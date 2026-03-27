@@ -106,13 +106,114 @@
 
 
   <!-- ===========================
-       SECTION 2 — PLACEHOLDER
+       SECTION 2 — PACKAGE CALCULATOR
   =========================== -->
-  <section class="pricing-section pricing-section--placeholder" id="ongoing">
+  <section class="pricing-section" id="calculator">
     <div class="pricing-container">
-      <div class="placeholder-box">
-        <!-- Coming soon -->
+
+      <div class="pricing-intro">
+        <p class="section-eyebrow">Build Your Package</p>
+        <h2 class="pricing-heading">Returning customer? Glad to see you back!</h2>
+        <p class="pricing-subtext">More hours means a better hourly rate. Adjust your schedule and watch the price update live.</p>
       </div>
+
+      <div class="calc-layout">
+
+        <!-- ── Inputs ── -->
+        <div class="calc-inputs">
+
+          <div class="calc-group">
+            <p class="calc-group-label">Student Level</p>
+            <div class="calc-type-grid" id="calc-type-grid">
+
+              <button class="calc-type-btn active" data-type="elementary">
+                Elementary
+              </button>
+
+              <button class="calc-type-btn" data-type="middle">
+                Middle School
+              </button>
+
+              <button class="calc-type-btn" data-type="high">
+                High School
+                <span class="calc-type-sub">Incl. SAT / ACT Prep</span>
+              </button>
+
+            </div>
+          </div>
+
+          <div class="calc-group">
+            <p class="calc-group-label">Sessions per Week</p>
+            <div class="calc-stepper">
+              <button class="stepper-btn" data-target="sessions" data-dir="-1" aria-label="Decrease sessions">−</button>
+              <span class="stepper-display">
+                <span class="stepper-val" id="sessions-val">2</span>
+                <span class="stepper-unit">/ week</span>
+              </span>
+              <button class="stepper-btn" data-target="sessions" data-dir="1" aria-label="Increase sessions">+</button>
+            </div>
+          </div>
+
+          <div class="calc-group">
+            <p class="calc-group-label">Hours per Session</p>
+            <div class="calc-stepper">
+              <button class="stepper-btn" data-target="hoursPerSession" data-dir="-1" aria-label="Decrease hours">−</button>
+              <span class="stepper-display">
+                <span class="stepper-val" id="hoursPerSession-val">1</span>
+                <span class="stepper-unit">hr</span>
+              </span>
+              <button class="stepper-btn" data-target="hoursPerSession" data-dir="1" aria-label="Increase hours">+</button>
+            </div>
+          </div>
+
+          <div class="calc-group">
+            <p class="calc-group-label">Number of Weeks</p>
+            <div class="calc-stepper">
+              <button class="stepper-btn" data-target="weeks" data-dir="-1" aria-label="Decrease weeks">−</button>
+              <span class="stepper-display">
+                <span class="stepper-val" id="weeks-val">4</span>
+                <span class="stepper-unit">wks</span>
+              </span>
+              <button class="stepper-btn" data-target="weeks" data-dir="1" aria-label="Increase weeks">+</button>
+            </div>
+          </div>
+
+        </div><!-- /calc-inputs -->
+
+        <!-- ── Live Summary ── -->
+        <div class="calc-summary" id="calc-summary">
+
+          <div class="summary-header">
+            <p class="summary-level" id="summary-level">Elementary</p>
+            <p class="summary-schedule" id="summary-schedule">2 sessions · 1 hr · 4 weeks</p>
+          </div>
+
+          <div class="summary-divider"></div>
+
+          <div class="summary-row">
+            <span class="summary-key">Total Hours</span>
+            <span class="summary-val" id="summary-total-hours">8 hrs</span>
+          </div>
+
+          <div class="summary-row">
+            <span class="summary-key">Effective Rate</span>
+            <span class="summary-val" id="summary-rate">—</span>
+          </div>
+
+          <div class="summary-divider"></div>
+
+          <div class="summary-price-block">
+            <p class="summary-original" id="summary-original"></p>
+            <p class="summary-total" id="summary-total">—</p>
+            <p class="summary-saving" id="summary-saving"></p>
+          </div>
+
+          <a href="#" class="btn btn-gold summary-cta">Get Started</a>
+
+        </div><!-- /calc-summary -->
+
+      </div><!-- /calc-layout -->
+
     </div>
   </section>
 

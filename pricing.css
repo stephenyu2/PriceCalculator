@@ -192,16 +192,250 @@
 
 
 /* ============================================
-   SECTION 2 — PLACEHOLDER
+   SECTION 2 — PACKAGE CALCULATOR
 ============================================ */
 
-.pricing-section--placeholder {
-  padding-top: 0;
+/* Layout: two-column on desktop */
+.calc-layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 2.5rem;
+  align-items: start;
 }
 
-.placeholder-box {
-  border: 2px dashed rgba(191, 160, 104, 0.2);
-  border-radius: 12px;
-  height: 400px;
+@media (max-width: 820px) {
+  .calc-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ── Input Groups ── */
+
+.calc-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.calc-group-label {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+
+/* ── Student Type Tiles ── */
+
+.calc-type-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+@media (max-width: 500px) {
+  .calc-type-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.calc-type-btn {
+  background: var(--navy-light);
+  border: 1px solid rgba(191, 160, 104, 0.2);
+  border-radius: 8px;
+  padding: 1.1rem 1rem;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.calc-type-btn:hover {
+  border-color: rgba(191, 160, 104, 0.5);
+  color: var(--white);
+}
+
+.calc-type-btn.active {
+  border-color: var(--gold);
+  background: rgba(191, 160, 104, 0.08);
+  color: var(--white);
+}
+
+.calc-type-sub {
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  line-height: 1.3;
+}
+
+.calc-type-btn.active .calc-type-sub {
+  color: var(--text-muted);
+}
+
+
+/* ── Steppers ── */
+
+.calc-stepper {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.stepper-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(191, 160, 104, 0.35);
+  background: transparent;
+  color: var(--gold);
+  font-size: 1.3rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+  flex-shrink: 0;
+}
+
+.stepper-btn:hover {
+  background: rgba(191, 160, 104, 0.12);
+  border-color: var(--gold);
+}
+
+.stepper-btn:disabled {
+  opacity: 0.25;
+  cursor: default;
+  pointer-events: none;
+}
+
+.stepper-display {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  min-width: 72px;
+}
+
+.stepper-val {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1;
+}
+
+.stepper-unit {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+
+/* ── Summary Card ── */
+
+.calc-summary {
   background: var(--navy-mid);
+  border: 1px solid rgba(191, 160, 104, 0.25);
+  border-radius: 12px;
+  padding: 2.2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: sticky;
+  top: 100px;
+}
+
+.summary-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.summary-level {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+
+.summary-schedule {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.summary-divider {
+  height: 1px;
+  background: rgba(191, 160, 104, 0.12);
+}
+
+.summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.summary-key {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.summary-val {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.summary-price-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.summary-original {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  text-decoration: line-through;
+  text-decoration-color: rgba(191, 160, 104, 0.4);
+  min-height: 1.3em; /* reserve space so layout doesn't shift */
+}
+
+.summary-total {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+}
+
+.summary-saving {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--gold-light);
+  min-height: 1.2em;
+}
+
+.summary-cta {
+  display: block;
+  text-align: center;
+  margin-top: 0.4rem;
 }
