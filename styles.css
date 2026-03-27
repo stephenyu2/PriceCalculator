@@ -450,7 +450,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .testimonials {
   background-color: var(--navy-mid);
-  padding: 3rem 0 0;
+  padding: 0;
   overflow: hidden;
 }
 
@@ -487,6 +487,24 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   cursor: default;
   display: block;
   font-size: 0;
+}
+
+.proof-section-heading {
+  position: absolute;
+  top: clamp(2.5rem, 6vh, 5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--white);
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.6), 0 1px 4px rgba(0,0,0,0.5);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .proof-item img {
