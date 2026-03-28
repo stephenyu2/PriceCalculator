@@ -278,4 +278,11 @@
   });
 })();
 
+/* --- Proof Card Flip --- */
+document.querySelectorAll('.proof-item').forEach(function (item) {
+  item.addEventListener('click', function () {
+    item.classList.toggle('flipped');
+  });
+});
+
 
