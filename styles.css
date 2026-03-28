@@ -518,20 +518,21 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   letter-spacing: -0.01em;
 }
 
-/* Proof Stack */
+/* Proof Grid — 4 col × 3 row */
 .proof-scroller {
   width: 100%;
-  overflow: hidden;
+  padding: 0 2rem 2rem;
 }
 
 .proof-track {
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
 }
 
 .proof-item {
   position: relative;
-  width: 100%;
-  height: 90vh;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   cursor: default;
   display: block;
@@ -581,7 +582,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: clamp(2rem, 5vw, 4rem) clamp(2rem, 6vw, 5rem);
+  padding: 1rem;
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -592,14 +593,13 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .proof-quote {
   font-family: var(--font-heading);
-  font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+  font-size: clamp(0.7rem, 1.1vw, 1rem);
   font-style: italic;
   font-weight: 400;
   color: var(--white);
-  line-height: 1.45;
-  margin-bottom: 1.2rem;
-  max-width: 700px;
-  transform: translateY(10px);
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  transform: translateY(6px);
   transition: transform 0.4s ease;
 }
 
@@ -608,23 +608,23 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .proof-name {
-  font-size: 0.78rem;
+  font-size: 0.6rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-muted);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.4rem;
 }
 
 .proof-result {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 0.6rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--on-gold);
   background: var(--gold);
-  padding: 0.3rem 0.9rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 2px;
 }
 
@@ -688,6 +688,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 ============================================ */
 
 @media (max-width: 900px) {
+  .proof-track {
+    grid-template-columns: repeat(3, 1fr); /* 3 col × 4 row */
+  }
+
   /* Value scene: shorter on tablet */
   .value-scene {
     height: 75vh;
@@ -704,6 +708,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 @media (max-width: 700px) {
+  .proof-track {
+    grid-template-columns: repeat(2, 1fr); /* 2 col × 6 row */
+  }
+
   /* Nav mobile */
   .nav-hamburger {
     display: flex;
