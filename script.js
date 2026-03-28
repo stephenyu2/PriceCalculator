@@ -2,6 +2,24 @@
    LAUNCH VALLEY TUTORING — script.js
    ============================================ */
 
+/* --- Theme Toggle --- */
+(function () {
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+
+  btn.addEventListener('click', function () {
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('lvt-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('lvt-theme', 'light');
+    }
+  });
+})();
+
+
 /* --- Sticky Nav: add .scrolled class on scroll --- */
 (function () {
   const nav = document.getElementById('nav');

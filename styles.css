@@ -12,6 +12,7 @@
   --white:      #F9F8F6;
   --text-muted: rgba(249, 248, 246, 0.60);
   --text-dim:   rgba(249, 248, 246, 0.40);
+  --on-gold:    #0D1B2A;
 
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body:    'Inter', system-ui, sans-serif;
@@ -21,6 +22,19 @@
   --radius:      4px;
 
   --transition: 0.3s ease;
+}
+
+/* --- Light Mode Variables --- */
+[data-theme="light"] {
+  --navy:       #f5f3ee;
+  --navy-mid:   #ece9e1;
+  --navy-light: #e2ddd4;
+  --gold:       #8B6914;
+  --gold-light: #A07820;
+  --white:      #1a1a2e;
+  --text-muted: rgba(26, 26, 46, 0.60);
+  --text-dim:   rgba(26, 26, 46, 0.38);
+  --on-gold:    #f5f3ee;
 }
 
 /* --- Reset & Base --- */
@@ -73,12 +87,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .btn-outline:hover {
   background: var(--gold);
-  color: var(--navy);
+  color: var(--on-gold);
 }
 
 .btn-gold {
   background: var(--gold);
-  color: var(--navy);
+  color: var(--on-gold);
   border: 1px solid var(--gold);
 }
 
@@ -173,7 +187,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .nav-cta:hover {
   background: var(--gold);
-  color: var(--navy);
+  color: var(--on-gold);
 }
 
 /* Hamburger */
@@ -195,6 +209,40 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
 .nav-hamburger.open span:nth-child(2) { opacity: 0; }
 .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* Theme Toggle */
+.theme-toggle {
+  position: relative;
+  width: 46px;
+  height: 25px;
+  border-radius: 13px;
+  background: var(--navy-light);
+  border: 1px solid rgba(191, 160, 104, 0.35);
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.theme-toggle:hover {
+  border-color: var(--gold);
+}
+
+.theme-toggle-thumb {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--gold);
+  transition: transform var(--transition);
+  pointer-events: none;
+}
+
+[data-theme="light"] .theme-toggle-thumb {
+  transform: translateX(21px);
+}
 
 
 /* ============================================
@@ -574,7 +622,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--navy);
+  color: var(--on-gold);
   background: var(--gold);
   padding: 0.3rem 0.9rem;
   border-radius: 2px;
@@ -723,4 +771,40 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .btn {
     padding: 0.8rem 1.8rem;
   }
+}
+
+
+/* ============================================
+   LIGHT MODE — pin video/photo text to dark-mode values
+============================================ */
+
+[data-theme="light"] .hero-eyebrow {
+  color: #BFA068;
+}
+
+[data-theme="light"] .hero-heading {
+  color: #F9F8F6;
+}
+
+[data-theme="light"] .btn-outline {
+  color: #F9F8F6;
+  border-color: #BFA068;
+}
+
+[data-theme="light"] .btn-outline:hover {
+  background: #BFA068;
+  color: #0D1B2A;
+}
+
+[data-theme="light"] .proof-quote {
+  color: #F9F8F6;
+}
+
+[data-theme="light"] .proof-name {
+  color: rgba(249, 248, 246, 0.60);
+}
+
+[data-theme="light"] .proof-result {
+  background: #BFA068;
+  color: #0D1B2A;
 }
