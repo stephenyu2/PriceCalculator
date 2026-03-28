@@ -592,9 +592,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .footer-contact {
   display: flex;
-  justify-content: center;
-  gap: 2.5rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .footer-contact-item {
@@ -619,9 +619,9 @@ a.footer-contact-item:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.4rem 2rem;
+  padding: 0.75rem 2rem;
   font-family: var(--font-heading);
-  font-size: clamp(1.3rem, 2.8vw, 2rem);
+  font-size: clamp(0.9rem, 1.6vw, 1.2rem);
   font-weight: 600;
   color: var(--text-muted);
   text-decoration: none;
@@ -637,7 +637,7 @@ a.footer-contact-item:hover {
 }
 
 .footer-nav-link:hover {
-  padding: 2.4rem 2rem;
+  padding: 1.4rem 2rem;
   background: rgba(191, 160, 104, 0.05);
   color: var(--white);
 }
@@ -746,11 +746,6 @@ a.footer-contact-item:hover {
     gap: 2.5rem;
   }
 
-  /* Footer contact stack on mobile */
-  .footer-contact {
-    flex-direction: column;
-    gap: 0.6rem;
-  }
 }
 
 @media (max-width: 400px) {
