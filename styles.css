@@ -127,12 +127,15 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   left: 0;
   width: 100%;
   z-index: 100;
-  transition: background-color var(--transition), box-shadow var(--transition);
-  background: transparent;
+  transition: background-color var(--transition), box-shadow var(--transition), backdrop-filter var(--transition);
+  background: rgba(13, 27, 42, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(191, 160, 104, 0.12);
 }
 
 .nav.scrolled {
-  background-color: var(--navy);
+  background: rgba(13, 27, 42, 0.85);
   box-shadow: 0 1px 0 rgba(191, 160, 104, 0.15);
 }
 
@@ -768,6 +771,14 @@ a.footer-contact-item:hover {
 /* ============================================
    LIGHT MODE — pin video/photo text to dark-mode values
 ============================================ */
+
+[data-theme="light"] .nav {
+  background: rgba(245, 243, 238, 0.55);
+}
+
+[data-theme="light"] .nav.scrolled {
+  background: rgba(245, 243, 238, 0.85);
+}
 
 [data-theme="light"] .hero-eyebrow {
   color: #BFA068;
