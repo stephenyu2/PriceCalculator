@@ -142,7 +142,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   padding: 1.4rem 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 2rem;
 }
 
 .nav-logo {
@@ -152,6 +152,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   color: var(--white);
   letter-spacing: 0.01em;
   flex-shrink: 0;
+  margin-right: auto;
 }
 
 .nav-links {
@@ -210,38 +211,41 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .nav-hamburger.open span:nth-child(2) { opacity: 0; }
 .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-/* Theme Toggle */
-.theme-toggle {
-  position: relative;
-  width: 46px;
-  height: 25px;
-  border-radius: 13px;
-  background: var(--navy-light);
-  border: 1px solid rgba(191, 160, 104, 0.35);
-  cursor: pointer;
+/* Always-visible nav items (theme btn + Get Started) */
+.nav-persistent {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   flex-shrink: 0;
-  padding: 0;
-  transition: background var(--transition), border-color var(--transition);
 }
 
-.theme-toggle:hover {
-  border-color: var(--gold);
+.theme-btn {
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.6rem 1.5rem;
+  border: 1px solid var(--text-muted);
+  color: var(--text-muted);
+  border-radius: var(--radius);
+  background: transparent;
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition);
 }
 
-.theme-toggle-thumb {
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: var(--gold);
-  transition: transform var(--transition);
-  pointer-events: none;
+.theme-btn:hover {
+  color: var(--white);
+  border-color: var(--white);
 }
 
-[data-theme="light"] .theme-toggle-thumb {
-  transform: translateX(21px);
+.theme-btn.flash {
+  animation: themeBtnFlash 0.35s ease forwards;
+}
+
+@keyframes themeBtnFlash {
+  0%   { transform: scale(1);    background: transparent; }
+  35%  { transform: scale(0.93); background: rgba(249, 248, 246, 0.1); }
+  100% { transform: scale(1);    background: transparent; }
 }
 
 
@@ -707,9 +711,10 @@ a.footer-contact-item:hover {
     letter-spacing: 0.1em;
   }
 
+  .theme-btn,
   .nav-cta {
-    font-size: 0.85rem;
-    padding: 0.75rem 1.8rem;
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
   }
 
   /* Hero */

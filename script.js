@@ -7,6 +7,12 @@
   const btn = document.getElementById('theme-toggle');
   if (!btn) return;
 
+  function updateLabel() {
+    btn.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? 'Light' : 'Dark';
+  }
+
+  updateLabel(); // sync label with current theme on page load
+
   btn.addEventListener('click', function () {
     const isLight = document.documentElement.getAttribute('data-theme') === 'light';
     if (isLight) {
@@ -16,6 +22,11 @@
       document.documentElement.setAttribute('data-theme', 'light');
       localStorage.setItem('lvt-theme', 'light');
     }
+    updateLabel();
+    btn.classList.remove('flash');
+    void btn.offsetWidth; // force reflow so animation restarts if clicked quickly
+    btn.classList.add('flash');
+    btn.addEventListener('animationend', function () { btn.classList.remove('flash'); }, { once: true });
   });
 })();
 
@@ -37,28 +48,6 @@
   onScroll(); // Run once on load
 })();
 
-
-/* --- Value Circles: tap to toggle popup on touch devices --- */
-(function () {
-  document.querySelectorAll('.value-circle').forEach(function (circle) {
-    circle.addEventListener('click', function (e) {
-      const isActive = circle.classList.contains('active');
-      // Close all others
-      document.querySelectorAll('.value-circle').forEach(function (c) {
-        c.classList.remove('active');
-      });
-      if (!isActive) circle.classList.add('active');
-      e.stopPropagation();
-    });
-  });
-
-  // Tap outside closes all
-  document.addEventListener('click', function () {
-    document.querySelectorAll('.value-circle').forEach(function (c) {
-      c.classList.remove('active');
-    });
-  });
-})();
 
 
 /* ============================================
