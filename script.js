@@ -141,7 +141,7 @@
   }
 
   function levelLabel(type) {
-    return { elementary: 'Elementary', middle: 'Middle School', high: 'High School' }[type];
+    return { elementary: 'Middle School', middle: 'High School', high: 'SAT/ACT Prep' }[type];
   }
 
 
