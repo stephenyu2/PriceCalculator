@@ -572,50 +572,83 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .footer {
   background-color: var(--navy);
   border-top: 1px solid rgba(191, 160, 104, 0.15);
-  padding: 3.5rem 2rem;
 }
 
-.footer-inner {
-  max-width: var(--container);
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.4rem;
+/* Brand + contact info block */
+.footer-brand {
+  padding: 3.5rem 2rem;
   text-align: center;
+  border-bottom: 1px solid rgba(191, 160, 104, 0.15);
 }
 
 .footer-logo {
   font-family: var(--font-heading);
-  font-size: 1.05rem;
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
   font-weight: 600;
   color: var(--white);
   letter-spacing: 0.01em;
+  margin-bottom: 1.25rem;
 }
 
-.footer-nav {
+.footer-contact {
   display: flex;
-  gap: 2rem;
-  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
 }
 
-.footer-nav a {
-  font-size: 0.78rem;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+.footer-contact-item {
+  font-size: 0.88rem;
   color: var(--text-muted);
+  letter-spacing: 0.03em;
+  text-decoration: none;
   transition: color var(--transition);
 }
 
-.footer-nav a:hover {
+a.footer-contact-item:hover {
   color: var(--gold);
 }
 
+/* Expandable nav rows */
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.4rem 2rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 2.8vw, 2rem);
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(191, 160, 104, 0.2);
+  background: transparent;
+  transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              background 0.3s ease,
+              color 0.3s ease;
+}
+
+.footer-nav-link:last-child {
+  border-bottom: none;
+}
+
+.footer-nav-link:hover {
+  padding: 2.4rem 2rem;
+  background: rgba(191, 160, 104, 0.05);
+  color: var(--white);
+}
+
 .footer-copy {
+  padding: 1.75rem 2rem;
+  text-align: center;
   font-size: 0.75rem;
   color: var(--text-dim);
   letter-spacing: 0.03em;
+  border-top: 1px solid rgba(191, 160, 104, 0.1);
 }
 
 
@@ -713,11 +746,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     gap: 2.5rem;
   }
 
-  /* Footer nav stack */
-  .footer-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.2rem;
+  /* Footer contact stack on mobile */
+  .footer-contact {
+    flex-direction: column;
+    gap: 0.6rem;
   }
 }
 
