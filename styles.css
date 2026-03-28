@@ -330,14 +330,16 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .value {
   position: relative;
+  padding: 0 clamp(1rem, 4vw, 3rem);
 }
 
-/* Full-width scene container */
+/* Full-width scene container — framed with border-radius so background shows */
 .value-scene {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  border-radius: 12px;
 }
 
 .value-scene > img {
@@ -347,143 +349,88 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   display: block;
 }
 
-/* Gradient overlays */
-.value-gradient-top {
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 45%;
-  background: linear-gradient(to bottom, rgba(6,14,26,0.72) 0%, transparent 100%);
-  pointer-events: none;
-}
+/* ---- Hover panels (1/3 each) ---- */
 
-.value-gradient-bottom {
+.value-panels {
   position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 35%;
-  background: linear-gradient(to top, rgba(6,14,26,0.55) 0%, transparent 100%);
-  pointer-events: none;
-}
-
-/* Heading */
-.value-heading {
-  position: absolute;
-  top: clamp(2.5rem, 6vh, 5rem);
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  text-align: center;
-  white-space: nowrap;
-  font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  font-weight: 600;
-  line-height: 1;
-  color: var(--white);
-  letter-spacing: -0.01em;
-  text-shadow: 0 2px 20px rgba(0,0,0,0.6), 0 1px 4px rgba(0,0,0,0.5);
-  z-index: 2;
-  pointer-events: none;
-}
-
-/* ---- Circles ---- */
-
-/* Position using CSS custom props --cx and --cy set inline */
-.value-circle {
-  position: absolute;
-  left: var(--cx);
-  top: var(--cy);
-  transform: translate(-50%, -50%);
-  z-index: 3;
+  inset: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.6rem;
+  z-index: 3;
 }
 
-/* The ring itself */
-.circle-ring {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(191, 160, 104, 0.75);
-  background: rgba(13, 27, 42, 0.25);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+.value-panel {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem 2rem;
+  background: rgba(6, 14, 26, 0.25);
+  border-bottom: 1px solid rgba(191, 160, 104, 0.45);
   cursor: pointer;
-  transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
-  /* Subtle pulse */
-  animation: circlePulse 3s ease-in-out infinite;
+  transition: flex 0.45s cubic-bezier(0.4, 0, 0.2, 1), background 0.45s ease;
 }
 
-.value-circle:hover .circle-ring {
-  border-color: var(--gold);
-  background: rgba(13, 27, 42, 0.55);
-  transform: scale(1.1);
-  animation: none;
+.value-panel:last-child {
+  border-bottom: none;
 }
 
-@keyframes circlePulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(191, 160, 104, 0.35); }
-  50%       { box-shadow: 0 0 0 10px rgba(191, 160, 104, 0); }
+/* When any panel is hovered, shrink the non-hovered siblings */
+.value-panels:has(.value-panel:hover) .value-panel {
+  flex: 0.55;
 }
 
-.circle-icon {
-  font-size: 1rem;
-  color: var(--gold);
-  line-height: 1;
+.value-panels:has(.value-panel:hover) .value-panel:hover {
+  flex: 1.9;
+  background: rgba(6, 14, 26, 0.55);
 }
 
-/* Label below the ring — always visible */
-.circle-label {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+.panel-content {
+  text-align: center;
   color: var(--white);
-  text-shadow: 0 1px 8px rgba(0,0,0,0.9), 0 2px 20px rgba(0,0,0,0.8);
-  white-space: nowrap;
+  width: 100%;
 }
 
-/* Popup — hidden by default, shown on hover */
-.circle-popup {
-  position: absolute;
-  bottom: calc(100% + 1rem);
-  left: 50%;
-  transform: translateX(-50%) translateY(6px);
-  width: 220px;
-  background: rgba(13, 27, 42, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(191, 160, 104, 0.25);
-  border-radius: 4px;
-  padding: 1.1rem 1.2rem;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.value-circle:hover .circle-popup,
-.value-circle.active .circle-popup {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-.circle-popup strong {
-  display: block;
-  font-size: 0.8rem;
+.panel-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.03em;
+  text-shadow: 0 1px 10px rgba(0,0,0,0.9), 0 2px 20px rgba(0,0,0,0.7);
+  transition: margin-bottom 0.35s ease;
+}
+
+.panel-desc {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.45s ease, opacity 0.35s ease 0.1s;
+  margin-top: 0.75rem;
+}
+
+.value-panel:hover .panel-desc {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.panel-desc strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.55rem;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.8);
 }
 
-.circle-popup p {
-  font-size: 0.82rem;
-  color: var(--text-muted);
+.panel-desc p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.55;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.8);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 
@@ -492,7 +439,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 ============================================ */
 
 .testimonials {
-  background-color: var(--navy-mid);
+  background-color: var(--navy);
   padding: 0;
   overflow: hidden;
 }
@@ -697,13 +644,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     height: 75vh;
   }
 
-  .circle-ring {
-    width: 64px;
-    height: 64px;
-  }
-
-  .circle-popup {
-    width: 180px;
+  .panel-title {
+    font-size: 1.3rem;
   }
 }
 
@@ -755,7 +697,27 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
   /* Value */
   .value {
-    padding: var(--section-pad) 1.5rem;
+    padding: 0 0.75rem 0.75rem;
+  }
+
+  .value-scene {
+    height: 80vh;
+  }
+
+  .value-panels:has(.value-panel:hover) .value-panel {
+    flex: 0.65;
+  }
+
+  .value-panels:has(.value-panel:hover) .value-panel:hover {
+    flex: 1.7;
+  }
+
+  .panel-title {
+    font-size: 1.1rem;
+  }
+
+  .panel-desc p {
+    font-size: 0.95rem;
   }
 
   .value-inner {
@@ -815,4 +777,13 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 [data-theme="light"] .proof-result {
   background: #BFA068;
   color: #0D1B2A;
+}
+
+/* Pin panel UI on the photo to dark-mode values regardless of theme */
+[data-theme="light"] .panel-content {
+  color: #F9F8F6;
+}
+
+[data-theme="light"] .panel-desc strong {
+  color: #BFA068;
 }
