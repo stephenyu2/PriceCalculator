@@ -84,9 +84,9 @@
   // Adjust rateAt6, floor, and k here to tune pricing behaviour.
 
   const PRICING = {
-    elementary: { rateAt6: 58.33, floor: 42 },
-    middle:     { rateAt6: 75.00, floor: 55 },
-    high:       { rateAt6: 100.0, floor: 75 },
+    elementary: { rateAt6: 95.83, floor: 80 },
+    middle:     { rateAt6: 104.17, floor: 90 },
+    high:       { rateAt6: 120.83, floor: 105 },
   };
 
   const K = 0.12; // exponential decay constant
