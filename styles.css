@@ -407,6 +407,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   transition: margin-bottom 0.35s ease;
 }
 
+.panel-tap-hint {
+  display: none;
+}
+
 .panel-desc {
   overflow: hidden;
   max-height: 0;
@@ -813,6 +817,15 @@ a.footer-contact-item:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* Always show overlay on mobile (no hover) */
+  .proof-item:not(.flipped) .proof-overlay {
+    opacity: 1;
+  }
+
+  .proof-item:not(.flipped) .proof-quote {
+    transform: translateY(0);
+  }
+
   /* Hero */
   .hero-heading::after {
     margin-top: 1.2rem;
@@ -837,6 +850,21 @@ a.footer-contact-item:hover {
 
   .panel-title {
     font-size: 1.1rem;
+  }
+
+  .panel-tap-hint {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 0.4rem;
+    transition: opacity 0.3s ease;
+  }
+
+  .value-panel:hover .panel-tap-hint {
+    opacity: 0;
   }
 
   .panel-desc p {
