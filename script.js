@@ -278,6 +278,49 @@
   });
 })();
 
+/* --- Scroll Reveal --- */
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!els.length) return;
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+
+/* --- Testimonial Card Stagger --- */
+(function () {
+  var items = Array.prototype.slice.call(document.querySelectorAll('.proof-item'));
+  if (!items.length) return;
+
+  // Hide all cards initially
+  items.forEach(function (item) { item.classList.add('card-hidden'); });
+
+  function getColCount() {
+    return window.innerWidth <= 900 ? 2 : 4;
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      var item = entry.target;
+      var col = items.indexOf(item) % getColCount();
+      item.style.setProperty('--reveal-delay', (col * 150) + 'ms');
+      item.classList.remove('card-hidden');
+      observer.unobserve(item);
+    });
+  }, { threshold: 0.15 });
+
+  items.forEach(function (item) { observer.observe(item); });
+})();
+
+
 /* --- Proof Card Flip --- */
 document.querySelectorAll('.proof-item').forEach(function (item) {
   item.addEventListener('click', function () {
