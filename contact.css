@@ -127,6 +127,99 @@
 }
 
 
+/* ============================================
+   LEAD FORM
+============================================ */
+
+.lead-form-wrap {
+  background: var(--navy-light);
+  border: 1px solid rgba(191, 160, 104, 0.18);
+  border-radius: 12px;
+  padding: 2.2rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.lead-form-hidden {
+  display: none;
+}
+
+.lead-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.form-label {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.form-required {
+  color: var(--gold);
+}
+
+.form-input {
+  background: var(--navy);
+  border: 1px solid rgba(191, 160, 104, 0.22);
+  border-radius: var(--radius);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-input::placeholder {
+  color: var(--text-dim);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: rgba(191, 160, 104, 0.6);
+  box-shadow: 0 0 0 3px rgba(191, 160, 104, 0.1);
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23BFA068' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.form-select option {
+  background: var(--navy-mid);
+  color: var(--white);
+}
+
+.lead-form-submit {
+  margin-top: 0.4rem;
+  align-self: flex-start;
+}
+
+[data-theme="light"] .form-input {
+  background: var(--navy-mid);
+  color: var(--white);
+}
+
+[data-theme="light"] .form-select option {
+  background: var(--navy-mid);
+}
+
+
 /* ── Address ── */
 
 .contact-address {

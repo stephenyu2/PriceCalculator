@@ -1,0 +1,246 @@
+/* ============================================
+   LAUNCH VALLEY TUTORING — thank-you.css
+============================================ */
+
+/* Keep nav opaque (no hero video behind it) */
+.nav.scrolled {
+  background: rgba(13, 27, 42, 0.92);
+  box-shadow: 0 1px 0 rgba(191, 160, 104, 0.15);
+}
+
+[data-theme="light"] .nav,
+[data-theme="light"] .nav.scrolled {
+  background: rgba(245, 243, 238, 0.92);
+}
+
+
+/* ============================================
+   THANK YOU SECTION
+============================================ */
+
+.ty-section {
+  padding: var(--section-pad) 1.5rem 5rem;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.ty-container {
+  max-width: 680px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+/* ── Badge ── */
+
+.ty-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(191, 160, 104, 0.12);
+  border: 1px solid rgba(191, 160, 104, 0.35);
+  border-radius: 999px;
+  color: var(--gold);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.4rem 1.1rem;
+  margin-bottom: 1.6rem;
+}
+
+/* ── Heading ── */
+
+.ty-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--white);
+  margin-bottom: 1.4rem;
+}
+
+/* ── Intro ── */
+
+.ty-intro {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 580px;
+  margin: 0 auto 2.5rem;
+}
+
+.ty-intro strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* ── Stats Row ── */
+
+.ty-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: var(--navy-light);
+  border: 1px solid rgba(191, 160, 104, 0.18);
+  border-radius: 10px;
+  padding: 1.6rem 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.ty-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.ty-stat-number {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.ty-stat-label {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.ty-stat-divider {
+  width: 1px;
+  height: 2.5rem;
+  background: rgba(191, 160, 104, 0.2);
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .ty-stats {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .ty-stat-divider {
+    width: 2.5rem;
+    height: 1px;
+  }
+}
+
+/* ── Cards ── */
+
+.ty-card {
+  background: var(--navy-light);
+  border: 1px solid rgba(191, 160, 104, 0.18);
+  border-radius: 10px;
+  padding: 1.8rem 2rem;
+  text-align: left;
+  margin-bottom: 1.25rem;
+}
+
+.ty-card-label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.7rem;
+}
+
+.ty-card-value {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  line-height: 1.6;
+}
+
+.ty-map-link {
+  display: inline-block;
+  margin-top: 0.9rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--gold);
+  transition: color var(--transition);
+}
+
+.ty-map-link:hover {
+  color: var(--gold-light);
+}
+
+/* ── Steps ── */
+
+.ty-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ty-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.ty-step-icon {
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  margin-top: 0.05rem;
+}
+
+.ty-step strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* ── Contact note ── */
+
+.ty-contact-note {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 2rem 0 2rem;
+}
+
+.ty-contact-link {
+  color: var(--gold);
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+.ty-contact-link:hover {
+  color: var(--gold-light);
+}
+
+/* ── Back button ── */
+
+.ty-back-btn {
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+[data-theme="light"] .ty-back-btn {
+  background: var(--gold);
+  color: var(--on-gold);
+  border-color: var(--gold);
+}
+
+[data-theme="light"] .ty-back-btn:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+}
