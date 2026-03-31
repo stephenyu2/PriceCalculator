@@ -329,3 +329,30 @@ document.querySelectorAll('.proof-item').forEach(function (item) {
 });
 
 
+/* --- Netlify Form Submission --- */
+(function () {
+  function encode(data) {
+    return Object.keys(data)
+      .map(function (key) {
+        return encodeURIComponent(key) + '=' + encodeURIComponent(data[key]);
+      })
+      .join('&');
+  }
+
+  document.querySelectorAll('form[data-netlify="true"]').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var data = { 'form-name': form.getAttribute('name') };
+      new FormData(form).forEach(function (val, key) { data[key] = val; });
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode(data)
+      })
+        .then(function () { window.location.href = '/thank-you'; })
+        .catch(function () { window.location.href = '/thank-you'; });
+    });
+  });
+})();
+
+
