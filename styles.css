@@ -798,9 +798,21 @@ a.footer-contact-item:hover {
    RESPONSIVE — TABLET & MOBILE
 ============================================ */
 
+#get-started {
+  padding-top: clamp(3rem, 6vw, 5rem);
+}
+
 @media (max-width: 900px) {
   .proof-track {
     grid-template-columns: repeat(2, 1fr); /* 2 col × 4 row */
+  }
+
+  .proof-item:nth-child(n+7) {
+    display: none;
+  }
+
+  #get-started {
+    padding-top: clamp(2.5rem, 5vw, 4rem);
   }
 
   /* Value scene: shorter on tablet */

@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="contact.css" />
   <script>(function(){var t=localStorage.getItem('lvt-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})();</script>
 </head>
 <body>
@@ -283,6 +284,66 @@
 
 
   <!-- ===========================
+       SECTION 4 — LEAD FORM
+  =========================== -->
+  <section class="contact-section reveal" id="get-started">
+    <div class="contact-container">
+
+      <div class="contact-intro">
+        <h2 class="contact-heading">Interested in tutoring or<br>have any questions?</h2>
+        <p class="contact-subtext">Fill out the form and we'll get back to you soon.</p>
+      </div>
+
+      <div class="lead-form-wrap">
+        <form class="lead-form" id="lead-form-home" name="lead-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thank-you.html">
+          <input type="hidden" name="form-name" value="lead-form" />
+          <p class="lead-form-hidden" aria-hidden="true">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div class="form-field">
+            <label class="form-label" for="home-parent-name">Parent Name <span class="form-required">*</span></label>
+            <input class="form-input" type="text" id="home-parent-name" name="parent-name" placeholder="Jane Smith" required />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="home-phone">Phone Number <span class="form-required">*</span></label>
+            <input class="form-input" type="tel" id="home-phone" name="phone" placeholder="(818) 555-0100" required />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="home-grade">Student Grade <span class="form-required">*</span></label>
+            <select class="form-input form-select" id="home-grade" name="grade" required>
+              <option value="" disabled selected>Select grade</option>
+              <option value="Middle School">Middle School</option>
+              <option value="9">9th Grade (Freshman)</option>
+              <option value="10">10th Grade (Sophomore)</option>
+              <option value="11">11th Grade (Junior)</option>
+              <option value="12">12th Grade (Senior)</option>
+              <option value="College">College</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="home-subject">Primary Focus <span class="form-required">*</span></label>
+            <select class="form-input form-select" id="home-subject" name="subject" required>
+              <option value="" disabled selected>Select a focus</option>
+              <option value="Academic Tutoring">Academic Tutoring</option>
+              <option value="SAT/ACT Prep">SAT/ACT Prep</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <button class="btn btn-gold lead-form-submit" type="submit">Submit</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===========================
        FOOTER
   =========================== -->
   <footer class="footer reveal" id="footer">
@@ -310,6 +371,21 @@
 
   </footer>
 
+  <script>
+    (function () {
+      var input = document.getElementById('home-phone');
+      if (!input) return;
+      input.addEventListener('input', function () {
+        var digits = input.value.replace(/\D/g, '').slice(0, 10);
+        var formatted = '';
+        if (digits.length === 0) formatted = '';
+        else if (digits.length <= 3) formatted = '(' + digits;
+        else if (digits.length <= 6) formatted = '(' + digits.slice(0, 3) + ') ' + digits.slice(3);
+        else formatted = '(' + digits.slice(0, 3) + ') ' + digits.slice(3, 6) + '-' + digits.slice(6);
+        input.value = formatted;
+      });
+    })();
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
