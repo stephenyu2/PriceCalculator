@@ -92,15 +92,15 @@
     }
     .diag-hero { text-align: center; margin-bottom: 56px; }
     .diag-title {
-      font-family: 'Playfair Display', serif;
+      font-family: var(--font-heading);
       font-size: clamp(2rem, 5vw, 3rem);
       font-weight: 700;
       margin-bottom: 16px;
-      color: var(--text, #111);
+      color: var(--white);
     }
     .diag-subtitle {
       font-size: 1.05rem;
-      color: var(--text-muted, #555);
+      color: var(--text-muted);
       line-height: 1.7;
       max-width: 520px;
       margin: 0 auto;
@@ -110,63 +110,70 @@
     .diag-schedule { display: flex; flex-direction: column; gap: 16px; }
 
     .diag-row {
-      border: 1px solid var(--border, #e0e0e0);
+      border: 1px solid rgba(191, 160, 104, 0.18);
       border-radius: 12px;
       overflow: hidden;
-      transition: box-shadow .2s;
+      transition: border-color var(--transition), box-shadow var(--transition);
     }
-    .diag-row:hover { box-shadow: 0 4px 20px rgba(0,0,0,.08); }
+    .diag-row:hover {
+      border-color: rgba(191, 160, 104, 0.45);
+      box-shadow: 0 4px 24px rgba(0,0,0,.2);
+    }
 
     .diag-row-header {
       display: flex;
       align-items: center;
       gap: 16px;
       padding: 20px 24px;
-      background: var(--surface, #fff);
+      background: var(--navy-light);
     }
     .diag-date {
       flex: 1;
       font-size: 1.05rem;
       font-weight: 600;
-      color: var(--text, #111);
+      color: var(--white);
     }
     .diag-time {
       font-size: .9rem;
-      color: var(--text-muted, #777);
+      color: var(--text-muted);
       margin-top: 2px;
     }
-    .diag-btn-group { display: flex; gap: 10px; }
+    .diag-btn-group { display: flex; gap: 10px; margin-left: auto; }
 
     .diag-btn {
-      padding: 10px 22px;
+      padding: 10px 34px;
       border-radius: 8px;
-      border: 2px solid transparent;
+      border: 1px solid transparent;
       font-size: .9rem;
       font-weight: 600;
       cursor: pointer;
-      transition: background .15s, color .15s, border-color .15s;
+      transition: background var(--transition), color var(--transition), border-color var(--transition);
     }
-    .diag-btn-sat {
-      background: #111;
-      color: #fff;
-    }
-    .diag-btn-sat:hover { background: #333; }
+    .diag-btn-sat,
     .diag-btn-act {
       background: transparent;
-      color: #111;
-      border-color: #111;
+      color: var(--gold);
+      border-color: var(--gold);
     }
-    .diag-btn-act:hover { background: #f5f5f5; }
+    .diag-btn-sat:hover,
+    .diag-btn-act:hover { background: rgba(191, 160, 104, 0.1); }
 
-    /* dark mode overrides */
-    [data-theme="light"] .diag-btn-act { color: #111; border-color: #111; }
+    .diag-btn.active {
+      background: var(--gold);
+      color: var(--on-gold);
+      border-color: var(--gold);
+    }
+    .diag-btn.active:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+    }
 
     /* ---- dropdown ---- */
     .diag-dropdown {
       display: none;
       padding: 0 24px 20px;
-      background: var(--surface, #fff);
-      border-top: 1px solid var(--border, #e0e0e0);
+      background: var(--navy-light);
+      border-top: 1px solid rgba(191, 160, 104, 0.18);
     }
     .diag-dropdown.open { display: block; }
     .diag-dropdown-inner {
@@ -177,27 +184,31 @@
     }
     .diag-dropdown-label {
       font-size: .95rem;
-      color: var(--text-muted, #555);
+      color: var(--text-muted);
     }
-    .diag-dropdown-label strong { color: var(--text, #111); }
+    .diag-dropdown-label strong { color: var(--white); }
     .diag-signup-btn {
       padding: 10px 24px;
-      background: #2563eb;
-      color: #fff;
-      border: none;
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid var(--gold);
       border-radius: 8px;
       font-size: .9rem;
       font-weight: 600;
       cursor: pointer;
-      transition: background .15s;
+      transition: background var(--transition), color var(--transition), border-color var(--transition);
     }
-    .diag-signup-btn:hover { background: #1d4ed8; }
+    .diag-signup-btn:hover {
+      background: var(--gold);
+      color: var(--on-gold);
+      border-color: var(--gold);
+    }
 
     /* ---- modal ---- */
     .diag-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,.5);
+      background: rgba(0,0,0,.6);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -206,13 +217,14 @@
     }
     .diag-overlay[hidden] { display: none; }
     .diag-modal {
-      background: var(--surface, #fff);
+      background: var(--navy-mid);
+      border: 1px solid rgba(191, 160, 104, 0.22);
       border-radius: 16px;
       padding: 40px 36px;
       width: 100%;
       max-width: 440px;
       position: relative;
-      box-shadow: 0 20px 60px rgba(0,0,0,.2);
+      box-shadow: 0 20px 60px rgba(0,0,0,.4);
     }
     .diag-modal-close {
       position: absolute;
@@ -221,58 +233,68 @@
       border: none;
       font-size: 1.5rem;
       cursor: pointer;
-      color: var(--text-muted, #777);
+      color: var(--text-muted);
       line-height: 1;
     }
     .diag-modal-title {
-      font-family: 'Playfair Display', serif;
+      font-family: var(--font-heading);
       font-size: 1.6rem;
       font-weight: 700;
       margin-bottom: 6px;
-      color: var(--text, #111);
+      color: var(--white);
     }
     .diag-modal-meta {
       font-size: .9rem;
-      color: var(--text-muted, #777);
+      color: var(--text-muted);
       margin-bottom: 28px;
     }
     .diag-label {
       display: block;
-      font-size: .85rem;
+      font-size: .72rem;
       font-weight: 600;
-      color: var(--text, #111);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
       margin-bottom: 6px;
       margin-top: 16px;
     }
     .diag-input {
       width: 100%;
       padding: 11px 14px;
-      border: 1.5px solid var(--border, #d1d5db);
+      border: 1px solid rgba(191, 160, 104, 0.22);
       border-radius: 8px;
       font-size: .95rem;
-      background: var(--surface, #fff);
-      color: var(--text, #111);
+      background: var(--navy);
+      color: var(--white);
       box-sizing: border-box;
-      transition: border-color .15s;
+      transition: border-color var(--transition), box-shadow var(--transition);
     }
-    .diag-input:focus { outline: none; border-color: #2563eb; }
+    .diag-input::placeholder { color: var(--text-dim); }
+    .diag-input:focus {
+      outline: none;
+      border-color: rgba(191, 160, 104, 0.6);
+      box-shadow: 0 0 0 3px rgba(191, 160, 104, 0.1);
+    }
     .diag-submit {
       margin-top: 24px;
       width: 100%;
       padding: 13px;
-      background: #2563eb;
-      color: #fff;
-      border: none;
+      background: var(--gold);
+      color: var(--on-gold);
+      border: 1px solid var(--gold);
       border-radius: 8px;
       font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
-      transition: background .15s;
+      transition: background var(--transition), border-color var(--transition);
     }
-    .diag-submit:hover { background: #1d4ed8; }
+    .diag-submit:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+    }
     .diag-form-error {
       margin-top: 10px;
-      color: #dc2626;
+      color: #e57373;
       font-size: .85rem;
       text-align: center;
     }
@@ -281,16 +303,23 @@
 
   <script>
     (function () {
-      // ---- compute next 4 Sundays ----
+      // ---- compute next 4 eligible Sundays ----
+      // A Sunday is only available if it's more than 24 hours away from the 10AM test time.
       function nextSundays(n) {
         const dates = [];
+        const now = Date.now();
         const d = new Date();
         d.setHours(0, 0, 0, 0);
         // advance to next Sunday (or today if Sunday)
         const day = d.getDay(); // 0 = Sun
         if (day !== 0) d.setDate(d.getDate() + (7 - day));
-        for (let i = 0; i < n; i++) {
-          dates.push(new Date(d));
+        while (dates.length < n) {
+          const testTime = new Date(d);
+          testTime.setHours(10, 0, 0, 0);
+          // only include if more than 24 hours before the test
+          if (testTime.getTime() - now > 24 * 60 * 60 * 1000) {
+            dates.push(new Date(d));
+          }
           d.setDate(d.getDate() + 7);
         }
         return dates;
@@ -328,6 +357,7 @@
 
       // ---- button logic ----
       let activeDropdown = null;
+      let activeBtn = null;
       let activeTest = null;
       let activeDate = null;
 
@@ -340,15 +370,21 @@
           const testLabel = btn.dataset.test;
           const dateLabel = btn.dataset.date;
 
+          // close previous dropdown and deactivate previous button
           if (activeDropdown && activeDropdown !== dropdown) {
             activeDropdown.classList.remove('open');
+          }
+          if (activeBtn && activeBtn !== btn) {
+            activeBtn.classList.remove('active');
           }
 
           const alreadyOpen = dropdown.classList.contains('open') && activeTest === testLabel;
           dropdown.classList.toggle('open', !alreadyOpen);
+          btn.classList.toggle('active', !alreadyOpen);
           dropdown.querySelector('strong').textContent = testLabel + ' on ' + dateLabel;
 
           activeDropdown = alreadyOpen ? null : dropdown;
+          activeBtn = alreadyOpen ? null : btn;
           activeTest = alreadyOpen ? null : testLabel;
           activeDate = alreadyOpen ? null : dateLabel;
           return;
@@ -430,8 +466,8 @@
     </div>
 
     <nav class="footer-nav" aria-label="Footer navigation">
-      <a href="contact.html" class="footer-nav-link">Contact</a>
       <a href="sat-act-diagnostic.html" class="footer-nav-link">SAT/ACT Diagnostic Test</a>
+      <a href="contact.html" class="footer-nav-link">Contact</a>
       <a href="faq.html" class="footer-nav-link">FAQ</a>
       <a href="about.html" class="footer-nav-link">About Us</a>
       <a href="careers.html" class="footer-nav-link">Careers</a>
