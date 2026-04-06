@@ -688,6 +688,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
   font-size: 0.88rem;
   color: var(--text-muted);
   letter-spacing: 0.03em;
@@ -695,7 +698,35 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   transition: color var(--transition);
 }
 
+.footer-contact-item svg {
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
 a.footer-contact-item:hover {
+  color: var(--gold);
+}
+
+.footer-social {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+.footer-social-link svg {
+  width: 21px;
+  height: 21px;
+}
+
+.footer-social-link:hover {
   color: var(--gold);
 }
 

@@ -50,6 +50,355 @@
 
 
   <!-- ===========================
+       DIAGNOSTIC PAGE CONTENT
+  =========================== -->
+  <main class="diag-main">
+
+    <div class="diag-hero">
+      <h1 class="diag-title">Free SAT/ACT Diagnostic Test</h1>
+      <p class="diag-subtitle">Pick a Sunday, choose your test, and we'll take care of the rest. Tests run at <strong>10:00 AM</strong> and are completely free — no strings attached.</p>
+    </div>
+
+    <div class="diag-schedule" id="diag-schedule">
+      <!-- Rows injected by JS -->
+    </div>
+
+  </main>
+
+  <!-- Signup modal -->
+  <div class="diag-overlay" id="diag-overlay" hidden>
+    <div class="diag-modal">
+      <button class="diag-modal-close" id="diag-modal-close" aria-label="Close">&times;</button>
+      <h2 class="diag-modal-title">Sign Up</h2>
+      <p class="diag-modal-meta" id="diag-modal-meta"></p>
+      <form class="diag-form" id="diag-form" novalidate>
+        <label class="diag-label" for="diag-name">Full Name</label>
+        <input class="diag-input" id="diag-name" type="text" placeholder="Jane Smith" required />
+        <label class="diag-label" for="diag-email">Email Address</label>
+        <input class="diag-input" id="diag-email" type="email" placeholder="jane@example.com" required />
+        <button class="diag-submit" type="submit">Submit</button>
+        <p class="diag-form-error" id="diag-form-error" hidden>Please fill in both fields.</p>
+      </form>
+    </div>
+  </div>
+
+  <style>
+    /* ---- layout ---- */
+    .diag-main {
+      min-height: 100vh;
+      padding: 120px 24px 80px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .diag-hero { text-align: center; margin-bottom: 56px; }
+    .diag-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--text, #111);
+    }
+    .diag-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted, #555);
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* ---- schedule rows ---- */
+    .diag-schedule { display: flex; flex-direction: column; gap: 16px; }
+
+    .diag-row {
+      border: 1px solid var(--border, #e0e0e0);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: box-shadow .2s;
+    }
+    .diag-row:hover { box-shadow: 0 4px 20px rgba(0,0,0,.08); }
+
+    .diag-row-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      background: var(--surface, #fff);
+    }
+    .diag-date {
+      flex: 1;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text, #111);
+    }
+    .diag-time {
+      font-size: .9rem;
+      color: var(--text-muted, #777);
+      margin-top: 2px;
+    }
+    .diag-btn-group { display: flex; gap: 10px; }
+
+    .diag-btn {
+      padding: 10px 22px;
+      border-radius: 8px;
+      border: 2px solid transparent;
+      font-size: .9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .15s, color .15s, border-color .15s;
+    }
+    .diag-btn-sat {
+      background: #111;
+      color: #fff;
+    }
+    .diag-btn-sat:hover { background: #333; }
+    .diag-btn-act {
+      background: transparent;
+      color: #111;
+      border-color: #111;
+    }
+    .diag-btn-act:hover { background: #f5f5f5; }
+
+    /* dark mode overrides */
+    [data-theme="light"] .diag-btn-act { color: #111; border-color: #111; }
+
+    /* ---- dropdown ---- */
+    .diag-dropdown {
+      display: none;
+      padding: 0 24px 20px;
+      background: var(--surface, #fff);
+      border-top: 1px solid var(--border, #e0e0e0);
+    }
+    .diag-dropdown.open { display: block; }
+    .diag-dropdown-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+    }
+    .diag-dropdown-label {
+      font-size: .95rem;
+      color: var(--text-muted, #555);
+    }
+    .diag-dropdown-label strong { color: var(--text, #111); }
+    .diag-signup-btn {
+      padding: 10px 24px;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: .9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .diag-signup-btn:hover { background: #1d4ed8; }
+
+    /* ---- modal ---- */
+    .diag-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 24px;
+    }
+    .diag-overlay[hidden] { display: none; }
+    .diag-modal {
+      background: var(--surface, #fff);
+      border-radius: 16px;
+      padding: 40px 36px;
+      width: 100%;
+      max-width: 440px;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,.2);
+    }
+    .diag-modal-close {
+      position: absolute;
+      top: 16px; right: 20px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-muted, #777);
+      line-height: 1;
+    }
+    .diag-modal-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text, #111);
+    }
+    .diag-modal-meta {
+      font-size: .9rem;
+      color: var(--text-muted, #777);
+      margin-bottom: 28px;
+    }
+    .diag-label {
+      display: block;
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--text, #111);
+      margin-bottom: 6px;
+      margin-top: 16px;
+    }
+    .diag-input {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid var(--border, #d1d5db);
+      border-radius: 8px;
+      font-size: .95rem;
+      background: var(--surface, #fff);
+      color: var(--text, #111);
+      box-sizing: border-box;
+      transition: border-color .15s;
+    }
+    .diag-input:focus { outline: none; border-color: #2563eb; }
+    .diag-submit {
+      margin-top: 24px;
+      width: 100%;
+      padding: 13px;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .diag-submit:hover { background: #1d4ed8; }
+    .diag-form-error {
+      margin-top: 10px;
+      color: #dc2626;
+      font-size: .85rem;
+      text-align: center;
+    }
+    .diag-form-error[hidden] { display: none; }
+  </style>
+
+  <script>
+    (function () {
+      // ---- compute next 4 Sundays ----
+      function nextSundays(n) {
+        const dates = [];
+        const d = new Date();
+        d.setHours(0, 0, 0, 0);
+        // advance to next Sunday (or today if Sunday)
+        const day = d.getDay(); // 0 = Sun
+        if (day !== 0) d.setDate(d.getDate() + (7 - day));
+        for (let i = 0; i < n; i++) {
+          dates.push(new Date(d));
+          d.setDate(d.getDate() + 7);
+        }
+        return dates;
+      }
+
+      const fmt = new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+
+      const sundays = nextSundays(4);
+      const schedule = document.getElementById('diag-schedule');
+
+      sundays.forEach(function (date) {
+        const label = fmt.format(date);
+        const row = document.createElement('div');
+        row.className = 'diag-row';
+        row.innerHTML = `
+          <div class="diag-row-header">
+            <div>
+              <div class="diag-date">${label}</div>
+              <div class="diag-time">10:00 AM</div>
+            </div>
+            <div class="diag-btn-group">
+              <button class="diag-btn diag-btn-sat" data-test="SAT" data-date="${label}">SAT</button>
+              <button class="diag-btn diag-btn-act" data-test="ACT" data-date="${label}">ACT</button>
+            </div>
+          </div>
+          <div class="diag-dropdown" id="dropdown-${date.getTime()}">
+            <div class="diag-dropdown-inner">
+              <span class="diag-dropdown-label">Ready to reserve your spot for <strong></strong>?</span>
+              <button class="diag-signup-btn">Sign up now</button>
+            </div>
+          </div>
+        `;
+        schedule.appendChild(row);
+      });
+
+      // ---- button logic ----
+      let activeDropdown = null;
+      let activeTest = null;
+      let activeDate = null;
+
+      document.getElementById('diag-schedule').addEventListener('click', function (e) {
+        // SAT / ACT buttons
+        const btn = e.target.closest('.diag-btn');
+        if (btn) {
+          const row = btn.closest('.diag-row');
+          const dropdown = row.querySelector('.diag-dropdown');
+          const testLabel = btn.dataset.test;
+          const dateLabel = btn.dataset.date;
+
+          if (activeDropdown && activeDropdown !== dropdown) {
+            activeDropdown.classList.remove('open');
+          }
+
+          const alreadyOpen = dropdown.classList.contains('open') && activeTest === testLabel;
+          dropdown.classList.toggle('open', !alreadyOpen);
+          dropdown.querySelector('strong').textContent = testLabel + ' on ' + dateLabel;
+
+          activeDropdown = alreadyOpen ? null : dropdown;
+          activeTest = alreadyOpen ? null : testLabel;
+          activeDate = alreadyOpen ? null : dateLabel;
+          return;
+        }
+
+        // Sign up now button
+        const signupBtn = e.target.closest('.diag-signup-btn');
+        if (signupBtn) {
+          const dropdown = signupBtn.closest('.diag-dropdown');
+          const meta = dropdown.querySelector('strong').textContent;
+          document.getElementById('diag-modal-meta').textContent = meta + ' at 10:00 AM';
+          document.getElementById('diag-overlay').hidden = false;
+          document.getElementById('diag-name').focus();
+        }
+      });
+
+      // ---- modal close ----
+      document.getElementById('diag-modal-close').addEventListener('click', closeModal);
+      document.getElementById('diag-overlay').addEventListener('click', function (e) {
+        if (e.target === this) closeModal();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+
+      function closeModal() {
+        document.getElementById('diag-overlay').hidden = true;
+        document.getElementById('diag-form').reset();
+        document.getElementById('diag-form-error').hidden = true;
+      }
+
+      // ---- form submit ----
+      document.getElementById('diag-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('diag-name').value.trim();
+        const email = document.getElementById('diag-email').value.trim();
+        const err = document.getElementById('diag-form-error');
+        if (!name || !email) {
+          err.hidden = false;
+          return;
+        }
+        err.hidden = true;
+        // TODO: wire up to backend / email service
+        alert('You\u2019re signed up! We\u2019ll be in touch at ' + email + '.');
+        closeModal();
+      });
+    })();
+  </script>
+
+  <!-- ===========================
        FOOTER
   =========================== -->
   <footer class="footer" id="footer">
@@ -57,10 +406,26 @@
     <div class="footer-brand">
       <p class="footer-logo">Launch Valley Tutoring</p>
       <div class="footer-contact">
-        <a href="tel:+18182943292" class="footer-contact-item">(818) 294-3292</a>
-        <a href="mailto:launch@launchvalleytutoring.com" class="footer-contact-item">launch@launchvalleytutoring.com</a>
-        <span class="footer-contact-item">19849 Nordhoff St STE 105</span>
-        <span class="footer-contact-item">Northridge, CA 91324</span>
+        <a href="tel:+18182943292" class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+          (818) 294-3292
+        </a>
+        <a href="mailto:launch@launchvalleytutoring.com" class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          launch@launchvalleytutoring.com
+        </a>
+        <span class="footer-contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          19849 Nordhoff St STE 105, Northridge, CA 91324
+        </span>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=61587728533067" class="footer-social-link" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/launchvalleytutoring/" class="footer-social-link" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
       </div>
     </div>
 
