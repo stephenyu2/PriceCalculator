@@ -122,34 +122,32 @@
 /* --- Mobile Nav: hamburger toggle --- */
 (function () {
   const hamburger = document.getElementById('nav-hamburger');
-  const navLinks  = document.getElementById('nav-links');
-  if (!hamburger || !navLinks) return;
+  const navMenu   = document.getElementById('nav-menu');
+  const nav       = document.getElementById('nav');
+  if (!hamburger || !navMenu) return;
+
+  function closeMenu() {
+    navMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
 
   hamburger.addEventListener('click', function () {
-    const isOpen = navLinks.classList.toggle('open');
+    const isOpen = navMenu.classList.toggle('open');
     hamburger.classList.toggle('open', isOpen);
     hamburger.setAttribute('aria-expanded', isOpen);
     document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
   // Close on any nav link click
-  navLinks.querySelectorAll('a').forEach(function (link) {
-    link.addEventListener('click', function () {
-      navLinks.classList.remove('open');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    });
+  navMenu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', closeMenu);
   });
 
   // Close on outside click
   document.addEventListener('click', function (e) {
-    if (!nav.contains(e.target)) {
-      navLinks.classList.remove('open');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }
+    if (nav && !nav.contains(e.target)) closeMenu();
   });
 })();
 
