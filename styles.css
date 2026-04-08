@@ -128,14 +128,14 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   width: 100%;
   z-index: 100;
   transition: background-color var(--transition), box-shadow var(--transition), backdrop-filter var(--transition);
-  background: rgba(13, 27, 42, 0.55);
+  background: rgba(13, 27, 42, 0.45);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 1px 0 rgba(191, 160, 104, 0.12);
+  box-shadow: none;
 }
 
 .nav.scrolled {
-  background: rgba(13, 27, 42, 0.85);
+  background: rgba(13, 27, 42, 0.75);
   box-shadow: 0 1px 0 rgba(191, 160, 104, 0.15);
 }
 
@@ -309,7 +309,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .hero-eyebrow {
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.26em;
   text-transform: uppercase;
@@ -320,7 +320,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .hero-heading {
   font-family: var(--font-heading);
-  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-size: clamp(3.5rem, 9vw, 6.5rem);
   font-weight: 600;
   line-height: 1.08;
   color: var(--white);
@@ -337,6 +337,52 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background: var(--gold);
   margin: 1.6rem auto 0;
   opacity: 0.7;
+}
+
+
+/* ============================================
+   PAGE HERO — inner pages (GroupPhoto.jpeg)
+============================================ */
+
+.page-hero {
+  position: relative;
+  height: 55vh;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 4.5rem;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(6, 14, 26, 0.2) 0%,
+    rgba(6, 14, 26, 0.4) 60%,
+    rgba(6, 14, 26, 0.6) 100%
+  );
+  pointer-events: none;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+  animation: heroFadeIn 1.2s ease forwards;
+  opacity: 0;
 }
 
 
@@ -834,10 +880,42 @@ a.footer-contact-item:hover {
   }
 
   .nav-persistent {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    padding: 1rem 1.75rem 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+  }
+
+  .nav-cta {
+    display: block;
+    padding: 0.85rem 1.75rem;
+    border: none;
+    border-bottom: 1px solid rgba(191, 160, 104, 0.08);
+    border-radius: 0;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+  }
+
+  .nav-cta:hover {
+    background: transparent;
+    color: var(--white);
+  }
+
+  .theme-btn {
+    padding: 0.85rem 1.75rem;
+    border: none;
+    border-radius: 0;
+    text-align: left;
+    color: var(--text-muted);
+    border-bottom: 1px solid rgba(191, 160, 104, 0.08);
+  }
+
+  .theme-btn:hover {
+    color: var(--white);
+    border-color: rgba(191, 160, 104, 0.08);
   }
 }
 
@@ -941,7 +1019,7 @@ a.footer-contact-item:hover {
 @media (max-width: 400px) {
   .hero-eyebrow {
     letter-spacing: 0.16em;
-    font-size: 0.67rem;
+    font-size: 0.79rem;
   }
 
   .btn {
@@ -956,10 +1034,12 @@ a.footer-contact-item:hover {
 
 [data-theme="light"] .nav {
   background: rgba(245, 243, 238, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 [data-theme="light"] .nav.scrolled {
-  background: rgba(245, 243, 238, 0.85);
+  background: rgba(245, 243, 238, 0.82);
 }
 
 [data-theme="light"] .hero-eyebrow {

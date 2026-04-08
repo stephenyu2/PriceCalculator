@@ -25,7 +25,7 @@
   <!-- ===========================
        NAVIGATION
   =========================== -->
-  <nav class="nav scrolled" id="nav">
+  <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Launch Valley Tutoring</a>
 
@@ -53,12 +53,23 @@
 
 
   <!-- ===========================
+       PAGE HERO
+  =========================== -->
+  <section class="page-hero">
+    <img class="page-hero-bg" src="Images/GroupPhoto.jpeg" alt="" aria-hidden="true" />
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+    <div class="page-hero-content">
+      <h1 class="hero-heading">SAT/ACT<br>Diagnostic Test</h1>
+    </div>
+  </section>
+
+
+  <!-- ===========================
        DIAGNOSTIC PAGE CONTENT
   =========================== -->
   <main class="diag-main">
 
     <div class="diag-hero">
-      <h1 class="diag-title">Free SAT/ACT Diagnostic Test</h1>
       <p class="diag-subtitle">Pick a Sunday, choose your test, and we'll take care of the rest. Tests run at <strong>10:00 AM</strong> and are completely free — no strings attached.</p>
     </div>
 
@@ -141,6 +152,15 @@
       color: var(--text-muted);
       margin-top: 2px;
     }
+    .diag-spots {
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      margin-top: 5px;
+    }
+    .diag-spots-low  { color: #e57373; }
+    .diag-spots-mid  { color: #ffb74d; }
+    .diag-spots-open { color: var(--gold); }
     .diag-btn-group { display: flex; gap: 10px; margin-left: auto; }
 
     .diag-btn {
@@ -171,14 +191,31 @@
       border-color: var(--gold-light);
     }
 
+    @keyframes diag-btn-pop {
+      0%   { transform: scale(1); }
+      40%  { transform: scale(0.91); }
+      70%  { transform: scale(1.06); }
+      100% { transform: scale(1); }
+    }
+    .diag-btn.pop {
+      animation: diag-btn-pop 0.28s ease;
+    }
+
     /* ---- dropdown ---- */
     .diag-dropdown {
-      display: none;
-      padding: 0 24px 20px;
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 24px;
       background: var(--navy-light);
       border-top: 1px solid rgba(191, 160, 104, 0.18);
+      opacity: 0;
+      transition: max-height 0.32s ease, padding 0.32s ease, opacity 0.25s ease;
     }
-    .diag-dropdown.open { display: block; }
+    .diag-dropdown.open {
+      max-height: 120px;
+      padding: 0 24px 20px;
+      opacity: 1;
+    }
     .diag-dropdown-inner {
       display: flex;
       align-items: center;
@@ -331,10 +368,14 @@
       const fmt = new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
 
       const sundays = nextSundays(4);
+      const spotsRemaining = [1, 1, 2, 4];
       const schedule = document.getElementById('diag-schedule');
 
-      sundays.forEach(function (date) {
+      sundays.forEach(function (date, idx) {
         const label = fmt.format(date);
+        const spots = spotsRemaining[idx];
+        const spotsClass = spots <= 2 ? 'diag-spots-low' : 'diag-spots-open';
+        const spotsText = spots === 1 ? '1 spot remaining' : spots + ' spots remaining';
         const row = document.createElement('div');
         row.className = 'diag-row';
         row.innerHTML = `
@@ -342,6 +383,7 @@
             <div>
               <div class="diag-date">${label}</div>
               <div class="diag-time">10:00 AM</div>
+              <div class="diag-spots ${spotsClass}">${spotsText}</div>
             </div>
             <div class="diag-btn-group">
               <button class="diag-btn diag-btn-sat" data-test="SAT" data-date="${label}">SAT</button>
@@ -384,6 +426,10 @@
           const alreadyOpen = dropdown.classList.contains('open') && activeTest === testLabel;
           dropdown.classList.toggle('open', !alreadyOpen);
           btn.classList.toggle('active', !alreadyOpen);
+          btn.classList.remove('pop');
+          void btn.offsetWidth; // force reflow to restart animation
+          btn.classList.add('pop');
+          btn.addEventListener('animationend', function () { btn.classList.remove('pop'); }, { once: true });
           dropdown.querySelector('strong').textContent = testLabel + ' on ' + dateLabel;
 
           activeDropdown = alreadyOpen ? null : dropdown;
