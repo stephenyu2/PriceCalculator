@@ -212,3 +212,106 @@
   left: 0;
   color: var(--gold);
 }
+
+
+/* ============================================
+   SAT/ACT DIAGNOSTIC — Explainer + Zigzag
+============================================ */
+
+.diag-explainer {
+  background-color: var(--navy);
+  padding: 2rem clamp(1rem, 4vw, 3rem) clamp(4rem, 8vh, 7rem);
+}
+
+.diag-explainer-intro {
+  text-align: center;
+  margin-bottom: clamp(3rem, 6vh, 5rem);
+}
+
+.diag-explainer-sub {
+  margin-top: 0.85rem;
+  font-size: 1.05rem;
+  color: var(--gold);
+  font-style: normal;
+}
+
+.diag-steps {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 8vh, 6rem);
+}
+
+.diag-step {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+
+.diag-step-flip .diag-step-img { order: 2; }
+.diag-step-flip .diag-step-text { order: 1; }
+
+.diag-step-img {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.diag-step-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.diag-step-num {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+
+.diag-step-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.diag-step-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.diag-step-text ul li {
+  color: var(--text-muted);
+  line-height: 1.8;
+  padding-left: 1.4rem;
+  position: relative;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.diag-step-text ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+@media (max-width: 700px) {
+  .diag-step,
+  .diag-step-flip {
+    grid-template-columns: 1fr;
+  }
+  .diag-step .diag-step-text,
+  .diag-step-flip .diag-step-text { order: 0; }
+  .diag-step .diag-step-img,
+  .diag-step-flip .diag-step-img { order: 1; }
+}
