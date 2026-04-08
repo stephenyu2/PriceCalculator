@@ -35,12 +35,11 @@
           <a href="index.html" class="nav-link">Home</a>
           <a href="pricing.html" class="nav-link">Pricing</a>
           <a href="sat-act-diagnostic.html" class="nav-link">SAT/ACT Diagnostic Test</a>
-          <a href="contact.html" class="nav-link active">Contact</a>
         </div>
 
         <div class="nav-persistent">
           <button class="theme-btn" id="theme-toggle">Dark</button>
-          <a href="contact.html" class="nav-cta">Get Started</a>
+          <a href="get-started.html" class="nav-cta">Get Started</a>
         </div>
       </div>
 
@@ -72,58 +71,8 @@
     <div class="contact-container">
 
       <div class="contact-intro">
-        <h1 class="contact-heading">Interested in tutoring or<br>have any questions?</h1>
-        <p class="contact-subtext">We'd love to talk - fill out the form, call, text, email, or book a free 30-minute consultation call.</p>
-      </div>
-
-      <!-- ── Lead Form ── -->
-      <div class="lead-form-wrap">
-        <form class="lead-form" id="lead-form" name="lead-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
-          <input type="hidden" name="form-name" value="lead-form" />
-          <p class="lead-form-hidden" aria-hidden="true">
-            <label>Don't fill this out: <input name="bot-field" /></label>
-          </p>
-
-          <!-- Parent Name -->
-          <div class="form-field">
-            <label class="form-label" for="parent-name">Parent Name <span class="form-required">*</span></label>
-            <input class="form-input" type="text" id="parent-name" name="parent-name" placeholder="Jane Smith" required />
-          </div>
-
-          <!-- Phone Number -->
-          <div class="form-field">
-            <label class="form-label" for="phone">Phone Number <span class="form-required">*</span></label>
-            <input class="form-input" type="tel" id="phone" name="phone" placeholder="(818) 555-0100" required />
-          </div>
-
-          <!-- Student Grade -->
-          <div class="form-field">
-            <label class="form-label" for="grade">Student Grade <span class="form-required">*</span></label>
-            <select class="form-input form-select" id="grade" name="grade" required>
-              <option value="" disabled selected>Select grade</option>
-              <option value="Middle School">Middle School</option>
-              <option value="9">9th Grade (Freshman)</option>
-              <option value="10">10th Grade (Sophomore)</option>
-              <option value="11">11th Grade (Junior)</option>
-              <option value="12">12th Grade (Senior)</option>
-              <option value="College">College</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-
-          <!-- Primary Focus -->
-          <div class="form-field">
-            <label class="form-label" for="subject">Primary Focus <span class="form-required">*</span></label>
-            <select class="form-input form-select" id="subject" name="subject" required>
-              <option value="" disabled selected>Select a focus</option>
-              <option value="Academic Tutoring">Academic Tutoring</option>
-              <option value="SAT/ACT Prep">SAT/ACT Prep</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-
-          <button class="btn btn-gold lead-form-submit" type="submit">Submit</button>
-        </form>
+        <h1 class="contact-heading">Have any questions?</h1>
+        <p class="contact-subtext">Call, text, email, or book a free 30-minute consultation call.</p>
       </div>
 
       <!-- ── Contact Cards ── -->
@@ -206,26 +155,6 @@
 
   </footer>
 
-  <script>
-    (function () {
-      var input = document.getElementById('phone');
-      if (!input) return;
-      input.addEventListener('input', function (e) {
-        var digits = input.value.replace(/\D/g, '').slice(0, 10);
-        var formatted = '';
-        if (digits.length === 0) {
-          formatted = '';
-        } else if (digits.length <= 3) {
-          formatted = '(' + digits;
-        } else if (digits.length <= 6) {
-          formatted = '(' + digits.slice(0, 3) + ') ' + digits.slice(3);
-        } else {
-          formatted = '(' + digits.slice(0, 3) + ') ' + digits.slice(3, 6) + '-' + digits.slice(6);
-        }
-        input.value = formatted;
-      });
-    })();
-  </script>
   <script src="script.js"></script>
 </body>
 </html>

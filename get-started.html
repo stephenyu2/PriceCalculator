@@ -7,17 +7,17 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'AW-18021083135');
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms of Service — Launch Valley Tutoring</title>
+  <title>Get Started — Launch Valley Tutoring</title>
+  <meta name="description" content="Get started with Launch Valley Tutoring. Fill out the form or book a free 30-minute consultation call." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="content-pages.css" />
+  <link rel="stylesheet" href="contact.css" />
   <script>(function(){var t=localStorage.getItem('lvt-theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})();</script>
 </head>
 <body>
@@ -58,75 +58,75 @@
     <img class="page-hero-bg" src="Images/GroupPhoto.jpeg" alt="" aria-hidden="true" />
     <div class="page-hero-overlay" aria-hidden="true"></div>
     <div class="page-hero-content">
-      <h1 class="hero-heading">Terms of Service</h1>
+      <h1 class="hero-heading">Get Started</h1>
     </div>
   </section>
 
 
   <!-- ===========================
-       CONTENT
+       GET STARTED SECTION
   =========================== -->
-  <main class="content-body">
+  <section class="contact-section">
+    <div class="contact-container">
 
-    <p>These Terms of Service ("Terms") govern your use of the website and services provided by Launch Valley Tutoring LLC ("Launch Valley Tutoring," "we," "our," or "us"). By accessing our website or engaging our services, you agree to be bound by these Terms.</p>
+      <div class="contact-intro">
+        <h1 class="contact-heading">Interested in tutoring?</h1>
+        <p class="contact-subtext">Fill out the form and we'll get back to you soon.</p>
+      </div>
 
-    <h2 class="content-section-heading">1. Services</h2>
-    <p>Launch Valley Tutoring provides academic tutoring, standardized test preparation, and academic advisory services. Services may include one-on-one tutoring, small group sessions, consultations, diagnostic testing, and structured academic programs.</p>
-    <p>We reserve the right to modify, suspend, or discontinue services at our discretion.</p>
+      <!-- ── Lead Form ── -->
+      <div class="lead-form-wrap">
+        <form class="lead-form" id="lead-form-home" name="lead-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
+          <input type="hidden" name="form-name" value="lead-form" />
+          <p class="lead-form-hidden" aria-hidden="true">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
 
-    <h2 class="content-section-heading">2. Enrollment and Payment</h2>
-    <p>Tuition fees and service rates will be communicated prior to engagement. Payment terms, including deposits and installment schedules, will be outlined in service agreements or invoices.</p>
-    <p>Payment is due according to the agreed billing schedule. Failure to remit payment may result in suspension or termination of services.</p>
-    <p>If installment plans are offered, clients remain responsible for the full agreed tuition amount unless otherwise stated in writing.</p>
+          <!-- Parent Name -->
+          <div class="form-field">
+            <label class="form-label" for="parent-name">Parent Name <span class="form-required">*</span></label>
+            <input class="form-input" type="text" id="parent-name" name="parent-name" placeholder="Jane Smith" required />
+          </div>
 
-    <h2 class="content-section-heading">3. Cancellations and Rescheduling</h2>
-    <p>Sessions must be canceled or rescheduled with reasonable advance notice as communicated during enrollment. Missed sessions or late cancellations may be forfeited.</p>
-    <p>Specific cancellation policies may be detailed in client agreements and will govern in the event of conflict with this section.</p>
+          <!-- Phone Number -->
+          <div class="form-field">
+            <label class="form-label" for="phone">Phone Number <span class="form-required">*</span></label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="(818) 555-0100" required />
+          </div>
 
-    <h2 class="content-section-heading">4. No Guarantee of Results</h2>
-    <p>While Launch Valley Tutoring strives to provide high-quality academic support, we do not guarantee specific academic outcomes, score improvements, school admissions, or performance results.</p>
-    <p>Student success depends on multiple factors including effort, consistency, and external academic environments.</p>
+          <!-- Student Grade -->
+          <div class="form-field">
+            <label class="form-label" for="grade">Student Grade <span class="form-required">*</span></label>
+            <select class="form-input form-select" id="grade" name="grade" required>
+              <option value="" disabled selected>Select grade</option>
+              <option value="Middle School">Middle School</option>
+              <option value="9">9th Grade (Freshman)</option>
+              <option value="10">10th Grade (Sophomore)</option>
+              <option value="11">11th Grade (Junior)</option>
+              <option value="12">12th Grade (Senior)</option>
+              <option value="College">College</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
 
-    <h2 class="content-section-heading">5. Client Responsibilities</h2>
-    <p>Clients agree to:</p>
-    <ul>
-      <li>Provide accurate information</li>
-      <li>Participate actively in sessions</li>
-      <li>Complete assigned work and preparation</li>
-      <li>Maintain respectful communication with tutors and staff</li>
-    </ul>
-    <p>Launch Valley Tutoring reserves the right to discontinue services if conduct is inappropriate or disruptive.</p>
+          <!-- Primary Focus -->
+          <div class="form-field">
+            <label class="form-label" for="subject">Primary Focus <span class="form-required">*</span></label>
+            <select class="form-input form-select" id="subject" name="subject" required>
+              <option value="" disabled selected>Select a focus</option>
+              <option value="Academic Tutoring">Academic Tutoring</option>
+              <option value="SAT/ACT Prep">SAT/ACT Prep</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
 
-    <h2 class="content-section-heading">6. Intellectual Property</h2>
-    <p>All materials provided, including lesson plans, study guides, diagnostic assessments, and proprietary frameworks, are the intellectual property of Launch Valley Tutoring LLC.</p>
-    <p>Materials may not be reproduced, distributed, or shared without written permission.</p>
+          <button class="btn btn-gold lead-form-submit" type="submit">Submit</button>
+        </form>
+      </div>
 
-    <h2 class="content-section-heading">7. Limitation of Liability</h2>
-    <p>To the fullest extent permitted by law, Launch Valley Tutoring LLC shall not be liable for indirect, incidental, consequential, or special damages arising from the use of our services or website.</p>
-    <p>Our total liability shall not exceed the amount paid by the client for services rendered.</p>
 
-    <h2 class="content-section-heading">8. Website Use</h2>
-    <p>Users agree not to misuse the website, attempt unauthorized access, or interfere with its operation.</p>
-
-    <h2 class="content-section-heading">9. Privacy</h2>
-    <p>Your use of our services is also governed by our <a href="privacy.html" style="color: var(--gold);">Privacy Policy</a>.</p>
-
-    <h2 class="content-section-heading">10. Modifications to Terms</h2>
-    <p>We may update these Terms from time to time. Continued use of our website or services after updates constitutes acceptance of the revised Terms.</p>
-
-    <h2 class="content-section-heading">11. Governing Law</h2>
-    <p>These Terms shall be governed by and construed in accordance with the laws of the State of California.</p>
-
-    <h2 class="content-section-heading">12. Contact Information</h2>
-    <p>If you have questions regarding these Terms, please contact:</p>
-    <p>
-      Launch Valley Tutoring LLC<br>
-      Email: <a href="mailto:launch@launchvalleytutoring.com" style="color: var(--gold);">launch@launchvalleytutoring.com</a><br>
-      Phone: <a href="tel:+18182943292" style="color: var(--gold);">(818) 294-3292</a><br>
-      Location: Los Angeles, California
-    </p>
-
-  </main>
+    </div>
+  </section>
 
 
   <!-- ===========================
@@ -173,6 +173,26 @@
 
   </footer>
 
+  <script>
+    (function () {
+      var input = document.getElementById('phone');
+      if (!input) return;
+      input.addEventListener('input', function (e) {
+        var digits = input.value.replace(/\D/g, '').slice(0, 10);
+        var formatted = '';
+        if (digits.length === 0) {
+          formatted = '';
+        } else if (digits.length <= 3) {
+          formatted = '(' + digits;
+        } else if (digits.length <= 6) {
+          formatted = '(' + digits.slice(0, 3) + ') ' + digits.slice(3);
+        } else {
+          formatted = '(' + digits.slice(0, 3) + ') ' + digits.slice(3, 6) + '-' + digits.slice(6);
+        }
+        input.value = formatted;
+      });
+    })();
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
