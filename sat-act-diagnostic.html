@@ -71,7 +71,7 @@
 
     <div class="diag-hero">
       <h2 class="diag-title">Sign Up Now</h2>
-      <p class="diag-subtitle">Pick a Sunday, choose your test, and we'll take care of the rest. Tests run at <strong>10:00 AM</strong> and are completely free.</p>
+      <p class="diag-subtitle">Pick a Sunday, choose your test, and we'll take care of the rest. Tests run at 10:00 AM and are completely <strong style="text-transform:uppercase;">free</strong>.</p>
     </div>
 
     <div class="diag-schedule" id="diag-schedule">
@@ -86,11 +86,14 @@
       <button class="diag-modal-close" id="diag-modal-close" aria-label="Close">&times;</button>
       <h2 class="diag-modal-title">Sign Up</h2>
       <p class="diag-modal-meta" id="diag-modal-meta"></p>
-      <form class="diag-form" id="diag-form" novalidate>
+      <form class="diag-form" id="diag-form" name="diag-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="diag-signup" />
+        <input type="hidden" name="test-selection" id="diag-test-selection" value="" />
+        <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
         <label class="diag-label" for="diag-name">Full Name</label>
-        <input class="diag-input" id="diag-name" type="text" placeholder="Jane Smith" required />
+        <input class="diag-input" id="diag-name" name="name" type="text" placeholder="Jane Smith" required />
         <label class="diag-label" for="diag-email">Email Address</label>
-        <input class="diag-input" id="diag-email" type="email" placeholder="jane@example.com" required />
+        <input class="diag-input" id="diag-email" name="email" type="email" placeholder="jane@example.com" required />
         <button class="diag-submit" type="submit">Submit</button>
         <p class="diag-form-error" id="diag-form-error" hidden>Please fill in both fields.</p>
       </form>
@@ -446,6 +449,7 @@
           const dropdown = signupBtn.closest('.diag-dropdown');
           const meta = dropdown.querySelector('strong').textContent;
           document.getElementById('diag-modal-meta').textContent = meta + ' at 10:00 AM';
+          document.getElementById('diag-test-selection').value = meta + ' at 10:00 AM';
           document.getElementById('diag-overlay').hidden = false;
           document.getElementById('diag-name').focus();
         }
@@ -477,9 +481,18 @@
           return;
         }
         err.hidden = true;
-        // TODO: wire up to backend / email service
-        alert('You\u2019re signed up! We\u2019ll be in touch at ' + email + '.');
-        closeModal();
+        e.stopImmediatePropagation();
+        var encoded = [];
+        new FormData(document.getElementById('diag-form')).forEach(function (val, key) {
+          encoded.push(encodeURIComponent(key) + '=' + encodeURIComponent(val));
+        });
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: encoded.join('&')
+        })
+          .then(function () { window.location.href = '/thank-you-diagnostic'; })
+          .catch(function () { window.location.href = '/thank-you-diagnostic'; });
       });
     })();
   </script>
@@ -529,7 +542,7 @@
           <img src="Images/Now.png" alt="Now What?" />
         </div>
         <div class="diag-step-text">
-          <h3 class="diag-step-title">Now What?</h3>
+          <h3 class="diag-step-title">Personalized Lesson Plan</h3>
           <ul>
             <li>Everything up to this point is free — no commitment required</li>
             <li>However, if you sign up for our tutoring, we turn that data into an individualized lesson plan targeting weaknesses and drilling high-impact questions</li>
@@ -537,54 +550,6 @@
         </div>
       </div>
 
-    </div>
-  </section>
-
-
-  <!-- ===========================
-       WHY US — VALUE PANEL FORMAT
-  =========================== -->
-  <div class="value-intro reveal">
-    <h2 class="testimonials-heading">Why Us?</h2>
-  </div>
-
-  <section class="value reveal">
-    <div class="value-scene">
-      <img src="Images/LandingTiny.jpg" alt="Launch Valley Tutoring session" />
-
-      <div class="value-panels">
-
-        <div class="value-panel">
-          <div class="panel-content">
-            <div class="panel-title">1-on-1 Attention</div>
-            <div class="panel-tap-hint">tap to expand</div>
-            <div class="panel-desc">
-              <p>Every session is 1-on-1, so your student gets full attention with no group classes or wasted time.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="value-panel">
-          <div class="panel-content">
-            <div class="panel-title">Data-Driven Lessons</div>
-            <div class="panel-tap-hint">tap to expand</div>
-            <div class="panel-desc">
-              <p>Using our diagnostic test, we identify gaps immediately and focus each session on the areas that will drive the most improvement.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="value-panel">
-          <div class="panel-content">
-            <div class="panel-title">Adaptive Expertise</div>
-            <div class="panel-tap-hint">tap to expand</div>
-            <div class="panel-desc">
-              <p>Our tutors have experience working with every type of student and adapt to what your child actually needs.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
     </div>
   </section>
 
