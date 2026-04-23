@@ -306,48 +306,8 @@
       </div>
 
       <div class="lead-form-wrap">
-        <form class="lead-form" id="lead-form-home" name="lead-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
-          <input type="hidden" name="form-name" value="lead-form" />
-          <p class="lead-form-hidden" aria-hidden="true">
-            <label>Don't fill this out: <input name="bot-field" /></label>
-          </p>
-
-          <div class="form-field">
-            <label class="form-label" for="home-parent-name">Parent Name <span class="form-required">*</span></label>
-            <input class="form-input" type="text" id="home-parent-name" name="parent-name" placeholder="Jane Smith" required />
-          </div>
-
-          <div class="form-field">
-            <label class="form-label" for="home-phone">Phone Number <span class="form-required">*</span></label>
-            <input class="form-input" type="tel" id="home-phone" name="phone" placeholder="(818) 555-0100" required />
-          </div>
-
-          <div class="form-field">
-            <label class="form-label" for="home-grade">Student Grade <span class="form-required">*</span></label>
-            <select class="form-input form-select" id="home-grade" name="grade" required>
-              <option value="" disabled selected>Select grade</option>
-              <option value="Middle School">Middle School</option>
-              <option value="9">9th Grade (Freshman)</option>
-              <option value="10">10th Grade (Sophomore)</option>
-              <option value="11">11th Grade (Junior)</option>
-              <option value="12">12th Grade (Senior)</option>
-              <option value="College">College</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-
-          <div class="form-field">
-            <label class="form-label" for="home-subject">Primary Focus <span class="form-required">*</span></label>
-            <select class="form-input form-select" id="home-subject" name="subject" required>
-              <option value="" disabled selected>Select a focus</option>
-              <option value="Academic Tutoring">Academic Tutoring</option>
-              <option value="SAT/ACT Prep">SAT/ACT Prep</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-
-          <button class="btn btn-gold lead-form-submit" type="submit">Submit</button>
-        </form>
+        <script>!function(){function e(e){try{"resize"===e.data.type&&"iframe"===e.data.source&&e.data.height&&(t.style.height=e.data.height+80+"px")}catch(e){console.error("Error handling message:",e)}}var t;document.addEventListener("DOMContentLoaded",function(){t=document.getElementById("noto-embed"),window.addEventListener("message",e)})}();</script>
+        <iframe id="noto-embed" src="https://app.noto.nyc/forms/800a9eee-0ca1-41ae-9f2a-e9db2dc960e0" loading="lazy" frameborder="0" onmousewheel="" width="100%" height="600" style="width: 100%; border: none; margin: 0px auto; display: block;"></iframe>
       </div>
 
     </div>
@@ -398,21 +358,6 @@
 
   </footer>
 
-  <script>
-    (function () {
-      var input = document.getElementById('home-phone');
-      if (!input) return;
-      input.addEventListener('input', function () {
-        var digits = input.value.replace(/\D/g, '').slice(0, 10);
-        var formatted = '';
-        if (digits.length === 0) formatted = '';
-        else if (digits.length <= 3) formatted = '(' + digits;
-        else if (digits.length <= 6) formatted = '(' + digits.slice(0, 3) + ') ' + digits.slice(3);
-        else formatted = '(' + digits.slice(0, 3) + ') ' + digits.slice(3, 6) + '-' + digits.slice(6);
-        input.value = formatted;
-      });
-    })();
-  </script>
   <script src="script.js"></script>
 </body>
 </html>
