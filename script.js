@@ -202,6 +202,7 @@ document.querySelectorAll('.proof-item').forEach(function (item) {
 });
 
 
+
 /* --- Netlify Form Submission --- */
 (function () {
   function encode(data) {
