@@ -59,7 +59,7 @@
       <div class="subject-panel">
         <div class="subject-panel-header">
           <video autoplay muted loop playsinline>
-            <source src="/Videos/Math.mp4" type="video/mp4" />
+            <source src="/Videos/MathTiny.mp4" type="video/mp4" />
           </video>
           <div class="subject-panel-overlay">
             <span class="subject-panel-label">Math</span>
@@ -86,7 +86,7 @@
       <div class="subject-panel">
         <div class="subject-panel-header">
           <video autoplay muted loop playsinline>
-            <source src="/Videos/Science.mp4" type="video/mp4" />
+            <source src="/Videos/ScienceTiny.mp4" type="video/mp4" />
           </video>
           <div class="subject-panel-overlay">
             <span class="subject-panel-label">Science</span>
@@ -229,9 +229,7 @@
   <script>
     document.querySelectorAll('.subject-panel').forEach(panel => {
       panel.querySelector('.subject-panel-header').addEventListener('click', () => {
-        const isActive = panel.classList.contains('active');
-        document.querySelectorAll('.subject-panel').forEach(p => p.classList.remove('active'));
-        if (!isActive) panel.classList.add('active');
+        panel.classList.toggle('active');
       });
     });
   </script>

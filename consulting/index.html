@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="/styles.css" />
   <link rel="stylesheet" href="/contact.css" />
   <link rel="stylesheet" href="/content-pages.css" />
+  <link rel="stylesheet" href="/tutoring/tutoring.css" />
   <script>(function(){var t=localStorage.getItem('lvt-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})();</script>
 </head>
 <body>
@@ -52,19 +53,105 @@
     </div>
   </section>
 
-  <main class="content-body">
-    <p>[Hub blurb — to be added]</p>
+  <section class="subject-panels">
+    <div class="subject-panels-inner">
 
-    <section class="hub-section">
-      <ul class="hub-list">
-        <li><a href="/consulting/college-admissions/">College Admissions Consulting</a></li>
-        <li><a href="/consulting/college-essay-coaching/">College Essay Coaching</a></li>
-        <li><a href="/consulting/gpa-improvement/">GPA Improvement</a></li>
-      </ul>
-    </section>
+      <div class="subject-panel">
+        <div class="subject-panel-header">
+          <video autoplay muted loop playsinline>
+            <source src="/Videos/College.mp4" type="video/mp4" />
+          </video>
+          <div class="subject-panel-overlay">
+            <span class="subject-panel-label">College Admissions</span>
+            <span class="subject-panel-hint">(tap to expand)</span>
+          </div>
+        </div>
+        <div class="subject-panel-body">
+          <p class="subject-panel-blurb">Getting into the right college takes more than good grades — it takes strategy. Our college admissions consultants work one-on-one with students to build a strong application, identify the right school list, and navigate every step of the process from start to acceptance.</p>
+          <nav class="subject-panel-links">
+            <a href="/consulting/college-admissions/">College Admissions Consulting</a>
+            <a href="/consulting/gpa-improvement/">GPA Improvement</a>
+          </nav>
+        </div>
+      </div>
 
-    <a href="/index.html#get-started" class="btn btn-gold">Get Started</a>
-  </main>
+      <div class="subject-panel">
+        <div class="subject-panel-header">
+          <video autoplay muted loop playsinline>
+            <source src="/Videos/Essay.mp4" type="video/mp4" />
+          </video>
+          <div class="subject-panel-overlay">
+            <span class="subject-panel-label">College Essays</span>
+            <span class="subject-panel-hint">(tap to expand)</span>
+          </div>
+        </div>
+        <div class="subject-panel-body">
+          <p class="subject-panel-blurb">The college essay is your one chance to speak directly to admissions committees. Our essay coaches help students find their authentic voice, develop compelling stories, and refine every word — turning a blank page into one of the strongest parts of their application.</p>
+          <nav class="subject-panel-links">
+            <a href="/consulting/college-essay-coaching/">College Essay Coaching</a>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact-section" id="get-started">
+    <div class="contact-container">
+
+      <div class="contact-intro">
+        <h2 class="contact-heading">Interested in Tutoring?</h2>
+        <p class="contact-subtext">Fill out the form and we'll get back to you soon.</p>
+      </div>
+
+      <div class="lead-form-wrap">
+        <form class="lead-form" id="lead-form-consulting" name="lead-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
+          <input type="hidden" name="form-name" value="lead-form" />
+          <p class="lead-form-hidden" aria-hidden="true">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div class="form-field">
+            <label class="form-label" for="parent-name">Name <span class="form-required">*</span></label>
+            <input class="form-input" type="text" id="parent-name" name="parent-name" placeholder="Jane Smith" required />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="phone">Phone Number <span class="form-required">*</span></label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="(818) 294-3292" required />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="grade">Student Grade <span class="form-required">*</span></label>
+            <select class="form-input form-select" id="grade" name="grade" required>
+              <option value="" disabled selected>Select grade</option>
+              <option value="Middle School">Middle School</option>
+              <option value="9">9th Grade (Freshman)</option>
+              <option value="10">10th Grade (Sophomore)</option>
+              <option value="11">11th Grade (Junior)</option>
+              <option value="12">12th Grade (Senior)</option>
+              <option value="College">College</option>
+              <option value="Other">Other (Including Elementary School)</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="subject">Primary Focus <span class="form-required">*</span></label>
+            <select class="form-input form-select" id="subject" name="subject" required>
+              <option value="" disabled selected>Select a focus</option>
+              <option value="Academic Tutoring">Academic Tutoring</option>
+              <option value="SAT/ACT Prep">SAT/ACT Prep</option>
+              <option value="College Counseling">College Counseling</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <button class="btn btn-gold lead-form-submit" type="submit">Submit</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
 
   <footer class="footer" id="footer">
     <div class="footer-brand">
@@ -104,5 +191,12 @@
   </footer>
 
   <script src="/script.js"></script>
+  <script>
+    document.querySelectorAll('.subject-panel').forEach(panel => {
+      panel.querySelector('.subject-panel-header').addEventListener('click', () => {
+        panel.classList.toggle('active');
+      });
+    });
+  </script>
 </body>
 </html>
