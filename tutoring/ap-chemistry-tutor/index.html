@@ -11,20 +11,16 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, follow">
-  <title>Get Started — Launch Valley Tutoring</title>
-  <meta name="description" content="Get started with Launch Valley Tutoring. Fill out the form or book a free 30-minute consultation call." />
+  <title>AP Chemistry Tutor — Launch Valley Tutoring</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/contact.css" />
+  <script>(function(){var t=localStorage.getItem('lvt-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})();</script>
 </head>
 <body>
 
-  <!-- ===========================
-       NAVIGATION
-  =========================== -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="/" class="nav-logo">Launch Valley Tutoring</a>
@@ -47,51 +43,31 @@
     </div>
   </nav>
 
+  <main class="content-main">
+    <h1>AP Chemistry Tutor</h1>
+    <p>[Page copy — to be added]</p>
+  </main>
 
-  <!-- ===========================
-       PAGE HERO
-  =========================== -->
-  <section class="page-hero">
-    <img class="page-hero-bg" src="Images/GroupPhoto.jpeg" alt="" aria-hidden="true" />
-    <div class="page-hero-overlay" aria-hidden="true"></div>
-    <div class="page-hero-content">
-      <h1 class="hero-heading">Get Started</h1>
-    </div>
-  </section>
-
-
-  <!-- ===========================
-       GET STARTED SECTION
-  =========================== -->
-  <section class="contact-section">
+  <section class="contact-section" id="get-started">
     <div class="contact-container">
-
       <div class="contact-intro">
-        <h1 class="contact-heading">Interested in Tutoring?</h1>
+        <h2 class="contact-heading">Interested in Tutoring?</h2>
         <p class="contact-subtext">Fill out the form and we'll get back to you soon.</p>
       </div>
-
-      <!-- ── Lead Form ── -->
       <div class="lead-form-wrap">
-        <form class="lead-form" id="lead-form-home" name="lead-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
+        <form class="lead-form" name="lead-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
           <input type="hidden" name="form-name" value="lead-form" />
           <p class="lead-form-hidden" aria-hidden="true">
             <label>Don't fill this out: <input name="bot-field" /></label>
           </p>
-
-          <!-- Parent Name -->
           <div class="form-field">
             <label class="form-label" for="parent-name">Name <span class="form-required">*</span></label>
             <input class="form-input" type="text" id="parent-name" name="parent-name" placeholder="Jane Smith" required />
           </div>
-
-          <!-- Phone Number -->
           <div class="form-field">
             <label class="form-label" for="phone">Phone Number <span class="form-required">*</span></label>
             <input class="form-input" type="tel" id="phone" name="phone" placeholder="(818) 294-3292" required />
           </div>
-
-          <!-- Student Grade -->
           <div class="form-field">
             <label class="form-label" for="grade">Student Grade <span class="form-required">*</span></label>
             <select class="form-input form-select" id="grade" name="grade" required>
@@ -105,8 +81,6 @@
               <option value="Other">Other (Including Elementary School)</option>
             </select>
           </div>
-
-          <!-- Primary Focus -->
           <div class="form-field">
             <label class="form-label" for="subject">Primary Focus <span class="form-required">*</span></label>
             <select class="form-input form-select" id="subject" name="subject" required>
@@ -117,21 +91,13 @@
               <option value="Other">Other</option>
             </select>
           </div>
-
           <button class="btn btn-gold lead-form-submit" type="submit">Submit</button>
         </form>
       </div>
-
-
     </div>
   </section>
 
-
-  <!-- ===========================
-       FOOTER
-  =========================== -->
   <footer class="footer" id="footer">
-
     <div class="footer-brand">
       <p class="footer-logo">Launch Valley Tutoring</p>
       <div class="footer-contact">
@@ -157,40 +123,17 @@
         </div>
       </div>
     </div>
-
     <nav class="footer-nav" aria-label="Footer navigation">
-      <a href="contact.html" class="footer-nav-link">Contact</a>
-      <a href="faq.html" class="footer-nav-link">FAQ</a>
-      <a href="about.html" class="footer-nav-link">About Us</a>
-      <a href="careers.html" class="footer-nav-link">Careers</a>
-      <a href="privacy.html" class="footer-nav-link">Privacy Policy</a>
-      <a href="terms.html" class="footer-nav-link">Terms and Service</a>
+      <a href="/contact.html" class="footer-nav-link">Contact</a>
+      <a href="/faq.html" class="footer-nav-link">FAQ</a>
+      <a href="/about.html" class="footer-nav-link">About Us</a>
+      <a href="/careers.html" class="footer-nav-link">Careers</a>
+      <a href="/privacy.html" class="footer-nav-link">Privacy Policy</a>
+      <a href="/terms.html" class="footer-nav-link">Terms and Service</a>
     </nav>
-
     <p class="footer-copy">&copy; 2026 Launch Valley Tutoring. All rights reserved.</p>
-
   </footer>
 
-  <script>
-    (function () {
-      var input = document.getElementById('phone');
-      if (!input) return;
-      input.addEventListener('input', function (e) {
-        var digits = input.value.replace(/\D/g, '').slice(0, 10);
-        var formatted = '';
-        if (digits.length === 0) {
-          formatted = '';
-        } else if (digits.length <= 3) {
-          formatted = '(' + digits;
-        } else if (digits.length <= 6) {
-          formatted = '(' + digits.slice(0, 3) + ') ' + digits.slice(3);
-        } else {
-          formatted = '(' + digits.slice(0, 3) + ') ' + digits.slice(3, 6) + '-' + digits.slice(6);
-        }
-        input.value = formatted;
-      });
-    })();
-  </script>
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
 </body>
 </html>

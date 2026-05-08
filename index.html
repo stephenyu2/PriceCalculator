@@ -18,6 +18,11 @@
   <meta property="og:description" content="Personalized SAT/ACT prep and academic tutoring in Northridge for middle and high schoolers. Save 20% on SAT/ACT prep all May. Claim your spot now.">
   <meta name="twitter:title" content="Northridge Tutoring &amp; SAT/ACT Prep | Launch Valley Tutoring">
   <meta name="twitter:description" content="Personalized SAT/ACT prep and academic tutoring in Northridge for middle and high schoolers. Save 20% on SAT/ACT prep all May. Claim your spot now.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="shortcut icon" href="/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -62,18 +67,17 @@
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="/" class="nav-logo">Launch Valley Tutoring</a>
-
       <div class="nav-menu" id="nav-menu">
         <div class="nav-links">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="sat-act-diagnostic.html" class="nav-link">SAT/ACT Diagnostic Test</a>
+          <a href="/index.html" class="nav-link">Home</a>
+          <a href="/tutoring/" class="nav-link">Tutoring</a>
+          <a href="/test-prep/" class="nav-link">Test Prep</a>
+          <a href="/consulting/" class="nav-link">Consulting</a>
         </div>
-
         <div class="nav-persistent">
-          <a href="#get-started" class="nav-cta">Get Started</a>
+          <a href="/index.html#get-started" class="nav-cta">Get Started</a>
         </div>
       </div>
-
       <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
         <span></span>
         <span></span>
@@ -132,7 +136,7 @@
             <div class="panel-title">Personalized Plans</div>
             <div class="panel-tap-hint">tap to expand</div>
             <div class="panel-desc">
-              <p>No generic curriculum. Whether your student needs test prep, academic tutoring, or college planning, every session at our Northridge learning center follows a custom roadmap tailored to their goals, pace, and learning style.</p>
+              <p>No generic curriculum, no group sessions. Whether your student needs test prep, academic tutoring, or college planning, every 1-on-1 session follows a custom roadmap tailored to their goals, pace, and learning style.</p>
             </div>
           </div>
         </div>
@@ -142,7 +146,7 @@
             <div class="panel-title">Proven Results</div>
             <div class="panel-tap-hint">tap to expand</div>
             <div class="panel-desc">
-              <p>Consistently 5-star rated with documented score improvements, GPA gains, and diagnostic test results across hundreds of Northridge students.</p>
+              <p>4.9 stars on Google. Documented SAT and ACT score jumps, real GPA gains, and college acceptances at UCLA, USC, Stanford, and Harvard across hundreds of San Fernando Valley students.</p>
             </div>
           </div>
         </div>
@@ -348,7 +352,7 @@
     <div class="contact-container">
 
       <div class="contact-intro">
-        <h2 class="contact-heading">Interested in tutoring?</h2>
+        <h2 class="contact-heading">Interested in Tutoring?</h2>
         <p class="contact-subtext">Fill out the form and we'll get back to you soon.</p>
       </div>
 
@@ -360,7 +364,7 @@
           </p>
 
           <div class="form-field">
-            <label class="form-label" for="parent-name">Parent Name <span class="form-required">*</span></label>
+            <label class="form-label" for="parent-name">Name <span class="form-required">*</span></label>
             <input class="form-input" type="text" id="parent-name" name="parent-name" placeholder="Jane Smith" required />
           </div>
 
@@ -379,7 +383,7 @@
               <option value="11">11th Grade (Junior)</option>
               <option value="12">12th Grade (Senior)</option>
               <option value="College">College</option>
-              <option value="Other">Other</option>
+              <option value="Other">Other (Including Elementary School)</option>
             </select>
           </div>
 
@@ -389,6 +393,7 @@
               <option value="" disabled selected>Select a focus</option>
               <option value="Academic Tutoring">Academic Tutoring</option>
               <option value="SAT/ACT Prep">SAT/ACT Prep</option>
+              <option value="College Counseling">College Counseling</option>
               <option value="Other">Other</option>
             </select>
           </div>
@@ -408,12 +413,11 @@
     <h2 class="visit-us-heading">Visit Us in Northridge</h2>
     <p class="visit-us-address">19849 Nordhoff St Suite 105, Northridge, CA 91324</p>
     <div class="visit-us-map-wrap">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105554.48869660818!2d-118.63639794199302!3d34.2337979080089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c29b32cbcca9c9%3A0xd4207859e1ac78a6!2sLaunch%20Valley%20Tutoring!5e0!3m2!1sen!2sus!4v1777879264337!5m2!1sen!2sus"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+      <div class="map-facade" id="map-facade" role="button" tabindex="0" aria-label="Load interactive map">
+        <svg class="map-facade-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <p class="map-facade-label">Launch Valley Tutoring</p>
+        <span class="map-facade-cta">Click to load map</span>
+      </div>
     </div>
   </section>
 

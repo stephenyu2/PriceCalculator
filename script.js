@@ -225,4 +225,22 @@ document.querySelectorAll('.proof-item').forEach(function (item) {
   });
 })();
 
+/* --- Map facade: load iframe on click --- */
+(function () {
+  var facade = document.getElementById('map-facade');
+  if (!facade) return;
 
+  function loadMap() {
+    var iframe = document.createElement('iframe');
+    iframe.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105554.48869660818!2d-118.63639794199302!3d34.2337979080089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c29b32cbcca9c9%3A0xd4207859e1ac78a6!2sLaunch%20Valley%20Tutoring!5e0!3m2!1sen!2sus!4v1777879264337!5m2!1sen!2sus';
+    iframe.allowFullscreen = true;
+    iframe.referrerPolicy = 'no-referrer-when-downgrade';
+    iframe.style.cssText = 'display:block;width:100%;height:400px;border:0;';
+    facade.parentNode.replaceChild(iframe, facade);
+  }
+
+  facade.addEventListener('click', loadMap);
+  facade.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') loadMap();
+  });
+})();
