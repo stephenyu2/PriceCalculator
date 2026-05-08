@@ -1144,17 +1144,17 @@ a.footer-contact-item:hover {
 
 .subject-panels-inner {
   display: flex;
+  flex-direction: row;
+  align-items: stretch;
   height: 48vh;
   overflow: hidden;
   border-radius: 12px;
 }
 
 .subject-panel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex: 1;
-  position: relative;
+  display: grid;
+  grid-template-rows: 1fr;
   overflow: hidden;
   text-decoration: none;
   transition: flex 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1165,17 +1165,19 @@ a.footer-contact-item:hover {
 }
 
 .subject-panel video {
-  position: absolute;
-  inset: 0;
+  grid-area: 1 / 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .subject-panel-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  grid-area: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
   transition: background 0.4s ease;
 }
 
@@ -1183,9 +1185,11 @@ a.footer-contact-item:hover {
   background: rgba(0, 0, 0, 0.15);
 }
 
+.subject-panel:nth-child(3) .subject-panel-label {
+  font-family: 'Inter', sans-serif;
+}
+
 .subject-panel-label {
-  position: relative;
-  z-index: 2;
   color: #fff;
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.2rem, 2vw, 2rem);
@@ -1193,6 +1197,7 @@ a.footer-contact-item:hover {
   text-align: center;
   text-shadow: 0 1px 10px rgba(0,0,0,0.9), 0 2px 20px rgba(0,0,0,0.7);
   pointer-events: none;
+  white-space: nowrap;
 }
 
 @media (max-width: 600px) {
