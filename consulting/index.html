@@ -11,7 +11,7 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Educational Consulting — Launch Valley Tutoring</title>
+  <title>College Consulting Northridge | Launch Valley Tutoring</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -49,7 +49,7 @@
     <img class="page-hero-bg" src="/Images/GroupPhoto.jpeg" alt="" aria-hidden="true" />
     <div class="page-hero-overlay" aria-hidden="true"></div>
     <div class="page-hero-content">
-      <h1 class="hero-heading">Educational Consulting</h1>
+      <h1 class="hero-heading">College Consulting in Northridge</h1>
     </div>
   </section>
 
@@ -67,11 +67,17 @@
           </div>
         </div>
         <div class="subject-panel-body">
-          <p class="subject-panel-blurb">Getting into the right college takes more than good grades — it takes strategy. Our college admissions consultants work one-on-one with students to build a strong application, identify the right school list, and navigate every step of the process from start to acceptance.</p>
-          <nav class="subject-panel-links">
-            <a href="/consulting/college-admissions/">College Admissions Consulting</a>
-            <a href="/consulting/gpa-improvement/">GPA Improvement</a>
-          </nav>
+          <p class="subject-panel-blurb">Getting into the right college takes more than good grades - it takes strategy. Our college admissions consultants work one-on-one with students to build a strong application, identify the right school list, and navigate every step of the process from start to acceptance.</p>
+          <div class="service-list">
+      <div class="service-item">
+        <h2 class="service-item-header">College Admissions Consulting<span class="service-item-icon">+</span></h2>
+        <div class="service-item-body"><p>Our consultants work one-on-one with students to build a balanced college list, position their application competitively, and navigate every step from initial planning to final submission. Students who work with us submit stronger, more intentional applications to schools where they'll genuinely thrive. <a href="/consulting/college-admissions/">Learn about College Admissions Consulting →</a></p></div>
+      </div>
+      <div class="service-item">
+        <h2 class="service-item-header">GPA Improvement &amp; Grade Recovery<span class="service-item-icon">+</span></h2>
+        <div class="service-item-body"><p>For students who need to course-correct before applications open, our GPA consulting combines targeted academic tutoring with strategic planning. We identify the fastest path to a stronger transcript and build a realistic plan around it. <a href="/consulting/gpa-improvement/">Learn about GPA Improvement →</a></p></div>
+      </div>
+      </div>
         </div>
       </div>
 
@@ -86,10 +92,13 @@
           </div>
         </div>
         <div class="subject-panel-body">
-          <p class="subject-panel-blurb">The college essay is your one chance to speak directly to admissions committees. Our essay coaches help students find their authentic voice, develop compelling stories, and refine every word — turning a blank page into one of the strongest parts of their application.</p>
-          <nav class="subject-panel-links">
-            <a href="/consulting/college-essay-coaching/">College Essay Coaching</a>
-          </nav>
+          <p class="subject-panel-blurb">The college essay is your one chance to speak directly to admissions committees. Our essay coaches help students find their authentic voice, develop compelling stories, and refine every word - turning a blank page into one of the strongest parts of their application.</p>
+          <div class="service-list">
+      <div class="service-item">
+        <h2 class="service-item-header">College Essay Coaching<span class="service-item-icon">+</span></h2>
+        <div class="service-item-body"><p>A strong college essay can meaningfully differentiate a student in a competitive applicant pool. Our coaches help students find their most compelling narrative, develop it authentically, and produce a polished final draft that reads in their own voice - not like a template. <a href="/consulting/college-essay-coaching/">Learn about College Essay Coaching →</a></p></div>
+      </div>
+      </div>
         </div>
       </div>
 
@@ -100,7 +109,7 @@
     <div class="contact-container">
 
       <div class="contact-intro">
-        <h2 class="contact-heading">Interested in Tutoring?</h2>
+        <h2 class="contact-heading">Interested in College Consulting?</h2>
         <p class="contact-subtext">Fill out the form and we'll get back to you soon.</p>
       </div>
 
@@ -191,6 +200,11 @@
   </footer>
 
   <script src="/script.js"></script>
+  <script>
+    document.querySelectorAll('.service-item-header').forEach(btn => {
+      btn.addEventListener('click', () => btn.closest('.service-item').classList.toggle('active'));
+    });
+  </script>
   <script>
     document.querySelectorAll('.subject-panel').forEach(panel => {
       panel.querySelector('.subject-panel-header').addEventListener('click', () => {

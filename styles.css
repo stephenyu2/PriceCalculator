@@ -1211,3 +1211,47 @@ a.footer-contact-item:hover {
     flex: none;
   }
 }
+
+/* --- Services Editorial Section (homepage) --- */
+.services-editorial {
+  background: var(--navy-mid);
+  padding: var(--section-pad) clamp(1.5rem, 5vw, 3rem);
+}
+
+.services-editorial-grid {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 3rem);
+}
+
+.service-card-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+}
+
+.service-card-editorial p {
+  font-size: 0.94rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+
+.service-card-link {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.service-card-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .services-editorial-grid {
+    grid-template-columns: 1fr;
+  }
+}
