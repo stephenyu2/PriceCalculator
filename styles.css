@@ -623,11 +623,64 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   justify-content: center;
 }
 
-.proof-back img {
+.proof-review {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  padding: 1.25rem 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.55rem;
+  font-size: 1rem;
+}
+
+.proof-review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.proof-review-name {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #202124;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.proof-google-icon {
   display: block;
+  flex-shrink: 0;
+}
+
+.proof-review-stars {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #fbbc04;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.proof-review-check {
+  display: block;
+  flex-shrink: 0;
+}
+
+.proof-review-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(0.72rem, 1.05vw, 0.84rem);
+  line-height: 1.6;
+  color: #3c4043;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .proof-section-heading {
