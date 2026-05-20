@@ -359,6 +359,27 @@
       margin-top: 1.1rem;
     }
 
+    /* Standalone CTA buttons — gold outline, not affected by nav mobile overrides */
+    .schol-btn {
+      display: inline-block;
+      padding: 0.85rem 2.2rem;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      background: transparent;
+      transition: background-color var(--transition), color var(--transition);
+      text-decoration: none;
+    }
+    .schol-btn:hover {
+      background: var(--gold);
+      color: var(--on-gold);
+    }
+
     @media (max-width: 640px) {
       .schol-awards-grid { grid-template-columns: 1fr; }
       .schol-steps { grid-template-columns: 1fr; }
@@ -378,6 +399,7 @@
           <a href="/index.html" class="nav-link">Home</a>
           <a href="/test-prep/sat-act-diagnostic/" class="nav-link">SAT/ACT Diagnostic Test</a>
           <a href="/scholarship/" class="nav-link">Scholarship</a>
+          <a href="/team.html" class="nav-link">Our Team</a>
         </div>
         <div class="nav-persistent">
           <a href="/index.html#get-started" class="nav-cta">Get Started</a>
@@ -471,7 +493,7 @@
       <p style="color:var(--text-muted);line-height:1.85;margin-top:1.25rem;">We don't ask for your GPA or test scores. We work with students at every level. Some of our students are catching up after falling behind. Some are accelerating into material their school doesn't offer. A GPA doesn't tell us anything useful about either group.</p>
       <p style="color:var(--text-muted);line-height:1.85;margin-top:1rem;">What we care about, and what this essay is for, is the effort, curiosity, and honesty you bring to your own learning. Write something real. That's what we're reading for.</p>
 
-      <a href="https://forms.gle/a9nQWGswn9Ujoy2z5" class="nav-cta" target="_blank" rel="noopener" style="margin-top:2rem;">Apply Now</a>
+      <a href="https://forms.gle/a9nQWGswn9Ujoy2z5" class="schol-btn" target="_blank" rel="noopener" style="margin-top:2rem;">Apply Now</a>
     </div>
   </div>
 
@@ -551,7 +573,7 @@
   <div class="schol-section" style="text-align:center;">
     <h2 class="content-h2">Past Winners</h2>
     <p style="color:var(--text-muted);font-size:1rem;line-height:1.85;margin-bottom:2rem;">See the students who've been awarded the Launch Valley Tutoring Scholarship in previous cycles.</p>
-    <a href="/scholarship/past-winners/" class="nav-cta">View Past Winners</a>
+    <a href="/scholarship/past-winners/" class="schol-btn">View Past Winners</a>
   </div>
 
 

@@ -412,3 +412,93 @@
   background: rgba(191, 160, 104, 0.15);
   color: var(--white);
 }
+
+
+/* ============================================
+   TEAM PAGE
+============================================ */
+
+.team-page {
+  padding: clamp(3rem, 6vh, 5rem) clamp(1rem, 4vw, 3rem);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.team-intro {
+  max-width: 680px;
+  margin: 0 auto clamp(2.5rem, 5vh, 4rem);
+  text-align: center;
+  color: var(--text-muted);
+  line-height: 1.85;
+  font-size: 1rem;
+}
+
+.team-section-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 600;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.team-card {
+  border: 1px solid rgba(191, 160, 104, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(191, 160, 104, 0.03);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.team-card:hover {
+  border-color: rgba(191, 160, 104, 0.35);
+  transform: translateY(-3px);
+}
+
+.team-card-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.team-card-body {
+  padding: 1.4rem 1.5rem 1.6rem;
+}
+
+.team-card-name {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.2rem;
+}
+
+.team-card-role {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.9rem;
+}
+
+.team-card-bio {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+@media (max-width: 540px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
