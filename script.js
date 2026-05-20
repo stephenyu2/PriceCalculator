@@ -210,6 +210,7 @@ document.querySelectorAll('.proof-item').forEach(function (item) {
   }
 
   document.querySelectorAll('form[data-netlify="true"]').forEach(function (form) {
+    if (form.dataset.popup) return;
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var data = { 'form-name': form.getAttribute('name') };
@@ -221,6 +222,76 @@ document.querySelectorAll('.proof-item').forEach(function (item) {
       })
         .then(function () { window.location.href = '/thank-you'; })
         .catch(function () { window.location.href = '/thank-you'; });
+    });
+  });
+})();
+
+
+/* --- Email Popup --- */
+(function () {
+  var overlay = document.getElementById('popup-overlay');
+  if (!overlay) return;
+
+  var KEY_SEEN = 'lvt-popup-seen';
+
+  if (localStorage.getItem(KEY_SEEN)) return;
+
+  function openPopup() {
+    overlay.classList.add('active');
+  }
+
+  function closePopup() {
+    overlay.classList.remove('active');
+    localStorage.setItem(KEY_SEEN, '1');
+  }
+
+  // Show after 5 seconds
+  var timer = setTimeout(openPopup, 5000);
+
+  // Or show when user scrolls 40% down
+  function onScroll() {
+    var scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+    if (scrolled >= 0.4) {
+      clearTimeout(timer);
+      onScroll = null;
+      window.removeEventListener('scroll', arguments.callee);
+      openPopup();
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Close on X button
+  document.getElementById('popup-close').addEventListener('click', closePopup);
+
+  // Close on overlay click (not card)
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closePopup();
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closePopup();
+  });
+
+  // Form submission
+  var form = document.getElementById('popup-form');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var data = { 'form-name': 'email-popup' };
+    new FormData(form).forEach(function (val, key) { data[key] = val; });
+    var body = Object.keys(data)
+      .map(function (k) { return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]); })
+      .join('&');
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body
+    }).finally(function () {
+      document.getElementById('popup-body').hidden = true;
+      document.getElementById('popup-thanks').hidden = false;
+      localStorage.setItem(KEY_SEEN, '1');
     });
   });
 })();

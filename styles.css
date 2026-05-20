@@ -176,7 +176,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--white);
   transition: color var(--transition);
 }
 
@@ -1282,4 +1282,150 @@ a.footer-contact-item:hover {
   .services-editorial-grid {
     grid-template-columns: 1fr;
   }
+}
+
+
+/* ============================================
+   EMAIL POPUP
+============================================ */
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 14, 26, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.popup-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.popup-card {
+  position: relative;
+  background: var(--navy);
+  border: 1px solid rgba(139, 105, 20, 0.3);
+  border-top: 3px solid var(--gold);
+  border-radius: 14px;
+  padding: clamp(2rem, 5vw, 2.75rem);
+  max-width: 420px;
+  width: 100%;
+  transform: translateY(14px) scale(0.97);
+  transition: transform 0.35s ease;
+}
+
+.popup-overlay.active .popup-card {
+  transform: translateY(0) scale(1);
+}
+
+.popup-close {
+  position: absolute;
+  top: 0.9rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.popup-close:hover {
+  color: var(--white);
+}
+
+.popup-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
+}
+
+.popup-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 0.65rem;
+}
+
+.popup-sub {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.popup-input {
+  width: 100%;
+  padding: 0.78rem 1rem;
+  background: rgba(139, 105, 20, 0.05);
+  border: 1px solid rgba(139, 105, 20, 0.22);
+  border-radius: 8px;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.popup-input::placeholder {
+  color: var(--text-dim);
+}
+
+.popup-input:focus {
+  border-color: rgba(139, 105, 20, 0.55);
+}
+
+.popup-btn {
+  width: 100%;
+  padding: 0.82rem;
+  background: var(--gold);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.popup-btn:hover {
+  opacity: 0.88;
+}
+
+.popup-disclaimer {
+  font-size: 0.74rem;
+  color: var(--text-dim);
+  text-align: center;
+  margin-top: 0.4rem;
+}
+
+#popup-thanks {
+  text-align: center;
+}
+
+#popup-thanks .popup-sub {
+  margin-bottom: 0;
 }
