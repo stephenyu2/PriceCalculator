@@ -1355,11 +1355,12 @@ a.footer-contact-item:hover {
 
 .popup-heading {
   font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 600;
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  font-weight: 700;
   color: var(--white);
   line-height: 1.2;
   margin-bottom: 0.65rem;
+  white-space: nowrap;
 }
 
 .popup-sub {
@@ -1428,4 +1429,126 @@ a.footer-contact-item:hover {
 
 #popup-thanks .popup-sub {
   margin-bottom: 0;
+}
+
+
+/* ============================================
+   EMAIL FLYOUT
+============================================ */
+
+.flyout {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 320px;
+  background: var(--navy);
+  border: 1px solid rgba(139, 105, 20, 0.25);
+  border-top: 3px solid var(--gold);
+  border-radius: 14px;
+  padding: 1.4rem 1.6rem;
+  z-index: 1999;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.13);
+  transform: translateY(calc(100% + 2.5rem));
+  transition: transform 0.45s cubic-bezier(0.34, 1.1, 0.64, 1);
+}
+
+.flyout.active {
+  transform: translateY(0);
+}
+
+.flyout-close {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.9rem;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.flyout-close:hover {
+  color: var(--white);
+}
+
+.flyout-heading {
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+
+.flyout-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.flyout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.flyout-input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  background: rgba(139, 105, 20, 0.05);
+  border: 1px solid rgba(139, 105, 20, 0.22);
+  border-radius: 8px;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.flyout-input::placeholder { color: var(--text-dim); }
+
+.flyout-input:focus { border-color: rgba(139, 105, 20, 0.55); }
+
+.flyout-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--gold);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.flyout-btn:hover { opacity: 0.88; }
+
+.flyout-disclaimer {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  text-align: center;
+  margin-top: 0.3rem;
+}
+
+#flyout-thanks { text-align: center; }
+#flyout-thanks .flyout-sub { margin-bottom: 0; }
+
+@media (max-width: 500px) {
+  .flyout {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 14px 14px 0 0;
+    transform: translateY(100%);
+  }
 }

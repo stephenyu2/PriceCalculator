@@ -174,31 +174,6 @@ document.querySelectorAll('.proof-item').forEach(function (item) {
 
 
 
-/* --- Dark / Light Mode Toggle --- */
-(function () {
-  var btn = document.getElementById('theme-toggle');
-  if (!btn) return;
-
-  function applyTheme(dark) {
-    if (dark) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      btn.textContent = 'Light';
-      localStorage.setItem('lvt-theme', 'dark');
-    } else {
-      document.documentElement.removeAttribute('data-theme');
-      btn.textContent = 'Dark';
-      localStorage.setItem('lvt-theme', 'light');
-    }
-  }
-
-  applyTheme(document.documentElement.getAttribute('data-theme') === 'dark');
-
-  btn.addEventListener('click', function () {
-    applyTheme(document.documentElement.getAttribute('data-theme') !== 'dark');
-  });
-})();
-
-
 /* --- Netlify Form Submission --- */
 (function () {
   function encode(data) {
@@ -227,71 +202,103 @@ document.querySelectorAll('.proof-item').forEach(function (item) {
 })();
 
 
-/* --- Email Popup --- */
+/* --- Email Flyout + Exit Intent Popup --- */
 (function () {
-  var overlay = document.getElementById('popup-overlay');
-  if (!overlay) return;
-
   var KEY_SEEN = 'lvt-popup-seen';
-
   if (localStorage.getItem(KEY_SEEN)) return;
 
-  function openPopup() {
-    overlay.classList.add('active');
+  var flyout  = document.getElementById('flyout');
+  var overlay = document.getElementById('popup-overlay');
+  if (!flyout || !overlay) return;
+
+  var flyoutFired  = false;
+  var overlayFired = false;
+
+  function markSeen() { localStorage.setItem(KEY_SEEN, '1'); }
+
+  function postForm(formEl, onDone) {
+    var data = { 'form-name': 'email-popup' };
+    new FormData(formEl).forEach(function (val, key) { data[key] = val; });
+    var body = Object.keys(data)
+      .map(function (k) { return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]); })
+      .join('&');
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body })
+      .finally(onDone);
   }
 
-  function closePopup() {
-    overlay.classList.remove('active');
-    localStorage.setItem(KEY_SEEN, '1');
+  /* ---- Flyout ---- */
+  function showFlyout() {
+    if (flyoutFired || overlayFired || localStorage.getItem(KEY_SEEN)) return;
+    flyoutFired = true;
+    flyout.classList.add('active');
   }
 
-  // Show after 5 seconds
-  var timer = setTimeout(openPopup, 5000);
+  function closeFlyout() {
+    flyout.classList.remove('active');
+    markSeen();
+  }
 
-  // Or show when user scrolls 40% down
+  var flyoutTimer = setTimeout(showFlyout, 20000);
+
   function onScroll() {
-    var scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-    if (scrolled >= 0.4) {
-      clearTimeout(timer);
-      onScroll = null;
-      window.removeEventListener('scroll', arguments.callee);
-      openPopup();
+    var pct = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+    if (pct >= 0.8) {
+      clearTimeout(flyoutTimer);
+      window.removeEventListener('scroll', onScroll);
+      showFlyout();
     }
   }
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  // Close on X button
-  document.getElementById('popup-close').addEventListener('click', closePopup);
+  document.getElementById('flyout-close').addEventListener('click', closeFlyout);
 
-  // Close on overlay click (not card)
-  overlay.addEventListener('click', function (e) {
-    if (e.target === overlay) closePopup();
-  });
-
-  // Close on Escape
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closePopup();
-  });
-
-  // Form submission
-  var form = document.getElementById('popup-form');
-  if (!form) return;
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var data = { 'form-name': 'email-popup' };
-    new FormData(form).forEach(function (val, key) { data[key] = val; });
-    var body = Object.keys(data)
-      .map(function (k) { return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]); })
-      .join('&');
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: body
-    }).finally(function () {
-      document.getElementById('popup-body').hidden = true;
-      document.getElementById('popup-thanks').hidden = false;
-      localStorage.setItem(KEY_SEEN, '1');
+  var flyoutForm = document.getElementById('flyout-form');
+  if (flyoutForm) {
+    flyoutForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      postForm(flyoutForm, function () {
+        document.getElementById('flyout-body').hidden = true;
+        document.getElementById('flyout-thanks').hidden = false;
+        markSeen();
+      });
     });
+  }
+
+  /* ---- Exit Intent Overlay ---- */
+  function showOverlay() {
+    if (overlayFired || localStorage.getItem(KEY_SEEN)) return;
+    overlayFired = true;
+    flyout.classList.remove('active');
+    overlay.classList.add('active');
+  }
+
+  function closeOverlay() {
+    overlay.classList.remove('active');
+    markSeen();
+  }
+
+  document.addEventListener('mouseleave', function (e) {
+    if (e.clientY <= 5) showOverlay();
   });
+
+  document.getElementById('popup-close').addEventListener('click', closeOverlay);
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closeOverlay();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { overlayFired ? closeOverlay() : closeFlyout(); }
+  });
+
+  var overlayForm = document.getElementById('popup-form');
+  if (overlayForm) {
+    overlayForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      postForm(overlayForm, function () {
+        document.getElementById('popup-body').hidden = true;
+        document.getElementById('popup-thanks').hidden = false;
+        markSeen();
+      });
+    });
+  }
 })();
