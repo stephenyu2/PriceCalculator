@@ -72,6 +72,19 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background: transparent;
 }
 
+.btn-cta {
+  background: #111111;
+  color: #ffffff;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.btn-cta:hover {
+  background: #333333;
+}
+
 .btn-outline:hover {
   background: var(--gold);
   color: var(--on-gold);
@@ -227,6 +240,40 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   align-items: center;
   gap: 1rem;
   flex-shrink: 0;
+}
+
+
+/* ============================================
+   TRUST BAR
+============================================ */
+
+.trust-bar {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.75rem;
+  padding: 0.9rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  color: var(--white);
+}
+
+.trust-item strong {
+  font-weight: 600;
+}
+
+.trust-sep {
+  color: var(--text-muted);
+  user-select: none;
+}
+
+@media (max-width: 480px) {
+  .trust-sep { display: none; }
+  .trust-bar { flex-direction: column; gap: 0.25rem; padding: 0.75rem 1rem; }
 }
 
 
