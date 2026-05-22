@@ -67,25 +67,37 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .btn-outline {
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  border: 1px solid var(--gold);
+  color: var(--gold);
   background: transparent;
 }
 
 .btn-outline:hover {
+  background: var(--gold);
+  color: var(--on-gold);
+}
+
+/* Hero "Get Started" stays white on the dark video background */
+.hero .btn-outline {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.hero .btn-outline:hover {
   background: #ffffff;
   color: #111111;
 }
 
 .btn-gold {
-  background: var(--gold);
-  color: var(--on-gold);
+  background: transparent;
+  color: var(--gold);
   border: 1px solid var(--gold);
 }
 
 .btn-gold:hover {
-  background: var(--gold-light);
-  border-color: var(--gold-light);
+  background: var(--gold);
+  color: var(--on-gold);
+  border-color: var(--gold);
 }
 
 
