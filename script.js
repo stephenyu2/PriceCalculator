@@ -120,14 +120,12 @@
     navMenu.classList.remove('open');
     hamburger.classList.remove('open');
     hamburger.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
   }
 
   hamburger.addEventListener('click', function () {
     const isOpen = navMenu.classList.toggle('open');
     hamburger.classList.toggle('open', isOpen);
     hamburger.setAttribute('aria-expanded', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
   // Close on any nav link click
@@ -135,10 +133,13 @@
     link.addEventListener('click', closeMenu);
   });
 
-  // Close on outside click
+  // Close on outside click or touch outside nav
   document.addEventListener('click', function (e) {
     if (nav && !nav.contains(e.target)) closeMenu();
   });
+  document.addEventListener('touchstart', function (e) {
+    if (nav && !nav.contains(e.target)) closeMenu();
+  }, { passive: true });
 })();
 
 /* --- Scroll Reveal --- */

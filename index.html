@@ -122,6 +122,7 @@
     <video class="hero-bg" autoplay muted loop playsinline aria-hidden="true">
       <source src="Videos/LandingPageTiny.mp4" type="video/mp4" />
     </video>
+    <img class="hero-bg hero-bg-mobile" src="Images/MobileFallback.jpeg" alt="" aria-hidden="true" />
     <div class="hero-overlay" aria-hidden="true"></div>
 
     <div class="hero-content">
@@ -153,6 +154,14 @@
           <span class="cs-sep" aria-hidden="true">·</span>
           <span class="cs-college cs-dartmouth">Dartmouth</span>
           <span class="cs-sep" aria-hidden="true">·</span>
+          <span class="cs-college cs-ucsd">UCSD</span>
+          <span class="cs-sep" aria-hidden="true">·</span>
+          <span class="cs-college cs-ucr">UC Riverside</span>
+          <span class="cs-sep" aria-hidden="true">·</span>
+          <span class="cs-college cs-sdsu">SDSU</span>
+          <span class="cs-sep" aria-hidden="true">·</span>
+          <span class="cs-college cs-calpoly">Cal Poly SLO</span>
+          <span class="cs-sep" aria-hidden="true">·</span>
           <!-- duplicate for seamless loop -->
           <span class="cs-college cs-harvard">Harvard</span>
           <span class="cs-sep" aria-hidden="true">·</span>
@@ -171,6 +180,14 @@
           <span class="cs-college cs-pepperdine">Pepperdine</span>
           <span class="cs-sep" aria-hidden="true">·</span>
           <span class="cs-college cs-dartmouth">Dartmouth</span>
+          <span class="cs-sep" aria-hidden="true">·</span>
+          <span class="cs-college cs-ucsd">UCSD</span>
+          <span class="cs-sep" aria-hidden="true">·</span>
+          <span class="cs-college cs-ucr">UC Riverside</span>
+          <span class="cs-sep" aria-hidden="true">·</span>
+          <span class="cs-college cs-sdsu">SDSU</span>
+          <span class="cs-sep" aria-hidden="true">·</span>
+          <span class="cs-college cs-calpoly">Cal Poly SLO</span>
           <span class="cs-sep" aria-hidden="true">·</span>
         </div>
       </div>
@@ -427,38 +444,60 @@
        SECTION 3 - VALUE PROP
   =========================== -->
   <section class="value reveal" id="value">
-    <div class="vp-scene">
 
-      <!-- Background images — one shows at a time -->
+    <!-- Desktop version: single image swap with overlay panels -->
+    <div class="vp-scene">
       <img class="vp-img vp-img-1" src="Images/ExpertTeachers.jpeg" alt="" aria-hidden="true" />
       <img class="vp-img vp-img-2" src="Images/LessonPlan.jpeg" alt="" aria-hidden="true" />
       <img class="vp-img vp-img-3" src="Images/ProvenResults.jpeg" alt="" aria-hidden="true" />
-
       <div class="vp-overlay"></div>
-
-      <!-- Three text panels at the bottom -->
       <div class="vp-panels">
-
         <div class="vp-panel vp-panel-1">
           <h3 class="vp-title">Expert Teachers</h3>
           <p class="vp-desc">Our tutors hold a degree in their subject and score in the top 5% on their respective standardized test.</p>
           <a href="/team.html" class="vp-cta">Meet the team →</a>
         </div>
-
         <div class="vp-panel vp-panel-2">
           <h3 class="vp-title">Personalized Plans</h3>
           <p class="vp-desc">No group sessions. Every 1-on-1 session follows a custom roadmap built around your student.</p>
           <a href="/tutoring/" class="vp-cta">See how it works →</a>
         </div>
-
         <div class="vp-panel vp-panel-3">
           <h3 class="vp-title">Proven Results</h3>
           <p class="vp-desc">4.9 stars on Google. Real score jumps, GPA gains, and acceptances at UCLA, Stanford, Harvard, and more.</p>
           <a href="#testimonials" class="vp-cta">Read reviews →</a>
         </div>
-
       </div>
     </div>
+
+    <!-- Mobile version: 3 stacked cards each with photo + white text box -->
+    <div class="vp-mobile">
+      <div class="vp-mobile-card">
+        <img src="Images/ExpertTeachers.jpeg" alt="Expert Teachers" class="vp-mobile-img" />
+        <div class="vp-mobile-box">
+          <h3 class="vp-mobile-title">Expert Teachers</h3>
+          <p class="vp-mobile-desc">Our tutors hold a degree in their subject and score in the top 5% on their respective standardized test.</p>
+          <a href="/team.html" class="vp-mobile-cta">Meet the team →</a>
+        </div>
+      </div>
+      <div class="vp-mobile-card">
+        <img src="Images/LessonPlan.jpeg" alt="Personalized Plans" class="vp-mobile-img" />
+        <div class="vp-mobile-box">
+          <h3 class="vp-mobile-title">Personalized Plans</h3>
+          <p class="vp-mobile-desc">No group sessions. Every 1-on-1 session follows a custom roadmap built around your student.</p>
+          <a href="/tutoring/" class="vp-mobile-cta">See how it works →</a>
+        </div>
+      </div>
+      <div class="vp-mobile-card">
+        <img src="Images/ProvenResults.jpeg" alt="Proven Results" class="vp-mobile-img" />
+        <div class="vp-mobile-box">
+          <h3 class="vp-mobile-title">Proven Results</h3>
+          <p class="vp-mobile-desc">4.9 stars on Google. Real score jumps, GPA gains, and acceptances at UCLA, Stanford, Harvard, and more.</p>
+          <a href="#testimonials" class="vp-mobile-cta">Read reviews →</a>
+        </div>
+      </div>
+    </div>
+
   </section>
 
 
@@ -501,7 +540,7 @@
       <div class="contact-intro">
         <h2 class="contact-heading">Get a Free Custom Study Plan</h2>
         <p class="contact-subtext">Know your student's strengths, gaps, and next steps.</p>
-        <p class="contact-subtext">Built from a 30-minute diagnostic with one of our top tutors.</p>
+        <p class="contact-subtext">Whether you're ready to start tutoring or just exploring, this is step one.</p>
         <p class="form-trust-ribbon">★★★★★ 4.9 from 300+ San Fernando Valley families</p>
       </div>
 
@@ -624,19 +663,19 @@
   <div class="flyout" id="flyout" role="dialog" aria-labelledby="flyout-heading">
     <button class="flyout-close" id="flyout-close" aria-label="Close">&times;</button>
     <div id="flyout-body">
-      <p class="flyout-heading" id="flyout-heading">DO YOU WANT<br>15% OFF?</p>
-      <p class="flyout-sub">Enter your email and we'll send the code straight to your inbox.</p>
+      <p class="flyout-heading" id="flyout-heading">Not ready to commit?<br>We totally get it.</p>
+      <p class="flyout-sub">Drop your email and we'll send you free practice tests, study guides, and college-prep tips. No pressure, no sales calls.</p>
       <form class="flyout-form" id="flyout-form" name="email-popup" data-netlify="true" netlify-honeypot="bot-field" data-popup="true">
         <input type="hidden" name="form-name" value="email-popup" />
         <input type="hidden" name="bot-field" />
         <input class="flyout-input" type="email" name="email" placeholder="Your email address" required />
-        <button class="flyout-btn" type="submit">GET 15% OFF</button>
+        <button class="flyout-btn" type="submit">Keep me in the loop</button>
       </form>
       <p class="flyout-disclaimer">No spam. Unsubscribe anytime.</p>
     </div>
     <div id="flyout-thanks" hidden>
-      <p class="flyout-heading">Check Your Inbox!</p>
-      <p class="flyout-sub">Your 15% discount code is on its way.</p>
+      <p class="flyout-heading">You're in!</p>
+      <p class="flyout-sub">Check your inbox — good stuff is on the way.</p>
     </div>
   </div>
 
@@ -647,20 +686,20 @@
     <div class="popup-card">
       <button class="popup-close" id="popup-close" aria-label="Close">&times;</button>
       <div id="popup-body">
-        <h2 class="popup-heading" id="popup-heading">DO YOU WANT 15% OFF?</h2>
-        <p class="popup-sub">Enter your email and we'll send your discount code straight to your inbox.</p>
+        <h2 class="popup-heading" id="popup-heading">Not ready to commit? We totally get it.</h2>
+        <p class="popup-sub">Drop your email and we'll send you free practice tests, study guides, and college-prep tips to help your student get ahead. No pressure, no sales calls.</p>
         <form class="popup-form" id="popup-form" name="email-popup" data-netlify="true" netlify-honeypot="bot-field" data-popup="true">
           <input type="hidden" name="form-name" value="email-popup" />
           <input type="hidden" name="bot-field" />
           <input class="popup-input" type="email" name="email" placeholder="Your email address" required />
-          <button class="popup-btn" type="submit">GET 15% OFF</button>
+          <button class="popup-btn" type="submit">Keep me in the loop</button>
         </form>
         <p class="popup-disclaimer">No spam. Unsubscribe anytime.</p>
       </div>
       <div id="popup-thanks" hidden>
         <p class="popup-eyebrow">You're in!</p>
         <h2 class="popup-heading">Check Your Inbox!</h2>
-        <p class="popup-sub">Your 15% discount code is on its way. We look forward to working with you.</p>
+        <p class="popup-sub">Good stuff is on the way. We look forward to helping your student get ahead.</p>
       </div>
     </div>
   </div>
