@@ -21,6 +21,25 @@
 
 
 
+/* --- Value Panels: sticky active state --- */
+(function () {
+  const panels = document.querySelectorAll('.vp-panel');
+  if (!panels.length) return;
+
+  function setActive(panel) {
+    panels.forEach(p => p.classList.remove('active'));
+    panel.classList.add('active');
+  }
+
+  // Default: Expert Teachers
+  setActive(panels[0]);
+
+  panels.forEach(panel => {
+    panel.addEventListener('mouseenter', () => setActive(panel));
+  });
+})();
+
+
 /* --- FAQ Accordion --- */
 (function () {
   document.querySelectorAll('.faq-question').forEach(function (btn) {
