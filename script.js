@@ -158,30 +158,119 @@
 })();
 
 
-/* --- Testimonial Card Stagger --- */
+/* --- Testimonial Card Intro Sequence --- */
 (function () {
   var items = Array.prototype.slice.call(document.querySelectorAll('.proof-item'));
   if (!items.length) return;
 
-  // Hide all cards initially
   items.forEach(function (item) { item.classList.add('card-hidden'); });
 
-  function getColCount() {
-    return window.innerWidth <= 900 ? 2 : 4;
-  }
+  var triggered = false;
+  var track = document.querySelector('.proof-track') || items[0];
 
   var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (!entry.isIntersecting) return;
-      var item = entry.target;
-      var col = items.indexOf(item) % getColCount();
-      item.style.setProperty('--reveal-delay', (col * 150) + 'ms');
-      item.classList.remove('card-hidden');
-      observer.unobserve(item);
-    });
+    if (triggered || !entries[0].isIntersecting) return;
+    triggered = true;
+    observer.disconnect();
+    runIntroSequence();
   }, { threshold: 0.15 });
 
-  items.forEach(function (item) { observer.observe(item); });
+  observer.observe(track);
+
+  function runIntroSequence() {
+    var stage = document.getElementById('proof-intro-stage');
+    var firstThree = items.slice(0, 3);
+    var vpW = window.innerWidth;
+    var vpH = window.innerHeight;
+    var cardW = Math.min(400, Math.max(240, vpW * 0.4));
+    var cardH = cardW * (4 / 3);
+    var cx = vpW / 2 - cardW / 2;
+    var cy = vpH / 2 - cardH / 2;
+    var INTERVAL = 650;
+
+    var stageCards = firstThree.map(function (item, i) {
+      var front = item.querySelector('.proof-front');
+      var card = document.createElement('div');
+      card.className = 'stage-card';
+      card.innerHTML = front.innerHTML;
+      card.style.width = cardW + 'px';
+      card.style.height = cardH + 'px';
+      card.style.zIndex = (i + 1).toString();
+      card.style.transform = 'translate(' + cx + 'px, ' + cy + 'px) scale(0.85)';
+      card.style.opacity = '0';
+      stage.appendChild(card);
+      return card;
+    });
+
+    stage.style.display = 'block';
+
+    // Pop each card in sequentially — all centered, stacking on top of each other
+    stageCards.forEach(function (card, i) {
+      setTimeout(function () {
+        requestAnimationFrame(function () {
+          card.style.transform = 'translate(' + cx + 'px, ' + cy + 'px) scale(1)';
+          card.style.opacity = '1';
+        });
+      }, i * INTERVAL);
+    });
+
+    // After last card has settled, fly them all to their grid spots
+    setTimeout(function () {
+      collapseToGrid(firstThree, stageCards, stage, cardW, cardH);
+    }, (firstThree.length - 1) * INTERVAL + 700);
+  }
+
+  function collapseToGrid(firstThree, stageCards, stage, cardW, cardH) {
+    // Measure natural (untransformed) grid positions
+    firstThree.forEach(function (item) {
+      item.style.opacity = '0';
+      item.classList.remove('card-hidden');
+    });
+    var targets = firstThree.map(function (item) {
+      return item.getBoundingClientRect();
+    });
+    firstThree.forEach(function (item) {
+      item.classList.add('card-hidden');
+      item.style.opacity = '';
+    });
+
+    // Fly each stage card from center to its grid cell, shrinking as it lands
+    // Formula: given transform-origin at card center and transform: translate(tx,ty) scale(S),
+    // screen top-left = (S*(tx - cardW/2) + cardW/2, S*(ty - cardH/2) + cardH/2)
+    // Solving for tx,ty: tx = cardW/2 + (t.left - cardW/2)/S
+    stageCards.forEach(function (card, i) {
+      var t = targets[i];
+      var scale = t.width / cardW;
+      var tx = cardW / 2 + (t.left - cardW / 2) / scale;
+      var ty = cardH / 2 + (t.top - cardH / 2) / scale;
+
+      card.classList.add('flying');
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          card.style.transform = 'translate(' + tx + 'px, ' + ty + 'px) scale(' + scale + ')';
+          card.style.opacity = '0';
+        });
+      });
+    });
+
+    // Once stage cards have landed, swap in the real grid
+    setTimeout(function () {
+      stage.style.display = 'none';
+      while (stage.firstChild) { stage.removeChild(stage.firstChild); }
+
+      // First 3 appear instantly (seamless handoff from where stage cards landed)
+      firstThree.forEach(function (item) {
+        item.classList.remove('card-hidden');
+      });
+
+      // Remaining 5 shuffle in
+      items.slice(3).forEach(function (item, i) {
+        item.style.setProperty('--reveal-delay', (i * 65) + 'ms');
+        item.classList.remove('card-hidden');
+        item.classList.add('card-shuffling');
+      });
+    }, 850);
+  }
 })();
 
 
