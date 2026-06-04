@@ -93,35 +93,57 @@ function updateTimerDisplay() {
   else el.classList.remove('timer-urgent');
 }
 
-// Convert LaTeX source strings to readable plain text for PDF
+// Convert LaTeX source strings to readable plain text for PDF.
+// Uses only ASCII + Latin-1 output so jsPDF's built-in Helvetica renders correctly.
+// Unicode math symbols (sqrt, arrows, Greek, etc.) are NOT in Helvetica and show as
+// garbage characters — everything here must stay in the printable ASCII range.
 function latexToText(str) {
   if (!str) return '';
   return str
+    // Protect currency \$ before stripping LaTeX math $ delimiters
+    .replace(/\\\$/g, '\x01DOLLAR\x01')
+    // Strip LaTeX math delimiters
     .replace(/\$\$/g, '').replace(/\$/g, '')
+    // Restore currency $
+    .replace(/\x01DOLLAR\x01/g, '$')
+    // Fractions
     .replace(/\\frac\{([^{}]+)\}\{([^{}]+)\}/g, '($1)/($2)')
-    .replace(/\\sqrt\[([^\]]+)\]\{([^{}]+)\}/g, '$1√($2)')
-    .replace(/\\sqrt\{([^{}]+)\}/g, '√($1)')
-    .replace(/\\sqrt/g, '√')
-    .replace(/\\times/g, '×').replace(/\\div/g, '÷')
-    .replace(/\\cdot/g, '·').replace(/\\pm/g, '±')
-    .replace(/\\leq/g, '≤').replace(/\\geq/g, '≥')
-    .replace(/\\neq/g, '≠').replace(/\\approx/g, '≈')
-    .replace(/\\to/g, '→').replace(/\\infty/g, '∞')
-    .replace(/\\pi/g, 'π').replace(/\\theta/g, 'θ')
-    .replace(/\\alpha/g, 'α').replace(/\\beta/g, 'β')
-    .replace(/\\mu/g, 'μ').replace(/\\sigma/g, 'σ')
-    .replace(/\\bar\{([^}]+)\}/g, '$1̄')
+    // Roots — use ASCII sqrt() notation; Unicode sqrt char doesn't render in Helvetica
+    .replace(/\\sqrt\[([^\]]+)\]\{([^{}]+)\}/g, '$1-root($2)')
+    .replace(/\\sqrt\{([^{}]+)\}/g, 'sqrt($1)')
+    .replace(/\\sqrt/g, 'sqrt')
+    // Operators
+    .replace(/\\times/g, 'x').replace(/\\div/g, '/')
+    .replace(/\\cdot/g, '*').replace(/\\pm/g, '+/-')
+    // Relations
+    .replace(/\\leq/g, '<=').replace(/\\geq/g, '>=')
+    .replace(/\\neq/g, '!=').replace(/\\approx/g, '~=')
+    // Arrows & special values
+    .replace(/\\to/g, '->').replace(/\\infty/g, 'inf')
+    // Greek letters
+    .replace(/\\pi/g, 'pi').replace(/\\theta/g, 'theta')
+    .replace(/\\alpha/g, 'alpha').replace(/\\beta/g, 'beta')
+    .replace(/\\mu/g, 'mu').replace(/\\sigma/g, 'sigma')
+    // Overline: x-bar notation
+    .replace(/\\bar\{([^}]+)\}/g, '$1-bar')
+    // Trig / log functions (already ASCII, just strip backslash)
     .replace(/\\sin/g, 'sin').replace(/\\cos/g, 'cos')
     .replace(/\\tan/g, 'tan').replace(/\\log/g, 'log')
     .replace(/\\ln/g, 'ln').replace(/\\lim/g, 'lim')
-    .replace(/\\int/g, '∫').replace(/\\sum/g, 'Σ')
-    .replace(/\\prod/g, 'Π').replace(/\\partial/g, '∂')
-    .replace(/\\angle/g, '∠').replace(/\\parallel/g, '∥')
-    .replace(/\\perp/g, '⊥').replace(/\\cup/g, '∪')
-    .replace(/\\cap/g, '∩').replace(/\\in/g, '∈')
+    // Calculus
+    .replace(/\\int/g, 'integral').replace(/\\sum/g, 'sum')
+    .replace(/\\prod/g, 'product').replace(/\\partial/g, 'd')
+    // Geometry / set symbols
+    .replace(/\\angle/g, 'angle').replace(/\\parallel/g, '||')
+    .replace(/\\perp/g, 'perp').replace(/\\cup/g, 'union')
+    .replace(/\\cap/g, 'intersect').replace(/\\in/g, 'in')
+    // Combinations
     .replace(/\\binom\{([^}]+)\}\{([^}]+)\}/g, 'C($1,$2)')
+    // Superscripts / subscripts
     .replace(/\^\{([^}]+)\}/g, '^($1)').replace(/_\{([^}]+)\}/g, '_($1)')
-    .replace(/\^2/g, '²').replace(/\^3/g, '³').replace(/\^n/g, 'ⁿ')
+    // ^2 / ^3 stay as-is (superscript digits are Latin-1, safe in Helvetica)
+    .replace(/\^2/g, '^2').replace(/\^3/g, '^3').replace(/\^n/g, '^n')
+    // Strip remaining LaTeX structure
     .replace(/\\left|\\right/g, '').replace(/\\text\{([^}]+)\}/g, '$1')
     .replace(/\{|\}/g, '').replace(/\\/g, '')
     .replace(/\s{2,}/g, ' ').trim();
