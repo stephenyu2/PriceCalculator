@@ -744,6 +744,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background-color: #ffffff;
   padding: 0;
   overflow: hidden;
+  position: relative;
 }
 
 .value-intro {
@@ -1065,18 +1066,18 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   animation: proof-shuffle 0.4s ease var(--reveal-delay, 0ms) both;
 }
 
-/* Intro stage — full-screen white backdrop for the featured card sequence */
+/* Intro stage — contained within the testimonials section */
 #proof-intro-stage {
-  position: fixed;
+  position: absolute;
   inset: 0;
   z-index: 200;
-  background: #fff;
+  background: transparent;
   pointer-events: none;
   display: none;
 }
 
 .stage-card {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   overflow: hidden;

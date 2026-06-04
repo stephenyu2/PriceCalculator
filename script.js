@@ -180,8 +180,9 @@
   function runIntroSequence() {
     var stage = document.getElementById('proof-intro-stage');
     var firstThree = items.slice(0, 3);
-    var vpW = window.innerWidth;
-    var vpH = window.innerHeight;
+    var section = stage.parentElement;
+    var vpW = section.offsetWidth;
+    var vpH = section.offsetHeight;
     var cardW = Math.min(400, Math.max(240, vpW * 0.4));
     var cardH = cardW * (4 / 3);
     var cx = vpW / 2 - cardW / 2;
@@ -235,14 +236,12 @@
     });
 
     // Fly each stage card from center to its grid cell, shrinking as it lands
-    // Formula: given transform-origin at card center and transform: translate(tx,ty) scale(S),
-    // screen top-left = (S*(tx - cardW/2) + cardW/2, S*(ty - cardH/2) + cardH/2)
-    // Solving for tx,ty: tx = cardW/2 + (t.left - cardW/2)/S
+    var stageRect = stage.getBoundingClientRect();
     stageCards.forEach(function (card, i) {
       var t = targets[i];
       var scale = t.width / cardW;
-      var tx = cardW / 2 + (t.left - cardW / 2) / scale;
-      var ty = cardH / 2 + (t.top - cardH / 2) / scale;
+      var tx = cardW / 2 + (t.left - stageRect.left - cardW / 2) / scale;
+      var ty = cardH / 2 + (t.top - stageRect.top - cardH / 2) / scale;
 
       card.classList.add('flying');
       requestAnimationFrame(function () {

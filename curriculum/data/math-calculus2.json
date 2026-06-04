@@ -1,0 +1,217 @@
+{
+  "subject": "math",
+  "grade": "calculus2",
+  "gradeLabel": "Calculus II",
+  "nextGrade": null,
+  "timeMinutes": 40,
+  "questions": [
+    {
+      "id": 1,
+      "standard": "AP.CALC.BC.INT-1",
+      "text": "Evaluate $\\int x e^x\\,dx$ using integration by parts.",
+      "options": ["$xe^x + C$", "$e^x(x - 1) + C$", "$xe^x - e^x + C$", "$x^2 e^x + C$"],
+      "answer": 2,
+      "explanation": "Let $u = x$, $dv = e^x\\,dx$. Then $du = dx$, $v = e^x$. By IBP: $\\int u\\,dv = uv - \\int v\\,du = xe^x - \\int e^x\\,dx = xe^x - e^x + C$."
+    },
+    {
+      "id": 2,
+      "standard": "AP.CALC.BC.INT-1",
+      "text": "Evaluate $\\int x \\ln x\\,dx$.",
+      "options": ["$\\frac{x^2}{2} \\ln x - \\frac{x^2}{4} + C$", "$\\frac{x^2 \\ln x}{2} + C$", "$\\frac{x^2}{2} \\ln x + \\frac{x^2}{4} + C$", "$x \\ln x - x + C$"],
+      "answer": 0,
+      "explanation": "Let $u = \\ln x$, $dv = x\\,dx$. Then $du = \\frac{1}{x}\\,dx$, $v = \\frac{x^2}{2}$. IBP gives $\\frac{x^2}{2}\\ln x - \\int \\frac{x^2}{2} \\cdot \\frac{1}{x}\\,dx = \\frac{x^2}{2}\\ln x - \\frac{x^2}{4} + C$."
+    },
+    {
+      "id": 3,
+      "standard": "AP.CALC.BC.INT-1",
+      "text": "Evaluate $\\int \\sin^2 x\\,dx$.",
+      "options": ["$-\\frac{1}{2}\\sin x \\cos x + C$", "$\\frac{x}{2} - \\frac{\\sin 2x}{4} + C$", "$\\frac{x}{2} + \\frac{\\sin 2x}{4} + C$", "$-\\cos^2 x + C$"],
+      "answer": 1,
+      "explanation": "Use the identity $\\sin^2 x = \\frac{1 - \\cos 2x}{2}$. Then $\\int \\sin^2 x\\,dx = \\int \\frac{1-\\cos 2x}{2}\\,dx = \\frac{x}{2} - \\frac{\\sin 2x}{4} + C$."
+    },
+    {
+      "id": 4,
+      "standard": "AP.CALC.BC.INT-1",
+      "text": "Which substitution simplifies $\\int \\frac{dx}{\\sqrt{9 - x^2}}$?",
+      "options": ["$x = 3\\tan\\theta$", "$x = 3\\sin\\theta$", "$x = 3\\sec\\theta$", "$x = 9\\sin\\theta$"],
+      "answer": 1,
+      "explanation": "For $\\sqrt{a^2 - x^2}$, use $x = a\\sin\\theta$. With $a = 3$: $\\sqrt{9 - 9\\sin^2\\theta} = 3\\cos\\theta$, giving $\\int \\frac{3\\cos\\theta\\,d\\theta}{3\\cos\\theta} = \\theta + C = \\arcsin\\frac{x}{3} + C$."
+    },
+    {
+      "id": 5,
+      "standard": "AP.CALC.BC.INT-1",
+      "text": "Decompose $\\frac{3x + 1}{x^2 - x - 2}$ into partial fractions. (Factor: $x^2 - x - 2 = (x-2)(x+1)$)",
+      "options": ["$\\frac{2}{x-2} + \\frac{1}{x+1}$", "$\\frac{7/3}{x-2} + \\frac{2/3}{x+1}$", "$\\frac{1}{x-2} + \\frac{2}{x+1}$", "$\\frac{7}{3(x-2)} - \\frac{2}{3(x+1)}$"],
+      "answer": 3,
+      "explanation": "Set $\\frac{3x+1}{(x-2)(x+1)} = \\frac{A}{x-2} + \\frac{B}{x+1}$. Solving: $x=2$ gives $A = \\frac{7}{3}$; $x=-1$ gives $B = -\\frac{2}{3}$. So the decomposition is $\\frac{7}{3(x-2)} - \\frac{2}{3(x+1)}$."
+    },
+    {
+      "id": 6,
+      "standard": "AP.CALC.BC.INT-1",
+      "text": "Does the improper integral $\\int_1^{\\infty} \\frac{1}{x^2}\\,dx$ converge or diverge? If it converges, what is its value?",
+      "options": ["Diverges", "Converges to $\\infty$", "Converges to $2$", "Converges to $1$"],
+      "answer": 3,
+      "explanation": "$\\int_1^{\\infty} x^{-2}\\,dx = \\lim_{b \\to \\infty}\\left[-x^{-1}\\right]_1^b = \\lim_{b \\to \\infty}\\left(-\\frac{1}{b} + 1\\right) = 1$."
+    },
+    {
+      "id": 7,
+      "standard": "AP.CALC.BC.INT-1",
+      "text": "The integral $\\int_1^{\\infty} \\frac{1}{x}\\,dx$:",
+      "options": ["Converges to $1$", "Converges to $\\ln 2$", "Diverges", "Converges to $0$"],
+      "answer": 2,
+      "explanation": "$\\int_1^b \\frac{1}{x}\\,dx = \\ln b$. As $b \\to \\infty$, $\\ln b \\to \\infty$, so the integral diverges. This is the borderline $p$-series case with $p = 1$."
+    },
+    {
+      "id": 8,
+      "standard": "AP.CALC.BC.INT-2",
+      "text": "Find the area between $f(x) = x^2$ and $g(x) = 2x$ on $[0, 2]$.",
+      "options": ["$2$", "$\\frac{4}{3}$", "$0$", "$4$"],
+      "answer": 1,
+      "explanation": "On $[0,2]$, $2x \\geq x^2$. Area $= \\int_0^2(2x - x^2)\\,dx = \\left[x^2 - \\frac{x^3}{3}\\right]_0^2 = 4 - \\frac{8}{3} = \\frac{4}{3}$."
+    },
+    {
+      "id": 9,
+      "standard": "AP.CALC.BC.INT-2",
+      "text": "The region bounded by $y = \\sqrt{x}$, $x = 4$, and the $x$-axis is revolved about the $x$-axis. What is the volume by the disk method?",
+      "options": ["$8\\pi$", "$16\\pi$", "$4\\pi$", "$32\\pi$"],
+      "answer": 0,
+      "explanation": "$V = \\pi \\int_0^4 (\\sqrt{x})^2\\,dx = \\pi \\int_0^4 x\\,dx = \\pi \\left[\\frac{x^2}{2}\\right]_0^4 = \\pi \\cdot 8 = 8\\pi$."
+    },
+    {
+      "id": 10,
+      "standard": "AP.CALC.BC.INT-2",
+      "text": "Which integral gives the volume of the solid formed by revolving $y = x^2$ from $x = 0$ to $x = 1$ about the $y$-axis using the shell method?",
+      "options": ["$\\pi \\int_0^1 x^4\\,dx$", "$2\\pi \\int_0^1 x \\cdot x^2\\,dx$", "$2\\pi \\int_0^1 x^2\\,dx$", "$\\pi \\int_0^1 (x^2)^2\\,dx$"],
+      "answer": 1,
+      "explanation": "Shell method revolving about the $y$-axis: $V = 2\\pi \\int_0^1 x \\cdot f(x)\\,dx = 2\\pi \\int_0^1 x \\cdot x^2\\,dx = 2\\pi \\int_0^1 x^3\\,dx$."
+    },
+    {
+      "id": 11,
+      "standard": "AP.CALC.BC.INT-2",
+      "text": "Which integral gives the arc length of $f(x) = x^2$ from $x = 0$ to $x = 2$?",
+      "options": ["$\\int_0^2 \\sqrt{1 + x^2}\\,dx$", "$\\int_0^2 \\sqrt{1 + 4x^2}\\,dx$", "$\\int_0^2 (1 + 2x)\\,dx$", "$\\int_0^2 \\sqrt{x^4 + 1}\\,dx$"],
+      "answer": 1,
+      "explanation": "Arc length formula: $\\int_a^b \\sqrt{1 + [f'(x)]^2}\\,dx$. Here $f'(x) = 2x$, so the integral is $\\int_0^2 \\sqrt{1 + (2x)^2}\\,dx = \\int_0^2 \\sqrt{1 + 4x^2}\\,dx$."
+    },
+    {
+      "id": 12,
+      "standard": "AP.CALC.BC.INT-2",
+      "text": "A spring with spring constant $k = 10$ N/m requires how much work to stretch it $0.5$ m from its natural length?",
+      "options": ["$5$ J", "$2.5$ J", "$1.25$ J", "$10$ J"],
+      "answer": 2,
+      "explanation": "$W = \\int_0^{0.5} kx\\,dx = \\int_0^{0.5} 10x\\,dx = \\left[5x^2\\right]_0^{0.5} = 5(0.25) = 1.25$ J."
+    },
+    {
+      "id": 13,
+      "standard": "AP.CALC.BC.DE-1",
+      "text": "Solve the separable differential equation $\\frac{dy}{dx} = 2xy$ with $y(0) = 3$.",
+      "options": ["$y = 3e^{2x}$", "$y = 3e^{x^2}$", "$y = e^{x^2} + 2$", "$y = 3x^2 + 3$"],
+      "answer": 1,
+      "explanation": "Separate: $\\frac{dy}{y} = 2x\\,dx$. Integrate: $\\ln|y| = x^2 + C$, so $y = Ae^{x^2}$. Apply $y(0) = 3$: $A = 3$, giving $y = 3e^{x^2}$."
+    },
+    {
+      "id": 14,
+      "standard": "AP.CALC.BC.DE-1",
+      "text": "A population grows according to $\\frac{dP}{dt} = 0.05P$. If $P(0) = 200$, what is $P(t)$?",
+      "options": ["$P(t) = 200 + 0.05t$", "$P(t) = 200e^{0.05}$", "$P(t) = 200e^{0.05t}$", "$P(t) = 0.05e^{200t}$"],
+      "answer": 2,
+      "explanation": "Exponential growth model: $P(t) = P_0 e^{kt}$. With $P_0 = 200$ and $k = 0.05$: $P(t) = 200e^{0.05t}$."
+    },
+    {
+      "id": 15,
+      "standard": "AP.CALC.BC.SER-1",
+      "text": "Does the sequence $a_n = \\frac{3n^2 + 1}{n^2 + 2}$ converge? If so, to what value?",
+      "options": ["Diverges", "Converges to $0$", "Converges to $1$", "Converges to $3$"],
+      "answer": 3,
+      "explanation": "Divide numerator and denominator by $n^2$: $\\frac{3 + 1/n^2}{1 + 2/n^2} \\to \\frac{3}{1} = 3$ as $n \\to \\infty$."
+    },
+    {
+      "id": 16,
+      "standard": "AP.CALC.BC.SER-1",
+      "text": "Find the sum of the geometric series $\\sum_{n=0}^{\\infty} \\left(\\frac{2}{3}\\right)^n$.",
+      "options": ["$2$", "$3$", "$\\frac{3}{2}$", "Diverges"],
+      "answer": 1,
+      "explanation": "This is a geometric series with $a = 1$ and $r = \\frac{2}{3}$. Since $|r| < 1$, the sum is $\\frac{a}{1-r} = \\frac{1}{1 - 2/3} = 3$."
+    },
+    {
+      "id": 17,
+      "standard": "AP.CALC.BC.SER-1",
+      "text": "Use the Ratio Test on $\\sum_{n=1}^{\\infty} \\frac{n!}{2^n}$. What does the test conclude?",
+      "options": ["Converges, ratio $< 1$", "Inconclusive, ratio $= 1$", "Diverges, ratio $> 1$", "Converges absolutely"],
+      "answer": 2,
+      "explanation": "$\\left|\\frac{a_{n+1}}{a_n}\\right| = \\frac{(n+1)!}{2^{n+1}} \\cdot \\frac{2^n}{n!} = \\frac{n+1}{2} \\to \\infty > 1$ as $n \\to \\infty$. The series diverges."
+    },
+    {
+      "id": 18,
+      "standard": "AP.CALC.BC.SER-1",
+      "text": "The alternating series $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n}$ converges by the Alternating Series Test. This convergence is:",
+      "options": ["Absolute convergence", "Conditional convergence", "Divergence", "Uniform convergence"],
+      "answer": 1,
+      "explanation": "The series converges by the AST, but $\\sum \\frac{1}{n}$ (the harmonic series) diverges. Therefore the convergence is conditional, not absolute."
+    },
+    {
+      "id": 19,
+      "standard": "AP.CALC.BC.SER-2",
+      "text": "Find the radius of convergence of $\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$.",
+      "options": ["$R = 0$", "$R = 1$", "$R = e$", "$R = \\infty$"],
+      "answer": 3,
+      "explanation": "Apply the Ratio Test: $\\left|\\frac{x^{n+1}}{(n+1)!} \\cdot \\frac{n!}{x^n}\\right| = \\frac{|x|}{n+1} \\to 0 < 1$ for all $x$. So $R = \\infty$."
+    },
+    {
+      "id": 20,
+      "standard": "AP.CALC.BC.SER-2",
+      "text": "Using the known series $\\frac{1}{1-x} = \\sum_{n=0}^{\\infty} x^n$, find the power series for $\\frac{1}{1+x^2}$.",
+      "options": ["$\\sum_{n=0}^{\\infty} x^{2n}$", "$\\sum_{n=0}^{\\infty} (-1)^n x^{2n}$", "$\\sum_{n=0}^{\\infty} (-1)^n x^n$", "$\\sum_{n=0}^{\\infty} x^n$"],
+      "answer": 1,
+      "explanation": "Substitute $x \\to -x^2$ in the geometric series: $\\frac{1}{1-(-x^2)} = \\sum_{n=0}^{\\infty} (-x^2)^n = \\sum_{n=0}^{\\infty} (-1)^n x^{2n}$, valid for $|x| < 1$."
+    },
+    {
+      "id": 21,
+      "standard": "AP.CALC.BC.SER-2",
+      "text": "What is the third-degree Taylor polynomial for $\\sin x$ centered at $x = 0$?",
+      "options": ["$1 - x + \\frac{x^2}{2}$", "$x - \\frac{x^3}{6}$", "$x - \\frac{x^2}{2} + \\frac{x^3}{6}$", "$x + \\frac{x^3}{6}$"],
+      "answer": 1,
+      "explanation": "The Maclaurin series for $\\sin x$ is $x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\cdots$. The third-degree polynomial is $x - \\frac{x^3}{6}$."
+    },
+    {
+      "id": 22,
+      "standard": "AP.CALC.BC.SER-2",
+      "text": "The interval of convergence of $\\sum_{n=1}^{\\infty} \\frac{(x-2)^n}{n}$ is:",
+      "options": ["$[1, 3]$", "$(1, 3)$", "$[1, 3)$", "$(1, 3]$"],
+      "answer": 2,
+      "explanation": "The radius of convergence is $R = 1$ (Ratio Test). Center is $2$, so convergence on $(1, 3)$. At $x=3$: $\\sum \\frac{1}{n}$ diverges. At $x=1$: $\\sum \\frac{(-1)^n}{n}$ converges (AST). Interval: $[1, 3)$."
+    },
+    {
+      "id": 23,
+      "standard": "AP.CALC.BC.PAR-1",
+      "text": "A curve is defined parametrically by $x = t^2$, $y = t^3$. Find $\\frac{dy}{dx}$.",
+      "options": ["$\\frac{3t^2}{2t} = \\frac{3t}{2}$", "$\\frac{2t}{3t^2} = \\frac{2}{3t}$", "$3t^2$", "$2t$"],
+      "answer": 0,
+      "explanation": "$\\frac{dy}{dx} = \\frac{dy/dt}{dx/dt} = \\frac{3t^2}{2t} = \\frac{3t}{2}$."
+    },
+    {
+      "id": 24,
+      "standard": "AP.CALC.BC.PAR-1",
+      "text": "Convert the polar point $\\left(4, \\frac{\\pi}{3}\\right)$ to rectangular coordinates.",
+      "options": ["$(2, 2\\sqrt{3})$", "$(2\\sqrt{3}, 2)$", "$(4, 4\\sqrt{3})$", "$(\\sqrt{3}, 1)$"],
+      "answer": 0,
+      "explanation": "$x = r\\cos\\theta = 4\\cos\\frac{\\pi}{3} = 4 \\cdot \\frac{1}{2} = 2$. $y = r\\sin\\theta = 4\\sin\\frac{\\pi}{3} = 4 \\cdot \\frac{\\sqrt{3}}{2} = 2\\sqrt{3}$."
+    },
+    {
+      "id": 25,
+      "standard": "AP.CALC.BC.PAR-1",
+      "text": "Which integral gives the area enclosed by the polar curve $r = 2\\sin\\theta$ for $0 \\leq \\theta \\leq \\pi$?",
+      "options": ["$\\int_0^{\\pi} 2\\sin\\theta\\,d\\theta$", "$\\frac{1}{2}\\int_0^{\\pi} 4\\sin^2\\theta\\,d\\theta$", "$\\int_0^{\\pi} 4\\sin^2\\theta\\,d\\theta$", "$2\\int_0^{\\pi} \\sin^2\\theta\\,d\\theta$"],
+      "answer": 1,
+      "explanation": "Area in polar coordinates: $A = \\frac{1}{2}\\int_\\alpha^\\beta r^2\\,d\\theta = \\frac{1}{2}\\int_0^\\pi (2\\sin\\theta)^2\\,d\\theta = \\frac{1}{2}\\int_0^\\pi 4\\sin^2\\theta\\,d\\theta$."
+    },
+    {
+      "id": 26,
+      "standard": "AP.CALC.BC.INT-2",
+      "text": "The washer method computes the volume of the solid formed by revolving the region between $f(x) = \\sqrt{x}$ and $g(x) = x$ (for $0 \\leq x \\leq 1$) about the $x$-axis. The correct integral is:",
+      "options": ["$\\pi\\int_0^1 (\\sqrt{x} - x)^2\\,dx$", "$\\pi\\int_0^1 (\\sqrt{x} + x)^2\\,dx$", "$\\pi\\int_0^1 \\left[(\\sqrt{x})^2 - x^2\\right]\\,dx$", "$2\\pi\\int_0^1 x(\\sqrt{x} - x)\\,dx$"],
+      "answer": 2,
+      "explanation": "Washer method: $V = \\pi\\int_a^b \\left[R(x)^2 - r(x)^2\\right]\\,dx$ where $R = \\sqrt{x}$ (outer) and $r = x$ (inner). So $V = \\pi\\int_0^1 \\left[x - x^2\\right]\\,dx$."
+    }
+  ]
+}

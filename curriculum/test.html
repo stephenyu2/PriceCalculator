@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Diagnostic Test — Launch Valley Tutoring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="curriculum.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+</head>
+<body>
+  <!-- Print-only header (hidden on screen) -->
+  <div class="print-header">
+    <div class="print-logo">Launch Valley Tutoring</div>
+    <div class="print-title" id="printTitle"></div>
+    <div class="print-date" id="printDate"></div>
+    <p class="print-instructions">To discuss these results with a tutor, email this PDF to <strong>hello@launchvalleytutoring.com</strong> or visit launchvalleytutoring.com/contact.</p>
+  </div>
+
+  <!-- Email gate — shown before test loads; hidden once email stored in localStorage -->
+  <div class="gate-overlay" id="emailGate">
+    <div class="gate-card">
+      <div class="gate-logo">Launch Valley Tutoring</div>
+      <h2 class="gate-heading">Academic Diagnostic</h2>
+      <p class="gate-sub">Enter your email to start. Your results will be shown at the end.</p>
+      <label class="gate-label" for="gateEmail">Email address</label>
+      <input class="gate-input" type="email" id="gateEmail" placeholder="you@example.com" autocomplete="email" oninput="handleGateInput()">
+      <p class="gate-error" id="gateError" aria-live="polite"></p>
+      <button class="gate-btn" id="gateBtn" onclick="handleGateSubmit()" disabled>Start Test</button>
+      <p class="gate-privacy">Only used to discuss your results with a tutor.</p>
+    </div>
+  </div>
+
+  <!-- Save results modal -->
+  <div class="modal-overlay hidden" id="resultsModal" onclick="handleOverlayClick(event)">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+      <div class="modal-icon">⚠</div>
+      <h3 class="modal-heading" id="modalHeading">Save Your Results</h3>
+      <p class="modal-body">Your answers and score only exist on this page. <strong>Once you navigate away, everything is gone.</strong></p>
+      <p class="modal-body">Download this page as a PDF to keep your results and share them with Launch Valley Tutoring.</p>
+      <button class="btn-modal-primary" id="pdfDownloadBtn" onclick="downloadPDF()">Download Results as PDF</button>
+      <button class="btn-modal-secondary" onclick="closeModal()">I'll do it later</button>
+    </div>
+  </div>
+
+  <header class="curr-site-header">
+    <a href="/" class="curr-logo">Launch Valley Tutoring</a>
+    <div class="timer-wrap hidden" id="timerWrap" aria-live="polite" aria-label="Time remaining">
+      <span class="timer-label">Time remaining</span>
+      <span class="timer-display" id="timerDisplay">--:--</span>
+    </div>
+  </header>
+
+  <div class="test-page">
+
+    <div class="test-loading" id="testLoading">
+      <div class="loading-spinner"></div>
+      <p>Loading diagnostic...</p>
+    </div>
+
+    <div class="test-error hidden" id="testError">
+      <h2>Test Not Available</h2>
+      <p>This diagnostic is not yet available. Check back soon.</p>
+      <a href="index.html" class="btn-back">← Back to Curriculum</a>
+    </div>
+
+    <div class="test-content hidden" id="testContent">
+      <div class="test-inner">
+
+        <a href="index.html" class="back-link">← All Diagnostics</a>
+
+        <header class="test-header">
+          <h1 id="testTitle"></h1>
+          <p class="test-subtitle" id="testSubtitle"></p>
+        </header>
+
+        <div class="test-instructions">
+          <p>Answer all questions, then click <strong>Submit Test</strong> at the bottom to see your results. This diagnostic takes <span id="testDuration">40</span> minutes.</p>
+          <p class="instructions-note" id="k2Note" style="display:none">For grades K–2: a parent or tutor should read each question aloud to the student.</p>
+        </div>
+
+        <div class="progress-tracker">
+          <span class="progress-label"><span id="answeredCount">0</span> of <span id="totalCount">0</span> answered</span>
+          <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        </div>
+
+        <form class="questions-list" id="questionsList" novalidate></form>
+
+        <div class="submit-section">
+          <button type="button" class="btn-submit" id="submitBtn" onclick="handleSubmit()">Submit Test</button>
+          <p class="submit-note" id="submitNote"></p>
+        </div>
+
+        <section class="results hidden" id="resultsSection">
+          <div class="results-inner">
+            <h2>Your Results</h2>
+
+            <div class="score-display">
+              <span class="score-fraction" id="scoreFraction"></span>
+              <span class="score-percent" id="scorePercent"></span>
+            </div>
+
+            <div class="level-badge" id="levelBadge">
+              <span class="level-icon" id="levelIcon"></span>
+              <span class="level-text" id="levelText"></span>
+            </div>
+
+            <p class="level-description" id="levelDescription"></p>
+
+            <div class="next-grade-prompt hidden" id="nextGradePrompt">
+              <p id="nextGradeText"></p>
+              <a href="#" class="btn-next-grade" id="nextGradeLink">Take the next diagnostic →</a>
+            </div>
+
+            <div class="results-cta">
+              <p>Want personalized support based on these results?</p>
+              <a href="/contact" class="btn-cta">Talk to a tutor</a>
+            </div>
+
+            <div class="answer-review">
+              <h3>Review Your Answers</h3>
+              <div id="reviewList"></div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="test-runner.js"></script>
+</body>
+</html>
