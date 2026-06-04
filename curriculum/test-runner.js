@@ -45,10 +45,21 @@ function handleGateSubmit() {
   const email = document.getElementById('gateEmail').value.trim();
   if (!isValidEmail(email)) {
     document.getElementById('gateError').textContent = 'Please enter a valid email address.';
-    document.getElementById('gateInput').classList.add('invalid');
+    document.getElementById('gateEmail').classList.add('invalid');
     return;
   }
   localStorage.setItem('lvt_email', email);
+  // Fire-and-forget — don't block test start on network
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({
+      'form-name': 'diagnostic-email-gate',
+      email,
+      subject: subject || '',
+      grade: grade || ''
+    })
+  }).catch(() => {});
   document.getElementById('emailGate').classList.add('hidden');
   init();
 }
@@ -392,6 +403,34 @@ function renderTest(data) {
 
   if (['k','1','2'].includes(grade)) {
     document.getElementById('k2Note').style.display = 'block';
+  }
+
+  // Calculator badge
+  const calcBadge = document.getElementById('calcBadge');
+  if (calcBadge) {
+    if (data.calculator) {
+      calcBadge.textContent = 'Calculator allowed';
+      calcBadge.className = 'calc-badge allowed';
+    } else {
+      calcBadge.textContent = 'No calculator';
+      calcBadge.className = 'calc-badge no-calc';
+    }
+    calcBadge.removeAttribute('hidden');
+  }
+
+  // Formula sheet
+  const formulaSection = document.getElementById('formulaSection');
+  if (formulaSection && data.formulas && data.formulas.length) {
+    const rows = data.formulas.map(f =>
+      `<tr><td class="formula-label">${f.label}</td><td class="formula-expr">${f.formula}</td></tr>`
+    ).join('');
+    formulaSection.innerHTML = `
+      <details class="formula-sheet">
+        <summary class="formula-summary">Reference Formulas <span class="formula-toggle-hint">(tap to expand)</span></summary>
+        <table class="formula-table">${rows}</table>
+      </details>`;
+    typeset(formulaSection);
+    formulaSection.removeAttribute('hidden');
   }
 
   const form = document.getElementById('questionsList');

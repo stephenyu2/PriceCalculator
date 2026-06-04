@@ -384,6 +384,84 @@ body {
   font-style: italic;
 }
 
+/* Calculator badge */
+.calc-badge {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.calc-badge.allowed {
+  background: #e8f5e9;
+  color: #2d6e3e;
+  border: 1px solid #a8e0bc;
+}
+
+.calc-badge.no-calc {
+  background: #fff3e0;
+  color: #8a4f00;
+  border: 1px solid #f5c07a;
+}
+
+/* Formula sheet */
+#formulaSection { margin-bottom: 1.5rem; }
+
+.formula-sheet {
+  background: #fff;
+  border: 1px solid #e8e6e1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.formula-summary {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.formula-summary::-webkit-details-marker { display: none; }
+.formula-summary::before { content: '▶'; font-size: 0.65rem; color: #888; transition: transform 0.2s; }
+details[open] .formula-summary::before { transform: rotate(90deg); }
+
+.formula-toggle-hint {
+  font-size: 0.75rem;
+  color: #999;
+  font-weight: 400;
+}
+
+.formula-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  border-top: 1px solid #e8e6e1;
+}
+
+.formula-table tr:nth-child(even) { background: #faf9f7; }
+
+.formula-label {
+  padding: 0.5rem 1.25rem;
+  color: #555;
+  font-weight: 500;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.formula-expr {
+  padding: 0.5rem 1.25rem 0.5rem 0.5rem;
+  color: #111;
+}
+
 /* Progress */
 .progress-tracker {
   display: flex;
@@ -698,6 +776,28 @@ body {
 
 .btn-cta:hover { background: #f5f3ee; }
 
+.results-download {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.btn-download-results {
+  background: transparent;
+  border: 1.5px solid #bbb;
+  color: #444;
+  padding: 0.7rem 1.75rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.btn-download-results:hover {
+  border-color: #111;
+  color: #111;
+}
+
 /* Answer review */
 .answer-review {
   text-align: left;
@@ -888,7 +988,8 @@ body {
   .questions-list,
   .submit-section,
   .next-grade-prompt,
-  .results-cta       { display: none !important; }
+  .results-cta,
+  .results-download  { display: none !important; }
 
   /* Show print-specific elements */
   .print-header { display: block !important; margin-bottom: 1.5rem; border-bottom: 2px solid #111; padding-bottom: 1rem; }
