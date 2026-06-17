@@ -1,0 +1,100 @@
+{
+  "_comment": "SKILL BLUEPRINT SCHEMA — output of the Spec agent, input to the Generator agent.",
+  "_comment2": "One blueprint per standard. This is the contract the generator builds against.",
+
+  "standard": "7.RP.A.1",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Ratios and Proportional Relationships",
+  "domainCode": "RP",
+  "cluster": "Analyze proportional relationships and use them to solve real-world and mathematical problems",
+  "clusterCode": "A",
+  "skillName": "Unit Rates with Fractions",
+
+  "description": "Students compute unit rates where the rate itself is a ratio of fractions — e.g., (3/4 mile) per (1/2 hour) — by dividing complex fractions. They must set up the rate correctly, apply fraction division, and express the result with appropriate units.",
+
+  "subSkills": [
+    "Set up a ratio of two quantities given in fraction form",
+    "Divide a fraction by a fraction (multiply by the reciprocal)",
+    "Identify and label units correctly in the unit rate",
+    "Apply unit rate reasoning to real-world contexts (speed, price per unit, density)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Distance/time",
+      "example": "A car travels 3/4 mile in 1/4 hour. What is the speed in miles per hour?"
+    },
+    {
+      "name": "Price per unit",
+      "example": "A store sells 2/3 pound of cheese for $5/4. What is the cost per pound?"
+    },
+    {
+      "name": "Area/time or work rate",
+      "example": "A painter covers 5/6 of a wall in 2/3 of an hour. How much wall per hour?"
+    },
+    {
+      "name": "Density or concentration",
+      "example": "A solution contains 3/8 gram of salt in 1/4 liter. What is the concentration in grams per liter?"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "One of the two quantities is a whole number or simple unit fraction (1/2, 1/3, 1/4). The division step is straightforward with no simplification required beyond reducing once.",
+      "constraints": [
+        "Denominator of the complex fraction is a unit fraction (1/n)",
+        "Numbers stay within small integers (numerators/denominators ≤ 6)",
+        "Context is familiar (speed, price)"
+      ]
+    },
+    "Medium": {
+      "description": "Both quantities are non-unit fractions. Requires full fraction division and simplification. May involve mixed numbers or slightly larger values.",
+      "constraints": [
+        "Both numerator and denominator of the complex fraction are non-unit fractions",
+        "Simplification requires finding GCF",
+        "Context may be less familiar (density, work rate)"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step: student must first convert or set up the complex fraction from a verbal description before computing. May involve comparison of two unit rates or a follow-up question.",
+      "constraints": [
+        "Requires reading comprehension to extract the two quantities",
+        "May involve mixed numbers that must be converted to improper fractions first",
+        "Follow-up asks student to compare two unit rates or find a total"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student adds or subtracts the fractions instead of dividing",
+      "distractor": "Produces (3/4 + 1/2) or (3/4 - 1/2) instead of (3/4) ÷ (1/2)"
+    },
+    {
+      "misconception": "Student divides in the wrong order (denominator ÷ numerator)",
+      "distractor": "Gets (1/2) ÷ (3/4) = 2/3 instead of (3/4) ÷ (1/2) = 3/2"
+    },
+    {
+      "misconception": "Student multiplies straight across without taking the reciprocal",
+      "distractor": "Computes (3/4) × (1/2) = 3/8 instead of (3/4) × (2/1) = 3/2"
+    },
+    {
+      "misconception": "Student forgets to attach units to the answer",
+      "distractor": "Gives '3/2' instead of '3/2 miles per hour'"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

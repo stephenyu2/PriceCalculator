@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── Site header ── */
+/* ── Site header (test pages only) ── */
 .curr-site-header {
   position: sticky;
   top: 0;
@@ -32,7 +32,7 @@ body {
 
 .curr-logo:hover { color: #ddd; }
 
-/* ── Timer ── */
+/* ── Timer (inside curr-site-header on test pages) ── */
 .timer-wrap {
   display: flex;
   align-items: center;
@@ -1061,3 +1061,118 @@ details[open] .formula-summary::before { transform: rotate(90deg); }
     background: #fafafa;
   }
 }
+
+/* ── Library access button ── */
+.lib-access-wrap {
+  text-align: center;
+  margin: 2.5rem 0 1rem;
+}
+
+.lib-access-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: #111111;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: background 0.2s;
+}
+
+.lib-access-btn:hover { background: #333; }
+
+/* ── Library gate modal ── */
+.lib-gate-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.lib-gate-overlay.hidden { display: none; }
+
+.lib-gate-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  max-width: 360px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.lib-gate-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #888;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.lib-gate-close:hover { color: #111; }
+
+.lib-gate-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+.lib-gate-sub {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.lib-gate-input {
+  width: 100%;
+  padding: 0.65rem 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.5rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.lib-gate-input:focus { border-color: #111; }
+
+.lib-gate-error {
+  font-size: 0.85rem;
+  color: #c0392b;
+  margin-bottom: 0.75rem;
+}
+
+.lib-gate-error.hidden { display: none; }
+
+.lib-gate-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #111111;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 0.25rem;
+  transition: background 0.2s;
+}
+
+.lib-gate-btn:hover { background: #333; }
