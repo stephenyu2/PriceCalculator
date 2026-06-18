@@ -32,6 +32,11 @@ Open http://localhost:8080.
 
 /consulting/               → consulting/index.html (hub with video panels)
 /consulting/<service>/     → individual consulting pages (3 total)
+
+/curriculum/               → Academic Diagnostic tests (30 tests, email gate, timer, PDF)
+/library/                  → library/index.html (tutor-only CCSS library hub)
+/library/<subject>-<grade>/→ per-grade browsers (math-k..8/algebra1.., ela-k..12)
+/library/material.html?id= → single lesson/worksheet/quiz viewer
 ```
 
 ## CSS architecture
@@ -83,3 +88,12 @@ Single file, no dependencies. Handles: sticky nav, FAQ accordion, pricing calcul
 
 ## Redirects
 Old URL redirects are in `_redirects` (Netlify format). Check this before adding new routes.
+
+## Curriculum library content pipeline (`library/pipeline/`)
+Multi-agent pipeline that generates and verifies library material (lesson, worksheets Easy/Medium/Hard, quiz) per Common Core standard. See `library/pipeline/README.md` for full docs.
+
+- **Agents:** Spec (standard → blueprint) → Generator (→ `staging/<id>.json`) → Verifier (re-solves every item independently + runs `check.mjs` via code execution, bounded retry ≤3, else flags). Orchestrated by `orchestrate.workflow.js` (run via the Workflow tool; note `args` arrives as a JSON string and is parsed in-script).
+- **Deterministic helpers (run by hand, not agents):** `plan.mjs <grade> <subject>` computes the idempotent work list (re-running drops materials that now pass), `check.mjs` is the renderer-contract gate, `store.mjs` promotes ok-verdict staging files into `data/content/` and upserts `data/catalog.json`.
+- **Renderer contract (critical):** `library/material.js` calls `render()` inside the fetch try/catch, so a malformed item shows "Material not found", not just a 404. Worksheet/lesson items need `solution.steps[]`; quiz items must be multiple choice (`A) ...` option lines + answer starting with the correct letter) with `solution.steps[]`. `check.mjs` enforces all of this.
+- **Working dirs** (`staging/`, `verdicts/`, `feedback/`, `flagged/`, `reports/`) are gitignored run artifacts; `blueprints/` (spec outputs) are kept.
+- Status: Grade 1, 2, 6 ELA fully generated. `6.RL.C.8` is intentionally unbuilt (RL.6.8 is "not applicable to literature").
