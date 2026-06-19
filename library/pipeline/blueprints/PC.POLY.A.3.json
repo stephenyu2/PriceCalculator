@@ -1,0 +1,144 @@
+{
+  "standard": "PC.POLY.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Polynomial and Rational Functions",
+  "domainCode": "POLY",
+  "cluster": "Polynomial functions",
+  "clusterCode": "A",
+  "skillName": "Rational Functions",
+
+  "description": "Students analyze rational functions $f(x)=\\frac{p(x)}{q(x)}$ where $p$ and $q$ are polynomials. They find the domain, factor numerator and denominator, and identify all features of the graph: vertical asymptotes (zeros of the denominator that do not cancel), holes (removable discontinuities from common factors), and end behavior expressed as a horizontal asymptote (when $\\deg p \\le \\deg q$) or an oblique/slant asymptote (when $\\deg p = \\deg q + 1$, found by polynomial long division). They graph the function, describe behavior near each asymptote using one-sided limit language ($f(x)\\to+\\infty$ or $f(x)\\to-\\infty$), and solve rational equations and inequalities, checking for extraneous solutions and using a sign chart across critical points.",
+
+  "subSkills": [
+    "Determine the domain of a rational function by excluding zeros of the denominator",
+    "Factor numerator and denominator completely and cancel common factors",
+    "Identify vertical asymptotes (denominator zeros that do not cancel) and write them as $x=a$",
+    "Identify holes (removable discontinuities) and give the hole coordinates $(a, f(a))$ using the reduced function",
+    "Determine a horizontal asymptote by comparing degrees: $y=0$ when $\\deg p < \\deg q$, $y=\\frac{\\text{leading } p}{\\text{leading } q}$ when $\\deg p = \\deg q$",
+    "Find an oblique (slant) asymptote by polynomial long division when $\\deg p = \\deg q + 1$",
+    "Find x-intercepts (zeros of the reduced numerator) and the y-intercept ($f(0)$)",
+    "Describe behavior near a vertical asymptote with one-sided limits ($x\\to a^-$, $x\\to a^+$)",
+    "Sketch the full graph using intercepts, asymptotes, holes, and a sign analysis of $f$",
+    "Solve rational equations by clearing denominators and checking for extraneous roots",
+    "Solve rational inequalities using a sign chart of critical numbers (zeros and undefined points)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Domain and vertical asymptotes",
+      "example": "Find the domain and all vertical asymptotes of $f(x)=\\frac{x+2}{x^2-9}$."
+    },
+    {
+      "name": "Horizontal asymptote by degree comparison",
+      "example": "Identify the horizontal asymptote of $f(x)=\\frac{3x^2-1}{6x^2+5x}$."
+    },
+    {
+      "name": "Oblique asymptote by long division",
+      "example": "Find the oblique asymptote of $f(x)=\\frac{x^2+3x+5}{x+1}$."
+    },
+    {
+      "name": "Holes (removable discontinuities)",
+      "example": "Find the coordinates of any hole in the graph of $f(x)=\\frac{x^2-4}{x-2}$."
+    },
+    {
+      "name": "Full feature analysis and graphing",
+      "example": "For $f(x)=\\frac{x-1}{x^2-x-6}$, state the domain, all asymptotes, holes, and intercepts, then sketch the graph."
+    },
+    {
+      "name": "Behavior near an asymptote (one-sided limits)",
+      "example": "For $f(x)=\\frac{1}{x-4}$, describe the behavior as $x\\to 4^-$ and as $x\\to 4^+$."
+    },
+    {
+      "name": "Rational equation with extraneous-root check",
+      "example": "Solve $\\frac{2}{x-3}+\\frac{1}{x}=\\frac{6}{x^2-3x}$ and identify any extraneous solutions."
+    },
+    {
+      "name": "Rational inequality via sign chart",
+      "example": "Solve $\\frac{x-1}{x+2}\\ge 0$ and write the solution in interval notation."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-feature identification on a function that is already factored or factors trivially. One asymptote or one hole; degree comparison is immediate. Equations have a single denominator.",
+      "constraints": [
+        "Denominator is linear or a simple difference of squares, e.g. $\\frac{1}{x-4}$ or $\\frac{x}{x^2-9}$",
+        "Horizontal asymptote follows directly from $\\deg p < \\deg q$ ($y=0$) or equal degrees (ratio of leading coefficients)",
+        "At most one vertical asymptote to report, or a single removable hole from one common factor",
+        "Rational equations clear to a linear equation with at most one extraneous candidate"
+      ]
+    },
+    "Medium": {
+      "description": "Requires factoring a quadratic numerator and denominator, then distinguishing a hole from a vertical asymptote when a factor cancels. Includes oblique asymptotes via long division and inequalities with two critical points.",
+      "constraints": [
+        "Numerator and denominator are quadratics requiring factoring, e.g. $\\frac{x^2-4}{x^2-x-6}$",
+        "At least one common factor cancels, producing a hole whose y-coordinate must be computed from the reduced form",
+        "Oblique asymptote problems require polynomial long division of a quadratic over a linear divisor",
+        "Inequalities use a sign chart with two or three critical numbers and report interval notation",
+        "Equations clear to a quadratic and require checking both roots against the domain"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step synthesis: full graph from scratch combining holes, vertical and slant asymptotes, intercepts, and one-sided behavior, or a layered equation/inequality requiring careful sign analysis and extraneous-root elimination.",
+      "constraints": [
+        "Cubic over quadratic (or quadratic over linear) requiring long division for the slant asymptote plus a separate hole from a cancelled factor",
+        "Student must report domain, all asymptotes, holes, intercepts, and one-sided limit behavior on both sides of each vertical asymptote",
+        "Rational equations have a quadratic result where one or both roots are extraneous, demanding justification",
+        "Inequalities involve a factored numerator and denominator with three or more critical points and a strict-versus-inclusive endpoint decision driven by the domain"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student treats every zero of the denominator as a vertical asymptote, even when the factor cancels",
+      "distractor": "For $f(x)=\\frac{x^2-4}{x-2}$ reports a vertical asymptote at $x=2$ instead of recognizing a hole at $(2,4)$"
+    },
+    {
+      "misconception": "Student swaps the horizontal-asymptote rule, dividing leading coefficients when degrees are unequal",
+      "distractor": "For $f(x)=\\frac{3x-1}{x^2+5}$ gives $y=3$ instead of $y=0$ because $\\deg p<\\deg q$"
+    },
+    {
+      "misconception": "Student forgets that equal degrees give a horizontal asymptote at the ratio of leading coefficients, defaulting to $y=0$",
+      "distractor": "For $f(x)=\\frac{2x^2+1}{5x^2-x}$ gives $y=0$ instead of $y=\\frac{2}{5}$"
+    },
+    {
+      "misconception": "Student reverses the dividend and divisor (or keeps the remainder term) when reading the slant asymptote off the long division",
+      "distractor": "For $f(x)=\\frac{x^2+3x+5}{x+1}$ gives $y=x+1$ or includes the remainder instead of the quotient $y=x+2$"
+    },
+    {
+      "misconception": "Student gives the x-value of a hole but uses the original unreduced function (which is undefined) to find the y-coordinate",
+      "distractor": "Reports the hole as $(2,0)$ or leaves the y-coordinate blank instead of substituting $x=2$ into the reduced function"
+    },
+    {
+      "misconception": "Student solves a rational equation by clearing denominators but never checks roots against the excluded domain values",
+      "distractor": "Accepts $x=3$ as a solution to $\\frac{2}{x-3}+\\frac{1}{x}=\\frac{6}{x^2-3x}$ even though $x=3$ makes a denominator zero (extraneous)"
+    },
+    {
+      "misconception": "Student solves a rational inequality by cross-multiplying as if it were an equation, ignoring that the sign of the multiplier may flip the inequality",
+      "distractor": "For $\\frac{x-1}{x+2}\\ge 0$ multiplies both sides by $x+2$ without case analysis and reports $x\\ge 1$, missing the interval $x<-2$"
+    },
+    {
+      "misconception": "Student includes a critical number where the function is undefined as a closed endpoint in an inequality solution",
+      "distractor": "For $\\frac{x-1}{x+2}\\ge 0$ writes $[-2,\\infty)$, incorrectly including $x=-2$ where the expression is undefined"
+    },
+    {
+      "misconception": "Student assumes the graph never crosses a horizontal asymptote",
+      "distractor": "Claims $f(x)=\\frac{x}{x^2+1}$ cannot equal $0$, missing the x-intercept at the origin where the curve crosses $y=0$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

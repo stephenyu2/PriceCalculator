@@ -1,0 +1,215 @@
+{
+  "id": "PC.EXP.A.3--worksheet--medium",
+  "standard": "PC.EXP.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Exponential and Logarithmic Functions",
+  "domainCode": "EXP",
+  "cluster": "Properties and graphs",
+  "clusterCode": "A",
+  "skillName": "Logarithmic Properties and Equations",
+  "materialType": "worksheet",
+  "difficulty": "Medium",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Apply two or three logarithm properties at once. Expand and condense expressions that mix products, quotients, and powers (treat a square root as a $\\frac{1}{2}$ power), and solve exponential and logarithmic equations whose answers are exact logarithms or require condensing two terms first.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Expand $\\log_2\\left(\\frac{x^3\\sqrt{y}}{z}\\right)$ as a sum and difference of logarithms with no products, quotients, or exponents inside any logarithm.",
+      "answer": "$3\\log_2 x+\\frac{1}{2}\\log_2 y-\\log_2 z$",
+      "solution": {
+        "steps": [
+          "Apply the quotient rule: $\\log_2\\left(\\frac{x^3\\sqrt{y}}{z}\\right)=\\log_2(x^3\\sqrt{y})-\\log_2 z$.",
+          "Apply the product rule to the first term: $\\log_2(x^3\\sqrt{y})=\\log_2 x^3+\\log_2\\sqrt{y}$.",
+          "Write the root as a fractional exponent and use the power rule: $\\log_2 x^3=3\\log_2 x$ and $\\log_2\\sqrt{y}=\\log_2 y^{1/2}=\\frac{1}{2}\\log_2 y$.",
+          "Combine: $3\\log_2 x+\\frac{1}{2}\\log_2 y-\\log_2 z$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Expand $\\ln\\left(\\frac{5x^4}{\\sqrt{y\\,z}}\\right)$ completely as a sum and difference of logarithms.",
+      "answer": "$\\ln 5+4\\ln x-\\frac{1}{2}\\ln y-\\frac{1}{2}\\ln z$",
+      "solution": {
+        "steps": [
+          "Use the quotient rule: $\\ln\\left(\\frac{5x^4}{\\sqrt{y\\,z}}\\right)=\\ln(5x^4)-\\ln\\sqrt{y\\,z}$.",
+          "Expand the numerator with the product and power rules: $\\ln(5x^4)=\\ln 5+4\\ln x$.",
+          "Rewrite the denominator as a power: $\\ln\\sqrt{y\\,z}=\\ln(y\\,z)^{1/2}=\\frac{1}{2}\\ln(y\\,z)=\\frac{1}{2}(\\ln y+\\ln z)$.",
+          "Distribute the $\\frac{1}{2}$ and combine: $\\ln 5+4\\ln x-\\frac{1}{2}\\ln y-\\frac{1}{2}\\ln z$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Expand $\\log_3\\left(9x^2\\sqrt[3]{y}\\right)$ completely, evaluating any logarithm that has a numerical value.",
+      "answer": "$2+2\\log_3 x+\\frac{1}{3}\\log_3 y$",
+      "solution": {
+        "steps": [
+          "Apply the product rule: $\\log_3\\left(9x^2\\sqrt[3]{y}\\right)=\\log_3 9+\\log_3 x^2+\\log_3\\sqrt[3]{y}$.",
+          "Evaluate $\\log_3 9$: since $9=3^2$, $\\log_3 9=2$.",
+          "Apply the power rule to the remaining terms: $\\log_3 x^2=2\\log_3 x$ and $\\log_3\\sqrt[3]{y}=\\log_3 y^{1/3}=\\frac{1}{3}\\log_3 y$.",
+          "Combine: $2+2\\log_3 x+\\frac{1}{3}\\log_3 y$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Write $2\\ln x+\\frac{1}{3}\\ln y-\\ln 5$ as a single logarithm.",
+      "answer": "$\\ln\\left(\\frac{x^2\\sqrt[3]{y}}{5}\\right)$",
+      "solution": {
+        "steps": [
+          "Move each coefficient inside as an exponent using the power rule: $2\\ln x=\\ln x^2$ and $\\frac{1}{3}\\ln y=\\ln y^{1/3}=\\ln\\sqrt[3]{y}$.",
+          "The expression is now $\\ln x^2+\\ln\\sqrt[3]{y}-\\ln 5$.",
+          "Combine the sum with the product rule: $\\ln x^2+\\ln\\sqrt[3]{y}=\\ln\\left(x^2\\sqrt[3]{y}\\right)$.",
+          "Combine the difference with the quotient rule: $\\ln\\left(x^2\\sqrt[3]{y}\\right)-\\ln 5=\\ln\\left(\\frac{x^2\\sqrt[3]{y}}{5}\\right)$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Condense $3\\log_b x-\\log_b y-2\\log_b z$ into a single logarithm with coefficient $1$.",
+      "answer": "$\\log_b\\left(\\frac{x^3}{y\\,z^2}\\right)$",
+      "solution": {
+        "steps": [
+          "Use the power rule on each coefficient: $3\\log_b x=\\log_b x^3$, $\\log_b y$ stays, and $2\\log_b z=\\log_b z^2$.",
+          "Group the positive term over the subtracted terms; the subtracted logarithms become factors in the denominator.",
+          "Apply the quotient rule: $\\log_b x^3-\\log_b y-\\log_b z^2=\\log_b\\left(\\frac{x^3}{y\\,z^2}\\right)$.",
+          "The condensed form is $\\log_b\\left(\\frac{x^3}{y\\,z^2}\\right)$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Condense $\\frac{1}{2}\\log x+3\\log y-\\frac{1}{2}\\log z$ into a single logarithm.",
+      "answer": "$\\log\\left(\\frac{y^3\\sqrt{x}}{\\sqrt{z}}\\right)$",
+      "solution": {
+        "steps": [
+          "Apply the power rule: $\\frac{1}{2}\\log x=\\log x^{1/2}=\\log\\sqrt{x}$, $3\\log y=\\log y^3$, and $\\frac{1}{2}\\log z=\\log\\sqrt{z}$.",
+          "Combine the two additions with the product rule: $\\log\\sqrt{x}+\\log y^3=\\log\\left(y^3\\sqrt{x}\\right)$.",
+          "Apply the quotient rule for the subtraction: $\\log\\left(y^3\\sqrt{x}\\right)-\\log\\sqrt{z}=\\log\\left(\\frac{y^3\\sqrt{x}}{\\sqrt{z}}\\right)$.",
+          "The single logarithm is $\\log\\left(\\frac{y^3\\sqrt{x}}{\\sqrt{z}}\\right)$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Evaluate $\\log_5 50+\\log_5 \\frac{1}{2}$ exactly using logarithm properties.",
+      "answer": "$2$",
+      "solution": {
+        "steps": [
+          "Combine with the product rule: $\\log_5 50+\\log_5\\frac{1}{2}=\\log_5\\left(50\\cdot\\frac{1}{2}\\right)$.",
+          "Multiply inside the logarithm: $50\\cdot\\frac{1}{2}=25$, so the expression is $\\log_5 25$.",
+          "Since $25=5^2$, $\\log_5 25=2$.",
+          "The exact value is $2$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Use the change-of-base formula to write $\\log_7 30$ as a quotient of natural logarithms, then state its value rounded to four decimal places.",
+      "answer": "$\\log_7 30=\\frac{\\ln 30}{\\ln 7}\\approx 1.7479$",
+      "solution": {
+        "steps": [
+          "The change-of-base formula gives $\\log_7 30=\\frac{\\ln 30}{\\ln 7}$ (the new base goes in the denominator).",
+          "Compute $\\ln 30\\approx 3.4012$ and $\\ln 7\\approx 1.9459$.",
+          "Divide: $\\frac{3.4012}{1.9459}\\approx 1.7479$.",
+          "So $\\log_7 30=\\frac{\\ln 30}{\\ln 7}\\approx 1.7479$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Solve $3^{x+1}=20$ for $x$. Give the exact answer.",
+      "answer": "$x=\\log_3 20-1=\\frac{\\ln 20}{\\ln 3}-1$",
+      "solution": {
+        "steps": [
+          "Take the natural logarithm of both sides: $\\ln 3^{x+1}=\\ln 20$.",
+          "Apply the power rule on the left: $(x+1)\\ln 3=\\ln 20$.",
+          "Divide both sides by $\\ln 3$: $x+1=\\frac{\\ln 20}{\\ln 3}=\\log_3 20$.",
+          "Subtract $1$: $x=\\log_3 20-1=\\frac{\\ln 20}{\\ln 3}-1$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Solve $5\\cdot 2^{x}=90$ for $x$. Give the exact answer.",
+      "answer": "$x=\\log_2 18=\\frac{\\ln 18}{\\ln 2}$",
+      "solution": {
+        "steps": [
+          "Divide both sides by $5$ to isolate the exponential: $2^{x}=\\frac{90}{5}=18$.",
+          "Take the natural logarithm of both sides: $\\ln 2^{x}=\\ln 18$.",
+          "Apply the power rule: $x\\ln 2=\\ln 18$.",
+          "Divide by $\\ln 2$: $x=\\frac{\\ln 18}{\\ln 2}=\\log_2 18$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Solve $7^{2x}=4^{x+3}$ for $x$. Give the exact answer.",
+      "answer": "$x=\\frac{3\\ln 4}{2\\ln 7-\\ln 4}$",
+      "solution": {
+        "steps": [
+          "Take the natural logarithm of both sides: $\\ln 7^{2x}=\\ln 4^{x+3}$.",
+          "Apply the power rule on each side: $2x\\ln 7=(x+3)\\ln 4$.",
+          "Distribute and gather the $x$ terms: $2x\\ln 7=x\\ln 4+3\\ln 4$, so $2x\\ln 7-x\\ln 4=3\\ln 4$.",
+          "Factor and solve: $x(2\\ln 7-\\ln 4)=3\\ln 4$, giving $x=\\frac{3\\ln 4}{2\\ln 7-\\ln 4}$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Solve $\\log_2(x+3)+\\log_2(x)=2$ for $x$, and check the solution against the domain.",
+      "answer": "$x=1$",
+      "solution": {
+        "steps": [
+          "Condense the left side with the product rule: $\\log_2\\big(x(x+3)\\big)=2$.",
+          "Rewrite in exponential form $\\log_b A=k\\Rightarrow A=b^k$: $x(x+3)=2^2=4$.",
+          "Expand and solve the quadratic: $x^2+3x-4=0\\Rightarrow (x+4)(x-1)=0$, so $x=-4$ or $x=1$.",
+          "Check the domain (arguments $x+3>0$ and $x>0$): $x=-4$ makes $x$ negative, so reject it; $x=1$ gives arguments $4$ and $1$, both positive. Answer: $x=1$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Solve $\\log_5(x+2)-\\log_5(x-1)=1$ for $x$, and verify the solution lies in the domain.",
+      "answer": "$x=\\frac{7}{4}$",
+      "solution": {
+        "steps": [
+          "Condense with the quotient rule: $\\log_5\\left(\\frac{x+2}{x-1}\\right)=1$.",
+          "Rewrite in exponential form: $\\frac{x+2}{x-1}=5^1=5$.",
+          "Clear the fraction: $x+2=5(x-1)=5x-5$, so $7=4x$ and $x=\\frac{7}{4}$.",
+          "Check the domain: $x+2=\\frac{15}{4}>0$ and $x-1=\\frac{3}{4}>0$, so $x=\\frac{7}{4}$ is valid."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Solve $\\ln(2x)+\\ln 3=\\ln 30$ for $x$, and confirm the solution is in the domain.",
+      "answer": "$x=5$",
+      "solution": {
+        "steps": [
+          "Condense the left side with the product rule: $\\ln(2x)+\\ln 3=\\ln(6x)$.",
+          "The equation becomes $\\ln(6x)=\\ln 30$. Since $\\ln$ is one-to-one, $6x=30$.",
+          "Solve: $x=\\frac{30}{6}=5$.",
+          "Check the domain: the argument $2x=10>0$, so $x=5$ is valid."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Solve $\\log(x)+\\log(x-3)=1$ for $x$, where $\\log$ is base $10$, and reject any extraneous solution.",
+      "answer": "$x=5$",
+      "solution": {
+        "steps": [
+          "Condense the left side with the product rule: $\\log\\big(x(x-3)\\big)=1$.",
+          "Rewrite in exponential form (base $10$): $x(x-3)=10^1=10$.",
+          "Expand and solve the quadratic: $x^2-3x-10=0\\Rightarrow (x-5)(x+2)=0$, so $x=5$ or $x=-2$.",
+          "Check the domain (need $x>0$ and $x-3>0$, i.e. $x>3$): reject $x=-2$; $x=5$ gives arguments $5$ and $2$, both positive. Answer: $x=5$."
+        ]
+      }
+    }
+  ]
+}

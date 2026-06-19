@@ -1,0 +1,240 @@
+{
+  "id": "PC.TRIG.C.8--worksheet--hard",
+  "standard": "PC.TRIG.C.8",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Laws of sines and cosines",
+  "clusterCode": "C",
+  "skillName": "Law of Sines",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems require full ambiguous-case (SSA) analysis with the height test, complete solutions of both triangles when two exist, and multi-stage word problems that combine the angle sum, the Law of Sines, and the area formula. For each problem, state and justify the number of triangles, not just the final numbers.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Given $A = 30^\\circ$, $a = 10$, and $b = 16$, determine how many triangles are possible and solve each completely (find $B$, $C$, and $c$). Round angles and sides to one decimal place.",
+      "answer": "Two triangles. Triangle 1: $B \\approx 53.1^\\circ$, $C \\approx 96.9^\\circ$, $c \\approx 19.9$. Triangle 2: $B \\approx 126.9^\\circ$, $C \\approx 23.1^\\circ$, $c \\approx 7.9$.",
+      "solution": {
+        "steps": [
+          "Compute the height $h = b\\sin A = 16\\sin 30^\\circ = 16(0.5) = 8$. Since $h < a < b$ (that is $8 < 10 < 16$), two triangles exist.",
+          "Solve for $B$: $\\sin B = \\dfrac{b\\sin A}{a} = \\dfrac{16\\sin 30^\\circ}{10} = \\dfrac{8}{10} = 0.8$.",
+          "First angle: $B_1 = \\sin^{-1}(0.8) \\approx 53.1^\\circ$. Supplement: $B_2 = 180^\\circ - 53.1^\\circ = 126.9^\\circ$.",
+          "Check $B_2$: $A + B_2 = 30^\\circ + 126.9^\\circ = 156.9^\\circ < 180^\\circ$, so the supplement is valid and a second triangle exists.",
+          "Triangle 1: $C_1 = 180^\\circ - 30^\\circ - 53.1^\\circ = 96.9^\\circ$, then $c_1 = \\dfrac{a\\sin C_1}{\\sin A} = \\dfrac{10\\sin 96.9^\\circ}{\\sin 30^\\circ} \\approx \\dfrac{9.929}{0.5} \\approx 19.9$.",
+          "Triangle 2: $C_2 = 180^\\circ - 30^\\circ - 126.9^\\circ = 23.1^\\circ$, then $c_2 = \\dfrac{a\\sin C_2}{\\sin A} = \\dfrac{10\\sin 23.1^\\circ}{\\sin 30^\\circ} \\approx \\dfrac{3.928}{0.5} \\approx 7.9$. (Using the unrounded $C_2 = 23.130^\\circ$ gives $c_2 = 7.856$, which rounds to $7.9$.)"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Given $A = 40^\\circ$, $a = 5$, and $b = 12$, determine how many triangles are possible and justify your answer with the height test.",
+      "answer": "No triangle. Since $a = 5 < h = b\\sin A \\approx 7.7$, the side $a$ is too short to reach the base; equivalently $\\sin B \\approx 1.54 > 1$.",
+      "solution": {
+        "steps": [
+          "Compute the height: $h = b\\sin A = 12\\sin 40^\\circ \\approx 12(0.6428) \\approx 7.71$.",
+          "Compare $a$ to $h$: here $a = 5$ and $h \\approx 7.71$, so $a < h$.",
+          "When $a < h$ in the SSA case, side $a$ cannot reach the base line, so no triangle is formed.",
+          "Confirm algebraically: $\\sin B = \\dfrac{b\\sin A}{a} = \\dfrac{12\\sin 40^\\circ}{5} \\approx \\dfrac{7.713}{5} \\approx 1.54$.",
+          "Since $\\sin B \\approx 1.54 > 1$ is impossible, no angle $B$ exists, confirming no triangle."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Given $A = 35^\\circ$, $a = 7$, and $b = 10$, determine the number of triangles and solve each completely (find $B$, $C$, and $c$). Round to one decimal place.",
+      "answer": "Two triangles. Triangle 1: $B \\approx 55.0^\\circ$, $C \\approx 90.0^\\circ$, $c \\approx 12.2$. Triangle 2: $B \\approx 125.0^\\circ$, $C \\approx 20.0^\\circ$, $c \\approx 4.2$. (This is a borderline right-triangle case, since $C_1 \\approx 90.0^\\circ$.)",
+      "solution": {
+        "steps": [
+          "Height test: $h = b\\sin A = 10\\sin 35^\\circ \\approx 5.74$. Since $h < a < b$ (that is $5.74 < 7 < 10$), two triangles exist.",
+          "$\\sin B = \\dfrac{b\\sin A}{a} = \\dfrac{10\\sin 35^\\circ}{7} \\approx \\dfrac{5.7358}{7} \\approx 0.81939$.",
+          "$B_1 = \\sin^{-1}(0.81939) \\approx 55.024^\\circ \\approx 55.0^\\circ$; supplement $B_2 = 180^\\circ - 55.0^\\circ = 125.0^\\circ$.",
+          "Check $B_2$: $A + B_2 = 35^\\circ + 125.0^\\circ = 160.0^\\circ < 180^\\circ$, valid, so two triangles. (Triangle 1 is essentially a right triangle here.)",
+          "Triangle 1: $C_1 = 180^\\circ - 35^\\circ - 55.0^\\circ = 90.0^\\circ$; $c_1 = \\dfrac{a\\sin C_1}{\\sin A} = \\dfrac{7\\sin 90.0^\\circ}{\\sin 35^\\circ} \\approx \\dfrac{7.000}{0.5736} \\approx 12.2$.",
+          "Triangle 2: $C_2 = 180^\\circ - 35^\\circ - 125.0^\\circ = 20.0^\\circ$; $c_2 = \\dfrac{7\\sin 20.0^\\circ}{\\sin 35^\\circ} \\approx \\dfrac{2.394}{0.5736} \\approx 4.2$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Given $B = 50^\\circ$, $b = 9$, and $c = 11$, determine the number of triangles and solve each completely (find $C$, $A$, and $a$). Round to one decimal place.",
+      "answer": "Two triangles. Triangle 1: $C \\approx 69.4^\\circ$, $A \\approx 60.6^\\circ$, $a \\approx 10.2$. Triangle 2: $C \\approx 110.6^\\circ$, $A \\approx 19.4^\\circ$, $a \\approx 3.9$.",
+      "solution": {
+        "steps": [
+          "Here the known angle $B$ is opposite the shorter known side $b$, and $c > b$, so check the ambiguous case. Height relative to the base: $h = c\\sin B = 11\\sin 50^\\circ \\approx 8.43$. Since $h < b < c$ (that is $8.43 < 9 < 11$), two triangles exist.",
+          "$\\sin C = \\dfrac{c\\sin B}{b} = \\dfrac{11\\sin 50^\\circ}{9} \\approx \\dfrac{8.427}{9} \\approx 0.9363$.",
+          "$C_1 = \\sin^{-1}(0.9363) \\approx 69.4^\\circ$; supplement $C_2 = 180^\\circ - 69.4^\\circ = 110.6^\\circ$.",
+          "Check $C_2$: $B + C_2 = 50^\\circ + 110.6^\\circ = 160.6^\\circ < 180^\\circ$, valid, so two triangles.",
+          "Triangle 1: $A_1 = 180^\\circ - 50^\\circ - 69.4^\\circ = 60.6^\\circ$; $a_1 = \\dfrac{b\\sin A_1}{\\sin B} = \\dfrac{9\\sin 60.6^\\circ}{\\sin 50^\\circ} \\approx \\dfrac{7.841}{0.766} \\approx 10.2$.",
+          "Triangle 2: $A_2 = 180^\\circ - 50^\\circ - 110.6^\\circ = 19.4^\\circ$; $a_2 = \\dfrac{9\\sin 19.4^\\circ}{\\sin 50^\\circ} \\approx \\dfrac{2.990}{0.766} \\approx 3.9$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Given $A = 58^\\circ$, $a = 14$, and $b = 10$, determine the number of triangles and solve the triangle completely. Explain why the supplementary angle is rejected.",
+      "answer": "One triangle. $B \\approx 37.3^\\circ$, $C \\approx 84.7^\\circ$, $c \\approx 16.4$. The supplement $B \\approx 142.7^\\circ$ is rejected because $A + 142.7^\\circ > 180^\\circ$.",
+      "solution": {
+        "steps": [
+          "Since $a = 14 > b = 10$ and $A$ is opposite the larger side, exactly one triangle is possible (the side opposite the larger angle is longer).",
+          "$\\sin B = \\dfrac{b\\sin A}{a} = \\dfrac{10\\sin 58^\\circ}{14} \\approx \\dfrac{8.480}{14} \\approx 0.6057$.",
+          "$B_1 = \\sin^{-1}(0.6057) \\approx 37.3^\\circ$. Supplement $B_2 = 180^\\circ - 37.3^\\circ = 142.7^\\circ$.",
+          "Reject $B_2$: $A + B_2 = 58^\\circ + 142.7^\\circ = 200.7^\\circ > 180^\\circ$, which is impossible for a triangle. So only $B \\approx 37.3^\\circ$ works.",
+          "$C = 180^\\circ - 58^\\circ - 37.3^\\circ = 84.7^\\circ$.",
+          "$c = \\dfrac{a\\sin C}{\\sin A} = \\dfrac{14\\sin 84.7^\\circ}{\\sin 58^\\circ} \\approx \\dfrac{13.939}{0.848} \\approx 16.4$. (Using the unrounded $C = 84.717^\\circ$ gives $c = 16.438$, which rounds to $16.4$.)"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Given $A = 42^\\circ$ and $b = 18$, find the exact value of $a$ (as a multiple of $\\sin 42^\\circ$) for which the SSA case produces exactly one right-triangle solution, and state $a$ rounded to one decimal place.",
+      "answer": "$a = 18\\sin 42^\\circ \\approx 12.0$. This is the borderline case $a = h$, giving exactly one (right) triangle with $B = 90^\\circ$.",
+      "solution": {
+        "steps": [
+          "In the SSA case the height is $h = b\\sin A$. The borderline that gives exactly one triangle (a right triangle) occurs when $a = h$.",
+          "Set $a = h = b\\sin A = 18\\sin 42^\\circ$.",
+          "Evaluate: $\\sin 42^\\circ \\approx 0.6691$, so $a \\approx 18(0.6691) \\approx 12.0$.",
+          "Verify: $\\sin B = \\dfrac{b\\sin A}{a} = \\dfrac{18\\sin 42^\\circ}{18\\sin 42^\\circ} = 1$, so $B = 90^\\circ$ exactly, a single right triangle.",
+          "Thus $a = 18\\sin 42^\\circ \\approx 12.0$ is the unique value producing one right-triangle solution."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A surveyor wants the area of a triangular plot $\\triangle ABC$ where $A = 48^\\circ$, $B = 67^\\circ$, and side $c = 80$ meters. Find the area to the nearest square meter. (You must first find another side.)",
+      "answer": "$\\approx 2415$ square meters.",
+      "solution": {
+        "steps": [
+          "Find the third angle: $C = 180^\\circ - 48^\\circ - 67^\\circ = 65^\\circ$.",
+          "Use the Law of Sines to find side $a$ (opposite $A$): $a = \\dfrac{c\\sin A}{\\sin C} = \\dfrac{80\\sin 48^\\circ}{\\sin 65^\\circ} \\approx \\dfrac{59.451}{0.90631} \\approx 65.60$ m.",
+          "Sides $a$ and $c$ include angle $B$ between them, so use $\\text{Area} = \\dfrac{1}{2}ac\\sin B$.",
+          "$\\text{Area} = \\dfrac{1}{2}(65.60)(80)\\sin 67^\\circ = 2624\\sin 67^\\circ \\approx 2624(0.92050)$.",
+          "$\\text{Area} \\approx 2415$ square meters."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Two fire-lookout towers, $P$ and $Q$, are $6$ km apart on an east-west line. A fire $F$ is sighted: from $P$ the bearing to $F$ makes a $53^\\circ$ angle with line $PQ$, and from $Q$ the angle that line $QF$ makes with line $QP$ is $68^\\circ$. Find the distance from tower $P$ to the fire, to the nearest tenth of a kilometer.",
+      "answer": "$\\approx 6.5$ km.",
+      "solution": {
+        "steps": [
+          "In $\\triangle PQF$, the angle at $P$ is $53^\\circ$ and the angle at $Q$ is $68^\\circ$.",
+          "Find the angle at $F$: $F = 180^\\circ - 53^\\circ - 68^\\circ = 59^\\circ$.",
+          "Side $PQ = 6$ is opposite angle $F$; the distance $PF$ is opposite angle $Q = 68^\\circ$.",
+          "Law of Sines: $\\dfrac{PF}{\\sin Q} = \\dfrac{PQ}{\\sin F}$, so $PF = \\dfrac{6\\sin 68^\\circ}{\\sin 59^\\circ}$.",
+          "$PF \\approx \\dfrac{6(0.92718)}{0.85717} = \\dfrac{5.5631}{0.85717} \\approx 6.5$.",
+          "So the distance from $P$ to the fire is $\\approx 6.5$ km."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A ship sails on a bearing such that at point $X$ a lighthouse $L$ is sighted $34^\\circ$ off the ship's heading. After sailing $12$ km to point $Y$, the lighthouse is $58^\\circ$ off the (same) heading, measured back toward $X$. Find the distance from $Y$ to the lighthouse, then find how close the ship comes to the lighthouse (the perpendicular distance from $L$ to line $XY$). Round to one decimal place.",
+      "answer": "$YL \\approx 16.5$ km; closest approach (perpendicular distance) $\\approx 14.0$ km.",
+      "solution": {
+        "steps": [
+          "In $\\triangle XYL$, the angle at $X$ is $34^\\circ$. At $Y$ the lighthouse is $58^\\circ$ measured back toward $X$, so the interior angle at $Y$ is $180^\\circ - 58^\\circ = 122^\\circ$.",
+          "Angle at $L$: $L = 180^\\circ - 34^\\circ - 122^\\circ = 24^\\circ$.",
+          "Side $XY = 12$ is opposite $L = 24^\\circ$. Distance $YL$ is opposite $X = 34^\\circ$: $YL = \\dfrac{12\\sin 34^\\circ}{\\sin 24^\\circ}$.",
+          "With $\\sin 34^\\circ = 0.55919$ and $\\sin 24^\\circ = 0.40674$: $YL = \\dfrac{12(0.55919)}{0.40674} = \\dfrac{6.7103}{0.40674} \\approx 16.5$ km.",
+          "Closest approach is the perpendicular distance $d$ from $L$ to line $XY$. Dropping a perpendicular from $L$ to the line through $Y$, the angle between segment $YL$ and line $XY$ at $Y$ is $58^\\circ$, so $d = YL\\sin 58^\\circ \\approx 16.5(0.84805) \\approx 14.0$ km.",
+          "Therefore $YL \\approx 16.5$ km and the closest approach to the lighthouse is $\\approx 14.0$ km."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "In $\\triangle ABC$, $C = 110^\\circ$, $a = 9$, and $c = 15$. Determine the number of triangles, solve completely, and then compute the area of the triangle to one decimal place.",
+      "answer": "One triangle. $A \\approx 34.3^\\circ$, $B \\approx 35.7^\\circ$, $b \\approx 9.3$. Area $\\approx 39.4$ square units.",
+      "solution": {
+        "steps": [
+          "The given angle $C = 110^\\circ$ is obtuse and lies opposite side $c = 15$. Since $c > a$, exactly one triangle exists (an obtuse known angle opposite the longer side gives one solution).",
+          "$\\sin A = \\dfrac{a\\sin C}{c} = \\dfrac{9\\sin 110^\\circ}{15} \\approx \\dfrac{9(0.93969)}{15} \\approx \\dfrac{8.457}{15} \\approx 0.5638$.",
+          "$A = \\sin^{-1}(0.5638) \\approx 34.3^\\circ$. (The supplement $145.7^\\circ$ is rejected since $C + 145.7^\\circ > 180^\\circ$.)",
+          "$B = 180^\\circ - 110^\\circ - 34.3^\\circ = 35.7^\\circ$.",
+          "$b = \\dfrac{c\\sin B}{\\sin C} = \\dfrac{15\\sin 35.7^\\circ}{\\sin 110^\\circ} \\approx \\dfrac{15(0.58354)}{0.93969} \\approx \\dfrac{8.753}{0.93969} \\approx 9.3$.",
+          "Area using the two sides $a$ and $b$ with included angle $C$: $\\text{Area} = \\dfrac{1}{2}ab\\sin C = \\dfrac{1}{2}(9)(9.310)\\sin 110^\\circ \\approx \\dfrac{1}{2}(83.79)(0.93969) \\approx 39.4$ square units. (Using the unrounded $b = 9.310$ gives $39.37$, which rounds to $39.4$.)"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A triangular garden has $\\text{Area} = 60$ square meters. Two of its sides measure $a = 12$ m and $b = 14$ m, with the included angle $C$ between them. Find the two possible values of $C$ to the nearest tenth of a degree, then find side $c$ for the acute case (round to one decimal place).",
+      "answer": "$C \\approx 45.6^\\circ$ or $C \\approx 134.4^\\circ$. For the acute case, $c \\approx 10.2$ m.",
+      "solution": {
+        "steps": [
+          "Area formula: $\\text{Area} = \\dfrac{1}{2}ab\\sin C$, so $60 = \\dfrac{1}{2}(12)(14)\\sin C = 84\\sin C$.",
+          "$\\sin C = \\dfrac{60}{84} = \\dfrac{5}{7} \\approx 0.7143$.",
+          "$C_1 = \\sin^{-1}(0.7143) \\approx 45.6^\\circ$; supplement $C_2 = 180^\\circ - 45.6^\\circ = 134.4^\\circ$. Both give the same area, so both values of $C$ are valid.",
+          "For the acute case $C \\approx 45.6^\\circ$, sides $a$ and $b$ and the included angle $C$ are known, so find $c$ with the Law of Cosines: $c^2 = a^2 + b^2 - 2ab\\cos C$.",
+          "With $\\cos 45.6^\\circ \\approx 0.6997$: $c^2 = 12^2 + 14^2 - 2(12)(14)(0.6997) = 144 + 196 - 235.1 = 104.9$.",
+          "$c = \\sqrt{104.9} \\approx 10.2$ m for the acute case."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Given $A = 25^\\circ$, $a = 6$, and $b = 13$, determine the number of triangles using the height test and justify your conclusion. If any triangle exists, solve it; if not, explain.",
+      "answer": "Two triangles. Triangle 1: $B \\approx 66.3^\\circ$, $C \\approx 88.7^\\circ$, $c \\approx 14.2$. Triangle 2: $B \\approx 113.7^\\circ$, $C \\approx 41.3^\\circ$, $c \\approx 9.4$.",
+      "solution": {
+        "steps": [
+          "Compute the height: $h = b\\sin A = 13\\sin 25^\\circ \\approx 13(0.42262) \\approx 5.494$.",
+          "Compare: $a = 6$ and $h \\approx 5.494$, so $h < a < b$ (that is $5.494 < 6 < 13$). This is the two-triangle condition.",
+          "$\\sin B = \\dfrac{b\\sin A}{a} = \\dfrac{13\\sin 25^\\circ}{6} \\approx \\dfrac{5.494}{6} \\approx 0.9156$.",
+          "$B_1 = \\sin^{-1}(0.9156) \\approx 66.3^\\circ$; supplement $B_2 = 180^\\circ - 66.3^\\circ = 113.7^\\circ$. Check $B_2$: $A + B_2 = 25^\\circ + 113.7^\\circ = 138.7^\\circ < 180^\\circ$, valid. So two triangles exist.",
+          "Triangle 1: $C_1 = 180^\\circ - 25^\\circ - 66.3^\\circ = 88.7^\\circ$; $c_1 = \\dfrac{a\\sin C_1}{\\sin A} = \\dfrac{6\\sin 88.7^\\circ}{\\sin 25^\\circ} \\approx \\dfrac{5.998}{0.42262} \\approx 14.2$.",
+          "Triangle 2: $C_2 = 180^\\circ - 25^\\circ - 113.7^\\circ = 41.3^\\circ$; $c_2 = \\dfrac{6\\sin 41.3^\\circ}{\\sin 25^\\circ} \\approx \\dfrac{3.961}{0.42262} \\approx 9.4$. Final: two triangles, as solved."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A radio antenna is anchored by two guy wires from its top $T$ to points $P$ and $Q$ on level ground, on the same side of the tower base. Wire $TP$ makes a $62^\\circ$ angle with the ground at $P$, and wire $TQ$ makes a $48^\\circ$ angle with the ground at $Q$. The points $P$ and $Q$ are $20$ m apart, with $Q$ farther from the base. Find the length of the longer wire $TQ$ to one decimal place.",
+      "answer": "$TQ \\approx 73.0$ m.",
+      "solution": {
+        "steps": [
+          "Consider $\\triangle TPQ$. The wire angle at $P$ with the ground is $62^\\circ$; since $Q$ is on the same side beyond $P$, the interior angle of the triangle at $P$ (angle $TPQ$) is the supplement: $\\angle TPQ = 180^\\circ - 62^\\circ = 118^\\circ$.",
+          "The angle at $Q$ in the triangle is the elevation angle there: $\\angle TQP = 48^\\circ$.",
+          "Third angle at $T$: $\\angle PTQ = 180^\\circ - 118^\\circ - 48^\\circ = 14^\\circ$.",
+          "Side $PQ = 20$ is opposite $\\angle T = 14^\\circ$. The longer wire $TQ$ is opposite $\\angle P = 118^\\circ$.",
+          "Law of Sines: $TQ = \\dfrac{PQ\\sin(\\angle P)}{\\sin(\\angle T)} = \\dfrac{20\\sin 118^\\circ}{\\sin 14^\\circ}$.",
+          "With $\\sin 118^\\circ = 0.88295$ and $\\sin 14^\\circ = 0.24192$: $TQ = \\dfrac{17.659}{0.24192} \\approx 73.0$ m."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Two triangles share the SSA data $A = 30^\\circ$, $a = 10$, $b = 16$ (the same as Problem 1). Find the area of each of the two triangles using $\\text{Area} = \\dfrac{1}{2}ab\\sin C$, and state the ratio of the larger area to the smaller area, rounded to two decimal places.",
+      "answer": "Triangle 1 area $\\approx 79.4$ sq units; Triangle 2 area $\\approx 31.4$ sq units. Ratio $\\approx 2.53$.",
+      "solution": {
+        "steps": [
+          "From Problem 1, the two triangles have $C_1 \\approx 96.9^\\circ$ and $C_2 \\approx 23.1^\\circ$, with the same two sides $a = 10$ and $b = 16$ adjacent to angle $C$.",
+          "Triangle 1: $\\text{Area}_1 = \\dfrac{1}{2}ab\\sin C_1 = \\dfrac{1}{2}(10)(16)\\sin 96.9^\\circ \\approx 80(0.99272) \\approx 79.4$ square units.",
+          "Triangle 2: $\\text{Area}_2 = \\dfrac{1}{2}(10)(16)\\sin 23.1^\\circ \\approx 80(0.39234) \\approx 31.4$ square units.",
+          "Ratio of larger to smaller: $\\dfrac{79.4}{31.4} \\approx 2.53$.",
+          "Equivalently the ratio equals $\\dfrac{\\sin 96.9^\\circ}{\\sin 23.1^\\circ} \\approx \\dfrac{0.99272}{0.39234} \\approx 2.53$, confirming the result."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "From a point $A$ on a straight shoreline, a buoy $B$ is sighted at an angle of $40^\\circ$ to the shoreline. From point $C$, which is $250$ m down the shoreline from $A$, the buoy is sighted at an angle of $115^\\circ$ to the shoreline (measured at $C$, opening back toward $A$). Find the distance from $C$ to the buoy and the area of $\\triangle ABC$. Round the distance to one decimal place and the area to the nearest square meter.",
+      "answer": "$CB \\approx 166.4$ m; area $\\approx 18847$ square meters.",
+      "solution": {
+        "steps": [
+          "In $\\triangle ABC$, the interior angle at $A$ is $40^\\circ$. At $C$ the sighting is $115^\\circ$ measured opening back toward $A$, so the interior angle at $C$ is $180^\\circ - 115^\\circ = 65^\\circ$.",
+          "Third angle at $B$: $B = 180^\\circ - 40^\\circ - 65^\\circ = 75^\\circ$.",
+          "Side $AC = 250$ is opposite $B = 75^\\circ$. Distance $CB$ is opposite $A = 40^\\circ$: $CB = \\dfrac{AC\\sin A}{\\sin B} = \\dfrac{250\\sin 40^\\circ}{\\sin 75^\\circ} \\approx \\dfrac{160.70}{0.96593} \\approx 166.4$ m.",
+          "Sides $AC$ and $CB$ include angle $C = 65^\\circ$ between them, so use $\\text{Area} = \\dfrac{1}{2}(AC)(CB)\\sin C$.",
+          "$\\text{Area} = \\dfrac{1}{2}(250)(166.4)\\sin 65^\\circ \\approx \\dfrac{1}{2}(41600)(0.90631) \\approx 18847$ square meters."
+        ]
+      }
+    }
+  ]
+}

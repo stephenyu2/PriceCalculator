@@ -1,0 +1,228 @@
+{
+  "id": "PC.POLY.A.3--worksheet--medium",
+  "standard": "PC.POLY.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Polynomial and Rational Functions",
+  "domainCode": "POLY",
+  "cluster": "Polynomial functions",
+  "clusterCode": "A",
+  "skillName": "Rational Functions",
+  "materialType": "worksheet",
+  "difficulty": "Medium",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Each problem asks you to factor, then analyze a rational function or solve a rational equation or inequality. Watch for factors that cancel: those create holes, not vertical asymptotes. Always compute a hole's y-coordinate from the reduced function, compare degrees for end behavior, and check every equation root against the excluded domain values.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Find the coordinates of any hole in the graph of $f(x)=\\frac{x^2-4}{x^2-x-6}$.",
+      "answer": "Hole at $\\left(-2,\\ \\frac{4}{5}\\right)$",
+      "solution": {
+        "steps": [
+          "Factor both polynomials: $f(x)=\\frac{(x-2)(x+2)}{(x-3)(x+2)}$.",
+          "The factor $(x+2)$ is common to numerator and denominator, so it cancels: $x=-2$ gives a hole, not a vertical asymptote.",
+          "Reduce: $f(x)=\\frac{x-2}{x-3}$ for $x\\ne -2$.",
+          "Find the y-coordinate from the reduced form: $\\frac{-2-2}{-2-3}=\\frac{-4}{-5}=\\frac{4}{5}$.",
+          "The hole is at $\\left(-2,\\ \\frac{4}{5}\\right)$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "State the domain and all vertical asymptotes of $f(x)=\\frac{x+1}{x^2-x-12}$.",
+      "answer": "Domain: $x\\ne -3,\\ x\\ne 4$. Vertical asymptotes: $x=-3$ and $x=4$.",
+      "solution": {
+        "steps": [
+          "Factor the denominator: $x^2-x-12=(x-4)(x+3)$.",
+          "The denominator is zero at $x=4$ and $x=-3$, so the domain is all real numbers except $x=4$ and $x=-3$.",
+          "Neither factor cancels with the numerator $x+1$, so both excluded values give vertical asymptotes.",
+          "Vertical asymptotes: $x=-3$ and $x=4$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Identify the horizontal asymptote of $f(x)=\\frac{2x^2+1}{5x^2-x}$.",
+      "answer": "$y=\\frac{2}{5}$",
+      "solution": {
+        "steps": [
+          "The numerator and denominator both have degree $2$, so the degrees are equal.",
+          "When $\\deg p=\\deg q$, the horizontal asymptote is the ratio of the leading coefficients.",
+          "Leading coefficient of the numerator is $2$, of the denominator is $5$.",
+          "Horizontal asymptote: $y=\\frac{2}{5}$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Find the oblique (slant) asymptote of $f(x)=\\frac{x^2+3x+5}{x+1}$.",
+      "answer": "$y=x+2$",
+      "solution": {
+        "steps": [
+          "Since $\\deg p=\\deg q+1$, there is an oblique asymptote found by long division.",
+          "Divide $x^2+3x+5$ by $x+1$: $x^2\\div x=x$, and $x(x+1)=x^2+x$. Subtract to get $2x+5$.",
+          "Continue: $2x\\div x=2$, and $2(x+1)=2x+2$. Subtract to get a remainder of $3$.",
+          "So $f(x)=x+2+\\frac{3}{x+1}$. The remainder term goes to $0$ as $x\\to\\pm\\infty$.",
+          "The oblique asymptote is the quotient: $y=x+2$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "For $f(x)=\\frac{x^2-9}{x^2-2x-3}$, identify any holes and any vertical asymptotes.",
+      "answer": "Hole at $\\left(3,\\ \\frac{3}{2}\\right)$; vertical asymptote $x=-1$.",
+      "solution": {
+        "steps": [
+          "Factor: $f(x)=\\frac{(x-3)(x+3)}{(x-3)(x+1)}$.",
+          "The common factor $(x-3)$ cancels, so $x=3$ is a hole, not an asymptote.",
+          "Reduce: $f(x)=\\frac{x+3}{x+1}$ for $x\\ne 3$.",
+          "Find the hole's y-coordinate from the reduced form: $\\frac{3+3}{3+1}=\\frac{6}{4}=\\frac{3}{2}$, so the hole is at $\\left(3,\\ \\frac{3}{2}\\right)$.",
+          "The remaining denominator factor $(x+1)$ does not cancel, so $x=-1$ is a vertical asymptote."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Solve the rational equation $\\frac{2}{x-3}+\\frac{1}{x}=\\frac{6}{x^2-3x}$ and identify any extraneous solutions.",
+      "answer": "No solution. The only candidate $x=3$ is extraneous.",
+      "solution": {
+        "steps": [
+          "Factor the right denominator: $x^2-3x=x(x-3)$. The excluded values are $x=0$ and $x=3$.",
+          "Multiply every term by the common denominator $x(x-3)$: $2x+(x-3)=6$.",
+          "Combine: $3x-3=6$, so $3x=9$ and $x=3$.",
+          "Check $x=3$ against the domain: it makes $x-3=0$, so it is excluded and therefore extraneous.",
+          "Since the only candidate is extraneous, the equation has no solution."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Solve the inequality $\\frac{x-1}{x+2}\\ge 0$ and write the solution in interval notation.",
+      "answer": "$(-\\infty,-2)\\cup[1,\\infty)$",
+      "solution": {
+        "steps": [
+          "Critical numbers come from the numerator zero $x=1$ and the denominator zero $x=-2$.",
+          "Build a sign chart with intervals $(-\\infty,-2)$, $(-2,1)$, $(1,\\infty)$.",
+          "Test $x=-3$: $\\frac{-4}{-1}=4>0$ (positive). Test $x=0$: $\\frac{-1}{2}<0$ (negative). Test $x=2$: $\\frac{1}{4}>0$ (positive).",
+          "We want $\\ge 0$, so keep the positive intervals. Include $x=1$ (numerator zero makes the expression $0$), but exclude $x=-2$ where the expression is undefined.",
+          "Solution: $(-\\infty,-2)\\cup[1,\\infty)$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Find the x-intercepts and the y-intercept of $f(x)=\\frac{x^2-x-6}{x^2-4}$.",
+      "answer": "x-intercept: $(3,0)$. y-intercept: $\\left(0,\\ \\frac{3}{2}\\right)$.",
+      "solution": {
+        "steps": [
+          "Factor: $f(x)=\\frac{(x-3)(x+2)}{(x-2)(x+2)}$.",
+          "Cancel the common factor $(x+2)$: $f(x)=\\frac{x-3}{x-2}$ for $x\\ne -2$ (so $x=-2$ is a hole, not an intercept).",
+          "x-intercepts are zeros of the reduced numerator: $x-3=0$ gives $x=3$, so $(3,0)$.",
+          "y-intercept is $f(0)=\\frac{0-3}{0-2}=\\frac{-3}{-2}=\\frac{3}{2}$, so $\\left(0,\\ \\frac{3}{2}\\right)$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Solve the rational equation $\\frac{x}{x-2}=\\frac{4}{x-2}+3$ and check for extraneous roots.",
+      "answer": "$x=1$",
+      "solution": {
+        "steps": [
+          "The excluded value is $x=2$ (it makes a denominator zero).",
+          "Multiply every term by $x-2$: $x=4+3(x-2)$.",
+          "Expand the right side: $x=4+3x-6=3x-2$.",
+          "Solve: $x-3x=-2$, so $-2x=-2$ and $x=1$.",
+          "Check against the domain: $x=1\\ne 2$, so it is valid and not extraneous. The solution is $x=1$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Identify the horizontal asymptote of $f(x)=\\frac{4x-7}{2x^2+x-3}$.",
+      "answer": "$y=0$",
+      "solution": {
+        "steps": [
+          "The numerator has degree $1$ and the denominator has degree $2$.",
+          "Since $\\deg p<\\deg q$, the horizontal asymptote is $y=0$.",
+          "Do not divide leading coefficients here, that rule applies only when the degrees are equal.",
+          "Horizontal asymptote: $y=0$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Find the oblique asymptote of $f(x)=\\frac{2x^2-3x-1}{x-2}$.",
+      "answer": "$y=2x+1$",
+      "solution": {
+        "steps": [
+          "Because $\\deg p=\\deg q+1$, divide $2x^2-3x-1$ by $x-2$.",
+          "$2x^2\\div x=2x$, and $2x(x-2)=2x^2-4x$. Subtract: $(-3x)-(-4x)=x$, bringing down $-1$ gives $x-1$.",
+          "$x\\div x=1$, and $1(x-2)=x-2$. Subtract: $(x-1)-(x-2)=1$, remainder $1$.",
+          "So $f(x)=2x+1+\\frac{1}{x-2}$.",
+          "The oblique asymptote is the quotient: $y=2x+1$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Solve the inequality $\\frac{(x+1)(x-4)}{x}\\le 0$ and write the solution in interval notation.",
+      "answer": "$(-\\infty,-1]\\cup(0,4]$",
+      "solution": {
+        "steps": [
+          "Critical numbers: $x=-1$ and $x=4$ (numerator zeros) and $x=0$ (denominator zero, undefined).",
+          "Order them: $-1<0<4$, giving intervals $(-\\infty,-1)$, $(-1,0)$, $(0,4)$, $(4,\\infty)$.",
+          "Test $x=-2$: $\\frac{(-1)(-6)}{-2}=\\frac{6}{-2}<0$. Test $x=-0.5$: $\\frac{(0.5)(-4.5)}{-0.5}>0$. Test $x=1$: $\\frac{(2)(-3)}{1}<0$. Test $x=5$: $\\frac{(6)(1)}{5}>0$.",
+          "We want $\\le 0$, so keep the negative intervals: $(-\\infty,-1)$ and $(0,4)$.",
+          "Include the numerator zeros $x=-1$ and $x=4$ (expression equals $0$), but exclude $x=0$ where it is undefined.",
+          "Solution: $(-\\infty,-1]\\cup(0,4]$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "For $f(x)=\\frac{x^2+2x-8}{x-2}$, find any hole and the oblique asymptote.",
+      "answer": "Hole at $(2,6)$; oblique asymptote $y=x+4$.",
+      "solution": {
+        "steps": [
+          "Factor the numerator: $x^2+2x-8=(x+4)(x-2)$.",
+          "The factor $(x-2)$ cancels with the denominator, so $x=2$ is a hole.",
+          "Reduce: $f(x)=x+4$ for $x\\ne 2$. This linear reduced form is also the oblique asymptote.",
+          "Hole y-coordinate from the reduced form: $2+4=6$, so the hole is at $(2,6)$.",
+          "Because the function reduces to the line $y=x+4$, the oblique asymptote is $y=x+4$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Solve the rational equation $\\frac{3}{x+1}-\\frac{2}{x-1}=\\frac{x-3}{x^2-1}$ and check for extraneous roots.",
+      "answer": "No solution. After clearing denominators the equation reduces to the contradiction $-5=-3$, so it has no solution (this is a contradiction, not an extraneous-root situation).",
+      "solution": {
+        "steps": [
+          "Factor: $x^2-1=(x+1)(x-1)$. Excluded values are $x=-1$ and $x=1$.",
+          "Multiply every term by $(x+1)(x-1)$: $3(x-1)-2(x+1)=x-3$.",
+          "Expand: $3x-3-2x-2=x-3$, so $x-5=x-3$.",
+          "Subtract $x$ from both sides: $-5=-3$, a false statement.",
+          "The equation reduces to a contradiction, so there is no solution. Note that no candidate value of $x$ was ever produced, so this is a contradiction, not an extraneous root."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "For $f(x)=\\frac{2x^2-2}{x^2+3x+2}$, state the domain, the horizontal asymptote, any hole, and any vertical asymptote.",
+      "answer": "Domain: $x\\ne -2,\\ x\\ne -1$. Horizontal asymptote $y=2$. Hole at $(-1,-4)$. Vertical asymptote $x=-2$.",
+      "solution": {
+        "steps": [
+          "Factor: $f(x)=\\frac{2(x^2-1)}{(x+2)(x+1)}=\\frac{2(x-1)(x+1)}{(x+2)(x+1)}$.",
+          "Denominator zeros are $x=-2$ and $x=-1$, so the domain excludes both.",
+          "Degrees are equal (both $2$), so the horizontal asymptote is the ratio of leading coefficients: $\\frac{2}{1}=2$, giving $y=2$.",
+          "The factor $(x+1)$ cancels, so $x=-1$ is a hole. Reduce: $f(x)=\\frac{2(x-1)}{x+2}$.",
+          "Hole y-coordinate: $\\frac{2(-1-1)}{-1+2}=\\frac{2(-2)}{1}=-4$, so the hole is at $(-1,-4)$.",
+          "The remaining factor $(x+2)$ does not cancel, so $x=-2$ is a vertical asymptote."
+        ]
+      }
+    }
+  ]
+}

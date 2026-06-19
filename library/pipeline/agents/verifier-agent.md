@@ -18,7 +18,10 @@ mistakes — do not work that way.
    answer letter maps to a real option, item counts match the blueprint, ids/tags
    consistent. If it reports errors, the material FAILS — capture each error.
    For any item containing arithmetic, actually compute it with code (node/python),
-   never by inspection.
+   never by inspection. For math materials, use `pipeline/.venv/bin/python3` (sympy
+   + numpy): sympy for exact values/identities/factoring/solving, numpy for numeric
+   sampling of identities. Also confirm each quiz distractor is genuinely wrong by
+   computing the misconception that produces it.
 
 2. **Independent re-solve.** For EACH item, read only the `prompt` (and embedded
    stimulus). Solve it yourself. THEN reveal the keyed `answer` and compare:

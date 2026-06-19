@@ -1,0 +1,120 @@
+{
+  "standard": "PC.SEQ.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Sequences, Series, and Limits",
+  "domainCode": "SEQ",
+  "cluster": "Sequences and series",
+  "clusterCode": "A",
+  "skillName": "Arithmetic Sequences and Series",
+
+  "description": "Students recognize an arithmetic sequence by testing whether successive terms share a constant common difference $d$. They derive and apply the explicit formula for the $n$th term, $a_n = a_1 + (n-1)d$, and the partial-sum (arithmetic series) formula, $S_n = \\frac{n}{2}\\left(a_1 + a_n\\right) = \\frac{n}{2}\\left(2a_1 + (n-1)d\\right)$. They translate verbal and real-world situations (savings plans, stacked rows, accumulating distances) into arithmetic models and solve for any of $a_1$, $d$, $n$, $a_n$, or $S_n$.",
+
+  "subSkills": [
+    "Test a list of terms for a constant common difference and classify it as arithmetic or not arithmetic",
+    "Compute the common difference $d = a_{n+1} - a_n$ from consecutive terms",
+    "Apply the explicit formula $a_n = a_1 + (n-1)d$ to find a specified term",
+    "Solve for $a_1$, $d$, or $n$ given other known quantities (including two non-consecutive terms)",
+    "Apply $S_n = \\frac{n}{2}(a_1 + a_n)$ and $S_n = \\frac{n}{2}(2a_1 + (n-1)d)$ to find a partial sum",
+    "Evaluate a finite arithmetic series written in summation (sigma) notation",
+    "Model real-world contexts as arithmetic sequences or series and answer the contextual question"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Classify and find the common difference",
+      "example": "Determine whether $3,\\ 7,\\ 11,\\ 15,\\ \\dots$ is arithmetic, and if so state the common difference. (Yes; $d = 4$.)"
+    },
+    {
+      "name": "Find the nth term (explicit formula)",
+      "example": "An arithmetic sequence has $a_1 = 5$ and $d = 3$. Find $a_{20}$. ($a_{20} = 5 + 19\\cdot 3 = 62$.)"
+    },
+    {
+      "name": "Write the explicit rule",
+      "example": "Write a formula for the $n$th term of $2,\\ 9,\\ 16,\\ 23,\\ \\dots$. ($a_n = 2 + (n-1)\\cdot 7 = 7n - 5$.)"
+    },
+    {
+      "name": "Solve for an unknown parameter from two terms",
+      "example": "In an arithmetic sequence $a_4 = 14$ and $a_9 = 34$. Find $a_1$ and $d$. ($d = \\frac{34 - 14}{9 - 4} = 4$, $a_1 = 14 - 3\\cdot 4 = 2$.)"
+    },
+    {
+      "name": "Partial sum of a finite series",
+      "example": "Find the sum of the first $30$ terms of $4,\\ 7,\\ 10,\\ \\dots$. ($a_{30} = 4 + 29\\cdot 3 = 91$; $S_{30} = \\frac{30}{2}(4 + 91) = 1425$.)"
+    },
+    {
+      "name": "Evaluate sigma notation",
+      "example": "Evaluate $\\sum_{k=1}^{12}(3k + 2)$. (First term $5$, last term $38$; $S = \\frac{12}{2}(5 + 38) = 258$.)"
+    },
+    {
+      "name": "Real-world arithmetic model",
+      "example": "A theater has $18$ seats in the first row and $2$ more in each successive row. How many seats are in the $15$th row, and how many seats total in $15$ rows? ($a_{15} = 18 + 14\\cdot 2 = 46$; $S_{15} = \\frac{15}{2}(18 + 46) = 480$.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Direct single-formula application with all needed quantities given explicitly. Either classify a short list and find $d$, or substitute $a_1$, $d$, and a small $n$ into $a_n = a_1 + (n-1)d$.",
+      "constraints": [
+        "$a_1$, $d$, and $n$ are given directly; only one substitution is required",
+        "Positive integer values; $d$ a small integer with $|d| \\le 6$ and $n \\le 20$",
+        "No solving for an embedded unknown; no series sum required"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step problems: either compute a partial sum (requiring $a_n$ first, then $S_n$), evaluate a finite series in sigma notation, or back-solve for $a_1$ or $d$ from two given terms.",
+      "constraints": [
+        "Requires chaining the $n$th-term and partial-sum formulas, or solving a two-step linear equation for a parameter",
+        "May include a negative or fractional common difference (e.g. $d = -3$ or $d = \\tfrac{1}{2}$)",
+        "Sigma-notation series with up to about $20$ terms, or non-consecutive given terms"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step modeling or parameter recovery: extract an arithmetic model from a verbal/real-world scenario, solve for $n$ (often via a quadratic from the sum formula), or combine several unknowns before answering the contextual question.",
+      "constraints": [
+        "Student must build the model from prose before computing",
+        "Solving for $n$ produces a quadratic from $S_n = \\frac{n}{2}(2a_1 + (n-1)d)$, requiring rejection of the non-physical root",
+        "May require simultaneous use of both a known term and a known partial sum to recover $a_1$ and $d$"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student uses $a_n = a_1 + nd$ instead of $a_1 + (n-1)d$ (off-by-one on the number of steps)",
+      "distractor": "For $a_1 = 5$, $d = 3$, $n = 20$ computes $5 + 20\\cdot 3 = 65$ instead of $5 + 19\\cdot 3 = 62$"
+    },
+    {
+      "misconception": "Student treats the sequence as geometric, dividing terms or using a common ratio instead of a common difference",
+      "distractor": "From $3,\\ 7,\\ 11,\\dots$ reports $r = \\frac{7}{3}$ or multiplies by a ratio rather than adding $d = 4$"
+    },
+    {
+      "misconception": "Student computes the common difference as $\\frac{a_m - a_k}{m - k}$ but forgets to divide by the gap in indices, using $a_m - a_k$ as $d$",
+      "distractor": "From $a_4 = 14$, $a_9 = 34$ takes $d = 34 - 14 = 20$ instead of $\\frac{20}{5} = 4$"
+    },
+    {
+      "misconception": "Student averages $a_1$ and $a_n$ for the sum but forgets the factor of $n$ (or uses $n-1$ for the count of terms)",
+      "distractor": "For $S_{30}$ reports $\\frac{4 + 91}{2} = 47.5$, or uses $\\frac{29}{2}(4+91)$ instead of $\\frac{30}{2}(4+91) = 1425$"
+    },
+    {
+      "misconception": "Student substitutes the wrong term value into the partial-sum formula, using $a_1$ where $a_n$ is needed (or never computes $a_n$)",
+      "distractor": "Computes $S_{30} = \\frac{30}{2}(4 + 4) = 120$ instead of using $a_{30} = 91$"
+    },
+    {
+      "misconception": "In sigma notation the student plugs the index bounds in as terms rather than evaluating the expression at each $k$",
+      "distractor": "For $\\sum_{k=1}^{12}(3k+2)$ reports $\\frac{12}{2}(1 + 12) = 78$ instead of using the actual first/last terms $5$ and $38$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

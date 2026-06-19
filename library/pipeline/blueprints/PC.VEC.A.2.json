@@ -1,0 +1,145 @@
+{
+  "standard": "PC.VEC.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Vectors and Parametric Equations",
+  "domainCode": "VEC",
+  "cluster": "Vectors in the plane",
+  "clusterCode": "A",
+  "skillName": "Dot Product and Applications",
+
+  "description": "Students compute the dot product of two vectors in component form, $\\vec{u}\\cdot\\vec{v}=u_1v_1+u_2v_2$ (and its $3$D extension $u_1v_1+u_2v_2+u_3v_3$). They use the relationship $\\vec{u}\\cdot\\vec{v}=\\|\\vec{u}\\|\\,\\|\\vec{v}\\|\\cos\\theta$ to find the angle between two vectors, determine whether two vectors are orthogonal by testing $\\vec{u}\\cdot\\vec{v}=0$, and compute the scalar and vector projection of one vector onto another using $\\operatorname{proj}_{\\vec{v}}\\vec{u}=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\vec{v}\\cdot\\vec{v}}\\,\\vec{v}$. Answers are given exactly with radicals, $\\pi$, and fractions rather than rounded decimals unless an approximation is requested.",
+
+  "subSkills": [
+    "Compute the dot product of two vectors given in component form ($2$D and $3$D)",
+    "Use $\\vec{v}\\cdot\\vec{v}=\\|\\vec{v}\\|^2$ to relate the dot product to magnitude",
+    "Find the angle between two vectors via $\\cos\\theta=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{u}\\|\\,\\|\\vec{v}\\|}$",
+    "Determine orthogonality by testing whether $\\vec{u}\\cdot\\vec{v}=0$",
+    "Compute the scalar projection (component) $\\operatorname{comp}_{\\vec{v}}\\vec{u}=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{v}\\|}$",
+    "Compute the vector projection $\\operatorname{proj}_{\\vec{v}}\\vec{u}=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\vec{v}\\cdot\\vec{v}}\\,\\vec{v}$",
+    "Decompose a vector into components parallel and orthogonal to a given vector",
+    "Solve for an unknown component that makes two vectors orthogonal or parallel",
+    "Apply the dot product to work ($W=\\vec{F}\\cdot\\vec{d}$) and geometric contexts"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Compute the dot product",
+      "example": "Given $\\vec{u}=\\langle 3,-4\\rangle$ and $\\vec{v}=\\langle 5,2\\rangle$, find $\\vec{u}\\cdot\\vec{v}$. (Answer: $\\vec{u}\\cdot\\vec{v}=3(5)+(-4)(2)=7$.)"
+    },
+    {
+      "name": "Angle between vectors (exact special angle)",
+      "example": "Find the angle between $\\vec{u}=\\langle 1,\\sqrt{3}\\rangle$ and $\\vec{v}=\\langle \\sqrt{3},1\\rangle$. (Answer: $\\cos\\theta=\\frac{2\\sqrt{3}}{4}=\\frac{\\sqrt{3}}{2}$, so $\\theta=\\frac{\\pi}{6}$.)"
+    },
+    {
+      "name": "Angle between vectors (general, approximate)",
+      "example": "Find the angle between $\\vec{u}=\\langle 2,3\\rangle$ and $\\vec{v}=\\langle -1,4\\rangle$ to the nearest degree. (Answer: $\\cos\\theta=\\frac{10}{\\sqrt{13}\\,\\sqrt{17}}$, so $\\theta\\approx 47.7^\\circ$.)"
+    },
+    {
+      "name": "Test for orthogonality",
+      "example": "Are $\\vec{u}=\\langle 4,6\\rangle$ and $\\vec{v}=\\langle 3,-2\\rangle$ orthogonal? (Answer: $\\vec{u}\\cdot\\vec{v}=12-12=0$, so yes.)"
+    },
+    {
+      "name": "Solve for an unknown component",
+      "example": "Find $k$ so that $\\vec{u}=\\langle k,5\\rangle$ and $\\vec{v}=\\langle 2,-3\\rangle$ are orthogonal. (Answer: $2k-15=0\\Rightarrow k=\\frac{15}{2}$.)"
+    },
+    {
+      "name": "Scalar projection (component)",
+      "example": "Find the scalar projection of $\\vec{u}=\\langle 4,3\\rangle$ onto $\\vec{v}=\\langle 1,0\\rangle$. (Answer: $\\operatorname{comp}_{\\vec{v}}\\vec{u}=\\frac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{v}\\|}=4$.)"
+    },
+    {
+      "name": "Vector projection",
+      "example": "Find $\\operatorname{proj}_{\\vec{v}}\\vec{u}$ for $\\vec{u}=\\langle 3,4\\rangle$ and $\\vec{v}=\\langle 2,1\\rangle$. (Answer: $\\frac{\\vec{u}\\cdot\\vec{v}}{\\vec{v}\\cdot\\vec{v}}\\vec{v}=\\frac{10}{5}\\langle 2,1\\rangle=\\langle 4,2\\rangle$.)"
+    },
+    {
+      "name": "Orthogonal decomposition",
+      "example": "Write $\\vec{u}=\\langle 5,2\\rangle$ as the sum of a vector parallel to $\\vec{v}=\\langle 1,1\\rangle$ and a vector orthogonal to $\\vec{v}$. (Answer: $\\vec{u}=\\langle \\frac{7}{2},\\frac{7}{2}\\rangle+\\langle \\frac{3}{2},-\\frac{3}{2}\\rangle$.)"
+    },
+    {
+      "name": "Work done by a force",
+      "example": "A constant force $\\vec{F}=\\langle 6,2\\rangle$ moves an object along displacement $\\vec{d}=\\langle 4,1\\rangle$. Find the work. (Answer: $W=\\vec{F}\\cdot\\vec{d}=24+2=26$.)"
+    },
+    {
+      "name": "Dot product in 3D",
+      "example": "Find $\\vec{u}\\cdot\\vec{v}$ for $\\vec{u}=\\langle 1,-2,3\\rangle$ and $\\vec{v}=\\langle 4,0,-1\\rangle$. (Answer: $4+0-3=1$.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step computation with small integer components. Compute a dot product directly, or test orthogonality by checking if the dot product is zero. No magnitudes or radicals required.",
+      "constraints": [
+        "Vectors are 2D with integer components, each $|\\,\\text{component}\\,|\\le 6$",
+        "Task is one operation: a dot product, or an orthogonality yes/no test",
+        "No square roots, fractions, or inverse trig in the answer",
+        "Angle questions, if any, use perpendicular ($\\frac{\\pi}{2}$) or parallel detection only"
+      ]
+    },
+    "Medium": {
+      "description": "Two to three steps involving magnitudes and the angle or projection formulas, where the result is an exact special-angle value or a clean fraction. Includes solving for an unknown component for orthogonality and computing vector projections.",
+      "constraints": [
+        "Requires computing one or two magnitudes with radicals (e.g. $\\sqrt{5},\\sqrt{13}$)",
+        "Angle answers are exact unit-circle values such as $\\frac{\\pi}{6},\\frac{\\pi}{4},\\frac{\\pi}{3},\\frac{\\pi}{2},\\frac{2\\pi}{3},\\frac{3\\pi}{4}$",
+        "Scalar or vector projections with fractional coefficients are allowed",
+        "Solving $\\vec{u}\\cdot\\vec{v}=0$ for one unknown component is Medium"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems that combine several operations, require orthogonal decomposition, use 3D vectors, yield non-special angles requiring $\\cos^{-1}$ with an approximation, or are set in an applied/geometric context requiring setup before computation.",
+      "constraints": [
+        "May require an orthogonal decomposition into parallel and perpendicular parts",
+        "May use 3D vectors or symbolic/parameterized components",
+        "Angle answers may be non-special, expressed exactly as $\\cos^{-1}\\!\\left(\\frac{\\dots}{\\dots}\\right)$ and approximated to the nearest degree",
+        "Applied context (work, geometry, proving a triangle is right) must be translated into vectors first"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Treats the dot product as a vector by multiplying componentwise instead of summing",
+      "distractor": "Reports $\\vec{u}\\cdot\\vec{v}=\\langle u_1v_1,\\,u_2v_2\\rangle$ (e.g. $\\langle 15,-8\\rangle$) instead of the scalar $u_1v_1+u_2v_2=7$"
+    },
+    {
+      "misconception": "Adds the components of each vector first, then multiplies, or otherwise mishandles signs",
+      "distractor": "Computes $(u_1+u_2)(v_1+v_2)$ or drops the negative sign, e.g. $3(5)+4(2)=23$ instead of $3(5)+(-4)(2)=7$"
+    },
+    {
+      "misconception": "Forgets to divide by the product of the magnitudes when finding the angle",
+      "distractor": "Sets $\\cos\\theta=\\vec{u}\\cdot\\vec{v}$ and takes $\\cos^{-1}$ of an out-of-range value, or omits one magnitude in the denominator"
+    },
+    {
+      "misconception": "Confuses the orthogonality condition with the parallel condition",
+      "distractor": "Calls vectors orthogonal when components are proportional ($\\frac{u_1}{v_1}=\\frac{u_2}{v_2}$) rather than when $\\vec{u}\\cdot\\vec{v}=0$"
+    },
+    {
+      "misconception": "Uses $\\|\\vec{v}\\|$ instead of $\\|\\vec{v}\\|^2$ (i.e. $\\vec{v}\\cdot\\vec{v}$) in the vector projection denominator",
+      "distractor": "Computes $\\operatorname{proj}_{\\vec{v}}\\vec{u}=\\frac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{v}\\|}\\vec{v}$, scaling $\\vec{v}$ by the scalar projection instead of $\\frac{\\vec{u}\\cdot\\vec{v}}{\\vec{v}\\cdot\\vec{v}}$"
+    },
+    {
+      "misconception": "Confuses the scalar projection (a number) with the vector projection (a vector)",
+      "distractor": "Gives the scalar $\\frac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{v}\\|}$ when a vector $\\langle\\,,\\,\\rangle$ is required, or vice versa"
+    },
+    {
+      "misconception": "Forgets the magnitude square root, using $u_1^2+u_2^2$ as the magnitude",
+      "distractor": "Uses $\\|\\vec{u}\\|=u_1^2+u_2^2$ instead of $\\sqrt{u_1^2+u_2^2}$, producing the wrong $\\cos\\theta$ and angle"
+    },
+    {
+      "misconception": "Projects onto the wrong vector, swapping $\\vec{u}$ and $\\vec{v}$",
+      "distractor": "Computes $\\operatorname{proj}_{\\vec{u}}\\vec{v}$ when $\\operatorname{proj}_{\\vec{v}}\\vec{u}$ was asked, using $\\vec{u}\\cdot\\vec{u}$ in the denominator"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

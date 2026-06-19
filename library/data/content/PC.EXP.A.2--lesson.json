@@ -1,0 +1,164 @@
+{
+  "id": "PC.EXP.A.2--lesson",
+  "standard": "PC.EXP.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Exponential and Logarithmic Functions",
+  "domainCode": "EXP",
+  "cluster": "Properties and graphs",
+  "clusterCode": "A",
+  "skillName": "Logarithmic Functions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "A logarithm answers the question: to what power must the base be raised to get a given number? The statement $y = \\log_b x$ means exactly the same thing as $b^y = x$, so the logarithm is the inverse of the exponential function. Because of that inverse relationship, $\\log_b(b^x) = x$ and $b^{\\log_b x} = x$. You can evaluate many logarithms exactly by rewriting the argument as a power of the base, use the change-of-base formula $\\log_b x = \\frac{\\ln x}{\\ln b}$ for arbitrary bases, and graph $y = a\\log_b(x - h) + k$ by tracking its vertical asymptote $x = h$, its domain $x > h$, and its range of all real numbers.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Rewrite $2^5 = 32$ in logarithmic form, and rewrite $\\log_3 81 = 4$ in exponential form.",
+      "solution": {
+        "steps": [
+          "The definition links the two forms: $b^y = x$ is the same statement as $y = \\log_b x$. The base $b$ stays the base in both forms.",
+          "For $2^5 = 32$, the base is $2$, the exponent is $5$, and the result is $32$. In log form the base stays the base and the exponent becomes the value: $\\log_2 32 = 5$.",
+          "For $\\log_3 81 = 4$, the base is $3$, the value $4$ is the exponent, and $81$ is the result. In exponential form: $3^4 = 81$.",
+          "Check: $3^4 = 81$ is true, confirming the conversion."
+        ],
+        "answer": "$\\log_2 32 = 5$ and $3^4 = 81$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Evaluate $\\log_4 \\frac{1}{64}$ without a calculator.",
+      "solution": {
+        "steps": [
+          "Let $\\log_4 \\frac{1}{64} = y$. By the definition this means $4^y = \\frac{1}{64}$.",
+          "Write $\\frac{1}{64}$ as a power of $4$. Since $64 = 4^3$, we have $\\frac{1}{64} = 4^{-3}$.",
+          "So $4^y = 4^{-3}$, which forces $y = -3$ because the bases are equal.",
+          "The reciprocal makes the exponent negative, so the value is negative, not positive."
+        ],
+        "answer": "$-3$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Simplify $5^{\\log_5 12}$ and $\\log_2(2^9)$ using the inverse relationship.",
+      "solution": {
+        "steps": [
+          "The functions $b^x$ and $\\log_b x$ are inverses, so applying one and then the other returns the original input.",
+          "For $5^{\\log_5 12}$, use the identity $b^{\\log_b x} = x$ with $b = 5$ and $x = 12$. The exponential and the logarithm cancel, leaving $12$.",
+          "For $\\log_2(2^9)$, use the identity $\\log_b(b^x) = x$ with $b = 2$ and $x = 9$. The logarithm and the exponential cancel, leaving $9$.",
+          "Neither result requires computing $\\log_5 12$ or $2^9$ directly; the inverse identities do the work."
+        ],
+        "answer": "$5^{\\log_5 12} = 12$ and $\\log_2(2^9) = 9$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Express $\\log_7 20$ using natural logarithms, then approximate to three decimal places.",
+      "solution": {
+        "steps": [
+          "The change-of-base formula is $\\log_b x = \\frac{\\ln x}{\\ln b}$. The argument $x$ goes in the numerator and the base $b$ goes in the denominator.",
+          "Here $b = 7$ and $x = 20$, so $\\log_7 20 = \\frac{\\ln 20}{\\ln 7}$.",
+          "Evaluate: $\\ln 20 \\approx 2.9957$ and $\\ln 7 \\approx 1.9459$.",
+          "Divide: $\\frac{2.9957}{1.9459} \\approx 1.540$.",
+          "Sanity check: $7^1 = 7$ and $7^2 = 49$, and $20$ is between them closer to the low end, so a value near $1.5$ is reasonable."
+        ],
+        "answer": "$\\log_7 20 = \\frac{\\ln 20}{\\ln 7} \\approx 1.540$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Describe the transformations of $y = -2\\log_2(x + 1) + 4$ from the parent function $y = \\log_2 x$, and state the vertical asymptote, domain, and range.",
+      "solution": {
+        "steps": [
+          "Compare to the general form $y = a\\log_b(x - h) + k$. Here $a = -2$, $b = 2$, $h = -1$ (since $x + 1 = x - (-1)$), and $k = 4$.",
+          "The factor $a = -2$ has two effects: the negative sign reflects the graph across the $x$-axis, and the $2$ stretches it vertically by a factor of $2$.",
+          "The value $h = -1$ shifts the graph left $1$ unit, which moves the vertical asymptote from $x = 0$ to $x = -1$.",
+          "The value $k = 4$ shifts the graph up $4$ units. A vertical shift does not move a vertical asymptote, so the asymptote stays at $x = -1$.",
+          "The argument must be positive: $x + 1 > 0$, so $x > -1$. The domain is $x > -1$.",
+          "A logarithmic function still outputs every real number after these transformations, so the range is all real numbers."
+        ],
+        "answer": "Reflect across the $x$-axis, stretch vertically by $2$, shift left $1$, shift up $4$. Vertical asymptote $x = -1$, domain $x > -1$, range all real numbers."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Rewrite $10^{-2} = \\frac{1}{100}$ in logarithmic form.",
+      "hint": "The base of the power stays the base of the logarithm, and the exponent becomes the value of the logarithm.",
+      "solution": {
+        "steps": [
+          "The base is $10$, the exponent is $-2$, and the result is $\\frac{1}{100}$.",
+          "Using $b^y = x \\iff y = \\log_b x$, write $\\log_{10} \\frac{1}{100} = -2$.",
+          "Check: $10^{-2} = \\frac{1}{100}$ confirms the conversion."
+        ],
+        "answer": "$\\log_{10} \\frac{1}{100} = -2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Evaluate $\\log_5 \\frac{1}{25}$ without a calculator.",
+      "hint": "Set the expression equal to $y$ and rewrite $\\frac{1}{25}$ as a power of $5$.",
+      "solution": {
+        "steps": [
+          "Let $\\log_5 \\frac{1}{25} = y$, so $5^y = \\frac{1}{25}$.",
+          "Since $25 = 5^2$, we have $\\frac{1}{25} = 5^{-2}$.",
+          "Then $5^y = 5^{-2}$, so $y = -2$."
+        ],
+        "answer": "$-2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Simplify $\\log_3(3^7)$ and $8^{\\log_8 5}$.",
+      "hint": "Use the inverse identities $\\log_b(b^x) = x$ and $b^{\\log_b x} = x$.",
+      "solution": {
+        "steps": [
+          "For $\\log_3(3^7)$, the log base $3$ undoes the exponential base $3$: the result is $7$.",
+          "For $8^{\\log_8 5}$, the exponential base $8$ undoes the log base $8$: the result is $5$."
+        ],
+        "answer": "$\\log_3(3^7) = 7$ and $8^{\\log_8 5} = 5$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Express $\\log_6 45$ as a ratio of natural logarithms, then approximate to three decimal places.",
+      "hint": "Change of base puts the argument on top: $\\log_b x = \\frac{\\ln x}{\\ln b}$.",
+      "solution": {
+        "steps": [
+          "Apply $\\log_b x = \\frac{\\ln x}{\\ln b}$ with $b = 6$ and $x = 45$: $\\log_6 45 = \\frac{\\ln 45}{\\ln 6}$.",
+          "Evaluate: $\\ln 45 \\approx 3.8067$ and $\\ln 6 \\approx 1.7918$.",
+          "Divide: $\\frac{3.8067}{1.7918} \\approx 2.125$ (the exact quotient is $2.12454$, which rounds up at the third decimal place).",
+          "Check: $6^2 = 36$ and $6^3 = 216$, and $45$ is just above $36$, so a value slightly above $2$ is reasonable."
+        ],
+        "answer": "$\\log_6 45 = \\frac{\\ln 45}{\\ln 6} \\approx 2.125$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "State the vertical asymptote, domain, and range of $y = \\log_2(x - 3) + 1$.",
+      "hint": "The argument must be positive. A vertical shift ($+1$) does not move a vertical asymptote.",
+      "solution": {
+        "steps": [
+          "Write in the form $y = a\\log_b(x - h) + k$: here $h = 3$ and $k = 1$.",
+          "The vertical asymptote is at $x = h$, so $x = 3$. The $+1$ vertical shift does not move it.",
+          "The argument must be positive: $x - 3 > 0$, so $x > 3$. The domain is $x > 3$.",
+          "A logarithmic function outputs all real numbers, and a vertical shift does not change that, so the range is all real numbers."
+        ],
+        "answer": "Vertical asymptote $x = 3$, domain $x > 3$, range all real numbers"
+      }
+    }
+  ]
+}

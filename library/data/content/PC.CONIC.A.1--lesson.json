@@ -1,0 +1,175 @@
+{
+  "id": "PC.CONIC.A.1--lesson",
+  "standard": "PC.CONIC.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Analytic Geometry",
+  "domainCode": "CONIC",
+  "cluster": "Conic sections",
+  "clusterCode": "A",
+  "skillName": "Parabolas",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "A parabola is the set of all points equidistant from a fixed point (the focus) and a fixed line (the directrix). For a vertical axis the standard form is $(x-h)^2 = 4p(y-k)$, and for a horizontal axis it is $(y-k)^2 = 4p(x-h)$. The vertex is $(h,k)$ and $p$ is the signed distance from the vertex to the focus. Watch the coefficient: it equals $4p$, not $p$. The sign of $p$ tells you the direction of opening, the focus sits $p$ units from the vertex along the axis, and the directrix is the line $p$ units from the vertex on the opposite side. The latus rectum (focal width) has length $|4p|$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "For the parabola $(x-3)^2 = 8(y+1)$, find the vertex, the value of $p$, the direction of opening, the focus, the directrix, and the axis of symmetry.",
+      "solution": {
+        "steps": [
+          "Compare with the vertical-axis standard form $(x-h)^2 = 4p(y-k)$. Matching gives $h=3$ and $k=-1$, so the vertex is $(3,-1)$.",
+          "The coefficient is $4p = 8$, so $p = 2$. Because $p>0$ and the $x$ term is squared, the parabola opens up.",
+          "The focus lies $p=2$ units above the vertex along the axis: $(3,\\,-1+2) = (3,1)$.",
+          "The directrix is the horizontal line $p=2$ units below the vertex: $y = -1-2 = -3$.",
+          "The axis of symmetry is the vertical line through the vertex: $x=3$."
+        ],
+        "answer": "Vertex $(3,-1)$, $p=2$, opens up, focus $(3,1)$, directrix $y=-3$, axis $x=3$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Use the focus-directrix definition to derive the standard-form equation of the parabola with focus $(0,p)$ and directrix $y=-p$, showing each algebraic step.",
+      "solution": {
+        "steps": [
+          "Let $(x,y)$ be any point on the parabola. By definition its distance to the focus equals its distance to the directrix.",
+          "Distance to the focus $(0,p)$: $\\sqrt{(x-0)^2+(y-p)^2}$. Distance to the directrix $y=-p$: $|y-(-p)| = |y+p|$.",
+          "Set them equal: $\\sqrt{x^2+(y-p)^2} = |y+p|$.",
+          "Square both sides: $x^2+(y-p)^2 = (y+p)^2$.",
+          "Expand: $x^2 + y^2 - 2py + p^2 = y^2 + 2py + p^2$.",
+          "Subtract $y^2+p^2$ from both sides: $x^2 - 2py = 2py$.",
+          "Add $2py$ to both sides: $x^2 = 4py$."
+        ],
+        "answer": "$x^2 = 4py$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Write the standard-form equation of the parabola with vertex $(-1,4)$ and focus $(-1,6)$.",
+      "solution": {
+        "steps": [
+          "The vertex and focus share the $x$-coordinate $-1$, so the axis is vertical ($x=-1$) and the equation has the form $(x-h)^2 = 4p(y-k)$.",
+          "Vertex $(h,k) = (-1,4)$, so $h=-1$ and $k=4$.",
+          "$p$ is the signed distance from vertex to focus along the axis: $p = 6 - 4 = 2$. Since $p>0$, the parabola opens up, which is consistent with the focus being above the vertex.",
+          "Then $4p = 8$.",
+          "Substitute: $(x-(-1))^2 = 8(y-4)$, that is $(x+1)^2 = 8(y-4)$."
+        ],
+        "answer": "$(x+1)^2 = 8(y-4)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Rewrite $y = x^2 - 6x + 11$ in vertex standard form, then give the vertex and focus.",
+      "solution": {
+        "steps": [
+          "Group the $x$ terms: $y = (x^2 - 6x) + 11$.",
+          "Complete the square. Half of $-6$ is $-3$, and $(-3)^2 = 9$, so add and subtract $9$: $y = (x^2 - 6x + 9) - 9 + 11$.",
+          "Write the perfect square and combine constants: $y = (x-3)^2 + 2$.",
+          "Isolate the squared term to reach standard form: $(x-3)^2 = y - 2$, i.e. $(x-3)^2 = 1\\cdot(y-2)$.",
+          "The vertex is $(3,2)$. The coefficient is $4p = 1$, so $p = \\frac{1}{4}$; the parabola opens up.",
+          "The focus is $p=\\frac{1}{4}$ above the vertex: $\\left(3,\\, 2+\\frac{1}{4}\\right) = \\left(3,\\frac{9}{4}\\right)$."
+        ],
+        "answer": "$(x-3)^2 = y-2$; vertex $(3,2)$, focus $\\left(3,\\frac{9}{4}\\right)$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "For the parabola $(y+2)^2 = -12(x-1)$, find the vertex, $p$, the direction of opening, the focus, and the directrix.",
+      "solution": {
+        "steps": [
+          "The $y$ term is squared, so compare with the horizontal-axis standard form $(y-k)^2 = 4p(x-h)$. Matching gives $k=-2$ and $h=1$, so the vertex is $(1,-2)$.",
+          "The coefficient is $4p = -12$, so $p = -3$. Because $p<0$ and the axis is horizontal, the parabola opens left.",
+          "The focus lies $p=-3$ units from the vertex along the horizontal axis: $(1+(-3),\\,-2) = (-2,-2)$.",
+          "The directrix is the vertical line on the opposite side, $p$ units the other way: $x = 1-(-3) = 4$, that is $x=4$.",
+          "The axis of symmetry is the horizontal line $y=-2$."
+        ],
+        "answer": "Vertex $(1,-2)$, $p=-3$, opens left, focus $(-2,-2)$, directrix $x=4$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "For the parabola $x^2 = 16y$, find the vertex, focus, and directrix.",
+      "hint": "This matches $x^2 = 4py$ with vertex at the origin. Set $4p = 16$ to find $p$, then place the focus and directrix $p$ units from the vertex.",
+      "solution": {
+        "steps": [
+          "The equation $x^2 = 16y$ has the form $x^2 = 4py$, so the vertex is at the origin $(0,0)$.",
+          "$4p = 16$, so $p = 4$. Since $p>0$ and $x$ is squared, the parabola opens up.",
+          "The focus is $p=4$ units above the vertex: $(0,4)$.",
+          "The directrix is $4$ units below the vertex: $y=-4$."
+        ],
+        "answer": "Vertex $(0,0)$, focus $(0,4)$, directrix $y=-4$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Find the standard-form equation of the parabola with focus $(0,2)$ and directrix $y=-2$.",
+      "hint": "The vertex is halfway between the focus and the directrix. Here that is the origin, so use $x^2 = 4py$ with $p$ equal to the vertex-to-focus distance.",
+      "solution": {
+        "steps": [
+          "The vertex is midway between the focus $(0,2)$ and the directrix $y=-2$, which is the origin $(0,0)$.",
+          "The focus is above the vertex, so the parabola opens up and has the form $x^2 = 4py$.",
+          "$p$ is the vertex-to-focus distance: $p = 2$, so $4p = 8$.",
+          "Substitute: $x^2 = 8y$."
+        ],
+        "answer": "$x^2 = 8y$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Write the standard-form equation of the parabola with vertex $(2,-3)$ and directrix $x=5$.",
+      "hint": "The directrix is a vertical line, so the axis is horizontal and the form is $(y-k)^2 = 4p(x-h)$. The directrix is to the right of the vertex, so the parabola opens left and $p<0$.",
+      "solution": {
+        "steps": [
+          "The directrix $x=5$ is vertical, so the axis is horizontal and the equation has the form $(y-k)^2 = 4p(x-h)$ with vertex $(h,k)=(2,-3)$.",
+          "The directrix is $3$ units to the right of the vertex ($5-2=3$). The parabola opens away from the directrix, so it opens left and $p = -3$.",
+          "Then $4p = -12$.",
+          "Substitute: $(y-(-3))^2 = -12(x-2)$, that is $(y+3)^2 = -12(x-2)$."
+        ],
+        "answer": "$(y+3)^2 = -12(x-2)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Rewrite $y = 2x^2 - 8x + 5$ in vertex standard form $(x-h)^2 = 4p(y-k)$, then state the vertex and the value of $p$.",
+      "hint": "Factor the leading coefficient $2$ out of the $x$ terms before completing the square. Do not forget to multiply the constant you add back by that $2$.",
+      "solution": {
+        "steps": [
+          "Factor $2$ from the $x$ terms: $y = 2(x^2 - 4x) + 5$.",
+          "Complete the square inside the parentheses. Half of $-4$ is $-2$, and $(-2)^2 = 4$: $y = 2(x^2 - 4x + 4) - 2\\cdot 4 + 5$.",
+          "Simplify: $y = 2(x-2)^2 - 8 + 5 = 2(x-2)^2 - 3$.",
+          "Isolate the squared term: $y + 3 = 2(x-2)^2$, so $(x-2)^2 = \\frac{1}{2}(y+3)$.",
+          "The vertex is $(2,-3)$. The coefficient is $4p = \\frac{1}{2}$, so $p = \\frac{1}{8}$."
+        ],
+        "answer": "$(x-2)^2 = \\frac{1}{2}(y+3)$; vertex $(2,-3)$, $p=\\frac{1}{8}$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "For the parabola $(x-2)^2 = 4(y+1)$, find the vertex, focus, directrix, axis of symmetry, and the endpoints of the latus rectum.",
+      "hint": "Read $h$, $k$, and $4p$ from the equation. The latus rectum is the segment through the focus perpendicular to the axis, with total length $|4p|$, so it extends $|2p|$ on each side of the focus.",
+      "solution": {
+        "steps": [
+          "Compare with $(x-h)^2 = 4p(y-k)$: $h=2$, $k=-1$, so the vertex is $(2,-1)$.",
+          "$4p = 4$, so $p = 1$; since $p>0$ and $x$ is squared, the parabola opens up.",
+          "The focus is $p=1$ above the vertex: $(2,0)$. The directrix is $1$ below: $y=-2$. The axis of symmetry is $x=2$.",
+          "The latus rectum has length $|4p| = 4$, so it extends $2$ units on each side of the focus $(2,0)$ along the horizontal line $y=0$.",
+          "Its endpoints are $(2-2,\\,0) = (0,0)$ and $(2+2,\\,0) = (4,0)$."
+        ],
+        "answer": "Vertex $(2,-1)$, focus $(2,0)$, directrix $y=-2$, axis $x=2$, latus-rectum endpoints $(0,0)$ and $(4,0)$."
+      }
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "id": "PC.EXP.A.3--quiz",
+  "standard": "PC.EXP.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Exponential and Logarithmic Functions",
+  "domainCode": "EXP",
+  "cluster": "Properties and graphs",
+  "clusterCode": "A",
+  "skillName": "Logarithmic Properties and Equations",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Multiple choice quiz on logarithm properties, the change-of-base formula, and solving exponential and logarithmic equations. Choose the single best answer for each item.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Evaluate $\\log_2 32$.\nA) $5$\nB) $16$\nC) $4$\nD) $\\frac{32}{2}=16$",
+      "answer": "A) $5$",
+      "solution": {
+        "steps": [
+          "Ask: to what power must $2$ be raised to get $32$?",
+          "Since $2^5=32$, we have $\\log_2 32=5$.",
+          "B and D treat the log as division $\\frac{32}{2}=16$, which is the misconception that $\\log_b A$ equals $\\frac{A}{b}$.",
+          "C, $4$, would give $2^4=16\\ne 32$, so it is wrong."
+        ],
+        "answer": "A) $5$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Solve $2^x=64$.\nA) $x=32$\nB) $x=6$\nC) $x=5$\nD) $x=\\frac{64}{2}=32$",
+      "answer": "B) $x=6$",
+      "solution": {
+        "steps": [
+          "Write $64$ as a power of $2$: $64=2^6$.",
+          "So $2^x=2^6$ gives $x=6$.",
+          "A and D divide $64$ by the base instead of taking a logarithm, the dividing-out-the-base misconception.",
+          "C, $x=5$, gives $2^5=32\\ne 64$, so it is wrong."
+        ],
+        "answer": "B) $x=6$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Expand $\\log_b\\left(\\dfrac{M}{N}\\right)$ using a logarithm rule.\nA) $\\dfrac{\\log_b M}{\\log_b N}$\nB) $\\log_b M+\\log_b N$\nC) $\\log_b M-\\log_b N$\nD) $\\log_b(M-N)$",
+      "answer": "C) $\\log_b M-\\log_b N$",
+      "solution": {
+        "steps": [
+          "The quotient rule states $\\log_b\\left(\\frac{M}{N}\\right)=\\log_b M-\\log_b N$.",
+          "A is the misconception of writing the quotient rule as a quotient of logs.",
+          "B is the product rule, which applies to $\\log_b(MN)$, not a quotient.",
+          "D incorrectly moves the subtraction inside the logarithm; the log of a difference does not split."
+        ],
+        "answer": "C) $\\log_b M-\\log_b N$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Expand $\\log_2\\left(\\dfrac{x^3\\sqrt{y}}{z}\\right)$ completely as a sum and difference of logarithms.\nA) $3\\log_2 x+\\frac{1}{2}\\log_2 y-\\log_2 z$\nB) $3\\log_2 x+\\log_2 y-\\log_2 z$\nC) $3\\log_2 x+\\frac{1}{2}\\log_2 y+\\log_2 z$\nD) $\\frac{3\\log_2 x\\cdot\\log_2 y}{\\log_2 z}$",
+      "answer": "A) $3\\log_2 x+\\frac{1}{2}\\log_2 y-\\log_2 z$",
+      "solution": {
+        "steps": [
+          "Quotient rule: $\\log_2(x^3\\sqrt{y})-\\log_2 z$.",
+          "Product rule on the numerator: $\\log_2 x^3+\\log_2\\sqrt{y}-\\log_2 z$.",
+          "Power rule with $\\sqrt{y}=y^{1/2}$: $3\\log_2 x+\\frac{1}{2}\\log_2 y-\\log_2 z$.",
+          "B forgets the root is a $\\frac{1}{2}$ power, leaving $\\log_2 y$.",
+          "C turns the quotient into a sum, keeping $+\\log_2 z$ instead of $-\\log_2 z$.",
+          "D wrongly treats the rules as products and quotients of logs."
+        ],
+        "answer": "A) $3\\log_2 x+\\frac{1}{2}\\log_2 y-\\log_2 z$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Condense $2\\ln x+\\dfrac{1}{3}\\ln y-\\ln 5$ into a single logarithm.\nA) $\\ln\\left(2x+\\frac{1}{3}y-5\\right)$\nB) $\\ln\\left(\\dfrac{x^2\\sqrt[3]{y}}{5}\\right)$\nC) $\\ln\\left(\\dfrac{2x\\cdot\\frac{1}{3}y}{5}\\right)$\nD) $\\dfrac{2\\ln x\\cdot\\frac{1}{3}\\ln y}{\\ln 5}$",
+      "answer": "B) $\\ln\\left(\\dfrac{x^2\\sqrt[3]{y}}{5}\\right)$",
+      "solution": {
+        "steps": [
+          "Power rule moves each coefficient to an exponent: $\\ln x^2+\\ln y^{1/3}-\\ln 5$.",
+          "Product rule combines the sum, quotient rule handles the subtraction: $\\ln\\left(\\frac{x^2 y^{1/3}}{5}\\right)=\\ln\\left(\\frac{x^2\\sqrt[3]{y}}{5}\\right)$.",
+          "A pulls the coefficients in as multipliers and the operations outside the log, which is invalid.",
+          "C makes the coefficients multipliers instead of exponents, e.g. $2\\log x$ becomes $2x$ rather than $x^2$.",
+          "D wrongly treats the sum and difference of logs as a product and quotient of logs."
+        ],
+        "answer": "B) $\\ln\\left(\\dfrac{x^2\\sqrt[3]{y}}{5}\\right)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Solve $3^{x+1}=20$ for $x$, exactly.\nA) $x=\\log_3 20-1$\nB) $x=\\frac{17}{3}$\nC) $x=\\dfrac{\\ln 3}{\\ln 20}-1$\nD) $x=\\log_3 20$",
+      "answer": "A) $x=\\log_3 20-1$",
+      "solution": {
+        "steps": [
+          "Take the base-$3$ logarithm of both sides: $x+1=\\log_3 20$.",
+          "Subtract $1$: $x=\\log_3 20-1$ (equivalently $\\frac{\\ln 20}{\\ln 3}-1$).",
+          "B divides $20$ by the base, the dividing-out misconception, giving $x+1=\\frac{20}{3}$.",
+          "C inverts the change-of-base ratio, using $\\frac{\\ln 3}{\\ln 20}$ instead of $\\frac{\\ln 20}{\\ln 3}$.",
+          "D forgets to subtract the $1$ from the exponent $x+1$."
+        ],
+        "answer": "A) $x=\\log_3 20-1$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Solve $\\log_3 x+\\log_3(x-2)=1$ for all real $x$.\nA) $x=3$ and $x=-1$\nB) $x=-1$\nC) $x=3$\nD) $x=1$",
+      "answer": "C) $x=3$",
+      "solution": {
+        "steps": [
+          "Condense with the product rule: $\\log_3\\big(x(x-2)\\big)=1$.",
+          "Rewrite in exponential form: $x(x-2)=3^1=3$, so $x^2-2x-3=0$.",
+          "Factor: $(x-3)(x+1)=0$, giving candidates $x=3$ or $x=-1$.",
+          "Domain requires $x>0$ and $x-2>0$, so $x>2$. Reject $x=-1$ because $\\log_3(-1)$ is undefined; keep $x=3$.",
+          "A keeps the extraneous $x=-1$. B keeps only the rejected value. D, $x=1$, does not satisfy $x^2-2x-3=0$ and also violates $x>2$."
+        ],
+        "answer": "C) $x=3$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Solve $e^{2x}-5e^{x}+6=0$ for all real $x$.\nA) $x=\\ln 2$ only\nB) $x=\\ln 3$ and $x=\\ln 2$\nC) $x=2$ and $x=3$\nD) $x=\\ln 5$ and $x=\\ln 6$",
+      "answer": "B) $x=\\ln 3$ and $x=\\ln 2$",
+      "solution": {
+        "steps": [
+          "Substitute $u=e^x$ (with $u>0$): $u^2-5u+6=0$.",
+          "Factor: $(u-2)(u-3)=0$, so $u=2$ or $u=3$; both are positive and valid.",
+          "Back-substitute: $e^x=2\\Rightarrow x=\\ln 2$ and $e^x=3\\Rightarrow x=\\ln 3$.",
+          "A drops the valid solution $x=\\ln 3$. C forgets to undo the exponential, reporting the $u$-values as $x$. D reads the coefficients $5$ and $6$ as the $u$-values instead of solving the quadratic."
+        ],
+        "answer": "B) $x=\\ln 3$ and $x=\\ln 2$"
+      }
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "id": "PC.TRIG.C.9--worksheet--hard",
+  "standard": "PC.TRIG.C.9",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Laws of sines and cosines",
+  "clusterCode": "C",
+  "skillName": "Law of Cosines",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems require full triangle solutions, derivations, and multi-stage modeling. Combine the Law of Cosines with the Law of Sines and Heron's formula, watch the sign of the cosine for obtuse angles, and translate verbal setups into triangles before solving. Round angle measures to the nearest tenth of a degree unless an exact value is available.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Solve triangle $ABC$ completely given $a = 4$, $b = 5$, $c = 6$. Find all three angles to the nearest tenth of a degree.",
+      "answer": "$A \\approx 41.4^\\circ$, $B \\approx 55.8^\\circ$, $C \\approx 82.8^\\circ$",
+      "solution": {
+        "steps": [
+          "Find the largest angle $C$ (opposite the longest side $c = 6$) first: $\\cos C = \\dfrac{a^2 + b^2 - c^2}{2ab} = \\dfrac{16 + 25 - 36}{2(4)(5)} = \\dfrac{5}{40} = \\dfrac{1}{8}$.",
+          "So $C = \\cos^{-1}\\!\\left(\\tfrac{1}{8}\\right) \\approx 82.8^\\circ$.",
+          "Find $A$ with the Law of Cosines: $\\cos A = \\dfrac{b^2 + c^2 - a^2}{2bc} = \\dfrac{25 + 36 - 16}{2(5)(6)} = \\dfrac{45}{60} = \\dfrac{3}{4}$, so $A = \\cos^{-1}\\!\\left(\\tfrac{3}{4}\\right) \\approx 41.4^\\circ$.",
+          "Find $B$ by subtraction: $B = 180^\\circ - 82.8^\\circ - 41.4^\\circ \\approx 55.8^\\circ$.",
+          "Check: $\\cos B = \\dfrac{a^2 + c^2 - b^2}{2ac} = \\dfrac{16 + 36 - 25}{48} = \\dfrac{27}{48} = \\dfrac{9}{16}$, giving $B = \\cos^{-1}\\!\\left(\\tfrac{9}{16}\\right) \\approx 55.8^\\circ$, which matches."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "In triangle $ABC$, $a = 8$, $b = 11$, and the included angle $C = 105^\\circ$. Solve the triangle: find $c$ and the remaining two angles to the nearest tenth.",
+      "answer": "$c \\approx 15.2$, $A \\approx 30.6^\\circ$, $B \\approx 44.4^\\circ$",
+      "solution": {
+        "steps": [
+          "SAS, so use the Law of Cosines for the side opposite the given angle: $c^2 = a^2 + b^2 - 2ab\\cos C = 64 + 121 - 2(8)(11)\\cos 105^\\circ$.",
+          "Since $\\cos 105^\\circ \\approx -0.2588$, we get $c^2 = 185 - 176(-0.2588) \\approx 185 + 45.55 = 230.55$, so $c \\approx 15.18$.",
+          "Find angle $A$ with the Law of Cosines: $\\cos A = \\dfrac{b^2 + c^2 - a^2}{2bc} = \\dfrac{121 + 230.55 - 64}{2(11)(15.18)} = \\dfrac{287.55}{333.96} \\approx 0.8611$, so $A = \\cos^{-1}(0.8611) \\approx 30.592^\\circ \\approx 30.6^\\circ$ (acute, since $a$ is the smallest side).",
+          "Finish by subtraction: $B = 180^\\circ - 105^\\circ - 30.6^\\circ = 44.408^\\circ \\approx 44.4^\\circ$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A surveyor stands at point $C$ and sights two landmarks $A$ and $B$. The distance to $A$ is $320$ m, the distance to $B$ is $250$ m, and the angle $ACB$ between the two lines of sight is $118^\\circ$. Find the distance $AB$ between the landmarks to the nearest meter.",
+      "answer": "$AB \\approx 490$ m",
+      "solution": {
+        "steps": [
+          "Model: $C$ is the included vertex, with $CA = b = 320$, $CB = a = 250$, and included angle $C = 118^\\circ$. The unknown $AB = c$ is opposite $C$.",
+          "Apply the Law of Cosines: $c^2 = a^2 + b^2 - 2ab\\cos C = 250^2 + 320^2 - 2(250)(320)\\cos 118^\\circ$.",
+          "Compute: $250^2 + 320^2 = 62500 + 102400 = 164900$ and $2(250)(320) = 160000$.",
+          "Since $\\cos 118^\\circ \\approx -0.4695$, $c^2 \\approx 164900 - 160000(-0.4695) = 164900 + 75116 = 240016$.",
+          "So $c = \\sqrt{240016} \\approx 489.9$, giving $AB \\approx 490$ m."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Two forces act on a single point. One has magnitude $40$ N and the other $65$ N, with an angle of $50^\\circ$ between them. Find the magnitude of the resultant force to the nearest tenth of a newton.",
+      "answer": "$\\approx 95.7$ N",
+      "solution": {
+        "steps": [
+          "The resultant is the diagonal of the parallelogram formed by the two force vectors. In the triangle formed by placing the forces head to tail, the interior angle opposite the resultant is the supplement of the angle between them: $180^\\circ - 50^\\circ = 130^\\circ$.",
+          "Apply the Law of Cosines with sides $40$ and $65$ and included angle $130^\\circ$: $R^2 = 40^2 + 65^2 - 2(40)(65)\\cos 130^\\circ$.",
+          "Compute: $1600 + 4225 = 5825$ and $2(40)(65) = 5200$.",
+          "Since $\\cos 130^\\circ \\approx -0.6428$, $R^2 \\approx 5825 - 5200(-0.6428) = 5825 + 3342.6 = 9167.6$.",
+          "So $R = \\sqrt{9167.6} \\approx 95.7$ N."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A ship leaves port and sails $60$ km on a bearing of $N 40^\\circ E$, then turns and sails $90$ km on a bearing of $S 70^\\circ E$. How far is the ship from port, to the nearest tenth of a kilometer?",
+      "answer": "$\\approx 124.1$ km",
+      "solution": {
+        "steps": [
+          "Let $P$ be the port, $Q$ the first turning point, $R$ the final position. Then $PQ = 60$, $QR = 90$, and we need $PR$.",
+          "The first leg heads $N 40^\\circ E$. At $Q$, the back-bearing toward $P$ is $S 40^\\circ W$. The second leg leaves $Q$ on bearing $S 70^\\circ E$.",
+          "The interior angle of the triangle at $Q$ lies between direction $S 40^\\circ W$ and $S 70^\\circ E$. Measured from due south, one is $40^\\circ$ to the west and the other $70^\\circ$ to the east, so the angle $PQR = 40^\\circ + 70^\\circ = 110^\\circ$.",
+          "Apply the Law of Cosines: $PR^2 = 60^2 + 90^2 - 2(60)(90)\\cos 110^\\circ = 3600 + 8100 - 10800\\cos 110^\\circ$.",
+          "Since $\\cos 110^\\circ \\approx -0.3420$, $PR^2 \\approx 11700 + 10800(0.3420) = 11700 + 3693.8 = 15393.8$.",
+          "So $PR = \\sqrt{15393.8} \\approx 124.1$ km."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Find the area of a triangle with sides $a = 11$, $b = 13$, $c = 20$ using Heron's formula. Give the exact area as a simplified radical.",
+      "answer": "$66$ square units",
+      "solution": {
+        "steps": [
+          "Compute the semiperimeter: $s = \\dfrac{a+b+c}{2} = \\dfrac{11 + 13 + 20}{2} = \\dfrac{44}{2} = 22$.",
+          "Form the factors: $s - a = 22 - 11 = 11$, $s - b = 22 - 13 = 9$, $s - c = 22 - 20 = 2$.",
+          "Apply Heron's formula: $A = \\sqrt{s(s-a)(s-b)(s-c)} = \\sqrt{22 \\cdot 11 \\cdot 9 \\cdot 2}$.",
+          "Multiply under the root: $22 \\cdot 11 = 242$, $9 \\cdot 2 = 18$, so the radicand is $242 \\cdot 18 = 4356$. Note $4356 = 36 \\cdot 121$.",
+          "So $A = \\sqrt{4356} = \\sqrt{36}\\,\\sqrt{121} = 6 \\cdot 11 = 66$. The exact area is $66$ square units."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A triangular plot of land has sides measuring $34$ m, $25$ m, and $39$ m. Find both the largest interior angle (to the nearest tenth of a degree) and the area of the plot (to the nearest square meter).",
+      "answer": "Largest angle $\\approx 81.2^\\circ$; area $= 420$ m$^2$",
+      "solution": {
+        "steps": [
+          "The largest angle is opposite the longest side $39$. Label $a = 34$, $b = 25$, $c = 39$ with $C$ opposite $c$.",
+          "Apply the Law of Cosines for $C$: $\\cos C = \\dfrac{a^2 + b^2 - c^2}{2ab} = \\dfrac{1156 + 625 - 1521}{2(34)(25)} = \\dfrac{260}{1700} = \\dfrac{13}{85} \\approx 0.1529$.",
+          "So $C = \\cos^{-1}(0.1529) \\approx 81.2^\\circ$ (acute, since the cosine is positive).",
+          "For the area, use Heron's formula: $s = \\dfrac{34 + 25 + 39}{2} = \\dfrac{98}{2} = 49$.",
+          "Then $A = \\sqrt{49(49-34)(49-25)(49-39)} = \\sqrt{49 \\cdot 15 \\cdot 24 \\cdot 10} = \\sqrt{176400} = 420$. The area is exactly $420$ m$^2$, and the largest angle is about $81.2^\\circ$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "In triangle $ABC$, $a = 9$, $b = 12$, $c = 7$. After finding angle $A$ with the Law of Cosines, verify the result by computing the area two ways: with $\\tfrac{1}{2}bc\\sin A$ and with Heron's formula. Show that they agree.",
+      "answer": "$A \\approx 48.2^\\circ$; both methods give area $\\approx 31.3$ square units",
+      "solution": {
+        "steps": [
+          "Find angle $A$ (opposite $a = 9$): $\\cos A = \\dfrac{b^2 + c^2 - a^2}{2bc} = \\dfrac{144 + 49 - 81}{2(12)(7)} = \\dfrac{112}{168} = \\dfrac{2}{3} \\approx 0.6667$.",
+          "So $A = \\cos^{-1}\\!\\left(\\tfrac{2}{3}\\right) \\approx 48.19^\\circ$, and $\\sin A = \\sqrt{1 - \\tfrac{4}{9}} = \\sqrt{\\tfrac{5}{9}} = \\dfrac{\\sqrt{5}}{3} \\approx 0.7454$.",
+          "Area via $\\tfrac{1}{2}bc\\sin A = \\tfrac{1}{2}(12)(7)\\cdot\\dfrac{\\sqrt5}{3} = 42 \\cdot \\dfrac{\\sqrt5}{3} = 14\\sqrt5 \\approx 31.30$ square units.",
+          "Heron's: $s = \\dfrac{9 + 12 + 7}{2} = 14$, so $A = \\sqrt{14(14-9)(14-12)(14-7)} = \\sqrt{14 \\cdot 5 \\cdot 2 \\cdot 7} = \\sqrt{980}$.",
+          "Simplify: $\\sqrt{980} = \\sqrt{196 \\cdot 5} = 14\\sqrt5 \\approx 31.30$. Both methods give $14\\sqrt5 \\approx 31.3$ square units, confirming the result."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Starting from the area formula $A = \\tfrac{1}{2}ab\\sin C$ and the Law of Cosines rearranged as $\\cos C = \\dfrac{a^2 + b^2 - c^2}{2ab}$, derive Heron's formula $A = \\sqrt{s(s-a)(s-b)(s-c)}$ where $s = \\dfrac{a+b+c}{2}$.",
+      "answer": "$A = \\sqrt{s(s-a)(s-b)(s-c)}$, derived below",
+      "solution": {
+        "steps": [
+          "Square the area formula: $A^2 = \\tfrac{1}{4}a^2 b^2 \\sin^2 C = \\tfrac{1}{4}a^2 b^2 (1 - \\cos^2 C)$ using $\\sin^2 C = 1 - \\cos^2 C$.",
+          "Factor the difference of squares: $A^2 = \\tfrac{1}{4}a^2 b^2 (1 - \\cos C)(1 + \\cos C)$.",
+          "Substitute $\\cos C = \\dfrac{a^2 + b^2 - c^2}{2ab}$. Then $1 + \\cos C = \\dfrac{2ab + a^2 + b^2 - c^2}{2ab} = \\dfrac{(a+b)^2 - c^2}{2ab} = \\dfrac{(a+b+c)(a+b-c)}{2ab}$.",
+          "Likewise $1 - \\cos C = \\dfrac{2ab - a^2 - b^2 + c^2}{2ab} = \\dfrac{c^2 - (a-b)^2}{2ab} = \\dfrac{(c+a-b)(c-a+b)}{2ab}$.",
+          "Multiply: $A^2 = \\tfrac{1}{4}a^2 b^2 \\cdot \\dfrac{(a+b+c)(a+b-c)(c+a-b)(c-a+b)}{4a^2 b^2} = \\dfrac{(a+b+c)(a+b-c)(a-b+c)(-a+b+c)}{16}$.",
+          "Now $\\dfrac{a+b+c}{2} = s$, $\\dfrac{a+b-c}{2} = s-c$, $\\dfrac{a-b+c}{2} = s-b$, $\\dfrac{-a+b+c}{2} = s-a$. So $A^2 = s(s-a)(s-b)(s-c)$, hence $A = \\sqrt{s(s-a)(s-b)(s-c)}$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A parallelogram has sides of length $14$ cm and $9$ cm, and one interior angle measures $112^\\circ$. Find the length of the longer diagonal to the nearest tenth of a centimeter.",
+      "answer": "$\\approx 19.3$ cm",
+      "solution": {
+        "steps": [
+          "Consecutive interior angles of a parallelogram are supplementary: $112^\\circ$ and $180^\\circ - 112^\\circ = 68^\\circ$. The longer diagonal spans the angle whose cosine is most negative, i.e. the obtuse angle $112^\\circ$.",
+          "In the triangle formed by two adjacent sides and the diagonal across the $112^\\circ$ angle, apply the Law of Cosines: $d^2 = 14^2 + 9^2 - 2(14)(9)\\cos 112^\\circ$.",
+          "Compute: $196 + 81 = 277$ and $2(14)(9) = 252$.",
+          "Since $\\cos 112^\\circ \\approx -0.37461$, $d^2 \\approx 277 - 252(-0.37461) = 277 + 94.4 = 371.4$.",
+          "So $d = \\sqrt{371.4} \\approx 19.27$, which rounds to $19.3$ cm for the longer diagonal. (The shorter diagonal, across $68^\\circ$, would be $\\sqrt{277 - 252(0.37461)} = \\sqrt{182.6} \\approx 13.5$ cm.)"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Two airplanes leave an airport at the same time. The first flies on a bearing of $075^\\circ$ at $420$ km/h, and the second flies on a bearing of $200^\\circ$ at $360$ km/h. How far apart are the planes after $2$ hours, to the nearest kilometer?",
+      "answer": "$\\approx 1385$ km",
+      "solution": {
+        "steps": [
+          "After $2$ hours: plane 1 has flown $420 \\times 2 = 840$ km; plane 2 has flown $360 \\times 2 = 720$ km. These are two sides from the airport vertex.",
+          "The angle between the flight paths is the difference of the bearings: $200^\\circ - 075^\\circ = 125^\\circ$.",
+          "Apply the Law of Cosines with sides $840$ and $720$ and included angle $125^\\circ$: $d^2 = 840^2 + 720^2 - 2(840)(720)\\cos 125^\\circ$.",
+          "Compute: $840^2 = 705600$, $720^2 = 518400$, sum $= 1224000$; and $2(840)(720) = 1209600$.",
+          "Since $\\cos 125^\\circ \\approx -0.5736$, $d^2 \\approx 1224000 + 1209600(0.5736) = 1224000 + 693826 = 1917826$, so $d = \\sqrt{1917826} \\approx 1385$ km."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "In triangle $ABC$, $b = 15$, $c = 22$, and angle $A = 130^\\circ$. Solve the triangle completely: find $a$, $B$, and $C$ to the nearest tenth.",
+      "answer": "$a \\approx 33.7$, $B \\approx 20.0^\\circ$, $C \\approx 30.0^\\circ$",
+      "solution": {
+        "steps": [
+          "SAS with included angle $A$. Find side $a$ (opposite $A$): $a^2 = b^2 + c^2 - 2bc\\cos A = 225 + 484 - 2(15)(22)\\cos 130^\\circ$.",
+          "Since $\\cos 130^\\circ \\approx -0.6428$, $a^2 = 709 - 660(-0.6428) = 709 + 424.2 = 1133.2$, so $a \\approx 33.664$ (round to $33.7$). Keep the full-precision value $a \\approx 33.664$ for the next steps.",
+          "Use the Law of Sines for $B$ (opposite the smaller of $b, c$, so acute), substituting the unrounded $a$: $\\sin B = \\dfrac{b\\sin A}{a} = \\dfrac{15\\sin 130^\\circ}{33.664} \\approx \\dfrac{15(0.766)}{33.664} \\approx 0.3414$.",
+          "Then $B = \\sin^{-1}(0.3414) \\approx 19.96^\\circ \\approx 20.0^\\circ$ (acute, since $A$ is obtuse so the other two angles must be acute).",
+          "Finish by subtraction: $C = 180^\\circ - 130^\\circ - 20.0^\\circ = 30.0^\\circ$. (A direct Law of Cosines check gives $C \\approx 30.04^\\circ$, also $30.0^\\circ$.) So $a \\approx 33.7$, $B \\approx 20.0^\\circ$, $C \\approx 30.0^\\circ$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A triangle has sides $a = 7$, $b = 8$, and $c = 12$. A student claims angle $C$ is acute because all the sides are positive. Use the Law of Cosines to determine whether $C$ is acute, right, or obtuse, find $C$ to the nearest tenth, and explain how the sign of the cosine settles the question.",
+      "answer": "$C$ is obtuse; $C \\approx 106.1^\\circ$",
+      "solution": {
+        "steps": [
+          "Apply the Law of Cosines for the angle opposite the longest side: $\\cos C = \\dfrac{a^2 + b^2 - c^2}{2ab} = \\dfrac{49 + 64 - 144}{2(7)(8)} = \\dfrac{-31}{112} \\approx -0.2768$.",
+          "The cosine is negative, so the angle is obtuse. The sign, not the positivity of the sides, decides: $\\cos C < 0 \\iff a^2 + b^2 < c^2$, i.e. the side opposite is too long for a right or acute angle.",
+          "Here $a^2 + b^2 = 113 < 144 = c^2$, confirming $C$ is obtuse.",
+          "Compute the measure: $C = \\cos^{-1}\\!\\left(-\\tfrac{31}{112}\\right) = \\cos^{-1}(-0.2768) \\approx 106.1^\\circ$.",
+          "The student's reasoning is flawed: side positivity says nothing about angle type. The negative cosine is what proves $C$ is obtuse, so $C \\approx 106.1^\\circ$, not acute."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A hot-air balloon $P$ is observed from two points $A$ and $B$ that lie $500$ m apart on level ground, with the balloon in the vertical plane through $A$ and $B$ and its base between them. From $A$ the angle of elevation to the balloon is $58^\\circ$, and from $B$ the angle of elevation is $47^\\circ$. Using the Law of Sines to find a slant distance and then the height, determine the height of the balloon to the nearest meter.",
+      "answer": "$\\approx 321$ m",
+      "solution": {
+        "steps": [
+          "In triangle $ABP$, the interior angle at $A$ is the elevation $58^\\circ$ and the interior angle at $B$ is the elevation $47^\\circ$ (the balloon's base lies between $A$ and $B$).",
+          "The third angle at the balloon: $\\angle APB = 180^\\circ - 58^\\circ - 47^\\circ = 75^\\circ$.",
+          "Use the Law of Sines for slant distance $AP$ (opposite the angle at $B$): $\\dfrac{AP}{\\sin 47^\\circ} = \\dfrac{500}{\\sin 75^\\circ}$, so $AP = \\dfrac{500\\sin 47^\\circ}{\\sin 75^\\circ} = \\dfrac{500(0.7314)}{0.9659} \\approx 378.6$ m.",
+          "The height is the vertical component from $A$: $h = AP\\sin 58^\\circ = 378.6(0.8480) \\approx 321.0$ m.",
+          "Cross-check from $B$: $BP = \\dfrac{500\\sin 58^\\circ}{\\sin 75^\\circ} = \\dfrac{500(0.8480)}{0.9659} \\approx 438.9$ m, and $h = BP\\sin 47^\\circ = 438.9(0.7314) \\approx 321.0$ m. Both agree, so the height is about $321$ m."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A triangular sail has sides $a = 16$ ft and $b = 10$ ft meeting at an included angle $C = 96^\\circ$. Find (a) the length of the third side $c$ and (b) the area of the sail, each to the nearest tenth, and explain why the Law of Cosines (not the Law of Sines) is the correct first step.",
+      "answer": "(a) $c \\approx 19.7$ ft; (b) area $\\approx 79.6$ ft$^2$",
+      "solution": {
+        "steps": [
+          "Method choice: the given data is SAS (two sides and the included angle). No side is paired with its opposite angle, so the Law of Sines $\\dfrac{\\sin A}{a} = \\dfrac{\\sin B}{b}$ has no usable ratio. The Law of Cosines is required.",
+          "(a) Find $c$ opposite $C$: $c^2 = a^2 + b^2 - 2ab\\cos C = 256 + 100 - 2(16)(10)\\cos 96^\\circ$.",
+          "Since $\\cos 96^\\circ \\approx -0.1045$, $c^2 = 356 - 320(-0.1045) = 356 + 33.4 = 389.4$, so $c = \\sqrt{389.4} \\approx 19.73$ ft.",
+          "(b) The area uses the included angle directly: $A = \\tfrac{1}{2}ab\\sin C = \\tfrac{1}{2}(16)(10)\\sin 96^\\circ = 80\\sin 96^\\circ$.",
+          "Since $\\sin 96^\\circ \\approx 0.9945$, $A \\approx 80(0.9945) \\approx 79.6$ ft$^2$. So $c \\approx 19.7$ ft and the sail area is about $79.6$ ft$^2$."
+        ]
+      }
+    }
+  ]
+}

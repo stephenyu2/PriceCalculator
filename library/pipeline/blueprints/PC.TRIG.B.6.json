@@ -1,0 +1,144 @@
+{
+  "standard": "PC.TRIG.B.6",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Graphs and identities",
+  "clusterCode": "B",
+  "skillName": "Trig Identities",
+
+  "description": "Students verify and apply the fundamental trigonometric identities. They use the Pythagorean identities ($\\sin^2\\theta + \\cos^2\\theta = 1$, $1 + \\tan^2\\theta = \\sec^2\\theta$, $1 + \\cot^2\\theta = \\csc^2\\theta$), the quotient identities ($\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$, $\\cot\\theta = \\frac{\\cos\\theta}{\\sin\\theta}$), and the reciprocal identities ($\\csc\\theta = \\frac{1}{\\sin\\theta}$, $\\sec\\theta = \\frac{1}{\\cos\\theta}$, $\\cot\\theta = \\frac{1}{\\tan\\theta}$). They also apply the sum and difference formulas, the double-angle formulas, and the half-angle formulas to evaluate expressions at non-standard angles, rewrite expressions, prove identities, and solve for unknown trigonometric values.",
+
+  "subSkills": [
+    "State and apply the three Pythagorean identities to simplify or solve",
+    "Convert between trig functions using quotient and reciprocal identities",
+    "Simplify a trigonometric expression to a single function or constant",
+    "Verify (prove) an identity by transforming one side into the other",
+    "Apply sum and difference formulas: $\\sin(A\\pm B)$, $\\cos(A\\pm B)$, $\\tan(A\\pm B)$",
+    "Evaluate exact values at non-standard angles by decomposing into known angles (e.g. $15^\\circ = 45^\\circ - 30^\\circ$, $75^\\circ = 45^\\circ + 30^\\circ$)",
+    "Apply double-angle formulas: $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$, $\\cos 2\\theta$ (three forms), $\\tan 2\\theta$",
+    "Apply half-angle formulas and choose the correct sign from the quadrant of $\\frac{\\theta}{2}$",
+    "Find a remaining trig value given one value and a quadrant, then feed it into a sum, double, or half-angle formula"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Simplify using fundamental identities",
+      "example": "Simplify $\\frac{1 - \\cos^2\\theta}{\\sin\\theta}$ to a single trigonometric function. (Answer: $\\sin\\theta$.)"
+    },
+    {
+      "name": "Verify an identity",
+      "example": "Verify that $\\frac{\\cos\\theta}{1 - \\sin\\theta} = \\sec\\theta + \\tan\\theta$ by transforming the left side."
+    },
+    {
+      "name": "Evaluate at a non-standard angle with a sum or difference formula",
+      "example": "Find the exact value of $\\cos 15^\\circ$ using $\\cos(45^\\circ - 30^\\circ)$. (Answer: $\\frac{\\sqrt{6} + \\sqrt{2}}{4}$.)"
+    },
+    {
+      "name": "Apply a double-angle formula given one ratio",
+      "example": "If $\\sin\\theta = \\frac{3}{5}$ and $\\theta$ is in Quadrant I, find $\\sin 2\\theta$. (Answer: $\\frac{24}{25}$.)"
+    },
+    {
+      "name": "Apply a half-angle formula with quadrant sign choice",
+      "example": "If $\\cos\\theta = \\frac{4}{5}$ and $\\theta$ is in Quadrant IV, find $\\sin\\frac{\\theta}{2}$. (Answer: $\\frac{\\sqrt{10}}{10}$.)"
+    },
+    {
+      "name": "Find a missing value then apply a sum formula",
+      "example": "Given $\\sin A = \\frac{3}{5}$ ($A$ in QI) and $\\cos B = \\frac{5}{13}$ ($B$ in QI), find $\\sin(A + B)$. (Answer: $\\frac{56}{65}$.)"
+    },
+    {
+      "name": "Rewrite a power or product using double/half-angle identities",
+      "example": "Use a power-reducing (half-angle) identity to rewrite $\\cos^2\\theta$. (Answer: $\\frac{1 + \\cos 2\\theta}{2}$.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step application of one fundamental identity (Pythagorean, quotient, or reciprocal). The student substitutes a known identity or evaluates one direct formula with friendly numbers and no quadrant ambiguity.",
+      "constraints": [
+        "Exactly one identity is used in one step",
+        "Pythagorean, quotient, or reciprocal identity only (no sum/difference/double/half)",
+        "If a value is given it lies in Quadrant I so all signs are positive",
+        "Expression simplifies to a single function or a known constant such as $1$ or $0$",
+        "Example: simplify $\\sin\\theta\\,\\csc\\theta$ (Answer: $1$); or simplify $\\frac{\\sin\\theta}{\\cos\\theta}$ (Answer: $\\tan\\theta$)"
+      ]
+    },
+    "Medium": {
+      "description": "Two to three steps. The student applies a sum, difference, or double-angle formula, decomposes a non-standard angle into known angles, or finds one missing value before substituting. One sign decision may be required.",
+      "constraints": [
+        "Uses a sum/difference or double-angle formula, or chains two fundamental identities",
+        "Non-standard angles built from $30^\\circ, 45^\\circ, 60^\\circ$ (e.g. $15^\\circ, 75^\\circ, 105^\\circ$)",
+        "May require finding a missing ratio via a Pythagorean identity using a given quadrant",
+        "Exactly one quadrant/sign decision",
+        "Example: find $\\tan 2\\theta$ given $\\tan\\theta = \\frac{1}{2}$ (Answer: $\\frac{4}{3}$)"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step proofs or compound applications. The student verifies a non-trivial identity, applies a half-angle formula requiring a quadrant-based sign choice, or combines finding missing values with a sum/double/half-angle formula across multiple substitutions.",
+      "constraints": [
+        "Full identity verification requiring at least three transformation steps, OR",
+        "Half-angle formula where the sign of the result depends on the quadrant of $\\frac{\\theta}{2}$",
+        "May require computing two missing values (e.g. both $\\cos A$ and $\\sin B$) before substituting into a compound formula",
+        "Answers involve nested radicals such as $\\frac{\\sqrt{6} - \\sqrt{2}}{4}$ or $\\sqrt{\\frac{1 - \\cos\\theta}{2}}$",
+        "Example: if $\\cos\\theta = -\\frac{3}{5}$ with $\\theta$ in QII, find $\\cos\\frac{\\theta}{2}$, justifying the sign from the quadrant of $\\frac{\\theta}{2}$ (Answer: $\\frac{\\sqrt{5}}{5}$)"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Distributes the trig function over a sum, treating $\\sin$ as linear",
+      "distractor": "Writes $\\sin(A + B) = \\sin A + \\sin B$ instead of $\\sin A\\cos B + \\cos A\\sin B$, e.g. gives $\\sin 75^\\circ$ as $\\frac{\\sqrt{2}}{2} + \\frac{1}{2}$"
+    },
+    {
+      "misconception": "Swaps the sign pattern in the cosine sum/difference formula",
+      "distractor": "Uses $\\cos(A - B) = \\cos A\\cos B - \\sin A\\sin B$ (the plus-sign form) so $\\cos 15^\\circ$ comes out as $\\frac{\\sqrt{6} - \\sqrt{2}}{4}$ instead of $\\frac{\\sqrt{6} + \\sqrt{2}}{4}$"
+    },
+    {
+      "misconception": "Mismatches the cross terms in the sine formula",
+      "distractor": "Writes $\\sin(A + B) = \\sin A\\sin B + \\cos A\\cos B$ (cosine pattern) yielding a value like $\\frac{63}{65}$ instead of $\\frac{56}{65}$"
+    },
+    {
+      "misconception": "Treats the double angle as a simple multiplier",
+      "distractor": "Writes $\\sin 2\\theta = 2\\sin\\theta$ instead of $2\\sin\\theta\\cos\\theta$, giving $\\frac{6}{5}$ instead of $\\frac{24}{25}$"
+    },
+    {
+      "misconception": "Uses the wrong form of the cosine double-angle identity for the given information",
+      "distractor": "Applies $\\cos 2\\theta = 1 - \\sin^2\\theta$ (a Pythagorean confusion) instead of $\\cos 2\\theta = 1 - 2\\sin^2\\theta$, producing $\\frac{16}{25}$ instead of $\\frac{7}{25}$ when $\\sin\\theta = \\frac{3}{5}$"
+    },
+    {
+      "misconception": "Drops the factor of 2 or the square in the half-angle formula",
+      "distractor": "Writes $\\sin\\frac{\\theta}{2} = \\sqrt{\\frac{1 - \\cos\\theta}{2}}$ as $\\frac{1 - \\cos\\theta}{2}$ (forgets the radical) or as $\\sqrt{1 - \\cos\\theta}$ (drops the 2)"
+    },
+    {
+      "misconception": "Chooses the wrong sign for a half-angle result by using the quadrant of $\\theta$ instead of $\\frac{\\theta}{2}$",
+      "distractor": "Reports $\\sin\\frac{\\theta}{2}$ as negative because $\\theta$ is in QIV, ignoring that $\\frac{\\theta}{2}$ lands in QII where sine is positive, so gives $-\\frac{\\sqrt{10}}{10}$ instead of $\\frac{\\sqrt{10}}{10}$"
+    },
+    {
+      "misconception": "Ignores the given quadrant when taking a square root for a missing value",
+      "distractor": "Takes the positive root for $\\cos\\theta$ when $\\theta$ is in QII, using $\\cos\\theta = +\\frac{4}{5}$ instead of $-\\frac{4}{5}$, which corrupts every downstream value"
+    },
+    {
+      "misconception": "Confuses reciprocal with quotient identities",
+      "distractor": "Writes $\\sec\\theta = \\frac{1}{\\cos\\theta}$ as $\\frac{\\sin\\theta}{\\cos\\theta}$ (the tangent quotient), so $\\sec\\theta\\cos\\theta$ is reported as $\\sin\\theta$ instead of $1$"
+    },
+    {
+      "misconception": "Inverts the tangent double-angle formula",
+      "distractor": "Writes $\\tan 2\\theta = \\frac{1 - \\tan^2\\theta}{2\\tan\\theta}$ (numerator and denominator swapped) giving $\\frac{3}{4}$ instead of $\\frac{4}{3}$ when $\\tan\\theta = \\frac{1}{2}$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

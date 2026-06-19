@@ -1,0 +1,180 @@
+{
+  "id": "PC.POLY.A.2--lesson",
+  "standard": "PC.POLY.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Polynomial and Rational Functions",
+  "domainCode": "POLY",
+  "cluster": "Polynomial functions",
+  "clusterCode": "A",
+  "skillName": "Zeros and Factoring",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "To find every zero of a polynomial, start with the Rational Root Theorem to list the candidate rational zeros $\\frac{p}{q}$, where $p$ divides the constant term and $q$ divides the leading coefficient. Test candidates with synthetic division: a remainder of $0$ means you found a zero and the quotient is a depressed polynomial of lower degree. Keep depressing until a quadratic remains, then factor it or use the quadratic formula. The Fundamental Theorem of Algebra guarantees a degree-$n$ polynomial has exactly $n$ complex zeros counted with multiplicity, and the Conjugate Pairs Theorem says non-real (and irrational quadratic-surd) zeros of a real-coefficient polynomial come in conjugate pairs.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "List all possible rational zeros of $f(x)=2x^3-5x^2+4x-12$ using the Rational Root Theorem.",
+      "solution": {
+        "steps": [
+          "Identify the constant term and the leading coefficient. The constant term is $-12$ and the leading coefficient is $2$.",
+          "Let $p$ be a factor of the constant term: $p \\in \\{1, 2, 3, 4, 6, 12\\}$.",
+          "Let $q$ be a factor of the leading coefficient: $q \\in \\{1, 2\\}$.",
+          "Form every ratio $\\frac{p}{q}$ with both signs. With $q=1$: $\\pm 1,\\ \\pm 2,\\ \\pm 3,\\ \\pm 4,\\ \\pm 6,\\ \\pm 12$.",
+          "With $q=2$ the new (non-integer) values are $\\pm\\frac{1}{2},\\ \\pm\\frac{3}{2}$ (the others reduce to integers already listed).",
+          "The complete list of candidate rational zeros is $\\pm 1,\\ \\pm 2,\\ \\pm 3,\\ \\pm 4,\\ \\pm 6,\\ \\pm 12,\\ \\pm\\frac{1}{2},\\ \\pm\\frac{3}{2}$."
+        ],
+        "answer": "$\\pm 1,\\ \\pm 2,\\ \\pm 3,\\ \\pm 4,\\ \\pm 6,\\ \\pm 12,\\ \\pm\\frac{1}{2},\\ \\pm\\frac{3}{2}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find all real zeros of $f(x)=x^3-6x^2+11x-6$.",
+      "solution": {
+        "steps": [
+          "The leading coefficient is $1$, so candidate rational zeros are $\\pm$ divisors of $6$: $\\pm 1,\\ \\pm 2,\\ \\pm 3,\\ \\pm 6$.",
+          "Test $x=1$ with synthetic division. Place $1$ in the box and bring down the coefficients $1,\\ -6,\\ 11,\\ -6$: $1 \\to 1$; $1\\cdot 1=1$, $-6+1=-5$; $1\\cdot(-5)=-5$, $11-5=6$; $1\\cdot 6=6$, $-6+6=0$.",
+          "The remainder is $0$, so $x=1$ is a zero and the quotient is $x^2-5x+6$. Thus $f(x)=(x-1)(x^2-5x+6)$.",
+          "Factor the quotient: $x^2-5x+6=(x-2)(x-3)$.",
+          "So $f(x)=(x-1)(x-2)(x-3)$, giving zeros $x=1,\\ 2,\\ 3$.",
+          "Each is a simple zero and there are $3$ of them, matching $\\deg f = 3$."
+        ],
+        "answer": "$x=1,\\ 2,\\ 3$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Find all zeros, real and complex, of $f(x)=x^3-3x^2+4x-12$.",
+      "solution": {
+        "steps": [
+          "Candidate rational zeros (leading coefficient $1$) are $\\pm 1,\\ \\pm 2,\\ \\pm 3,\\ \\pm 4,\\ \\pm 6,\\ \\pm 12$.",
+          "Test $x=3$ with synthetic division on coefficients $1,\\ -3,\\ 4,\\ -12$: bring down $1$; $3\\cdot 1=3$, $-3+3=0$; $3\\cdot 0=0$, $4+0=4$; $3\\cdot 4=12$, $-12+12=0$.",
+          "The remainder is $0$, so $x=3$ is a zero and the quotient is $x^2+4$. Thus $f(x)=(x-3)(x^2+4)$.",
+          "Solve $x^2+4=0$, so $x^2=-4$ and $x=\\pm\\sqrt{-4}=\\pm 2i$.",
+          "By the Conjugate Pairs Theorem the non-real zeros come as the pair $2i$ and $-2i$.",
+          "The three zeros are $x=3,\\ 2i,\\ -2i$, matching $\\deg f = 3$."
+        ],
+        "answer": "$x=3,\\ 2i,\\ -2i$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Find all zeros of $f(x)=2x^3-3x^2+8x+5$, including any irrational or complex zeros.",
+      "solution": {
+        "steps": [
+          "Constant term $5$ has factors $p \\in \\{1, 5\\}$; leading coefficient $2$ has factors $q \\in \\{1, 2\\}$. Candidates: $\\pm 1,\\ \\pm 5,\\ \\pm\\frac{1}{2},\\ \\pm\\frac{5}{2}$.",
+          "Test $x=-\\frac{1}{2}$ with synthetic division on $2,\\ -3,\\ 8,\\ 5$: bring down $2$; $-\\frac{1}{2}\\cdot 2=-1$, $-3+(-1)=-4$; $-\\frac{1}{2}\\cdot(-4)=2$, $8+2=10$; $-\\frac{1}{2}\\cdot 10=-5$, $5+(-5)=0$.",
+          "The remainder is $0$, so $x=-\\frac{1}{2}$ is a zero and the quotient is $2x^2-4x+10$. Thus $f(x)=\\left(x+\\frac{1}{2}\\right)(2x^2-4x+10)$.",
+          "Set $2x^2-4x+10=0$. Divide by $2$: $x^2-2x+5=0$.",
+          "Apply the quadratic formula: $x=\\frac{2\\pm\\sqrt{(-2)^2-4(1)(5)}}{2}=\\frac{2\\pm\\sqrt{4-20}}{2}=\\frac{2\\pm\\sqrt{-16}}{2}$.",
+          "Simplify $\\sqrt{-16}=4i$, so $x=\\frac{2\\pm 4i}{2}=1\\pm 2i$.",
+          "The zeros are $x=-\\frac{1}{2},\\ 1+2i,\\ 1-2i$ (the complex pair are conjugates), a total of $3=\\deg f$."
+        ],
+        "answer": "$x=-\\frac{1}{2},\\ 1+2i,\\ 1-2i$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Write a polynomial $f(x)$ of least degree with real coefficients, leading coefficient $1$, and zeros $x=2$ and $x=3i$. Then factor it completely over the reals and over the complex numbers.",
+      "solution": {
+        "steps": [
+          "Because the coefficients are real and $3i$ is a zero, the Conjugate Pairs Theorem forces $-3i$ to be a zero too.",
+          "The least-degree polynomial therefore has the three zeros $2,\\ 3i,\\ -3i$ and corresponding factors $(x-2),\\ (x-3i),\\ (x+3i)$.",
+          "Multiply the complex-conjugate factors: $(x-3i)(x+3i)=x^2-(3i)^2=x^2-9i^2=x^2+9$.",
+          "Combine: $f(x)=(x-2)(x^2+9)$. This is the complete factorization over $\\mathbb{R}$ (the quadratic $x^2+9$ is irreducible over the reals).",
+          "Expand to standard form: $f(x)=x^3+9x-2x^2-18=x^3-2x^2+9x-18$.",
+          "Over $\\mathbb{C}$, factor the quadratic into linear pieces: $f(x)=(x-2)(x-3i)(x+3i)$."
+        ],
+        "answer": "$f(x)=x^3-2x^2+9x-18=(x-2)(x^2+9)=(x-2)(x-3i)(x+3i)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "List all possible rational zeros of $f(x)=3x^3+2x^2-7x+4$ using the Rational Root Theorem.",
+      "hint": "Form $\\frac{p}{q}$ where $p$ divides the constant term $4$ and $q$ divides the leading coefficient $3$. Include both signs.",
+      "solution": {
+        "steps": [
+          "Factors of the constant term $4$: $p \\in \\{1, 2, 4\\}$.",
+          "Factors of the leading coefficient $3$: $q \\in \\{1, 3\\}$.",
+          "With $q=1$: $\\pm 1,\\ \\pm 2,\\ \\pm 4$. With $q=3$: $\\pm\\frac{1}{3},\\ \\pm\\frac{2}{3},\\ \\pm\\frac{4}{3}$.",
+          "The complete list is $\\pm 1,\\ \\pm 2,\\ \\pm 4,\\ \\pm\\frac{1}{3},\\ \\pm\\frac{2}{3},\\ \\pm\\frac{4}{3}$."
+        ],
+        "answer": "$\\pm 1,\\ \\pm 2,\\ \\pm 4,\\ \\pm\\frac{1}{3},\\ \\pm\\frac{2}{3},\\ \\pm\\frac{4}{3}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Use synthetic division to show that $x=3$ is a zero of $f(x)=x^3-2x^2-5x+6$, then find all remaining zeros.",
+      "hint": "Place $3$ in the synthetic-division box (the factor is $x-3$). After getting the quotient, factor the resulting quadratic.",
+      "solution": {
+        "steps": [
+          "Synthetic division by $3$ on coefficients $1,\\ -2,\\ -5,\\ 6$: bring down $1$; $3\\cdot 1=3$, $-2+3=1$; $3\\cdot 1=3$, $-5+3=-2$; $3\\cdot(-2)=-6$, $6+(-6)=0$.",
+          "The remainder is $0$, so $x=3$ is a zero and the quotient is $x^2+x-2$. Thus $f(x)=(x-3)(x^2+x-2)$.",
+          "Factor the quotient: $x^2+x-2=(x+2)(x-1)$.",
+          "So $f(x)=(x-3)(x+2)(x-1)$.",
+          "The zeros are $x=3,\\ -2,\\ 1$."
+        ],
+        "answer": "$x=3,\\ -2,\\ 1$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Find all zeros, real and complex, of $f(x)=x^3-2x^2+9x-18$.",
+      "hint": "Try the small integer factors of $18$. Once you find a real zero, the remaining quadratic gives a complex-conjugate pair.",
+      "solution": {
+        "steps": [
+          "Candidate rational zeros: $\\pm 1,\\ \\pm 2,\\ \\pm 3,\\ \\pm 6,\\ \\pm 9,\\ \\pm 18$.",
+          "Test $x=2$ by synthetic division on $1,\\ -2,\\ 9,\\ -18$: bring down $1$; $2$, $-2+2=0$; $0$, $9+0=9$; $18$, $-18+18=0$.",
+          "The remainder is $0$, so $x=2$ is a zero and the quotient is $x^2+9$. Thus $f(x)=(x-2)(x^2+9)$.",
+          "Solve $x^2+9=0$: $x^2=-9$, so $x=\\pm 3i$.",
+          "The zeros are $x=2,\\ 3i,\\ -3i$."
+        ],
+        "answer": "$x=2,\\ 3i,\\ -3i$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Find all zeros of $f(x)=x^4-2x^3+x^2$ with their multiplicities, and confirm the total equals the degree.",
+      "hint": "Factor out the greatest common monomial first, then factor what remains as a perfect-square trinomial.",
+      "solution": {
+        "steps": [
+          "Factor out $x^2$: $f(x)=x^2(x^2-2x+1)$.",
+          "Factor the trinomial as a perfect square: $x^2-2x+1=(x-1)^2$.",
+          "So $f(x)=x^2(x-1)^2$.",
+          "The zero $x=0$ has multiplicity $2$ and the zero $x=1$ has multiplicity $2$.",
+          "Total zeros counted with multiplicity: $2+2=4=\\deg f$, as the Fundamental Theorem of Algebra requires."
+        ],
+        "answer": "$x=0$ (multiplicity $2$) and $x=1$ (multiplicity $2$); total $4=\\deg f$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Factor $f(x)=x^4-16$ completely over the real numbers, then over the complex numbers, and list all four zeros.",
+      "hint": "Use difference of squares twice. One quadratic factor stays irreducible over the reals but splits over the complex numbers.",
+      "solution": {
+        "steps": [
+          "Difference of squares: $x^4-16=(x^2-4)(x^2+4)$.",
+          "Factor $x^2-4=(x-2)(x+2)$. Over $\\mathbb{R}$: $f(x)=(x-2)(x+2)(x^2+4)$, since $x^2+4$ is irreducible over the reals.",
+          "Over $\\mathbb{C}$, solve $x^2+4=0$: $x=\\pm 2i$, so $x^2+4=(x-2i)(x+2i)$.",
+          "Complete factorization over $\\mathbb{C}$: $f(x)=(x-2)(x+2)(x-2i)(x+2i)$.",
+          "The four zeros are $x=2,\\ -2,\\ 2i,\\ -2i$, matching $\\deg f = 4$."
+        ],
+        "answer": "Over $\\mathbb{R}$: $(x-2)(x+2)(x^2+4)$. Over $\\mathbb{C}$: $(x-2)(x+2)(x-2i)(x+2i)$. Zeros: $x=2,\\ -2,\\ 2i,\\ -2i$"
+      }
+    }
+  ]
+}

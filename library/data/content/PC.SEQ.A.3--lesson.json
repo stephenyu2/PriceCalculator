@@ -1,0 +1,171 @@
+{
+  "id": "PC.SEQ.A.3--lesson",
+  "standard": "PC.SEQ.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Sequences, Series, and Limits",
+  "domainCode": "SEQ",
+  "cluster": "Sequences and series",
+  "clusterCode": "A",
+  "skillName": "Introduction to Limits",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "A limit describes where a function's outputs are heading, not necessarily where they land. We write $\\lim_{x \\to a} f(x) = L$ to mean that as $x$ gets close to $a$ from both sides, $f(x)$ gets close to $L$. The key idea is that the limit cares only about values near $a$, never the value $f(a)$ itself, so the limit can exist at a hole, can differ from $f(a)$, and can fail to exist when the two sides disagree, the outputs grow without bound, or the outputs oscillate. We estimate limits from graphs, from numerical tables that approach $a$ from the left and from the right, and from piecewise rules using one-sided limits.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "The graph of $f$ is a single smooth curve that passes through the point $(2, 5)$ with no break or hole there. Estimate $\\lim_{x \\to 2} f(x)$.",
+      "solution": {
+        "steps": [
+          "A limit asks what height the curve approaches as $x$ slides toward $2$ from both sides.",
+          "From the left ($x = 1.9, 1.99, \\dots$) the curve rises toward height $5$.",
+          "From the right ($x = 2.1, 2.01, \\dots$) the curve falls toward height $5$.",
+          "Both one-sided approaches agree on the same height, so the two-sided limit is that height: $\\lim_{x \\to 2^-} f(x) = 5$ and $\\lim_{x \\to 2^+} f(x) = 5$.",
+          "Therefore $\\lim_{x \\to 2} f(x) = 5$. Because the curve is continuous here, the limit also equals $f(2) = 5$."
+        ],
+        "answer": "$\\lim_{x \\to 2} f(x) = 5$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Let $f(x) = \\dfrac{x^2 - 9}{x - 3}$. Build a table for $x = 2.9,\\ 2.99,\\ 3.01,\\ 3.1$ and use it to estimate $\\lim_{x \\to 3} f(x)$. Does $f(3)$ exist?",
+      "solution": {
+        "steps": [
+          "For every $x \\neq 3$, factor the numerator: $\\dfrac{x^2 - 9}{x - 3} = \\dfrac{(x-3)(x+3)}{x - 3} = x + 3$.",
+          "So away from $x = 3$ the function behaves exactly like $x + 3$.",
+          "Table of $x + 3$: at $x = 2.9$, $f = 5.9$; at $x = 2.99$, $f = 5.99$; at $x = 3.01$, $f = 6.01$; at $x = 3.1$, $f = 6.1$.",
+          "From both sides the outputs close in on $6$, so $\\lim_{x \\to 3} f(x) = 6$.",
+          "At $x = 3$ the original formula gives $\\dfrac{0}{0}$, which is undefined, so $f(3)$ does not exist. The limit is $6$ anyway: there is a hole at $(3, 6)$."
+        ],
+        "answer": "$\\lim_{x \\to 3} f(x) = 6$; $f(3)$ is undefined (a hole)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A graph shows a curve that approaches height $4$ as $x \\to 1$ from both sides, but a solid dot is plotted at $(1, 7)$ and the curve has an open circle at $(1, 4)$. Find $\\lim_{x \\to 1} f(x)$ and $f(1)$.",
+      "solution": {
+        "steps": [
+          "The limit depends only on the heights the curve approaches near $x = 1$, not on the single plotted point.",
+          "From the left the curve rises toward $4$; from the right it falls toward $4$. Both sides agree.",
+          "So $\\lim_{x \\to 1} f(x) = 4$.",
+          "The function value is read from the solid dot, which sits at height $7$, so $f(1) = 7$.",
+          "The limit and the function value disagree: the limit describes where the curve heads ($4$), while $f(1) = 7$ is a separately defined point. A limit need not equal $f(a)$."
+        ],
+        "answer": "$\\lim_{x \\to 1} f(x) = 4$ while $f(1) = 7$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "For $f(x) = \\begin{cases} x + 1 & x < 2 \\\\ x^2 & x \\ge 2 \\end{cases}$, find $\\lim_{x \\to 2^-} f(x)$, $\\lim_{x \\to 2^+} f(x)$, and decide whether $\\lim_{x \\to 2} f(x)$ exists.",
+      "solution": {
+        "steps": [
+          "The left-hand limit uses inputs just below $2$, where the rule is $f(x) = x + 1$.",
+          "$\\lim_{x \\to 2^-} f(x) = 2 + 1 = 3$.",
+          "The right-hand limit uses inputs at or just above $2$, where the rule is $f(x) = x^2$.",
+          "$\\lim_{x \\to 2^+} f(x) = 2^2 = 4$.",
+          "Existence criterion: a two-sided limit exists only if the left and right limits are equal. Here $3 \\neq 4$.",
+          "Since the one-sided limits disagree (a jump), $\\lim_{x \\to 2} f(x)$ does not exist."
+        ],
+        "answer": "$\\lim_{x \\to 2^-} f(x) = 3$, $\\lim_{x \\to 2^+} f(x) = 4$; $\\lim_{x \\to 2} f(x)$ does not exist."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Consider $f(x) = \\dfrac{1}{x}$ near $x = 0$. Find $\\lim_{x \\to 0^-} f(x)$ and $\\lim_{x \\to 0^+} f(x)$, then explain whether $\\lim_{x \\to 0} f(x)$ exists. Also estimate $\\lim_{x \\to \\infty} f(x)$.",
+      "solution": {
+        "steps": [
+          "Right side: as $x \\to 0^+$ (try $0.1, 0.01, 0.001$), $\\dfrac{1}{x}$ gives $10, 100, 1000, \\dots$, growing without bound, so $\\lim_{x \\to 0^+} \\dfrac{1}{x} = +\\infty$.",
+          "Left side: as $x \\to 0^-$ (try $-0.1, -0.01, -0.001$), $\\dfrac{1}{x}$ gives $-10, -100, -1000, \\dots$, so $\\lim_{x \\to 0^-} \\dfrac{1}{x} = -\\infty$.",
+          "The two sides disagree (and neither is a finite number), so $\\lim_{x \\to 0} \\dfrac{1}{x}$ does not exist. There is a vertical asymptote at $x = 0$.",
+          "End behavior: as $x \\to \\infty$ (try $100, 1000, 10000$), $\\dfrac{1}{x}$ gives $0.01, 0.001, 0.0001, \\dots$, shrinking toward $0$.",
+          "So $\\lim_{x \\to \\infty} \\dfrac{1}{x} = 0$, the horizontal asymptote."
+        ],
+        "answer": "$\\lim_{x \\to 0^-} \\frac{1}{x} = -\\infty$, $\\lim_{x \\to 0^+} \\frac{1}{x} = +\\infty$, so $\\lim_{x \\to 0} \\frac{1}{x}$ does not exist; $\\lim_{x \\to \\infty} \\frac{1}{x} = 0$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "The graph of $g$ passes smoothly through $(4, -2)$ with no hole or break. Estimate $\\lim_{x \\to 4} g(x)$.",
+      "hint": "Track the height the curve approaches from both sides of $x = 4$. With no break, the limit equals the height at the point.",
+      "solution": {
+        "steps": [
+          "From the left and the right the curve approaches height $-2$ as $x \\to 4$.",
+          "Both one-sided approaches agree, so the two-sided limit is $-2$.",
+          "Because the curve is continuous there, $\\lim_{x \\to 4} g(x) = g(4) = -2$."
+        ],
+        "answer": "$\\lim_{x \\to 4} g(x) = -2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Let $f(x) = \\dfrac{x^2 - 4}{x - 2}$. Estimate $\\lim_{x \\to 2} f(x)$ by simplifying. Is the limit affected by the fact that $f(2)$ is undefined?",
+      "hint": "Factor $x^2 - 4 = (x-2)(x+2)$ and cancel the common factor for $x \\neq 2$.",
+      "solution": {
+        "steps": [
+          "Factor: $\\dfrac{x^2 - 4}{x - 2} = \\dfrac{(x-2)(x+2)}{x - 2} = x + 2$ for every $x \\neq 2$.",
+          "As $x \\to 2$, $x + 2 \\to 4$, so $\\lim_{x \\to 2} f(x) = 4$.",
+          "At $x = 2$ the original formula gives $\\dfrac{0}{0}$, so $f(2)$ is undefined, but the limit only looks at nearby values, so the hole does not change it.",
+          "The limit is $4$ despite $f(2)$ being undefined."
+        ],
+        "answer": "$\\lim_{x \\to 2} f(x) = 4$ (a hole at $(2,4)$; $f(2)$ undefined)"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "For $f(x) = \\begin{cases} 3x & x < 1 \\\\ x + 5 & x \\ge 1 \\end{cases}$, find $\\lim_{x \\to 1^-} f(x)$ and $\\lim_{x \\to 1^+} f(x)$, then state whether $\\lim_{x \\to 1} f(x)$ exists.",
+      "hint": "Use the $x < 1$ rule for the left-hand limit and the $x \\ge 1$ rule for the right-hand limit, then compare.",
+      "solution": {
+        "steps": [
+          "Left-hand limit uses $f(x) = 3x$: $\\lim_{x \\to 1^-} f(x) = 3(1) = 3$.",
+          "Right-hand limit uses $f(x) = x + 5$: $\\lim_{x \\to 1^+} f(x) = 1 + 5 = 6$.",
+          "The two sides give $3$ and $6$, which are not equal.",
+          "By the existence criterion, since the one-sided limits disagree, $\\lim_{x \\to 1} f(x)$ does not exist (a jump)."
+        ],
+        "answer": "$\\lim_{x \\to 1^-} f(x) = 3$, $\\lim_{x \\to 1^+} f(x) = 6$; the two-sided limit does not exist."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Estimate $\\lim_{x \\to \\infty} \\dfrac{3x + 1}{x}$ using a table of large $x$.",
+      "hint": "Rewrite the fraction as $3 + \\dfrac{1}{x}$ and see what happens to $\\dfrac{1}{x}$ as $x$ grows.",
+      "solution": {
+        "steps": [
+          "Split the fraction: $\\dfrac{3x + 1}{x} = \\dfrac{3x}{x} + \\dfrac{1}{x} = 3 + \\dfrac{1}{x}$.",
+          "Table: at $x = 10$, value $= 3.1$; at $x = 100$, value $= 3.01$; at $x = 1000$, value $= 3.001$.",
+          "As $x \\to \\infty$, the term $\\dfrac{1}{x} \\to 0$, so the expression approaches $3$.",
+          "Therefore $\\lim_{x \\to \\infty} \\dfrac{3x + 1}{x} = 3$."
+        ],
+        "answer": "$\\lim_{x \\to \\infty} \\dfrac{3x + 1}{x} = 3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Explain why $\\lim_{x \\to 0} \\dfrac{1}{x^2}$ does not exist, and describe the behavior with $\\infty$ notation.",
+      "hint": "Plug in small values like $x = 0.1, 0.01$ and their negatives. Notice $x^2$ is always positive.",
+      "solution": {
+        "steps": [
+          "Since $x^2 > 0$ for every $x \\neq 0$, the quotient $\\dfrac{1}{x^2}$ is positive on both sides of $0$.",
+          "Right side: at $x = 0.1$, value $= 100$; at $x = 0.01$, value $= 10000$. Left side: at $x = -0.1$, value $= 100$; at $x = -0.01$, value $= 10000$.",
+          "From both sides the outputs grow without bound rather than settling on a finite number.",
+          "Because the outputs are unbounded, no finite limit value exists, so $\\lim_{x \\to 0} \\dfrac{1}{x^2}$ does not exist.",
+          "We describe the unbounded behavior by writing $\\lim_{x \\to 0} \\dfrac{1}{x^2} = +\\infty$, which records the direction of growth, not an actual limit value."
+        ],
+        "answer": "The limit does not exist because the outputs grow without bound; we describe this as $\\lim_{x \\to 0} \\frac{1}{x^2} = +\\infty$."
+      }
+    }
+  ]
+}

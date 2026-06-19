@@ -1,0 +1,228 @@
+{
+  "id": "PC.SEQ.A.1--worksheet--hard",
+  "standard": "PC.SEQ.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Sequences, Series, and Limits",
+  "domainCode": "SEQ",
+  "cluster": "Sequences and series",
+  "clusterCode": "A",
+  "skillName": "Arithmetic Sequences and Series",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems require building an arithmetic model from a verbal or real-world scenario, recovering parameters from mixed information, or solving for the number of terms $n$ through a quadratic. Use $a_n = a_1 + (n-1)d$ and $S_n = \\frac{n}{2}\\left(2a_1 + (n-1)d\\right)$, and reject any non-physical roots.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A stadium section has $22$ seats in the first row, and each row behind it holds $3$ more seats than the row in front. What is the smallest number of rows needed so that the section's total seating is at least $1000$ seats?",
+      "answer": "$20$ rows",
+      "solution": {
+        "steps": [
+          "Model the rows: $a_1 = 22$, $d = 3$, so $S_n = \\frac{n}{2}\\left(2(22) + (n-1)(3)\\right) = \\frac{n}{2}(41 + 3n)$.",
+          "Set $\\frac{n}{2}(41 + 3n) \\ge 1000$, i.e. $3n^2 + 41n - 2000 \\ge 0$.",
+          "Solve $3n^2 + 41n - 2000 = 0$: $n = \\frac{-41 + \\sqrt{41^2 + 4(3)(2000)}}{2(3)} = \\frac{-41 + \\sqrt{25681}}{6} \\approx \\frac{-41 + 160.25}{6} \\approx 19.9$.",
+          "Since $n$ must be a whole number of rows, test $n = 19$ and $n = 20$.",
+          "$S_{19} = \\frac{19}{2}(41 + 57) = \\frac{19}{2}(98) = 931 < 1000$ and $S_{20} = \\frac{20}{2}(41 + 60) = 10(101) = 1010 \\ge 1000$.",
+          "The smallest number of rows is $20$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "In an arithmetic sequence the $7$th term is $a_7 = 40$ and the sum of the first $7$ terms is $S_7 = 175$. Find $a_1$ and the common difference $d$.",
+      "answer": "$a_1 = 10$ and $d = 5$",
+      "solution": {
+        "steps": [
+          "Use $S_7 = \\frac{7}{2}(a_1 + a_7)$: $175 = \\frac{7}{2}(a_1 + 40)$.",
+          "Solve: $a_1 + 40 = \\frac{2(175)}{7} = 50$, so $a_1 = 10$.",
+          "Use $a_7 = a_1 + 6d$: $40 = 10 + 6d$, so $6d = 30$ and $d = 5$.",
+          "Check: $a_7 = 10 + 6(5) = 40$ and $S_7 = \\frac{7}{2}(10 + 40) = 175$. Both hold."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A pile of logs is stacked so the bottom row has $34$ logs, the next row has $32$, and each higher row has $2$ fewer logs. The top row has $4$ logs. How many logs are in the entire pile?",
+      "answer": "$304$ logs",
+      "solution": {
+        "steps": [
+          "Model: $a_1 = 34$, $d = -2$, last term $a_n = 4$.",
+          "Find the number of rows from $a_n = a_1 + (n-1)d$: $4 = 34 + (n-1)(-2)$.",
+          "Solve: $-30 = -2(n-1)$, so $n - 1 = 15$ and $n = 16$.",
+          "Sum: $S_{16} = \\frac{16}{2}(a_1 + a_n) = 8(34 + 4) = 8(38) = 304$.",
+          "The pile contains $304$ logs."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Maria deposits money monthly into a jar. The first month she deposits $\\$15$, and each month she deposits $\\$8$ more than the previous month. In which month does her total accumulated deposits first exceed $\\$1000$?",
+      "answer": "Month $15$",
+      "solution": {
+        "steps": [
+          "Model: $a_1 = 15$, $d = 8$, so $S_n = \\frac{n}{2}\\left(2(15) + (n-1)(8)\\right) = \\frac{n}{2}(8n + 22) = n(4n + 11)$.",
+          "Set $n(4n + 11) > 1000$, i.e. $4n^2 + 11n - 1000 > 0$.",
+          "Solve $4n^2 + 11n - 1000 = 0$: $n = \\frac{-11 + \\sqrt{121 + 16000}}{8} = \\frac{-11 + \\sqrt{16121}}{8} \\approx \\frac{-11 + 126.97}{8} \\approx 14.5$.",
+          "Test whole months. $S_{14} = 14(4(14) + 11) = 14(67) = 938 < 1000$.",
+          "$S_{15} = 15(4(15) + 11) = 15(71) = 1065 > 1000$.",
+          "Her total first exceeds $\\$1000$ in month $15$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "An arithmetic sequence has $a_3 = -5$ and $a_{10} = 16$. Find the sum of the first $25$ terms, $S_{25}$.",
+      "answer": "$S_{25} = 625$",
+      "solution": {
+        "steps": [
+          "Common difference: $d = \\frac{a_{10} - a_3}{10 - 3} = \\frac{16 - (-5)}{7} = \\frac{21}{7} = 3$.",
+          "First term: $a_3 = a_1 + 2d$, so $-5 = a_1 + 6$, giving $a_1 = -11$.",
+          "Sum: $S_{25} = \\frac{25}{2}\\left(2(-11) + (25-1)(3)\\right) = \\frac{25}{2}(-22 + 72) = \\frac{25}{2}(50)$.",
+          "$S_{25} = 25 \\times 25 = 625$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A runner trains by increasing her daily distance by a fixed amount each day. On day $1$ she runs $2$ miles, and over the first $10$ days she runs a total of $65$ miles. By how much does she increase her distance each day, and how far does she run on day $10$?",
+      "answer": "$d = 1$ mile per day; $a_{10} = 11$ miles",
+      "solution": {
+        "steps": [
+          "Model: $a_1 = 2$, $S_{10} = 65$.",
+          "Use $S_{10} = \\frac{10}{2}\\left(2a_1 + 9d\\right) = 5(4 + 9d)$.",
+          "Set equal: $65 = 5(4 + 9d)$, so $4 + 9d = 13$, giving $9d = 9$ and $d = 1$.",
+          "Day $10$: $a_{10} = a_1 + 9d = 2 + 9(1) = 11$ miles."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "The terms of $\\displaystyle\\sum_{k=1}^{n}(5k - 3)$ form an arithmetic series. Find a simplified closed form for this sum in terms of $n$, then determine the value of $n$ for which the sum equals $416$.",
+      "answer": "$\\dfrac{n(5n-1)}{2}$; the sum equals $416$ when $n = 13$",
+      "solution": {
+        "steps": [
+          "The terms form an arithmetic sequence with first term $a_1 = 5(1) - 3 = 2$ and $n$th term $a_n = 5n - 3$, common difference $5$.",
+          "Sum: $S_n = \\frac{n}{2}(a_1 + a_n) = \\frac{n}{2}\\left(2 + 5n - 3\\right) = \\frac{n}{2}(5n - 1) = \\frac{n(5n-1)}{2}$.",
+          "Set $\\frac{n(5n-1)}{2} = 416$: $5n^2 - n - 832 = 0$.",
+          "Solve: $n = \\frac{1 + \\sqrt{1 + 4(5)(832)}}{10} = \\frac{1 + \\sqrt{16641}}{10} = \\frac{1 + 129}{10} = 13$.",
+          "Check: $\\frac{13(5(13)-1)}{2} = \\frac{13(64)}{2} = 13 \\times 32 = 416$. Confirmed, so $n = 13$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "The interior angles of a convex polygon form an arithmetic sequence. The smallest angle is $100^\\circ$ and the common difference is $10^\\circ$. The angles of an $n$-sided convex polygon sum to $(n-2)\\cdot 180^\\circ$. How many sides does the polygon have?",
+      "answer": "$8$ sides",
+      "solution": {
+        "steps": [
+          "The angle sum as a series: $S_n = \\frac{n}{2}\\left(2(100) + (n-1)(10)\\right) = \\frac{n}{2}(10n + 190) = 5n^2 + 95n$.",
+          "Set equal to the polygon angle sum: $5n^2 + 95n = 180(n - 2)$.",
+          "Simplify: $5n^2 + 95n = 180n - 360$, so $5n^2 - 85n + 360 = 0$, i.e. $n^2 - 17n + 72 = 0$.",
+          "Factor: $(n - 8)(n - 9) = 0$, so $n = 8$ or $n = 9$.",
+          "Test $n = 9$: the largest angle would be $a_9 = 100 + 8(10) = 180^\\circ$, not valid for a convex polygon (angles must be strictly less than $180^\\circ$). Reject $n = 9$.",
+          "Therefore $n = 8$. Check: $S_8 = 5(64) + 95(8) = 320 + 760 = 1080 = (8-2)(180)$. Valid."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "In an arithmetic sequence, the sum of the first $5$ terms is $40$ and the sum of the first $10$ terms is $155$. Find $a_1$ and $d$.",
+      "answer": "$a_1 = 2$ and $d = 3$",
+      "solution": {
+        "steps": [
+          "$S_5 = \\frac{5}{2}(2a_1 + 4d) = 5a_1 + 10d = 40$, so $a_1 + 2d = 8$.",
+          "$S_{10} = \\frac{10}{2}(2a_1 + 9d) = 10a_1 + 45d = 155$, so $2a_1 + 9d = 31$.",
+          "From the first equation $a_1 = 8 - 2d$. Substitute: $2(8 - 2d) + 9d = 31$, i.e. $16 - 4d + 9d = 31$.",
+          "Solve: $5d = 15$, so $d = 3$, and $a_1 = 8 - 2(3) = 2$.",
+          "Check: $S_5 = 5(2) + 10(3) = 40$ and $S_{10} = 10(2) + 45(3) = 155$. Both hold."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A grocery display stacks oranges in a triangular wall: the top row has $1$ orange, and each row below has $2$ more oranges than the row above. The clerk has exactly $400$ oranges and stacks complete rows. How many complete rows can she build, and how many oranges are left over?",
+      "answer": "$20$ complete rows; $0$ oranges left over",
+      "solution": {
+        "steps": [
+          "Model: $a_1 = 1$, $d = 2$, so row $k$ holds $a_k = 1 + (k-1)(2) = 2k - 1$ oranges (the odd numbers).",
+          "Total in $n$ rows: $S_n = \\frac{n}{2}(2(1) + (n-1)(2)) = \\frac{n}{2}(2n) = n^2$.",
+          "Find the largest $n$ with $n^2 \\le 400$: $\\sqrt{400} = 20$, so $n = 20$ gives exactly $S_{20} = 400$.",
+          "She uses all $400$ oranges to build $20$ complete rows with $0$ left over."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "An arithmetic sequence of positive integers has first term $a_1 = 6$ and common difference $d = 4$. Find the sum of all terms of this sequence that are less than $200$.",
+      "answer": "$4998$",
+      "solution": {
+        "steps": [
+          "Terms: $a_n = 6 + (n-1)(4) = 4n + 2$. Require $4n + 2 < 200$.",
+          "Solve: $4n < 198$, so $n < 49.5$; thus $n$ ranges from $1$ to $49$.",
+          "Last included term: $a_{49} = 4(49) + 2 = 198$.",
+          "Sum: $S_{49} = \\frac{49}{2}(a_1 + a_{49}) = \\frac{49}{2}(6 + 198) = \\frac{49}{2}(204) = 49 \\times 102 = 4998$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A car decelerates uniformly. In the first second after braking it travels $30$ meters, and each subsequent second it travels $4$ meters less than the previous second. Assuming the pattern holds while the distance per second stays positive, what total distance does the car travel before it stops?",
+      "answer": "$128$ meters",
+      "solution": {
+        "steps": [
+          "Model: $a_1 = 30$, $d = -4$. The distances are $30, 26, 22, \\ldots$ and must stay positive.",
+          "Find the last positive term: $a_n = 30 + (n-1)(-4) = 34 - 4n > 0$ requires $n < 8.5$, so $n = 8$ is the last full second.",
+          "$a_8 = 34 - 4(8) = 2$ meters (still positive); $a_9 = 34 - 36 = -2$, so the car has stopped before a ninth second.",
+          "Total distance: $S_8 = \\frac{8}{2}(a_1 + a_8) = 4(30 + 2) = 4(32) = 128$.",
+          "The car travels $128$ meters before stopping."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Three numbers form an arithmetic sequence. Their sum is $36$, and the sum of the squares of the smallest and largest is $290$. Find the three numbers (assume the common difference is positive).",
+      "answer": "$11,\\ 12,\\ 13$",
+      "solution": {
+        "steps": [
+          "For three consecutive arithmetic terms, the middle term is the average: $\\frac{36}{3} = 12$. Write the terms as $12 - d$, $12$, $12 + d$.",
+          "Smallest is $12 - d$, largest is $12 + d$. Sum of their squares: $(12-d)^2 + (12+d)^2 = 290$.",
+          "Expand: $144 - 24d + d^2 + 144 + 24d + d^2 = 288 + 2d^2 = 290$.",
+          "Solve: $2d^2 = 2$, so $d^2 = 1$ and $d = 1$ (positive value).",
+          "The three numbers are $12 - 1 = 11$, $12$, and $12 + 1 = 13$. Check: $11 + 12 + 13 = 36$ and $11^2 + 13^2 = 121 + 169 = 290$. Both hold."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Two arithmetic sequences start at the same first term $a_1 = 5$. The first has common difference $3$ and the second has common difference $7$. For what value of $n$ does the $n$th term of the second sequence first exceed twice the $n$th term of the first sequence?",
+      "answer": "$n = 7$",
+      "solution": {
+        "steps": [
+          "Sequence one: $a_n = 5 + (n-1)(3) = 3n + 2$. Sequence two: $b_n = 5 + (n-1)(7) = 7n - 2$.",
+          "Require $b_n > 2a_n$: $7n - 2 > 2(3n + 2) = 6n + 4$.",
+          "Solve: $7n - 6n > 4 + 2$, so $n > 6$.",
+          "The smallest integer satisfying $n > 6$ is $n = 7$.",
+          "Check $n = 7$: $b_7 = 7(7) - 2 = 47$ and $2a_7 = 2(3(7)+2) = 2(23) = 46$; indeed $47 > 46$. At $n = 6$: $b_6 = 40$, $2a_6 = 40$, not strictly greater. So $n = 7$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "An auditorium's rows increase arithmetically. The $4$th row has $30$ seats and the $11$th row has $58$ seats. What is the total number of seats in the first $20$ rows?",
+      "answer": "$1120$ seats",
+      "solution": {
+        "steps": [
+          "Common difference: $d = \\frac{a_{11} - a_4}{11 - 4} = \\frac{58 - 30}{7} = \\frac{28}{7} = 4$.",
+          "First row: $a_4 = a_1 + 3d$, so $30 = a_1 + 12$, giving $a_1 = 18$.",
+          "Sum of $20$ rows: $S_{20} = \\frac{20}{2}\\left(2(18) + (20-1)(4)\\right) = 10(36 + 76) = 10(112)$.",
+          "$S_{20} = 1120$ seats.",
+          "Check via last term: $a_{20} = 18 + 19(4) = 94$, and $S_{20} = \\frac{20}{2}(18 + 94) = 10(112) = 1120$. Consistent."
+        ]
+      }
+    }
+  ]
+}

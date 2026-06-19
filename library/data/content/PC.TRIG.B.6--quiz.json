@@ -1,0 +1,160 @@
+{
+  "id": "PC.TRIG.B.6--quiz",
+  "standard": "PC.TRIG.B.6",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Graphs and identities",
+  "clusterCode": "B",
+  "skillName": "Trig Identities",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "An 8-question multiple-choice quiz on the fundamental, sum/difference, double-angle, and half-angle trigonometric identities. Choose the single best answer for each item.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Simplify $\\sin\\theta\\,\\csc\\theta$.\nA) $1$\nB) $\\sin^2\\theta$\nC) $\\tan\\theta$\nD) $\\cos\\theta$",
+      "answer": "A) $1$",
+      "solution": {
+        "steps": [
+          "Apply the reciprocal identity $\\csc\\theta = \\frac{1}{\\sin\\theta}$.",
+          "Then $\\sin\\theta\\,\\csc\\theta = \\sin\\theta\\cdot\\frac{1}{\\sin\\theta} = 1$.",
+          "B treats the product as $\\sin\\theta\\cdot\\sin\\theta$, but $\\csc\\theta$ is the reciprocal of $\\sin\\theta$, not $\\sin\\theta$ itself.",
+          "C and D come from confusing the reciprocal identity with a quotient identity; neither matches $\\sin\\theta\\cdot\\frac{1}{\\sin\\theta}$."
+        ],
+        "answer": "A) $1$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Simplify $\\dfrac{\\sin\\theta}{\\cos\\theta}$.\nA) $\\cot\\theta$\nB) $\\tan\\theta$\nC) $\\sec\\theta$\nD) $1$",
+      "answer": "B) $\\tan\\theta$",
+      "solution": {
+        "steps": [
+          "Apply the quotient identity $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$.",
+          "So $\\frac{\\sin\\theta}{\\cos\\theta} = \\tan\\theta$.",
+          "A, $\\cot\\theta = \\frac{\\cos\\theta}{\\sin\\theta}$, is the reciprocal quotient, not this one.",
+          "C, $\\sec\\theta = \\frac{1}{\\cos\\theta}$, is a reciprocal identity with no $\\sin\\theta$ in the numerator.",
+          "D would require $\\sin\\theta = \\cos\\theta$ for all $\\theta$, which is false."
+        ],
+        "answer": "B) $\\tan\\theta$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Simplify $\\sec\\theta\\,\\cos\\theta$.\nA) $\\sin\\theta$\nB) $\\sec^2\\theta$\nC) $1$\nD) $\\tan\\theta$",
+      "answer": "C) $1$",
+      "solution": {
+        "steps": [
+          "Apply the reciprocal identity $\\sec\\theta = \\frac{1}{\\cos\\theta}$.",
+          "Then $\\sec\\theta\\,\\cos\\theta = \\frac{1}{\\cos\\theta}\\cdot\\cos\\theta = 1$.",
+          "A results from misreading $\\sec\\theta$ as the quotient $\\frac{\\sin\\theta}{\\cos\\theta}$, which would give $\\sin\\theta$, but that is $\\tan\\theta$, not $\\sec\\theta$.",
+          "B and D do not follow from canceling $\\cos\\theta$ with its reciprocal."
+        ],
+        "answer": "C) $1$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Find the exact value of $\\cos 15^\\circ$ using $\\cos(45^\\circ - 30^\\circ)$.\nA) $\\dfrac{\\sqrt{6} + \\sqrt{2}}{4}$\nB) $\\dfrac{\\sqrt{6} - \\sqrt{2}}{4}$\nC) $\\dfrac{\\sqrt{2}}{2} - \\dfrac{\\sqrt{3}}{2}$\nD) $\\dfrac{\\sqrt{6} + \\sqrt{2}}{2}$",
+      "answer": "A) $\\dfrac{\\sqrt{6} + \\sqrt{2}}{4}$",
+      "solution": {
+        "steps": [
+          "Use $\\cos(A - B) = \\cos A\\cos B + \\sin A\\sin B$ with $A = 45^\\circ$, $B = 30^\\circ$.",
+          "$\\cos 15^\\circ = \\cos 45^\\circ\\cos 30^\\circ + \\sin 45^\\circ\\sin 30^\\circ = \\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2} + \\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2}$.",
+          "$= \\frac{\\sqrt{6}}{4} + \\frac{\\sqrt{2}}{4} = \\frac{\\sqrt{6} + \\sqrt{2}}{4}$.",
+          "B uses the wrong sign $\\cos A\\cos B - \\sin A\\sin B$ (the sum form), giving a minus instead of a plus.",
+          "C drops the products entirely and just subtracts $\\cos$ values, treating cosine as linear over the difference.",
+          "D forgets that each term carries a factor of $\\frac{1}{2}$, leaving a denominator of $2$ instead of $4$."
+        ],
+        "answer": "A) $\\dfrac{\\sqrt{6} + \\sqrt{2}}{4}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "If $\\sin\\theta = \\dfrac{3}{5}$ and $\\theta$ is in Quadrant I, find $\\sin 2\\theta$.\nA) $\\dfrac{6}{5}$\nB) $\\dfrac{7}{25}$\nC) $\\dfrac{24}{25}$\nD) $\\dfrac{12}{25}$",
+      "answer": "C) $\\dfrac{24}{25}$",
+      "solution": {
+        "steps": [
+          "Since $\\theta$ is in Quadrant I, $\\cos\\theta = \\sqrt{1 - \\sin^2\\theta} = \\sqrt{1 - \\frac{9}{25}} = \\frac{4}{5}$.",
+          "Apply the double-angle formula $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta = 2\\cdot\\frac{3}{5}\\cdot\\frac{4}{5}$.",
+          "$= \\frac{24}{25}$.",
+          "A drops the $\\cos\\theta$ factor, writing $\\sin 2\\theta = 2\\sin\\theta = \\frac{6}{5}$.",
+          "B is $\\cos 2\\theta = 1 - 2\\sin^2\\theta$, not $\\sin 2\\theta$.",
+          "D forgets the factor of $2$, computing only $\\sin\\theta\\cos\\theta = \\frac{12}{25}$."
+        ],
+        "answer": "C) $\\dfrac{24}{25}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "If $\\tan\\theta = \\dfrac{1}{2}$, find $\\tan 2\\theta$.\nA) $\\dfrac{3}{4}$\nB) $1$\nC) $\\dfrac{4}{3}$\nD) $\\dfrac{1}{4}$",
+      "answer": "C) $\\dfrac{4}{3}$",
+      "solution": {
+        "steps": [
+          "Apply the double-angle formula $\\tan 2\\theta = \\frac{2\\tan\\theta}{1 - \\tan^2\\theta}$.",
+          "Substitute $\\tan\\theta = \\frac{1}{2}$: numerator $= 2\\cdot\\frac{1}{2} = 1$; denominator $= 1 - \\left(\\frac{1}{2}\\right)^2 = 1 - \\frac{1}{4} = \\frac{3}{4}$.",
+          "$\\tan 2\\theta = \\dfrac{1}{\\frac{3}{4}} = \\frac{4}{3}$.",
+          "A swaps numerator and denominator, using $\\frac{1 - \\tan^2\\theta}{2\\tan\\theta} = \\frac{3/4}{1}$.",
+          "B treats $\\tan 2\\theta$ as $2\\tan\\theta = 1$, ignoring the denominator.",
+          "D is just $\\tan^2\\theta = \\frac{1}{4}$, which is not the double-angle value."
+        ],
+        "answer": "C) $\\dfrac{4}{3}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Given $\\sin A = \\dfrac{3}{5}$ with $A$ in Quadrant I and $\\sin B = \\dfrac{5}{13}$ with $B$ in Quadrant I, find $\\sin(A + B)$.\nA) $\\dfrac{63}{65}$\nB) $\\dfrac{56}{65}$\nC) $\\dfrac{8}{13}$\nD) $\\dfrac{33}{65}$",
+      "answer": "B) $\\dfrac{56}{65}$",
+      "solution": {
+        "steps": [
+          "Find the missing values. In QI, $\\cos A = \\sqrt{1 - \\frac{9}{25}} = \\frac{4}{5}$ and $\\cos B = \\sqrt{1 - \\frac{25}{169}} = \\frac{12}{13}$.",
+          "Apply $\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B$.",
+          "$= \\frac{3}{5}\\cdot\\frac{12}{13} + \\frac{4}{5}\\cdot\\frac{5}{13} = \\frac{36}{65} + \\frac{20}{65} = \\frac{56}{65}$.",
+          "A, $\\frac{63}{65}$, uses the cosine pattern $\\sin A\\sin B + \\cos A\\cos B$ by mistake, pairing the same-named functions.",
+          "C, $\\frac{8}{13}$, comes from treating sine as linear: $\\sin A + \\sin B = \\frac{3}{5} + \\frac{5}{13}$ is also wrong, and $\\frac{8}{13}$ reflects a careless additive shortcut.",
+          "D mis-pairs one cross term, for instance using $\\sin A\\sin B + \\cos A\\sin B$."
+        ],
+        "answer": "B) $\\dfrac{56}{65}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "If $\\cos\\theta = \\dfrac{4}{5}$ and $\\theta$ is in Quadrant IV, find $\\sin\\dfrac{\\theta}{2}$.\nA) $-\\dfrac{\\sqrt{10}}{10}$\nB) $\\dfrac{\\sqrt{10}}{10}$\nC) $\\dfrac{1}{10}$\nD) $\\dfrac{3\\sqrt{10}}{10}$",
+      "answer": "B) $\\dfrac{\\sqrt{10}}{10}$",
+      "solution": {
+        "steps": [
+          "Half-angle formula: $\\sin\\frac{\\theta}{2} = \\pm\\sqrt{\\frac{1 - \\cos\\theta}{2}}$.",
+          "Substitute $\\cos\\theta = \\frac{4}{5}$: $\\sqrt{\\frac{1 - \\frac{4}{5}}{2}} = \\sqrt{\\frac{1/5}{2}} = \\sqrt{\\frac{1}{10}} = \\frac{1}{\\sqrt{10}} = \\frac{\\sqrt{10}}{10}$.",
+          "Choose the sign from the quadrant of $\\frac{\\theta}{2}$. With $\\theta$ in QIV, $270^\\circ < \\theta < 360^\\circ$, so $135^\\circ < \\frac{\\theta}{2} < 180^\\circ$, placing $\\frac{\\theta}{2}$ in QII where sine is positive.",
+          "Therefore $\\sin\\frac{\\theta}{2} = +\\frac{\\sqrt{10}}{10}$.",
+          "A uses the quadrant of $\\theta$ (QIV, sine negative) instead of the quadrant of $\\frac{\\theta}{2}$, giving the wrong sign.",
+          "C forgets the radical, writing $\\frac{1 - \\cos\\theta}{2}$ as the final value.",
+          "D drops the factor of $2$ under the radical, computing $\\sqrt{1 - \\cos\\theta} = \\sqrt{\\frac{1}{5}}$ scaled incorrectly."
+        ],
+        "answer": "B) $\\dfrac{\\sqrt{10}}{10}$"
+      }
+    }
+  ]
+}

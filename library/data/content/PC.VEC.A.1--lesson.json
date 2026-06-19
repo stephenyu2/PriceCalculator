@@ -1,0 +1,162 @@
+{
+  "id": "PC.VEC.A.1--lesson",
+  "standard": "PC.VEC.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Vectors and Parametric Equations",
+  "domainCode": "VEC",
+  "cluster": "Vectors in the plane",
+  "clusterCode": "A",
+  "skillName": "Vectors: Components and Operations",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "A vector has both magnitude (length) and direction. You can describe one geometrically as an arrow from an initial point to a terminal point, or analytically in component form $\\langle a, b \\rangle$, where $a$ is the horizontal change and $b$ is the vertical change. From two endpoints $P(x_1, y_1)$ and $Q(x_2, y_2)$, the vector is $\\langle x_2 - x_1, y_2 - y_1 \\rangle$. You add, subtract, and scale vectors component by component. The length is $\\lVert \\vec{v} \\rVert = \\sqrt{a^2 + b^2}$, the direction angle satisfies $\\tan\\theta = \\frac{b}{a}$ (placed in the correct quadrant), and a vector with magnitude $r$ and direction $\\theta$ has components $\\langle r\\cos\\theta, r\\sin\\theta \\rangle$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A vector has initial point $P(-2, 3)$ and terminal point $Q(4, -1)$. Write the vector $\\vec{PQ}$ in component form.",
+      "solution": {
+        "steps": [
+          "To go from $P$ to $Q$, subtract the initial point from the terminal point: $\\vec{PQ} = \\langle x_2 - x_1, \\, y_2 - y_1 \\rangle$.",
+          "Horizontal change: $x_2 - x_1 = 4 - (-2) = 6$.",
+          "Vertical change: $y_2 - y_1 = -1 - 3 = -4$.",
+          "Assemble the components: $\\vec{PQ} = \\langle 6, -4 \\rangle$."
+        ],
+        "answer": "$\\langle 6, -4 \\rangle$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Given $\\vec{u} = \\langle 2, -1 \\rangle$ and $\\vec{v} = \\langle -3, 4 \\rangle$, compute the linear combination $3\\vec{u} - 2\\vec{v}$.",
+      "solution": {
+        "steps": [
+          "Scale each vector by distributing the scalar to both components.",
+          "$3\\vec{u} = 3\\langle 2, -1 \\rangle = \\langle 6, -3 \\rangle$.",
+          "$2\\vec{v} = 2\\langle -3, 4 \\rangle = \\langle -6, 8 \\rangle$.",
+          "Subtract component-wise: $3\\vec{u} - 2\\vec{v} = \\langle 6 - (-6), \\, -3 - 8 \\rangle$.",
+          "Simplify: $\\langle 6 + 6, \\, -11 \\rangle = \\langle 12, -11 \\rangle$."
+        ],
+        "answer": "$\\langle 12, -11 \\rangle$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Find the magnitude of $\\vec{v} = \\langle -6, 8 \\rangle$.",
+      "solution": {
+        "steps": [
+          "Use $\\lVert \\vec{v} \\rVert = \\sqrt{a^2 + b^2}$ with $a = -6$ and $b = 8$.",
+          "Square each component: $(-6)^2 = 36$ and $8^2 = 64$. Note that squaring a negative gives a positive.",
+          "Add: $36 + 64 = 100$.",
+          "Take the square root: $\\sqrt{100} = 10$."
+        ],
+        "answer": "$10$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Find the direction angle $\\theta$ (with $0^\\circ \\le \\theta < 360^\\circ$) of $\\vec{v} = \\langle -1, \\sqrt{3} \\rangle$.",
+      "solution": {
+        "steps": [
+          "Find the reference angle from $\\tan\\theta_{\\text{ref}} = \\left| \\frac{b}{a} \\right| = \\left| \\frac{\\sqrt{3}}{-1} \\right| = \\sqrt{3}$.",
+          "Since $\\tan 60^\\circ = \\sqrt{3}$, the reference angle is $60^\\circ$.",
+          "Determine the quadrant: $a = -1 < 0$ and $b = \\sqrt{3} > 0$, so the vector points into Quadrant II.",
+          "In Quadrant II, $\\theta = 180^\\circ - \\theta_{\\text{ref}} = 180^\\circ - 60^\\circ = 120^\\circ$."
+        ],
+        "answer": "$120^\\circ$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A vector has magnitude $8$ and direction angle $\\frac{2\\pi}{3}$. Write it in component form.",
+      "solution": {
+        "steps": [
+          "Use $\\vec{v} = \\langle r\\cos\\theta, \\, r\\sin\\theta \\rangle$ with $r = 8$ and $\\theta = \\frac{2\\pi}{3}$.",
+          "Evaluate the trig values: $\\cos\\frac{2\\pi}{3} = -\\frac{1}{2}$ and $\\sin\\frac{2\\pi}{3} = \\frac{\\sqrt{3}}{2}$.",
+          "First component: $8 \\cdot \\left(-\\frac{1}{2}\\right) = -4$.",
+          "Second component: $8 \\cdot \\frac{\\sqrt{3}}{2} = 4\\sqrt{3}$.",
+          "Assemble: $\\vec{v} = \\langle -4, 4\\sqrt{3} \\rangle$."
+        ],
+        "answer": "$\\langle -4, 4\\sqrt{3} \\rangle$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A vector has initial point $P(5, -2)$ and terminal point $Q(1, 6)$. Write $\\vec{PQ}$ in component form.",
+      "hint": "Subtract the initial point from the terminal point: $\\langle x_2 - x_1, \\, y_2 - y_1 \\rangle$. Keep the order correct so the vector points from $P$ to $Q$.",
+      "solution": {
+        "steps": [
+          "Horizontal change: $x_2 - x_1 = 1 - 5 = -4$.",
+          "Vertical change: $y_2 - y_1 = 6 - (-2) = 8$.",
+          "Assemble: $\\vec{PQ} = \\langle -4, 8 \\rangle$."
+        ],
+        "answer": "$\\langle -4, 8 \\rangle$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Given $\\vec{u} = \\langle 3, -5 \\rangle$ and $\\vec{v} = \\langle -1, 2 \\rangle$, find $\\vec{u} - \\vec{v}$.",
+      "hint": "Subtract component by component: $\\langle a - c, \\, b - d \\rangle$. Watch the signs when subtracting a negative.",
+      "solution": {
+        "steps": [
+          "First component: $3 - (-1) = 3 + 1 = 4$.",
+          "Second component: $-5 - 2 = -7$.",
+          "So $\\vec{u} - \\vec{v} = \\langle 4, -7 \\rangle$."
+        ],
+        "answer": "$\\langle 4, -7 \\rangle$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Compute $2\\vec{u} + 3\\vec{v}$ where $\\vec{u} = \\langle -1, 4 \\rangle$ and $\\vec{v} = \\langle 2, -2 \\rangle$.",
+      "hint": "Scale both components of each vector first, then add the results component-wise. Do not forget to scale the second component.",
+      "solution": {
+        "steps": [
+          "Scale: $2\\vec{u} = \\langle -2, 8 \\rangle$ and $3\\vec{v} = \\langle 6, -6 \\rangle$.",
+          "Add component-wise: $\\langle -2 + 6, \\, 8 + (-6) \\rangle$.",
+          "Simplify: $\\langle 4, 2 \\rangle$."
+        ],
+        "answer": "$\\langle 4, 2 \\rangle$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Given $\\vec{u} = \\langle 1, 7 \\rangle$ and $\\vec{v} = \\langle 3, -1 \\rangle$, find $\\lVert \\vec{u} + \\vec{v} \\rVert$.",
+      "hint": "Add the vectors first to get the resultant, then apply $\\sqrt{a^2 + b^2}$. Do not add the magnitudes separately.",
+      "solution": {
+        "steps": [
+          "Add component-wise: $\\vec{u} + \\vec{v} = \\langle 1 + 3, \\, 7 + (-1) \\rangle = \\langle 4, 6 \\rangle$.",
+          "Apply the magnitude formula: $\\sqrt{4^2 + 6^2} = \\sqrt{16 + 36} = \\sqrt{52}$.",
+          "Simplify the radical: $\\sqrt{52} = \\sqrt{4 \\cdot 13} = 2\\sqrt{13}$."
+        ],
+        "answer": "$2\\sqrt{13}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A vector has magnitude $6$ and direction angle $\\frac{5\\pi}{6}$. Write it in component form, giving exact values.",
+      "hint": "Use $\\langle r\\cos\\theta, \\, r\\sin\\theta \\rangle$. Recall $\\cos\\frac{5\\pi}{6} = -\\frac{\\sqrt{3}}{2}$ and $\\sin\\frac{5\\pi}{6} = \\frac{1}{2}$.",
+      "solution": {
+        "steps": [
+          "First component: $6\\cos\\frac{5\\pi}{6} = 6 \\cdot \\left(-\\frac{\\sqrt{3}}{2}\\right) = -3\\sqrt{3}$.",
+          "Second component: $6\\sin\\frac{5\\pi}{6} = 6 \\cdot \\frac{1}{2} = 3$.",
+          "Assemble: $\\langle -3\\sqrt{3}, 3 \\rangle$."
+        ],
+        "answer": "$\\langle -3\\sqrt{3}, 3 \\rangle$"
+      }
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "id": "PC.TRIG.A.3--lesson",
+  "standard": "PC.TRIG.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Angles, radian measure, and the unit circle",
+  "clusterCode": "A",
+  "skillName": "Trig Functions of Any Angle",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "The six trig functions are defined for any angle, not just acute ones. To evaluate $\\sin\\theta$, $\\cos\\theta$, or $\\tan\\theta$ at a non-acute angle, follow three steps: find a coterminal angle in $[0, 2\\pi)$ if needed, identify the quadrant of the terminal side, find the reference angle $\\theta'$ (the acute angle between the terminal side and the $x$-axis), and attach the correct sign using ASTC. ASTC tells you which functions are positive: All in Quadrant I, Sine in Quadrant II, Tangent in Quadrant III, Cosine in Quadrant IV. The magnitude of the function equals its value at the reference angle. For a point $(x, y)$ on the terminal side, use $r=\\sqrt{x^2+y^2}$ with $\\sin\\theta=\\frac{y}{r}$, $\\cos\\theta=\\frac{x}{r}$, $\\tan\\theta=\\frac{y}{x}$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Evaluate $\\sin\\frac{5\\pi}{4}$.",
+      "solution": {
+        "steps": [
+          "Locate the angle. Since $\\pi=\\frac{4\\pi}{4} < \\frac{5\\pi}{4} < \\frac{6\\pi}{4}=\\frac{3\\pi}{2}$, the terminal side lies in Quadrant III.",
+          "Find the reference angle. In Quadrant III, $\\theta'=\\theta-\\pi=\\frac{5\\pi}{4}-\\pi=\\frac{\\pi}{4}$.",
+          "Apply ASTC. In Quadrant III only tangent (and cotangent) are positive, so sine is negative.",
+          "Use the reference-angle value: $\\sin\\frac{\\pi}{4}=\\frac{\\sqrt{2}}{2}$, then attach the negative sign.",
+          "Therefore $\\sin\\frac{5\\pi}{4}=-\\frac{\\sqrt{2}}{2}$."
+        ],
+        "answer": "$-\\frac{\\sqrt{2}}{2}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Evaluate $\\sec\\frac{2\\pi}{3}$.",
+      "solution": {
+        "steps": [
+          "Locate the angle. Since $\\frac{\\pi}{2}=\\frac{3\\pi}{6} < \\frac{2\\pi}{3}=\\frac{4\\pi}{6} < \\pi$, the terminal side is in Quadrant II.",
+          "Find the reference angle. In Quadrant II, $\\theta'=\\pi-\\theta=\\pi-\\frac{2\\pi}{3}=\\frac{\\pi}{3}$.",
+          "Evaluate the base function $\\cos$. In Quadrant II cosine is negative, and $\\cos\\frac{\\pi}{3}=\\frac{1}{2}$, so $\\cos\\frac{2\\pi}{3}=-\\frac{1}{2}$.",
+          "Reciprocate to get secant: $\\sec\\frac{2\\pi}{3}=\\frac{1}{\\cos\\frac{2\\pi}{3}}=\\frac{1}{-\\frac{1}{2}}=-2$.",
+          "Therefore $\\sec\\frac{2\\pi}{3}=-2$."
+        ],
+        "answer": "$-2$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Evaluate $\\cos 405^\\circ$ by first finding a coterminal angle in $[0^\\circ, 360^\\circ)$.",
+      "solution": {
+        "steps": [
+          "Reduce to a coterminal angle. Subtract one full rotation: $405^\\circ-360^\\circ=45^\\circ$.",
+          "So $\\cos 405^\\circ=\\cos 45^\\circ$.",
+          "The angle $45^\\circ$ is in Quadrant I, where cosine is positive, and it is its own reference angle.",
+          "Recall $\\cos 45^\\circ=\\frac{\\sqrt{2}}{2}$.",
+          "Therefore $\\cos 405^\\circ=\\frac{\\sqrt{2}}{2}$."
+        ],
+        "answer": "$\\frac{\\sqrt{2}}{2}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "The terminal side of $\\theta$ passes through the point $(-3, 4)$. Find $\\sin\\theta$, $\\cos\\theta$, and $\\tan\\theta$.",
+      "solution": {
+        "steps": [
+          "Compute $r$, the distance from the origin: $r=\\sqrt{x^2+y^2}=\\sqrt{(-3)^2+4^2}=\\sqrt{9+16}=\\sqrt{25}=5$.",
+          "Use $\\sin\\theta=\\frac{y}{r}=\\frac{4}{5}$.",
+          "Use $\\cos\\theta=\\frac{x}{r}=\\frac{-3}{5}=-\\frac{3}{5}$.",
+          "Use $\\tan\\theta=\\frac{y}{x}=\\frac{4}{-3}=-\\frac{4}{3}$.",
+          "Check: the point $(-3,4)$ is in Quadrant II, where sine is positive and cosine and tangent are negative, which matches the results."
+        ],
+        "answer": "$\\sin\\theta=\\frac{4}{5}$, $\\cos\\theta=-\\frac{3}{5}$, $\\tan\\theta=-\\frac{4}{3}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Given that $\\sin\\theta=-\\frac{5}{13}$ and $\\theta$ is in Quadrant IV, find $\\cos\\theta$ and $\\tan\\theta$.",
+      "solution": {
+        "steps": [
+          "Use the Pythagorean identity $\\sin^2\\theta+\\cos^2\\theta=1$ to solve for $\\cos\\theta$: $\\cos^2\\theta=1-\\sin^2\\theta=1-\\left(-\\frac{5}{13}\\right)^2=1-\\frac{25}{169}=\\frac{144}{169}$.",
+          "Take the square root: $\\cos\\theta=\\pm\\frac{12}{13}$.",
+          "Choose the sign by quadrant. In Quadrant IV cosine is positive, so $\\cos\\theta=\\frac{12}{13}$.",
+          "Find tangent: $\\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}=\\frac{-\\frac{5}{13}}{\\frac{12}{13}}=-\\frac{5}{12}$, which is negative as expected in Quadrant IV.",
+          "Therefore $\\cos\\theta=\\frac{12}{13}$ and $\\tan\\theta=-\\frac{5}{12}$."
+        ],
+        "answer": "$\\cos\\theta=\\frac{12}{13}$, $\\tan\\theta=-\\frac{5}{12}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Find the reference angle for $\\theta=\\frac{7\\pi}{6}$.",
+      "hint": "The terminal side is in Quadrant III. There the reference angle is $\\theta-\\pi$.",
+      "solution": {
+        "steps": [
+          "Since $\\pi=\\frac{6\\pi}{6} < \\frac{7\\pi}{6} < \\frac{9\\pi}{6}=\\frac{3\\pi}{2}$, the terminal side is in Quadrant III.",
+          "In Quadrant III the reference angle is $\\theta'=\\theta-\\pi=\\frac{7\\pi}{6}-\\pi=\\frac{7\\pi}{6}-\\frac{6\\pi}{6}=\\frac{\\pi}{6}$.",
+          "The reference angle is $\\frac{\\pi}{6}$."
+        ],
+        "answer": "$\\frac{\\pi}{6}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Evaluate $\\cos\\frac{5\\pi}{6}$.",
+      "hint": "The angle is in Quadrant II. Find the reference angle $\\pi-\\theta$, then attach the Quadrant II sign for cosine.",
+      "solution": {
+        "steps": [
+          "The terminal side of $\\frac{5\\pi}{6}$ is in Quadrant II (between $\\frac{\\pi}{2}$ and $\\pi$).",
+          "Reference angle: $\\theta'=\\pi-\\frac{5\\pi}{6}=\\frac{\\pi}{6}$.",
+          "In Quadrant II cosine is negative, and $\\cos\\frac{\\pi}{6}=\\frac{\\sqrt{3}}{2}$.",
+          "Therefore $\\cos\\frac{5\\pi}{6}=-\\frac{\\sqrt{3}}{2}$."
+        ],
+        "answer": "$-\\frac{\\sqrt{3}}{2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Evaluate $\\tan\\left(-\\frac{\\pi}{3}\\right)$.",
+      "hint": "Add $2\\pi$ to find a coterminal angle in $[0, 2\\pi)$, or use the fact that tangent is an odd function.",
+      "solution": {
+        "steps": [
+          "Find a coterminal angle: $-\\frac{\\pi}{3}+2\\pi=\\frac{5\\pi}{3}$, whose terminal side is in Quadrant IV.",
+          "Reference angle in Quadrant IV: $\\theta'=2\\pi-\\frac{5\\pi}{3}=\\frac{\\pi}{3}$.",
+          "In Quadrant IV tangent is negative, and $\\tan\\frac{\\pi}{3}=\\sqrt{3}$.",
+          "Therefore $\\tan\\left(-\\frac{\\pi}{3}\\right)=-\\sqrt{3}$."
+        ],
+        "answer": "$-\\sqrt{3}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Evaluate $\\tan\\frac{\\pi}{2}$, or state that it is undefined.",
+      "hint": "Write $\\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}$ and check the denominator at $\\frac{\\pi}{2}$.",
+      "solution": {
+        "steps": [
+          "Use $\\tan\\frac{\\pi}{2}=\\frac{\\sin\\frac{\\pi}{2}}{\\cos\\frac{\\pi}{2}}$.",
+          "At the quadrantal angle $\\frac{\\pi}{2}$, $\\sin\\frac{\\pi}{2}=1$ and $\\cos\\frac{\\pi}{2}=0$.",
+          "Division by zero is undefined: $\\frac{1}{0}$ has no value.",
+          "Therefore $\\tan\\frac{\\pi}{2}$ is undefined."
+        ],
+        "answer": "Undefined (because $\\cos\\frac{\\pi}{2}=0$)"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "The terminal side of $\\theta$ passes through the point $(5, -12)$. Find $\\sin\\theta$, $\\cos\\theta$, and $\\tan\\theta$.",
+      "hint": "First compute $r=\\sqrt{x^2+y^2}$, then use $\\sin\\theta=\\frac{y}{r}$, $\\cos\\theta=\\frac{x}{r}$, $\\tan\\theta=\\frac{y}{x}$.",
+      "solution": {
+        "steps": [
+          "Compute $r=\\sqrt{5^2+(-12)^2}=\\sqrt{25+144}=\\sqrt{169}=13$.",
+          "$\\sin\\theta=\\frac{y}{r}=\\frac{-12}{13}=-\\frac{12}{13}$.",
+          "$\\cos\\theta=\\frac{x}{r}=\\frac{5}{13}$.",
+          "$\\tan\\theta=\\frac{y}{x}=\\frac{-12}{5}=-\\frac{12}{5}$.",
+          "The point $(5,-12)$ is in Quadrant IV, where only cosine is positive, which matches these signs."
+        ],
+        "answer": "$\\sin\\theta=-\\frac{12}{13}$, $\\cos\\theta=\\frac{5}{13}$, $\\tan\\theta=-\\frac{12}{5}$"
+      }
+    }
+  ]
+}

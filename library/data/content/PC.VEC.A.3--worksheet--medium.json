@@ -1,0 +1,204 @@
+{
+  "id": "PC.VEC.A.3--worksheet--medium",
+  "standard": "PC.VEC.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Vectors and Parametric Equations",
+  "domainCode": "VEC",
+  "cluster": "Vectors in the plane",
+  "clusterCode": "A",
+  "skillName": "Parametric Equations",
+  "materialType": "worksheet",
+  "difficulty": "Medium",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems take two to three steps. You will eliminate the parameter to get a rectangular equation (sometimes using the Pythagorean identity $\\cos^2 t+\\sin^2 t=1$), identify circles and ellipses with their radii and axes, and set up and evaluate basic projectile-motion equations. Give exact values such as $\\cos 30^\\circ=\\frac{\\sqrt{3}}{2}$ rather than rounded decimals.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Eliminate the parameter in $x=2t-1$, $y=t^2$ to obtain a rectangular equation in $x$ and $y$.",
+      "answer": "$y=\\left(\\dfrac{x+1}{2}\\right)^2$",
+      "solution": {
+        "steps": [
+          "Solve the linear equation for $t$: from $x=2t-1$ we get $2t=x+1$, so $t=\\dfrac{x+1}{2}$.",
+          "Substitute this into $y=t^2$: $y=\\left(\\dfrac{x+1}{2}\\right)^2$.",
+          "Optionally expand: $y=\\dfrac{(x+1)^2}{4}$, an upward parabola."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Eliminate the parameter in $x=3\\cos t$, $y=3\\sin t$ for $0\\le t<2\\pi$ and name the curve.",
+      "answer": "$x^2+y^2=9$, a circle of radius $3$ centered at the origin.",
+      "solution": {
+        "steps": [
+          "Solve each equation for the trig function: $\\cos t=\\dfrac{x}{3}$ and $\\sin t=\\dfrac{y}{3}$.",
+          "Apply the Pythagorean identity $\\cos^2 t+\\sin^2 t=1$: $\\left(\\dfrac{x}{3}\\right)^2+\\left(\\dfrac{y}{3}\\right)^2=1$.",
+          "Simplify: $\\dfrac{x^2}{9}+\\dfrac{y^2}{9}=1$, so $x^2+y^2=9$.",
+          "This is a circle of radius $3$ centered at the origin."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Eliminate the parameter in $x=4\\cos t$, $y=2\\sin t$ and identify the curve.",
+      "answer": "$\\dfrac{x^2}{16}+\\dfrac{y^2}{4}=1$, an ellipse.",
+      "solution": {
+        "steps": [
+          "Solve for the trig functions: $\\cos t=\\dfrac{x}{4}$ and $\\sin t=\\dfrac{y}{2}$.",
+          "Apply $\\cos^2 t+\\sin^2 t=1$: $\\left(\\dfrac{x}{4}\\right)^2+\\left(\\dfrac{y}{2}\\right)^2=1$.",
+          "Simplify: $\\dfrac{x^2}{16}+\\dfrac{y^2}{4}=1$.",
+          "This is an ellipse with horizontal semi-axis $4$ and vertical semi-axis $2$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Eliminate the parameter in $x=t+2$, $y=t^2-1$ to write $y$ as a function of $x$.",
+      "answer": "$y=(x-2)^2-1$",
+      "solution": {
+        "steps": [
+          "Solve the linear equation for $t$: $t=x-2$.",
+          "Substitute into $y=t^2-1$: $y=(x-2)^2-1$.",
+          "This is a parabola with vertex $(2,-1)$ opening upward."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Eliminate the parameter in $x=5\\cos t$, $y=5\\sin t$ and state the radius of the resulting circle.",
+      "answer": "$x^2+y^2=25$; radius $5$.",
+      "solution": {
+        "steps": [
+          "Write $\\cos t=\\dfrac{x}{5}$ and $\\sin t=\\dfrac{y}{5}$.",
+          "Use $\\cos^2 t+\\sin^2 t=1$: $\\dfrac{x^2}{25}+\\dfrac{y^2}{25}=1$.",
+          "Multiply through by $25$: $x^2+y^2=25$.",
+          "The radius is $\\sqrt{25}=5$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A ball is launched from the ground with initial speed $v_0=20$ m/s at angle $\\theta=30^\\circ$. Using $g=9.8$ m/s$^2$, write the parametric equations for its horizontal and vertical position.",
+      "answer": "$x=10\\sqrt{3}\\,t$ and $y=10t-4.9t^2$",
+      "solution": {
+        "steps": [
+          "Horizontal: $x=(v_0\\cos\\theta)t=(20\\cos 30^\\circ)t$. Since $\\cos 30^\\circ=\\dfrac{\\sqrt{3}}{2}$, $x=20\\cdot\\dfrac{\\sqrt{3}}{2}\\,t=10\\sqrt{3}\\,t$.",
+          "Vertical: $y=(v_0\\sin\\theta)t-\\tfrac{1}{2}gt^2=(20\\sin 30^\\circ)t-\\tfrac{1}{2}(9.8)t^2$. Since $\\sin 30^\\circ=\\dfrac{1}{2}$, $y=20\\cdot\\dfrac{1}{2}\\,t-4.9t^2=10t-4.9t^2$.",
+          "So $x=10\\sqrt{3}\\,t$ and $y=10t-4.9t^2$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A projectile follows $x=15t$ and $y=20t-4.9t^2$ (meters, seconds). Find its position $(x,y)$ at $t=2$ seconds.",
+      "answer": "$(30,\\ 20.4)$ meters",
+      "solution": {
+        "steps": [
+          "Horizontal: $x=15(2)=30$ meters.",
+          "Vertical: $y=20(2)-4.9(2)^2=40-4.9(4)=40-19.6=20.4$ meters.",
+          "The position at $t=2$ is $(30,\\ 20.4)$ meters."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Eliminate the parameter in $x=t^2$, $y=t-1$ by solving the linear equation for $t$.",
+      "answer": "$x=(y+1)^2$",
+      "solution": {
+        "steps": [
+          "The linear equation is $y=t-1$. Solve for $t$: $t=y+1$.",
+          "Substitute into $x=t^2$: $x=(y+1)^2$.",
+          "This is a parabola opening in the positive $x$ direction with vertex $(0,-1)$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Eliminate the parameter in $x=2\\cos t$, $y=6\\sin t$ and identify the lengths of the semi-axes.",
+      "answer": "$\\dfrac{x^2}{4}+\\dfrac{y^2}{36}=1$; horizontal semi-axis $2$, vertical semi-axis $6$.",
+      "solution": {
+        "steps": [
+          "Solve for the trig functions: $\\cos t=\\dfrac{x}{2}$ and $\\sin t=\\dfrac{y}{6}$.",
+          "Apply $\\cos^2 t+\\sin^2 t=1$: $\\left(\\dfrac{x}{2}\\right)^2+\\left(\\dfrac{y}{6}\\right)^2=1$.",
+          "Simplify: $\\dfrac{x^2}{4}+\\dfrac{y^2}{36}=1$.",
+          "This ellipse has horizontal semi-axis $\\sqrt{4}=2$ and vertical semi-axis $\\sqrt{36}=6$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A ball is launched from the ground at $v_0=40$ m/s and angle $\\theta=60^\\circ$, with $g=9.8$ m/s$^2$. Write the vertical position equation $y(t)$ using an exact coefficient.",
+      "answer": "$y=20\\sqrt{3}\\,t-4.9t^2$",
+      "solution": {
+        "steps": [
+          "Vertical position: $y=(v_0\\sin\\theta)t-\\tfrac{1}{2}gt^2=(40\\sin 60^\\circ)t-\\tfrac{1}{2}(9.8)t^2$.",
+          "Since $\\sin 60^\\circ=\\dfrac{\\sqrt{3}}{2}$, the coefficient is $40\\cdot\\dfrac{\\sqrt{3}}{2}=20\\sqrt{3}$.",
+          "And $\\tfrac{1}{2}(9.8)=4.9$, so $y=20\\sqrt{3}\\,t-4.9t^2$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Eliminate the parameter in $x=3t+1$, $y=9t^2$ to obtain a rectangular equation.",
+      "answer": "$y=(x-1)^2$",
+      "solution": {
+        "steps": [
+          "Solve the linear equation for $t$: from $x=3t+1$, $3t=x-1$, so $t=\\dfrac{x-1}{3}$.",
+          "Substitute into $y=9t^2$: $y=9\\left(\\dfrac{x-1}{3}\\right)^2=9\\cdot\\dfrac{(x-1)^2}{9}$.",
+          "Simplify: $y=(x-1)^2$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Eliminate the parameter in $x=\\cos t$, $y=\\sin t$ and name the curve.",
+      "answer": "$x^2+y^2=1$, the unit circle.",
+      "solution": {
+        "steps": [
+          "Here $\\cos t=x$ and $\\sin t=y$ directly.",
+          "Apply $\\cos^2 t+\\sin^2 t=1$: $x^2+y^2=1$.",
+          "This is the unit circle, radius $1$ centered at the origin."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A projectile has horizontal position $x=(25\\cos 45^\\circ)t$. Write the coefficient of $t$ as an exact value, then find $x$ at $t=2$ seconds.",
+      "answer": "Coefficient $\\dfrac{25\\sqrt{2}}{2}$; $x=25\\sqrt{2}$ meters at $t=2$.",
+      "solution": {
+        "steps": [
+          "Since $\\cos 45^\\circ=\\dfrac{\\sqrt{2}}{2}$, the coefficient is $25\\cdot\\dfrac{\\sqrt{2}}{2}=\\dfrac{25\\sqrt{2}}{2}$.",
+          "So $x=\\dfrac{25\\sqrt{2}}{2}\\,t$.",
+          "At $t=2$: $x=\\dfrac{25\\sqrt{2}}{2}(2)=25\\sqrt{2}$ meters."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Eliminate the parameter in $x=t-3$, $y=2t^2$ to write $y$ in terms of $x$.",
+      "answer": "$y=2(x+3)^2$",
+      "solution": {
+        "steps": [
+          "Solve the linear equation for $t$: from $x=t-3$, $t=x+3$.",
+          "Substitute into $y=2t^2$: $y=2(x+3)^2$.",
+          "This is an upward parabola with vertex $(-3,0)$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A ball is launched from the ground with $v_0=30$ m/s at $\\theta=30^\\circ$ and $g=9.8$ m/s$^2$. Using the equations $x=(30\\cos 30^\\circ)t$ and $y=(30\\sin 30^\\circ)t-4.9t^2$, find its height $y$ at $t=1$ second.",
+      "answer": "$y=10.1$ meters",
+      "solution": {
+        "steps": [
+          "Vertical equation: $y=(30\\sin 30^\\circ)t-4.9t^2$. Since $\\sin 30^\\circ=\\dfrac{1}{2}$, the coefficient is $30\\cdot\\dfrac{1}{2}=15$, so $y=15t-4.9t^2$.",
+          "Evaluate at $t=1$: $y=15(1)-4.9(1)^2=15-4.9$.",
+          "So $y=10.1$ meters."
+        ]
+      }
+    }
+  ]
+}

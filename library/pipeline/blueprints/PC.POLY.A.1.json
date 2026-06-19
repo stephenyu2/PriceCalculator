@@ -1,0 +1,139 @@
+{
+  "standard": "PC.POLY.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Polynomial and Rational Functions",
+  "domainCode": "POLY",
+  "cluster": "Polynomial functions",
+  "clusterCode": "A",
+  "skillName": "Polynomial End Behavior",
+
+  "description": "Students determine the end behavior of a polynomial function from its degree and leading coefficient, stating what happens to $f(x)$ as $x \\to +\\infty$ and $x \\to -\\infty$. They classify polynomials as even-degree or odd-degree, predict whether the two ends point the same direction or opposite directions, and use end behavior together with the real zeros (and their multiplicities) to sketch a graph that is consistent with both. They also reason in reverse, inferring the sign of the leading coefficient and the parity of the degree from a given graph or verbal description of end behavior.",
+
+  "subSkills": [
+    "Identify the degree and leading coefficient of a polynomial written in standard, factored, or expanded form",
+    "State end behavior using limit notation, e.g. $f(x)\\to+\\infty$ as $x\\to-\\infty$",
+    "Classify a polynomial as even-degree or odd-degree and connect parity to whether the ends match or oppose",
+    "Use the sign of the leading coefficient to decide the direction of each end",
+    "Find real zeros from factored form and determine each zero's multiplicity",
+    "Decide whether the graph crosses or touches (is tangent to) the x-axis at a zero based on odd vs even multiplicity",
+    "Sketch a graph consistent with both the end behavior and the zeros",
+    "Reverse-engineer the parity of the degree and the sign of the leading coefficient from a given graph or end-behavior statement"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "End behavior from standard form",
+      "example": "Describe the end behavior of $f(x)=-2x^3+5x^2-x+4$. Answer: $f(x)\\to-\\infty$ as $x\\to+\\infty$ and $f(x)\\to+\\infty$ as $x\\to-\\infty$ (odd degree, negative leading coefficient)."
+    },
+    {
+      "name": "End behavior from factored form",
+      "example": "Describe the end behavior of $f(x)=3(x-1)^2(x+4)$. The leading term is $3x^3$, so $f(x)\\to+\\infty$ as $x\\to+\\infty$ and $f(x)\\to-\\infty$ as $x\\to-\\infty$."
+    },
+    {
+      "name": "Even vs odd classification",
+      "example": "Without graphing, state whether the two ends of $g(x)=x^4-7x^2+6$ point in the same or opposite directions, and explain. Answer: same direction (even degree); both ends $\\to+\\infty$."
+    },
+    {
+      "name": "Match end behavior to a sign/parity case",
+      "example": "A polynomial satisfies $f(x)\\to+\\infty$ as $x\\to-\\infty$ and $f(x)\\to-\\infty$ as $x\\to+\\infty$. What must be true of its degree and leading coefficient? Answer: odd degree, negative leading coefficient."
+    },
+    {
+      "name": "Zeros with multiplicity (cross vs touch)",
+      "example": "For $f(x)=(x+2)(x-3)^2$, list the zeros and state at each whether the graph crosses or is tangent. Answer: crosses at $x=-2$ (multiplicity $1$), tangent at $x=3$ (multiplicity $2$)."
+    },
+    {
+      "name": "Sketch consistent with end behavior and zeros",
+      "example": "Sketch $f(x)=-(x+1)(x-2)^2$: leading term $-x^3$ gives $f(x)\\to-\\infty$ as $x\\to+\\infty$ and $f(x)\\to+\\infty$ as $x\\to-\\infty$; the graph crosses at $x=-1$ and is tangent at $x=2$."
+    },
+    {
+      "name": "Read degree/leading coefficient from a graph",
+      "example": "A graph falls to the left and rises to the right. State the smallest possible degree parity and the sign of the leading coefficient. Answer: odd degree, positive leading coefficient."
+    },
+    {
+      "name": "Build a polynomial from given conditions",
+      "example": "Write a polynomial of least degree with zeros at $x=-3$ (multiplicity $1$) and $x=1$ (multiplicity $2$) whose end behavior is both ends $\\to-\\infty$. Answer: degree must be even, so raise one zero; e.g. $f(x)=-(x+3)^2(x-1)^2$ gives both ends $\\to-\\infty$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-concept recall and direct reading. The polynomial is given in standard form with the leading term visible, or in simple factored form whose leading term is obvious. Student states end behavior or names degree parity / leading-coefficient sign in one step.",
+      "constraints": [
+        "Polynomial degree is $2$ or $3$ and the leading term is explicitly shown",
+        "Leading coefficient is a small integer such as $1$, $-1$, $2$, or $-3$",
+        "Task is a single step: identify parity, identify sign, or state end behavior for one or both ends",
+        "No expansion or multiplication needed to find the leading term",
+        "Zeros, if mentioned, are simple with multiplicity $1$"
+      ]
+    },
+    "Medium": {
+      "description": "Two or three linked steps. Student must extract the leading term from factored form (multiplying leading factors) or combine end behavior with zeros and multiplicities. Cross-vs-tangent reasoning appears here, as does choosing a graph that matches both ends and the zeros.",
+      "constraints": [
+        "Polynomial degree is $3$ or $4$ and is given in factored form requiring the leading term to be computed",
+        "At least one zero has multiplicity $\\geq 2$, forcing a cross-vs-tangent decision",
+        "Student must combine end behavior with zero information to pick or sketch a consistent graph",
+        "May require expanding two or three factors to confirm the leading coefficient",
+        "Reverse tasks: infer parity and leading-coefficient sign from a described or pictured graph"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step synthesis or construction. Student builds a polynomial meeting several constraints at once (specified zeros, multiplicities, parity, and end-behavior direction), resolves a contradiction, or analyzes end behavior of a non-obvious form (negative leading coefficient hidden in a product, missing terms, or a comparison of two functions' eventual dominance).",
+      "constraints": [
+        "Degree is $4$ or higher, or the leading term's sign depends on combining several negative factors",
+        "Student must construct a polynomial satisfying multiple simultaneous conditions (zeros, multiplicities, parity, end-behavior direction)",
+        "May require adjusting a multiplicity or adding a factor to force the required even/odd degree while preserving end-behavior sign",
+        "Includes comparison or contradiction problems, e.g. 'explain why no odd-degree polynomial can have both ends pointing up'",
+        "Leading coefficient sign is obscured and must be determined from the product of multiple factors and constants"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student thinks the leading coefficient alone controls both ends and ignores degree parity",
+      "distractor": "Embodies the belief that a positive leading coefficient sends both ends to $+\\infty$ regardless of degree, so for an odd-degree polynomial it wrongly reports both ends $\\to+\\infty$ instead of opposite ends"
+    },
+    {
+      "misconception": "Student swaps the behavior of the two ends, reversing left and right",
+      "distractor": "Reports $f(x)\\to-\\infty$ as $x\\to-\\infty$ when it should be $f(x)\\to+\\infty$ as $x\\to-\\infty$ (correct directions but assigned to the wrong infinities)"
+    },
+    {
+      "misconception": "Student uses the constant term or a middle term instead of the leading term to judge end behavior",
+      "distractor": "For $f(x)=-2x^3+5x^2-x+4$ uses the $+4$ or the $+5x^2$ term and concludes both ends rise, ignoring that the highest-degree term dominates"
+    },
+    {
+      "misconception": "Student determines the leading coefficient's sign incorrectly when the polynomial is in factored form, forgetting an outside negative or the product of negative leading factors",
+      "distractor": "For $f(x)=-(x+1)(x-2)^2$ treats the leading coefficient as positive (ignores the front minus) and reports the end behavior of $+x^3$"
+    },
+    {
+      "misconception": "Student confuses multiplicity rules, thinking even multiplicity means the graph crosses and odd multiplicity means it is tangent",
+      "distractor": "States the graph is tangent at a multiplicity-$1$ zero and crosses at a multiplicity-$2$ zero, reversing the cross-vs-touch rule"
+    },
+    {
+      "misconception": "Student counts the number of factors instead of the degree, mishandling repeated factors",
+      "distractor": "For $f(x)=3(x-1)^2(x+4)$ calls the degree $2$ (two distinct factors) instead of $3$, then assigns even-degree end behavior"
+    },
+    {
+      "misconception": "Student believes every odd-degree polynomial has a negative end on the left simply because $x$ is negative there",
+      "distractor": "Ignores the leading coefficient's sign and always reports $f(x)\\to-\\infty$ as $x\\to-\\infty$ for odd-degree functions, even when the leading coefficient is negative"
+    },
+    {
+      "misconception": "Student assumes the number of x-intercepts must equal the degree and forces extra crossings into a sketch",
+      "distractor": "Draws or selects a degree-$4$ graph with four crossings even when the given polynomial has repeated zeros or fewer real zeros, producing a graph inconsistent with the stated end behavior"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

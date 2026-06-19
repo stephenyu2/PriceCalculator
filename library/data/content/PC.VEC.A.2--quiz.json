@@ -1,0 +1,146 @@
+{
+  "id": "PC.VEC.A.2--quiz",
+  "standard": "PC.VEC.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Vectors and Parametric Equations",
+  "domainCode": "VEC",
+  "cluster": "Vectors in the plane",
+  "clusterCode": "A",
+  "skillName": "Dot Product and Applications",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Multiple-choice quiz on the dot product: computing it in component form, testing orthogonality, finding angles between vectors, and computing scalar and vector projections. Choose the single best answer for each item.",
+  "items": [
+    {
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Given $\\vec{u}=\\langle 3,-4\\rangle$ and $\\vec{v}=\\langle 5,2\\rangle$, find $\\vec{u}\\cdot\\vec{v}$.\nA) $7$\nB) $23$\nC) $\\langle 15,-8\\rangle$\nD) $-8$",
+      "answer": "A) $7$",
+      "solution": {
+        "steps": [
+          "The dot product is a scalar: $\\vec{u}\\cdot\\vec{v}=u_1v_1+u_2v_2$.",
+          "Substitute: $\\vec{u}\\cdot\\vec{v}=3(5)+(-4)(2)=15-8=7$.",
+          "B) $23$ comes from dropping the negative sign: $3(5)+4(2)=23$.",
+          "C) $\\langle 15,-8\\rangle$ treats the dot product as componentwise multiplication, but the dot product is a single number.",
+          "D) $-8$ uses only the second term and ignores the first product."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Are $\\vec{u}=\\langle 4,6\\rangle$ and $\\vec{v}=\\langle 3,-2\\rangle$ orthogonal?\nA) No, because the components are proportional\nB) Yes, because $\\vec{u}\\cdot\\vec{v}=0$\nC) No, because $\\vec{u}\\cdot\\vec{v}=24$\nD) Cannot be determined without the magnitudes",
+      "answer": "B) Yes, because $\\vec{u}\\cdot\\vec{v}=0$",
+      "solution": {
+        "steps": [
+          "Two vectors are orthogonal exactly when their dot product is $0$.",
+          "Compute: $\\vec{u}\\cdot\\vec{v}=4(3)+6(-2)=12-12=0$, so they are orthogonal.",
+          "A) confuses orthogonality with the parallel (proportional) condition; here the components are not proportional anyway.",
+          "C) $24$ would come from $4(3)+6(2)$, dropping the negative sign on $-2$.",
+          "D) Orthogonality only needs the dot product, not the magnitudes."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "A constant force $\\vec{F}=\\langle 6,2\\rangle$ moves an object along the displacement $\\vec{d}=\\langle 4,1\\rangle$. Find the work done, $W=\\vec{F}\\cdot\\vec{d}$.\nA) $\\langle 24,2\\rangle$\nB) $13$\nC) $26$\nD) $22$",
+      "answer": "C) $26$",
+      "solution": {
+        "steps": [
+          "Work is the dot product of force and displacement: $W=\\vec{F}\\cdot\\vec{d}=F_1d_1+F_2d_2$.",
+          "Compute: $W=6(4)+2(1)=24+2=26$.",
+          "A) $\\langle 24,2\\rangle$ multiplies componentwise instead of summing; work is a scalar.",
+          "B) $13$ comes from $(6+2)+(4+1)=13$, adding components incorrectly.",
+          "D) $22$ comes from $24-2$, mishandling the sign of the second product."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Find the angle $\\theta$ between $\\vec{u}=\\langle 1,\\sqrt{3}\\rangle$ and $\\vec{v}=\\langle \\sqrt{3},1\\rangle$.\nA) $\\frac{\\pi}{3}$\nB) $\\frac{\\pi}{4}$\nC) $\\frac{\\pi}{6}$\nD) $\\frac{\\pi}{2}$",
+      "answer": "C) $\\frac{\\pi}{6}$",
+      "solution": {
+        "steps": [
+          "Use $\\cos\\theta=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{u}\\|\\,\\|\\vec{v}\\|}$.",
+          "Dot product: $\\vec{u}\\cdot\\vec{v}=1(\\sqrt{3})+\\sqrt{3}(1)=2\\sqrt{3}$.",
+          "Magnitudes: $\\|\\vec{u}\\|=\\sqrt{1+3}=2$ and $\\|\\vec{v}\\|=\\sqrt{3+1}=2$, so $\\|\\vec{u}\\|\\,\\|\\vec{v}\\|=4$.",
+          "Thus $\\cos\\theta=\\dfrac{2\\sqrt{3}}{4}=\\dfrac{\\sqrt{3}}{2}$, giving $\\theta=\\dfrac{\\pi}{6}$.",
+          "B) $\\frac{\\pi}{4}$ would require $\\cos\\theta=\\frac{\\sqrt{2}}{2}$. A) $\\frac{\\pi}{3}$ requires $\\cos\\theta=\\frac{1}{2}$, the value you get if you forget one magnitude in the denominator and use $\\frac{2\\sqrt3}{2\\cdot2\\sqrt3}$ incorrectly. D) $\\frac{\\pi}{2}$ would require the dot product to be $0$, but it is $2\\sqrt{3}\\neq 0$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Find the value of $k$ so that $\\vec{u}=\\langle k,5\\rangle$ and $\\vec{v}=\\langle 2,-3\\rangle$ are orthogonal.\nA) $-\\frac{2}{5}$\nB) $\\frac{15}{2}$\nC) $-\\frac{15}{2}$\nD) $\\frac{10}{3}$",
+      "answer": "B) $\\frac{15}{2}$",
+      "solution": {
+        "steps": [
+          "Orthogonal means $\\vec{u}\\cdot\\vec{v}=0$.",
+          "Compute: $\\vec{u}\\cdot\\vec{v}=k(2)+5(-3)=2k-15$.",
+          "Set equal to $0$: $2k-15=0\\Rightarrow k=\\dfrac{15}{2}$.",
+          "C) $-\\frac{15}{2}$ comes from a sign error, solving $2k+15=0$.",
+          "D) $\\frac{10}{3}$ comes from the proportionality (parallel) condition $\\frac{k}{2}=\\frac{5}{-3}$ done with a sign slip, not the orthogonality condition.",
+          "A) $-\\frac{2}{5}$ does not satisfy $2k-15=0$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Find the vector projection $\\operatorname{proj}_{\\vec{v}}\\vec{u}$ of $\\vec{u}=\\langle 3,4\\rangle$ onto $\\vec{v}=\\langle 2,1\\rangle$.\nA) $\\langle 4,2\\rangle$\nB) $\\frac{10}{\\sqrt{5}}$\nC) $\\langle 4\\sqrt{5},2\\sqrt{5}\\rangle$\nD) $\\langle \\frac{6}{5},\\frac{8}{5}\\rangle$",
+      "answer": "A) $\\langle 4,2\\rangle$",
+      "solution": {
+        "steps": [
+          "Use $\\operatorname{proj}_{\\vec{v}}\\vec{u}=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\vec{v}\\cdot\\vec{v}}\\,\\vec{v}$.",
+          "Dot products: $\\vec{u}\\cdot\\vec{v}=3(2)+4(1)=10$ and $\\vec{v}\\cdot\\vec{v}=2^2+1^2=5$.",
+          "So $\\operatorname{proj}_{\\vec{v}}\\vec{u}=\\dfrac{10}{5}\\langle 2,1\\rangle=2\\langle 2,1\\rangle=\\langle 4,2\\rangle$.",
+          "B) $\\frac{10}{\\sqrt{5}}$ is the scalar projection (a number), not the required vector.",
+          "C) $\\langle 4\\sqrt{5},2\\sqrt{5}\\rangle$ uses $\\|\\vec{v}\\|=\\sqrt{5}$ instead of $\\vec{v}\\cdot\\vec{v}=5$ in the denominator, giving $\\frac{10}{\\sqrt5}\\langle 2,1\\rangle$.",
+          "D) $\\langle \\frac{6}{5},\\frac{8}{5}\\rangle$ projects onto the wrong vector, computing $\\operatorname{proj}_{\\vec{u}}\\vec{v}=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\vec{u}\\cdot\\vec{u}}\\,\\vec{u}=\\frac{10}{25}\\langle 3,4\\rangle=\\langle \\frac{6}{5},\\frac{8}{5}\\rangle$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Write $\\vec{u}=\\langle 5,2\\rangle$ as the sum of a vector $\\vec{p}$ parallel to $\\vec{v}=\\langle 1,1\\rangle$ and a vector $\\vec{w}$ orthogonal to $\\vec{v}$. Which pair is correct?\nA) $\\vec{p}=\\langle \\frac{7}{2},\\frac{7}{2}\\rangle,\\ \\vec{w}=\\langle \\frac{3}{2},-\\frac{3}{2}\\rangle$\nB) $\\vec{p}=\\langle 7,7\\rangle,\\ \\vec{w}=\\langle -2,-5\\rangle$\nC) $\\vec{p}=\\langle \\frac{3}{2},-\\frac{3}{2}\\rangle,\\ \\vec{w}=\\langle \\frac{7}{2},\\frac{7}{2}\\rangle$\nD) $\\vec{p}=\\langle 5,2\\rangle,\\ \\vec{w}=\\langle 0,0\\rangle$",
+      "answer": "A) $\\vec{p}=\\langle \\frac{7}{2},\\frac{7}{2}\\rangle,\\ \\vec{w}=\\langle \\frac{3}{2},-\\frac{3}{2}\\rangle$",
+      "solution": {
+        "steps": [
+          "The parallel part is $\\vec{p}=\\operatorname{proj}_{\\vec{v}}\\vec{u}=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\vec{v}\\cdot\\vec{v}}\\,\\vec{v}$.",
+          "Dot products: $\\vec{u}\\cdot\\vec{v}=5(1)+2(1)=7$ and $\\vec{v}\\cdot\\vec{v}=1^2+1^2=2$.",
+          "So $\\vec{p}=\\dfrac{7}{2}\\langle 1,1\\rangle=\\langle \\tfrac{7}{2},\\tfrac{7}{2}\\rangle$.",
+          "The orthogonal part is $\\vec{w}=\\vec{u}-\\vec{p}=\\langle 5-\\tfrac{7}{2},\\,2-\\tfrac{7}{2}\\rangle=\\langle \\tfrac{3}{2},-\\tfrac{3}{2}\\rangle$. Check: $\\vec{w}\\cdot\\vec{v}=\\tfrac{3}{2}-\\tfrac{3}{2}=0$.",
+          "B) uses $\\|\\vec{v}\\|$-free scaling, taking $\\vec{p}=7\\langle 1,1\\rangle$ (forgetting to divide by $\\vec{v}\\cdot\\vec{v}=2$).",
+          "C) swaps the roles, calling the orthogonal piece $\\vec{p}$; that vector is not parallel to $\\vec{v}$.",
+          "D) ignores the projection entirely; $\\langle 5,2\\rangle$ is not parallel to $\\langle 1,1\\rangle$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Find the angle between $\\vec{u}=\\langle 2,3\\rangle$ and $\\vec{v}=\\langle -1,4\\rangle$ to the nearest degree.\nA) $48^\\circ$\nB) $42^\\circ$\nC) $90^\\circ$\nD) $10^\\circ$",
+      "answer": "A) $48^\\circ$",
+      "solution": {
+        "steps": [
+          "Use $\\cos\\theta=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{u}\\|\\,\\|\\vec{v}\\|}$.",
+          "Dot product: $\\vec{u}\\cdot\\vec{v}=2(-1)+3(4)=-2+12=10$.",
+          "Magnitudes: $\\|\\vec{u}\\|=\\sqrt{4+9}=\\sqrt{13}$ and $\\|\\vec{v}\\|=\\sqrt{1+16}=\\sqrt{17}$.",
+          "So $\\cos\\theta=\\dfrac{10}{\\sqrt{13}\\,\\sqrt{17}}=\\dfrac{10}{\\sqrt{221}}\\approx 0.6727$, giving $\\theta=\\cos^{-1}(0.6727)\\approx 48^\\circ$.",
+          "B) $42^\\circ$ is the complement, taken if you compute $\\sin^{-1}$ instead of $\\cos^{-1}$.",
+          "C) $90^\\circ$ would require $\\vec{u}\\cdot\\vec{v}=0$, but it is $10$.",
+          "D) $10^\\circ$ comes from setting $\\cos\\theta=\\vec{u}\\cdot\\vec{v}=10$ without dividing by the magnitudes, an invalid out-of-range value."
+        ]
+      }
+    }
+  ]
+}

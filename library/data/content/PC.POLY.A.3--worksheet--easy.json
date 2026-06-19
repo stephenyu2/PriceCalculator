@@ -1,0 +1,218 @@
+{
+  "id": "PC.POLY.A.3--worksheet--easy",
+  "standard": "PC.POLY.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Polynomial and Rational Functions",
+  "domainCode": "POLY",
+  "cluster": "Polynomial functions",
+  "clusterCode": "A",
+  "skillName": "Rational Functions",
+  "materialType": "worksheet",
+  "difficulty": "Easy",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems build the core skills for analyzing rational functions one feature at a time: finding the domain, locating a single vertical asymptote, reading off the horizontal asymptote by comparing degrees, spotting a removable hole, and solving a basic rational equation. Each function is already factored or factors easily.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Find the domain of $f(x)=\\frac{x+5}{x-4}$. Write your answer in set notation.",
+      "answer": "$\\{x \\mid x \\ne 4\\}$",
+      "solution": {
+        "steps": [
+          "The domain excludes any value that makes the denominator zero.",
+          "Set the denominator equal to zero: $x-4=0$, so $x=4$.",
+          "Exclude $x=4$ from all real numbers.",
+          "Domain: $\\{x \\mid x \\ne 4\\}$, or in interval notation $(-\\infty,4)\\cup(4,\\infty)$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Find the vertical asymptote of $f(x)=\\frac{3}{x-7}$.",
+      "answer": "$x=7$",
+      "solution": {
+        "steps": [
+          "A vertical asymptote occurs where the denominator is zero and the factor does not cancel.",
+          "Set $x-7=0$, giving $x=7$.",
+          "The numerator $3$ is not zero there, so the factor does not cancel.",
+          "The vertical asymptote is $x=7$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Find the horizontal asymptote of $f(x)=\\frac{2x+1}{x-3}$.",
+      "answer": "$y=2$",
+      "solution": {
+        "steps": [
+          "Compare the degrees of numerator and denominator. Both are degree $1$, so the degrees are equal.",
+          "When degrees are equal, the horizontal asymptote is the ratio of the leading coefficients.",
+          "Leading coefficient of the numerator is $2$; of the denominator is $1$.",
+          "The horizontal asymptote is $y=\\frac{2}{1}=2$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Find the horizontal asymptote of $f(x)=\\frac{5}{x^2+1}$.",
+      "answer": "$y=0$",
+      "solution": {
+        "steps": [
+          "The numerator has degree $0$ and the denominator has degree $2$.",
+          "Since $\\deg p < \\deg q$, the horizontal asymptote is $y=0$.",
+          "As $x\\to\\pm\\infty$ the denominator grows without bound, so $f(x)\\to 0$.",
+          "The horizontal asymptote is $y=0$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Find the $y$-intercept of $f(x)=\\frac{x+6}{x-2}$.",
+      "answer": "$(0,-3)$",
+      "solution": {
+        "steps": [
+          "The $y$-intercept is the value of $f(0)$.",
+          "Substitute $x=0$: $f(0)=\\frac{0+6}{0-2}=\\frac{6}{-2}$.",
+          "Simplify: $\\frac{6}{-2}=-3$.",
+          "The $y$-intercept is $(0,-3)$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Find the $x$-intercept of $f(x)=\\frac{x-8}{x+1}$.",
+      "answer": "$(8,0)$",
+      "solution": {
+        "steps": [
+          "An $x$-intercept occurs where $f(x)=0$, which means the numerator is zero (and the denominator is not).",
+          "Set the numerator equal to zero: $x-8=0$, so $x=8$.",
+          "Check the denominator at $x=8$: $8+1=9\\ne 0$, so this is valid.",
+          "The $x$-intercept is $(8,0)$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Find the domain of $f(x)=\\frac{x}{x^2-9}$. Write your answer in set notation.",
+      "answer": "$\\{x \\mid x \\ne -3,\\ x \\ne 3\\}$",
+      "solution": {
+        "steps": [
+          "Set the denominator equal to zero: $x^2-9=0$.",
+          "Factor as a difference of squares: $(x-3)(x+3)=0$.",
+          "So $x=3$ or $x=-3$ must be excluded.",
+          "Domain: $\\{x \\mid x \\ne -3,\\ x \\ne 3\\}$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Find all vertical asymptotes of $f(x)=\\frac{x}{x^2-9}$.",
+      "answer": "$x=-3$ and $x=3$",
+      "solution": {
+        "steps": [
+          "Factor the denominator: $x^2-9=(x-3)(x+3)$.",
+          "Set each factor to zero: $x=3$ and $x=-3$.",
+          "Neither factor cancels with the numerator $x$, so both give vertical asymptotes.",
+          "The vertical asymptotes are $x=-3$ and $x=3$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Find the horizontal asymptote of $f(x)=\\frac{4x^2-1}{2x^2+5}$.",
+      "answer": "$y=2$",
+      "solution": {
+        "steps": [
+          "The numerator and denominator both have degree $2$, so the degrees are equal.",
+          "Take the ratio of the leading coefficients: $\\frac{4}{2}$.",
+          "Simplify: $\\frac{4}{2}=2$.",
+          "The horizontal asymptote is $y=2$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Find the coordinates of the hole in the graph of $f(x)=\\frac{x^2-25}{x-5}$.",
+      "answer": "$(5,10)$",
+      "solution": {
+        "steps": [
+          "Factor the numerator: $x^2-25=(x-5)(x+5)$.",
+          "Cancel the common factor $x-5$: the reduced function is $f(x)=x+5$ for $x\\ne 5$.",
+          "Because $x-5$ cancels, there is a hole at $x=5$ rather than a vertical asymptote.",
+          "Find the $y$-coordinate from the reduced function: $5+5=10$.",
+          "The hole is at $(5,10)$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Describe the behavior of $f(x)=\\frac{1}{x-2}$ as $x\\to 2^+$ (as $x$ approaches $2$ from the right).",
+      "answer": "$f(x)\\to +\\infty$",
+      "solution": {
+        "steps": [
+          "When $x$ is just greater than $2$, the factor $x-2$ is a small positive number.",
+          "The numerator $1$ is positive, so $\\frac{1}{x-2}$ is a positive number divided by a tiny positive number.",
+          "This quotient grows without bound.",
+          "Therefore $f(x)\\to +\\infty$ as $x\\to 2^+$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Solve the rational equation $\\frac{x+1}{x-3}=2$.",
+      "answer": "$x=7$",
+      "solution": {
+        "steps": [
+          "Note the restriction: $x\\ne 3$ since that makes the denominator zero.",
+          "Multiply both sides by $x-3$: $x+1=2(x-3)$.",
+          "Distribute: $x+1=2x-6$.",
+          "Solve: $1+6=2x-x$, so $7=x$.",
+          "Check $x=7$ against the restriction: $7\\ne 3$, so it is valid. The solution is $x=7$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Solve the rational equation $\\frac{6}{x}=\\frac{3}{x-2}$.",
+      "answer": "$x=4$",
+      "solution": {
+        "steps": [
+          "Restrictions: $x\\ne 0$ and $x\\ne 2$.",
+          "Cross multiply: $6(x-2)=3x$.",
+          "Distribute: $6x-12=3x$.",
+          "Solve: $3x=12$, so $x=4$.",
+          "Check: $x=4$ is not $0$ or $2$, so it is valid. The solution is $x=4$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Find the domain and the vertical asymptote of $f(x)=\\frac{x+2}{2x-6}$. Give the domain in set notation.",
+      "answer": "Domain $\\{x \\mid x \\ne 3\\}$; vertical asymptote $x=3$",
+      "solution": {
+        "steps": [
+          "Set the denominator equal to zero: $2x-6=0$.",
+          "Solve: $2x=6$, so $x=3$.",
+          "Exclude $x=3$ from the domain: $\\{x \\mid x \\ne 3\\}$.",
+          "The factor $x-3$ (from $2x-6$) does not cancel with the numerator, so there is a vertical asymptote at $x=3$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "State the horizontal asymptote of $f(x)=\\frac{7x}{x^2-4}$, and explain in one sentence why the degree comparison gives that value.",
+      "answer": "$y=0$",
+      "solution": {
+        "steps": [
+          "Identify the degrees: the numerator $7x$ has degree $1$ and the denominator $x^2-4$ has degree $2$.",
+          "Since $\\deg p < \\deg q$, the rule gives a horizontal asymptote of $y=0$.",
+          "As $x\\to\\pm\\infty$, the degree-$2$ denominator grows faster than the degree-$1$ numerator, so the ratio tends to $0$.",
+          "The horizontal asymptote is $y=0$."
+        ]
+      }
+    }
+  ]
+}

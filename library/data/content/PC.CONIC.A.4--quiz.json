@@ -1,0 +1,150 @@
+{
+  "id": "PC.CONIC.A.4--quiz",
+  "standard": "PC.CONIC.A.4",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Analytic Geometry",
+  "domainCode": "CONIC",
+  "cluster": "Conic sections",
+  "clusterCode": "A",
+  "skillName": "Polar Coordinates",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Eight multiple-choice questions on the polar coordinate system: plotting and re-representing points, converting points and equations between polar and rectangular form, and classifying standard polar curves. Choose the single best answer.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Convert the polar point $\\left(4,\\dfrac{\\pi}{3}\\right)$ to rectangular coordinates.\nA) $\\left(2,\\;2\\sqrt{3}\\right)$\nB) $\\left(2\\sqrt{3},\\;2\\right)$\nC) $\\left(2\\sqrt{3},\\;-2\\right)$\nD) $\\left(-2,\\;2\\sqrt{3}\\right)$",
+      "answer": "A) $\\left(2,\\;2\\sqrt{3}\\right)$",
+      "solution": {
+        "steps": [
+          "Use $x=r\\cos\\theta$ and $y=r\\sin\\theta$ with $r=4$ and $\\theta=\\dfrac{\\pi}{3}$.",
+          "$x=4\\cos\\dfrac{\\pi}{3}=4\\cdot\\dfrac{1}{2}=2$.",
+          "$y=4\\sin\\dfrac{\\pi}{3}=4\\cdot\\dfrac{\\sqrt{3}}{2}=2\\sqrt{3}$, giving $\\left(2,\\;2\\sqrt{3}\\right)$, choice A.",
+          "Choice B swaps the sine and cosine roles, using $x=r\\sin\\theta$ and $y=r\\cos\\theta$.",
+          "Choice C makes that same swap and also mis-signs $y$. Choice D incorrectly makes $x$ negative, but $\\cos\\dfrac{\\pi}{3}>0$."
+        ],
+        "answer": "A) $\\left(2,\\;2\\sqrt{3}\\right)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Which best describes the graph of the polar equation $r=5$?\nA) A line through the pole\nB) A circle of radius $5$ centered at the pole\nC) A circle of radius $25$ centered at the pole\nD) A cardioid",
+      "answer": "B) A circle of radius $5$ centered at the pole",
+      "solution": {
+        "steps": [
+          "The equation $r=5$ says every point is a distance $5$ from the pole, regardless of $\\theta$.",
+          "That set of points is a circle of radius $5$ centered at the pole, choice B.",
+          "Choice A confuses $r=5$ with a $\\theta=$ constant equation, which would be a line.",
+          "Choice C mistakenly squares the radius. Choice D requires a constant-plus-trig form like $a+b\\cos\\theta$, which $r=5$ is not."
+        ],
+        "answer": "B) A circle of radius $5$ centered at the pole"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Convert the rectangular point $\\left(1,\\;\\sqrt{3}\\right)$ to polar form with $r>0$ and $0\\le\\theta<2\\pi$.\nA) $\\left(2,\\;\\dfrac{\\pi}{6}\\right)$\nB) $\\left(4,\\;\\dfrac{\\pi}{3}\\right)$\nC) $\\left(2,\\;\\dfrac{\\pi}{3}\\right)$\nD) $\\left(2,\\;\\dfrac{2\\pi}{3}\\right)$",
+      "answer": "C) $\\left(2,\\;\\dfrac{\\pi}{3}\\right)$",
+      "solution": {
+        "steps": [
+          "Compute $r=\\sqrt{x^2+y^2}=\\sqrt{1+3}=\\sqrt{4}=2$.",
+          "The point is in Quadrant I, so $\\theta=\\arctan\\dfrac{y}{x}=\\arctan\\dfrac{\\sqrt{3}}{1}=\\dfrac{\\pi}{3}$, giving $\\left(2,\\dfrac{\\pi}{3}\\right)$, choice C.",
+          "Choice B squares incorrectly, reporting $r=4$ instead of $2$.",
+          "Choice A uses $\\arctan\\dfrac{x}{y}=\\dfrac{\\pi}{6}$, inverting the ratio. Choice D adds an unnecessary quadrant correction; the point is already in Quadrant I."
+        ],
+        "answer": "C) $\\left(2,\\;\\dfrac{\\pi}{3}\\right)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Convert the rectangular point $\\left(-1,\\;\\sqrt{3}\\right)$ to polar form with $r>0$ and $0\\le\\theta<2\\pi$.\nA) $\\left(2,\\;-\\dfrac{\\pi}{3}\\right)$\nB) $\\left(2,\\;\\dfrac{2\\pi}{3}\\right)$\nC) $\\left(2,\\;\\dfrac{\\pi}{3}\\right)$\nD) $\\left(2,\\;\\dfrac{5\\pi}{3}\\right)$",
+      "answer": "B) $\\left(2,\\;\\dfrac{2\\pi}{3}\\right)$",
+      "solution": {
+        "steps": [
+          "Compute $r=\\sqrt{(-1)^2+(\\sqrt{3})^2}=\\sqrt{1+3}=2$.",
+          "The reference angle is $\\arctan\\dfrac{\\sqrt{3}}{1}=\\dfrac{\\pi}{3}$, but $\\left(-1,\\sqrt{3}\\right)$ is in Quadrant II ($x<0$, $y>0$).",
+          "In Quadrant II, $\\theta=\\pi-\\dfrac{\\pi}{3}=\\dfrac{2\\pi}{3}$, giving $\\left(2,\\dfrac{2\\pi}{3}\\right)$, choice B.",
+          "Choice A reports the raw $\\arctan\\!\\left(-\\sqrt{3}\\right)=-\\dfrac{\\pi}{3}$ without quadrant adjustment.",
+          "Choice C ignores the sign of $x$ and treats the point as Quadrant I. Choice D lands in Quadrant IV, the wrong quadrant."
+        ],
+        "answer": "B) $\\left(2,\\;\\dfrac{2\\pi}{3}\\right)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Write the rectangular equation $x^2+y^2=6x$ as a polar equation.\nA) $r=6\\sin\\theta$\nB) $r^2=6\\cos\\theta$\nC) $r=6\\cos\\theta$\nD) $r=6$",
+      "answer": "C) $r=6\\cos\\theta$",
+      "solution": {
+        "steps": [
+          "Substitute $x^2+y^2=r^2$ and $x=r\\cos\\theta$, giving $r^2=6r\\cos\\theta$.",
+          "Divide both sides by $r$ (for $r\\neq 0$): $r=6\\cos\\theta$, choice C.",
+          "Choice A uses $y=r\\sin\\theta$ in place of $x=r\\cos\\theta$, replacing the wrong variable.",
+          "Choice B forgets to divide by $r$, leaving an extra factor of $r$. Choice D drops the $x$ term entirely, treating the equation as $x^2+y^2=$ constant."
+        ],
+        "answer": "C) $r=6\\cos\\theta$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Identify the curve $r=2+2\\cos\\theta$.\nA) A circle of radius $2$ centered at the pole\nB) A cardioid symmetric about the polar axis\nC) A rose curve with $4$ petals\nD) A limacon with an inner loop",
+      "answer": "B) A cardioid symmetric about the polar axis",
+      "solution": {
+        "steps": [
+          "The form $r=a+b\\cos\\theta$ is a limacon; here $a=2$ and $b=2$.",
+          "Because $a=b$, the limacon is the special case called a cardioid, and the $\\cos\\theta$ term makes it symmetric about the polar axis, choice B.",
+          "Choice A confuses the cardioid with a plain circle because both contain a trig term, but the constant-plus-cosine form is not $r=$ constant.",
+          "Choice C requires a $\\cos(n\\theta)$ form, not present here. Choice D would need $a<b$ (inner loop); since $a=b$, there is no inner loop."
+        ],
+        "answer": "B) A cardioid symmetric about the polar axis"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Determine the number of petals and the petal length of the rose curve $r=3\\cos(2\\theta)$.\nA) $2$ petals, each of length $3$\nB) $4$ petals, each of length $3$\nC) $4$ petals, each of length $6$\nD) $2$ petals, each of length $6$",
+      "answer": "B) $4$ petals, each of length $3$",
+      "solution": {
+        "steps": [
+          "For a rose $r=a\\cos(n\\theta)$, the petal length equals $|a|$, so here each petal has length $3$.",
+          "The petal-count rule: if $n$ is odd there are $n$ petals, and if $n$ is even there are $2n$ petals. Here $n=2$ is even, so there are $2n=4$ petals, choice B.",
+          "Choice A applies $n$ petals regardless of parity, which is the rule for odd $n$ only.",
+          "Choices C and D double the amplitude to length $6$; the petal length is $|a|=3$, not $2a$."
+        ],
+        "answer": "B) $4$ petals, each of length $3$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Convert $r=4\\sin\\theta$ to rectangular form and identify the curve.\nA) $x^2+y^2=4y$, a circle centered at $(0,2)$ with radius $2$\nB) $x^2+y^2=4x$, a circle centered at $(2,0)$ with radius $2$\nC) $x^2+y^2=4y$, a circle centered at $(0,4)$ with radius $4$\nD) $\\sqrt{x^2+y^2}=4y$, a parabola",
+      "answer": "A) $x^2+y^2=4y$, a circle centered at $(0,2)$ with radius $2$",
+      "solution": {
+        "steps": [
+          "Multiply both sides by $r$: $r^2=4r\\sin\\theta$.",
+          "Substitute $r^2=x^2+y^2$ and $r\\sin\\theta=y$: $x^2+y^2=4y$.",
+          "Complete the square in $y$: $x^2+(y^2-4y+4)=4$, so $x^2+(y-2)^2=4$, a circle centered at $(0,2)$ with radius $2$, choice A.",
+          "Choice B uses $r\\cos\\theta=x$ instead of $r\\sin\\theta=y$, replacing the wrong variable. Choice C reads the center and radius off $4y$ directly instead of completing the square. Choice D forgets to multiply by $r$, leaving a stray $r$ and a wrong classification."
+        ],
+        "answer": "A) $x^2+y^2=4y$, a circle centered at $(0,2)$ with radius $2$"
+      }
+    }
+  ]
+}

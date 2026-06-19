@@ -1,0 +1,230 @@
+{
+  "id": "PC.POLY.A.2--worksheet--medium",
+  "standard": "PC.POLY.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Polynomial and Rational Functions",
+  "domainCode": "POLY",
+  "cluster": "Polynomial functions",
+  "clusterCode": "A",
+  "skillName": "Zeros and Factoring",
+  "materialType": "worksheet",
+  "difficulty": "Medium",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "intro": "Find every zero, including irrational and complex ones. List rational candidates with the Rational Root Theorem, depress with one synthetic division, then finish the quadratic with the quadratic formula. Non-real and surd zeros come in conjugate pairs.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Find all zeros (real and complex) of $f(x)=x^3-3x^2+4x-12$.",
+      "answer": "$x=3,\\ 2i,\\ -2i$",
+      "solution": {
+        "steps": [
+          "Candidate rational zeros are $\\pm$ divisors of $12$: $\\pm1,\\pm2,\\pm3,\\pm4,\\pm6,\\pm12$.",
+          "Test $x=3$ by synthetic division with $3$: coefficients $1,\\ -3,\\ 4,\\ -12$ give $1,\\ 0,\\ 4,\\ 0$. Remainder $0$, so $x=3$ is a zero.",
+          "The depressed quotient is $x^2+4$.",
+          "Solve $x^2+4=0$: $x^2=-4$, so $x=\\pm\\sqrt{-4}=\\pm 2i$.",
+          "All zeros: $x=3,\\ 2i,\\ -2i$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Find all zeros (real and complex) of $f(x)=x^3-2x^2+x-2$.",
+      "answer": "$x=2,\\ i,\\ -i$",
+      "solution": {
+        "steps": [
+          "Candidate rational zeros: $\\pm1,\\pm2$.",
+          "Test $x=2$ with synthetic division on $1,\\ -2,\\ 1,\\ -2$: results $1,\\ 0,\\ 1,\\ 0$. Remainder $0$, so $x=2$ is a zero.",
+          "The depressed quotient is $x^2+1$.",
+          "Solve $x^2+1=0$: $x^2=-1$, so $x=\\pm i$.",
+          "All zeros: $x=2,\\ i,\\ -i$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Find all zeros (real and complex) of $f(x)=x^3-5x^2+17x-13$.",
+      "answer": "$x=1,\\ 2+3i,\\ 2-3i$",
+      "solution": {
+        "steps": [
+          "Candidate rational zeros: $\\pm1,\\pm13$.",
+          "Test $x=1$ with synthetic division on $1,\\ -5,\\ 17,\\ -13$: results $1,\\ -4,\\ 13,\\ 0$. Remainder $0$, so $x=1$ is a zero.",
+          "The depressed quotient is $x^2-4x+13$.",
+          "Quadratic formula: $x=\\dfrac{4\\pm\\sqrt{16-52}}{2}=\\dfrac{4\\pm\\sqrt{-36}}{2}=\\dfrac{4\\pm 6i}{2}=2\\pm 3i$.",
+          "All zeros: $x=1,\\ 2+3i,\\ 2-3i$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Find all real zeros of $f(x)=x^3-3x^2-2x+4$. Give exact values.",
+      "answer": "$x=1,\\ 1+\\sqrt{5},\\ 1-\\sqrt{5}$",
+      "solution": {
+        "steps": [
+          "Candidate rational zeros: $\\pm1,\\pm2,\\pm4$.",
+          "Test $x=1$ with synthetic division on $1,\\ -3,\\ -2,\\ 4$: results $1,\\ -2,\\ -4,\\ 0$. Remainder $0$, so $x=1$ is a zero.",
+          "The depressed quotient is $x^2-2x-4$.",
+          "Quadratic formula: $x=\\dfrac{2\\pm\\sqrt{4+16}}{2}=\\dfrac{2\\pm\\sqrt{20}}{2}=\\dfrac{2\\pm 2\\sqrt{5}}{2}=1\\pm\\sqrt{5}$.",
+          "All zeros: $x=1,\\ 1+\\sqrt{5},\\ 1-\\sqrt{5}$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Find all zeros of $f(x)=2x^3-3x^2+8x+5$. (Hint: try a candidate of the form $\\frac{p}{q}$.)",
+      "answer": "$x=-\\frac{1}{2},\\ 1+2i,\\ 1-2i$",
+      "solution": {
+        "steps": [
+          "Leading coefficient $2$, constant $5$. Candidates $\\frac{p}{q}$: $\\pm1,\\pm5,\\pm\\frac{1}{2},\\pm\\frac{5}{2}$.",
+          "Test $x=-\\frac{1}{2}$ with synthetic division on $2,\\ -3,\\ 8,\\ 5$: bring down $2$; $2\\cdot(-\\tfrac12)=-1$, $-3+(-1)=-4$; $-4\\cdot(-\\tfrac12)=2$, $8+2=10$; $10\\cdot(-\\tfrac12)=-5$, $5+(-5)=0$. Remainder $0$.",
+          "The depressed quotient is $2x^2-4x+10$, i.e. $2(x^2-2x+5)$.",
+          "Solve $x^2-2x+5=0$: $x=\\dfrac{2\\pm\\sqrt{4-20}}{2}=\\dfrac{2\\pm\\sqrt{-16}}{2}=\\dfrac{2\\pm 4i}{2}=1\\pm 2i$.",
+          "All zeros: $x=-\\frac{1}{2},\\ 1+2i,\\ 1-2i$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Find all zeros of $f(x)=2x^3+x^2+2x+1$.",
+      "answer": "$x=-\\frac{1}{2},\\ i,\\ -i$",
+      "solution": {
+        "steps": [
+          "Candidates $\\frac{p}{q}$: $\\pm1,\\pm\\frac{1}{2}$.",
+          "Test $x=-\\frac{1}{2}$ on $2,\\ 1,\\ 2,\\ 1$: bring down $2$; $2\\cdot(-\\tfrac12)=-1$, $1+(-1)=0$; $0\\cdot(-\\tfrac12)=0$, $2+0=2$; $2\\cdot(-\\tfrac12)=-1$, $1+(-1)=0$. Remainder $0$.",
+          "The depressed quotient is $2x^2+0x+2=2(x^2+1)$.",
+          "Solve $x^2+1=0$: $x=\\pm i$.",
+          "All zeros: $x=-\\frac{1}{2},\\ i,\\ -i$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Find all real zeros of $f(x)=x^3+2x^2-7x-2$. Give exact values.",
+      "answer": "$x=2,\\ -2+\\sqrt{3},\\ -2-\\sqrt{3}$",
+      "solution": {
+        "steps": [
+          "Candidate rational zeros: $\\pm1,\\pm2$.",
+          "Test $x=2$ on $1,\\ 2,\\ -7,\\ -2$: bring down $1$; $1\\cdot2=2$, $2+2=4$; $4\\cdot2=8$, $-7+8=1$; $1\\cdot2=2$, $-2+2=0$. Remainder $0$, so $x=2$ is a zero.",
+          "The depressed quotient is $x^2+4x+1$.",
+          "Quadratic formula: $x=\\dfrac{-4\\pm\\sqrt{16-4}}{2}=\\dfrac{-4\\pm\\sqrt{12}}{2}=\\dfrac{-4\\pm 2\\sqrt{3}}{2}=-2\\pm\\sqrt{3}$.",
+          "All zeros: $x=2,\\ -2+\\sqrt{3},\\ -2-\\sqrt{3}$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Write a polynomial $f(x)$ of least degree with real coefficients and zeros $x=2$ and $x=3i$. Give the answer in expanded form.",
+      "answer": "$f(x)=x^3-2x^2+9x-18$",
+      "solution": {
+        "steps": [
+          "Real coefficients force the conjugate $x=-3i$ to also be a zero (Conjugate Pairs Theorem).",
+          "The complex pair gives $(x-3i)(x+3i)=x^2-(3i)^2=x^2+9$.",
+          "Include the real zero: $f(x)=(x-2)(x^2+9)$.",
+          "Expand: $(x-2)(x^2+9)=x^3+9x-2x^2-18=x^3-2x^2+9x-18$.",
+          "Least-degree real polynomial: $f(x)=x^3-2x^2+9x-18$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Write a polynomial $f(x)$ of least degree with real coefficients and zeros $x=-1$ and $x=2-i$. Give the answer in expanded form.",
+      "answer": "$f(x)=x^3-3x^2+x+5$",
+      "solution": {
+        "steps": [
+          "Real coefficients force the conjugate $x=2+i$ to also be a zero.",
+          "The complex pair: $(x-(2-i))(x-(2+i))=(x-2)^2-(i)^2=(x-2)^2+1=x^2-4x+5$.",
+          "Include the real zero: $f(x)=(x+1)(x^2-4x+5)$.",
+          "Expand: $(x+1)(x^2-4x+5)=x^3-4x^2+5x+x^2-4x+5=x^3-3x^2+x+5$.",
+          "Least-degree real polynomial: $f(x)=x^3-3x^2+x+5$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Write a polynomial $f(x)$ of least degree with real coefficients and zeros $x=4$ and $x=1+\\sqrt{2}$. Give the answer in expanded form.",
+      "answer": "$f(x)=x^3-6x^2+7x+4$",
+      "solution": {
+        "steps": [
+          "Real coefficients force the radical conjugate $x=1-\\sqrt{2}$ to also be a zero.",
+          "The conjugate pair: $(x-(1+\\sqrt2))(x-(1-\\sqrt2))=(x-1)^2-(\\sqrt2)^2=(x-1)^2-2=x^2-2x-1$.",
+          "Include the real zero: $f(x)=(x-4)(x^2-2x-1)$.",
+          "Expand: $(x-4)(x^2-2x-1)=x^3-2x^2-x-4x^2+8x+4$.",
+          "Combine like terms: $x^3-6x^2+7x+4$. So $f(x)=x^3-6x^2+7x+4$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Find all zeros of $f(x)=3x^3-2x^2+12x-8$.",
+      "answer": "$x=\\frac{2}{3},\\ 2i,\\ -2i$",
+      "solution": {
+        "steps": [
+          "Candidates $\\frac{p}{q}$ with $p\\mid 8$, $q\\mid 3$: $\\pm1,\\pm2,\\pm4,\\pm8,\\pm\\frac{1}{3},\\pm\\frac{2}{3},\\pm\\frac{4}{3},\\pm\\frac{8}{3}$.",
+          "Test $x=\\frac{2}{3}$ on $3,\\ -2,\\ 12,\\ -8$: bring down $3$; $3\\cdot\\tfrac23=2$, $-2+2=0$; $0\\cdot\\tfrac23=0$, $12+0=12$; $12\\cdot\\tfrac23=8$, $-8+8=0$. Remainder $0$.",
+          "The depressed quotient is $3x^2+0x+12=3(x^2+4)$.",
+          "Solve $x^2+4=0$: $x=\\pm 2i$.",
+          "All zeros: $x=\\frac{2}{3},\\ 2i,\\ -2i$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Find all zeros of $f(x)=4x^3-11x^2+14x-6$.",
+      "answer": "$x=\\frac{3}{4},\\ 1+i,\\ 1-i$",
+      "solution": {
+        "steps": [
+          "Candidates $\\frac{p}{q}$ with $p\\mid 6$, $q\\mid 4$: $\\pm1,\\pm2,\\pm3,\\pm6,\\pm\\frac{1}{2},\\pm\\frac{3}{2},\\pm\\frac{1}{4},\\pm\\frac{3}{4}$.",
+          "Test $x=\\frac{3}{4}$ on $4,\\ -11,\\ 14,\\ -6$: bring down $4$; $4\\cdot\\tfrac34=3$, $-11+3=-8$; $-8\\cdot\\tfrac34=-6$, $14-6=8$; $8\\cdot\\tfrac34=6$, $-6+6=0$. Remainder $0$.",
+          "The depressed quotient is $4x^2-8x+8=4(x^2-2x+2)$.",
+          "Solve $x^2-2x+2=0$: $x=\\dfrac{2\\pm\\sqrt{4-8}}{2}=\\dfrac{2\\pm 2i}{2}=1\\pm i$.",
+          "All zeros: $x=\\frac{3}{4},\\ 1+i,\\ 1-i$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Find all real zeros of $f(x)=x^3-4x^2+3x+2$. Give exact values.",
+      "answer": "$x=2,\\ 1+\\sqrt{2},\\ 1-\\sqrt{2}$",
+      "solution": {
+        "steps": [
+          "Candidate rational zeros: $\\pm1,\\pm2$.",
+          "Test $x=2$ on $1,\\ -4,\\ 3,\\ 2$: bring down $1$; $1\\cdot2=2$, $-4+2=-2$; $-2\\cdot2=-4$, $3-4=-1$; $-1\\cdot2=-2$, $2-2=0$. Remainder $0$, so $x=2$ is a zero.",
+          "The depressed quotient is $x^2-2x-1$.",
+          "Quadratic formula: $x=\\dfrac{2\\pm\\sqrt{4+4}}{2}=\\dfrac{2\\pm\\sqrt{8}}{2}=\\dfrac{2\\pm 2\\sqrt{2}}{2}=1\\pm\\sqrt{2}$.",
+          "All zeros: $x=2,\\ 1+\\sqrt{2},\\ 1-\\sqrt{2}$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Find all zeros (real and complex) of $f(x)=x^3+x^2+4x+4$.",
+      "answer": "$x=-1,\\ 2i,\\ -2i$",
+      "solution": {
+        "steps": [
+          "Candidate rational zeros: $\\pm1,\\pm2,\\pm4$.",
+          "Test $x=-1$ on $1,\\ 1,\\ 4,\\ 4$: bring down $1$; $1\\cdot(-1)=-1$, $1-1=0$; $0\\cdot(-1)=0$, $4+0=4$; $4\\cdot(-1)=-4$, $4-4=0$. Remainder $0$, so $x=-1$ is a zero.",
+          "The depressed quotient is $x^2+4$.",
+          "Solve $x^2+4=0$: $x=\\pm 2i$.",
+          "All zeros: $x=-1,\\ 2i,\\ -2i$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Find all zeros of $f(x)=2x^3-7x^2+10x-6$.",
+      "answer": "$x=\\frac{3}{2},\\ 1+i,\\ 1-i$",
+      "solution": {
+        "steps": [
+          "Candidates $\\frac{p}{q}$ with $p\\mid 6$, $q\\mid 2$: $\\pm1,\\pm2,\\pm3,\\pm6,\\pm\\frac{1}{2},\\pm\\frac{3}{2}$.",
+          "Test $x=\\frac{3}{2}$ on $2,\\ -7,\\ 10,\\ -6$: bring down $2$; $2\\cdot\\tfrac32=3$, $-7+3=-4$; $-4\\cdot\\tfrac32=-6$, $10-6=4$; $4\\cdot\\tfrac32=6$, $-6+6=0$. Remainder $0$.",
+          "The depressed quotient is $2x^2-4x+4=2(x^2-2x+2)$.",
+          "Solve $x^2-2x+2=0$: $x=\\dfrac{2\\pm\\sqrt{4-8}}{2}=\\dfrac{2\\pm\\sqrt{-4}}{2}=\\dfrac{2\\pm 2i}{2}=1\\pm i$.",
+          "All zeros: $x=\\frac{3}{2},\\ 1+i,\\ 1-i$."
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-18T23:50:18.141Z"
+}

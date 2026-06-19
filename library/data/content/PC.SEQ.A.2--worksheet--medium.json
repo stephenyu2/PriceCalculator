@@ -1,0 +1,215 @@
+{
+  "id": "PC.SEQ.A.2--worksheet--medium",
+  "standard": "PC.SEQ.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Sequences, Series, and Limits",
+  "domainCode": "SEQ",
+  "cluster": "Sequences and series",
+  "clusterCode": "A",
+  "skillName": "Geometric Sequences and Series",
+  "materialType": "worksheet",
+  "difficulty": "Medium",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems ask you to extract a common ratio before applying a formula, evaluate finite and infinite geometric sums, unpack sigma notation, and track signs with negative ratios. Find the common ratio with $r=\\dfrac{a_{n+1}}{a_n}$, use $a_n=a_1 r^{n-1}$ for a term, $S_n=a_1\\dfrac{1-r^n}{1-r}$ for a finite sum, and $S=\\dfrac{a_1}{1-r}$ (only when $\\lvert r\\rvert<1$) for an infinite sum.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A geometric sequence begins $4,\\ 10,\\ 25,\\dots$. Find the common ratio $r$ and the next term $a_4$.",
+      "answer": "$r=\\dfrac{5}{2}$ and $a_4=\\dfrac{125}{2}$",
+      "solution": {
+        "steps": [
+          "Compute the ratio from two consecutive terms: $r=\\dfrac{a_2}{a_1}=\\dfrac{10}{4}=\\dfrac{5}{2}$.",
+          "Check with the next pair: $\\dfrac{25}{10}=\\dfrac{5}{2}$, confirming the ratio is constant.",
+          "Multiply the last given term by $r$: $a_4=25\\cdot\\dfrac{5}{2}=\\dfrac{125}{2}$.",
+          "So $r=\\dfrac{5}{2}$ and $a_4=\\dfrac{125}{2}=62.5$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "The first two terms of a geometric sequence are $a_1=18$ and $a_2=12$. Find $a_5$.",
+      "answer": "$a_5=\\dfrac{32}{9}$",
+      "solution": {
+        "steps": [
+          "Find the ratio: $r=\\dfrac{a_2}{a_1}=\\dfrac{12}{18}=\\dfrac{2}{3}$.",
+          "Apply the explicit formula with the exponent $n-1=4$: $a_5=a_1 r^{4}=18\\left(\\dfrac{2}{3}\\right)^{4}$.",
+          "Evaluate the power: $\\left(\\dfrac{2}{3}\\right)^{4}=\\dfrac{16}{81}$.",
+          "Multiply: $a_5=18\\cdot\\dfrac{16}{81}=\\dfrac{288}{81}=\\dfrac{32}{9}$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A geometric sequence has terms $\\dfrac{3}{4},\\ \\dfrac{3}{2},\\ 3,\\dots$. Find $a_7$.",
+      "answer": "$a_7=48$",
+      "solution": {
+        "steps": [
+          "Find the ratio: $r=\\dfrac{a_2}{a_1}=\\dfrac{3/2}{3/4}=\\dfrac{3}{2}\\cdot\\dfrac{4}{3}=2$.",
+          "Apply the explicit formula with exponent $n-1=6$: $a_7=a_1 r^{6}=\\dfrac{3}{4}\\cdot 2^{6}$.",
+          "Evaluate: $2^{6}=64$, so $a_7=\\dfrac{3}{4}\\cdot 64=\\dfrac{192}{4}=48$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Find the sum of the first $7$ terms of the geometric series $2+6+18+\\cdots$.",
+      "answer": "$S_7=2186$",
+      "solution": {
+        "steps": [
+          "Identify $a_1=2$ and $r=\\dfrac{6}{2}=3$.",
+          "Apply the finite partial-sum formula: $S_7=a_1\\dfrac{1-r^{7}}{1-r}=2\\cdot\\dfrac{1-3^{7}}{1-3}$.",
+          "Evaluate $3^{7}=2187$, so $S_7=2\\cdot\\dfrac{1-2187}{-2}=2\\cdot\\dfrac{-2186}{-2}$.",
+          "Simplify: $S_7=2\\cdot 1093=2186$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Find the sum of the first $6$ terms of the geometric series $80+40+20+\\cdots$.",
+      "answer": "$S_6=\\dfrac{315}{2}$",
+      "solution": {
+        "steps": [
+          "Identify $a_1=80$ and $r=\\dfrac{40}{80}=\\dfrac{1}{2}$.",
+          "Apply the partial-sum formula: $S_6=80\\cdot\\dfrac{1-(1/2)^{6}}{1-1/2}$.",
+          "Evaluate $\\left(\\dfrac{1}{2}\\right)^{6}=\\dfrac{1}{64}$, so the numerator is $1-\\dfrac{1}{64}=\\dfrac{63}{64}$ and the denominator is $\\dfrac{1}{2}$.",
+          "Then $S_6=80\\cdot\\dfrac{63/64}{1/2}=80\\cdot\\dfrac{63}{64}\\cdot 2=80\\cdot\\dfrac{63}{32}=\\dfrac{5040}{32}=\\dfrac{315}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Evaluate the finite geometric series $\\displaystyle\\sum_{k=1}^{5} 3\\left(\\dfrac{1}{2}\\right)^{k-1}$.",
+      "answer": "$\\dfrac{93}{16}$",
+      "solution": {
+        "steps": [
+          "Read off the first term and ratio from the sigma form: $a_1=3$ and $r=\\dfrac{1}{2}$, with $n=5$ terms.",
+          "Apply the partial-sum formula: $S_5=3\\cdot\\dfrac{1-(1/2)^{5}}{1-1/2}$.",
+          "Evaluate $\\left(\\dfrac{1}{2}\\right)^{5}=\\dfrac{1}{32}$, so the numerator is $1-\\dfrac{1}{32}=\\dfrac{31}{32}$ and the denominator is $\\dfrac{1}{2}$.",
+          "Then $S_5=3\\cdot\\dfrac{31/32}{1/2}=3\\cdot\\dfrac{31}{32}\\cdot 2=3\\cdot\\dfrac{31}{16}=\\dfrac{93}{16}$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Evaluate the finite geometric series $\\displaystyle\\sum_{k=1}^{4} 5\\cdot 2^{\\,k-1}$.",
+      "answer": "$75$",
+      "solution": {
+        "steps": [
+          "Identify $a_1=5$, $r=2$, and $n=4$ terms.",
+          "Apply the partial-sum formula: $S_4=5\\cdot\\dfrac{1-2^{4}}{1-2}$.",
+          "Evaluate $2^{4}=16$: $S_4=5\\cdot\\dfrac{1-16}{-1}=5\\cdot\\dfrac{-15}{-1}=5\\cdot 15$.",
+          "So $S_4=75$. (Check: $5+10+20+40=75$.)"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Evaluate the infinite geometric series $\\displaystyle\\sum_{n=1}^{\\infty} 10\\left(\\dfrac{2}{5}\\right)^{n-1}$.",
+      "answer": "$\\dfrac{50}{3}$",
+      "solution": {
+        "steps": [
+          "Identify $a_1=10$ and $r=\\dfrac{2}{5}$.",
+          "Since $\\lvert r\\rvert=\\dfrac{2}{5}<1$, the series converges and $S=\\dfrac{a_1}{1-r}$.",
+          "Compute the denominator: $1-\\dfrac{2}{5}=\\dfrac{3}{5}$.",
+          "Then $S=\\dfrac{10}{3/5}=10\\cdot\\dfrac{5}{3}=\\dfrac{50}{3}$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Find the sum of the infinite geometric series $9+6+4+\\cdots$.",
+      "answer": "$27$",
+      "solution": {
+        "steps": [
+          "Find the ratio: $r=\\dfrac{6}{9}=\\dfrac{2}{3}$, confirmed by $\\dfrac{4}{6}=\\dfrac{2}{3}$.",
+          "Since $\\lvert r\\rvert=\\dfrac{2}{3}<1$, the series converges: $S=\\dfrac{a_1}{1-r}=\\dfrac{9}{1-2/3}$.",
+          "The denominator is $1-\\dfrac{2}{3}=\\dfrac{1}{3}$.",
+          "So $S=\\dfrac{9}{1/3}=9\\cdot 3=27$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A geometric series has first term $a_1=24$ and common ratio $r=-\\dfrac{1}{2}$. Find the sum of the infinite series.",
+      "answer": "$16$",
+      "solution": {
+        "steps": [
+          "Check convergence: $\\lvert r\\rvert=\\dfrac{1}{2}<1$, so the series converges.",
+          "Apply $S=\\dfrac{a_1}{1-r}$ and keep the sign of $r$: $S=\\dfrac{24}{1-(-1/2)}$.",
+          "The denominator is $1+\\dfrac{1}{2}=\\dfrac{3}{2}$.",
+          "So $S=\\dfrac{24}{3/2}=24\\cdot\\dfrac{2}{3}=16$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Evaluate the infinite geometric series $\\displaystyle\\sum_{n=1}^{\\infty} 8\\left(-\\dfrac{1}{3}\\right)^{n-1}$.",
+      "answer": "$6$",
+      "solution": {
+        "steps": [
+          "Identify $a_1=8$ and $r=-\\dfrac{1}{3}$.",
+          "Since $\\lvert r\\rvert=\\dfrac{1}{3}<1$, the series converges: $S=\\dfrac{a_1}{1-r}$.",
+          "Compute the denominator, keeping the negative sign of $r$: $1-\\left(-\\dfrac{1}{3}\\right)=1+\\dfrac{1}{3}=\\dfrac{4}{3}$.",
+          "Then $S=\\dfrac{8}{4/3}=8\\cdot\\dfrac{3}{4}=6$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A geometric sequence has first term $a_3=20$ and the term $a_4=-30$. Find the common ratio $r$ and the sum of the infinite series $a_1+a_2+a_3+\\cdots$ if possible, or state that it diverges.",
+      "answer": "$r=-\\dfrac{3}{2}$; the series diverges",
+      "solution": {
+        "steps": [
+          "Find the ratio from two consecutive terms: $r=\\dfrac{a_4}{a_3}=\\dfrac{-30}{20}=-\\dfrac{3}{2}$.",
+          "Test convergence of the infinite series: $\\lvert r\\rvert=\\dfrac{3}{2}\\ge 1$.",
+          "Because $\\lvert r\\rvert\\ge 1$, the terms do not shrink to $0$, so the infinite series diverges.",
+          "The common ratio is $r=-\\dfrac{3}{2}$ and no finite infinite sum exists."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A new car is worth $\\$20000$ and loses $20\\%$ of its value each year, so its value forms a geometric sequence. What is the car's value at the start of the $4$th year (that is, the $4$th term, with the purchase price as the first term)?",
+      "answer": "$\\$10240$",
+      "solution": {
+        "steps": [
+          "Losing $20\\%$ means $80\\%$ of the value remains each year, so $r=0.8=\\dfrac{4}{5}$ and $a_1=20000$.",
+          "The $4$th term uses exponent $n-1=3$: $a_4=20000\\left(\\dfrac{4}{5}\\right)^{3}$.",
+          "Evaluate $\\left(\\dfrac{4}{5}\\right)^{3}=\\dfrac{64}{125}$.",
+          "Then $a_4=20000\\cdot\\dfrac{64}{125}=160\\cdot 64=10240$, so the value is $\\$10240$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "On the first day a charity receives $\\$300$ in donations, and each day after, donations are $\\dfrac{3}{4}$ of the previous day's total. What is the total amount donated over the first $4$ days?",
+      "answer": "$\\$\\dfrac{13125}{16}$ (that is, $\\$820.3125$)",
+      "solution": {
+        "steps": [
+          "Donations form a geometric series with $a_1=300$, $r=\\dfrac{3}{4}$, over $n=4$ days.",
+          "Apply the partial-sum formula: $S_4=300\\cdot\\dfrac{1-(3/4)^{4}}{1-3/4}$.",
+          "Evaluate $\\left(\\dfrac{3}{4}\\right)^{4}=\\dfrac{81}{256}$, so the numerator is $1-\\dfrac{81}{256}=\\dfrac{175}{256}$ and the denominator is $\\dfrac{1}{4}$.",
+          "Then $S_4=300\\cdot\\dfrac{175/256}{1/4}=300\\cdot\\dfrac{175}{256}\\cdot 4=300\\cdot\\dfrac{175}{64}=\\dfrac{52500}{64}=\\dfrac{13125}{16}=820.3125$.",
+          "Verify by adding the four daily amounts: $300+225+168.75+126.5625=820.3125$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Determine whether the infinite geometric series $\\dfrac{2}{3}+\\dfrac{2}{9}+\\dfrac{2}{27}+\\cdots$ converges, and if so, find its sum.",
+      "answer": "Converges to $1$",
+      "solution": {
+        "steps": [
+          "Find the ratio: $r=\\dfrac{2/9}{2/3}=\\dfrac{2}{9}\\cdot\\dfrac{3}{2}=\\dfrac{1}{3}$.",
+          "Since $\\lvert r\\rvert=\\dfrac{1}{3}<1$, the series converges, so $S=\\dfrac{a_1}{1-r}$ applies with $a_1=\\dfrac{2}{3}$.",
+          "The denominator is $1-\\dfrac{1}{3}=\\dfrac{2}{3}$.",
+          "Then $S=\\dfrac{2/3}{2/3}=1$."
+        ]
+      }
+    }
+  ]
+}

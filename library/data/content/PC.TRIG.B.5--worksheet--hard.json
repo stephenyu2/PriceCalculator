@@ -1,0 +1,216 @@
+{
+  "id": "PC.TRIG.B.5--worksheet--hard",
+  "standard": "PC.TRIG.B.5",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Graphs and identities",
+  "clusterCode": "B",
+  "skillName": "Inverse Trig Functions",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems require multi-step compositions of trigonometric and inverse trigonometric functions. Use reference right triangles or the Pythagorean identity for mixed compositions, and always fold an out-of-range inner angle back into the restricted range of the inverse function before simplifying. Recall the ranges: $\\arcsin$ and $\\arctan$ return angles in $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$, while $\\arccos$ returns angles in $[0,\\pi]$.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Write $\\cos\\left(\\arcsin x\\right)$ as an algebraic expression in $x$ for $x\\in[-1,1]$.",
+      "answer": "$\\sqrt{1-x^2}$",
+      "solution": {
+        "steps": [
+          "Let $\\theta=\\arcsin x$, so $\\sin\\theta=x$ with $\\theta\\in\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$.",
+          "Use the Pythagorean identity: $\\cos^2\\theta=1-\\sin^2\\theta=1-x^2$.",
+          "On the range $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$, cosine is nonnegative, so take the positive root.",
+          "Therefore $\\cos\\theta=\\sqrt{1-x^2}$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Write $\\tan\\left(\\arccos x\\right)$ as an algebraic expression in $x$ for $x\\in(0,1]$.",
+      "answer": "$\\dfrac{\\sqrt{1-x^2}}{x}$",
+      "solution": {
+        "steps": [
+          "Let $\\theta=\\arccos x$, so $\\cos\\theta=x$ with $\\theta\\in[0,\\pi]$.",
+          "Build a reference right triangle: adjacent $=x$, hypotenuse $=1$, so the opposite side is $\\sqrt{1-x^2}$.",
+          "Then $\\sin\\theta=\\sqrt{1-x^2}$ (sine is nonnegative on $[0,\\pi]$).",
+          "Thus $\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}=\\dfrac{\\sqrt{1-x^2}}{x}$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Evaluate $\\sin\\left(\\arctan\\left(\\frac{3}{4}\\right)\\right)$.",
+      "answer": "$\\frac{3}{5}$",
+      "solution": {
+        "steps": [
+          "Let $\\theta=\\arctan\\left(\\frac{3}{4}\\right)$, so $\\tan\\theta=\\frac{3}{4}$ with $\\theta\\in\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$; since the value is positive, $\\theta$ is in the first quadrant.",
+          "Build a right triangle with opposite $=3$ and adjacent $=4$.",
+          "The hypotenuse is $\\sqrt{3^2+4^2}=\\sqrt{25}=5$.",
+          "Therefore $\\sin\\theta=\\dfrac{\\text{opposite}}{\\text{hypotenuse}}=\\frac{3}{5}$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Evaluate $\\arccos\\left(\\cos\\left(\\frac{4\\pi}{3}\\right)\\right)$.",
+      "answer": "$\\frac{2\\pi}{3}$",
+      "solution": {
+        "steps": [
+          "First find the inner value: $\\cos\\left(\\frac{4\\pi}{3}\\right)=-\\frac{1}{2}$.",
+          "Now evaluate $\\arccos\\left(-\\frac{1}{2}\\right)$, whose result must lie in $[0,\\pi]$.",
+          "The angle in $[0,\\pi]$ with cosine $-\\frac{1}{2}$ is $\\frac{2\\pi}{3}$.",
+          "Therefore $\\arccos\\left(\\cos\\left(\\frac{4\\pi}{3}\\right)\\right)=\\frac{2\\pi}{3}$, not $\\frac{4\\pi}{3}$, since $\\frac{4\\pi}{3}$ is outside the range of $\\arccos$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Evaluate $\\arcsin\\left(\\sin\\left(\\frac{5\\pi}{6}\\right)\\right)$.",
+      "answer": "$\\frac{\\pi}{6}$",
+      "solution": {
+        "steps": [
+          "Find the inner value: $\\sin\\left(\\frac{5\\pi}{6}\\right)=\\frac{1}{2}$.",
+          "Now evaluate $\\arcsin\\left(\\frac{1}{2}\\right)$, whose result must lie in $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$.",
+          "The angle in that range with sine $\\frac{1}{2}$ is $\\frac{\\pi}{6}$.",
+          "Therefore the answer is $\\frac{\\pi}{6}$, not $\\frac{5\\pi}{6}$, which lies outside the range of $\\arcsin$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Evaluate $\\tan\\left(\\arcsin\\left(-\\frac{5}{13}\\right)\\right)$.",
+      "answer": "$-\\frac{5}{12}$",
+      "solution": {
+        "steps": [
+          "Let $\\theta=\\arcsin\\left(-\\frac{5}{13}\\right)$, so $\\sin\\theta=-\\frac{5}{13}$ with $\\theta\\in\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$; since the sine is negative, $\\theta$ is in the fourth quadrant.",
+          "Build a reference triangle with opposite $=5$, hypotenuse $=13$, so the adjacent side is $\\sqrt{13^2-5^2}=\\sqrt{144}=12$.",
+          "On $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$ cosine is positive, so $\\cos\\theta=\\frac{12}{13}$ and $\\sin\\theta=-\\frac{5}{13}$.",
+          "Therefore $\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}=\\dfrac{-\\frac{5}{13}}{\\frac{12}{13}}=-\\frac{5}{12}$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Write $\\sin\\left(2\\arctan x\\right)$ as an algebraic expression in $x$.",
+      "answer": "$\\dfrac{2x}{1+x^2}$",
+      "solution": {
+        "steps": [
+          "Let $\\theta=\\arctan x$, so $\\tan\\theta=x$ with $\\theta\\in\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$.",
+          "From a reference triangle, the hypotenuse is $\\sqrt{1+x^2}$, giving $\\sin\\theta=\\dfrac{x}{\\sqrt{1+x^2}}$ and $\\cos\\theta=\\dfrac{1}{\\sqrt{1+x^2}}$.",
+          "Apply the double-angle formula: $\\sin(2\\theta)=2\\sin\\theta\\cos\\theta=2\\cdot\\dfrac{x}{\\sqrt{1+x^2}}\\cdot\\dfrac{1}{\\sqrt{1+x^2}}$.",
+          "Simplify: $\\sin(2\\theta)=\\dfrac{2x}{1+x^2}$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Evaluate $\\cos\\left(\\arcsin\\left(\\frac{3}{5}\\right)+\\arccos\\left(\\frac{5}{13}\\right)\\right)$.",
+      "answer": "$-\\frac{16}{65}$",
+      "solution": {
+        "steps": [
+          "Let $\\alpha=\\arcsin\\left(\\frac{3}{5}\\right)$, so $\\sin\\alpha=\\frac{3}{5}$ and $\\cos\\alpha=\\frac{4}{5}$ ($\\alpha$ in the first quadrant).",
+          "Let $\\beta=\\arccos\\left(\\frac{5}{13}\\right)$, so $\\cos\\beta=\\frac{5}{13}$ and $\\sin\\beta=\\frac{12}{13}$ ($\\beta\\in[0,\\pi]$ with sine nonnegative).",
+          "Use the angle-sum formula: $\\cos(\\alpha+\\beta)=\\cos\\alpha\\cos\\beta-\\sin\\alpha\\sin\\beta$.",
+          "Compute each product: $\\cos\\alpha\\cos\\beta=\\frac{4}{5}\\cdot\\frac{5}{13}=\\frac{20}{65}$ and $\\sin\\alpha\\sin\\beta=\\frac{3}{5}\\cdot\\frac{12}{13}=\\frac{36}{65}$.",
+          "Subtract: $\\cos(\\alpha+\\beta)=\\frac{20}{65}-\\frac{36}{65}=-\\frac{16}{65}$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Evaluate $\\arctan\\left(\\tan\\left(\\frac{5\\pi}{4}\\right)\\right)$.",
+      "answer": "$\\frac{\\pi}{4}$",
+      "solution": {
+        "steps": [
+          "Find the inner value: $\\tan\\left(\\frac{5\\pi}{4}\\right)=1$.",
+          "Now evaluate $\\arctan(1)$, whose result must lie in $\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$.",
+          "The angle in that range with tangent $1$ is $\\frac{\\pi}{4}$.",
+          "Therefore the answer is $\\frac{\\pi}{4}$, not $\\frac{5\\pi}{4}$, which lies outside the range of $\\arctan$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Write $\\cos\\left(2\\arcsin x\\right)$ as an algebraic expression in $x$ for $x\\in[-1,1]$.",
+      "answer": "$1-2x^2$",
+      "solution": {
+        "steps": [
+          "Let $\\theta=\\arcsin x$, so $\\sin\\theta=x$ with $\\theta\\in\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$.",
+          "Apply the double-angle formula $\\cos(2\\theta)=1-2\\sin^2\\theta$.",
+          "Substitute $\\sin\\theta=x$: $\\cos(2\\theta)=1-2x^2$.",
+          "Therefore $\\cos\\left(2\\arcsin x\\right)=1-2x^2$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Evaluate $\\sin\\left(\\arccos\\left(-\\frac{3}{5}\\right)\\right)$.",
+      "answer": "$\\frac{4}{5}$",
+      "solution": {
+        "steps": [
+          "Let $\\theta=\\arccos\\left(-\\frac{3}{5}\\right)$, so $\\cos\\theta=-\\frac{3}{5}$ with $\\theta\\in[0,\\pi]$; the negative cosine places $\\theta$ in the second quadrant.",
+          "Use $\\sin^2\\theta=1-\\cos^2\\theta=1-\\frac{9}{25}=\\frac{16}{25}$.",
+          "On $[0,\\pi]$ sine is nonnegative, so take the positive root: $\\sin\\theta=\\frac{4}{5}$.",
+          "Therefore $\\sin\\left(\\arccos\\left(-\\frac{3}{5}\\right)\\right)=\\frac{4}{5}$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Evaluate $\\arcsin\\left(\\sin\\left(\\frac{11\\pi}{6}\\right)\\right)$.",
+      "answer": "$-\\frac{\\pi}{6}$",
+      "solution": {
+        "steps": [
+          "Find the inner value: $\\sin\\left(\\frac{11\\pi}{6}\\right)=-\\frac{1}{2}$.",
+          "Now evaluate $\\arcsin\\left(-\\frac{1}{2}\\right)$, whose result must lie in $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$.",
+          "The angle in that range with sine $-\\frac{1}{2}$ is $-\\frac{\\pi}{6}$.",
+          "Therefore the answer is $-\\frac{\\pi}{6}$, not $\\frac{11\\pi}{6}$, which is outside the range of $\\arcsin$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Write $\\sec\\left(\\arctan x\\right)$ as an algebraic expression in $x$.",
+      "answer": "$\\sqrt{1+x^2}$",
+      "solution": {
+        "steps": [
+          "Let $\\theta=\\arctan x$, so $\\tan\\theta=x$ with $\\theta\\in\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$.",
+          "Use the identity $\\sec^2\\theta=1+\\tan^2\\theta=1+x^2$.",
+          "On $\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$ cosine is positive, so $\\sec\\theta$ is positive; take the positive root.",
+          "Therefore $\\sec\\theta=\\sqrt{1+x^2}$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Evaluate $\\cos\\left(\\arctan\\left(\\frac{8}{15}\\right)-\\arcsin\\left(\\frac{4}{5}\\right)\\right)$.",
+      "answer": "$\\frac{77}{85}$",
+      "solution": {
+        "steps": [
+          "Let $\\alpha=\\arctan\\left(\\frac{8}{15}\\right)$; from a triangle with opposite $8$, adjacent $15$, hypotenuse $\\sqrt{8^2+15^2}=17$, so $\\sin\\alpha=\\frac{8}{17}$, $\\cos\\alpha=\\frac{15}{17}$.",
+          "Let $\\beta=\\arcsin\\left(\\frac{4}{5}\\right)$, so $\\sin\\beta=\\frac{4}{5}$ and $\\cos\\beta=\\frac{3}{5}$ ($\\beta$ in the first quadrant).",
+          "Use $\\cos(\\alpha-\\beta)=\\cos\\alpha\\cos\\beta+\\sin\\alpha\\sin\\beta$.",
+          "Substitute: $\\cos(\\alpha-\\beta)=\\frac{15}{17}\\cdot\\frac{3}{5}+\\frac{8}{17}\\cdot\\frac{4}{5}=\\frac{45}{85}+\\frac{32}{85}=\\frac{77}{85}$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Write $\\tan\\left(\\arcsin x\\right)$ as an algebraic expression in $x$ for $x\\in(-1,1)$.",
+      "answer": "$\\dfrac{x}{\\sqrt{1-x^2}}$",
+      "solution": {
+        "steps": [
+          "Let $\\theta=\\arcsin x$, so $\\sin\\theta=x$ with $\\theta\\in\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$.",
+          "From the Pythagorean identity, $\\cos\\theta=\\sqrt{1-x^2}$ (cosine is nonnegative on this range).",
+          "Then $\\tan\\theta=\\dfrac{\\sin\\theta}{\\cos\\theta}=\\dfrac{x}{\\sqrt{1-x^2}}$.",
+          "Therefore $\\tan\\left(\\arcsin x\\right)=\\dfrac{x}{\\sqrt{1-x^2}}$."
+        ]
+      }
+    }
+  ]
+}

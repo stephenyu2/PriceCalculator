@@ -1,0 +1,223 @@
+{
+  "id": "PC.EXP.A.2--worksheet--medium",
+  "standard": "PC.EXP.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Exponential and Logarithmic Functions",
+  "domainCode": "EXP",
+  "cluster": "Properties and graphs",
+  "clusterCode": "A",
+  "skillName": "Logarithmic Functions",
+  "materialType": "worksheet",
+  "difficulty": "Medium",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems mix change-of-base setups, fractional-exponent evaluations, inverse-function identities, and two-feature transformations. For transformation problems, report the domain, range, and vertical asymptote together. Give exact values unless an approximation is requested.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Express $\\log_7 20$ using natural logarithms, then approximate to three decimal places.",
+      "answer": "$\\log_7 20 = \\frac{\\ln 20}{\\ln 7} \\approx 1.540$",
+      "solution": {
+        "steps": [
+          "Apply the change-of-base formula $\\log_b x = \\frac{\\ln x}{\\ln b}$ with $b = 7$ and $x = 20$.",
+          "Write $\\log_7 20 = \\frac{\\ln 20}{\\ln 7}$ (the new argument goes on top, the original base on the bottom).",
+          "Approximate: $\\ln 20 \\approx 2.9957$ and $\\ln 7 \\approx 1.9459$.",
+          "Divide: $\\frac{2.9957}{1.9459} \\approx 1.540$."
+        ],
+        "answer": "$\\log_7 20 = \\frac{\\ln 20}{\\ln 7} \\approx 1.540$"
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Evaluate $\\log_8 2$ exactly without a calculator.",
+      "answer": "$\\frac{1}{3}$",
+      "solution": {
+        "steps": [
+          "Let $\\log_8 2 = y$, which means $8^y = 2$.",
+          "Write the base as a power: $8 = 2^3$, so $(2^3)^y = 2^1$, giving $2^{3y} = 2^1$.",
+          "Set the exponents equal: $3y = 1$.",
+          "Solve: $y = \\frac{1}{3}$."
+        ],
+        "answer": "$\\frac{1}{3}$"
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Simplify the expression $3^{\\log_3 12} + \\log_5(5^4)$ using the inverse relationship between logarithms and exponentials.",
+      "answer": "$16$",
+      "solution": {
+        "steps": [
+          "Use the identity $b^{\\log_b x} = x$: here $3^{\\log_3 12} = 12$.",
+          "Use the identity $\\log_b(b^x) = x$: here $\\log_5(5^4) = 4$.",
+          "Add the results: $12 + 4 = 16$."
+        ],
+        "answer": "$16$"
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "For $y = \\log_2(x - 3) + 1$, state the vertical asymptote, the domain, and the range.",
+      "answer": "Asymptote $x = 3$; domain $x > 3$; range all real numbers.",
+      "solution": {
+        "steps": [
+          "The argument must be positive: $x - 3 > 0$, so $x > 3$. This gives the domain $x > 3$.",
+          "The vertical asymptote occurs where the argument equals $0$: $x - 3 = 0$, so $x = 3$.",
+          "The vertical shift of $+1$ moves the graph up but does not affect the asymptote or the range.",
+          "A logarithmic function takes every real output, so the range is all real numbers."
+        ],
+        "answer": "Asymptote $x = 3$; domain $x > 3$; range all real numbers."
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Express $\\log_3 50$ using common (base-$10$) logarithms, then approximate to three decimal places.",
+      "answer": "$\\log_3 50 = \\frac{\\log 50}{\\log 3} \\approx 3.561$",
+      "solution": {
+        "steps": [
+          "Apply the change-of-base formula $\\log_b x = \\frac{\\log x}{\\log b}$ with $b = 3$ and $x = 50$.",
+          "Write $\\log_3 50 = \\frac{\\log 50}{\\log 3}$.",
+          "Approximate: $\\log 50 \\approx 1.69897$ and $\\log 3 \\approx 0.47712$.",
+          "Divide: $\\frac{1.69897}{0.47712} \\approx 3.561$."
+        ],
+        "answer": "$\\log_3 50 = \\frac{\\log 50}{\\log 3} \\approx 3.561$"
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Describe the two transformations of $y = -\\log_2(x) + 3$ from the parent function $y = \\log_2 x$, then state the range.",
+      "answer": "Reflect across the $x$-axis and shift up $3$; range is all real numbers.",
+      "solution": {
+        "steps": [
+          "The factor $-1$ in front, $a = -1$, reflects the graph across the $x$-axis (the curve becomes decreasing).",
+          "The $+3$ added at the end shifts the graph up $3$ units.",
+          "Neither a reflection nor a vertical shift restricts the outputs, so the range stays all real numbers."
+        ],
+        "answer": "Reflect across the $x$-axis and shift up $3$; range is all real numbers."
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Evaluate $\\log_{27} 9$ exactly without a calculator.",
+      "answer": "$\\frac{2}{3}$",
+      "solution": {
+        "steps": [
+          "Let $\\log_{27} 9 = y$, which means $27^y = 9$.",
+          "Write both sides as powers of $3$: $27 = 3^3$ and $9 = 3^2$, so $(3^3)^y = 3^2$, giving $3^{3y} = 3^2$.",
+          "Set the exponents equal: $3y = 2$.",
+          "Solve: $y = \\frac{2}{3}$."
+        ],
+        "answer": "$\\frac{2}{3}$"
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "For $y = \\log_3(x + 2) - 4$, state the vertical asymptote, the domain, and the range.",
+      "answer": "Asymptote $x = -2$; domain $x > -2$; range all real numbers.",
+      "solution": {
+        "steps": [
+          "The argument must be positive: $x + 2 > 0$, so $x > -2$. This is the domain.",
+          "The vertical asymptote occurs where the argument is $0$: $x + 2 = 0$, so $x = -2$.",
+          "The vertical shift $-4$ does not move the vertical asymptote.",
+          "A logarithm produces every real output, so the range is all real numbers."
+        ],
+        "answer": "Asymptote $x = -2$; domain $x > -2$; range all real numbers."
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Simplify $\\log_2\\left(\\frac{1}{8}\\right) + 4^{\\log_4 9}$.",
+      "answer": "$6$",
+      "solution": {
+        "steps": [
+          "Evaluate $\\log_2\\left(\\frac{1}{8}\\right)$: since $\\frac{1}{8} = 2^{-3}$, we get $\\log_2(2^{-3}) = -3$.",
+          "Use the inverse identity $b^{\\log_b x} = x$: $4^{\\log_4 9} = 9$.",
+          "Add: $-3 + 9 = 6$."
+        ],
+        "answer": "$6$"
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Describe the two transformations of $y = 2\\log_5(x - 1)$ from $y = \\log_5 x$, and state the domain and vertical asymptote.",
+      "answer": "Vertical stretch by $2$ and shift right $1$; domain $x > 1$; asymptote $x = 1$.",
+      "solution": {
+        "steps": [
+          "The coefficient $a = 2$ produces a vertical stretch by a factor of $2$.",
+          "The $(x - 1)$ shifts the graph right $1$ unit.",
+          "The argument must be positive: $x - 1 > 0$, so $x > 1$ (domain) and the asymptote is at $x - 1 = 0$, i.e. $x = 1$.",
+          "A vertical stretch does not change the domain or asymptote."
+        ],
+        "answer": "Vertical stretch by $2$ and shift right $1$; domain $x > 1$; asymptote $x = 1$."
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Express $\\log_4 11$ using natural logarithms, then approximate to three decimal places.",
+      "answer": "$\\log_4 11 = \\frac{\\ln 11}{\\ln 4} \\approx 1.730$",
+      "solution": {
+        "steps": [
+          "Apply change of base: $\\log_4 11 = \\frac{\\ln 11}{\\ln 4}$.",
+          "Approximate: $\\ln 11 \\approx 2.3979$ and $\\ln 4 \\approx 1.3863$.",
+          "Divide: $\\frac{2.3979}{1.3863} \\approx 1.730$."
+        ],
+        "answer": "$\\log_4 11 = \\frac{\\ln 11}{\\ln 4} \\approx 1.730$"
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Evaluate $\\log_9 \\frac{1}{27}$ exactly without a calculator.",
+      "answer": "$-\\frac{3}{2}$",
+      "solution": {
+        "steps": [
+          "Let $\\log_9 \\frac{1}{27} = y$, which means $9^y = \\frac{1}{27}$.",
+          "Write both sides as powers of $3$: $9 = 3^2$ and $\\frac{1}{27} = 3^{-3}$, so $(3^2)^y = 3^{-3}$, giving $3^{2y} = 3^{-3}$.",
+          "Set the exponents equal: $2y = -3$.",
+          "Solve: $y = -\\frac{3}{2}$."
+        ],
+        "answer": "$-\\frac{3}{2}$"
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "For $y = -3\\log_2(x - 5)$, identify the reflection and stretch, and state the domain, range, and vertical asymptote.",
+      "answer": "Reflected across the $x$-axis with vertical stretch by $3$; domain $x > 5$; range all real numbers; asymptote $x = 5$.",
+      "solution": {
+        "steps": [
+          "The coefficient $a = -3$ has magnitude $3$ (vertical stretch by $3$) and a negative sign (reflection across the $x$-axis).",
+          "The $(x - 5)$ requires $x - 5 > 0$, so the domain is $x > 5$ and the asymptote is $x = 5$.",
+          "A stretch and reflection do not limit the outputs, so the range is all real numbers."
+        ],
+        "answer": "Reflected across the $x$-axis with vertical stretch by $3$; domain $x > 5$; range all real numbers; asymptote $x = 5$."
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Rewrite $\\log_6 5 + \\log_6 7$ as a single base-$6$ logarithm, then express that result using natural logarithms.",
+      "answer": "$\\log_6 35 = \\frac{\\ln 35}{\\ln 6}$",
+      "solution": {
+        "steps": [
+          "Use the product rule $\\log_b m + \\log_b n = \\log_b(mn)$: $\\log_6 5 + \\log_6 7 = \\log_6(5 \\cdot 7) = \\log_6 35$.",
+          "Apply change of base to $\\log_6 35$: $\\log_6 35 = \\frac{\\ln 35}{\\ln 6}$."
+        ],
+        "answer": "$\\log_6 35 = \\frac{\\ln 35}{\\ln 6}$"
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "For $y = \\log_{10}(x) - 2$, state the domain, range, and vertical asymptote, and explain why the vertical shift does not move the asymptote.",
+      "answer": "Domain $x > 0$; range all real numbers; asymptote $x = 0$. A vertical shift moves points up or down but leaves the vertical asymptote in place.",
+      "solution": {
+        "steps": [
+          "The argument is just $x$, so $x > 0$ gives the domain $x > 0$ and the asymptote at $x = 0$.",
+          "The $-2$ is a vertical shift; it moves every point down $2$ units but does not change which $x$-value the curve approaches without reaching.",
+          "Because the asymptote is a vertical line $x = 0$, only horizontal shifts (changes inside the argument) move it.",
+          "The range of any logarithmic function is all real numbers."
+        ],
+        "answer": "Domain $x > 0$; range all real numbers; asymptote $x = 0$. The vertical shift does not move the vertical asymptote."
+      }
+    }
+  ]
+}

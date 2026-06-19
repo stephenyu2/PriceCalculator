@@ -1,0 +1,127 @@
+{
+  "standard": "PC.TRIG.B.5",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Graphs and identities",
+  "clusterCode": "B",
+  "skillName": "Inverse Trig Functions",
+
+  "description": "Students define the inverse trigonometric functions $\\arcsin$, $\\arccos$, and $\\arctan$ by restricting the domains of $\\sin$, $\\cos$, and $\\tan$ so each becomes one-to-one. They state the correct range of each inverse function, graph each inverse, evaluate exact values from the unit circle and approximate values with a calculator, and simplify compositions such as $\\sin^{-1}(\\sin x)$, $\\cos(\\arcsin x)$, and $\\tan(\\arccos x)$ by accounting for the restricted range.",
+
+  "subSkills": [
+    "State the restricted domain of $\\sin$, $\\cos$, $\\tan$ that makes each invertible and give the resulting range of $\\arcsin$, $\\arccos$, $\\arctan$",
+    "Evaluate exact values of $\\arcsin$, $\\arccos$, $\\arctan$ at standard unit-circle inputs, returning an angle in the correct range",
+    "Approximate inverse trig values with a calculator and interpret the angle (degrees vs radians)",
+    "Graph $y=\\arcsin x$, $y=\\arccos x$, $y=\\arctan x$, identifying domain, range, intercepts, and asymptotes",
+    "Simplify direct compositions like $\\sin(\\arcsin x)$ and recognize the domain on which they equal $x$",
+    "Simplify inverse-then-direct compositions like $\\arcsin(\\sin x)$, returning the co-terminal/reference angle inside the restricted range",
+    "Simplify mixed compositions like $\\cos(\\arcsin x)$ and $\\tan(\\arccos x)$ into algebraic expressions using a reference right triangle or Pythagorean identity"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Domain restriction and range identification",
+      "example": "On what interval is $\\cos x$ restricted to define $\\arccos x$, and what is the range of $y=\\arccos x$? Answer: domain restricted to $[0,\\pi]$, so the range of $\\arccos$ is $[0,\\pi]$."
+    },
+    {
+      "name": "Exact value of a single inverse function",
+      "example": "Evaluate $\\arcsin\\left(-\\frac{1}{2}\\right)$. Answer: $-\\frac{\\pi}{6}$ (must lie in $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$, not $\\frac{7\\pi}{6}$)."
+    },
+    {
+      "name": "Approximate value with a calculator",
+      "example": "Approximate $\\arctan(2.5)$ in radians to three decimal places. Answer: $\\approx 1.190$."
+    },
+    {
+      "name": "Graphing an inverse function",
+      "example": "Sketch $y=\\arctan x$. State the horizontal asymptotes. Answer: passes through $(0,0)$, increasing, with horizontal asymptotes $y=\\frac{\\pi}{2}$ and $y=-\\frac{\\pi}{2}$."
+    },
+    {
+      "name": "Direct composition (function of its inverse)",
+      "example": "Simplify $\\sin\\left(\\arcsin\\left(\\frac{3}{5}\\right)\\right)$. Answer: $\\frac{3}{5}$ (valid since $\\frac{3}{5}\\in[-1,1]$)."
+    },
+    {
+      "name": "Inverse-then-direct composition requiring range adjustment",
+      "example": "Simplify $\\arcsin\\left(\\sin\\left(\\frac{2\\pi}{3}\\right)\\right)$. Answer: $\\frac{\\pi}{3}$ (the angle in $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$ with the same sine, not $\\frac{2\\pi}{3}$)."
+    },
+    {
+      "name": "Mixed composition simplified to an algebraic expression",
+      "example": "Write $\\cos\\left(\\arcsin x\\right)$ as an algebraic expression in $x$ for $x\\in[-1,1]$. Answer: $\\sqrt{1-x^2}$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recall or one exact evaluation with a positive standard input, or a direct composition that simplifies immediately. No range adjustment needed.",
+      "constraints": [
+        "Evaluate one inverse function at a standard positive value, e.g. $\\arccos\\left(\\frac{\\sqrt{3}}{2}\\right)=\\frac{\\pi}{6}$",
+        "Direct compositions where the input is already in range, e.g. $\\sin(\\arcsin(0.4))=0.4$",
+        "State a domain/range fact for one inverse function",
+        "Answer is a single standard angle ($0,\\frac{\\pi}{6},\\frac{\\pi}{4},\\frac{\\pi}{3},\\frac{\\pi}{2}$) or the input value itself"
+      ]
+    },
+    "Medium": {
+      "description": "Evaluation with a negative input requiring correct quadrant/sign placement in the restricted range, calculator approximation, or graph reading. Two reasoning steps.",
+      "constraints": [
+        "Negative inputs that force attention to the range, e.g. $\\arccos\\left(-\\frac{1}{2}\\right)=\\frac{2\\pi}{3}$ and $\\arctan(-1)=-\\frac{\\pi}{4}$",
+        "Calculator approximations with correct radian/degree interpretation",
+        "Identify range, intercepts, or asymptotes from a graph of an inverse function",
+        "Distinguish that $\\arcsin$ and $\\arctan$ use $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$ but $\\arccos$ uses $[0,\\pi]$"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step compositions requiring a reference triangle or Pythagorean identity, or inverse-then-direct compositions where the inner angle lies outside the range and must be folded back in.",
+      "constraints": [
+        "Mixed compositions producing algebraic expressions, e.g. $\\tan(\\arccos x)=\\frac{\\sqrt{1-x^2}}{x}$",
+        "Inverse-then-direct with an out-of-range inner angle, e.g. $\\arccos\\left(\\cos\\left(\\frac{4\\pi}{3}\\right)\\right)=\\frac{2\\pi}{3}$",
+        "Compositions with a specific numeric input solved via a right triangle, e.g. $\\sin\\left(\\arctan\\left(\\frac{3}{4}\\right)\\right)=\\frac{3}{5}$",
+        "Requires tracking sign across quadrants and the restricted range simultaneously"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student returns an out-of-range angle, ignoring the restricted range of the inverse function",
+      "distractor": "Gives $\\arcsin\\left(-\\frac{1}{2}\\right)=\\frac{7\\pi}{6}$ or $\\frac{11\\pi}{6}$ instead of $-\\frac{\\pi}{6}$, treating arcsine as multivalued"
+    },
+    {
+      "misconception": "Student uses the wrong range for $\\arccos$, applying the $\\arcsin$ range $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$ instead of $[0,\\pi]$",
+      "distractor": "Gives $\\arccos\\left(-\\frac{1}{2}\\right)=-\\frac{\\pi}{3}$ instead of $\\frac{2\\pi}{3}$"
+    },
+    {
+      "misconception": "Student assumes $\\arcsin(\\sin x)=x$ for every $x$, ignoring that it only holds on the restricted domain",
+      "distractor": "Gives $\\arcsin\\left(\\sin\\left(\\frac{2\\pi}{3}\\right)\\right)=\\frac{2\\pi}{3}$ instead of $\\frac{\\pi}{3}$"
+    },
+    {
+      "misconception": "Student treats the inverse function as a reciprocal, confusing $\\sin^{-1}x$ with $\\csc x=\\frac{1}{\\sin x}$",
+      "distractor": "Computes $\\sin^{-1}\\left(\\frac{1}{2}\\right)$ as $\\frac{1}{\\sin(1/2)}\\approx 2.09$ instead of $\\frac{\\pi}{6}$"
+    },
+    {
+      "misconception": "In a mixed composition, student drops the radical or mishandles the Pythagorean step",
+      "distractor": "Gives $\\cos(\\arcsin x)=1-x^2$ or $1-x$ instead of $\\sqrt{1-x^2}$"
+    },
+    {
+      "misconception": "Student keeps the wrong sign when the inverse-then-direct inner angle is in a lower quadrant",
+      "distractor": "Gives $\\arccos\\left(\\cos\\left(\\frac{4\\pi}{3}\\right)\\right)=\\frac{4\\pi}{3}$ or $-\\frac{2\\pi}{3}$ instead of $\\frac{2\\pi}{3}$"
+    },
+    {
+      "misconception": "Student confuses degree and radian mode, or reports a degree value when radians are requested",
+      "distractor": "Gives $\\arctan(1)=45$ instead of $\\frac{\\pi}{4}$ (or $0.785$) when radians are required"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

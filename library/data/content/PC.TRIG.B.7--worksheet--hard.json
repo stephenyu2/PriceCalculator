@@ -1,0 +1,241 @@
+{
+  "id": "PC.TRIG.B.7--worksheet--hard",
+  "standard": "PC.TRIG.B.7",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Graphs and identities",
+  "clusterCode": "B",
+  "skillName": "Trig Equations",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems require multiple steps: solving multiple-angle equations by generating inner-angle solutions before dividing, applying double-angle identities to reduce to one function, factoring, and trimming candidates to the stated interval. Give exact values and check each solution against the original equation and domain.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Solve $\\sin(2x) = \\frac{\\sqrt{3}}{2}$ for $x \\in [0, 2\\pi)$.",
+      "answer": "$x = \\frac{\\pi}{6},\\ \\frac{\\pi}{3},\\ \\frac{7\\pi}{6},\\ \\frac{4\\pi}{3}$",
+      "solution": {
+        "steps": [
+          "Let $u = 2x$. Since $x \\in [0, 2\\pi)$, we have $u \\in [0, 4\\pi)$.",
+          "Solve $\\sin u = \\frac{\\sqrt{3}}{2}$. The reference angle is $\\frac{\\pi}{3}$, and sine is positive in quadrants I and II, so $u = \\frac{\\pi}{3}$ or $u = \\frac{2\\pi}{3}$.",
+          "Add $2\\pi$ to capture all solutions in $[0, 4\\pi)$: $u = \\frac{\\pi}{3},\\ \\frac{2\\pi}{3},\\ \\frac{7\\pi}{3},\\ \\frac{8\\pi}{3}$.",
+          "Divide each by 2: $x = \\frac{\\pi}{6},\\ \\frac{\\pi}{3},\\ \\frac{7\\pi}{6},\\ \\frac{4\\pi}{3}$.",
+          "All four lie in $[0, 2\\pi)$, so they are the solutions."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Solve $\\cos(2\\theta) = \\frac{1}{2}$ for $\\theta \\in [0, 2\\pi)$.",
+      "answer": "$\\theta = \\frac{\\pi}{6},\\ \\frac{5\\pi}{6},\\ \\frac{7\\pi}{6},\\ \\frac{11\\pi}{6}$",
+      "solution": {
+        "steps": [
+          "Let $u = 2\\theta$, so $u \\in [0, 4\\pi)$.",
+          "Solve $\\cos u = \\frac{1}{2}$. The reference angle is $\\frac{\\pi}{3}$, and cosine is positive in quadrants I and IV: $u = \\frac{\\pi}{3}$ or $u = \\frac{5\\pi}{3}$.",
+          "Add $2\\pi$ for the second period: $u = \\frac{\\pi}{3},\\ \\frac{5\\pi}{3},\\ \\frac{7\\pi}{3},\\ \\frac{11\\pi}{3}$.",
+          "Divide each by 2: $\\theta = \\frac{\\pi}{6},\\ \\frac{5\\pi}{6},\\ \\frac{7\\pi}{6},\\ \\frac{11\\pi}{6}$.",
+          "All four are in $[0, 2\\pi)$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Solve $\\cos(2\\theta) = \\sin\\theta$ for $\\theta \\in [0, 2\\pi)$ using a double-angle identity.",
+      "answer": "$\\theta = \\frac{\\pi}{6},\\ \\frac{5\\pi}{6},\\ \\frac{3\\pi}{2}$",
+      "solution": {
+        "steps": [
+          "Use $\\cos(2\\theta) = 1 - 2\\sin^2\\theta$ to get $1 - 2\\sin^2\\theta = \\sin\\theta$.",
+          "Rearrange to $2\\sin^2\\theta + \\sin\\theta - 1 = 0$.",
+          "Factor: $(2\\sin\\theta - 1)(\\sin\\theta + 1) = 0$.",
+          "From $2\\sin\\theta - 1 = 0$: $\\sin\\theta = \\frac{1}{2}$, giving $\\theta = \\frac{\\pi}{6},\\ \\frac{5\\pi}{6}$.",
+          "From $\\sin\\theta + 1 = 0$: $\\sin\\theta = -1$, giving $\\theta = \\frac{3\\pi}{2}$.",
+          "All three lie in $[0, 2\\pi)$, so $\\theta = \\frac{\\pi}{6},\\ \\frac{5\\pi}{6},\\ \\frac{3\\pi}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Solve $\\sin(2x) = \\cos x$ for $x \\in [0, 2\\pi)$.",
+      "answer": "$x = \\frac{\\pi}{6},\\ \\frac{\\pi}{2},\\ \\frac{5\\pi}{6},\\ \\frac{3\\pi}{2}$",
+      "solution": {
+        "steps": [
+          "Use $\\sin(2x) = 2\\sin x\\cos x$: $2\\sin x\\cos x = \\cos x$.",
+          "Move all terms to one side: $2\\sin x\\cos x - \\cos x = 0$.",
+          "Factor out $\\cos x$: $\\cos x(2\\sin x - 1) = 0$. Do not divide by $\\cos x$, or you lose solutions.",
+          "From $\\cos x = 0$: $x = \\frac{\\pi}{2},\\ \\frac{3\\pi}{2}$.",
+          "From $2\\sin x - 1 = 0$: $\\sin x = \\frac{1}{2}$, giving $x = \\frac{\\pi}{6},\\ \\frac{5\\pi}{6}$.",
+          "Combining and ordering: $x = \\frac{\\pi}{6},\\ \\frac{\\pi}{2},\\ \\frac{5\\pi}{6},\\ \\frac{3\\pi}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Solve $\\cos(2x) = \\frac{\\sqrt{2}}{2}$ for $x \\in [0, 2\\pi)$.",
+      "answer": "$x = \\frac{\\pi}{8},\\ \\frac{7\\pi}{8},\\ \\frac{9\\pi}{8},\\ \\frac{15\\pi}{8}$",
+      "solution": {
+        "steps": [
+          "Let $u = 2x$, so $u \\in [0, 4\\pi)$.",
+          "Solve $\\cos u = \\frac{\\sqrt{2}}{2}$. The reference angle is $\\frac{\\pi}{4}$, cosine positive in quadrants I and IV: $u = \\frac{\\pi}{4}$ or $u = \\frac{7\\pi}{4}$.",
+          "Add $2\\pi$ for the second period: $u = \\frac{\\pi}{4},\\ \\frac{7\\pi}{4},\\ \\frac{9\\pi}{4},\\ \\frac{15\\pi}{4}$.",
+          "Divide each by 2: $x = \\frac{\\pi}{8},\\ \\frac{7\\pi}{8},\\ \\frac{9\\pi}{8},\\ \\frac{15\\pi}{8}$.",
+          "All four lie in $[0, 2\\pi)$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Solve $2\\cos^2\\theta + \\sin\\theta - 1 = 0$ for $\\theta \\in [0, 2\\pi)$ using a Pythagorean substitution.",
+      "answer": "$\\theta = \\frac{7\\pi}{6},\\ \\frac{11\\pi}{6},\\ \\frac{\\pi}{2}$",
+      "solution": {
+        "steps": [
+          "Replace $\\cos^2\\theta$ with $1 - \\sin^2\\theta$: $2(1 - \\sin^2\\theta) + \\sin\\theta - 1 = 0$.",
+          "Expand: $2 - 2\\sin^2\\theta + \\sin\\theta - 1 = 0$, so $-2\\sin^2\\theta + \\sin\\theta + 1 = 0$.",
+          "Multiply by $-1$: $2\\sin^2\\theta - \\sin\\theta - 1 = 0$.",
+          "Factor: $(2\\sin\\theta + 1)(\\sin\\theta - 1) = 0$.",
+          "From $2\\sin\\theta + 1 = 0$: $\\sin\\theta = -\\frac{1}{2}$, giving $\\theta = \\frac{7\\pi}{6},\\ \\frac{11\\pi}{6}$.",
+          "From $\\sin\\theta - 1 = 0$: $\\sin\\theta = 1$, giving $\\theta = \\frac{\\pi}{2}$.",
+          "So $\\theta = \\frac{\\pi}{2},\\ \\frac{7\\pi}{6},\\ \\frac{11\\pi}{6}$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Solve $\\tan(2x) = 1$ for $x \\in [0, 2\\pi)$.",
+      "answer": "$x = \\frac{\\pi}{8},\\ \\frac{5\\pi}{8},\\ \\frac{9\\pi}{8},\\ \\frac{13\\pi}{8}$",
+      "solution": {
+        "steps": [
+          "Let $u = 2x$, so $u \\in [0, 4\\pi)$.",
+          "Solve $\\tan u = 1$. Tangent has period $\\pi$, with base solution $u = \\frac{\\pi}{4}$, so $u = \\frac{\\pi}{4} + \\pi n$.",
+          "List values in $[0, 4\\pi)$: $u = \\frac{\\pi}{4},\\ \\frac{5\\pi}{4},\\ \\frac{9\\pi}{4},\\ \\frac{13\\pi}{4}$.",
+          "Divide each by 2: $x = \\frac{\\pi}{8},\\ \\frac{5\\pi}{8},\\ \\frac{9\\pi}{8},\\ \\frac{13\\pi}{8}$.",
+          "All four lie in $[0, 2\\pi)$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Solve $\\cos(2\\theta) + \\cos\\theta + 1 = 0$ for $\\theta \\in [0, 2\\pi)$.",
+      "answer": "$\\theta = \\frac{\\pi}{2},\\ \\frac{3\\pi}{2},\\ \\frac{2\\pi}{3},\\ \\frac{4\\pi}{3}$",
+      "solution": {
+        "steps": [
+          "Use $\\cos(2\\theta) = 2\\cos^2\\theta - 1$: $2\\cos^2\\theta - 1 + \\cos\\theta + 1 = 0$.",
+          "Simplify: $2\\cos^2\\theta + \\cos\\theta = 0$.",
+          "Factor out $\\cos\\theta$: $\\cos\\theta(2\\cos\\theta + 1) = 0$.",
+          "From $\\cos\\theta = 0$: $\\theta = \\frac{\\pi}{2},\\ \\frac{3\\pi}{2}$.",
+          "From $2\\cos\\theta + 1 = 0$: $\\cos\\theta = -\\frac{1}{2}$, giving $\\theta = \\frac{2\\pi}{3},\\ \\frac{4\\pi}{3}$.",
+          "So $\\theta = \\frac{\\pi}{2},\\ \\frac{2\\pi}{3},\\ \\frac{4\\pi}{3},\\ \\frac{3\\pi}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Solve $\\sin(2x) = \\sin x$ for $x \\in [0, 2\\pi)$.",
+      "answer": "$x = 0,\\ \\pi,\\ \\frac{\\pi}{3},\\ \\frac{5\\pi}{3}$",
+      "solution": {
+        "steps": [
+          "Use $\\sin(2x) = 2\\sin x\\cos x$: $2\\sin x\\cos x = \\sin x$.",
+          "Move all to one side: $2\\sin x\\cos x - \\sin x = 0$.",
+          "Factor out $\\sin x$: $\\sin x(2\\cos x - 1) = 0$. Do not divide by $\\sin x$, or you lose its zeros.",
+          "From $\\sin x = 0$: $x = 0,\\ \\pi$.",
+          "From $2\\cos x - 1 = 0$: $\\cos x = \\frac{1}{2}$, giving $x = \\frac{\\pi}{3},\\ \\frac{5\\pi}{3}$.",
+          "So $x = 0,\\ \\frac{\\pi}{3},\\ \\pi,\\ \\frac{5\\pi}{3}$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Solve $\\cos(3x) = -1$ for $x \\in [0, 2\\pi)$.",
+      "answer": "$x = \\frac{\\pi}{3},\\ \\pi,\\ \\frac{5\\pi}{3}$",
+      "solution": {
+        "steps": [
+          "Let $u = 3x$. Since $x \\in [0, 2\\pi)$, $u \\in [0, 6\\pi)$.",
+          "Solve $\\cos u = -1$. This occurs at $u = \\pi + 2\\pi n$.",
+          "List values in $[0, 6\\pi)$: $u = \\pi,\\ 3\\pi,\\ 5\\pi$.",
+          "Divide each by 3: $x = \\frac{\\pi}{3},\\ \\pi,\\ \\frac{5\\pi}{3}$.",
+          "All three lie in $[0, 2\\pi)$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Solve $2\\sin^2\\theta = \\sin(2\\theta)$ for $\\theta \\in [0, 2\\pi)$.",
+      "answer": "$\\theta = 0,\\ \\pi,\\ \\frac{\\pi}{4},\\ \\frac{5\\pi}{4}$",
+      "solution": {
+        "steps": [
+          "Use $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$: $2\\sin^2\\theta = 2\\sin\\theta\\cos\\theta$.",
+          "Bring to one side: $2\\sin^2\\theta - 2\\sin\\theta\\cos\\theta = 0$.",
+          "Factor out $2\\sin\\theta$: $2\\sin\\theta(\\sin\\theta - \\cos\\theta) = 0$.",
+          "From $\\sin\\theta = 0$: $\\theta = 0,\\ \\pi$.",
+          "From $\\sin\\theta - \\cos\\theta = 0$: $\\tan\\theta = 1$, giving $\\theta = \\frac{\\pi}{4},\\ \\frac{5\\pi}{4}$.",
+          "So $\\theta = 0,\\ \\frac{\\pi}{4},\\ \\pi,\\ \\frac{5\\pi}{4}$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Solve $\\cos(2x) = \\cos x$ for $x \\in [0, 2\\pi)$.",
+      "answer": "$x = 0,\\ \\frac{2\\pi}{3},\\ \\frac{4\\pi}{3}$",
+      "solution": {
+        "steps": [
+          "Use $\\cos(2x) = 2\\cos^2 x - 1$: $2\\cos^2 x - 1 = \\cos x$.",
+          "Rearrange: $2\\cos^2 x - \\cos x - 1 = 0$.",
+          "Factor: $(2\\cos x + 1)(\\cos x - 1) = 0$.",
+          "From $2\\cos x + 1 = 0$: $\\cos x = -\\frac{1}{2}$, giving $x = \\frac{2\\pi}{3},\\ \\frac{4\\pi}{3}$.",
+          "From $\\cos x - 1 = 0$: $\\cos x = 1$, giving $x = 0$.",
+          "So $x = 0,\\ \\frac{2\\pi}{3},\\ \\frac{4\\pi}{3}$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Solve $\\sin(2x) = -\\frac{1}{2}$ for $x \\in [0, 2\\pi)$.",
+      "answer": "$x = \\frac{7\\pi}{12},\\ \\frac{11\\pi}{12},\\ \\frac{19\\pi}{12},\\ \\frac{23\\pi}{12}$",
+      "solution": {
+        "steps": [
+          "Let $u = 2x$, so $u \\in [0, 4\\pi)$.",
+          "Solve $\\sin u = -\\frac{1}{2}$. The reference angle is $\\frac{\\pi}{6}$, sine negative in quadrants III and IV: $u = \\frac{7\\pi}{6}$ or $u = \\frac{11\\pi}{6}$.",
+          "Add $2\\pi$ for the second period: $u = \\frac{7\\pi}{6},\\ \\frac{11\\pi}{6},\\ \\frac{19\\pi}{6},\\ \\frac{23\\pi}{6}$.",
+          "Divide each by 2: $x = \\frac{7\\pi}{12},\\ \\frac{11\\pi}{12},\\ \\frac{19\\pi}{12},\\ \\frac{23\\pi}{12}$.",
+          "All four lie in $[0, 2\\pi)$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Solve $\\cos(2\\theta) = 3\\cos\\theta - 1$ for $\\theta \\in [0, 2\\pi)$.",
+      "answer": "$\\theta = \\frac{\\pi}{2},\\ \\frac{3\\pi}{2}$",
+      "solution": {
+        "steps": [
+          "Use $\\cos(2\\theta) = 2\\cos^2\\theta - 1$: $2\\cos^2\\theta - 1 = 3\\cos\\theta - 1$.",
+          "Simplify: $2\\cos^2\\theta - 3\\cos\\theta = 0$.",
+          "Factor out $\\cos\\theta$: $\\cos\\theta(2\\cos\\theta - 3) = 0$.",
+          "From $2\\cos\\theta - 3 = 0$: $\\cos\\theta = \\frac{3}{2}$, which has no solution since $|\\cos\\theta| \\le 1$. Reject this branch.",
+          "From $\\cos\\theta = 0$: $\\theta = \\frac{\\pi}{2},\\ \\frac{3\\pi}{2}$.",
+          "Check: at $\\theta = \\frac{\\pi}{2}$, $\\cos(2\\theta) = \\cos\\pi = -1$ and $3\\cos\\theta - 1 = -1$, so it holds. The same check works at $\\theta = \\frac{3\\pi}{2}$.",
+          "So $\\theta = \\frac{\\pi}{2},\\ \\frac{3\\pi}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Solve $4\\sin^2 x - 3 = 0$ for $x \\in [0, 2\\pi)$, then confirm the count of solutions by considering where the curve $y = 4\\sin^2 x - 3$ crosses the $x$-axis on this interval.",
+      "answer": "$x = \\frac{\\pi}{3},\\ \\frac{2\\pi}{3},\\ \\frac{4\\pi}{3},\\ \\frac{5\\pi}{3}$ (four crossings)",
+      "solution": {
+        "steps": [
+          "Isolate $\\sin^2 x$: $4\\sin^2 x = 3$, so $\\sin^2 x = \\frac{3}{4}$.",
+          "Take square roots: $\\sin x = \\pm\\frac{\\sqrt{3}}{2}$.",
+          "From $\\sin x = \\frac{\\sqrt{3}}{2}$: $x = \\frac{\\pi}{3},\\ \\frac{2\\pi}{3}$.",
+          "From $\\sin x = -\\frac{\\sqrt{3}}{2}$: $x = \\frac{4\\pi}{3},\\ \\frac{5\\pi}{3}$.",
+          "Graphically, $y = 4\\sin^2 x - 3$ crosses the $x$-axis exactly where $\\sin^2 x = \\frac{3}{4}$, which is four points on $[0, 2\\pi)$, matching the algebra.",
+          "So $x = \\frac{\\pi}{3},\\ \\frac{2\\pi}{3},\\ \\frac{4\\pi}{3},\\ \\frac{5\\pi}{3}$."
+        ]
+      }
+    }
+  ]
+}

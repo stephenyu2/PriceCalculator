@@ -1,0 +1,168 @@
+{
+  "id": "PC.SEQ.A.1--lesson",
+  "standard": "PC.SEQ.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Sequences, Series, and Limits",
+  "domainCode": "SEQ",
+  "cluster": "Sequences and series",
+  "clusterCode": "A",
+  "skillName": "Arithmetic Sequences and Series",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "A sequence is arithmetic when each term is obtained from the previous one by adding a fixed number, the common difference $d$. You can test this by checking that $a_{n+1} - a_n$ is the same for every pair of consecutive terms. Once you know the first term $a_1$ and $d$, the explicit formula $a_n = a_1 + (n-1)d$ gives any term directly, and the partial-sum formulas $S_n = \\frac{n}{2}(a_1 + a_n) = \\frac{n}{2}\\bigl(2a_1 + (n-1)d\\bigr)$ give the sum of the first $n$ terms. These tools let you model and solve savings plans, stacked rows of seats, and many other accumulating quantities.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Determine whether the sequence $3,\\ 7,\\ 11,\\ 15,\\ \\dots$ is arithmetic. If it is, state the common difference $d$.",
+      "solution": {
+        "steps": [
+          "A sequence is arithmetic when the difference between every pair of consecutive terms is the same constant $d$.",
+          "Compute consecutive differences: $7 - 3 = 4$, $11 - 7 = 4$, $15 - 11 = 4$.",
+          "Every difference equals $4$, so the sequence is arithmetic with $d = 4$.",
+          "Note this is addition, not multiplication: each term is the previous term plus $4$, not times a ratio."
+        ],
+        "answer": "Yes, it is arithmetic with common difference $d = 4$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "An arithmetic sequence has first term $a_1 = 5$ and common difference $d = 3$. Find the $20$th term, $a_{20}$.",
+      "solution": {
+        "steps": [
+          "Use the explicit formula $a_n = a_1 + (n-1)d$.",
+          "Substitute $a_1 = 5$, $d = 3$, and $n = 20$: $a_{20} = 5 + (20 - 1)\\cdot 3$.",
+          "Simplify the index step: $20 - 1 = 19$, so $a_{20} = 5 + 19\\cdot 3$.",
+          "Multiply and add: $19\\cdot 3 = 57$, so $a_{20} = 5 + 57 = 62$.",
+          "The exponent on the steps is $n - 1 = 19$, not $n = 20$; using $20$ would wrongly give $65$."
+        ],
+        "answer": "$a_{20} = 62$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Write an explicit formula for the $n$th term of the arithmetic sequence $2,\\ 9,\\ 16,\\ 23,\\ \\dots$, then simplify it into the form $a_n = mn + b$.",
+      "solution": {
+        "steps": [
+          "Identify the first term: $a_1 = 2$.",
+          "Find the common difference: $9 - 2 = 7$, and $16 - 9 = 7$, so $d = 7$.",
+          "Substitute into $a_n = a_1 + (n-1)d$: $a_n = 2 + (n-1)\\cdot 7$.",
+          "Distribute: $a_n = 2 + 7n - 7$.",
+          "Combine constants: $a_n = 7n - 5$.",
+          "Check with $n = 4$: $7(4) - 5 = 28 - 5 = 23$, which matches the fourth term."
+        ],
+        "answer": "$a_n = 2 + (n-1)\\cdot 7 = 7n - 5$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "In an arithmetic sequence, $a_4 = 14$ and $a_9 = 34$. Find the common difference $d$ and the first term $a_1$.",
+      "solution": {
+        "steps": [
+          "Between $a_4$ and $a_9$ there are $9 - 4 = 5$ steps, each adding $d$, so $a_9 = a_4 + 5d$.",
+          "Substitute the known values: $34 = 14 + 5d$.",
+          "Solve for $d$: $5d = 34 - 14 = 20$, so $d = \\frac{20}{5} = 4$.",
+          "Divide by the index gap $5$, not just by $1$; $34 - 14 = 20$ is the total change over $5$ steps, not the common difference.",
+          "Find $a_1$ using $a_4 = a_1 + 3d$: $14 = a_1 + 3\\cdot 4 = a_1 + 12$, so $a_1 = 2$."
+        ],
+        "answer": "$d = 4$ and $a_1 = 2$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Find the sum of the first $30$ terms of the arithmetic sequence $4,\\ 7,\\ 10,\\ \\dots$.",
+      "solution": {
+        "steps": [
+          "Identify $a_1 = 4$ and $d = 7 - 4 = 3$.",
+          "First find the last term $a_{30}$ using $a_n = a_1 + (n-1)d$: $a_{30} = 4 + (30 - 1)\\cdot 3 = 4 + 29\\cdot 3 = 4 + 87 = 91$.",
+          "Apply the partial-sum formula $S_n = \\frac{n}{2}(a_1 + a_n)$ with $n = 30$, $a_1 = 4$, $a_{30} = 91$.",
+          "Substitute: $S_{30} = \\frac{30}{2}(4 + 91) = 15\\cdot 95$.",
+          "Multiply: $15\\cdot 95 = 1425$.",
+          "Keep the factor $\\frac{n}{2} = 15$; the average of the ends $\\frac{4+91}{2}$ alone is not the sum."
+        ],
+        "answer": "$S_{30} = 1425$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Determine whether $20,\\ 16,\\ 12,\\ 8,\\ \\dots$ is arithmetic. If it is, state the common difference $d$.",
+      "hint": "Subtract each term from the one after it: $a_{n+1} - a_n$. A negative constant difference is still arithmetic.",
+      "solution": {
+        "steps": [
+          "Compute consecutive differences: $16 - 20 = -4$, $12 - 16 = -4$, $8 - 12 = -4$.",
+          "Every difference equals $-4$, so the sequence is arithmetic with $d = -4$.",
+          "The terms decrease, which is fine; the common difference is simply negative."
+        ],
+        "answer": "Yes, it is arithmetic with $d = -4$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "An arithmetic sequence has $a_1 = 7$ and $d = 5$. Find the $12$th term, $a_{12}$.",
+      "hint": "Use $a_n = a_1 + (n-1)d$, and remember the number of steps from term $1$ to term $12$ is $12 - 1 = 11$.",
+      "solution": {
+        "steps": [
+          "Apply $a_n = a_1 + (n-1)d$ with $a_1 = 7$, $d = 5$, $n = 12$.",
+          "Substitute: $a_{12} = 7 + (12 - 1)\\cdot 5 = 7 + 11\\cdot 5$.",
+          "Multiply and add: $11\\cdot 5 = 55$, so $a_{12} = 7 + 55 = 62$."
+        ],
+        "answer": "$a_{12} = 62$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Evaluate the finite arithmetic series $\\sum_{k=1}^{12}(3k + 2)$.",
+      "hint": "Find the first term (at $k=1$) and the last term (at $k=12$), then use $S_n = \\frac{n}{2}(a_1 + a_n)$ with $n = 12$.",
+      "solution": {
+        "steps": [
+          "Evaluate the expression at the bounds, not the bounds themselves. First term at $k = 1$: $3(1) + 2 = 5$.",
+          "Last term at $k = 12$: $3(12) + 2 = 38$.",
+          "There are $12$ terms, so use $S_{12} = \\frac{12}{2}(a_1 + a_{12}) = 6(5 + 38)$.",
+          "Compute: $6\\cdot 43 = 258$."
+        ],
+        "answer": "$258$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "In an arithmetic sequence, $a_3 = 11$ and $a_7 = 27$. Find the common difference $d$ and the first term $a_1$.",
+      "hint": "From $a_3$ to $a_7$ is $7 - 3 = 4$ steps, so $a_7 = a_3 + 4d$. Solve for $d$ first, then back out $a_1$.",
+      "solution": {
+        "steps": [
+          "There are $7 - 3 = 4$ steps from $a_3$ to $a_7$, so $a_7 = a_3 + 4d$.",
+          "Substitute: $27 = 11 + 4d$, giving $4d = 16$ and $d = \\frac{16}{4} = 4$.",
+          "Find $a_1$ using $a_3 = a_1 + 2d$: $11 = a_1 + 2\\cdot 4 = a_1 + 8$, so $a_1 = 3$."
+        ],
+        "answer": "$d = 4$ and $a_1 = 3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A theater has $18$ seats in the first row, and each successive row has $2$ more seats than the row before it. How many seats are in the $15$th row, and how many seats are there in the first $15$ rows in total?",
+      "hint": "Model the rows as arithmetic with $a_1 = 18$ and $d = 2$. Find $a_{15}$ first, then use $S_{15} = \\frac{15}{2}(a_1 + a_{15})$.",
+      "solution": {
+        "steps": [
+          "Model the seats per row as arithmetic with $a_1 = 18$ and $d = 2$.",
+          "Find the $15$th row: $a_{15} = 18 + (15 - 1)\\cdot 2 = 18 + 14\\cdot 2 = 18 + 28 = 46$ seats.",
+          "Find the total over $15$ rows with $S_n = \\frac{n}{2}(a_1 + a_n)$: $S_{15} = \\frac{15}{2}(18 + 46)$.",
+          "Compute: $\\frac{15}{2}\\cdot 64 = 15\\cdot 32 = 480$ seats."
+        ],
+        "answer": "The $15$th row has $46$ seats, and the first $15$ rows have $480$ seats in total."
+      }
+    }
+  ]
+}

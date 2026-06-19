@@ -1,0 +1,265 @@
+{
+  "id": "PC.CONIC.A.2--worksheet--hard",
+  "standard": "PC.CONIC.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Analytic Geometry",
+  "domainCode": "CONIC",
+  "cluster": "Conic sections",
+  "clusterCode": "A",
+  "skillName": "Ellipses",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems push beyond reading off features. You will complete the square in both variables (often factoring out leading coefficients first), convert general-form equations to standard form, derive standard form from the focal definition, and combine eccentricity with given data. Keep exact values: simplify radicals, do not round.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Rewrite $9x^2+4y^2-18x+16y-11=0$ in standard form and state the center.",
+      "answer": "$\\frac{(x-1)^2}{4}+\\frac{(y+2)^2}{9}=1$, center $(1,-2)$",
+      "solution": {
+        "steps": [
+          "Group by variable: $(9x^2-18x)+(4y^2+16y)=11$.",
+          "Factor leading coefficients: $9(x^2-2x)+4(y^2+4y)=11$.",
+          "Complete the square inside each group. For $x$: half of $-2$ is $-1$, squared is $1$. For $y$: half of $4$ is $2$, squared is $4$.",
+          "Add the balancing constants times their factored coefficients to the right: $9(x^2-2x+1)+4(y^2+4y+4)=11+9(1)+4(4)=11+9+16=36$.",
+          "Write as squares: $9(x-1)^2+4(y+2)^2=36$.",
+          "Divide every term by $36$: $\\frac{9(x-1)^2}{36}+\\frac{4(y+2)^2}{36}=1$, which gives $\\frac{(x-1)^2}{4}+\\frac{(y+2)^2}{9}=1$.",
+          "The center is $(1,-2)$."
+        ],
+        "answer": "$\\frac{(x-1)^2}{4}+\\frac{(y+2)^2}{9}=1$, center $(1,-2)$"
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Convert $4x^2+25y^2+24x-50y-39=0$ to standard form, then give the center, vertices, and foci.",
+      "answer": "$\\frac{(x+3)^2}{25}+\\frac{(y-1)^2}{4}=1$; center $(-3,1)$, vertices $(2,1)$ and $(-8,1)$, foci $(-3\\pm\\sqrt{21},1)$",
+      "solution": {
+        "steps": [
+          "Group: $(4x^2+24x)+(25y^2-50y)=39$.",
+          "Factor: $4(x^2+6x)+25(y^2-2y)=39$.",
+          "Complete the square: $x$ adds $9$, $y$ adds $1$. Balance the right side: $4(x^2+6x+9)+25(y^2-2y+1)=39+4(9)+25(1)=39+36+25=100$.",
+          "Write squares: $4(x+3)^2+25(y-1)^2=100$.",
+          "Divide by $100$: $\\frac{(x+3)^2}{25}+\\frac{(y-1)^2}{4}=1$.",
+          "Center $(-3,1)$. Since $25>4$, the major axis is horizontal with $a^2=25$ so $a=5$, and $b^2=4$ so $b=2$.",
+          "Vertices are $a=5$ left and right of center: $(-3+5,1)=(2,1)$ and $(-3-5,1)=(-8,1)$.",
+          "Find $c$: $c^2=a^2-b^2=25-4=21$, so $c=\\sqrt{21}$. Foci lie on the horizontal major axis: $(-3\\pm\\sqrt{21},1)$."
+        ],
+        "answer": "$\\frac{(x+3)^2}{25}+\\frac{(y-1)^2}{4}=1$; center $(-3,1)$, vertices $(2,1)$ and $(-8,1)$, foci $(-3\\pm\\sqrt{21},1)$"
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Rewrite $16x^2+9y^2+64x-54y+1=0$ in standard form and identify the orientation of the major axis.",
+      "answer": "$\\frac{(x+2)^2}{9}+\\frac{(y-3)^2}{16}=1$; major axis vertical",
+      "solution": {
+        "steps": [
+          "Group: $(16x^2+64x)+(9y^2-54y)=-1$.",
+          "Factor: $16(x^2+4x)+9(y^2-6y)=-1$.",
+          "Complete the square: $x$ adds $4$, $y$ adds $9$. Balance: $16(x^2+4x+4)+9(y^2-6y+9)=-1+16(4)+9(9)=-1+64+81=144$.",
+          "Write squares: $16(x+2)^2+9(y-3)^2=144$.",
+          "Divide by $144$: $\\frac{(x+2)^2}{9}+\\frac{(y-3)^2}{16}=1$.",
+          "The larger denominator $16$ sits under the $y$-term, so the major axis is vertical."
+        ],
+        "answer": "$\\frac{(x+2)^2}{9}+\\frac{(y-3)^2}{16}=1$; major axis vertical"
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "An ellipse has center $(0,0)$, a vertex at $(0,10)$, and eccentricity $e=\\frac{3}{5}$. Write its equation in standard form.",
+      "answer": "$\\frac{x^2}{64}+\\frac{y^2}{100}=1$",
+      "solution": {
+        "steps": [
+          "The vertex $(0,10)$ is on the $y$-axis, so the major axis is vertical with $a=10$ and $a^2=100$.",
+          "Use eccentricity $e=\\frac{c}{a}$: $\\frac{3}{5}=\\frac{c}{10}$, so $c=6$.",
+          "Find $b^2$: $b^2=a^2-c^2=100-36=64$.",
+          "For a vertical major axis, $a^2$ goes under $y^2$ and $b^2$ under $x^2$: $\\frac{x^2}{64}+\\frac{y^2}{100}=1$."
+        ],
+        "answer": "$\\frac{x^2}{64}+\\frac{y^2}{100}=1$"
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "An ellipse centered at the origin has a horizontal major axis, passes through $(0,4)$, and has eccentricity $e=\\frac{3}{5}$. Write its equation in standard form.",
+      "answer": "$\\frac{x^2}{25}+\\frac{y^2}{16}=1$",
+      "solution": {
+        "steps": [
+          "The point $(0,4)$ is a co-vertex on the minor (vertical) axis, so $b=4$ and $b^2=16$.",
+          "With $e=\\frac{c}{a}=\\frac{3}{5}$, write $c=\\frac{3}{5}a$.",
+          "Use $b^2=a^2-c^2$: $16=a^2-\\left(\\frac{3}{5}a\\right)^2=a^2-\\frac{9}{25}a^2=\\frac{16}{25}a^2$.",
+          "Solve: $a^2=16\\cdot\\frac{25}{16}=25$, so $a=5$.",
+          "Horizontal major axis puts $a^2=25$ under $x^2$: $\\frac{x^2}{25}+\\frac{y^2}{16}=1$."
+        ],
+        "answer": "$\\frac{x^2}{25}+\\frac{y^2}{16}=1$"
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Derive the standard-form equation of an ellipse from the focal definition $\\sqrt{(x-c)^2+y^2}+\\sqrt{(x+c)^2+y^2}=2a$ (foci at $(\\pm c,0)$), showing that the result is $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ with $b^2=a^2-c^2$.",
+      "answer": "$\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ with $b^2=a^2-c^2$",
+      "solution": {
+        "steps": [
+          "Isolate one radical: $\\sqrt{(x-c)^2+y^2}=2a-\\sqrt{(x+c)^2+y^2}$.",
+          "Square both sides: $(x-c)^2+y^2=4a^2-4a\\sqrt{(x+c)^2+y^2}+(x+c)^2+y^2$.",
+          "Expand $(x-c)^2$ and $(x+c)^2$ and cancel $x^2$, $y^2$, and $c^2$: $-2cx=4a^2-4a\\sqrt{(x+c)^2+y^2}+2cx$.",
+          "Isolate the radical: $4a\\sqrt{(x+c)^2+y^2}=4a^2+4cx$, so $a\\sqrt{(x+c)^2+y^2}=a^2+cx$.",
+          "Square again: $a^2\\left[(x+c)^2+y^2\\right]=a^4+2a^2cx+c^2x^2$.",
+          "Expand the left side: $a^2x^2+2a^2cx+a^2c^2+a^2y^2=a^4+2a^2cx+c^2x^2$. Cancel $2a^2cx$.",
+          "Collect terms: $a^2x^2-c^2x^2+a^2y^2=a^4-a^2c^2$, i.e. $(a^2-c^2)x^2+a^2y^2=a^2(a^2-c^2)$.",
+          "Let $b^2=a^2-c^2$: $b^2x^2+a^2y^2=a^2b^2$.",
+          "Divide both sides by $a^2b^2$: $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$, with $b^2=a^2-c^2$."
+        ],
+        "answer": "$\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ with $b^2=a^2-c^2$"
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "An ellipse has foci $(1,2)$ and $(1,-6)$ and a major axis of length $10$. Write its equation in standard form.",
+      "answer": "$\\frac{(x-1)^2}{9}+\\frac{(y+2)^2}{25}=1$",
+      "solution": {
+        "steps": [
+          "The center is the midpoint of the foci: $\\left(\\frac{1+1}{2},\\frac{2+(-6)}{2}\\right)=(1,-2)$.",
+          "The foci share the $x$-coordinate $1$, so the major axis is vertical.",
+          "Major axis length $2a=10$, so $a=5$ and $a^2=25$.",
+          "Distance from center to a focus: $c=|2-(-2)|=4$, so $c^2=16$.",
+          "Find $b^2=a^2-c^2=25-16=9$.",
+          "Vertical major axis: $a^2$ under the $y$-term. $\\frac{(x-1)^2}{9}+\\frac{(y+2)^2}{25}=1$."
+        ],
+        "answer": "$\\frac{(x-1)^2}{9}+\\frac{(y+2)^2}{25}=1$"
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Rewrite $25x^2+9y^2-100x+18y-116=0$ in standard form, then state the eccentricity $e$.",
+      "answer": "$\\frac{(x-2)^2}{9}+\\frac{(y+1)^2}{25}=1$; $e=\\frac{4}{5}$",
+      "solution": {
+        "steps": [
+          "Group: $(25x^2-100x)+(9y^2+18y)=116$.",
+          "Factor: $25(x^2-4x)+9(y^2+2y)=116$.",
+          "Complete the square: $x$ adds $4$, $y$ adds $1$. Balance: $25(x^2-4x+4)+9(y^2+2y+1)=116+25(4)+9(1)=116+100+9=225$.",
+          "Write squares: $25(x-2)^2+9(y+1)^2=225$.",
+          "Divide by $225$: $\\frac{(x-2)^2}{9}+\\frac{(y+1)^2}{25}=1$.",
+          "Larger denominator $25$ is under $y$, so $a^2=25$ ($a=5$), $b^2=9$.",
+          "Compute $c$: $c^2=a^2-b^2=25-9=16$, so $c=4$.",
+          "Eccentricity $e=\\frac{c}{a}=\\frac{4}{5}$."
+        ],
+        "answer": "$\\frac{(x-2)^2}{9}+\\frac{(y+1)^2}{25}=1$; $e=\\frac{4}{5}$"
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Convert $3x^2+2y^2-12x+12y+18=0$ to standard form and find the foci. (Leading coefficients are not perfect squares, so denominators will be non-integer.)",
+      "answer": "$\\frac{(x-2)^2}{4}+\\frac{(y+3)^2}{6}=1$; foci $(2,-3\\pm\\sqrt{2})$",
+      "solution": {
+        "steps": [
+          "Group: $(3x^2-12x)+(2y^2+12y)=-18$.",
+          "Factor: $3(x^2-4x)+2(y^2+6y)=-18$.",
+          "Complete the square: $x$ adds $4$, $y$ adds $9$. Balance: $3(x^2-4x+4)+2(y^2+6y+9)=-18+3(4)+2(9)=-18+12+18=12$.",
+          "Write squares: $3(x-2)^2+2(y+3)^2=12$.",
+          "Divide by $12$: $\\frac{(x-2)^2}{4}+\\frac{(y+3)^2}{6}=1$.",
+          "Center $(2,-3)$. Larger denominator $6$ is under $y$, so the major axis is vertical with $a^2=6$ and $b^2=4$.",
+          "Compute $c$: $c^2=a^2-b^2=6-4=2$, so $c=\\sqrt{2}$.",
+          "Foci on the vertical major axis: $(2,-3\\pm\\sqrt{2})$."
+        ],
+        "answer": "$\\frac{(x-2)^2}{4}+\\frac{(y+3)^2}{6}=1$; foci $(2,-3\\pm\\sqrt{2})$"
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "An ellipse has center $(4,-1)$, one focus at $(7,-1)$, and one co-vertex at $(4,1)$. Write its equation in standard form.",
+      "answer": "$\\frac{(x-4)^2}{13}+\\frac{(y+1)^2}{4}=1$",
+      "solution": {
+        "steps": [
+          "The focus $(7,-1)$ shares the $y$-coordinate of the center, so the major axis is horizontal and $c=|7-4|=3$.",
+          "The co-vertex $(4,1)$ is on the minor (vertical) axis, $b=|1-(-1)|=2$, so $b^2=4$.",
+          "Find $a^2$ using $c^2=a^2-b^2$: $9=a^2-4$, so $a^2=13$.",
+          "Horizontal major axis puts $a^2=13$ under the $x$-term: $\\frac{(x-4)^2}{13}+\\frac{(y+1)^2}{4}=1$."
+        ],
+        "answer": "$\\frac{(x-4)^2}{13}+\\frac{(y+1)^2}{4}=1$"
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Rewrite $x^2+9y^2-4x+54y+76=0$ in standard form and list the four endpoints of the axes (the two vertices and two co-vertices).",
+      "answer": "$\\frac{(x-2)^2}{9}+\\frac{(y+3)^2}{1}=1$; vertices $(5,-3)$ and $(-1,-3)$, co-vertices $(2,-2)$ and $(2,-4)$",
+      "solution": {
+        "steps": [
+          "Group: $(x^2-4x)+(9y^2+54y)=-76$.",
+          "Factor the $y$ group: $(x^2-4x)+9(y^2+6y)=-76$.",
+          "Complete the square: $x$ adds $4$, $y$ adds $9$. Balance: $(x^2-4x+4)+9(y^2+6y+9)=-76+4+9(9)=-76+4+81=9$.",
+          "Write squares: $(x-2)^2+9(y+3)^2=9$.",
+          "Divide by $9$: $\\frac{(x-2)^2}{9}+\\frac{(y+3)^2}{1}=1$.",
+          "Center $(2,-3)$. Larger denominator $9$ under $x$, so major axis horizontal with $a=3$; $b^2=1$ so $b=1$.",
+          "Vertices are $a=3$ left/right of center: $(5,-3)$ and $(-1,-3)$. Co-vertices are $b=1$ up/down: $(2,-2)$ and $(2,-4)$."
+        ],
+        "answer": "$\\frac{(x-2)^2}{9}+\\frac{(y+3)^2}{1}=1$; vertices $(5,-3)$ and $(-1,-3)$, co-vertices $(2,-2)$ and $(2,-4)$"
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "An ellipse centered at the origin has a vertical major axis, passes through the point $(3,0)$, and has a focus at $(0,4)$. Write its equation in standard form.",
+      "answer": "$\\frac{x^2}{9}+\\frac{y^2}{25}=1$",
+      "solution": {
+        "steps": [
+          "The point $(3,0)$ is on the $x$-axis, the minor axis, so $b=3$ and $b^2=9$.",
+          "The focus $(0,4)$ gives $c=4$, so $c^2=16$.",
+          "Find $a^2$ using $a^2=b^2+c^2$ (rearranged from $c^2=a^2-b^2$): $a^2=9+16=25$.",
+          "Vertical major axis places $a^2=25$ under $y^2$: $\\frac{x^2}{9}+\\frac{y^2}{25}=1$."
+        ],
+        "answer": "$\\frac{x^2}{9}+\\frac{y^2}{25}=1$"
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Rewrite $49x^2+4y^2+294x-8y+249=0$ in standard form and give the center and the length of the major axis.",
+      "answer": "$\\frac{(x+3)^2}{4}+\\frac{(y-1)^2}{49}=1$; center $(-3,1)$, major axis length $14$",
+      "solution": {
+        "steps": [
+          "Group: $(49x^2+294x)+(4y^2-8y)=-249$.",
+          "Factor: $49(x^2+6x)+4(y^2-2y)=-249$.",
+          "Complete the square: $x$ adds $9$, $y$ adds $1$. Balance the right side: $49(x^2+6x+9)+4(y^2-2y+1)=-249+49(9)+4(1)=-249+441+4=196$.",
+          "Write squares: $49(x+3)^2+4(y-1)^2=196$.",
+          "Divide every term by $196$: $\\frac{49(x+3)^2}{196}+\\frac{4(y-1)^2}{196}=1$, which gives $\\frac{(x+3)^2}{4}+\\frac{(y-1)^2}{49}=1$.",
+          "Center $(-3,1)$. Larger denominator $49$ under $y$, so $a^2=49$, $a=7$. Major axis length $2a=14$."
+        ],
+        "answer": "$\\frac{(x+3)^2}{4}+\\frac{(y-1)^2}{49}=1$; center $(-3,1)$, major axis length $14$"
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "An ellipse centered at the origin has eccentricity $e=\\frac{\\sqrt{5}}{3}$ and a major axis of length $6$ along the $x$-axis. Find its standard-form equation and the coordinates of its foci.",
+      "answer": "$\\frac{x^2}{9}+\\frac{y^2}{4}=1$; foci $(\\pm\\sqrt{5},0)$",
+      "solution": {
+        "steps": [
+          "Major axis length $2a=6$ along the $x$-axis, so $a=3$, $a^2=9$, and the major axis is horizontal.",
+          "Use $e=\\frac{c}{a}$: $\\frac{\\sqrt{5}}{3}=\\frac{c}{3}$, so $c=\\sqrt{5}$ and $c^2=5$.",
+          "Find $b^2=a^2-c^2=9-5=4$.",
+          "Horizontal major axis: $\\frac{x^2}{9}+\\frac{y^2}{4}=1$.",
+          "Foci lie $c=\\sqrt{5}$ from center along the $x$-axis: $(\\pm\\sqrt{5},0)$."
+        ],
+        "answer": "$\\frac{x^2}{9}+\\frac{y^2}{4}=1$; foci $(\\pm\\sqrt{5},0)$"
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Rewrite $4x^2+y^2+8x-6y+9=0$ in standard form and find the center, vertices, co-vertices, and foci.",
+      "answer": "$\\frac{(x+1)^2}{1}+\\frac{(y-3)^2}{4}=1$; center $(-1,3)$, vertices $(-1,5)$ and $(-1,1)$, co-vertices $(0,3)$ and $(-2,3)$, foci $(-1,3\\pm\\sqrt{3})$",
+      "solution": {
+        "steps": [
+          "Group: $(4x^2+8x)+(y^2-6y)=-9$.",
+          "Factor the $x$ group: $4(x^2+2x)+(y^2-6y)=-9$.",
+          "Complete the square: $x$ adds $1$, $y$ adds $9$. Balance: $4(x^2+2x+1)+(y^2-6y+9)=-9+4(1)+9=4$.",
+          "Write squares: $4(x+1)^2+(y-3)^2=4$.",
+          "Divide by $4$: $\\frac{(x+1)^2}{1}+\\frac{(y-3)^2}{4}=1$.",
+          "Center $(-1,3)$. Larger denominator $4$ under $y$, so the major axis is vertical with $a^2=4$ ($a=2$) and $b^2=1$ ($b=1$).",
+          "Vertices are $a=2$ up/down: $(-1,5)$ and $(-1,1)$. Co-vertices are $b=1$ left/right: $(0,3)$ and $(-2,3)$.",
+          "Find $c$: $c^2=a^2-b^2=4-1=3$, so $c=\\sqrt{3}$. Foci on the vertical major axis: $(-1,3\\pm\\sqrt{3})$."
+        ],
+        "answer": "$\\frac{(x+1)^2}{1}+\\frac{(y-3)^2}{4}=1$; center $(-1,3)$, vertices $(-1,5)$ and $(-1,1)$, co-vertices $(0,3)$ and $(-2,3)$, foci $(-1,3\\pm\\sqrt{3})$"
+      }
+    }
+  ]
+}

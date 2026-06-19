@@ -1,0 +1,230 @@
+{
+  "id": "PC.EXP.A.1--worksheet--hard",
+  "standard": "PC.EXP.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Exponential and Logarithmic Functions",
+  "domainCode": "EXP",
+  "cluster": "Properties and graphs",
+  "clusterCode": "A",
+  "skillName": "Exponential Functions",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems require building an exponential model from a verbal description, combining several transformations, or comparing two scenarios before computing. Translate percent rates, doubling, and half-life into the correct base or rate first, then reason carefully about asymptotes, end behavior, and interpretation.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A laptop purchased for $1800$ dollars loses $22\\%$ of its value each year. Write a function $V(t)$ for its value after $t$ years, then find its value after $4$ years (rounded to the nearest dollar).",
+      "answer": "$V(t)=1800(0.78)^{t}$, and $V(4)\\approx 666$ dollars",
+      "solution": {
+        "steps": [
+          "A $22\\%$ annual loss means each year the laptop keeps $100\\%-22\\%=78\\%$ of its value, so the decay factor is $0.78$.",
+          "Write the model with initial value $1800$: $V(t)=1800(0.78)^{t}$.",
+          "Evaluate at $t=4$: $V(4)=1800(0.78)^{4}$.",
+          "Compute $(0.78)^{4}=0.37015\\ldots$, so $V(4)=1800(0.37015\\ldots)\\approx 666.3$.",
+          "Rounded to the nearest dollar, $V(4)\\approx 666$ dollars."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A bacterial colony doubles every $3$ hours and starts with $400$ cells. Write a model $P(t)$ for the population after $t$ hours, then find the population after $12$ hours.",
+      "answer": "$P(t)=400\\cdot 2^{t/3}$, and $P(12)=6400$ cells",
+      "solution": {
+        "steps": [
+          "Doubling means the base is $2$. Because doubling happens every $3$ hours, the exponent is $\\frac{t}{3}$ so that one doubling occurs each time $t$ increases by $3$.",
+          "Write the model: $P(t)=400\\cdot 2^{t/3}$.",
+          "Evaluate at $t=12$: $P(12)=400\\cdot 2^{12/3}=400\\cdot 2^{4}$.",
+          "Compute $2^{4}=16$, so $P(12)=400\\cdot 16=6400$.",
+          "The population after $12$ hours is $6400$ cells."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A radioactive sample has a half-life of $5$ years and begins with $80$ grams. Write a model $A(t)$ for the amount after $t$ years, then determine how much remains after $20$ years.",
+      "answer": "$A(t)=80\\left(\\frac{1}{2}\\right)^{t/5}$, and $A(20)=5$ grams",
+      "solution": {
+        "steps": [
+          "A half-life means the base is $\\frac{1}{2}$. Halving occurs every $5$ years, so the exponent is $\\frac{t}{5}$.",
+          "Write the model: $A(t)=80\\left(\\frac{1}{2}\\right)^{t/5}$.",
+          "Evaluate at $t=20$: $A(20)=80\\left(\\frac{1}{2}\\right)^{20/5}=80\\left(\\frac{1}{2}\\right)^{4}$.",
+          "Compute $\\left(\\frac{1}{2}\\right)^{4}=\\frac{1}{16}$, so $A(20)=80\\cdot\\frac{1}{16}=5$.",
+          "After $20$ years, $5$ grams remain."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Investor A puts $5000$ dollars into an account earning $5\\%$ annual interest compounded monthly. Investor B puts $5000$ dollars into an account earning $5\\%$ compounded continuously. After $8$ years, which investor has more, and by how much (to the nearest cent)?",
+      "answer": "Investor B has more, by about $6.19$ dollars",
+      "solution": {
+        "steps": [
+          "Investor A uses $A=P\\left(1+\\frac{r}{n}\\right)^{nt}$ with $P=5000$, $r=0.05$, $n=12$, $t=8$: $A=5000\\left(1+\\frac{0.05}{12}\\right)^{12\\cdot 8}=5000\\left(1.0041\\overline{6}\\right)^{96}$.",
+          "Compute $\\left(1.0041\\overline{6}\\right)^{96}\\approx 1.4905853$, so $A\\approx 5000(1.4905853)\\approx 7452.93$ dollars.",
+          "Investor B uses $A=Pe^{rt}=5000e^{0.05\\cdot 8}=5000e^{0.4}$.",
+          "Compute $e^{0.4}\\approx 1.4918247$, so $A\\approx 5000(1.4918247)\\approx 7459.12$ dollars.",
+          "Continuous compounding yields more than any finite compounding at the same rate, so Investor B has more. The difference is $7459.12-7452.93=6.19$ dollars."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "The function $f(x)=2^{x}$ is transformed into $h(x)=-3\\cdot 2^{x+1}-5$. Describe the sequence of transformations, then state the horizontal asymptote, the range, and the end behavior of $h$ as $x\\to+\\infty$.",
+      "answer": "Shift left $1$, vertical stretch by $3$, reflect over the $x$-axis, shift down $5$; asymptote $y=-5$, range $(-\\infty,-5)$, and $h(x)\\to-\\infty$ as $x\\to+\\infty$",
+      "solution": {
+        "steps": [
+          "The $x+1$ inside the exponent shifts the graph left $1$ unit.",
+          "The factor $3$ is a vertical stretch by a factor of $3$, and the negative sign reflects the graph over the $x$-axis.",
+          "The $-5$ shifts the graph down $5$ units, moving the horizontal asymptote from $y=0$ to $y=-5$.",
+          "Because the reflected, stretched exponential opens downward below its asymptote, the range is all values below $-5$: $(-\\infty,-5)$.",
+          "As $x\\to+\\infty$, $2^{x+1}\\to+\\infty$, so $-3\\cdot 2^{x+1}\\to-\\infty$ and $h(x)\\to-\\infty$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A town's population was $18{,}000$ in $2010$ and grew to $24{,}000$ by $2020$. Assuming exponential growth, write a model $P(t)$ where $t$ is years since $2010$ using the form $P(t)=18000\\cdot b^{t}$, and predict the population in $2030$ (nearest whole person).",
+      "answer": "$P(t)=18000\\left(\\frac{4}{3}\\right)^{t/10}$, and $P(2030)\\approx 32{,}000$",
+      "solution": {
+        "steps": [
+          "From $2010$ to $2020$ is $t=10$ years, and the population grew from $18000$ to $24000$, so $18000\\cdot b^{10}=24000$.",
+          "Solve for $b^{10}$: $b^{10}=\\frac{24000}{18000}=\\frac{4}{3}$, so $b=\\left(\\frac{4}{3}\\right)^{1/10}$ and the model is $P(t)=18000\\left(\\frac{4}{3}\\right)^{t/10}$.",
+          "For $2030$, $t=20$: $P(20)=18000\\left(\\frac{4}{3}\\right)^{20/10}=18000\\left(\\frac{4}{3}\\right)^{2}$.",
+          "Compute $\\left(\\frac{4}{3}\\right)^{2}=\\frac{16}{9}$, so $P(20)=18000\\cdot\\frac{16}{9}=2000\\cdot 16=32000$.",
+          "The predicted population in $2030$ is about $32{,}000$ people."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A cup of coffee cools so that the temperature above room temperature follows $D(t)=70\\cdot(0.92)^{t}$ degrees Fahrenheit, where $t$ is in minutes and room temperature is $68^{\\circ}\\text{F}$. The actual coffee temperature is $C(t)=70\\cdot(0.92)^{t}+68$. State the horizontal asymptote of $C(t)$, interpret it in context, and find the coffee's temperature after $10$ minutes (nearest degree).",
+      "answer": "Asymptote $y=68$ (coffee approaches room temperature); $C(10)\\approx 98^{\\circ}\\text{F}$",
+      "solution": {
+        "steps": [
+          "$C(t)=70(0.92)^{t}+68$ is a decaying exponential ($0<0.92<1$) shifted up $68$ units, so its horizontal asymptote is $y=68$.",
+          "In context, as $t\\to\\infty$ the term $70(0.92)^{t}\\to 0$, so the coffee temperature approaches $68^{\\circ}\\text{F}$, which is room temperature.",
+          "Evaluate at $t=10$: $C(10)=70(0.92)^{10}+68$.",
+          "Compute $(0.92)^{10}\\approx 0.434388$, so $70(0.434388)\\approx 30.41$.",
+          "Then $C(10)\\approx 30.41+68=98.41$, which rounds to $98^{\\circ}\\text{F}$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Two competing investments each start at $3000$ dollars. Plan X pays $7\\%$ compounded annually; Plan Y pays $6.8\\%$ compounded continuously. After $5$ years, which plan is worth more, and by how much (nearest cent)?",
+      "answer": "Plan Y is worth more, by about $7.18$ dollars",
+      "solution": {
+        "steps": [
+          "Plan X: $A=3000(1+0.07)^{5}=3000(1.07)^{5}$. Compute $(1.07)^{5}\\approx 1.4025517$, so $A\\approx 3000(1.4025517)\\approx 4207.66$ dollars.",
+          "Plan Y: $A=3000e^{0.068\\cdot 5}=3000e^{0.34}$. Compute $e^{0.34}\\approx 1.4049476$, so $A\\approx 3000(1.4049476)\\approx 4214.84$ dollars.",
+          "Compare the two balances: Plan Y ($4214.84$ dollars) exceeds Plan X ($4207.66$ dollars).",
+          "Here the slightly lower continuous rate still wins because continuous compounding at $6.8\\%$ outpaces annual compounding at $7\\%$ over these $5$ years.",
+          "The difference is $4214.84-4207.66=7.18$, so Plan Y is worth more by about $7.18$ dollars."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A drug in the bloodstream decays so that $25\\%$ is eliminated every hour. A patient starts with $200$ mg. Write a model $M(t)$ for the amount after $t$ hours, and determine the amount remaining after $6$ hours (nearest tenth of a mg).",
+      "answer": "$M(t)=200(0.75)^{t}$, and $M(6)\\approx 35.6$ mg",
+      "solution": {
+        "steps": [
+          "Eliminating $25\\%$ each hour means $75\\%$ remains, so the decay factor is $0.75$.",
+          "Write the model with initial amount $200$: $M(t)=200(0.75)^{t}$.",
+          "Evaluate at $t=6$: $M(6)=200(0.75)^{6}$.",
+          "Compute $(0.75)^{6}=0.177979\\ldots$, so $M(6)=200(0.177979\\ldots)\\approx 35.596$.",
+          "Rounded to the nearest tenth, $M(6)\\approx 35.6$ mg."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "The graph of $g(x)=\\left(\\frac{1}{2}\\right)^{x}$ is transformed into $k(x)=4\\left(\\frac{1}{2}\\right)^{x-2}+1$. State whether $k$ represents growth or decay, give its horizontal asymptote and range, and find $k(2)$.",
+      "answer": "Decay; asymptote $y=1$, range $(1,\\infty)$, and $k(2)=5$",
+      "solution": {
+        "steps": [
+          "The base is $\\frac{1}{2}$ with $0<\\frac{1}{2}<1$, so the function represents exponential decay; the transformations (stretch, shifts) do not change that.",
+          "The $+1$ outside shifts the graph up $1$ unit, so the horizontal asymptote is $y=1$.",
+          "Since the vertical stretch by $4$ is positive, the curve stays above its asymptote, giving range $(1,\\infty)$.",
+          "Evaluate at $x=2$: $k(2)=4\\left(\\frac{1}{2}\\right)^{2-2}+1=4\\left(\\frac{1}{2}\\right)^{0}+1$.",
+          "Since $\\left(\\frac{1}{2}\\right)^{0}=1$, $k(2)=4(1)+1=5$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A car worth $28{,}000$ dollars depreciates so that after $2$ years it is worth $17{,}920$ dollars. Assuming exponential depreciation $V(t)=28000\\cdot b^{t}$, find the annual depreciation rate (as a percent) and the value after $5$ years (nearest dollar).",
+      "answer": "Annual decay factor $b=0.8$ (a $20\\%$ rate); $V(5)\\approx 9175$ dollars",
+      "solution": {
+        "steps": [
+          "After $2$ years: $28000\\cdot b^{2}=17920$, so $b^{2}=\\frac{17920}{28000}=0.64$.",
+          "Then $b=\\sqrt{0.64}=0.8$, so the car retains $80\\%$ of its value each year.",
+          "The annual depreciation rate is $1-0.8=0.20$, that is $20\\%$ per year.",
+          "Value after $5$ years: $V(5)=28000(0.8)^{5}$. Compute $(0.8)^{5}=0.32768$.",
+          "So $V(5)=28000(0.32768)=9175.04\\approx 9175$ dollars."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "An investment of $4000$ dollars grows continuously and reaches $4000e^{0.03\\cdot 6}$ dollars after $6$ years. A second investment of $4000$ dollars is compounded quarterly at $3\\%$ for $6$ years. Compute both balances to the nearest cent and state which is larger.",
+      "answer": "Continuous $\\approx 4788.87$ dollars; quarterly $\\approx 4785.65$ dollars; the continuous account is larger",
+      "solution": {
+        "steps": [
+          "Continuous: $A=4000e^{0.03\\cdot 6}=4000e^{0.18}$. Compute $e^{0.18}\\approx 1.1972174$, so $A\\approx 4000(1.1972174)\\approx 4788.87$ dollars.",
+          "Quarterly: $A=4000\\left(1+\\frac{0.03}{4}\\right)^{4\\cdot 6}=4000(1.0075)^{24}$.",
+          "Compute $(1.0075)^{24}\\approx 1.1964129$, so $A\\approx 4000(1.1964129)\\approx 4785.65$ dollars.",
+          "Comparing the two balances, the continuous account ($\\approx 4788.87$ dollars) exceeds the quarterly account ($\\approx 4785.65$ dollars).",
+          "This matches the rule that, at the same nominal rate, continuous compounding yields the most: the continuous investment is larger by about $3.22$ dollars."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A pond is being overtaken by algae that triples in area every $4$ days. Today the algae covers $5$ square meters. Write a model $A(t)$ for the area after $t$ days, then determine after how many whole days the area first exceeds $100$ square meters.",
+      "answer": "$A(t)=5\\cdot 3^{t/4}$; the area first exceeds $100\\ \\text{m}^2$ after $11$ whole days ($A(11)\\approx 102.6$)",
+      "solution": {
+        "steps": [
+          "Tripling gives base $3$; tripling every $4$ days means the exponent is $\\frac{t}{4}$, so $A(t)=5\\cdot 3^{t/4}$.",
+          "Test $t=8$: $A(8)=5\\cdot 3^{8/4}=5\\cdot 3^{2}=5\\cdot 9=45$, which is below $100$.",
+          "Test $t=10$: $A(10)=5\\cdot 3^{10/4}=5\\cdot 3^{2.5}=5\\cdot 9\\sqrt{3}\\approx 5(15.588)=77.9$, still below $100$.",
+          "Test $t=11$: $A(11)=5\\cdot 3^{11/4}=5\\cdot 3^{2.75}\\approx 5(20.52)=102.6$, which exceeds $100$.",
+          "Since $A(10)\\approx 77.9<100$ and $A(11)\\approx 102.6>100$, the area first exceeds $100$ square meters after $11$ whole days."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Compare $f(x)=2^{x}$ and $g(x)=3^{x}$. For which integer values of $x$ is $g(x)>2f(x)$? Justify by evaluating both sides at $x=1$ and $x=2$, and describe the long-run behavior of $\\frac{g(x)}{f(x)}$ as $x\\to\\infty$.",
+      "answer": "$g(x)>2f(x)$ for integers $x\\geq 2$; and $\\frac{g(x)}{f(x)}=\\left(\\frac{3}{2}\\right)^{x}\\to\\infty$ as $x\\to\\infty$",
+      "solution": {
+        "steps": [
+          "At $x=1$: $g(1)=3$ and $2f(1)=2\\cdot 2=4$. Since $3<4$, the inequality $g(x)>2f(x)$ fails at $x=1$.",
+          "At $x=2$: $g(2)=9$ and $2f(2)=2\\cdot 4=8$. Since $9>8$, the inequality holds at $x=2$.",
+          "Because $\\frac{g(x)}{f(x)}=\\left(\\frac{3}{2}\\right)^{x}$ is increasing, once it passes the threshold $2$ it stays above it; so $g(x)>2f(x)$ holds for all integers $x\\geq 2$.",
+          "Indeed $\\left(\\frac{3}{2}\\right)^{x}=2$ between $x=1$ and $x=2$, confirming the switch occurs there.",
+          "As $x\\to\\infty$, $\\frac{g(x)}{f(x)}=\\left(\\frac{3}{2}\\right)^{x}\\to\\infty$ because the base $\\frac{3}{2}>1$, so $g$ grows without bound faster than any constant multiple of $f$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A savings bond doubles in value every $12$ years. If it is worth $1500$ dollars today, write a model $B(t)$ for its value $t$ years from now, and determine its value after $30$ years (nearest dollar).",
+      "answer": "$B(t)=1500\\cdot 2^{t/12}$, and $B(30)\\approx 8485$ dollars",
+      "solution": {
+        "steps": [
+          "Doubling gives base $2$; doubling every $12$ years means the exponent is $\\frac{t}{12}$, so $B(t)=1500\\cdot 2^{t/12}$.",
+          "Evaluate at $t=30$: $B(30)=1500\\cdot 2^{30/12}=1500\\cdot 2^{2.5}$.",
+          "Rewrite $2^{2.5}=2^{2}\\cdot 2^{0.5}=4\\sqrt{2}$.",
+          "Compute $4\\sqrt{2}\\approx 4(1.414214)=5.656854$, so $B(30)\\approx 1500(5.656854)\\approx 8485.28$.",
+          "Rounded to the nearest dollar, $B(30)\\approx 8485$ dollars."
+        ]
+      }
+    }
+  ]
+}

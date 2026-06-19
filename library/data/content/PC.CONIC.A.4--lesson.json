@@ -1,0 +1,169 @@
+{
+  "id": "PC.CONIC.A.4--lesson",
+  "standard": "PC.CONIC.A.4",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Analytic Geometry",
+  "domainCode": "CONIC",
+  "cluster": "Conic sections",
+  "clusterCode": "A",
+  "skillName": "Polar Coordinates",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "In the polar coordinate system a point is named by a directed distance $r$ from the pole and a directed angle $\\theta$ from the polar axis, written $(r,\\theta)$. Unlike rectangular coordinates, polar names are not unique: a point has infinitely many representations through coterminal angles and through negative $r$ (which points in the opposite direction, $\\theta+\\pi$). The bridge between the systems is $x=r\\cos\\theta$, $y=r\\sin\\theta$, together with $r^2=x^2+y^2$ and $\\tan\\theta=\\dfrac{y}{x}$. With these you can convert points and whole equations either way, and recognize the standard polar curves: circles, lines, limacons $r=a\\pm b\\cos\\theta$, cardioids ($a=b$), and rose curves $r=a\\cos(n\\theta)$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Convert the polar point $\\left(4,\\frac{2\\pi}{3}\\right)$ to rectangular coordinates.",
+      "solution": {
+        "steps": [
+          "Use $x=r\\cos\\theta$ and $y=r\\sin\\theta$ with $r=4$ and $\\theta=\\frac{2\\pi}{3}$.",
+          "Evaluate the trig values: $\\cos\\frac{2\\pi}{3}=-\\frac{1}{2}$ and $\\sin\\frac{2\\pi}{3}=\\frac{\\sqrt{3}}{2}$.",
+          "Compute $x$: $x=4\\cdot\\left(-\\frac{1}{2}\\right)=-2$.",
+          "Compute $y$: $y=4\\cdot\\frac{\\sqrt{3}}{2}=2\\sqrt{3}$.",
+          "The rectangular coordinates are $\\left(-2,\\;2\\sqrt{3}\\right)$."
+        ],
+        "answer": "$\\left(-2,\\;2\\sqrt{3}\\right)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Convert the rectangular point $\\left(-1,\\;\\sqrt{3}\\right)$ to polar form with $r>0$ and $0\\le\\theta<2\\pi$.",
+      "solution": {
+        "steps": [
+          "Find $r$ using $r=\\sqrt{x^2+y^2}$: $r=\\sqrt{(-1)^2+\\left(\\sqrt{3}\\right)^2}=\\sqrt{1+3}=\\sqrt{4}=2$.",
+          "Find the reference angle from $\\tan\\theta=\\frac{y}{x}=\\frac{\\sqrt{3}}{-1}=-\\sqrt{3}$, whose reference angle is $\\frac{\\pi}{3}$.",
+          "The point $\\left(-1,\\sqrt{3}\\right)$ has $x<0$ and $y>0$, so it lies in Quadrant II. Do not simply report $\\arctan(-\\sqrt{3})=-\\frac{\\pi}{3}$.",
+          "Place the angle in Quadrant II: $\\theta=\\pi-\\frac{\\pi}{3}=\\frac{2\\pi}{3}$.",
+          "The polar form is $\\left(2,\\frac{2\\pi}{3}\\right)$."
+        ],
+        "answer": "$\\left(2,\\frac{2\\pi}{3}\\right)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Write the rectangular equation $x^2+y^2=6x$ as a polar equation, solved for $r$.",
+      "solution": {
+        "steps": [
+          "Substitute $x^2+y^2=r^2$ and $x=r\\cos\\theta$ into the equation: $r^2=6\\,r\\cos\\theta$.",
+          "Move everything to one side: $r^2-6r\\cos\\theta=0$.",
+          "Factor out $r$: $r(r-6\\cos\\theta)=0$.",
+          "The factor $r=0$ is the pole, which is already on the curve $r=6\\cos\\theta$ (it occurs at $\\theta=\\frac{\\pi}{2}$), so the full curve is captured by the other factor.",
+          "Solve $r-6\\cos\\theta=0$ to get $r=6\\cos\\theta$. This is a circle of radius $3$ centered at $(3,0)$."
+        ],
+        "answer": "$r=6\\cos\\theta$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Write the polar equation $r=4\\sin\\theta$ in rectangular form and identify the curve, giving its center and radius.",
+      "solution": {
+        "steps": [
+          "Multiply both sides by $r$ so every term can be converted: $r^2=4r\\sin\\theta$.",
+          "Substitute $r^2=x^2+y^2$ and $r\\sin\\theta=y$: $x^2+y^2=4y$.",
+          "Move the $y$ term to the left to set up completing the square: $x^2+y^2-4y=0$.",
+          "Complete the square in $y$ by adding $\\left(\\frac{4}{2}\\right)^2=4$ to both sides: $x^2+\\left(y^2-4y+4\\right)=4$.",
+          "Write the perfect square: $x^2+(y-2)^2=4$. This is a circle with center $(0,2)$ and radius $2$."
+        ],
+        "answer": "$x^2+(y-2)^2=4$, a circle with center $(0,2)$ and radius $2$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Identify the curve $r=2+2\\cos\\theta$. State its type, its axis of symmetry, its maximum $r$-value, and where it passes through the pole.",
+      "solution": {
+        "steps": [
+          "The form $r=a\\pm b\\cos\\theta$ is a limacon. Here $a=2$ and $b=2$, so $a=b$ and the limacon is a cardioid.",
+          "Because the equation uses $\\cos\\theta$ (an even function of $\\theta$, since $\\cos(-\\theta)=\\cos\\theta$), the graph is symmetric about the polar axis (the $x$-axis).",
+          "The maximum $r$ occurs where $\\cos\\theta$ is largest, namely $\\cos\\theta=1$ at $\\theta=0$: $r=2+2(1)=4$. So the curve reaches its farthest point $r=4$ along the positive polar axis.",
+          "The curve passes through the pole where $r=0$: $2+2\\cos\\theta=0\\Rightarrow\\cos\\theta=-1\\Rightarrow\\theta=\\pi$.",
+          "Summary: a cardioid, symmetric about the polar axis, with maximum $r=4$ at $\\theta=0$ and passing through the pole at $\\theta=\\pi$."
+        ],
+        "answer": "A cardioid (since $a=b=2$), symmetric about the polar axis, with maximum $r=4$ at $\\theta=0$, passing through the pole at $\\theta=\\pi$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Convert the polar point $\\left(6,\\frac{\\pi}{6}\\right)$ to rectangular coordinates.",
+      "hint": "Use $x=r\\cos\\theta$ and $y=r\\sin\\theta$ with $\\cos\\frac{\\pi}{6}=\\frac{\\sqrt{3}}{2}$ and $\\sin\\frac{\\pi}{6}=\\frac{1}{2}$.",
+      "solution": {
+        "steps": [
+          "$x=6\\cos\\frac{\\pi}{6}=6\\cdot\\frac{\\sqrt{3}}{2}=3\\sqrt{3}$.",
+          "$y=6\\sin\\frac{\\pi}{6}=6\\cdot\\frac{1}{2}=3$.",
+          "The rectangular coordinates are $\\left(3\\sqrt{3},\\;3\\right)$."
+        ],
+        "answer": "$\\left(3\\sqrt{3},\\;3\\right)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Plot the point $\\left(-3,\\frac{\\pi}{6}\\right)$ by giving an equivalent representation with $r>0$ and $0\\le\\theta<2\\pi$.",
+      "hint": "A negative $r$ points in the opposite direction. To make $r$ positive, keep the magnitude and add $\\pi$ to the angle.",
+      "solution": {
+        "steps": [
+          "A negative $r$ means the point lies in the direction opposite to $\\theta$, so $\\left(-3,\\frac{\\pi}{6}\\right)$ is the same as $\\left(3,\\frac{\\pi}{6}+\\pi\\right)$.",
+          "Add the angles: $\\frac{\\pi}{6}+\\pi=\\frac{\\pi}{6}+\\frac{6\\pi}{6}=\\frac{7\\pi}{6}$.",
+          "This angle is in $[0,2\\pi)$, so the equivalent representation is $\\left(3,\\frac{7\\pi}{6}\\right)$."
+        ],
+        "answer": "$\\left(3,\\frac{7\\pi}{6}\\right)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Write the polar equation $r=8\\cos\\theta$ in rectangular form, then give the center and radius of the circle.",
+      "hint": "Multiply both sides by $r$ first so you can substitute $r^2=x^2+y^2$ and $r\\cos\\theta=x$. Then complete the square.",
+      "solution": {
+        "steps": [
+          "Multiply both sides by $r$: $r^2=8r\\cos\\theta$.",
+          "Substitute $r^2=x^2+y^2$ and $r\\cos\\theta=x$: $x^2+y^2=8x$.",
+          "Set up completing the square: $x^2-8x+y^2=0$, then add $\\left(\\frac{8}{2}\\right)^2=16$ to both sides: $(x-4)^2+y^2=16$.",
+          "This is a circle with center $(4,0)$ and radius $4$."
+        ],
+        "answer": "$(x-4)^2+y^2=16$, center $(4,0)$, radius $4$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "For the rose curve $r=3\\cos(2\\theta)$, determine the number of petals and the length of each petal.",
+      "hint": "For $r=a\\cos(n\\theta)$, the number of petals is $n$ if $n$ is odd and $2n$ if $n$ is even. The petal length is $|a|$.",
+      "solution": {
+        "steps": [
+          "Here $a=3$ and $n=2$.",
+          "Since $n=2$ is even, the number of petals is $2n=2(2)=4$.",
+          "The petal length equals $|a|=|3|=3$.",
+          "So the curve is a rose with $4$ petals, each of length $3$."
+        ],
+        "answer": "$4$ petals, each of length $3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Convert the polar equation $r=\\dfrac{2}{1-\\cos\\theta}$ to rectangular form and identify the conic.",
+      "hint": "Multiply both sides by the denominator to clear the fraction, then replace $r=\\sqrt{x^2+y^2}$ and $r\\cos\\theta=x$. Isolate the radical before squaring.",
+      "solution": {
+        "steps": [
+          "Clear the fraction: $r(1-\\cos\\theta)=2$, which expands to $r-r\\cos\\theta=2$.",
+          "Substitute $r=\\sqrt{x^2+y^2}$ and $r\\cos\\theta=x$: $\\sqrt{x^2+y^2}-x=2$.",
+          "Isolate the radical: $\\sqrt{x^2+y^2}=x+2$.",
+          "Square both sides: $x^2+y^2=(x+2)^2=x^2+4x+4$.",
+          "Cancel $x^2$ and solve for $y^2$: $y^2=4x+4$. This is a parabola opening to the right with vertex $(-1,0)$."
+        ],
+        "answer": "$y^2=4x+4$, a parabola opening right with vertex $(-1,0)$"
+      }
+    }
+  ]
+}

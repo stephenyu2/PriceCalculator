@@ -1,0 +1,142 @@
+{
+  "standard": "PC.CONIC.A.4",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Analytic Geometry",
+  "domainCode": "CONIC",
+  "cluster": "Conic sections",
+  "clusterCode": "A",
+  "skillName": "Polar Coordinates",
+
+  "description": "Students work fluently with the polar coordinate system. They plot points given as $(r,\\theta)$, convert individual points and full equations between polar form and rectangular (Cartesian) form using $x=r\\cos\\theta$, $y=r\\sin\\theta$, $r^2=x^2+y^2$, and $\\tan\\theta=\\dfrac{y}{x}$, and they identify and graph the standard polar curves: circles, lines, limacons $r=a\\pm b\\sin\\theta$ and $r=a\\pm b\\cos\\theta$, cardioids ($a=b$), and rose curves $r=a\\cos(n\\theta)$ or $r=a\\sin(n\\theta)$. They reason about non-uniqueness of polar coordinates (negative $r$, coterminal and added-$\\pi$ representations) and use symmetry to graph efficiently.",
+
+  "subSkills": [
+    "Plot a point $(r,\\theta)$ in the polar plane, including negative $r$ and angles outside $[0,2\\pi)$",
+    "Give alternate polar representations of the same point (coterminal angle, negative $r$ with $\\theta+\\pi$)",
+    "Convert a polar point to rectangular form using $x=r\\cos\\theta$ and $y=r\\sin\\theta$",
+    "Convert a rectangular point to polar form using $r=\\pm\\sqrt{x^2+y^2}$ and $\\theta=\\arctan\\frac{y}{x}$ adjusted for quadrant",
+    "Convert a rectangular equation to a polar equation by substituting $x=r\\cos\\theta$, $y=r\\sin\\theta$, $x^2+y^2=r^2$",
+    "Convert a polar equation to a rectangular equation by multiplying by $r$ and substituting $r^2=x^2+y^2$, $r\\cos\\theta=x$, $r\\sin\\theta=y$",
+    "Classify a polar equation as a circle, line, limacon, cardioid, or rose curve from its form",
+    "Determine the shape parameters of a limacon (inner loop vs. dimpled vs. convex) from the ratio $\\frac{a}{b}$",
+    "Determine the number of petals and petal length of a rose curve from $r=a\\cos(n\\theta)$ or $r=a\\sin(n\\theta)$",
+    "Use symmetry about the polar axis, the line $\\theta=\\frac{\\pi}{2}$, and the pole to graph efficiently",
+    "Build a table of values $(\\theta, r)$ at standard angles to sketch a polar curve"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Plot and re-represent a polar point",
+      "example": "Plot the point $\\left(-3,\\frac{\\pi}{6}\\right)$ and give two other ordered pairs (one with $r>0$, one with $r<0$) that name the same point."
+    },
+    {
+      "name": "Polar point to rectangular",
+      "example": "Convert $\\left(4,\\frac{2\\pi}{3}\\right)$ to rectangular coordinates. Answer: $\\left(-2,\\;2\\sqrt{3}\\right)$."
+    },
+    {
+      "name": "Rectangular point to polar",
+      "example": "Convert $\\left(-1,\\;\\sqrt{3}\\right)$ to polar form with $r>0$ and $0\\le\\theta<2\\pi$. Answer: $\\left(2,\\frac{2\\pi}{3}\\right)$."
+    },
+    {
+      "name": "Rectangular equation to polar equation",
+      "example": "Write $x^2+y^2=6x$ as a polar equation. Answer: $r=6\\cos\\theta$."
+    },
+    {
+      "name": "Polar equation to rectangular equation",
+      "example": "Write $r=4\\sin\\theta$ in rectangular form. Answer: $x^2+y^2=4y$, i.e. $x^2+(y-2)^2=4$."
+    },
+    {
+      "name": "Classify and describe a polar curve",
+      "example": "Identify the curve $r=2+2\\cos\\theta$, state its type, and give a key feature. Answer: a cardioid (since $a=b=2$) symmetric about the polar axis, with maximum $r=4$ at $\\theta=0$ and passing through the pole at $\\theta=\\pi$."
+    },
+    {
+      "name": "Graph a rose curve / limacon",
+      "example": "For $r=3\\cos(2\\theta)$, determine the number of petals and the petal length, then sketch. Answer: $4$ petals (since $n=2$ is even, petals $=2n$), each of length $3$."
+    },
+    {
+      "name": "Multi-step conversion with simplification",
+      "example": "Convert $r=\\dfrac{2}{1-\\cos\\theta}$ to rectangular form and identify the conic. Answer: $y^2=4x+4$, a parabola opening right with vertex $(-1,0)$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step plug-in at a standard unit-circle angle, or direct classification by inspection. The student applies one formula with exact special-angle values and no quadrant ambiguity or sign adjustment.",
+      "constraints": [
+        "Angles are quadrantal or first-quadrant special angles: $0,\\frac{\\pi}{6},\\frac{\\pi}{4},\\frac{\\pi}{3},\\frac{\\pi}{2}$",
+        "$r>0$ in conversions; no negative-$r$ reinterpretation required",
+        "Point-to-rectangular or simple classification ('is $r=5$ a circle or a line?')",
+        "Rectangular-to-polar lands in Quadrant I so $\\arctan\\frac{y}{x}$ needs no quadrant correction",
+        "At most one exact radical or fraction in the final answer"
+      ]
+    },
+    "Medium": {
+      "description": "Two to three steps. Requires quadrant reasoning, choosing the correct $\\theta$ for $r<0$, or a full equation conversion that involves multiplying by $r$ and substituting. Curve problems require reading shape parameters (petals, limacon type) rather than naming a category.",
+      "constraints": [
+        "Angles fall in Quadrants II, III, or IV so $\\theta$ must be adjusted from the reference angle",
+        "Conversions may require negative $r$ or an alternate representation",
+        "Equation conversion needs multiplication by $r$ then substitution (e.g. $r=6\\cos\\theta \\to x^2+y^2=6x$)",
+        "Rose curves: determine petal count using even/odd rule; limacons: classify inner-loop vs. dimpled vs. convex from $\\frac{a}{b}$",
+        "Answer requires completing the square to reveal a circle's center and radius"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems that chain conversion, identity use, and identification, or that require interpreting a conic-form polar equation. The student must manipulate trig identities, handle non-unique representations carefully, or derive a feature (center, vertex, intersection) that is not directly given.",
+      "constraints": [
+        "Convert a fractional polar conic $r=\\frac{ed}{1\\pm e\\cos\\theta}$ to rectangular form and classify the conic",
+        "Requires a trig identity such as $\\cos(2\\theta)=\\cos^2\\theta-\\sin^2\\theta$ or $\\sin(2\\theta)=2\\sin\\theta\\cos\\theta$ during conversion",
+        "Find intersection points of two polar curves, accounting for the pole and multiple representations",
+        "Derive center and radius of a circle, or vertex/orientation of a parabola, from the converted equation",
+        "Justify the number of petals or symmetry with reasoning, not just a memorized rule"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student swaps the sine and cosine roles when converting a point",
+      "distractor": "Computes $x=r\\sin\\theta$ and $y=r\\cos\\theta$, so $\\left(4,\\frac{2\\pi}{3}\\right)$ becomes $\\left(2\\sqrt{3},\\,-2\\right)$ instead of $\\left(-2,\\,2\\sqrt{3}\\right)$"
+    },
+    {
+      "misconception": "Student ignores the quadrant when finding $\\theta$ and reports the raw $\\arctan$ value",
+      "distractor": "For $\\left(-1,\\sqrt{3}\\right)$ reports $\\theta=\\arctan\\!\\left(-\\sqrt{3}\\right)=-\\frac{\\pi}{3}$ instead of recognizing Quadrant II and using $\\theta=\\frac{2\\pi}{3}$"
+    },
+    {
+      "misconception": "Student treats negative $r$ as if it only negates the angle, plotting in the wrong direction",
+      "distractor": "Plots $\\left(-3,\\frac{\\pi}{6}\\right)$ as if it were $\\left(3,\\frac{\\pi}{6}\\right)$ or $\\left(3,-\\frac{\\pi}{6}\\right)$ instead of $\\left(3,\\frac{7\\pi}{6}\\right)$"
+    },
+    {
+      "misconception": "Student forgets to multiply the whole equation by $r$ before substituting, leaving a stray $r$",
+      "distractor": "Converts $r=6\\cos\\theta$ to $\\sqrt{x^2+y^2}=\\frac{6x}{\\sqrt{x^2+y^2}}$ and stops, or writes $r=6\\cos\\theta \\to \\sqrt{x^2+y^2}=6x$ instead of $x^2+y^2=6x$"
+    },
+    {
+      "misconception": "Student uses the wrong rose-petal rule, applying $n$ petals regardless of parity",
+      "distractor": "Says $r=3\\cos(2\\theta)$ has $2$ petals (using $n$) instead of $4$ (since $n$ even gives $2n$ petals)"
+    },
+    {
+      "misconception": "Student confuses a cardioid with a circle because both contain a trig term",
+      "distractor": "Identifies $r=2+2\\cos\\theta$ as a circle of radius $2$ instead of a cardioid, ignoring the constant-plus-cosine limacon form"
+    },
+    {
+      "misconception": "Student mis-applies $r^2=x^2+y^2$ by writing $r=x^2+y^2$ (dropping the square root / square)",
+      "distractor": "Converts $r=4$ to $x^2+y^2=4$ (radius $2$) instead of $x^2+y^2=16$ (radius $4$)"
+    },
+    {
+      "misconception": "Student substitutes a compound-angle term directly without expanding it via an identity",
+      "distractor": "Treats $r=\\cos(2\\theta)$ as $r=\\cos\\theta$ or replaces $\\cos(2\\theta)$ with $\\frac{x}{r}$, instead of expanding $\\cos(2\\theta)=\\cos^2\\theta-\\sin^2\\theta=\\frac{x^2-y^2}{r^2}$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

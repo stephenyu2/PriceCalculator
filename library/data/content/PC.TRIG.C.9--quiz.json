@@ -1,0 +1,143 @@
+{
+  "id": "PC.TRIG.C.9--quiz",
+  "standard": "PC.TRIG.C.9",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Laws of sines and cosines",
+  "clusterCode": "C",
+  "skillName": "Law of Cosines",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Eight multiple-choice questions on the Law of Cosines: the SAS and SSS cases, choosing between the Law of Cosines and the Law of Sines, recognizing obtuse angles from a negative cosine, and Heron's formula for area.",
+  "items": [
+    {
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "In triangle $ABC$, $a = 7$, $b = 10$, and the included angle $C = 60^\\circ$. Find side $c$.\nA) $\\sqrt{79}$\nB) $\\sqrt{149}$\nC) $79$\nD) $\\sqrt{219}$",
+      "answer": "A) $\\sqrt{79}$",
+      "solution": {
+        "steps": [
+          "Use the Law of Cosines with $C$ opposite the unknown side $c$: $c^2 = a^2 + b^2 - 2ab\\cos C$.",
+          "Substitute: $c^2 = 7^2 + 10^2 - 2(7)(10)\\cos 60^\\circ = 49 + 100 - 140\\cdot\\tfrac{1}{2}$.",
+          "Simplify: $c^2 = 149 - 70 = 79$, so $c = \\sqrt{79}$. The key is A.",
+          "B) $\\sqrt{149}$ drops the $-2ab\\cos C$ term and treats the triangle as right (Pythagorean theorem).",
+          "C) $79$ forgets to take the square root, reporting $c^2$ as $c$.",
+          "D) $\\sqrt{219}$ adds $+70$ instead of subtracting, mishandling the sign of the cosine term."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Find the area of a triangle with sides $a = 13$, $b = 14$, and $c = 15$ using Heron's formula.\nA) $84$\nB) $42$\nC) $168$\nD) $\\sqrt{7056}\\,/\\,2$",
+      "answer": "A) $84$",
+      "solution": {
+        "steps": [
+          "Compute the semiperimeter: $s = \\dfrac{13+14+15}{2} = 21$.",
+          "Apply Heron's formula: $A = \\sqrt{s(s-a)(s-b)(s-c)} = \\sqrt{21(8)(7)(6)} = \\sqrt{7056} = 84$. The key is A.",
+          "B) $42$ halves the correct area, as if the $\\tfrac{1}{2}$ from a base-height formula still applied; Heron's already gives the full area.",
+          "C) $168$ uses the full perimeter $P = 42$ in place of the semiperimeter under part of the root, overstating the area.",
+          "D) $\\sqrt{7056}/2 = 42$ wrongly divides Heron's result by 2."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "You are given side $b = 9$, side $c = 12$, and the included angle $A = 40^\\circ$. Which law and case should you use to find side $a$?\nA) Law of Cosines, SAS case\nB) Law of Sines, AAS case\nC) Law of Cosines, SSS case\nD) Law of Sines, SSA case",
+      "answer": "A) Law of Cosines, SAS case",
+      "solution": {
+        "steps": [
+          "You know two sides ($b$ and $c$) and the angle $A$ between them, which is the SAS configuration.",
+          "With no side paired to its opposite angle, the Law of Sines cannot start; the Law of Cosines $a^2 = b^2 + c^2 - 2bc\\cos A$ applies directly. The key is A.",
+          "B) is wrong: AAS requires two angles, but only one angle is given.",
+          "C) is wrong: SSS requires three sides, but only two sides are given.",
+          "D) is wrong: the Law of Sines needs a known angle-side opposite pair, which is unavailable here, and this is not the SSA setup."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "A triangle has sides $a = 5$, $b = 6$, and $c = 8$. Find angle $C$, opposite the longest side, to the nearest tenth of a degree.\nA) $92.9^\\circ$\nB) $87.1^\\circ$\nC) $46.6^\\circ$\nD) $48.2^\\circ$",
+      "answer": "A) $92.9^\\circ$",
+      "solution": {
+        "steps": [
+          "Rearrange the Law of Cosines: $\\cos C = \\dfrac{a^2 + b^2 - c^2}{2ab} = \\dfrac{25 + 36 - 64}{2(5)(6)} = \\dfrac{-3}{60} = -\\dfrac{1}{20}$.",
+          "Because $\\cos C$ is negative, $C$ is obtuse: $C = \\cos^{-1}\\!\\left(-\\tfrac{1}{20}\\right) \\approx 92.9^\\circ$. The key is A.",
+          "B) $87.1^\\circ$ ignores the negative sign and takes $\\cos^{-1}\\!\\left(\\tfrac{1}{20}\\right)$, the acute supplement.",
+          "C) and D) come from rearranging the formula incorrectly (wrong denominator or flipped numerator sign), producing a cosine of the wrong magnitude."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Two roads diverge from a point at an angle of $72^\\circ$. A car drives $8$ km along one road and $5$ km along the other. How far apart are the endpoints, to the nearest tenth of a kilometer? (Use $\\cos 72^\\circ \\approx 0.309$.)\nA) $8.0$ km\nB) $9.4$ km\nC) $3.5$ km\nD) $11.2$ km",
+      "answer": "A) $8.0$ km",
+      "solution": {
+        "steps": [
+          "The two roads and the segment joining the endpoints form a triangle with the $72^\\circ$ angle between the known sides (SAS).",
+          "Apply the Law of Cosines: $d^2 = 8^2 + 5^2 - 2(8)(5)\\cos 72^\\circ = 64 + 25 - 80(0.309) \\approx 89 - 24.7 = 64.3$.",
+          "So $d \\approx \\sqrt{64.3} \\approx 8.0$ km. The key is A.",
+          "B) $9.4 \\approx \\sqrt{89}$ uses the Pythagorean theorem and drops the $-2ab\\cos C$ term.",
+          "C) $3.5 = 8 - 5$ wrongly subtracts the side lengths instead of using the Law of Cosines.",
+          "D) $11.2 \\approx \\sqrt{125}$ adds $+2ab\\cos C$ instead of subtracting, flipping the sign of the cosine term."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Find the area of a triangle with sides $a = 5$, $b = 7$, and $c = 8$ using Heron's formula. Give the exact value.\nA) $10\\sqrt{3}$\nB) $20\\sqrt{3}$\nC) $\\sqrt{2400}$\nD) $14\\sqrt{6}$",
+      "answer": "A) $10\\sqrt{3}$",
+      "solution": {
+        "steps": [
+          "Semiperimeter: $s = \\dfrac{5+7+8}{2} = 10$.",
+          "Heron's formula: $A = \\sqrt{10(10-5)(10-7)(10-8)} = \\sqrt{10\\cdot 5\\cdot 3\\cdot 2} = \\sqrt{300}$.",
+          "Simplify the radical: $\\sqrt{300} = \\sqrt{100\\cdot 3} = 10\\sqrt{3}$. The key is A.",
+          "B) $20\\sqrt{3} = \\sqrt{1200}$ forgets the $\\tfrac{1}{2}$ in the semiperimeter for one factor, doubling the radicand region.",
+          "C) $\\sqrt{2400}$ uses the full perimeter $P = 20$ in place of $s$ in the first factor, overstating the area.",
+          "D) $14\\sqrt{6} = \\sqrt{1176}$ does not match any correct rearrangement; it is a radical-simplification trap."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "In triangle $ABC$, $a = 4$, $b = 5$, $c = 6$. After finding $\\cos A = \\dfrac{3}{4}$ with the Law of Cosines, you want angle $B$. Which single computation gives $\\cos B$ correctly?\nA) $\\cos B = \\dfrac{a^2 + c^2 - b^2}{2ac} = \\dfrac{16 + 36 - 25}{48} = \\dfrac{27}{48}$\nB) $\\cos B = \\dfrac{a^2 + b^2 - c^2}{2ab} = \\dfrac{16 + 25 - 36}{40} = \\dfrac{5}{40}$\nC) $\\cos B = \\dfrac{b^2 + c^2 - a^2}{2bc} = \\dfrac{25 + 36 - 16}{60} = \\dfrac{45}{60}$\nD) $\\cos B = \\dfrac{a^2 + c^2 - b^2}{2ab} = \\dfrac{16 + 36 - 25}{40} = \\dfrac{27}{40}$",
+      "answer": "A) $\\cos B = \\dfrac{a^2 + c^2 - b^2}{2ac} = \\dfrac{16 + 36 - 25}{48} = \\dfrac{27}{48}$",
+      "solution": {
+        "steps": [
+          "For angle $B$, the opposite side is $b$, so it must appear with a minus sign in the numerator and the other two sides ($a$ and $c$) form the denominator $2ac$: $\\cos B = \\dfrac{a^2 + c^2 - b^2}{2ac}$.",
+          "Substitute: $\\dfrac{16 + 36 - 25}{2(4)(6)} = \\dfrac{27}{48} = \\dfrac{9}{16}$. The key is A.",
+          "B) solves for $C$ (subtracts $c^2$ with denominator $2ab$), the wrong angle.",
+          "C) solves for $A$ (subtracts $a^2$ with denominator $2bc$), the wrong angle.",
+          "D) keeps the correct numerator but uses the wrong denominator $2ab$ instead of $2ac$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A surveyor finds two sides of a triangular plot are $a = 9$ m and $b = 12$ m, meeting at an included angle $C = 120^\\circ$. Find the exact area of the plot.\nA) $27\\sqrt{3}$ m$^2$\nB) $54\\sqrt{3}$ m$^2$\nC) $54$ m$^2$\nD) $27$ m$^2$",
+      "answer": "A) $27\\sqrt{3}$ m$^2$",
+      "solution": {
+        "steps": [
+          "With two sides and the included angle (SAS), use the area formula $A = \\tfrac{1}{2}ab\\sin C$ directly, rather than first finding the third side.",
+          "Compute $\\sin 120^\\circ = \\dfrac{\\sqrt{3}}{2}$.",
+          "Then $A = \\tfrac{1}{2}(9)(12)\\cdot\\dfrac{\\sqrt{3}}{2} = 54\\cdot\\dfrac{\\sqrt{3}}{2} = 27\\sqrt{3}$ m$^2$. The key is A.",
+          "B) $54\\sqrt{3}$ forgets the $\\tfrac{1}{2}$ factor in the area formula.",
+          "C) $54$ uses $\\sin 120^\\circ = 1$ (or drops the radical), as if the included angle were $90^\\circ$.",
+          "D) $27$ drops the $\\sin C$ factor entirely, computing only $\\tfrac{1}{2}ab\\cdot\\tfrac{1}{2}$ without the $\\sqrt{3}$."
+        ]
+      }
+    }
+  ]
+}

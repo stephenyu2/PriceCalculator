@@ -1,0 +1,136 @@
+{
+  "standard": "PC.POLY.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Polynomial and Rational Functions",
+  "domainCode": "POLY",
+  "cluster": "Polynomial functions",
+  "clusterCode": "A",
+  "skillName": "Zeros and Factoring",
+
+  "description": "Students find all real and complex zeros of a polynomial function with integer (or rational) coefficients. They list candidate rational zeros with the Rational Root Theorem, test them using synthetic division to depress the polynomial, factor the resulting quotient completely (including via the quadratic formula for irrational and complex roots), and use the Conjugate Pairs Theorem to pair complex and irrational-conjugate zeros. They state the number of zeros guaranteed by the Fundamental Theorem of Algebra (counting multiplicity), write the full factorization over the reals and over the complex numbers, and reconstruct a polynomial from a given set of zeros.",
+
+  "subSkills": [
+    "List all candidate rational zeros $\\frac{p}{q}$ where $p$ divides the constant term and $q$ divides the leading coefficient (Rational Root Theorem)",
+    "Use synthetic division to test a candidate and read off the quotient and remainder (Factor Theorem: zero remainder means a zero)",
+    "Depress a polynomial by repeated synthetic division until a quadratic (or linear) factor remains",
+    "Factor the depressed quadratic by factoring, completing the square, or the quadratic formula to obtain real irrational or complex zeros",
+    "Apply the Conjugate Pairs Theorem: non-real zeros and irrational quadratic-surd zeros occur in conjugate pairs for real-coefficient polynomials",
+    "State and apply the Fundamental Theorem of Algebra: a degree-$n$ polynomial has exactly $n$ complex zeros counted with multiplicity",
+    "Determine the multiplicity of a repeated zero and write the complete linear factorization over $\\mathbb{C}$ and the irreducible factorization over $\\mathbb{R}$",
+    "Construct a polynomial of least degree with real coefficients given a list of zeros (supplying missing conjugates)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "List candidate rational zeros",
+      "example": "List all possible rational zeros of $f(x)=2x^3-5x^2+4x-12$ using the Rational Root Theorem. Answer: $\\pm 1,\\ \\pm 2,\\ \\pm 3,\\ \\pm 4,\\ \\pm 6,\\ \\pm 12,\\ \\pm\\frac{1}{2},\\ \\pm\\frac{3}{2}$."
+    },
+    {
+      "name": "Find a rational zero by synthetic division",
+      "example": "Use synthetic division to show that $x=3$ is a zero of $f(x)=x^3-2x^2-5x+6$ and find the remaining factor. Answer: quotient $x^2+x-2$, so $f(x)=(x-3)(x+2)(x-1)$, zeros $x=3,\\ -2,\\ 1$."
+    },
+    {
+      "name": "Find all real zeros (one rational, then a quadratic)",
+      "example": "Find all real zeros of $f(x)=x^3-6x^2+11x-6$. Answer: $x=1,\\ 2,\\ 3$."
+    },
+    {
+      "name": "Real and complex zeros via the quadratic formula",
+      "example": "Find all zeros (real and complex) of $f(x)=x^3-3x^2+4x-12$. Synthetic division by $x=3$ gives $x^2+4$, so the zeros are $x=3,\\ 2i,\\ -2i$."
+    },
+    {
+      "name": "Apply the Conjugate Pairs Theorem",
+      "example": "A degree-4 polynomial with real coefficients has zeros $2$ and $1+3i$. State the remaining zeros. Answer: $1-3i$ must also be a zero (conjugate pair), and one more real or complex zero is needed to reach degree 4."
+    },
+    {
+      "name": "Build a polynomial from given zeros",
+      "example": "Write a polynomial $f(x)$ of least degree with real coefficients and zeros $x=2$ and $x=3i$. Answer: $f(x)=(x-2)(x^2+9)=x^3-2x^2+9x-18$."
+    },
+    {
+      "name": "Zeros with multiplicity / Fundamental Theorem count",
+      "example": "Find all zeros of $f(x)=x^4-2x^3+x^2$ with multiplicity and confirm the total equals the degree. Answer: $x=0$ (multiplicity 2), $x=1$ (multiplicity 2); total $4=\\deg f$."
+    },
+    {
+      "name": "Complete factorization over R and over C",
+      "example": "Factor $f(x)=x^4-1$ completely over the reals, then over the complex numbers. Real: $(x-1)(x+1)(x^2+1)$. Complex: $(x-1)(x+1)(x-i)(x+i)$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Degree-2 or degree-3 polynomial, monic (leading coefficient $1$), with all integer zeros found by a single synthetic division leaving a factorable quadratic, or a direct Rational-Root-Theorem listing. No complex or irrational zeros.",
+      "constraints": [
+        "Leading coefficient is $1$ so candidate zeros are just $\\pm$ divisors of the constant term",
+        "At most one synthetic division needed; remaining quadratic factors over the integers",
+        "All zeros are integers; no use of the quadratic formula",
+        "Tasks: list candidates, verify a given zero, or fully factor a monic cubic with three integer roots such as $f(x)=x^3-6x^2+11x-6$"
+      ]
+    },
+    "Medium": {
+      "description": "Degree-3 (or simple degree-4) polynomial that may have a non-unit leading coefficient (rational candidate zeros) and whose depressed quadratic requires the quadratic formula, producing either irrational conjugates or a single complex-conjugate pair.",
+      "constraints": [
+        "Leading coefficient $\\ne 1$, so candidates include fractions $\\frac{p}{q}$ such as $\\pm\\frac{1}{2},\\ \\pm\\frac{3}{2}$",
+        "One synthetic division then a quadratic solved by the quadratic formula",
+        "Answer includes a conjugate pair: irrational $a\\pm\\sqrt{b}$ or complex $a\\pm bi$",
+        "Or: build a least-degree real polynomial from a real zero plus one complex zero, supplying the conjugate"
+      ]
+    },
+    "Hard": {
+      "description": "Degree-4 or degree-5 polynomial requiring two or more synthetic divisions to depress, combining a repeated (multiplicity) zero with a complex-conjugate pair, OR full factorization over both $\\mathbb{R}$ and $\\mathbb{C}$ with justification by the Fundamental Theorem of Algebra and Conjugate Pairs Theorem.",
+      "constraints": [
+        "At least two successful synthetic divisions before reaching a quadratic",
+        "Answer mixes a multiplicity-2 zero with an irrational or complex conjugate pair, or requires reconstructing a degree-4+ polynomial from mixed real and complex zeros",
+        "Student must state the total number of zeros (with multiplicity) and confirm it equals the degree",
+        "Requires both the real irreducible factorization and the complete linear factorization over $\\mathbb{C}$"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student forms candidate zeros as $\\frac{q}{p}$ (factors of leading coefficient over factors of constant) instead of $\\frac{p}{q}$",
+      "distractor": "For $2x^2+3x-9$ lists $\\pm\\frac{1}{3},\\ \\pm\\frac{1}{9}$ instead of $\\pm 1,\\pm 3,\\pm 9,\\pm\\frac{1}{2},\\pm\\frac{3}{2},\\pm\\frac{9}{2}$ by inverting the ratio"
+    },
+    {
+      "misconception": "Student uses the divisor's sign directly instead of its negation in the synthetic-division box (uses $-c$ to test the factor $x-c$)",
+      "distractor": "Tests the factor $(x-3)$ by writing $-3$ in the synthetic-division box, gets a nonzero remainder, and wrongly concludes $3$ is not a zero"
+    },
+    {
+      "misconception": "Student takes only the principal square root and reports a single root instead of the $\\pm$ conjugate pair",
+      "distractor": "From $x^2=-4$ reports only $x=2i$, omitting $x=-2i$, so the zero count falls short of the degree"
+    },
+    {
+      "misconception": "Student mishandles $\\sqrt{-1}$, treating $\\sqrt{-4}$ as $-2$ or $4i$ instead of $2i$",
+      "distractor": "Solves $x^2+4=0$ as $x=\\pm\\sqrt{-4}=\\pm 4i$ or $x=\\pm 2$, dropping or doubling the imaginary unit"
+    },
+    {
+      "misconception": "Student ignores the Conjugate Pairs Theorem and builds a real-coefficient polynomial using only the given complex zero without its conjugate",
+      "distractor": "For zeros $2$ and $3i$ writes $f(x)=(x-2)(x-3i)$, yielding non-real coefficients $x^2-(2+3i)x+6i$ instead of $(x-2)(x^2+9)$"
+    },
+    {
+      "misconception": "Student counts distinct zeros instead of counting with multiplicity, so the total disagrees with the Fundamental Theorem of Algebra",
+      "distractor": "For $f(x)=x^4-2x^3+x^2=x^2(x-1)^2$ reports only $2$ zeros ($0$ and $1$) instead of $4$ counted with multiplicity"
+    },
+    {
+      "misconception": "Student errs in the quadratic formula by mishandling the discriminant sign or the $-b$ term",
+      "distractor": "For $x^2-4x+13$ computes $x=\\frac{4\\pm\\sqrt{16+52}}{2}$ (adds $4ac$ instead of subtracting) or $x=\\frac{-4\\pm\\sqrt{-36}}{2}$, instead of $x=2\\pm 3i$"
+    },
+    {
+      "misconception": "Student stops at the real factorization and claims a polynomial has no further zeros once an irreducible quadratic remains",
+      "distractor": "Says $x^2+1$ 'cannot be factored' and reports zero count of $2$ for $x^4-1$ instead of finding the complex zeros $\\pm i$ for a total of $4$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

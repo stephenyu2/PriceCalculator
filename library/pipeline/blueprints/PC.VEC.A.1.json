@@ -1,0 +1,134 @@
+{
+  "standard": "PC.VEC.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Vectors and Parametric Equations",
+  "domainCode": "VEC",
+  "cluster": "Vectors in the plane",
+  "clusterCode": "A",
+  "skillName": "Vectors: Components and Operations",
+
+  "description": "Students represent vectors in the plane both geometrically (as directed line segments with an initial and terminal point) and analytically (in component form $\\langle a, b \\rangle$). They convert a vector given by two endpoints into component form by computing $\\langle x_2 - x_1, y_2 - y_1 \\rangle$, and they convert between component form and magnitude-direction form. They add and subtract vectors and multiply a vector by a scalar, both component-wise and geometrically (tip-to-tail / parallelogram). They compute a vector's magnitude with $\\lVert \\vec{v} \\rVert = \\sqrt{a^2 + b^2}$ and its direction angle $\\theta$ using $\\tan\\theta = \\frac{b}{a}$, placing $\\theta$ in the correct quadrant. They also recover component form from magnitude $r$ and direction $\\theta$ via $\\langle r\\cos\\theta, r\\sin\\theta \\rangle$.",
+
+  "subSkills": [
+    "Write a vector in component form $\\langle a, b \\rangle$ from a directed line segment given by initial point $P(x_1, y_1)$ and terminal point $Q(x_2, y_2)$ using $\\langle x_2 - x_1, y_2 - y_1 \\rangle$",
+    "Add and subtract vectors component-wise: $\\langle a, b \\rangle \\pm \\langle c, d \\rangle = \\langle a \\pm c, b \\pm d \\rangle$",
+    "Multiply a vector by a scalar: $k\\langle a, b \\rangle = \\langle ka, kb \\rangle$, and interpret the geometric effect of $k > 0$, $k < 0$, and $|k| \\ne 1$",
+    "Compute magnitude $\\lVert \\vec{v} \\rVert = \\sqrt{a^2 + b^2}$ and simplify radicals exactly",
+    "Find the direction angle $\\theta$ from components using $\\tan\\theta = \\frac{b}{a}$ with correct quadrant adjustment ($0^\\circ \\le \\theta < 360^\\circ$)",
+    "Convert from magnitude $r$ and direction $\\theta$ to component form $\\langle r\\cos\\theta, r\\sin\\theta \\rangle$",
+    "Interpret vector operations geometrically (tip-to-tail addition, parallelogram rule, negative as reversal)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Endpoints to component form",
+      "example": "A vector has initial point $P(-2, 3)$ and terminal point $Q(4, -1)$. Write the vector in component form. Answer: $\\langle 6, -4 \\rangle$."
+    },
+    {
+      "name": "Component-wise addition and subtraction",
+      "example": "Given $\\vec{u} = \\langle 3, -5 \\rangle$ and $\\vec{v} = \\langle -1, 2 \\rangle$, find $\\vec{u} + \\vec{v}$ and $\\vec{u} - \\vec{v}$. Answer: $\\langle 2, -3 \\rangle$ and $\\langle 4, -7 \\rangle$."
+    },
+    {
+      "name": "Scalar multiplication and linear combination",
+      "example": "Given $\\vec{u} = \\langle 2, -1 \\rangle$ and $\\vec{v} = \\langle -3, 4 \\rangle$, compute $3\\vec{u} - 2\\vec{v}$. Answer: $\\langle 12, -11 \\rangle$."
+    },
+    {
+      "name": "Magnitude of a vector",
+      "example": "Find the magnitude of $\\vec{v} = \\langle -6, 8 \\rangle$. Answer: $\\sqrt{(-6)^2 + 8^2} = \\sqrt{100} = 10$."
+    },
+    {
+      "name": "Direction angle from components",
+      "example": "Find the direction angle of $\\vec{v} = \\langle -1, \\sqrt{3} \\rangle$. Reference angle $60^\\circ$; vector in Quadrant II, so $\\theta = 120^\\circ$."
+    },
+    {
+      "name": "Magnitude-direction to component form",
+      "example": "A vector has magnitude $8$ and direction angle $\\frac{2\\pi}{3}$. Write it in component form. Answer: $\\langle 8\\cos\\frac{2\\pi}{3}, 8\\sin\\frac{2\\pi}{3} \\rangle = \\langle -4, 4\\sqrt{3} \\rangle$."
+    },
+    {
+      "name": "Magnitude of a combination / resultant",
+      "example": "Given $\\vec{u} = \\langle 1, 7 \\rangle$ and $\\vec{v} = \\langle 3, -1 \\rangle$, find $\\lVert \\vec{u} + \\vec{v} \\rVert$. Answer: $\\langle 4, 6 \\rangle$, $\\sqrt{16 + 36} = \\sqrt{52} = 2\\sqrt{13}$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single direct operation on vectors already given in component form, with small integer components. Magnitude yields a perfect square; direction angle lands on a quadrantal axis or a first-quadrant special angle that needs no quadrant correction.",
+      "constraints": [
+        "Vectors supplied directly in component form $\\langle a, b \\rangle$",
+        "Integer components with $|a|, |b| \\le 8$",
+        "Single operation only (one sum, one difference, one scalar multiple, or one magnitude)",
+        "Magnitude problems use Pythagorean pairs so $\\sqrt{a^2+b^2}$ is an integer (e.g. $\\langle 3,4 \\rangle, \\langle 6,8 \\rangle$)",
+        "Direction angles, if asked, are $0^\\circ, 90^\\circ, 180^\\circ, 270^\\circ$ or first-quadrant special angles ($30^\\circ, 45^\\circ, 60^\\circ$)"
+      ]
+    },
+    "Medium": {
+      "description": "Two combined steps: convert endpoints to components then operate, or form a linear combination $a\\vec{u} + b\\vec{v}$, or find a direction angle requiring quadrant adjustment (II, III, or IV). Magnitudes simplify to a reduced radical rather than an integer.",
+      "constraints": [
+        "May require building a vector from initial/terminal points first",
+        "Linear combinations with scalar coefficients (e.g. $2\\vec{u} - 3\\vec{v}$)",
+        "Direction angle falls in Quadrant II, III, or IV and requires adding/adjusting the reference angle",
+        "Magnitudes simplify to exact reduced radicals such as $2\\sqrt{13}$ or $5\\sqrt{2}$",
+        "Magnitude-to-component conversion using a special angle (e.g. $r = 6$, $\\theta = \\frac{5\\pi}{6}$)"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step synthesis: combine endpoint extraction, a linear combination, and a magnitude or direction request; or solve for an unknown scalar/component subject to a condition (e.g. find $k$ so a vector has a given magnitude, or so two vectors are parallel); or compute the magnitude and direction of a resultant from a verbal/applied setup.",
+      "constraints": [
+        "Three or more chained operations before the final answer",
+        "Solve for an unknown component or scalar from a magnitude or direction condition",
+        "Determine the direction angle of a combination, including quadrant placement, with exact radical components",
+        "Applied resultant context (forces, displacement, velocity) requiring setup of the vectors before operating",
+        "Answers expressed as exact values (radicals, $\\pi$, or degrees), not rounded decimals unless an approximation is explicitly requested"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Subtracts endpoints in the wrong order when forming component form",
+      "distractor": "Computes $\\langle x_1 - x_2, y_1 - y_2 \\rangle$ instead of $\\langle x_2 - x_1, y_2 - y_1 \\rangle$, giving the negated vector (e.g. $\\langle -6, 4 \\rangle$ instead of $\\langle 6, -4 \\rangle$)"
+    },
+    {
+      "misconception": "Distributes a scalar to only the first component",
+      "distractor": "Computes $k\\langle a, b \\rangle = \\langle ka, b \\rangle$, leaving the second component unscaled (e.g. $3\\langle 2, -1 \\rangle = \\langle 6, -1 \\rangle$)"
+    },
+    {
+      "misconception": "Adds the components together inside the magnitude instead of squaring each",
+      "distractor": "Computes $\\lVert \\langle a, b \\rangle \\rVert = a + b$ or $\\sqrt{a + b}$ instead of $\\sqrt{a^2 + b^2}$ (e.g. gets $2$ from $\\langle -6, 8 \\rangle$ instead of $10$)"
+    },
+    {
+      "misconception": "Drops the squaring of a negative sign, or takes $\\sqrt{a^2+b^2}$ as $|a|+|b|$",
+      "distractor": "Treats $\\sqrt{(-6)^2 + 8^2}$ as $\\sqrt{-36 + 64} = \\sqrt{28}$ or as $6 + 8 = 14$"
+    },
+    {
+      "misconception": "Reports the reference angle as the direction angle without quadrant adjustment",
+      "distractor": "For $\\langle -1, \\sqrt{3} \\rangle$ gives $\\theta = 60^\\circ$ (the raw $\\arctan$ / reference angle) instead of $120^\\circ$"
+    },
+    {
+      "misconception": "Swaps sine and cosine when converting magnitude-direction to components",
+      "distractor": "Writes $\\langle r\\sin\\theta, r\\cos\\theta \\rangle$ instead of $\\langle r\\cos\\theta, r\\sin\\theta \\rangle$ (e.g. $\\langle 4\\sqrt{3}, -4 \\rangle$ instead of $\\langle -4, 4\\sqrt{3} \\rangle$)"
+    },
+    {
+      "misconception": "Adds magnitudes directly instead of adding vectors then taking the magnitude",
+      "distractor": "Computes $\\lVert \\vec{u} + \\vec{v} \\rVert = \\lVert \\vec{u} \\rVert + \\lVert \\vec{v} \\rVert$ instead of adding components first (e.g. uses $\\sqrt{50}+\\sqrt{10}$ instead of $2\\sqrt{13}$)"
+    },
+    {
+      "misconception": "Uses $\\tan\\theta = \\frac{a}{b}$ (run over rise) instead of $\\frac{b}{a}$",
+      "distractor": "Inverts the ratio, producing the complementary angle (e.g. $30^\\circ$ where the answer is $60^\\circ$)"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

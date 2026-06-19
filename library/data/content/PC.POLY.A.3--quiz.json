@@ -1,0 +1,156 @@
+{
+  "id": "PC.POLY.A.3--quiz",
+  "standard": "PC.POLY.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Polynomial and Rational Functions",
+  "domainCode": "POLY",
+  "cluster": "Polynomial functions",
+  "clusterCode": "A",
+  "skillName": "Rational Functions",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Multiple-choice quiz on rational functions: domain, vertical and horizontal and oblique asymptotes, holes, intercepts, one-sided behavior, and solving rational equations and inequalities.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "What is the horizontal asymptote of $f(x)=\\frac{3x-1}{x^2+5}$?\nA) $y=0$\nB) $y=3$\nC) $y=\\frac{3}{5}$\nD) There is no horizontal asymptote",
+      "answer": "A) $y=0$",
+      "solution": {
+        "steps": [
+          "Compare degrees: the numerator has degree $1$ and the denominator has degree $2$, so $\\deg p < \\deg q$.",
+          "When $\\deg p < \\deg q$, the horizontal asymptote is $y=0$.",
+          "B) $y=3$ comes from incorrectly dividing the leading coefficients as if the degrees were equal.",
+          "C) $y=\\frac{3}{5}$ comes from dividing the leading coefficient of the numerator by the constant term of the denominator, which is not a valid rule.",
+          "D) is wrong because a horizontal asymptote does exist whenever $\\deg p \\le \\deg q$."
+        ],
+        "answer": "A) $y=0$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Find the domain of $f(x)=\\frac{x+2}{x^2-9}$.\nA) All real numbers\nB) All real numbers except $x=9$\nC) All real numbers except $x=3$ and $x=-3$\nD) All real numbers except $x=-2$",
+      "answer": "C) All real numbers except $x=3$ and $x=-3$",
+      "solution": {
+        "steps": [
+          "The domain excludes values that make the denominator zero. Set $x^2-9=0$.",
+          "Factor: $x^2-9=(x-3)(x+3)=0$, so $x=3$ or $x=-3$.",
+          "Neither factor cancels with the numerator $x+2$, so both values are excluded.",
+          "B) $x=9$ wrongly solves $x-9=0$ instead of factoring the difference of squares.",
+          "D) $x=-2$ is the zero of the numerator (an x-intercept), not an excluded domain value."
+        ],
+        "answer": "C) All real numbers except $x=3$ and $x=-3$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "As $x\\to 4^-$, what is the behavior of $f(x)=\\frac{1}{x-4}$?\nA) $f(x)\\to +\\infty$\nB) $f(x)\\to -\\infty$\nC) $f(x)\\to 0$\nD) $f(x)\\to 4$",
+      "answer": "B) $f(x)\\to -\\infty$",
+      "solution": {
+        "steps": [
+          "As $x\\to 4^-$, $x$ is slightly less than $4$, so $x-4$ is a small negative number.",
+          "$\\frac{1}{\\text{small negative}}$ is a large negative number, so $f(x)\\to -\\infty$.",
+          "A) $+\\infty$ is the behavior on the other side, as $x\\to 4^+$ where $x-4$ is small positive.",
+          "C) $f(x)\\to 0$ describes the horizontal asymptote far from $x=4$, not the behavior near the vertical asymptote.",
+          "D) $f(x)\\to 4$ confuses the asymptote location $x=4$ with the output value."
+        ],
+        "answer": "B) $f(x)\\to -\\infty$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Find the coordinates of the hole in the graph of $f(x)=\\frac{x^2-4}{x-2}$.\nA) Vertical asymptote at $x=2$; no hole\nB) Hole at $(2,0)$\nC) Hole at $(2,4)$\nD) Hole at $(-2,0)$",
+      "answer": "C) Hole at $(2,4)$",
+      "solution": {
+        "steps": [
+          "Factor the numerator: $x^2-4=(x-2)(x+2)$, so $f(x)=\\frac{(x-2)(x+2)}{x-2}$.",
+          "The factor $x-2$ cancels, giving the reduced function $f(x)=x+2$ for $x\\neq 2$. A cancelled factor produces a hole, not a vertical asymptote.",
+          "Find the y-coordinate by substituting $x=2$ into the reduced function: $2+2=4$. The hole is at $(2,4)$.",
+          "A) treats the cancelled denominator zero as a vertical asymptote, which is the removable-discontinuity misconception.",
+          "B) and D) use the original (undefined) function or the wrong x-value instead of the reduced function to find the y-coordinate."
+        ],
+        "answer": "C) Hole at $(2,4)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "What is the horizontal asymptote of $f(x)=\\frac{2x^2+1}{5x^2-x}$?\nA) $y=0$\nB) $y=\\frac{2}{5}$\nC) $y=\\frac{1}{5}$\nD) $y=2$",
+      "answer": "B) $y=\\frac{2}{5}$",
+      "solution": {
+        "steps": [
+          "The numerator and denominator both have degree $2$, so $\\deg p = \\deg q$.",
+          "When the degrees are equal, the horizontal asymptote is the ratio of the leading coefficients: $\\frac{2}{5}$.",
+          "A) $y=0$ wrongly defaults to the rule for $\\deg p < \\deg q$.",
+          "C) $y=\\frac{1}{5}$ uses the constant term of the numerator instead of its leading coefficient.",
+          "D) $y=2$ uses only the numerator's leading coefficient and ignores the denominator."
+        ],
+        "answer": "B) $y=\\frac{2}{5}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Find the oblique (slant) asymptote of $f(x)=\\frac{x^2+3x+5}{x+1}$.\nA) $y=x+1$\nB) $y=x+2$\nC) $y=x+2+\\frac{3}{x+1}$\nD) $y=0$",
+      "answer": "B) $y=x+2$",
+      "solution": {
+        "steps": [
+          "Since $\\deg p = \\deg q + 1$, use polynomial long division of $x^2+3x+5$ by $x+1$.",
+          "$x^2+3x+5 = (x+1)(x+2)+3$, so $f(x)=x+2+\\frac{3}{x+1}$.",
+          "The slant asymptote is the quotient only: $y=x+2$. As $x\\to\\pm\\infty$, $\\frac{3}{x+1}\\to 0$.",
+          "A) $y=x+1$ reverses or misreads the division.",
+          "C) keeps the remainder term, which is not part of the asymptote. D) $y=0$ ignores that unequal degrees with $\\deg p=\\deg q+1$ give a slant, not a horizontal, asymptote."
+        ],
+        "answer": "B) $y=x+2$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Solve $\\frac{2}{x-3}+\\frac{1}{x}=\\frac{6}{x^2-3x}$ and identify the solution set.\nA) $x=3$\nB) $x=3$ and $x=-1$\nC) No solution\nD) $x=-1$",
+      "answer": "C) No solution",
+      "solution": {
+        "steps": [
+          "Factor the right denominator: $x^2-3x=x(x-3)$, so the excluded values are $x=0$ and $x=3$.",
+          "Multiply every term by $x(x-3)$: $2x + (x-3) = 6$, which gives $3x-3=6$, so $3x=9$ and $x=3$.",
+          "Check $x=3$ against the domain: it makes $x-3=0$, so it is extraneous and must be rejected.",
+          "With the only candidate eliminated, the equation has no solution.",
+          "A) accepts $x=3$ without checking it against the excluded domain values (the extraneous-root misconception). B) and D) introduce $x=-1$, which does not satisfy the cleared linear equation."
+        ],
+        "answer": "C) No solution"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Solve $\\frac{x-1}{x+2}\\ge 0$ and write the solution in interval notation.\nA) $[1,\\infty)$\nB) $(-\\infty,-2)\\cup[1,\\infty)$\nC) $[-2,1]$\nD) $(-2,1]$",
+      "answer": "B) $(-\\infty,-2)\\cup[1,\\infty)$",
+      "solution": {
+        "steps": [
+          "The critical numbers are $x=1$ (numerator zero) and $x=-2$ (denominator zero, where the expression is undefined).",
+          "Build a sign chart. For $x<-2$: numerator $(-)$, denominator $(-)$, quotient $(+)$. For $-2<x<1$: numerator $(-)$, denominator $(+)$, quotient $(-)$. For $x>1$: both $(+)$, quotient $(+)$.",
+          "The inequality is $\\ge 0$, so keep the intervals where the quotient is positive, plus the zero of the numerator. Include $x=1$ (the expression equals $0$ there).",
+          "Exclude $x=-2$ because the expression is undefined there, so that endpoint stays open. Solution: $(-\\infty,-2)\\cup[1,\\infty)$.",
+          "A) misses the interval $x<-2$ by cross-multiplying as if the inequality were an equation. C) and D) wrongly include $x=-2$ as a closed endpoint where the function is undefined."
+        ],
+        "answer": "B) $(-\\infty,-2)\\cup[1,\\infty)$"
+      }
+    }
+  ]
+}

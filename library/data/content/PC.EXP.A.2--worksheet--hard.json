@@ -1,0 +1,239 @@
+{
+  "id": "PC.EXP.A.2--worksheet--hard",
+  "standard": "PC.EXP.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Exponential and Logarithmic Functions",
+  "domainCode": "EXP",
+  "cluster": "Properties and graphs",
+  "clusterCode": "A",
+  "skillName": "Logarithmic Functions",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems synthesize the definition of the logarithm, change of base, inverse identities, and transformations of $y = a\\log_b(x - h) + k$. Several are reverse problems that ask you to recover an unknown base, argument, or transformation parameter. Give exact values.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Solve for $x$: $\\log_x 81 = 4$.",
+      "answer": "$x = 3$",
+      "solution": {
+        "steps": [
+          "Convert $\\log_x 81 = 4$ to exponential form: $x^4 = 81$.",
+          "Write $81$ as a fourth power: $81 = 3^4$, so $x^4 = 3^4$.",
+          "Since the base of a logarithm must be positive, take the positive fourth root: $x = 3$."
+        ],
+        "answer": "$x = 3$"
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Evaluate the composite expression $\\log_2\\big(\\log_3 81\\big)$.",
+      "answer": "$2$",
+      "solution": {
+        "steps": [
+          "Work from the inside out. First evaluate $\\log_3 81$: since $3^4 = 81$, $\\log_3 81 = 4$.",
+          "Substitute: the expression becomes $\\log_2 4$.",
+          "Since $2^2 = 4$, $\\log_2 4 = 2$.",
+          "Therefore $\\log_2\\big(\\log_3 81\\big) = 2$."
+        ],
+        "answer": "$2$"
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A logarithmic graph of the form $y = \\log_b(x - h)$ has vertical asymptote $x = 2$ and passes through the points $(3, 0)$ and $(5, 1)$. Find $b$ and $h$, then state the equation.",
+      "answer": "$h = 2$, $b = 3$, so $y = \\log_3(x - 2)$",
+      "solution": {
+        "steps": [
+          "The vertical asymptote of $y = \\log_b(x - h)$ is $x = h$, so $h = 2$.",
+          "The equation so far is $y = \\log_b(x - 2)$.",
+          "Use the point $(3, 0)$: $0 = \\log_b(3 - 2) = \\log_b 1$, which is true for any base, so it confirms the $x$-intercept at $x - 2 = 1$.",
+          "Use the point $(5, 1)$: $1 = \\log_b(5 - 2) = \\log_b 3$, which means $b^1 = 3$, so $b = 3$.",
+          "The equation is $y = \\log_3(x - 2)$."
+        ],
+        "answer": "$y = \\log_3(x - 2)$"
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Describe all transformations applied to $y = \\log_2 x$ to obtain $y = -3\\log_2(x + 4) - 1$. Then state the vertical asymptote, the domain, and the range.",
+      "answer": "Reflect across the $x$-axis, vertical stretch by $3$, shift left $4$, shift down $1$. Asymptote $x = -4$; domain $x > -4$; range all real numbers.",
+      "solution": {
+        "steps": [
+          "Compare $y = -3\\log_2(x + 4) - 1$ with $y = a\\log_2(x - h) + k$: here $a = -3$, $h = -4$, $k = -1$.",
+          "The factor $a = -3$ has magnitude $3$ (vertical stretch by $3$) and is negative (reflection across the $x$-axis).",
+          "The term $(x + 4) = (x - (-4))$ gives $h = -4$, a shift left $4$ units.",
+          "The $-1$ gives $k = -1$, a shift down $1$ unit.",
+          "The vertical asymptote moves with the horizontal shift: $x = -4$.",
+          "Domain requires the argument positive: $x + 4 > 0$, so $x > -4$.",
+          "The range of any transformed logarithm of this form is all real numbers."
+        ],
+        "answer": "Reflect across the $x$-axis, vertical stretch by $3$, left $4$, down $1$; asymptote $x = -4$; domain $x > -4$; range $(-\\infty, \\infty)$."
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Solve for $x$: $\\log_5 x = -3$.",
+      "answer": "$x = \\frac{1}{125}$",
+      "solution": {
+        "steps": [
+          "Convert to exponential form: $\\log_5 x = -3$ means $5^{-3} = x$.",
+          "Evaluate the negative power: $5^{-3} = \\frac{1}{5^3} = \\frac{1}{125}$.",
+          "Therefore $x = \\frac{1}{125}$."
+        ],
+        "answer": "$x = \\frac{1}{125}$"
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Use the change-of-base formula together with an inverse identity to evaluate exactly: $\\log_9 27$.",
+      "answer": "$\\frac{3}{2}$",
+      "solution": {
+        "steps": [
+          "Apply change of base to base $3$: $\\log_9 27 = \\frac{\\log_3 27}{\\log_3 9}$.",
+          "Evaluate each part with the inverse relationship: $\\log_3 27 = 3$ because $3^3 = 27$, and $\\log_3 9 = 2$ because $3^2 = 9$.",
+          "Substitute: $\\frac{3}{2}$.",
+          "Therefore $\\log_9 27 = \\frac{3}{2}$."
+        ],
+        "answer": "$\\frac{3}{2}$"
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Simplify completely: $2^{\\log_2 5} + \\log_3\\big(3^{7}\\big) - \\log_4 1$.",
+      "answer": "$12$",
+      "solution": {
+        "steps": [
+          "Apply the inverse identity $b^{\\log_b x} = x$: $2^{\\log_2 5} = 5$.",
+          "Apply the inverse identity $\\log_b(b^x) = x$: $\\log_3(3^7) = 7$.",
+          "Evaluate $\\log_4 1 = 0$, since $4^0 = 1$.",
+          "Combine: $5 + 7 - 0 = 12$."
+        ],
+        "answer": "$12$"
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A function of the form $y = a\\log_2(x - 1)$ passes through the point $(5, -6)$. Find $a$ and write the equation.",
+      "answer": "$a = -3$, so $y = -3\\log_2(x - 1)$",
+      "solution": {
+        "steps": [
+          "Substitute the point $(5, -6)$ into $y = a\\log_2(x - 1)$: $-6 = a\\log_2(5 - 1)$.",
+          "Evaluate $\\log_2(4) = 2$ because $2^2 = 4$.",
+          "The equation becomes $-6 = a \\cdot 2$.",
+          "Solve: $a = \\frac{-6}{2} = -3$.",
+          "The equation is $y = -3\\log_2(x - 1)$."
+        ],
+        "answer": "$y = -3\\log_2(x - 1)$"
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Solve for $x$: $\\log_2(x - 3) = 5$.",
+      "answer": "$x = 35$",
+      "solution": {
+        "steps": [
+          "Convert to exponential form: $\\log_2(x - 3) = 5$ means $2^5 = x - 3$.",
+          "Evaluate $2^5 = 32$, so $x - 3 = 32$.",
+          "Add $3$ to both sides: $x = 35$.",
+          "Check the domain: the argument $x - 3 = 32 > 0$, so the solution is valid."
+        ],
+        "answer": "$x = 35$"
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "The graph of $y = a\\log_3(x - h) + k$ has vertical asymptote $x = -2$, passes through $(-1, 4)$, and passes through $(7, 0)$. Determine $a$, $h$, and $k$, and write the equation.",
+      "answer": "$h = -2$, $k = 4$, $a = -2$; so $y = -2\\log_3(x + 2) + 4$",
+      "solution": {
+        "steps": [
+          "The vertical asymptote is $x = h$, so $h = -2$; the equation is $y = a\\log_3(x + 2) + k$.",
+          "Use $(-1, 4)$: $4 = a\\log_3(-1 + 2) + k = a\\log_3(1) + k = a \\cdot 0 + k$, so $k = 4$.",
+          "Use $(7, 0)$: $0 = a\\log_3(7 + 2) + 4 = a\\log_3(9) + 4$.",
+          "Evaluate $\\log_3 9 = 2$, so $0 = 2a + 4$.",
+          "Solve: $2a = -4$, giving $a = -2$.",
+          "The equation is $y = -2\\log_3(x + 2) + 4$."
+        ],
+        "answer": "$y = -2\\log_3(x + 2) + 4$"
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Evaluate exactly using the inverse relationship: $\\log_8 \\frac{1}{4}$.",
+      "answer": "$-\\frac{2}{3}$",
+      "solution": {
+        "steps": [
+          "Let $\\log_8 \\frac{1}{4} = y$, so $8^y = \\frac{1}{4}$.",
+          "Write both sides as powers of $2$: $8 = 2^3$ and $\\frac{1}{4} = 2^{-2}$, so $(2^3)^y = 2^{-2}$.",
+          "Equate exponents: $3y = -2$.",
+          "Solve: $y = -\\frac{2}{3}$."
+        ],
+        "answer": "$-\\frac{2}{3}$"
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Solve for $x$: $\\log_2(\\log_2 x) = 2$.",
+      "answer": "$x = 16$",
+      "solution": {
+        "steps": [
+          "Convert the outer logarithm: $\\log_2(\\log_2 x) = 2$ means $2^2 = \\log_2 x$, so $\\log_2 x = 4$.",
+          "Convert again: $\\log_2 x = 4$ means $x = 2^4$.",
+          "Evaluate: $x = 16$.",
+          "Check: $\\log_2 16 = 4$ and $\\log_2 4 = 2$, confirming the solution."
+        ],
+        "answer": "$x = 16$"
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Consider $f(x) = \\log_5 x$. Find the equation of the function $g$ obtained by reflecting $f$ across the $y$-axis and then shifting it up $2$ units. State the domain and vertical asymptote of $g$.",
+      "answer": "$g(x) = \\log_5(-x) + 2$; domain $x < 0$; vertical asymptote $x = 0$",
+      "solution": {
+        "steps": [
+          "Reflecting $f(x) = \\log_5 x$ across the $y$-axis replaces $x$ with $-x$: $\\log_5(-x)$.",
+          "Shifting up $2$ units adds $2$: $g(x) = \\log_5(-x) + 2$.",
+          "Domain requires the argument positive: $-x > 0$, so $x < 0$.",
+          "The vertical asymptote occurs where the argument is $0$: $-x = 0$, so $x = 0$.",
+          "A vertical shift does not move the asymptote, so it remains $x = 0$."
+        ],
+        "answer": "$g(x) = \\log_5(-x) + 2$; domain $x < 0$; asymptote $x = 0$"
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Express $\\log_{16} 2$ exactly, then use it to evaluate the chain $4^{\\,\\log_{16} 2}$.",
+      "answer": "$\\log_{16} 2 = \\frac{1}{4}$, and $4^{\\,\\log_{16} 2} = \\sqrt{2}$",
+      "solution": {
+        "steps": [
+          "Let $\\log_{16} 2 = y$, so $16^y = 2$. Write $16 = 2^4$: $(2^4)^y = 2^1$, giving $4y = 1$, so $y = \\frac{1}{4}$.",
+          "Thus $\\log_{16} 2 = \\frac{1}{4}$.",
+          "Substitute into the chain: $4^{\\,\\log_{16} 2} = 4^{1/4}$.",
+          "Write $4 = 2^2$: $4^{1/4} = (2^2)^{1/4} = 2^{1/2} = \\sqrt{2}$.",
+          "Therefore $4^{\\,\\log_{16} 2} = \\sqrt{2}$."
+        ],
+        "answer": "$\\log_{16} 2 = \\frac{1}{4}$ and $4^{\\,\\log_{16} 2} = \\sqrt{2}$"
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "The function $y = a\\log_b(x - h) + k$ has vertical asymptote $x = 1$, $x$-intercept at $(2, 0)$, and passes through $(10, -3)$. Given that the base satisfies $b = 9$, find $a$, $h$, and $k$, and write the equation.",
+      "answer": "$h = 1$, $k = 0$, $a = -3$; so $y = -3\\log_9(x - 1)$",
+      "solution": {
+        "steps": [
+          "The vertical asymptote is $x = h$, so $h = 1$; the equation is $y = a\\log_9(x - 1) + k$.",
+          "Use the $x$-intercept $(2, 0)$: $0 = a\\log_9(2 - 1) + k = a\\log_9(1) + k = a \\cdot 0 + k$, so $k = 0$.",
+          "The equation is now $y = a\\log_9(x - 1)$.",
+          "Use $(10, -3)$: $-3 = a\\log_9(10 - 1) = a\\log_9(9)$.",
+          "Evaluate $\\log_9 9 = 1$, so $-3 = a \\cdot 1$, giving $a = -3$.",
+          "The equation is $y = -3\\log_9(x - 1)$."
+        ],
+        "answer": "$y = -3\\log_9(x - 1)$"
+      }
+    }
+  ]
+}

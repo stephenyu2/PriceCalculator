@@ -1,0 +1,135 @@
+{
+  "standard": "PC.TRIG.C.9",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Laws of sines and cosines",
+  "clusterCode": "C",
+  "skillName": "Law of Cosines",
+
+  "description": "Students apply the Law of Cosines, $c^2 = a^2 + b^2 - 2ab\\cos C$, to solve oblique (non-right) triangles in the two cases it governs: SAS (two sides and the included angle, solve for the third side) and SSS (three sides, solve for an angle). They rearrange the formula to isolate an unknown angle as $\\cos C = \\dfrac{a^2 + b^2 - c^2}{2ab}$, recognize when the Law of Cosines is required versus the Law of Sines, and derive and apply Heron's formula, $A = \\sqrt{s(s-a)(s-b)(s-c)}$ with $s = \\dfrac{a+b+c}{2}$, to find the area of a triangle from its three side lengths.",
+
+  "subSkills": [
+    "State the Law of Cosines and identify which side is opposite the chosen angle",
+    "Solve the SAS case: given two sides and the included angle, find the third side",
+    "Solve the SSS case: rearrange to $\\cos C = \\dfrac{a^2+b^2-c^2}{2ab}$ and find an angle via $\\cos^{-1}$",
+    "Recognize obtuse angles from a negative cosine value (the sign of $\\cos C$ reveals acute vs. obtuse)",
+    "Choose correctly between the Law of Cosines (SAS, SSS) and the Law of Sines (ASA, AAS, SSA)",
+    "Compute the semiperimeter $s = \\dfrac{a+b+c}{2}$ and apply Heron's formula for area",
+    "Derive Heron's formula by combining the Law of Cosines with $A = \\tfrac{1}{2}ab\\sin C$",
+    "Apply the Law of Cosines and Heron's formula to real-world contexts (surveying, navigation, force diagrams)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "SAS: find the third side",
+      "example": "In triangle $ABC$, $a = 7$, $b = 10$, and the included angle $C = 60^\\circ$. Find side $c$. Solution: $c^2 = 7^2 + 10^2 - 2(7)(10)\\cos 60^\\circ = 49 + 100 - 140\\cdot\\tfrac{1}{2} = 79$, so $c = \\sqrt{79}$."
+    },
+    {
+      "name": "SSS: find an angle",
+      "example": "A triangle has sides $a = 5$, $b = 6$, $c = 8$. Find angle $C$ (opposite the longest side). Solution: $\\cos C = \\dfrac{5^2 + 6^2 - 8^2}{2(5)(6)} = \\dfrac{25+36-64}{60} = \\dfrac{-3}{60} = -\\dfrac{1}{20}$, so $C = \\cos^{-1}\\!\\left(-\\tfrac{1}{20}\\right) \\approx 92.9^\\circ$ (obtuse, since the cosine is negative)."
+    },
+    {
+      "name": "Solve the whole triangle",
+      "example": "Given $a = 4$, $b = 5$, $c = 6$, solve the triangle. Use the Law of Cosines for one angle, then the Law of Sines (or Law of Cosines again) for a second angle, and subtract from $180^\\circ$ for the third."
+    },
+    {
+      "name": "Heron's formula for area",
+      "example": "Find the area of a triangle with sides $a = 13$, $b = 14$, $c = 15$. Solution: $s = \\dfrac{13+14+15}{2} = 21$, so $A = \\sqrt{21(21-13)(21-14)(21-15)} = \\sqrt{21\\cdot 8\\cdot 7\\cdot 6} = \\sqrt{7056} = 84$."
+    },
+    {
+      "name": "Law of Cosines vs. Law of Sines selection",
+      "example": "You are given angle $A = 40^\\circ$, side $b = 9$, and side $c = 12$. Which law solves for side $a$? (SAS with the included angle, so the Law of Cosines.)"
+    },
+    {
+      "name": "Applied / contextual (surveying, navigation, vectors)",
+      "example": "Two roads diverge from a point at an angle of $72^\\circ$. A car drives $8$ km along one road and $5$ km along the other. How far apart are the endpoints? Apply the Law of Cosines: $d^2 = 8^2 + 5^2 - 2(8)(5)\\cos 72^\\circ$."
+    },
+    {
+      "name": "Derive Heron's formula",
+      "example": "Starting from $A = \\tfrac{1}{2}ab\\sin C$ and $\\cos C = \\dfrac{a^2+b^2-c^2}{2ab}$, use $\\sin^2 C = 1 - \\cos^2 C$ to derive $A = \\sqrt{s(s-a)(s-b)(s-c)}$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Direct single-application of the Law of Cosines or Heron's formula with the relevant case already identified for the student. Clean numbers; the included angle is a benchmark value ($30^\\circ$, $45^\\circ$, $60^\\circ$, $90^\\circ$, $120^\\circ$) with an exact cosine, or Heron values produce a perfect-square radicand.",
+      "constraints": [
+        "SAS with included angle a benchmark value so $\\cos C$ is exact (e.g. $\\cos 60^\\circ = \\tfrac{1}{2}$)",
+        "Or SSS where the radicand is a perfect square or the answer is a clean $\\cos^{-1}$ value",
+        "Or Heron's with integer sides yielding a perfect-square product under the root",
+        "Single step: plug in and simplify, no choice between laws required",
+        "Side lengths are small positive integers (each $\\le 15$)"
+      ]
+    },
+    "Medium": {
+      "description": "Student must select the correct law/formula and may need a non-benchmark angle (requiring a calculator/approximation) or a follow-up step. SSS problems may yield an obtuse angle (negative cosine). Heron's may require simplifying a non-perfect-square radical.",
+      "constraints": [
+        "Student decides between Law of Cosines and Law of Sines based on the given parts",
+        "Non-benchmark included angle, or SSS producing an obtuse angle (negative cosine)",
+        "Answer left as a simplified radical (e.g. $\\sqrt{79}$) or rounded to a stated precision",
+        "Heron's radicand needs radical simplification (e.g. $\\sqrt{56} = 2\\sqrt{14}$)",
+        "Two linked steps, such as finding a side then its opposite angle"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems requiring full triangle solution, derivation, comparison of methods, or modeling from a verbal/contextual setup with no diagram. Combines the Law of Cosines with the Law of Sines and/or Heron's formula, and may require checking for an obtuse angle to avoid the ambiguous-case trap.",
+      "constraints": [
+        "Solve a complete oblique triangle (all sides and angles) using both laws",
+        "Or derive Heron's formula or the Law of Cosines from first principles",
+        "Or a multi-stage applied problem (navigation bearings, resultant force, surveying) that must be translated into a triangle first",
+        "Or combine the Law of Cosines for an angle with Heron's formula for area in one problem",
+        "Requires justifying method choice and watching the sign of the cosine for obtuse angles"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student treats the triangle as right and uses the Pythagorean theorem, dropping the $-2ab\\cos C$ term",
+      "distractor": "Computes $c = \\sqrt{a^2 + b^2}$ (e.g. $\\sqrt{149}$ instead of $\\sqrt{79}$), ignoring the included angle"
+    },
+    {
+      "misconception": "Student pairs the angle with a side that is NOT opposite it, using the wrong side as $c$",
+      "distractor": "Plugs the included angle into the formula opposite one of the given sides rather than opposite the unknown side, yielding the wrong $c^2$"
+    },
+    {
+      "misconception": "Student forgets the cosine is negative for an obtuse angle and takes the acute supplement",
+      "distractor": "Reports $C = \\cos^{-1}\\!\\left(\\tfrac{1}{20}\\right) \\approx 87.1^\\circ$ instead of the obtuse $\\cos^{-1}\\!\\left(-\\tfrac{1}{20}\\right) \\approx 92.9^\\circ$"
+    },
+    {
+      "misconception": "Student applies order of operations wrong: subtracts before squaring or multiplies $2ab\\cos C$ incorrectly",
+      "distractor": "Computes $(a^2 + b^2 - 2ab)\\cos C$ or $a^2 + b^2 - 2ab \\cdot C$, mishandling the product $2ab\\cos C$"
+    },
+    {
+      "misconception": "Student rearranges the SSS formula incorrectly, e.g. $\\cos C = \\dfrac{c^2 - a^2 - b^2}{2ab}$ (sign flipped) or wrong denominator",
+      "distractor": "Uses $\\cos C = \\dfrac{a^2 + b^2 - c^2}{2ac}$ or flips the numerator sign, producing a cosine of the wrong magnitude or sign"
+    },
+    {
+      "misconception": "Student uses the side lengths directly in Heron's formula without computing the semiperimeter (uses the full perimeter)",
+      "distractor": "Computes $\\sqrt{P(P-a)(P-b)(P-c)}$ with $P = a+b+c$ instead of $s = \\tfrac{a+b+c}{2}$, overstating the area"
+    },
+    {
+      "misconception": "Student forgets to take the square root after applying the Law of Cosines, reporting $c^2$ as $c$",
+      "distractor": "Gives $c = 79$ instead of $c = \\sqrt{79}$"
+    },
+    {
+      "misconception": "Student chooses the Law of Sines for an SAS or SSS case where no angle-side pair is known",
+      "distractor": "Sets up $\\dfrac{\\sin A}{a} = \\dfrac{\\sin B}{b}$ with no valid opposite pair, an unusable equation, instead of the Law of Cosines"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

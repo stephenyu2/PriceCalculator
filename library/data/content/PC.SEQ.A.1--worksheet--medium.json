@@ -1,0 +1,214 @@
+{
+  "id": "PC.SEQ.A.1--worksheet--medium",
+  "standard": "PC.SEQ.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Sequences, Series, and Limits",
+  "domainCode": "SEQ",
+  "cluster": "Sequences and series",
+  "clusterCode": "A",
+  "skillName": "Arithmetic Sequences and Series",
+  "materialType": "worksheet",
+  "difficulty": "Medium",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems chain the explicit term formula $a_n = a_1 + (n-1)d$ with the partial-sum formulas $S_n = \\frac{n}{2}(a_1 + a_n)$ and $S_n = \\frac{n}{2}(2a_1 + (n-1)d)$. Several ask you to recover $a_1$ or $d$ from two known terms, evaluate a finite sum in sigma notation, or work with a negative or fractional common difference. Give exact values.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Find the sum of the first $30$ terms of the arithmetic sequence $4,\\ 7,\\ 10,\\ 13,\\ \\dots$.",
+      "answer": "$S_{30} = 1425$",
+      "solution": {
+        "steps": [
+          "Identify $a_1 = 4$ and $d = 7 - 4 = 3$.",
+          "Find the $30$th term: $a_{30} = a_1 + (30-1)d = 4 + 29\\cdot 3 = 4 + 87 = 91$.",
+          "Apply the partial-sum formula: $S_{30} = \\frac{30}{2}(a_1 + a_{30}) = 15(4 + 91)$.",
+          "Compute: $S_{30} = 15 \\cdot 95 = 1425$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "In an arithmetic sequence, $a_4 = 14$ and $a_9 = 34$. Find the common difference $d$ and the first term $a_1$.",
+      "answer": "$d = 4$ and $a_1 = 2$",
+      "solution": {
+        "steps": [
+          "The terms $a_4$ and $a_9$ are $9 - 4 = 5$ index steps apart, so $a_9 = a_4 + 5d$.",
+          "Substitute: $34 = 14 + 5d$, so $5d = 20$ and $d = \\frac{20}{5} = 4$.",
+          "Back out $a_1$ using $a_4 = a_1 + 3d$: $14 = a_1 + 3\\cdot 4 = a_1 + 12$.",
+          "Solve: $a_1 = 14 - 12 = 2$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Evaluate the finite series $\\sum_{k=1}^{12}(3k + 2)$.",
+      "answer": "$258$",
+      "solution": {
+        "steps": [
+          "The terms form an arithmetic sequence; the first term is at $k=1$: $3(1)+2 = 5$.",
+          "The last term is at $k=12$: $3(12)+2 = 38$.",
+          "There are $12$ terms, so $S = \\frac{12}{2}(5 + 38) = 6 \\cdot 43$.",
+          "Compute: $S = 258$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "An arithmetic sequence has first term $a_1 = 50$ and common difference $d = -3$. Find the sum of the first $20$ terms, $S_{20}$.",
+      "answer": "$S_{20} = 430$",
+      "solution": {
+        "steps": [
+          "Use $S_n = \\frac{n}{2}(2a_1 + (n-1)d)$ with $n = 20$.",
+          "Substitute: $S_{20} = \\frac{20}{2}\\big(2(50) + (20-1)(-3)\\big) = 10\\big(100 + 19(-3)\\big)$.",
+          "Simplify inside: $100 - 57 = 43$.",
+          "Compute: $S_{20} = 10 \\cdot 43 = 430$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "An arithmetic sequence has $a_1 = 7$ and $a_{25} = 91$. Find the sum of the first $25$ terms, $S_{25}$.",
+      "answer": "$S_{25} = 1225$",
+      "solution": {
+        "steps": [
+          "Both end terms are known, so use $S_n = \\frac{n}{2}(a_1 + a_n)$ directly with $n = 25$.",
+          "Substitute: $S_{25} = \\frac{25}{2}(7 + 91) = \\frac{25}{2}(98)$.",
+          "Simplify: $S_{25} = 25 \\cdot 49$.",
+          "Compute: $S_{25} = 1225$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "The third term of an arithmetic sequence is $a_3 = 17$ and the seventh term is $a_7 = 37$. Find the explicit formula for the $n$th term in the form $a_n = a_1 + (n-1)d$.",
+      "answer": "$a_n = 7 + (n-1)\\cdot 5$, equivalently $a_n = 5n + 2$",
+      "solution": {
+        "steps": [
+          "The indices differ by $7 - 3 = 4$, so $a_7 = a_3 + 4d$.",
+          "Substitute: $37 = 17 + 4d$, giving $4d = 20$ and $d = 5$.",
+          "Find $a_1$ from $a_3 = a_1 + 2d$: $17 = a_1 + 2(5) = a_1 + 10$, so $a_1 = 7$.",
+          "Write the rule: $a_n = 7 + (n-1)\\cdot 5 = 5n + 2$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Find the sum of the first $40$ terms of the arithmetic sequence $-5,\\ -1,\\ 3,\\ 7,\\ \\dots$.",
+      "answer": "$S_{40} = 2920$",
+      "solution": {
+        "steps": [
+          "Identify $a_1 = -5$ and $d = -1 - (-5) = 4$.",
+          "Find $a_{40} = a_1 + 39d = -5 + 39\\cdot 4 = -5 + 156 = 151$.",
+          "Apply $S_{40} = \\frac{40}{2}(a_1 + a_{40}) = 20(-5 + 151) = 20 \\cdot 146$.",
+          "Compute: $S_{40} = 2920$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "An arithmetic sequence has first term $a_1 = 3$ and common difference $d = \\frac{1}{2}$. Find the sum of the first $16$ terms, $S_{16}$.",
+      "answer": "$S_{16} = 108$",
+      "solution": {
+        "steps": [
+          "Use $S_n = \\frac{n}{2}(2a_1 + (n-1)d)$ with $n = 16$.",
+          "Substitute: $S_{16} = \\frac{16}{2}\\big(2(3) + (16-1)\\cdot\\tfrac{1}{2}\\big) = 8\\big(6 + 15\\cdot\\tfrac{1}{2}\\big)$.",
+          "Simplify inside: $6 + \\frac{15}{2} = \\frac{12}{2} + \\frac{15}{2} = \\frac{27}{2}$.",
+          "Compute: $S_{16} = 8 \\cdot \\frac{27}{2} = 4 \\cdot 27 = 108$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Evaluate the finite series $\\sum_{k=1}^{20}(5k - 3)$.",
+      "answer": "$990$",
+      "solution": {
+        "steps": [
+          "First term at $k=1$: $5(1) - 3 = 2$. Last term at $k=20$: $5(20) - 3 = 97$.",
+          "There are $20$ terms, so $S = \\frac{20}{2}(2 + 97) = 10 \\cdot 99$.",
+          "Compute: $S = 990$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "In an arithmetic sequence, $a_5 = 23$ and $a_{12} = 58$. Find $a_{20}$.",
+      "answer": "$a_{20} = 98$",
+      "solution": {
+        "steps": [
+          "The indices differ by $12 - 5 = 7$, so $a_{12} = a_5 + 7d$.",
+          "Substitute: $58 = 23 + 7d$, giving $7d = 35$ and $d = 5$.",
+          "Step from $a_{12}$ to $a_{20}$: that is $20 - 12 = 8$ steps, so $a_{20} = a_{12} + 8d = 58 + 8\\cdot 5$.",
+          "Compute: $a_{20} = 58 + 40 = 98$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Find the sum of all the multiples of $4$ from $4$ to $100$ inclusive.",
+      "answer": "$1300$",
+      "solution": {
+        "steps": [
+          "The multiples are $4, 8, 12, \\dots, 100$, an arithmetic sequence with $a_1 = 4$ and $d = 4$.",
+          "Find the number of terms: $a_n = 100 = 4 + (n-1)\\cdot 4$, so $96 = 4(n-1)$, giving $n - 1 = 24$ and $n = 25$.",
+          "Apply $S_{25} = \\frac{25}{2}(a_1 + a_{25}) = \\frac{25}{2}(4 + 100) = \\frac{25}{2}(104)$.",
+          "Compute: $S_{25} = 25 \\cdot 52 = 1300$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "An arithmetic sequence has $a_2 = 11$ and $a_6 = 27$. Find the sum of the first $15$ terms, $S_{15}$.",
+      "answer": "$S_{15} = 525$",
+      "solution": {
+        "steps": [
+          "The indices differ by $6 - 2 = 4$, so $a_6 = a_2 + 4d$: $27 = 11 + 4d$, giving $d = 4$.",
+          "Find $a_1$ from $a_2 = a_1 + d$: $11 = a_1 + 4$, so $a_1 = 7$.",
+          "Find $a_{15} = a_1 + 14d = 7 + 14\\cdot 4 = 7 + 56 = 63$.",
+          "Apply $S_{15} = \\frac{15}{2}(a_1 + a_{15}) = \\frac{15}{2}(7 + 63) = \\frac{15}{2}(70) = 15 \\cdot 35 = 525$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Evaluate the finite series $\\sum_{k=3}^{10}(2k + 1)$.",
+      "answer": "$112$",
+      "solution": {
+        "steps": [
+          "The index runs from $k=3$ to $k=10$, which is $10 - 3 + 1 = 8$ terms.",
+          "First term at $k=3$: $2(3)+1 = 7$. Last term at $k=10$: $2(10)+1 = 21$.",
+          "Apply $S = \\frac{8}{2}(7 + 21) = 4 \\cdot 28$.",
+          "Compute: $S = 112$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "An arithmetic sequence starts $20,\\ 17,\\ 14,\\ 11,\\ \\dots$. Find the sum of the first $18$ terms, $S_{18}$.",
+      "answer": "$S_{18} = -99$",
+      "solution": {
+        "steps": [
+          "Identify $a_1 = 20$ and $d = 17 - 20 = -3$.",
+          "Use $S_n = \\frac{n}{2}(2a_1 + (n-1)d)$ with $n = 18$: $S_{18} = \\frac{18}{2}\\big(2(20) + 17(-3)\\big)$.",
+          "Simplify inside: $40 - 51 = -11$.",
+          "Compute: $S_{18} = 9 \\cdot (-11) = -99$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A stack of logs has $24$ logs in the bottom row, and each row above has $2$ fewer logs than the row below. Find the total number of logs in the bottom $10$ rows.",
+      "answer": "$150$ logs",
+      "solution": {
+        "steps": [
+          "Model the rows as an arithmetic sequence with $a_1 = 24$ (bottom row) and $d = -2$.",
+          "Find the $10$th row: $a_{10} = a_1 + 9d = 24 + 9(-2) = 24 - 18 = 6$ logs.",
+          "Apply $S_{10} = \\frac{10}{2}(a_1 + a_{10}) = 5(24 + 6) = 5 \\cdot 30$.",
+          "Compute: $S_{10} = 150$ logs total."
+        ]
+      }
+    }
+  ]
+}

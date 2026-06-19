@@ -1,0 +1,129 @@
+{
+  "standard": "PC.VEC.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Vectors and Parametric Equations",
+  "domainCode": "VEC",
+  "cluster": "Vectors in the plane",
+  "clusterCode": "A",
+  "skillName": "Parametric Equations",
+
+  "description": "Students define a plane curve parametrically as $x=f(t)$ and $y=g(t)$, build and read a table of values, and graph the curve with its orientation (the direction of increasing $t$). They eliminate the parameter to recover a rectangular equation in $x$ and $y$, including cases that require trig identities such as $\\cos^2 t+\\sin^2 t=1$, and they account for any domain or range restrictions the parameterization imposes. They also write parametric equations to model motion, including projectile motion under gravity with horizontal component $x=(v_0\\cos\\theta)\\,t$ and vertical component $y=(v_0\\sin\\theta)\\,t-\\tfrac{1}{2}gt^2$, and answer questions about position, time, range, and maximum height.",
+
+  "subSkills": [
+    "Evaluate $x=f(t)$ and $y=g(t)$ at given parameter values to build a table of points",
+    "Plot parametric points and mark the orientation (arrow for increasing $t$)",
+    "Eliminate the parameter by solving one equation for $t$ and substituting (algebraic/linear and quadratic cases)",
+    "Eliminate the parameter using a Pythagorean trig identity $\\cos^2 t+\\sin^2 t=1$ for circles and ellipses",
+    "State the domain/range restrictions on the rectangular equation imposed by the parameter interval",
+    "Write parametric equations for a line segment, circle, or ellipse from a description",
+    "Set up projectile-motion parametric equations $x=(v_0\\cos\\theta)t$, $y=(v_0\\sin\\theta)t-\\tfrac{1}{2}gt^2$",
+    "Solve projectile-motion questions: position at a time, time of flight, horizontal range, and maximum height"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Build a table and graph",
+      "example": "For $x=t^2$ and $y=t+1$ on $-2\\le t\\le 2$, make a table of $(x,y)$ for $t=-2,-1,0,1,2$ and sketch the curve, indicating its orientation."
+    },
+    {
+      "name": "Eliminate the parameter (linear/polynomial)",
+      "example": "Eliminate the parameter in $x=2t-1$, $y=t^2$ to obtain a rectangular equation. Answer: solve $t=\\dfrac{x+1}{2}$ so $y=\\left(\\dfrac{x+1}{2}\\right)^2$."
+    },
+    {
+      "name": "Eliminate the parameter (trig identity)",
+      "example": "Eliminate the parameter in $x=3\\cos t$, $y=3\\sin t$. Using $\\cos^2 t+\\sin^2 t=1$ gives $x^2+y^2=9$, a circle of radius $3$."
+    },
+    {
+      "name": "Eliminate with an ellipse",
+      "example": "Eliminate the parameter in $x=4\\cos t$, $y=2\\sin t$. Answer: $\\dfrac{x^2}{16}+\\dfrac{y^2}{4}=1$."
+    },
+    {
+      "name": "Domain/range restriction from the parameterization",
+      "example": "For $x=\\sqrt{t}$, $y=t-3$ with $t\\ge 0$, eliminate the parameter and state the restriction. Answer: $y=x^2-3$ with $x\\ge 0$."
+    },
+    {
+      "name": "Write parametric equations from a description",
+      "example": "Write parametric equations for the line segment from $(1,2)$ to $(5,-4)$ for $0\\le t\\le 1$. Answer: $x=1+4t$, $y=2-6t$."
+    },
+    {
+      "name": "Projectile motion",
+      "example": "A ball is launched at $v_0=20$ m/s at angle $\\theta=30^\\circ$ (use $g=9.8$ m/s$^2$). Write $x=(20\\cos 30^\\circ)t$ and $y=(20\\sin 30^\\circ)t-4.9t^2$, then find the time of flight and the horizontal range."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single, direct step. Evaluate a parameterization at one or two values, or eliminate the parameter when one equation is linear and solving for $t$ is immediate. No identities, no restrictions to track.",
+      "constraints": [
+        "Plug in given $t$ values to find points, or solve a linear $x=at+b$ for $t$ and substitute",
+        "Integer coefficients; no trig identity required",
+        "Orientation read directly from a small table; no domain restriction to state"
+      ]
+    },
+    "Medium": {
+      "description": "Two to three steps. Eliminate the parameter where substitution yields a quadratic, or use $\\cos^2 t+\\sin^2 t=1$ to get a circle or ellipse, or set up basic projectile equations and evaluate position at a given time.",
+      "constraints": [
+        "Requires the Pythagorean identity for a circle/ellipse, or substitution producing $y$ as a quadratic in $x$",
+        "Identify the curve type (circle vs. ellipse) and its radii/axes",
+        "Projectile: substitute exact values such as $\\cos 30^\\circ=\\frac{\\sqrt{3}}{2}$ and evaluate $x$ or $y$ at a stated $t$"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step with restrictions or applied reasoning. Eliminate the parameter and correctly state the domain/range restriction it forces, write a parameterization from scratch, or solve a full projectile problem for time of flight, range, or maximum height.",
+      "constraints": [
+        "Must report a domain/range restriction (e.g. $x\\ge 0$, $y\\le 1$) the parameter interval imposes",
+        "Construct parametric equations from a verbal description of a segment, circle, or ellipse",
+        "Projectile: solve $y=0$ for time of flight, then compute range, or use vertex/axis to find maximum height; exact or clearly approximated answers"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Eliminates the parameter by solving for $t$ in one equation but forgets to substitute, or substitutes into the wrong variable",
+      "distractor": "Leaves $t$ in the final answer or replaces $y$ instead of $x$, e.g. writes $y=2t-1$ as the rectangular equation instead of substituting $t$ out"
+    },
+    {
+      "misconception": "Drops the orientation or reverses the direction of increasing $t$",
+      "distractor": "Marks the arrow in the direction of decreasing $t$, tracing the curve backward"
+    },
+    {
+      "misconception": "Misapplies the Pythagorean identity, adding $x$ and $y$ instead of squaring, or squaring only one term",
+      "distractor": "From $x=3\\cos t$, $y=3\\sin t$ writes $x+y=3$ or $x^2+y^2=3$ instead of $x^2+y^2=9$"
+    },
+    {
+      "misconception": "Ignores the domain/range restriction the parameterization imposes",
+      "distractor": "For $x=\\sqrt{t}$, $y=t-3$ gives $y=x^2-3$ for all $x$ instead of restricting to $x\\ge 0$"
+    },
+    {
+      "misconception": "Swaps the horizontal and vertical components in projectile motion or omits the $-\\tfrac{1}{2}gt^2$ gravity term",
+      "distractor": "Writes $x=(v_0\\sin\\theta)t$ and $y=(v_0\\cos\\theta)t$, or uses $y=(v_0\\sin\\theta)t$ with no $-4.9t^2$ term"
+    },
+    {
+      "misconception": "Confuses time of flight with time to maximum height (off by a factor of two)",
+      "distractor": "Reports the time to the peak as the total time of flight, halving the true range"
+    },
+    {
+      "misconception": "Uses degree mode values incorrectly, e.g. treats $\\cos 30^\\circ$ as $\\frac{1}{2}$ instead of $\\frac{\\sqrt{3}}{2}$",
+      "distractor": "Swaps $\\sin 30^\\circ=\\frac{1}{2}$ and $\\cos 30^\\circ=\\frac{\\sqrt{3}}{2}$ in the projectile components"
+    },
+    {
+      "misconception": "When eliminating with an ellipse, fails to divide by the squared coefficients",
+      "distractor": "From $x=4\\cos t$, $y=2\\sin t$ writes $x^2+y^2=1$ instead of $\\dfrac{x^2}{16}+\\dfrac{y^2}{4}=1$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "id": "PC.TRIG.A.2--lesson",
+  "standard": "PC.TRIG.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Angles, radian measure, and the unit circle",
+  "clusterCode": "A",
+  "skillName": "Unit Circle",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "The unit circle is the circle $x^2 + y^2 = 1$ centered at the origin. For an angle $\\theta$ in standard position, the point where its terminal side crosses the circle is $(\\cos\\theta, \\sin\\theta)$. So the $x$-coordinate is $\\cos\\theta$ and the $y$-coordinate is $\\sin\\theta$, and $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$. To evaluate any standard angle (a multiple of $\\frac{\\pi}{6}$ or $\\frac{\\pi}{4}$), find its reference angle, recall the first-quadrant value, then attach the correct sign using the quadrant rule ASTC: All positive in Quadrant I, only Sine in II, only Tangent in III, only Cosine in IV.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Find the exact value of $\\sin\\frac{\\pi}{3}$, and state the coordinates of the terminal point on the unit circle for $\\theta = \\frac{\\pi}{3}$.",
+      "solution": {
+        "steps": [
+          "The angle $\\frac{\\pi}{3} = 60^\\circ$ lies in Quadrant I, so every value is positive.",
+          "Recall the first-quadrant value: $\\sin\\frac{\\pi}{3} = \\frac{\\sqrt{3}}{2}$ and $\\cos\\frac{\\pi}{3} = \\frac{1}{2}$.",
+          "The terminal point is $(\\cos\\theta, \\sin\\theta) = \\left(\\frac{1}{2}, \\frac{\\sqrt{3}}{2}\\right)$.",
+          "So $\\sin\\frac{\\pi}{3} = \\frac{\\sqrt{3}}{2}$."
+        ],
+        "answer": "$\\sin\\frac{\\pi}{3} = \\frac{\\sqrt{3}}{2}$; terminal point $\\left(\\frac{1}{2}, \\frac{\\sqrt{3}}{2}\\right)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find the exact value of $\\cos\\frac{2\\pi}{3}$ using a reference angle and the quadrant sign rule.",
+      "solution": {
+        "steps": [
+          "Locate the angle: $\\frac{2\\pi}{3} = 120^\\circ$ lies in Quadrant II (between $\\frac{\\pi}{2}$ and $\\pi$).",
+          "Find the reference angle by subtracting from $\\pi$: $\\pi - \\frac{2\\pi}{3} = \\frac{3\\pi}{3} - \\frac{2\\pi}{3} = \\frac{\\pi}{3}$.",
+          "Recall the reference value: $\\cos\\frac{\\pi}{3} = \\frac{1}{2}$.",
+          "Apply ASTC: in Quadrant II only sine is positive, so cosine is negative.",
+          "Therefore $\\cos\\frac{2\\pi}{3} = -\\frac{1}{2}$."
+        ],
+        "answer": "$\\cos\\frac{2\\pi}{3} = -\\frac{1}{2}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Give the coordinates of the point where the terminal side of $\\theta = \\frac{5\\pi}{6}$ meets the unit circle.",
+      "solution": {
+        "steps": [
+          "The angle $\\frac{5\\pi}{6} = 150^\\circ$ lies in Quadrant II.",
+          "Reference angle: $\\pi - \\frac{5\\pi}{6} = \\frac{6\\pi}{6} - \\frac{5\\pi}{6} = \\frac{\\pi}{6}$.",
+          "First-quadrant values for $\\frac{\\pi}{6}$: $\\cos\\frac{\\pi}{6} = \\frac{\\sqrt{3}}{2}$ and $\\sin\\frac{\\pi}{6} = \\frac{1}{2}$.",
+          "In Quadrant II, $x$ (cosine) is negative and $y$ (sine) is positive.",
+          "So $\\cos\\frac{5\\pi}{6} = -\\frac{\\sqrt{3}}{2}$ and $\\sin\\frac{5\\pi}{6} = \\frac{1}{2}$.",
+          "The terminal point is $(\\cos\\theta, \\sin\\theta) = \\left(-\\frac{\\sqrt{3}}{2}, \\frac{1}{2}\\right)$."
+        ],
+        "answer": "$\\left(-\\frac{\\sqrt{3}}{2}, \\frac{1}{2}\\right)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Find $\\tan\\frac{\\pi}{2}$ and explain why it has this value.",
+      "solution": {
+        "steps": [
+          "Use the definition $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$.",
+          "The terminal point of $\\frac{\\pi}{2} = 90^\\circ$ on the unit circle is $(0, 1)$, so $\\cos\\frac{\\pi}{2} = 0$ and $\\sin\\frac{\\pi}{2} = 1$.",
+          "Substitute: $\\tan\\frac{\\pi}{2} = \\frac{1}{0}$.",
+          "Division by $0$ is not defined, so $\\tan\\frac{\\pi}{2}$ is undefined.",
+          "This makes sense because the terminal side is vertical, so it never produces a finite slope."
+        ],
+        "answer": "$\\tan\\frac{\\pi}{2}$ is undefined (since $\\cos\\frac{\\pi}{2} = 0$)"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Find $\\cos\\left(-\\frac{4\\pi}{3}\\right)$ by reducing to a coterminal angle in $[0, 2\\pi)$ first.",
+      "solution": {
+        "steps": [
+          "Add $2\\pi$ to make the angle positive: $-\\frac{4\\pi}{3} + 2\\pi = -\\frac{4\\pi}{3} + \\frac{6\\pi}{3} = \\frac{2\\pi}{3}$.",
+          "So $\\cos\\left(-\\frac{4\\pi}{3}\\right) = \\cos\\frac{2\\pi}{3}$.",
+          "The angle $\\frac{2\\pi}{3} = 120^\\circ$ is in Quadrant II with reference angle $\\pi - \\frac{2\\pi}{3} = \\frac{\\pi}{3}$.",
+          "Recall $\\cos\\frac{\\pi}{3} = \\frac{1}{2}$, and cosine is negative in Quadrant II.",
+          "Therefore $\\cos\\left(-\\frac{4\\pi}{3}\\right) = -\\frac{1}{2}$."
+        ],
+        "answer": "$\\cos\\left(-\\frac{4\\pi}{3}\\right) = -\\frac{1}{2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Find the exact value of $\\cos\\frac{\\pi}{6}$.",
+      "hint": "The angle $\\frac{\\pi}{6} = 30^\\circ$ is in Quadrant I, so the value is positive. Recall the standard first-quadrant value.",
+      "solution": {
+        "steps": [
+          "$\\frac{\\pi}{6} = 30^\\circ$ lies in Quadrant I, so all values are positive.",
+          "The standard value is $\\cos\\frac{\\pi}{6} = \\frac{\\sqrt{3}}{2}$.",
+          "Therefore $\\cos\\frac{\\pi}{6} = \\frac{\\sqrt{3}}{2}$."
+        ],
+        "answer": "$\\frac{\\sqrt{3}}{2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Find the exact value of $\\sin\\frac{7\\pi}{6}$.",
+      "hint": "This angle is in Quadrant III. Find the reference angle by subtracting $\\pi$, then apply the sign rule (sine is negative in Quadrant III).",
+      "solution": {
+        "steps": [
+          "$\\frac{7\\pi}{6} = 210^\\circ$ lies in Quadrant III.",
+          "Reference angle: $\\frac{7\\pi}{6} - \\pi = \\frac{7\\pi}{6} - \\frac{6\\pi}{6} = \\frac{\\pi}{6}$.",
+          "Reference value: $\\sin\\frac{\\pi}{6} = \\frac{1}{2}$.",
+          "In Quadrant III sine is negative, so $\\sin\\frac{7\\pi}{6} = -\\frac{1}{2}$."
+        ],
+        "answer": "$-\\frac{1}{2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Find the exact value of $\\tan\\frac{\\pi}{4}$.",
+      "hint": "Use $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$ with the terminal point of $\\frac{\\pi}{4}$.",
+      "solution": {
+        "steps": [
+          "The terminal point of $\\frac{\\pi}{4} = 45^\\circ$ is $\\left(\\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2}\\right)$.",
+          "So $\\tan\\frac{\\pi}{4} = \\frac{\\sin\\frac{\\pi}{4}}{\\cos\\frac{\\pi}{4}} = \\frac{\\frac{\\sqrt{2}}{2}}{\\frac{\\sqrt{2}}{2}}$.",
+          "The numerator equals the denominator, so the quotient is $1$.",
+          "Therefore $\\tan\\frac{\\pi}{4} = 1$."
+        ],
+        "answer": "$1$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Evaluate $\\tan 150^\\circ$, giving an exact value.",
+      "hint": "Convert to radians or work in degrees. The angle is in Quadrant II with reference angle $30^\\circ$; decide the sign of tangent there.",
+      "solution": {
+        "steps": [
+          "$150^\\circ = \\frac{5\\pi}{6}$ lies in Quadrant II.",
+          "Reference angle: $180^\\circ - 150^\\circ = 30^\\circ$, and $\\tan 30^\\circ = \\frac{\\sqrt{3}}{3}$.",
+          "In Quadrant II, sine is positive but cosine is negative, so tangent is negative.",
+          "Therefore $\\tan 150^\\circ = -\\frac{\\sqrt{3}}{3}$."
+        ],
+        "answer": "$-\\frac{\\sqrt{3}}{3}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Find $\\sin\\left(-\\frac{\\pi}{6}\\right)$.",
+      "hint": "A negative angle reflects across the $x$-axis. Sine is an odd function, so $\\sin(-\\theta) = -\\sin\\theta$.",
+      "solution": {
+        "steps": [
+          "A negative angle rotates clockwise, placing $-\\frac{\\pi}{6}$ in Quadrant IV.",
+          "Use odd symmetry: $\\sin\\left(-\\frac{\\pi}{6}\\right) = -\\sin\\frac{\\pi}{6}$.",
+          "Recall $\\sin\\frac{\\pi}{6} = \\frac{1}{2}$.",
+          "Therefore $\\sin\\left(-\\frac{\\pi}{6}\\right) = -\\frac{1}{2}$."
+        ],
+        "answer": "$-\\frac{1}{2}$"
+      }
+    }
+  ]
+}

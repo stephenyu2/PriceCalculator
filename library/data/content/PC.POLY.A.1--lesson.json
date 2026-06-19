@@ -1,0 +1,168 @@
+{
+  "id": "PC.POLY.A.1--lesson",
+  "standard": "PC.POLY.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Polynomial and Rational Functions",
+  "domainCode": "POLY",
+  "cluster": "Polynomial functions",
+  "clusterCode": "A",
+  "skillName": "Polynomial End Behavior",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "The end behavior of a polynomial tells you where the graph heads as $x$ runs far to the right ($x\\to+\\infty$) and far to the left ($x\\to-\\infty$). Only the leading term matters, because for large $|x|$ it dominates every other term. Two features control everything: the parity of the degree and the sign of the leading coefficient. Even degree means both ends point the same way; odd degree means they point opposite ways. A positive leading coefficient sends the right end up; a negative one sends the right end down. Combine this with the real zeros and their multiplicities (odd multiplicity crosses the x-axis, even multiplicity is tangent to it) and you can sketch or identify the graph.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Describe the end behavior of $f(x)=-2x^3+5x^2-x+4$ using limit notation.",
+      "solution": {
+        "steps": [
+          "Identify the leading term: the highest-degree term is $-2x^3$, so the degree is $3$ and the leading coefficient is $-2$.",
+          "For large $|x|$ only the leading term matters, so $f(x)$ behaves like $-2x^3$.",
+          "Degree $3$ is odd, so the two ends point in opposite directions.",
+          "The leading coefficient $-2$ is negative, so the right end goes down: as $x\\to+\\infty$, $-2x^3\\to-\\infty$, hence $f(x)\\to-\\infty$.",
+          "Since the ends oppose, the left end goes up: as $x\\to-\\infty$, $-2x^3\\to+\\infty$, hence $f(x)\\to+\\infty$."
+        ],
+        "answer": "$f(x)\\to-\\infty$ as $x\\to+\\infty$, and $f(x)\\to+\\infty$ as $x\\to-\\infty$ (odd degree, negative leading coefficient)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find the leading term of $f(x)=3(x-1)^2(x+4)$ and use it to state the end behavior.",
+      "solution": {
+        "steps": [
+          "To find the leading term, multiply the highest-degree piece of each factor. The factor $(x-1)^2$ contributes $x^2$ and the factor $(x+4)$ contributes $x$.",
+          "Multiply those highest-degree pieces with the constant $3$: leading term $=3\\cdot x^2\\cdot x=3x^3$.",
+          "So the degree is $3$ (count multiplicities: $2+1=3$), not $2$, and the leading coefficient is $3$.",
+          "Degree $3$ is odd, so the ends oppose; the leading coefficient $3$ is positive, so the right end goes up.",
+          "As $x\\to+\\infty$, $3x^3\\to+\\infty$ so $f(x)\\to+\\infty$; as $x\\to-\\infty$, $3x^3\\to-\\infty$ so $f(x)\\to-\\infty$."
+        ],
+        "answer": "Leading term $3x^3$; $f(x)\\to+\\infty$ as $x\\to+\\infty$ and $f(x)\\to-\\infty$ as $x\\to-\\infty$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Without graphing, decide whether the two ends of $g(x)=x^4-7x^2+6$ point in the same direction or opposite directions, and state where each end goes.",
+      "solution": {
+        "steps": [
+          "Identify the leading term: $x^4$, so the degree is $4$ and the leading coefficient is $1$.",
+          "Degree $4$ is even, so the two ends point in the same direction.",
+          "The leading coefficient $1$ is positive, so as $x\\to+\\infty$, $x^4\\to+\\infty$ and $g(x)\\to+\\infty$.",
+          "Because the degree is even, the left end matches the right end: as $x\\to-\\infty$, $x^4\\to+\\infty$ and $g(x)\\to+\\infty$.",
+          "Note the middle terms $-7x^2+6$ do not affect end behavior; only the leading term $x^4$ does."
+        ],
+        "answer": "Same direction; both ends go to $+\\infty$ (even degree, positive leading coefficient)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "For $f(x)=-(x+1)(x-2)^2$, find the leading coefficient, state the end behavior, and at each real zero state whether the graph crosses or is tangent to the x-axis.",
+      "solution": {
+        "steps": [
+          "Find the leading term. The highest-degree pieces are: outside factor $-1$, then $x$ from $(x+1)$, and $x^2$ from $(x-2)^2$.",
+          "Multiply: $-1\\cdot x\\cdot x^2=-x^3$. The degree is $3$ and the leading coefficient is $-1$ (do not drop the front minus sign).",
+          "Degree $3$ is odd so the ends oppose; the leading coefficient is negative so the right end goes down: $f(x)\\to-\\infty$ as $x\\to+\\infty$, and $f(x)\\to+\\infty$ as $x\\to-\\infty$.",
+          "Find the zeros from the factors: $x=-1$ has multiplicity $1$, and $x=2$ has multiplicity $2$.",
+          "Apply the multiplicity rule: odd multiplicity means the graph crosses, even multiplicity means it is tangent. So the graph crosses at $x=-1$ (multiplicity $1$) and is tangent at $x=2$ (multiplicity $2$)."
+        ],
+        "answer": "Leading coefficient $-1$; $f(x)\\to-\\infty$ as $x\\to+\\infty$ and $f(x)\\to+\\infty$ as $x\\to-\\infty$; crosses at $x=-1$, tangent at $x=2$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Write a polynomial of least degree with zeros at $x=-3$ (multiplicity $1$) and $x=1$ (multiplicity $2$) whose end behavior is both ends pointing down ($f(x)\\to-\\infty$ at both ends).",
+      "solution": {
+        "steps": [
+          "Both ends pointing the same direction requires an even degree, so the total degree (sum of multiplicities) must be even.",
+          "The given zeros give $(x+3)^1$ and $(x-1)^2$, a total degree of $1+2=3$, which is odd. We must make the degree even while keeping these zeros.",
+          "Raise the multiplicity of one zero by $1$ to keep the same zeros but reach an even degree. For example use $x=-3$ with multiplicity $2$: $(x+3)^2(x-1)^2$, total degree $4$.",
+          "Choose the leading coefficient sign. With even degree both ends match; to send both ends to $-\\infty$ the leading coefficient must be negative, so put a factor of $-1$ in front.",
+          "The polynomial $f(x)=-(x+3)^2(x-1)^2$ has leading term $-x^4$, so both ends go to $-\\infty$, and it has zeros at $x=-3$ and $x=1$ as required."
+        ],
+        "answer": "$f(x)=-(x+3)^2(x-1)^2$ (degree $4$, leading term $-x^4$, both ends $\\to-\\infty$)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Describe the end behavior of $h(x)=4x^5-x^3+2x-9$ using limit notation.",
+      "hint": "Look only at the leading term $4x^5$. Is the degree even or odd? Is the leading coefficient positive or negative?",
+      "solution": {
+        "steps": [
+          "The leading term is $4x^5$: degree $5$ (odd) and leading coefficient $4$ (positive).",
+          "Odd degree means the ends oppose; positive leading coefficient means the right end goes up.",
+          "As $x\\to+\\infty$, $4x^5\\to+\\infty$ so $h(x)\\to+\\infty$.",
+          "As $x\\to-\\infty$, $4x^5\\to-\\infty$ so $h(x)\\to-\\infty$."
+        ],
+        "answer": "$h(x)\\to+\\infty$ as $x\\to+\\infty$, and $h(x)\\to-\\infty$ as $x\\to-\\infty$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Find the leading term of $p(x)=-2(x-5)(x+1)^3$ and state its end behavior.",
+      "hint": "Multiply the highest-degree piece of each factor together with the $-2$ out front. Remember $(x+1)^3$ contributes $x^3$.",
+      "solution": {
+        "steps": [
+          "Take the highest-degree piece of each factor: $-2$, then $x$ from $(x-5)$, and $x^3$ from $(x+1)^3$.",
+          "Multiply: $-2\\cdot x\\cdot x^3=-2x^4$. The degree is $4$ and the leading coefficient is $-2$.",
+          "Even degree means both ends point the same way; negative leading coefficient means the right end goes down.",
+          "As $x\\to+\\infty$, $-2x^4\\to-\\infty$ so $p(x)\\to-\\infty$; and because the degree is even, $p(x)\\to-\\infty$ as $x\\to-\\infty$ as well."
+        ],
+        "answer": "Leading term $-2x^4$; both ends $\\to-\\infty$ (even degree, negative leading coefficient)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A polynomial satisfies $f(x)\\to+\\infty$ as $x\\to-\\infty$ and $f(x)\\to-\\infty$ as $x\\to+\\infty$. What must be true of its degree parity and the sign of its leading coefficient?",
+      "hint": "The two ends point in opposite directions. What parity forces opposite ends? Then use the right end to fix the sign.",
+      "solution": {
+        "steps": [
+          "The two ends point in opposite directions (one up, one down), which only happens for an odd-degree polynomial.",
+          "Look at the right end: $f(x)\\to-\\infty$ as $x\\to+\\infty$ means the right end goes down.",
+          "A right end going down requires a negative leading coefficient."
+        ],
+        "answer": "Odd degree with a negative leading coefficient."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "For $f(x)=(x+2)(x-3)^2$, list the real zeros and state at each whether the graph crosses or is tangent to the x-axis.",
+      "hint": "A factor raised to an odd power gives a crossing; a factor raised to an even power gives a tangent (touch) point.",
+      "solution": {
+        "steps": [
+          "Set each factor equal to zero: $x+2=0$ gives $x=-2$, and $(x-3)^2=0$ gives $x=3$.",
+          "Read multiplicities from the exponents: $x=-2$ has multiplicity $1$, and $x=3$ has multiplicity $2$.",
+          "Multiplicity $1$ is odd, so the graph crosses the x-axis at $x=-2$.",
+          "Multiplicity $2$ is even, so the graph is tangent to (touches) the x-axis at $x=3$."
+        ],
+        "answer": "Crosses at $x=-2$ (multiplicity $1$); tangent at $x=3$ (multiplicity $2$)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A graph falls to the left and rises to the right. State the smallest possible degree parity and the sign of the leading coefficient.",
+      "hint": "Falls on the left and rises on the right means the two ends point in opposite directions. Use the right end to fix the sign.",
+      "solution": {
+        "steps": [
+          "The ends point in opposite directions (down on the left, up on the right), so the degree must be odd.",
+          "The right end rises, meaning $f(x)\\to+\\infty$ as $x\\to+\\infty$, which requires a positive leading coefficient.",
+          "The smallest odd degree consistent with a polynomial of this shape is $1$, but in general the degree parity is odd."
+        ],
+        "answer": "Odd degree with a positive leading coefficient."
+      }
+    }
+  ]
+}

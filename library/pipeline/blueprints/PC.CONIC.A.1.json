@@ -1,0 +1,132 @@
+{
+  "standard": "PC.CONIC.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Analytic Geometry",
+  "domainCode": "CONIC",
+  "cluster": "Conic sections",
+  "clusterCode": "A",
+  "skillName": "Parabolas",
+
+  "description": "Students derive the standard-form equation of a parabola from the geometric focus-directrix definition (the locus of points equidistant from a fixed focus and a fixed directrix line). Given an equation in standard or general form, they identify and locate the vertex, focus, directrix, and axis of symmetry, determine the direction of opening and the focal parameter $p$, and graph the parabola accurately. They also reconstruct the equation from given features (vertex and focus, vertex and directrix, or focus and directrix) and convert general form $Ax^2+Dx+Ey+F=0$ (or the $y^2$ analog) into vertex standard form by completing the square.",
+
+  "subSkills": [
+    "State the focus-directrix definition and set up the distance equation $\\sqrt{(x-h)^2+(y-k)^2}=|\\text{distance to directrix}|$ for a point $(x,y)$ on the parabola",
+    "Algebraically derive $ (x-h)^2 = 4p(y-k) $ (vertical axis) or $ (y-k)^2 = 4p(x-h) $ (horizontal axis) by squaring and simplifying the distance equation",
+    "Read $h$, $k$, and $p$ directly from a standard-form equation and interpret the sign of $p$ as the direction of opening",
+    "Locate the vertex $(h,k)$, focus, directrix line, and axis of symmetry from $p$",
+    "Compute the latus rectum (focal width) $|4p|$ and use its endpoints to sketch the parabola's width",
+    "Convert general form to vertex standard form by completing the square in the squared variable",
+    "Reconstruct the standard-form equation from given features (vertex + focus, vertex + directrix, or focus + directrix)",
+    "Graph the parabola: plot vertex, focus, directrix, axis, and latus-rectum endpoints, then draw the curve"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Identify features from standard form",
+      "example": "For $ (x-3)^2 = 8(y+1) $, find the vertex, focus, directrix, and axis of symmetry. (Vertex $(3,-1)$; $4p=8$ so $p=2$; opens up; focus $(3,1)$; directrix $y=-3$; axis $x=3$.)"
+    },
+    {
+      "name": "Derive equation from focus and directrix",
+      "example": "Find the standard-form equation of the parabola with focus $(0,2)$ and directrix $y=-2$. (Vertex at origin, $p=2$, vertical axis: $x^2 = 8y$.)"
+    },
+    {
+      "name": "Reconstruct equation from vertex and focus (or directrix)",
+      "example": "Write the equation of the parabola with vertex $(-1,4)$ and focus $(-1,6)$. ($p=2$, opens up: $ (x+1)^2 = 8(y-4) $.)"
+    },
+    {
+      "name": "Complete the square: general to standard form",
+      "example": "Rewrite $ y = x^2 - 6x + 11 $ in vertex standard form and give the vertex and focus. ($ (x-3)^2 = (y-2) $, so $4p=1$, $p=\\frac{1}{4}$; vertex $(3,2)$, focus $(3,\\frac{9}{4})$.)"
+    },
+    {
+      "name": "Horizontal-axis parabola",
+      "example": "For $ (y+2)^2 = -12(x-1) $, find the vertex, focus, and directrix. (Vertex $(1,-2)$; $4p=-12$ so $p=-3$; opens left; focus $(-2,-2)$; directrix $x=4$.)"
+    },
+    {
+      "name": "Full derivation from the locus definition",
+      "example": "Using the focus-directrix definition, derive the equation of all points equidistant from the focus $(0,p)$ and the directrix $y=-p$, showing each algebraic step to obtain $x^2 = 4py$."
+    },
+    {
+      "name": "Graph from an equation",
+      "example": "Graph $ (x-2)^2 = 4(y+1) $: plot vertex $(2,-1)$, focus $(2,0)$, directrix $y=-2$, axis $x=2$, and latus-rectum endpoints $(0,0)$ and $(4,0)$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step extraction from a parabola already in clean standard form with vertex at the origin or with an integer $p$. The student reads $h$, $k$, and $p$ and reports one or two features. No completing the square, no derivation.",
+      "constraints": [
+        "Equation given in form $x^2=4py$ or $y^2=4px$ (vertex at origin) or $ (x-h)^2=4p(y-k) $ with integer $h,k$",
+        "$4p$ is a friendly integer ($\\pm4,\\pm8,\\pm12,\\pm16$) so $p$ is an integer",
+        "Task asks for a single feature: vertex, OR focus, OR directrix, OR axis, OR direction of opening",
+        "No conversion or algebra beyond substituting the sign of $p$"
+      ]
+    },
+    "Medium": {
+      "description": "Two to three connected steps. Either reconstruct the equation from two given features, or convert from general form by completing the square once, then report multiple features. $p$ may be a fraction.",
+      "constraints": [
+        "Reconstruct from vertex+focus, vertex+directrix, or focus+directrix (must compute $p$ and choose orientation/sign)",
+        "OR complete the square once on $y=ax^2+bx+c$ (or the $x=ay^2+\\dots$ analog) to reach standard form",
+        "$p$ may be a non-integer such as $\\frac{1}{4}$ or $\\frac{3}{2}$",
+        "Student must report at least vertex, focus, and directrix together (consistency required)"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step synthesis: a full focus-directrix derivation with non-origin vertex, OR completing the square with a leading coefficient that must be factored out, OR reconstruction requiring the student to deduce orientation from a focus and directrix that are not axis-aligned to the origin, plus graphing all features and computing the latus rectum.",
+      "constraints": [
+        "Derive standard form from the distance definition with a general focus/directrix, showing the squaring and simplification steps",
+        "OR complete the square when the squared term has a coefficient $a\\neq1$ that must be factored before completing",
+        "Combine multiple sub-tasks: find vertex, focus, directrix, axis, latus-rectum endpoints, and direction of opening from one prompt",
+        "Exact fractional or radical coordinates expected; no rounding"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Confuses $p$ with $4p$, treating the coefficient itself as the focal distance",
+      "distractor": "For $ (x-3)^2 = 8(y+1) $ places the focus $8$ units from the vertex (focus $(3,7)$, directrix $y=-9$) instead of using $p=2$"
+    },
+    {
+      "misconception": "Reverses the direction of opening / sign of $p$",
+      "distractor": "Reads $4p=-12$ as opening up/right instead of down/left, giving focus and directrix on the wrong side of the vertex"
+    },
+    {
+      "misconception": "Swaps the roles of the squared and linear variables (vertical vs. horizontal axis)",
+      "distractor": "Treats $ (y-k)^2=4p(x-h) $ as if it opened up/down, putting the focus along the vertical axis and writing the directrix as a horizontal line $y=\\dots$"
+    },
+    {
+      "misconception": "Mixes up which coordinate of the vertex shifts: uses $(h,k)$ with the wrong signs from $ (x-h)^2 $ and $ (y-k) $",
+      "distractor": "Reads $ (x+1)^2=8(y-4) $ as vertex $(1,4)$ or $(-1,-4)$ instead of $(-1,4)$"
+    },
+    {
+      "misconception": "Forgets to factor out the leading coefficient before completing the square",
+      "distractor": "For $ y=2x^2-8x+5 $ completes the square as if $a=1$, getting $ (x-4)^2 $ terms and a wrong $4p$, so the focus and directrix are off"
+    },
+    {
+      "misconception": "Places the directrix through the focus or on the same side as the focus",
+      "distractor": "Writes the directrix at distance $p$ on the focus side (e.g., focus $(0,2)$ paired with directrix $y=2$) instead of $y=-2$"
+    },
+    {
+      "misconception": "Uses the latus rectum length as $|2p|$ or $|p|$ instead of $|4p|$",
+      "distractor": "Reports focal width $2p$ when graphing, so the latus-rectum endpoints are placed too close to the focus"
+    },
+    {
+      "misconception": "Drops the absolute value / sign error when squaring the distance to the directrix during derivation",
+      "distractor": "In the derivation gets $ x^2 = 4py + 4p^2 $ or a missing cross term, yielding a wrong constant and a shifted parabola"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

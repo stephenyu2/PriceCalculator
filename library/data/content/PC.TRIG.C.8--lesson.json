@@ -1,0 +1,170 @@
+{
+  "id": "PC.TRIG.C.8--lesson",
+  "standard": "PC.TRIG.C.8",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Laws of sines and cosines",
+  "clusterCode": "C",
+  "skillName": "Law of Sines",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "The Law of Sines, $\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B} = \\dfrac{c}{\\sin C}$, lets you solve oblique (non-right) triangles. Each side is paired with the sine of the angle opposite it. Use it when you know two angles and any side (AAS or ASA), or two sides and a non-included angle (SSA). The SSA case is ambiguous, so you must check whether zero, one, or two triangles are possible. When you know two sides and the angle between them, the area is $\\text{Area} = \\dfrac{1}{2}ab\\sin C$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "In $\\triangle ABC$, $A = 40^\\circ$, $B = 75^\\circ$, and $a = 12$. Find side $b$ to one decimal place.",
+      "solution": {
+        "steps": [
+          "Side $a$ is opposite angle $A$ and side $b$ is opposite angle $B$, so pair them: $\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B}$.",
+          "Substitute the known values: $\\dfrac{12}{\\sin 40^\\circ} = \\dfrac{b}{\\sin 75^\\circ}$.",
+          "Solve for $b$ by multiplying both sides by $\\sin 75^\\circ$: $b = \\dfrac{12\\sin 75^\\circ}{\\sin 40^\\circ}$.",
+          "Evaluate (calculator in degree mode): $\\sin 75^\\circ \\approx 0.9659$ and $\\sin 40^\\circ \\approx 0.6428$, so $b \\approx \\dfrac{12(0.9659)}{0.6428} \\approx \\dfrac{11.591}{0.6428}$.",
+          "Therefore $b \\approx 18.0$."
+        ],
+        "answer": "$b \\approx 18.0$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "In $\\triangle ABC$, $A = 50^\\circ$, $C = 60^\\circ$, and $b = 10$. Find side $a$ to one decimal place.",
+      "solution": {
+        "steps": [
+          "Side $b$ is opposite angle $B$, but $B$ is unknown, so first use the angle sum: $A + B + C = 180^\\circ$.",
+          "Solve for $B$: $B = 180^\\circ - 50^\\circ - 60^\\circ = 70^\\circ$.",
+          "Now pair side $a$ (opposite $A$) with side $b$ (opposite $B$): $\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B}$, so $\\dfrac{a}{\\sin 50^\\circ} = \\dfrac{10}{\\sin 70^\\circ}$.",
+          "Solve for $a$: $a = \\dfrac{10\\sin 50^\\circ}{\\sin 70^\\circ}$.",
+          "Evaluate: $\\sin 50^\\circ \\approx 0.7660$ and $\\sin 70^\\circ \\approx 0.9397$, so $a \\approx \\dfrac{10(0.7660)}{0.9397} \\approx 8.2$."
+        ],
+        "answer": "$a \\approx 8.2$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "In $\\triangle ABC$, $a = 22$, $b = 12$, and $A = 42^\\circ$ (an SSA configuration). Find angle $B$ to one decimal place and state how many triangles exist.",
+      "solution": {
+        "steps": [
+          "Pair each side with the sine of its opposite angle: $\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B}$.",
+          "Solve for $\\sin B$ by cross multiplying: $\\sin B = \\dfrac{b\\sin A}{a} = \\dfrac{12\\sin 42^\\circ}{22}$.",
+          "Evaluate: $\\sin 42^\\circ \\approx 0.6691$, so $\\sin B \\approx \\dfrac{12(0.6691)}{22} \\approx \\dfrac{8.029}{22} \\approx 0.365$.",
+          "Take the inverse sine: $B \\approx \\sin^{-1}(0.365) \\approx 21.4^\\circ$.",
+          "Check the supplement $180^\\circ - 21.4^\\circ = 158.6^\\circ$. Then $A + 158.6^\\circ = 42^\\circ + 158.6^\\circ = 200.6^\\circ > 180^\\circ$, which is impossible, so the supplement is rejected.",
+          "Because $a > b$, the side opposite the given angle is the longer side, confirming exactly one triangle."
+        ],
+        "answer": "$B \\approx 21.4^\\circ$; exactly one triangle exists."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Given $a = 10$, $b = 16$, and $A = 30^\\circ$, determine how many triangles are possible and find all values of angle $B$ to one decimal place.",
+      "solution": {
+        "steps": [
+          "First classify the SSA case with the height test: $h = b\\sin A = 16\\sin 30^\\circ = 16(0.5) = 8$.",
+          "Compare: here $h = 8$ and $a = 10$, so $h < a < b$ ($8 < 10 < 16$), which means two triangles are possible.",
+          "Set up the Law of Sines for angle $B$: $\\sin B = \\dfrac{b\\sin A}{a} = \\dfrac{16\\sin 30^\\circ}{10} = \\dfrac{16(0.5)}{10} = 0.8$.",
+          "First solution: $B_1 = \\sin^{-1}(0.8) \\approx 53.1^\\circ$.",
+          "Second solution (supplement): $B_2 = 180^\\circ - 53.1^\\circ = 126.9^\\circ$.",
+          "Check both: $A + B_1 = 30^\\circ + 53.1^\\circ = 83.1^\\circ < 180^\\circ$ (valid) and $A + B_2 = 30^\\circ + 126.9^\\circ = 156.9^\\circ < 180^\\circ$ (valid), so both triangles are genuine."
+        ],
+        "answer": "Two triangles exist: $B \\approx 53.1^\\circ$ or $B \\approx 126.9^\\circ$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "In $\\triangle ABC$, $a = 9$, $b = 14$, and the included angle $C = 50^\\circ$. Find the area of the triangle to one decimal place.",
+      "solution": {
+        "steps": [
+          "Angle $C$ is included between sides $a$ and $b$, so use $\\text{Area} = \\dfrac{1}{2}ab\\sin C$.",
+          "Substitute: $\\text{Area} = \\dfrac{1}{2}(9)(14)\\sin 50^\\circ$.",
+          "Multiply the sides: $\\dfrac{1}{2}(9)(14) = \\dfrac{1}{2}(126) = 63$.",
+          "Evaluate $\\sin 50^\\circ \\approx 0.7660$, so $\\text{Area} \\approx 63(0.7660) \\approx 48.3$.",
+          "The area is about $48.3$ square units."
+        ],
+        "answer": "$\\text{Area} \\approx 48.3$ square units"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "In $\\triangle ABC$, $A = 35^\\circ$, $B = 65^\\circ$, and $a = 8$. Find side $b$ to one decimal place.",
+      "hint": "Side $a$ is opposite $A$ and side $b$ is opposite $B$. Set up $\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B}$ and solve for $b = \\dfrac{a\\sin B}{\\sin A}$.",
+      "solution": {
+        "steps": [
+          "Pair opposite sides and angles: $\\dfrac{8}{\\sin 35^\\circ} = \\dfrac{b}{\\sin 65^\\circ}$.",
+          "Solve for $b$: $b = \\dfrac{8\\sin 65^\\circ}{\\sin 35^\\circ}$.",
+          "Evaluate: $\\sin 65^\\circ \\approx 0.9063$ and $\\sin 35^\\circ \\approx 0.5736$, so $b \\approx \\dfrac{8(0.9063)}{0.5736} \\approx 12.6$."
+        ],
+        "answer": "$b \\approx 12.6$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "In $\\triangle ABC$, $A = 45^\\circ$, $C = 30^\\circ$, and $c = 6$. Find side $a$ to one decimal place.",
+      "hint": "First find the angle you need, then pair side $a$ with side $c$. Both $A$ and $C$ are already given, so go straight to the proportion $\\dfrac{a}{\\sin A} = \\dfrac{c}{\\sin C}$.",
+      "solution": {
+        "steps": [
+          "Side $a$ is opposite $A$ and side $c$ is opposite $C$, so $\\dfrac{a}{\\sin 45^\\circ} = \\dfrac{6}{\\sin 30^\\circ}$.",
+          "Solve for $a$: $a = \\dfrac{6\\sin 45^\\circ}{\\sin 30^\\circ}$.",
+          "Use exact values: $\\sin 45^\\circ = \\dfrac{\\sqrt{2}}{2}$ and $\\sin 30^\\circ = \\dfrac{1}{2}$, so $a = \\dfrac{6 \\cdot \\frac{\\sqrt{2}}{2}}{\\frac{1}{2}} = 6\\sqrt{2}$.",
+          "As a decimal, $a = 6\\sqrt{2} \\approx 8.5$."
+        ],
+        "answer": "$a = 6\\sqrt{2} \\approx 8.5$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Given $a = 5$, $b = 12$, and $A = 40^\\circ$, find angle $B$ or explain why no triangle exists.",
+      "hint": "Solve $\\sin B = \\dfrac{b\\sin A}{a}$. If the result is greater than $1$, no angle has that sine.",
+      "solution": {
+        "steps": [
+          "Set up the Law of Sines for $B$: $\\sin B = \\dfrac{b\\sin A}{a} = \\dfrac{12\\sin 40^\\circ}{5}$.",
+          "Evaluate: $\\sin 40^\\circ \\approx 0.6428$, so $\\sin B \\approx \\dfrac{12(0.6428)}{5} \\approx \\dfrac{7.714}{5} \\approx 1.54$.",
+          "Since $\\sin B \\approx 1.54 > 1$ and the sine of any real angle is at most $1$, there is no angle $B$ that satisfies the equation.",
+          "Therefore no triangle can be formed with these measurements."
+        ],
+        "answer": "No triangle exists, because $\\sin B \\approx 1.54 > 1$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Given $A = 35^\\circ$, $a = 7$, and $b = 10$, use the height test to determine how many triangles are possible.",
+      "hint": "Compute $h = b\\sin A$ and compare $h$, $a$, and $b$. If $h < a < b$, two triangles exist.",
+      "solution": {
+        "steps": [
+          "Compute the height: $h = b\\sin A = 10\\sin 35^\\circ \\approx 10(0.5736) \\approx 5.74$.",
+          "Compare the three lengths: $h \\approx 5.74$, $a = 7$, and $b = 10$, so $h < a < b$ ($5.74 < 7 < 10$).",
+          "When the side opposite the given angle satisfies $h < a < b$, the SSA data determine two triangles."
+        ],
+        "answer": "Two triangles are possible."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "In $\\triangle ABC$, $a = 6$, $b = 10$, and the included angle $C = 120^\\circ$. Find the area of the triangle to one decimal place.",
+      "hint": "Angle $C$ is between sides $a$ and $b$, so use $\\text{Area} = \\dfrac{1}{2}ab\\sin C$.",
+      "solution": {
+        "steps": [
+          "Use the area formula with the included angle: $\\text{Area} = \\dfrac{1}{2}ab\\sin C = \\dfrac{1}{2}(6)(10)\\sin 120^\\circ$.",
+          "Multiply the sides: $\\dfrac{1}{2}(6)(10) = 30$.",
+          "Use the exact value $\\sin 120^\\circ = \\dfrac{\\sqrt{3}}{2} \\approx 0.8660$, so $\\text{Area} \\approx 30(0.8660) \\approx 26.0$.",
+          "The area is about $26.0$ square units."
+        ],
+        "answer": "$\\text{Area} = 15\\sqrt{3} \\approx 26.0$ square units"
+      }
+    }
+  ]
+}

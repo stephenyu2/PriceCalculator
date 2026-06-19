@@ -1,0 +1,215 @@
+{
+  "id": "PC.VEC.A.1--worksheet--medium",
+  "standard": "PC.VEC.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Vectors and Parametric Equations",
+  "domainCode": "VEC",
+  "cluster": "Vectors in the plane",
+  "clusterCode": "A",
+  "skillName": "Vectors: Components and Operations",
+  "materialType": "worksheet",
+  "difficulty": "Medium",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems combine two steps: building a vector from endpoints before operating, forming linear combinations, finding direction angles that need a quadrant adjustment, and simplifying magnitudes to reduced radicals. Give exact values.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A vector has initial point $P(-3, 5)$ and terminal point $Q(4, -2)$. Write the vector $\\vec{PQ}$ in component form, then find its magnitude.",
+      "answer": "$\\vec{PQ} = \\langle 7, -7 \\rangle$, $\\lVert \\vec{PQ} \\rVert = 7\\sqrt{2}$",
+      "solution": {
+        "steps": [
+          "Subtract terminal minus initial: $\\langle x_2 - x_1, y_2 - y_1 \\rangle = \\langle 4 - (-3), -2 - 5 \\rangle$",
+          "$= \\langle 7, -7 \\rangle$",
+          "Magnitude: $\\lVert \\vec{PQ} \\rVert = \\sqrt{7^2 + (-7)^2} = \\sqrt{49 + 49} = \\sqrt{98}$",
+          "Simplify: $\\sqrt{98} = \\sqrt{49 \\cdot 2} = 7\\sqrt{2}$"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Given $\\vec{u} = \\langle 2, -1 \\rangle$ and $\\vec{v} = \\langle -3, 4 \\rangle$, compute $3\\vec{u} - 2\\vec{v}$.",
+      "answer": "$\\langle 12, -11 \\rangle$",
+      "solution": {
+        "steps": [
+          "Scale each vector: $3\\vec{u} = \\langle 3 \\cdot 2, 3 \\cdot (-1) \\rangle = \\langle 6, -3 \\rangle$",
+          "$2\\vec{v} = \\langle 2 \\cdot (-3), 2 \\cdot 4 \\rangle = \\langle -6, 8 \\rangle$",
+          "Subtract component-wise: $\\langle 6 - (-6), -3 - 8 \\rangle$",
+          "$= \\langle 12, -11 \\rangle$"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Find the direction angle $\\theta$, with $0^\\circ \\le \\theta < 360^\\circ$, of the vector $\\vec{v} = \\langle -1, \\sqrt{3} \\rangle$.",
+      "answer": "$\\theta = 120^\\circ$",
+      "solution": {
+        "steps": [
+          "Find the reference angle: $\\tan\\theta_{\\text{ref}} = \\left|\\frac{b}{a}\\right| = \\left|\\frac{\\sqrt{3}}{-1}\\right| = \\sqrt{3}$, so $\\theta_{\\text{ref}} = 60^\\circ$",
+          "Determine the quadrant: $a = -1 < 0$ and $b = \\sqrt{3} > 0$, so the vector is in Quadrant II",
+          "In Quadrant II: $\\theta = 180^\\circ - \\theta_{\\text{ref}} = 180^\\circ - 60^\\circ$",
+          "$\\theta = 120^\\circ$"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A vector has magnitude $6$ and direction angle $\\frac{5\\pi}{6}$. Write it in component form.",
+      "answer": "$\\langle -3\\sqrt{3}, 3 \\rangle$",
+      "solution": {
+        "steps": [
+          "Use $\\langle r\\cos\\theta, r\\sin\\theta \\rangle$ with $r = 6$ and $\\theta = \\frac{5\\pi}{6}$",
+          "$\\cos\\frac{5\\pi}{6} = -\\frac{\\sqrt{3}}{2}$ and $\\sin\\frac{5\\pi}{6} = \\frac{1}{2}$",
+          "First component: $6 \\cdot \\left(-\\frac{\\sqrt{3}}{2}\\right) = -3\\sqrt{3}$",
+          "Second component: $6 \\cdot \\frac{1}{2} = 3$",
+          "Component form: $\\langle -3\\sqrt{3}, 3 \\rangle$"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Given $\\vec{u} = \\langle 1, 7 \\rangle$ and $\\vec{v} = \\langle 3, -1 \\rangle$, find $\\lVert \\vec{u} + \\vec{v} \\rVert$.",
+      "answer": "$2\\sqrt{13}$",
+      "solution": {
+        "steps": [
+          "Add component-wise first: $\\vec{u} + \\vec{v} = \\langle 1 + 3, 7 + (-1) \\rangle = \\langle 4, 6 \\rangle$",
+          "Take the magnitude of the sum: $\\sqrt{4^2 + 6^2} = \\sqrt{16 + 36} = \\sqrt{52}$",
+          "Simplify: $\\sqrt{52} = \\sqrt{4 \\cdot 13} = 2\\sqrt{13}$"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A vector has initial point $A(2, -4)$ and terminal point $B(-3, 8)$. Write $\\vec{AB}$ in component form and find its magnitude.",
+      "answer": "$\\vec{AB} = \\langle -5, 12 \\rangle$, $\\lVert \\vec{AB} \\rVert = 13$",
+      "solution": {
+        "steps": [
+          "Subtract terminal minus initial: $\\langle -3 - 2, 8 - (-4) \\rangle$",
+          "$= \\langle -5, 12 \\rangle$",
+          "Magnitude: $\\sqrt{(-5)^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169}$",
+          "$= 13$"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Find the direction angle $\\theta$, with $0^\\circ \\le \\theta < 360^\\circ$, of the vector $\\vec{v} = \\langle -3, -3 \\rangle$.",
+      "answer": "$\\theta = 225^\\circ$",
+      "solution": {
+        "steps": [
+          "Reference angle: $\\tan\\theta_{\\text{ref}} = \\left|\\frac{-3}{-3}\\right| = 1$, so $\\theta_{\\text{ref}} = 45^\\circ$",
+          "Determine the quadrant: $a = -3 < 0$ and $b = -3 < 0$, so the vector is in Quadrant III",
+          "In Quadrant III: $\\theta = 180^\\circ + \\theta_{\\text{ref}} = 180^\\circ + 45^\\circ$",
+          "$\\theta = 225^\\circ$"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Given $\\vec{u} = \\langle -4, 6 \\rangle$ and $\\vec{v} = \\langle 5, -2 \\rangle$, compute $2\\vec{u} + 3\\vec{v}$.",
+      "answer": "$\\langle 7, 6 \\rangle$",
+      "solution": {
+        "steps": [
+          "Scale: $2\\vec{u} = \\langle -8, 12 \\rangle$",
+          "Scale: $3\\vec{v} = \\langle 15, -6 \\rangle$",
+          "Add component-wise: $\\langle -8 + 15, 12 + (-6) \\rangle$",
+          "$= \\langle 7, 6 \\rangle$"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A vector has magnitude $10$ and direction angle $\\frac{4\\pi}{3}$. Write it in component form.",
+      "answer": "$\\langle -5, -5\\sqrt{3} \\rangle$",
+      "solution": {
+        "steps": [
+          "Use $\\langle r\\cos\\theta, r\\sin\\theta \\rangle$ with $r = 10$ and $\\theta = \\frac{4\\pi}{3}$",
+          "$\\cos\\frac{4\\pi}{3} = -\\frac{1}{2}$ and $\\sin\\frac{4\\pi}{3} = -\\frac{\\sqrt{3}}{2}$",
+          "First component: $10 \\cdot \\left(-\\frac{1}{2}\\right) = -5$",
+          "Second component: $10 \\cdot \\left(-\\frac{\\sqrt{3}}{2}\\right) = -5\\sqrt{3}$",
+          "Component form: $\\langle -5, -5\\sqrt{3} \\rangle$"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Given $\\vec{u} = \\langle 5, 2 \\rangle$ and $\\vec{v} = \\langle -1, 3 \\rangle$, find $\\lVert \\vec{u} - \\vec{v} \\rVert$.",
+      "answer": "$\\sqrt{37}$",
+      "solution": {
+        "steps": [
+          "Subtract component-wise first: $\\vec{u} - \\vec{v} = \\langle 5 - (-1), 2 - 3 \\rangle = \\langle 6, -1 \\rangle$",
+          "Take the magnitude: $\\sqrt{6^2 + (-1)^2} = \\sqrt{36 + 1} = \\sqrt{37}$",
+          "Since $37$ is prime, $\\sqrt{37}$ is already in simplest form"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Find the direction angle $\\theta$, with $0^\\circ \\le \\theta < 360^\\circ$, of the vector $\\vec{v} = \\langle \\sqrt{3}, -1 \\rangle$.",
+      "answer": "$\\theta = 330^\\circ$",
+      "solution": {
+        "steps": [
+          "Reference angle: $\\tan\\theta_{\\text{ref}} = \\left|\\frac{-1}{\\sqrt{3}}\\right| = \\frac{1}{\\sqrt{3}}$, so $\\theta_{\\text{ref}} = 30^\\circ$",
+          "Determine the quadrant: $a = \\sqrt{3} > 0$ and $b = -1 < 0$, so the vector is in Quadrant IV",
+          "In Quadrant IV: $\\theta = 360^\\circ - \\theta_{\\text{ref}} = 360^\\circ - 30^\\circ$",
+          "$\\theta = 330^\\circ$"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A vector has initial point $P(6, 1)$ and terminal point $Q(2, 5)$. Find the magnitude of $\\vec{PQ}$.",
+      "answer": "$4\\sqrt{2}$",
+      "solution": {
+        "steps": [
+          "Form the vector: $\\vec{PQ} = \\langle 2 - 6, 5 - 1 \\rangle = \\langle -4, 4 \\rangle$",
+          "Magnitude: $\\sqrt{(-4)^2 + 4^2} = \\sqrt{16 + 16} = \\sqrt{32}$",
+          "Simplify: $\\sqrt{32} = \\sqrt{16 \\cdot 2} = 4\\sqrt{2}$"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Given $\\vec{u} = \\langle 3, -2 \\rangle$ and $\\vec{v} = \\langle 1, 4 \\rangle$, find $\\lVert 2\\vec{u} - \\vec{v} \\rVert$.",
+      "answer": "$\\sqrt{89}$",
+      "solution": {
+        "steps": [
+          "Scale: $2\\vec{u} = \\langle 6, -4 \\rangle$",
+          "Subtract: $2\\vec{u} - \\vec{v} = \\langle 6 - 1, -4 - 4 \\rangle = \\langle 5, -8 \\rangle$",
+          "Magnitude: $\\sqrt{5^2 + (-8)^2} = \\sqrt{25 + 64} = \\sqrt{89}$",
+          "Since $89$ is prime, $\\sqrt{89}$ is in simplest form"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A vector has magnitude $4$ and direction angle $210^\\circ$. Write it in component form.",
+      "answer": "$\\langle -2\\sqrt{3}, -2 \\rangle$",
+      "solution": {
+        "steps": [
+          "Use $\\langle r\\cos\\theta, r\\sin\\theta \\rangle$ with $r = 4$ and $\\theta = 210^\\circ$",
+          "$\\cos 210^\\circ = -\\frac{\\sqrt{3}}{2}$ and $\\sin 210^\\circ = -\\frac{1}{2}$",
+          "First component: $4 \\cdot \\left(-\\frac{\\sqrt{3}}{2}\\right) = -2\\sqrt{3}$",
+          "Second component: $4 \\cdot \\left(-\\frac{1}{2}\\right) = -2$",
+          "Component form: $\\langle -2\\sqrt{3}, -2 \\rangle$"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A vector has initial point $A(-1, -2)$ and terminal point $B(5, 6)$. Find the unit vector in the direction of $\\vec{AB}$.",
+      "answer": "$\\left\\langle \\frac{3}{5}, \\frac{4}{5} \\right\\rangle$",
+      "solution": {
+        "steps": [
+          "Form the vector: $\\vec{AB} = \\langle 5 - (-1), 6 - (-2) \\rangle = \\langle 6, 8 \\rangle$",
+          "Magnitude: $\\lVert \\vec{AB} \\rVert = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$",
+          "Divide each component by the magnitude: $\\frac{1}{10}\\langle 6, 8 \\rangle$",
+          "Unit vector: $\\left\\langle \\frac{6}{10}, \\frac{8}{10} \\right\\rangle = \\left\\langle \\frac{3}{5}, \\frac{4}{5} \\right\\rangle$"
+        ]
+      }
+    }
+  ]
+}

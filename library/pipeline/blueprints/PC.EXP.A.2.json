@@ -1,0 +1,140 @@
+{
+  "standard": "PC.EXP.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Exponential and Logarithmic Functions",
+  "domainCode": "EXP",
+  "cluster": "Properties and graphs",
+  "clusterCode": "A",
+  "skillName": "Logarithmic Functions",
+
+  "description": "Students define the logarithm $\\log_b x$ as the inverse of the exponential function $b^x$, converting fluently between exponential form $b^y = x$ and logarithmic form $y = \\log_b x$. They evaluate logarithms exactly, apply the change-of-base formula $\\log_b x = \\frac{\\ln x}{\\ln b} = \\frac{\\log x}{\\log b}$, and graph functions of the form $y = a\\log_b(x - h) + k$. They identify the domain, range, vertical asymptote, $x$-intercept, and the effect of each transformation (horizontal/vertical shift, vertical stretch/compression, reflection).",
+
+  "subSkills": [
+    "Convert between exponential form $b^y = x$ and logarithmic form $y = \\log_b x$",
+    "Evaluate logarithms exactly using the inverse relationship (e.g. $\\log_2 8 = 3$, $\\log_5 \\frac{1}{25} = -2$)",
+    "Recognize $\\log_b x$ and $b^x$ as inverse functions and use $\\log_b(b^x) = x$ and $b^{\\log_b x} = x$",
+    "Apply the change-of-base formula to evaluate or rewrite logarithms with arbitrary bases",
+    "Identify the domain (argument $> 0$), range (all reals), and vertical asymptote of a logarithmic function",
+    "Graph $y = \\log_b x$ and locate key points $(1, 0)$ and $(b, 1)$",
+    "Apply transformations $y = a\\log_b(x - h) + k$ and track the resulting asymptote, intercept, domain, and range",
+    "Identify reflections across the $x$-axis ($a < 0$) and $y$-axis (argument $-x$)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Form conversion",
+      "example": "Rewrite $3^4 = 81$ in logarithmic form. Answer: $\\log_3 81 = 4$."
+    },
+    {
+      "name": "Exact evaluation",
+      "example": "Evaluate $\\log_4 \\frac{1}{64}$ without a calculator. Answer: $-3$."
+    },
+    {
+      "name": "Inverse-function identity",
+      "example": "Simplify $5^{\\log_5 12}$ and $\\log_3(3^7)$. Answers: $12$ and $7$."
+    },
+    {
+      "name": "Change of base",
+      "example": "Express $\\log_7 20$ using natural logarithms, then approximate. Answer: $\\frac{\\ln 20}{\\ln 7} \\approx 1.540$."
+    },
+    {
+      "name": "Domain and asymptote",
+      "example": "State the domain and vertical asymptote of $y = \\log_2(x - 3)$. Answer: domain $x > 3$, asymptote $x = 3$."
+    },
+    {
+      "name": "Graph from key points",
+      "example": "Graph $y = \\log_3 x$ by plotting $(1, 0)$ and $(3, 1)$ and the asymptote $x = 0$."
+    },
+    {
+      "name": "Transformation analysis",
+      "example": "Describe the transformations of $y = -2\\log_2(x + 1) + 4$ from $y = \\log_2 x$: reflect across the $x$-axis, vertical stretch by $2$, shift left $1$, up $4$. Asymptote $x = -1$, domain $x > -1$, range all reals."
+    },
+    {
+      "name": "Build equation from a graph or description",
+      "example": "Write an equation for a logarithmic graph with vertical asymptote $x = 2$ passing through $(3, 0)$ and $(5, 1)$. Answer: $y = \\log_3(x - 2)$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step conversions and exact evaluations with common integer bases ($2$, $3$, $5$, $10$) where the answer is a small integer. Domain or asymptote of a basic $y = \\log_b x$ or a single horizontal shift.",
+      "constraints": [
+        "Base is $2$, $3$, $5$, or $10$ and the argument is an exact power of the base",
+        "Logarithm value is an integer (positive, zero, or a simple negative for reciprocals)",
+        "At most one transformation, and it is a horizontal or vertical shift only",
+        "No change-of-base computation required"
+      ]
+    },
+    "Medium": {
+      "description": "Multi-feature problems: change-of-base setup, inverse-function identities, or transformations combining two features. Requires stating domain, range, and asymptote together for a shifted/stretched function.",
+      "constraints": [
+        "Change-of-base formula must be set up explicitly (exact form or decimal approximation requested)",
+        "Argument may be a fractional power (e.g. $\\log_8 2 = \\frac{1}{3}$) requiring rational exponent reasoning",
+        "Transformation combines two features (e.g. shift plus vertical stretch, or reflection plus shift)",
+        "Student must report domain, range, and asymptote, not just one"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step synthesis: reconstruct an equation from a graph or verbal description, combine three or more transformations, or chain change-of-base with the inverse relationship. May require solving for an unknown base or argument.",
+      "constraints": [
+        "Three or more transformations applied to $y = a\\log_b(x - h) + k$, with full domain/range/asymptote/intercept analysis",
+        "Reverse problems: given key points or asymptote, determine $a$, $b$, $h$, or $k$",
+        "Solve for an unknown using the definition (e.g. find $x$ if $\\log_x 81 = 4$, or evaluate a composite like $\\log_2(\\log_3 81)$)",
+        "Combine change-of-base with an inverse identity in a single chain"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student swaps base and argument when converting forms",
+      "distractor": "Rewrites $3^4 = 81$ as $\\log_4 81 = 3$ (treats the exponent as the base) instead of $\\log_3 81 = 4$"
+    },
+    {
+      "misconception": "Student treats $\\log_b x$ as $\\frac{\\log x}{b}$ or divides the argument by the base",
+      "distractor": "Computes $\\log_2 8$ as $\\frac{8}{2} = 4$ instead of $3$"
+    },
+    {
+      "misconception": "Student inverts the change-of-base ratio",
+      "distractor": "Writes $\\log_7 20 = \\frac{\\ln 7}{\\ln 20}$ instead of $\\frac{\\ln 20}{\\ln 7}$"
+    },
+    {
+      "misconception": "Student mishandles logarithms of reciprocals and gives a positive value",
+      "distractor": "States $\\log_4 \\frac{1}{64} = 3$ instead of $-3$, ignoring the negative exponent"
+    },
+    {
+      "misconception": "Student shifts the vertical asymptote and domain in the wrong direction for $(x - h)$",
+      "distractor": "For $y = \\log_2(x - 3)$ gives asymptote $x = -3$ and domain $x > -3$ instead of $x = 3$ and $x > 3$"
+    },
+    {
+      "misconception": "Student confuses the domain and range of a logarithmic function (swaps them with the exponential)",
+      "distractor": "States domain is all reals and range is $y > 0$ instead of domain $x > 0$ and range all reals"
+    },
+    {
+      "misconception": "Student applies a vertical shift $k$ to the asymptote or argument",
+      "distractor": "For $y = \\log_2 x + 4$ claims the asymptote is $x = 4$ instead of $x = 0$ (vertical shifts do not move a vertical asymptote)"
+    },
+    {
+      "misconception": "Student fails to reflect when $a < 0$ and keeps the graph increasing",
+      "distractor": "For $y = -\\log_2 x$ describes an increasing curve through $(b, 1)$ instead of a decreasing curve through $(b, -1)$"
+    },
+    {
+      "misconception": "Student forgets the argument of a logarithm must be positive when finding domain",
+      "distractor": "Gives the domain of $y = \\log_2(x - 3)$ as all real numbers instead of $x > 3$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

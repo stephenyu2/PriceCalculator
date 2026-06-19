@@ -1,0 +1,218 @@
+{
+  "id": "PC.VEC.A.3--worksheet--hard",
+  "standard": "PC.VEC.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Vectors and Parametric Equations",
+  "domainCode": "VEC",
+  "cluster": "Vectors in the plane",
+  "clusterCode": "A",
+  "skillName": "Parametric Equations",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems require multi-step reasoning: eliminate the parameter and state the restriction the parameter interval forces, write parametric equations from a verbal description, or solve a full projectile-motion problem for time of flight, range, or maximum height. Give exact values and always report any domain or range restriction.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Eliminate the parameter in $x=\\sqrt{t}$, $y=t-4$ for $t\\ge 0$, write a rectangular equation, and state the domain restriction it forces.",
+      "answer": "$y=x^2-4$ with $x\\ge 0$",
+      "solution": {
+        "steps": [
+          "From $x=\\sqrt{t}$, square both sides: $x^2=t$.",
+          "Substitute $t=x^2$ into $y=t-4$: $y=x^2-4$.",
+          "Because $x=\\sqrt{t}$ and $t\\ge 0$, the square root is never negative, so $x\\ge 0$.",
+          "The rectangular equation is $y=x^2-4$ restricted to $x\\ge 0$ (the right half of the parabola)."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Eliminate the parameter in $x=t^2$, $y=2t+1$ for $-3\\le t\\le 3$, write a rectangular equation in $x$ and $y$, and state the domain restriction.",
+      "answer": "$x=\\left(\\dfrac{y-1}{2}\\right)^2$ with $0\\le x\\le 9$",
+      "solution": {
+        "steps": [
+          "Solve the linear equation for $t$: from $y=2t+1$, $t=\\dfrac{y-1}{2}$.",
+          "Substitute into $x=t^2$: $x=\\left(\\dfrac{y-1}{2}\\right)^2$.",
+          "Find the range of $x$: since $x=t^2$ and $-3\\le t\\le 3$, $t^2$ runs from $0$ (at $t=0$) up to $9$ (at $t=\\pm 3$).",
+          "So the restriction is $0\\le x\\le 9$, and the rectangular equation is $x=\\left(\\dfrac{y-1}{2}\\right)^2$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Write parametric equations for the line segment from $(-2,5)$ to $(4,-7)$ using parameter $t$ on $0\\le t\\le 1$, with $t=0$ at the first point.",
+      "answer": "$x=-2+6t$, $y=5-12t$, for $0\\le t\\le 1$",
+      "solution": {
+        "steps": [
+          "Use $x=x_1+(x_2-x_1)t$ and $y=y_1+(y_2-y_1)t$ so that $t=0$ gives $(x_1,y_1)$ and $t=1$ gives $(x_2,y_2)$.",
+          "Compute the differences: $x_2-x_1=4-(-2)=6$ and $y_2-y_1=-7-5=-12$.",
+          "So $x=-2+6t$ and $y=5-12t$.",
+          "Check: $t=0$ gives $(-2,5)$ and $t=1$ gives $(-2+6,\\,5-12)=(4,-7)$, as required."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A ball is launched from ground level at $v_0=40$ m/s at an angle of $\\theta=30^\\circ$ above the horizontal. Using $g=9.8$ m/s$^2$, write the parametric equations of motion and find the time of flight (time until it returns to the ground). Give an exact value and a decimal approximation.",
+      "answer": "$x=(40\\cos 30^\\circ)t$, $y=(40\\sin 30^\\circ)t-4.9t^2$; time of flight $t=\\dfrac{200}{49}\\approx 4.08$ s",
+      "solution": {
+        "steps": [
+          "Set up the components: $x=(v_0\\cos\\theta)t=(40\\cos 30^\\circ)t$ and $y=(v_0\\sin\\theta)t-\\tfrac{1}{2}gt^2=(40\\sin 30^\\circ)t-4.9t^2$.",
+          "Use exact trig values: $\\sin 30^\\circ=\\frac{1}{2}$, so the vertical equation is $y=40\\cdot\\frac{1}{2}\\,t-4.9t^2=20t-4.9t^2$.",
+          "Time of flight occurs when $y=0$: $20t-4.9t^2=0$, so $t(20-4.9t)=0$.",
+          "Discard $t=0$ (the launch) and solve $20-4.9t=0$: $t=\\dfrac{20}{4.9}=\\dfrac{200}{49}$.",
+          "So the time of flight is $t=\\dfrac{200}{49}\\approx 4.08$ s."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Eliminate the parameter in $x=2\\cos t$, $y=5\\sin t$ for $0\\le t<2\\pi$, write the rectangular equation, and identify the curve.",
+      "answer": "$\\dfrac{x^2}{4}+\\dfrac{y^2}{25}=1$, an ellipse",
+      "solution": {
+        "steps": [
+          "Solve each equation for the trig function: $\\cos t=\\dfrac{x}{2}$ and $\\sin t=\\dfrac{y}{5}$.",
+          "Apply the Pythagorean identity $\\cos^2 t+\\sin^2 t=1$: $\\left(\\dfrac{x}{2}\\right)^2+\\left(\\dfrac{y}{5}\\right)^2=1$.",
+          "Simplify: $\\dfrac{x^2}{4}+\\dfrac{y^2}{25}=1$.",
+          "This is an ellipse centered at the origin with horizontal semi-axis $2$ and vertical semi-axis $5$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Write parametric equations for the circle of radius $4$ centered at $(3,-1)$, traced counterclockwise starting at the rightmost point, using parameter $t$ on $0\\le t<2\\pi$.",
+      "answer": "$x=3+4\\cos t$, $y=-1+4\\sin t$, for $0\\le t<2\\pi$",
+      "solution": {
+        "steps": [
+          "A circle of radius $r$ centered at $(h,k)$ traced counterclockwise from the right is $x=h+r\\cos t$, $y=k+r\\sin t$.",
+          "Substitute $h=3$, $k=-1$, $r=4$: $x=3+4\\cos t$ and $y=-1+4\\sin t$.",
+          "Check the start: $t=0$ gives $(3+4,\\,-1+0)=(7,-1)$, the rightmost point.",
+          "Check direction: as $t$ increases past $0$, $\\sin t>0$ so $y$ rises, confirming counterclockwise motion."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A projectile is launched from ground level at $v_0=30$ m/s and $\\theta=60^\\circ$ (use $g=9.8$ m/s$^2$). Find the maximum height reached. Give a decimal approximation rounded to the nearest tenth of a meter.",
+      "answer": "$\\approx 34.4$ m",
+      "solution": {
+        "steps": [
+          "The vertical equation is $y=(30\\sin 60^\\circ)t-4.9t^2$. With $\\sin 60^\\circ=\\frac{\\sqrt{3}}{2}$, $30\\sin 60^\\circ=15\\sqrt{3}\\approx 25.98$, so $y\\approx 25.98t-4.9t^2$.",
+          "Maximum height occurs at the vertex. The time to the peak is $t=\\dfrac{15\\sqrt{3}}{2(4.9)}=\\dfrac{15\\sqrt{3}}{9.8}\\approx 2.651$ s.",
+          "Substitute back: $y\\approx 25.98(2.651)-4.9(2.651)^2\\approx 68.88-34.44$.",
+          "So the maximum height is $y\\approx 34.4$ m."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Eliminate the parameter in $x=\\ln t$, $y=t$ for $t>0$, write $y$ as a function of $x$, and state the resulting range restriction on $y$.",
+      "answer": "$y=e^x$ with $y>0$",
+      "solution": {
+        "steps": [
+          "From $x=\\ln t$, rewrite in exponential form: $t=e^x$.",
+          "Substitute into $y=t$: $y=e^x$.",
+          "Determine the restriction: since $t>0$ and $y=t$, we have $y>0$ (the exponential is always positive anyway).",
+          "The rectangular equation is $y=e^x$ with $y>0$ for all real $x$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A ball is thrown from a height of $2$ m with $v_0=25$ m/s at $\\theta=45^\\circ$ (use $g=9.8$ m/s$^2$). The vertical position is $y=2+(25\\sin 45^\\circ)t-4.9t^2$. Find the time of flight (time until $y=0$). Round to the nearest hundredth of a second.",
+      "answer": "$\\approx 3.72$ s",
+      "solution": {
+        "steps": [
+          "Use $\\sin 45^\\circ=\\frac{\\sqrt{2}}{2}$, so $25\\sin 45^\\circ=\\dfrac{25\\sqrt{2}}{2}\\approx 17.678$. Then $y=2+17.678t-4.9t^2$.",
+          "Set $y=0$: $-4.9t^2+17.678t+2=0$, or $4.9t^2-17.678t-2=0$.",
+          "Apply the quadratic formula: $t=\\dfrac{17.678\\pm\\sqrt{17.678^2+4(4.9)(2)}}{2(4.9)}=\\dfrac{17.678\\pm\\sqrt{312.51+39.2}}{9.8}$.",
+          "Compute the discriminant: $\\sqrt{351.71}\\approx 18.754$, so $t=\\dfrac{17.678\\pm 18.754}{9.8}$.",
+          "Take the positive root: $t=\\dfrac{17.678+18.754}{9.8}=\\dfrac{36.432}{9.8}\\approx 3.72$ s. (To the hundredth, $\\approx 3.72$ s.)"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Eliminate the parameter in $x=t+1$, $y=\\sqrt{t}$ for $t\\ge 0$, write a rectangular equation, and state both the domain and range restrictions.",
+      "answer": "$y=\\sqrt{x-1}$ with $x\\ge 1$ and $y\\ge 0$",
+      "solution": {
+        "steps": [
+          "From $x=t+1$, solve for $t$: $t=x-1$.",
+          "Substitute into $y=\\sqrt{t}$: $y=\\sqrt{x-1}$.",
+          "Domain: the radicand $x-1$ must be $\\ge 0$, and since $t\\ge 0$ gives $x=t+1\\ge 1$, the domain is $x\\ge 1$.",
+          "Range: $y=\\sqrt{t}$ is never negative, so $y\\ge 0$.",
+          "The rectangular equation is $y=\\sqrt{x-1}$ with $x\\ge 1$ and $y\\ge 0$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Write parametric equations for the ellipse $\\dfrac{x^2}{9}+\\dfrac{y^2}{16}=1$ traced counterclockwise, using parameter $t$ on $0\\le t<2\\pi$ with the curve starting at $(3,0)$.",
+      "answer": "$x=3\\cos t$, $y=4\\sin t$, for $0\\le t<2\\pi$",
+      "solution": {
+        "steps": [
+          "For $\\dfrac{x^2}{a^2}+\\dfrac{y^2}{b^2}=1$, a standard counterclockwise parameterization is $x=a\\cos t$, $y=b\\sin t$.",
+          "Here $a^2=9$ so $a=3$, and $b^2=16$ so $b=4$.",
+          "Thus $x=3\\cos t$ and $y=4\\sin t$.",
+          "Check: $t=0$ gives $(3,0)$, the required start, and as $t$ increases $y$ becomes positive, confirming counterclockwise orientation."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A cannonball is fired from ground level at $v_0=50$ m/s and $\\theta=30^\\circ$ (use $g=9.8$ m/s$^2$). Find the horizontal range (the horizontal distance when it lands). Round to the nearest tenth of a meter.",
+      "answer": "$\\approx 220.9$ m",
+      "solution": {
+        "steps": [
+          "Vertical equation: $y=(50\\sin 30^\\circ)t-4.9t^2=25t-4.9t^2$ since $\\sin 30^\\circ=\\frac{1}{2}$.",
+          "Time of flight: set $y=0$, so $t(25-4.9t)=0$, giving $t=\\dfrac{25}{4.9}\\approx 5.102$ s.",
+          "Horizontal equation: $x=(50\\cos 30^\\circ)t$ with $\\cos 30^\\circ=\\frac{\\sqrt{3}}{2}$, so $50\\cos 30^\\circ=25\\sqrt{3}\\approx 43.301$.",
+          "Range $=x$ at landing $=43.301\\times 5.102\\approx 220.9$ m."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Eliminate the parameter in $x=3\\sec t$, $y=2\\tan t$ for $-\\frac{\\pi}{2}<t<\\frac{\\pi}{2}$, write the rectangular equation, and identify the curve. (Use the identity $\\sec^2 t-\\tan^2 t=1$.)",
+      "answer": "$\\dfrac{x^2}{9}-\\dfrac{y^2}{4}=1$, a hyperbola (right branch, $x\\ge 3$)",
+      "solution": {
+        "steps": [
+          "Solve for the trig functions: $\\sec t=\\dfrac{x}{3}$ and $\\tan t=\\dfrac{y}{2}$.",
+          "Apply the identity $\\sec^2 t-\\tan^2 t=1$: $\\left(\\dfrac{x}{3}\\right)^2-\\left(\\dfrac{y}{2}\\right)^2=1$.",
+          "Simplify: $\\dfrac{x^2}{9}-\\dfrac{y^2}{4}=1$, a hyperbola opening left and right.",
+          "On $-\\frac{\\pi}{2}<t<\\frac{\\pi}{2}$, $\\sec t\\ge 1$ so $x=3\\sec t\\ge 3$; only the right branch ($x\\ge 3$) is traced."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Write parametric equations for an object that starts at $(1,4)$ and moves with constant velocity, reaching $(7,1)$ after $3$ seconds. Use $t$ in seconds with $t\\ge 0$, where $t$ is the elapsed time.",
+      "answer": "$x=1+2t$, $y=4-t$, for $t\\ge 0$",
+      "solution": {
+        "steps": [
+          "Constant velocity means linear parametric equations $x=x_0+v_x t$, $y=y_0+v_y t$ starting at $(x_0,y_0)=(1,4)$.",
+          "Velocity components: $v_x=\\dfrac{7-1}{3}=2$ and $v_y=\\dfrac{1-4}{3}=-1$ (units per second).",
+          "So $x=1+2t$ and $y=4-t$.",
+          "Check: at $t=3$, $x=1+6=7$ and $y=4-3=1$, reaching $(7,1)$ as required."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Eliminate the parameter in $x=4\\cos t$, $y=3\\sin t$ for $0\\le t\\le\\pi$, write the rectangular equation, and state the range restriction on $y$ imposed by this parameter interval.",
+      "answer": "$\\dfrac{x^2}{16}+\\dfrac{y^2}{9}=1$ with $y\\ge 0$ (the upper half of the ellipse)",
+      "solution": {
+        "steps": [
+          "Solve for the trig functions: $\\cos t=\\dfrac{x}{4}$ and $\\sin t=\\dfrac{y}{3}$.",
+          "Apply $\\cos^2 t+\\sin^2 t=1$: $\\dfrac{x^2}{16}+\\dfrac{y^2}{9}=1$, an ellipse.",
+          "Restriction: on $0\\le t\\le\\pi$, $\\sin t\\ge 0$, so $y=3\\sin t\\ge 0$.",
+          "Only the upper half of the ellipse is traced, so the rectangular equation is $\\dfrac{x^2}{16}+\\dfrac{y^2}{9}=1$ with $y\\ge 0$."
+        ]
+      }
+    }
+  ]
+}

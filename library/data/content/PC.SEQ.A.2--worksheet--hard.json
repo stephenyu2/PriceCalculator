@@ -1,0 +1,231 @@
+{
+  "id": "PC.SEQ.A.2--worksheet--hard",
+  "standard": "PC.SEQ.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Sequences, Series, and Limits",
+  "domainCode": "SEQ",
+  "cluster": "Sequences and series",
+  "clusterCode": "A",
+  "skillName": "Geometric Sequences and Series",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems require multi-step reasoning: solving for unknowns from non-consecutive terms, using logarithms to find an index, converting repeating decimals through infinite series, and modeling real situations. Track signs carefully, take the correct root when solving $r^k=\\dfrac{a_m}{a_p}$, and confirm convergence before applying $S=\\dfrac{a_1}{1-r}$.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "In a geometric sequence, $a_2=12$ and $a_5=96$. Find the common ratio $r$ and the first term $a_1$.",
+      "answer": "$r=2$ and $a_1=6$",
+      "solution": {
+        "steps": [
+          "Use the ratio of non-consecutive terms: $\\dfrac{a_5}{a_2}=\\dfrac{a_1 r^4}{a_1 r}=r^3$.",
+          "Substitute the values: $r^3=\\dfrac{96}{12}=8$.",
+          "Take the cube root (not divide the exponents): $r=\\sqrt[3]{8}=2$.",
+          "Back-substitute into $a_2=a_1 r=12$: $a_1\\cdot 2=12$, so $a_1=6$."
+        ],
+        "answer": "$r=2$ and $a_1=6$"
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A geometric sequence has $a_3=\\dfrac{9}{2}$ and $a_6=\\dfrac{243}{16}$. Find $r$ and write the explicit formula $a_n$.",
+      "answer": "$r=\\dfrac{3}{2}$ and $a_n=2\\left(\\dfrac{3}{2}\\right)^{n-1}$",
+      "solution": {
+        "steps": [
+          "Form the ratio: $\\dfrac{a_6}{a_3}=r^3=\\dfrac{243/16}{9/2}=\\dfrac{243}{16}\\cdot\\dfrac{2}{9}=\\dfrac{243}{72}=\\dfrac{27}{8}$.",
+          "Take the cube root: $r=\\sqrt[3]{\\dfrac{27}{8}}=\\dfrac{3}{2}$.",
+          "Find $a_1$ from $a_3=a_1 r^2=\\dfrac{9}{2}$: $a_1\\left(\\dfrac{3}{2}\\right)^2=a_1\\cdot\\dfrac{9}{4}=\\dfrac{9}{2}$, so $a_1=2$.",
+          "Write the explicit formula: $a_n=2\\left(\\dfrac{3}{2}\\right)^{n-1}$."
+        ],
+        "answer": "$r=\\dfrac{3}{2}$ and $a_n=2\\left(\\dfrac{3}{2}\\right)^{n-1}$"
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A geometric sequence has first term $a_1=5$ and common ratio $r=3$. Which term equals $10935$? Solve for $n$ using logarithms.",
+      "answer": "$n=8$",
+      "solution": {
+        "steps": [
+          "Set up the explicit formula: $a_n=5\\cdot 3^{n-1}=10935$.",
+          "Isolate the power: $3^{n-1}=\\dfrac{10935}{5}=2187$.",
+          "Take logarithms: $n-1=\\dfrac{\\log 2187}{\\log 3}=\\log_3 2187=7$, since $3^7=2187$.",
+          "Solve: $n=7+1=8$."
+        ],
+        "answer": "$n=8$"
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Express the repeating decimal $0.\\overline{27}$ as a fraction in lowest terms using an infinite geometric series.",
+      "answer": "$\\dfrac{3}{11}$",
+      "solution": {
+        "steps": [
+          "Write the decimal as a series: $0.\\overline{27}=\\dfrac{27}{100}+\\dfrac{27}{10000}+\\cdots$, with $a_1=\\dfrac{27}{100}$ and $r=\\dfrac{1}{100}$.",
+          "Since $\\lvert r\\rvert=\\dfrac{1}{100}<1$, the series converges; use $S=\\dfrac{a_1}{1-r}$.",
+          "Compute: $S=\\dfrac{27/100}{1-1/100}=\\dfrac{27/100}{99/100}=\\dfrac{27}{99}$.",
+          "Simplify by dividing by $9$: $\\dfrac{27}{99}=\\dfrac{3}{11}$."
+        ],
+        "answer": "$\\dfrac{3}{11}$"
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Express the repeating decimal $0.4\\overline{16}=0.4161616\\dots$ as a fraction in lowest terms.",
+      "answer": "$\\dfrac{206}{495}$",
+      "solution": {
+        "steps": [
+          "Separate the non-repeating part: $0.4\\overline{16}=\\dfrac{4}{10}+0.0\\overline{16}$.",
+          "Treat the repeating part as a geometric series with $a_1=\\dfrac{16}{1000}$ and $r=\\dfrac{1}{100}$: $0.0\\overline{16}=\\dfrac{16/1000}{1-1/100}=\\dfrac{16/1000}{99/100}=\\dfrac{16}{990}=\\dfrac{8}{495}$.",
+          "Add the parts: $\\dfrac{4}{10}+\\dfrac{8}{495}=\\dfrac{2}{5}+\\dfrac{8}{495}$.",
+          "Common denominator $495$: $\\dfrac{2}{5}=\\dfrac{198}{495}$, so the total is $\\dfrac{198+8}{495}=\\dfrac{206}{495}$, which is already in lowest terms."
+        ],
+        "answer": "$\\dfrac{206}{495}$"
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "An infinite geometric series has first term $a_1=18$ and sum $S=27$. Find the common ratio $r$.",
+      "answer": "$r=\\dfrac{1}{3}$",
+      "solution": {
+        "steps": [
+          "Use the convergent-sum formula $S=\\dfrac{a_1}{1-r}$: $27=\\dfrac{18}{1-r}$.",
+          "Solve for $1-r$: $1-r=\\dfrac{18}{27}=\\dfrac{2}{3}$.",
+          "Therefore $r=1-\\dfrac{2}{3}=\\dfrac{1}{3}$.",
+          "Check convergence: $\\lvert r\\rvert=\\dfrac{1}{3}<1$, so the series indeed converges and the value is valid."
+        ],
+        "answer": "$r=\\dfrac{1}{3}$"
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A convergent infinite geometric series has common ratio $r=-\\dfrac{2}{5}$ and sum $S=20$. Find the first term $a_1$.",
+      "answer": "$a_1=28$",
+      "solution": {
+        "steps": [
+          "Confirm convergence: $\\lvert r\\rvert=\\dfrac{2}{5}<1$.",
+          "Apply $S=\\dfrac{a_1}{1-r}$ with the negative ratio: $1-r=1-\\left(-\\dfrac{2}{5}\\right)=\\dfrac{7}{5}$.",
+          "Substitute: $20=\\dfrac{a_1}{7/5}=\\dfrac{5a_1}{7}$.",
+          "Solve: $a_1=20\\cdot\\dfrac{7}{5}=28$."
+        ],
+        "answer": "$a_1=28$"
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Determine whether $\\displaystyle\\sum_{n=1}^{\\infty} 7\\left(\\dfrac{5}{4}\\right)^{n-1}$ converges. If it converges, find its sum; if not, explain why.",
+      "answer": "Diverges, since $\\lvert r\\rvert=\\dfrac{5}{4}\\ge 1$",
+      "solution": {
+        "steps": [
+          "Identify the common ratio: $r=\\dfrac{5}{4}$.",
+          "Test convergence: an infinite geometric series converges only when $\\lvert r\\rvert<1$.",
+          "Here $\\lvert r\\rvert=\\dfrac{5}{4}=1.25\\ge 1$, so the terms grow without bound.",
+          "The series diverges; the formula $S=\\dfrac{a_1}{1-r}$ does not apply (using it would give a meaningless negative 'sum')."
+        ],
+        "answer": "Diverges, since $\\lvert r\\rvert=\\dfrac{5}{4}\\ge 1$"
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Evaluate the finite geometric series $\\displaystyle\\sum_{k=1}^{6} 5\\left(-2\\right)^{k-1}$.",
+      "answer": "$-105$",
+      "solution": {
+        "steps": [
+          "Identify $a_1=5$, $r=-2$, $n=6$.",
+          "Apply $S_n=a_1\\dfrac{1-r^n}{1-r}$: $S_6=5\\cdot\\dfrac{1-(-2)^6}{1-(-2)}$.",
+          "Compute the powers: $(-2)^6=64$, so the numerator is $1-64=-63$ and the denominator is $1+2=3$.",
+          "Therefore $S_6=5\\cdot\\dfrac{-63}{3}=5\\cdot(-21)=-105$."
+        ],
+        "answer": "$-105$"
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A geometric sequence has $a_4=54$ and $a_7=2$. Find the sum of the corresponding infinite series $\\displaystyle\\sum_{n=1}^{\\infty} a_n$.",
+      "answer": "$2187$",
+      "solution": {
+        "steps": [
+          "Find $r$ from the non-consecutive terms: $\\dfrac{a_7}{a_4}=r^3=\\dfrac{2}{54}=\\dfrac{1}{27}$, so $r=\\sqrt[3]{\\dfrac{1}{27}}=\\dfrac{1}{3}$.",
+          "Find $a_1$ from $a_4=a_1 r^3=54$: $a_1\\left(\\dfrac{1}{3}\\right)^3=a_1\\cdot\\dfrac{1}{27}=54$, so $a_1=54\\cdot 27=1458$.",
+          "Check convergence: $\\lvert r\\rvert=\\dfrac{1}{3}<1$, so the infinite series converges.",
+          "Apply $S=\\dfrac{a_1}{1-r}=\\dfrac{1458}{1-1/3}=\\dfrac{1458}{2/3}=1458\\cdot\\dfrac{3}{2}=2187$."
+        ],
+        "answer": "$2187$"
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A ball is dropped from a height of $24$ feet. Each bounce it returns to $\\dfrac{3}{4}$ of its previous height. Find the total vertical distance the ball travels before coming to rest (count both the drop and each rise).",
+      "answer": "$168$ feet",
+      "solution": {
+        "steps": [
+          "The initial drop is $24$ ft. After that, each up-and-down cycle covers twice the bounce height.",
+          "The bounce heights form a geometric series with first term $24\\cdot\\dfrac{3}{4}=18$ and $r=\\dfrac{3}{4}$.",
+          "Total of all rises and falls after the first drop is $2\\cdot\\dfrac{18}{1-3/4}=2\\cdot\\dfrac{18}{1/4}=2\\cdot 72=144$ ft.",
+          "Add the original drop: $24+144=168$ ft. (Convergence holds since $\\lvert r\\rvert=\\dfrac{3}{4}<1$.)"
+        ],
+        "answer": "$168$ feet"
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "An investment of $\\$1000$ grows by $8\\%$ at the end of each year (so it is multiplied by $1.08$ annually). After how many full years will the balance first exceed $\\$2000$? Use logarithms.",
+      "answer": "$10$ years",
+      "solution": {
+        "steps": [
+          "Model the balance as a geometric sequence: $a_n=1000(1.08)^{n}$ after $n$ years.",
+          "Require $1000(1.08)^n>2000$, i.e. $(1.08)^n>2$.",
+          "Take logarithms: $n>\\dfrac{\\log 2}{\\log 1.08}=\\dfrac{0.30103}{0.03342}\\approx 9.01$.",
+          "Since $n$ must be a whole number of years and $9.01$ rounds up, the balance first exceeds $\\$2000$ after $n=10$ years."
+        ],
+        "answer": "$10$ years"
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Three numbers form a geometric sequence. Their product is $216$ and the sum of the first and third is $15$. Find the three numbers (assume they are positive).",
+      "answer": "$3,\\ 6,\\ 12$",
+      "solution": {
+        "steps": [
+          "Let the three terms be $\\dfrac{a}{r},\\ a,\\ ar$. Their product is $\\dfrac{a}{r}\\cdot a\\cdot ar=a^3=216$, so $a=6$.",
+          "The first plus third term: $\\dfrac{6}{r}+6r=15$.",
+          "Multiply by $r$: $6+6r^2=15r$, i.e. $6r^2-15r+6=0$, or $2r^2-5r+2=0$.",
+          "Factor: $(2r-1)(r-2)=0$, so $r=2$ or $r=\\dfrac{1}{2}$. Both give the same set of terms: with $r=2$ they are $3,\\ 6,\\ 12$.",
+          "Check: product $=3\\cdot 6\\cdot 12=216$ and first $+$ third $=3+12=15$."
+        ],
+        "answer": "$3,\\ 6,\\ 12$"
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Evaluate $\\displaystyle\\sum_{k=3}^{\\infty} 8\\left(\\dfrac{1}{2}\\right)^{k-1}$.",
+      "answer": "$4$",
+      "solution": {
+        "steps": [
+          "The summand $8\\left(\\dfrac{1}{2}\\right)^{k-1}$ has $a_1=8$ and $r=\\dfrac{1}{2}$, but the sum starts at $k=3$, not $k=1$.",
+          "The first included term is at $k=3$: $8\\left(\\dfrac{1}{2}\\right)^{2}=8\\cdot\\dfrac{1}{4}=2$, and the ratio is still $\\dfrac{1}{2}$.",
+          "Since $\\lvert r\\rvert=\\dfrac{1}{2}<1$, apply $S=\\dfrac{\\text{first term}}{1-r}=\\dfrac{2}{1-1/2}$.",
+          "Compute: $S=\\dfrac{2}{1/2}=4$."
+        ],
+        "answer": "$4$"
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "The sum of the first $n$ terms of the geometric series $3+6+12+\\cdots$ is $765$. Find $n$.",
+      "answer": "$n=8$",
+      "solution": {
+        "steps": [
+          "Identify $a_1=3$ and $r=\\dfrac{6}{3}=2$.",
+          "Apply the partial-sum formula: $S_n=3\\cdot\\dfrac{1-2^n}{1-2}=3\\cdot\\dfrac{1-2^n}{-1}=3(2^n-1)$.",
+          "Set equal to $765$: $3(2^n-1)=765$, so $2^n-1=255$ and $2^n=256$.",
+          "Since $2^8=256$, we get $n=8$."
+        ],
+        "answer": "$n=8$"
+      }
+    }
+  ]
+}

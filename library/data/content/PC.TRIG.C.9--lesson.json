@@ -1,0 +1,179 @@
+{
+  "id": "PC.TRIG.C.9--lesson",
+  "standard": "PC.TRIG.C.9",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Laws of sines and cosines",
+  "clusterCode": "C",
+  "skillName": "Law of Cosines",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "The Law of Cosines, $c^2 = a^2 + b^2 - 2ab\\cos C$, is a generalization of the Pythagorean theorem to any triangle. It governs two cases that the Law of Sines cannot start from: SAS (two sides and the included angle, solve for the third side) and SSS (three sides, solve for an angle). Rearranged, it gives $\\cos C = \\dfrac{a^2 + b^2 - c^2}{2ab}$, where the side $c$ always sits opposite the angle $C$. A negative cosine signals an obtuse angle. Paired with the area formula $A = \\tfrac{1}{2}ab\\sin C$, the Law of Cosines also leads to Heron's formula, $A = \\sqrt{s(s-a)(s-b)(s-c)}$ with semiperimeter $s = \\dfrac{a+b+c}{2}$, for finding area from three sides alone.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "In triangle $ABC$, sides $a = 7$ and $b = 10$ enclose the angle $C = 60^\\circ$. Find the length of the third side $c$.",
+      "solution": {
+        "steps": [
+          "This is the SAS case: two sides and the included angle. The side $c$ is opposite the known angle $C$, so use $c^2 = a^2 + b^2 - 2ab\\cos C$.",
+          "Substitute the values: $c^2 = 7^2 + 10^2 - 2(7)(10)\\cos 60^\\circ$.",
+          "Evaluate each piece: $7^2 = 49$, $10^2 = 100$, and $2(7)(10) = 140$ with $\\cos 60^\\circ = \\tfrac{1}{2}$.",
+          "So $c^2 = 49 + 100 - 140\\cdot\\tfrac{1}{2} = 149 - 70 = 79$.",
+          "Take the positive square root (a length is positive): $c = \\sqrt{79}$.",
+          "Note this is larger than $\\sqrt{149}$ would be wrong: the $-2ab\\cos C$ term must stay, so $c = \\sqrt{79} \\approx 8.89$."
+        ],
+        "answer": "$c = \\sqrt{79} \\approx 8.89$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A triangle has sides $a = 5$, $b = 6$, and $c = 8$. Find the measure of angle $C$, the angle opposite the longest side.",
+      "solution": {
+        "steps": [
+          "This is the SSS case: all three sides are known, so solve for an angle. Rearrange the Law of Cosines to isolate $\\cos C$: $\\cos C = \\dfrac{a^2 + b^2 - c^2}{2ab}$.",
+          "Be sure $c = 8$ is the side opposite the angle $C$ you want. Substitute: $\\cos C = \\dfrac{5^2 + 6^2 - 8^2}{2(5)(6)}$.",
+          "Evaluate the numerator: $25 + 36 - 64 = -3$. Evaluate the denominator: $2(5)(6) = 60$.",
+          "So $\\cos C = \\dfrac{-3}{60} = -\\dfrac{1}{20}$.",
+          "The cosine is negative, which means $C$ is obtuse. Apply the inverse cosine: $C = \\cos^{-1}\\!\\left(-\\dfrac{1}{20}\\right) \\approx 92.9^\\circ$.",
+          "Check: $92.9^\\circ$ is obtuse and is the largest angle, consistent with $c = 8$ being the longest side."
+        ],
+        "answer": "$C = \\cos^{-1}\\!\\left(-\\dfrac{1}{20}\\right) \\approx 92.9^\\circ$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Find the area of a triangle whose sides are $a = 13$, $b = 14$, and $c = 15$ using Heron's formula.",
+      "solution": {
+        "steps": [
+          "Heron's formula needs the semiperimeter first: $s = \\dfrac{a+b+c}{2}$, which is half the perimeter, not the full perimeter.",
+          "Compute $s = \\dfrac{13 + 14 + 15}{2} = \\dfrac{42}{2} = 21$.",
+          "Find each difference: $s - a = 21 - 13 = 8$, $\\;s - b = 21 - 14 = 7$, $\\;s - c = 21 - 15 = 6$.",
+          "Apply Heron's formula: $A = \\sqrt{s(s-a)(s-b)(s-c)} = \\sqrt{21 \\cdot 8 \\cdot 7 \\cdot 6}$.",
+          "Multiply under the root: $21 \\cdot 8 = 168$, then $168 \\cdot 7 = 1176$, then $1176 \\cdot 6 = 7056$.",
+          "Take the square root: $A = \\sqrt{7056} = 84$ square units."
+        ],
+        "answer": "$A = 84$ square units"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Two straight roads diverge from a single point with a $72^\\circ$ angle between them. A surveyor walks $8$ km along one road and $5$ km along the other. How far apart, to the nearest hundredth of a kilometer, are the two endpoints?",
+      "solution": {
+        "steps": [
+          "Model the situation as a triangle. The two roads are sides of length $8$ and $5$, and the $72^\\circ$ angle between them is the included angle. The distance between the endpoints is the side $d$ opposite that angle.",
+          "This is SAS, so use the Law of Cosines: $d^2 = 8^2 + 5^2 - 2(8)(5)\\cos 72^\\circ$.",
+          "Evaluate the known parts: $8^2 = 64$, $5^2 = 25$, and $2(8)(5) = 80$.",
+          "Since $72^\\circ$ is not a benchmark angle, use a calculator: $\\cos 72^\\circ \\approx 0.3090$.",
+          "So $d^2 \\approx 64 + 25 - 80(0.3090) = 89 - 24.72 = 64.28$.",
+          "Take the square root: $d \\approx \\sqrt{64.28} \\approx 8.02$ km."
+        ],
+        "answer": "$d \\approx 8.02$ km"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "You are given angle $A = 40^\\circ$, side $b = 9$, and side $c = 12$ in triangle $ABC$. Decide which law to use to find side $a$, then find $a$ to the nearest hundredth.",
+      "solution": {
+        "steps": [
+          "Identify the configuration. Side $b$ and side $c$ enclose angle $A$ (the angle $A$ is between them), so this is the SAS case.",
+          "In SAS there is no complete angle-side opposite pair to start the Law of Sines, so the Law of Cosines is required. Because $a$ is opposite $A$, write $a^2 = b^2 + c^2 - 2bc\\cos A$.",
+          "Substitute: $a^2 = 9^2 + 12^2 - 2(9)(12)\\cos 40^\\circ$.",
+          "Evaluate: $9^2 = 81$, $12^2 = 144$, $2(9)(12) = 216$, and $\\cos 40^\\circ \\approx 0.7660$.",
+          "So $a^2 \\approx 81 + 144 - 216(0.7660) = 225 - 165.46 = 59.54$.",
+          "Take the square root: $a \\approx \\sqrt{59.54} \\approx 7.72$."
+        ],
+        "answer": "Use the Law of Cosines (SAS); $a \\approx 7.72$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "In triangle $ABC$, $a = 6$, $b = 9$, and the included angle $C = 120^\\circ$. Find the exact length of side $c$.",
+      "hint": "This is SAS, so use $c^2 = a^2 + b^2 - 2ab\\cos C$. Recall that $\\cos 120^\\circ = -\\tfrac{1}{2}$, so the last term becomes positive.",
+      "solution": {
+        "steps": [
+          "Use the Law of Cosines: $c^2 = a^2 + b^2 - 2ab\\cos C = 6^2 + 9^2 - 2(6)(9)\\cos 120^\\circ$.",
+          "Evaluate: $6^2 = 36$, $9^2 = 81$, $2(6)(9) = 108$, and $\\cos 120^\\circ = -\\tfrac{1}{2}$.",
+          "So $c^2 = 36 + 81 - 108\\left(-\\tfrac{1}{2}\\right) = 117 + 54 = 171$.",
+          "Take the positive square root and simplify: $c = \\sqrt{171} = \\sqrt{9 \\cdot 19} = 3\\sqrt{19}$."
+        ],
+        "answer": "$c = 3\\sqrt{19} \\approx 13.08$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A triangle has sides $a = 4$, $b = 5$, and $c = 7$. Find angle $C$ (opposite side $c$) to the nearest tenth of a degree.",
+      "hint": "Use the rearranged form $\\cos C = \\dfrac{a^2 + b^2 - c^2}{2ab}$. If the cosine comes out negative, the angle is obtuse.",
+      "solution": {
+        "steps": [
+          "This is SSS, so isolate the angle: $\\cos C = \\dfrac{a^2 + b^2 - c^2}{2ab} = \\dfrac{4^2 + 5^2 - 7^2}{2(4)(5)}$.",
+          "Numerator: $16 + 25 - 49 = -8$. Denominator: $2(4)(5) = 40$.",
+          "So $\\cos C = \\dfrac{-8}{40} = -\\dfrac{1}{5}$.",
+          "The cosine is negative, so $C$ is obtuse: $C = \\cos^{-1}\\!\\left(-\\tfrac{1}{5}\\right) \\approx 101.5^\\circ$."
+        ],
+        "answer": "$C \\approx 101.5^\\circ$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Find the area of a triangle with sides $a = 9$, $b = 10$, and $c = 11$ using Heron's formula. Leave the answer as a simplified radical.",
+      "hint": "First compute the semiperimeter $s = \\dfrac{a+b+c}{2}$, then $A = \\sqrt{s(s-a)(s-b)(s-c)}$. Simplify the radical by pulling out perfect-square factors.",
+      "solution": {
+        "steps": [
+          "Compute the semiperimeter: $s = \\dfrac{9 + 10 + 11}{2} = \\dfrac{30}{2} = 15$.",
+          "Differences: $s - a = 15 - 9 = 6$, $\\;s - b = 15 - 10 = 5$, $\\;s - c = 15 - 11 = 4$.",
+          "Apply Heron's formula: $A = \\sqrt{15 \\cdot 6 \\cdot 5 \\cdot 4} = \\sqrt{1800}$.",
+          "Simplify the radical: $1800 = 900 \\cdot 2$, so $A = \\sqrt{900}\\sqrt{2} = 30\\sqrt{2}$."
+        ],
+        "answer": "$A = 30\\sqrt{2} \\approx 42.43$ square units"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A ship sails $30$ km on a course, then turns through an interior triangle angle of $50^\\circ$ and sails $40$ km. Treating the two legs as sides enclosing a $50^\\circ$ angle, how far is the ship from its starting point, to the nearest hundredth of a kilometer?",
+      "hint": "The two legs enclose the given angle, so this is SAS. Use $d^2 = a^2 + b^2 - 2ab\\cos C$ with $\\cos 50^\\circ \\approx 0.6428$.",
+      "solution": {
+        "steps": [
+          "Model the path as a triangle with sides $30$ and $40$ enclosing the $50^\\circ$ angle; the distance $d$ is opposite that angle.",
+          "Apply the Law of Cosines: $d^2 = 30^2 + 40^2 - 2(30)(40)\\cos 50^\\circ$.",
+          "Evaluate: $30^2 = 900$, $40^2 = 1600$, $2(30)(40) = 2400$, and $\\cos 50^\\circ \\approx 0.6428$.",
+          "So $d^2 \\approx 900 + 1600 - 2400(0.6428) = 2500 - 1542.69 = 957.31$.",
+          "Take the square root: $d \\approx \\sqrt{957.31} \\approx 30.94$ km."
+        ],
+        "answer": "$d \\approx 30.94$ km"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "In triangle $ABC$ you know $a = 8$, $b = 11$, and $c = 6$. First find angle $A$ (opposite side $a$) with the Law of Cosines, then use the Law of Sines to find angle $B$. Give both to the nearest tenth of a degree.",
+      "hint": "Start with $\\cos A = \\dfrac{b^2 + c^2 - a^2}{2bc}$. Once you have $A$, use $\\dfrac{\\sin A}{a} = \\dfrac{\\sin B}{b}$ to solve for $\\sin B$. Caution: $b = 11$ is the longest side, so $B$ is the largest angle and must be obtuse. Take the supplement of the acute $\\sin^{-1}$ value.",
+      "solution": {
+        "steps": [
+          "Find $A$ with the Law of Cosines: $\\cos A = \\dfrac{b^2 + c^2 - a^2}{2bc} = \\dfrac{11^2 + 6^2 - 8^2}{2(11)(6)}$.",
+          "Numerator: $121 + 36 - 64 = 93$. Denominator: $2(11)(6) = 132$. So $\\cos A = \\dfrac{93}{132} \\approx 0.7045$.",
+          "Then $A = \\cos^{-1}(0.7045) \\approx 45.2^\\circ$.",
+          "Now use the Law of Sines for $B$: $\\dfrac{\\sin B}{b} = \\dfrac{\\sin A}{a}$, so $\\sin B = \\dfrac{b\\sin A}{a} = \\dfrac{11\\sin 45.2^\\circ}{8}$.",
+          "Compute: $\\sin 45.2^\\circ \\approx 0.7097$, so $\\sin B \\approx \\dfrac{11(0.7097)}{8} \\approx 0.9758$, and $\\sin^{-1}(0.9758) \\approx 77.4^\\circ$.",
+          "Because $b = 11$ is the longest side of the triangle, $B$ is the largest angle and must be obtuse. The Law of Sines only returns the acute candidate, so take its supplement: $B = 180^\\circ - 77.4^\\circ = 102.6^\\circ$.",
+          "Check with the angle sum: $C = 180^\\circ - 45.2^\\circ - 102.6^\\circ = 32.2^\\circ$, which fits $c = 6$ being the shortest side. (Confirm directly: $\\cos B = \\dfrac{a^2 + c^2 - b^2}{2ac} = \\dfrac{64 + 36 - 121}{96} = -\\dfrac{21}{96}$, giving $B \\approx 102.6^\\circ$.)"
+        ],
+        "answer": "$A \\approx 45.2^\\circ$ and $B \\approx 102.6^\\circ$"
+      }
+    }
+  ]
+}

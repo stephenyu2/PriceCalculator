@@ -1,0 +1,146 @@
+{
+  "standard": "PC.SEQ.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Sequences, Series, and Limits",
+  "domainCode": "SEQ",
+  "cluster": "Sequences and series",
+  "clusterCode": "A",
+  "skillName": "Introduction to Limits",
+
+  "description": "Students develop the informal concept of a limit as the value a function $f(x)$ approaches as $x$ approaches a fixed value $a$ (or as $x$ grows without bound). They estimate limits from graphs, build and read numerical tables that approach $a$ from both sides, evaluate two-sided and one-sided limits, and identify the three classic ways a limit fails to exist: oscillation, unbounded behavior (the function diverges to $\\pm\\infty$), and one-sided disagreement (the left-hand and right-hand limits differ). The focus is on $\\lim_{x \\to a} f(x)$ describing where the output heads, which need not equal $f(a)$.",
+
+  "subSkills": [
+    "State the informal meaning of $\\lim_{x \\to a} f(x) = L$: outputs approach $L$ as inputs approach $a$ from both sides",
+    "Estimate a two-sided limit from a graph by tracking the height the curve approaches at $x = a$",
+    "Build and read a numerical table to estimate $\\lim_{x \\to a} f(x)$ using inputs approaching $a$ from the left and from the right",
+    "Distinguish the limit $\\lim_{x \\to a} f(x)$ from the function value $f(a)$, including at holes and jumps",
+    "Evaluate one-sided limits $\\lim_{x \\to a^-} f(x)$ and $\\lim_{x \\to a^+} f(x)$ from a graph, table, or piecewise rule",
+    "Apply the existence criterion: $\\lim_{x \\to a} f(x)$ exists iff the left-hand and right-hand limits exist and are equal",
+    "Identify non-existence by oscillation (e.g. $\\sin\\!\\left(\\frac{1}{x}\\right)$ near $0$)",
+    "Identify non-existence by unbounded behavior, distinguishing $+\\infty$, $-\\infty$, and a vertical asymptote with disagreeing sides",
+    "Identify non-existence by one-sided disagreement (a jump discontinuity)",
+    "Estimate end behavior limits $\\lim_{x \\to \\infty} f(x)$ and $\\lim_{x \\to -\\infty} f(x)$ informally from a graph or table"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Limit from a graph (continuous point)",
+      "example": "The graph of $f$ passes smoothly through the point $(2, 5)$. Estimate $\\lim_{x \\to 2} f(x)$. Answer: $5$."
+    },
+    {
+      "name": "Limit at a hole (removable discontinuity)",
+      "example": "Given $f(x) = \\dfrac{x^2 - 9}{x - 3}$, build a table for $x = 2.9, 2.99, 3.01, 3.1$ and estimate $\\lim_{x \\to 3} f(x)$. Since $f(x) = x + 3$ for $x \\neq 3$, the limit is $6$ even though $f(3)$ is undefined."
+    },
+    {
+      "name": "Limit vs. function value mismatch",
+      "example": "A graph shows a curve approaching height $4$ as $x \\to 1$, but a solid dot sits at $(1, 7)$. State $\\lim_{x \\to 1} f(x)$ and $f(1)$. Answer: $\\lim_{x \\to 1} f(x) = 4$ while $f(1) = 7$."
+    },
+    {
+      "name": "One-sided limits from a piecewise function",
+      "example": "For $f(x) = \\begin{cases} x + 1 & x < 2 \\\\ x^2 & x \\ge 2 \\end{cases}$, find $\\lim_{x \\to 2^-} f(x)$ and $\\lim_{x \\to 2^+} f(x)$. Answers: $3$ and $4$; the two-sided limit does not exist."
+    },
+    {
+      "name": "Numerical table estimation",
+      "example": "Using $f(x) = \\dfrac{\\sin x}{x}$, complete a table at $x = -0.1, -0.01, 0.01, 0.1$ (in radians) and estimate $\\lim_{x \\to 0} f(x)$. Answer: $1$."
+    },
+    {
+      "name": "Non-existence by oscillation",
+      "example": "Explain why $\\lim_{x \\to 0} \\sin\\!\\left(\\frac{1}{x}\\right)$ does not exist. The outputs oscillate between $-1$ and $1$ infinitely often and never settle on a single value."
+    },
+    {
+      "name": "Non-existence by unbounded behavior",
+      "example": "Evaluate $\\lim_{x \\to 0} \\dfrac{1}{x^2}$. The outputs grow without bound, so the limit does not exist (we write $\\lim_{x \\to 0} \\frac{1}{x^2} = +\\infty$ to describe the behavior)."
+    },
+    {
+      "name": "Non-existence by one-sided disagreement (jump / sign change)",
+      "example": "For $f(x) = \\dfrac{1}{x}$, find $\\lim_{x \\to 0^-} f(x)$ and $\\lim_{x \\to 0^+} f(x)$. They are $-\\infty$ and $+\\infty$; since the sides disagree, $\\lim_{x \\to 0} f(x)$ does not exist."
+    },
+    {
+      "name": "End behavior limit",
+      "example": "Estimate $\\lim_{x \\to \\infty} \\dfrac{3x + 1}{x}$ from a table of large $x$. Answer: $3$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step reads where the limit equals the obvious approached value. Student reads a two-sided limit off a clean graph at a point with no discontinuity, or off a short table that clearly approaches one number, or recalls the informal definition. No mismatch between limit and function value, no non-existence cases.",
+      "constraints": [
+        "Limit exists and the curve is continuous at the target point",
+        "Graph or table makes a single approached value unmistakable to one decimal place",
+        "Target value $a$ is a small integer; the answer is a small integer or simple value",
+        "No piecewise rules, no one-sided notation, no $\\infty$"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step reasoning involving a discontinuity or one-sided thinking. Student distinguishes $\\lim_{x \\to a} f(x)$ from $f(a)$ at a hole or jump, evaluates a single one-sided limit, completes a table that approaches a non-integer value, or simplifies a removable factor such as $\\frac{x^2 - 9}{x - 3}$ before taking the limit.",
+      "constraints": [
+        "Involves a removable discontinuity (hole) or a defined-but-different $f(a)$",
+        "May require one-sided limit notation $\\lim_{x \\to a^-}$ or $\\lim_{x \\to a^+}$",
+        "Table values approach a non-integer (e.g. estimating $\\lim_{x \\to 0}\\frac{\\sin x}{x} = 1$ from below)",
+        "Piecewise functions limited to two pieces and a linear/quadratic rule"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step analysis combining one-sided limits with a non-existence judgment, or interpreting unbounded/oscillating behavior. Student must compute both one-sided limits, compare them, and decide whether the two-sided limit exists, citing the specific reason for non-existence (oscillation, unbounded, or one-sided disagreement). May combine end behavior with a vertical asymptote or reason about a multi-piece function.",
+      "constraints": [
+        "Requires evaluating both one-sided limits and applying the existence criterion explicitly",
+        "Includes at least one non-existence case (oscillation, $\\pm\\infty$, or jump) the student must name",
+        "May involve $\\infty$ notation, vertical asymptotes, or end behavior as $x \\to \\pm\\infty$",
+        "Piecewise functions may have three pieces, or the prompt requires justifying the reason in words"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student believes $\\lim_{x \\to a} f(x)$ must equal $f(a)$",
+      "distractor": "At a hole or jump, reports the plotted point's height $f(a)$ (e.g. $7$) as the limit instead of the approached value (e.g. $4$)"
+    },
+    {
+      "misconception": "Student concludes the limit does not exist simply because $f(a)$ is undefined",
+      "distractor": "For $\\lim_{x \\to 3}\\frac{x^2-9}{x-3}$, answers 'does not exist' because the denominator is $0$ at $x=3$, missing that the hole cancels to give $6$"
+    },
+    {
+      "misconception": "Student plugs in directly without simplifying the removable factor",
+      "distractor": "Evaluates $\\frac{x^2-9}{x-3}$ at $x=3$ to get $\\frac{0}{0}$ and writes the answer as $0$ or $1$ instead of cancelling to $x+3 = 6$"
+    },
+    {
+      "misconception": "Student ignores one-sided disagreement and averages the two sides",
+      "distractor": "For a jump where $\\lim_{x\\to 2^-}f = 3$ and $\\lim_{x\\to 2^+}f = 5$, reports the two-sided limit as $4$ (the average) instead of 'does not exist'"
+    },
+    {
+      "misconception": "Student takes only one side and reports it as the two-sided limit",
+      "distractor": "For $f(x)=\\frac{1}{x}$ near $0$, sees $\\lim_{x\\to 0^+}\\frac{1}{x}=+\\infty$ and concludes $\\lim_{x\\to 0}\\frac{1}{x}=+\\infty$, ignoring that the left side goes to $-\\infty$"
+    },
+    {
+      "misconception": "Student treats unbounded growth as a numerical limit value",
+      "distractor": "For $\\lim_{x\\to 0}\\frac{1}{x^2}$, writes a large finite number or $\\infty$ as an existing limit value, rather than recognizing the limit does not exist (is unbounded)"
+    },
+    {
+      "misconception": "Student assumes an oscillating function still has a limit",
+      "distractor": "For $\\lim_{x\\to 0}\\sin\\!\\left(\\frac{1}{x}\\right)$, reports $0$ (the midpoint) or $1$ instead of recognizing the oscillation prevents the limit from existing"
+    },
+    {
+      "misconception": "Student confuses the direction of approach with the input value",
+      "distractor": "For $\\lim_{x\\to \\infty}\\frac{3x+1}{x}$, evaluates at the asymptote or at $x=0$ and answers $1$ or undefined instead of reading the end behavior value $3$"
+    },
+    {
+      "misconception": "Student reverses left and right one-sided limits",
+      "distractor": "For a piecewise function, assigns the $x<a$ rule to $\\lim_{x\\to a^+}$ and the $x\\ge a$ rule to $\\lim_{x\\to a^-}$, swapping the two one-sided answers"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

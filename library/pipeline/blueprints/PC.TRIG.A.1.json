@@ -1,0 +1,129 @@
+{
+  "standard": "PC.TRIG.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Angles, radian measure, and the unit circle",
+  "clusterCode": "A",
+  "skillName": "Radian and Degree Measure",
+
+  "description": "Students convert fluently between degree and radian measure using the relationship $180^\\circ = \\pi$ radians, draw and analyze angles in standard position, find positive and negative coterminal angles, and compute arc length with $s = r\\theta$ (where $\\theta$ is in radians). They apply both units in geometric and real-world contexts such as rotation, angular position, and circular motion. Exact values are expressed with $\\pi$, radicals, and fractions; decimals appear only when an approximation is explicitly requested.",
+
+  "subSkills": [
+    "Convert a degree measure to radians by multiplying by $\\frac{\\pi}{180^\\circ}$ and simplifying",
+    "Convert a radian measure to degrees by multiplying by $\\frac{180^\\circ}{\\pi}$ and simplifying",
+    "Sketch an angle in standard position and identify its quadrant or axis",
+    "Find positive and negative coterminal angles by adding or subtracting $360^\\circ$ or $2\\pi$",
+    "Compute arc length with $s = r\\theta$, ensuring $\\theta$ is in radians",
+    "Solve for an unknown radius, central angle, or arc length given the other two",
+    "Apply radian and degree measure to real-world rotation and circular-motion contexts"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Degrees to radians",
+      "example": "Convert $135^\\circ$ to radians. Answer: $\\frac{3\\pi}{4}$."
+    },
+    {
+      "name": "Radians to degrees",
+      "example": "Convert $\\frac{7\\pi}{6}$ to degrees. Answer: $210^\\circ$."
+    },
+    {
+      "name": "Standard position and quadrant",
+      "example": "In which quadrant does the terminal side of $\\frac{5\\pi}{4}$ lie? Answer: Quadrant III."
+    },
+    {
+      "name": "Coterminal angles",
+      "example": "Find a positive and a negative angle coterminal with $\\frac{\\pi}{3}$. Answers: $\\frac{7\\pi}{3}$ and $-\\frac{5\\pi}{3}$."
+    },
+    {
+      "name": "Arc length given radius and angle",
+      "example": "A circle has radius $r = 6$. Find the length of the arc subtended by a central angle of $\\frac{\\pi}{3}$. Answer: $s = 2\\pi$."
+    },
+    {
+      "name": "Solve for radius or central angle",
+      "example": "An arc of length $s = 10$ subtends a central angle of $\\frac{5}{4}$ radians. Find the radius. Answer: $r = 8$."
+    },
+    {
+      "name": "Real-world rotation / circular motion",
+      "example": "A wheel of radius $r = 0.5$ m turns through $4\\pi$ radians. How far does a point on the rim travel? Answer: $s = 2\\pi$ m."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step conversion or direct substitution using common benchmark angles. The angle is a familiar multiple of $30^\\circ$, $45^\\circ$, $60^\\circ$, $90^\\circ$ (or $\\frac{\\pi}{6}$, $\\frac{\\pi}{4}$, $\\frac{\\pi}{3}$, $\\frac{\\pi}{2}$), and simplification is at most one reduction.",
+      "constraints": [
+        "Conversion of a benchmark angle such as $90^\\circ \\to \\frac{\\pi}{2}$ or $\\frac{\\pi}{4} \\to 45^\\circ$",
+        "Arc length with $r$ and $\\theta$ given directly, $\\theta$ already in radians, small integers",
+        "One coterminal angle within a single $\\pm 360^\\circ$ or $\\pm 2\\pi$ step",
+        "Answer is a clean multiple of $\\pi$ or a whole number of degrees"
+      ]
+    },
+    "Medium": {
+      "description": "Two steps or a non-benchmark angle requiring careful simplification, quadrant identification, or recognition that the angle must be converted to radians before applying $s = r\\theta$.",
+      "constraints": [
+        "Conversion of a non-benchmark angle such as $200^\\circ$ or $\\frac{7\\pi}{9}$ requiring GCF simplification",
+        "Arc length where $\\theta$ is given in degrees and must be converted to radians first",
+        "Solve $s = r\\theta$ for $r$ or $\\theta$ given the other two",
+        "Determine the quadrant of an angle greater than $2\\pi$ or negative",
+        "Find both a positive and a negative coterminal angle"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problem that combines conversion, coterminal reduction, and arc length, or an applied circular-motion / angular-speed scenario requiring the student to extract quantities and chain operations.",
+      "constraints": [
+        "Reduce a large or negative angle to its coterminal value in $[0, 2\\pi)$ then convert or apply arc length",
+        "Applied context: linear distance traveled, revolutions per minute, or angular speed over time",
+        "Compare two quantities expressed in different units (one in degrees, one in radians)",
+        "Solve for an unknown that requires setting up and combining $s = r\\theta$ with a conversion",
+        "Multi-part: convert, identify quadrant, and find coterminal in one chain"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student multiplies by the wrong conversion factor, using $\\frac{180^\\circ}{\\pi}$ when going degrees-to-radians (or $\\frac{\\pi}{180^\\circ}$ when going radians-to-degrees)",
+      "distractor": "Converts $135^\\circ$ by multiplying by $\\frac{180}{\\pi}$ and reports $\\frac{24300}{\\pi}$ or similar inverted result instead of $\\frac{3\\pi}{4}$"
+    },
+    {
+      "misconception": "Student forgets to convert the central angle to radians before using $s = r\\theta$ and plugs the degree value straight in",
+      "distractor": "For $r = 6$, $\\theta = 60^\\circ$, computes $s = 6 \\cdot 60 = 360$ instead of converting to $\\frac{\\pi}{3}$ to get $s = 2\\pi$"
+    },
+    {
+      "misconception": "Student treats $\\pi$ as the full revolution instead of $2\\pi$, so coterminal and reduction steps use $\\pi$",
+      "distractor": "Finds a coterminal angle of $\\frac{\\pi}{3}$ as $\\frac{\\pi}{3} + \\pi = \\frac{4\\pi}{3}$ instead of $\\frac{\\pi}{3} + 2\\pi = \\frac{7\\pi}{3}$"
+    },
+    {
+      "misconception": "Student adds when they should subtract (or vice versa) when finding a negative coterminal angle, or stops after one direction",
+      "distractor": "Gives $\\frac{\\pi}{3} - 2\\pi = -\\frac{5\\pi}{3}$ but labels it positive, or reports $\\frac{\\pi}{3} + 2\\pi$ when a negative coterminal angle is requested"
+    },
+    {
+      "misconception": "Student mis-simplifies the fraction during conversion, leaving an unreduced or arithmetically wrong result",
+      "distractor": "Converts $\\frac{7\\pi}{6}$ to degrees as $\\frac{7 \\cdot 180}{6} = 200^\\circ$ (arithmetic slip) instead of $210^\\circ$, or leaves $\\frac{135\\pi}{180}$ unreduced"
+    },
+    {
+      "misconception": "Student identifies the wrong quadrant by misjudging where the terminal side falls, often confusing radian boundaries",
+      "distractor": "Places $\\frac{5\\pi}{4}$ in Quadrant II instead of Quadrant III by treating $\\frac{5\\pi}{4}$ as just past $\\frac{\\pi}{2}$"
+    },
+    {
+      "misconception": "Student inverts the arc-length relationship when solving for radius or angle, dividing the wrong way",
+      "distractor": "For $s = 10$, $\\theta = \\frac{5}{4}$, computes $r = 10 \\cdot \\frac{5}{4} = \\frac{25}{2}$ instead of $r = \\frac{10}{5/4} = 8$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

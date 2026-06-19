@@ -1,0 +1,256 @@
+{
+  "id": "PC.EXP.A.3--worksheet--hard",
+  "standard": "PC.EXP.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Exponential and Logarithmic Functions",
+  "domainCode": "EXP",
+  "cluster": "Properties and graphs",
+  "clusterCode": "A",
+  "skillName": "Logarithmic Properties and Equations",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems push past single rules. Most require condensing logarithms into one term, rewriting in exponential form, and solving a quadratic. Always state the domain (every logarithm argument must be positive) and test each candidate, discarding any extraneous root. For exponential equations that are quadratic in form, substitute $u=b^x$ and remember that $u$ must be positive. Give exact answers.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Solve $\\log_3 x+\\log_3(x-2)=1$ for $x$, stating the domain and rejecting any extraneous root.",
+      "answer": "$x=3$",
+      "solution": {
+        "steps": [
+          "Domain: need $x>0$ and $x-2>0$, so $x>2$.",
+          "Condense with the product rule: $\\log_3\\big(x(x-2)\\big)=1$.",
+          "Rewrite in exponential form: $x(x-2)=3^1=3$.",
+          "Expand and set to zero: $x^2-2x-3=0$, so $(x-3)(x+1)=0$.",
+          "Candidates: $x=3$ or $x=-1$.",
+          "Test against the domain $x>2$: $x=3$ is valid; $x=-1$ is rejected (it makes both arguments negative).",
+          "Answer: $x=3$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Solve $e^{2x}-5e^{x}+6=0$ for all real $x$. Give exact answers.",
+      "answer": "$x=\\ln 2$ or $x=\\ln 3$",
+      "solution": {
+        "steps": [
+          "Substitute $u=e^{x}$, where $u>0$. The equation becomes $u^2-5u+6=0$.",
+          "Factor: $(u-2)(u-3)=0$, so $u=2$ or $u=3$.",
+          "Both are positive, so both are admissible values of $e^{x}$.",
+          "Back-substitute: $e^{x}=2\\Rightarrow x=\\ln 2$, and $e^{x}=3\\Rightarrow x=\\ln 3$.",
+          "Answer: $x=\\ln 2$ or $x=\\ln 3$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Solve $\\log_2(x+6)+\\log_2(x+2)=5$ for $x$. State the domain and discard any extraneous solution.",
+      "answer": "$x=2$",
+      "solution": {
+        "steps": [
+          "Domain: need $x+6>0$ and $x+2>0$, so $x>-2$.",
+          "Condense: $\\log_2\\big((x+6)(x+2)\\big)=5$.",
+          "Rewrite in exponential form: $(x+6)(x+2)=2^5=32$.",
+          "Expand: $x^2+8x+12=32$, so $x^2+8x-20=0$.",
+          "Factor: $(x+10)(x-2)=0$, giving $x=-10$ or $x=2$.",
+          "Test against $x>-2$: $x=2$ is valid; $x=-10$ is rejected.",
+          "Answer: $x=2$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Solve $\\log_5(2x-1)-\\log_5(x-2)=1$ for $x$, checking the domain.",
+      "answer": "$x=3$",
+      "solution": {
+        "steps": [
+          "Domain: need $2x-1>0$ and $x-2>0$, so $x>2$.",
+          "Condense with the quotient rule: $\\log_5\\left(\\frac{2x-1}{x-2}\\right)=1$.",
+          "Rewrite in exponential form: $\\frac{2x-1}{x-2}=5^1=5$.",
+          "Clear the denominator: $2x-1=5(x-2)=5x-10$.",
+          "Solve: $-1+10=5x-2x$, so $9=3x$ and $x=3$.",
+          "Check domain $x>2$: $x=3$ is valid (arguments $5>0$ and $1>0$).",
+          "Answer: $x=3$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Solve $\\log_4(x)+\\log_4(x-6)=2$ for $x$. State the domain and reject any extraneous root.",
+      "answer": "$x=8$",
+      "solution": {
+        "steps": [
+          "Domain: need $x>0$ and $x-6>0$, so $x>6$.",
+          "Condense: $\\log_4\\big(x(x-6)\\big)=2$.",
+          "Rewrite in exponential form: $x(x-6)=4^2=16$.",
+          "Expand: $x^2-6x-16=0$, so $(x-8)(x+2)=0$.",
+          "Candidates: $x=8$ or $x=-2$.",
+          "Test against $x>6$: $x=8$ is valid; $x=-2$ is rejected.",
+          "Answer: $x=8$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Solve $\\ln(x-1)+\\ln(x-3)=\\ln(2x-3)$ for $x$. State the domain and discard extraneous roots.",
+      "answer": "$x=3+\\sqrt{3}$",
+      "solution": {
+        "steps": [
+          "Domain: need $x-1>0$, $x-3>0$, and $2x-3>0$. The binding condition is $x>3$.",
+          "Condense the left side: $\\ln\\big((x-1)(x-3)\\big)=\\ln(2x-3)$.",
+          "Since $\\ln$ is one-to-one, $(x-1)(x-3)=2x-3$.",
+          "Expand: $x^2-4x+3=2x-3$, so $x^2-6x+6=0$.",
+          "Quadratic formula: $x=\\frac{6\\pm\\sqrt{36-24}}{2}=\\frac{6\\pm\\sqrt{12}}{2}=3\\pm\\sqrt{3}$.",
+          "Candidates: $x=3+\\sqrt{3}\\approx 4.73$ and $x=3-\\sqrt{3}\\approx 1.27$.",
+          "Test against $x>3$: $x=3-\\sqrt{3}$ is rejected (it is less than $3$); $x=3+\\sqrt{3}$ satisfies $x>3$ and is valid.",
+          "Answer: $x=3+\\sqrt{3}$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Solve $2^{2x}-9\\cdot 2^{x}+8=0$ for all real $x$. Give exact answers.",
+      "answer": "$x=0$ or $x=3$",
+      "solution": {
+        "steps": [
+          "Note $2^{2x}=(2^x)^2$. Substitute $u=2^x$ with $u>0$: $u^2-9u+8=0$.",
+          "Factor: $(u-1)(u-8)=0$, so $u=1$ or $u=8$.",
+          "Both are positive, so both are admissible.",
+          "Back-substitute: $2^x=1\\Rightarrow x=0$, and $2^x=8=2^3\\Rightarrow x=3$.",
+          "Answer: $x=0$ or $x=3$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Solve $\\log(x)+\\log(x-15)=2$ (common logarithm, base 10) for $x$. State the domain and reject any extraneous root.",
+      "answer": "$x=20$",
+      "solution": {
+        "steps": [
+          "Domain: need $x>0$ and $x-15>0$, so $x>15$.",
+          "Condense: $\\log\\big(x(x-15)\\big)=2$.",
+          "Rewrite in exponential form: $x(x-15)=10^2=100$.",
+          "Expand: $x^2-15x-100=0$, so $(x-20)(x+5)=0$.",
+          "Candidates: $x=20$ or $x=-5$.",
+          "Test against $x>15$: $x=20$ is valid; $x=-5$ is rejected.",
+          "Answer: $x=20$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Solve $\\log_2(x+1)+\\log_2(x-1)=3$ for $x$. State the domain and discard extraneous solutions.",
+      "answer": "$x=3$",
+      "solution": {
+        "steps": [
+          "Domain: need $x+1>0$ and $x-1>0$, so $x>1$.",
+          "Condense: $\\log_2\\big((x+1)(x-1)\\big)=3$, i.e. $\\log_2(x^2-1)=3$.",
+          "Rewrite in exponential form: $x^2-1=2^3=8$.",
+          "Solve: $x^2=9$, so $x=3$ or $x=-3$.",
+          "Test against $x>1$: $x=3$ is valid; $x=-3$ is rejected.",
+          "Answer: $x=3$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Solve $\\ln(x)+\\ln(x+1)=\\ln 6$ for $x$. State the domain and reject any extraneous root.",
+      "answer": "$x=2$",
+      "solution": {
+        "steps": [
+          "Domain: need $x>0$ and $x+1>0$, so $x>0$.",
+          "Condense: $\\ln\\big(x(x+1)\\big)=\\ln 6$.",
+          "Since $\\ln$ is one-to-one, $x(x+1)=6$.",
+          "Expand: $x^2+x-6=0$, so $(x+3)(x-2)=0$.",
+          "Candidates: $x=2$ or $x=-3$.",
+          "Test against $x>0$: $x=2$ is valid; $x=-3$ is rejected.",
+          "Answer: $x=2$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Solve $\\log_6(x)+\\log_6(x+5)=2$ for $x$. State the domain and discard any extraneous root.",
+      "answer": "$x=4$",
+      "solution": {
+        "steps": [
+          "Domain: need $x>0$ and $x+5>0$, so $x>0$.",
+          "Condense: $\\log_6\\big(x(x+5)\\big)=2$.",
+          "Rewrite in exponential form: $x(x+5)=6^2=36$.",
+          "Expand: $x^2+5x-36=0$, so $(x+9)(x-4)=0$.",
+          "Candidates: $x=4$ or $x=-9$.",
+          "Test against $x>0$: $x=4$ is valid; $x=-9$ is rejected.",
+          "Answer: $x=4$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Solve $e^{2x}-e^{x}-12=0$ for all real $x$. Give the exact answer and explain why the other candidate is discarded.",
+      "answer": "$x=\\ln 4$",
+      "solution": {
+        "steps": [
+          "Substitute $u=e^{x}$ with $u>0$: $u^2-u-12=0$.",
+          "Factor: $(u-4)(u+3)=0$, so $u=4$ or $u=-3$.",
+          "Reject $u=-3$ because $e^{x}>0$ for all real $x$, so $u$ cannot be negative.",
+          "Keep $u=4$: $e^{x}=4\\Rightarrow x=\\ln 4$.",
+          "Answer: $x=\\ln 4$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Solve $\\log_3(x+3)+\\log_3(x-3)=\\log_3(2x+9)$ for $x$. State the domain and reject any extraneous root.",
+      "answer": "$x=1+\\sqrt{19}$",
+      "solution": {
+        "steps": [
+          "Domain: need $x+3>0$, $x-3>0$, and $2x+9>0$. The binding condition is $x>3$.",
+          "Condense the left side: $\\log_3\\big((x+3)(x-3)\\big)=\\log_3(2x+9)$, i.e. $\\log_3(x^2-9)=\\log_3(2x+9)$.",
+          "Since $\\log_3$ is one-to-one, $x^2-9=2x+9$.",
+          "Rearrange: $x^2-9-2x-9=0$, so $x^2-2x-18=0$.",
+          "Use the quadratic formula: $x=\\frac{2\\pm\\sqrt{4+72}}{2}=\\frac{2\\pm\\sqrt{76}}{2}=1\\pm\\sqrt{19}$.",
+          "Candidates: $x=1+\\sqrt{19}\\approx 5.36$ and $x=1-\\sqrt{19}\\approx -3.36$.",
+          "Test against $x>3$: $x=1-\\sqrt{19}$ is rejected; $x=1+\\sqrt{19}$ satisfies $x>3$.",
+          "Answer: $x=1+\\sqrt{19}$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Solve $\\log_2(3x+1)=2+\\log_2(x-1)$ for $x$. State the domain and discard any extraneous root.",
+      "answer": "$x=5$",
+      "solution": {
+        "steps": [
+          "Domain: need $3x+1>0$ and $x-1>0$, so $x>1$.",
+          "Move the logs together: $\\log_2(3x+1)-\\log_2(x-1)=2$.",
+          "Condense with the quotient rule: $\\log_2\\left(\\frac{3x+1}{x-1}\\right)=2$.",
+          "Rewrite in exponential form: $\\frac{3x+1}{x-1}=2^2=4$.",
+          "Clear the denominator: $3x+1=4(x-1)=4x-4$.",
+          "Solve: $1+4=4x-3x$, so $x=5$.",
+          "Check domain $x>1$: $x=5$ is valid (arguments $16>0$ and $4>0$).",
+          "Answer: $x=5$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Solve $\\log_2(x-1)+\\log_2(x+2)=2$ for $x$, and show why one candidate is extraneous.",
+      "answer": "$x=2$",
+      "solution": {
+        "steps": [
+          "Domain: need $x-1>0$ and $x+2>0$, so $x>1$.",
+          "Condense: $\\log_2\\big((x-1)(x+2)\\big)=2$.",
+          "Rewrite in exponential form: $(x-1)(x+2)=2^2=4$.",
+          "Expand: $x^2+x-2=4$, so $x^2+x-6=0$.",
+          "Factor: $(x+3)(x-2)=0$, giving $x=2$ or $x=-3$.",
+          "Test against $x>1$: $x=2$ is valid; $x=-3$ is extraneous because it makes $\\log_2(x-1)=\\log_2(-4)$ undefined.",
+          "Answer: $x=2$."
+        ]
+      }
+    }
+  ]
+}

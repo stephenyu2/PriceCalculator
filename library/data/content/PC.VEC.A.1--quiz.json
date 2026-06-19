@@ -1,0 +1,162 @@
+{
+  "id": "PC.VEC.A.1--quiz",
+  "standard": "PC.VEC.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Vectors and Parametric Equations",
+  "domainCode": "VEC",
+  "cluster": "Vectors in the plane",
+  "clusterCode": "A",
+  "skillName": "Vectors: Components and Operations",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Eight multiple-choice questions on vectors in the plane: component form, addition and subtraction, scalar multiples, magnitude, and direction angle.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Given $\\vec{u} = \\langle 3, -5 \\rangle$ and $\\vec{v} = \\langle -1, 2 \\rangle$, find $\\vec{u} + \\vec{v}$.\nA) $\\langle 2, -3 \\rangle$\nB) $\\langle 4, -7 \\rangle$\nC) $\\langle -2, 3 \\rangle$\nD) $\\langle 2, 3 \\rangle$",
+      "answer": "A) $\\langle 2, -3 \\rangle$",
+      "solution": {
+        "steps": [
+          "Add component-wise: $\\langle 3 + (-1), -5 + 2 \\rangle$.",
+          "First component: $3 + (-1) = 2$. Second component: $-5 + 2 = -3$.",
+          "So $\\vec{u} + \\vec{v} = \\langle 2, -3 \\rangle$, which is A.",
+          "B is the difference $\\vec{u} - \\vec{v} = \\langle 4, -7 \\rangle$, not the sum.",
+          "C is the negative of the correct sum, from subtracting in the wrong order.",
+          "D adds the magnitudes of the signs incorrectly, keeping $-5+2$ as $+3$."
+        ],
+        "answer": "A) $\\langle 2, -3 \\rangle$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Find the magnitude of $\\vec{v} = \\langle -6, 8 \\rangle$.\nA) $2$\nB) $\\sqrt{28}$\nC) $10$\nD) $14$",
+      "answer": "C) $10$",
+      "solution": {
+        "steps": [
+          "Use $\\lVert \\vec{v} \\rVert = \\sqrt{a^2 + b^2}$.",
+          "$\\sqrt{(-6)^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$, which is C.",
+          "A comes from adding the components $-6 + 8 = 2$ instead of squaring.",
+          "B comes from treating $(-6)^2$ as $-36$, giving $\\sqrt{-36 + 64} = \\sqrt{28}$.",
+          "D comes from $|-6| + |8| = 14$ instead of the Pythagorean sum."
+        ],
+        "answer": "C) $10$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Compute $3\\langle 2, -1 \\rangle$.\nA) $\\langle 6, -1 \\rangle$\nB) $\\langle 5, 2 \\rangle$\nC) $\\langle 6, -3 \\rangle$\nD) $\\langle 2, -3 \\rangle$",
+      "answer": "C) $\\langle 6, -3 \\rangle$",
+      "solution": {
+        "steps": [
+          "Scalar multiplication scales every component: $k\\langle a, b \\rangle = \\langle ka, kb \\rangle$.",
+          "$3\\langle 2, -1 \\rangle = \\langle 3 \\cdot 2, 3 \\cdot (-1) \\rangle = \\langle 6, -3 \\rangle$, which is C.",
+          "A scales only the first component, leaving $-1$ unchanged.",
+          "B adds $3$ to each component instead of multiplying.",
+          "D scales only the second component, leaving $2$ unchanged."
+        ],
+        "answer": "C) $\\langle 6, -3 \\rangle$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "A vector has initial point $P(-2, 3)$ and terminal point $Q(4, -1)$. Write it in component form.\nA) $\\langle 6, -4 \\rangle$\nB) $\\langle -6, 4 \\rangle$\nC) $\\langle 2, 2 \\rangle$\nD) $\\langle -6, -4 \\rangle$",
+      "answer": "A) $\\langle 6, -4 \\rangle$",
+      "solution": {
+        "steps": [
+          "Use $\\langle x_2 - x_1, y_2 - y_1 \\rangle$ with $P$ as the initial point.",
+          "First component: $4 - (-2) = 6$. Second component: $-1 - 3 = -4$.",
+          "So the vector is $\\langle 6, -4 \\rangle$, which is A.",
+          "B subtracts in the wrong order, $\\langle x_1 - x_2, y_1 - y_2 \\rangle$, giving the negated vector.",
+          "C adds the coordinates instead of subtracting.",
+          "D keeps the correct first component but negates the second using the wrong order there."
+        ],
+        "answer": "A) $\\langle 6, -4 \\rangle$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Given $\\vec{u} = \\langle 2, -1 \\rangle$ and $\\vec{v} = \\langle -3, 4 \\rangle$, compute $3\\vec{u} - 2\\vec{v}$.\nA) $\\langle 0, 5 \\rangle$\nB) $\\langle 12, -11 \\rangle$\nC) $\\langle 12, -5 \\rangle$\nD) $\\langle 0, -11 \\rangle$",
+      "answer": "B) $\\langle 12, -11 \\rangle$",
+      "solution": {
+        "steps": [
+          "Scale first: $3\\vec{u} = \\langle 6, -3 \\rangle$ and $2\\vec{v} = \\langle -6, 8 \\rangle$.",
+          "Subtract component-wise: $\\langle 6 - (-6), -3 - 8 \\rangle = \\langle 12, -11 \\rangle$, which is B.",
+          "A adds $2\\vec{v}$ in the first component, $6 + (-6) = 0$, and adds in the second, $-3 + 8 = 5$, instead of subtracting throughout.",
+          "C scales the first components correctly but subtracts the unscaled $\\vec{v}$ in the second, $-3 - 2 = -5$.",
+          "D adds $2\\vec{v}$ in the first component, $6 + (-6) = 0$, while subtracting correctly in the second, $-3 - 8 = -11$."
+        ],
+        "answer": "B) $\\langle 12, -11 \\rangle$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Find the direction angle $\\theta$ of $\\vec{v} = \\langle -1, \\sqrt{3} \\rangle$, with $0^\\circ \\le \\theta < 360^\\circ$.\nA) $60^\\circ$\nB) $120^\\circ$\nC) $30^\\circ$\nD) $240^\\circ$",
+      "answer": "B) $120^\\circ$",
+      "solution": {
+        "steps": [
+          "The reference angle satisfies $\\tan\\theta_{\\text{ref}} = \\left| \\frac{\\sqrt{3}}{-1} \\right| = \\sqrt{3}$, so $\\theta_{\\text{ref}} = 60^\\circ$.",
+          "The components $\\langle -1, \\sqrt{3} \\rangle$ have $x < 0$ and $y > 0$, placing the vector in Quadrant II.",
+          "In Quadrant II, $\\theta = 180^\\circ - 60^\\circ = 120^\\circ$, which is B.",
+          "A reports the raw reference angle without the quadrant adjustment.",
+          "C inverts the ratio to $\\tan\\theta = \\frac{a}{b}$, giving the complementary $30^\\circ$.",
+          "D places the angle in Quadrant III, but the vector is in Quadrant II."
+        ],
+        "answer": "B) $120^\\circ$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A vector has magnitude $8$ and direction angle $\\frac{2\\pi}{3}$. Write it in component form.\nA) $\\langle 4\\sqrt{3}, -4 \\rangle$\nB) $\\langle 4, -4\\sqrt{3} \\rangle$\nC) $\\langle -4, 4\\sqrt{3} \\rangle$\nD) $\\langle -4\\sqrt{3}, 4 \\rangle$",
+      "answer": "C) $\\langle -4, 4\\sqrt{3} \\rangle$",
+      "solution": {
+        "steps": [
+          "Use $\\langle r\\cos\\theta, r\\sin\\theta \\rangle$ with $r = 8$ and $\\theta = \\frac{2\\pi}{3}$.",
+          "$\\cos\\frac{2\\pi}{3} = -\\frac{1}{2}$, so the first component is $8 \\cdot \\left(-\\frac{1}{2}\\right) = -4$.",
+          "$\\sin\\frac{2\\pi}{3} = \\frac{\\sqrt{3}}{2}$, so the second component is $8 \\cdot \\frac{\\sqrt{3}}{2} = 4\\sqrt{3}$.",
+          "The component form is $\\langle -4, 4\\sqrt{3} \\rangle$, which is C.",
+          "A swaps sine and cosine, writing $\\langle r\\sin\\theta, r\\cos\\theta \\rangle$.",
+          "B both swaps the functions and mishandles the signs.",
+          "D swaps the radical onto the wrong component."
+        ],
+        "answer": "C) $\\langle -4, 4\\sqrt{3} \\rangle$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Given $\\vec{u} = \\langle 1, 7 \\rangle$ and $\\vec{v} = \\langle 3, -1 \\rangle$, find $\\lVert \\vec{u} + \\vec{v} \\rVert$.\nA) $\\sqrt{50} + \\sqrt{10}$\nB) $10$\nC) $2\\sqrt{13}$\nD) $\\sqrt{20}$",
+      "answer": "C) $2\\sqrt{13}$",
+      "solution": {
+        "steps": [
+          "Add the vectors first: $\\vec{u} + \\vec{v} = \\langle 1 + 3, 7 + (-1) \\rangle = \\langle 4, 6 \\rangle$.",
+          "Take the magnitude: $\\sqrt{4^2 + 6^2} = \\sqrt{16 + 36} = \\sqrt{52}$.",
+          "Simplify the radical: $\\sqrt{52} = \\sqrt{4 \\cdot 13} = 2\\sqrt{13}$, which is C.",
+          "A adds the individual magnitudes $\\lVert \\vec{u} \\rVert + \\lVert \\vec{v} \\rVert$ instead of adding the vectors first.",
+          "B comes from adding the components of the resultant, $4 + 6 = 10$, rather than using $\\sqrt{a^2+b^2}$.",
+          "D fails to square the components, using $\\sqrt{4 + 16}$ in place of $\\sqrt{16 + 36}$."
+        ],
+        "answer": "C) $2\\sqrt{13}$"
+      }
+    }
+  ]
+}

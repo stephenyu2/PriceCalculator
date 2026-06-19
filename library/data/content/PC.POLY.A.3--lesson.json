@@ -1,0 +1,169 @@
+{
+  "id": "PC.POLY.A.3--lesson",
+  "standard": "PC.POLY.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Polynomial and Rational Functions",
+  "domainCode": "POLY",
+  "cluster": "Polynomial functions",
+  "clusterCode": "A",
+  "skillName": "Rational Functions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "A rational function has the form $f(x)=\\frac{p(x)}{q(x)}$ where $p$ and $q$ are polynomials. To analyze one, factor the numerator and denominator completely. A factor that appears only in the denominator gives a vertical asymptote; a factor common to both cancels and gives a hole. End behavior comes from comparing degrees: if $\\deg p<\\deg q$ the horizontal asymptote is $y=0$, if $\\deg p=\\deg q$ it is the ratio of leading coefficients, and if $\\deg p=\\deg q+1$ long division gives an oblique asymptote. When solving rational equations, clear denominators and discard any root that makes a denominator zero (extraneous). For inequalities, build a sign chart from the zeros and undefined points.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Find the domain and all vertical asymptotes of $f(x)=\\frac{x+2}{x^2-9}$.",
+      "solution": {
+        "steps": [
+          "Factor the denominator: $x^2-9=(x-3)(x+3)$.",
+          "The denominator is zero when $x=3$ or $x=-3$, so the domain is all real numbers except these: $x\\neq 3$ and $x\\neq -3$.",
+          "The numerator $x+2$ shares no factor with $(x-3)(x+3)$, so neither factor cancels.",
+          "Each non-canceling denominator zero is a vertical asymptote: $x=3$ and $x=-3$."
+        ],
+        "answer": "Domain: all real $x$ with $x\\neq 3$ and $x\\neq -3$. Vertical asymptotes: $x=3$ and $x=-3$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Identify the horizontal asymptote of $f(x)=\\frac{3x^2-1}{6x^2+5x}$.",
+      "solution": {
+        "steps": [
+          "Compare the degrees of numerator and denominator. Numerator $3x^2-1$ has degree $2$; denominator $6x^2+5x$ has degree $2$.",
+          "When the degrees are equal, the horizontal asymptote is the ratio of the leading coefficients.",
+          "The leading coefficient of the numerator is $3$ and of the denominator is $6$, so the asymptote is $y=\\frac{3}{6}$.",
+          "Simplify: $y=\\frac{1}{2}$."
+        ],
+        "answer": "$y=\\frac{1}{2}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Find the oblique asymptote of $f(x)=\\frac{x^2+3x+5}{x+1}$.",
+      "solution": {
+        "steps": [
+          "Since $\\deg p=2$ and $\\deg q=1$, with $\\deg p=\\deg q+1$, there is an oblique (slant) asymptote found by long division.",
+          "Divide $x^2+3x+5$ by $x+1$. First, $x^2\\div x=x$; multiply: $x(x+1)=x^2+x$; subtract: $(x^2+3x+5)-(x^2+x)=2x+5$.",
+          "Next, $2x\\div x=2$; multiply: $2(x+1)=2x+2$; subtract: $(2x+5)-(2x+2)=3$.",
+          "So $f(x)=x+2+\\frac{3}{x+1}$. The quotient (ignoring the remainder term) is the oblique asymptote.",
+          "As $x\\to\\pm\\infty$, $\\frac{3}{x+1}\\to 0$, leaving $y=x+2$."
+        ],
+        "answer": "$y=x+2$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Find the coordinates of any hole in the graph of $f(x)=\\frac{x^2-4}{x-2}$.",
+      "solution": {
+        "steps": [
+          "Factor the numerator: $x^2-4=(x-2)(x+2)$.",
+          "The factor $(x-2)$ appears in both numerator and denominator, so it cancels: $f(x)=\\frac{(x-2)(x+2)}{x-2}=x+2$ for $x\\neq 2$.",
+          "A canceled factor produces a hole (removable discontinuity), not a vertical asymptote. The hole occurs at $x=2$.",
+          "Find the y-coordinate using the reduced function $x+2$: at $x=2$, the value is $2+2=4$.",
+          "The hole is at $(2,4)$."
+        ],
+        "answer": "Hole at $(2,4)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Solve $\\frac{2}{x-3}+\\frac{1}{x}=\\frac{6}{x^2-3x}$ and identify any extraneous solutions.",
+      "solution": {
+        "steps": [
+          "Factor the right denominator: $x^2-3x=x(x-3)$. The excluded values are $x\\neq 0$ and $x\\neq 3$.",
+          "Multiply every term by the common denominator $x(x-3)$: $2x+(x-3)=6$.",
+          "Combine like terms: $3x-3=6$, so $3x=9$ and $x=3$.",
+          "Check $x=3$ against the excluded values. Since $x=3$ makes $x-3=0$, it is undefined in the original equation.",
+          "Therefore $x=3$ is extraneous and must be rejected; there is no valid solution."
+        ],
+        "answer": "No solution; $x=3$ is extraneous."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Find the domain and all vertical asymptotes of $f(x)=\\frac{x}{x^2-16}$.",
+      "hint": "Factor $x^2-16$ as a difference of squares, then check whether either factor cancels with the numerator.",
+      "solution": {
+        "steps": [
+          "Factor the denominator: $x^2-16=(x-4)(x+4)$.",
+          "The denominator is zero at $x=4$ and $x=-4$, so the domain is all real $x$ with $x\\neq 4$ and $x\\neq -4$.",
+          "The numerator $x$ shares no factor with $(x-4)(x+4)$, so nothing cancels.",
+          "Both denominator zeros are vertical asymptotes: $x=4$ and $x=-4$."
+        ],
+        "answer": "Domain: all real $x$ with $x\\neq 4$ and $x\\neq -4$. Vertical asymptotes: $x=4$ and $x=-4$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Identify the horizontal asymptote of $f(x)=\\frac{2x^2+1}{5x^2-x}$.",
+      "hint": "The degrees are equal, so use the ratio of the leading coefficients, not $y=0$.",
+      "solution": {
+        "steps": [
+          "Both numerator and denominator have degree $2$.",
+          "For equal degrees, the horizontal asymptote is the ratio of the leading coefficients: $\\frac{2}{5}$.",
+          "So $y=\\frac{2}{5}$."
+        ],
+        "answer": "$y=\\frac{2}{5}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "For $f(x)=\\frac{1}{x-4}$, describe the behavior as $x\\to 4^-$ and as $x\\to 4^+$.",
+      "hint": "Just to the left of $4$, $x-4$ is a small negative number; just to the right, it is a small positive number. The reciprocal of a tiny number is huge.",
+      "solution": {
+        "steps": [
+          "As $x\\to 4^-$, $x-4$ is a small negative number, so $\\frac{1}{x-4}$ is a large negative number: $f(x)\\to -\\infty$.",
+          "As $x\\to 4^+$, $x-4$ is a small positive number, so $\\frac{1}{x-4}$ is a large positive number: $f(x)\\to +\\infty$.",
+          "This confirms a vertical asymptote at $x=4$ with the curve dropping on the left and rising on the right."
+        ],
+        "answer": "As $x\\to 4^-$, $f(x)\\to -\\infty$; as $x\\to 4^+$, $f(x)\\to +\\infty$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Find the coordinates of any hole in the graph of $f(x)=\\frac{x^2-x-6}{x-3}$.",
+      "hint": "Factor the numerator and look for a factor that matches the denominator. Use the reduced function for the y-coordinate.",
+      "solution": {
+        "steps": [
+          "Factor the numerator: $x^2-x-6=(x-3)(x+2)$.",
+          "The factor $(x-3)$ cancels: $f(x)=x+2$ for $x\\neq 3$, so there is a hole at $x=3$, not a vertical asymptote.",
+          "Use the reduced function: at $x=3$, $x+2=3+2=5$.",
+          "The hole is at $(3,5)$."
+        ],
+        "answer": "Hole at $(3,5)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Solve $\\frac{x-1}{x+2}\\ge 0$ and write the solution in interval notation.",
+      "hint": "Find the critical numbers (where the numerator is zero and where the denominator is zero), then test the sign of the expression in each interval. The point where the denominator is zero can never be included.",
+      "solution": {
+        "steps": [
+          "The numerator is zero at $x=1$ and the denominator is zero at $x=-2$. These are the critical numbers.",
+          "Build a sign chart across the intervals $(-\\infty,-2)$, $(-2,1)$, and $(1,\\infty)$.",
+          "Test $x=-3$: $\\frac{-3-1}{-3+2}=\\frac{-4}{-1}=4>0$, so the expression is positive on $(-\\infty,-2)$.",
+          "Test $x=0$: $\\frac{0-1}{0+2}=\\frac{-1}{2}<0$, so it is negative on $(-2,1)$.",
+          "Test $x=2$: $\\frac{2-1}{2+2}=\\frac{1}{4}>0$, so it is positive on $(1,\\infty)$.",
+          "Since the inequality is $\\ge 0$, include where the expression is positive or zero. At $x=1$ the value is $0$, so include it; at $x=-2$ the expression is undefined, so exclude it.",
+          "The solution is $(-\\infty,-2)\\cup[1,\\infty)$."
+        ],
+        "answer": "$(-\\infty,-2)\\cup[1,\\infty)$"
+      }
+    }
+  ]
+}

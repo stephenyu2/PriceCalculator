@@ -1,0 +1,144 @@
+{
+  "id": "PC.VEC.A.3--quiz",
+  "standard": "PC.VEC.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Vectors and Parametric Equations",
+  "domainCode": "VEC",
+  "cluster": "Vectors in the plane",
+  "clusterCode": "A",
+  "skillName": "Parametric Equations",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Eight multiple-choice questions on parametric equations: building tables, eliminating the parameter (algebraic and trig), stating restrictions, writing parameterizations, and projectile motion. Choose the single best answer.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "For the parametric equations $x=2t-1$ and $y=t+3$, what point corresponds to $t=2$?\nA) $(3,5)$\nB) $(2,3)$\nC) $(5,3)$\nD) $(1,5)$",
+      "answer": "A) $(3,5)$",
+      "solution": {
+        "steps": [
+          "Substitute $t=2$ into $x=2t-1$: $x=2(2)-1=3$.",
+          "Substitute $t=2$ into $y=t+3$: $y=2+3=5$.",
+          "So the point is $(3,5)$, choice A.",
+          "B uses $t=2$ as the coordinates directly without evaluating. C swaps $x$ and $y$. D miscomputes $x$ as $2(2)-3=1$."
+        ],
+        "answer": "A) $(3,5)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Eliminate the parameter in $x=t+4$, $y=3t$. Which rectangular equation results?\nA) $y=3t$\nB) $y=3x-12$\nC) $y=3x+4$\nD) $y=3x+12$",
+      "answer": "B) $y=3x-12$",
+      "solution": {
+        "steps": [
+          "Solve the first equation for $t$: $t=x-4$.",
+          "Substitute into $y=3t$: $y=3(x-4)=3x-12$, choice B.",
+          "A still contains $t$, so the parameter was never eliminated. C and D substitute with the wrong sign or omit the distribution, giving $3x+4$ or $3x+12$ instead of $3x-12$."
+        ],
+        "answer": "B) $y=3x-12$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "A particle moves so that $x=t$ and $y=t^2$. As $t$ increases from $-2$ to $2$, in which direction is the curve traced (its orientation)?\nA) From left to right\nB) From right to left\nC) Clockwise around the origin\nD) Counterclockwise around the origin",
+      "answer": "A) From left to right",
+      "solution": {
+        "steps": [
+          "Since $x=t$, the $x$-coordinate increases steadily as $t$ increases from $-2$ to $2$.",
+          "Increasing $x$ means the curve (the parabola $y=x^2$) is traced from left to right, choice A.",
+          "B reverses the orientation (the direction of decreasing $t$). The curve is a parabola, not a closed loop, so the rotational descriptions C and D do not apply."
+        ],
+        "answer": "A) From left to right"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Eliminate the parameter in $x=5\\cos t$, $y=5\\sin t$. The rectangular equation is:\nA) $x+y=5$\nB) $x^2+y^2=5$\nC) $x^2+y^2=25$\nD) $\\dfrac{x^2}{25}+\\dfrac{y^2}{5}=1$",
+      "answer": "C) $x^2+y^2=25$",
+      "solution": {
+        "steps": [
+          "Solve for the trig functions: $\\cos t=\\dfrac{x}{5}$ and $\\sin t=\\dfrac{y}{5}$.",
+          "Apply the Pythagorean identity $\\cos^2 t+\\sin^2 t=1$: $\\dfrac{x^2}{25}+\\dfrac{y^2}{25}=1$.",
+          "Multiply through by $25$: $x^2+y^2=25$, a circle of radius $5$, choice C.",
+          "A adds $x$ and $y$ instead of squaring. B forgets to square the radius ($5$ instead of $25$). D mismatches denominators as if it were an ellipse."
+        ],
+        "answer": "C) $x^2+y^2=25$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Eliminate the parameter in $x=6\\cos t$, $y=2\\sin t$. The rectangular equation is:\nA) $\\dfrac{x^2}{36}+\\dfrac{y^2}{4}=1$\nB) $x^2+y^2=1$\nC) $\\dfrac{x^2}{6}+\\dfrac{y^2}{2}=1$\nD) $x^2+y^2=40$",
+      "answer": "A) $\\dfrac{x^2}{36}+\\dfrac{y^2}{4}=1$",
+      "solution": {
+        "steps": [
+          "Solve for the trig functions: $\\cos t=\\dfrac{x}{6}$ and $\\sin t=\\dfrac{y}{2}$.",
+          "Apply $\\cos^2 t+\\sin^2 t=1$: $\\left(\\dfrac{x}{6}\\right)^2+\\left(\\dfrac{y}{2}\\right)^2=1$, which is $\\dfrac{x^2}{36}+\\dfrac{y^2}{4}=1$, choice A.",
+          "B fails to divide by the squared coefficients. C divides by the coefficients without squaring them. D adds the squares instead of forming the ellipse equation."
+        ],
+        "answer": "A) $\\dfrac{x^2}{36}+\\dfrac{y^2}{4}=1$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "A projectile is launched at $v_0=40$ m/s at angle $\\theta=30^\\circ$. Which pair of parametric equations models its motion (use $g=9.8$ m/s$^2$)?\nA) $x=40\\sin 30^\\circ\\,t,\\ y=40\\cos 30^\\circ\\,t-4.9t^2$\nB) $x=40\\cos 30^\\circ\\,t,\\ y=40\\sin 30^\\circ\\,t$\nC) $x=40\\cos 30^\\circ\\,t,\\ y=40\\sin 30^\\circ\\,t-4.9t^2$\nD) $x=40\\cos 30^\\circ\\,t-4.9t^2,\\ y=40\\sin 30^\\circ\\,t$",
+      "answer": "C) $x=40\\cos 30^\\circ\\,t,\\ y=40\\sin 30^\\circ\\,t-4.9t^2$",
+      "solution": {
+        "steps": [
+          "The horizontal component uses cosine: $x=(v_0\\cos\\theta)t=40\\cos 30^\\circ\\,t$.",
+          "The vertical component uses sine and includes gravity $-\\tfrac{1}{2}gt^2=-\\tfrac{1}{2}(9.8)t^2=-4.9t^2$: $y=40\\sin 30^\\circ\\,t-4.9t^2$, choice C.",
+          "A swaps sine and cosine between the components. B omits the gravity term in $y$. D puts the gravity term on the horizontal component instead of the vertical."
+        ],
+        "answer": "C) $x=40\\cos 30^\\circ\\,t,\\ y=40\\sin 30^\\circ\\,t-4.9t^2$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "For $x=\\sqrt{t}$ and $y=t-5$ with $t\\ge 0$, eliminate the parameter and state the restriction. Which is correct?\nA) $y=x^2-5$ for all real $x$\nB) $y=x^2-5$ with $x\\ge 0$\nC) $y=x^2+5$ with $x\\ge 0$\nD) $y=\\sqrt{x}-5$ with $x\\ge 0$",
+      "answer": "B) $y=x^2-5$ with $x\\ge 0$",
+      "solution": {
+        "steps": [
+          "From $x=\\sqrt{t}$, square both sides to get $t=x^2$.",
+          "Substitute into $y=t-5$: $y=x^2-5$.",
+          "Since $x=\\sqrt{t}$ and $t\\ge 0$, the value $x$ is never negative, so the restriction $x\\ge 0$ must be stated: choice B.",
+          "A drops the restriction and keeps all real $x$. C has the wrong constant sign. D fails to solve for $t$ correctly, leaving a square root."
+        ],
+        "answer": "B) $y=x^2-5$ with $x\\ge 0$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A ball is launched from ground level at $v_0=30$ m/s at angle $\\theta=30^\\circ$, so $y=30\\sin 30^\\circ\\,t-4.9t^2$ (use $\\sin 30^\\circ=\\tfrac{1}{2}$). What is the total time of flight (when the ball returns to the ground)?\nA) $\\approx 1.53$ s\nB) $\\approx 3.06$ s\nC) $\\approx 6.12$ s\nD) $\\approx 2.65$ s",
+      "answer": "B) $\\approx 3.06$ s",
+      "solution": {
+        "steps": [
+          "With $\\sin 30^\\circ=\\tfrac{1}{2}$, the vertical equation is $y=30\\cdot\\tfrac{1}{2}\\,t-4.9t^2=15t-4.9t^2$.",
+          "Set $y=0$ for ground level: $15t-4.9t^2=0$, so $t(15-4.9t)=0$.",
+          "The nonzero solution is $t=\\dfrac{15}{4.9}\\approx 3.06$ s, choice B.",
+          "A halves this, reporting the time to maximum height instead of the full flight. C doubles it. D uses $\\cos 30^\\circ$ in place of $\\sin 30^\\circ$, giving the wrong initial vertical speed."
+        ],
+        "answer": "B) $\\approx 3.06$ s"
+      }
+    }
+  ]
+}

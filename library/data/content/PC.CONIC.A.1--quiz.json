@@ -1,0 +1,148 @@
+{
+  "id": "PC.CONIC.A.1--quiz",
+  "standard": "PC.CONIC.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Analytic Geometry",
+  "domainCode": "CONIC",
+  "cluster": "Conic sections",
+  "clusterCode": "A",
+  "skillName": "Parabolas",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Eight multiple-choice questions on parabolas: identifying the vertex, focus, directrix, axis of symmetry, and direction of opening from standard form, reconstructing equations from features, completing the square, and applying the focus-directrix definition.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "What is the vertex of the parabola $x^2 = 12y$?\nA) $(0,0)$\nB) $(0,3)$\nC) $(0,12)$\nD) $(12,0)$",
+      "answer": "A) $(0,0)$",
+      "solution": {
+        "steps": [
+          "The equation $x^2 = 12y$ has the form $(x-h)^2 = 4p(y-k)$ with $h=0$ and $k=0$.",
+          "The vertex is $(h,k) = (0,0)$, so A is correct.",
+          "B treats $p=3$ (from $4p=12$) as the vertex; the focus is at $(0,3)$, not the vertex.",
+          "C confuses the coefficient $12$ with a coordinate, and D puts that coefficient on the wrong axis."
+        ],
+        "answer": "A) $(0,0)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "The parabola $(x-3)^2 = 8(y+1)$ has $4p = 8$. What is the focal distance $p$?\nA) $p = 8$\nB) $p = 4$\nC) $p = 2$\nD) $p = 16$",
+      "answer": "C) $p = 2$",
+      "solution": {
+        "steps": [
+          "In standard form $(x-h)^2 = 4p(y-k)$, the coefficient equals $4p$.",
+          "Here $4p = 8$, so $p = \\frac{8}{4} = 2$. C is correct.",
+          "A uses the coefficient $8$ itself as $p$, confusing $p$ with $4p$.",
+          "B divides $8$ by $2$ instead of $4$, and D multiplies by $2$ instead of dividing by $4$."
+        ],
+        "answer": "C) $p = 2$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Which direction does the parabola $(y-2)^2 = -16(x-5)$ open?\nA) Up\nB) Down\nC) Left\nD) Right",
+      "answer": "C) Left",
+      "solution": {
+        "steps": [
+          "Because the $y$ term is squared, the parabola has a horizontal axis and opens left or right.",
+          "Here $4p = -16$, so $p = -4$ is negative, meaning it opens to the left. C is correct.",
+          "A and B describe vertical-axis parabolas (where $x$ is squared), the wrong orientation.",
+          "D reverses the sign of $p$: a positive $p$ would open right, but $p=-4$ opens left."
+        ],
+        "answer": "C) Left"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Find the focus of the parabola $(x+1)^2 = 8(y-4)$.\nA) $(-1,6)$\nB) $(1,4)$\nC) $(-1,12)$\nD) $(-1,2)$",
+      "answer": "A) $(-1,6)$",
+      "solution": {
+        "steps": [
+          "Vertex: $(x+1)^2 = (x-(-1))^2$ and $(y-4)$ give vertex $(-1,4)$.",
+          "From $4p=8$, $p=2$, and since the $x$ term is squared with $p>0$ it opens up; the focus is $p$ units above the vertex.",
+          "Focus $= (-1, 4+2) = (-1,6)$. A is correct.",
+          "B misreads the vertex sign as $(1,4)$. C uses $p=8$ instead of $p=2$. D places the focus below the vertex, reversing the sign of $p$."
+        ],
+        "answer": "A) $(-1,6)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "What is the directrix of the parabola with focus $(0,2)$ and vertex at the origin?\nA) $y = 2$\nB) $y = -2$\nC) $x = -2$\nD) $y = -\\frac{1}{2}$",
+      "answer": "B) $y = -2$",
+      "solution": {
+        "steps": [
+          "The vertex is the midpoint between focus and directrix, so the directrix is the same distance $p=2$ on the opposite side of the vertex from the focus.",
+          "The focus is at $y=2$ (above the vertex), so the directrix is the horizontal line $y=-2$. B is correct.",
+          "A places the directrix through the focus, on the wrong side of the vertex.",
+          "C makes the directrix vertical, which fits a horizontal-axis parabola, not this vertical one. D uses $\\frac{1}{p}$ instead of $p$."
+        ],
+        "answer": "B) $y = -2$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Rewrite $y = x^2 - 6x + 11$ in vertex standard form.\nA) $(x-3)^2 = (y-2)$\nB) $(x-3)^2 = (y+2)$\nC) $(x+3)^2 = (y-2)$\nD) $(x-6)^2 = (y-11)$",
+      "answer": "A) $(x-3)^2 = (y-2)$",
+      "solution": {
+        "steps": [
+          "Complete the square: $y = (x^2 - 6x) + 11 = (x^2 - 6x + 9) + 11 - 9$.",
+          "This gives $y = (x-3)^2 + 2$, so $(x-3)^2 = y - 2 = (y-2)$. A is correct.",
+          "B has the wrong sign on the constant; the vertex $y$-value is $+2$, giving $(y-2)$.",
+          "C reads $-6x$ as $(x+3)^2$, mixing up the sign of $h$. D fails to complete the square and just copies coefficients."
+        ],
+        "answer": "A) $(x-3)^2 = (y-2)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "For $y = 2x^2 - 8x + 5$, find the focus after writing it in vertex standard form.\nA) $\\left(2, -\\frac{23}{8}\\right)$\nB) $\\left(2, -\\frac{25}{8}\\right)$\nC) $\\left(2, -3\\right)$\nD) $\\left(4, -3\\right)$",
+      "answer": "A) $\\left(2, -\\frac{23}{8}\\right)$",
+      "solution": {
+        "steps": [
+          "Factor out the leading coefficient on the $x$ terms: $y = 2(x^2 - 4x) + 5 = 2(x^2 - 4x + 4) + 5 - 8$.",
+          "So $y = 2(x-2)^2 - 3$, giving $(x-2)^2 = \\frac{1}{2}(y+3)$, with vertex $(2,-3)$.",
+          "Then $4p = \\frac{1}{2}$, so $p = \\frac{1}{8}$; opening up, the focus is $\\frac{1}{8}$ above the vertex: $\\left(2, -3 + \\frac{1}{8}\\right) = \\left(2, -\\frac{23}{8}\\right)$. A is correct.",
+          "B places the focus below the vertex (wrong sign of $p$). C reports the vertex itself, forgetting to add $p$. D fails to factor out the $2$ before completing the square, getting the wrong vertex."
+        ],
+        "answer": "A) $\\left(2, -\\frac{23}{8}\\right)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A parabola has focus $(4,-2)$ and directrix $x = -2$. What is its standard-form equation?\nA) $(y+2)^2 = 6(x-1)$\nB) $(y+2)^2 = 12(x-1)$\nC) $(x-1)^2 = 12(y+2)$\nD) $(y+2)^2 = 6(x-4)$",
+      "answer": "B) $(y+2)^2 = 12(x-1)$",
+      "solution": {
+        "steps": [
+          "The directrix $x=-2$ is vertical, so the axis is horizontal and the equation has the form $(y-k)^2 = 4p(x-h)$.",
+          "The vertex is the midpoint between focus $(4,-2)$ and the directrix point $(-2,-2)$: $\\left(\\frac{4+(-2)}{2}, -2\\right) = (1,-2)$.",
+          "The focal distance is $p = 4 - 1 = 3$ (focus is right of the vertex, so $p>0$), giving $4p = 12$. Thus $(y+2)^2 = 12(x-1)$. B is correct.",
+          "A uses $|4p| = 2p = 6$, halving the coefficient. C swaps the squared variable, treating it as a vertical-axis parabola. D centers on the focus instead of the vertex."
+        ],
+        "answer": "B) $(y+2)^2 = 12(x-1)$"
+      }
+    }
+  ]
+}

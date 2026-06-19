@@ -1,0 +1,230 @@
+{
+  "id": "PC.TRIG.B.6--worksheet--hard",
+  "standard": "PC.TRIG.B.6",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Graphs and identities",
+  "clusterCode": "B",
+  "skillName": "Trig Identities",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems require multi-step proofs and compound applications of the trigonometric identities. Verify non-trivial identities by transforming one side, apply half-angle formulas with a quadrant-based sign choice, and find missing values before substituting into sum, double-angle, or half-angle formulas. Keep exact values throughout: radicals, $\\pi$, and fractions, never rounded decimals.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Verify the identity $\\dfrac{\\cos\\theta}{1 - \\sin\\theta} = \\sec\\theta + \\tan\\theta$ by transforming the left side.",
+      "answer": "The identity is verified: the left side equals $\\sec\\theta + \\tan\\theta$.",
+      "solution": {
+        "steps": [
+          "Multiply numerator and denominator of the left side by the conjugate $1 + \\sin\\theta$: $\\dfrac{\\cos\\theta}{1 - \\sin\\theta} \\cdot \\dfrac{1 + \\sin\\theta}{1 + \\sin\\theta} = \\dfrac{\\cos\\theta(1 + \\sin\\theta)}{1 - \\sin^2\\theta}$.",
+          "Apply the Pythagorean identity $1 - \\sin^2\\theta = \\cos^2\\theta$: $\\dfrac{\\cos\\theta(1 + \\sin\\theta)}{\\cos^2\\theta}$.",
+          "Cancel one factor of $\\cos\\theta$: $\\dfrac{1 + \\sin\\theta}{\\cos\\theta}$.",
+          "Split the fraction: $\\dfrac{1}{\\cos\\theta} + \\dfrac{\\sin\\theta}{\\cos\\theta} = \\sec\\theta + \\tan\\theta$.",
+          "The left side now equals the right side, so the identity is verified."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "If $\\cos\\theta = -\\dfrac{3}{5}$ and $\\theta$ is in Quadrant II, find $\\cos\\dfrac{\\theta}{2}$, and justify the sign you choose from the quadrant of $\\dfrac{\\theta}{2}$.",
+      "answer": "$\\dfrac{\\sqrt{5}}{5}$",
+      "solution": {
+        "steps": [
+          "Determine the quadrant of $\\dfrac{\\theta}{2}$. Since $\\theta$ is in QII, $90^\\circ < \\theta < 180^\\circ$, so $45^\\circ < \\dfrac{\\theta}{2} < 90^\\circ$, placing $\\dfrac{\\theta}{2}$ in Quadrant I.",
+          "In Quadrant I cosine is positive, so we take the positive root.",
+          "Apply the half-angle formula: $\\cos\\dfrac{\\theta}{2} = +\\sqrt{\\dfrac{1 + \\cos\\theta}{2}}$.",
+          "Substitute $\\cos\\theta = -\\dfrac{3}{5}$: $\\sqrt{\\dfrac{1 - \\frac{3}{5}}{2}} = \\sqrt{\\dfrac{\\frac{2}{5}}{2}} = \\sqrt{\\dfrac{1}{5}}$.",
+          "Simplify: $\\sqrt{\\dfrac{1}{5}} = \\dfrac{1}{\\sqrt{5}} = \\dfrac{\\sqrt{5}}{5}$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Given $\\sin A = \\dfrac{3}{5}$ with $A$ in Quadrant II and $\\cos B = -\\dfrac{5}{13}$ with $B$ in Quadrant III, find $\\sin(A + B)$.",
+      "answer": "$\\dfrac{33}{65}$",
+      "solution": {
+        "steps": [
+          "Find $\\cos A$. Since $A$ is in QII, $\\cos A < 0$: $\\cos A = -\\sqrt{1 - \\frac{9}{25}} = -\\dfrac{4}{5}$.",
+          "Find $\\sin B$. Since $B$ is in QIII, $\\sin B < 0$: $\\sin B = -\\sqrt{1 - \\frac{25}{169}} = -\\dfrac{12}{13}$.",
+          "Apply the sum formula: $\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B$.",
+          "Substitute: $\\left(\\dfrac{3}{5}\\right)\\left(-\\dfrac{5}{13}\\right) + \\left(-\\dfrac{4}{5}\\right)\\left(-\\dfrac{12}{13}\\right) = -\\dfrac{15}{65} + \\dfrac{48}{65}$.",
+          "Combine: $\\dfrac{-15 + 48}{65} = \\dfrac{33}{65}$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Find the exact value of $\\sin 15^\\circ$ using a difference formula.",
+      "answer": "$\\dfrac{\\sqrt{6} - \\sqrt{2}}{4}$",
+      "solution": {
+        "steps": [
+          "Write $15^\\circ = 45^\\circ - 30^\\circ$.",
+          "Apply the sine difference formula: $\\sin(45^\\circ - 30^\\circ) = \\sin 45^\\circ\\cos 30^\\circ - \\cos 45^\\circ\\sin 30^\\circ$.",
+          "Substitute known values: $\\dfrac{\\sqrt{2}}{2}\\cdot\\dfrac{\\sqrt{3}}{2} - \\dfrac{\\sqrt{2}}{2}\\cdot\\dfrac{1}{2}$.",
+          "Multiply: $\\dfrac{\\sqrt{6}}{4} - \\dfrac{\\sqrt{2}}{4}$.",
+          "Combine over a common denominator: $\\dfrac{\\sqrt{6} - \\sqrt{2}}{4}$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Verify the identity $\\dfrac{1 + \\cos 2\\theta}{\\sin 2\\theta} = \\cot\\theta$ by transforming the left side using double-angle identities.",
+      "answer": "The identity is verified: the left side equals $\\cot\\theta$.",
+      "solution": {
+        "steps": [
+          "Rewrite the numerator with $\\cos 2\\theta = 2\\cos^2\\theta - 1$: $1 + (2\\cos^2\\theta - 1) = 2\\cos^2\\theta$.",
+          "Rewrite the denominator with $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$.",
+          "Form the quotient: $\\dfrac{2\\cos^2\\theta}{2\\sin\\theta\\cos\\theta}$.",
+          "Cancel the common factor $2\\cos\\theta$: $\\dfrac{\\cos\\theta}{\\sin\\theta}$.",
+          "By the quotient identity $\\dfrac{\\cos\\theta}{\\sin\\theta} = \\cot\\theta$, so the left side equals the right side and the identity is verified."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "If $\\tan\\theta = -\\dfrac{4}{3}$ and $\\theta$ is in Quadrant IV, find $\\sin 2\\theta$.",
+      "answer": "$-\\dfrac{24}{25}$",
+      "solution": {
+        "steps": [
+          "Since $\\theta$ is in QIV, $\\sin\\theta < 0$ and $\\cos\\theta > 0$. With $\\tan\\theta = -\\dfrac{4}{3}$, use a reference triangle with legs $3$ and $4$ and hypotenuse $5$.",
+          "Assign signs by quadrant: $\\sin\\theta = -\\dfrac{4}{5}$ and $\\cos\\theta = \\dfrac{3}{5}$.",
+          "Apply the double-angle formula: $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$.",
+          "Substitute: $2\\left(-\\dfrac{4}{5}\\right)\\left(\\dfrac{3}{5}\\right) = 2\\cdot\\left(-\\dfrac{12}{25}\\right)$.",
+          "Simplify: $-\\dfrac{24}{25}$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Verify the identity $\\dfrac{\\sin\\theta}{1 + \\cos\\theta} + \\dfrac{1 + \\cos\\theta}{\\sin\\theta} = 2\\csc\\theta$ by combining the left side over a common denominator.",
+      "answer": "The identity is verified: the left side equals $2\\csc\\theta$.",
+      "solution": {
+        "steps": [
+          "Use the common denominator $\\sin\\theta(1 + \\cos\\theta)$: $\\dfrac{\\sin^2\\theta + (1 + \\cos\\theta)^2}{\\sin\\theta(1 + \\cos\\theta)}$.",
+          "Expand the numerator: $\\sin^2\\theta + 1 + 2\\cos\\theta + \\cos^2\\theta$.",
+          "Apply $\\sin^2\\theta + \\cos^2\\theta = 1$: the numerator becomes $1 + 1 + 2\\cos\\theta = 2 + 2\\cos\\theta = 2(1 + \\cos\\theta)$.",
+          "Substitute back: $\\dfrac{2(1 + \\cos\\theta)}{\\sin\\theta(1 + \\cos\\theta)}$ and cancel $(1 + \\cos\\theta)$ to get $\\dfrac{2}{\\sin\\theta}$.",
+          "Since $\\dfrac{1}{\\sin\\theta} = \\csc\\theta$, this is $2\\csc\\theta$, so the identity is verified."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "If $\\sin\\theta = \\dfrac{12}{13}$ and $\\theta$ is in Quadrant II, find $\\tan\\dfrac{\\theta}{2}$, justifying the sign from the quadrant of $\\dfrac{\\theta}{2}$.",
+      "answer": "$\\dfrac{3}{2}$",
+      "solution": {
+        "steps": [
+          "Find $\\cos\\theta$. Since $\\theta$ is in QII, $\\cos\\theta < 0$: $\\cos\\theta = -\\sqrt{1 - \\frac{144}{169}} = -\\dfrac{5}{13}$.",
+          "Determine the quadrant of $\\dfrac{\\theta}{2}$: $90^\\circ < \\theta < 180^\\circ$ gives $45^\\circ < \\dfrac{\\theta}{2} < 90^\\circ$, so $\\dfrac{\\theta}{2}$ is in Quadrant I, where tangent is positive.",
+          "Apply the half-angle formula $\\tan\\dfrac{\\theta}{2} = \\dfrac{1 - \\cos\\theta}{\\sin\\theta}$ (this form gives the sign automatically).",
+          "Substitute: $\\dfrac{1 - \\left(-\\frac{5}{13}\\right)}{\\frac{12}{13}} = \\dfrac{\\frac{18}{13}}{\\frac{12}{13}}$.",
+          "Simplify: $\\dfrac{18}{13}\\cdot\\dfrac{13}{12} = \\dfrac{18}{12} = \\dfrac{3}{2}$, which is positive as expected for QI."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Verify the identity $\\cos^4\\theta - \\sin^4\\theta = \\cos 2\\theta$ by factoring the left side.",
+      "answer": "The identity is verified: the left side equals $\\cos 2\\theta$.",
+      "solution": {
+        "steps": [
+          "Factor the left side as a difference of squares: $\\cos^4\\theta - \\sin^4\\theta = (\\cos^2\\theta - \\sin^2\\theta)(\\cos^2\\theta + \\sin^2\\theta)$.",
+          "Apply the Pythagorean identity $\\cos^2\\theta + \\sin^2\\theta = 1$: the expression becomes $(\\cos^2\\theta - \\sin^2\\theta)(1)$.",
+          "So the left side equals $\\cos^2\\theta - \\sin^2\\theta$.",
+          "Apply the double-angle identity $\\cos 2\\theta = \\cos^2\\theta - \\sin^2\\theta$.",
+          "Therefore the left side equals $\\cos 2\\theta$, and the identity is verified."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Given $\\sin A = \\dfrac{4}{5}$ with $A$ in Quadrant I and $\\tan B = \\dfrac{5}{12}$ with $B$ in Quadrant III, find $\\cos(A - B)$.",
+      "answer": "$-\\dfrac{56}{65}$",
+      "solution": {
+        "steps": [
+          "Find $\\cos A$. Since $A$ is in QI, $\\cos A > 0$: $\\cos A = \\sqrt{1 - \\frac{16}{25}} = \\dfrac{3}{5}$.",
+          "Find $\\sin B$ and $\\cos B$. With $\\tan B = \\dfrac{5}{12}$ use a $5$-$12$-$13$ triangle. In QIII both sine and cosine are negative: $\\sin B = -\\dfrac{5}{13}$ and $\\cos B = -\\dfrac{12}{13}$.",
+          "Apply the difference formula: $\\cos(A - B) = \\cos A\\cos B + \\sin A\\sin B$.",
+          "Substitute: $\\left(\\dfrac{3}{5}\\right)\\left(-\\dfrac{12}{13}\\right) + \\left(\\dfrac{4}{5}\\right)\\left(-\\dfrac{5}{13}\\right) = -\\dfrac{36}{65} - \\dfrac{20}{65}$.",
+          "Combine: $\\dfrac{-36 - 20}{65} = -\\dfrac{56}{65}$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Find the exact value of $\\tan 75^\\circ$ using a sum formula, and rationalize the result.",
+      "answer": "$2 + \\sqrt{3}$",
+      "solution": {
+        "steps": [
+          "Write $75^\\circ = 45^\\circ + 30^\\circ$.",
+          "Apply the tangent sum formula: $\\tan(45^\\circ + 30^\\circ) = \\dfrac{\\tan 45^\\circ + \\tan 30^\\circ}{1 - \\tan 45^\\circ\\tan 30^\\circ}$.",
+          "Substitute $\\tan 45^\\circ = 1$ and $\\tan 30^\\circ = \\dfrac{1}{\\sqrt{3}}$: $\\dfrac{1 + \\frac{1}{\\sqrt{3}}}{1 - \\frac{1}{\\sqrt{3}}}$.",
+          "Multiply numerator and denominator by $\\sqrt{3}$: $\\dfrac{\\sqrt{3} + 1}{\\sqrt{3} - 1}$.",
+          "Rationalize by multiplying by $\\dfrac{\\sqrt{3} + 1}{\\sqrt{3} + 1}$: $\\dfrac{(\\sqrt{3} + 1)^2}{3 - 1} = \\dfrac{3 + 2\\sqrt{3} + 1}{2} = \\dfrac{4 + 2\\sqrt{3}}{2} = 2 + \\sqrt{3}$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "If $\\cos\\theta = \\dfrac{4}{5}$ and $\\theta$ is in Quadrant IV, find $\\sin\\dfrac{\\theta}{2}$, justifying the sign from the quadrant of $\\dfrac{\\theta}{2}$.",
+      "answer": "$\\dfrac{\\sqrt{10}}{10}$",
+      "solution": {
+        "steps": [
+          "Determine the quadrant of $\\dfrac{\\theta}{2}$. Since $\\theta$ is in QIV, $270^\\circ < \\theta < 360^\\circ$, so $135^\\circ < \\dfrac{\\theta}{2} < 180^\\circ$, placing $\\dfrac{\\theta}{2}$ in Quadrant II.",
+          "In Quadrant II sine is positive, so take the positive root. Note this differs from the quadrant of $\\theta$ itself.",
+          "Apply the half-angle formula: $\\sin\\dfrac{\\theta}{2} = +\\sqrt{\\dfrac{1 - \\cos\\theta}{2}}$.",
+          "Substitute $\\cos\\theta = \\dfrac{4}{5}$: $\\sqrt{\\dfrac{1 - \\frac{4}{5}}{2}} = \\sqrt{\\dfrac{\\frac{1}{5}}{2}} = \\sqrt{\\dfrac{1}{10}}$.",
+          "Simplify: $\\sqrt{\\dfrac{1}{10}} = \\dfrac{1}{\\sqrt{10}} = \\dfrac{\\sqrt{10}}{10}$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Verify the identity $\\sec\\theta - \\cos\\theta = \\sin\\theta\\tan\\theta$ by transforming the left side.",
+      "answer": "The identity is verified: the left side equals $\\sin\\theta\\tan\\theta$.",
+      "solution": {
+        "steps": [
+          "Rewrite $\\sec\\theta$ using its reciprocal identity: $\\sec\\theta - \\cos\\theta = \\dfrac{1}{\\cos\\theta} - \\cos\\theta$.",
+          "Combine over the common denominator $\\cos\\theta$: $\\dfrac{1 - \\cos^2\\theta}{\\cos\\theta}$.",
+          "Apply the Pythagorean identity $1 - \\cos^2\\theta = \\sin^2\\theta$: $\\dfrac{\\sin^2\\theta}{\\cos\\theta}$.",
+          "Split as $\\sin\\theta\\cdot\\dfrac{\\sin\\theta}{\\cos\\theta}$.",
+          "By the quotient identity $\\dfrac{\\sin\\theta}{\\cos\\theta} = \\tan\\theta$, this equals $\\sin\\theta\\tan\\theta$, so the identity is verified."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "If $\\sin\\theta = \\dfrac{3}{5}$ and $\\theta$ is in Quadrant II, find $\\cos 2\\theta$ using the appropriate double-angle form.",
+      "answer": "$\\dfrac{7}{25}$",
+      "solution": {
+        "steps": [
+          "Choose the double-angle form written entirely in terms of $\\sin\\theta$: $\\cos 2\\theta = 1 - 2\\sin^2\\theta$.",
+          "This form needs only $\\sin\\theta$, so no quadrant sign decision is required for $\\cos 2\\theta$ here.",
+          "Substitute $\\sin\\theta = \\dfrac{3}{5}$: $1 - 2\\left(\\dfrac{3}{5}\\right)^2 = 1 - 2\\cdot\\dfrac{9}{25}$.",
+          "Compute: $1 - \\dfrac{18}{25} = \\dfrac{25}{25} - \\dfrac{18}{25}$.",
+          "Simplify: $\\dfrac{7}{25}$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Given $\\sin A = \\dfrac{8}{17}$ with $A$ in Quadrant I, find $\\tan 2A$.",
+      "answer": "$\\dfrac{240}{161}$",
+      "solution": {
+        "steps": [
+          "Find $\\cos A$. Since $A$ is in QI, $\\cos A > 0$: $\\cos A = \\sqrt{1 - \\frac{64}{289}} = \\dfrac{15}{17}$.",
+          "Find $\\tan A = \\dfrac{\\sin A}{\\cos A} = \\dfrac{8/17}{15/17} = \\dfrac{8}{15}$.",
+          "Apply the tangent double-angle formula: $\\tan 2A = \\dfrac{2\\tan A}{1 - \\tan^2 A}$.",
+          "Substitute: $\\dfrac{2\\cdot\\frac{8}{15}}{1 - \\left(\\frac{8}{15}\\right)^2} = \\dfrac{\\frac{16}{15}}{1 - \\frac{64}{225}} = \\dfrac{\\frac{16}{15}}{\\frac{161}{225}}$.",
+          "Divide: $\\dfrac{16}{15}\\cdot\\dfrac{225}{161} = \\dfrac{16\\cdot 15}{161} = \\dfrac{240}{161}$. Since $1 - \\frac{64}{225} = \\frac{161}{225} > 0$ the result is positive: $\\dfrac{240}{161}$."
+        ]
+      }
+    }
+  ]
+}

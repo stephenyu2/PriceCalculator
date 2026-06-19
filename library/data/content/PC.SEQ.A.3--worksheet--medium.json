@@ -1,0 +1,206 @@
+{
+  "id": "PC.SEQ.A.3--worksheet--medium",
+  "standard": "PC.SEQ.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Sequences, Series, and Limits",
+  "domainCode": "SEQ",
+  "cluster": "Sequences and series",
+  "clusterCode": "A",
+  "skillName": "Introduction to Limits",
+  "materialType": "worksheet",
+  "difficulty": "Medium",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems focus on two-step limit reasoning: distinguishing $\\lim_{x \\to a} f(x)$ from $f(a)$ at holes and jumps, simplifying removable factors before taking a limit, evaluating single one-sided limits, and reading tables that approach non-integer values. Give exact values and remember that the limit describes where the outputs head, not the plotted point.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Simplify and evaluate $\\lim_{x \\to 3} \\dfrac{x^2 - 9}{x - 3}$.",
+      "answer": "$6$",
+      "solution": {
+        "steps": [
+          "Factor the numerator: $x^2 - 9 = (x - 3)(x + 3)$.",
+          "Cancel the removable factor for $x \\neq 3$: $\\dfrac{(x-3)(x+3)}{x-3} = x + 3$.",
+          "The limit equals the value the simplified expression approaches: $\\lim_{x \\to 3}(x + 3) = 3 + 3 = 6$.",
+          "Even though $f(3)$ is undefined (a hole), the limit is $6$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A graph shows the curve approaching height $4$ as $x \\to 1$ from both sides, but a solid dot is plotted at $(1, 7)$. State $\\lim_{x \\to 1} f(x)$ and $f(1)$.",
+      "answer": "$\\lim_{x \\to 1} f(x) = 4$ and $f(1) = 7$",
+      "solution": {
+        "steps": [
+          "The limit tracks the height the curve approaches, not the plotted point.",
+          "From both sides the curve heads toward height $4$, so $\\lim_{x \\to 1} f(x) = 4$.",
+          "The solid dot at $(1, 7)$ gives the actual function value: $f(1) = 7$.",
+          "The limit and the function value need not agree; here they differ."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "For $f(x) = \\begin{cases} x + 1 & x < 2 \\\\ x^2 & x \\ge 2 \\end{cases}$, find $\\lim_{x \\to 2^-} f(x)$.",
+      "answer": "$3$",
+      "solution": {
+        "steps": [
+          "A left-hand limit $\\lim_{x \\to 2^-}$ uses inputs slightly less than $2$, so apply the rule for $x < 2$, namely $x + 1$.",
+          "Substitute the approached value: $2 + 1 = 3$.",
+          "Therefore $\\lim_{x \\to 2^-} f(x) = 3$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "For the same piecewise function $f(x) = \\begin{cases} x + 1 & x < 2 \\\\ x^2 & x \\ge 2 \\end{cases}$, find $\\lim_{x \\to 2^+} f(x)$.",
+      "answer": "$4$",
+      "solution": {
+        "steps": [
+          "A right-hand limit $\\lim_{x \\to 2^+}$ uses inputs slightly greater than $2$, so apply the rule for $x \\ge 2$, namely $x^2$.",
+          "Substitute the approached value: $2^2 = 4$.",
+          "Therefore $\\lim_{x \\to 2^+} f(x) = 4$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Evaluate $\\lim_{x \\to 5} \\dfrac{x^2 - 25}{x - 5}$.",
+      "answer": "$10$",
+      "solution": {
+        "steps": [
+          "Factor the numerator: $x^2 - 25 = (x - 5)(x + 5)$.",
+          "Cancel for $x \\neq 5$: $\\dfrac{(x-5)(x+5)}{x-5} = x + 5$.",
+          "Take the limit of the simplified form: $\\lim_{x \\to 5}(x + 5) = 5 + 5 = 10$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A table for $f(x) = \\dfrac{\\sin x}{x}$ (radians) gives $f(-0.1) \\approx 0.99833$, $f(-0.01) \\approx 0.99998$, $f(0.01) \\approx 0.99998$, $f(0.1) \\approx 0.99833$. Estimate $\\lim_{x \\to 0} \\dfrac{\\sin x}{x}$.",
+      "answer": "$1$",
+      "solution": {
+        "steps": [
+          "Read the table from both sides: as $x$ approaches $0$ from the left, values rise toward $1$; from the right, they also rise toward $1$.",
+          "The closer inputs ($\\pm 0.01$) give values about $0.99998$, very near $1$.",
+          "Both sides agree and head to the same number, so $\\lim_{x \\to 0} \\dfrac{\\sin x}{x} = 1$.",
+          "Note $f(0)$ itself is undefined, yet the limit still exists."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Evaluate $\\lim_{x \\to -2} \\dfrac{x^2 + 5x + 6}{x + 2}$.",
+      "answer": "$1$",
+      "solution": {
+        "steps": [
+          "Factor the numerator: $x^2 + 5x + 6 = (x + 2)(x + 3)$.",
+          "Cancel the removable factor for $x \\neq -2$: $\\dfrac{(x+2)(x+3)}{x+2} = x + 3$.",
+          "Take the limit: $\\lim_{x \\to -2}(x + 3) = -2 + 3 = 1$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A graph has an open circle at $(4, 2)$ and a solid dot at $(4, 6)$, with the curve approaching the open circle from both sides. Find $\\lim_{x \\to 4} f(x)$.",
+      "answer": "$2$",
+      "solution": {
+        "steps": [
+          "The open circle marks the height the curve approaches but does not actually reach: $(4, 2)$.",
+          "From both sides the curve heads toward height $2$, so $\\lim_{x \\to 4} f(x) = 2$.",
+          "The solid dot at $(4, 6)$ is the function value $f(4) = 6$, which does not affect the limit."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Evaluate $\\lim_{x \\to 0} \\dfrac{x^2 + 3x}{x}$.",
+      "answer": "$3$",
+      "solution": {
+        "steps": [
+          "Factor the numerator: $x^2 + 3x = x(x + 3)$.",
+          "Cancel the common factor for $x \\neq 0$: $\\dfrac{x(x+3)}{x} = x + 3$.",
+          "Take the limit: $\\lim_{x \\to 0}(x + 3) = 0 + 3 = 3$.",
+          "Direct substitution would give $\\frac{0}{0}$, so simplifying first is required."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "For $g(x) = \\begin{cases} 2x - 1 & x < 3 \\\\ 4 & x \\ge 3 \\end{cases}$, find $\\lim_{x \\to 3^-} g(x)$.",
+      "answer": "$5$",
+      "solution": {
+        "steps": [
+          "The left-hand limit uses inputs just below $3$, so apply the rule for $x < 3$, namely $2x - 1$.",
+          "Substitute the approached value: $2(3) - 1 = 6 - 1 = 5$.",
+          "Therefore $\\lim_{x \\to 3^-} g(x) = 5$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A table for $f(x) = \\dfrac{x - 1}{\\sqrt{x} - 1}$ gives $f(0.9) \\approx 1.9487$, $f(0.99) \\approx 1.99499$, $f(1.01) \\approx 2.00499$, $f(1.1) \\approx 2.04881$. Estimate $\\lim_{x \\to 1} f(x)$.",
+      "answer": "$2$",
+      "solution": {
+        "steps": [
+          "Read the table: from the left the values rise toward $2$, and from the right they fall toward $2$.",
+          "The closest inputs ($0.99$ and $1.01$) give values just below and just above $2$.",
+          "Both sides converge to the same number, so $\\lim_{x \\to 1} f(x) = 2$.",
+          "Algebraically, $\\dfrac{x - 1}{\\sqrt{x} - 1} = \\dfrac{(\\sqrt{x}-1)(\\sqrt{x}+1)}{\\sqrt{x}-1} = \\sqrt{x} + 1 \\to 2$, confirming the estimate."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Evaluate $\\lim_{x \\to 2} \\dfrac{x^2 - 4}{x^2 - 3x + 2}$.",
+      "answer": "$4$",
+      "solution": {
+        "steps": [
+          "Factor numerator and denominator: $x^2 - 4 = (x - 2)(x + 2)$ and $x^2 - 3x + 2 = (x - 2)(x - 1)$.",
+          "Cancel the common factor $(x - 2)$ for $x \\neq 2$: $\\dfrac{(x-2)(x+2)}{(x-2)(x-1)} = \\dfrac{x + 2}{x - 1}$.",
+          "Take the limit: $\\lim_{x \\to 2} \\dfrac{x + 2}{x - 1} = \\dfrac{2 + 2}{2 - 1} = \\dfrac{4}{1} = 4$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A graph of $f$ has a hole (open circle) at $(2, 5)$, with the curve approaching that point from both sides, and $f(2)$ is left undefined. A classmate says $\\lim_{x \\to 2} f(x)$ does not exist because $f(2)$ is undefined. Find the limit and explain whether the classmate is correct.",
+      "answer": "$\\lim_{x \\to 2} f(x) = 5$; the classmate is incorrect.",
+      "solution": {
+        "steps": [
+          "A limit depends only on the behavior of $f$ near $x = 2$, not on the value (or absence of a value) at $x = 2$ itself.",
+          "The curve approaches height $5$ from both the left and the right, so the one-sided limits agree.",
+          "By the existence criterion, $\\lim_{x \\to 2} f(x) = 5$.",
+          "The classmate is incorrect: an undefined $f(2)$ produces a hole, but the limit can still exist."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Evaluate $\\lim_{x \\to 4} \\dfrac{\\sqrt{x} - 2}{x - 4}$.",
+      "answer": "$\\dfrac{1}{4}$",
+      "solution": {
+        "steps": [
+          "Factor the denominator as a difference of squares using $\\sqrt{x}$: $x - 4 = (\\sqrt{x} - 2)(\\sqrt{x} + 2)$.",
+          "Cancel the common factor $(\\sqrt{x} - 2)$ for $x \\neq 4$: $\\dfrac{\\sqrt{x} - 2}{(\\sqrt{x} - 2)(\\sqrt{x} + 2)} = \\dfrac{1}{\\sqrt{x} + 2}$.",
+          "Take the limit: $\\lim_{x \\to 4} \\dfrac{1}{\\sqrt{x} + 2} = \\dfrac{1}{\\sqrt{4} + 2} = \\dfrac{1}{2 + 2} = \\dfrac{1}{4}$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "For $h(x) = \\begin{cases} x^2 - 1 & x \\le 1 \\\\ 3x & x > 1 \\end{cases}$, find $\\lim_{x \\to 1^+} h(x)$.",
+      "answer": "$3$",
+      "solution": {
+        "steps": [
+          "The right-hand limit $\\lim_{x \\to 1^+}$ uses inputs just above $1$, so apply the rule for $x > 1$, namely $3x$.",
+          "Substitute the approached value: $3(1) = 3$.",
+          "Therefore $\\lim_{x \\to 1^+} h(x) = 3$."
+        ]
+      }
+    }
+  ]
+}

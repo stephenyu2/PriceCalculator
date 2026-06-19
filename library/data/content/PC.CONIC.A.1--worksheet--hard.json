@@ -1,0 +1,272 @@
+{
+  "id": "PC.CONIC.A.1--worksheet--hard",
+  "standard": "PC.CONIC.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Analytic Geometry",
+  "domainCode": "CONIC",
+  "cluster": "Conic sections",
+  "clusterCode": "A",
+  "skillName": "Parabolas",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems require full synthesis: deriving equations from the focus-directrix definition with non-origin vertices, completing the square when a leading coefficient must be factored out, reconstructing equations from off-origin features, and reporting every feature including the latus rectum. Give exact fractional or radical values and never round.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Using the focus-directrix definition, derive the standard-form equation of the parabola whose focus is $(2,5)$ and whose directrix is the line $y=1$. Then state the vertex, the value of $p$, and the latus-rectum length.",
+      "answer": "$(x-2)^2 = 8(y-3)$; vertex $(2,3)$, $p=2$, latus rectum $|4p|=8$.",
+      "solution": {
+        "steps": [
+          "A point $(x,y)$ on the parabola is equidistant from the focus $(2,5)$ and the directrix $y=1$.",
+          "Distance to focus equals distance to directrix: $\\sqrt{(x-2)^2+(y-5)^2}=|y-1|$.",
+          "Square both sides: $(x-2)^2+(y-5)^2=(y-1)^2$.",
+          "Expand the $y$ terms: $(x-2)^2+y^2-10y+25=y^2-2y+1$.",
+          "Cancel $y^2$ and collect: $(x-2)^2=-2y+1+10y-25=8y-24$.",
+          "Factor the right side: $(x-2)^2=8(y-3)$.",
+          "Compare to $(x-h)^2=4p(y-k)$: vertex $(h,k)=(2,3)$, $4p=8$ so $p=2$ (opens up).",
+          "The latus-rectum length is $|4p|=8$."
+        ],
+        "answer": "$(x-2)^2 = 8(y-3)$; vertex $(2,3)$, $p=2$, latus rectum $8$."
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Rewrite $y = 2x^2 - 12x + 23$ in vertex standard form $(x-h)^2 = 4p(y-k)$. Give the vertex, focus, directrix, axis of symmetry, and the latus-rectum endpoints.",
+      "answer": "$(x-3)^2 = \\frac{1}{2}(y-5)$; vertex $(3,5)$, $p=\\frac{1}{8}$, focus $\\left(3,\\frac{41}{8}\\right)$, directrix $y=\\frac{39}{8}$, axis $x=3$, latus-rectum endpoints $\\left(\\frac{11}{4},\\frac{41}{8}\\right)$ and $\\left(\\frac{13}{4},\\frac{41}{8}\\right)$.",
+      "solution": {
+        "steps": [
+          "Factor the leading coefficient from the $x$ terms: $y=2(x^2-6x)+23$.",
+          "Complete the square inside: half of $-6$ is $-3$, and $(-3)^2=9$, so add and subtract $9$: $y=2(x^2-6x+9-9)+23$.",
+          "Distribute and combine constants: $y=2(x-3)^2-18+23=2(x-3)^2+5$.",
+          "Isolate the squared term: $y-5=2(x-3)^2$, so $(x-3)^2=\\frac{1}{2}(y-5)$.",
+          "Compare to $(x-h)^2=4p(y-k)$: vertex $(3,5)$ and $4p=\\frac{1}{2}$, so $p=\\frac{1}{8}$ (opens up).",
+          "Focus is $p$ above the vertex: $\\left(3,\\,5+\\frac{1}{8}\\right)=\\left(3,\\frac{41}{8}\\right)$.",
+          "Directrix is $p$ below the vertex: $y=5-\\frac{1}{8}=\\frac{39}{8}$. Axis of symmetry: $x=3$.",
+          "Latus-rectum length $|4p|=\\frac{1}{2}$; its endpoints are $\\frac{1}{4}$ on each side of the focus: $\\left(3\\pm\\frac{1}{4},\\frac{41}{8}\\right)=\\left(\\frac{11}{4},\\frac{41}{8}\\right)$ and $\\left(\\frac{13}{4},\\frac{41}{8}\\right)$."
+        ],
+        "answer": "$(x-3)^2 = \\frac{1}{2}(y-5)$; vertex $(3,5)$, focus $\\left(3,\\frac{41}{8}\\right)$, directrix $y=\\frac{39}{8}$, axis $x=3$, latus-rectum endpoints $\\left(\\frac{11}{4},\\frac{41}{8}\\right)$ and $\\left(\\frac{13}{4},\\frac{41}{8}\\right)$."
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Rewrite $x = -3y^2 + 12y - 7$ in vertex standard form $(y-k)^2 = 4p(x-h)$. State the vertex, focus, directrix, and direction of opening.",
+      "answer": "$(y-2)^2 = -\\frac{1}{3}(x-5)$; vertex $(5,2)$, $p=-\\frac{1}{12}$, focus $\\left(\\frac{59}{12},2\\right)$, directrix $x=\\frac{61}{12}$, opens left.",
+      "solution": {
+        "steps": [
+          "Factor $-3$ from the $y$ terms: $x=-3(y^2-4y)-7$.",
+          "Complete the square: half of $-4$ is $-2$, $(-2)^2=4$, so $x=-3(y^2-4y+4-4)-7$.",
+          "Distribute: $x=-3(y-2)^2+12-7=-3(y-2)^2+5$.",
+          "Isolate the squared term: $x-5=-3(y-2)^2$, so $(y-2)^2=-\\frac{1}{3}(x-5)$.",
+          "Compare to $(y-k)^2=4p(x-h)$: vertex $(5,2)$ and $4p=-\\frac{1}{3}$, so $p=-\\frac{1}{12}$.",
+          "Because $p<0$ and the axis is horizontal, the parabola opens left.",
+          "Focus is $p$ to the left of the vertex: $\\left(5-\\frac{1}{12},\\,2\\right)=\\left(\\frac{59}{12},2\\right)$.",
+          "Directrix is $|p|$ to the right of the vertex: $x=5+\\frac{1}{12}=\\frac{61}{12}$."
+        ],
+        "answer": "$(y-2)^2 = -\\frac{1}{3}(x-5)$; vertex $(5,2)$, focus $\\left(\\frac{59}{12},2\\right)$, directrix $x=\\frac{61}{12}$, opens left."
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A parabola has focus $(-3,4)$ and directrix $x=1$. Derive its standard-form equation from the distance definition, then give the vertex, $p$, and the axis of symmetry.",
+      "answer": "$(y-4)^2 = -8(x+1)$; vertex $(-1,4)$, $p=-2$, axis $y=4$ (opens left).",
+      "solution": {
+        "steps": [
+          "Set distance to focus equal to distance to the vertical directrix: $\\sqrt{(x+3)^2+(y-4)^2}=|x-1|$.",
+          "Square both sides: $(x+3)^2+(y-4)^2=(x-1)^2$.",
+          "Expand the $x$ terms: $x^2+6x+9+(y-4)^2=x^2-2x+1$.",
+          "Cancel $x^2$ and collect $x$ terms on one side: $(y-4)^2=-2x+1-6x-9=-8x-8$.",
+          "Factor: $(y-4)^2=-8(x+1)$.",
+          "Compare to $(y-k)^2=4p(x-h)$: vertex $(-1,4)$, $4p=-8$ so $p=-2$ (opens left).",
+          "The axis of symmetry is horizontal through the vertex: $y=4$."
+        ],
+        "answer": "$(y-4)^2 = -8(x+1)$; vertex $(-1,4)$, $p=-2$, axis $y=4$."
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Find the standard-form equation of the parabola with vertex $(4,-2)$ that passes through the point $(6,2)$ and opens to the right. State $p$, the focus, and the directrix.",
+      "answer": "$(y+2)^2 = 8(x-4)$; $p=2$, focus $(6,-2)$, directrix $x=2$.",
+      "solution": {
+        "steps": [
+          "Opens right with vertex $(4,-2)$, so the form is $(y-(-2))^2=4p(x-4)$, i.e. $(y+2)^2=4p(x-4)$.",
+          "Substitute the point $(6,2)$: $(2+2)^2=4p(6-4)$.",
+          "Simplify the left side and the factor: $16=4p\\cdot2=8p$.",
+          "Solve for $p$: $p=\\frac{16}{8}=2$, so $4p=8$.",
+          "Equation: $(y+2)^2=8(x-4)$. Check the point at $x=6$: $(y+2)^2=8(2)=16$, so $y+2=\\pm4$ and $y=2$ is on the curve.",
+          "Focus is $p$ right of the vertex: $(4+2,-2)=(6,-2)$. Directrix is $x=4-2=2$."
+        ],
+        "answer": "$(y+2)^2 = 8(x-4)$; $p=2$, focus $(6,-2)$, directrix $x=2$."
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Convert $4y^2 + 8y - x + 7 = 0$ to vertex standard form $(y-k)^2 = 4p(x-h)$. Give the vertex, focus, directrix, and the latus-rectum length.",
+      "answer": "$(y+1)^2 = \\frac{1}{4}(x-3)$; vertex $(3,-1)$, $p=\\frac{1}{16}$, focus $\\left(\\frac{49}{16},-1\\right)$, directrix $x=\\frac{47}{16}$, latus rectum $\\frac{1}{4}$.",
+      "solution": {
+        "steps": [
+          "Isolate the $y$ terms: $4y^2+8y=x-7$.",
+          "Factor out $4$: $4(y^2+2y)=x-7$.",
+          "Complete the square inside: half of $2$ is $1$, $1^2=1$, so $4(y^2+2y+1-1)=x-7$.",
+          "Distribute: $4(y+1)^2-4=x-7$, so $4(y+1)^2=x-3$.",
+          "Divide by $4$: $(y+1)^2=\\frac{1}{4}(x-3)$.",
+          "Compare to $(y-k)^2=4p(x-h)$: vertex $(3,-1)$, $4p=\\frac{1}{4}$, so $p=\\frac{1}{16}$ (opens right).",
+          "Focus is $p$ right of the vertex: $\\left(3+\\frac{1}{16},-1\\right)=\\left(\\frac{49}{16},-1\\right)$. Directrix: $x=3-\\frac{1}{16}=\\frac{47}{16}$.",
+          "Latus-rectum length is $|4p|=\\frac{1}{4}$."
+        ],
+        "answer": "$(y+1)^2 = \\frac{1}{4}(x-3)$; vertex $(3,-1)$, focus $\\left(\\frac{49}{16},-1\\right)$, directrix $x=\\frac{47}{16}$, latus rectum $\\frac{1}{4}$."
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Using the focus-directrix definition, derive the equation of the parabola with focus $(1,-2)$ and directrix $y=4$. State the vertex, $p$, direction of opening, and the latus-rectum endpoints.",
+      "answer": "$(x-1)^2 = -12(y-1)$; vertex $(1,1)$, $p=-3$, opens down, latus-rectum endpoints $(-5,-2)$ and $(7,-2)$.",
+      "solution": {
+        "steps": [
+          "Equidistance: $\\sqrt{(x-1)^2+(y+2)^2}=|y-4|$.",
+          "Square: $(x-1)^2+(y+2)^2=(y-4)^2$.",
+          "Expand: $(x-1)^2+y^2+4y+4=y^2-8y+16$.",
+          "Cancel $y^2$ and collect: $(x-1)^2=-8y+16-4y-4=-12y+12$.",
+          "Factor: $(x-1)^2=-12(y-1)$. Vertex $(1,1)$, $4p=-12$, $p=-3$ (opens down).",
+          "Focus is $p$ below the vertex: $(1,1-3)=(1,-2)$, matching the given focus as a check.",
+          "Latus-rectum length $|4p|=12$; endpoints lie $6$ on each side of the focus along $y=-2$: $(1-6,-2)$ and $(1+6,-2)$, i.e. $(-5,-2)$ and $(7,-2)$."
+        ],
+        "answer": "$(x-1)^2 = -12(y-1)$; vertex $(1,1)$, $p=-3$, opens down, latus-rectum endpoints $(-5,-2)$ and $(7,-2)$."
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Rewrite $y = -\\frac{1}{2}x^2 + 2x + 1$ in vertex standard form and give the vertex, focus, and directrix.",
+      "answer": "$(x-2)^2 = -2(y-3)$; vertex $(2,3)$, $p=-\\frac{1}{2}$, focus $\\left(2,\\frac{5}{2}\\right)$, directrix $y=\\frac{7}{2}$.",
+      "solution": {
+        "steps": [
+          "Factor $-\\frac{1}{2}$ from the $x$ terms: $y=-\\frac{1}{2}(x^2-4x)+1$.",
+          "Complete the square: half of $-4$ is $-2$, $(-2)^2=4$, so $y=-\\frac{1}{2}(x^2-4x+4-4)+1$.",
+          "Distribute: $y=-\\frac{1}{2}(x-2)^2+2+1=-\\frac{1}{2}(x-2)^2+3$.",
+          "Isolate: $y-3=-\\frac{1}{2}(x-2)^2$, so $(x-2)^2=-2(y-3)$.",
+          "Compare to $(x-h)^2=4p(y-k)$: vertex $(2,3)$, $4p=-2$, $p=-\\frac{1}{2}$ (opens down).",
+          "Focus is $p$ below the vertex: $\\left(2,3-\\frac{1}{2}\\right)=\\left(2,\\frac{5}{2}\\right)$. Directrix: $y=3+\\frac{1}{2}=\\frac{7}{2}$."
+        ],
+        "answer": "$(x-2)^2 = -2(y-3)$; vertex $(2,3)$, focus $\\left(2,\\frac{5}{2}\\right)$, directrix $y=\\frac{7}{2}$."
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A parabola opens upward with vertex $(-2,1)$ and a latus rectum (focal width) of length $6$. Write its standard-form equation and give the focus and directrix.",
+      "answer": "$(x+2)^2 = 6(y-1)$; $p=\\frac{3}{2}$, focus $\\left(-2,\\frac{5}{2}\\right)$, directrix $y=-\\frac{1}{2}$.",
+      "solution": {
+        "steps": [
+          "Latus-rectum length is $|4p|=6$. Since it opens up, $4p=6$ and $p=\\frac{3}{2}$.",
+          "With vertical axis and vertex $(-2,1)$, the form is $(x+2)^2=4p(y-1)=6(y-1)$.",
+          "Focus is $p$ above the vertex: $\\left(-2,\\,1+\\frac{3}{2}\\right)=\\left(-2,\\frac{5}{2}\\right)$.",
+          "Directrix is $p$ below the vertex: $y=1-\\frac{3}{2}=-\\frac{1}{2}$."
+        ],
+        "answer": "$(x+2)^2 = 6(y-1)$; $p=\\frac{3}{2}$, focus $\\left(-2,\\frac{5}{2}\\right)$, directrix $y=-\\frac{1}{2}$."
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Find the standard-form equation of the parabola with focus $\\left(\\frac{5}{2},-1\\right)$ and directrix $x=-\\frac{1}{2}$. Give the vertex, $p$, and direction of opening.",
+      "answer": "$(y+1)^2 = 6\\left(x-1\\right)$; vertex $(1,-1)$, $p=\\frac{3}{2}$, opens right.",
+      "solution": {
+        "steps": [
+          "The directrix $x=-\\frac{1}{2}$ is a vertical line, so the axis of symmetry is horizontal and the parabola opens right or left.",
+          "Vertex is midway between focus and directrix along the axis. Its $x$-coordinate is the average of $\\frac{5}{2}$ and $-\\frac{1}{2}$: $\\frac{1}{2}\\left(\\frac{5}{2}-\\frac{1}{2}\\right)=\\frac{1}{2}\\cdot2=1$.",
+          "The $y$-coordinate matches the focus: $y=-1$. So the vertex is $(1,-1)$.",
+          "$p$ is the signed distance from vertex to focus: $p=\\frac{5}{2}-1=\\frac{3}{2}>0$, so the parabola opens right.",
+          "Form: $(y-(-1))^2=4p(x-1)$, with $4p=6$: $(y+1)^2=6(x-1)$.",
+          "Check: directrix should be $x=1-\\frac{3}{2}=-\\frac{1}{2}$, which matches the given directrix."
+        ],
+        "answer": "$(y+1)^2 = 6(x-1)$; vertex $(1,-1)$, $p=\\frac{3}{2}$, opens right."
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Convert $2x^2 + 8x - 3y + 14 = 0$ to vertex standard form $(x-h)^2 = 4p(y-k)$ and report the vertex, focus, directrix, and latus-rectum length.",
+      "answer": "$(x+2)^2 = \\frac{3}{2}(y-2)$; vertex $(-2,2)$, $p=\\frac{3}{8}$, focus $\\left(-2,\\frac{19}{8}\\right)$, directrix $y=\\frac{13}{8}$, latus rectum $\\frac{3}{2}$.",
+      "solution": {
+        "steps": [
+          "Isolate the $x$ terms: $2x^2+8x=3y-14$.",
+          "Factor out $2$: $2(x^2+4x)=3y-14$.",
+          "Complete the square: half of $4$ is $2$, $2^2=4$, so $2(x^2+4x+4-4)=3y-14$.",
+          "Distribute: $2(x+2)^2-8=3y-14$, so $2(x+2)^2=3y-6=3(y-2)$.",
+          "Divide by $2$: $(x+2)^2=\\frac{3}{2}(y-2)$.",
+          "Compare to $(x-h)^2=4p(y-k)$: vertex $(-2,2)$, $4p=\\frac{3}{2}$, $p=\\frac{3}{8}$ (opens up).",
+          "Focus is $p$ above the vertex: $\\left(-2,\\,2+\\frac{3}{8}\\right)=\\left(-2,\\frac{19}{8}\\right)$. Directrix: $y=2-\\frac{3}{8}=\\frac{13}{8}$.",
+          "Latus-rectum length is $|4p|=\\frac{3}{2}$."
+        ],
+        "answer": "$(x+2)^2 = \\frac{3}{2}(y-2)$; vertex $(-2,2)$, focus $\\left(-2,\\frac{19}{8}\\right)$, directrix $y=\\frac{13}{8}$, latus rectum $\\frac{3}{2}$."
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Using the focus-directrix definition, derive the equation of the parabola with focus $\\left(-1,\\frac{3}{2}\\right)$ and directrix $y=\\frac{1}{2}$. Give the vertex, $p$, and the equation in standard form.",
+      "answer": "$(x+1)^2 = 2(y-1)$; vertex $(-1,1)$, $p=\\frac{1}{2}$.",
+      "solution": {
+        "steps": [
+          "Equidistance: $\\sqrt{(x+1)^2+\\left(y-\\frac{3}{2}\\right)^2}=\\left|y-\\frac{1}{2}\\right|$.",
+          "Square both sides: $(x+1)^2+\\left(y-\\frac{3}{2}\\right)^2=\\left(y-\\frac{1}{2}\\right)^2$.",
+          "Expand the $y$ terms: $(x+1)^2+y^2-3y+\\frac{9}{4}=y^2-y+\\frac{1}{4}$.",
+          "Cancel $y^2$: $(x+1)^2=-y+\\frac{1}{4}+3y-\\frac{9}{4}=2y-2$.",
+          "Factor: $(x+1)^2=2(y-1)$. Vertex $(-1,1)$, $4p=2$, $p=\\frac{1}{2}$ (opens up).",
+          "Check: focus $\\left(-1,1+\\frac{1}{2}\\right)=\\left(-1,\\frac{3}{2}\\right)$ and directrix $y=1-\\frac{1}{2}=\\frac{1}{2}$, matching the given data."
+        ],
+        "answer": "$(x+1)^2 = 2(y-1)$; vertex $(-1,1)$, $p=\\frac{1}{2}$."
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "The cable-supported reflector cross-section is modeled by a parabola with vertex at $(3,-4)$ that opens downward and passes through $(7,-8)$. Write the standard-form equation and find the focus and directrix.",
+      "answer": "$(x-3)^2 = -4(y+4)$; $p=-1$, focus $(3,-5)$, directrix $y=-3$.",
+      "solution": {
+        "steps": [
+          "Opens down with vertex $(3,-4)$: form $(x-3)^2=4p(y+4)$ with $p<0$.",
+          "Substitute $(7,-8)$: $(7-3)^2=4p(-8+4)$, so $16=4p(-4)=-16p$.",
+          "Solve: $p=-1$, hence $4p=-4$.",
+          "Equation: $(x-3)^2=-4(y+4)$.",
+          "Focus is $|p|$ below the vertex (opens down): $(3,-4-1)=(3,-5)$.",
+          "Directrix is $|p|$ above the vertex: $y=-4+1=-3$."
+        ],
+        "answer": "$(x-3)^2 = -4(y+4)$; $p=-1$, focus $(3,-5)$, directrix $y=-3$."
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Convert $3y^2 - 6y + 2x + 7 = 0$ to vertex standard form $(y-k)^2 = 4p(x-h)$ and report the vertex, focus, directrix, and direction of opening.",
+      "answer": "$(y-1)^2 = -\\frac{2}{3}(x+2)$; vertex $(-2,1)$, $p=-\\frac{1}{6}$, focus $\\left(-\\frac{13}{6},1\\right)$, directrix $x=-\\frac{11}{6}$, opens left.",
+      "solution": {
+        "steps": [
+          "Isolate the $y$ terms: $3y^2-6y=-2x-7$.",
+          "Factor out $3$: $3(y^2-2y)=-2x-7$.",
+          "Complete the square: half of $-2$ is $-1$, $(-1)^2=1$, so $3(y^2-2y+1-1)=-2x-7$.",
+          "Distribute: $3(y-1)^2-3=-2x-7$, so $3(y-1)^2=-2x-4=-2(x+2)$.",
+          "Divide by $3$: $(y-1)^2=-\\frac{2}{3}(x+2)$.",
+          "Compare to $(y-k)^2=4p(x-h)$: vertex $(-2,1)$, $4p=-\\frac{2}{3}$, $p=-\\frac{1}{6}$. Since $p<0$ and the axis is horizontal, it opens left.",
+          "Focus is $|p|$ left of the vertex: $\\left(-2-\\frac{1}{6},1\\right)=\\left(-\\frac{13}{6},1\\right)$. Directrix: $x=-2+\\frac{1}{6}=-\\frac{11}{6}$."
+        ],
+        "answer": "$(y-1)^2 = -\\frac{2}{3}(x+2)$; vertex $(-2,1)$, focus $\\left(-\\frac{13}{6},1\\right)$, directrix $x=-\\frac{11}{6}$, opens left."
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Derive, from the focus-directrix definition, the equation of the parabola with focus $(4,3)$ and directrix $x=10$. State the vertex, $p$, axis of symmetry, and the latus-rectum endpoints.",
+      "answer": "$(y-3)^2 = -12(x-7)$; vertex $(7,3)$, $p=-3$, axis $y=3$, latus-rectum endpoints $(4,-3)$ and $(4,9)$.",
+      "solution": {
+        "steps": [
+          "Equidistance with a vertical directrix: $\\sqrt{(x-4)^2+(y-3)^2}=|x-10|$.",
+          "Square both sides: $(x-4)^2+(y-3)^2=(x-10)^2$.",
+          "Expand the $x$ terms: $x^2-8x+16+(y-3)^2=x^2-20x+100$.",
+          "Cancel $x^2$ and collect: $(y-3)^2=-20x+100+8x-16=-12x+84$.",
+          "Factor: $(y-3)^2=-12(x-7)$. Vertex $(7,3)$, $4p=-12$, $p=-3$ (opens left).",
+          "Axis of symmetry is horizontal: $y=3$. Focus check: $(7-3,3)=(4,3)$ matches the given focus.",
+          "Latus-rectum length $|4p|=12$; endpoints lie $6$ above and below the focus along $x=4$: $(4,3-6)$ and $(4,3+6)$, i.e. $(4,-3)$ and $(4,9)$."
+        ],
+        "answer": "$(y-3)^2 = -12(x-7)$; vertex $(7,3)$, $p=-3$, axis $y=3$, latus-rectum endpoints $(4,-3)$ and $(4,9)$."
+      }
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "standard": "PC.TRIG.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Angles, radian measure, and the unit circle",
+  "clusterCode": "A",
+  "skillName": "Trig Functions of Any Angle",
+
+  "description": "Students extend the six trigonometric functions beyond acute angles to any angle, positive or negative, in degrees or radians. Given an angle $\\theta$, they determine the quadrant in which the terminal side lies, find the reference angle $\\theta'$, apply the correct sign of each function in that quadrant, and use the known exact values of the reference angle to evaluate $\\sin\\theta$, $\\cos\\theta$, $\\tan\\theta$, $\\csc\\theta$, $\\sec\\theta$, and $\\cot\\theta$. They also evaluate trig functions of a point on the terminal side, of quadrantal angles such as $\\frac{\\pi}{2}$ and $\\pi$, and of non-standard angles using a calculator with appropriate rounding.",
+
+  "subSkills": [
+    "Determine the quadrant of an angle's terminal side given the angle in degrees or radians, including negative and coterminal angles",
+    "Find a coterminal angle in $[0^\\circ, 360^\\circ)$ or $[0, 2\\pi)$ by adding or subtracting full rotations",
+    "Compute the reference angle $\\theta'$ for an angle in any quadrant",
+    "Apply the sign rules (ASTC / 'All Students Take Calculus') for each function in each quadrant",
+    "Evaluate the six trig functions at an angle using its reference angle and the exact unit-circle values",
+    "Evaluate trig functions of quadrantal angles ($0$, $\\frac{\\pi}{2}$, $\\pi$, $\\frac{3\\pi}{2}$) including recognizing undefined values",
+    "Find the exact values of all six functions given a point $(x, y)$ on the terminal side using $r=\\sqrt{x^2+y^2}$",
+    "Evaluate trig functions of non-standard angles with a calculator, using correct mode (degrees vs radians) and rounding"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Reference angle determination",
+      "example": "Find the reference angle for $\\theta = \\frac{7\\pi}{6}$. (Answer: $\\frac{\\pi}{6}$.)"
+    },
+    {
+      "name": "Sign of a function by quadrant",
+      "example": "Is $\\cos\\theta$ positive or negative when $\\theta$ terminates in Quadrant III? (Answer: negative.)"
+    },
+    {
+      "name": "Exact value of a standard non-acute angle",
+      "example": "Evaluate $\\sin\\frac{5\\pi}{4}$. (Reference angle $\\frac{\\pi}{4}$, Quadrant III where sine is negative, so $-\\frac{\\sqrt{2}}{2}$.)"
+    },
+    {
+      "name": "Reciprocal function at a non-acute angle",
+      "example": "Evaluate $\\sec\\frac{2\\pi}{3}$. (Reference angle $\\frac{\\pi}{3}$, Quadrant II where cosine is negative, so $\\cos\\frac{2\\pi}{3}=-\\frac{1}{2}$ and $\\sec\\frac{2\\pi}{3}=-2$.)"
+    },
+    {
+      "name": "Negative or large coterminal angle",
+      "example": "Evaluate $\\tan(-\\frac{\\pi}{3})$ or $\\cos 405^\\circ$ by first finding a coterminal angle in $[0,2\\pi)$."
+    },
+    {
+      "name": "Quadrantal angle including undefined values",
+      "example": "Evaluate $\\tan\\frac{\\pi}{2}$ and $\\csc\\pi$. (Both undefined because the relevant coordinate is $0$.)"
+    },
+    {
+      "name": "Function values from a terminal-side point",
+      "example": "The terminal side of $\\theta$ passes through $(-3, 4)$. Find $\\sin\\theta$, $\\cos\\theta$, and $\\tan\\theta$. (Here $r=5$, so $\\sin\\theta=\\frac{4}{5}$, $\\cos\\theta=-\\frac{3}{5}$, $\\tan\\theta=-\\frac{4}{3}$.)"
+    },
+    {
+      "name": "Calculator evaluation of a non-standard angle",
+      "example": "Use a calculator to evaluate $\\sin 47^\\circ$ rounded to four decimal places. (Answer: $\\approx 0.7314$.)"
+    },
+    {
+      "name": "Multi-step: given one function value and a quadrant, find another",
+      "example": "If $\\sin\\theta=-\\frac{5}{13}$ and $\\theta$ is in Quadrant IV, find $\\cos\\theta$ and $\\tan\\theta$. (Use $\\cos^2\\theta=1-\\sin^2\\theta$ with the Quadrant IV sign: $\\cos\\theta=\\frac{12}{13}$, $\\tan\\theta=-\\frac{5}{12}$.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recall: identify a quadrant, state a sign, find a reference angle, or evaluate a function at a first-rotation standard angle whose terminal side is clearly in one quadrant. No coterminal reduction and no reciprocal-of-zero subtleties.",
+      "constraints": [
+        "Angle is a standard value in $[0, 2\\pi)$ or $[0^\\circ, 360^\\circ)$ from the set $\\{\\frac{\\pi}{6}, \\frac{\\pi}{4}, \\frac{\\pi}{3}, \\frac{2\\pi}{3}, \\frac{3\\pi}{4}, \\frac{5\\pi}{6}, \\frac{7\\pi}{6}, \\frac{5\\pi}{4}, \\frac{4\\pi}{3}, \\frac{5\\pi}{3}, \\frac{7\\pi}{4}, \\frac{11\\pi}{6}\\}$",
+        "Asks for $\\sin$, $\\cos$, or $\\tan$ only, or for a reference angle or a sign",
+        "At most one of: find reference angle, apply sign, recall exact value"
+      ]
+    },
+    "Medium": {
+      "description": "Two to three steps combined: reduce a negative or larger-than-one-rotation angle to a coterminal angle, then find the reference angle and apply the sign, possibly for a reciprocal function. Includes quadrantal angles and undefined results.",
+      "constraints": [
+        "Angle may be negative, exceed $2\\pi$ (or $360^\\circ$), or be quadrantal ($0$, $\\frac{\\pi}{2}$, $\\pi$, $\\frac{3\\pi}{2}$)",
+        "May ask for a reciprocal function ($\\csc$, $\\sec$, $\\cot$) requiring reciprocation after sign assignment",
+        "Student must perform coterminal reduction OR identify an undefined value, plus reference-angle and sign work"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step derivation or synthesis: find all six functions from a terminal-side point, derive a second function from a given function value and quadrant using a Pythagorean relationship, or chain coterminal reduction, reference angle, sign, and reciprocation together. Calculator items require correct mode and rounding plus interpretation.",
+      "constraints": [
+        "Given a point $(x,y)$, compute $r=\\sqrt{x^2+y^2}$ and produce multiple function values with correct signs",
+        "OR given one function value and a quadrant, derive another via $\\sin^2\\theta+\\cos^2\\theta=1$ or $\\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}$ and the quadrant's sign",
+        "OR combine three or more operations (coterminal reduction, reference angle, sign, reciprocal) in one problem",
+        "Calculator items must specify degree/radian mode and a rounding precision"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student ignores the quadrant sign and reports the reference-angle value as positive",
+      "distractor": "For $\\cos\\frac{5\\pi}{6}$ gives $+\\frac{\\sqrt{3}}{2}$ instead of $-\\frac{\\sqrt{3}}{2}$, treating every function as positive like an acute angle"
+    },
+    {
+      "misconception": "Student mis-assigns the ASTC sign rule, e.g. thinks tangent is positive in Quadrant II",
+      "distractor": "For $\\tan\\frac{2\\pi}{3}$ gives $+\\sqrt{3}$ instead of $-\\sqrt{3}$, applying a Quadrant III sign pattern to a Quadrant II angle"
+    },
+    {
+      "misconception": "Student computes the reference angle incorrectly, subtracting from the wrong axis",
+      "distractor": "For $\\theta=\\frac{7\\pi}{6}$ uses reference angle $\\frac{\\pi}{3}$ (from $\\frac{7\\pi}{6}-\\frac{5\\pi}{6}$) instead of $\\frac{7\\pi}{6}-\\pi=\\frac{\\pi}{6}$, then reports $-\\frac{\\sqrt{3}}{2}$ for $\\sin\\frac{7\\pi}{6}$ instead of $-\\frac{1}{2}$"
+    },
+    {
+      "misconception": "Student swaps sine and cosine values for the reference angle",
+      "distractor": "For $\\sin\\frac{2\\pi}{3}$ gives $\\frac{1}{2}$ (the cosine of $\\frac{\\pi}{3}$) instead of $\\frac{\\sqrt{3}}{2}$"
+    },
+    {
+      "misconception": "Student forgets to reduce a negative or large angle to a coterminal angle and guesses",
+      "distractor": "For $\\cos 405^\\circ$ leaves it unreduced or treats $405^\\circ$ as $45^\\circ$ in the wrong quadrant, giving a negative value instead of $\\frac{\\sqrt{2}}{2}$"
+    },
+    {
+      "misconception": "Student reciprocates incorrectly or reciprocates the wrong base function",
+      "distractor": "For $\\sec\\frac{2\\pi}{3}$ gives $-\\frac{2\\sqrt{3}}{3}$ (the reciprocal of sine, i.e. $\\csc$) instead of $-2$, the reciprocal of $\\cos\\frac{2\\pi}{3}=-\\frac{1}{2}$"
+    },
+    {
+      "misconception": "Student treats an undefined quadrantal value as $0$ or as $1$",
+      "distractor": "For $\\tan\\frac{\\pi}{2}$ answers $0$ or $1$ instead of recognizing it is undefined because $\\cos\\frac{\\pi}{2}=0$"
+    },
+    {
+      "misconception": "Student uses $x$ and $y$ but forgets $r$, or mixes up the ratio, when working from a terminal-side point",
+      "distractor": "For the point $(-3,4)$ gives $\\sin\\theta=\\frac{4}{3}$ (using $\\frac{y}{x}$) instead of $\\frac{4}{5}$, or omits the negative sign on $\\cos\\theta$"
+    },
+    {
+      "misconception": "Student has the calculator in the wrong angle mode",
+      "distractor": "For $\\sin 47^\\circ$ reads the radian-mode value $\\sin(47\\text{ rad})\\approx 0.1236$ instead of the degree value $\\approx 0.7314$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

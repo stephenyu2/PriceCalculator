@@ -1,0 +1,129 @@
+{
+  "standard": "PC.CONIC.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Analytic Geometry",
+  "domainCode": "CONIC",
+  "cluster": "Conic sections",
+  "clusterCode": "A",
+  "skillName": "Ellipses",
+
+  "description": "Students work with ellipses in the coordinate plane. They derive the standard-form equation $\\frac{(x-h)^2}{a^2}+\\frac{(y-k)^2}{b^2}=1$ from the locus definition (the set of points whose distances to two foci sum to a constant $2a$), and use the relationship $c^2=a^2-b^2$. Given an equation, they identify the center, the major and minor axis orientation, the vertices, the co-vertices, and the foci, and they sketch horizontal and vertical ellipses. Given geometric features, they write the equation in standard form.",
+
+  "subSkills": [
+    "State the locus definition of an ellipse and identify $2a$ as the constant sum of focal distances",
+    "Derive standard form by setting $\\sqrt{(x-c)^2+y^2}+\\sqrt{(x+c)^2+y^2}=2a$ and simplifying to $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ with $b^2=a^2-c^2$",
+    "Determine major-axis orientation by comparing the denominators ($a^2$ sits under the variable along the major axis, $a^2>b^2$)",
+    "Identify center $(h,k)$, vertices $(\\pm a$ along major axis$)$, and co-vertices ($\\pm b$ along minor axis)",
+    "Compute $c$ from $c^2=a^2-b^2$ and locate the foci on the major axis",
+    "Convert general-form $Ax^2+By^2+Cx+Dy+E=0$ to standard form by completing the square in $x$ and $y$",
+    "Write the standard-form equation given center, a vertex, and a focus (or co-vertex)",
+    "Graph horizontal and vertical ellipses, plotting center, vertices, co-vertices, and foci accurately"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Identify features from standard form",
+      "example": "For $\\frac{x^2}{25}+\\frac{y^2}{9}=1$, find the center, vertices, co-vertices, and foci. (Major axis horizontal, $a=5$, $b=3$, $c=\\sqrt{25-9}=4$; vertices $(\\pm 5,0)$, co-vertices $(0,\\pm 3)$, foci $(\\pm 4,0)$.)"
+    },
+    {
+      "name": "Identify features of a translated ellipse",
+      "example": "For $\\frac{(x-2)^2}{4}+\\frac{(y+3)^2}{16}=1$, find the center, orientation, vertices, and foci. (Center $(2,-3)$, vertical major axis, $a=4$, $b=2$, $c=\\sqrt{16-4}=2\\sqrt{3}$; vertices $(2,1)$ and $(2,-7)$, foci $(2,-3\\pm 2\\sqrt{3})$.)"
+    },
+    {
+      "name": "Write equation from features",
+      "example": "Write the standard-form equation of the ellipse with center $(0,0)$, a vertex at $(0,6)$, and a focus at $(0,4)$. (Vertical, $a=6$, $c=4$, $b^2=36-16=20$; equation $\\frac{x^2}{20}+\\frac{y^2}{36}=1$.)"
+    },
+    {
+      "name": "Complete the square to reach standard form",
+      "example": "Rewrite $9x^2+4y^2-18x+16y-11=0$ in standard form. (Group and complete the square: $9(x-1)^2+4(y+2)^2=36$, so $\\frac{(x-1)^2}{4}+\\frac{(y+2)^2}{9}=1$.)"
+    },
+    {
+      "name": "Derive standard form from the focal definition",
+      "example": "Use the definition $\\sqrt{(x-c)^2+y^2}+\\sqrt{(x+c)^2+y^2}=2a$ to derive $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ where $b^2=a^2-c^2$."
+    },
+    {
+      "name": "Graph and label",
+      "example": "Graph $\\frac{(x+1)^2}{9}+\\frac{(y-2)^2}{25}=1$, labeling the center, both vertices, both co-vertices, and both foci."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Ellipse centered at the origin, already in standard form with perfect-square denominators. Student reads off $a$, $b$, identifies orientation, and computes $c$ where $a^2-b^2$ is a perfect square (integer $c$). One or two retrievals, no algebraic manipulation.",
+      "constraints": [
+        "Center is $(0,0)$",
+        "Equation given in standard form $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$",
+        "$a^2$ and $b^2$ are small perfect squares (e.g. $4,9,16,25,36$)",
+        "$a^2-b^2$ is a perfect square so $c$ is an integer",
+        "Task is single-step: name center, vertices, co-vertices, or foci"
+      ]
+    },
+    "Medium": {
+      "description": "Translated ellipse with center $(h,k)\\ne(0,0)$, or a problem requiring $c$ as a radical (e.g. $c=2\\sqrt{3}$), or writing the equation from two given features. Two to four steps, including sign care on $(x-h)$ and $(y-k)$ and applying $c^2=a^2-b^2$.",
+      "constraints": [
+        "Center may be off-origin; signs of $h,k$ must be handled",
+        "$c$ may be an irrational exact value such as $\\sqrt{5}$ or $2\\sqrt{3}$",
+        "May require writing standard form from center plus a vertex and a focus or co-vertex",
+        "Student must correctly identify which denominator is $a^2$ (larger) to set orientation"
+      ]
+    },
+    "Hard": {
+      "description": "General form requiring completing the square in both variables (often with leading coefficients to factor out), or a multi-part derivation/application: derive standard form from the focal definition, or find features then write the equation, or use eccentricity $e=\\frac{c}{a}$. Five or more steps with multiple opportunities for sign and factoring errors.",
+      "constraints": [
+        "Equation given in general form $Ax^2+By^2+Cx+Dy+E=0$ with $A\\ne B$; must factor leading coefficients before completing the square",
+        "May require deriving standard form algebraically from the two-foci definition",
+        "May combine eccentricity $e=\\frac{c}{a}$ with given data to find a missing parameter",
+        "Answer features may be irrational and require simplifying radicals"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student uses $c^2=a^2+b^2$ (the hyperbola relationship) instead of $c^2=a^2-b^2$",
+      "distractor": "For $\\frac{x^2}{25}+\\frac{y^2}{9}=1$ computes $c=\\sqrt{25+9}=\\sqrt{34}$ and places foci at $(\\pm\\sqrt{34},0)$ instead of $(\\pm 4,0)$"
+    },
+    {
+      "misconception": "Student takes $a$ and $b$ as the square roots' squares but assigns the major axis to the smaller denominator",
+      "distractor": "For $\\frac{x^2}{9}+\\frac{y^2}{25}=1$ calls the major axis horizontal and gives vertices $(\\pm 3,0)$ instead of recognizing the larger denominator $25$ puts the major axis vertical with vertices $(0,\\pm 5)$"
+    },
+    {
+      "misconception": "Student confuses vertices (endpoints of the major axis) with co-vertices (endpoints of the minor axis)",
+      "distractor": "Reports the vertices as $(0,\\pm b)$ and co-vertices as $(\\pm a,0)$, swapping the two endpoint pairs"
+    },
+    {
+      "misconception": "Student forgets to take the square root of the denominators, using $a^2$ and $b^2$ directly as coordinates",
+      "distractor": "For $\\frac{x^2}{25}+\\frac{y^2}{9}=1$ gives vertices at $(\\pm 25,0)$ and co-vertices at $(0,\\pm 9)$ instead of $(\\pm 5,0)$ and $(0,\\pm 3)$"
+    },
+    {
+      "misconception": "Student reverses the sign of the center when reading $(x-h)$ and $(y-k)$",
+      "distractor": "For $\\frac{(x-2)^2}{4}+\\frac{(y+3)^2}{16}=1$ states the center is $(-2,3)$ instead of $(2,-3)$"
+    },
+    {
+      "misconception": "When completing the square, student adds the balancing constant to the equation but forgets to multiply it by the factored leading coefficient",
+      "distractor": "For $9x^2-18x=9(x^2-2x)$ adds only $1$ (not $9\\cdot 1$) to the right side, producing the wrong standard-form denominators"
+    },
+    {
+      "misconception": "Student divides only some terms (not all) by the constant when normalizing the right side to $1$",
+      "distractor": "From $9(x-1)^2+4(y+2)^2=36$ writes $\\frac{(x-1)^2}{4}+(y+2)^2=1$, failing to divide the $(y+2)^2$ term, instead of $\\frac{(x-1)^2}{4}+\\frac{(y+2)^2}{9}=1$"
+    },
+    {
+      "misconception": "Student places the foci along the minor axis instead of the major axis",
+      "distractor": "For $\\frac{x^2}{9}+\\frac{y^2}{25}=1$ ($c=4$) gives foci at $(\\pm 4,0)$ on the minor axis instead of $(0,\\pm 4)$ on the major axis"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "id": "PC.VEC.A.2--lesson",
+  "standard": "PC.VEC.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Vectors and Parametric Equations",
+  "domainCode": "VEC",
+  "cluster": "Vectors in the plane",
+  "clusterCode": "A",
+  "skillName": "Dot Product and Applications",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "The dot product turns two vectors into a single number. In component form $\\vec{u}\\cdot\\vec{v}=u_1v_1+u_2v_2$ (and $u_1v_1+u_2v_2+u_3v_3$ in $3$D). Geometrically $\\vec{u}\\cdot\\vec{v}=\\|\\vec{u}\\|\\,\\|\\vec{v}\\|\\cos\\theta$, which lets you find the angle between two vectors, test orthogonality (the dot product is $0$), and project one vector onto another. Throughout, give exact values with radicals, $\\pi$, and fractions unless an approximation is requested.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Given $\\vec{u}=\\langle 3,-4\\rangle$ and $\\vec{v}=\\langle 5,2\\rangle$, find $\\vec{u}\\cdot\\vec{v}$.",
+      "solution": {
+        "steps": [
+          "The dot product multiplies matching components and adds: $\\vec{u}\\cdot\\vec{v}=u_1v_1+u_2v_2$.",
+          "Substitute: $\\vec{u}\\cdot\\vec{v}=(3)(5)+(-4)(2)$.",
+          "Compute each product: $(3)(5)=15$ and $(-4)(2)=-8$.",
+          "Add: $15+(-8)=7$. The result is a single number (a scalar), not a vector."
+        ],
+        "answer": "$\\vec{u}\\cdot\\vec{v}=7$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find the angle $\\theta$ between $\\vec{u}=\\langle 1,\\sqrt{3}\\rangle$ and $\\vec{v}=\\langle \\sqrt{3},1\\rangle$.",
+      "solution": {
+        "steps": [
+          "Use $\\cos\\theta=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{u}\\|\\,\\|\\vec{v}\\|}$.",
+          "Dot product: $\\vec{u}\\cdot\\vec{v}=(1)(\\sqrt{3})+(\\sqrt{3})(1)=2\\sqrt{3}$.",
+          "Magnitudes: $\\|\\vec{u}\\|=\\sqrt{1^2+(\\sqrt{3})^2}=\\sqrt{1+3}=2$ and $\\|\\vec{v}\\|=\\sqrt{(\\sqrt{3})^2+1^2}=2$.",
+          "So $\\cos\\theta=\\dfrac{2\\sqrt{3}}{(2)(2)}=\\dfrac{2\\sqrt{3}}{4}=\\dfrac{\\sqrt{3}}{2}$.",
+          "The angle whose cosine is $\\dfrac{\\sqrt{3}}{2}$ is $\\theta=\\dfrac{\\pi}{6}$."
+        ],
+        "answer": "$\\theta=\\dfrac{\\pi}{6}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Determine whether $\\vec{u}=\\langle 4,6\\rangle$ and $\\vec{v}=\\langle 3,-2\\rangle$ are orthogonal.",
+      "solution": {
+        "steps": [
+          "Two nonzero vectors are orthogonal exactly when their dot product is $0$, since $\\cos\\dfrac{\\pi}{2}=0$.",
+          "Compute: $\\vec{u}\\cdot\\vec{v}=(4)(3)+(6)(-2)$.",
+          "Evaluate: $(4)(3)=12$ and $(6)(-2)=-12$, so $\\vec{u}\\cdot\\vec{v}=12-12=0$.",
+          "Because the dot product is $0$, the vectors are orthogonal (perpendicular)."
+        ],
+        "answer": "Yes; $\\vec{u}\\cdot\\vec{v}=0$, so they are orthogonal."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Find the vector projection of $\\vec{u}=\\langle 3,4\\rangle$ onto $\\vec{v}=\\langle 2,1\\rangle$, that is $\\operatorname{proj}_{\\vec{v}}\\vec{u}$.",
+      "solution": {
+        "steps": [
+          "Use $\\operatorname{proj}_{\\vec{v}}\\vec{u}=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\vec{v}\\cdot\\vec{v}}\\,\\vec{v}$. The denominator is $\\vec{v}\\cdot\\vec{v}=\\|\\vec{v}\\|^2$, not $\\|\\vec{v}\\|$.",
+          "Numerator: $\\vec{u}\\cdot\\vec{v}=(3)(2)+(4)(1)=6+4=10$.",
+          "Denominator: $\\vec{v}\\cdot\\vec{v}=(2)(2)+(1)(1)=4+1=5$.",
+          "Scalar coefficient: $\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\vec{v}\\cdot\\vec{v}}=\\dfrac{10}{5}=2$.",
+          "Scale $\\vec{v}$: $\\operatorname{proj}_{\\vec{v}}\\vec{u}=2\\langle 2,1\\rangle=\\langle 4,2\\rangle$."
+        ],
+        "answer": "$\\operatorname{proj}_{\\vec{v}}\\vec{u}=\\langle 4,2\\rangle$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A constant force $\\vec{F}=\\langle 6,2\\rangle$ (in newtons) moves an object along the displacement $\\vec{d}=\\langle 4,1\\rangle$ (in meters). Find the work done.",
+      "solution": {
+        "steps": [
+          "Work done by a constant force is $W=\\vec{F}\\cdot\\vec{d}$.",
+          "Compute the dot product: $W=(6)(4)+(2)(1)$.",
+          "Evaluate: $(6)(4)=24$ and $(2)(1)=2$, so $W=24+2=26$.",
+          "The units are newton-meters, or joules."
+        ],
+        "answer": "$W=26$ joules"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Find $\\vec{u}\\cdot\\vec{v}$ for $\\vec{u}=\\langle -2,5\\rangle$ and $\\vec{v}=\\langle 4,3\\rangle$.",
+      "hint": "Multiply matching components and add: $\\vec{u}\\cdot\\vec{v}=u_1v_1+u_2v_2$. The answer is one number, not a vector.",
+      "solution": {
+        "steps": [
+          "Apply $\\vec{u}\\cdot\\vec{v}=u_1v_1+u_2v_2$: $(-2)(4)+(5)(3)$.",
+          "Evaluate: $(-2)(4)=-8$ and $(5)(3)=15$.",
+          "Add: $-8+15=7$."
+        ],
+        "answer": "$\\vec{u}\\cdot\\vec{v}=7$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Find the value of $k$ that makes $\\vec{u}=\\langle k,5\\rangle$ and $\\vec{v}=\\langle 2,-3\\rangle$ orthogonal.",
+      "hint": "Orthogonal vectors have dot product $0$. Set $\\vec{u}\\cdot\\vec{v}=0$ and solve for $k$.",
+      "solution": {
+        "steps": [
+          "Set the dot product to zero: $\\vec{u}\\cdot\\vec{v}=(k)(2)+(5)(-3)=0$.",
+          "Simplify: $2k-15=0$.",
+          "Solve: $2k=15$, so $k=\\dfrac{15}{2}$."
+        ],
+        "answer": "$k=\\dfrac{15}{2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Find the angle $\\theta$ between $\\vec{u}=\\langle 0,2\\rangle$ and $\\vec{v}=\\langle 2,2\\rangle$.",
+      "hint": "Use $\\cos\\theta=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{u}\\|\\,\\|\\vec{v}\\|}$. Each magnitude needs a square root.",
+      "solution": {
+        "steps": [
+          "Dot product: $\\vec{u}\\cdot\\vec{v}=(0)(2)+(2)(2)=4$.",
+          "Magnitudes: $\\|\\vec{u}\\|=\\sqrt{0^2+2^2}=2$ and $\\|\\vec{v}\\|=\\sqrt{2^2+2^2}=\\sqrt{8}=2\\sqrt{2}$.",
+          "So $\\cos\\theta=\\dfrac{4}{(2)(2\\sqrt{2})}=\\dfrac{4}{4\\sqrt{2}}=\\dfrac{1}{\\sqrt{2}}=\\dfrac{\\sqrt{2}}{2}$.",
+          "The angle with cosine $\\dfrac{\\sqrt{2}}{2}$ is $\\theta=\\dfrac{\\pi}{4}$."
+        ],
+        "answer": "$\\theta=\\dfrac{\\pi}{4}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Find the scalar projection (component) of $\\vec{u}=\\langle 5,2\\rangle$ onto $\\vec{v}=\\langle 3,4\\rangle$, that is $\\operatorname{comp}_{\\vec{v}}\\vec{u}$.",
+      "hint": "The scalar projection is a number: $\\operatorname{comp}_{\\vec{v}}\\vec{u}=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{v}\\|}$. Divide by the magnitude, not its square.",
+      "solution": {
+        "steps": [
+          "Numerator: $\\vec{u}\\cdot\\vec{v}=(5)(3)+(2)(4)=15+8=23$.",
+          "Magnitude of $\\vec{v}$: $\\|\\vec{v}\\|=\\sqrt{3^2+4^2}=\\sqrt{25}=5$.",
+          "Scalar projection: $\\operatorname{comp}_{\\vec{v}}\\vec{u}=\\dfrac{23}{5}$."
+        ],
+        "answer": "$\\operatorname{comp}_{\\vec{v}}\\vec{u}=\\dfrac{23}{5}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Write $\\vec{u}=\\langle 5,2\\rangle$ as the sum of a vector parallel to $\\vec{v}=\\langle 1,1\\rangle$ and a vector orthogonal to $\\vec{v}$.",
+      "hint": "The parallel part is $\\operatorname{proj}_{\\vec{v}}\\vec{u}=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\vec{v}\\cdot\\vec{v}}\\,\\vec{v}$. The orthogonal part is $\\vec{u}-\\operatorname{proj}_{\\vec{v}}\\vec{u}$.",
+      "solution": {
+        "steps": [
+          "Parallel part: $\\vec{u}\\cdot\\vec{v}=(5)(1)+(2)(1)=7$ and $\\vec{v}\\cdot\\vec{v}=1^2+1^2=2$.",
+          "So $\\vec{w}_1=\\operatorname{proj}_{\\vec{v}}\\vec{u}=\\dfrac{7}{2}\\langle 1,1\\rangle=\\left\\langle \\dfrac{7}{2},\\dfrac{7}{2}\\right\\rangle$.",
+          "Orthogonal part: $\\vec{w}_2=\\vec{u}-\\vec{w}_1=\\left\\langle 5-\\dfrac{7}{2},\\,2-\\dfrac{7}{2}\\right\\rangle=\\left\\langle \\dfrac{3}{2},-\\dfrac{3}{2}\\right\\rangle$.",
+          "Check orthogonality: $\\vec{w}_2\\cdot\\vec{v}=\\dfrac{3}{2}-\\dfrac{3}{2}=0$, and $\\vec{w}_1+\\vec{w}_2=\\langle 5,2\\rangle=\\vec{u}$."
+        ],
+        "answer": "$\\vec{u}=\\left\\langle \\dfrac{7}{2},\\dfrac{7}{2}\\right\\rangle+\\left\\langle \\dfrac{3}{2},-\\dfrac{3}{2}\\right\\rangle$"
+      }
+    }
+  ]
+}

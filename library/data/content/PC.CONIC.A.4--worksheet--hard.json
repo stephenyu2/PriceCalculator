@@ -1,0 +1,246 @@
+{
+  "id": "PC.CONIC.A.4--worksheet--hard",
+  "standard": "PC.CONIC.A.4",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Analytic Geometry",
+  "domainCode": "CONIC",
+  "cluster": "Conic sections",
+  "clusterCode": "A",
+  "skillName": "Polar Coordinates",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems chain together conversions, trigonometric identities, and curve identification. Work in exact values, keep track of non-unique polar representations, and derive features such as centers, vertices, and intersection points that are not given directly.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Convert the polar conic $r=\\dfrac{2}{1-\\cos\\theta}$ to rectangular form and identify the conic, its vertex, and its direction of opening.",
+      "answer": "$y^2=4x+4$, a parabola with vertex $(-1,0)$ opening to the right.",
+      "solution": {
+        "steps": [
+          "Clear the denominator: $r(1-\\cos\\theta)=2$, so $r-r\\cos\\theta=2$.",
+          "Substitute $r=\\sqrt{x^2+y^2}$ and $r\\cos\\theta=x$: $\\sqrt{x^2+y^2}-x=2$.",
+          "Isolate the radical: $\\sqrt{x^2+y^2}=x+2$.",
+          "Square both sides: $x^2+y^2=x^2+4x+4$.",
+          "Cancel $x^2$: $y^2=4x+4$.",
+          "Write as $y^2=4(x+1)$, which is a rightward parabola with vertex $(-1,0)$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Convert $r=\\cos(2\\theta)$ to a rectangular equation. Use a double-angle identity and clear all denominators.",
+      "answer": "$(x^2+y^2)^{3/2}=x^2-y^2$, equivalently $(x^2+y^2)^3=(x^2-y^2)^2$.",
+      "solution": {
+        "steps": [
+          "Expand with the identity $\\cos(2\\theta)=\\cos^2\\theta-\\sin^2\\theta$.",
+          "Using $\\cos\\theta=\\dfrac{x}{r}$ and $\\sin\\theta=\\dfrac{y}{r}$: $\\cos(2\\theta)=\\dfrac{x^2}{r^2}-\\dfrac{y^2}{r^2}=\\dfrac{x^2-y^2}{r^2}$.",
+          "So the equation becomes $r=\\dfrac{x^2-y^2}{r^2}$.",
+          "Multiply both sides by $r^2$: $r^3=x^2-y^2$.",
+          "Since $r=\\sqrt{x^2+y^2}$, we have $r^3=(x^2+y^2)^{3/2}$, giving $(x^2+y^2)^{3/2}=x^2-y^2$.",
+          "Squaring to remove the fractional power: $(x^2+y^2)^3=(x^2-y^2)^2$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Find all intersection points of $r=2\\sin\\theta$ and $r=2\\cos\\theta$ for $0\\le\\theta<2\\pi$, including the pole. Give the points in rectangular coordinates.",
+      "answer": "The pole $(0,0)$ and the point $(1,1)$.",
+      "solution": {
+        "steps": [
+          "Set the equations equal: $2\\sin\\theta=2\\cos\\theta$, so $\\tan\\theta=1$.",
+          "On $[0,2\\pi)$ this gives $\\theta=\\dfrac{\\pi}{4}$ or $\\theta=\\dfrac{5\\pi}{4}$.",
+          "At $\\theta=\\dfrac{\\pi}{4}$: $r=2\\sin\\dfrac{\\pi}{4}=2\\cdot\\dfrac{\\sqrt2}{2}=\\sqrt2$. Then $x=r\\cos\\theta=\\sqrt2\\cdot\\dfrac{\\sqrt2}{2}=1$ and $y=r\\sin\\theta=1$, giving $(1,1)$.",
+          "At $\\theta=\\dfrac{5\\pi}{4}$: $r=2\\sin\\dfrac{5\\pi}{4}=-\\sqrt2$, which is the same rectangular point $(1,1)$ as before (negative $r$ flips the direction back).",
+          "Check the pole separately: $r=2\\sin\\theta=0$ at $\\theta=0$, and $r=2\\cos\\theta=0$ at $\\theta=\\dfrac{\\pi}{2}$. Each curve passes through the pole, so the pole is a shared point even though no single $\\theta$ solves both there.",
+          "Intersections: $(0,0)$ and $(1,1)$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Convert $r=4\\sin\\theta$ to rectangular form, complete the square, and state the center and radius of the resulting circle.",
+      "answer": "$x^2+(y-2)^2=4$; center $(0,2)$, radius $2$.",
+      "solution": {
+        "steps": [
+          "Multiply both sides by $r$: $r^2=4r\\sin\\theta$.",
+          "Substitute $r^2=x^2+y^2$ and $r\\sin\\theta=y$: $x^2+y^2=4y$.",
+          "Move all terms to one side: $x^2+y^2-4y=0$.",
+          "Complete the square in $y$: $x^2+(y^2-4y+4)=4$.",
+          "Write as $x^2+(y-2)^2=4$.",
+          "This is a circle with center $(0,2)$ and radius $\\sqrt4=2$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Convert the polar conic $r=\\dfrac{6}{2+\\cos\\theta}$ to rectangular form, then identify the conic and locate its center.",
+      "answer": "$\\dfrac{(x+2)^2}{16}+\\dfrac{y^2}{12}=1$, an ellipse with center $(-2,0)$.",
+      "solution": {
+        "steps": [
+          "Clear the denominator: $r(2+\\cos\\theta)=6$, so $2r+r\\cos\\theta=6$.",
+          "Substitute $r=\\sqrt{x^2+y^2}$ and $r\\cos\\theta=x$: $2\\sqrt{x^2+y^2}+x=6$.",
+          "Isolate the radical: $2\\sqrt{x^2+y^2}=6-x$.",
+          "Square both sides: $4(x^2+y^2)=36-12x+x^2$.",
+          "Expand and collect: $4x^2+4y^2=36-12x+x^2$, so $3x^2+12x+4y^2=36$.",
+          "Complete the square in $x$: $3(x^2+4x)+4y^2=36$ gives $3(x+2)^2-12+4y^2=36$, so $3(x+2)^2+4y^2=48$.",
+          "Divide by $48$: $\\dfrac{(x+2)^2}{16}+\\dfrac{y^2}{12}=1$.",
+          "This is an ellipse with center $(-2,0)$, semi-axes $a=4$ (horizontal) and $b=2\\sqrt3$ (vertical)."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Convert $r=\\sin(2\\theta)$ to a rectangular equation using a double-angle identity.",
+      "answer": "$(x^2+y^2)^{3/2}=2xy$, equivalently $(x^2+y^2)^3=4x^2y^2$.",
+      "solution": {
+        "steps": [
+          "Use $\\sin(2\\theta)=2\\sin\\theta\\cos\\theta$.",
+          "Substitute $\\sin\\theta=\\dfrac{y}{r}$ and $\\cos\\theta=\\dfrac{x}{r}$: $\\sin(2\\theta)=2\\cdot\\dfrac{y}{r}\\cdot\\dfrac{x}{r}=\\dfrac{2xy}{r^2}$.",
+          "The equation becomes $r=\\dfrac{2xy}{r^2}$.",
+          "Multiply both sides by $r^2$: $r^3=2xy$.",
+          "Since $r^3=(x^2+y^2)^{3/2}$, we get $(x^2+y^2)^{3/2}=2xy$.",
+          "Squaring removes the fractional power: $(x^2+y^2)^3=4x^2y^2$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Convert the polar conic $r=\\dfrac{3}{1+2\\sin\\theta}$ to rectangular form and classify the conic by its eccentricity.",
+      "answer": "$x^2-3y^2+12y-9=0$; since the eccentricity is $e=2>1$, the conic is a hyperbola.",
+      "solution": {
+        "steps": [
+          "From the standard form $r=\\dfrac{ed}{1+e\\sin\\theta}$, read $e=2$, so the conic is a hyperbola.",
+          "Clear the denominator: $r(1+2\\sin\\theta)=3$, so $r+2r\\sin\\theta=3$.",
+          "Substitute $r=\\sqrt{x^2+y^2}$ and $r\\sin\\theta=y$: $\\sqrt{x^2+y^2}+2y=3$.",
+          "Isolate the radical: $\\sqrt{x^2+y^2}=3-2y$.",
+          "Square both sides: $x^2+y^2=9-12y+4y^2$.",
+          "Collect terms: $x^2+y^2-4y^2+12y-9=0$, so $x^2-3y^2+12y-9=0$.",
+          "The $x^2$ and $y^2$ coefficients have opposite signs, confirming a hyperbola, consistent with $e=2>1$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Show that $r=4\\cos\\theta+4\\sin\\theta$ is a circle. Convert to rectangular form, complete the square, and give the center and radius.",
+      "answer": "$(x-2)^2+(y-2)^2=8$; center $(2,2)$, radius $2\\sqrt2$.",
+      "solution": {
+        "steps": [
+          "Multiply both sides by $r$: $r^2=4r\\cos\\theta+4r\\sin\\theta$.",
+          "Substitute $r^2=x^2+y^2$, $r\\cos\\theta=x$, $r\\sin\\theta=y$: $x^2+y^2=4x+4y$.",
+          "Move all terms left: $x^2-4x+y^2-4y=0$.",
+          "Complete the square in both variables: $(x^2-4x+4)+(y^2-4y+4)=0+4+4$.",
+          "Write as $(x-2)^2+(y-2)^2=8$.",
+          "This is a circle with center $(2,2)$ and radius $\\sqrt8=2\\sqrt2$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Find the rectangular coordinates of the point $\\left(-4,\\dfrac{5\\pi}{6}\\right)$, then give a second polar representation of the same point that uses $r>0$ and an angle in $[0,2\\pi)$.",
+      "answer": "Rectangular: $\\left(2\\sqrt3,\\,-2\\right)$. A second polar name with $r>0$ is $\\left(4,\\dfrac{11\\pi}{6}\\right)$.",
+      "solution": {
+        "steps": [
+          "Compute $x=r\\cos\\theta=-4\\cos\\dfrac{5\\pi}{6}=-4\\left(-\\dfrac{\\sqrt3}{2}\\right)=2\\sqrt3$.",
+          "Compute $y=r\\sin\\theta=-4\\sin\\dfrac{5\\pi}{6}=-4\\left(\\dfrac{1}{2}\\right)=-2$, so the rectangular point is $\\left(2\\sqrt3,\\,-2\\right)$.",
+          "To get $r>0$, replace $r=-4$ with $r=4$ and add $\\pi$ to the angle: $\\dfrac{5\\pi}{6}+\\pi=\\dfrac{11\\pi}{6}$.",
+          "Check: $\\left(4,\\dfrac{11\\pi}{6}\\right)$ gives $x=4\\cos\\dfrac{11\\pi}{6}=4\\cdot\\dfrac{\\sqrt3}{2}=2\\sqrt3$ and $y=4\\sin\\dfrac{11\\pi}{6}=4\\left(-\\dfrac{1}{2}\\right)=-2$, the same point $\\left(2\\sqrt3,\\,-2\\right)$.",
+          "So the rectangular coordinates are $\\left(2\\sqrt3,\\,-2\\right)$ and a valid $r>0$ representation is $\\left(4,\\dfrac{11\\pi}{6}\\right)$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Convert the polar conic $r=\\dfrac{4}{1-\\sin\\theta}$ to rectangular form, identify the conic, and give its vertex and direction of opening.",
+      "answer": "$x^2=8y+16$, a parabola with vertex $(0,-2)$ opening upward.",
+      "solution": {
+        "steps": [
+          "Clear the denominator: $r(1-\\sin\\theta)=4$, so $r-r\\sin\\theta=4$.",
+          "Substitute $r=\\sqrt{x^2+y^2}$ and $r\\sin\\theta=y$: $\\sqrt{x^2+y^2}-y=4$.",
+          "Isolate the radical: $\\sqrt{x^2+y^2}=y+4$.",
+          "Square both sides: $x^2+y^2=y^2+8y+16$.",
+          "Cancel $y^2$: $x^2=8y+16$.",
+          "Write as $x^2=8(y+2)$, a parabola opening upward with vertex $(0,-2)$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Determine the number of petals of $r=5\\sin(3\\theta)$ and justify the count using symmetry, not just a memorized rule. State the petal length.",
+      "answer": "$3$ petals, each of length $5$.",
+      "solution": {
+        "steps": [
+          "A rose $r=a\\sin(n\\theta)$ traces a petal each time $r$ goes from $0$ up to its maximum $|a|$ and back to $0$.",
+          "Here $r=5\\sin(3\\theta)$ has maximum magnitude $5$, so each petal reaches length $5$.",
+          "Find where $r=0$: $\\sin(3\\theta)=0$ when $3\\theta=k\\pi$, i.e. $\\theta=\\dfrac{k\\pi}{3}$. Petal tips occur where $\\sin(3\\theta)=\\pm1$, i.e. $3\\theta=\\dfrac{\\pi}{2}+k\\pi$.",
+          "As $\\theta$ runs over $[0,\\pi)$, the curve produces 3 petals; over $[\\pi,2\\pi)$ the negative $r$ values retrace those same 3 petals rather than adding new ones.",
+          "Because $n=3$ is odd, the second half-revolution overlaps the first, so the total is $n=3$ petals, not $2n$.",
+          "Therefore there are $3$ petals, each of length $5$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Convert $r^2=\\sin(2\\theta)$ to a rectangular equation. This lemniscate requires a double-angle identity.",
+      "answer": "$(x^2+y^2)^2=2xy$.",
+      "solution": {
+        "steps": [
+          "Use $\\sin(2\\theta)=2\\sin\\theta\\cos\\theta$, so $r^2=2\\sin\\theta\\cos\\theta$.",
+          "Substitute $\\sin\\theta=\\dfrac{y}{r}$ and $\\cos\\theta=\\dfrac{x}{r}$: $r^2=2\\cdot\\dfrac{y}{r}\\cdot\\dfrac{x}{r}=\\dfrac{2xy}{r^2}$.",
+          "Multiply both sides by $r^2$: $r^4=2xy$.",
+          "Since $r^2=x^2+y^2$, we have $r^4=(x^2+y^2)^2$.",
+          "Therefore $(x^2+y^2)^2=2xy$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Find all intersection points of the cardioid $r=1+\\cos\\theta$ and the circle $r=\\dfrac{3}{2}$ on $0\\le\\theta<2\\pi$. Give answers as polar points.",
+      "answer": "$\\left(\\dfrac{3}{2},\\dfrac{\\pi}{3}\\right)$ and $\\left(\\dfrac{3}{2},\\dfrac{5\\pi}{3}\\right)$.",
+      "solution": {
+        "steps": [
+          "Set the curves equal: $1+\\cos\\theta=\\dfrac{3}{2}$.",
+          "Solve for the cosine: $\\cos\\theta=\\dfrac{3}{2}-1=\\dfrac{1}{2}$.",
+          "On $[0,2\\pi)$, $\\cos\\theta=\\dfrac{1}{2}$ at $\\theta=\\dfrac{\\pi}{3}$ and $\\theta=\\dfrac{5\\pi}{3}$.",
+          "At both angles $r=\\dfrac{3}{2}$, matching the circle.",
+          "Check the pole: the circle $r=\\dfrac{3}{2}$ never reaches the pole, so there is no pole intersection.",
+          "The intersection points are $\\left(\\dfrac{3}{2},\\dfrac{\\pi}{3}\\right)$ and $\\left(\\dfrac{3}{2},\\dfrac{5\\pi}{3}\\right)$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Convert the rectangular equation $\\left(x^2+y^2\\right)^2=2\\left(x^2-y^2\\right)$ to a simplified polar equation.",
+      "answer": "$r^2=2\\cos(2\\theta)$.",
+      "solution": {
+        "steps": [
+          "Substitute $x^2+y^2=r^2$ on the left: $\\left(r^2\\right)^2=r^4$.",
+          "Substitute $x=r\\cos\\theta$, $y=r\\sin\\theta$ on the right: $x^2-y^2=r^2\\cos^2\\theta-r^2\\sin^2\\theta=r^2(\\cos^2\\theta-\\sin^2\\theta)$.",
+          "Apply the identity $\\cos^2\\theta-\\sin^2\\theta=\\cos(2\\theta)$: the right side is $2r^2\\cos(2\\theta)$.",
+          "So $r^4=2r^2\\cos(2\\theta)$.",
+          "Divide both sides by $r^2$ (the pole $r=0$ is recovered separately): $r^2=2\\cos(2\\theta)$.",
+          "This is a lemniscate $r^2=2\\cos(2\\theta)$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Convert the polar conic $r=\\dfrac{4}{2-2\\cos\\theta}$ to rectangular form, identify the conic, and state its vertex.",
+      "answer": "$y^2=4x+4$, a parabola with vertex $(-1,0)$ opening right.",
+      "solution": {
+        "steps": [
+          "Factor the denominator: $r=\\dfrac{4}{2(1-\\cos\\theta)}=\\dfrac{2}{1-\\cos\\theta}$, so $e=1$ and the conic is a parabola.",
+          "Clear the denominator: $r(1-\\cos\\theta)=2$, so $r-r\\cos\\theta=2$.",
+          "Substitute $r=\\sqrt{x^2+y^2}$ and $r\\cos\\theta=x$: $\\sqrt{x^2+y^2}-x=2$.",
+          "Isolate and square: $\\sqrt{x^2+y^2}=x+2$, so $x^2+y^2=x^2+4x+4$.",
+          "Cancel $x^2$: $y^2=4x+4=4(x+1)$.",
+          "This is a rightward parabola with vertex $(-1,0)$."
+        ]
+      }
+    }
+  ]
+}

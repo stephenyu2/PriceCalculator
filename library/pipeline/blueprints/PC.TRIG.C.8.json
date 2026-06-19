@@ -1,0 +1,145 @@
+{
+  "standard": "PC.TRIG.C.8",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Laws of sines and cosines",
+  "clusterCode": "C",
+  "skillName": "Law of Sines",
+
+  "description": "Students apply the Law of Sines, $\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B} = \\dfrac{c}{\\sin C}$, to solve oblique (non-right) triangles given a side and two angles (AAS or ASA) or two sides and a non-included angle (SSA). They use the angle sum $A + B + C = 180^\\circ$ to find a missing angle, set up and solve a proportion for an unknown side or angle, and analyze the ambiguous SSA case to determine whether the data yield zero, one, or two triangles. They also compute the area of a triangle using $\\text{Area} = \\dfrac{1}{2}ab\\sin C$ when two sides and the included angle are known.",
+
+  "subSkills": [
+    "State the Law of Sines and identify when it applies (AAS, ASA, or SSA configurations)",
+    "Use the triangle angle sum $A+B+C=180^\\circ$ to find a third angle before applying the law",
+    "Set up a correct proportion pairing each side with the sine of its opposite angle",
+    "Solve the proportion for an unknown side: $a = \\dfrac{b\\sin A}{\\sin B}$",
+    "Solve the proportion for an unknown angle: $\\sin A = \\dfrac{a\\sin B}{b}$, then take $\\sin^{-1}$",
+    "Recognize the second possible angle $180^\\circ - \\theta$ when solving for an angle (SSA)",
+    "Analyze the ambiguous SSA case to count solutions (zero, one, or two triangles)",
+    "Use the height test $h = b\\sin A$ to classify the SSA case",
+    "Compute triangle area with $\\text{Area} = \\dfrac{1}{2}ab\\sin C$ (two sides and included angle)",
+    "Solve real-world bearing, surveying, and navigation problems with the Law of Sines"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "AAS / ASA solve for a side",
+      "example": "In $\\triangle ABC$, $A = 40^\\circ$, $B = 75^\\circ$, and $a = 12$. Find side $b$. Setup: $\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B}$ gives $b = \\dfrac{12\\sin 75^\\circ}{\\sin 40^\\circ} \\approx 18.0$."
+    },
+    {
+      "name": "Find a missing angle first (ASA)",
+      "example": "In $\\triangle ABC$, $A = 50^\\circ$, $C = 60^\\circ$, and $b = 10$. Find side $a$. First $B = 180^\\circ - 50^\\circ - 60^\\circ = 70^\\circ$, then $a = \\dfrac{10\\sin 50^\\circ}{\\sin 70^\\circ} \\approx 8.15$."
+    },
+    {
+      "name": "SSA solve for an angle (one triangle)",
+      "example": "Given $a = 22$, $b = 12$, and $A = 42^\\circ$, find $B$. $\\sin B = \\dfrac{12\\sin 42^\\circ}{22} \\approx 0.365$, so $B \\approx 21.4^\\circ$. Since $a > b$, only one triangle exists."
+    },
+    {
+      "name": "Ambiguous SSA: two triangles",
+      "example": "Given $a = 10$, $b = 16$, and $A = 30^\\circ$, find all triangles. $\\sin B = \\dfrac{16\\sin 30^\\circ}{10} = 0.8$, so $B \\approx 53.1^\\circ$ or $B \\approx 126.9^\\circ$. Both keep $A+B < 180^\\circ$, so two triangles are determined."
+    },
+    {
+      "name": "Ambiguous SSA: no triangle",
+      "example": "Given $a = 5$, $b = 12$, and $A = 40^\\circ$, find $B$. $\\sin B = \\dfrac{12\\sin 40^\\circ}{5} \\approx 1.54 > 1$, which is impossible, so no triangle exists."
+    },
+    {
+      "name": "Classify the SSA case with the height test",
+      "example": "Given $A = 35^\\circ$, $a = 7$, $b = 10$, determine the number of triangles. Height $h = b\\sin A = 10\\sin 35^\\circ \\approx 5.74$. Since $h < a < b$, two triangles are determined."
+    },
+    {
+      "name": "Triangle area from two sides and included angle",
+      "example": "In $\\triangle ABC$, $a = 9$, $b = 14$, and the included angle $C = 50^\\circ$. Area $= \\dfrac{1}{2}(9)(14)\\sin 50^\\circ \\approx 48.3$ square units."
+    },
+    {
+      "name": "Real-world bearing / surveying application",
+      "example": "Two observers $500$ m apart sight a balloon. From the first, the angle of elevation along the line is $65^\\circ$; from the second it is $80^\\circ$. Find the distance from the first observer to the balloon using the Law of Sines after finding the third angle $35^\\circ$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Direct AAS/ASA setup solving for one unknown side or angle. The proportion pairs are given directly or require at most one angle-sum subtraction. No ambiguous case; exactly one triangle. Single computation, no case analysis.",
+      "constraints": [
+        "Configuration is AAS or ASA (never SSA)",
+        "At most one angle found via $180^\\circ - A - B$ before the proportion",
+        "Solve a single proportion $\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B}$ for one unknown",
+        "Angles are common values (e.g. $30^\\circ, 45^\\circ, 60^\\circ$ or clean integers)",
+        "Answer rounded to one decimal place; one solution guaranteed"
+      ]
+    },
+    "Medium": {
+      "description": "SSA case solving for an angle that yields exactly one triangle, or a multi-step AAS problem requiring an angle-sum step plus a proportion. May require taking $\\sin^{-1}$ and reasoning that the supplementary angle is rejected. Includes basic area computation with $\\frac{1}{2}ab\\sin C$.",
+      "constraints": [
+        "SSA with a clear single-triangle outcome (e.g. $a \\ge b$), or two-step AAS/ASA",
+        "Requires $\\sin^{-1}$ to find an angle, then justify one vs. two triangles",
+        "May ask for area via $\\text{Area} = \\dfrac{1}{2}ab\\sin C$ given the included angle",
+        "Non-standard angle measures; at least two distinct steps",
+        "Answers may be exact where possible or rounded to one decimal"
+      ]
+    },
+    "Hard": {
+      "description": "Full ambiguous-case analysis: student must determine whether zero, one, or two triangles exist using the height test, find all solutions (both $B$ values and the corresponding remaining side/angle), or solve a multi-stage word problem that combines angle-sum, the Law of Sines, and area. Requires synthesizing several steps and justifying the count of solutions.",
+      "constraints": [
+        "Ambiguous SSA where the count (0, 1, or 2) is not obvious without $h = b\\sin A$",
+        "When two triangles exist, solve both completely (both $B$, both $C$, both $c$)",
+        "Multi-stage applications: bearings/surveying combining Law of Sines with area or a second triangle",
+        "May require exact-value reasoning or comparing two computed quantities",
+        "Student must state and justify the number of triangles, not just compute"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student pairs a side with the wrong angle in the proportion",
+      "distractor": "Writes $\\dfrac{a}{\\sin B} = \\dfrac{b}{\\sin A}$ (side over the adjacent angle's sine) instead of pairing each side with the sine of the angle opposite it, producing $a = \\dfrac{b\\sin B}{\\sin A}$"
+    },
+    {
+      "misconception": "Student forgets the angle sum and never finds the third angle in ASA",
+      "distractor": "Uses the given non-opposite angle directly in the proportion, e.g. plugs $C$ in where $B$ is needed, skipping $B = 180^\\circ - A - C$"
+    },
+    {
+      "misconception": "Student inverts the proportion when solving for a side",
+      "distractor": "Computes $a = \\dfrac{\\sin A}{b\\sin B}$ or $a = \\dfrac{\\sin B}{b\\sin A}$ instead of $a = \\dfrac{b\\sin A}{\\sin B}$, dividing by the side instead of multiplying"
+    },
+    {
+      "misconception": "Student ignores the second possible angle in the SSA case",
+      "distractor": "Reports only $B = \\sin^{-1}(0.8) \\approx 53.1^\\circ$ and concludes one triangle, missing the valid supplement $B \\approx 126.9^\\circ$ that gives a second triangle"
+    },
+    {
+      "misconception": "Student accepts the supplementary angle even when it is invalid",
+      "distractor": "Claims two triangles by adding $B = 180^\\circ - \\theta$ even though $A + (180^\\circ - \\theta) \\ge 180^\\circ$, so the supplement is geometrically impossible"
+    },
+    {
+      "misconception": "Student does not recognize $\\sin B > 1$ means no triangle",
+      "distractor": "After getting $\\sin B \\approx 1.54$, rounds or caps it to $\\sin B = 1$ and reports $B = 90^\\circ$ instead of concluding no triangle exists"
+    },
+    {
+      "misconception": "Student uses the wrong sides in the area formula",
+      "distractor": "Computes $\\text{Area} = \\dfrac{1}{2}ab\\sin A$ (sine of a non-included angle) instead of $\\dfrac{1}{2}ab\\sin C$ with the angle included between sides $a$ and $b$"
+    },
+    {
+      "misconception": "Student treats the oblique triangle like a right triangle",
+      "distractor": "Applies SOH-CAH-TOA or the Pythagorean theorem (e.g. $c^2 = a^2 + b^2$) to a triangle with no right angle instead of the Law of Sines"
+    },
+    {
+      "misconception": "Student leaves the calculator in radian mode for degree inputs",
+      "distractor": "Evaluates $\\sin 40^\\circ$ as $\\sin(40\\text{ rad})$, yielding a wildly wrong side length such as a negative or out-of-range value"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

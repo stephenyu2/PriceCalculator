@@ -1,0 +1,162 @@
+{
+  "id": "PC.POLY.A.2--quiz",
+  "standard": "PC.POLY.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Polynomial and Rational Functions",
+  "domainCode": "POLY",
+  "cluster": "Polynomial functions",
+  "clusterCode": "A",
+  "skillName": "Zeros and Factoring",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Find real and complex zeros, factor completely, apply the Rational Root Theorem, the Conjugate Pairs Theorem, and the Fundamental Theorem of Algebra. Choose the single best answer for each question.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "List all possible rational zeros of $f(x)=x^3+2x^2-5x-6$ using the Rational Root Theorem.\nA) $\\pm 1,\\ \\pm 2,\\ \\pm 3,\\ \\pm 6$\nB) $\\pm 1,\\ \\pm 5,\\ \\pm 6$\nC) $\\pm 1,\\ \\pm 2,\\ \\pm 3$\nD) $1,\\ 2,\\ 3,\\ 6$",
+      "answer": "A) $\\pm 1,\\ \\pm 2,\\ \\pm 3,\\ \\pm 6$",
+      "solution": {
+        "steps": [
+          "The leading coefficient is $1$, so $q$ divides $1$ and every candidate is $\\frac{p}{1}=p$, an integer.",
+          "The constant term is $-6$, so $p$ ranges over the divisors of $6$: $1,2,3,6$.",
+          "Each candidate appears with both signs, giving $\\pm 1,\\ \\pm 2,\\ \\pm 3,\\ \\pm 6$, which is choice A.",
+          "B is wrong because it uses the prime $5$, which does not divide $6$, and drops $2$ and $3$.",
+          "C is wrong because it omits $\\pm 6$.",
+          "D is wrong because the Rational Root Theorem lists both positive and negative candidates, not just positives."
+        ],
+        "answer": "A) $\\pm 1,\\ \\pm 2,\\ \\pm 3,\\ \\pm 6$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Find all real zeros of $f(x)=x^3-6x^2+11x-6$.\nA) $x=1,\\ 2,\\ 3$\nB) $x=-1,\\ -2,\\ -3$\nC) $x=1,\\ 2,\\ 6$\nD) $x=2,\\ 3,\\ 6$",
+      "answer": "A) $x=1,\\ 2,\\ 3$",
+      "solution": {
+        "steps": [
+          "Test $x=1$: $1-6+11-6=0$, so $x=1$ is a zero. Synthetic division by $1$ gives the quotient $x^2-5x+6$.",
+          "Factor the quotient: $x^2-5x+6=(x-2)(x-3)$, so the remaining zeros are $x=2$ and $x=3$.",
+          "Thus all zeros are $x=1,\\ 2,\\ 3$, which is choice A.",
+          "B is wrong because it negates the roots; $(x+1)(x+2)(x+3)$ would expand with all positive coefficients, not the alternating signs here.",
+          "C and D are wrong because they keep $6$ from the constant term as a root, but $f(6)=216-216+66-6\\ne 0$."
+        ],
+        "answer": "A) $x=1,\\ 2,\\ 3$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Synthetic division of $f(x)=x^3-2x^2-5x+6$ by $x-3$ gives quotient $x^2+x-2$ and remainder $0$. What is the complete factorization of $f(x)$?\nA) $(x-3)(x+2)(x-1)$\nB) $(x-3)(x-2)(x+1)$\nC) $(x+3)(x+2)(x-1)$\nD) $(x-3)(x^2+x-2)$ with $x^2+x-2$ prime",
+      "answer": "A) $(x-3)(x+2)(x-1)$",
+      "solution": {
+        "steps": [
+          "A zero remainder means $x-3$ is a factor: $f(x)=(x-3)(x^2+x-2)$.",
+          "Factor the quadratic: $x^2+x-2=(x+2)(x-1)$ since $2\\cdot(-1)=-2$ and $2+(-1)=1$.",
+          "So $f(x)=(x-3)(x+2)(x-1)$, which is choice A.",
+          "B is wrong because it factors the quadratic with the wrong signs as $(x-2)(x+1)$, which gives $x^2-x-2$, not $x^2+x-2$.",
+          "C is wrong because it uses $(x+3)$; the divisor $x-3$ corresponds to the factor $(x-3)$, not $(x+3)$.",
+          "D is wrong because $x^2+x-2$ is not prime; it factors over the integers."
+        ],
+        "answer": "A) $(x-3)(x+2)(x-1)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Find all zeros (real and complex) of $f(x)=x^3-3x^2+4x-12$.\nA) $x=3,\\ 2i,\\ -2i$\nB) $x=3,\\ 2,\\ -2$\nC) $x=3,\\ 4i,\\ -4i$\nD) $x=-3,\\ 2i,\\ -2i$",
+      "answer": "A) $x=3,\\ 2i,\\ -2i$",
+      "solution": {
+        "steps": [
+          "Test $x=3$: $27-27+12-12=0$, so $x=3$ is a zero. Synthetic division gives the quotient $x^2+4$.",
+          "Solve $x^2+4=0$: $x^2=-4$, so $x=\\pm\\sqrt{-4}=\\pm 2i$.",
+          "The zeros are $x=3,\\ 2i,\\ -2i$, which is choice A.",
+          "B is wrong because $x^2+4=0$ has no real solutions; $\\pm 2$ are not zeros.",
+          "C is wrong because it mishandles $\\sqrt{-4}$ as $4i$ instead of $2i$.",
+          "D is wrong because it negates the real zero; $f(-3)=-27-27-12-12\\ne 0$."
+        ],
+        "answer": "A) $x=3,\\ 2i,\\ -2i$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Find all zeros of $f(x)=x^2-4x+13$.\nA) $x=2\\pm 3i$\nB) $x=2\\pm 3$\nC) $x=-2\\pm 3i$\nD) $x=2\\pm\\sqrt{17}$",
+      "answer": "A) $x=2\\pm 3i$",
+      "solution": {
+        "steps": [
+          "Apply the quadratic formula: $x=\\frac{-(-4)\\pm\\sqrt{(-4)^2-4(1)(13)}}{2(1)}=\\frac{4\\pm\\sqrt{16-52}}{2}$.",
+          "The discriminant is $16-52=-36$, so $\\sqrt{-36}=6i$ and $x=\\frac{4\\pm 6i}{2}=2\\pm 3i$, which is choice A.",
+          "B is wrong because the discriminant is negative, so the roots are complex, not real.",
+          "C is wrong because $-b=-(-4)=+4$, giving real part $+2$, not $-2$.",
+          "D is wrong because it adds $4ac$ instead of subtracting: it uses $16+52=68$, giving $\\sqrt{17}$, an incorrect discriminant."
+        ],
+        "answer": "A) $x=2\\pm 3i$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Write a polynomial $f(x)$ of least degree with real coefficients that has zeros $x=2$ and $x=3i$.\nA) $f(x)=x^3-2x^2+9x-18$\nB) $f(x)=x^2-(2+3i)x+6i$\nC) $f(x)=x^2-2x+9$\nD) $f(x)=x^3+2x^2+9x+18$",
+      "answer": "A) $f(x)=x^3-2x^2+9x-18$",
+      "solution": {
+        "steps": [
+          "By the Conjugate Pairs Theorem, real coefficients force the conjugate $x=-3i$ to also be a zero, so the zeros are $2,\\ 3i,\\ -3i$.",
+          "The factors $(x-3i)(x+3i)=x^2-(3i)^2=x^2+9$, so $f(x)=(x-2)(x^2+9)$.",
+          "Expand: $(x-2)(x^2+9)=x^3+9x-2x^2-18=x^3-2x^2+9x-18$, which is choice A.",
+          "B is wrong because it uses only the single complex zero $3i$ without its conjugate, producing non-real coefficients.",
+          "C is wrong because $x^2-2x+9$ does not have $2$ or $3i$ as a zero and is only degree $2$.",
+          "D is wrong because it uses $(x+2)$ instead of $(x-2)$; its real zero would be $-2$, not $2$."
+        ],
+        "answer": "A) $f(x)=x^3-2x^2+9x-18$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Find all zeros of $f(x)=x^4-2x^3+x^2$, listed with multiplicity, and confirm the total equals the degree.\nA) $x=0$ (multiplicity $2$), $x=1$ (multiplicity $2$); total $4=\\deg f$\nB) $x=0,\\ x=1$; total $2$ zeros\nC) $x=0$ (multiplicity $2$), $x=1$; total $3$\nD) $x=0,\\ x=1,\\ x=-1$; total $3$",
+      "answer": "A) $x=0$ (multiplicity $2$), $x=1$ (multiplicity $2$); total $4=\\deg f$",
+      "solution": {
+        "steps": [
+          "Factor out $x^2$: $f(x)=x^2(x^2-2x+1)$.",
+          "The remaining quadratic is a perfect square: $x^2-2x+1=(x-1)^2$, so $f(x)=x^2(x-1)^2$.",
+          "Thus $x=0$ has multiplicity $2$ and $x=1$ has multiplicity $2$; the total counted with multiplicity is $2+2=4$, equal to $\\deg f$, which is choice A.",
+          "B is wrong because it counts only distinct zeros, giving $2$ instead of $4$, contradicting the Fundamental Theorem of Algebra.",
+          "C is wrong because it overlooks that $(x-1)^2$ makes $x=1$ a double zero.",
+          "D is wrong because $x=-1$ is not a zero: $f(-1)=1+2+1=4\\ne 0$."
+        ],
+        "answer": "A) $x=0$ (multiplicity $2$), $x=1$ (multiplicity $2$); total $4=\\deg f$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Factor $f(x)=x^4-1$ completely over the complex numbers, and state the total number of zeros.\nA) $(x-1)(x+1)(x-i)(x+i)$; $4$ zeros\nB) $(x-1)(x+1)(x^2+1)$; $2$ zeros\nC) $(x-1)(x+1)(x-i)$; $3$ zeros\nD) $(x^2-1)(x^2+1)$; $2$ zeros",
+      "answer": "A) $(x-1)(x+1)(x-i)(x+i)$; $4$ zeros",
+      "solution": {
+        "steps": [
+          "Difference of squares: $x^4-1=(x^2-1)(x^2+1)=(x-1)(x+1)(x^2+1)$.",
+          "Over $\\mathbb{C}$ the irreducible quadratic factors further: $x^2+1=(x-i)(x+i)$ since $(-i)(i)=1$ and the sum of roots is $0$.",
+          "So $f(x)=(x-1)(x+1)(x-i)(x+i)$ with zeros $1,\\ -1,\\ i,\\ -i$, a total of $4$, which is choice A.",
+          "B is wrong because it stops at the real factorization and leaves $x^2+1$ unfactored, undercounting to $2$ zeros.",
+          "C is wrong because it omits the conjugate $x=-i$, dropping a zero from the count.",
+          "D is wrong because it factors neither difference of squares fully and again undercounts the zeros."
+        ],
+        "answer": "A) $(x-1)(x+1)(x-i)(x+i)$; $4$ zeros"
+      }
+    }
+  ]
+}

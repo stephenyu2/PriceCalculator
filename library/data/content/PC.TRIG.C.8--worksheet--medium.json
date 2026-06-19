@@ -1,0 +1,215 @@
+{
+  "id": "PC.TRIG.C.8--worksheet--medium",
+  "standard": "PC.TRIG.C.8",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Laws of sines and cosines",
+  "clusterCode": "C",
+  "skillName": "Law of Sines",
+  "materialType": "worksheet",
+  "difficulty": "Medium",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Each problem uses the Law of Sines, $\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B} = \\dfrac{c}{\\sin C}$. Several require an angle-sum step before the proportion, an $\\sin^{-1}$ step in the SSA case, or the area formula $\\text{Area} = \\dfrac{1}{2}ab\\sin C$. Round angles and lengths to one decimal place unless an exact value is requested.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "In $\\triangle ABC$, $A = 38^\\circ$, $C = 64^\\circ$, and side $b = 15$. Find angle $B$, then find side $a$ to one decimal place.",
+      "answer": "$B = 78^\\circ$ and $a \\approx 9.4$ units",
+      "solution": {
+        "steps": [
+          "Find the third angle: $B = 180^\\circ - 38^\\circ - 64^\\circ = 78^\\circ$.",
+          "Pair side $a$ (opposite $A$) with side $b$ (opposite $B$): $\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B}$.",
+          "Solve for $a$: $a = \\dfrac{b\\sin A}{\\sin B} = \\dfrac{15\\sin 38^\\circ}{\\sin 78^\\circ}$.",
+          "Evaluate: $\\sin 38^\\circ \\approx 0.6157$ and $\\sin 78^\\circ \\approx 0.9781$, so $a \\approx \\dfrac{15(0.6157)}{0.9781} \\approx 9.4$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "In $\\triangle ABC$, $A = 52^\\circ$, $B = 71^\\circ$, and side $a = 20$. Find side $c$ to one decimal place.",
+      "answer": "$c \\approx 21.3$",
+      "solution": {
+        "steps": [
+          "Find the third angle: $C = 180^\\circ - 52^\\circ - 71^\\circ = 57^\\circ$.",
+          "Pair side $c$ (opposite $C$) with side $a$ (opposite $A$): $\\dfrac{c}{\\sin C} = \\dfrac{a}{\\sin A}$.",
+          "Solve for $c$: $c = \\dfrac{a\\sin C}{\\sin A} = \\dfrac{20\\sin 57^\\circ}{\\sin 52^\\circ}$.",
+          "Evaluate: $\\sin 57^\\circ \\approx 0.8387$ and $\\sin 52^\\circ \\approx 0.7880$, so $c \\approx \\dfrac{20(0.8387)}{0.7880} \\approx 21.3$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "In $\\triangle ABC$, sides $a = 25$ and $b = 14$, and angle $A = 47^\\circ$. Find angle $B$ to one decimal place, and explain why exactly one triangle exists.",
+      "answer": "$B \\approx 24.2^\\circ$, and only one triangle exists because $a > b$",
+      "solution": {
+        "steps": [
+          "Use the proportion solved for the unknown angle: $\\sin B = \\dfrac{b\\sin A}{a} = \\dfrac{14\\sin 47^\\circ}{25}$.",
+          "Evaluate: $\\sin 47^\\circ \\approx 0.7314$, so $\\sin B \\approx \\dfrac{14(0.7314)}{25} \\approx 0.4096$.",
+          "Take the inverse sine: $B \\approx \\sin^{-1}(0.4096) \\approx 24.2^\\circ$.",
+          "The supplement would be $180^\\circ - 24.2^\\circ = 155.8^\\circ$, but $47^\\circ + 155.8^\\circ = 202.8^\\circ > 180^\\circ$, so it is rejected. Since $a > b$, exactly one triangle exists."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "In $\\triangle ABC$, sides $a = 30$ and $b = 18$, and angle $A = 55^\\circ$. Find angle $B$ to one decimal place. State how many triangles are possible.",
+      "answer": "$B \\approx 29.4^\\circ$; one triangle",
+      "solution": {
+        "steps": [
+          "Solve for the unknown angle: $\\sin B = \\dfrac{b\\sin A}{a} = \\dfrac{18\\sin 55^\\circ}{30}$.",
+          "Evaluate: $\\sin 55^\\circ \\approx 0.8192$, so $\\sin B \\approx \\dfrac{18(0.8192)}{30} \\approx 0.4915$.",
+          "Take the inverse sine: $B \\approx \\sin^{-1}(0.4915) \\approx 29.4^\\circ$.",
+          "Because $a > b$, the side opposite $A$ is the longest of the two, so the supplement $150.6^\\circ$ is impossible and exactly one triangle exists."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "In $\\triangle ABC$, $a = 9$, $b = 12$, and the included angle $C = 50^\\circ$. Find the area of the triangle to one decimal place.",
+      "answer": "Area $\\approx 41.4$ square units",
+      "solution": {
+        "steps": [
+          "The included angle $C$ lies between sides $a$ and $b$, so use $\\text{Area} = \\dfrac{1}{2}ab\\sin C$.",
+          "Substitute: $\\text{Area} = \\dfrac{1}{2}(9)(12)\\sin 50^\\circ$.",
+          "Compute the product: $\\dfrac{1}{2}(9)(12) = 54$.",
+          "Evaluate: $\\sin 50^\\circ \\approx 0.7660$, so $\\text{Area} \\approx 54(0.7660) \\approx 41.4$ square units."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "In $\\triangle ABC$, $A = 33^\\circ$, $B = 49^\\circ$, and side $c = 22$. Find side $a$ to one decimal place.",
+      "answer": "$a \\approx 12.1$",
+      "solution": {
+        "steps": [
+          "Find the third angle: $C = 180^\\circ - 33^\\circ - 49^\\circ = 98^\\circ$.",
+          "Pair side $a$ (opposite $A$) with side $c$ (opposite $C$): $\\dfrac{a}{\\sin A} = \\dfrac{c}{\\sin C}$.",
+          "Solve for $a$: $a = \\dfrac{c\\sin A}{\\sin C} = \\dfrac{22\\sin 33^\\circ}{\\sin 98^\\circ}$.",
+          "Evaluate: $\\sin 33^\\circ \\approx 0.5446$ and $\\sin 98^\\circ \\approx 0.9903$, so $a \\approx \\dfrac{22(0.5446)}{0.9903} \\approx 12.1$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "In $\\triangle ABC$, sides $a = 16$ and $c = 10$, and angle $A = 61^\\circ$. Find angle $C$ to one decimal place.",
+      "answer": "$C \\approx 33.1^\\circ$",
+      "solution": {
+        "steps": [
+          "Solve the proportion for the unknown angle: $\\sin C = \\dfrac{c\\sin A}{a} = \\dfrac{10\\sin 61^\\circ}{16}$.",
+          "Evaluate: $\\sin 61^\\circ \\approx 0.8746$, so $\\sin C \\approx \\dfrac{10(0.8746)}{16} \\approx 0.5466$.",
+          "Take the inverse sine: $C \\approx \\sin^{-1}(0.5466) \\approx 33.1^\\circ$.",
+          "Since $a > c$, the supplement is rejected and this is the only solution."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "In $\\triangle ABC$, $B = 42^\\circ$, $C = 95^\\circ$, and side $a = 18$. Find side $b$ to one decimal place.",
+      "answer": "$b \\approx 17.7$",
+      "solution": {
+        "steps": [
+          "Find the third angle: $A = 180^\\circ - 42^\\circ - 95^\\circ = 43^\\circ$.",
+          "Pair side $b$ (opposite $B$) with side $a$ (opposite $A$): $\\dfrac{b}{\\sin B} = \\dfrac{a}{\\sin A}$.",
+          "Solve for $b$: $b = \\dfrac{a\\sin B}{\\sin A} = \\dfrac{18\\sin 42^\\circ}{\\sin 43^\\circ}$.",
+          "Evaluate: $\\sin 42^\\circ \\approx 0.6691$ and $\\sin 43^\\circ \\approx 0.6820$, so $b \\approx \\dfrac{18(0.6691)}{0.6820} \\approx 17.7$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "In $\\triangle ABC$, $a = 11$, $c = 8$, and the included angle $B = 73^\\circ$. Find the area of the triangle to one decimal place.",
+      "answer": "Area $\\approx 42.1$ square units",
+      "solution": {
+        "steps": [
+          "The angle $B$ is included between sides $a$ and $c$, so use $\\text{Area} = \\dfrac{1}{2}ac\\sin B$.",
+          "Substitute: $\\text{Area} = \\dfrac{1}{2}(11)(8)\\sin 73^\\circ$.",
+          "Compute the product: $\\dfrac{1}{2}(11)(8) = 44$.",
+          "Evaluate: $\\sin 73^\\circ \\approx 0.9563$, so $\\text{Area} \\approx 44(0.9563) \\approx 42.1$ square units."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "In $\\triangle ABC$, sides $b = 28$ and $c = 19$, and angle $B = 58^\\circ$. Find angle $C$ to one decimal place, and state the number of triangles.",
+      "answer": "$C \\approx 35.1^\\circ$; one triangle",
+      "solution": {
+        "steps": [
+          "Solve for the unknown angle: $\\sin C = \\dfrac{c\\sin B}{b} = \\dfrac{19\\sin 58^\\circ}{28}$.",
+          "Evaluate: $\\sin 58^\\circ \\approx 0.8480$, so $\\sin C \\approx \\dfrac{19(0.8480)}{28} \\approx 0.5754$.",
+          "Take the inverse sine: $C \\approx \\sin^{-1}(0.5754) \\approx 35.1^\\circ$.",
+          "Since $b > c$, the supplement $144.9^\\circ$ is impossible, so exactly one triangle exists."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A surveyor stands at point $A$ and sights a tower at point $C$ across a river. The baseline $AB$ is $120$ m long. The angle at $A$ (from the baseline to the tower) is $54^\\circ$ and the angle at $B$ is $66^\\circ$. Find the distance $AC$ from the surveyor to the tower to one decimal place.",
+      "answer": "$AC \\approx 126.6$ m",
+      "solution": {
+        "steps": [
+          "The angle at the tower is $C = 180^\\circ - 54^\\circ - 66^\\circ = 60^\\circ$.",
+          "Side $AC$ is opposite angle $B = 66^\\circ$, and the baseline $AB = 120$ m is opposite angle $C = 60^\\circ$.",
+          "Apply the Law of Sines: $\\dfrac{AC}{\\sin B} = \\dfrac{AB}{\\sin C}$, so $AC = \\dfrac{120\\sin 66^\\circ}{\\sin 60^\\circ}$.",
+          "Evaluate: $\\sin 66^\\circ \\approx 0.9135$ and $\\sin 60^\\circ \\approx 0.8660$, so $AC \\approx \\dfrac{120(0.9135)}{0.8660} \\approx 126.6$ m."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "In $\\triangle ABC$, $A = 29^\\circ$, $C = 47^\\circ$, and side $a = 13$. Find side $c$ to one decimal place.",
+      "answer": "$c \\approx 19.6$",
+      "solution": {
+        "steps": [
+          "Side $a$ is opposite $A$ and side $c$ is opposite $C$, both given, so no angle-sum step is needed for this pair.",
+          "Apply the Law of Sines: $\\dfrac{a}{\\sin A} = \\dfrac{c}{\\sin C}$.",
+          "Solve for $c$: $c = \\dfrac{a\\sin C}{\\sin A} = \\dfrac{13\\sin 47^\\circ}{\\sin 29^\\circ}$.",
+          "Evaluate: $\\sin 47^\\circ \\approx 0.7314$ and $\\sin 29^\\circ \\approx 0.4848$, so $c \\approx \\dfrac{13(0.7314)}{0.4848} \\approx 19.6$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "In $\\triangle ABC$, $b = 15$, $c = 21$, and the included angle $A = 84^\\circ$. Find the area of the triangle to one decimal place.",
+      "answer": "Area $\\approx 156.6$ square units",
+      "solution": {
+        "steps": [
+          "Angle $A$ is included between sides $b$ and $c$, so use $\\text{Area} = \\dfrac{1}{2}bc\\sin A$.",
+          "Substitute: $\\text{Area} = \\dfrac{1}{2}(15)(21)\\sin 84^\\circ$.",
+          "Compute the product: $\\dfrac{1}{2}(15)(21) = 157.5$.",
+          "Evaluate: $\\sin 84^\\circ \\approx 0.9945$, so $\\text{Area} \\approx 157.5(0.9945) \\approx 156.6$ square units."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "In $\\triangle ABC$, sides $a = 24$ and $b = 17$, and angle $A = 68^\\circ$. Find angle $B$ and then side $c$ to one decimal place.",
+      "answer": "$B \\approx 41.1^\\circ$ and $c \\approx 24.5$",
+      "solution": {
+        "steps": [
+          "Solve for $B$: $\\sin B = \\dfrac{b\\sin A}{a} = \\dfrac{17\\sin 68^\\circ}{24}$.",
+          "Evaluate: $\\sin 68^\\circ \\approx 0.9272$, so $\\sin B \\approx \\dfrac{17(0.9272)}{24} \\approx 0.6568$, giving $B \\approx 41.1^\\circ$ (the supplement is rejected since $a > b$).",
+          "Find the third angle: $C = 180^\\circ - 68^\\circ - 41.1^\\circ = 70.9^\\circ$.",
+          "Solve for $c$: $c = \\dfrac{a\\sin C}{\\sin A} = \\dfrac{24\\sin 70.9^\\circ}{\\sin 68^\\circ} \\approx \\dfrac{24(0.9451)}{0.9272} \\approx 24.5$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Two ranger stations $A$ and $B$ are $40$ km apart. Both spot the same forest fire at point $C$. The angle at station $A$ between the baseline $AB$ and the fire is $43^\\circ$, and the angle at station $B$ is $57^\\circ$. How far is the fire from station $B$? Round to one decimal place.",
+      "answer": "$BC \\approx 27.7$ km",
+      "solution": {
+        "steps": [
+          "The angle at the fire is $C = 180^\\circ - 43^\\circ - 57^\\circ = 80^\\circ$.",
+          "Side $BC$ is opposite angle $A = 43^\\circ$, and the baseline $AB = 40$ km is opposite angle $C = 80^\\circ$.",
+          "Apply the Law of Sines: $\\dfrac{BC}{\\sin A} = \\dfrac{AB}{\\sin C}$, so $BC = \\dfrac{40\\sin 43^\\circ}{\\sin 80^\\circ}$.",
+          "Evaluate: $\\sin 43^\\circ \\approx 0.6820$ and $\\sin 80^\\circ \\approx 0.9848$, so $BC \\approx \\dfrac{40(0.6820)}{0.9848} \\approx 27.7$ km."
+        ]
+      }
+    }
+  ]
+}

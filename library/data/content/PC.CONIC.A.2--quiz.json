@@ -1,0 +1,157 @@
+{
+  "id": "PC.CONIC.A.2--quiz",
+  "standard": "PC.CONIC.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Analytic Geometry",
+  "domainCode": "CONIC",
+  "cluster": "Conic sections",
+  "clusterCode": "A",
+  "skillName": "Ellipses",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Multiple-choice quiz on ellipses: reading features from standard form, translated ellipses, writing equations from features, completing the square, and eccentricity.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "What are the vertices of the ellipse $\\frac{x^2}{25}+\\frac{y^2}{9}=1$?\nA) $(\\pm 5,0)$\nB) $(0,\\pm 3)$\nC) $(\\pm 25,0)$\nD) $(\\pm 3,0)$",
+      "answer": "A) $(\\pm 5,0)$",
+      "solution": {
+        "steps": [
+          "The larger denominator is $25$ and it sits under $x^2$, so the major axis is horizontal with $a^2=25$, giving $a=5$.",
+          "Vertices are the endpoints of the major axis: $(\\pm a,0)=(\\pm 5,0)$, so A is correct.",
+          "B gives the co-vertices $(0,\\pm 3)$ (endpoints of the minor axis), not the vertices.",
+          "C forgets to take the square root, using $a^2=25$ directly as a coordinate.",
+          "D uses $b=3$ as if it were $a$, placing the vertices on the minor axis."
+        ],
+        "answer": "A) $(\\pm 5,0)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "What are the co-vertices of the ellipse $\\frac{x^2}{36}+\\frac{y^2}{16}=1$?\nA) $(\\pm 6,0)$\nB) $(0,\\pm 4)$\nC) $(0,\\pm 16)$\nD) $(\\pm 4,0)$",
+      "answer": "B) $(0,\\pm 4)$",
+      "solution": {
+        "steps": [
+          "The major axis is horizontal since $36>16$ sits under $x^2$, so $a^2=36$ and $b^2=16$, giving $b=4$.",
+          "Co-vertices are the endpoints of the minor axis: $(0,\\pm b)=(0,\\pm 4)$, so B is correct.",
+          "A gives the vertices $(\\pm 6,0)$, the endpoints of the major axis, not the co-vertices.",
+          "C forgets to take the square root, using $b^2=16$ as a coordinate.",
+          "D places $b=4$ on the wrong axis."
+        ],
+        "answer": "B) $(0,\\pm 4)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "What are the foci of the ellipse $\\frac{x^2}{25}+\\frac{y^2}{9}=1$?\nA) $(\\pm\\sqrt{34},0)$\nB) $(0,\\pm 4)$\nC) $(\\pm 4,0)$\nD) $(\\pm 16,0)$",
+      "answer": "C) $(\\pm 4,0)$",
+      "solution": {
+        "steps": [
+          "Here $a^2=25$ and $b^2=9$, and the major axis is horizontal.",
+          "Use $c^2=a^2-b^2=25-9=16$, so $c=4$, and the foci lie on the major axis: $(\\pm 4,0)$. C is correct.",
+          "A uses the hyperbola relationship $c^2=a^2+b^2=34$ by mistake.",
+          "B puts the foci on the minor (vertical) axis instead of the major axis.",
+          "D fails to take the square root of $c^2=16$."
+        ],
+        "answer": "C) $(\\pm 4,0)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "What is the center of the ellipse $\\frac{(x-2)^2}{4}+\\frac{(y+3)^2}{16}=1$?\nA) $(-2,3)$\nB) $(2,-3)$\nC) $(2,3)$\nD) $(-2,-3)$",
+      "answer": "B) $(2,-3)$",
+      "solution": {
+        "steps": [
+          "Standard form is $\\frac{(x-h)^2}{a^2}+\\frac{(y-k)^2}{b^2}=1$ with center $(h,k)$.",
+          "Matching $(x-2)$ gives $h=2$, and matching $(y+3)=(y-(-3))$ gives $k=-3$, so the center is $(2,-3)$. B is correct.",
+          "A reverses both signs, a common error reading $(x-h)$ and $(y-k)$.",
+          "C and D each flip one of the two signs incorrectly."
+        ],
+        "answer": "B) $(2,-3)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "What are the vertices of the ellipse $\\frac{x^2}{9}+\\frac{y^2}{25}=1$?\nA) $(\\pm 3,0)$\nB) $(0,\\pm 5)$\nC) $(\\pm 5,0)$\nD) $(0,\\pm 3)$",
+      "answer": "B) $(0,\\pm 5)$",
+      "solution": {
+        "steps": [
+          "The larger denominator $25$ sits under $y^2$, so the major axis is vertical with $a^2=25$ and $a=5$.",
+          "Vertices on a vertical major axis are $(0,\\pm a)=(0,\\pm 5)$, so B is correct.",
+          "A treats the major axis as horizontal, assigning $a$ to the smaller denominator.",
+          "C uses $a=5$ but places the vertices on the wrong (horizontal) axis.",
+          "D uses $b=3$ as the vertex distance."
+        ],
+        "answer": "B) $(0,\\pm 5)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Which equation is the standard form of the ellipse with center $(0,0)$, a vertex at $(0,6)$, and a focus at $(0,4)$?\nA) $\\frac{x^2}{20}+\\frac{y^2}{36}=1$\nB) $\\frac{x^2}{36}+\\frac{y^2}{20}=1$\nC) $\\frac{x^2}{16}+\\frac{y^2}{36}=1$\nD) $\\frac{x^2}{36}+\\frac{y^2}{52}=1$",
+      "answer": "A) $\\frac{x^2}{20}+\\frac{y^2}{36}=1$",
+      "solution": {
+        "steps": [
+          "The vertex $(0,6)$ and focus $(0,4)$ lie on the $y$-axis, so the major axis is vertical: $a=6$ and $c=4$.",
+          "Then $b^2=a^2-c^2=36-16=20$, and $a^2=36$ goes under $y^2$ (vertical major axis): $\\frac{x^2}{20}+\\frac{y^2}{36}=1$. A is correct.",
+          "B swaps the denominators, putting the larger value under $x^2$ as if the major axis were horizontal.",
+          "C uses $c^2=16$ as $b^2$ instead of computing $b^2=a^2-c^2$.",
+          "D uses the hyperbola relation $b^2=a^2+c^2=52$."
+        ],
+        "answer": "A) $\\frac{x^2}{20}+\\frac{y^2}{36}=1$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Rewrite $9x^2+4y^2-18x+16y-11=0$ in standard form.\nA) $\\frac{(x-1)^2}{4}+\\frac{(y+2)^2}{9}=1$\nB) $\\frac{(x+1)^2}{4}+\\frac{(y-2)^2}{9}=1$\nC) $\\frac{(x-1)^2}{4}+(y+2)^2=1$\nD) $\\frac{(x-1)^2}{9}+\\frac{(y+2)^2}{4}=1$",
+      "answer": "A) $\\frac{(x-1)^2}{4}+\\frac{(y+2)^2}{9}=1$",
+      "solution": {
+        "steps": [
+          "Group and factor leading coefficients: $9(x^2-2x)+4(y^2+4y)=11$.",
+          "Complete the square: $x^2-2x+1$ and $y^2+4y+4$. Add $9\\cdot 1=9$ and $4\\cdot 4=16$ to the right: $9(x-1)^2+4(y+2)^2=11+9+16=36$.",
+          "Divide every term by $36$: $\\frac{9(x-1)^2}{36}+\\frac{4(y+2)^2}{36}=1$, which gives $\\frac{(x-1)^2}{4}+\\frac{(y+2)^2}{9}=1$. A is correct.",
+          "B reverses the signs of the center; the binomials should be $(x-1)$ and $(y+2)$.",
+          "C fails to divide the $(y+2)^2$ term by its denominator when normalizing the right side to $1$.",
+          "D swaps the denominators $4$ and $9$ between the two terms."
+        ],
+        "answer": "A) $\\frac{(x-1)^2}{4}+\\frac{(y+2)^2}{9}=1$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "An ellipse centered at the origin has a vertical major axis with $a=10$ and eccentricity $e=\\frac{3}{5}$. What is its standard-form equation?\nA) $\\frac{x^2}{64}+\\frac{y^2}{100}=1$\nB) $\\frac{x^2}{100}+\\frac{y^2}{64}=1$\nC) $\\frac{x^2}{36}+\\frac{y^2}{100}=1$\nD) $\\frac{x^2}{100}+\\frac{y^2}{136}=1$",
+      "answer": "A) $\\frac{x^2}{64}+\\frac{y^2}{100}=1$",
+      "solution": {
+        "steps": [
+          "Eccentricity is $e=\\frac{c}{a}$, so $c=ea=\\frac{3}{5}\\cdot 10=6$.",
+          "Then $b^2=a^2-c^2=100-36=64$.",
+          "The major axis is vertical, so $a^2=100$ goes under $y^2$ and $b^2=64$ under $x^2$: $\\frac{x^2}{64}+\\frac{y^2}{100}=1$. A is correct.",
+          "B swaps the denominators, treating the major axis as horizontal.",
+          "C uses $c^2=36$ as $b^2$ instead of $b^2=a^2-c^2=64$.",
+          "D uses the hyperbola relation $b^2=a^2+c^2=136$."
+        ],
+        "answer": "A) $\\frac{x^2}{64}+\\frac{y^2}{100}=1$"
+      }
+    }
+  ]
+}

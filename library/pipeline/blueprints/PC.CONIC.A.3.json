@@ -1,0 +1,152 @@
+{
+  "standard": "PC.CONIC.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Analytic Geometry",
+  "domainCode": "CONIC",
+  "cluster": "Conic sections",
+  "clusterCode": "A",
+  "skillName": "Hyperbolas",
+
+  "description": "Students work with hyperbolas in the coordinate plane. They derive and use the standard-form equation of a hyperbola centered at $(h,k)$ in both horizontal orientation $\\frac{(x-h)^2}{a^2}-\\frac{(y-k)^2}{b^2}=1$ and vertical orientation $\\frac{(y-k)^2}{a^2}-\\frac{(x-h)^2}{b^2}=1$. They identify the center, vertices, co-vertices, foci, and asymptotes; use the relationship $c^2=a^2+b^2$ to move between $a$, $b$, and $c$; determine orientation from the equation; convert general second-degree equations to standard form by completing the square; and sketch the hyperbola with its central rectangle and asymptotes.",
+
+  "subSkills": [
+    "Identify a hyperbola from its equation and distinguish it from an ellipse (subtraction of squared terms vs. addition)",
+    "Determine orientation (horizontal vs. vertical transverse axis) from which variable's squared term is positive",
+    "Read off the center $(h,k)$, $a^2$, and $b^2$ from standard form",
+    "Apply $c^2=a^2+b^2$ to find $c$ given $a$ and $b$ (or solve for a missing value)",
+    "Locate vertices, co-vertices, and foci along the correct axis",
+    "Write the equations of the two asymptotes through the center with slopes $\\pm\\frac{b}{a}$ (horizontal) or $\\pm\\frac{a}{b}$ (vertical)",
+    "Complete the square on both variables to convert a general equation $Ax^2+Cy^2+Dx+Ey+F=0$ (with $A$ and $C$ opposite signs) into standard form",
+    "Derive the standard-form equation from given features (center, a vertex, a focus, or asymptotes)",
+    "Sketch a hyperbola using the central rectangle, asymptotes, vertices, and branches",
+    "Compute the eccentricity $e=\\frac{c}{a}>1$ and interpret it"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Identify features from standard form (centered at origin)",
+      "example": "For $\\frac{x^2}{16}-\\frac{y^2}{9}=1$, find the center, vertices, foci, and asymptotes."
+    },
+    {
+      "name": "Identify features from standard form (translated center)",
+      "example": "For $\\frac{(y+2)^2}{25}-\\frac{(x-3)^2}{144}=1$, find the center, vertices, foci, and asymptotes, and state the orientation."
+    },
+    {
+      "name": "Determine orientation",
+      "example": "Does $\\frac{(y-1)^2}{4}-\\frac{(x+5)^2}{9}=1$ open left/right or up/down? Justify."
+    },
+    {
+      "name": "Find the foci using $c^2=a^2+b^2$",
+      "example": "Find the coordinates of the foci of $\\frac{x^2}{36}-\\frac{y^2}{64}=1$."
+    },
+    {
+      "name": "Write equations of the asymptotes",
+      "example": "Write the asymptotes of $\\frac{(x-2)^2}{9}-\\frac{(y+1)^2}{16}=1$."
+    },
+    {
+      "name": "Complete the square to reach standard form",
+      "example": "Write $9x^2-4y^2-54x-8y+113=0$ in standard form and identify the center."
+    },
+    {
+      "name": "Derive the equation from features",
+      "example": "A hyperbola has center $(0,0)$, a vertex at $(0,5)$, and a focus at $(0,13)$. Write its standard-form equation."
+    },
+    {
+      "name": "Derive the equation from a vertex and an asymptote",
+      "example": "A hyperbola centered at the origin has a vertex at $(4,0)$ and asymptotes $y=\\pm\\frac{3}{4}x$. Write its equation."
+    },
+    {
+      "name": "Sketch the hyperbola",
+      "example": "Sketch $\\frac{x^2}{4}-\\frac{y^2}{1}=1$ by drawing the central rectangle, asymptotes, vertices, and branches."
+    },
+    {
+      "name": "Eccentricity",
+      "example": "Find the eccentricity of $\\frac{x^2}{9}-\\frac{y^2}{16}=1$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Hyperbola centered at the origin already in standard form with $a^2$ and $b^2$ perfect squares. Single feature requested (center, vertices, or orientation). Direct read-off plus at most one application of $c^2=a^2+b^2$ with clean numbers.",
+      "constraints": [
+        "Center at $(0,0)$; equation given in standard form",
+        "$a^2$ and $b^2$ are perfect squares with $a,b\\le 12$",
+        "$c$ comes out a clean integer (e.g. $a=3,b=4\\Rightarrow c=5$) or a simple radical like $\\sqrt{13}$",
+        "Asks for one feature, or vertices/foci only"
+      ]
+    },
+    "Medium": {
+      "description": "Translated center $(h,k)$ in standard form, or origin-centered requiring several linked features at once (vertices, foci, and asymptotes together). Orientation must be read correctly and translation applied to coordinates. May produce radical values of $c$.",
+      "constraints": [
+        "Nonzero center $(h,k)$ requiring translation of every feature",
+        "May be vertical orientation so slopes are $\\pm\\frac{a}{b}$ and foci shift in $y$",
+        "Requests multiple features in one problem (vertices AND foci AND asymptotes)",
+        "$c$ may be an exact radical such as $\\sqrt{34}$ or $2\\sqrt{10}$",
+        "Or: derive the equation from center plus one vertex and one focus"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems requiring completing the square to reach standard form, derivation of the equation from mixed or indirect features (asymptotes plus a point, focus plus eccentricity), or a derivation/proof using the locus definition. Several algebra steps and sign decisions before any feature can be read.",
+      "constraints": [
+        "Convert a general second-degree equation via completing the square on both variables, including factoring out leading coefficients and balancing the constant",
+        "Derive the equation from asymptote slopes plus a vertex or a passing point",
+        "Combine eccentricity with $c^2=a^2+b^2$ to solve for $a$, $b$, $c$",
+        "May require recognizing a non-standard arrangement (e.g. $y^2$ term first, or coefficients not yet 1) and correct orientation assignment",
+        "Locus derivation: use $|d_1-d_2|=2a$ to obtain the standard form"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student uses the ellipse relationship $c^2=a^2-b^2$ instead of $c^2=a^2+b^2$ for the hyperbola",
+      "distractor": "For $\\frac{x^2}{16}-\\frac{y^2}{9}=1$ reports $c=\\sqrt{16-9}=\\sqrt{7}$ and foci $(\\pm\\sqrt{7},0)$ instead of $c=5$, foci $(\\pm 5,0)$"
+    },
+    {
+      "misconception": "Student determines orientation from which denominator is larger (ellipse logic) rather than from which squared term is positive",
+      "distractor": "For $\\frac{y^2}{4}-\\frac{x^2}{9}=1$ claims it opens left/right because $9>4$, instead of up/down because the $y^2$ term is positive"
+    },
+    {
+      "misconception": "Student takes $a$ as the square root of the larger denominator regardless of position, so picks the wrong axis for $a$",
+      "distractor": "For $\\frac{x^2}{9}-\\frac{y^2}{25}=1$ sets $a^2=25$ and puts vertices at $(0,\\pm 5)$ instead of $a^2=9$, vertices $(\\pm 3,0)$"
+    },
+    {
+      "misconception": "Student writes asymptote slopes as $\\pm\\frac{a}{b}$ for a horizontal hyperbola (inverts the ratio)",
+      "distractor": "For $\\frac{x^2}{16}-\\frac{y^2}{9}=1$ gives asymptotes $y=\\pm\\frac{4}{3}x$ instead of $y=\\pm\\frac{3}{4}x$"
+    },
+    {
+      "misconception": "Student ignores the center translation and places vertices/foci/asymptotes relative to the origin",
+      "distractor": "For $\\frac{(x-3)^2}{4}-\\frac{(y+1)^2}{5}=1$ reports vertices $(\\pm 2,0)$ instead of $(3\\pm 2,-1)=(1,-1)$ and $(5,-1)$"
+    },
+    {
+      "misconception": "Student mishandles the sign of $h$ or $k$, reading $(x-h)^2$ as center $-h$",
+      "distractor": "For $\\frac{(x+4)^2}{9}-\\frac{(y-2)^2}{16}=1$ states the center is $(4,-2)$ instead of $(-4,2)$"
+    },
+    {
+      "misconception": "When completing the square, student forgets to multiply the added constant by the factored-out leading coefficient, breaking the balance",
+      "distractor": "For $9x^2-54x-\\dots$ adds $9$ inside the parentheses but only adds $9$ (not $81$) to the other side, giving the wrong $a^2$ and $b^2$"
+    },
+    {
+      "misconception": "Student confuses vertices (endpoints of the transverse axis on the curve) with co-vertices (endpoints of the conjugate axis, not on the curve)",
+      "distractor": "For $\\frac{x^2}{16}-\\frac{y^2}{9}=1$ lists vertices as $(0,\\pm 3)$ (the co-vertices) instead of $(\\pm 4,0)$"
+    },
+    {
+      "misconception": "Student computes eccentricity as $\\frac{a}{c}$ or as a value less than 1, treating it like an ellipse",
+      "distractor": "For $\\frac{x^2}{9}-\\frac{y^2}{16}=1$ reports $e=\\frac{3}{5}$ instead of $e=\\frac{c}{a}=\\frac{5}{3}$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

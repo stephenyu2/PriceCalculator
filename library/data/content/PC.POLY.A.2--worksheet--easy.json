@@ -1,0 +1,217 @@
+{
+  "id": "PC.POLY.A.2--worksheet--easy",
+  "standard": "PC.POLY.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Polynomial and Rational Functions",
+  "domainCode": "POLY",
+  "cluster": "Polynomial functions",
+  "clusterCode": "A",
+  "skillName": "Zeros and Factoring",
+  "materialType": "worksheet",
+  "difficulty": "Easy",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems build fluency finding the zeros of monic polynomials with integer roots. List candidate rational zeros, verify zeros with synthetic division, factor quadratics over the integers, and write complete factorizations. Every zero in this set is an integer, so no quadratic formula is needed.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "List all possible rational zeros of $f(x)=x^2+5x+6$ using the Rational Root Theorem.",
+      "answer": "$\\pm 1,\\ \\pm 2,\\ \\pm 3,\\ \\pm 6$",
+      "solution": {
+        "steps": [
+          "The Rational Root Theorem says each candidate has the form $\\frac{p}{q}$, where $p$ divides the constant term and $q$ divides the leading coefficient.",
+          "The leading coefficient is $1$, so $q=\\pm 1$ and every candidate is just $\\pm$ a divisor of the constant term $6$.",
+          "The positive divisors of $6$ are $1,\\ 2,\\ 3,\\ 6$.",
+          "Including both signs gives the candidates $\\pm 1,\\ \\pm 2,\\ \\pm 3,\\ \\pm 6$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Find all zeros of $f(x)=x^2-7x+12$ by factoring.",
+      "answer": "$x=3$ and $x=4$",
+      "solution": {
+        "steps": [
+          "Look for two integers whose product is $12$ and whose sum is $-7$.",
+          "The pair $-3$ and $-4$ works: $(-3)(-4)=12$ and $-3+(-4)=-7$.",
+          "Factor: $f(x)=(x-3)(x-4)$.",
+          "Set each factor to zero: $x-3=0$ gives $x=3$, and $x-4=0$ gives $x=4$.",
+          "The zeros are $x=3$ and $x=4$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Find all zeros of $f(x)=x^2+2x-15$ by factoring.",
+      "answer": "$x=3$ and $x=-5$",
+      "solution": {
+        "steps": [
+          "Find two integers whose product is $-15$ and whose sum is $2$.",
+          "The pair $5$ and $-3$ works: $(5)(-3)=-15$ and $5+(-3)=2$.",
+          "Factor: $f(x)=(x+5)(x-3)$.",
+          "Set each factor to zero: $x+5=0$ gives $x=-5$, and $x-3=0$ gives $x=3$.",
+          "The zeros are $x=3$ and $x=-5$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Use synthetic division to show that $x=1$ is a zero of $f(x)=x^3-2x^2-5x+6$, and state the quotient.",
+      "answer": "The remainder is $0$, so $x=1$ is a zero; the quotient is $x^2-x-6$.",
+      "solution": {
+        "steps": [
+          "To test the factor $(x-1)$, place $1$ (the value of the zero, not $-1$) in the synthetic-division box.",
+          "Write the coefficients of $f(x)$: $1,\\ -2,\\ -5,\\ 6$.",
+          "Bring down $1$. Multiply $1\\cdot 1=1$ and add to $-2$ to get $-1$.",
+          "Multiply $1\\cdot(-1)=-1$ and add to $-5$ to get $-6$. Multiply $1\\cdot(-6)=-6$ and add to $6$ to get $0$.",
+          "The remainder is $0$, so $x=1$ is a zero, and the quotient is $x^2-x-6$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Find all zeros of $f(x)=x^2-9$.",
+      "answer": "$x=3$ and $x=-3$",
+      "solution": {
+        "steps": [
+          "Recognize a difference of squares: $x^2-9=x^2-3^2$.",
+          "Factor: $f(x)=(x-3)(x+3)$.",
+          "Set each factor to zero: $x-3=0$ gives $x=3$, and $x+3=0$ gives $x=-3$.",
+          "The zeros are $x=3$ and $x=-3$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "List all possible rational zeros of $f(x)=x^3-4x^2+x+6$ using the Rational Root Theorem.",
+      "answer": "$\\pm 1,\\ \\pm 2,\\ \\pm 3,\\ \\pm 6$",
+      "solution": {
+        "steps": [
+          "The leading coefficient is $1$, so every candidate is $\\pm$ a divisor of the constant term $6$.",
+          "The positive divisors of $6$ are $1,\\ 2,\\ 3,\\ 6$.",
+          "Including both signs gives the candidates $\\pm 1,\\ \\pm 2,\\ \\pm 3,\\ \\pm 6$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Find all zeros of $f(x)=x^3-6x^2+11x-6$. (One zero is $x=1$.)",
+      "answer": "$x=1,\\ x=2,\\ x=3$",
+      "solution": {
+        "steps": [
+          "Test $x=1$ by synthetic division with coefficients $1,\\ -6,\\ 11,\\ -6$.",
+          "Bring down $1$; $1\\cdot 1=1$, $-6+1=-5$; $1\\cdot(-5)=-5$, $11-5=6$; $1\\cdot 6=6$, $-6+6=0$.",
+          "The remainder is $0$, so $x=1$ is a zero and the quotient is $x^2-5x+6$.",
+          "Factor the quotient: $x^2-5x+6=(x-2)(x-3)$.",
+          "Thus $f(x)=(x-1)(x-2)(x-3)$, and the zeros are $x=1,\\ 2,\\ 3$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Find all zeros of $f(x)=x^2-x-12$ by factoring.",
+      "answer": "$x=4$ and $x=-3$",
+      "solution": {
+        "steps": [
+          "Find two integers whose product is $-12$ and whose sum is $-1$.",
+          "The pair $-4$ and $3$ works: $(-4)(3)=-12$ and $-4+3=-1$.",
+          "Factor: $f(x)=(x-4)(x+3)$.",
+          "Set each factor to zero: $x=4$ and $x=-3$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Verify whether $x=-2$ is a zero of $f(x)=x^3+3x^2-4$ using synthetic division.",
+      "answer": "Yes; the remainder is $0$, so $x=-2$ is a zero of $f(x)$.",
+      "solution": {
+        "steps": [
+          "Write the coefficients of $f(x)=x^3+3x^2+0x-4$: $1,\\ 3,\\ 0,\\ -4$.",
+          "Place $-2$ in the box. Bring down $1$; $-2\\cdot 1=-2$, $3+(-2)=1$.",
+          "$-2\\cdot 1=-2$, $0+(-2)=-2$; $-2\\cdot(-2)=4$, $-4+4=0$.",
+          "The remainder is $0$, so $x=-2$ IS a zero of $f(x)$.",
+          "The quotient is $x^2+x-2=(x+2)(x-1)$, confirming the zero and giving the other zeros $x=-2,\\ 1$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Find all zeros of $f(x)=x^2+8x+16$ and state the multiplicity of each.",
+      "answer": "$x=-4$ with multiplicity $2$",
+      "solution": {
+        "steps": [
+          "Find two integers whose product is $16$ and whose sum is $8$: both are $4$.",
+          "Factor: $f(x)=(x+4)(x+4)=(x+4)^2$.",
+          "Set the factor to zero: $x+4=0$ gives $x=-4$.",
+          "Because the factor $(x+4)$ appears twice, $x=-4$ is a zero of multiplicity $2$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Find all zeros of $f(x)=x^2-3x$ by factoring.",
+      "answer": "$x=0$ and $x=3$",
+      "solution": {
+        "steps": [
+          "Factor out the common factor $x$: $f(x)=x(x-3)$.",
+          "Set each factor to zero: $x=0$, and $x-3=0$ gives $x=3$.",
+          "The zeros are $x=0$ and $x=3$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Find all zeros of $f(x)=x^3-x^2-6x$ by factoring.",
+      "answer": "$x=0,\\ x=3,\\ x=-2$",
+      "solution": {
+        "steps": [
+          "Factor out the common factor $x$: $f(x)=x(x^2-x-6)$.",
+          "Factor the quadratic: $x^2-x-6=(x-3)(x+2)$.",
+          "So $f(x)=x(x-3)(x+2)$.",
+          "Set each factor to zero: $x=0$, $x=3$, and $x=-2$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Write the complete factorization of $f(x)=x^2-5x+4$, then state its zeros.",
+      "answer": "$f(x)=(x-1)(x-4)$; zeros $x=1$ and $x=4$",
+      "solution": {
+        "steps": [
+          "Find two integers whose product is $4$ and whose sum is $-5$: $-1$ and $-4$.",
+          "Factor: $f(x)=(x-1)(x-4)$.",
+          "Set each factor to zero: $x=1$ and $x=4$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Find all zeros of $f(x)=x^3+2x^2-x-2$. (One zero is $x=1$.)",
+      "answer": "$x=1,\\ x=-1,\\ x=-2$",
+      "solution": {
+        "steps": [
+          "Test $x=1$ by synthetic division with coefficients $1,\\ 2,\\ -1,\\ -2$.",
+          "Bring down $1$; $1\\cdot 1=1$, $2+1=3$; $1\\cdot 3=3$, $-1+3=2$; $1\\cdot 2=2$, $-2+2=0$.",
+          "The remainder is $0$, so $x=1$ is a zero and the quotient is $x^2+3x+2$.",
+          "Factor the quotient: $x^2+3x+2=(x+1)(x+2)$.",
+          "Thus $f(x)=(x-1)(x+1)(x+2)$, and the zeros are $x=1,\\ -1,\\ -2$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "How many zeros (counting multiplicity) does the degree-$3$ polynomial $f(x)=x^3-6x^2+11x-6$ have, by the Fundamental Theorem of Algebra?",
+      "answer": "$3$ zeros, counted with multiplicity",
+      "solution": {
+        "steps": [
+          "The Fundamental Theorem of Algebra states that a degree-$n$ polynomial has exactly $n$ zeros in the complex numbers, counted with multiplicity.",
+          "Here $\\deg f=3$, so $f$ has exactly $3$ zeros counted with multiplicity.",
+          "These are the real zeros $x=1,\\ 2,\\ 3$, each of multiplicity $1$, confirming the total of $3$."
+        ]
+      }
+    }
+  ]
+}

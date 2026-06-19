@@ -1,0 +1,222 @@
+{
+  "id": "PC.EXP.A.1--worksheet--medium",
+  "standard": "PC.EXP.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Exponential and Logarithmic Functions",
+  "domainCode": "EXP",
+  "cluster": "Properties and graphs",
+  "clusterCode": "A",
+  "skillName": "Exponential Functions",
+  "materialType": "worksheet",
+  "difficulty": "Medium",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems build on the basics: apply transformations to $f(x)=a\\cdot b^{x}$ and read the shifted asymptote and range, recover an unknown initial value $a$ from a given point, and use the compound-interest formula $A=P\\left(1+\\frac{r}{n}\\right)^{nt}$ and the continuous formula $A=Pe^{rt}$. Remember that horizontal shifts come from $x-h$ and never move the asymptote, while vertical shifts $+k$ move the asymptote to $y=k$.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Describe the transformation that takes $f(x)=2^{x}$ to $g(x)=2^{x-4}+1$, and state the horizontal asymptote of $g$.",
+      "answer": "Shift right $4$ and up $1$; asymptote $y=1$.",
+      "solution": {
+        "steps": [
+          "The exponent $x-4$ shifts the graph right $4$ units (replacing $x$ with $x-4$ moves the graph in the $+x$ direction).",
+          "The $+1$ outside the power shifts the graph up $1$ unit.",
+          "Horizontal shifts do not move the asymptote; the vertical shift of $+1$ raises the asymptote from $y=0$ to $y=1$.",
+          "So $g$ is $f$ shifted right $4$ and up $1$, with horizontal asymptote $y=1$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "For $h(x)=3^{x-2}+5$, state the horizontal asymptote, the range, and the domain.",
+      "answer": "Asymptote $y=5$; range $(5,\\infty)$; domain $(-\\infty,\\infty)$.",
+      "solution": {
+        "steps": [
+          "Start from $3^{x}$, which has asymptote $y=0$ and range $(0,\\infty)$.",
+          "The exponent $x-2$ is a horizontal shift right $2$ and does not affect the asymptote or range.",
+          "The $+5$ shifts the graph up $5$, moving the asymptote to $y=5$.",
+          "Since $3^{x-2}>0$ for all $x$, adding $5$ gives outputs greater than $5$, so the range is $(5,\\infty)$.",
+          "An exponential is defined for every real input, so the domain is $(-\\infty,\\infty)$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "For the function $f(x)=a\\cdot 4^{x}$, it is given that $f(2)=48$. Find $a$, then find $f(0)$.",
+      "answer": "$a=3$, so $f(0)=3$.",
+      "solution": {
+        "steps": [
+          "Substitute $x=2$: $a\\cdot 4^{2}=48$.",
+          "Since $4^{2}=16$, this is $16a=48$.",
+          "Divide both sides by $16$: $a=3$.",
+          "Then $f(0)=3\\cdot 4^{0}=3\\cdot 1=3$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A principal of $2000$ dollars is invested at $6\\%$ annual interest compounded quarterly for $5$ years. Use $A=P\\left(1+\\frac{r}{n}\\right)^{nt}$ to find the balance, rounded to the nearest cent.",
+      "answer": "$A\\approx 2693.71$ dollars.",
+      "solution": {
+        "steps": [
+          "Identify $P=2000$, $r=0.06$, $n=4$, $t=5$.",
+          "Substitute: $A=2000\\left(1+\\frac{0.06}{4}\\right)^{4\\cdot 5}$.",
+          "Simplify inside: $1+\\frac{0.06}{4}=1+0.015=1.015$, and the exponent is $4\\cdot 5=20$.",
+          "So $A=2000(1.015)^{20}$.",
+          "Compute $(1.015)^{20}\\approx 1.346855$, then $A\\approx 2000(1.346855)\\approx 2693.71$ dollars."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Describe the transformation that takes $f(x)=2^{x}$ to $g(x)=-2^{x}+3$, and state the asymptote and range of $g$.",
+      "answer": "Reflect over the $x$-axis and shift up $3$; asymptote $y=3$, range $(-\\infty,3)$.",
+      "solution": {
+        "steps": [
+          "The factor $-1$ in front reflects the graph of $2^{x}$ over the $x$-axis, turning growth that rises into a curve that falls.",
+          "The $+3$ shifts the reflected graph up $3$ units, moving the asymptote from $y=0$ to $y=3$.",
+          "Since $2^{x}>0$, $-2^{x}<0$, so $-2^{x}+3<3$ for all $x$; the outputs approach $3$ but never reach it.",
+          "The asymptote is $y=3$ and the range is $(-\\infty,3)$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A bacteria culture grows continuously at $5\\%$ per hour, starting from $400$ cells. Use $A=Pe^{rt}$ to find the population after $8$ hours, rounded to the nearest whole cell.",
+      "answer": "$A\\approx 597$ cells.",
+      "solution": {
+        "steps": [
+          "Identify $P=400$, $r=0.05$, $t=8$, and use $A=Pe^{rt}$.",
+          "Substitute: $A=400e^{0.05\\cdot 8}=400e^{0.4}$.",
+          "Compute $e^{0.4}\\approx 1.491825$.",
+          "Then $A\\approx 400(1.491825)\\approx 596.73$.",
+          "Rounded to the nearest whole cell, $A\\approx 597$ cells."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "For the function $f(x)=a\\cdot\\left(\\frac{1}{2}\\right)^{x}$, it is given that $f(3)=10$. Find $a$, then find $f(1)$.",
+      "answer": "$a=80$, so $f(1)=40$.",
+      "solution": {
+        "steps": [
+          "Substitute $x=3$: $a\\cdot\\left(\\frac{1}{2}\\right)^{3}=10$.",
+          "Since $\\left(\\frac{1}{2}\\right)^{3}=\\frac{1}{8}$, this is $\\frac{a}{8}=10$.",
+          "Multiply both sides by $8$: $a=80$.",
+          "Then $f(1)=80\\cdot\\left(\\frac{1}{2}\\right)^{1}=80\\cdot\\frac{1}{2}=40$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A principal of $5000$ dollars is invested at $4\\%$ annual interest compounded monthly for $3$ years. Use $A=P\\left(1+\\frac{r}{n}\\right)^{nt}$ to find the balance, rounded to the nearest cent.",
+      "answer": "$A\\approx 5636.36$ dollars.",
+      "solution": {
+        "steps": [
+          "Identify $P=5000$, $r=0.04$, $n=12$, $t=3$.",
+          "Substitute: $A=5000\\left(1+\\frac{0.04}{12}\\right)^{12\\cdot 3}$.",
+          "Simplify: $\\frac{0.04}{12}\\approx 0.0033333$, so the base is about $1.0033333$, and the exponent is $36$.",
+          "So $A=5000\\left(1.0033333\\right)^{36}$.",
+          "Compute $(1.0033333)^{36}\\approx 1.127272$, then $A\\approx 5000(1.127272)\\approx 5636.36$ dollars."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Describe the transformation that takes $f(x)=3^{x}$ to $g(x)=3^{x+2}-4$, and state the horizontal asymptote and range of $g$.",
+      "answer": "Shift left $2$ and down $4$; asymptote $y=-4$, range $(-4,\\infty)$.",
+      "solution": {
+        "steps": [
+          "The exponent $x+2$ means $x-(-2)$, a horizontal shift left $2$ units.",
+          "The $-4$ outside the power shifts the graph down $4$ units.",
+          "Horizontal shifts leave the asymptote unchanged; the $-4$ moves the asymptote from $y=0$ to $y=-4$.",
+          "Since $3^{x+2}>0$, $3^{x+2}-4>-4$ for all $x$, so the range is $(-4,\\infty)$ with asymptote $y=-4$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A radioactive sample decays continuously at a rate of $3\\%$ per year, starting from $250$ grams. Use $A=Pe^{rt}$ with $r=-0.03$ to find the amount remaining after $10$ years, rounded to the nearest tenth of a gram.",
+      "answer": "$A\\approx 185.2$ grams.",
+      "solution": {
+        "steps": [
+          "Decay means the continuous rate is negative: $r=-0.03$. Use $P=250$, $t=10$.",
+          "Substitute: $A=250e^{-0.03\\cdot 10}=250e^{-0.3}$.",
+          "Compute $e^{-0.3}\\approx 0.740818$.",
+          "Then $A\\approx 250(0.740818)\\approx 185.20$.",
+          "Rounded to the nearest tenth, $A\\approx 185.2$ grams."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "For the function $f(x)=a\\cdot 5^{x}$, it is given that $f(-1)=4$. Find $a$, then find $f(2)$.",
+      "answer": "$a=20$, so $f(2)=500$.",
+      "solution": {
+        "steps": [
+          "Substitute $x=-1$: $a\\cdot 5^{-1}=4$.",
+          "Since $5^{-1}=\\frac{1}{5}$, this is $\\frac{a}{5}=4$.",
+          "Multiply both sides by $5$: $a=20$.",
+          "Then $f(2)=20\\cdot 5^{2}=20\\cdot 25=500$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Describe the transformation that takes $f(x)=2^{x}$ to $g(x)=3\\cdot 2^{x}-6$, and state the horizontal asymptote and the $y$-intercept of $g$.",
+      "answer": "Vertical stretch by $3$ and shift down $6$; asymptote $y=-6$, $y$-intercept $(0,-3)$.",
+      "solution": {
+        "steps": [
+          "The coefficient $3$ is a vertical stretch by a factor of $3$.",
+          "The $-6$ shifts the stretched graph down $6$ units, moving the asymptote from $y=0$ to $y=-6$.",
+          "The vertical stretch does not move the asymptote; only the $-6$ does, so the asymptote is $y=-6$.",
+          "Find the $y$-intercept by evaluating $g(0)=3\\cdot 2^{0}-6=3\\cdot 1-6=-3$, giving the point $(0,-3)$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A principal of $8000$ dollars is invested at $5\\%$ annual interest compounded semiannually for $4$ years. Use $A=P\\left(1+\\frac{r}{n}\\right)^{nt}$ to find the balance, rounded to the nearest cent.",
+      "answer": "$A\\approx 9747.22$ dollars.",
+      "solution": {
+        "steps": [
+          "Semiannual compounding means $n=2$. Use $P=8000$, $r=0.05$, $t=4$.",
+          "Substitute: $A=8000\\left(1+\\frac{0.05}{2}\\right)^{2\\cdot 4}$.",
+          "Simplify: $1+\\frac{0.05}{2}=1.025$ and the exponent is $8$.",
+          "So $A=8000(1.025)^{8}$.",
+          "Compute $(1.025)^{8}\\approx 1.218403$, then $A\\approx 8000(1.218403)\\approx 9747.22$ dollars."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Describe the transformation that takes $f(x)=\\left(\\frac{1}{2}\\right)^{x}$ to $g(x)=\\left(\\frac{1}{2}\\right)^{x-1}+2$, and state the asymptote and range of $g$.",
+      "answer": "Shift right $1$ and up $2$; asymptote $y=2$, range $(2,\\infty)$.",
+      "solution": {
+        "steps": [
+          "The exponent $x-1$ shifts the graph right $1$ unit.",
+          "The $+2$ shifts the graph up $2$ units, moving the asymptote from $y=0$ to $y=2$.",
+          "The horizontal shift does not affect the asymptote; only the $+2$ does.",
+          "Since $\\left(\\frac{1}{2}\\right)^{x-1}>0$, adding $2$ gives outputs greater than $2$, so the range is $(2,\\infty)$ with asymptote $y=2$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A continuously compounded account earns $7\\%$ per year on a principal of $1500$ dollars. Use $A=Pe^{rt}$ to find the balance after $6$ years, rounded to the nearest cent.",
+      "answer": "$A\\approx 2282.94$ dollars.",
+      "solution": {
+        "steps": [
+          "Continuous compounding uses $A=Pe^{rt}$ with $P=1500$, $r=0.07$, $t=6$.",
+          "Substitute: $A=1500e^{0.07\\cdot 6}=1500e^{0.42}$.",
+          "Compute $e^{0.42}\\approx 1.521962$.",
+          "Then $A\\approx 1500(1.521962)\\approx 2282.94$.",
+          "Rounded to the nearest cent, $A\\approx 2282.94$ dollars."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "standard": "PC.EXP.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Exponential and Logarithmic Functions",
+  "domainCode": "EXP",
+  "cluster": "Properties and graphs",
+  "clusterCode": "A",
+  "skillName": "Logarithmic Properties and Equations",
+
+  "description": "Students apply the product, quotient, and power rules for logarithms (together with the change-of-base formula and the identities $\\log_b b = 1$, $\\log_b 1 = 0$, $b^{\\log_b x} = x$, and $\\log_b b^x = x$) to expand a single logarithm into a sum or difference of logarithms and to condense a sum or difference into a single logarithm. They then solve exponential equations by taking logarithms of both sides and solve logarithmic equations by condensing to a single log and rewriting in exponential form. For every logarithmic equation they must verify each candidate solution against the domain requirement that the argument of every logarithm be positive, and discard any extraneous solutions.",
+
+  "subSkills": [
+    "Expand a single logarithm using the product rule $\\log_b(MN)=\\log_b M+\\log_b N$",
+    "Expand using the quotient rule $\\log_b\\left(\\frac{M}{N}\\right)=\\log_b M-\\log_b N$",
+    "Expand using the power rule $\\log_b(M^p)=p\\log_b M$, including roots written as fractional exponents",
+    "Condense a sum or difference of logarithms back into a single logarithm with coefficient 1",
+    "Apply the change-of-base formula $\\log_b a=\\frac{\\log a}{\\log b}=\\frac{\\ln a}{\\ln b}$ to evaluate or rewrite",
+    "Use logarithm identities $\\log_b b=1$, $\\log_b 1=0$, $b^{\\log_b x}=x$, $\\log_b b^x=x$",
+    "Solve exponential equations of the form $b^{f(x)}=c$ by taking a logarithm of both sides",
+    "Solve logarithmic equations by condensing to one log and rewriting in exponential form",
+    "Determine the domain of each logarithmic expression (argument $>0$) and check candidate solutions for extraneous roots"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Expand a logarithm",
+      "example": "Expand $\\log_2\\left(\\frac{x^3\\sqrt{y}}{z}\\right)$ as a sum and difference of logarithms with no products, quotients, or exponents inside any log. Answer: $3\\log_2 x+\\frac{1}{2}\\log_2 y-\\log_2 z$."
+    },
+    {
+      "name": "Condense to a single logarithm",
+      "example": "Write $2\\ln x+\\frac{1}{3}\\ln y-\\ln 5$ as a single logarithm. Answer: $\\ln\\left(\\frac{x^2\\sqrt[3]{y}}{5}\\right)$."
+    },
+    {
+      "name": "Evaluate using properties or change of base",
+      "example": "Evaluate $\\log_2 40-\\log_2 5$ exactly. Answer: $\\log_2 8=3$."
+    },
+    {
+      "name": "Solve an exponential equation",
+      "example": "Solve $3^{x+1}=20$ for $x$. Answer: $x=\\frac{\\ln 20}{\\ln 3}-1=\\log_3 20-1$."
+    },
+    {
+      "name": "Solve a logarithmic equation (single log)",
+      "example": "Solve $\\log_4(2x-1)=2$. Answer: $2x-1=16$, so $x=\\frac{17}{2}$ (valid since $2x-1>0$)."
+    },
+    {
+      "name": "Solve with condensing and an extraneous root",
+      "example": "Solve $\\log_3 x+\\log_3(x-2)=1$. Condense: $\\log_3\\big(x(x-2)\\big)=1\\Rightarrow x^2-2x-3=0\\Rightarrow x=3$ or $x=-1$. Reject $x=-1$ (makes $\\log_3 x$ undefined); answer $x=3$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single property applied once, or a one-step equation. Expand or condense an expression that needs exactly one rule (product, quotient, or power). Solve $b^x=c$ where $c$ is an exact power of $b$, or solve a single-log equation with no extraneous-root risk.",
+      "constraints": [
+        "At most one logarithm rule is needed, applied a single time",
+        "Exponential equations have an exact integer or simple rational answer, e.g. $2^x=32\\Rightarrow x=5$",
+        "Logarithmic equations contain exactly one log term and yield one valid solution",
+        "No quadratic arises; no candidate solution needs to be rejected"
+      ]
+    },
+    "Medium": {
+      "description": "Two or three properties combined. Expand or condense expressions mixing products, quotients, and powers (including a square root as a $\\frac{1}{2}$ power). Solve exponential equations requiring a logarithm and change of base, or logarithmic equations that require condensing two log terms before rewriting in exponential form.",
+      "constraints": [
+        "Combines two or three rules in one expansion or condensation",
+        "Exponential answers are exact logarithms, e.g. $x=\\frac{\\ln 20}{\\ln 3}-1$, not clean integers",
+        "Logarithmic equations require condensing two terms, then rewriting $\\log_b A=k$ as $A=b^k$",
+        "At most one candidate solution may need an extraneous-root check"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems whose algebra produces a quadratic (or a substitution) and require an explicit domain analysis. Solving forces condensing, rewriting, solving a quadratic in $x$ or in $u=b^x$, then testing every candidate against the positivity of all arguments and discarding extraneous solutions, or proving none exist.",
+      "constraints": [
+        "Condensing yields a quadratic argument, e.g. $\\log_b x+\\log_b(x-c)=k$",
+        "Exponential equations may be quadratic in form, e.g. $e^{2x}-5e^{x}+6=0$ solved by substitution $u=e^x$",
+        "Student must state the domain (every argument $>0$) and reject at least one candidate, or justify that a solution set is empty",
+        "Answers are exact (radicals, $\\ln$, $\\log$, fractions); approximations only if the problem asks for one"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Treats the log of a sum as the sum of logs",
+      "distractor": "Writes $\\log_b(M+N)=\\log_b M+\\log_b N$, so expands $\\log_2(x+8)$ as $\\log_2 x+\\log_2 8$ instead of leaving it unchanged"
+    },
+    {
+      "misconception": "Misapplies the quotient rule as a quotient of logs",
+      "distractor": "Writes $\\log_b\\left(\\frac{M}{N}\\right)=\\frac{\\log_b M}{\\log_b N}$ instead of $\\log_b M-\\log_b N$"
+    },
+    {
+      "misconception": "Drops the power-rule coefficient or applies it to the wrong factor",
+      "distractor": "Expands $\\log_2(x^3 y)$ as $\\log_2 x+3\\log_2 y$ or $\\log_2 x^3+\\log_2 y$ instead of $3\\log_2 x+\\log_2 y$"
+    },
+    {
+      "misconception": "Forgets a root is a fractional exponent when expanding",
+      "distractor": "Expands $\\log_b\\sqrt{y}$ as $\\log_b y$ instead of $\\frac{1}{2}\\log_b y$"
+    },
+    {
+      "misconception": "When condensing, adds coefficients into the log as multipliers instead of exponents",
+      "distractor": "Condenses $2\\log_b x$ as $\\log_b(2x)$ instead of $\\log_b(x^2)$"
+    },
+    {
+      "misconception": "Cancels or simplifies $\\log_b b^x$ incorrectly, treating $\\log$ as a multiplier",
+      "distractor": "Claims $\\log_2 8=\\frac{8}{2}=4$ instead of $\\log_2 8=3$"
+    },
+    {
+      "misconception": "Solves an exponential equation by dividing out the base instead of taking a logarithm",
+      "distractor": "From $3^{x+1}=20$ writes $x+1=\\frac{20}{3}$, giving $x=\\frac{17}{3}$ instead of $x=\\log_3 20-1$"
+    },
+    {
+      "misconception": "Inverts the change-of-base ratio",
+      "distractor": "Writes $\\log_3 20=\\frac{\\ln 3}{\\ln 20}$ instead of $\\frac{\\ln 20}{\\ln 3}$"
+    },
+    {
+      "misconception": "Rewrites $\\log_b A=k$ in exponential form with base and exponent swapped",
+      "distractor": "From $\\log_4(2x-1)=2$ writes $2x-1=2^4=16$... uses base 2 instead, giving $2x-1=4^2$ mishandled, e.g. solving $2x-1=2^4$ or $2x-1=4\\cdot 2$"
+    },
+    {
+      "misconception": "Accepts a negative or out-of-domain candidate as a valid solution",
+      "distractor": "From $\\log_3 x+\\log_3(x-2)=1$ keeps both $x=3$ and $x=-1$ instead of rejecting $x=-1$, which makes the arguments negative"
+    },
+    {
+      "misconception": "Rejects a valid solution by misjudging the domain",
+      "distractor": "Discards a legitimate solution because one intermediate factor is negative, even though every actual logarithm argument is positive at that value"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

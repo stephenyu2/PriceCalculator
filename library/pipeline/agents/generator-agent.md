@@ -30,8 +30,14 @@ if violated** (see `library/material.js`):
   Each item also carries `difficulty` ∈ {Easy, Medium, Hard}. Distractors come from
   the blueprint's `commonMisconceptions`.
 
-**Self-contained stimulus:** If an item needs a passage/sentence/excerpt, embed it
-in the `prompt`. Never reference an external text.
+**Self-contained stimulus (ELA):** If an item needs a passage/sentence/excerpt,
+embed it in the `prompt`. Never reference an external text.
+
+**Math notation (subject = math):** Write ALL math in LaTeX between `$` delimiters
+(KaTeX). Fractions are `$\frac{7}{6}$`, never bare `7/6`. Use `$x^2$`, `$\sqrt5$`,
+`$\sin\theta$`, `$\frac{\pi}{3}$`. Every `$` must be balanced. Prefer exact values
+(radicals, `$\pi$`, fractions) over rounded decimals. Quiz options each carry their
+own LaTeX, e.g. `A) $\frac{\sqrt3}{2}$`.
 
 **Counts:** Exactly the blueprint's `itemCounts`. Quiz difficulty mix should span
 Easy→Hard (roughly 3 Easy / 3 Medium / 2 Hard for an 8-item quiz).

@@ -1,0 +1,156 @@
+{
+  "id": "PC.EXP.A.1--quiz",
+  "standard": "PC.EXP.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Exponential and Logarithmic Functions",
+  "domainCode": "EXP",
+  "cluster": "Properties and graphs",
+  "clusterCode": "A",
+  "skillName": "Exponential Functions",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Multiple-choice quiz on exponential functions: classifying growth and decay, reading key features, transformations, and modeling with compound and continuous growth.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Classify $f(x)=4\\left(\\frac{1}{3}\\right)^{x}$ as exponential growth or decay.\nA) Growth, because the coefficient $4>1$\nB) Decay, because $0<\\frac{1}{3}<1$\nC) Growth, because the base $\\frac{1}{3}$ is a fraction\nD) Neither growth nor decay",
+      "answer": "B) Decay, because $0<\\frac{1}{3}<1$",
+      "solution": {
+        "steps": [
+          "Growth versus decay is determined only by the base $b$, not by the coefficient $a$.",
+          "Here $b=\\frac{1}{3}$, and since $0<\\frac{1}{3}<1$, the function is exponential decay.",
+          "A) is wrong: the coefficient $a=4$ does not determine growth or decay; it is the initial value.",
+          "C) is wrong: a fractional base does not automatically mean decay, but $\\frac{1}{3}<1$ does make this one decay; the stated reason is also faulty because what matters is $b<1$, not merely that $b$ is a fraction.",
+          "D) is wrong: any $f(x)=a\\cdot b^{x}$ with $b>0$, $b\\ne 1$ is either growth or decay."
+        ],
+        "answer": "B) Decay, because $0<\\frac{1}{3}<1$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "What is the $y$-intercept of $f(x)=3\\cdot 2^{x}$?\nA) $(0,2)$\nB) $(0,1)$\nC) $(0,3)$\nD) $(0,6)$",
+      "answer": "C) $(0,3)$",
+      "solution": {
+        "steps": [
+          "The $y$-intercept occurs at $x=0$: $f(0)=3\\cdot 2^{0}=3\\cdot 1=3$.",
+          "So the $y$-intercept is $(0,3)$.",
+          "A) confuses the base $b=2$ with the initial value $a=3$.",
+          "B) is the intercept of the parent $2^{x}$ alone, ignoring the coefficient $3$.",
+          "D) multiplies $a$ and $b$ together ($3\\cdot 2$), which is not how the function is evaluated at $x=0$."
+        ],
+        "answer": "C) $(0,3)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "What is the range of $f(x)=2^{x}$?\nA) $(0,\\infty)$\nB) $(-\\infty,\\infty)$\nC) $[0,\\infty)$\nD) $(-\\infty,0)$",
+      "answer": "A) $(0,\\infty)$",
+      "solution": {
+        "steps": [
+          "For the parent exponential $f(x)=2^{x}$, the horizontal asymptote is $y=0$ and the outputs are always positive.",
+          "The function never reaches $0$ but takes every positive value, so the range is $(0,\\infty)$.",
+          "B) is the domain, not the range; this confuses range with domain.",
+          "C) wrongly includes $0$, but $2^{x}>0$ for all $x$ and never equals $0$.",
+          "D) gives negative outputs, but $2^{x}$ is always positive."
+        ],
+        "answer": "A) $(0,\\infty)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Evaluate $f(x)=3\\cdot 2^{x}$ at $x=2$.\nA) $36$\nB) $12$\nC) $64$\nD) $18$",
+      "answer": "B) $12$",
+      "solution": {
+        "steps": [
+          "Apply the order of operations: exponentiate first, then multiply by the coefficient.",
+          "$f(2)=3\\cdot 2^{2}=3\\cdot 4=12$.",
+          "A) treats the expression as $(3\\cdot 2)^{2}=6^{2}=36$, incorrectly multiplying the coefficient into the base.",
+          "C) computes $4^{3}$ or similar by combining the numbers wrongly; $2^{2}=4$, not $64$.",
+          "D) uses $3^{2}\\cdot 2$ or another mis-grouping; the coefficient is not squared."
+        ],
+        "answer": "B) $12$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "What is the horizontal asymptote of $h(x)=2^{x-3}+4$?\nA) $y=3$\nB) $x=3$\nC) $y=4$\nD) $y=0$",
+      "answer": "C) $y=4$",
+      "solution": {
+        "steps": [
+          "Only the vertical shift $+k$ moves the horizontal asymptote; here $k=4$.",
+          "So the asymptote is $y=4$.",
+          "A) shifts the asymptote by the horizontal value $h=3$, but horizontal shifts do not move a horizontal asymptote.",
+          "B) gives a vertical line $x=3$, but the asymptote of an exponential is horizontal, not vertical.",
+          "D) is the asymptote of the parent function before the vertical shift; the $+4$ raises it to $y=4$."
+        ],
+        "answer": "C) $y=4$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "For $f(x)=a\\cdot 3^{x}$, it is given that $f(2)=45$. Find the value of $a$.\nA) $a=15$\nB) $a=5$\nC) $a=9$\nD) $a=45$",
+      "answer": "B) $a=5$",
+      "solution": {
+        "steps": [
+          "Substitute $x=2$: $f(2)=a\\cdot 3^{2}=9a$.",
+          "Set equal to the given value: $9a=45$, so $a=\\frac{45}{9}=5$.",
+          "A) divides $45$ by $3$ instead of by $3^{2}=9$.",
+          "C) reports $3^{2}=9$ itself rather than solving for $a$.",
+          "D) takes $a$ to equal the output $45$, ignoring the factor $3^{2}$."
+        ],
+        "answer": "B) $a=5$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A car worth $24{,}000$ dollars depreciates $15\\%$ per year. Which function models its value $V(t)$ after $t$ years?\nA) $V(t)=24000(0.85)^{t}$\nB) $V(t)=24000(0.15)^{t}$\nC) $V(t)=24000(1.15)^{t}$\nD) $V(t)=24000(15)^{t}$",
+      "answer": "A) $V(t)=24000(0.85)^{t}$",
+      "solution": {
+        "steps": [
+          "Depreciation of $15\\%$ per year means each year the car keeps $100\\%-15\\%=85\\%$ of its value.",
+          "The decay factor is $0.85$, so $V(t)=24000(0.85)^{t}$.",
+          "B) uses the loss rate $0.15$ as the factor, which would discard $85\\%$ of the value each year instead of $15\\%$.",
+          "C) uses $1.15$, modeling $15\\%$ growth rather than depreciation.",
+          "D) uses the whole percent $15$ as the base, mishandling the percent conversion."
+        ],
+        "answer": "A) $V(t)=24000(0.85)^{t}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A principal of $2000$ dollars is invested at $6\\%$ annual interest compounded quarterly for $5$ years. Which expression gives the balance?\nA) $2000(1.06)^{4\\cdot 5}$\nB) $2000\\left(1+\\frac{0.06}{4}\\right)^{4\\cdot 5}$\nC) $2000\\left(1+\\frac{0.06}{4}\\right)^{5}$\nD) $2000(1+0.06)^{5}$",
+      "answer": "B) $2000\\left(1+\\frac{0.06}{4}\\right)^{4\\cdot 5}$",
+      "solution": {
+        "steps": [
+          "Use $A=P\\left(1+\\frac{r}{n}\\right)^{nt}$ with $P=2000$, $r=0.06$, $n=4$ (quarterly), $t=5$.",
+          "Substitute: $A=2000\\left(1+\\frac{0.06}{4}\\right)^{4\\cdot 5}$, matching B).",
+          "A) keeps the exponent $nt=20$ but forgets to divide the rate by $n$, using $1.06$ instead of $1+\\frac{0.06}{4}$.",
+          "C) divides the rate correctly but uses $t=5$ as the exponent instead of $nt=20$.",
+          "D) ignores compounding entirely, using annual compounding ($n=1$) with exponent $5$."
+        ],
+        "answer": "B) $2000\\left(1+\\frac{0.06}{4}\\right)^{4\\cdot 5}$"
+      }
+    }
+  ]
+}

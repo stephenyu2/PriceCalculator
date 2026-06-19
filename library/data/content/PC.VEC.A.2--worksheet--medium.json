@@ -1,0 +1,215 @@
+{
+  "id": "PC.VEC.A.2--worksheet--medium",
+  "standard": "PC.VEC.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Vectors and Parametric Equations",
+  "domainCode": "VEC",
+  "cluster": "Vectors in the plane",
+  "clusterCode": "A",
+  "skillName": "Dot Product and Applications",
+  "materialType": "worksheet",
+  "difficulty": "Medium",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Use the dot product to find magnitudes, angles between vectors, and projections. Recall $\\vec{u}\\cdot\\vec{v}=u_1v_1+u_2v_2$, $\\cos\\theta=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{u}\\|\\,\\|\\vec{v}\\|}$, and $\\operatorname{proj}_{\\vec{v}}\\vec{u}=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\vec{v}\\cdot\\vec{v}}\\,\\vec{v}$. Give exact values with radicals, $\\pi$, and fractions.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Find the angle $\\theta$ between $\\vec{u}=\\langle 1,\\sqrt{3}\\rangle$ and $\\vec{v}=\\langle \\sqrt{3},1\\rangle$.",
+      "answer": "$\\theta=\\dfrac{\\pi}{6}$",
+      "solution": {
+        "steps": [
+          "Dot product: $\\vec{u}\\cdot\\vec{v}=(1)(\\sqrt{3})+(\\sqrt{3})(1)=2\\sqrt{3}$.",
+          "Magnitudes: $\\|\\vec{u}\\|=\\sqrt{1^2+(\\sqrt{3})^2}=\\sqrt{4}=2$ and $\\|\\vec{v}\\|=\\sqrt{(\\sqrt{3})^2+1^2}=2$.",
+          "Apply the formula: $\\cos\\theta=\\dfrac{2\\sqrt{3}}{(2)(2)}=\\dfrac{2\\sqrt{3}}{4}=\\dfrac{\\sqrt{3}}{2}$.",
+          "Since $\\cos\\theta=\\dfrac{\\sqrt{3}}{2}$, we have $\\theta=\\dfrac{\\pi}{6}$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Find the angle $\\theta$ between $\\vec{u}=\\langle 2,2\\rangle$ and $\\vec{v}=\\langle 0,5\\rangle$.",
+      "answer": "$\\theta=\\dfrac{\\pi}{4}$",
+      "solution": {
+        "steps": [
+          "Dot product: $\\vec{u}\\cdot\\vec{v}=(2)(0)+(2)(5)=10$.",
+          "Magnitudes: $\\|\\vec{u}\\|=\\sqrt{2^2+2^2}=\\sqrt{8}=2\\sqrt{2}$ and $\\|\\vec{v}\\|=\\sqrt{0^2+5^2}=5$.",
+          "Apply the formula: $\\cos\\theta=\\dfrac{10}{(2\\sqrt{2})(5)}=\\dfrac{10}{10\\sqrt{2}}=\\dfrac{1}{\\sqrt{2}}=\\dfrac{\\sqrt{2}}{2}$.",
+          "Since $\\cos\\theta=\\dfrac{\\sqrt{2}}{2}$, we have $\\theta=\\dfrac{\\pi}{4}$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Find the angle $\\theta$ between $\\vec{u}=\\langle -1,\\sqrt{3}\\rangle$ and $\\vec{v}=\\langle 1,0\\rangle$.",
+      "answer": "$\\theta=\\dfrac{2\\pi}{3}$",
+      "solution": {
+        "steps": [
+          "Dot product: $\\vec{u}\\cdot\\vec{v}=(-1)(1)+(\\sqrt{3})(0)=-1$.",
+          "Magnitudes: $\\|\\vec{u}\\|=\\sqrt{(-1)^2+(\\sqrt{3})^2}=\\sqrt{4}=2$ and $\\|\\vec{v}\\|=\\sqrt{1^2+0^2}=1$.",
+          "Apply the formula: $\\cos\\theta=\\dfrac{-1}{(2)(1)}=-\\dfrac{1}{2}$.",
+          "Since $\\cos\\theta=-\\dfrac{1}{2}$, we have $\\theta=\\dfrac{2\\pi}{3}$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Find the value of $k$ so that $\\vec{u}=\\langle k,5\\rangle$ and $\\vec{v}=\\langle 2,-3\\rangle$ are orthogonal.",
+      "answer": "$k=\\dfrac{15}{2}$",
+      "solution": {
+        "steps": [
+          "Two vectors are orthogonal exactly when their dot product is zero.",
+          "Set up: $\\vec{u}\\cdot\\vec{v}=(k)(2)+(5)(-3)=2k-15$.",
+          "Require $2k-15=0$, so $2k=15$.",
+          "Solve: $k=\\dfrac{15}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Find the value of $k$ so that $\\vec{u}=\\langle 3,k\\rangle$ and $\\vec{v}=\\langle 4,6\\rangle$ are orthogonal.",
+      "answer": "$k=-2$",
+      "solution": {
+        "steps": [
+          "Orthogonal means $\\vec{u}\\cdot\\vec{v}=0$.",
+          "Compute: $\\vec{u}\\cdot\\vec{v}=(3)(4)+(k)(6)=12+6k$.",
+          "Set equal to zero: $12+6k=0$, so $6k=-12$.",
+          "Solve: $k=-2$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Find the vector projection $\\operatorname{proj}_{\\vec{v}}\\vec{u}$ of $\\vec{u}=\\langle 3,4\\rangle$ onto $\\vec{v}=\\langle 2,1\\rangle$.",
+      "answer": "$\\operatorname{proj}_{\\vec{v}}\\vec{u}=\\langle 4,2\\rangle$",
+      "solution": {
+        "steps": [
+          "Compute $\\vec{u}\\cdot\\vec{v}=(3)(2)+(4)(1)=10$.",
+          "Compute $\\vec{v}\\cdot\\vec{v}=(2)^2+(1)^2=5$.",
+          "The scalar multiplier is $\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\vec{v}\\cdot\\vec{v}}=\\dfrac{10}{5}=2$.",
+          "Scale $\\vec{v}$: $\\operatorname{proj}_{\\vec{v}}\\vec{u}=2\\langle 2,1\\rangle=\\langle 4,2\\rangle$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Find the vector projection $\\operatorname{proj}_{\\vec{v}}\\vec{u}$ of $\\vec{u}=\\langle 5,2\\rangle$ onto $\\vec{v}=\\langle 1,1\\rangle$.",
+      "answer": "$\\operatorname{proj}_{\\vec{v}}\\vec{u}=\\left\\langle \\dfrac{7}{2},\\dfrac{7}{2}\\right\\rangle$",
+      "solution": {
+        "steps": [
+          "Compute $\\vec{u}\\cdot\\vec{v}=(5)(1)+(2)(1)=7$.",
+          "Compute $\\vec{v}\\cdot\\vec{v}=(1)^2+(1)^2=2$.",
+          "The scalar multiplier is $\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\vec{v}\\cdot\\vec{v}}=\\dfrac{7}{2}$.",
+          "Scale $\\vec{v}$: $\\operatorname{proj}_{\\vec{v}}\\vec{u}=\\dfrac{7}{2}\\langle 1,1\\rangle=\\left\\langle \\dfrac{7}{2},\\dfrac{7}{2}\\right\\rangle$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Find the scalar projection (component) $\\operatorname{comp}_{\\vec{v}}\\vec{u}$ of $\\vec{u}=\\langle 4,3\\rangle$ onto $\\vec{v}=\\langle 1,2\\rangle$.",
+      "answer": "$\\operatorname{comp}_{\\vec{v}}\\vec{u}=2\\sqrt{5}$",
+      "solution": {
+        "steps": [
+          "The scalar projection is $\\operatorname{comp}_{\\vec{v}}\\vec{u}=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{v}\\|}$.",
+          "Compute $\\vec{u}\\cdot\\vec{v}=(4)(1)+(3)(2)=10$.",
+          "Compute $\\|\\vec{v}\\|=\\sqrt{1^2+2^2}=\\sqrt{5}$.",
+          "Divide: $\\operatorname{comp}_{\\vec{v}}\\vec{u}=\\dfrac{10}{\\sqrt{5}}=\\dfrac{10\\sqrt{5}}{5}=2\\sqrt{5}$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Find the angle $\\theta$ between $\\vec{u}=\\langle 3,0\\rangle$ and $\\vec{v}=\\langle -2,2\\rangle$.",
+      "answer": "$\\theta=\\dfrac{3\\pi}{4}$",
+      "solution": {
+        "steps": [
+          "Dot product: $\\vec{u}\\cdot\\vec{v}=(3)(-2)+(0)(2)=-6$.",
+          "Magnitudes: $\\|\\vec{u}\\|=\\sqrt{3^2+0^2}=3$ and $\\|\\vec{v}\\|=\\sqrt{(-2)^2+2^2}=\\sqrt{8}=2\\sqrt{2}$.",
+          "Apply the formula: $\\cos\\theta=\\dfrac{-6}{(3)(2\\sqrt{2})}=\\dfrac{-6}{6\\sqrt{2}}=-\\dfrac{1}{\\sqrt{2}}=-\\dfrac{\\sqrt{2}}{2}$.",
+          "Since $\\cos\\theta=-\\dfrac{\\sqrt{2}}{2}$, we have $\\theta=\\dfrac{3\\pi}{4}$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Find the magnitude $\\|\\vec{u}\\|$ using the dot product, given that $\\vec{u}\\cdot\\vec{u}=29$ for $\\vec{u}=\\langle 5,2\\rangle$.",
+      "answer": "$\\|\\vec{u}\\|=\\sqrt{29}$",
+      "solution": {
+        "steps": [
+          "Recall $\\vec{u}\\cdot\\vec{u}=\\|\\vec{u}\\|^2$.",
+          "Verify: $\\vec{u}\\cdot\\vec{u}=(5)^2+(2)^2=25+4=29$.",
+          "So $\\|\\vec{u}\\|^2=29$.",
+          "Take the positive square root: $\\|\\vec{u}\\|=\\sqrt{29}$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Find the value(s) of $k$ so that $\\vec{u}=\\langle k,3\\rangle$ and $\\vec{v}=\\langle k,-12\\rangle$ are orthogonal.",
+      "answer": "$k=6$ or $k=-6$",
+      "solution": {
+        "steps": [
+          "Orthogonal means $\\vec{u}\\cdot\\vec{v}=0$.",
+          "Compute: $\\vec{u}\\cdot\\vec{v}=(k)(k)+(3)(-12)=k^2-36$.",
+          "Set equal to zero: $k^2-36=0$, so $k^2=36$.",
+          "Solve: $k=6$ or $k=-6$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Find the angle $\\theta$ between $\\vec{u}=\\langle 4,0\\rangle$ and $\\vec{v}=\\langle 3,3\\sqrt{3}\\rangle$.",
+      "answer": "$\\theta=\\dfrac{\\pi}{3}$",
+      "solution": {
+        "steps": [
+          "Dot product: $\\vec{u}\\cdot\\vec{v}=(4)(3)+(0)(3\\sqrt{3})=12$.",
+          "Magnitudes: $\\|\\vec{u}\\|=\\sqrt{4^2+0^2}=4$ and $\\|\\vec{v}\\|=\\sqrt{3^2+(3\\sqrt{3})^2}=\\sqrt{9+27}=\\sqrt{36}=6$.",
+          "Apply the formula: $\\cos\\theta=\\dfrac{12}{(4)(6)}=\\dfrac{12}{24}=\\dfrac{1}{2}$.",
+          "Since $\\cos\\theta=\\dfrac{1}{2}$, we have $\\theta=\\dfrac{\\pi}{3}$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Find the vector projection $\\operatorname{proj}_{\\vec{v}}\\vec{u}$ of $\\vec{u}=\\langle -2,6\\rangle$ onto $\\vec{v}=\\langle 4,2\\rangle$.",
+      "answer": "$\\operatorname{proj}_{\\vec{v}}\\vec{u}=\\left\\langle \\dfrac{4}{5},\\dfrac{2}{5}\\right\\rangle$",
+      "solution": {
+        "steps": [
+          "Compute $\\vec{u}\\cdot\\vec{v}=(-2)(4)+(6)(2)=-8+12=4$.",
+          "Compute $\\vec{v}\\cdot\\vec{v}=(4)^2+(2)^2=16+4=20$.",
+          "The scalar multiplier is $\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\vec{v}\\cdot\\vec{v}}=\\dfrac{4}{20}=\\dfrac{1}{5}$.",
+          "Scale $\\vec{v}$: $\\operatorname{proj}_{\\vec{v}}\\vec{u}=\\dfrac{1}{5}\\langle 4,2\\rangle=\\left\\langle \\dfrac{4}{5},\\dfrac{2}{5}\\right\\rangle$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Find the scalar projection (component) $\\operatorname{comp}_{\\vec{v}}\\vec{u}$ of $\\vec{u}=\\langle 6,-2\\rangle$ onto $\\vec{v}=\\langle 3,1\\rangle$.",
+      "answer": "$\\operatorname{comp}_{\\vec{v}}\\vec{u}=\\dfrac{8\\sqrt{10}}{5}$",
+      "solution": {
+        "steps": [
+          "The scalar projection is $\\operatorname{comp}_{\\vec{v}}\\vec{u}=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{v}\\|}$.",
+          "Compute $\\vec{u}\\cdot\\vec{v}=(6)(3)+(-2)(1)=18-2=16$.",
+          "Compute $\\|\\vec{v}\\|=\\sqrt{3^2+1^2}=\\sqrt{10}$.",
+          "Divide: $\\operatorname{comp}_{\\vec{v}}\\vec{u}=\\dfrac{16}{\\sqrt{10}}=\\dfrac{16\\sqrt{10}}{10}=\\dfrac{8\\sqrt{10}}{5}$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Find the angle $\\theta$ between $\\vec{u}=\\langle \\sqrt{3},-1\\rangle$ and $\\vec{v}=\\langle 0,4\\rangle$.",
+      "answer": "$\\theta=\\dfrac{2\\pi}{3}$",
+      "solution": {
+        "steps": [
+          "Dot product: $\\vec{u}\\cdot\\vec{v}=(\\sqrt{3})(0)+(-1)(4)=-4$.",
+          "Magnitudes: $\\|\\vec{u}\\|=\\sqrt{(\\sqrt{3})^2+(-1)^2}=\\sqrt{4}=2$ and $\\|\\vec{v}\\|=\\sqrt{0^2+4^2}=4$.",
+          "Apply the formula: $\\cos\\theta=\\dfrac{-4}{(2)(4)}=\\dfrac{-4}{8}=-\\dfrac{1}{2}$.",
+          "Since $\\cos\\theta=-\\dfrac{1}{2}$, we have $\\theta=\\dfrac{2\\pi}{3}$."
+        ]
+      }
+    }
+  ]
+}

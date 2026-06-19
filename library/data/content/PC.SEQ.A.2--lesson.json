@@ -1,0 +1,164 @@
+{
+  "id": "PC.SEQ.A.2--lesson",
+  "standard": "PC.SEQ.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Sequences, Series, and Limits",
+  "domainCode": "SEQ",
+  "cluster": "Sequences and series",
+  "clusterCode": "A",
+  "skillName": "Geometric Sequences and Series",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "A geometric sequence multiplies by a constant common ratio $r$ each step, so consecutive terms satisfy $r=\\dfrac{a_{n+1}}{a_n}$ and the $n$th term is $a_n=a_1 r^{n-1}$. A finite geometric series sums to $S_n=a_1\\dfrac{1-r^n}{1-r}$. An infinite geometric series converges only when $\\lvert r\\rvert<1$, in which case it sums to $S=\\dfrac{a_1}{1-r}$. These tools let you find terms, total sums, and even rewrite repeating decimals as fractions.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Determine whether $3,\\ 6,\\ 12,\\ 24,\\dots$ is geometric. If it is, state the common ratio $r$ and write the explicit formula for $a_n$.",
+      "solution": {
+        "steps": [
+          "Test for a constant ratio by dividing each term by the one before it: $\\dfrac{6}{3}=2$, $\\dfrac{12}{6}=2$, $\\dfrac{24}{12}=2$.",
+          "Since every ratio equals the same value, the sequence is geometric with $r=2$.",
+          "The first term is $a_1=3$, so the explicit formula is $a_n=a_1 r^{n-1}=3\\cdot 2^{\\,n-1}$.",
+          "Check: $a_3=3\\cdot 2^{2}=12$, which matches the given third term."
+        ],
+        "answer": "Geometric with $r=2$ and $a_n=3\\cdot 2^{\\,n-1}$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A geometric sequence has $a_1=5$ and $r=\\dfrac{1}{2}$. Find $a_6$.",
+      "solution": {
+        "steps": [
+          "Use the explicit formula $a_n=a_1 r^{n-1}$ with $n=6$.",
+          "Substitute: $a_6=5\\left(\\dfrac{1}{2}\\right)^{6-1}=5\\left(\\dfrac{1}{2}\\right)^{5}$.",
+          "Evaluate the power: $\\left(\\dfrac{1}{2}\\right)^{5}=\\dfrac{1}{32}$.",
+          "Multiply: $a_6=5\\cdot\\dfrac{1}{32}=\\dfrac{5}{32}$. Note the exponent is $5$, not $6$, because the formula uses $n-1$."
+        ],
+        "answer": "$a_6=\\dfrac{5}{32}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "In a geometric sequence $a_2=12$ and $a_5=96$. Find the common ratio $r$ and the first term $a_1$.",
+      "solution": {
+        "steps": [
+          "Write each term with the explicit formula: $a_2=a_1 r^{1}$ and $a_5=a_1 r^{4}$.",
+          "Divide the equations to eliminate $a_1$: $\\dfrac{a_5}{a_2}=\\dfrac{a_1 r^{4}}{a_1 r^{1}}=r^{3}$.",
+          "So $r^{3}=\\dfrac{96}{12}=8$, and taking the cube root gives $r=\\sqrt[3]{8}=2$ (not $\\dfrac{8}{3}$; you must take the root, not divide the exponent).",
+          "Back-substitute into $a_2=a_1 r$: $12=a_1\\cdot 2$, so $a_1=6$.",
+          "Check: $a_5=6\\cdot 2^{4}=6\\cdot 16=96$, which matches."
+        ],
+        "answer": "$r=2$ and $a_1=6$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Find the sum of the first $8$ terms of the geometric series $2+6+18+\\dots$",
+      "solution": {
+        "steps": [
+          "Identify the parameters: $a_1=2$ and $r=\\dfrac{6}{2}=3$, with $n=8$.",
+          "Use the finite partial-sum formula $S_n=a_1\\dfrac{1-r^{n}}{1-r}$.",
+          "Substitute: $S_8=2\\cdot\\dfrac{1-3^{8}}{1-3}$.",
+          "Compute the power: $3^{8}=6561$, so the numerator is $1-6561=-6560$ and the denominator is $1-3=-2$.",
+          "Simplify: $S_8=2\\cdot\\dfrac{-6560}{-2}=2\\cdot 3280=6560$."
+        ],
+        "answer": "$S_8=6560$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Does the infinite series $\\displaystyle\\sum_{n=1}^{\\infty} 6\\left(\\dfrac{1}{4}\\right)^{n-1}$ converge? If so, find its sum.",
+      "solution": {
+        "steps": [
+          "Read off the parameters: the first term is $a_1=6$ and the common ratio is $r=\\dfrac{1}{4}$.",
+          "Test for convergence: an infinite geometric series converges exactly when $\\lvert r\\rvert<1$. Here $\\left\\lvert\\dfrac{1}{4}\\right\\rvert=\\dfrac{1}{4}<1$, so it converges.",
+          "Apply the convergent-sum formula $S=\\dfrac{a_1}{1-r}$, being careful to subtract $r$ in the denominator: $S=\\dfrac{6}{1-\\frac{1}{4}}$.",
+          "Simplify the denominator: $1-\\dfrac{1}{4}=\\dfrac{3}{4}$, so $S=\\dfrac{6}{3/4}=6\\cdot\\dfrac{4}{3}=8$."
+        ],
+        "answer": "It converges, and the sum is $S=8$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A geometric sequence has $a_1=4$ and $r=3$. Find $a_5$.",
+      "hint": "Use $a_n=a_1 r^{n-1}$ with $n=5$, so the exponent on $r$ is $4$, not $5$.",
+      "solution": {
+        "steps": [
+          "Apply $a_n=a_1 r^{n-1}$ with $a_1=4$, $r=3$, $n=5$: $a_5=4\\cdot 3^{5-1}=4\\cdot 3^{4}$.",
+          "Evaluate the power: $3^{4}=81$.",
+          "Multiply: $a_5=4\\cdot 81=324$."
+        ],
+        "answer": "$a_5=324$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Find the common ratio of the geometric sequence $20,\\ -10,\\ 5,\\ -\\dfrac{5}{2},\\dots$",
+      "hint": "Divide a term by the term before it, keeping track of the sign: $r=\\dfrac{a_2}{a_1}$.",
+      "solution": {
+        "steps": [
+          "Compute $r=\\dfrac{a_2}{a_1}=\\dfrac{-10}{20}=-\\dfrac{1}{2}$.",
+          "Confirm with the next pair: $\\dfrac{5}{-10}=-\\dfrac{1}{2}$, the same value.",
+          "The negative ratio is why the terms alternate in sign."
+        ],
+        "answer": "$r=-\\dfrac{1}{2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Evaluate the finite geometric series $\\displaystyle\\sum_{k=1}^{4} 5\\left(2\\right)^{k-1}$.",
+      "hint": "Here $a_1=5$ and $r=2$ with $n=4$ terms. Use $S_n=a_1\\dfrac{1-r^{n}}{1-r}$.",
+      "solution": {
+        "steps": [
+          "Identify $a_1=5$, $r=2$, $n=4$.",
+          "Substitute into $S_n=a_1\\dfrac{1-r^{n}}{1-r}$: $S_4=5\\cdot\\dfrac{1-2^{4}}{1-2}$.",
+          "Compute: $2^{4}=16$, so $S_4=5\\cdot\\dfrac{1-16}{-1}=5\\cdot\\dfrac{-15}{-1}=5\\cdot 15=75$.",
+          "Check by adding the terms $5+10+20+40=75$."
+        ],
+        "answer": "$S_4=75$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Determine whether $\\displaystyle\\sum_{n=1}^{\\infty} 7\\left(\\dfrac{3}{2}\\right)^{n-1}$ converges, and explain.",
+      "hint": "An infinite geometric series converges only when $\\lvert r\\rvert<1$. Compare $r$ to $1$.",
+      "solution": {
+        "steps": [
+          "The common ratio is $r=\\dfrac{3}{2}$.",
+          "Test convergence: $\\left\\lvert\\dfrac{3}{2}\\right\\rvert=\\dfrac{3}{2}\\ge 1$, so the condition $\\lvert r\\rvert<1$ fails.",
+          "Because $\\lvert r\\rvert\\ge 1$ the terms do not shrink to $0$, so the series diverges. The formula $\\dfrac{a_1}{1-r}$ does not apply here."
+        ],
+        "answer": "It diverges, because $\\lvert r\\rvert=\\dfrac{3}{2}\\ge 1$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Express the repeating decimal $0.\\overline{27}$ as a fraction using an infinite geometric series.",
+      "hint": "Write $0.\\overline{27}=0.272727\\dots$ as $\\dfrac{27}{100}+\\dfrac{27}{10000}+\\dots$ Identify $a_1$ and $r$, then use $S=\\dfrac{a_1}{1-r}$.",
+      "solution": {
+        "steps": [
+          "Write the decimal as a sum: $0.\\overline{27}=\\dfrac{27}{100}+\\dfrac{27}{10000}+\\dfrac{27}{1000000}+\\dots$",
+          "This is geometric with first term $a_1=\\dfrac{27}{100}$ and common ratio $r=\\dfrac{1}{100}$.",
+          "Since $\\lvert r\\rvert=\\dfrac{1}{100}<1$, the series converges, so $S=\\dfrac{a_1}{1-r}=\\dfrac{27/100}{1-1/100}$.",
+          "Simplify the denominator: $1-\\dfrac{1}{100}=\\dfrac{99}{100}$, so $S=\\dfrac{27/100}{99/100}=\\dfrac{27}{99}=\\dfrac{3}{11}$."
+        ],
+        "answer": "$0.\\overline{27}=\\dfrac{3}{11}$"
+      }
+    }
+  ]
+}

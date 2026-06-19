@@ -1,0 +1,155 @@
+{
+  "id": "PC.EXP.A.2--quiz",
+  "standard": "PC.EXP.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Exponential and Logarithmic Functions",
+  "domainCode": "EXP",
+  "cluster": "Properties and graphs",
+  "clusterCode": "A",
+  "skillName": "Logarithmic Functions",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "An 8-question multiple-choice quiz on logarithmic functions: converting between exponential and logarithmic form, evaluating logarithms exactly, inverse-function identities, the change-of-base formula, and the domain, asymptote, and transformations of logarithmic graphs.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Rewrite the exponential equation $3^4 = 81$ in logarithmic form.\nA) $\\log_3 81 = 4$\nB) $\\log_4 81 = 3$\nC) $\\log_{81} 3 = 4$\nD) $\\log_3 4 = 81$",
+      "answer": "A) $\\log_3 81 = 4$",
+      "solution": {
+        "steps": [
+          "The form $b^y = x$ converts to $\\log_b x = y$. Here the base is $b = 3$, the exponent is $y = 4$, and the result is $x = 81$.",
+          "So $3^4 = 81$ becomes $\\log_3 81 = 4$, which is choice A.",
+          "B swaps the base and the exponent, treating the exponent $4$ as the base; the base must stay $3$.",
+          "C swaps the base and the argument, putting $81$ as the base.",
+          "D places the exponent as the argument and the result as the value, scrambling all the roles."
+        ],
+        "answer": "A) $\\log_3 81 = 4$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Evaluate $\\log_2 8$ without a calculator.\nA) $4$\nB) $16$\nC) $3$\nD) $6$",
+      "answer": "C) $3$",
+      "solution": {
+        "steps": [
+          "$\\log_2 8$ asks: to what power must $2$ be raised to get $8$?",
+          "Since $2^3 = 8$, the value is $3$, which is choice C.",
+          "A comes from dividing the argument by the base, $\\frac{8}{2} = 4$, which is not how a logarithm works.",
+          "B is $2 \\times 8 = 16$, multiplying instead of finding an exponent.",
+          "D is another arithmetic slip; none of these reflect the inverse relationship $2^3 = 8$."
+        ],
+        "answer": "C) $3$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "State the domain and vertical asymptote of $y = \\log_2(x - 3)$.\nA) Domain $x > -3$, asymptote $x = -3$\nB) Domain $x > 3$, asymptote $x = 3$\nC) Domain all real numbers, asymptote $x = 0$\nD) Domain $x > 0$, asymptote $x = 3$",
+      "answer": "B) Domain $x > 3$, asymptote $x = 3$",
+      "solution": {
+        "steps": [
+          "The argument of a logarithm must be positive: $x - 3 > 0$, so $x > 3$.",
+          "The vertical asymptote occurs where the argument equals $0$: $x - 3 = 0$, so $x = 3$. This is choice B.",
+          "A shifts in the wrong direction, treating $(x - 3)$ as $(x + 3)$.",
+          "C ignores the requirement that the argument be positive and uses the unshifted asymptote.",
+          "D uses the base parent domain $x > 0$ and does not account for the horizontal shift."
+        ],
+        "answer": "B) Domain $x > 3$, asymptote $x = 3$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Evaluate $\\log_4 \\dfrac{1}{64}$ without a calculator.\nA) $-3$\nB) $3$\nC) $-\\dfrac{1}{3}$\nD) $16$",
+      "answer": "A) $-3$",
+      "solution": {
+        "steps": [
+          "Write $\\frac{1}{64}$ as a power of the base $4$. Since $64 = 4^3$, we have $\\frac{1}{64} = 4^{-3}$.",
+          "Then $\\log_4 4^{-3} = -3$, which is choice A.",
+          "B drops the negative sign, ignoring that the reciprocal makes the exponent negative.",
+          "C confuses taking a reciprocal of the argument with reciprocating the exponent.",
+          "D comes from $\\frac{64}{4}$, dividing the argument by the base rather than finding the exponent."
+        ],
+        "answer": "A) $-3$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Express $\\log_7 20$ using natural logarithms with the change-of-base formula.\nA) $\\dfrac{\\ln 7}{\\ln 20}$\nB) $\\ln 20 - \\ln 7$\nC) $\\dfrac{\\ln 20}{\\ln 7}$\nD) $\\dfrac{20}{7}$",
+      "answer": "C) $\\dfrac{\\ln 20}{\\ln 7}$",
+      "solution": {
+        "steps": [
+          "The change-of-base formula is $\\log_b x = \\frac{\\ln x}{\\ln b}$, with the argument on top and the base on the bottom.",
+          "Here $b = 7$ and $x = 20$, so $\\log_7 20 = \\frac{\\ln 20}{\\ln 7}$, which is choice C.",
+          "A inverts the ratio, putting the base on top and the argument on the bottom.",
+          "B uses a subtraction rule that does not apply to a single logarithm of one number.",
+          "D simply divides the argument by the base, which is not the change-of-base formula."
+        ],
+        "answer": "C) $\\dfrac{\\ln 20}{\\ln 7}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Which statement correctly gives the domain and range of $y = \\log_3 x$?\nA) Domain $x > 0$, range all real numbers\nB) Domain all real numbers, range $y > 0$\nC) Domain $x > 0$, range $y > 0$\nD) Domain all real numbers, range all real numbers",
+      "answer": "A) Domain $x > 0$, range all real numbers",
+      "solution": {
+        "steps": [
+          "For the basic logarithmic function $y = \\log_3 x$, the argument $x$ must be positive, so the domain is $x > 0$.",
+          "As $x$ ranges over all positive values, $\\log_3 x$ takes on every real value, so the range is all real numbers. This is choice A.",
+          "B and D swap the domain and range with those of the inverse exponential function (whose domain is all reals).",
+          "C incorrectly restricts the range to positive values; logarithms output negative values for $0 < x < 1$, such as $\\log_3 \\frac{1}{3} = -1$."
+        ],
+        "answer": "A) Domain $x > 0$, range all real numbers"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Describe the graph of $y = -2\\log_2(x + 1) + 4$ compared to $y = \\log_2 x$.\nA) Reflected across the $x$-axis, vertical stretch by $2$, shifted left $1$ and up $4$; asymptote $x = -1$, domain $x > -1$, range all reals\nB) Reflected across the $x$-axis, vertical stretch by $2$, shifted right $1$ and up $4$; asymptote $x = 1$, domain $x > 1$, range all reals\nC) No reflection, vertical stretch by $2$, shifted left $1$ and up $4$; asymptote $x = -1$, domain $x > -1$, range $y > 4$\nD) Reflected across the $x$-axis, vertical stretch by $2$, shifted left $1$ and up $4$; asymptote $x = 4$, domain $x > -1$, range all reals",
+      "answer": "A) Reflected across the $x$-axis, vertical stretch by $2$, shifted left $1$ and up $4$; asymptote $x = -1$, domain $x > -1$, range all reals",
+      "solution": {
+        "steps": [
+          "The factor $a = -2$ means a reflection across the $x$-axis (negative sign) and a vertical stretch by $2$.",
+          "The argument $(x + 1)$ is $(x - h)$ with $h = -1$, a shift left $1$, and $+4$ is a shift up $4$.",
+          "The vertical asymptote moves with the horizontal shift to $x = -1$; the domain is $x + 1 > 0$, so $x > -1$.",
+          "Reflections, stretches, and vertical shifts do not bound the range, so the range stays all real numbers. This matches choice A.",
+          "B shifts right instead of left, mishandling $(x + 1)$. C drops the reflection and wrongly bounds the range as $y > 4$. D moves the asymptote to $x = 4$, applying the vertical shift $k$ to a vertical asymptote, which it never affects."
+        ],
+        "answer": "A) Reflected across the $x$-axis, vertical stretch by $2$, shifted left $1$ and up $4$; asymptote $x = -1$, domain $x > -1$, range all reals"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Evaluate the composite expression $\\log_2\\big(\\log_3 81\\big)$.\nA) $2$\nB) $4$\nC) $\\log_2 81$\nD) $\\log_6 81$",
+      "answer": "A) $2$",
+      "solution": {
+        "steps": [
+          "Work from the inside out. First, $\\log_3 81$ asks for the power of $3$ that gives $81$; since $3^4 = 81$, $\\log_3 81 = 4$.",
+          "Substitute to get $\\log_2 4$. Since $2^2 = 4$, $\\log_2 4 = 2$, which is choice A.",
+          "B stops after evaluating only the inner logarithm and reports $4$.",
+          "C skips evaluating the inner logarithm entirely, leaving $81$ as the argument.",
+          "D incorrectly combines the two bases into a single base $6$, which has no basis in the rules of logarithms."
+        ],
+        "answer": "A) $2$"
+      }
+    }
+  ]
+}

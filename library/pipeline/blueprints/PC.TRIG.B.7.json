@@ -1,0 +1,125 @@
+{
+  "standard": "PC.TRIG.B.7",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Graphs and identities",
+  "clusterCode": "B",
+  "skillName": "Trig Equations",
+
+  "description": "Students solve trigonometric equations both algebraically and graphically. They find all solutions on a specified interval such as $[0, 2\\pi)$, then write the general solution that captures every solution by adding integer multiples of the period (for example $\\theta = \\frac{\\pi}{6} + 2\\pi n$ or $\\theta = \\frac{\\pi}{4} + \\pi n$, $n \\in \\mathbb{Z}$). They use Pythagorean, double-angle, and other identities to rewrite an equation in a single trig function before solving, factor trig polynomials, handle equations with multiple angles such as $\\sin(2x)$, and verify candidate solutions against the original equation and the stated domain.",
+
+  "subSkills": [
+    "Solve a basic equation like $\\sin\\theta = \\frac{1}{2}$ using exact unit-circle values, listing every solution on $[0, 2\\pi)$",
+    "Write the general solution by adding the period: $+\\,2\\pi n$ for $\\sin$ and $\\cos$, $+\\,\\pi n$ for $\\tan$, where $n \\in \\mathbb{Z}$",
+    "Solve linear trig equations by isolating the function first (for example $2\\cos\\theta - 1 = 0$)",
+    "Factor and solve trig equations that are quadratic in form, such as $2\\sin^2\\theta - \\sin\\theta - 1 = 0$, using the zero-product property",
+    "Apply the Pythagorean identity $\\sin^2\\theta + \\cos^2\\theta = 1$ to convert an equation to a single function before solving",
+    "Apply double-angle identities (for example $\\cos(2\\theta) = 1 - 2\\sin^2\\theta$) to reduce a multiple-angle equation to one trig function",
+    "Solve multiple-angle equations like $\\sin(2x) = \\frac{\\sqrt{3}}{2}$ by solving for the inner angle then dividing, adjusting the solution count over the interval",
+    "Solve graphically by finding intersection points of two curves or the zeros of one curve on a window, and reconcile graphical and algebraic answers",
+    "Check for and discard extraneous solutions and solutions outside the stated interval"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Exact-value equation on an interval",
+      "example": "Solve $2\\cos\\theta = \\sqrt{3}$ for $\\theta \\in [0, 2\\pi)$. Answer: $\\theta = \\frac{\\pi}{6},\\ \\frac{11\\pi}{6}$."
+    },
+    {
+      "name": "General solution",
+      "example": "Find all solutions of $\\tan\\theta = -1$. Answer: $\\theta = \\frac{3\\pi}{4} + \\pi n,\\ n \\in \\mathbb{Z}$."
+    },
+    {
+      "name": "Factorable / quadratic in form",
+      "example": "Solve $2\\sin^2\\theta - \\sin\\theta - 1 = 0$ on $[0, 2\\pi)$. Factor to $(2\\sin\\theta + 1)(\\sin\\theta - 1) = 0$, giving $\\theta = \\frac{\\pi}{2},\\ \\frac{7\\pi}{6},\\ \\frac{11\\pi}{6}$."
+    },
+    {
+      "name": "Identity-substitution equation",
+      "example": "Solve $2\\cos^2\\theta + \\sin\\theta - 1 = 0$ on $[0, 2\\pi)$. Replace $\\cos^2\\theta$ with $1 - \\sin^2\\theta$ to get $2\\sin^2\\theta - \\sin\\theta - 1 = 0$, then factor and solve."
+    },
+    {
+      "name": "Multiple-angle equation",
+      "example": "Solve $\\sin(2x) = \\frac{\\sqrt{3}}{2}$ on $[0, 2\\pi)$. Solving $2x = \\frac{\\pi}{3} + 2\\pi n$ and $2x = \\frac{2\\pi}{3} + 2\\pi n$ yields $x = \\frac{\\pi}{6},\\ \\frac{\\pi}{3},\\ \\frac{7\\pi}{6},\\ \\frac{4\\pi}{3}$."
+    },
+    {
+      "name": "Graphical solution / intersection",
+      "example": "Use a graph to estimate the solutions of $\\cos x = x - 1$ on $[0, 2\\pi)$, identifying the intersection of $y = \\cos x$ and $y = x - 1$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single-step equation that reduces to one trig function equal to an exact unit-circle value. The student isolates the function and reads solutions directly off the unit circle on $[0, 2\\pi)$. At most one isolation step (add/subtract or divide).",
+      "constraints": [
+        "Equation involves one trig function and one occurrence of it",
+        "Right-hand value is an exact unit-circle value such as $\\frac{1}{2}$, $\\frac{\\sqrt{2}}{2}$, $\\frac{\\sqrt{3}}{2}$, $0$, $1$, or $-1$",
+        "Interval is $[0, 2\\pi)$ and yields one or two solutions",
+        "No identities, no factoring, no multiple angles"
+      ]
+    },
+    "Medium": {
+      "description": "Two to three steps. The equation is quadratic in one trig function and must be factored, OR a single Pythagorean identity must be applied to get one function, OR the general solution must be written explicitly with $+\\,2\\pi n$ or $+\\,\\pi n$. All resulting values are exact unit-circle angles.",
+      "constraints": [
+        "Requires factoring a trig quadratic via the zero-product property, or one identity substitution ($\\sin^2 + \\cos^2 = 1$)",
+        "May require writing the general solution with the correct period and $n \\in \\mathbb{Z}$",
+        "Student must reject a branch that has no solution (for example $\\sin\\theta = 2$)",
+        "Still resolves to exact unit-circle values"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step (three or more) involving a multiple-angle equation, a double-angle identity substitution, or reconciling graphical and algebraic methods. Solving a multiple angle requires generating extra solutions before dividing, then trimming to the interval. May combine identity use with factoring.",
+      "constraints": [
+        "Contains a multiple angle such as $\\sin(2x)$ or $\\cos(3x)$, requiring solutions of the inner angle to be generated then divided",
+        "Or requires a double-angle identity ($\\cos(2\\theta) = 1 - 2\\sin^2\\theta$, $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$) before solving",
+        "Student must enumerate the correct count of solutions on the interval and discard out-of-range or extraneous ones",
+        "May ask to confirm an algebraic answer against a graph or compare general solutions"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student gives only the first-quadrant solution and forgets the second angle with the same sine or cosine value",
+      "distractor": "For $\\sin\\theta = \\frac{1}{2}$ on $[0,2\\pi)$, answers only $\\theta = \\frac{\\pi}{6}$ and omits $\\theta = \\frac{5\\pi}{6}$"
+    },
+    {
+      "misconception": "Student writes the general solution with the wrong period, using $+\\,2\\pi n$ for tangent instead of $+\\,\\pi n$",
+      "distractor": "Writes $\\theta = \\frac{\\pi}{4} + 2\\pi n$ for $\\tan\\theta = 1$ instead of $\\theta = \\frac{\\pi}{4} + \\pi n$"
+    },
+    {
+      "misconception": "Student divides both sides by a trig function, losing the solutions where that function equals zero",
+      "distractor": "From $\\sin\\theta\\cos\\theta = \\sin\\theta$, divides by $\\sin\\theta$ to get only $\\cos\\theta = 1$ and loses the solutions from $\\sin\\theta = 0$"
+    },
+    {
+      "misconception": "Student solves a multiple-angle equation by dividing the angle before finding all inner-angle solutions, missing solutions on the interval",
+      "distractor": "For $\\sin(2x) = \\frac{\\sqrt{3}}{2}$ on $[0,2\\pi)$, gives only $x = \\frac{\\pi}{6}$ and $x = \\frac{\\pi}{3}$, missing $x = \\frac{7\\pi}{6}$ and $x = \\frac{4\\pi}{3}$"
+    },
+    {
+      "misconception": "Student keeps a candidate that makes a function undefined or lies outside the stated interval",
+      "distractor": "Includes $\\theta = \\frac{\\pi}{2}$ as a solution to an equation containing $\\tan\\theta$, where the function is undefined"
+    },
+    {
+      "misconception": "Student uses the wrong Pythagorean substitution, replacing $\\cos^2\\theta$ with $1 + \\sin^2\\theta$ instead of $1 - \\sin^2\\theta$",
+      "distractor": "Sign error converts $2\\cos^2\\theta + \\sin\\theta - 1 = 0$ into $-2\\sin^2\\theta + \\sin\\theta + 1 = 0$, producing wrong roots"
+    },
+    {
+      "misconception": "Student mishandles the sign of the inverse, ignoring that the reference angle gives solutions in two quadrants for a negative value",
+      "distractor": "For $\\cos\\theta = -\\frac{1}{2}$, answers $\\theta = \\frac{\\pi}{3}$ (reference angle) instead of $\\theta = \\frac{2\\pi}{3},\\ \\frac{4\\pi}{3}$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

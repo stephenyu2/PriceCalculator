@@ -1,0 +1,167 @@
+{
+  "id": "PC.TRIG.B.5--lesson",
+  "standard": "PC.TRIG.B.5",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Graphs and identities",
+  "clusterCode": "B",
+  "skillName": "Inverse Trig Functions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Because $\\sin$, $\\cos$, and $\\tan$ repeat, they fail the horizontal line test, so we restrict their domains to make them one-to-one before inverting. The inverse functions return exactly one angle from a fixed range: $\\arcsin x$ and $\\arctan x$ return angles in $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$ (with $\\arctan$ never reaching the endpoints), while $\\arccos x$ returns angles in $[0,\\pi]$. To evaluate compositions, always check that your final angle lies in the correct range, and use a reference right triangle or the Pythagorean identity to simplify mixed compositions into algebraic expressions.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "State the restricted domain used to define $\\arccos x$ and give the range of $y=\\arccos x$. Then evaluate $\\arccos\\left(\\frac{\\sqrt{3}}{2}\\right)$.",
+      "solution": {
+        "steps": [
+          "To make $\\cos x$ one-to-one we restrict its domain to $[0,\\pi]$, where $\\cos$ decreases from $1$ to $-1$ exactly once.",
+          "Inverting that piece, the range of $y=\\arccos x$ is exactly the restricted domain: $[0,\\pi]$. Its domain is $[-1,1]$.",
+          "Now evaluate $\\arccos\\left(\\frac{\\sqrt{3}}{2}\\right)$: we need the angle in $[0,\\pi]$ whose cosine is $\\frac{\\sqrt{3}}{2}$.",
+          "Since $\\cos\\frac{\\pi}{6}=\\frac{\\sqrt{3}}{2}$ and $\\frac{\\pi}{6}\\in[0,\\pi]$, we have $\\arccos\\left(\\frac{\\sqrt{3}}{2}\\right)=\\frac{\\pi}{6}$."
+        ],
+        "answer": "Restricted domain $[0,\\pi]$, range of $\\arccos$ is $[0,\\pi]$, and $\\arccos\\left(\\frac{\\sqrt{3}}{2}\\right)=\\frac{\\pi}{6}$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Evaluate $\\arcsin\\left(-\\frac{1}{2}\\right)$ exactly.",
+      "solution": {
+        "steps": [
+          "$\\arcsin$ returns an angle in $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$, so we need the angle in that interval whose sine is $-\\frac{1}{2}$.",
+          "The reference angle for $\\sin=\\frac{1}{2}$ is $\\frac{\\pi}{6}$.",
+          "Sine is negative on the range only for negative angles, so the answer is $-\\frac{\\pi}{6}$, which lies in $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$.",
+          "We reject $\\frac{7\\pi}{6}$ and $\\frac{11\\pi}{6}$: although their sine is $-\\frac{1}{2}$, they are outside the range of $\\arcsin$.",
+          "Therefore $\\arcsin\\left(-\\frac{1}{2}\\right)=-\\frac{\\pi}{6}$."
+        ],
+        "answer": "$-\\frac{\\pi}{6}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Write $\\cos(\\arcsin x)$ as an algebraic expression in $x$ for $x\\in[-1,1]$.",
+      "solution": {
+        "steps": [
+          "Let $\\theta=\\arcsin x$, so $\\sin\\theta=x$ with $\\theta\\in\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$.",
+          "We want $\\cos\\theta$. Use the Pythagorean identity $\\sin^2\\theta+\\cos^2\\theta=1$, so $\\cos^2\\theta=1-\\sin^2\\theta=1-x^2$.",
+          "Then $\\cos\\theta=\\pm\\sqrt{1-x^2}$. On $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$ cosine is never negative, so we take the positive root.",
+          "Therefore $\\cos(\\arcsin x)=\\sqrt{1-x^2}$. Do not drop the radical: it is $\\sqrt{1-x^2}$, not $1-x^2$."
+        ],
+        "answer": "$\\sqrt{1-x^2}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Simplify $\\arccos\\left(\\cos\\left(\\frac{4\\pi}{3}\\right)\\right)$.",
+      "solution": {
+        "steps": [
+          "The output of $\\arccos$ must lie in $[0,\\pi]$, but the inner angle $\\frac{4\\pi}{3}$ is not in that interval, so the answer is not simply $\\frac{4\\pi}{3}$.",
+          "First find $\\cos\\left(\\frac{4\\pi}{3}\\right)$. The angle $\\frac{4\\pi}{3}$ is in the third quadrant with reference angle $\\frac{\\pi}{3}$, so $\\cos\\left(\\frac{4\\pi}{3}\\right)=-\\frac{1}{2}$.",
+          "Now evaluate $\\arccos\\left(-\\frac{1}{2}\\right)$: we need the angle in $[0,\\pi]$ whose cosine is $-\\frac{1}{2}$.",
+          "Cosine is negative in the second quadrant, and $\\cos\\frac{2\\pi}{3}=-\\frac{1}{2}$ with $\\frac{2\\pi}{3}\\in[0,\\pi]$.",
+          "Therefore $\\arccos\\left(\\cos\\left(\\frac{4\\pi}{3}\\right)\\right)=\\frac{2\\pi}{3}$."
+        ],
+        "answer": "$\\frac{2\\pi}{3}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Evaluate $\\sin\\left(\\arctan\\left(\\frac{3}{4}\\right)\\right)$ exactly using a reference right triangle.",
+      "solution": {
+        "steps": [
+          "Let $\\theta=\\arctan\\left(\\frac{3}{4}\\right)$, so $\\tan\\theta=\\frac{3}{4}$ with $\\theta\\in\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$. Since $\\frac{3}{4}>0$, $\\theta$ is in the first quadrant.",
+          "Build a right triangle with opposite $=3$ and adjacent $=4$, matching $\\tan\\theta=\\frac{\\text{opp}}{\\text{adj}}=\\frac{3}{4}$.",
+          "Find the hypotenuse: $\\sqrt{3^2+4^2}=\\sqrt{9+16}=\\sqrt{25}=5$.",
+          "Then $\\sin\\theta=\\frac{\\text{opp}}{\\text{hyp}}=\\frac{3}{5}$, and it is positive since $\\theta$ is in the first quadrant.",
+          "Therefore $\\sin\\left(\\arctan\\left(\\frac{3}{4}\\right)\\right)=\\frac{3}{5}$."
+        ],
+        "answer": "$\\frac{3}{5}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Evaluate $\\arctan(1)$ exactly, giving the answer in radians.",
+      "hint": "Find the angle in $\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$ whose tangent is $1$. Give a radian measure, not degrees.",
+      "solution": {
+        "steps": [
+          "$\\arctan$ returns an angle in $\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$ with tangent equal to $1$.",
+          "Since $\\tan\\frac{\\pi}{4}=1$ and $\\frac{\\pi}{4}$ is in the range, $\\arctan(1)=\\frac{\\pi}{4}$.",
+          "The answer is in radians, not $45$ degrees."
+        ],
+        "answer": "$\\frac{\\pi}{4}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Evaluate $\\arccos\\left(-\\frac{1}{2}\\right)$ exactly.",
+      "hint": "The range of $\\arccos$ is $[0,\\pi]$, so the answer must be positive. Cosine is negative in the second quadrant.",
+      "solution": {
+        "steps": [
+          "We need the angle in $[0,\\pi]$ whose cosine is $-\\frac{1}{2}$.",
+          "The reference angle for $\\cos=\\frac{1}{2}$ is $\\frac{\\pi}{3}$, and cosine is negative in the second quadrant.",
+          "So the angle is $\\pi-\\frac{\\pi}{3}=\\frac{2\\pi}{3}$, which is in $[0,\\pi]$.",
+          "Therefore $\\arccos\\left(-\\frac{1}{2}\\right)=\\frac{2\\pi}{3}$. Note it is not $-\\frac{\\pi}{3}$, since $\\arccos$ never returns a negative angle."
+        ],
+        "answer": "$\\frac{2\\pi}{3}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Simplify $\\arcsin\\left(\\sin\\left(\\frac{2\\pi}{3}\\right)\\right)$.",
+      "hint": "The answer must lie in $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$, so it cannot be $\\frac{2\\pi}{3}$. Find the angle in that range with the same sine.",
+      "solution": {
+        "steps": [
+          "First find $\\sin\\left(\\frac{2\\pi}{3}\\right)$. The angle is in the second quadrant with reference angle $\\frac{\\pi}{3}$, so $\\sin\\left(\\frac{2\\pi}{3}\\right)=\\frac{\\sqrt{3}}{2}$.",
+          "Now evaluate $\\arcsin\\left(\\frac{\\sqrt{3}}{2}\\right)$: the angle in $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$ with that sine.",
+          "Since $\\sin\\frac{\\pi}{3}=\\frac{\\sqrt{3}}{2}$ and $\\frac{\\pi}{3}$ is in the range, the result is $\\frac{\\pi}{3}$.",
+          "Therefore $\\arcsin\\left(\\sin\\left(\\frac{2\\pi}{3}\\right)\\right)=\\frac{\\pi}{3}$, not $\\frac{2\\pi}{3}$."
+        ],
+        "answer": "$\\frac{\\pi}{3}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Write $\\tan(\\arccos x)$ as an algebraic expression in $x$ for $x\\in(0,1]$.",
+      "hint": "Let $\\theta=\\arccos x$ so $\\cos\\theta=x$. Build a right triangle with adjacent $x$ and hypotenuse $1$, then find the opposite side.",
+      "solution": {
+        "steps": [
+          "Let $\\theta=\\arccos x$, so $\\cos\\theta=x=\\frac{x}{1}$ with $\\theta\\in[0,\\pi]$.",
+          "Model with a right triangle: adjacent $=x$, hypotenuse $=1$, so the opposite side is $\\sqrt{1^2-x^2}=\\sqrt{1-x^2}$.",
+          "Then $\\tan\\theta=\\frac{\\text{opp}}{\\text{adj}}=\\frac{\\sqrt{1-x^2}}{x}$.",
+          "For $x\\in(0,1]$, $\\theta$ is in the first quadrant where tangent is positive, so $\\tan(\\arccos x)=\\frac{\\sqrt{1-x^2}}{x}$."
+        ],
+        "answer": "$\\frac{\\sqrt{1-x^2}}{x}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Sketch $y=\\arctan x$ in your head and state its domain, range, and any horizontal asymptotes.",
+      "hint": "Recall that $\\arctan$ inverts $\\tan$ restricted to $\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$. The asymptotes come from the endpoints of that range.",
+      "solution": {
+        "steps": [
+          "$\\arctan$ inverts $\\tan$ on the open interval $\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$, where $\\tan$ takes every real value, so the domain of $\\arctan$ is all real numbers $(-\\infty,\\infty)$.",
+          "The range is the restricted domain of $\\tan$: $\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$, open at both ends.",
+          "The graph passes through the origin $(0,0)$ since $\\arctan(0)=0$, and it increases throughout.",
+          "Because the range never reaches its endpoints, the graph has horizontal asymptotes $y=\\frac{\\pi}{2}$ (as $x\\to\\infty$) and $y=-\\frac{\\pi}{2}$ (as $x\\to-\\infty$)."
+        ],
+        "answer": "Domain $(-\\infty,\\infty)$, range $\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$, horizontal asymptotes $y=\\frac{\\pi}{2}$ and $y=-\\frac{\\pi}{2}$, passing through $(0,0)$."
+      }
+    }
+  ]
+}

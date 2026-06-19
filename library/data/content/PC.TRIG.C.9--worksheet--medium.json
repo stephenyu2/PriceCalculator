@@ -1,0 +1,235 @@
+{
+  "id": "PC.TRIG.C.9--worksheet--medium",
+  "standard": "PC.TRIG.C.9",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Laws of sines and cosines",
+  "clusterCode": "C",
+  "skillName": "Law of Cosines",
+  "materialType": "worksheet",
+  "difficulty": "Medium",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Apply the Law of Cosines, $c^2 = a^2 + b^2 - 2ab\\cos C$, and Heron's formula, $A = \\sqrt{s(s-a)(s-b)(s-c)}$, to oblique triangles. These medium problems ask you to choose the correct law, work with non-benchmark angles, watch the sign of the cosine for obtuse angles, and simplify radicals. Round decimal answers to the precision stated.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "In triangle $ABC$, $a = 6$, $b = 9$, and the included angle $C = 50^\\circ$. Find side $c$, rounded to two decimal places.",
+      "answer": "$c \\approx 6.90$",
+      "solution": {
+        "steps": [
+          "Side $c$ is opposite the given angle $C$, so use $c^2 = a^2 + b^2 - 2ab\\cos C$.",
+          "Substitute: $c^2 = 6^2 + 9^2 - 2(6)(9)\\cos 50^\\circ = 36 + 81 - 108\\cos 50^\\circ$.",
+          "Since $\\cos 50^\\circ \\approx 0.6428$, $c^2 \\approx 117 - 108(0.6428) \\approx 117 - 69.42 = 47.58$.",
+          "Take the square root: $c \\approx \\sqrt{47.58} \\approx 6.90$."
+        ],
+        "answer": "$c \\approx 6.90$"
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A triangle has sides $a = 5$, $b = 6$, $c = 8$. Find the measure of angle $C$ (opposite the longest side), rounded to one decimal place, and state whether it is acute or obtuse.",
+      "answer": "$C \\approx 92.9^\\circ$, obtuse",
+      "solution": {
+        "steps": [
+          "Rearrange the Law of Cosines for the angle: $\\cos C = \\dfrac{a^2 + b^2 - c^2}{2ab}$.",
+          "Substitute: $\\cos C = \\dfrac{5^2 + 6^2 - 8^2}{2(5)(6)} = \\dfrac{25 + 36 - 64}{60} = \\dfrac{-3}{60} = -\\dfrac{1}{20}$.",
+          "The cosine is negative, so angle $C$ is obtuse.",
+          "Take the inverse cosine: $C = \\cos^{-1}\\!\\left(-\\dfrac{1}{20}\\right) \\approx 92.9^\\circ$."
+        ],
+        "answer": "$C \\approx 92.9^\\circ$, obtuse"
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "You are given angle $A = 38^\\circ$, side $b = 11$, and side $c = 14$. State which law you should use to find side $a$, then find $a$ rounded to two decimal places.",
+      "answer": "Law of Cosines (SAS); $a \\approx 8.62$",
+      "solution": {
+        "steps": [
+          "The given parts are two sides and the angle $A$ included between them (SAS), so use the Law of Cosines, not the Law of Sines.",
+          "Side $a$ is opposite angle $A$: $a^2 = b^2 + c^2 - 2bc\\cos A$.",
+          "Substitute: $a^2 = 11^2 + 14^2 - 2(11)(14)\\cos 38^\\circ = 121 + 196 - 308\\cos 38^\\circ$.",
+          "Since $\\cos 38^\\circ \\approx 0.7880$, $a^2 \\approx 317 - 308(0.7880) \\approx 317 - 242.71 = 74.29$.",
+          "Take the square root: $a \\approx \\sqrt{74.29} \\approx 8.62$."
+        ],
+        "answer": "Law of Cosines (SAS); $a \\approx 8.62$"
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Find the area of a triangle with sides $a = 4$, $b = 5$, $c = 7$ using Heron's formula. Leave your answer as a simplified radical.",
+      "answer": "$4\\sqrt{6}$",
+      "solution": {
+        "steps": [
+          "Compute the semiperimeter: $s = \\dfrac{a+b+c}{2} = \\dfrac{4+5+7}{2} = 8$.",
+          "Apply Heron's formula: $A = \\sqrt{s(s-a)(s-b)(s-c)} = \\sqrt{8(8-4)(8-5)(8-7)}$.",
+          "Simplify inside: $A = \\sqrt{8 \\cdot 4 \\cdot 3 \\cdot 1} = \\sqrt{96}$.",
+          "Simplify the radical: $\\sqrt{96} = \\sqrt{16 \\cdot 6} = 4\\sqrt{6}$."
+        ],
+        "answer": "$4\\sqrt{6}$"
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Two roads diverge from a single point at an angle of $72^\\circ$. A surveyor walks $8$ km along one road and $5$ km along the other. How far apart are the two endpoints, rounded to two decimal places?",
+      "answer": "$\\approx 8.02$ km",
+      "solution": {
+        "steps": [
+          "The two roads and the line joining the endpoints form a triangle with the $72^\\circ$ angle included between the $8$ km and $5$ km sides (SAS).",
+          "Let $d$ be the distance between endpoints: $d^2 = 8^2 + 5^2 - 2(8)(5)\\cos 72^\\circ$.",
+          "Substitute: $d^2 = 64 + 25 - 80\\cos 72^\\circ = 89 - 80\\cos 72^\\circ$.",
+          "Since $\\cos 72^\\circ \\approx 0.3090$, $d^2 \\approx 89 - 80(0.3090) \\approx 89 - 24.72 = 64.28$.",
+          "Take the square root: $d \\approx \\sqrt{64.28} \\approx 8.02$ km."
+        ],
+        "answer": "$\\approx 8.02$ km"
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A triangle has sides $a = 7$, $b = 8$, $c = 12$. Find angle $C$ opposite the longest side, rounded to one decimal place. Is the triangle obtuse?",
+      "answer": "$C \\approx 106.1^\\circ$, yes obtuse",
+      "solution": {
+        "steps": [
+          "Use $\\cos C = \\dfrac{a^2 + b^2 - c^2}{2ab}$ with $c$ the longest side.",
+          "Substitute: $\\cos C = \\dfrac{7^2 + 8^2 - 12^2}{2(7)(8)} = \\dfrac{49 + 64 - 144}{112} = \\dfrac{-31}{112}$.",
+          "The cosine is negative, so angle $C$ is obtuse and the triangle is obtuse.",
+          "Compute $-\\dfrac{31}{112} \\approx -0.2768$, so $C = \\cos^{-1}(-0.2768) \\approx 106.1^\\circ$."
+        ],
+        "answer": "$C \\approx 106.1^\\circ$, yes obtuse"
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "In triangle $ABC$, $a = 10$, $b = 7$, and the included angle $C = 120^\\circ$. Find side $c$. Give the exact value.",
+      "answer": "$c = \\sqrt{219}$",
+      "solution": {
+        "steps": [
+          "Side $c$ is opposite $C$, so $c^2 = a^2 + b^2 - 2ab\\cos C$.",
+          "Substitute: $c^2 = 10^2 + 7^2 - 2(10)(7)\\cos 120^\\circ$.",
+          "Since $\\cos 120^\\circ = -\\dfrac{1}{2}$, $c^2 = 100 + 49 - 140\\left(-\\dfrac{1}{2}\\right) = 149 + 70 = 219$.",
+          "Take the square root: $c = \\sqrt{219}$ (which does not simplify, since $219 = 3 \\cdot 73$)."
+        ],
+        "answer": "$c = \\sqrt{219}$"
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Find the area of a triangle with sides $a = 6$, $b = 8$, $c = 10$ using Heron's formula. (Notice anything about this triangle?)",
+      "answer": "$24$",
+      "solution": {
+        "steps": [
+          "Semiperimeter: $s = \\dfrac{6+8+10}{2} = 12$.",
+          "Heron's formula: $A = \\sqrt{12(12-6)(12-8)(12-10)} = \\sqrt{12 \\cdot 6 \\cdot 4 \\cdot 2}$.",
+          "Simplify: $A = \\sqrt{576} = 24$.",
+          "Check: $6^2 + 8^2 = 36 + 64 = 100 = 10^2$, so this is a right triangle, and indeed $\\tfrac{1}{2}(6)(8) = 24$ agrees."
+        ],
+        "answer": "$24$"
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A triangle has sides $a = 9$, $b = 12$, $c = 6$. Find the smallest angle of the triangle, rounded to one decimal place. (The smallest angle lies opposite the shortest side.)",
+      "answer": "$C \\approx 29.0^\\circ$",
+      "solution": {
+        "steps": [
+          "The shortest side is $c = 6$, so the smallest angle is $C$, opposite it.",
+          "Use $\\cos C = \\dfrac{a^2 + b^2 - c^2}{2ab} = \\dfrac{9^2 + 12^2 - 6^2}{2(9)(12)}$.",
+          "Substitute: $\\cos C = \\dfrac{81 + 144 - 36}{216} = \\dfrac{189}{216} = \\dfrac{7}{8}$.",
+          "Take the inverse cosine: $C = \\cos^{-1}\\!\\left(\\dfrac{7}{8}\\right) \\approx 29.0^\\circ$."
+        ],
+        "answer": "$C \\approx 29.0^\\circ$"
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A ship sails $15$ nautical miles on a course, then turns through an interior triangle angle of $110^\\circ$ and sails $20$ nautical miles. How far is the ship from its starting point, rounded to two decimal places?",
+      "answer": "$\\approx 28.81$ nautical miles",
+      "solution": {
+        "steps": [
+          "The two legs of $15$ and $20$ nautical miles with the $110^\\circ$ angle between them form an SAS triangle; the distance back to the start is the side opposite that angle.",
+          "Let $d$ be that distance: $d^2 = 15^2 + 20^2 - 2(15)(20)\\cos 110^\\circ$.",
+          "Substitute: $d^2 = 225 + 400 - 600\\cos 110^\\circ = 625 - 600\\cos 110^\\circ$.",
+          "Since $\\cos 110^\\circ \\approx -0.3420$, $d^2 \\approx 625 - 600(-0.3420) = 625 + 205.21 = 830.21$.",
+          "Take the square root: $d \\approx \\sqrt{830.21} \\approx 28.81$ nautical miles."
+        ],
+        "answer": "$\\approx 28.81$ nautical miles"
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "You are given angle $B = 65^\\circ$, side $a = 9$, and side $c = 9$ (the two sides that include angle $B$). Decide which law applies, then find side $b$ rounded to two decimal places.",
+      "answer": "Law of Cosines (SAS); $b \\approx 9.67$",
+      "solution": {
+        "steps": [
+          "Angle $B$ is included between sides $a$ and $c$, so this is SAS and the Law of Cosines applies.",
+          "Side $b$ is opposite $B$: $b^2 = a^2 + c^2 - 2ac\\cos B$.",
+          "Substitute: $b^2 = 9^2 + 9^2 - 2(9)(9)\\cos 65^\\circ = 81 + 81 - 162\\cos 65^\\circ$.",
+          "Since $\\cos 65^\\circ \\approx 0.4226$, $b^2 \\approx 162 - 162(0.4226) \\approx 162 - 68.47 = 93.53$.",
+          "Take the square root: $b \\approx \\sqrt{93.53} \\approx 9.67$."
+        ],
+        "answer": "Law of Cosines (SAS); $b \\approx 9.67$"
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Find the area of a triangle with sides $a = 5$, $b = 5$, $c = 6$ using Heron's formula. Give the exact value.",
+      "answer": "$12$",
+      "solution": {
+        "steps": [
+          "Semiperimeter: $s = \\dfrac{5+5+6}{2} = 8$.",
+          "Heron's formula: $A = \\sqrt{8(8-5)(8-5)(8-6)} = \\sqrt{8 \\cdot 3 \\cdot 3 \\cdot 2}$.",
+          "Simplify the radicand: $8 \\cdot 3 \\cdot 3 \\cdot 2 = 144$.",
+          "Therefore $A = \\sqrt{144} = 12$."
+        ],
+        "answer": "$12$"
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "In triangle $ABC$, $a = 11$, $b = 13$, and the included angle $C = 95^\\circ$. Find side $c$, rounded to two decimal places.",
+      "answer": "$c \\approx 17.75$",
+      "solution": {
+        "steps": [
+          "Side $c$ is opposite $C$: $c^2 = a^2 + b^2 - 2ab\\cos C$.",
+          "Substitute: $c^2 = 11^2 + 13^2 - 2(11)(13)\\cos 95^\\circ = 121 + 169 - 286\\cos 95^\\circ$.",
+          "Since $\\cos 95^\\circ \\approx -0.0872$, $c^2 \\approx 290 - 286(-0.0872) = 290 + 24.93 = 314.93$.",
+          "Take the square root: $c \\approx \\sqrt{314.93} \\approx 17.75$."
+        ],
+        "answer": "$c \\approx 17.75$"
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A triangle has sides $a = 4$, $b = 7$, $c = 9$. First find angle $C$ opposite the longest side (round to one decimal place), then use the Law of Sines to find angle $A$ (round to one decimal place).",
+      "answer": "$C \\approx 106.6^\\circ$, $A \\approx 25.2^\\circ$",
+      "solution": {
+        "steps": [
+          "Find $C$ with the Law of Cosines: $\\cos C = \\dfrac{a^2 + b^2 - c^2}{2ab} = \\dfrac{16 + 49 - 81}{2(4)(7)} = \\dfrac{-16}{56} = -\\dfrac{2}{7}$.",
+          "So $C = \\cos^{-1}\\!\\left(-\\dfrac{2}{7}\\right) \\approx 106.6^\\circ$ (obtuse, since the cosine is negative).",
+          "Now use the Law of Sines: $\\dfrac{\\sin A}{a} = \\dfrac{\\sin C}{c}$, so $\\sin A = \\dfrac{a\\sin C}{c} = \\dfrac{4\\sin 106.6^\\circ}{9}$.",
+          "Since $\\sin 106.6^\\circ \\approx 0.9583$, $\\sin A \\approx \\dfrac{4(0.9583)}{9} \\approx 0.4259$.",
+          "Then $A = \\sin^{-1}(0.4259) \\approx 25.2^\\circ$ (acute, since $C$ is already obtuse there is no ambiguity)."
+        ],
+        "answer": "$C \\approx 106.6^\\circ$, $A \\approx 25.2^\\circ$"
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Two forces of $30$ N and $40$ N act on a point with an angle of $115^\\circ$ between their directions. Modeling the resultant with a triangle, the magnitude $R$ of the resultant satisfies $R^2 = 30^2 + 40^2 - 2(30)(40)\\cos(180^\\circ - 115^\\circ)$. Find $R$ rounded to two decimal places.",
+      "answer": "$R \\approx 38.54$ N",
+      "solution": {
+        "steps": [
+          "In the force triangle, the angle opposite the resultant is the supplement of the angle between the forces: $180^\\circ - 115^\\circ = 65^\\circ$.",
+          "Apply the Law of Cosines: $R^2 = 30^2 + 40^2 - 2(30)(40)\\cos 65^\\circ = 900 + 1600 - 2400\\cos 65^\\circ$.",
+          "Since $\\cos 65^\\circ \\approx 0.42262$, $R^2 \\approx 2500 - 2400(0.42262) \\approx 2500 - 1014.29 = 1485.71$.",
+          "Take the square root: $R \\approx \\sqrt{1485.71} \\approx 38.54$ N."
+        ],
+        "answer": "$R \\approx 38.54$ N"
+      }
+    }
+  ]
+}

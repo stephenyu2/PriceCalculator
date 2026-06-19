@@ -123,6 +123,55 @@ function checkQuiz(items, errors, warnings) {
   });
 }
 
+// ── Math notation lint (subject === 'math') ──────────────────────────────────
+// Enforces that math is written in LaTeX between $ delimiters (rendered by
+// KaTeX in material.js), not as ASCII. Catches the exact thing the user cares
+// about: "7/6" must be $\frac{7}{6}$, exponents/roots must be LaTeX, and every
+// $ must be balanced (an odd $ silently breaks KaTeX rendering for the page).
+
+// Remove matched $$...$$ and $...$ spans; what remains is "prose" that must not
+// contain raw math. Returns { prose, balanced }.
+function stripMath(text) {
+  // Escaped \$ is a LITERAL currency dollar: material.js safe() converts it to
+  // <span>$</span> before KaTeX runs, so it is NOT a delimiter. Remove it first,
+  // exactly as the renderer does, before pairing/counting math delimiters.
+  const s = String(text).replace(/\\\$/g, '');
+  // strip display math first, then inline; non-greedy
+  const stripped = s.replace(/\$\$[\s\S]*?\$\$/g, ' ').replace(/\$[^$]*\$/g, ' ');
+  const balanced = !stripped.includes('$'); // any leftover $ means an unmatched delimiter
+  return { prose: stripped, balanced };
+}
+
+function lintMathText(text, tag, where, errors, warnings) {
+  if (typeof text !== 'string' || !text) return;
+  const { prose, balanced } = stripMath(text);
+  if (!balanced) errors.push(`${tag} ${where}: unbalanced $ delimiter (KaTeX will not render)`);
+  // bare numeric fraction outside math, e.g. 7/6  (allow dates/URLs are rare here)
+  if (/(?<![\w$/])\d+\s*\/\s*\d+(?![\w$/])/.test(prose)) {
+    const m = prose.match(/(?<![\w$/])\d+\s*\/\s*\d+(?![\w$/])/);
+    errors.push(`${tag} ${where}: bare ASCII fraction "${m[0]}" — use LaTeX $\\frac{a}{b}$`);
+  }
+  // common math written as ASCII outside $...$
+  if (/(?<![\\\w$])(sqrt|sin|cos|tan|log|ln|pi|theta)\b/i.test(prose) || /\w\^\w/.test(prose)) {
+    warnings.push(`${tag} ${where}: looks like math outside $...$ (sqrt/sin/^/pi...) — wrap in LaTeX`);
+  }
+}
+
+function lintItemMath(it, tag, errors, warnings) {
+  lintMathText(it.prompt, tag, 'prompt', errors, warnings);
+  lintMathText(it.hint, tag, 'hint', errors, warnings);
+  lintMathText(it.answer, tag, 'answer', errors, warnings);
+  if (it.solution) {
+    lintMathText(it.solution.answer, tag, 'solution.answer', errors, warnings);
+    (it.solution.steps || []).forEach((s, i) => lintMathText(s, tag, `step ${i + 1}`, errors, warnings));
+  }
+}
+
+function checkMathNotation(data, errors, warnings) {
+  if (data.subject !== 'math') return;
+  data.items.forEach((it, i) => lintItemMath(it, `${data.materialType} item #${it.id ?? i + 1}`, errors, warnings));
+}
+
 function checkCounts(data, blueprint, warnings, errors) {
   if (!blueprint || !blueprint.itemCounts) return;
   const c = blueprint.itemCounts;
@@ -152,6 +201,7 @@ export function check(file, blueprint = null) {
     else if (data.materialType === 'worksheet') checkWorksheet(data, data.items, errors, warnings);
     else if (data.materialType === 'quiz') checkQuiz(data.items, errors, warnings);
     else errors.push(`unknown materialType: ${data.materialType}`);
+    checkMathNotation(data, errors, warnings);
   }
   checkCounts(data, blueprint, warnings, errors);
 

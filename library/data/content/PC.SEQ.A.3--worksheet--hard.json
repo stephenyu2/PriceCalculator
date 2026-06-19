@@ -1,0 +1,217 @@
+{
+  "id": "PC.SEQ.A.3--worksheet--hard",
+  "standard": "PC.SEQ.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Sequences, Series, and Limits",
+  "domainCode": "SEQ",
+  "cluster": "Sequences and series",
+  "clusterCode": "A",
+  "skillName": "Introduction to Limits",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems require you to evaluate both one-sided limits, apply the existence criterion, and name the specific reason a limit fails to exist (oscillation, unbounded behavior, or one-sided disagreement). Give exact values, use $\\pm\\infty$ only to describe behavior, and state clearly when a two-sided limit does not exist.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "For $f(x) = \\begin{cases} x + 1 & x < 2 \\\\ 5 & x = 2 \\\\ x^2 & x > 2 \\end{cases}$, find $\\lim_{x \\to 2^-} f(x)$, $\\lim_{x \\to 2^+} f(x)$, and decide whether $\\lim_{x \\to 2} f(x)$ exists. Justify your reason.",
+      "answer": "$\\lim_{x \\to 2^-} f(x) = 3$, $\\lim_{x \\to 2^+} f(x) = 4$; the two-sided limit does not exist because the one-sided limits disagree (a jump).",
+      "solution": {
+        "steps": [
+          "Left side uses the rule for $x < 2$: $\\lim_{x \\to 2^-} f(x) = 2 + 1 = 3$.",
+          "Right side uses the rule for $x > 2$: $\\lim_{x \\to 2^+} f(x) = 2^2 = 4$.",
+          "Apply the existence criterion: the two-sided limit exists only if the one-sided limits are equal.",
+          "Since $3 \\neq 4$, $\\lim_{x \\to 2} f(x)$ does not exist; this is a jump (one-sided disagreement).",
+          "Note the value $f(2) = 5$ is irrelevant to the limit."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "For $f(x) = \\dfrac{1}{x}$, evaluate $\\lim_{x \\to 0^-} f(x)$ and $\\lim_{x \\to 0^+} f(x)$, then decide whether $\\lim_{x \\to 0} f(x)$ exists. Explain.",
+      "answer": "$\\lim_{x \\to 0^-} f(x) = -\\infty$ and $\\lim_{x \\to 0^+} f(x) = +\\infty$; $\\lim_{x \\to 0} f(x)$ does not exist because the two sides disagree (and both are unbounded).",
+      "solution": {
+        "steps": [
+          "As $x \\to 0^-$, $x$ is a small negative number, so $\\frac{1}{x}$ is large and negative: $\\lim_{x \\to 0^-} \\frac{1}{x} = -\\infty$.",
+          "As $x \\to 0^+$, $x$ is a small positive number, so $\\frac{1}{x}$ is large and positive: $\\lim_{x \\to 0^+} \\frac{1}{x} = +\\infty$.",
+          "The one-sided behaviors disagree ($-\\infty$ versus $+\\infty$), so the two-sided limit does not exist.",
+          "It is a mistake to report $+\\infty$ as the two-sided answer; the left side heads the opposite direction."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Evaluate $\\lim_{x \\to 0} \\dfrac{1}{x^2}$ by examining both sides, and state whether the limit exists. Justify your reasoning.",
+      "answer": "Both one-sided limits are $+\\infty$, so $\\lim_{x \\to 0} \\frac{1}{x^2}$ does not exist; we write $\\lim_{x \\to 0} \\frac{1}{x^2} = +\\infty$ to describe the unbounded behavior.",
+      "solution": {
+        "steps": [
+          "For $x \\to 0^-$: $x^2$ is a small positive number, so $\\frac{1}{x^2} \\to +\\infty$.",
+          "For $x \\to 0^+$: $x^2$ is again a small positive number, so $\\frac{1}{x^2} \\to +\\infty$.",
+          "Both sides agree in direction, but the value grows without bound, so there is no finite limit.",
+          "The two-sided limit does not exist (unbounded); $+\\infty$ is shorthand for the behavior, not an actual limit value."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Explain why $\\lim_{x \\to 0} \\sin\\!\\left(\\dfrac{1}{x}\\right)$ does not exist. Reference the values of $\\frac{1}{x}$ as $x \\to 0$.",
+      "answer": "It does not exist by oscillation: as $x \\to 0$, $\\frac{1}{x}$ runs through all large values, so $\\sin\\!\\left(\\frac{1}{x}\\right)$ oscillates between $-1$ and $1$ infinitely often and never settles on a single value.",
+      "solution": {
+        "steps": [
+          "As $x \\to 0$, $\\frac{1}{x}$ grows in magnitude without bound, sweeping through infinitely many full periods of sine.",
+          "Sine of those inputs takes every value in $[-1, 1]$ infinitely often, including hitting $1$ and $-1$ repeatedly.",
+          "Because the outputs do not approach any single number $L$, the limit fails to exist.",
+          "This is non-existence by oscillation; reporting $0$ (the midpoint) is incorrect."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "For $f(x) = \\begin{cases} 2x - 1 & x \\le 1 \\\\ 3 - x & x > 1 \\end{cases}$, find both one-sided limits at $x = 1$ and decide whether $\\lim_{x \\to 1} f(x)$ exists.",
+      "answer": "$\\lim_{x \\to 1^-} f(x) = 1$ and $\\lim_{x \\to 1^+} f(x) = 2$; the two-sided limit does not exist because the sides disagree.",
+      "solution": {
+        "steps": [
+          "Left side ($x \\le 1$): $\\lim_{x \\to 1^-} (2x - 1) = 2(1) - 1 = 1$.",
+          "Right side ($x > 1$): $\\lim_{x \\to 1^+} (3 - x) = 3 - 1 = 2$.",
+          "Compare: $1 \\neq 2$, so the existence criterion fails.",
+          "$\\lim_{x \\to 1} f(x)$ does not exist (jump, one-sided disagreement)."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A graph of $f$ has a vertical asymptote at $x = 4$. To the left of $x = 4$ the curve plunges downward, and to the right it shoots upward. Express $\\lim_{x \\to 4^-} f(x)$ and $\\lim_{x \\to 4^+} f(x)$ in $\\infty$ notation and state whether $\\lim_{x \\to 4} f(x)$ exists.",
+      "answer": "$\\lim_{x \\to 4^-} f(x) = -\\infty$ and $\\lim_{x \\to 4^+} f(x) = +\\infty$; $\\lim_{x \\to 4} f(x)$ does not exist (unbounded, with disagreeing sides).",
+      "solution": {
+        "steps": [
+          "The curve plunging downward on the left means the outputs decrease without bound: $\\lim_{x \\to 4^-} f(x) = -\\infty$.",
+          "The curve shooting upward on the right means the outputs increase without bound: $\\lim_{x \\to 4^+} f(x) = +\\infty$.",
+          "Neither one-sided limit is a finite number, and the directions disagree.",
+          "Therefore $\\lim_{x \\to 4} f(x)$ does not exist."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Consider $f(x) = \\dfrac{x^2 - 25}{x - 5}$. Find $\\lim_{x \\to 5} f(x)$, then state $f(5)$ and explain why the limit can exist even though $f(5)$ does not.",
+      "answer": "$\\lim_{x \\to 5} f(x) = 10$; $f(5)$ is undefined (a hole), but the limit describes the approached value, not the function value.",
+      "solution": {
+        "steps": [
+          "Factor the numerator: $x^2 - 25 = (x - 5)(x + 5)$.",
+          "For $x \\neq 5$, $\\frac{(x-5)(x+5)}{x-5} = x + 5$.",
+          "Take the limit of the simplified form: $\\lim_{x \\to 5} (x + 5) = 5 + 5 = 10$.",
+          "At $x = 5$ the original denominator is $0$, so $f(5)$ is undefined (a removable hole).",
+          "The limit tracks where outputs head as $x \\to 5$, which is $10$, independent of whether $f(5)$ exists."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "For $f(x) = \\begin{cases} \\dfrac{x^2 - 4}{x - 2} & x \\neq 2 \\\\ 1 & x = 2 \\end{cases}$, find $\\lim_{x \\to 2} f(x)$ and compare it to $f(2)$. Does the limit exist?",
+      "answer": "$\\lim_{x \\to 2} f(x) = 4$ and the limit exists; $f(2) = 1$, so the limit and the function value disagree (a removable discontinuity).",
+      "solution": {
+        "steps": [
+          "For $x \\neq 2$: $\\frac{x^2 - 4}{x - 2} = \\frac{(x-2)(x+2)}{x-2} = x + 2$.",
+          "Take the limit: $\\lim_{x \\to 2} (x + 2) = 4$. Both sides give $4$, so the limit exists and equals $4$.",
+          "The defined value is $f(2) = 1$.",
+          "Since $4 \\neq 1$, the limit does not equal the function value, but the limit still exists."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Estimate $\\lim_{x \\to \\infty} \\dfrac{3x + 1}{x}$ and $\\lim_{x \\to -\\infty} \\dfrac{3x + 1}{x}$. State both end-behavior limits and explain.",
+      "answer": "Both end-behavior limits equal $3$: $\\lim_{x \\to \\infty} \\frac{3x+1}{x} = 3$ and $\\lim_{x \\to -\\infty} \\frac{3x+1}{x} = 3$.",
+      "solution": {
+        "steps": [
+          "Rewrite: $\\frac{3x + 1}{x} = 3 + \\frac{1}{x}$.",
+          "As $x \\to \\infty$, $\\frac{1}{x} \\to 0$, so the expression $\\to 3$.",
+          "As $x \\to -\\infty$, $\\frac{1}{x} \\to 0$ as well, so the expression $\\to 3$.",
+          "The horizontal asymptote is $y = 3$; do not evaluate at $x = 0$, which would be undefined."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "For $f(x) = \\begin{cases} x^2 & x < 1 \\\\ 2x - 1 & 1 \\le x < 3 \\\\ 4 & x \\ge 3 \\end{cases}$, determine whether $\\lim_{x \\to 1} f(x)$ and $\\lim_{x \\to 3} f(x)$ each exist, with reasons.",
+      "answer": "$\\lim_{x \\to 1} f(x) = 1$ exists (both sides give $1$). $\\lim_{x \\to 3} f(x)$ does not exist: left side $\\to 5$, right side $\\to 4$, a jump.",
+      "solution": {
+        "steps": [
+          "At $x = 1$: left ($x < 1$) gives $\\lim_{x \\to 1^-} x^2 = 1$; right ($1 \\le x < 3$) gives $\\lim_{x \\to 1^+} (2x - 1) = 1$. Equal, so $\\lim_{x \\to 1} f(x) = 1$.",
+          "At $x = 3$: left uses $2x - 1$, giving $\\lim_{x \\to 3^-} (2x - 1) = 2(3) - 1 = 5$.",
+          "Right uses the constant $4$, giving $\\lim_{x \\to 3^+} f(x) = 4$.",
+          "Since $5 \\neq 4$, $\\lim_{x \\to 3} f(x)$ does not exist (jump)."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A numerical table for $f(x)$ gives $f(2.9) = 5.9$, $f(2.99) = 5.99$, $f(2.999) = 5.999$ from the left and $f(3.1) = 8.1$, $f(3.01) = 8.01$, $f(3.001) = 8.001$ from the right. Decide whether $\\lim_{x \\to 3} f(x)$ exists and justify using the table.",
+      "answer": "It does not exist: the left values approach $6$ and the right values approach $8$, so the one-sided limits disagree.",
+      "solution": {
+        "steps": [
+          "Read the left column: $5.9, 5.99, 5.999$ are climbing toward $6$, so $\\lim_{x \\to 3^-} f(x) = 6$.",
+          "Read the right column: $8.1, 8.01, 8.001$ are settling toward $8$, so $\\lim_{x \\to 3^+} f(x) = 8$.",
+          "Apply the existence criterion: $6 \\neq 8$.",
+          "Therefore $\\lim_{x \\to 3} f(x)$ does not exist; this is a jump. Averaging to $7$ would be incorrect."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "For $f(x) = \\dfrac{|x - 4|}{x - 4}$, evaluate $\\lim_{x \\to 4^-} f(x)$ and $\\lim_{x \\to 4^+} f(x)$, and decide whether $\\lim_{x \\to 4} f(x)$ exists.",
+      "answer": "$\\lim_{x \\to 4^-} f(x) = -1$ and $\\lim_{x \\to 4^+} f(x) = 1$; $\\lim_{x \\to 4} f(x)$ does not exist (one-sided disagreement).",
+      "solution": {
+        "steps": [
+          "For $x < 4$, $x - 4 < 0$, so $|x - 4| = -(x - 4)$ and $f(x) = \\frac{-(x-4)}{x-4} = -1$. Thus $\\lim_{x \\to 4^-} f(x) = -1$.",
+          "For $x > 4$, $x - 4 > 0$, so $|x - 4| = x - 4$ and $f(x) = \\frac{x-4}{x-4} = 1$. Thus $\\lim_{x \\to 4^+} f(x) = 1$.",
+          "The one-sided limits are $-1$ and $1$, which disagree.",
+          "Therefore $\\lim_{x \\to 4} f(x)$ does not exist."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A graph of $f$ approaches height $2$ as $x \\to -\\infty$ and approaches height $6$ as $x \\to \\infty$, with a vertical asymptote at $x = 0$ where the curve rises to $+\\infty$ on both sides. State $\\lim_{x \\to -\\infty} f(x)$, $\\lim_{x \\to \\infty} f(x)$, and $\\lim_{x \\to 0} f(x)$ with reasons.",
+      "answer": "$\\lim_{x \\to -\\infty} f(x) = 2$, $\\lim_{x \\to \\infty} f(x) = 6$, and $\\lim_{x \\to 0} f(x)$ does not exist (both sides rise to $+\\infty$, unbounded).",
+      "solution": {
+        "steps": [
+          "End behavior on the left: the curve levels off at $y = 2$, so $\\lim_{x \\to -\\infty} f(x) = 2$.",
+          "End behavior on the right: the curve levels off at $y = 6$, so $\\lim_{x \\to \\infty} f(x) = 6$.",
+          "At $x = 0$ both sides increase without bound: $\\lim_{x \\to 0^-} f(x) = +\\infty$ and $\\lim_{x \\to 0^+} f(x) = +\\infty$.",
+          "Because the outputs are unbounded, $\\lim_{x \\to 0} f(x)$ does not exist (we write $= +\\infty$ to describe the behavior)."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "For $f(x) = \\begin{cases} \\dfrac{x^2 - 1}{x - 1} & x < 1 \\\\ 3x - 1 & x \\ge 1 \\end{cases}$, find both one-sided limits at $x = 1$ and decide whether $\\lim_{x \\to 1} f(x)$ exists.",
+      "answer": "$\\lim_{x \\to 1^-} f(x) = 2$ and $\\lim_{x \\to 1^+} f(x) = 2$; the limits agree, so $\\lim_{x \\to 1} f(x) = 2$ exists.",
+      "solution": {
+        "steps": [
+          "Left side ($x < 1$): simplify $\\frac{x^2 - 1}{x - 1} = \\frac{(x-1)(x+1)}{x-1} = x + 1$, so $\\lim_{x \\to 1^-} f(x) = 1 + 1 = 2$.",
+          "Right side ($x \\ge 1$): $\\lim_{x \\to 1^+} (3x - 1) = 3(1) - 1 = 2$.",
+          "Both one-sided limits equal $2$, satisfying the existence criterion.",
+          "Therefore $\\lim_{x \\to 1} f(x) = 2$ exists, even though the rules differ on each side."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Classify the reason each limit fails to exist as oscillation, unbounded behavior, or one-sided disagreement: (a) $\\lim_{x \\to 0} \\cos\\!\\left(\\dfrac{1}{x}\\right)$, (b) $\\lim_{x \\to 0} \\dfrac{3}{x^2}$, (c) $\\lim_{x \\to 2} \\dfrac{x - 5}{x - 2}$.",
+      "answer": "(a) oscillation; (b) unbounded behavior ($+\\infty$); (c) one-sided disagreement ($-\\infty$ on the left, $+\\infty$ on the right).",
+      "solution": {
+        "steps": [
+          "(a) As $x \\to 0$, $\\frac{1}{x}$ sweeps through unbounded values, so $\\cos\\!\\left(\\frac{1}{x}\\right)$ oscillates between $-1$ and $1$ forever: non-existence by oscillation.",
+          "(b) As $x \\to 0$ from either side, $x^2 \\to 0^+$, so $\\frac{3}{x^2} \\to +\\infty$ on both sides: non-existence by unbounded behavior.",
+          "(c) Near $x = 2$ the numerator $\\to -3$ while the denominator $x - 2 \\to 0$: for $x \\to 2^-$, $x - 2 < 0$ gives $\\frac{-3}{\\text{small negative}} = +\\infty$; for $x \\to 2^+$, $x - 2 > 0$ gives $\\frac{-3}{\\text{small positive}} = -\\infty$.",
+          "The sides of (c) disagree ($+\\infty$ versus $-\\infty$): non-existence by one-sided disagreement."
+        ]
+      }
+    }
+  ]
+}

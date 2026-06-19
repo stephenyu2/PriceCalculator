@@ -1,0 +1,170 @@
+{
+  "id": "PC.VEC.A.3--lesson",
+  "standard": "PC.VEC.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Vectors and Parametric Equations",
+  "domainCode": "VEC",
+  "cluster": "Vectors in the plane",
+  "clusterCode": "A",
+  "skillName": "Parametric Equations",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "A pair of parametric equations $x=f(t)$ and $y=g(t)$ describes a curve by giving each coordinate as a function of a parameter $t$, usually time. As $t$ increases, the point $(x,y)$ traces the curve in a definite direction called its orientation. You can build a table of values to graph the curve, eliminate the parameter to recover a rectangular equation in $x$ and $y$ (sometimes using the identity $\\cos^2 t+\\sin^2 t=1$), and write parametric equations to model motion such as a projectile launched at an angle.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "For the parametric equations $x=t^2$ and $y=t+1$ on $-2\\le t\\le 2$, build a table of $(x,y)$ values for $t=-2,-1,0,1,2$ and describe the orientation of the curve.",
+      "solution": {
+        "steps": [
+          "Evaluate at $t=-2$: $x=(-2)^2=4$, $y=-2+1=-1$, giving $(4,-1)$.",
+          "At $t=-1$: $x=(-1)^2=1$, $y=-1+1=0$, giving $(1,0)$.",
+          "At $t=0$: $x=0^2=0$, $y=0+1=1$, giving $(0,1)$.",
+          "At $t=1$: $x=1^2=1$, $y=1+1=2$, giving $(1,2)$.",
+          "At $t=2$: $x=2^2=4$, $y=2+1=3$, giving $(4,3)$.",
+          "Plotting the points $(4,-1),(1,0),(0,1),(1,2),(4,3)$ traces a sideways parabola opening to the right.",
+          "As $t$ increases from $-2$ to $2$, $y=t+1$ increases steadily, so the orientation runs upward: the curve is traced from $(4,-1)$ at the bottom up to $(4,3)$ at the top."
+        ],
+        "answer": "Points: $(4,-1),(1,0),(0,1),(1,2),(4,3)$. The curve is a rightward-opening parabola, traced from bottom to top (in the direction of increasing $y$) as $t$ increases."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Eliminate the parameter in $x=2t-1$, $y=t^2$ to find a rectangular equation in $x$ and $y$.",
+      "solution": {
+        "steps": [
+          "Solve the linear equation for $t$: from $x=2t-1$, add $1$ to get $x+1=2t$, so $t=\\frac{x+1}{2}$.",
+          "Substitute this expression for $t$ into $y=t^2$: $y=\\left(\\frac{x+1}{2}\\right)^2$.",
+          "Square the fraction: $y=\\frac{(x+1)^2}{4}$.",
+          "No $t$ remains, so this is the rectangular equation, an upward parabola with vertex at $(-1,0)$."
+        ],
+        "answer": "$y=\\dfrac{(x+1)^2}{4}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Eliminate the parameter in $x=3\\cos t$, $y=3\\sin t$ and identify the resulting curve.",
+      "solution": {
+        "steps": [
+          "Isolate the trig functions: $\\cos t=\\frac{x}{3}$ and $\\sin t=\\frac{y}{3}$.",
+          "Apply the Pythagorean identity $\\cos^2 t+\\sin^2 t=1$: $\\left(\\frac{x}{3}\\right)^2+\\left(\\frac{y}{3}\\right)^2=1$.",
+          "Square each term: $\\frac{x^2}{9}+\\frac{y^2}{9}=1$.",
+          "Multiply both sides by $9$: $x^2+y^2=9$.",
+          "This is a circle centered at the origin with radius $\\sqrt{9}=3$."
+        ],
+        "answer": "$x^2+y^2=9$, a circle of radius $3$ centered at the origin"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "For $x=\\sqrt{t}$ and $y=t-3$ with $t\\ge 0$, eliminate the parameter and state any restriction on the rectangular equation.",
+      "solution": {
+        "steps": [
+          "Solve the simpler equation for $t$: squaring $x=\\sqrt{t}$ gives $t=x^2$.",
+          "Substitute into $y=t-3$: $y=x^2-3$.",
+          "Now track the restriction. Because $x=\\sqrt{t}$ is a square root and $t\\ge 0$, the output $x$ is never negative, so $x\\ge 0$.",
+          "The full rectangular description is the right half of the parabola $y=x^2-3$, only for $x\\ge 0$."
+        ],
+        "answer": "$y=x^2-3$ with the restriction $x\\ge 0$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A ball is launched from the ground at $v_0=20$ m/s at an angle of $\\theta=30^\\circ$. Using $g=9.8$ m/s$^2$, write the parametric equations for its position, then find the time of flight and the horizontal range.",
+      "solution": {
+        "steps": [
+          "The horizontal component uses cosine: $x=(v_0\\cos\\theta)t=(20\\cos 30^\\circ)t$. Since $\\cos 30^\\circ=\\frac{\\sqrt{3}}{2}$, this is $x=20\\cdot\\frac{\\sqrt{3}}{2}\\,t=10\\sqrt{3}\\,t$.",
+          "The vertical component uses sine and the gravity term: $y=(v_0\\sin\\theta)t-\\frac{1}{2}gt^2=(20\\sin 30^\\circ)t-\\frac{1}{2}(9.8)t^2$. Since $\\sin 30^\\circ=\\frac{1}{2}$, this is $y=10t-4.9t^2$.",
+          "Find the time of flight by setting $y=0$: $10t-4.9t^2=0$, so $t(10-4.9t)=0$.",
+          "The solutions are $t=0$ (launch) and $10-4.9t=0$, giving $t=\\frac{10}{4.9}\\approx 2.04$ s. The time of flight is about $2.04$ s.",
+          "Find the horizontal range by substituting the flight time into $x$: $x=10\\sqrt{3}\\,(2.04)\\approx 17.32\\cdot 2.04\\approx 35.3$ m."
+        ],
+        "answer": "$x=10\\sqrt{3}\\,t$, $y=10t-4.9t^2$; time of flight $\\approx 2.04$ s; horizontal range $\\approx 35.3$ m"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "For $x=t-1$ and $y=2t$, build a table of $(x,y)$ values for $t=0,1,2,3$ and state the orientation of the curve.",
+      "hint": "Substitute each $t$ value into both equations. The orientation follows the direction the points move as $t$ increases.",
+      "solution": {
+        "steps": [
+          "At $t=0$: $x=0-1=-1$, $y=2(0)=0$, giving $(-1,0)$.",
+          "At $t=1$: $x=0$, $y=2$, giving $(0,2)$.",
+          "At $t=2$: $x=1$, $y=4$, giving $(1,4)$.",
+          "At $t=3$: $x=2$, $y=6$, giving $(2,6)$.",
+          "The points lie on a line and move up and to the right as $t$ increases, so the orientation is toward the upper right."
+        ],
+        "answer": "Points: $(-1,0),(0,2),(1,4),(2,6)$; orientation is up and to the right as $t$ increases."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Eliminate the parameter in $x=t+2$, $y=t^2-1$ to find a rectangular equation in $x$ and $y$.",
+      "hint": "Solve the linear equation for $t$ first, then substitute into the equation for $y$.",
+      "solution": {
+        "steps": [
+          "Solve $x=t+2$ for $t$: $t=x-2$.",
+          "Substitute into $y=t^2-1$: $y=(x-2)^2-1$.",
+          "This is the rectangular equation, a parabola with vertex $(2,-1)$."
+        ],
+        "answer": "$y=(x-2)^2-1$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Eliminate the parameter in $x=4\\cos t$, $y=2\\sin t$ and identify the curve.",
+      "hint": "Solve for $\\cos t$ and $\\sin t$, then use $\\cos^2 t+\\sin^2 t=1$. Watch the different denominators.",
+      "solution": {
+        "steps": [
+          "Isolate: $\\cos t=\\frac{x}{4}$ and $\\sin t=\\frac{y}{2}$.",
+          "Apply $\\cos^2 t+\\sin^2 t=1$: $\\left(\\frac{x}{4}\\right)^2+\\left(\\frac{y}{2}\\right)^2=1$.",
+          "Square each term: $\\frac{x^2}{16}+\\frac{y^2}{4}=1$.",
+          "This is an ellipse centered at the origin with horizontal semi-axis $4$ and vertical semi-axis $2$."
+        ],
+        "answer": "$\\dfrac{x^2}{16}+\\dfrac{y^2}{4}=1$, an ellipse"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Write parametric equations for the line segment from $(1,2)$ to $(5,-4)$ using the parameter interval $0\\le t\\le 1$.",
+      "hint": "Use $x=x_1+(x_2-x_1)t$ and $y=y_1+(y_2-y_1)t$, so $t=0$ gives the start point and $t=1$ gives the end point.",
+      "solution": {
+        "steps": [
+          "Compute the changes in coordinates: $x_2-x_1=5-1=4$ and $y_2-y_1=-4-2=-6$.",
+          "Write $x$: $x=x_1+(x_2-x_1)t=1+4t$.",
+          "Write $y$: $y=y_1+(y_2-y_1)t=2-6t$.",
+          "Check the endpoints: at $t=0$, $(x,y)=(1,2)$; at $t=1$, $(x,y)=(5,-4)$, as required."
+        ],
+        "answer": "$x=1+4t$, $y=2-6t$ for $0\\le t\\le 1$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A projectile is launched from the ground at $v_0=40$ m/s at an angle of $\\theta=60^\\circ$. Using $g=9.8$ m/s$^2$, write the parametric equations and find the time of flight.",
+      "hint": "Use $x=(v_0\\cos\\theta)t$ and $y=(v_0\\sin\\theta)t-\\frac{1}{2}gt^2$. Recall $\\cos 60^\\circ=\\frac{1}{2}$ and $\\sin 60^\\circ=\\frac{\\sqrt{3}}{2}$. Set $y=0$ to find the time of flight.",
+      "solution": {
+        "steps": [
+          "Horizontal: $x=(40\\cos 60^\\circ)t=40\\cdot\\frac{1}{2}\\,t=20t$.",
+          "Vertical: $y=(40\\sin 60^\\circ)t-\\frac{1}{2}(9.8)t^2=40\\cdot\\frac{\\sqrt{3}}{2}\\,t-4.9t^2=20\\sqrt{3}\\,t-4.9t^2$.",
+          "Set $y=0$ for the time of flight: $20\\sqrt{3}\\,t-4.9t^2=0$, so $t(20\\sqrt{3}-4.9t)=0$.",
+          "Discard $t=0$; solve $20\\sqrt{3}-4.9t=0$, giving $t=\\frac{20\\sqrt{3}}{4.9}\\approx\\frac{34.64}{4.9}\\approx 7.07$ s."
+        ],
+        "answer": "$x=20t$, $y=20\\sqrt{3}\\,t-4.9t^2$; time of flight $\\approx 7.07$ s"
+      }
+    }
+  ]
+}

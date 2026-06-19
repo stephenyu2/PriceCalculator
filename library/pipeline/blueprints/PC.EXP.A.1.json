@@ -1,0 +1,132 @@
+{
+  "standard": "PC.EXP.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Exponential and Logarithmic Functions",
+  "domainCode": "EXP",
+  "cluster": "Properties and graphs",
+  "clusterCode": "A",
+  "skillName": "Exponential Functions",
+
+  "description": "Students graph exponential functions of the form $f(x)=a\\cdot b^{x}$ and their transformations $f(x)=a\\cdot b^{x-h}+k$, identifying the base, $y$-intercept, horizontal asymptote, and end behavior. They classify a function as exponential growth (when $b>1$) or exponential decay (when $0<b<1$), and they apply the compound interest formula $A=P\\left(1+\\frac{r}{n}\\right)^{nt}$ and the continuous growth formula $A=Pe^{rt}$ to model real-world situations and solve for unknown quantities.",
+
+  "subSkills": [
+    "Identify the base $b$, initial value $a$, and growth/decay factor of $f(x)=a\\cdot b^{x}$",
+    "Classify a function as exponential growth ($b>1$) or decay ($0<b<1$)",
+    "Graph $f(x)=a\\cdot b^{x}$ by plotting key points and the horizontal asymptote $y=0$",
+    "Apply transformations $f(x)=a\\cdot b^{x-h}+k$: shifts, reflections, and vertical stretches, and locate the shifted asymptote $y=k$",
+    "Determine domain, range, intercepts, and end behavior of a transformed exponential function",
+    "Apply the compound interest formula $A=P\\left(1+\\frac{r}{n}\\right)^{nt}$ for $n$ compounding periods per year",
+    "Apply the continuous growth/decay formula $A=Pe^{rt}$",
+    "Translate a verbal growth/decay scenario (population, depreciation, half-life) into an exponential model and evaluate it"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Classify growth vs. decay",
+      "example": "Classify $f(x)=5\\left(\\frac{2}{3}\\right)^{x}$ as exponential growth or decay and state the growth/decay factor. Answer: decay, since $0<\\frac{2}{3}<1$; decay factor $\\frac{2}{3}$."
+    },
+    {
+      "name": "Evaluate / find initial value",
+      "example": "For $f(x)=a\\cdot 3^{x}$, given $f(2)=45$, find $a$ and then $f(0)$. Answer: $a=5$, so $f(0)=5$."
+    },
+    {
+      "name": "Graph and read key features",
+      "example": "For $g(x)=2^{x}$, state the $y$-intercept, the horizontal asymptote, the range, and the end behavior. Answer: $y$-intercept $(0,1)$, asymptote $y=0$, range $(0,\\infty)$, as $x\\to-\\infty$, $g(x)\\to 0$ and as $x\\to\\infty$, $g(x)\\to\\infty$."
+    },
+    {
+      "name": "Transform an exponential function",
+      "example": "Describe the transformation taking $f(x)=2^{x}$ to $h(x)=-2^{x-3}+4$ and give the new horizontal asymptote. Answer: shift right $3$, reflect over the $x$-axis, shift up $4$; asymptote $y=4$."
+    },
+    {
+      "name": "Compound interest",
+      "example": "$\\$2000$ is invested at $6\\%$ annual interest compounded quarterly for $5$ years. Find the balance. Answer: $A=2000\\left(1+\\frac{0.06}{4}\\right)^{4\\cdot 5}=2000(1.015)^{20}\\approx \\$2693.71$."
+    },
+    {
+      "name": "Continuous growth/decay",
+      "example": "A culture grows continuously at $4\\%$ per hour from $300$ cells. Write the model and find the population after $10$ hours. Answer: $A=300e^{0.04t}$, so $A=300e^{0.4}\\approx 448$ cells."
+    },
+    {
+      "name": "Write a model from a verbal scenario",
+      "example": "A car worth $\\$24{,}000$ depreciates $15\\%$ per year. Write a function for its value after $t$ years and find its value after $3$ years. Answer: $V(t)=24000(0.85)^{t}$, so $V(3)\\approx \\$14{,}739$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recognition or direct substitution. Student classifies growth/decay from the base, reads one key feature from a basic $f(x)=b^{x}$, or evaluates $f(x)=a\\cdot b^{x}$ at a small integer with no transformation.",
+      "constraints": [
+        "Base is a simple integer or unit fraction (e.g. $2$, $3$, $\\frac{1}{2}$, $\\frac{1}{3}$)",
+        "No transformation; asymptote is always $y=0$",
+        "Inputs are small non-negative integers; no formula rearrangement",
+        "Compound-interest items, if any, use annual compounding ($n=1$) with given $P$, $r$, $t$"
+      ]
+    },
+    "Medium": {
+      "description": "Two to three steps. Student applies a transformation and reads the shifted asymptote/range, finds an unknown $a$ from a given point, or applies the compound-interest formula with $n>1$ or the continuous formula with all values given.",
+      "constraints": [
+        "Transformations include one or two of: horizontal/vertical shift, reflection, vertical stretch",
+        "Requires identifying the shifted asymptote $y=k$ and resulting range",
+        "Compound interest with $n=2,4,12$ or continuous $A=Pe^{rt}$ with given $P,r,t$",
+        "May require solving a simple equation for $a$ given $f(x_0)=y_0$"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step modeling or reasoning. Student builds an exponential model from a verbal description and then evaluates or compares, combines multiple transformations and justifies end behavior, or compares two investment/growth scenarios.",
+      "constraints": [
+        "Student must translate words (percent rate, doubling/half-life, depreciation) into the correct base or rate before computing",
+        "Combines three or more transformations or compares two functions",
+        "Compares two compounding scenarios, or mixes discrete compounding with continuous compounding",
+        "May ask for the meaning of a parameter in context or require interpreting the result"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student thinks any base less than the exponent, or a fractional-looking expression, means decay regardless of the base value",
+      "distractor": "Classifies $f(x)=5\\left(\\frac{3}{2}\\right)^{x}$ as decay because a fraction is present, missing that $\\frac{3}{2}>1$ makes it growth"
+    },
+    {
+      "misconception": "Student confuses the base $b$ with the initial value $a$ when reading $f(x)=a\\cdot b^{x}$",
+      "distractor": "For $f(x)=3\\cdot 2^{x}$ reports the growth factor as $3$ instead of $2$, or the $y$-intercept as $2$ instead of $3$"
+    },
+    {
+      "misconception": "Student multiplies the coefficient into the exponent or treats $a\\cdot b^{x}$ as $(ab)^{x}$",
+      "distractor": "Evaluates $3\\cdot 2^{2}$ as $6^{2}=36$ instead of $3\\cdot 4=12$"
+    },
+    {
+      "misconception": "Student shifts the horizontal asymptote with horizontal shifts instead of vertical shifts",
+      "distractor": "For $h(x)=2^{x-3}+4$ states the asymptote is $y=3$ (or $x=3$) instead of $y=4$"
+    },
+    {
+      "misconception": "Student applies a horizontal shift in the wrong direction, reading $x-h$ as a shift left",
+      "distractor": "Says $f(x)=2^{x-3}$ shifts the graph left $3$ instead of right $3$"
+    },
+    {
+      "misconception": "Student converts a percent rate incorrectly, using the whole percent or the wrong factor",
+      "distractor": "Models $15\\%$ annual depreciation as $V(t)=24000(0.15)^{t}$ instead of $24000(0.85)^{t}$"
+    },
+    {
+      "misconception": "Student mishandles the compound-interest exponent, using $t$ instead of $nt$ or dividing the rate incorrectly",
+      "distractor": "Computes $A=2000(1.06)^{4\\cdot 5}$ instead of $A=2000\\left(1+\\frac{0.06}{4}\\right)^{20}$"
+    },
+    {
+      "misconception": "Student confuses the range with the domain of an exponential function",
+      "distractor": "States the range of $f(x)=2^{x}$ is $(-\\infty,\\infty)$ instead of $(0,\\infty)$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

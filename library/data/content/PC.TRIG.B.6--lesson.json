@@ -1,0 +1,173 @@
+{
+  "id": "PC.TRIG.B.6--lesson",
+  "standard": "PC.TRIG.B.6",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Graphs and identities",
+  "clusterCode": "B",
+  "skillName": "Trig Identities",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Trigonometric identities are equations that hold for every angle where both sides are defined. The fundamental identities (Pythagorean, quotient, reciprocal) let you rewrite one function in terms of another and simplify messy expressions. Building on these, the sum and difference formulas, double-angle formulas, and half-angle formulas let you evaluate exact values at non-standard angles and find unknown trig values from partial information. A key habit throughout: when you take a square root, the quadrant of the angle decides the sign.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Simplify $\\frac{1 - \\cos^2\\theta}{\\sin\\theta}$ to a single trigonometric function.",
+      "solution": {
+        "steps": [
+          "Start from the Pythagorean identity $\\sin^2\\theta + \\cos^2\\theta = 1$. Solving for $1 - \\cos^2\\theta$ gives $1 - \\cos^2\\theta = \\sin^2\\theta$.",
+          "Substitute into the numerator: $\\frac{1 - \\cos^2\\theta}{\\sin\\theta} = \\frac{\\sin^2\\theta}{\\sin\\theta}$.",
+          "Cancel one factor of $\\sin\\theta$: $\\frac{\\sin^2\\theta}{\\sin\\theta} = \\sin\\theta$.",
+          "So the expression simplifies to $\\sin\\theta$."
+        ],
+        "answer": "$\\sin\\theta$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Verify the identity $\\frac{\\cos\\theta}{1 - \\sin\\theta} = \\sec\\theta + \\tan\\theta$ by transforming the left side into the right side.",
+      "solution": {
+        "steps": [
+          "Multiply the left side by $\\frac{1 + \\sin\\theta}{1 + \\sin\\theta}$ (a form of $1$) to rationalize the denominator: $\\frac{\\cos\\theta}{1 - \\sin\\theta} \\cdot \\frac{1 + \\sin\\theta}{1 + \\sin\\theta} = \\frac{\\cos\\theta(1 + \\sin\\theta)}{(1 - \\sin\\theta)(1 + \\sin\\theta)}$.",
+          "Expand the denominator as a difference of squares: $(1 - \\sin\\theta)(1 + \\sin\\theta) = 1 - \\sin^2\\theta$.",
+          "Use the Pythagorean identity $1 - \\sin^2\\theta = \\cos^2\\theta$: the expression becomes $\\frac{\\cos\\theta(1 + \\sin\\theta)}{\\cos^2\\theta}$.",
+          "Cancel one factor of $\\cos\\theta$: $\\frac{1 + \\sin\\theta}{\\cos\\theta}$.",
+          "Split the fraction: $\\frac{1}{\\cos\\theta} + \\frac{\\sin\\theta}{\\cos\\theta} = \\sec\\theta + \\tan\\theta$, which is the right side. The identity is verified."
+        ],
+        "answer": "Verified: the left side equals $\\sec\\theta + \\tan\\theta$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Find the exact value of $\\cos 15^\\circ$ using a difference formula.",
+      "solution": {
+        "steps": [
+          "Write $15^\\circ$ as a difference of known angles: $15^\\circ = 45^\\circ - 30^\\circ$.",
+          "Apply the cosine difference formula $\\cos(A - B) = \\cos A\\cos B + \\sin A\\sin B$ with $A = 45^\\circ$, $B = 30^\\circ$: $\\cos 15^\\circ = \\cos 45^\\circ\\cos 30^\\circ + \\sin 45^\\circ\\sin 30^\\circ$.",
+          "Substitute exact values $\\cos 45^\\circ = \\frac{\\sqrt{2}}{2}$, $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$, $\\sin 45^\\circ = \\frac{\\sqrt{2}}{2}$, $\\sin 30^\\circ = \\frac{1}{2}$: $\\cos 15^\\circ = \\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2} + \\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2}$.",
+          "Multiply each product: $\\frac{\\sqrt{6}}{4} + \\frac{\\sqrt{2}}{4}$.",
+          "Combine over the common denominator: $\\cos 15^\\circ = \\frac{\\sqrt{6} + \\sqrt{2}}{4}$."
+        ],
+        "answer": "$\\frac{\\sqrt{6} + \\sqrt{2}}{4}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "If $\\sin\\theta = \\frac{3}{5}$ and $\\theta$ is in Quadrant I, find $\\sin 2\\theta$ and $\\cos 2\\theta$.",
+      "solution": {
+        "steps": [
+          "First find $\\cos\\theta$. From $\\sin^2\\theta + \\cos^2\\theta = 1$: $\\cos^2\\theta = 1 - \\left(\\frac{3}{5}\\right)^2 = 1 - \\frac{9}{25} = \\frac{16}{25}$.",
+          "Since $\\theta$ is in Quadrant I, cosine is positive, so $\\cos\\theta = \\frac{4}{5}$.",
+          "Apply the double-angle formula $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta = 2\\cdot\\frac{3}{5}\\cdot\\frac{4}{5} = \\frac{24}{25}$.",
+          "Apply $\\cos 2\\theta = 1 - 2\\sin^2\\theta = 1 - 2\\left(\\frac{3}{5}\\right)^2 = 1 - 2\\cdot\\frac{9}{25} = 1 - \\frac{18}{25} = \\frac{7}{25}$.",
+          "So $\\sin 2\\theta = \\frac{24}{25}$ and $\\cos 2\\theta = \\frac{7}{25}$."
+        ],
+        "answer": "$\\sin 2\\theta = \\frac{24}{25}$ and $\\cos 2\\theta = \\frac{7}{25}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "If $\\cos\\theta = -\\frac{3}{5}$ and $\\theta$ is in Quadrant II, find $\\cos\\frac{\\theta}{2}$, justifying the sign from the quadrant of $\\frac{\\theta}{2}$.",
+      "solution": {
+        "steps": [
+          "Locate $\\frac{\\theta}{2}$. Since $\\theta$ is in Quadrant II, $90^\\circ < \\theta < 180^\\circ$, so dividing by $2$ gives $45^\\circ < \\frac{\\theta}{2} < 90^\\circ$, which is Quadrant I.",
+          "In Quadrant I cosine is positive, so $\\cos\\frac{\\theta}{2}$ will be the positive root.",
+          "Apply the half-angle formula $\\cos\\frac{\\theta}{2} = \\pm\\sqrt{\\frac{1 + \\cos\\theta}{2}}$ with the positive sign.",
+          "Substitute $\\cos\\theta = -\\frac{3}{5}$: $\\cos\\frac{\\theta}{2} = \\sqrt{\\frac{1 + \\left(-\\frac{3}{5}\\right)}{2}} = \\sqrt{\\frac{\\frac{2}{5}}{2}} = \\sqrt{\\frac{1}{5}}$.",
+          "Simplify the radical and rationalize: $\\sqrt{\\frac{1}{5}} = \\frac{1}{\\sqrt{5}} = \\frac{\\sqrt{5}}{5}$.",
+          "So $\\cos\\frac{\\theta}{2} = \\frac{\\sqrt{5}}{5}$."
+        ],
+        "answer": "$\\frac{\\sqrt{5}}{5}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Simplify $\\sin\\theta\\,\\csc\\theta$ to a single value.",
+      "hint": "Use the reciprocal identity $\\csc\\theta = \\frac{1}{\\sin\\theta}$.",
+      "solution": {
+        "steps": [
+          "Rewrite using the reciprocal identity: $\\sin\\theta\\,\\csc\\theta = \\sin\\theta\\cdot\\frac{1}{\\sin\\theta}$.",
+          "Cancel: $\\frac{\\sin\\theta}{\\sin\\theta} = 1$.",
+          "So the expression equals $1$."
+        ],
+        "answer": "$1$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Find the exact value of $\\sin 75^\\circ$ using a sum formula.",
+      "hint": "Write $75^\\circ = 45^\\circ + 30^\\circ$ and use $\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B$.",
+      "solution": {
+        "steps": [
+          "Decompose: $75^\\circ = 45^\\circ + 30^\\circ$.",
+          "Apply $\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B$: $\\sin 75^\\circ = \\sin 45^\\circ\\cos 30^\\circ + \\cos 45^\\circ\\sin 30^\\circ$.",
+          "Substitute exact values: $\\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2} + \\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2} = \\frac{\\sqrt{6}}{4} + \\frac{\\sqrt{2}}{4}$.",
+          "Combine: $\\sin 75^\\circ = \\frac{\\sqrt{6} + \\sqrt{2}}{4}$."
+        ],
+        "answer": "$\\frac{\\sqrt{6} + \\sqrt{2}}{4}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "If $\\tan\\theta = \\frac{1}{2}$, find $\\tan 2\\theta$.",
+      "hint": "Use $\\tan 2\\theta = \\frac{2\\tan\\theta}{1 - \\tan^2\\theta}$. Watch the order of numerator and denominator.",
+      "solution": {
+        "steps": [
+          "Apply the tangent double-angle formula $\\tan 2\\theta = \\frac{2\\tan\\theta}{1 - \\tan^2\\theta}$.",
+          "Substitute $\\tan\\theta = \\frac{1}{2}$: $\\tan 2\\theta = \\frac{2\\cdot\\frac{1}{2}}{1 - \\left(\\frac{1}{2}\\right)^2} = \\frac{1}{1 - \\frac{1}{4}}$.",
+          "Simplify the denominator: $1 - \\frac{1}{4} = \\frac{3}{4}$, so $\\tan 2\\theta = \\frac{1}{\\frac{3}{4}}$.",
+          "Divide: $\\frac{1}{\\frac{3}{4}} = \\frac{4}{3}$.",
+          "So $\\tan 2\\theta = \\frac{4}{3}$."
+        ],
+        "answer": "$\\frac{4}{3}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Given $\\sin A = \\frac{3}{5}$ with $A$ in Quadrant I and $\\cos B = \\frac{5}{13}$ with $B$ in Quadrant I, find $\\sin(A + B)$.",
+      "hint": "First find $\\cos A$ and $\\sin B$ with Pythagorean identities, then use $\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B$.",
+      "solution": {
+        "steps": [
+          "Find $\\cos A$: $\\cos^2 A = 1 - \\left(\\frac{3}{5}\\right)^2 = \\frac{16}{25}$, and since $A$ is in Quadrant I, $\\cos A = \\frac{4}{5}$.",
+          "Find $\\sin B$: $\\sin^2 B = 1 - \\left(\\frac{5}{13}\\right)^2 = 1 - \\frac{25}{169} = \\frac{144}{169}$, and since $B$ is in Quadrant I, $\\sin B = \\frac{12}{13}$.",
+          "Apply $\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B = \\frac{3}{5}\\cdot\\frac{5}{13} + \\frac{4}{5}\\cdot\\frac{12}{13}$.",
+          "Compute each product: $\\frac{3}{5}\\cdot\\frac{5}{13} = \\frac{15}{65}$ and $\\frac{4}{5}\\cdot\\frac{12}{13} = \\frac{48}{65}$.",
+          "Add the results: $\\frac{15}{65} + \\frac{48}{65} = \\frac{63}{65}$.",
+          "So $\\sin(A + B) = \\frac{63}{65}$."
+        ],
+        "answer": "$\\frac{63}{65}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "If $\\cos\\theta = \\frac{4}{5}$ and $\\theta$ is in Quadrant IV, find $\\sin\\frac{\\theta}{2}$, choosing the correct sign from the quadrant of $\\frac{\\theta}{2}$.",
+      "hint": "If $\\theta$ is in Quadrant IV then $270^\\circ < \\theta < 360^\\circ$, so $135^\\circ < \\frac{\\theta}{2} < 180^\\circ$. Decide the sign of sine there, then use $\\sin\\frac{\\theta}{2} = \\pm\\sqrt{\\frac{1 - \\cos\\theta}{2}}$.",
+      "solution": {
+        "steps": [
+          "Locate $\\frac{\\theta}{2}$. Since $\\theta$ is in Quadrant IV, $270^\\circ < \\theta < 360^\\circ$, so $135^\\circ < \\frac{\\theta}{2} < 180^\\circ$, which is Quadrant II.",
+          "In Quadrant II sine is positive, so take the positive root.",
+          "Apply $\\sin\\frac{\\theta}{2} = \\sqrt{\\frac{1 - \\cos\\theta}{2}}$ with $\\cos\\theta = \\frac{4}{5}$: $\\sin\\frac{\\theta}{2} = \\sqrt{\\frac{1 - \\frac{4}{5}}{2}} = \\sqrt{\\frac{\\frac{1}{5}}{2}} = \\sqrt{\\frac{1}{10}}$.",
+          "Rationalize: $\\sqrt{\\frac{1}{10}} = \\frac{1}{\\sqrt{10}} = \\frac{\\sqrt{10}}{10}$.",
+          "So $\\sin\\frac{\\theta}{2} = \\frac{\\sqrt{10}}{10}$."
+        ],
+        "answer": "$\\frac{\\sqrt{10}}{10}$"
+      }
+    }
+  ]
+}

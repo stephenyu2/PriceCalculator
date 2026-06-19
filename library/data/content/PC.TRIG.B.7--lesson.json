@@ -1,0 +1,169 @@
+{
+  "id": "PC.TRIG.B.7--lesson",
+  "standard": "PC.TRIG.B.7",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Graphs and identities",
+  "clusterCode": "B",
+  "skillName": "Trig Equations",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "A trigonometric equation asks which angles make a trig statement true. Because $\\sin$, $\\cos$, and $\\tan$ repeat, most equations have infinitely many solutions, so we work in two stages. First we find every solution on one full interval, usually $[0, 2\\pi)$, by reading exact values off the unit circle and remembering that each value of sine or cosine matches two angles per turn. Then, when asked for the general solution, we add the period: $+\\,2\\pi n$ for $\\sin$ and $\\cos$, and $+\\,\\pi n$ for $\\tan$, with $n \\in \\mathbb{Z}$. Harder equations are first rewritten as a single trig function using identities or factoring, and multiple-angle equations like $\\sin(2x)$ need extra inner-angle solutions before we divide. Always check candidates against the original equation and the stated interval.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Solve $2\\cos\\theta = \\sqrt{3}$ for $\\theta \\in [0, 2\\pi)$.",
+      "solution": {
+        "steps": [
+          "Isolate the trig function by dividing both sides by $2$: $\\cos\\theta = \\frac{\\sqrt{3}}{2}$.",
+          "The reference angle whose cosine is $\\frac{\\sqrt{3}}{2}$ is $\\frac{\\pi}{6}$.",
+          "Cosine is positive in Quadrant I and Quadrant IV, so on $[0, 2\\pi)$ there are two solutions.",
+          "Quadrant I solution: $\\theta = \\frac{\\pi}{6}$. Quadrant IV solution: $\\theta = 2\\pi - \\frac{\\pi}{6} = \\frac{11\\pi}{6}$.",
+          "Both lie in $[0, 2\\pi)$, so both are kept."
+        ],
+        "answer": "$\\theta = \\frac{\\pi}{6},\\ \\frac{11\\pi}{6}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find all solutions of $\\tan\\theta = -1$. Write the general solution.",
+      "solution": {
+        "steps": [
+          "The reference angle whose tangent has absolute value $1$ is $\\frac{\\pi}{4}$.",
+          "Tangent is negative in Quadrant II and Quadrant IV. On $[0, 2\\pi)$ these give $\\theta = \\frac{3\\pi}{4}$ and $\\theta = \\frac{7\\pi}{4}$.",
+          "Notice $\\frac{7\\pi}{4} = \\frac{3\\pi}{4} + \\pi$, so the two solutions are exactly one period apart. The period of tangent is $\\pi$.",
+          "To capture every solution, add integer multiples of the period $\\pi$ to one of them: $\\theta = \\frac{3\\pi}{4} + \\pi n$.",
+          "Use $+\\,\\pi n$ for tangent (not $+\\,2\\pi n$), because tangent repeats every $\\pi$."
+        ],
+        "answer": "$\\theta = \\frac{3\\pi}{4} + \\pi n,\\ n \\in \\mathbb{Z}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Solve $2\\sin^2\\theta - \\sin\\theta - 1 = 0$ for $\\theta \\in [0, 2\\pi)$.",
+      "solution": {
+        "steps": [
+          "This is quadratic in $\\sin\\theta$. Let $u = \\sin\\theta$, so $2u^2 - u - 1 = 0$.",
+          "Factor: $2u^2 - u - 1 = (2u + 1)(u - 1) = 0$, so $(2\\sin\\theta + 1)(\\sin\\theta - 1) = 0$.",
+          "Set each factor to zero. From $\\sin\\theta - 1 = 0$: $\\sin\\theta = 1$, giving $\\theta = \\frac{\\pi}{2}$.",
+          "From $2\\sin\\theta + 1 = 0$: $\\sin\\theta = -\\frac{1}{2}$. Sine is negative in Quadrants III and IV, with reference angle $\\frac{\\pi}{6}$, so $\\theta = \\frac{7\\pi}{6}$ and $\\theta = \\frac{11\\pi}{6}$.",
+          "All three values lie in $[0, 2\\pi)$, so collect them."
+        ],
+        "answer": "$\\theta = \\frac{\\pi}{2},\\ \\frac{7\\pi}{6},\\ \\frac{11\\pi}{6}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Solve $2\\cos^2\\theta + \\sin\\theta - 1 = 0$ for $\\theta \\in [0, 2\\pi)$.",
+      "solution": {
+        "steps": [
+          "The equation mixes $\\cos^2\\theta$ and $\\sin\\theta$. Use the Pythagorean identity $\\cos^2\\theta = 1 - \\sin^2\\theta$ to write everything in sine.",
+          "Substitute: $2(1 - \\sin^2\\theta) + \\sin\\theta - 1 = 0$, which expands to $2 - 2\\sin^2\\theta + \\sin\\theta - 1 = 0$.",
+          "Combine constants and reorder: $-2\\sin^2\\theta + \\sin\\theta + 1 = 0$. Multiply by $-1$: $2\\sin^2\\theta - \\sin\\theta - 1 = 0$.",
+          "Factor: $(2\\sin\\theta + 1)(\\sin\\theta - 1) = 0$. So $\\sin\\theta = -\\frac{1}{2}$ or $\\sin\\theta = 1$.",
+          "From $\\sin\\theta = 1$: $\\theta = \\frac{\\pi}{2}$. From $\\sin\\theta = -\\frac{1}{2}$ (Quadrants III, IV, reference $\\frac{\\pi}{6}$): $\\theta = \\frac{7\\pi}{6},\\ \\frac{11\\pi}{6}$."
+        ],
+        "answer": "$\\theta = \\frac{\\pi}{2},\\ \\frac{7\\pi}{6},\\ \\frac{11\\pi}{6}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Solve $\\sin(2x) = \\frac{\\sqrt{3}}{2}$ for $x \\in [0, 2\\pi)$.",
+      "solution": {
+        "steps": [
+          "Let the inner angle be $u = 2x$. As $x$ ranges over $[0, 2\\pi)$, $u = 2x$ ranges over $[0, 4\\pi)$, so we must find all $u$ on two full turns.",
+          "Solve $\\sin u = \\frac{\\sqrt{3}}{2}$. The reference angle is $\\frac{\\pi}{3}$, and sine is positive in Quadrants I and II, so on $[0, 2\\pi)$: $u = \\frac{\\pi}{3}$ and $u = \\frac{2\\pi}{3}$.",
+          "Add a full period $2\\pi$ to reach the second turn: $u = \\frac{\\pi}{3} + 2\\pi = \\frac{7\\pi}{3}$ and $u = \\frac{2\\pi}{3} + 2\\pi = \\frac{8\\pi}{3}$. All four lie in $[0, 4\\pi)$.",
+          "Divide each by $2$ to recover $x = \\frac{u}{2}$: $x = \\frac{\\pi}{6},\\ \\frac{\\pi}{3},\\ \\frac{7\\pi}{6},\\ \\frac{4\\pi}{3}$.",
+          "Each is in $[0, 2\\pi)$. Generating the extra inner-angle solutions before dividing is what produces the full set of four answers."
+        ],
+        "answer": "$x = \\frac{\\pi}{6},\\ \\frac{\\pi}{3},\\ \\frac{7\\pi}{6},\\ \\frac{4\\pi}{3}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Solve $\\sin\\theta = \\frac{1}{2}$ for $\\theta \\in [0, 2\\pi)$.",
+      "hint": "The reference angle is $\\frac{\\pi}{6}$. Sine is positive in two quadrants, so expect two solutions.",
+      "solution": {
+        "steps": [
+          "The reference angle whose sine is $\\frac{1}{2}$ is $\\frac{\\pi}{6}$.",
+          "Sine is positive in Quadrant I and Quadrant II.",
+          "Quadrant I: $\\theta = \\frac{\\pi}{6}$. Quadrant II: $\\theta = \\pi - \\frac{\\pi}{6} = \\frac{5\\pi}{6}$.",
+          "Both lie in $[0, 2\\pi)$."
+        ],
+        "answer": "$\\theta = \\frac{\\pi}{6},\\ \\frac{5\\pi}{6}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Solve $2\\cos\\theta - 1 = 0$ for $\\theta \\in [0, 2\\pi)$.",
+      "hint": "Isolate $\\cos\\theta$ first by adding $1$ and dividing by $2$.",
+      "solution": {
+        "steps": [
+          "Add $1$ to both sides: $2\\cos\\theta = 1$. Divide by $2$: $\\cos\\theta = \\frac{1}{2}$.",
+          "The reference angle whose cosine is $\\frac{1}{2}$ is $\\frac{\\pi}{3}$.",
+          "Cosine is positive in Quadrants I and IV: $\\theta = \\frac{\\pi}{3}$ and $\\theta = 2\\pi - \\frac{\\pi}{3} = \\frac{5\\pi}{3}$."
+        ],
+        "answer": "$\\theta = \\frac{\\pi}{3},\\ \\frac{5\\pi}{3}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Find all solutions of $\\sin\\theta = -\\frac{\\sqrt{2}}{2}$. Write the general solution.",
+      "hint": "Find the two solutions on $[0, 2\\pi)$ first, then attach $+\\,2\\pi n$ to each because the period of sine is $2\\pi$.",
+      "solution": {
+        "steps": [
+          "The reference angle whose sine has absolute value $\\frac{\\sqrt{2}}{2}$ is $\\frac{\\pi}{4}$.",
+          "Sine is negative in Quadrants III and IV. On $[0, 2\\pi)$: $\\theta = \\pi + \\frac{\\pi}{4} = \\frac{5\\pi}{4}$ and $\\theta = 2\\pi - \\frac{\\pi}{4} = \\frac{7\\pi}{4}$.",
+          "The period of sine is $2\\pi$, so add $2\\pi n$ to each base solution.",
+          "These two families are not one period apart, so both must be listed separately."
+        ],
+        "answer": "$\\theta = \\frac{5\\pi}{4} + 2\\pi n,\\ \\frac{7\\pi}{4} + 2\\pi n,\\ n \\in \\mathbb{Z}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Solve $2\\cos^2\\theta - 1 = 0$ for $\\theta \\in [0, 2\\pi)$.",
+      "hint": "Isolate $\\cos^2\\theta$, then take the square root, keeping both the positive and negative roots.",
+      "solution": {
+        "steps": [
+          "Add $1$ and divide by $2$: $\\cos^2\\theta = \\frac{1}{2}$.",
+          "Take the square root of both sides, keeping both signs: $\\cos\\theta = \\pm\\frac{1}{\\sqrt{2}} = \\pm\\frac{\\sqrt{2}}{2}$.",
+          "The reference angle is $\\frac{\\pi}{4}$. With both signs, cosine equals $\\pm\\frac{\\sqrt{2}}{2}$ at all four quadrantal reference positions.",
+          "On $[0, 2\\pi)$: $\\theta = \\frac{\\pi}{4},\\ \\frac{3\\pi}{4},\\ \\frac{5\\pi}{4},\\ \\frac{7\\pi}{4}$."
+        ],
+        "answer": "$\\theta = \\frac{\\pi}{4},\\ \\frac{3\\pi}{4},\\ \\frac{5\\pi}{4},\\ \\frac{7\\pi}{4}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Solve $\\cos(2x) = \\frac{1}{2}$ for $x \\in [0, 2\\pi)$.",
+      "hint": "Let $u = 2x$, which ranges over $[0, 4\\pi)$. Find every $u$ on two full turns before dividing by $2$.",
+      "solution": {
+        "steps": [
+          "Let $u = 2x$. As $x$ runs over $[0, 2\\pi)$, $u$ runs over $[0, 4\\pi)$.",
+          "Solve $\\cos u = \\frac{1}{2}$. The reference angle is $\\frac{\\pi}{3}$, and cosine is positive in Quadrants I and IV, so on $[0, 2\\pi)$: $u = \\frac{\\pi}{3}$ and $u = \\frac{5\\pi}{3}$.",
+          "Add $2\\pi$ to reach the second turn: $u = \\frac{\\pi}{3} + 2\\pi = \\frac{7\\pi}{3}$ and $u = \\frac{5\\pi}{3} + 2\\pi = \\frac{11\\pi}{3}$. All four are in $[0, 4\\pi)$.",
+          "Divide each by $2$: $x = \\frac{\\pi}{6},\\ \\frac{5\\pi}{6},\\ \\frac{7\\pi}{6},\\ \\frac{11\\pi}{6}$, all within $[0, 2\\pi)$."
+        ],
+        "answer": "$x = \\frac{\\pi}{6},\\ \\frac{5\\pi}{6},\\ \\frac{7\\pi}{6},\\ \\frac{11\\pi}{6}$"
+      }
+    }
+  ]
+}

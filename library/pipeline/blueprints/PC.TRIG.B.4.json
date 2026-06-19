@@ -1,0 +1,128 @@
+{
+  "standard": "PC.TRIG.B.4",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Graphs and identities",
+  "clusterCode": "B",
+  "skillName": "Graphs of Trig Functions",
+
+  "description": "Students graph the parent functions $y=\\sin x$, $y=\\cos x$, and $y=\\tan x$ and their transformations of the form $y=a\\sin(b(x-c))+d$ (and the cosine and tangent analogues). They identify and interpret amplitude $|a|$, period $\\frac{2\\pi}{b}$ (or $\\frac{\\pi}{b}$ for tangent), phase shift $c$, and midline $y=d$. Working in both directions, they read these features off a given graph and write an equation of a transformed trig function from its graph.",
+
+  "subSkills": [
+    "Graph the parent functions $y=\\sin x$, $y=\\cos x$, $y=\\tan x$ over one or more periods, marking key points (maxima, minima, zeros, asymptotes)",
+    "Determine amplitude $|a|$ and the vertical reflection from the sign of $a$",
+    "Determine period from $b$: $\\frac{2\\pi}{b}$ for sine and cosine, $\\frac{\\pi}{b}$ for tangent",
+    "Determine midline $y=d$ (vertical shift) and the maximum/minimum values $d\\pm|a|$",
+    "Determine phase shift $c$ by factoring the argument as $b(x-c)$, including the direction of the horizontal shift",
+    "Apply the five-key-point method (dividing one period into quarters) to graph a transformed sine or cosine accurately",
+    "Locate vertical asymptotes of a transformed tangent graph",
+    "Write an equation $y=a\\sin(b(x-c))+d$ or cosine/tangent analogue from a labeled graph by reading off amplitude, period, midline, and a reference shift"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Identify features from an equation",
+      "example": "For $y=3\\sin\\!\\left(2x-\\frac{\\pi}{2}\\right)+1$, state the amplitude, period, phase shift, and midline. (Amplitude $3$, period $\\pi$, phase shift $\\frac{\\pi}{4}$ to the right, midline $y=1$.)"
+    },
+    {
+      "name": "Graph a transformed sine or cosine",
+      "example": "Graph one full period of $y=-2\\cos\\!\\left(\\frac{1}{2}x\\right)+3$, labeling the five key points and the midline."
+    },
+    {
+      "name": "Graph a transformed tangent",
+      "example": "Graph $y=\\tan\\!\\left(x-\\frac{\\pi}{4}\\right)$ over one period, giving the equations of the vertical asymptotes."
+    },
+    {
+      "name": "Write an equation from a graph",
+      "example": "A sinusoid has maximum value $5$, minimum value $-1$, period $4\\pi$, and a maximum at $x=\\pi$. Write a cosine equation. (Amplitude $3$, midline $y=2$, $b=\\frac{1}{2}$, phase shift $\\pi$: $y=3\\cos\\!\\left(\\frac{1}{2}(x-\\pi)\\right)+2$.)"
+    },
+    {
+      "name": "Compute a feature value",
+      "example": "Find the period of $y=4\\tan\\!\\left(3x+\\pi\\right)$. (Period $\\frac{\\pi}{3}$.)"
+    },
+    {
+      "name": "Interpret midline and extrema in context",
+      "example": "The depth of water at a dock is modeled by $y=2.5\\sin\\!\\left(\\frac{\\pi}{6}t\\right)+4$ meters, $t$ in hours. Find the maximum depth and the period. (Max depth $6.5$ m, period $12$ hours.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-transformation reads on sine or cosine where the relevant parameter is directly visible. One step, no factoring needed.",
+      "constraints": [
+        "Amplitude or midline read directly from $a$ or $d$ with the function already written as $y=a\\sin(bx)+d$ (no inner factor needed)",
+        "Period from $b$ where $b$ is a positive integer or simple value so $\\frac{2\\pi}{b}$ is clean (e.g. $b=1,2$)",
+        "Phase shift is $0$ or the problem asks only for amplitude/period/midline, not phase shift",
+        "Parent-function recognition (e.g. identify amplitude $1$, period $2\\pi$ for $y=\\sin x$)"
+      ]
+    },
+    "Medium": {
+      "description": "Two or three transformations combined; phase shift requires factoring $b$ out of the argument, or a graph must be read for two features. Tangent period appears.",
+      "constraints": [
+        "Argument given as $bx-bc$ so the student must factor to find phase shift $c$",
+        "Period and amplitude both nontrivial (e.g. $b=\\frac{1}{2}$ giving period $4\\pi$; fractional or negative $a$)",
+        "Includes vertical reflection from negative $a$, or tangent with period $\\frac{\\pi}{b}$",
+        "Reading two features (e.g. amplitude and period) off a labeled graph"
+      ]
+    },
+    "Hard": {
+      "description": "Full equation-from-graph synthesis or multi-step modeling: combine amplitude, period, midline, and phase shift, choosing sine vs cosine and resolving the phase shift from a marked key point. Multiple steps with no parameter directly visible.",
+      "constraints": [
+        "Write a complete equation $y=a\\sin(b(x-c))+d$ from a graph using max/min to get $a$ and $d$, two key points to get the period and hence $b$, and a reference point to get $c$",
+        "Resolve phase-shift ambiguity (multiple valid $c$ values) or convert between an equivalent sine and cosine form",
+        "Applied modeling: extract amplitude, midline, period, and shift from a verbal context, then answer a follow-up (e.g. value at a given input)",
+        "Transformed tangent requiring both period and asymptote locations plus a shift"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student treats $b$ itself as the period instead of computing $\\frac{2\\pi}{b}$",
+      "distractor": "For $y=\\sin(2x)$ reports period $2$ (or $2\\pi\\cdot 2=4\\pi$) instead of $\\frac{2\\pi}{2}=\\pi$"
+    },
+    {
+      "misconception": "Student reads the phase shift directly off the constant in the argument without factoring out $b$",
+      "distractor": "For $y=\\sin\\!\\left(2x-\\frac{\\pi}{2}\\right)$ reports phase shift $\\frac{\\pi}{2}$ instead of $\\frac{\\pi}{2}\\div 2=\\frac{\\pi}{4}$"
+    },
+    {
+      "misconception": "Student gets the direction of the horizontal shift backward",
+      "distractor": "For $y=\\sin\\!\\left(x-\\frac{\\pi}{3}\\right)$ shifts left by $\\frac{\\pi}{3}$ instead of right by $\\frac{\\pi}{3}$"
+    },
+    {
+      "misconception": "Student takes amplitude as the full peak-to-trough distance rather than half of it",
+      "distractor": "For a graph with max $5$ and min $-1$ reports amplitude $6$ instead of $\\frac{5-(-1)}{2}=3$"
+    },
+    {
+      "misconception": "Student ignores the vertical shift so amplitude and midline are confused",
+      "distractor": "For $y=2\\sin x+3$ gives maximum value $2$ (using just $a$) instead of $d+|a|=3+2=5$, or sets midline at $y=0$"
+    },
+    {
+      "misconception": "Student uses the sine period formula $\\frac{2\\pi}{b}$ for tangent",
+      "distractor": "For $y=\\tan(2x)$ reports period $\\frac{2\\pi}{2}=\\pi$ instead of $\\frac{\\pi}{2}$"
+    },
+    {
+      "misconception": "Student lets a negative $a$ change the amplitude sign instead of reflecting the graph",
+      "distractor": "For $y=-4\\cos x$ reports amplitude $-4$ instead of $|-4|=4$ (a reflection, not a negative amplitude)"
+    },
+    {
+      "misconception": "Student computes midline as the average of $a$ and $d$ or otherwise mishandles the vertical shift when reading a graph",
+      "distractor": "For a graph with max $7$ and min $1$ places the midline at $y=4$ correctly but reports amplitude $4$ (using the max) instead of $3$, or vice versa"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

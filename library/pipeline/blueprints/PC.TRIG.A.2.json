@@ -1,0 +1,125 @@
+{
+  "standard": "PC.TRIG.A.2",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Angles, radian measure, and the unit circle",
+  "clusterCode": "A",
+  "skillName": "Unit Circle",
+
+  "description": "Students define the unit circle as the circle $x^2 + y^2 = 1$ centered at the origin, and use it to evaluate trigonometric functions at standard angles (multiples of $30^\\circ$ and $45^\\circ$, i.e. multiples of $\\frac{\\pi}{6}$ and $\\frac{\\pi}{4}$). For an angle $\\theta$ in standard position, the terminal point on the unit circle is $(\\cos\\theta, \\sin\\theta)$, so they identify exact coordinates and read off exact values of $\\sin\\theta$, $\\cos\\theta$, and $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$. They use reference angles and quadrant sign rules to extend the first-quadrant values to all four quadrants and to coterminal/negative angles.",
+
+  "subSkills": [
+    "State the definition of the unit circle $x^2 + y^2 = 1$ and that a point on it satisfies $(\\cos\\theta, \\sin\\theta)$",
+    "Memorize and reproduce first-quadrant exact values for $\\theta = 0, \\frac{\\pi}{6}, \\frac{\\pi}{4}, \\frac{\\pi}{3}, \\frac{\\pi}{2}$",
+    "Determine the reference angle for any standard angle in any quadrant",
+    "Apply quadrant sign rules (ASTC) to assign correct signs to $\\sin$, $\\cos$, $\\tan$",
+    "Read off the coordinates $(\\cos\\theta, \\sin\\theta)$ of the terminal point for a standard angle",
+    "Compute $\\tan\\theta = \\dfrac{\\sin\\theta}{\\cos\\theta}$ and recognize where it is undefined",
+    "Convert between degree and radian measure for standard angles ($30^\\circ = \\frac{\\pi}{6}$, etc.)",
+    "Reduce coterminal and negative angles to a standard angle in $[0, 2\\pi)$ before evaluating"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Evaluate a single function at a standard angle",
+      "example": "Find the exact value of $\\sin\\frac{2\\pi}{3}$. (Reference angle $\\frac{\\pi}{3}$ in Quadrant II, sine positive: $\\frac{\\sqrt{3}}{2}$.)"
+    },
+    {
+      "name": "Identify terminal-point coordinates",
+      "example": "Give the coordinates of the point where the terminal side of $\\theta = \\frac{5\\pi}{6}$ meets the unit circle. (Answer: $\\left(-\\frac{\\sqrt{3}}{2}, \\frac{1}{2}\\right)$.)"
+    },
+    {
+      "name": "Reference angle and quadrant sign",
+      "example": "State the reference angle and the sign of $\\cos\\frac{7\\pi}{4}$, then evaluate. (Reference $\\frac{\\pi}{4}$, Quadrant IV, cosine positive: $\\frac{\\sqrt{2}}{2}$.)"
+    },
+    {
+      "name": "Tangent and undefined values",
+      "example": "Find $\\tan\\frac{\\pi}{2}$ and explain. ($\\cos\\frac{\\pi}{2} = 0$, so $\\tan\\frac{\\pi}{2}$ is undefined.)"
+    },
+    {
+      "name": "Negative or coterminal angle reduction",
+      "example": "Find $\\cos\\left(-\\frac{\\pi}{3}\\right)$. (Coterminal with $\\frac{5\\pi}{3}$ or use even symmetry: $\\frac{1}{2}$.)"
+    },
+    {
+      "name": "Degree-stated standard angle",
+      "example": "Evaluate $\\tan 150^\\circ$. (Reference $30^\\circ$, Quadrant II, tangent negative: $-\\frac{\\sqrt{3}}{3}$.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Direct recall of a first-quadrant value or a quadrantal value. Angle is one of $0, \\frac{\\pi}{6}, \\frac{\\pi}{4}, \\frac{\\pi}{3}, \\frac{\\pi}{2}$ (or $0^\\circ$ through $90^\\circ$ equivalents). No reference angle or sign work needed; one step.",
+      "constraints": [
+        "Angle lies in Quadrant I or on a positive axis (multiple of $\\frac{\\pi}{2}$)",
+        "Single function value or a single coordinate requested",
+        "All signs are positive (or a clean $0$/$1$/undefined at a quadrantal angle)"
+      ]
+    },
+    "Medium": {
+      "description": "Angle lies in Quadrant II, III, or IV. Student must find the reference angle and apply the correct sign via ASTC, then evaluate. Two steps: locate quadrant + assign sign + recall reference value.",
+      "constraints": [
+        "Angle in $\\left(\\frac{\\pi}{2}, 2\\pi\\right)$, e.g. $\\frac{2\\pi}{3}, \\frac{5\\pi}{6}, \\frac{5\\pi}{4}, \\frac{7\\pi}{6}, \\frac{11\\pi}{6}$",
+        "Requires a reference-angle computation and a sign decision",
+        "May ask for the terminal-point coordinates (both signed components) or $\\tan\\theta$ as a quotient"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step: reduce a negative or large coterminal angle (e.g. $> 2\\pi$) to standard position first, or combine multiple function values, or state both coordinates plus $\\tan\\theta$ including undefined cases. May require degree/radian conversion before evaluating.",
+      "constraints": [
+        "Angle is negative, exceeds $2\\pi$, or stated in degrees needing conversion (e.g. $-\\frac{4\\pi}{3}, \\frac{13\\pi}{6}, 405^\\circ$)",
+        "Requires coterminal reduction to $[0, 2\\pi)$ before reference-angle work",
+        "Combines two or more steps, e.g. compute $\\sin\\theta$, $\\cos\\theta$, then $\\tan\\theta$, or identify an undefined tangent"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student swaps sine and cosine on the terminal point, treating the coordinate as $(\\sin\\theta, \\cos\\theta)$ instead of $(\\cos\\theta, \\sin\\theta)$",
+      "distractor": "For $\\theta = \\frac{\\pi}{6}$ gives $\\left(\\frac{1}{2}, \\frac{\\sqrt{3}}{2}\\right)$ instead of $\\left(\\frac{\\sqrt{3}}{2}, \\frac{1}{2}\\right)$"
+    },
+    {
+      "misconception": "Student ignores the quadrant and keeps the first-quadrant (positive) value, dropping the negative sign",
+      "distractor": "For $\\cos\\frac{2\\pi}{3}$ answers $\\frac{1}{2}$ instead of $-\\frac{1}{2}$"
+    },
+    {
+      "misconception": "Student confuses the $\\frac{\\pi}{6}$ and $\\frac{\\pi}{3}$ values, mixing $\\frac{1}{2}$ with $\\frac{\\sqrt{3}}{2}$",
+      "distractor": "For $\\sin\\frac{\\pi}{3}$ answers $\\frac{1}{2}$ instead of $\\frac{\\sqrt{3}}{2}$"
+    },
+    {
+      "misconception": "Student computes the wrong reference angle, subtracting from the wrong axis (uses $\\theta - \\pi$ in Quadrant II instead of $\\pi - \\theta$)",
+      "distractor": "For $\\theta = \\frac{5\\pi}{6}$ uses reference $\\frac{5\\pi}{6} - \\frac{\\pi}{2} = \\frac{\\pi}{3}$ giving $\\frac{\\sqrt{3}}{2}$ instead of reference $\\frac{\\pi}{6}$ giving $\\frac{1}{2}$"
+    },
+    {
+      "misconception": "Student inverts the tangent quotient, computing $\\frac{\\cos\\theta}{\\sin\\theta}$ (cotangent) instead of $\\frac{\\sin\\theta}{\\cos\\theta}$",
+      "distractor": "For $\\tan\\frac{\\pi}{3}$ answers $\\frac{\\sqrt{3}}{3}$ instead of $\\sqrt{3}$"
+    },
+    {
+      "misconception": "Student reports a zero-denominator tangent as $0$ rather than undefined",
+      "distractor": "For $\\tan\\frac{\\pi}{2}$ answers $0$ instead of undefined"
+    },
+    {
+      "misconception": "Student treats a negative angle as if it were positive, ignoring the reflection across the $x$-axis",
+      "distractor": "For $\\sin\\left(-\\frac{\\pi}{6}\\right)$ answers $\\frac{1}{2}$ instead of $-\\frac{1}{2}$"
+    },
+    {
+      "misconception": "Student mis-converts degrees to radians, scaling by the wrong factor",
+      "distractor": "Treats $150^\\circ$ as $\\frac{\\pi}{6}$ (reference value) rather than reducing the full angle, giving $\\tan 150^\\circ = \\frac{\\sqrt{3}}{3}$ instead of $-\\frac{\\sqrt{3}}{3}$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

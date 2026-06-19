@@ -1,0 +1,220 @@
+{
+  "id": "PC.CONIC.A.1--worksheet--medium",
+  "standard": "PC.CONIC.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Analytic Geometry",
+  "domainCode": "CONIC",
+  "cluster": "Conic sections",
+  "clusterCode": "A",
+  "skillName": "Parabolas",
+  "materialType": "worksheet",
+  "difficulty": "Medium",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Each problem asks you to reconstruct a parabola's equation from two given features or to convert an equation to vertex standard form by completing the square. Find $p$ from the relation between the coefficient $4p$ and the focal distance, choose the correct orientation, and report the vertex, focus, and directrix consistently. Give exact values, not rounded decimals.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Write the standard-form equation of the parabola with vertex $(0,0)$ and focus $(0,3)$. Then state the directrix.",
+      "answer": "$x^2 = 12y$; directrix $y=-3$",
+      "solution": {
+        "steps": [
+          "The focus $(0,3)$ lies above the vertex $(0,0)$, so the axis is vertical and the parabola opens up: use $x^2 = 4py$.",
+          "The focal distance is $p = 3$ (distance from vertex to focus), and $p>0$ confirms it opens up.",
+          "Compute $4p = 4(3) = 12$, so the equation is $x^2 = 12y$.",
+          "The directrix is the horizontal line $p$ units below the vertex on the opposite side: $y = -3$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Write the standard-form equation of the parabola with vertex $(-1,4)$ and focus $(-1,6)$. Then state the directrix.",
+      "answer": "$(x+1)^2 = 8(y-4)$; directrix $y=2$",
+      "solution": {
+        "steps": [
+          "The focus $(-1,6)$ is directly above the vertex $(-1,4)$, so the axis is vertical and the parabola opens up: use $(x-h)^2 = 4p(y-k)$ with $(h,k)=(-1,4)$.",
+          "The focal distance is $p = 6 - 4 = 2$, and $p>0$ confirms it opens up.",
+          "Then $4p = 8$, so $(x-(-1))^2 = 8(y-4)$, i.e. $(x+1)^2 = 8(y-4)$.",
+          "The directrix sits $p=2$ units below the vertex: $y = 4 - 2 = 2$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Find the standard-form equation of the parabola with focus $(0,2)$ and directrix $y=-2$. Then state the vertex.",
+      "answer": "$x^2 = 8y$; vertex $(0,0)$",
+      "solution": {
+        "steps": [
+          "The directrix $y=-2$ is horizontal, so the axis is vertical. The vertex lies halfway between the focus and the directrix.",
+          "Vertex $y$-coordinate: $\\frac{2 + (-2)}{2} = 0$, and the $x$-coordinate matches the focus, so the vertex is $(0,0)$.",
+          "The focal distance is $p = 2$ (from vertex $(0,0)$ to focus $(0,2)$); since the focus is above the vertex, it opens up.",
+          "Then $4p = 8$, giving $x^2 = 8y$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Write the standard-form equation of the parabola with vertex $(2,-3)$ and focus $(5,-3)$. Then state the directrix.",
+      "answer": "$(y+3)^2 = 12(x-2)$; directrix $x=-1$",
+      "solution": {
+        "steps": [
+          "The focus $(5,-3)$ is directly to the right of the vertex $(2,-3)$, so the axis is horizontal and the parabola opens right: use $(y-k)^2 = 4p(x-h)$ with $(h,k)=(2,-3)$.",
+          "The focal distance is $p = 5 - 2 = 3$, and $p>0$ confirms it opens right.",
+          "Then $4p = 12$, so $(y-(-3))^2 = 12(x-2)$, i.e. $(y+3)^2 = 12(x-2)$.",
+          "The directrix is the vertical line $p=3$ units to the left of the vertex: $x = 2 - 3 = -1$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Write the standard-form equation of the parabola with vertex $(4,1)$ and directrix $y=4$. Then state the focus.",
+      "answer": "$(x-4)^2 = -12(y-1)$; focus $(4,-2)$",
+      "solution": {
+        "steps": [
+          "The directrix $y=4$ is horizontal and lies above the vertex $(4,1)$, so the parabola opens down: use $(x-h)^2 = 4p(y-k)$ with $(h,k)=(4,1)$.",
+          "The distance from the vertex to the directrix is $4 - 1 = 3$, and opening down means $p = -3$.",
+          "Then $4p = -12$, so $(x-4)^2 = -12(y-1)$.",
+          "The focus sits $|p|=3$ units below the vertex on the side opposite the directrix: $(4, 1-3) = (4,-2)$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Rewrite $y = x^2 - 6x + 11$ in vertex standard form $(x-h)^2 = 4p(y-k)$, then give the vertex, focus, and directrix.",
+      "answer": "$(x-3)^2 = (y-2)$; vertex $(3,2)$, focus $\\left(3,\\frac{9}{4}\\right)$, directrix $y=\\frac{7}{4}$",
+      "solution": {
+        "steps": [
+          "Group and complete the square: $y = (x^2 - 6x) + 11$. Half of $-6$ is $-3$, and $(-3)^2 = 9$.",
+          "Add and subtract $9$: $y = (x^2 - 6x + 9) - 9 + 11 = (x-3)^2 + 2$.",
+          "Isolate the squared term: $(x-3)^2 = y - 2$, so $(x-3)^2 = 1\\cdot(y-2)$. The vertex is $(3,2)$.",
+          "Here $4p = 1$, so $p = \\frac{1}{4}$, and $p>0$ means it opens up.",
+          "Focus: $\\left(3,\\ 2 + \\frac{1}{4}\\right) = \\left(3, \\frac{9}{4}\\right)$. Directrix: $y = 2 - \\frac{1}{4} = \\frac{7}{4}$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Rewrite $y = x^2 + 4x + 7$ in vertex standard form, then give the vertex, focus, and directrix.",
+      "answer": "$(x+2)^2 = (y-3)$; vertex $(-2,3)$, focus $\\left(-2,\\frac{13}{4}\\right)$, directrix $y=\\frac{11}{4}$",
+      "solution": {
+        "steps": [
+          "Complete the square: $y = (x^2 + 4x) + 7$. Half of $4$ is $2$, and $2^2 = 4$.",
+          "Add and subtract $4$: $y = (x^2 + 4x + 4) - 4 + 7 = (x+2)^2 + 3$.",
+          "Isolate: $(x+2)^2 = y - 3$, so $4p = 1$ and the vertex is $(-2,3)$.",
+          "Then $p = \\frac{1}{4}$, opening up. Focus: $\\left(-2,\\ 3 + \\frac{1}{4}\\right) = \\left(-2, \\frac{13}{4}\\right)$.",
+          "Directrix: $y = 3 - \\frac{1}{4} = \\frac{11}{4}$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Rewrite $x = y^2 - 2y + 5$ in vertex standard form $(y-k)^2 = 4p(x-h)$, then give the vertex, focus, and directrix.",
+      "answer": "$(y-1)^2 = (x-4)$; vertex $(4,1)$, focus $\\left(\\frac{17}{4},1\\right)$, directrix $x=\\frac{15}{4}$",
+      "solution": {
+        "steps": [
+          "Complete the square in $y$: $x = (y^2 - 2y) + 5$. Half of $-2$ is $-1$, and $(-1)^2 = 1$.",
+          "Add and subtract $1$: $x = (y^2 - 2y + 1) - 1 + 5 = (y-1)^2 + 4$.",
+          "Isolate: $(y-1)^2 = x - 4$, so $4p = 1$ and the vertex is $(4,1)$. The squared variable is $y$, so the axis is horizontal.",
+          "Then $p = \\frac{1}{4}$, opening right. Focus: $\\left(4 + \\frac{1}{4},\\ 1\\right) = \\left(\\frac{17}{4}, 1\\right)$.",
+          "Directrix is vertical: $x = 4 - \\frac{1}{4} = \\frac{15}{4}$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Find the standard-form equation of the parabola with focus $(3,1)$ and directrix $x=-1$. Then state the vertex.",
+      "answer": "$(y-1)^2 = 8(x-1)$; vertex $(1,1)$",
+      "solution": {
+        "steps": [
+          "The directrix $x=-1$ is vertical, so the axis is horizontal. The vertex is halfway between focus and directrix.",
+          "Vertex $x$-coordinate: $\\frac{3 + (-1)}{2} = 1$, and the $y$-coordinate matches the focus, so the vertex is $(1,1)$.",
+          "The focal distance is $p = 3 - 1 = 2$; the focus is to the right of the vertex, so it opens right.",
+          "Then $4p = 8$, giving $(y-1)^2 = 8(x-1)$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Write the standard-form equation of the parabola with vertex $(-2,5)$ and focus $\\left(-2,\\frac{11}{2}\\right)$. Then state the directrix.",
+      "answer": "$(x+2)^2 = 2(y-5)$; directrix $y=\\frac{9}{2}$",
+      "solution": {
+        "steps": [
+          "The focus $\\left(-2,\\frac{11}{2}\\right)$ is directly above the vertex $(-2,5)$, so the axis is vertical and it opens up: use $(x-h)^2 = 4p(y-k)$ with $(h,k)=(-2,5)$.",
+          "Focal distance: $p = \\frac{11}{2} - 5 = \\frac{11}{2} - \\frac{10}{2} = \\frac{1}{2}$.",
+          "Then $4p = 4\\cdot\\frac{1}{2} = 2$, so $(x+2)^2 = 2(y-5)$.",
+          "Directrix sits $p = \\frac{1}{2}$ below the vertex: $y = 5 - \\frac{1}{2} = \\frac{9}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Find the standard-form equation of the parabola with focus $\\left(\\frac{5}{2},0\\right)$ and directrix $x=-\\frac{5}{2}$. Then state the vertex.",
+      "answer": "$y^2 = 10x$; vertex $(0,0)$",
+      "solution": {
+        "steps": [
+          "The directrix $x=-\\frac{5}{2}$ is vertical, so the axis is horizontal. The vertex is midway between focus and directrix.",
+          "Vertex $x$-coordinate: $\\frac{\\frac{5}{2} + \\left(-\\frac{5}{2}\\right)}{2} = 0$, and $y$ matches the focus, so the vertex is $(0,0)$.",
+          "Focal distance: $p = \\frac{5}{2} - 0 = \\frac{5}{2}$; the focus is right of the vertex, so it opens right.",
+          "Then $4p = 4\\cdot\\frac{5}{2} = 10$, giving $y^2 = 10x$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Rewrite $y = x^2 + 8x + 13$ in vertex standard form, then give the vertex, focus, and directrix.",
+      "answer": "$(x+4)^2 = (y+3)$; vertex $(-4,-3)$, focus $\\left(-4,-\\frac{11}{4}\\right)$, directrix $y=-\\frac{13}{4}$",
+      "solution": {
+        "steps": [
+          "Complete the square: $y = (x^2 + 8x) + 13$. Half of $8$ is $4$, and $4^2 = 16$.",
+          "Add and subtract $16$: $y = (x^2 + 8x + 16) - 16 + 13 = (x+4)^2 - 3$.",
+          "Isolate: $(x+4)^2 = y + 3$, so $4p = 1$ and the vertex is $(-4,-3)$.",
+          "Then $p = \\frac{1}{4}$, opening up. Focus: $\\left(-4,\\ -3 + \\frac{1}{4}\\right) = \\left(-4, -\\frac{11}{4}\\right)$.",
+          "Directrix: $y = -3 - \\frac{1}{4} = -\\frac{13}{4}$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Write the standard-form equation of the parabola with vertex $(3,-2)$ and directrix $x=5$. Then state the focus.",
+      "answer": "$(y+2)^2 = -8(x-3)$; focus $(1,-2)$",
+      "solution": {
+        "steps": [
+          "The directrix $x=5$ is vertical and lies to the right of the vertex $(3,-2)$, so the parabola opens left: use $(y-k)^2 = 4p(x-h)$ with $(h,k)=(3,-2)$.",
+          "Distance from vertex to directrix is $5 - 3 = 2$, and opening left means $p = -2$.",
+          "Then $4p = -8$, so $(y+2)^2 = -8(x-3)$.",
+          "The focus sits $|p|=2$ units left of the vertex, opposite the directrix: $(3-2,\\ -2) = (1,-2)$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Find the standard-form equation of the parabola with focus $(2,-1)$ and directrix $y=3$. Then state the vertex.",
+      "answer": "$(x-2)^2 = -8(y-1)$; vertex $(2,1)$",
+      "solution": {
+        "steps": [
+          "The directrix $y=3$ is horizontal, so the axis is vertical. The vertex is halfway between focus and directrix.",
+          "Vertex $y$-coordinate: $\\frac{-1 + 3}{2} = 1$, and $x$ matches the focus, so the vertex is $(2,1)$.",
+          "The focus $(2,-1)$ is below the vertex, so it opens down: $p = -1 - 1 = -2$.",
+          "Then $4p = -8$, giving $(x-2)^2 = -8(y-1)$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Rewrite $x = y^2 + 6y + 4$ in vertex standard form, then give the vertex, focus, and directrix.",
+      "answer": "$(y+3)^2 = (x+5)$; vertex $(-5,-3)$, focus $\\left(-\\frac{19}{4},-3\\right)$, directrix $x=-\\frac{21}{4}$",
+      "solution": {
+        "steps": [
+          "Complete the square in $y$: $x = (y^2 + 6y) + 4$. Half of $6$ is $3$, and $3^2 = 9$.",
+          "Add and subtract $9$: $x = (y^2 + 6y + 9) - 9 + 4 = (y+3)^2 - 5$.",
+          "Isolate: $(y+3)^2 = x + 5$, so $4p = 1$ and the vertex is $(-5,-3)$. The squared variable is $y$, so the axis is horizontal.",
+          "Then $p = \\frac{1}{4}$, opening right. Focus: $\\left(-5 + \\frac{1}{4},\\ -3\\right) = \\left(-\\frac{19}{4}, -3\\right)$.",
+          "Directrix is vertical: $x = -5 - \\frac{1}{4} = -\\frac{21}{4}$."
+        ]
+      }
+    }
+  ]
+}

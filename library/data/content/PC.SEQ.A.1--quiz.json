@@ -1,0 +1,158 @@
+{
+  "id": "PC.SEQ.A.1--quiz",
+  "standard": "PC.SEQ.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Sequences, Series, and Limits",
+  "domainCode": "SEQ",
+  "cluster": "Sequences and series",
+  "clusterCode": "A",
+  "skillName": "Arithmetic Sequences and Series",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Eight multiple-choice questions on arithmetic sequences and series: identifying the common difference, applying the explicit $n$th-term formula, recovering parameters from given terms, summing finite series (including sigma notation), and modeling real-world contexts.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "What is the common difference $d$ of the arithmetic sequence $3,\\ 7,\\ 11,\\ 15,\\ \\dots$?\nA) $3$\nB) $4$\nC) $\\frac{7}{3}$\nD) $7$",
+      "answer": "B) $4$",
+      "solution": {
+        "steps": [
+          "The common difference is the constant gap between consecutive terms: $d = a_2 - a_1 = 7 - 3 = 4$.",
+          "Check: $11 - 7 = 4$ and $15 - 11 = 4$, so $d = 4$ is consistent. Key is B.",
+          "A) $3$ is just the first term $a_1$, not the difference.",
+          "C) $\\frac{7}{3}$ treats the sequence as geometric by dividing $\\frac{a_2}{a_1}$, but this is an arithmetic sequence (you add, not multiply).",
+          "D) $7$ is the second term $a_2$, not the difference."
+        ],
+        "answer": "B) $4$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "An arithmetic sequence has $a_1 = 5$ and $d = 3$. Find $a_{20}$.\nA) $62$\nB) $65$\nC) $60$\nD) $68$",
+      "answer": "A) $62$",
+      "solution": {
+        "steps": [
+          "Use the explicit formula $a_n = a_1 + (n-1)d$.",
+          "Substitute: $a_{20} = 5 + (20-1)\\cdot 3 = 5 + 19\\cdot 3 = 5 + 57 = 62$. Key is A.",
+          "B) $65$ comes from the off-by-one error $a_1 + nd = 5 + 20\\cdot 3$, using $n$ instead of $n-1$ steps.",
+          "C) $60$ drops the starting term, computing $19\\cdot 3 = 57$ then mis-adjusting, or $20\\cdot 3 = 60$.",
+          "D) $68$ overshoots by adding an extra two differences."
+        ],
+        "answer": "A) $62$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Which list is an arithmetic sequence?\nA) $2,\\ 6,\\ 18,\\ 54,\\ \\dots$\nB) $1,\\ 4,\\ 9,\\ 16,\\ \\dots$\nC) $5,\\ 8,\\ 11,\\ 14,\\ \\dots$\nD) $3,\\ 3,\\ 6,\\ 9,\\ \\dots$",
+      "answer": "C) $5,\\ 8,\\ 11,\\ 14,\\ \\dots$",
+      "solution": {
+        "steps": [
+          "A sequence is arithmetic when every pair of consecutive terms has the same difference $d$.",
+          "For C: $8-5 = 3$, $11-8 = 3$, $14-11 = 3$. Constant $d = 3$, so C is arithmetic. Key is C.",
+          "A) $2,6,18,54$ multiplies by $3$ each step (geometric, $r = 3$), not a constant difference.",
+          "B) $1,4,9,16$ are perfect squares with growing gaps $3, 5, 7$, not constant.",
+          "D) $3,3,6,9$ has differences $0, 3, 3$, which are not all equal."
+        ],
+        "answer": "C) $5,\\ 8,\\ 11,\\ 14,\\ \\dots$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "In an arithmetic sequence $a_4 = 14$ and $a_9 = 34$. What is the common difference $d$?\nA) $20$\nB) $5$\nC) $4$\nD) $\\frac{34}{14}$",
+      "answer": "C) $4$",
+      "solution": {
+        "steps": [
+          "From $a_4$ to $a_9$ there are $9 - 4 = 5$ steps, so $a_9 = a_4 + 5d$.",
+          "Solve: $34 = 14 + 5d \\Rightarrow 5d = 20 \\Rightarrow d = \\frac{20}{5} = 4$. Key is C.",
+          "A) $20$ is $a_9 - a_4 = 34 - 14$, which forgets to divide by the gap in indices.",
+          "B) $5$ divides by $4$ instead of $5$, or confuses the number of terms with the number of steps.",
+          "D) $\\frac{34}{14}$ treats the sequence as geometric by taking a ratio of terms."
+        ],
+        "answer": "C) $4$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Find the sum of the first $30$ terms of the arithmetic sequence $4,\\ 7,\\ 10,\\ \\dots$.\nA) $1425$\nB) $120$\nC) $47.5$\nD) $1377.5$",
+      "answer": "A) $1425$",
+      "solution": {
+        "steps": [
+          "First find $a_{30}$ with $a_n = a_1 + (n-1)d$ where $a_1 = 4$, $d = 3$: $a_{30} = 4 + 29\\cdot 3 = 4 + 87 = 91$.",
+          "Apply $S_n = \\frac{n}{2}(a_1 + a_n)$: $S_{30} = \\frac{30}{2}(4 + 91) = 15\\cdot 95 = 1425$. Key is A.",
+          "B) $120$ uses $S_{30} = \\frac{30}{2}(4 + 4) = 120$, mistakenly substituting $a_1$ in place of $a_{30}$.",
+          "C) $47.5$ is just the average $\\frac{4 + 91}{2}$, forgetting the factor of $n$.",
+          "D) $1377.5$ uses $\\frac{29}{2}(4 + 91)$, using $n - 1$ instead of $n$ as the count of terms."
+        ],
+        "answer": "A) $1425$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Evaluate $\\sum_{k=1}^{12}(3k + 2)$.\nA) $78$\nB) $258$\nC) $234$\nD) $264$",
+      "answer": "B) $258$",
+      "solution": {
+        "steps": [
+          "Evaluate the expression at the bounds. First term ($k=1$): $3(1)+2 = 5$. Last term ($k=12$): $3(12)+2 = 38$.",
+          "There are $12$ terms with common difference $3$, so $S = \\frac{12}{2}(5 + 38) = 6\\cdot 43 = 258$. Key is B.",
+          "A) $78$ plugs the index bounds in as terms, computing $\\frac{12}{2}(1 + 12)$ instead of using the actual first and last terms.",
+          "C) $234$ omits the constant $+2$ on every term, summing only $3k$: $3\\cdot\\frac{12\\cdot 13}{2} = 234$.",
+          "D) $264$ adds the constant only once ($234 + 2 + 28$ style) rather than to all $12$ terms."
+        ],
+        "answer": "B) $258$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A theater has $18$ seats in the first row and $2$ more seats in each successive row. How many seats are there in total across the first $15$ rows?\nA) $46$\nB) $480$\nC) $690$\nD) $450$",
+      "answer": "B) $480$",
+      "solution": {
+        "steps": [
+          "Model the rows as arithmetic with $a_1 = 18$ and $d = 2$. The seats in the $15$th row are $a_{15} = 18 + 14\\cdot 2 = 18 + 28 = 46$.",
+          "Total seats: $S_{15} = \\frac{15}{2}(a_1 + a_{15}) = \\frac{15}{2}(18 + 46) = \\frac{15}{2}\\cdot 64 = 15\\cdot 32 = 480$. Key is B.",
+          "A) $46$ is only $a_{15}$, the seats in the last row, not the total.",
+          "C) $690$ uses $a_1 = 18$ in place of $a_{15}$ doubled incorrectly, e.g. $\\frac{15}{2}(46 + 46) = 690$.",
+          "D) $450$ uses the off-by-one term $a_{15} = 18 + 15\\cdot 2 = 48$ then mis-sums, or $\\frac{15}{2}(18 + 42)$."
+        ],
+        "answer": "B) $480$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "The sum of the first $n$ terms of the arithmetic sequence $2,\\ 5,\\ 8,\\ 11,\\ \\dots$ is $155$. Find $n$.\nA) $9$\nB) $11$\nC) $10$\nD) $12$",
+      "answer": "C) $10$",
+      "solution": {
+        "steps": [
+          "Here $a_1 = 2$, $d = 3$. Use $S_n = \\frac{n}{2}\\big(2a_1 + (n-1)d\\big)$: $155 = \\frac{n}{2}\\big(4 + 3(n-1)\\big)$.",
+          "Simplify inside the parentheses: $4 + 3(n-1) = 4 + 3n - 3 = 3n + 1$, so $155 = \\frac{n(3n+1)}{2}$.",
+          "Multiply both sides by $2$ and rearrange: $3n^2 + n - 310 = 0$.",
+          "Apply the quadratic formula: $n = \\frac{-1 \\pm \\sqrt{1 + 4\\cdot 3\\cdot 310}}{2\\cdot 3} = \\frac{-1 \\pm \\sqrt{3721}}{6} = \\frac{-1 \\pm 61}{6}$.",
+          "The roots are $n = \\frac{60}{6} = 10$ and $n = \\frac{-62}{6}$ (rejected, since $n$ must be a positive integer). So $n = 10$. Key is C.",
+          "Verify: $a_{10} = 2 + 9\\cdot 3 = 29$, and $S_{10} = \\frac{10}{2}(2 + 29) = 5\\cdot 31 = 155$. Correct.",
+          "A) $9$ gives $S_9 = \\frac{9}{2}(2 + 26) = 126$, too small. B) $11$ gives $S_{11} = \\frac{11}{2}(2 + 32) = 187$, too large. D) $12$ gives $S_{12} = \\frac{12}{2}(2 + 35) = 222$, too large."
+        ],
+        "answer": "C) $10$"
+      }
+    }
+  ]
+}

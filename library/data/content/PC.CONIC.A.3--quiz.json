@@ -1,0 +1,162 @@
+{
+  "id": "PC.CONIC.A.3--quiz",
+  "standard": "PC.CONIC.A.3",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Analytic Geometry",
+  "domainCode": "CONIC",
+  "cluster": "Conic sections",
+  "clusterCode": "A",
+  "skillName": "Hyperbolas",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "Eight multiple-choice questions on hyperbolas: standard form, orientation, centers, vertices, foci, asymptotes, completing the square, deriving the equation, and eccentricity.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "What are the vertices of the hyperbola $\\frac{x^2}{16}-\\frac{y^2}{9}=1$?\nA) $(\\pm 4,0)$\nB) $(0,\\pm 3)$\nC) $(\\pm 5,0)$\nD) $(0,\\pm 4)$",
+      "answer": "A) $(\\pm 4,0)$",
+      "solution": {
+        "steps": [
+          "The $x^2$ term is positive, so the transverse axis is horizontal and the vertices lie on the $x$-axis.",
+          "Here $a^2=16$, so $a=4$, giving vertices $(\\pm 4,0)$.",
+          "Choice A is correct.",
+          "B uses $b=3$, the co-vertices (endpoints of the conjugate axis), not the vertices on the curve.",
+          "C uses $c=5$ (the focal distance) instead of $a$.",
+          "D puts the vertices on the $y$-axis, the wrong axis for a horizontal hyperbola."
+        ],
+        "answer": "A) $(\\pm 4,0)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Which way does the hyperbola $\\frac{y^2}{4}-\\frac{x^2}{9}=1$ open?\nA) Left and right\nB) Up and down\nC) Toward all four diagonals\nD) It is a circle, so it does not open",
+      "answer": "B) Up and down",
+      "solution": {
+        "steps": [
+          "Orientation is determined by which squared term is positive, not by which denominator is larger.",
+          "Here the $y^2$ term is positive, so the transverse axis is vertical and the hyperbola opens up and down.",
+          "Choice B is correct.",
+          "A applies ellipse logic, picking the axis with the larger denominator ($9>4$), which is wrong for hyperbolas.",
+          "C and D describe shapes that are not hyperbolas; a hyperbola opens along exactly one axis."
+        ],
+        "answer": "B) Up and down"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Find the foci of the hyperbola $\\frac{x^2}{16}-\\frac{y^2}{9}=1$.\nA) $(\\pm\\sqrt{7},0)$\nB) $(0,\\pm 5)$\nC) $(\\pm 5,0)$\nD) $(\\pm 7,0)$",
+      "answer": "C) $(\\pm 5,0)$",
+      "solution": {
+        "steps": [
+          "For a hyperbola use $c^2=a^2+b^2$, with $a^2=16$ and $b^2=9$.",
+          "$c^2=16+9=25$, so $c=5$.",
+          "The transverse axis is horizontal, so the foci are $(\\pm 5,0)$. Choice C is correct.",
+          "A uses the ellipse relationship $c^2=a^2-b^2=\\sqrt{7}$, which is wrong for a hyperbola.",
+          "B places the foci on the $y$-axis, the wrong axis.",
+          "D takes $c^2=a^2+b^2$ but forgets the square root, using $7$ instead of $\\sqrt{25}=5$ from a sign slip."
+        ],
+        "answer": "C) $(\\pm 5,0)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "What is the center of the hyperbola $\\frac{(x+4)^2}{9}-\\frac{(y-2)^2}{16}=1$?\nA) $(4,-2)$\nB) $(-4,2)$\nC) $(-4,-2)$\nD) $(4,2)$",
+      "answer": "B) $(-4,2)$",
+      "solution": {
+        "steps": [
+          "Standard form uses $(x-h)^2$ and $(y-k)^2$, so the center is $(h,k)$.",
+          "Rewrite $(x+4)^2=(x-(-4))^2$, giving $h=-4$, and $(y-2)^2$ gives $k=2$.",
+          "The center is $(-4,2)$. Choice B is correct.",
+          "A flips both signs, reading $(x+4)$ as $h=4$ and $(y-2)$ as $k=-2$.",
+          "C and D get one coordinate's sign wrong by misreading $(x+4)$ or $(y-2)$."
+        ],
+        "answer": "B) $(-4,2)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Find the vertices of the hyperbola $\\frac{(x-3)^2}{4}-\\frac{(y+1)^2}{5}=1$.\nA) $(\\pm 2,0)$\nB) $(1,-1)$ and $(5,-1)$\nC) $(3,-3)$ and $(3,1)$\nD) $(1,1)$ and $(5,1)$",
+      "answer": "B) $(1,-1)$ and $(5,-1)$",
+      "solution": {
+        "steps": [
+          "The center is $(h,k)=(3,-1)$ and the $x^2$ term is positive, so the transverse axis is horizontal with $a^2=4$, $a=2$.",
+          "Vertices are $(h\\pm a,k)=(3\\pm 2,-1)$, giving $(1,-1)$ and $(5,-1)$. Choice B is correct.",
+          "A ignores the center translation and places vertices relative to the origin.",
+          "C moves $\\pm a$ in the $y$-direction, using the wrong (vertical) axis.",
+          "D mishandles the sign of $k$, using $k=1$ instead of $k=-1$."
+        ],
+        "answer": "B) $(1,-1)$ and $(5,-1)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Write the equations of the asymptotes of $\\frac{x^2}{16}-\\frac{y^2}{9}=1$.\nA) $y=\\pm\\frac{4}{3}x$\nB) $y=\\pm\\frac{3}{4}x$\nC) $y=\\pm\\frac{9}{16}x$\nD) $y=\\pm\\frac{16}{9}x$",
+      "answer": "B) $y=\\pm\\frac{3}{4}x$",
+      "solution": {
+        "steps": [
+          "For a horizontal hyperbola centered at the origin, the asymptotes are $y=\\pm\\frac{b}{a}x$.",
+          "Here $a^2=16$ so $a=4$, and $b^2=9$ so $b=3$, giving slopes $\\pm\\frac{3}{4}$.",
+          "The asymptotes are $y=\\pm\\frac{3}{4}x$. Choice B is correct.",
+          "A inverts the ratio to $\\frac{a}{b}=\\frac{4}{3}$, the slope form for a vertical hyperbola.",
+          "C and D use the squared values $\\frac{b^2}{a^2}$ or $\\frac{a^2}{b^2}$ instead of taking square roots first."
+        ],
+        "answer": "B) $y=\\pm\\frac{3}{4}x$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Convert $9x^2-4y^2-54x-8y+113=0$ to standard form and identify the center.\nA) $\\frac{(x-3)^2}{4}-\\frac{(y+1)^2}{9}=1$, center $(3,-1)$\nB) $\\frac{(y+1)^2}{9}-\\frac{(x-3)^2}{4}=1$, center $(3,-1)$\nC) $\\frac{(x-3)^2}{4}-\\frac{(y+1)^2}{9}=1$, center $(-3,1)$\nD) $\\frac{(x+3)^2}{4}-\\frac{(y-1)^2}{9}=1$, center $(-3,1)$",
+      "answer": "B) $\\frac{(y+1)^2}{9}-\\frac{(x-3)^2}{4}=1$, center $(3,-1)$",
+      "solution": {
+        "steps": [
+          "Group and factor: $9(x^2-6x)-4(y^2+2y)+113=0$.",
+          "Complete the square: $x^2-6x$ adds $9$ inside (so $9\\cdot 9=81$ added), and $y^2+2y$ adds $1$ inside (so $-4\\cdot 1=-4$ added).",
+          "$9(x^2-6x+9)-4(y^2+2y+1)+113=0+81-4$, i.e. $9(x-3)^2-4(y+1)^2+113=77$.",
+          "So $9(x-3)^2-4(y+1)^2=-36$. Divide by $-36$: $-\\frac{(x-3)^2}{4}+\\frac{(y+1)^2}{9}=1$, i.e. $\\frac{(y+1)^2}{9}-\\frac{(x-3)^2}{4}=1$.",
+          "The $y^2$ term is positive, so this is a vertical hyperbola with center $(3,-1)$. Choice B is correct.",
+          "A keeps the $x^2$ term positive, getting the orientation backward after dividing by the negative.",
+          "C reads the center signs wrong as $(-3,1)$, and D additionally mislabels both the form and the center."
+        ],
+        "answer": "B) $\\frac{(y+1)^2}{9}-\\frac{(x-3)^2}{4}=1$, center $(3,-1)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A hyperbola centered at the origin has a vertex at $(0,3)$ and a focus at $(0,5)$. What is its eccentricity, and what is its standard-form equation?\nA) $e=\\frac{5}{3}$, $\\frac{y^2}{9}-\\frac{x^2}{16}=1$\nB) $e=\\frac{3}{5}$, $\\frac{x^2}{9}-\\frac{y^2}{16}=1$\nC) $e=\\frac{5}{3}$, $\\frac{y^2}{9}-\\frac{x^2}{25}=1$\nD) $e=\\frac{5}{4}$, $\\frac{y^2}{9}-\\frac{x^2}{16}=1$",
+      "answer": "A) $e=\\frac{5}{3}$, $\\frac{y^2}{9}-\\frac{x^2}{16}=1$",
+      "solution": {
+        "steps": [
+          "The vertex and focus lie on the $y$-axis, so the hyperbola is vertical with $a=3$ and $c=5$.",
+          "Eccentricity is $e=\\frac{c}{a}=\\frac{5}{3}$, which is greater than $1$ as required for a hyperbola.",
+          "Find $b^2$ from $c^2=a^2+b^2$: $25=9+b^2$, so $b^2=16$.",
+          "The vertical standard form is $\\frac{y^2}{a^2}-\\frac{x^2}{b^2}=\\frac{y^2}{9}-\\frac{x^2}{16}=1$. Choice A is correct.",
+          "B reports $e=\\frac{a}{c}=\\frac{3}{5}<1$ (ellipse logic) and uses horizontal orientation.",
+          "C uses $b^2=c^2=25$ instead of $c^2-a^2=16$.",
+          "D miscomputes eccentricity as $\\frac{c}{b}=\\frac{5}{4}$ rather than $\\frac{c}{a}$."
+        ],
+        "answer": "A) $e=\\frac{5}{3}$, $\\frac{y^2}{9}-\\frac{x^2}{16}=1$"
+      }
+    }
+  ]
+}

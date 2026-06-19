@@ -1,0 +1,235 @@
+{
+  "id": "PC.VEC.A.1--worksheet--hard",
+  "standard": "PC.VEC.A.1",
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Vectors and Parametric Equations",
+  "domainCode": "VEC",
+  "cluster": "Vectors in the plane",
+  "clusterCode": "A",
+  "skillName": "Vectors: Components and Operations",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-18T00:00:00.000Z",
+  "verifiedAt": "2026-06-18T23:50:18.141Z",
+  "intro": "These problems chain several vector operations together: building vectors from endpoints, forming linear combinations, finding magnitudes and direction angles of resultants, and solving for unknown scalars or components from a given condition. Give exact values (radicals, $\\pi$, or degrees), not rounded decimals, unless an approximation is requested.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Points are $A(-3, 2)$, $B(5, -4)$, and $C(1, 6)$. Let $\\vec{u} = \\overrightarrow{AB}$ and $\\vec{v} = \\overrightarrow{AC}$. Compute $2\\vec{u} - \\vec{v}$ in component form, then find its magnitude.",
+      "answer": "$2\\vec{u} - \\vec{v} = \\langle 12, -16 \\rangle$, magnitude $20$",
+      "solution": {
+        "steps": [
+          "Build $\\vec{u} = \\overrightarrow{AB} = \\langle 5 - (-3), -4 - 2 \\rangle = \\langle 8, -6 \\rangle$.",
+          "Build $\\vec{v} = \\overrightarrow{AC} = \\langle 1 - (-3), 6 - 2 \\rangle = \\langle 4, 4 \\rangle$.",
+          "Scale: $2\\vec{u} = \\langle 16, -12 \\rangle$.",
+          "Subtract: $2\\vec{u} - \\vec{v} = \\langle 16 - 4, -12 - 4 \\rangle = \\langle 12, -16 \\rangle$.",
+          "Magnitude: $\\sqrt{12^2 + (-16)^2} = \\sqrt{144 + 256} = \\sqrt{400} = 20$."
+        ],
+        "answer": "$\\langle 12, -16 \\rangle$, magnitude $20$"
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Let $\\vec{u} = \\langle 4, k \\rangle$. Find all values of $k$ so that $\\lVert \\vec{u} \\rVert = 2\\sqrt{13}$.",
+      "answer": "$k = 6$ or $k = -6$",
+      "solution": {
+        "steps": [
+          "Magnitude condition: $\\sqrt{4^2 + k^2} = 2\\sqrt{13}$.",
+          "Square both sides: $16 + k^2 = (2\\sqrt{13})^2 = 4 \\cdot 13 = 52$.",
+          "Solve: $k^2 = 52 - 16 = 36$.",
+          "Take square roots: $k = \\pm 6$.",
+          "Check: $\\langle 4, 6 \\rangle$ has magnitude $\\sqrt{16 + 36} = \\sqrt{52} = 2\\sqrt{13}$, and likewise for $\\langle 4, -6 \\rangle$."
+        ],
+        "answer": "$k = 6$ or $k = -6$"
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Vectors $\\vec{u} = \\langle 6, -2 \\rangle$ and $\\vec{v} = \\langle k, 5 \\rangle$ are parallel. Find $k$.",
+      "answer": "$k = -15$",
+      "solution": {
+        "steps": [
+          "Parallel vectors satisfy $\\vec{v} = c\\,\\vec{u}$, equivalently their components are proportional: $\\frac{k}{6} = \\frac{5}{-2}$.",
+          "Cross-multiply: $-2k = 6 \\cdot 5 = 30$.",
+          "Solve: $k = -15$.",
+          "Check: $\\langle -15, 5 \\rangle = -\\tfrac{5}{2}\\langle 6, -2 \\rangle$, confirming the vectors are parallel."
+        ],
+        "answer": "$k = -15$"
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Given $\\vec{u} = \\langle -3, 4 \\rangle$ and $\\vec{v} = \\langle 1, -7 \\rangle$, find the magnitude of $3\\vec{u} + 2\\vec{v}$.",
+      "answer": "$\\sqrt{53}$",
+      "solution": {
+        "steps": [
+          "Scale: $3\\vec{u} = \\langle -9, 12 \\rangle$ and $2\\vec{v} = \\langle 2, -14 \\rangle$.",
+          "Add: $3\\vec{u} + 2\\vec{v} = \\langle -9 + 2, 12 - 14 \\rangle = \\langle -7, -2 \\rangle$.",
+          "Magnitude: $\\sqrt{(-7)^2 + (-2)^2} = \\sqrt{49 + 4} = \\sqrt{53}$.",
+          "Since $53$ is prime, $\\sqrt{53}$ is already in simplest form."
+        ],
+        "answer": "$\\sqrt{53}$"
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Find the direction angle $\\theta$ (with $0^\\circ \\le \\theta < 360^\\circ$) of $\\vec{u} + \\vec{v}$ where $\\vec{u} = \\langle 2, 5 \\rangle$ and $\\vec{v} = \\langle -7, -5 - 5\\sqrt{3} \\rangle$. Give the exact angle in degrees.",
+      "answer": "$\\theta = 240^\\circ$",
+      "solution": {
+        "steps": [
+          "Add: $\\vec{u} + \\vec{v} = \\langle 2 + (-7), 5 + (-5 - 5\\sqrt{3}) \\rangle = \\langle -5, -5\\sqrt{3} \\rangle$.",
+          "Both components are negative, so the resultant lies in Quadrant III.",
+          "Reference angle: $\\tan\\alpha = \\left|\\frac{-5\\sqrt{3}}{-5}\\right| = \\sqrt{3}$, so $\\alpha = 60^\\circ$.",
+          "In Quadrant III: $\\theta = 180^\\circ + 60^\\circ = 240^\\circ$."
+        ],
+        "answer": "$\\theta = 240^\\circ$"
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A force $\\vec{F_1}$ has magnitude $10$ and direction angle $30^\\circ$. A second force $\\vec{F_2}$ has magnitude $10$ and direction angle $150^\\circ$. Find the component form of the resultant $\\vec{F_1} + \\vec{F_2}$ and its magnitude.",
+      "answer": "Resultant $\\langle 0, 10 \\rangle$, magnitude $10$",
+      "solution": {
+        "steps": [
+          "$\\vec{F_1} = \\langle 10\\cos 30^\\circ, 10\\sin 30^\\circ \\rangle = \\langle 5\\sqrt{3}, 5 \\rangle$.",
+          "$\\vec{F_2} = \\langle 10\\cos 150^\\circ, 10\\sin 150^\\circ \\rangle = \\langle -5\\sqrt{3}, 5 \\rangle$.",
+          "Add: $\\vec{F_1} + \\vec{F_2} = \\langle 5\\sqrt{3} - 5\\sqrt{3}, 5 + 5 \\rangle = \\langle 0, 10 \\rangle$.",
+          "Magnitude: $\\sqrt{0^2 + 10^2} = 10$."
+        ],
+        "answer": "$\\langle 0, 10 \\rangle$, magnitude $10$"
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Vector $\\vec{w}$ has magnitude $6$ and direction angle $\\frac{5\\pi}{6}$. Vector $\\vec{z} = \\langle 2\\sqrt{3}, -3 \\rangle$. Find $\\vec{w} + \\vec{z}$ in component form.",
+      "answer": "$\\langle -\\sqrt{3}, 0 \\rangle$",
+      "solution": {
+        "steps": [
+          "Convert $\\vec{w}$: $\\langle 6\\cos\\frac{5\\pi}{6}, 6\\sin\\frac{5\\pi}{6} \\rangle$.",
+          "$\\cos\\frac{5\\pi}{6} = -\\frac{\\sqrt{3}}{2}$ and $\\sin\\frac{5\\pi}{6} = \\frac{1}{2}$, so $\\vec{w} = \\langle -3\\sqrt{3}, 3 \\rangle$.",
+          "Add: $\\vec{w} + \\vec{z} = \\langle -3\\sqrt{3} + 2\\sqrt{3}, 3 + (-3) \\rangle = \\langle -\\sqrt{3}, 0 \\rangle$."
+        ],
+        "answer": "$\\langle -\\sqrt{3}, 0 \\rangle$"
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Let $\\vec{u} = \\langle 4, -3 \\rangle$. Find a scalar $k > 0$ so that $\\lVert k\\vec{u} \\rVert = 35$.",
+      "answer": "$k = 7$",
+      "solution": {
+        "steps": [
+          "First $\\lVert \\vec{u} \\rVert = \\sqrt{4^2 + (-3)^2} = \\sqrt{16 + 9} = \\sqrt{25} = 5$.",
+          "Scaling multiplies magnitude: $\\lVert k\\vec{u} \\rVert = |k| \\cdot \\lVert \\vec{u} \\rVert = 5k$ for $k > 0$.",
+          "Set $5k = 35$, so $k = 7$.",
+          "Check: $7\\vec{u} = \\langle 28, -21 \\rangle$, $\\sqrt{28^2 + 21^2} = \\sqrt{784 + 441} = \\sqrt{1225} = 35$."
+        ],
+        "answer": "$k = 7$"
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A boat heads due east across a river at $8$ km/h relative to the water. The current flows due north at $6$ km/h. Find the boat's resultant speed (magnitude) and its direction angle measured counterclockwise from due east, to the nearest tenth of a degree.",
+      "answer": "Speed $10$ km/h, direction $\\approx 36.9^\\circ$ north of east",
+      "solution": {
+        "steps": [
+          "Model the boat velocity as $\\langle 8, 0 \\rangle$ (east) and the current as $\\langle 0, 6 \\rangle$ (north).",
+          "Resultant: $\\langle 8, 6 \\rangle$.",
+          "Speed: $\\sqrt{8^2 + 6^2} = \\sqrt{64 + 36} = \\sqrt{100} = 10$ km/h.",
+          "Direction angle: $\\tan\\theta = \\frac{6}{8} = \\frac{3}{4}$, so $\\theta = \\arctan\\frac{3}{4} \\approx 36.9^\\circ$. The resultant is in Quadrant I, so no adjustment is needed."
+        ],
+        "answer": "Speed $10$ km/h, direction $\\approx 36.9^\\circ$ north of east"
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Points $P(2, -1)$, $Q(-4, 7)$, and $R(a, 3)$ satisfy $\\overrightarrow{PR} = \\frac{1}{2}\\overrightarrow{PQ}$. Find $a$ and verify the $y$-components are consistent.",
+      "answer": "$a = -1$",
+      "solution": {
+        "steps": [
+          "$\\overrightarrow{PQ} = \\langle -4 - 2, 7 - (-1) \\rangle = \\langle -6, 8 \\rangle$.",
+          "$\\frac{1}{2}\\overrightarrow{PQ} = \\langle -3, 4 \\rangle$.",
+          "$\\overrightarrow{PR} = \\langle a - 2, 3 - (-1) \\rangle = \\langle a - 2, 4 \\rangle$.",
+          "Match $x$-components: $a - 2 = -3$, so $a = -1$.",
+          "Check $y$-components: $4 = 4$, consistent. So $a = -1$."
+        ],
+        "answer": "$a = -1$"
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Given $\\vec{u} = \\langle 5, -1 \\rangle$ and $\\vec{v} = \\langle -2, 3 \\rangle$, find the direction angle of $\\vec{u} - 2\\vec{v}$ to the nearest tenth of a degree, with $0^\\circ \\le \\theta < 360^\\circ$.",
+      "answer": "$\\theta \\approx 322.1^\\circ$",
+      "solution": {
+        "steps": [
+          "$2\\vec{v} = \\langle -4, 6 \\rangle$.",
+          "$\\vec{u} - 2\\vec{v} = \\langle 5 - (-4), -1 - 6 \\rangle = \\langle 9, -7 \\rangle$.",
+          "Components are $(+, -)$, so the vector lies in Quadrant IV.",
+          "Reference angle: $\\tan\\alpha = \\left|\\frac{-7}{9}\\right| = \\frac{7}{9}$, so $\\alpha = \\arctan\\frac{7}{9} \\approx 37.9^\\circ$.",
+          "In Quadrant IV: $\\theta = 360^\\circ - 37.9^\\circ \\approx 322.1^\\circ$."
+        ],
+        "answer": "$\\theta \\approx 322.1^\\circ$"
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Find a vector $\\vec{w}$ that has the same direction as $\\vec{u} = \\langle -3, 4 \\rangle$ but magnitude $15$.",
+      "answer": "$\\vec{w} = \\langle -9, 12 \\rangle$",
+      "solution": {
+        "steps": [
+          "$\\lVert \\vec{u} \\rVert = \\sqrt{(-3)^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.",
+          "The unit vector in the direction of $\\vec{u}$ is $\\frac{1}{5}\\langle -3, 4 \\rangle = \\langle -\\frac{3}{5}, \\frac{4}{5} \\rangle$.",
+          "Scale to magnitude $15$: $\\vec{w} = 15 \\cdot \\langle -\\frac{3}{5}, \\frac{4}{5} \\rangle = \\langle -9, 12 \\rangle$.",
+          "Check: $\\sqrt{(-9)^2 + 12^2} = \\sqrt{81 + 144} = \\sqrt{225} = 15$, and $\\vec{w} = 3\\vec{u}$ so the direction matches."
+        ],
+        "answer": "$\\langle -9, 12 \\rangle$"
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Two ropes pull on a ring. Rope 1 exerts a force of magnitude $12$ N at direction angle $60^\\circ$; rope 2 exerts a force of magnitude $8$ N at direction angle $180^\\circ$. Find the magnitude of the resultant force, in exact form.",
+      "answer": "$4\\sqrt{7}$ N",
+      "solution": {
+        "steps": [
+          "$\\vec{F_1} = \\langle 12\\cos 60^\\circ, 12\\sin 60^\\circ \\rangle = \\langle 6, 6\\sqrt{3} \\rangle$.",
+          "$\\vec{F_2} = \\langle 8\\cos 180^\\circ, 8\\sin 180^\\circ \\rangle = \\langle -8, 0 \\rangle$.",
+          "Resultant: $\\vec{R} = \\langle 6 - 8, 6\\sqrt{3} + 0 \\rangle = \\langle -2, 6\\sqrt{3} \\rangle$.",
+          "Magnitude: $\\lVert \\vec{R} \\rVert = \\sqrt{(-2)^2 + (6\\sqrt{3})^2} = \\sqrt{4 + 108} = \\sqrt{112} = 4\\sqrt{7}$ N."
+        ],
+        "answer": "$4\\sqrt{7}$ N"
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Let $\\vec{u} = \\langle 1, 2 \\rangle$ and $\\vec{v} = \\langle 3, -1 \\rangle$. Find scalars $a$ and $b$ so that $a\\vec{u} + b\\vec{v} = \\langle 9, 4 \\rangle$.",
+      "answer": "$a = 3$, $b = 2$",
+      "solution": {
+        "steps": [
+          "Write the component equations: $a(1) + b(3) = 9$ and $a(2) + b(-1) = 4$.",
+          "System: $a + 3b = 9$ and $2a - b = 4$.",
+          "From the second equation, $b = 2a - 4$. Substitute: $a + 3(2a - 4) = 9$.",
+          "Simplify: $a + 6a - 12 = 9$, so $7a = 21$ and $a = 3$.",
+          "Then $b = 2(3) - 4 = 2$. Check: $3\\langle 1, 2 \\rangle + 2\\langle 3, -1 \\rangle = \\langle 3, 6 \\rangle + \\langle 6, -2 \\rangle = \\langle 9, 4 \\rangle$."
+        ],
+        "answer": "$a = 3$, $b = 2$"
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "An airplane flies with airspeed velocity $\\langle 150, 0 \\rangle$ km/h (due east). A wind blows with magnitude $50$ km/h at direction angle $120^\\circ$. Find the plane's ground speed (magnitude of the resultant) in exact form.",
+      "answer": "$50\\sqrt{7}$ km/h",
+      "solution": {
+        "steps": [
+          "Plane velocity: $\\vec{p} = \\langle 150, 0 \\rangle$.",
+          "Wind velocity: $\\vec{w} = \\langle 50\\cos 120^\\circ, 50\\sin 120^\\circ \\rangle = \\langle 50 \\cdot (-\\tfrac{1}{2}), 50 \\cdot \\tfrac{\\sqrt{3}}{2} \\rangle = \\langle -25, 25\\sqrt{3} \\rangle$.",
+          "Resultant ground velocity: $\\vec{g} = \\langle 150 - 25, 0 + 25\\sqrt{3} \\rangle = \\langle 125, 25\\sqrt{3} \\rangle$.",
+          "Ground speed: $\\lVert \\vec{g} \\rVert = \\sqrt{125^2 + (25\\sqrt{3})^2} = \\sqrt{15625 + 1875} = \\sqrt{17500}$.",
+          "Simplify: $\\sqrt{17500} = \\sqrt{2500 \\cdot 7} = 50\\sqrt{7}$ km/h."
+        ],
+        "answer": "$50\\sqrt{7}$ km/h"
+      }
+    }
+  ]
+}
