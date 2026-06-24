@@ -4,7 +4,9 @@
   "_comment3": "The front end reads catalog.json to build navigation and filter views without loading every content file.",
 
   "id": "7.RP.A.1--lesson",
+  "scope": "standard",
   "standard": "7.RP.A.1",
+  "clusterId": null,
   "grade": "7",
   "subject": "math",
   "domain": "Ratios and Proportional Relationships",
@@ -14,16 +16,23 @@
   "skillName": "Unit Rates with Fractions",
   "materialType": "lesson",
   "difficulty": null,
+  "tier": null,
   "itemCount": 7,
   "verificationStatus": "verified",
   "generatedAt": "2026-06-16T00:00:00.000Z",
 
-  "_comment_id_convention": "IDs use double-dash as delimiter: {standard}--{materialType} for lessons/quizzes, {standard}--worksheet--{difficulty-lowercase} for worksheets.",
+  "_comment_scope": "scope is 'standard' (set `standard`, leave `clusterId` null) or 'cluster' (set `clusterId`, set `standard` to null).",
+  "_comment_tier": "tier is null normally, or 'tier1'|'tier2' for the two worksheets of a complex (two-worksheet) standard.",
+  "_comment_difficulty": "difficulty is null for everything except legacy worksheets, which carry 'Easy'|'Medium'|'Hard'.",
+  "_comment_id_convention": "IDs use double-dash as delimiter. Standard scope: {standard}--{materialType} for lessons/quizzes; {standard}--worksheet (single ramped) OR {standard}--worksheet--tier1 / --tier2 (complex) OR legacy {standard}--worksheet--{difficulty-lowercase}. Cluster scope: {clusterId}--cluster-worksheet and {clusterId}--cluster-test, where clusterId = {gradeCode}.{domainCode}.{clusterCode}.",
   "_comment_examples": [
     "7.RP.A.1--lesson",
-    "7.RP.A.1--worksheet--easy",
-    "7.RP.A.1--worksheet--medium",
-    "7.RP.A.1--worksheet--hard",
-    "7.RP.A.1--quiz"
+    "7.RP.A.1--worksheet",
+    "7.RP.A.2--worksheet--tier1",
+    "7.RP.A.2--worksheet--tier2",
+    "7.RP.A.1--worksheet--easy   (legacy, still supported)",
+    "7.RP.A.1--quiz",
+    "7.RP.A--cluster-worksheet   (scope: cluster, standard: null, clusterId: 7.RP.A)",
+    "7.RP.A--cluster-test        (scope: cluster, standard: null, clusterId: 7.RP.A)"
   ]
 }

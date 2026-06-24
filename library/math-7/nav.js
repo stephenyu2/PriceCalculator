@@ -1,5 +1,6 @@
 let skeleton = null;
 let catalog = null;
+let GRADE_CODE = null; // grade prefix used in standard codes (e.g. "7", "PC", "K", "A1")
 
 async function init() {
   try {
@@ -7,6 +8,7 @@ async function init() {
       fetch('../data/skeleton-7-math.json').then(r => r.json()),
       fetch('../data/catalog.json').then(r => r.json())
     ]);
+    GRADE_CODE = gradeCodeOf(skeleton);
     buildNav();
     handleHash();
     window.addEventListener('hashchange', handleHash);
@@ -56,19 +58,34 @@ function handleHash() {
 }
 
 function renderCluster(domain, cluster) {
-  const catalogByStandard = {};
-  for (const item of catalog.items) {
-    if (!catalogByStandard[item.standard]) catalogByStandard[item.standard] = [];
-    catalogByStandard[item.standard].push(item);
-  }
+  // Look materials up by id — ids encode the material shape, so we never have to
+  // rely on per-item difficulty/tier fields being present in the catalog.
+  const byId = {};
+  for (const item of catalog.items) byId[item.id] = item;
 
   const standardsHtml = cluster.standards.map(std => {
-    const items = catalogByStandard[std.code] || [];
-    const lesson = items.find(i => i.materialType === 'lesson');
-    const wkEasy = items.find(i => i.materialType === 'worksheet' && i.difficulty === 'Easy');
-    const wkMed  = items.find(i => i.materialType === 'worksheet' && i.difficulty === 'Medium');
-    const wkHard = items.find(i => i.materialType === 'worksheet' && i.difficulty === 'Hard');
-    const quiz   = items.find(i => i.materialType === 'quiz');
+    const lesson = byId[`${std.code}--lesson`];
+    const quiz   = byId[`${std.code}--quiz`];
+
+    // Worksheet chips, rendered dynamically from whatever exists:
+    //   legacy easy/medium/hard  -> three chips (keeps built grades working)
+    //   tier1/tier2              -> "Tier 1" / "Tier 2"
+    //   single ramped (default)  -> one "Practice" chip
+    const easy = byId[`${std.code}--worksheet--easy`];
+    const med  = byId[`${std.code}--worksheet--medium`];
+    const hard = byId[`${std.code}--worksheet--hard`];
+    const tier1 = byId[`${std.code}--worksheet--tier1`];
+    const tier2 = byId[`${std.code}--worksheet--tier2`];
+    const single = byId[`${std.code}--worksheet`];
+
+    let worksheetChips;
+    if (easy || med || hard) {
+      worksheetChips = chip(easy, 'Easy', 'chip-easy') + chip(med, 'Medium', 'chip-med') + chip(hard, 'Hard', 'chip-hard');
+    } else if (tier1 || tier2) {
+      worksheetChips = chip(tier1, 'Tier 1', 'chip-tier1') + chip(tier2, 'Tier 2', 'chip-tier2');
+    } else {
+      worksheetChips = chip(single, 'Practice', 'chip-worksheet');
+    }
 
     return `
       <div class="standard-card">
@@ -83,9 +100,7 @@ function renderCluster(domain, cluster) {
           </div>
           <div class="mat-group">
             <span class="mat-group-label">Worksheets</span>
-            ${chip(wkEasy, 'Easy', 'chip-easy')}
-            ${chip(wkMed, 'Medium', 'chip-med')}
-            ${chip(wkHard, 'Hard', 'chip-hard')}
+            ${worksheetChips}
           </div>
           <div class="mat-group">
             <span class="mat-group-label">Quiz</span>
@@ -95,11 +110,27 @@ function renderCluster(domain, cluster) {
       </div>`;
   }).join('');
 
-  const clusterTestId = `cluster-test--${domain.code}.${cluster.code}`;
-  const clusterTestItem = catalog.items.find(i => i.id === clusterTestId);
-  const clusterTestChip = clusterTestItem
-    ? `<a class="mat-chip chip-cluster-test" href="material.html?id=${clusterTestId}">Take Test</a>`
-    : `<span class="mat-chip unavailable">Coming soon</span>`;
+  // "Full Cluster" section — one ramped cluster worksheet + one cluster test.
+  const clusterId = clusterIdOf(domain, cluster);
+  const clusterWk   = byId[`${clusterId}--cluster-worksheet`];
+  const clusterTest = byId[`${clusterId}--cluster-test`];
+  const fullClusterHtml = `
+    <div class="standard-card cluster-full-card">
+      <div class="std-header">
+        <span class="std-code">${clusterId}</span>
+        <span class="std-name">Full Cluster</span>
+      </div>
+      <div class="std-materials">
+        <div class="mat-group">
+          <span class="mat-group-label">Worksheet</span>
+          ${chip(clusterWk, 'Cluster Worksheet', 'chip-cluster-worksheet')}
+        </div>
+        <div class="mat-group">
+          <span class="mat-group-label">Test</span>
+          ${chip(clusterTest, 'Cluster Test', 'chip-cluster-test')}
+        </div>
+      </div>
+    </div>`;
 
   document.getElementById('libMain').innerHTML = `
     <div class="cluster-header">
@@ -108,18 +139,22 @@ function renderCluster(domain, cluster) {
       <p class="cluster-meta">${cluster.standards.length} standard${cluster.standards.length !== 1 ? 's' : ''}</p>
     </div>
     ${standardsHtml}
-    <div class="cluster-test-section">
-      <h2 class="section-heading">Cluster Assessment</h2>
-      <div class="standard-card cluster-test-card">
-        <div class="std-header">
-          <span class="std-name">Full Cluster Test — All ${cluster.standards.length} Standards</span>
-        </div>
-        <p class="cluster-test-desc">Give students the library password to access this test independently.</p>
-        <div class="mat-group" style="margin-top:0.6rem">
-          ${clusterTestChip}
-        </div>
-      </div>
-    </div>`;
+    <h2 class="cluster-section-heading">Full Cluster</h2>
+    ${fullClusterHtml}`;
+}
+
+// The grade prefix used in standard codes (e.g. "7", "PC", "K", "A1") — read off an
+// actual standard code, since skeleton.grade ("precalculus", "k") differs from it.
+function gradeCodeOf(sk) {
+  for (const d of sk.domains) for (const c of d.clusters) {
+    if (c.standards && c.standards[0]) return c.standards[0].code.split('.')[0];
+  }
+  return String(sk.grade);
+}
+
+// clusterId = {gradeCode}.{domainCode}.{clusterCode}, e.g. 7.RP.A
+function clusterIdOf(domain, cluster) {
+  return `${GRADE_CODE}.${domain.code}.${cluster.code}`;
 }
 
 function chip(item, label, cls) {

@@ -27,13 +27,47 @@ const only = rest.includes('--standards') ? new Set(rest[rest.indexOf('--standar
 
 const skeleton = JSON.parse(readFileSync(join(DATA, `skeleton-${grade}-${subject}.json`), 'utf8'));
 
-function expectedMaterials(standard) {
+// The grade prefix used in the standard codes (e.g. "7", "PC", "K", "A1"). This is
+// NOT always equal to skeleton.grade (precalculus -> "PC", k -> "K"), so we read it
+// off an actual standard code to keep cluster ids consistent with the standards
+// they contain.
+function gradeCodeOf(sk) {
+  for (const d of sk.domains) for (const c of d.clusters) {
+    if (c.standards && c.standards[0]) return c.standards[0].code.split('.')[0];
+  }
+  return String(sk.grade);
+}
+const GRADE_CODE = gradeCodeOf(skeleton);
+
+// clusterId = {gradeCode}.{domainCode}.{clusterCode}, e.g. 7.RP.A — matches the
+// prefix of every standard code in that cluster (7.RP.A.1, 7.RP.A.2, ...).
+function clusterIdOf(domain, cluster) {
+  return `${GRADE_CODE}.${domain.code}.${cluster.code}`;
+}
+
+// Per-STANDARD expected materials. Worksheet shape is driven by std.worksheets:
+//   1 (default) -> one ramped {std}--worksheet (difficulty null)
+//   2           -> {std}--worksheet--tier1 and {std}--worksheet--tier2 (no overlap)
+function expectedMaterials(standard, worksheets) {
+  const out = [
+    { id: `${standard}--lesson`, materialType: 'lesson', difficulty: null, scope: 'standard' },
+  ];
+  if (worksheets === 2) {
+    out.push({ id: `${standard}--worksheet--tier1`, materialType: 'worksheet', difficulty: null, tier: 'tier1', scope: 'standard' });
+    out.push({ id: `${standard}--worksheet--tier2`, materialType: 'worksheet', difficulty: null, tier: 'tier2', scope: 'standard' });
+  } else {
+    out.push({ id: `${standard}--worksheet`, materialType: 'worksheet', difficulty: null, tier: null, scope: 'standard' });
+  }
+  out.push({ id: `${standard}--quiz`, materialType: 'quiz', difficulty: null, scope: 'standard' });
+  return out;
+}
+
+// Per-CLUSTER expected materials (the "Full Cluster" section): one ramped cluster
+// worksheet + one cluster test.
+function expectedClusterMaterials(clusterId) {
   return [
-    { id: `${standard}--lesson`, materialType: 'lesson', difficulty: null },
-    { id: `${standard}--worksheet--easy`, materialType: 'worksheet', difficulty: 'Easy' },
-    { id: `${standard}--worksheet--medium`, materialType: 'worksheet', difficulty: 'Medium' },
-    { id: `${standard}--worksheet--hard`, materialType: 'worksheet', difficulty: 'Hard' },
-    { id: `${standard}--quiz`, materialType: 'quiz', difficulty: null },
+    { id: `${clusterId}--cluster-worksheet`, materialType: 'cluster-worksheet', difficulty: null, scope: 'cluster' },
+    { id: `${clusterId}--cluster-test`, materialType: 'cluster-test', difficulty: null, scope: 'cluster' },
   ];
 }
 
@@ -62,27 +96,51 @@ function tagsFor(std, domain, cluster) {
 const tasks = [];
 let totalMaterials = 0, brokenCount = 0;
 
+function checkMaterial(m, bp) {
+  totalMaterials++;
+  const path = join(CONTENT, `${m.id}.json`);
+  const res = existsSync(path) ? check(path, bp ? JSON.parse(readFileSync(bp, 'utf8')) : null)
+    : { ok: false, errors: ['file missing'] };
+  if (!res.ok) { brokenCount++; return { ...m, errors: res.errors.slice(0, 4) }; }
+  return null;
+}
+
 for (const domain of skeleton.domains) {
   for (const cluster of domain.clusters) {
     for (const std of cluster.standards) {
       if (only && !only.has(std.code)) continue;
       const tags = tagsFor(std, domain, cluster);
-      const broken = [];
       const bp = existsSync(join(BLUEPRINTS, `${std.code}.json`))
         ? join(BLUEPRINTS, `${std.code}.json`) : null;
-      for (const m of expectedMaterials(std.code)) {
-        totalMaterials++;
-        const path = join(CONTENT, `${m.id}.json`);
-        const res = existsSync(path) ? check(path, bp ? JSON.parse(readFileSync(bp, 'utf8')) : null)
-          : { ok: false, errors: ['file missing'] };
-        if (!res.ok) { broken.push({ ...m, errors: res.errors.slice(0, 4) }); brokenCount++; }
-      }
+      const worksheets = std.worksheets === 2 ? 2 : 1; // default 1; only 1 or 2 supported
+      const broken = expectedMaterials(std.code, worksheets)
+        .map(m => checkMaterial(m, bp)).filter(Boolean);
       if (broken.length) {
         tasks.push({
+          scope: 'standard',
           standard: std.code, grade: String(grade), subject,
           skillName: std.skillName, description: std.description, ccssText: std.ccssText,
+          worksheets,
           ...tags,
           needBlueprint: !bp,
+          materials: broken,
+        });
+      }
+    }
+
+    // Cluster-scoped "Full Cluster" materials. Skipped when --standards narrows the
+    // run to specific standards (cluster materials are a whole-cluster instrument).
+    if (!only) {
+      const clusterId = clusterIdOf(domain, cluster);
+      const broken = expectedClusterMaterials(clusterId)
+        .map(m => checkMaterial(m, null)).filter(Boolean);
+      if (broken.length) {
+        tasks.push({
+          scope: 'cluster',
+          standard: null, clusterId, grade: String(grade), subject,
+          domain: domain.name, domainCode: domain.code,
+          cluster: cluster.name, clusterCode: cluster.code,
+          standards: cluster.standards.map(s => s.code),
           materials: broken,
         });
       }

@@ -1,11 +1,56 @@
 # Curriculum Content Pipeline
 
-Multi-agent pipeline that generates and verifies library material bundles (lesson,
-worksheets at each difficulty, quiz) for a Common Core standard, then deterministically
-stores them and updates the catalog. Built to fill gaps where the front end shows
-**"Material not found"** — which happens when a content file is missing or malformed
-for `library/material.js` (most often: worksheet/quiz items missing `solution.steps`,
-or quizzes that are not in the clickable multiple-choice shape the renderer requires).
+Multi-agent pipeline that generates and verifies library materials for a Common Core
+standard (and its cluster), then deterministically stores them and updates the catalog.
+Built to fill gaps where the front end shows **"Material not found"** — which happens
+when a content file is missing or malformed for `library/material.js` (most often:
+worksheet/quiz items missing `solution.steps`, or quizzes that are not in the clickable
+multiple-choice shape the renderer requires).
+
+## Material model
+
+The **standard** is the atomic unit. Per standard:
+
+| Material | Id | Items | Notes |
+|---|---|---|---|
+| Lesson | `{std}--lesson` | ~10 (per blueprint) | unchanged |
+| Quiz | `{std}--quiz` | 8 | multiple choice, clickable; unchanged |
+| Worksheet(s) | see below | 15 each | **variable: one OR two** |
+
+Worksheets are **variable**, driven by `skeleton.*.standards[].worksheets`:
+
+- **Simple standard (default, `worksheets: 1`):** one ramped sheet `{std}--worksheet`
+  that progresses Easy → Hard across its 15 items. `difficulty: null`, `tier: null`.
+- **Complex standard (`worksheets: 2` + `worksheetReason`):** two sheets
+  `{std}--worksheet--tier1` and `{std}--worksheet--tier2`, 15 items each, **no item
+  duplicated** between them. tier1 ramps Easy → Medium, tier2 ramps Medium → Hard
+  (the difficulty *bands* overlap at Medium for continuity; the *items* do not).
+  A standard is promoted to two tiers only with a recorded concrete trigger (it spans
+  distinct sub-skills, or its difficulty range is too wide for one 15-item ramp).
+  Default is biased to **one**; never three.
+
+Each **cluster** also gets a "Full Cluster" section (standard `null`,
+`clusterId = {gradeCode}.{domainCode}.{clusterCode}`, e.g. `7.RP.A`):
+
+| Material | Id | Items | Contract |
+|---|---|---|---|
+| Cluster worksheet | `{clusterId}--cluster-worksheet` | 15 | worksheet (open response); items grouped under per-standard section headers |
+| Cluster test | `{clusterId}--cluster-test` | 12 | quiz (clickable MC); end-of-cluster mastery check, section-labeled by standard |
+
+Cluster materials carry a per-item `standard` field naming which standard in the
+cluster each item targets, so `material.js` can render per-standard section headers.
+The per-standard quizzes are **kept** (they are the diagnostic-to-remediation join
+key); the cluster test is an additional, separate instrument, not a replacement of
+them, and is **not** a slice of the `/curriculum/` diagnostics.
+
+Legacy `{std}--worksheet--easy|medium|hard` files (from the old three-tier model) still
+validate and render; they are simply not generated under the new model. When a grade
+built on the old model is later regenerated, those orphaned files are cleaned up then.
+
+> **Agent prompts (`agents/spec-agent.md`, `generator-agent.md`, `verifier-agent.md`)
+> still describe the OLD lesson + Easy/Medium/Hard + quiz model.** They are updated in a
+> SEPARATE follow-up task (step two — generation). This README, `plan.mjs`, `check.mjs`,
+> the schemas, and the front end already reflect the new model.
 
 ## Roles
 

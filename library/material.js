@@ -35,9 +35,11 @@ function render(data) {
   document.getElementById('matLoading').classList.add('hidden');
 
   const el = document.getElementById('matContent');
-  if (data.materialType === 'lesson')          renderLesson(data, el);
-  else if (data.materialType === 'worksheet')  renderWorksheet(data, el);
-  else if (data.materialType === 'quiz')       renderQuiz(data, el);
+  if (data.materialType === 'lesson')                  renderLesson(data, el);
+  else if (data.materialType === 'worksheet')          renderWorksheet(data, el);
+  else if (data.materialType === 'cluster-worksheet')  renderWorksheet(data, el);
+  else if (data.materialType === 'quiz')               renderQuiz(data, el);
+  else if (data.materialType === 'cluster-test')       renderClusterTest(data, el);
 
   el.classList.remove('hidden');
   typeset(el);
@@ -46,10 +48,15 @@ function render(data) {
 // ── Shared header ────────────────────────────────────────────────────────────
 
 function header(data, subtitle) {
-  const typeLabel = { lesson: 'Lesson', worksheet: 'Worksheet', quiz: 'Quiz' }[data.materialType] || data.materialType;
+  const typeLabel = {
+    lesson: 'Lesson', worksheet: 'Worksheet', quiz: 'Quiz',
+    'cluster-worksheet': 'Cluster Worksheet', 'cluster-test': 'Cluster Test'
+  }[data.materialType] || data.materialType;
   const diffBadge = data.difficulty
     ? `<span class="badge-difficulty difficulty-${data.difficulty.toLowerCase()}">${data.difficulty}</span>`
     : '';
+  // Cluster materials have no single standard — show the clusterId instead.
+  const idLabel = data.materialType.startsWith('cluster') ? (data.clusterId || '') : data.standard;
   const backHash = `${data.domainCode}.${data.clusterCode}`;
   return `
     <a href="index.html#${backHash}" class="back-link">← ${data.domain}, Cluster ${data.clusterCode}</a>
@@ -57,9 +64,9 @@ function header(data, subtitle) {
       <div class="material-badges">
         <span class="badge-type badge-${data.materialType}">${typeLabel}</span>
         ${diffBadge}
-        <span class="badge-standard">${data.standard}</span>
+        <span class="badge-standard">${idLabel}</span>
       </div>
-      <h1 class="material-title">${data.skillName}${subtitle ? ' — ' + subtitle : ''}</h1>
+      <h1 class="material-title">${data.skillName || data.cluster || ''}${subtitle ? ' — ' + subtitle : ''}</h1>
       ${data.intro ? `<p class="material-intro">${safe(data.intro)}</p>` : ''}
     </header>`;
 }
@@ -113,15 +120,26 @@ function renderLesson(data, el) {
 
 // ── Worksheet ────────────────────────────────────────────────────────────────
 
+function worksheetSubtitle(data) {
+  if (data.materialType === 'cluster-worksheet') return 'Cluster Worksheet';
+  if (data.tier === 'tier1') return 'Worksheet — Tier 1';
+  if (data.tier === 'tier2') return 'Worksheet — Tier 2';
+  if (data.difficulty) return `${data.difficulty} Worksheet`; // legacy
+  return 'Worksheet';
+}
+
 function renderWorksheet(data, el) {
-  const subtitle = `${data.difficulty} Worksheet`;
+  const subtitle = worksheetSubtitle(data);
+  // Cluster worksheets group their items under per-standard section headers; a
+  // standard-scoped worksheet is a single flat, continuously-numbered list.
+  const body = data.materialType === 'cluster-worksheet'
+    ? sectioned(data.items, (p, n) => problemItem(p, n), 'worksheet-problems')
+    : `<ul class="worksheet-problems">${data.items.map((p, i) => problemItem(p, i + 1)).join('')}</ul>`;
   el.innerHTML = `
     ${header(data, subtitle)}
     ${stubNotice(data)}
     ${answerKeyBar()}
-    <ul class="worksheet-problems">
-      ${data.items.map((p, i) => problemItem(p, i + 1)).join('')}
-    </ul>`;
+    ${body}`;
 }
 
 // ── Quiz ─────────────────────────────────────────────────────────────────────
@@ -133,6 +151,31 @@ function renderQuiz(data, el) {
     <ul class="quiz-problems">
       ${data.items.map((p, i) => quizItem(p, i + 1)).join('')}
     </ul>`;
+}
+
+// ── Cluster test (reuses the clickable quiz renderer, sectioned by standard) ──
+
+function renderClusterTest(data, el) {
+  el.innerHTML = `
+    ${header(data)}
+    ${stubNotice(data)}
+    ${sectioned(data.items, (p, n) => quizItem(p, n), 'quiz-problems')}`;
+}
+
+// Group items by their per-item `standard` field (order preserved), emit a section
+// heading per standard, and number problems continuously across sections.
+function sectioned(items, renderItem, listClass) {
+  const groups = [];
+  const index = {};
+  for (const it of items) {
+    const key = it.standard || 'General';
+    if (!(key in index)) { index[key] = groups.length; groups.push({ standard: key, items: [] }); }
+    groups[index[key]].items.push(it);
+  }
+  let n = 0;
+  return groups.map(g => `
+    <h2 class="section-heading cluster-section-heading">${g.standard}</h2>
+    <ul class="${listClass}">${g.items.map(p => renderItem(p, ++n)).join('')}</ul>`).join('');
 }
 
 function parsePrompt(prompt) {
@@ -228,7 +271,12 @@ function answerKeyBar() {
 
 function stubNotice(data) {
   if (data.verificationStatus !== 'stub') return '';
-  const type = data.materialType === 'worksheet' ? `${data.difficulty} worksheet` : 'quiz';
+  const type = {
+    worksheet: `${data.difficulty || ''} worksheet`.trim(),
+    quiz: 'quiz',
+    'cluster-worksheet': 'cluster worksheet',
+    'cluster-test': 'cluster test'
+  }[data.materialType] || data.materialType;
   return `<div class="stub-notice">
     Stub — ${data.items.length} sample problems shown. The full ${type} will be generated by the pipeline.
   </div>`;

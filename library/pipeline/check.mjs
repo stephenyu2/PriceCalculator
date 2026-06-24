@@ -12,18 +12,49 @@
 // Exit:    0 if ok (no errors), 1 if any error, 2 on bad invocation.
 //
 // The renderer contract (see library/material.js) that this mirrors:
-//   - lesson    items: type in {worked-example, practice}, prompt,
+//   - lesson            items: type in {worked-example, practice}, prompt,
 //                      solution.steps[] (non-empty), solution.answer
-//   - worksheet items: prompt, answer (non-empty), solution.steps[] (non-empty)
-//   - quiz      items: prompt with >=2 lines matching /^[A-D]\)/m  (clickable
+//   - worksheet         items: prompt, answer (non-empty), solution.steps[] (non-empty)
+//   - quiz              items: prompt with >=2 lines matching /^[A-D]\)/m (clickable
 //                      options), answer whose first char is a letter that maps
-//                      to one of those options, solution.steps[] (non-empty),
-//                      difficulty in {Easy, Medium, Hard}
+//                      to one of those options, solution.steps[] (non-empty)
+//   - cluster-worksheet items: worksheet contract + per-item `standard` (which
+//                      standard in the cluster the item targets, for sectioning)
+//   - cluster-test      items: quiz contract + per-item `standard`
+//
+// Material id / scope conventions:
+//   standard scope: {std}--lesson, {std}--quiz, and EITHER
+//                   {std}--worksheet  (one ramped sheet, difficulty/tier null)  OR
+//                   {std}--worksheet--tier1 / {std}--worksheet--tier2  (two sheets)
+//                   Legacy {std}--worksheet--easy|medium|hard still validates.
+//   cluster scope:  {clusterId}--cluster-worksheet, {clusterId}--cluster-test
+//                   where clusterId = {gradeCode}.{domainCode}.{clusterCode} (e.g. 7.RP.A)
+//                   and the top-level `standard` is null.
 
 import { readFileSync } from 'node:fs';
 import { basename } from 'node:path';
 
 const DIFFICULTIES = ['Easy', 'Medium', 'Hard'];
+const TIERS = ['tier1', 'tier2'];
+const CLUSTER_TYPES = ['cluster-worksheet', 'cluster-test'];
+const isClusterType = (t) => CLUSTER_TYPES.includes(t);
+
+// Default item-count expectations (the canonical model). A blueprint may override
+// these — when a blueprint count is present, a mismatch is a hard error; otherwise
+// the default is enforced softly (warning) so existing stub/legacy files are never
+// reported as malformed.
+const DEFAULT_COUNTS = { quiz: 8, worksheet: 15, tier: 15, clusterWorksheet: 15, clusterTest: 12 };
+
+// {clusterId}-style id: three dot-separated segments, e.g. 7.RP.A, PC.TRIG.A, A1.N-Q.A.
+const CLUSTER_ID_RE = /^[A-Za-z0-9]+\.[A-Za-z0-9-]+\.[A-Za-z0-9-]+$/;
+
+// The worksheet id suffix implied by a worksheet's tier/difficulty fields.
+function worksheetSuffix(data) {
+  if (TIERS.includes(data.tier)) return `worksheet--${data.tier}`;
+  const d = String(data.difficulty || '').toLowerCase();
+  if (['easy', 'medium', 'hard'].includes(d)) return `worksheet--${d}`; // legacy
+  return 'worksheet'; // single ramped sheet
+}
 
 function parseArgs(argv) {
   const args = { file: null, blueprint: null };
@@ -57,10 +88,17 @@ function parseOptions(prompt) {
 }
 
 function checkCommon(data, errors, fileName) {
-  const required = ['id', 'standard', 'grade', 'subject', 'domain', 'domainCode',
-    'cluster', 'clusterCode', 'skillName', 'materialType'];
+  const cluster = isClusterType(data.materialType);
+  // Cluster materials are cluster-scoped: they carry clusterId instead of a standard
+  // (which must be null) and have no single skillName.
+  const required = cluster
+    ? ['id', 'clusterId', 'grade', 'subject', 'domain', 'domainCode', 'cluster', 'clusterCode', 'materialType']
+    : ['id', 'standard', 'grade', 'subject', 'domain', 'domainCode', 'cluster', 'clusterCode', 'skillName', 'materialType'];
   for (const k of required) {
     if (!isNonEmptyString(data[k])) errors.push(`missing/empty top-level field: ${k}`);
+  }
+  if (cluster && data.standard != null && data.standard !== '') {
+    errors.push(`cluster material must have standard: null (got "${data.standard}")`);
   }
   if (!Array.isArray(data.items) || data.items.length === 0) {
     errors.push('items must be a non-empty array');
@@ -70,11 +108,17 @@ function checkCommon(data, errors, fileName) {
   if (data.id && data.id !== expectedId) {
     errors.push(`id "${data.id}" does not match filename "${expectedId}"`);
   }
-  // id should encode standard + materialType
-  if (data.id && data.standard && data.materialType) {
-    const base = `${data.standard}--${data.materialType === 'worksheet'
-      ? `worksheet--${String(data.difficulty || '').toLowerCase()}`
-      : data.materialType}`;
+  // id should encode scope + materialType
+  if (cluster) {
+    if (isNonEmptyString(data.clusterId)) {
+      if (!CLUSTER_ID_RE.test(data.clusterId)) {
+        errors.push(`clusterId "${data.clusterId}" is not a valid {grade}.{domainCode}.{clusterCode} id`);
+      }
+      const base = `${data.clusterId}--${data.materialType}`;
+      if (data.id && data.id !== base) errors.push(`id "${data.id}" inconsistent with clusterId/type (expected "${base}")`);
+    }
+  } else if (data.id && data.standard && data.materialType) {
+    const base = `${data.standard}--${data.materialType === 'worksheet' ? worksheetSuffix(data) : data.materialType}`;
     if (data.id !== base) errors.push(`id "${data.id}" inconsistent with standard/type/difficulty (expected "${base}")`);
   }
 }
@@ -94,33 +138,58 @@ function checkLesson(items, errors, warnings) {
   if (pr === 0) warnings.push('lesson has no practice items');
 }
 
+// One worksheet-style item (open response): prompt, answer, solution.steps[].
+// requireStandard is set for cluster-worksheet items (they must say which standard
+// in the cluster they target, so material.js can render section headers).
+function checkWorksheetItem(it, tag, errors, requireStandard) {
+  if (!isNonEmptyString(it.prompt)) errors.push(`${tag}: empty prompt`);
+  if (!isNonEmptyString(it.answer)) errors.push(`${tag}: answer missing/empty`);
+  if (!it.solution || !isNonEmptyStepArray(it.solution.steps)) errors.push(`${tag}: solution.steps missing/empty`);
+  if (requireStandard && !isNonEmptyString(it.standard)) errors.push(`${tag}: missing per-item "standard" field (needed to section cluster material)`);
+}
+
+// One quiz-style item (multiple choice): >=2 option lines, answer letter maps to
+// an option, solution.steps[]. requireStandard is set for cluster-test items.
+function checkQuizItem(it, tag, errors, warnings, requireStandard) {
+  if (!isNonEmptyString(it.prompt)) { errors.push(`${tag}: empty prompt`); return; }
+  if (!DIFFICULTIES.includes(it.difficulty)) warnings.push(`${tag}: difficulty should be Easy|Medium|Hard`);
+  const opts = parseOptions(it.prompt);
+  if (opts.length < 2) { errors.push(`${tag}: needs >=2 option lines "A) ... B) ..." in prompt (found ${opts.length}) — quiz would not render`); }
+  const uniq = new Set(opts.map(o => o.trim().toLowerCase()));
+  if (uniq.size !== opts.length) errors.push(`${tag}: duplicate answer options`);
+  // answer must start with a letter that maps to a real option
+  const letter = String(it.answer ?? '').trim().charAt(0);
+  const idx = letter ? letter.charCodeAt(0) - 65 : -1;
+  if (idx < 0 || idx >= opts.length) {
+    errors.push(`${tag}: answer must begin with the correct option letter (A-${String.fromCharCode(64 + Math.max(opts.length, 1))}); got "${String(it.answer ?? '').slice(0, 12)}"`);
+  }
+  if (!it.solution || !isNonEmptyStepArray(it.solution.steps)) errors.push(`${tag}: solution.steps missing/empty`);
+  if (requireStandard && !isNonEmptyString(it.standard)) errors.push(`${tag}: missing per-item "standard" field (needed to section cluster material)`);
+}
+
 function checkWorksheet(data, items, errors, warnings) {
-  if (!DIFFICULTIES.includes(data.difficulty)) errors.push(`worksheet difficulty must be Easy|Medium|Hard (got "${data.difficulty}")`);
-  items.forEach((it, i) => {
-    const tag = `worksheet item #${it.id ?? i + 1}`;
-    if (!isNonEmptyString(it.prompt)) errors.push(`${tag}: empty prompt`);
-    if (!isNonEmptyString(it.answer)) errors.push(`${tag}: answer missing/empty`);
-    if (!it.solution || !isNonEmptyStepArray(it.solution.steps)) errors.push(`${tag}: solution.steps missing/empty`);
-  });
+  // A standard-scoped worksheet is one of: legacy easy/medium/hard, a single ramped
+  // sheet (difficulty + tier both null/absent), or tier1/tier2.
+  const hasTier = TIERS.includes(data.tier);
+  const hasDiff = DIFFICULTIES.includes(data.difficulty);
+  if (data.tier != null && !hasTier) errors.push(`worksheet tier must be tier1|tier2 or null (got "${data.tier}")`);
+  if (hasTier && hasDiff) errors.push('worksheet cannot set both tier and difficulty');
+  if (!hasTier && data.difficulty != null && data.difficulty !== '' && !hasDiff) {
+    errors.push(`worksheet difficulty must be Easy|Medium|Hard or null (got "${data.difficulty}")`);
+  }
+  items.forEach((it, i) => checkWorksheetItem(it, `worksheet item #${it.id ?? i + 1}`, errors, false));
+}
+
+function checkClusterWorksheet(items, errors, warnings) {
+  items.forEach((it, i) => checkWorksheetItem(it, `cluster-worksheet item #${it.id ?? i + 1}`, errors, true));
 }
 
 function checkQuiz(items, errors, warnings) {
-  items.forEach((it, i) => {
-    const tag = `quiz item #${it.id ?? i + 1}`;
-    if (!isNonEmptyString(it.prompt)) { errors.push(`${tag}: empty prompt`); return; }
-    if (!DIFFICULTIES.includes(it.difficulty)) warnings.push(`${tag}: difficulty should be Easy|Medium|Hard`);
-    const opts = parseOptions(it.prompt);
-    if (opts.length < 2) { errors.push(`${tag}: needs >=2 option lines "A) ... B) ..." in prompt (found ${opts.length}) — quiz would not render`); }
-    const uniq = new Set(opts.map(o => o.trim().toLowerCase()));
-    if (uniq.size !== opts.length) errors.push(`${tag}: duplicate answer options`);
-    // answer must start with a letter that maps to a real option
-    const letter = String(it.answer ?? '').trim().charAt(0);
-    const idx = letter ? letter.charCodeAt(0) - 65 : -1;
-    if (idx < 0 || idx >= opts.length) {
-      errors.push(`${tag}: answer must begin with the correct option letter (A-${String.fromCharCode(64 + Math.max(opts.length, 1))}); got "${String(it.answer ?? '').slice(0, 12)}"`);
-    }
-    if (!it.solution || !isNonEmptyStepArray(it.solution.steps)) errors.push(`${tag}: solution.steps missing/empty`);
-  });
+  items.forEach((it, i) => checkQuizItem(it, `quiz item #${it.id ?? i + 1}`, errors, warnings, false));
+}
+
+function checkClusterTest(items, errors, warnings) {
+  items.forEach((it, i) => checkQuizItem(it, `cluster-test item #${it.id ?? i + 1}`, errors, warnings, true));
 }
 
 // ── Math notation lint (subject === 'math') ──────────────────────────────────
@@ -172,20 +241,46 @@ function checkMathNotation(data, errors, warnings) {
   data.items.forEach((it, i) => lintItemMath(it, `${data.materialType} item #${it.id ?? i + 1}`, errors, warnings));
 }
 
+// Resolve the expected item count for a material. Returns { want, hard } where
+// `hard` means the count came from the blueprint (mismatch => error); otherwise it
+// is a default-model count (mismatch => warning, so legacy/stub files never break).
+function expectedCount(data, c) {
+  const t = data.materialType;
+  if (t === 'quiz') return c && c.quiz ? { want: c.quiz, hard: true } : { want: DEFAULT_COUNTS.quiz, hard: false };
+  if (t === 'cluster-test') return c && c.clusterTest ? { want: c.clusterTest, hard: true } : { want: DEFAULT_COUNTS.clusterTest, hard: false };
+  if (t === 'cluster-worksheet') return c && c.clusterWorksheet ? { want: c.clusterWorksheet, hard: true } : { want: DEFAULT_COUNTS.clusterWorksheet, hard: false };
+  if (t === 'worksheet') {
+    if (TIERS.includes(data.tier)) {
+      const bw = c && c.worksheet && c.worksheet[data.tier];
+      return bw ? { want: bw, hard: true } : { want: DEFAULT_COUNTS.tier, hard: false };
+    }
+    if (DIFFICULTIES.includes(data.difficulty)) {
+      // legacy easy/medium/hard: only a blueprint count gates it (keeps old stub files clean)
+      const bw = c && c.worksheet && c.worksheet[String(data.difficulty).toLowerCase()];
+      return bw ? { want: bw, hard: true } : { want: null, hard: false };
+    }
+    // single ramped sheet
+    const bw = c && c.worksheet && (typeof c.worksheet === 'number' ? c.worksheet : c.worksheet.single);
+    return bw ? { want: bw, hard: true } : { want: DEFAULT_COUNTS.worksheet, hard: false };
+  }
+  return { want: null, hard: false };
+}
+
 function checkCounts(data, blueprint, warnings, errors) {
-  if (!blueprint || !blueprint.itemCounts) return;
-  const c = blueprint.itemCounts;
+  if (!Array.isArray(data.items)) return;
+  const c = blueprint && blueprint.itemCounts;
   const n = data.items.length;
-  if (data.materialType === 'quiz' && c.quiz && n !== c.quiz) {
-    errors.push(`quiz item count ${n} != blueprint ${c.quiz}`);
+  if (data.materialType === 'lesson') {
+    if (c && c.lesson) {
+      const want = (c.lesson.workedExamples || 0) + (c.lesson.practiceProblems || 0);
+      if (want && n < want) warnings.push(`lesson item count ${n} < blueprint ${want}`);
+    }
+    return;
   }
-  if (data.materialType === 'worksheet' && c.worksheet) {
-    const want = c.worksheet[String(data.difficulty || '').toLowerCase()];
-    if (want && n !== want) errors.push(`worksheet item count ${n} != blueprint ${want}`);
-  }
-  if (data.materialType === 'lesson' && c.lesson) {
-    const want = (c.lesson.workedExamples || 0) + (c.lesson.practiceProblems || 0);
-    if (want && n < want) warnings.push(`lesson item count ${n} < blueprint ${want}`);
+  const { want, hard } = expectedCount(data, c);
+  if (want != null && n !== want) {
+    const msg = `${data.materialType} item count ${n} != ${hard ? 'blueprint' : 'expected'} ${want}`;
+    if (hard) errors.push(msg); else warnings.push(msg);
   }
 }
 
@@ -200,6 +295,8 @@ export function check(file, blueprint = null) {
     if (data.materialType === 'lesson') checkLesson(data.items, errors, warnings);
     else if (data.materialType === 'worksheet') checkWorksheet(data, data.items, errors, warnings);
     else if (data.materialType === 'quiz') checkQuiz(data.items, errors, warnings);
+    else if (data.materialType === 'cluster-worksheet') checkClusterWorksheet(data.items, errors, warnings);
+    else if (data.materialType === 'cluster-test') checkClusterTest(data.items, errors, warnings);
     else errors.push(`unknown materialType: ${data.materialType}`);
     checkMathNotation(data, errors, warnings);
   }

@@ -3,8 +3,20 @@
   "_comment2": "One file per content item. Filename matches the id field: e.g., 7.RP.A.1--lesson.json",
   "_comment3": "Math is written in LaTeX between $ delimiters, rendered by KaTeX — same convention as the diagnostics.",
 
+  "_comment_materialTypes": "materialType is one of: lesson, worksheet, quiz (standard-scoped) OR cluster-worksheet, cluster-test (cluster-scoped).",
+  "_comment_model": [
+    "Per STANDARD: {std}--lesson, {std}--quiz, and worksheets in ONE of two shapes:",
+    "  simple standard  (default): {std}--worksheet            one ramped sheet, difficulty=null, tier=null",
+    "  complex standard (opt-in):  {std}--worksheet--tier1 AND {std}--worksheet--tier2 (no item overlap)",
+    "Legacy {std}--worksheet--easy|medium|hard files still validate but are not generated under the new model.",
+    "Per CLUSTER: {clusterId}--cluster-worksheet (worksheet contract) and {clusterId}--cluster-test (quiz contract),",
+    "  where clusterId = {gradeCode}.{domainCode}.{clusterCode} (e.g. 7.RP.A). standard is null; clusterId is set.",
+    "  Cluster materials section their items by a per-item `standard` field (see items[].standard below)."
+  ],
+
   "id": "7.RP.A.1--lesson",
   "standard": "7.RP.A.1",
+  "clusterId": null,
   "grade": "7",
   "subject": "math",
   "domain": "Ratios and Proportional Relationships",
@@ -14,8 +26,12 @@
   "skillName": "Unit Rates with Fractions",
   "materialType": "lesson",
   "difficulty": null,
+  "tier": null,
 
-  "_comment_difficulty": "null for lessons and quizzes (they span difficulty). 'Easy'|'Medium'|'Hard' for worksheets.",
+  "_comment_standard_clusterId": "standard-scoped items set `standard` and leave `clusterId` null. Cluster-scoped items (cluster-worksheet/cluster-test) set `clusterId` and MUST set `standard` to null.",
+  "_comment_difficulty": "null for lessons, quizzes, single ramped worksheets, tiered worksheets, and all cluster materials. 'Easy'|'Medium'|'Hard' only for legacy worksheets.",
+  "_comment_tier": "null normally; 'tier1' or 'tier2' on the two worksheets of a complex (two-worksheet) standard.",
+  "_comment_item_standard": "For cluster-worksheet and cluster-test ONLY, each entry in items[] additionally carries a `standard` field (e.g. \"7.RP.A.1\") naming which standard in the cluster it targets, so material.js can render per-standard section headers.",
 
   "verificationStatus": "verified",
   "verificationNotes": "",
