@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>Tutoring Hour Packages | Launch Valley Tutoring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ============================================
+       BUY HOURS: page-specific styles
+    ============================================ */
+    .packages-section {
+      padding: var(--section-pad) 1.5rem;
+    }
+
+    .packages-container {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .packages-intro {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .packages-heading {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--white);
+      margin: 0 0 1rem;
+    }
+
+    .packages-subtext {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* --- Expiry / TutorBird note --- */
+    .packages-note {
+      max-width: 640px;
+      margin: 0 auto 3rem;
+      background: var(--navy-mid);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      padding: 1.1rem 1.4rem;
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    .packages-note strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    /* --- Level selector --- */
+    .level-selector {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (max-width: 720px) {
+      .level-selector {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 420px) {
+      .level-selector {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .level-btn {
+      background: var(--navy-light);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: 8px;
+      padding: 1rem 0.75rem;
+      text-align: center;
+      font-family: var(--font-body);
+      font-size: 0.86rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: border-color var(--transition), color var(--transition), background var(--transition);
+    }
+
+    .level-btn:hover {
+      border-color: rgba(0, 0, 0, 0.28);
+      color: var(--white);
+    }
+
+    .level-btn.active {
+      border-color: var(--gold);
+      background: rgba(0, 0, 0, 0.06);
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    /* --- Package panels --- */
+    .package-panel {
+      display: none;
+    }
+
+    .package-panel.active {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 700px) {
+      .package-panel.active {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: 0 auto;
+      }
+    }
+
+    .package-card {
+      background: var(--navy-light);
+      border: 1px solid rgba(0, 0, 0, 0.11);
+      border-radius: 12px;
+      padding: 2.2rem 1.8rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      position: relative;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .package-card:hover {
+      border-color: rgba(0, 0, 0, 0.25);
+      transform: translateY(-4px);
+    }
+
+    .package-card--featured {
+      border-color: var(--gold);
+      background: var(--navy-mid);
+    }
+
+    .package-popular-badge {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--on-gold);
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.28rem 0.9rem;
+      border-radius: 50px;
+      white-space: nowrap;
+    }
+
+    .package-name {
+      font-family: var(--font-heading);
+      font-size: clamp(1.5rem, 3vw, 1.9rem);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    .package-price-block {
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+    }
+
+    .package-price {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .package-price-per {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .package-savings {
+      align-self: flex-start;
+      display: inline-block;
+      background: var(--gold);
+      color: var(--on-gold);
+      font-family: var(--font-body);
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 0.4rem 0.8rem;
+      border-radius: 50px;
+      line-height: 1.3;
+    }
+
+    .package-cta {
+      display: block;
+      text-align: center;
+      margin-top: 0.4rem;
+      background: transparent;
+      border: 1px solid rgba(0, 0, 0, 0.28);
+      color: var(--gold-light);
+      padding: 0.85rem 1.5rem;
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: border-color var(--transition), color var(--transition), background var(--transition);
+    }
+
+    .package-cta:hover {
+      border-color: var(--gold);
+      color: var(--white);
+      background: rgba(0, 0, 0, 0.06);
+    }
+
+    .package-card--featured .package-cta {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--on-gold);
+    }
+
+    .package-card--featured .package-cta:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+      color: var(--on-gold);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===========================
+       PAGE HERO
+  =========================== -->
+  <section class="page-hero">
+    <img class="page-hero-bg" src="Images/GroupPhoto.jpeg" alt="" aria-hidden="true" />
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+    <div class="page-hero-content">
+      <h1 class="hero-heading">Tutoring Hour Packages</h1>
+    </div>
+  </section>
+
+
+  <!-- ===========================
+       PACKAGES
+  =========================== -->
+  <section class="packages-section">
+    <div class="packages-container">
+
+      <div class="packages-intro">
+        <h2 class="packages-heading">Purchase Tutoring Hours</h2>
+        <p class="packages-subtext">Choose your level, then pick the package that fits. Buy in bulk and lock in your savings.</p>
+      </div>
+
+      <p class="packages-note">
+        These hours never expire. Your balance will be updated in your <strong>TutorBird</strong> account shortly after purchase (not always instantly). Once payment is complete, you're all set, just contact us to book your sessions, even if your balance hasn't updated yet.
+      </p>
+
+      <!-- Level selector -->
+      <div class="level-selector" id="level-selector" role="tablist" aria-label="Choose a level">
+        <button class="level-btn" data-level="elementary" type="button">Elementary</button>
+        <button class="level-btn" data-level="middle" type="button">Middle School</button>
+        <button class="level-btn" data-level="high" type="button">High School</button>
+        <button class="level-btn" data-level="college" type="button">College</button>
+      </div>
+
+      <!-- Elementary -->
+      <div class="package-panel" data-panel="elementary">
+        <div class="package-card">
+          <h3 class="package-name">10-Hour Package</h3>
+          <div class="package-price-block">
+            <span class="package-price">$800</span>
+            <span class="package-price-per">/ 10 hours</span>
+          </div>
+          <a class="package-cta" href="https://book.stripe.com/3cI7sN1u1fTc5l26hC7ss0o" target="_blank" rel="noopener">Buy 10 Hours</a>
+        </div>
+        <div class="package-card package-card--featured">
+          <span class="package-popular-badge">Best Value</span>
+          <h3 class="package-name">20-Hour Package</h3>
+          <div class="package-price-block">
+            <span class="package-price">$1,520</span>
+            <span class="package-price-per">/ 20 hours</span>
+          </div>
+          <span class="package-savings">20 hours for the price of 19, save $80</span>
+          <a class="package-cta" href="https://book.stripe.com/00w6oJegN4au9BieO87ss0t" target="_blank" rel="noopener">Buy 20 Hours</a>
+        </div>
+      </div>
+
+      <!-- Middle School -->
+      <div class="package-panel" data-panel="middle">
+        <div class="package-card">
+          <h3 class="package-name">10-Hour Package</h3>
+          <div class="package-price-block">
+            <span class="package-price">$950</span>
+            <span class="package-price-per">/ 10 hours</span>
+          </div>
+          <a class="package-cta" href="https://book.stripe.com/dRm3cx0pX7mG4gYaxS7ss0p" target="_blank" rel="noopener">Buy 10 Hours</a>
+        </div>
+        <div class="package-card package-card--featured">
+          <span class="package-popular-badge">Best Value</span>
+          <h3 class="package-name">20-Hour Package</h3>
+          <div class="package-price-block">
+            <span class="package-price">$1,805</span>
+            <span class="package-price-per">/ 20 hours</span>
+          </div>
+          <span class="package-savings">20 hours for the price of 19, save $95</span>
+          <a class="package-cta" href="https://book.stripe.com/4gM8wR0pXdL4eVC0Xi7ss0u" target="_blank" rel="noopener">Buy 20 Hours</a>
+        </div>
+      </div>
+
+      <!-- High School -->
+      <div class="package-panel" data-panel="high">
+        <div class="package-card">
+          <h3 class="package-name">10-Hour Package</h3>
+          <div class="package-price-block">
+            <span class="package-price">$1,050</span>
+            <span class="package-price-per">/ 10 hours</span>
+          </div>
+          <a class="package-cta" href="https://book.stripe.com/fZu5kFb4B36qcNu35q7ss0q" target="_blank" rel="noopener">Buy 10 Hours</a>
+        </div>
+        <div class="package-card package-card--featured">
+          <span class="package-popular-badge">Best Value</span>
+          <h3 class="package-name">20-Hour Package</h3>
+          <div class="package-price-block">
+            <span class="package-price">$1,995</span>
+            <span class="package-price-per">/ 20 hours</span>
+          </div>
+          <span class="package-savings">20 hours for the price of 19, save $105</span>
+          <a class="package-cta" href="https://book.stripe.com/cNi9AVb4BgXg00IaxS7ss0v" target="_blank" rel="noopener">Buy 20 Hours</a>
+        </div>
+      </div>
+
+      <!-- College -->
+      <div class="package-panel" data-panel="college">
+        <div class="package-card">
+          <h3 class="package-name">10-Hour Package</h3>
+          <div class="package-price-block">
+            <span class="package-price">$1,250</span>
+            <span class="package-price-per">/ 10 hours</span>
+          </div>
+          <a class="package-cta" href="https://book.stripe.com/dRm5kFa0x8qK7ta6hC7ss0s" target="_blank" rel="noopener">Buy 10 Hours</a>
+        </div>
+        <div class="package-card package-card--featured">
+          <span class="package-popular-badge">Best Value</span>
+          <h3 class="package-name">20-Hour Package</h3>
+          <div class="package-price-block">
+            <span class="package-price">$2,375</span>
+            <span class="package-price-per">/ 20 hours</span>
+          </div>
+          <span class="package-savings">20 hours for the price of 19, save $125</span>
+          <a class="package-cta" href="https://book.stripe.com/aFa8wR3C94au14MaxS7ss0x" target="_blank" rel="noopener">Buy 20 Hours</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <script>
+    (function () {
+      var selector = document.getElementById('level-selector');
+      var buttons = selector.querySelectorAll('.level-btn');
+      var panels = document.querySelectorAll('.package-panel');
+
+      function showLevel(level) {
+        buttons.forEach(function (btn) {
+          btn.classList.toggle('active', btn.dataset.level === level);
+        });
+        panels.forEach(function (panel) {
+          panel.classList.toggle('active', panel.dataset.panel === level);
+        });
+      }
+
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          showLevel(btn.dataset.level);
+        });
+      });
+
+      // Show High School by default
+      showLevel('high');
+    })();
+  </script>
+</body>
+</html>
