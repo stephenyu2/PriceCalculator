@@ -1,0 +1,140 @@
+{
+  "standard": "A1.F-BF.A.2",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Building Functions",
+  "domainCode": "F-BF",
+  "cluster": "Build a function that models a relationship between two quantities",
+  "clusterCode": "A",
+  "skillName": "Arithmetic and Geometric Sequences",
+
+  "description": "Students write arithmetic and geometric sequences in two equivalent forms: a recursive rule, which gives the first term and a relationship between each term and the one before it, and an explicit (closed) formula, which gives the $n$th term directly as a function of $n$. They identify a sequence as arithmetic (constant difference $d$) or geometric (constant ratio $r$), find $d$ or $r$ and the first term $a_1$, and translate freely between the recursive form ($a_1=\\ldots,\\ a_n=a_{n-1}+d$ or $a_n=r\\,a_{n-1}$) and the explicit form ($a_n=a_1+(n-1)d$ or $a_n=a_1\\,r^{\\,n-1}$). They use these formulas to find a specific term, to model real-world situations, and to recognize a sequence as a discrete linear or exponential function whose domain is the positive integers.",
+
+  "subSkills": [
+    "Classify a sequence as arithmetic, geometric, or neither by testing for a constant difference vs. a constant ratio",
+    "Find the common difference $d$ or common ratio $r$ from listed terms",
+    "Identify the first term $a_1$ and use correct subscript indexing",
+    "Write the recursive rule for an arithmetic sequence: $a_1$ given, $a_n=a_{n-1}+d$",
+    "Write the recursive rule for a geometric sequence: $a_1$ given, $a_n=r\\,a_{n-1}$",
+    "Write the explicit formula for an arithmetic sequence: $a_n=a_1+(n-1)d$",
+    "Write the explicit formula for a geometric sequence: $a_n=a_1\\,r^{\\,n-1}$",
+    "Translate a recursive rule into an explicit formula and vice versa",
+    "Evaluate a formula to find a specified term (e.g. the $10$th term)",
+    "Model a real-world situation with the appropriate sequence and interpret $a_1$, $d$ or $r$, and $n$ in context"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Classify and find d or r",
+      "example": "Is $3, 7, 11, 15, \\ldots$ arithmetic or geometric, and what is the common difference or ratio? Answer: arithmetic, $d=4$. For $5, 10, 20, 40, \\ldots$: geometric, $r=2$."
+    },
+    {
+      "name": "Explicit formula for an arithmetic sequence",
+      "example": "Write an explicit formula for $2, 5, 8, 11, \\ldots$. Here $a_1=2$ and $d=3$, so $a_n=2+(n-1)3=3n-1$."
+    },
+    {
+      "name": "Explicit formula for a geometric sequence",
+      "example": "Write an explicit formula for $3, 6, 12, 24, \\ldots$. Here $a_1=3$ and $r=2$, so $a_n=3\\cdot 2^{\\,n-1}$."
+    },
+    {
+      "name": "Recursive rule for arithmetic or geometric",
+      "example": "Write a recursive rule for $20, 17, 14, 11, \\ldots$. Answer: $a_1=20,\\ a_n=a_{n-1}-3$. For $4, 12, 36, \\ldots$: $a_1=4,\\ a_n=3\\,a_{n-1}$."
+    },
+    {
+      "name": "Translate recursive to explicit",
+      "example": "Given $a_1=7,\\ a_n=a_{n-1}+5$, write the explicit formula. Answer: $a_n=7+(n-1)5=5n+2$."
+    },
+    {
+      "name": "Translate explicit to recursive",
+      "example": "Given $a_n=6\\cdot 2^{\\,n-1}$, write the recursive rule. Answer: $a_1=6,\\ a_n=2\\,a_{n-1}$."
+    },
+    {
+      "name": "Find a specified term",
+      "example": "For the arithmetic sequence with $a_1=4$ and $d=6$, find $a_{10}$. Using $a_n=4+(n-1)6$, $a_{10}=4+9\\cdot 6=58$."
+    },
+    {
+      "name": "Model a real-world situation",
+      "example": "A theater has $18$ seats in row $1$ and $4$ more in each later row. Write an explicit formula for the seats in row $n$ and find row $8$. Answer: $a_n=18+(n-1)4=4n+14$; $a_8=46$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recall on an arithmetic sequence whose terms are listed and increase by a small positive whole number. Student either states $a_1$ and $d$, classifies the sequence, or plugs directly into one form. No translation between forms and no negative or fractional parameters.",
+      "constraints": [
+        "Sequence is arithmetic with a small positive integer common difference $d$ (between $2$ and $6$)",
+        "First term $a_1$ is a small positive integer and is the literal first listed term",
+        "Task is to classify, state $d$, or write a single requested form (recursive OR explicit), not both",
+        "No translation between forms; no evaluation of a far-out term"
+      ]
+    },
+    "Medium": {
+      "description": "Student handles geometric sequences with a clean integer ratio, or arithmetic sequences with a negative or non-integer difference, and may be asked to evaluate a specific term or to do one translation between forms in the easier direction (recursive to explicit). Requires computing $d$ or $r$ from listed terms rather than reading it off.",
+      "constraints": [
+        "Includes geometric sequences with integer ratio $r\\in\\{2,3,4\\}$ or arithmetic with negative or unit-fraction $d$",
+        "Common difference or ratio must be computed from consecutive terms, not stated",
+        "May require evaluating a specified term such as $a_8$ or $a_{10}$",
+        "At most one translation, in the recursive-to-explicit direction",
+        "tier1 (Easy to Medium) lives here: arithmetic and simple geometric sequences, classifying and writing one form, ramping up to a single term evaluation or one easy translation"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems requiring a full translation in either direction with simplification, real-world modeling where parameters must be inferred from context or from non-adjacent terms, recovering $a_1$ or $d$ from two given terms, or geometric sequences with fractional or decaying ratios. Often closes with an evaluation or interpretation follow-up.",
+      "constraints": [
+        "Requires translating between forms with algebraic simplification (e.g. $a_1+(n-1)d$ simplified to slope-intercept form, or explicit-to-recursive for a geometric rule)",
+        "Parameters may be derived from two non-adjacent terms (solve for $d$ or $r$), or from a real-world context that must be interpreted",
+        "Includes geometric sequences with a fractional or decaying ratio such as $r=\\tfrac{1}{2}$ or $r=0.9$",
+        "May require both writing the rule and evaluating it to answer a contextual question",
+        "tier2 (Medium to Hard) lives here: two-way translation, parameter recovery from two terms, decaying geometric models, and contextual modeling, with no item overlap with tier1"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student uses $a_n=a_1+n\\,d$, forgetting the $(n-1)$ offset in the explicit arithmetic formula",
+      "distractor": "For $a_1=2,\\ d=3$ writes $a_n=2+3n=3n+2$ instead of $a_n=2+(n-1)3=3n-1$, so $a_{10}=32$ instead of $29$"
+    },
+    {
+      "misconception": "Student raises the ratio to the power $n$ instead of $n-1$ in the explicit geometric formula",
+      "distractor": "For $a_1=3,\\ r=2$ writes $a_n=3\\cdot 2^{\\,n}$ instead of $a_n=3\\cdot 2^{\\,n-1}$, giving $a_4=48$ instead of $24$"
+    },
+    {
+      "misconception": "Student confuses arithmetic and geometric, adding the ratio or multiplying by the difference",
+      "distractor": "For the geometric sequence $5, 10, 20, \\ldots$ treats it as arithmetic and writes $a_n=5+(n-1)5$ instead of $a_n=5\\cdot 2^{\\,n-1}$"
+    },
+    {
+      "misconception": "Student multiplies the first term by the ratio when it should stay $a_1$, shifting the whole sequence",
+      "distractor": "For $a_1=6,\\ r=2$ writes $a_n=6\\cdot 2^{\\,n}$ so that $a_1=12$ instead of $6$"
+    },
+    {
+      "misconception": "Student computes $d$ by subtracting in the wrong order, getting the wrong sign",
+      "distractor": "For $20, 17, 14, \\ldots$ computes $d=17-20$ then drops the sign and uses $d=3$ instead of $d=-3$, writing $a_n=20+(n-1)3$"
+    },
+    {
+      "misconception": "Student writes the recursive rule without stating the first term, leaving it undefined",
+      "distractor": "Gives only $a_n=a_{n-1}+5$ with no $a_1=7$, so the sequence cannot be generated"
+    },
+    {
+      "misconception": "Student in a recursive rule adds the index $n$ instead of the previous term $a_{n-1}$",
+      "distractor": "For a common difference of $5$ writes $a_n=n+5$ instead of $a_n=a_{n-1}+5$"
+    },
+    {
+      "misconception": "Student off-by-one when finding a specified term, plugging $n$ instead of $n-1$ into the count of steps",
+      "distractor": "For $a_1=4,\\ d=6$ computes $a_{10}=4+10\\cdot 6=64$ instead of $a_{10}=4+9\\cdot 6=58$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

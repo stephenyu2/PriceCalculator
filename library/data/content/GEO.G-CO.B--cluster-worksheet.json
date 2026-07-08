@@ -1,0 +1,234 @@
+{
+  "id": "GEO.G-CO.B--cluster-worksheet",
+  "standard": null,
+  "clusterId": "GEO.G-CO.B",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Understand congruence in terms of rigid motions",
+  "clusterCode": "B",
+  "skillName": "Understand congruence in terms of rigid motions",
+  "materialType": "cluster-worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "intro": "This cluster worksheet spans the three standards of $\\textbf{G-CO.B}$: applying rigid motions and using them to define congruence (G-CO.B.6), linking triangle congruence to corresponding parts through rigid motions (G-CO.B.7), and explaining the ASA, SAS, and SSS congruence criteria from the rigid-motion definition (G-CO.B.8). Items are grouped by standard and ramp from Easy to Hard within each group.",
+  "items": [
+    {
+      "standard": "GEO.G-CO.B.6",
+      "id": 1,
+      "prompt": "Point $A(3, 5)$ is reflected over the $x$-axis. Find the coordinates of the image $A'$.",
+      "answer": "$A'(3, -5)$",
+      "solution": {
+        "steps": [
+          "Reflection over the $x$-axis uses the rule $(x, y) \\mapsto (x, -y)$: the $x$-coordinate stays, the $y$-coordinate changes sign.",
+          "Apply it to $A(3, 5)$: $(3, 5) \\mapsto (3, -5)$.",
+          "So $A'(3, -5)$."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.B.6",
+      "id": 2,
+      "prompt": "Triangle $ABC$ has vertices $A(1, 2)$, $B(4, 2)$, $C(4, 6)$. Find the coordinates of the image after the translation $(x, y) \\mapsto (x - 3, y + 1)$.",
+      "answer": "$A'(-2, 3)$, $B'(1, 3)$, $C'(1, 7)$",
+      "solution": {
+        "steps": [
+          "Translation adds $-3$ to each $x$-coordinate and $+1$ to each $y$-coordinate.",
+          "$A(1, 2) \\mapsto (1 - 3, 2 + 1) = (-2, 3)$.",
+          "$B(4, 2) \\mapsto (4 - 3, 2 + 1) = (1, 3)$.",
+          "$C(4, 6) \\mapsto (4 - 3, 6 + 1) = (1, 7)$.",
+          "Image vertices: $A'(-2, 3)$, $B'(1, 3)$, $C'(1, 7)$."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.B.6",
+      "id": 3,
+      "prompt": "A rotation of $180^\\circ$ about the origin is applied to triangle $DEF$, where $DE = 7$ and $m\\angle D = 40^\\circ$. State the length $D'E'$, the measure of $\\angle D'$, and whether the orientation is preserved or reversed.",
+      "answer": "$D'E' = 7$, $m\\angle D' = 40^\\circ$, orientation preserved",
+      "solution": {
+        "steps": [
+          "A rotation is a rigid motion, so it preserves all distances and all angle measures.",
+          "Length is preserved: $D'E' = DE = 7$.",
+          "Angle measure is preserved: $m\\angle D' = m\\angle D = 40^\\circ$.",
+          "Rotations preserve orientation (only reflections reverse it), so the orientation is preserved."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.B.6",
+      "id": 4,
+      "prompt": "Point $P(2, 3)$ is first translated by $(x, y) \\mapsto (x - 1, y + 4)$ and then reflected over the $x$-axis. Find the final image $P''$.",
+      "answer": "$P''(1, -7)$",
+      "solution": {
+        "steps": [
+          "Apply the translation first: $P(2, 3) \\mapsto (2 - 1, 3 + 4) = (1, 7)$, so $P'(1, 7)$.",
+          "Now reflect $P'(1, 7)$ over the $x$-axis using $(x, y) \\mapsto (x, -y)$: $(1, 7) \\mapsto (1, -7)$.",
+          "Order matters; performing the translation before the reflection gives $P''(1, -7)$."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.B.6",
+      "id": 5,
+      "prompt": "Triangle $ABC$ has vertices $A(0, 0)$, $B(3, 0)$, $C(3, 4)$ and triangle $DEF$ has vertices $D(0, 0)$, $E(0, 3)$, $F(-4, 3)$. Determine whether the triangles are congruent, and if so describe a sequence of rigid motions that maps $\\triangle ABC$ onto $\\triangle DEF$.",
+      "answer": "Yes, congruent; a $90^\\circ$ counterclockwise rotation about the origin maps $\\triangle ABC$ onto $\\triangle DEF$.",
+      "solution": {
+        "steps": [
+          "Try the $90^\\circ$ counterclockwise rotation about the origin, with rule $(x, y) \\mapsto (-y, x)$.",
+          "$A(0, 0) \\mapsto (0, 0) = D$.",
+          "$B(3, 0) \\mapsto (0, 3) = E$.",
+          "$C(3, 4) \\mapsto (-4, 3) = F$.",
+          "All three vertices map onto the vertices of $\\triangle DEF$, so this single rigid motion maps $\\triangle ABC$ exactly onto $\\triangle DEF$.",
+          "Because a sequence of rigid motions (here, one rotation) carries one triangle onto the other, the triangles are congruent: $\\triangle ABC \\cong \\triangle DEF$."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.B.7",
+      "id": 6,
+      "prompt": "Given $\\triangle ABC \\cong \\triangle DEF$, name the side in $\\triangle DEF$ that corresponds to side $AB$, and the angle in $\\triangle DEF$ that corresponds to $\\angle C$.",
+      "answer": "$AB$ corresponds to $DE$; $\\angle C$ corresponds to $\\angle F$.",
+      "solution": {
+        "steps": [
+          "Read corresponding parts from the matched order of the letters in $\\triangle ABC \\cong \\triangle DEF$: $A \\leftrightarrow D$, $B \\leftrightarrow E$, $C \\leftrightarrow F$.",
+          "Side $AB$ uses vertices $A$ and $B$, which correspond to $D$ and $E$, so $AB \\leftrightarrow DE$.",
+          "Angle $C$ corresponds to the third matched vertex, $F$, so $\\angle C \\leftrightarrow \\angle F$."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.B.7",
+      "id": 7,
+      "prompt": "Given $\\triangle ABC \\cong \\triangle DEF$ with $AB = 8$, $BC = 5$, and $m\\angle A = 47^\\circ$, find $DE$ and $m\\angle D$.",
+      "answer": "$DE = 8$ and $m\\angle D = 47^\\circ$",
+      "solution": {
+        "steps": [
+          "Corresponding parts of congruent triangles are congruent (CPCTC), justified because rigid motions preserve length and angle measure.",
+          "From the matched order, $DE$ corresponds to $AB$, so $DE = AB = 8$.",
+          "$\\angle D$ corresponds to $\\angle A$, so $m\\angle D = m\\angle A = 47^\\circ$."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.B.7",
+      "id": 8,
+      "prompt": "In $\\triangle ABC \\cong \\triangle DEF$, $m\\angle A = 47^\\circ$ and $m\\angle B = 63^\\circ$. Find $m\\angle F$.",
+      "answer": "$m\\angle F = 70^\\circ$",
+      "solution": {
+        "steps": [
+          "First find $m\\angle C$ using the triangle angle sum: $m\\angle C = 180^\\circ - 47^\\circ - 63^\\circ = 70^\\circ$.",
+          "By the matched order $C \\leftrightarrow F$, so $\\angle F$ corresponds to $\\angle C$.",
+          "By CPCTC, $m\\angle F = m\\angle C = 70^\\circ$."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.B.7",
+      "id": 9,
+      "prompt": "Triangle $ABC$ has vertices $A(0, 0)$, $B(4, 0)$, $C(4, 3)$ and triangle $DEF$ has vertices $D(0, 0)$, $E(4, 0)$, $F(4, -3)$. Decide whether a reflection must be part of any sequence of rigid motions that maps $\\triangle ABC$ onto $\\triangle DEF$, and explain.",
+      "answer": "Yes, a reflection is required, because the two triangles have opposite orientation.",
+      "solution": {
+        "steps": [
+          "List the vertices in order: $A, B, C$ go counterclockwise (from $(0,0)$ to $(4,0)$ to $(4,3)$ turns left), while $D, E, F$ go clockwise (from $(0,0)$ to $(4,0)$ to $(4,-3)$ turns right).",
+          "Translations and rotations preserve orientation; only a reflection reverses it.",
+          "Since $\\triangle ABC$ and $\\triangle DEF$ have opposite orientation, no sequence of translations and rotations alone can map one onto the other.",
+          "Therefore a reflection (here, a reflection over the $x$-axis, since $(x, y) \\mapsto (x, -y)$ sends $A, B, C$ to $D, E, F$) must be part of the mapping."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.B.7",
+      "id": 10,
+      "prompt": "Triangle $ABC$ has vertices $A(0, 0)$, $B(4, 0)$, $C(4, 3)$ and triangle $DEF$ has vertices $D(1, 1)$, $E(5, 1)$, $F(5, 4)$. Describe a sequence of rigid motions that maps $\\triangle ABC$ onto $\\triangle DEF$, verify it carries all three vertices, and conclude that the triangles are congruent.",
+      "answer": "The translation $(x, y) \\mapsto (x + 1, y + 1)$ maps $\\triangle ABC$ onto $\\triangle DEF$, so $\\triangle ABC \\cong \\triangle DEF$.",
+      "solution": {
+        "steps": [
+          "Compare a matched pair: $A(0,0)$ should map to $D(1,1)$, suggesting the translation $(x, y) \\mapsto (x + 1, y + 1)$.",
+          "Check vertex $A$: $(0, 0) \\mapsto (1, 1) = D$.",
+          "Check vertex $B$: $(4, 0) \\mapsto (5, 1) = E$.",
+          "Check vertex $C$: $(4, 3) \\mapsto (5, 4) = F$.",
+          "All three vertices land on the vertices of $\\triangle DEF$, so this single rigid motion maps $\\triangle ABC$ exactly onto $\\triangle DEF$.",
+          "By the definition of congruence in terms of rigid motions, $\\triangle ABC \\cong \\triangle DEF$."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.B.8",
+      "id": 11,
+      "prompt": "In triangles $ABC$ and $DEF$ you are given $AB = DE$, $m\\angle A = m\\angle D$, and $AC = DF$. Which congruence criterion (ASA, SAS, or SSS) proves $\\triangle ABC \\cong \\triangle DEF$?",
+      "answer": "SAS",
+      "solution": {
+        "steps": [
+          "The given parts are two sides, $AB$ and $AC$, and the angle $\\angle A$.",
+          "Angle $A$ is formed by sides $AB$ and $AC$, so it is the included angle between the two given sides.",
+          "Two sides and the included angle is the SAS (side-angle-side) criterion."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.B.8",
+      "id": 12,
+      "prompt": "In triangles $ABC$ and $DEF$ you know $\\angle B \\cong \\angle E$ and $\\angle C \\cong \\angle F$. Which additional pair of corresponding parts would let you apply the ASA criterion?",
+      "answer": "The included side: $BC \\cong EF$.",
+      "solution": {
+        "steps": [
+          "ASA requires two angles and the side included between them.",
+          "The two known angles are $\\angle B$ and $\\angle C$. The side included between vertices $B$ and $C$ is $BC$, corresponding to $EF$.",
+          "So adding $BC \\cong EF$ gives two angles and their included side, which is the ASA criterion."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.B.8",
+      "id": 13,
+      "prompt": "In triangles $ABC$ and $DEF$, $AB = DE$, $BC = EF$, and $m\\angle A = m\\angle D$ (a non-included angle). Does this guarantee $\\triangle ABC \\cong \\triangle DEF$? Identify the criterion or non-criterion involved and justify.",
+      "answer": "No, it does not guarantee congruence; this is the SSA arrangement, which is not a valid congruence criterion.",
+      "solution": {
+        "steps": [
+          "The given parts are two sides ($AB$, $BC$) and angle $A$. Angle $A$ is between sides $AB$ and $AC$, not between $AB$ and $BC$, so it is a non-included angle relative to the two given sides.",
+          "Two sides and a non-included angle is the SSA arrangement.",
+          "SSA is the ambiguous case: it is possible to build two non-congruent triangles with the same two side lengths and the same non-included angle, so SSA does not force congruence.",
+          "Therefore the given information does not guarantee $\\triangle ABC \\cong \\triangle DEF$."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.B.8",
+      "id": 14,
+      "prompt": "Triangle $ABC$ has vertices $A(0, 0)$, $B(4, 0)$, $C(1, 3)$ and triangle $DEF$ has vertices $D(5, 1)$, $E(9, 1)$, $F(6, 4)$. Describe a sequence of rigid motions that maps $\\triangle ABC$ onto $\\triangle DEF$, and state the criterion the matched parts illustrate.",
+      "answer": "The translation $(x, y) \\mapsto (x + 5, y + 1)$ maps $\\triangle ABC$ onto $\\triangle DEF$; the matched parts illustrate SSS (and equivalently SAS or ASA, since all parts match).",
+      "solution": {
+        "steps": [
+          "Compare $A(0,0)$ with $D(5,1)$: this suggests the translation $(x, y) \\mapsto (x + 5, y + 1)$.",
+          "Check vertex $A$: $(0, 0) \\mapsto (5, 1) = D$.",
+          "Check vertex $B$: $(4, 0) \\mapsto (9, 1) = E$.",
+          "Check vertex $C$: $(1, 3) \\mapsto (6, 4) = F$.",
+          "All three vertices map onto $\\triangle DEF$, so the translation carries $\\triangle ABC$ exactly onto $\\triangle DEF$ and the triangles are congruent.",
+          "Because the mapping shows all three pairs of corresponding sides are congruent, the matched parts illustrate the SSS criterion."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.B.8",
+      "id": 15,
+      "prompt": "Explain, using the definition of congruence in terms of rigid motions, why two triangles with SAS matched (two pairs of corresponding sides and the included angle congruent) must be congruent. Describe the translate, rotate, and (if needed) reflect steps and explain why the third vertex is forced into place.",
+      "answer": "A translation aligns one vertex, a rotation aligns one given side along its image, a reflection fixes orientation if needed, and then the fixed length of the second side and the fixed included angle force the remaining vertex to coincide, so a sequence of rigid motions maps one triangle onto the other and they are congruent.",
+      "solution": {
+        "steps": [
+          "Suppose $\\triangle ABC$ and $\\triangle DEF$ have $AB = DE$, $m\\angle A = m\\angle D$, and $AC = DF$, with $\\angle A$ included between sides $AB$ and $AC$.",
+          "Step 1 (translate): translate $\\triangle ABC$ so that vertex $A$ lands on vertex $D$. Translation is a rigid motion and preserves all lengths and angles.",
+          "Step 2 (rotate): rotate about $D$ so that ray $AB$ lies along ray $DE$. Since rotation preserves length and $AB = DE$, the endpoint $B$ now coincides with $E$.",
+          "Step 3 (reflect if needed): if $C$ lands on the opposite side of line $DE$ from $F$, reflect over line $DE$. This rigid motion fixes $D$ and $E$ and brings $C$ to the same side as $F$.",
+          "Now $m\\angle A = m\\angle D$ forces ray $AC$ to lie along ray $DF$, and $AC = DF$ with length preserved forces the endpoint $C$ to coincide with $F$.",
+          "All three vertices coincide, so this sequence of rigid motions maps $\\triangle ABC$ exactly onto $\\triangle DEF$. By the definition of congruence in terms of rigid motions, $\\triangle ABC \\cong \\triangle DEF$, which is exactly the SAS criterion."
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T21:16:48.217Z"
+}

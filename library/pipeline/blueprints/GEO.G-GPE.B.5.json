@@ -1,0 +1,139 @@
+{
+  "standard": "GEO.G-GPE.B.5",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Expressing Geometric Properties with Equations",
+  "domainCode": "G-GPE",
+  "cluster": "Use coordinates to prove simple geometric theorems algebraically",
+  "clusterCode": "B",
+  "skillName": "Slope Criteria for Parallel and Perpendicular Lines",
+
+  "description": "Students prove and apply the slope criteria for parallel and perpendicular lines in the coordinate plane: two non-vertical lines are parallel if and only if they have equal slopes ($m_1=m_2$), and two non-vertical lines are perpendicular if and only if their slopes are opposite reciprocals (the product of slopes is $-1$, i.e. $m_1 m_2 = -1$, equivalently $m_2 = -\\dfrac{1}{m_1}$). They compute slopes from two points using $m=\\dfrac{y_2-y_1}{x_2-x_1}$, decide whether given lines are parallel, perpendicular, or neither, and write the equation of a line through a given point that is parallel or perpendicular to a given line. They also handle the special cases of horizontal lines (slope $0$) and vertical lines (undefined slope), and use these criteria to solve geometric problems such as classifying quadrilaterals, finding altitudes, and proving right angles algebraically.",
+
+  "subSkills": [
+    "Compute the slope of a line through two points with $m=\\dfrac{y_2-y_1}{x_2-x_1}$, including negative and fractional slopes",
+    "Apply the parallel criterion: lines are parallel iff $m_1=m_2$ (and distinct $y$-intercepts)",
+    "Apply the perpendicular criterion: lines are perpendicular iff $m_1 m_2=-1$, i.e. $m_2=-\\dfrac{1}{m_1}$ (the opposite reciprocal)",
+    "Classify a pair of lines as parallel, perpendicular, or neither from their slopes",
+    "Find the slope of a line from its equation by rewriting in slope-intercept form $y=mx+b$",
+    "Write the equation of a line parallel to a given line through a given point",
+    "Write the equation of a line perpendicular to a given line through a given point",
+    "Handle horizontal (slope $0$) and vertical (undefined slope) special cases for parallel/perpendicular relationships",
+    "Outline the algebraic proof of why perpendicular slopes multiply to $-1$ (right-triangle / rotation argument)",
+    "Use slope criteria in coordinate-geometry problems: classify quadrilaterals, find altitudes, and verify right angles"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Compute slope from two points",
+      "example": "Find the slope of the line through $(-2,3)$ and $(4,-1)$. ($m=\\dfrac{-1-3}{4-(-2)}=\\dfrac{-4}{6}=-\\dfrac{2}{3}$.)"
+    },
+    {
+      "name": "Classify two lines: parallel, perpendicular, or neither",
+      "example": "Are the lines $y=\\dfrac{3}{4}x+2$ and $4x+3y=9$ parallel, perpendicular, or neither? (Second line: $y=-\\dfrac{4}{3}x+3$; product $\\dfrac{3}{4}\\cdot\\left(-\\dfrac{4}{3}\\right)=-1$, so perpendicular.)"
+    },
+    {
+      "name": "Equation of a parallel line through a point",
+      "example": "Write the equation of the line through $(2,-1)$ parallel to $y=3x-5$. (Same slope $m=3$: $y=3x-7$.)"
+    },
+    {
+      "name": "Equation of a perpendicular line through a point",
+      "example": "Write the equation of the line through $(6,2)$ perpendicular to $y=\\dfrac{2}{3}x+1$. (Opposite reciprocal slope $m=-\\dfrac{3}{2}$: $y=-\\dfrac{3}{2}x+11$.)"
+    },
+    {
+      "name": "Special cases: horizontal and vertical lines",
+      "example": "Write the equation of the line through $(5,-4)$ perpendicular to $y=2$. ($y=2$ is horizontal, so the perpendicular is vertical: $x=5$.)"
+    },
+    {
+      "name": "Find a missing coordinate or parameter from a slope condition",
+      "example": "For what value of $k$ is the line through $(1,2)$ and $(k,8)$ perpendicular to the line $y=-\\dfrac{1}{2}x$? (Needed slope $2$: $\\dfrac{8-2}{k-1}=2\\Rightarrow k=4$.)"
+    },
+    {
+      "name": "Coordinate-geometry application (classify a figure / verify a right angle)",
+      "example": "Triangle with vertices $A(0,0)$, $B(4,2)$, $C(2,4)$: show angle... compute slopes $AB=\\dfrac{1}{2}$, $AC=2$, $BC=-1$; since $\\dfrac{1}{2}\\cdot 2=1\\ne-1$ no right angle at $A$, but $BC\\cdot$? test all pairs to classify."
+    },
+    {
+      "name": "Prove the perpendicular slope criterion",
+      "example": "Using a right-triangle (or $90^\\circ$ rotation) argument, prove that if two non-vertical lines are perpendicular then $m_1 m_2=-1$, and state why the converse also holds."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recall and computation. The student computes one slope from two points (or reads a slope directly from $y=mx+b$), or states whether two slopes given outright are parallel or perpendicular. No equation-building, no rewriting from standard form, integer or simple fractional slopes.",
+      "constraints": [
+        "Slopes are integers or simple fractions ($\\dfrac{1}{2}$, $\\dfrac{2}{3}$, $-3$)",
+        "Lines are already in slope-intercept form $y=mx+b$ or slopes are given directly",
+        "Task is one of: compute a single slope, identify a slope, or state parallel vs. perpendicular from two given slopes",
+        "No special (vertical/horizontal) cases; no point-slope equation writing"
+      ]
+    },
+    "Medium": {
+      "description": "Two to three connected steps. The student rewrites a line from standard form into $y=mx+b$ to extract a slope and then classifies, OR writes the equation of a parallel or perpendicular line through a given point (compute slope, apply criterion, substitute the point, simplify). Opposite-reciprocal reasoning required for perpendicular cases.",
+      "constraints": [
+        "At least one line given in standard form $Ax+By=C$ that must be solved for $y$",
+        "OR write the equation of a parallel/perpendicular line through a given point",
+        "Perpendicular tasks require forming the opposite reciprocal and the sign flip",
+        "May include one horizontal/vertical special case stated cleanly",
+        "Exact fractional slopes and intercepts; no rounding"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step synthesis or proof. The student solves for an unknown coordinate/parameter that makes lines parallel or perpendicular, classifies a quadrilateral or triangle from its vertices using several slope comparisons, or carries out the algebraic proof of the perpendicular-slope criterion. Combines slope computation, the criterion, and equation solving in one problem.",
+      "constraints": [
+        "Solve for an unknown coordinate or parameter $k$ from a slope-equality or product-$=-1$ condition",
+        "OR classify a polygon (e.g. parallelogram, rectangle, right triangle) by computing and comparing all relevant side slopes",
+        "OR produce the right-triangle/rotation proof that perpendicular slopes satisfy $m_1 m_2=-1$ with the converse",
+        "Must integrate at least three sub-steps (slope, criterion, solve/justify); exact values only"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Takes the negative reciprocal as just the reciprocal (forgets the sign flip) for perpendicular lines",
+      "distractor": "For a line of slope $\\dfrac{2}{3}$ gives the perpendicular slope as $\\dfrac{3}{2}$ instead of $-\\dfrac{3}{2}$"
+    },
+    {
+      "misconception": "Takes the negative of the slope instead of the opposite reciprocal for perpendicular lines",
+      "distractor": "For a line of slope $\\dfrac{2}{3}$ gives the perpendicular slope as $-\\dfrac{2}{3}$ instead of $-\\dfrac{3}{2}$"
+    },
+    {
+      "misconception": "Reverses the slope formula, computing $\\dfrac{x_2-x_1}{y_2-y_1}$ (run over rise)",
+      "distractor": "For $(-2,3)$ and $(4,-1)$ reports $-\\dfrac{3}{2}$ (the reciprocal) instead of $-\\dfrac{2}{3}$"
+    },
+    {
+      "misconception": "Sign error in the slope formula: subtracts coordinates in inconsistent order",
+      "distractor": "Computes $\\dfrac{y_2-y_1}{x_1-x_2}$, flipping the sign to $\\dfrac{2}{3}$ instead of $-\\dfrac{2}{3}$"
+    },
+    {
+      "misconception": "Confuses the parallel and perpendicular criteria",
+      "distractor": "Calls two lines with equal slopes perpendicular, or two lines with product-$-1$ slopes parallel"
+    },
+    {
+      "misconception": "Fails to convert standard form to slope-intercept before reading the slope",
+      "distractor": "From $4x+3y=9$ reports the slope as $4$ (the coefficient of $x$) instead of $-\\dfrac{4}{3}$"
+    },
+    {
+      "misconception": "Mishandles the special cases: treats a vertical line's undefined slope as $0$ or a horizontal line's slope as undefined",
+      "distractor": "Says the line perpendicular to $y=2$ has slope $0$ (giving $y=-4$) instead of recognizing it must be vertical, $x=5$"
+    },
+    {
+      "misconception": "Uses the correct perpendicular slope but substitutes the given point incorrectly when finding the intercept",
+      "distractor": "For the line through $(6,2)$ with slope $-\\dfrac{3}{2}$ writes $y=-\\dfrac{3}{2}x-7$ (wrong sign on $b$) instead of $y=-\\dfrac{3}{2}x+11$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

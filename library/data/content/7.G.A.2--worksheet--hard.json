@@ -1,0 +1,216 @@
+{
+  "id": "7.G.A.2--worksheet--hard",
+  "standard": "7.G.A.2",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Draw, construct, and describe geometrical figures and describe the relationships between them",
+  "clusterCode": "A",
+  "skillName": "Drawing Geometric Shapes with Given Conditions",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "These problems require multi-step reasoning. You may need to find a missing angle before classifying, analyze the ambiguous SSA case, determine the full range of values for an unknown side, or count and justify how many distinct triangles satisfy a set of conditions. Recall: a triangle exists from three sides only when the two shorter sides sum to more than the longest side, the interior angles must total $180^\\circ$, and for a known two sides the third side must satisfy $|a-b| < c < a+b$.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A triangle has two sides of length $a = 7\\text{ cm}$ and $b = 10\\text{ cm}$. Find the full range of possible lengths for the third side $c$.",
+      "answer": "$3\\text{ cm} < c < 17\\text{ cm}$",
+      "solution": {
+        "steps": [
+          "The third side must satisfy the triangle inequality on both ends: $|a - b| < c < a + b$.",
+          "Compute the lower bound: $|7 - 10| = 3$, so $c > 3\\text{ cm}$.",
+          "Compute the upper bound: $7 + 10 = 17$, so $c < 17\\text{ cm}$.",
+          "Therefore $3\\text{ cm} < c < 17\\text{ cm}$. The endpoints $3$ and $17$ are excluded because they would collapse the triangle into a straight segment."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Two interior angles of a triangle measure $43^\\circ$ and $58^\\circ$. Find the third angle, then classify the triangle by its angles (acute, right, or obtuse).",
+      "answer": "Third angle $= 79^\\circ$; the triangle is acute.",
+      "solution": {
+        "steps": [
+          "The three interior angles sum to $180^\\circ$.",
+          "Third angle $= 180^\\circ - 43^\\circ - 58^\\circ = 180^\\circ - 101^\\circ = 79^\\circ$.",
+          "All three angles ($43^\\circ$, $58^\\circ$, $79^\\circ$) are less than $90^\\circ$.",
+          "Since every angle is acute, the triangle is an acute triangle."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "In triangle $ABC$, you are given side $a = 6\\text{ cm}$, side $b = 9\\text{ cm}$, and the non-included angle $A = 30^\\circ$ (opposite side $a$). The height from the given angle is $h = b\\sin A = 9\\sin 30^\\circ$. Determine how many distinct triangles satisfy these conditions, and justify using $h$.",
+      "answer": "Two distinct triangles (the ambiguous SSA case).",
+      "solution": {
+        "steps": [
+          "This is the SSA ambiguous case: two sides and a non-included angle.",
+          "Compute the height: $h = 9\\sin 30^\\circ = 9 \\times \\frac{1}{2} = 4.5\\text{ cm}$.",
+          "Compare the opposite side $a = 6$ to $h$ and to $b$: since $h = 4.5 < a = 6 < b = 9$, the side $a$ is long enough to reach the base but shorter than $b$.",
+          "When $h < a < b$, the swinging side crosses the base in two places, so two non-congruent triangles satisfy the conditions.",
+          "Therefore there are two distinct triangles."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A set of conditions gives two angles of $35^\\circ$ and $35^\\circ$ and the included side of $8\\text{ cm}$ between them. Does this determine a unique triangle, more than one, or none? Name the criterion and find the third angle.",
+      "answer": "Unique triangle by ASA; third angle $= 110^\\circ$.",
+      "solution": {
+        "steps": [
+          "Two angles with the side between them is the Angle-Side-Angle (ASA) configuration.",
+          "ASA fixes the triangle completely, so the triangle is unique up to congruence.",
+          "Find the third angle: $180^\\circ - 35^\\circ - 35^\\circ = 110^\\circ$.",
+          "The triangle is unique by ASA, with angles $35^\\circ$, $35^\\circ$, $110^\\circ$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "The longest side of a triangle is $15\\text{ cm}$. One other side is $9\\text{ cm}$. Find the range of possible lengths for the remaining side $x$, given that $15$ must stay the longest side.",
+      "answer": "$6\\text{ cm} < x \\le 15\\text{ cm}$ (and combined with staying the longest side, $6\\text{ cm} < x \\le 15\\text{ cm}$).",
+      "solution": {
+        "steps": [
+          "Triangle inequality with sides $9$, $15$, and $x$: the two shorter sides must sum to more than the longest. Treating $15$ as longest, $9 + x > 15$, so $x > 6$.",
+          "For $15$ to remain the longest side, $x \\le 15$.",
+          "Also check the other inequality $x + 15 > 9$, which holds for all positive $x$.",
+          "Combining: $6\\text{ cm} < x \\le 15\\text{ cm}$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Given sides $a = 5\\text{ cm}$, $b = 8\\text{ cm}$, and non-included angle $A = 90^\\circ$ opposite $a$. How many triangles are possible? Justify.",
+      "answer": "Zero triangles.",
+      "solution": {
+        "steps": [
+          "In any triangle the largest angle lies opposite the longest side.",
+          "Here the right angle $A = 90^\\circ$ is given opposite side $a = 5$, but side $b = 8$ is longer than $a$.",
+          "The side opposite a $90^\\circ$ angle (the hypotenuse) must be the longest side, yet $a = 5 < b = 8$, a contradiction.",
+          "No triangle can satisfy these conditions, so there are zero triangles."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A triangle has angles in the ratio $2 : 3 : 4$. Find all three angle measures, then state whether the conditions (only the ratio is given) determine a unique triangle, more than one, or none.",
+      "answer": "Angles $40^\\circ$, $60^\\circ$, $80^\\circ$; more than one triangle (AAA, infinitely many similar triangles).",
+      "solution": {
+        "steps": [
+          "Let the angles be $2k$, $3k$, and $4k$. They sum to $180^\\circ$: $2k + 3k + 4k = 9k = 180^\\circ$.",
+          "Solve: $k = 20^\\circ$.",
+          "The angles are $2k = 40^\\circ$, $3k = 60^\\circ$, $4k = 80^\\circ$.",
+          "Only the three angles are fixed (AAA) and no side length is given, so the shape is determined but the size is not.",
+          "There are infinitely many similar triangles, so this gives more than one triangle."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "For sides $a = 3\\text{ cm}$, $b = 7\\text{ cm}$ and non-included angle $A = 30^\\circ$ opposite $a$, the height is $h = b\\sin A = 7\\sin 30^\\circ = 3.5\\text{ cm}$. Compare $a$ with $h$ to decide how many triangles are possible.",
+      "answer": "Zero triangles.",
+      "solution": {
+        "steps": [
+          "SSA ambiguous-case test: compute the height $h = 7\\sin 30^\\circ = 7 \\times \\frac{1}{2} = 3.5\\text{ cm}$.",
+          "Compare the opposite side $a = 3$ with $h = 3.5$: since $a = 3 < h = 3.5$, the side is too short to reach the base.",
+          "When the side opposite the given angle is shorter than the height, the swinging side never meets the base.",
+          "Therefore no triangle can be formed, so there are zero triangles."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "An isosceles triangle has a vertex angle of $96^\\circ$. Find each base angle, and explain why a vertex angle of $96^\\circ$ is geometrically possible while a vertex angle of $180^\\circ$ is not.",
+      "answer": "Each base angle $= 42^\\circ$.",
+      "solution": {
+        "steps": [
+          "In an isosceles triangle the two base angles are equal; call each $x$.",
+          "Angle sum: $96^\\circ + x + x = 180^\\circ$, so $2x = 84^\\circ$ and $x = 42^\\circ$.",
+          "Each base angle is $42^\\circ$, and $96^\\circ + 42^\\circ + 42^\\circ = 180^\\circ$ checks out.",
+          "A vertex angle of $180^\\circ$ would leave $0^\\circ$ for the two base angles, collapsing the figure into a straight line, so it cannot form a triangle."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Two sides of a triangle are $12\\text{ cm}$ and $5\\text{ cm}$. List all whole-number lengths the third side could have.",
+      "answer": "$8, 9, 10, 11, 12, 13, 14, 15, 16\\text{ cm}$.",
+      "solution": {
+        "steps": [
+          "The third side $c$ must satisfy $|12 - 5| < c < 12 + 5$, that is $7 < c < 17$.",
+          "The whole numbers strictly between $7$ and $17$ are $8, 9, 10, 11, 12, 13, 14, 15, 16$.",
+          "Each of these gives a valid triangle, so there are $9$ possible whole-number lengths."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A triangle is described by sides $3\\text{ cm}$ and $4\\text{ cm}$ with an included right angle of $90^\\circ$. Is the triangle unique? Name the criterion and find the length of the third side.",
+      "answer": "Unique by SAS; the third side is $5\\text{ cm}$.",
+      "solution": {
+        "steps": [
+          "Two sides with the angle between them is the Side-Angle-Side (SAS) configuration, which determines a unique triangle.",
+          "The included angle is $90^\\circ$, so the third side is the hypotenuse of a right triangle with legs $3$ and $4$.",
+          "By the Pythagorean theorem, $c = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5\\text{ cm}$.",
+          "The triangle is unique by SAS, with third side $5\\text{ cm}$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Conditions: angle $A = 40^\\circ$, angle $B = 75^\\circ$, and the side opposite $A$ is $a = 6\\text{ cm}$. First decide whether the third angle can be found, then classify whether the triangle is unique. Name the criterion.",
+      "answer": "Third angle $C = 65^\\circ$; unique triangle by AAS.",
+      "solution": {
+        "steps": [
+          "Find the third angle: $C = 180^\\circ - 40^\\circ - 75^\\circ = 65^\\circ$.",
+          "Now two angles and a side opposite one of them are known, which is the Angle-Angle-Side (AAS) configuration.",
+          "AAS determines a unique triangle up to congruence (once two angles are known, all three are, and one fixed side sets the size).",
+          "The triangle is unique by AAS with $C = 65^\\circ$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A student claims that sides $6\\text{ cm}$, $6\\text{ cm}$, and $12\\text{ cm}$ form a valid triangle because '$6 + 6 = 12$ is big enough.' Explain whether the student is correct and describe the resulting figure.",
+      "answer": "Incorrect; no triangle forms. The figure collapses into a straight $12\\text{ cm}$ segment.",
+      "solution": {
+        "steps": [
+          "The triangle inequality requires the two shorter sides to sum to strictly more than the longest side: $6 + 6 > 12$ must be a strict inequality.",
+          "Here $6 + 6 = 12$, which is equal, not greater.",
+          "When the sum equals the longest side, the two shorter sides lie flat along the longest side, forming a degenerate triangle.",
+          "The figure collapses into a straight segment of length $12\\text{ cm}$, so the student is incorrect and no triangle exists."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Given sides $a = 9\\text{ cm}$ and $b = 6\\text{ cm}$ with non-included angle $A = 50^\\circ$ opposite the longer side $a$. Determine how many triangles are possible, and justify why the count differs from a typical ambiguous case.",
+      "answer": "Exactly one triangle.",
+      "solution": {
+        "steps": [
+          "This is an SSA setup with the given angle opposite side $a$.",
+          "The given angle $A = 50^\\circ$ is opposite $a = 9$, the longer of the two sides ($a > b$).",
+          "When the side opposite the given angle is longer than the other given side, the swinging side can only meet the base once.",
+          "So the ambiguity disappears: there is exactly one triangle. (The two-triangle case requires the opposite side to be shorter than the other side.)"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A right trapezoid is to be drawn with two right angles, one pair of parallel sides of lengths $10\\text{ cm}$ and $6\\text{ cm}$, and a height of $4\\text{ cm}$ between the parallel sides. Find the length of the slanted (non-perpendicular) side, and explain why these conditions determine a unique figure.",
+      "answer": "The slanted side is $\\sqrt{32} = 4\\sqrt{2}\\text{ cm}$; the conditions determine a unique right trapezoid.",
+      "solution": {
+        "steps": [
+          "Place the two parallel sides ($10\\text{ cm}$ and $6\\text{ cm}$) with the height $4\\text{ cm}$ perpendicular between them; the two right angles fix one vertical side as the height.",
+          "The horizontal offset of the slanted side equals the difference of the parallel sides: $10 - 6 = 4\\text{ cm}$.",
+          "The slanted side is the hypotenuse of a right triangle with legs $4\\text{ cm}$ (offset) and $4\\text{ cm}$ (height): $\\sqrt{4^2 + 4^2} = \\sqrt{16 + 16} = \\sqrt{32} = 4\\sqrt{2}\\text{ cm}$.",
+          "Every measurement (both parallel sides, height, and the two right angles) is fixed, so only one trapezoid fits, making the figure unique."
+        ]
+      }
+    }
+  ]
+}

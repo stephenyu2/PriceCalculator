@@ -1,0 +1,122 @@
+{
+  "standard": "7.SP.C.6",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate chance processes and develop, use, and evaluate probability models",
+  "clusterCode": "C",
+  "skillName": "Experimental Probability",
+
+  "description": "Students approximate the probability of a chance event from collected data by computing its long-run relative frequency (experimental probability), $P(\\text{event}) \\approx \\dfrac{\\text{number of times the event occurred}}{\\text{total number of trials}}$. They also reverse the reasoning: given a known or theoretical probability, they predict the approximate number of times an event should occur over a given number of trials, using $\\text{expected count} \\approx P \\times n$. Students understand that experimental probability approaches theoretical probability as the number of trials grows (the law of large numbers).",
+
+  "subSkills": [
+    "Compute the experimental probability of an event as a fraction $\\frac{\\text{successes}}{\\text{trials}}$ from frequency data",
+    "Express experimental probability as a simplified fraction, decimal, or percent",
+    "Predict the approximate frequency of an event over $n$ trials given its probability, using $P \\times n$",
+    "Combine outcomes across categories or trials to find the total number of trials",
+    "Compare experimental probability to theoretical probability and explain why they differ",
+    "Recognize that more trials produce a relative frequency closer to the true probability (law of large numbers)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Experimental probability from a frequency table",
+      "example": "A spinner is spun $50$ times and lands on red $18$ times. What is the experimental probability of landing on red? Answer: $\\frac{18}{50} = \\frac{9}{25}$."
+    },
+    {
+      "name": "Predict frequency from a known probability",
+      "example": "The probability that a flipped bottle lands upright is $\\frac{1}{8}$. If the bottle is flipped $200$ times, about how many times is it expected to land upright? Answer: $\\frac{1}{8} \\times 200 = 25$."
+    },
+    {
+      "name": "Find the total number of trials, then the probability",
+      "example": "A bag draw produced $12$ red, $8$ blue, and $20$ green. What is the experimental probability of drawing blue? Answer: total $= 40$, so $P(\\text{blue}) = \\frac{8}{40} = \\frac{1}{5}$."
+    },
+    {
+      "name": "Express experimental probability as a decimal or percent",
+      "example": "Out of $80$ free throws, a player made $52$. Express the experimental probability of a make as a percent. Answer: $\\frac{52}{80} = 0.65 = 65\\%$."
+    },
+    {
+      "name": "Compare experimental and theoretical probability",
+      "example": "A fair coin is flipped $40$ times and lands heads $24$ times. How does the experimental probability $\\frac{24}{40} = \\frac{3}{5}$ compare to the theoretical probability $\\frac{1}{2}$, and what would you expect with more flips?"
+    },
+    {
+      "name": "Multi-step prediction with a scaled total",
+      "example": "From $60$ trials, an event occurred $9$ times. Based on this rate, about how many times would it occur in $400$ trials? Answer: $P = \\frac{9}{60} = \\frac{3}{20}$, so $\\frac{3}{20} \\times 400 = 60$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Direct single-step computation. The total number of trials is given explicitly, and the student forms one fraction or multiplies a simple probability by a trial count.",
+      "constraints": [
+        "Total trials given directly (no summing of categories required)",
+        "Experimental probability is $\\frac{\\text{successes}}{\\text{trials}}$ with at most one simplification step",
+        "Prediction problems use friendly numbers, e.g. $\\frac{1}{4} \\times 100$ or $\\frac{1}{2} \\times 60$",
+        "Numbers stay small (trials $\\le 100$, results are whole numbers)"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step problems. Student must first compute the total number of trials by summing categories, then form the probability; or convert between fraction, decimal, and percent forms.",
+      "constraints": [
+        "Total trials must be found by adding several category frequencies",
+        "Answer must be simplified or converted to a decimal/percent",
+        "Prediction uses a non-unit fraction probability, e.g. $\\frac{3}{20} \\times 200$",
+        "May require recognizing the complement (probability of NOT the event)"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning: derive a rate from one data set and scale it to a different number of trials, compare experimental to theoretical probability with justification, or work backward from an expected count to a missing quantity.",
+      "constraints": [
+        "Requires deriving a rate then applying it to a new, larger trial count",
+        "Mixes computation with conceptual reasoning about the law of large numbers",
+        "May give the expected count and ask for the probability or the number of trials (work backward)",
+        "Numbers may not divide evenly, requiring rounding to the nearest whole event and an 'about' answer"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student uses the count of successes alone as the probability instead of dividing by the total number of trials",
+      "distractor": "Reports the raw frequency, e.g. answers $18$ instead of $\\frac{18}{50}$"
+    },
+    {
+      "misconception": "Student divides by the number of failures or by another category instead of the total trials",
+      "distractor": "Computes $\\frac{8}{12}$ (blue over red) instead of $\\frac{8}{40}$ (blue over total)"
+    },
+    {
+      "misconception": "Student inverts the fraction, putting total over successes",
+      "distractor": "Gives $\\frac{50}{18}$ instead of $\\frac{18}{50}$"
+    },
+    {
+      "misconception": "Student adds the probability to the trial count instead of multiplying when predicting frequency",
+      "distractor": "Computes $\\frac{1}{8} + 200$ or $200 + 25$ instead of $\\frac{1}{8} \\times 200 = 25$"
+    },
+    {
+      "misconception": "Student forgets to sum all categories and uses an incomplete total",
+      "distractor": "Uses a total of $20$ (only two categories) instead of $40$, giving $\\frac{8}{20} = \\frac{2}{5}$"
+    },
+    {
+      "misconception": "Student confuses experimental and theoretical probability, assuming the experimental result must equal the theoretical value",
+      "distractor": "Claims $\\frac{24}{40}$ 'must be wrong' and reports $\\frac{1}{2}$ as the experimental probability"
+    },
+    {
+      "misconception": "Student computes the probability of the complement instead of the asked event",
+      "distractor": "Gives $\\frac{32}{40}$ (the rest) instead of $\\frac{8}{40}$ for the named event"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

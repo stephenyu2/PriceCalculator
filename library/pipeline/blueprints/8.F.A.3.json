@@ -1,0 +1,126 @@
+{
+  "standard": "8.F.A.3",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Functions",
+  "domainCode": "F",
+  "cluster": "Define, evaluate, and compare functions",
+  "clusterCode": "A",
+  "skillName": "Linear vs. Nonlinear Functions",
+
+  "description": "Students interpret the equation $y = mx + b$ as defining a linear function whose graph is a straight line, where $m$ is the constant rate of change (slope) and $b$ is the value at $x = 0$ (y-intercept). They classify functions as linear or nonlinear when presented as equations, tables, graphs, or verbal descriptions, justify the classification by checking for a constant rate of change, and give examples of functions that are not linear (such as $y = x^2$, $y = x^3$, or $y = \\frac{1}{x}$).",
+
+  "subSkills": [
+    "Identify $m$ (slope) and $b$ (y-intercept) in an equation of the form $y = mx + b$",
+    "Recognize that the graph of $y = mx + b$ is a straight line and that any straight-line (non-vertical) graph represents a linear function",
+    "Determine whether an equation is linear by checking that $x$ appears only to the first power, is not in a denominator, and is not inside a radical or other nonlinear operation",
+    "Test a table of values for a constant rate of change ($\\frac{\\Delta y}{\\Delta x}$ equal for every pair of points) to classify it as linear or nonlinear",
+    "Classify a graph as linear or nonlinear by whether the points lie on a single straight line",
+    "Produce and recognize examples of nonlinear functions such as $y = x^2$, $y = x^3$, $y = \\frac{1}{x}$, and exponential forms like $y = 2^x$"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Classify from an equation",
+      "example": "Is the function $y = -3x + 7$ linear or nonlinear? Identify $m$ and $b$."
+    },
+    {
+      "name": "Identify a nonlinear equation",
+      "example": "Which of these defines a nonlinear function: $y = 4x - 1$, $y = x^2 + 2$, $y = \\frac{1}{2}x$? Explain."
+    },
+    {
+      "name": "Classify from a table",
+      "example": "A table shows $(1, 3), (2, 5), (3, 7), (4, 9)$. Is the function linear? If so, give the equation $y = mx + b$."
+    },
+    {
+      "name": "Nonlinear table",
+      "example": "A table shows $(0, 1), (1, 2), (2, 4), (3, 8)$. Is the rate of change constant? Classify the function."
+    },
+    {
+      "name": "Classify from a graph or description",
+      "example": "A graph passes through $(0, 2)$ and rises by 3 units for every 1 unit right, forming a straight line. Write its equation and state whether it is linear."
+    },
+    {
+      "name": "Interpret slope and intercept in context",
+      "example": "A water tank starts with 5 gallons and fills at 2 gallons per minute, so $y = 2x + 5$. State $m$, $b$, and confirm the relationship is linear."
+    },
+    {
+      "name": "Give an example of a nonlinear function",
+      "example": "Give an example of a function that is not linear and explain why its graph is not a straight line."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single representation in the most explicit form. Equation is already in $y = mx + b$ form, or the table/graph is clearly straight with small integer values. Student only reads off $m$ and $b$ or checks one obvious feature.",
+      "constraints": [
+        "Equation given directly as $y = mx + b$ with integer $m$ and $b$ (e.g., $y = 2x + 1$)",
+        "Tables use consecutive integer $x$-values ($x = 1, 2, 3, 4$) so $\\frac{\\Delta y}{\\Delta x}$ is easy to compute",
+        "Nonlinear examples are visually obvious squares or reciprocals ($y = x^2$, $y = \\frac{1}{x}$)",
+        "One step: read off, or compute a single rate-of-change check"
+      ]
+    },
+    "Medium": {
+      "description": "Equation may be rearranged or disguised (terms out of order, fraction coefficients), or the table requires computing the rate of change across multiple unequal $x$-gaps. Student must verify the constant-rate property rather than read it directly.",
+      "constraints": [
+        "Equations need rearrangement to $y = mx + b$ form (e.g., $2x + y = 6$, $y - 4 = 3x$) or have fractional/negative slope",
+        "Tables have non-consecutive or unequal $x$-spacing so $\\frac{\\Delta y}{\\Delta x}$ must be computed for each interval and compared",
+        "Distinguishing $y = x^2$, $y = \\frac{1}{x}$, or $y = 2^x$ from linear forms by analyzing differences",
+        "Two to three steps: rearrange or compute several differences, then justify the classification"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning and justification: classify from a verbal or contextual description, compare two functions across mixed representations, or determine the equation of a linear function from a table and then verify, plus explain why a given nonlinear function fails the constant-rate test.",
+      "constraints": [
+        "Mixed representations: compare an equation, a table, and a graph and decide which are linear",
+        "Equation forms that look linear but are not (e.g., $y = \\frac{6}{x}$, $y = x^2 - x$) or look nonlinear but simplify to linear (e.g., $y = \\frac{2x + 4}{2}$ which is $y = x + 2$)",
+        "Derive $y = mx + b$ from a table, then determine $y$ for a new $x$, or compare slopes of two linear functions",
+        "Requires a written justification that names the constant-rate-of-change criterion"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student thinks any equation containing $x$ and $y$ is linear, regardless of the power of $x$",
+      "distractor": "Classifies $y = x^2 + 3$ as linear because it 'has $x$ and a constant'"
+    },
+    {
+      "misconception": "Student believes a function is linear only if $b = 0$ (confuses linear with proportional / passing through the origin)",
+      "distractor": "Says $y = 2x + 5$ is nonlinear because it does not pass through $(0, 0)$"
+    },
+    {
+      "misconception": "Student checks only the $y$-values for a constant difference and ignores whether the $x$-values are evenly spaced",
+      "distractor": "Calls a table linear because the $y$-values increase by a constant amount, even though the $x$-gaps are unequal so the rate of change is not constant"
+    },
+    {
+      "misconception": "Student confuses a constant ratio (multiplying) with a constant difference (adding), labeling an exponential table linear",
+      "distractor": "Classifies the table $(0,1),(1,2),(2,4),(3,8)$ as linear because the $y$-values follow a regular pattern of doubling"
+    },
+    {
+      "misconception": "Student treats a curved graph as linear because it is increasing or 'looks close to a line'",
+      "distractor": "Says the graph of $y = x^2$ is linear because it rises steadily from left to right"
+    },
+    {
+      "misconception": "Student misidentifies the slope and intercept, swapping $m$ and $b$",
+      "distractor": "For $y = 4x + 2$, reports slope $= 2$ and y-intercept $= 4$"
+    },
+    {
+      "misconception": "Student thinks a variable in the denominator still gives a linear function",
+      "distractor": "Classifies $y = \\frac{1}{x}$ as linear because '$x$ is only to the first power'"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

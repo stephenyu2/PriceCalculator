@@ -1,0 +1,144 @@
+{
+  "standard": "7.RP.A.3",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Ratios and Proportional Relationships",
+  "domainCode": "RP",
+  "cluster": "Analyze proportional relationships and use them to solve real-world and mathematical problems",
+  "clusterCode": "A",
+  "skillName": "Ratio and Percent Problems",
+
+  "description": "Students use proportional relationships to solve multistep ratio and percent problems set in real-world contexts: simple interest, sales tax, markups and markdowns, gratuities (tips), commissions, fees, percent increase and decrease, and percent error. They translate a verbal situation into a percent equation or proportion, compute the percent of a quantity, find the whole or the percent when one part is known, and chain operations (for example, apply tax after a discount). Final amounts of money should be expressed as $\\$$ values rounded to the nearest cent when the context requires it; percents are given exactly when the values are exact.",
+
+  "subSkills": [
+    "Convert between percents, decimals, and fractions (e.g., $15\\% = 0.15 = \\frac{3}{20}$)",
+    "Find the percent of a quantity using $\\text{part} = \\text{percent} \\times \\text{whole}$",
+    "Find the whole when a part and its percent are known (e.g., $\\$45$ is $30\\%$ of what?)",
+    "Find the percent one quantity is of another",
+    "Compute simple interest with $I = Prt$ and find the new balance $P + I$",
+    "Apply tax, tip, fee, or commission as a percent added to a base amount",
+    "Apply a markup or markdown (discount) to a price, including using a multiplier such as $1.08$ or $0.75$",
+    "Compute percent increase and percent decrease from an original and a new value",
+    "Compute percent error as $\\frac{|\\text{measured} - \\text{actual}|}{|\\text{actual}|} \\times 100\\%$",
+    "Chain multiple percent operations in a single multistep problem (e.g., discount then tax)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Sales tax",
+      "example": "A jacket costs $\\$48$. Sales tax is $7.5\\%$. What is the total cost? Answer: $\\$48 \\times 1.075 = \\$51.60$."
+    },
+    {
+      "name": "Tip / gratuity",
+      "example": "A restaurant bill is $\\$60$. You leave an $18\\%$ tip. How much is the tip, and what is the total? Tip $= 0.18 \\times \\$60 = \\$10.80$; total $= \\$70.80$."
+    },
+    {
+      "name": "Markdown / discount",
+      "example": "A $\\$120$ pair of shoes is on sale for $25\\%$ off. What is the sale price? $\\$120 \\times 0.75 = \\$90$."
+    },
+    {
+      "name": "Markup",
+      "example": "A store buys an item for $\\$40$ and marks it up $35\\%$. What is the selling price? $\\$40 \\times 1.35 = \\$54$."
+    },
+    {
+      "name": "Commission",
+      "example": "A salesperson earns $6\\%$ commission on $\\$3500$ in sales. What is the commission? $0.06 \\times \\$3500 = \\$210$."
+    },
+    {
+      "name": "Simple interest",
+      "example": "You deposit $\\$800$ at $4\\%$ annual simple interest for $3$ years. Find the interest and the final balance. $I = Prt = 800 \\times 0.04 \\times 3 = \\$96$; balance $= \\$896$."
+    },
+    {
+      "name": "Percent increase / decrease",
+      "example": "A town's population grows from $1500$ to $1800$. What is the percent increase? $\\frac{1800 - 1500}{1500} \\times 100\\% = 20\\%$."
+    },
+    {
+      "name": "Percent error",
+      "example": "A student measures a length as $9.6$ cm; the actual length is $10$ cm. What is the percent error? $\\frac{|9.6 - 10|}{10} \\times 100\\% = 4\\%$."
+    },
+    {
+      "name": "Find the whole from a part",
+      "example": "After a $20\\%$ discount, a shirt costs $\\$24$. What was the original price? $\\frac{\\$24}{0.80} = \\$30$."
+    },
+    {
+      "name": "Multistep / combined operations",
+      "example": "A $\\$200$ item is discounted $30\\%$, then $8\\%$ tax is added. Find the final price. $\\$200 \\times 0.70 \\times 1.08 = \\$151.20$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single percent operation on a whole-number base, with a friendly percent. Student applies one step: find the percent of a number, add a tax/tip, or take one discount. No finding-the-whole, no chaining.",
+      "constraints": [
+        "Exactly one percent operation",
+        "Percent is a friendly value ($5\\%$, $10\\%$, $15\\%$, $20\\%$, $25\\%$, $50\\%$)",
+        "Base amount is a whole dollar value, typically $\\le \\$200$",
+        "Result is exact to the cent with at most one decimal multiplication",
+        "Context is familiar (tax, tip, simple discount)"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step reasoning or a non-friendly percent. Includes simple interest with $I = Prt$, percent increase/decrease from two given values, commission, or finding the whole given a part and its percent. Requires setting up the correct relationship before computing.",
+      "constraints": [
+        "Two computational steps, or one step plus a setup decision (e.g., which value is the whole)",
+        "Percent may be non-friendly (e.g., $7.5\\%$, $4\\%$, $18\\%$, $35\\%$)",
+        "Includes simple interest, percent increase/decrease, percent error, commission, or find-the-whole",
+        "May require rounding the final money amount to the nearest cent"
+      ]
+    },
+    "Hard": {
+      "description": "Multistep problems that chain operations or require reasoning backward through multiple percents. Includes discount-then-tax, multiyear interest with a follow-up question, comparing two deals, or recovering an original price after a combined change.",
+      "constraints": [
+        "Three or more linked steps, or a reverse multistep computation",
+        "Combines two different percent contexts (e.g., markdown then tax, interest then commission)",
+        "May require comparison of two scenarios or a final yes/no decision with justification",
+        "Reading comprehension needed to extract base, percent, and order of operations",
+        "Order of operations matters (applying tax before vs. after discount changes nothing, but stacked percents do not simply add)"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student treats stacked percents as additive",
+      "distractor": "For a $30\\%$ discount then $8\\%$ tax, computes $200 \\times (1 - 0.30 + 0.08) = 200 \\times 0.78 = \\$156$ instead of $200 \\times 0.70 \\times 1.08 = \\$151.20$"
+    },
+    {
+      "misconception": "Student finds only the percent amount and forgets to add it to (or subtract it from) the base",
+      "distractor": "Reports the tax/tip/interest itself ($\\$10.80$) as the total instead of the base plus the percent ($\\$70.80$)"
+    },
+    {
+      "misconception": "Student divides by the wrong base when computing percent change",
+      "distractor": "Uses the new value as the denominator: $\\frac{1800 - 1500}{1800} \\approx 16.7\\%$ instead of dividing by the original $1500$ to get $20\\%$"
+    },
+    {
+      "misconception": "Student subtracts the percent directly from the price to find the original (reverse-percent error)",
+      "distractor": "From a $\\$24$ price after $20\\%$ off, computes $\\$24 \\times 1.20 = \\$28.80$ or $\\$24 + 20\\% = \\$28.80$ instead of $\\frac{\\$24}{0.80} = \\$30$"
+    },
+    {
+      "misconception": "Student misplaces the decimal when converting the percent",
+      "distractor": "Uses $7.5\\% = 0.75$ (or $4\\% = 0.4$), giving $\\$48 \\times 0.075 \\ne$ versus $\\$48 \\times 0.75 = \\$36$ instead of $\\$48 \\times 0.075 = \\$3.60$"
+    },
+    {
+      "misconception": "Student forgets the time factor in simple interest",
+      "distractor": "Computes $I = Pr = 800 \\times 0.04 = \\$32$ for $3$ years instead of $I = Prt = 800 \\times 0.04 \\times 3 = \\$96$"
+    },
+    {
+      "misconception": "Student reverses measured and actual in percent error or divides by the measured value",
+      "distractor": "Computes $\\frac{|9.6 - 10|}{9.6} \\times 100\\% \\approx 4.17\\%$ instead of dividing by the actual value $10$ to get $4\\%$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

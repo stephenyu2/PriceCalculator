@@ -1,0 +1,120 @@
+{
+  "standard": "A1.A-REI.C.5",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Reasoning with Equations and Inequalities",
+  "domainCode": "A-REI",
+  "cluster": "Solve systems of equations",
+  "clusterCode": "C",
+  "skillName": "Equivalent Systems of Equations",
+
+  "description": "Students prove and apply the key fact behind the elimination (linear combination) method: given a system of two equations in two variables, replacing one equation with the sum of that equation and a nonzero multiple of the other produces an equivalent system with exactly the same solution set. They justify why this replacement preserves solutions, choose multipliers that eliminate a variable, generate equivalent systems, and recognize when two systems are (or are not) equivalent.",
+
+  "subSkills": [
+    "State and use the replacement principle: $E_1$ may be replaced by $E_1 + k\\,E_2$ (for $k \\neq 0$) without changing the solution set",
+    "Verify that a given ordered pair satisfying a system also satisfies the new (combined) equation, and vice versa",
+    "Choose a multiplier $k$ so that adding $k$ times one equation to the other eliminates a chosen variable",
+    "Multiply both sides of an equation by a nonzero constant correctly (distribute over every term)",
+    "Form the sum $a\\,E_1 + b\\,E_2$ of two equations term by term",
+    "Decide whether two systems are equivalent by checking that one row is a linear combination of the original rows (and the other row is preserved)",
+    "Explain the logical 'if and only if' reasoning: any solution of the original system is a solution of the replacement, and any solution of the replacement is a solution of the original"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Verify a replacement preserves a known solution",
+      "example": "The system $\\begin{cases} 2x + 3y = 12 \\\\ x - y = 1 \\end{cases}$ has solution $(3, 2)$. Replace the first equation with $(2x+3y) + 2(x-y) = 12 + 2(1)$, giving $4x + y = 14$. Show that $(3,2)$ still satisfies the new system."
+    },
+    {
+      "name": "Choose a multiplier to eliminate a variable",
+      "example": "For $\\begin{cases} 3x + 4y = 10 \\\\ x - 2y = -4 \\end{cases}$, what multiple $k$ of the second equation should be added to the first so that $y$ is eliminated? (Answer: $k = 2$, giving $5x = 2$.)"
+    },
+    {
+      "name": "Generate the new equivalent equation from a stated combination",
+      "example": "Given $\\begin{cases} 5x - 2y = 7 \\\\ 3x + y = 9 \\end{cases}$, write the equation obtained by replacing the first equation with $E_1 + 2E_2$. (Answer: $11x = 25$.)"
+    },
+    {
+      "name": "Decide whether two systems are equivalent",
+      "example": "Is $\\begin{cases} x + y = 5 \\\\ 2x + 5y = 16 \\end{cases}$ equivalent to $\\begin{cases} x + y = 5 \\\\ 3y = 6 \\end{cases}$? Justify by showing the second row of the new system equals $E_2 - 2E_1$ of the original."
+    },
+    {
+      "name": "Prove/justify the replacement principle in general",
+      "example": "Explain why, for any $k$, every solution $(x_0, y_0)$ of $\\begin{cases} E_1 \\\\ E_2 \\end{cases}$ is also a solution of $\\begin{cases} E_1 + kE_2 \\\\ E_2 \\end{cases}$, and why every solution of the new system solves the original. Identify the property (a true equation stays true when equal quantities are added) that makes this work."
+    },
+    {
+      "name": "Solve a system by a full linear-combination chain",
+      "example": "Use the replacement principle to solve $\\begin{cases} 2x + 3y = 4 \\\\ 4x - y = 22 \\end{cases}$: replace $E_2$ with $E_2 - 2E_1$ to get $-7y = 14$, so $y = -2$ and $x = 5$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step replacement or verification with a supplied multiplier. The student either checks that a stated combination keeps a given solution, or forms the sum of two equations when one is already lined up to eliminate a variable with multiplier $1$ or $-1$.",
+      "constraints": [
+        "Multiplier is supplied or is $\\pm 1$ (no scaling decision required)",
+        "Integer coefficients with absolute value $\\le 6$; a variable already cancels by direct addition or subtraction",
+        "Tasks are 'verify $(x_0,y_0)$ still works' or 'write $E_1 + E_2$'",
+        "tier1 lower band: confirm-the-solution and direct-sum items live here"
+      ]
+    },
+    "Medium": {
+      "description": "Student must choose a single nonzero multiplier to eliminate a variable, then form the combined equation correctly, distributing the multiplier across every term including the constant.",
+      "constraints": [
+        "Requires selecting $k$ (a small integer, $|k| \\le 4$) so one variable's coefficients become opposites",
+        "Must multiply both sides of one equation before adding; common arithmetic on integer coefficients",
+        "Includes 'are these two systems equivalent?' items where one row is a single combination of the originals",
+        "tier1 upper band / tier2 lower band: this is the natural split point between the two worksheets"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning: combinations may require scaling BOTH equations (e.g. $aE_1 + bE_2$), proving the if-and-only-if equivalence in general (not just one direction), or carrying out a full solve-and-justify chain. May involve fractional or larger coefficients and an explanation of why a zero multiplier is excluded.",
+      "constraints": [
+        "Both equations may need a multiplier ($aE_1 + bE_2$ with $a, b \\neq 0$)",
+        "Coefficients may be larger or fractional; answers given as exact fractions such as $\\frac{2}{5}$",
+        "Requires a written justification of both directions of the equivalence, or identifying why $k = 0$ fails to preserve the system",
+        "tier2 upper band: general proof and multi-step solve-and-prove items"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student multiplies only the side of the equation with the variables and forgets to multiply the constant term",
+      "distractor": "For $2(x - y) = 1$ within $E_1 + 2E_2$, writes $4x + y = 12$ instead of $4x + y = 14$ because $2 \\cdot 1$ was dropped"
+    },
+    {
+      "misconception": "Student believes any replacement (including replacing an equation by a multiple of itself or by $E_1 + 0\\cdot E_2$) gives an equivalent system, ignoring the nonzero-multiplier requirement",
+      "distractor": "Claims replacing $E_1$ with $0 \\cdot E_1 + 0 \\cdot E_2 = 0$ keeps the solution set, or that scaling an equation by $0$ is allowed"
+    },
+    {
+      "misconception": "Student adds the multiplier to the equation instead of multiplying the equation by it",
+      "distractor": "For $E_1 + 2E_2$ treats it as $E_1 + (E_2 + 2)$, producing $5x - 2y = 9$ instead of $11x = 25$"
+    },
+    {
+      "misconception": "Student chooses a multiplier that scales the wrong variable's coefficients, so nothing eliminates",
+      "distractor": "To eliminate $y$ from $3x + 4y = 10$ and $x - 2y = -4$, picks $k = 1$ (giving $4x + 2y = 6$) instead of $k = 2$, leaving $y$ present"
+    },
+    {
+      "misconception": "Student reverses the sign when subtracting one equation from another (sign error across the whole equation)",
+      "distractor": "For $E_2 - 2E_1$ of $4x - y = 22$ and $2x + 3y = 4$, writes $-7y = 30$ instead of $-7y = 14$ by mis-signing the constant"
+    },
+    {
+      "misconception": "Student thinks the combined equation alone (one equation) is the equivalent 'system' and drops the second, preserved equation",
+      "distractor": "States the system $\\begin{cases} E_1 + kE_2 \\\\ E_2 \\end{cases}$ is equivalent to the single equation $E_1 + kE_2$, losing a solution constraint"
+    }
+  ],
+
+  "_comment_itemCounts": "Standard model: one lesson (5 worked + 5 practice), one ramped single worksheet of 15 (Easy verification -> Hard general proof), one quiz of 8 multiple-choice. tier1/tier2 sizes are recorded per schema but this standard uses the single ramped worksheet.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

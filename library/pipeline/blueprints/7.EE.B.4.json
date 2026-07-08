@@ -1,0 +1,123 @@
+{
+  "standard": "7.EE.B.4",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Expressions and Equations",
+  "domainCode": "EE",
+  "cluster": "Solve real-life and mathematical problems using numerical and algebraic expressions and equations",
+  "clusterCode": "B",
+  "skillName": "Equations and Inequalities from Word Problems",
+
+  "description": "Students translate real-world and mathematical word problems into algebraic equations and inequalities, then solve them. They define a variable for the unknown quantity, build a two-step equation of the form $px + q = r$ or a two-step inequality of the form $px + q > r$ or $px + q < r$ (where $p$, $q$, and $r$ are rational numbers), solve algebraically, and interpret the solution in the context of the problem. For inequalities, students must reverse the inequality symbol when multiplying or dividing by a negative number and interpret the solution set in context.",
+
+  "subSkills": [
+    "Define a variable to represent the unknown quantity in a word problem",
+    "Translate a verbal description into a two-step equation $px + q = r$",
+    "Solve a two-step equation by undoing addition/subtraction, then multiplication/division",
+    "Translate a verbal description into a two-step inequality $px + q > r$ or $px + q < r$",
+    "Solve a two-step inequality, reversing the symbol when dividing or multiplying by a negative",
+    "Graph the solution set of an inequality on a number line",
+    "Interpret the algebraic solution back in the context of the problem (including units and reasonableness)",
+    "Compare the efficiency of an algebraic approach to an arithmetic approach"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Two-step equation from context (perimeter/geometry)",
+      "example": "The perimeter of a rectangle is $54$ cm. Its length is $6$ cm. Write and solve an equation $2w + 12 = 54$ to find the width $w$."
+    },
+    {
+      "name": "Two-step equation from context (cost/savings)",
+      "example": "A gym charges a $\\$25$ sign-up fee plus $\\$15$ per month. Lena paid $\\$115$ total. Write and solve $15m + 25 = 115$ to find the number of months $m$."
+    },
+    {
+      "name": "Two-step equation with rational coefficients",
+      "example": "A bill of $\\$48.50$ included a $\\$6.50$ delivery charge plus $\\frac{3}{4}$ the cost of the food. Write and solve $\\frac{3}{4}c + 6.50 = 48.50$ to find the food cost $c$."
+    },
+    {
+      "name": "Two-step inequality from context (at most / at least)",
+      "example": "A taxi charges a $\\$3$ base fare plus $\\$2$ per mile. You have at most $\\$20$. Write and solve $2m + 3 \\le 20$ to find how many miles $m$ you can travel."
+    },
+    {
+      "name": "Inequality requiring symbol reversal",
+      "example": "The temperature is dropping $4^\\circ$ per hour from $70^\\circ$. Write and solve $70 - 4h < 50$ to find after how many hours $h$ the temperature is below $50^\\circ$."
+    },
+    {
+      "name": "Interpret and graph the solution set",
+      "example": "Solve $5x - 8 \\ge 17$ and graph the solution on a number line, then state the smallest whole number value of $x$ that works."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single, clearly stated two-step equation with positive integer coefficients. The variable, operation, and order are nearly transparent from the wording. Inequalities (if any) use $\\le$ or $\\ge$ with no symbol reversal.",
+      "constraints": [
+        "Coefficients $p$, $q$, $r$ are positive integers within $-1$ to $100$",
+        "Equation is directly stated as $px + q = r$; no combining of terms needed",
+        "Solutions are positive integers",
+        "Inequalities involve dividing only by a positive number (no reversal)",
+        "Context is familiar (cost, age, simple totals)"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step equation or inequality with rational coefficients (fractions or decimals), or one that requires light interpretation to set up. Inequalities may require reversing the symbol when dividing by a negative. Solution may be a fraction or decimal.",
+      "constraints": [
+        "At least one of $p$, $q$, $r$ is a fraction or decimal",
+        "Student must identify the correct operation and order from the wording",
+        "Inequalities may require reversing the symbol (division/multiplication by a negative)",
+        "Solutions may be non-integer rationals (e.g. $\\frac{7}{2}$ or $4.5$)",
+        "Context may include rates, discounts, or remaining-amount situations"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-clause problem where the equation or inequality must be constructed from layered information, possibly requiring combining like terms or distribution before it reaches $px + q = r$ form. Requires interpreting the solution set in context (reasonableness, rounding, smallest/largest valid value) and may involve symbol reversal plus a follow-up question.",
+      "constraints": [
+        "Setup requires distribution or combining like terms, e.g. $2(x + 5) - 3 = 19$",
+        "Inequality solution must be interpreted in context (e.g. round to a whole number of items, state the maximum/minimum)",
+        "May combine an equation and a follow-up inequality, or compare two scenarios",
+        "Rational coefficients and at least one negative coefficient triggering symbol reversal",
+        "Answer requires both the algebraic value and a contextual interpretation with units"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student reverses the order of operations when solving, dividing before subtracting the constant",
+      "distractor": "From $15m + 25 = 115$, divides $115 \\div 15$ first then subtracts, producing $m \\approx 7.67 - 25$ or a garbled value instead of subtracting $25$ first to get $m = 6$"
+    },
+    {
+      "misconception": "Student adds the constant instead of subtracting it (mis-translates the inverse operation)",
+      "distractor": "From $2w + 12 = 54$ computes $w = \\frac{54 + 12}{2} = 33$ instead of $w = \\frac{54 - 12}{2} = 21$"
+    },
+    {
+      "misconception": "Student forgets to reverse the inequality symbol when dividing by a negative",
+      "distractor": "From $-4h > -20$ writes $h > 5$ instead of the correct $h < 5$"
+    },
+    {
+      "misconception": "Student divides only one term by the coefficient instead of the whole side",
+      "distractor": "From $3x + 6 = 21$ writes $x + 6 = 7$ (divided only $3x$ and $21$ by $3$), giving $x = 1$ instead of $x = 5$"
+    },
+    {
+      "misconception": "Student mis-translates 'at most' / 'at least' into the wrong inequality direction",
+      "distractor": "Translates 'at most $\\$20$' as $2m + 3 \\ge 20$ instead of $2m + 3 \\le 20$, reversing the meaning"
+    },
+    {
+      "misconception": "Student picks the unsimplified intermediate value as the final answer",
+      "distractor": "From $\\frac{3}{4}c + 6.50 = 48.50$ stops at $\\frac{3}{4}c = 42$ and reports $c = 42$ instead of $c = 56$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

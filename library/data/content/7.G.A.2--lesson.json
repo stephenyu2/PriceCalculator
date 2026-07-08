@@ -1,0 +1,167 @@
+{
+  "id": "7.G.A.2--lesson",
+  "standard": "7.G.A.2",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Draw, construct, and describe geometrical figures and describe the relationships between them",
+  "clusterCode": "A",
+  "skillName": "Drawing Geometric Shapes with Given Conditions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "When you are given measurements for a triangle, the conditions may produce exactly one triangle, more than one triangle, or no triangle at all. Two rules govern whether a triangle can even exist: the three side lengths must satisfy the triangle inequality (the two shorter sides must add to more than the longest side), and the three interior angles must add to exactly $180^\\circ$. Once a triangle exists, the way the parts are arranged decides uniqueness: SSS, SAS, ASA, and AAS each pin down a single triangle, AAA (three angles, no side) fixes the shape but not the size so it gives infinitely many triangles, and SSA (two sides and a non-included angle) is the ambiguous case that can give zero, one, or two triangles.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Can a triangle be drawn with side lengths $4\\text{ cm}$, $5\\text{ cm}$, and $11\\text{ cm}$? Explain using the triangle inequality.",
+      "solution": {
+        "steps": [
+          "The triangle inequality says the two shorter sides together must be longer than the longest side.",
+          "Identify the longest side: $11\\text{ cm}$. The two shorter sides are $4\\text{ cm}$ and $5\\text{ cm}$.",
+          "Add the two shorter sides: $4 + 5 = 9$.",
+          "Compare to the longest side: $9 < 11$, so the two short sides cannot reach across the long side.",
+          "Because $4 + 5 < 11$, no triangle can be formed."
+        ],
+        "answer": "No triangle. Since $4 + 5 = 9 < 11$, the triangle inequality fails."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Can a triangle have interior angles measuring $40^\\circ$, $60^\\circ$, and $90^\\circ$? Explain using the angle-sum property.",
+      "solution": {
+        "steps": [
+          "The three interior angles of any triangle must add to exactly $180^\\circ$.",
+          "Add the given angles: $40^\\circ + 60^\\circ + 90^\\circ = 190^\\circ$.",
+          "Compare to $180^\\circ$: $190^\\circ \\ne 180^\\circ$.",
+          "Because the angles do not sum to $180^\\circ$, they cannot be the interior angles of a triangle."
+        ],
+        "answer": "No triangle. The angles sum to $190^\\circ$, not $180^\\circ$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A set of conditions gives a triangle with angles $50^\\circ$, $60^\\circ$, and $70^\\circ$, but no side length is specified. Does this determine a unique triangle, more than one triangle, or no triangle? Name the criterion.",
+      "solution": {
+        "steps": [
+          "First check feasibility with the angle sum: $50^\\circ + 60^\\circ + 70^\\circ = 180^\\circ$, so a triangle is possible.",
+          "Notice that only three angles are given and no side length is fixed. This is the AAA condition.",
+          "Three angles fix the shape of the triangle but not its size, so you can scale the triangle up or down and still satisfy all three angle conditions.",
+          "Therefore infinitely many similar triangles meet these conditions."
+        ],
+        "answer": "More than one triangle (infinitely many similar triangles). This is the AAA condition, which fixes shape but not size."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A triangle is described by two sides of $6\\text{ cm}$ and $8\\text{ cm}$ with an included angle of $40^\\circ$ between them. Is the triangle unique? Which congruence criterion applies?",
+      "solution": {
+        "steps": [
+          "Identify the parts given: two sides ($6\\text{ cm}$ and $8\\text{ cm}$) and the angle between them ($40^\\circ$).",
+          "An angle that sits between the two given sides is called the included angle.",
+          "Two sides with the included angle is the SAS (Side-Angle-Side) condition.",
+          "SAS fixes the lengths of both sides and the exact opening between them, so only one triangle can be built.",
+          "Therefore the triangle is unique."
+        ],
+        "answer": "Unique triangle. The condition is SAS (two sides with the included angle)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Using a ruler and protractor, you want to construct a triangle with a $7\\text{ cm}$ base, a $45^\\circ$ angle at one end of the base, and a $60^\\circ$ angle at the other end. Describe the construction and state whether the triangle is unique.",
+      "solution": {
+        "steps": [
+          "Draw the base: use the ruler to draw a segment exactly $7\\text{ cm}$ long. Label its endpoints $A$ and $B$.",
+          "At endpoint $A$, place the protractor and draw a ray making a $45^\\circ$ angle with the base.",
+          "At endpoint $B$, place the protractor and draw a ray making a $60^\\circ$ angle with the base, opening toward the same side as the first ray.",
+          "Mark the point where the two rays cross as $C$; triangle $ABC$ is the result.",
+          "The condition is two angles with the side between them (ASA), which determines a unique triangle. You can check feasibility: the third angle is $180^\\circ - 45^\\circ - 60^\\circ = 75^\\circ$, a valid angle."
+        ],
+        "answer": "A unique triangle. The condition is ASA (two angles with the included side)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Can a triangle be drawn with side lengths $3\\text{ cm}$, $4\\text{ cm}$, and $7\\text{ cm}$? Explain.",
+      "hint": "Add the two shorter sides and compare to the longest side. Watch for the boundary case where the sum equals the longest side.",
+      "solution": {
+        "steps": [
+          "The longest side is $7\\text{ cm}$; the two shorter sides are $3\\text{ cm}$ and $4\\text{ cm}$.",
+          "Add the two shorter sides: $3 + 4 = 7$.",
+          "Compare: $7 = 7$, so the two short sides exactly meet the long side instead of rising above it.",
+          "When the sum equals the longest side, the figure collapses flat into a straight segment, so it is degenerate and not a true triangle."
+        ],
+        "answer": "No triangle. Since $3 + 4 = 7$ equals the longest side, the figure is a straight segment (degenerate)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Two of a triangle's interior angles measure $35^\\circ$ and $85^\\circ$. Find the third angle, and state whether such a triangle can exist.",
+      "hint": "The three interior angles must total $180^\\circ$. Subtract the two known angles from $180^\\circ$.",
+      "solution": {
+        "steps": [
+          "The angles must sum to $180^\\circ$: third angle $= 180^\\circ - 35^\\circ - 85^\\circ$.",
+          "Compute: $180^\\circ - 120^\\circ = 60^\\circ$.",
+          "The third angle is $60^\\circ$, which is a positive angle less than $180^\\circ$, so the triangle is feasible."
+        ],
+        "answer": "The third angle is $60^\\circ$, and the triangle can exist."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A triangle is described by two angles of $50^\\circ$ and $60^\\circ$ and a side of $9\\text{ cm}$ that is not between those two angles. Does this determine a unique triangle? Name the criterion.",
+      "hint": "Two angles and any one side fix the triangle. When the side is not the included side, the criterion is AAS.",
+      "solution": {
+        "steps": [
+          "Two angles are given, so the third angle is forced: $180^\\circ - 50^\\circ - 60^\\circ = 70^\\circ$.",
+          "Once all three angles and one actual side length are known, the size is locked in.",
+          "Because the given side is not between the two given angles, the condition is AAS (Angle-Angle-Side).",
+          "AAS determines a unique triangle."
+        ],
+        "answer": "Unique triangle. The condition is AAS."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Conditions: angles $30^\\circ$, $70^\\circ$, and $80^\\circ$ with no side length given. Does this determine a unique triangle, more than one triangle, or no triangle? Explain.",
+      "hint": "First check the angle sum, then notice whether any actual length is fixed.",
+      "solution": {
+        "steps": [
+          "Check the angle sum: $30^\\circ + 70^\\circ + 80^\\circ = 180^\\circ$, so a triangle is possible.",
+          "Only three angles are given and no side length is specified; this is the AAA condition.",
+          "AAA fixes the shape but not the size, so the triangle can be drawn at any scale.",
+          "Therefore there are infinitely many similar triangles, not a unique one."
+        ],
+        "answer": "More than one triangle (infinitely many similar triangles), because AAA fixes only the shape."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "The two shorter sides of a triangle measure $6\\text{ cm}$ and $10\\text{ cm}$. Find the range of possible lengths for the third side $c$.",
+      "hint": "The third side must satisfy $|a - b| < c < a + b$, where $a$ and $b$ are the two given sides.",
+      "solution": {
+        "steps": [
+          "The third side must be shorter than the sum of the other two: $c < 6 + 10 = 16$.",
+          "The third side must also be longer than the difference of the other two: $c > |10 - 6| = 4$.",
+          "Combine both conditions: $4 < c < 16$.",
+          "Any length strictly between $4\\text{ cm}$ and $16\\text{ cm}$ produces a valid triangle."
+        ],
+        "answer": "$4\\text{ cm} < c < 16\\text{ cm}$"
+      }
+    }
+  ]
+}

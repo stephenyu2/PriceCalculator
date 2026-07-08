@@ -140,7 +140,7 @@ for (const domain of skeleton.domains) {
           standard: null, clusterId, grade: String(grade), subject,
           domain: domain.name, domainCode: domain.code,
           cluster: cluster.name, clusterCode: cluster.code,
-          standards: cluster.standards.map(s => s.code),
+          standards: cluster.standards.map(s => ({ code: s.code, skillName: s.skillName })),
           materials: broken,
         });
       }

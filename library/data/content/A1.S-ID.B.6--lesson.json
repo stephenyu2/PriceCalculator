@@ -1,0 +1,171 @@
+{
+  "id": "A1.S-ID.B.6--lesson",
+  "standard": "A1.S-ID.B.6",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on two categorical and quantitative variables",
+  "clusterCode": "B",
+  "skillName": "Scatter Plots and Fitted Functions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "When two quantities are measured together, we plot the ordered pairs $(x,y)$ as a scatter plot and look for a pattern. We describe the association by its direction (positive or negative), its strength (strong, moderate, weak, or none), and its form (linear or nonlinear). If the points fall roughly along a line, we fit a line of the form $y=mx+b$: take two representative points, compute the slope $m=\\frac{y_2-y_1}{x_2-x_1}$, and back-solve the intercept with $b=y-mx$. We can then predict values, interpret the slope as a rate of change and the intercept as a starting value, and check the fit using residuals (the gap $y_{\\text{actual}}-y_{\\text{predicted}}$). When the data curves with a constant ratio instead of a constant difference, an exponential model fits better than a line.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A scatter plot of hours studied $x$ versus test score $y$ shows points climbing steadily from the lower-left to the upper-right, clustered tightly along a straight path. Describe the association between hours studied and test score.",
+      "solution": {
+        "steps": [
+          "Check the direction: as $x$ (hours studied) increases, $y$ (test score) increases, so the trend goes up from left to right. That is a positive association.",
+          "Check the strength: the points are clustered tightly along the path, with little scatter, so the association is strong.",
+          "Check the form: the points follow a straight path rather than a curve, so the association is linear.",
+          "Combine the three descriptors into one statement."
+        ],
+        "answer": "A strong positive linear association."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A data set is given by the points $(0,2),(1,3),(2,6),(3,11),(4,18)$. Decide whether the association is linear or nonlinear, and if it is nonlinear, identify its shape.",
+      "solution": {
+        "steps": [
+          "For a linear pattern the first differences of $y$ (the change from one point to the next) must be constant.",
+          "Compute the first differences: $3-2=1$, $6-3=3$, $11-6=5$, $18-11=7$.",
+          "The first differences are $1,3,5,7$, which are not constant, so the data is not linear.",
+          "Look at the second differences: $3-1=2$, $5-3=2$, $7-5=2$. These are constant, which is the signature of a quadratic pattern, so the points curve upward.",
+          "Because the first differences grow steadily, the points bend, indicating a nonlinear (quadratic) association."
+        ],
+        "answer": "Nonlinear; the association is quadratic (the points curve upward)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A trend line drawn through a scatter plot passes through the two representative points $(2,5)$ and $(8,23)$. Find the equation of this line of fit in the form $y=mx+b$.",
+      "solution": {
+        "steps": [
+          "Find the slope using $m=\\frac{y_2-y_1}{x_2-x_1}$ with $(x_1,y_1)=(2,5)$ and $(x_2,y_2)=(8,23)$.",
+          "Substitute: $m=\\frac{23-5}{8-2}=\\frac{18}{6}=3$.",
+          "Back-solve the intercept with $b=y-mx$ using either point; use $(2,5)$: $b=5-3(2)=5-6=-1$.",
+          "Write the equation with $m=3$ and $b=-1$: $y=3x-1$.",
+          "Check with the other point $(8,23)$: $3(8)-1=24-1=23$. It matches, so the line is correct."
+        ],
+        "answer": "$y=3x-1$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A line of fit for a sunflower's height is $y=1.5x+4$, where $y$ is the height in centimeters after $x$ weeks. Interpret the slope and the $y$-intercept in context, and predict the height after $10$ weeks.",
+      "solution": {
+        "steps": [
+          "Identify the slope and intercept from $y=1.5x+4$: the slope is $m=1.5$ and the intercept is $b=4$.",
+          "Interpret the slope as a rate of change: the sunflower grows $1.5$ cm for each additional week, so $1.5$ cm per week.",
+          "Interpret the intercept as the starting value at $x=0$: the sunflower was $4$ cm tall when measuring began (week $0$).",
+          "Predict the height at $x=10$ by substituting: $y=1.5(10)+4=15+4=19$.",
+          "So the model predicts a height of $19$ cm after $10$ weeks."
+        ],
+        "answer": "Slope: grows $1.5$ cm per week. Intercept: started at $4$ cm. Predicted height at $10$ weeks: $19$ cm."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A bacteria count is recorded each hour as $(0,100),(1,200),(2,400),(3,800)$. Decide whether a linear or an exponential model fits better, and write the rule for that model.",
+      "solution": {
+        "steps": [
+          "Test for a linear pattern by checking first differences: $200-100=100$, $400-200=200$, $800-400=400$. These differences ($100,200,400$) are not constant, so the data is not linear.",
+          "Test for an exponential pattern by checking ratios of consecutive $y$-values: $\\frac{200}{100}=2$, $\\frac{400}{200}=2$, $\\frac{800}{400}=2$. The ratio is a constant $2$.",
+          "A constant ratio (not a constant difference) means an exponential model $y=ab^{x}$ fits best, with base $b=2$.",
+          "Find $a$ as the value at $x=0$: $a=100$.",
+          "Write the rule: $y=100\\cdot 2^{x}$. Check at $x=3$: $100\\cdot 2^{3}=100\\cdot 8=800$, which matches."
+        ],
+        "answer": "Exponential model fits better: $y=100\\cdot 2^{x}$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A scatter plot of outside temperature $x$ versus hot chocolate cups sold $y$ shows points falling from the upper-left to the lower-right in a fairly tight band. Describe the association.",
+      "hint": "Decide the direction from whether $y$ goes up or down as $x$ increases, the strength from how tightly the points cluster, and the form from whether they follow a line or a curve.",
+      "solution": {
+        "steps": [
+          "Direction: as temperature $x$ increases, cups sold $y$ decreases, so the trend falls from left to right. That is a negative association.",
+          "Strength: the points lie in a fairly tight band with little scatter, so the association is strong.",
+          "Form: the points follow a straight path, so the association is linear.",
+          "Combine the descriptors."
+        ],
+        "answer": "A strong negative linear association."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A line of fit passes through the representative points $(1,4)$ and $(5,14)$. Find the slope $m$ of the line.",
+      "hint": "Use $m=\\frac{y_2-y_1}{x_2-x_1}$. Be sure to put the change in $y$ on top and the change in $x$ on the bottom.",
+      "solution": {
+        "steps": [
+          "Apply $m=\\frac{y_2-y_1}{x_2-x_1}$ with $(1,4)$ and $(5,14)$.",
+          "Substitute: $m=\\frac{14-4}{5-1}=\\frac{10}{4}$.",
+          "Simplify: $\\frac{10}{4}=2.5$."
+        ],
+        "answer": "$m=2.5$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A line of fit passes through the point $(1,4)$ with slope $m=2.5$. Write the equation of the line in the form $y=mx+b$.",
+      "hint": "You already know $m$. Back-solve the intercept with $b=y-mx$ using the given point, then assemble $y=mx+b$.",
+      "solution": {
+        "steps": [
+          "Back-solve the intercept with $b=y-mx$ using the point $(1,4)$ and $m=2.5$.",
+          "Substitute: $b=4-2.5(1)=4-2.5=1.5$.",
+          "Write the equation with $m=2.5$ and $b=1.5$: $y=2.5x+1.5$.",
+          "Check with $(1,4)$: $2.5(1)+1.5=4$. It matches."
+        ],
+        "answer": "$y=2.5x+1.5$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A model for daily revenue is $\\hat{y}=2x+1$ (in thousands of dollars), where $x$ is the number of ads run. On a day with $x=5$ ads the actual revenue was $13$ (thousand dollars). Compute the residual and state whether the model overestimated or underestimated.",
+      "hint": "Residual $=y_{\\text{actual}}-y_{\\text{predicted}}$. First find the predicted value by substituting $x=5$ into the model.",
+      "solution": {
+        "steps": [
+          "Find the predicted value by substituting $x=5$ into $\\hat{y}=2x+1$: $\\hat{y}=2(5)+1=11$.",
+          "Compute the residual as actual minus predicted: $13-11=2$.",
+          "The residual is positive, which means the actual value is above the prediction, so the model underestimated.",
+          "The model was off by $2$ (thousand dollars) on the low side."
+        ],
+        "answer": "Residual $=2$; the model underestimated by $2$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A car's value (in thousands of dollars) is recorded each year as $(0,20),(1,16),(2,12.8),(3,10.24)$. Decide whether a linear or an exponential model fits better, then write the rule for that model.",
+      "hint": "Check first differences for a constant amount (linear) and ratios of consecutive values for a constant factor (exponential).",
+      "solution": {
+        "steps": [
+          "Check first differences: $16-20=-4$, $12.8-16=-3.2$, $10.24-12.8=-2.56$. These are not constant, so the data is not linear.",
+          "Check ratios of consecutive values: $\\frac{16}{20}=0.8$, $\\frac{12.8}{16}=0.8$, $\\frac{10.24}{12.8}=0.8$. The ratio is a constant $0.8$.",
+          "A constant ratio means an exponential model $y=ab^{x}$ fits best, with base $b=0.8$.",
+          "Find $a$ as the value at $x=0$: $a=20$.",
+          "Write the rule $y=20\\cdot(0.8)^{x}$. Check at $x=2$: $20\\cdot(0.8)^{2}=20\\cdot0.64=12.8$, which matches."
+        ],
+        "answer": "Exponential model fits better: $y=20\\cdot(0.8)^{x}$."
+      }
+    }
+  ]
+}

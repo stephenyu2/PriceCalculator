@@ -1,0 +1,238 @@
+{
+  "id": "GEO.S-CP.A--cluster-test",
+  "standard": null,
+  "clusterId": "GEO.S-CP.A",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Understand independence and conditional probability and use them to interpret data",
+  "clusterCode": "A",
+  "skillName": "Understand independence and conditional probability and use them to interpret data",
+  "materialType": "cluster-test",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:16:48.217Z",
+  "intro": "This cluster test covers events as subsets of a sample space (GEO.S-CP.A.1), independence of two events (GEO.S-CP.A.2), the definition of conditional probability (GEO.S-CP.A.3), two-way tables and independence (GEO.S-CP.A.4), and everyday conditional probability (GEO.S-CP.A.5). Choose the single best answer for each multiple-choice item.",
+  "items": [
+    {
+      "id": 1,
+      "standard": "GEO.S-CP.A.1",
+      "difficulty": "Easy",
+      "type": "multiple-choice",
+      "prompt": "A fair six-sided die is rolled once. Let $A = \\{2, 4, 6\\}$ (even) and $B = \\{1, 2, 3\\}$ (less than $4$). Which set is the union $A \\cup B$?\nA) $\\{2\\}$\nB) $\\{1, 2, 3, 4, 6\\}$\nC) $\\{1, 3, 4, 6\\}$\nD) $\\{1, 2, 3, 4, 5, 6\\}$",
+      "answer": "B) $\\{1, 2, 3, 4, 6\\}$",
+      "solution": {
+        "steps": [
+          "The union $A \\cup B$ contains every outcome that is in $A$ or in $B$ (or both).",
+          "List all such outcomes: from $A$ we get $2, 4, 6$ and from $B$ we get $1, 2, 3$, so together $\\{1, 2, 3, 4, 6\\}$.",
+          "A) $\\{2\\}$ is the intersection $A \\cap B$ (treats 'or' as 'and').",
+          "C) $\\{1, 3, 4, 6\\}$ drops the shared outcome $2$ (exclusive-or error).",
+          "D) is the whole sample space, which incorrectly adds $5$, an outcome in neither event."
+        ],
+        "answer": "B) $\\{1, 2, 3, 4, 6\\}$"
+      }
+    },
+    {
+      "id": 2,
+      "standard": "GEO.S-CP.A.1",
+      "difficulty": "Easy",
+      "type": "multiple-choice",
+      "prompt": "A fair six-sided die is rolled once, so $S = \\{1, 2, 3, 4, 5, 6\\}$. Let $A = \\{2, 4, 6\\}$. Which set is the complement $A^c$?\nA) $\\{2, 4, 6\\}$\nB) $\\{1, 3\\}$\nC) $\\{1, 3, 5\\}$\nD) $\\{1, 2, 3, 4, 5, 6\\}$",
+      "answer": "C) $\\{1, 3, 5\\}$",
+      "solution": {
+        "steps": [
+          "The complement $A^c$ is every outcome in the sample space $S$ that is NOT in $A$.",
+          "Remove $2, 4, 6$ from $S = \\{1, 2, 3, 4, 5, 6\\}$, leaving $\\{1, 3, 5\\}$.",
+          "A) $\\{2, 4, 6\\}$ repeats $A$ itself instead of taking its complement.",
+          "B) $\\{1, 3\\}$ forgets the boundary outcome $5$.",
+          "D) is all of $S$, which fails to remove the outcomes of $A$."
+        ],
+        "answer": "C) $\\{1, 3, 5\\}$"
+      }
+    },
+    {
+      "id": 3,
+      "standard": "GEO.S-CP.A.1",
+      "difficulty": "Medium",
+      "type": "multiple-choice",
+      "prompt": "Two fair coins are flipped, giving sample space $S = \\{HH, HT, TH, TT\\}$. Let $A$ = 'at least one head' and $B$ = 'the two coins match.' Which set is the intersection $A \\cap B$?\nA) $\\{HH\\}$\nB) $\\{HH, TT\\}$\nC) $\\{HH, HT, TH\\}$\nD) $\\{HH, HT, TH, TT\\}$",
+      "answer": "A) $\\{HH\\}$",
+      "solution": {
+        "steps": [
+          "First list each event. $A$ = 'at least one head' $= \\{HH, HT, TH\\}$.",
+          "$B$ = 'the two coins match' $= \\{HH, TT\\}$.",
+          "The intersection $A \\cap B$ keeps only outcomes in both: $HH$ is in both, $TT$ is in $B$ but not $A$, so $A \\cap B = \\{HH\\}$.",
+          "B) $\\{HH, TT\\}$ is just $B$ (it forgets $TT$ has no head).",
+          "C) $\\{HH, HT, TH\\}$ is just $A$, and D) is the whole sample space (the union $A \\cup B$, treating 'and' as 'or')."
+        ],
+        "answer": "A) $\\{HH\\}$"
+      }
+    },
+    {
+      "id": 4,
+      "standard": "GEO.S-CP.A.2",
+      "difficulty": "Easy",
+      "type": "multiple-choice",
+      "prompt": "Two events satisfy $P(A) = \\frac{1}{2}$, $P(B) = \\frac{1}{3}$, and $P(A \\cap B) = \\frac{1}{6}$. Are $A$ and $B$ independent?\nA) Yes, because $P(A)\\cdot P(B) = \\frac{1}{6} = P(A \\cap B)$\nB) No, because $P(A)\\cdot P(B) = \\frac{5}{6} \\neq P(A \\cap B)$\nC) No, because $P(A \\cap B) \\neq 0$\nD) Yes, because $P(A) + P(B) = \\frac{5}{6}$",
+      "answer": "A) Yes, because $P(A)\\cdot P(B) = \\frac{1}{6} = P(A \\cap B)$",
+      "solution": {
+        "steps": [
+          "Two events are independent exactly when $P(A \\cap B) = P(A)\\cdot P(B)$.",
+          "Compute the product: $P(A)\\cdot P(B) = \\frac{1}{2}\\cdot\\frac{1}{3} = \\frac{1}{6}$.",
+          "Since $\\frac{1}{6} = P(A \\cap B)$, the events are independent, so A is correct.",
+          "B uses $\\frac{5}{6}$, which is the sum $\\frac{1}{2}+\\frac{1}{3}$, not the product.",
+          "C wrongly treats independence like mutual exclusivity, and D adds the marginals instead of multiplying them."
+        ],
+        "answer": "A) Yes, because $P(A)\\cdot P(B) = \\frac{1}{6} = P(A \\cap B)$"
+      }
+    },
+    {
+      "id": 5,
+      "standard": "GEO.S-CP.A.2",
+      "difficulty": "Hard",
+      "type": "multiple-choice",
+      "prompt": "Two cards are drawn without replacement from a standard $52$-card deck. Let $A$ = 'the first card is a heart' and $B$ = 'the second card is a heart.' Which statement is correct?\nA) Independent, because $P(A \\cap B) = \\frac{1}{4}\\cdot\\frac{1}{4} = \\frac{1}{16}$\nB) Dependent, because $P(A \\cap B) = \\frac{13}{52}\\cdot\\frac{12}{51} = \\frac{1}{17} \\neq \\frac{1}{16} = P(A)\\cdot P(B)$\nC) Independent, because both cards are drawn from the same deck\nD) Dependent, because $P(A \\cap B) = 0$",
+      "answer": "B) Dependent, because $P(A \\cap B) = \\frac{13}{52}\\cdot\\frac{12}{51} = \\frac{1}{17} \\neq \\frac{1}{16} = P(A)\\cdot P(B)$",
+      "solution": {
+        "steps": [
+          "Each draw alone has $P(\\text{heart}) = \\frac{13}{52} = \\frac{1}{4}$, so $P(A)\\cdot P(B) = \\frac{1}{4}\\cdot\\frac{1}{4} = \\frac{1}{16}$.",
+          "Because the draw is without replacement, $P(A \\cap B) = \\frac{13}{52}\\cdot\\frac{12}{51} = \\frac{1}{4}\\cdot\\frac{12}{51} = \\frac{12}{204} = \\frac{1}{17}$.",
+          "Since $\\frac{1}{17} \\neq \\frac{1}{16}$, the events are dependent, so B is correct.",
+          "A keeps the total at $52$ for the second draw, masking the dependence.",
+          "C asserts independence with no test, and D is false since both cards can be hearts, so $P(A \\cap B) \\neq 0$."
+        ],
+        "answer": "B) Dependent, because $P(A \\cap B) = \\frac{13}{52}\\cdot\\frac{12}{51} = \\frac{1}{17} \\neq \\frac{1}{16} = P(A)\\cdot P(B)$"
+      }
+    },
+    {
+      "id": 6,
+      "standard": "GEO.S-CP.A.3",
+      "difficulty": "Easy",
+      "type": "multiple-choice",
+      "prompt": "Given $P(A \\cap B) = \\frac{1}{5}$ and $P(B) = \\frac{1}{2}$, what is the conditional probability $P(A \\mid B)$?\nA) $\\frac{1}{5}$\nB) $\\frac{1}{10}$\nC) $\\frac{2}{5}$\nD) $\\frac{7}{10}$",
+      "answer": "C) $\\frac{2}{5}$",
+      "solution": {
+        "steps": [
+          "Use the definition $P(A \\mid B) = \\dfrac{P(A \\cap B)}{P(B)}$ with $P(B) > 0$.",
+          "Substitute: $P(A \\mid B) = \\dfrac{1/5}{1/2} = \\frac{1}{5}\\cdot\\frac{2}{1} = \\frac{2}{5}$.",
+          "A) $\\frac{1}{5}$ reports the joint probability without dividing by $P(B)$.",
+          "B) $\\frac{1}{10}$ multiplies the two values instead of dividing.",
+          "D) $\\frac{7}{10}$ adds $\\frac{1}{5} + \\frac{1}{2}$ instead of dividing."
+        ],
+        "answer": "C) $\\frac{2}{5}$"
+      }
+    },
+    {
+      "id": 7,
+      "standard": "GEO.S-CP.A.3",
+      "difficulty": "Medium",
+      "type": "multiple-choice",
+      "prompt": "A fair die is rolled. Let $A = \\{\\text{prime}\\} = \\{2, 3, 5\\}$ and $B = \\{\\text{odd}\\} = \\{1, 3, 5\\}$. What is $P(A \\mid B)$?\nA) $\\frac{1}{3}$\nB) $\\frac{1}{2}$\nC) $\\frac{2}{3}$\nD) $\\frac{3}{4}$",
+      "answer": "C) $\\frac{2}{3}$",
+      "solution": {
+        "steps": [
+          "Condition on $B$, the odd outcomes $\\{1, 3, 5\\}$, so the reduced sample space has $3$ outcomes.",
+          "Find $A \\cap B$, the primes that are also odd: $\\{3, 5\\}$, which has $2$ outcomes.",
+          "Then $P(A \\mid B) = \\dfrac{|A \\cap B|}{|B|} = \\frac{2}{3}$.",
+          "A) $\\frac{1}{3}$ uses only one matching outcome or divides by the wrong total.",
+          "B) $\\frac{1}{2}$ divides $2$ favorable by the whole sample space restricted incorrectly, and D) $\\frac{3}{4}$ does not match any correct count here."
+        ],
+        "answer": "C) $\\frac{2}{3}$"
+      }
+    },
+    {
+      "id": 8,
+      "standard": "GEO.S-CP.A.4",
+      "difficulty": "Easy",
+      "type": "multiple-choice",
+      "prompt": "A two-way table classifies $40$ students by class and sport. Seniors: $15$ play a sport, $7$ do not. Juniors: $9$ play a sport, $9$ do not. What is $P(\\text{plays a sport})$?\nA) $\\frac{15}{40}$\nB) $\\frac{3}{5}$\nC) $\\frac{15}{22}$\nD) $\\frac{2}{5}$",
+      "answer": "B) $\\frac{3}{5}$",
+      "solution": {
+        "steps": [
+          "A marginal probability is the column total over the grand total.",
+          "Total who play a sport $= 15 + 9 = 24$, and the grand total is $40$.",
+          "So $P(\\text{plays a sport}) = \\dfrac{24}{40} = \\frac{3}{5}$.",
+          "A) $\\frac{15}{40}$ is the joint $P(\\text{senior and sport})$, not the marginal.",
+          "C) $\\frac{15}{22}$ is the conditional $P(\\text{sport} \\mid \\text{senior})$, and D) $\\frac{2}{5}$ is $P(\\text{does not play a sport})$."
+        ],
+        "answer": "B) $\\frac{3}{5}$"
+      }
+    },
+    {
+      "id": 9,
+      "standard": "GEO.S-CP.A.4",
+      "difficulty": "Medium",
+      "type": "multiple-choice",
+      "prompt": "Using the same table ($40$ students; seniors $15$ sport / $7$ no sport, $22$ total; juniors $9$ sport / $9$ no sport, $18$ total), what is $P(\\text{plays a sport} \\mid \\text{senior})$?\nA) $\\frac{15}{40}$\nB) $\\frac{15}{24}$\nC) $\\frac{15}{22}$\nD) $\\frac{22}{40}$",
+      "answer": "C) $\\frac{15}{22}$",
+      "solution": {
+        "steps": [
+          "Conditioning on 'senior' restricts the sample space to the $22$ seniors, so the denominator is the senior row total.",
+          "Of those $22$ seniors, $15$ play a sport, giving $P(\\text{sport} \\mid \\text{senior}) = \\dfrac{15}{22}$.",
+          "A) $\\frac{15}{40}$ uses the grand total $40$ (that is the joint probability).",
+          "B) $\\frac{15}{24}$ uses the sport column total $24$, which would be $P(\\text{senior} \\mid \\text{sport})$.",
+          "D) $\\frac{22}{40}$ is the marginal $P(\\text{senior})$, not a conditional."
+        ],
+        "answer": "C) $\\frac{15}{22}$"
+      }
+    },
+    {
+      "id": 10,
+      "standard": "GEO.S-CP.A.4",
+      "difficulty": "Hard",
+      "type": "multiple-choice",
+      "prompt": "For the same table ($P(\\text{senior}) = \\frac{22}{40}$, $P(\\text{sport}) = \\frac{24}{40}$, $P(\\text{senior and sport}) = \\frac{15}{40}$), are 'is a senior' and 'plays a sport' independent?\nA) Independent, because the 'senior and sport' cell is not zero\nB) Dependent, because $P(A \\cap B) = 0.375 \\neq 0.33 = P(A)\\cdot P(B)$\nC) Independent, because $P(\\text{sport} \\mid \\text{senior}) = P(\\text{sport})$\nD) Dependent, because $P(A) + P(B) = \\frac{46}{40} \\neq P(A \\cap B)$",
+      "answer": "B) Dependent, because $P(A \\cap B) = 0.375 \\neq 0.33 = P(A)\\cdot P(B)$",
+      "solution": {
+        "steps": [
+          "Test independence with $P(A \\cap B) = P(A)\\cdot P(B)$.",
+          "Compute the product: $P(A)\\cdot P(B) = \\dfrac{22}{40}\\cdot\\dfrac{24}{40} = \\dfrac{528}{1600} = 0.33$.",
+          "The joint is $P(A \\cap B) = \\dfrac{15}{40} = 0.375$. Since $0.375 \\neq 0.33$, the events are dependent, so B is correct.",
+          "A confuses a nonzero overlap with independence, and C is false because $P(\\text{sport} \\mid \\text{senior}) = \\frac{15}{22} \\approx 0.682 \\neq 0.6 = P(\\text{sport})$.",
+          "D applies the wrong test, adding the marginals instead of multiplying them."
+        ],
+        "answer": "B) Dependent, because $P(A \\cap B) = 0.375 \\neq 0.33 = P(A)\\cdot P(B)$"
+      }
+    },
+    {
+      "id": 11,
+      "standard": "GEO.S-CP.A.5",
+      "difficulty": "Easy",
+      "type": "multiple-choice",
+      "prompt": "A health report states: 'Among adults who exercise daily, $15\\%$ have high blood pressure.' Let $E$ = 'exercises daily' and $H$ = 'has high blood pressure.' Which statement matches the sentence?\nA) $P(H \\mid E) = 0.15$\nB) $P(E \\mid H) = 0.15$\nC) $P(H \\cap E) = 0.15$\nD) $P(H) = 0.15$",
+      "answer": "A) $P(H \\mid E) = 0.15$",
+      "solution": {
+        "steps": [
+          "The phrase 'among adults who exercise daily' names the condition, so $E$ is what we are given.",
+          "The $15\\%$ describes the chance of high blood pressure within that group, the target event $H$.",
+          "So the statement is $P(H \\mid E) = 0.15$, making A correct.",
+          "B reverses the conditioning to $P(E \\mid H)$, which need not equal $P(H \\mid E)$.",
+          "C states a joint probability (over all adults), and D states an overall marginal, neither restricted to daily exercisers."
+        ],
+        "answer": "A) $P(H \\mid E) = 0.15$"
+      }
+    },
+    {
+      "id": 12,
+      "standard": "GEO.S-CP.A.5",
+      "difficulty": "Hard",
+      "type": "multiple-choice",
+      "prompt": "A medical screening study reports $P(\\text{disease} \\mid \\text{positive test}) = 0.31$ while the overall rate is $P(\\text{disease}) = 0.05$. What does this comparison tell us?\nA) The events are independent, since a test does not cause disease\nB) A positive test lowers the chance of disease\nC) A positive test raises the chance of disease, so the events are dependent\nD) It must also be true that $P(\\text{positive test} \\mid \\text{disease}) = 0.31$",
+      "answer": "C) A positive test raises the chance of disease, so the events are dependent",
+      "solution": {
+        "steps": [
+          "Independence would require $P(\\text{disease} \\mid \\text{positive test}) = P(\\text{disease})$.",
+          "Here $0.31 \\neq 0.05$, so the events are dependent, and since $0.31 > 0.05$ a positive test raises the chance of disease. C is correct.",
+          "A wrongly declares independence even though the conditional and marginal differ.",
+          "B reverses the direction of the change, since $0.31 > 0.05$ is an increase, not a decrease.",
+          "D assumes conditioning is symmetric, but $P(\\text{positive} \\mid \\text{disease})$ generally differs from $P(\\text{disease} \\mid \\text{positive})$."
+        ],
+        "answer": "C) A positive test raises the chance of disease, so the events are dependent"
+      }
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "id": "A1.F-IF.A.3--quiz",
+  "standard": "A1.F-IF.A.3",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Functions",
+  "domainCode": "F-IF",
+  "cluster": "Understand the concept of a function and use function notation",
+  "clusterCode": "A",
+  "skillName": "Sequences as Functions",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "A short multiple-choice check on sequences as functions: reading sequence notation, evaluating explicit and recursive rules, identifying the domain, building rules from terms, and working backward to a term number.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "For the sequence with terms $7, 10, 13, 16, \\dots$, what is $a_3$?\nA) $3$\nB) $10$\nC) $13$\nD) $16$",
+      "answer": "C) $13$",
+      "solution": {
+        "steps": [
+          "In sequence notation, $a_3$ is the term value at the input $n = 3$, which is the third term in the list.",
+          "Counting: $a_1 = 7$, $a_2 = 10$, $a_3 = 13$.",
+          "So $a_3 = 13$, choice C.",
+          "A) $3$ confuses the term number $n = 3$ with the term value $a_3$.",
+          "B) $10$ is $a_2$ (off by one, reading the second term).",
+          "D) $16$ is $a_4$ (off by one the other way, reading the fourth term)."
+        ],
+        "answer": "C) $13$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "A sequence is defined by $a_n = 4n - 1$ for $n = 1, 2, 3, \\dots$. Find $a_6$.\nA) $6$\nB) $19$\nC) $23$\nD) $27$",
+      "answer": "C) $23$",
+      "solution": {
+        "steps": [
+          "Substitute $n = 6$ into the explicit rule: $a_6 = 4(6) - 1$.",
+          "Compute: $4(6) = 24$, so $a_6 = 24 - 1 = 23$, choice C.",
+          "A) $6$ reports the term number $n = 6$ instead of the term value.",
+          "B) $19$ evaluates $a_5 = 4(5) - 1$ (off-by-one index).",
+          "D) $27$ evaluates $a_7 = 4(7) - 1$ (off-by-one index)."
+        ],
+        "answer": "C) $23$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "What are the first four terms of the sequence $a_n = 2^n$ for $n = 1, 2, 3, 4$?\nA) $2, 4, 8, 16$\nB) $1, 2, 4, 8$\nC) $2, 4, 6, 8$\nD) $1, 4, 9, 16$",
+      "answer": "A) $2, 4, 8, 16$",
+      "solution": {
+        "steps": [
+          "Evaluate $a_n = 2^n$ at $n = 1, 2, 3, 4$.",
+          "$a_1 = 2^1 = 2$, $a_2 = 2^2 = 4$, $a_3 = 2^3 = 8$, $a_4 = 2^4 = 16$, choice A.",
+          "B) $1, 2, 4, 8$ starts the index at $n = 0$ ($2^0 = 1$) instead of $n = 1$.",
+          "C) $2, 4, 6, 8$ treats the rule as $2n$ (adding $2$ each time) rather than $2^n$.",
+          "D) $1, 4, 9, 16$ uses $n^2$ instead of $2^n$."
+        ],
+        "answer": "A) $2, 4, 8, 16$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "A sequence is defined by $a_1 = 7$ and $a_n = a_{n-1} + 3$. Find $a_4$.\nA) $6$\nB) $13$\nC) $16$\nD) $19$",
+      "answer": "C) $16$",
+      "solution": {
+        "steps": [
+          "This is a recursive rule, so build terms one at a time from $a_1 = 7$.",
+          "$a_2 = a_1 + 3 = 7 + 3 = 10$, then $a_3 = a_2 + 3 = 10 + 3 = 13$, then $a_4 = a_3 + 3 = 13 + 3 = 16$, choice C.",
+          "A) $6$ comes from substituting $n$ into the rule as if it were explicit: $4 - 1 + 3 = 6$.",
+          "B) $13$ stops the recursion one step early at $a_3$.",
+          "D) $19$ runs the recursion one step too far to $a_5$."
+        ],
+        "answer": "C) $16$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "A geometric sequence is defined by $a_1 = 5$ and $a_n = 2\\,a_{n-1}$. Find $a_4$.\nA) $11$\nB) $20$\nC) $40$\nD) $80$",
+      "answer": "C) $40$",
+      "solution": {
+        "steps": [
+          "Each term is twice the previous term, so multiply, starting from $a_1 = 5$.",
+          "$a_2 = 2(5) = 10$, $a_3 = 2(10) = 20$, $a_4 = 2(20) = 40$, choice C.",
+          "A) $11$ adds the $2$ three times ($5 + 2 + 2 + 2$) instead of multiplying, confusing the geometric rule with an arithmetic one.",
+          "B) $20$ stops one step early at $a_3$.",
+          "D) $80$ runs one step too far to $a_5 = 2(40)$."
+        ],
+        "answer": "C) $40$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "A sequence is defined by $a_n = 6n + 1$ with $n = 1, 2, 3, \\dots$. What is the domain of this function, and what does its graph look like?\nA) All real numbers; a continuous line\nB) The positive integers $\\{1, 2, 3, \\dots\\}$; discrete points\nC) All integers including negatives; a continuous line\nD) The interval $[1, \\infty)$; a continuous ray",
+      "answer": "B) The positive integers $\\{1, 2, 3, \\dots\\}$; discrete points",
+      "solution": {
+        "steps": [
+          "A sequence is a function whose domain is a set of consecutive integers; here $n = 1, 2, 3, \\dots$, the positive integers.",
+          "Because the inputs are isolated integers, the graph is a set of discrete points $(n, a_n)$, not a continuous curve. This is choice B.",
+          "A) treats the domain as all real numbers and the graph as continuous, the central misconception about sequences.",
+          "C) wrongly includes negative integers (the stated domain starts at $n = 1$) and still claims a continuous line.",
+          "D) uses a continuous interval $[1, \\infty)$; the domain is only the integers in that range, not every real number."
+        ],
+        "answer": "B) The positive integers $\\{1, 2, 3, \\dots\\}$; discrete points"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "The terms of an arithmetic sequence are $3, 7, 11, 15, \\dots$. Which explicit formula gives $a_n$?\nA) $a_n = 4n + 3$\nB) $a_n = 3n + 4$\nC) $a_n = 4n - 1$\nD) $a_n = 3 + 4 = 7$",
+      "answer": "C) $a_n = 4n - 1$",
+      "solution": {
+        "steps": [
+          "The first term is $a_1 = 3$ and the common difference is $d = 7 - 3 = 4$.",
+          "An arithmetic rule adds $d$ a total of $(n-1)$ times: $a_n = 3 + 4(n - 1) = 4n - 1$.",
+          "Check: $a_1 = 4(1) - 1 = 3$ and $a_2 = 4(2) - 1 = 7$, matching the list, so choice C.",
+          "A) $4n + 3$ gives $a_1 = 7$, adding the difference one extra time.",
+          "B) $3n + 4$ uses the wrong slope and intercept and gives $a_1 = 7$, not $3$.",
+          "D) $a_n = 3 + 4 = 7$ adds the common difference only once instead of $(n-1)$ times, producing a constant, not a rule in $n$."
+        ],
+        "answer": "C) $a_n = 4n - 1$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "For the sequence $a_n = 3n - 2$ with $n = 1, 2, 3, \\dots$, which statement is true?\nA) $20$ is a term, occurring at $n = \\frac{22}{3}$\nB) $20$ is a term, occurring at $n = 6$\nC) $25$ is a term, occurring at $n = 9$\nD) $25$ is a term, occurring at $n = 27$",
+      "answer": "C) $25$ is a term, occurring at $n = 9$",
+      "solution": {
+        "steps": [
+          "To test whether a value is a term, solve $3n - 2 = \\text{value}$ and require $n$ to be a positive integer in the domain.",
+          "For $25$: $3n - 2 = 25$ gives $3n = 27$, so $n = 9$, a positive integer. Thus $25 = a_9$ is a term, choice C.",
+          "For $20$: $3n - 2 = 20$ gives $3n = 22$, so $n = \\frac{22}{3}$, which is not an integer, so $20$ is not a term.",
+          "A) reports the non-integer $n = \\frac{22}{3}$ as a valid term number, ignoring that the domain is the positive integers.",
+          "B) claims $20$ occurs at $n = 6$, but $a_6 = 3(6) - 2 = 16$, not $20$.",
+          "D) claims $25$ occurs at $n = 27$, but $a_{27} = 3(27) - 2 = 79$; it confuses the term value with the term number."
+        ],
+        "answer": "C) $25$ is a term, occurring at $n = 9$"
+      }
+    }
+  ]
+}

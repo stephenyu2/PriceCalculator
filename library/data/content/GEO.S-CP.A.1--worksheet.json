@@ -1,0 +1,211 @@
+{
+  "id": "GEO.S-CP.A.1--worksheet",
+  "standard": "GEO.S-CP.A.1",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Understand independence and conditional probability and use them to interpret data",
+  "clusterCode": "A",
+  "skillName": "Events as Subsets of Sample Space",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Describe sample spaces and events as sets of outcomes, then combine events using union ($\\cup$, 'or'), intersection ($\\cap$, 'and'), and complement ($A^c$, 'not'). Items ramp from writing simple sample spaces to chained operations over compound sample spaces and two-way tables.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A fair six-sided die is rolled once. Write the sample space $S$ in roster form.",
+      "answer": "$S = \\{1, 2, 3, 4, 5, 6\\}$",
+      "solution": {
+        "steps": [
+          "The sample space is the set of all possible outcomes of the experiment.",
+          "A six-sided die can land on any face from $1$ to $6$.",
+          "List every outcome: $S = \\{1, 2, 3, 4, 5, 6\\}$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "For one roll of a fair die with $S = \\{1, 2, 3, 4, 5, 6\\}$, let $E$ be the event 'the result is even.' List $E$ as a subset of $S$.",
+      "answer": "$E = \\{2, 4, 6\\}$",
+      "solution": {
+        "steps": [
+          "An event is the subset of outcomes that satisfy the stated characteristic.",
+          "The even outcomes in $S$ are $2$, $4$, and $6$.",
+          "So $E = \\{2, 4, 6\\}$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Let $A = \\{2, 4, 6\\}$ and $B = \\{1, 2, 3\\}$ be events for one roll of a die. List the union $A \\cup B$ (the outcomes in $A$ or $B$ or both).",
+      "answer": "$A \\cup B = \\{1, 2, 3, 4, 6\\}$",
+      "solution": {
+        "steps": [
+          "The union $A \\cup B$ contains every outcome that is in $A$, in $B$, or in both.",
+          "Combine the lists: from $A$ take $2, 4, 6$; from $B$ take $1, 2, 3$.",
+          "List each outcome once, including the shared outcome $2$: $A \\cup B = \\{1, 2, 3, 4, 6\\}$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Let $A = \\{2, 4, 6\\}$ and $B = \\{1, 2, 3\\}$ for one roll of a die. List the intersection $A \\cap B$ (the outcomes in both $A$ and $B$).",
+      "answer": "$A \\cap B = \\{2\\}$",
+      "solution": {
+        "steps": [
+          "The intersection $A \\cap B$ contains only the outcomes that belong to both events.",
+          "Compare the lists: $A = \\{2, 4, 6\\}$ and $B = \\{1, 2, 3\\}$.",
+          "The only outcome in both sets is $2$, so $A \\cap B = \\{2\\}$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "For a die roll with $S = \\{1, 2, 3, 4, 5, 6\\}$ and the event $A = \\{2, 4, 6\\}$, list the complement $A^c$ (the outcomes in $S$ that are not in $A$).",
+      "answer": "$A^c = \\{1, 3, 5\\}$",
+      "solution": {
+        "steps": [
+          "The complement $A^c$ consists of every outcome of $S$ that is not in $A$.",
+          "Remove the outcomes of $A = \\{2, 4, 6\\}$ from $S = \\{1, 2, 3, 4, 5, 6\\}$.",
+          "What remains is $A^c = \\{1, 3, 5\\}$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Two fair coins are flipped, where each outcome records the first coin then the second (for example, $HT$ means heads then tails). Write the sample space $S$, then list the event $E =$ 'at least one head.'",
+      "answer": "$S = \\{HH, HT, TH, TT\\}$ and $E = \\{HH, HT, TH\\}$",
+      "solution": {
+        "steps": [
+          "Each coin can be $H$ or $T$, and order matters, so pair every first-coin result with every second-coin result.",
+          "The sample space is $S = \\{HH, HT, TH, TT\\}$, which has $4$ outcomes.",
+          "The event $E$ = 'at least one head' includes every outcome containing one or more $H$.",
+          "Only $TT$ has no head, so $E = \\{HH, HT, TH\\}$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "One card is drawn from a standard deck. Using the events $H =$ 'the card is a heart' and $F =$ 'the card is a face card (jack, queen, or king),' translate each phrase into set notation: (a) 'a heart and a face card,' and (b) 'a heart or a face card.'",
+      "answer": "(a) $H \\cap F$ and (b) $H \\cup F$",
+      "solution": {
+        "steps": [
+          "The word 'and' means both conditions hold at once, which is the intersection.",
+          "So 'a heart and a face card' is $H \\cap F$.",
+          "The word 'or' means at least one condition holds, which is the union.",
+          "So 'a heart or a face card' is $H \\cup F$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "For one roll of a die with $S = \\{1, 2, 3, 4, 5, 6\\}$, let $A = \\{2, 4, 6\\}$ (even) and $B = \\{4, 5, 6\\}$ (greater than $3$). List the event $A \\cap B^c$ (even and not greater than $3$).",
+      "answer": "$A \\cap B^c = \\{2\\}$",
+      "solution": {
+        "steps": [
+          "First find $B^c$, the outcomes of $S$ not in $B = \\{4, 5, 6\\}$, which gives $B^c = \\{1, 2, 3\\}$.",
+          "Now intersect $A = \\{2, 4, 6\\}$ with $B^c = \\{1, 2, 3\\}$, keeping outcomes in both.",
+          "The only common outcome is $2$, so $A \\cap B^c = \\{2\\}$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A spinner has eight equal sections numbered $1$ through $8$, so $S = \\{1, 2, 3, 4, 5, 6, 7, 8\\}$. Let $M =$ 'a multiple of $3$' and $P =$ 'a prime number.' List $M$, list $P$, then list $M \\cup P$.",
+      "answer": "$M = \\{3, 6\\}$, $P = \\{2, 3, 5, 7\\}$, and $M \\cup P = \\{2, 3, 5, 6, 7\\}$",
+      "solution": {
+        "steps": [
+          "The multiples of $3$ in $S$ are $3$ and $6$, so $M = \\{3, 6\\}$.",
+          "The primes in $S$ are $2, 3, 5, 7$ (note $1$ is not prime), so $P = \\{2, 3, 5, 7\\}$.",
+          "The union $M \\cup P$ collects every outcome in $M$ or $P$, listing the shared outcome $3$ once.",
+          "So $M \\cup P = \\{2, 3, 5, 6, 7\\}$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Twenty students are classified by grade level and whether they play a sport. There are $7$ juniors who play a sport, $4$ juniors who do not, $5$ seniors who play a sport, and $4$ seniors who do not. Let $J =$ 'junior' and $A =$ 'plays a sport.' Describe the event 'senior and plays a sport' using $J$ and $A$, and give the number of students in it.",
+      "answer": "The event is $J^c \\cap A$, and it contains $5$ students.",
+      "solution": {
+        "steps": [
+          "'Senior' is the complement of 'junior,' so it is $J^c$.",
+          "'Plays a sport' is the event $A$, and 'and' means intersection, giving $J^c \\cap A$.",
+          "From the data, the seniors who play a sport number $5$.",
+          "So $J^c \\cap A$ contains $5$ students."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Two fair six-sided dice are rolled and the ordered pair $(\\text{first}, \\text{second})$ is recorded, so $S$ has $36$ equally likely outcomes. Let $A =$ 'the sum is $7$' and $B =$ 'the two dice show the same number (doubles).' Are $A$ and $B$ mutually exclusive? Justify by listing $A \\cap B$.",
+      "answer": "Yes; $A$ and $B$ are mutually exclusive because $A \\cap B = \\varnothing$.",
+      "solution": {
+        "steps": [
+          "List $A$, the outcomes whose sum is $7$: $\\{(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)\\}$.",
+          "List $B$, the doubles: $\\{(1,1),(2,2),(3,3),(4,4),(5,5),(6,6)\\}$.",
+          "A double $(k,k)$ has sum $2k$, which is always even, so no double can sum to the odd number $7$.",
+          "Therefore $A \\cap B = \\varnothing$, which means $A$ and $B$ are mutually exclusive."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "For one roll of a die with $S = \\{1, 2, 3, 4, 5, 6\\}$, let $A = \\{1, 2, 3\\}$ and $B = \\{3, 4\\}$. Find $(A \\cup B)^c$ by first listing $A \\cup B$, and confirm it equals $A^c \\cap B^c$.",
+      "answer": "$(A \\cup B)^c = \\{5, 6\\}$, which equals $A^c \\cap B^c$.",
+      "solution": {
+        "steps": [
+          "First $A \\cup B = \\{1, 2, 3\\} \\cup \\{3, 4\\} = \\{1, 2, 3, 4\\}$.",
+          "Its complement removes those from $S$: $(A \\cup B)^c = \\{5, 6\\}$.",
+          "Check with De Morgan's law: $A^c = \\{4, 5, 6\\}$ and $B^c = \\{1, 2, 5, 6\\}$.",
+          "Their intersection is $A^c \\cap B^c = \\{5, 6\\}$, matching $(A \\cup B)^c$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Three fair coins are flipped, with each outcome recorded as an ordered triple such as $HTH$, so $S$ has $8$ outcomes. Let $E =$ 'exactly two heads' and $F =$ 'the first coin is a head.' List the event $E \\cap F$ and give the number of outcomes in it.",
+      "answer": "$E \\cap F = \\{HHT, HTH\\}$, which has $2$ outcomes.",
+      "solution": {
+        "steps": [
+          "The full sample space is $S = \\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\}$.",
+          "The event $E$ = 'exactly two heads' is $\\{HHT, HTH, THH\\}$.",
+          "The event $F$ = 'first coin is a head' is $\\{HHH, HHT, HTH, HTT\\}$.",
+          "Their intersection keeps outcomes in both: $E \\cap F = \\{HHT, HTH\\}$, which has $2$ outcomes."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "In a class of $30$ students, $18$ study Spanish ($S$), $12$ study art ($A$), and $7$ study both. Using a Venn diagram or counting, find the number of students in the event $S \\cap A^c$ (study Spanish but not art) and the number in $(S \\cup A)^c$ (study neither subject).",
+      "answer": "$S \\cap A^c$ contains $11$ students, and $(S \\cup A)^c$ contains $7$ students.",
+      "solution": {
+        "steps": [
+          "Of the $18$ Spanish students, $7$ also study art, so Spanish-only is $18 - 7 = 11$; thus $S \\cap A^c$ has $11$ students.",
+          "Similarly, art-only is $12 - 7 = 5$.",
+          "The number studying at least one subject is $S \\cup A = 11 + 5 + 7 = 23$.",
+          "Then $(S \\cup A)^c = 30 - 23 = 7$ students study neither subject."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "One card is drawn from a standard $52$-card deck. Let $R =$ 'the card is red,' $K =$ 'the card is a king,' and $H =$ 'the card is a heart.' Find the number of cards in the event $(R \\cap K) \\cup H$.",
+      "answer": "$(R \\cap K) \\cup H$ contains $14$ cards.",
+      "solution": {
+        "steps": [
+          "The red kings are the king of hearts and the king of diamonds, so $R \\cap K$ has $2$ cards.",
+          "The hearts make up the event $H$, which has $13$ cards.",
+          "Take the union $(R \\cap K) \\cup H$: the king of hearts already lies in $H$, so it is counted only once.",
+          "Adding the king of diamonds (not a heart) to the $13$ hearts gives $13 + 1 = 14$ cards."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "id": "8.EE.B.6--worksheet--hard",
+  "standard": "8.EE.B.6",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Expressions and Equations",
+  "domainCode": "EE",
+  "cluster": "Understand the connections between proportional relationships, lines, and linear equations",
+  "clusterCode": "B",
+  "skillName": "Slope and Linear Equations",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "These problems require full reasoning: write similar-triangles arguments for why slope is constant, derive $y = mx$ and $y = mx + b$ from indirect information, work carefully with negative and fractional slopes, and interpret and compare lines in context. Show every step and give exact values.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A non-vertical line passes through the origin. Slope triangle $A$ is drawn between $(0, 0)$ and $(4, 6)$. Slope triangle $B$ is drawn between $(0, 0)$ and $(10, k)$ on the same line. Explain, using similar triangles, why the two triangles have equal slope ratios, then find $k$.",
+      "answer": "$k = 15$; the triangles are similar by AA, so $\\frac{6}{4} = \\frac{k}{10}$.",
+      "solution": {
+        "steps": [
+          "Both slope triangles are right triangles: each has a horizontal leg (run) and a vertical leg (rise), so each contains a right angle.",
+          "Both hypotenuses lie along the same line, so they make the same angle with the horizontal axis. The triangles therefore share two pairs of equal angles and are similar by AA.",
+          "Because similar triangles have proportional corresponding sides, the ratio $\\frac{\\text{rise}}{\\text{run}}$ is the same for both: $\\frac{6}{4} = \\frac{k}{10}$.",
+          "Solve: $k = 10 \\cdot \\frac{6}{4} = 10 \\cdot \\frac{3}{2} = 15$.",
+          "The common slope is $\\frac{6}{4} = \\frac{3}{2}$, confirming $\\frac{15}{10} = \\frac{3}{2}$."
+        ],
+        "answer": "$k = 15$; the triangles are similar by AA, so $\\frac{6}{4} = \\frac{k}{10}$."
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A line crosses the $y$-axis at $(0, -5)$ and passes through $(8, 1)$. Derive the equation of the line in the form $y = mx + b$, then use it to find the value of $y$ when $x = -4$.",
+      "answer": "$y = \\frac{3}{4}x - 5$; when $x = -4$, $y = -8$.",
+      "solution": {
+        "steps": [
+          "Compute the slope: $m = \\frac{1 - (-5)}{8 - 0} = \\frac{6}{8} = \\frac{3}{4}$.",
+          "The line crosses the $y$-axis at $(0, -5)$, so $b = -5$.",
+          "Write the equation: $y = \\frac{3}{4}x - 5$.",
+          "Evaluate at $x = -4$: $y = \\frac{3}{4}(-4) - 5 = -3 - 5 = -8$."
+        ],
+        "answer": "$y = \\frac{3}{4}x - 5$; when $x = -4$, $y = -8$."
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "On a non-vertical line, one slope triangle has a rise of $-3$ and a run of $5$. A second slope triangle on the same line has a run of $15$. Explain why the two triangles are similar and find the rise of the second triangle. What is the slope of the line?",
+      "answer": "Rise $= -9$; slope $= -\\frac{3}{5}$.",
+      "solution": {
+        "steps": [
+          "Each slope triangle is a right triangle with a horizontal leg (run) and a vertical leg (rise), and both hypotenuses lie along the same line, so corresponding angles are equal (AA similarity).",
+          "Similar triangles have proportional corresponding sides, so $\\frac{\\text{rise}}{\\text{run}}$ is the same for both.",
+          "Set up the proportion: $\\frac{-3}{5} = \\frac{\\text{rise}}{15}$.",
+          "Solve: rise $= 15 \\cdot \\frac{-3}{5} = -9$. The negative rise means the line falls as $x$ increases.",
+          "The slope is $\\frac{-3}{5} = -\\frac{3}{5}$, the same from either triangle."
+        ],
+        "answer": "Rise $= -9$; slope $= -\\frac{3}{5}$."
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A table shows points on a line: $(-2, 7)$, $(1, 1)$, $(4, -5)$. Derive the equation in the form $y = mx + b$ and state the $y$-intercept as a point.",
+      "answer": "$y = -2x + 3$; $y$-intercept $(0, 3)$.",
+      "solution": {
+        "steps": [
+          "Find the slope from two points, say $(-2, 7)$ and $(1, 1)$: $m = \\frac{1 - 7}{1 - (-2)} = \\frac{-6}{3} = -2$.",
+          "Use a point and the slope to find $b$. With $(1, 1)$: $1 = -2(1) + b$, so $b = 1 + 2 = 3$.",
+          "Write the equation: $y = -2x + 3$.",
+          "Check with $(4, -5)$: $-2(4) + 3 = -8 + 3 = -5$. Correct.",
+          "The $y$-intercept is the point where $x = 0$: $(0, 3)$."
+        ],
+        "answer": "$y = -2x + 3$; $y$-intercept $(0, 3)$."
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A candle burns at a constant rate. After $3$ minutes it is $19$ cm tall; after $8$ minutes it is $14$ cm tall. Write an equation for the height $y$ (cm) after $x$ minutes, interpret the slope and $y$-intercept in context, and find how long until the candle is fully burned ($y = 0$).",
+      "answer": "$y = -x + 22$; slope $-1$ cm/min, intercept $22$ cm at start; burned out at $x = 22$ minutes.",
+      "solution": {
+        "steps": [
+          "Treat the data as points $(3, 19)$ and $(8, 14)$. Slope: $m = \\frac{14 - 19}{8 - 3} = \\frac{-5}{5} = -1$.",
+          "Find $b$ using $(3, 19)$: $19 = -1(3) + b$, so $b = 22$.",
+          "Equation: $y = -x + 22$.",
+          "Interpretation: the slope $-1$ means the candle shrinks $1$ cm per minute; the intercept $22$ means it was $22$ cm tall at the start ($x = 0$).",
+          "Set $y = 0$: $0 = -x + 22$, so $x = 22$. The candle is fully burned after $22$ minutes."
+        ],
+        "answer": "$y = -x + 22$; slope $-1$ cm/min, intercept $22$ cm at start; burned out at $x = 22$ minutes."
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Line 1 passes through $(0, 4)$ and $(6, 0)$. Line 2 passes through $(0, -2)$ and $(3, 4)$. Write the equation of each line, determine which line is steeper, and find the point where they intersect.",
+      "answer": "Line 1: $y = -\\frac{2}{3}x + 4$; Line 2: $y = 2x - 2$. Line 2 is steeper; they intersect at $\\left(\\frac{9}{4}, \\frac{5}{2}\\right)$.",
+      "solution": {
+        "steps": [
+          "Line 1 slope: $m = \\frac{0 - 4}{6 - 0} = -\\frac{2}{3}$, intercept $4$, so $y = -\\frac{2}{3}x + 4$.",
+          "Line 2 slope: $m = \\frac{4 - (-2)}{3 - 0} = \\frac{6}{3} = 2$, intercept $-2$, so $y = 2x - 2$.",
+          "Compare steepness by absolute value of slope: $|2| = 2 > \\left|-\\frac{2}{3}\\right| = \\frac{2}{3}$, so Line 2 is steeper.",
+          "Set the equations equal: $-\\frac{2}{3}x + 4 = 2x - 2$. Multiply by $3$: $-2x + 12 = 6x - 6$.",
+          "Solve: $18 = 8x$, so $x = \\frac{18}{8} = \\frac{9}{4}$. Then $y = 2 \\cdot \\frac{9}{4} - 2 = \\frac{9}{2} - 2 = \\frac{5}{2}$.",
+          "The lines intersect at $\\left(\\frac{9}{4}, \\frac{5}{2}\\right)$."
+        ],
+        "answer": "Line 1: $y = -\\frac{2}{3}x + 4$; Line 2: $y = 2x - 2$. Line 2 is steeper; they intersect at $\\left(\\frac{9}{4}, \\frac{5}{2}\\right)$."
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A proportional relationship passes through the origin and through the point $\\left(\\frac{3}{4}, \\frac{9}{2}\\right)$. Derive its equation in the form $y = mx$, then find the value of $x$ for which $y = 30$.",
+      "answer": "$y = 6x$; $x = 5$ when $y = 30$.",
+      "solution": {
+        "steps": [
+          "Because the line passes through the origin, its equation is $y = mx$ with $m = \\frac{y}{x}$ for any point on it.",
+          "Compute $m = \\frac{9/2}{3/4} = \\frac{9}{2} \\times \\frac{4}{3} = \\frac{36}{6} = 6$.",
+          "The equation is $y = 6x$.",
+          "Set $y = 30$: $30 = 6x$, so $x = 5$."
+        ],
+        "answer": "$y = 6x$; $x = 5$ when $y = 30$."
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Explain in your own words, using the idea of similar triangles, why a non-vertical line has the same slope no matter which two distinct points on it you choose.",
+      "answer": "Any two slope triangles on the line are similar by AA, so their rise-to-run ratios are equal, making the slope constant.",
+      "solution": {
+        "steps": [
+          "Pick any two distinct points on the line and draw the slope triangle between them: a horizontal leg (run) and a vertical leg (rise) meeting at a right angle, with the line itself as the hypotenuse.",
+          "Pick any other two points and draw their slope triangle the same way.",
+          "Both triangles have a right angle, and because both hypotenuses lie on the same line they make the same angle with the horizontal axis. Two pairs of equal angles means the triangles are similar by AA.",
+          "Similar triangles have proportional corresponding sides, so the ratio $\\frac{\\text{rise}}{\\text{run}}$ is identical for both triangles.",
+          "That common ratio is the slope, so the slope is the same between any two points on the line."
+        ],
+        "answer": "Any two slope triangles on the line are similar by AA, so their rise-to-run ratios are equal, making the slope constant."
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A line has slope $-\\frac{5}{2}$ and passes through the point $(-4, 7)$. Derive the equation in the form $y = mx + b$, then determine the coordinates of its $x$-intercept.",
+      "answer": "$y = -\\frac{5}{2}x - 3$; $x$-intercept $\\left(-\\frac{6}{5}, 0\\right)$.",
+      "solution": {
+        "steps": [
+          "Start with $y = mx + b$ and $m = -\\frac{5}{2}$: $y = -\\frac{5}{2}x + b$.",
+          "Substitute the point $(-4, 7)$: $7 = -\\frac{5}{2}(-4) + b = 10 + b$, so $b = -3$.",
+          "The equation is $y = -\\frac{5}{2}x - 3$.",
+          "Find the $x$-intercept by setting $y = 0$: $0 = -\\frac{5}{2}x - 3$, so $\\frac{5}{2}x = -3$ and $x = -\\frac{6}{5}$.",
+          "The $x$-intercept is $\\left(-\\frac{6}{5}, 0\\right)$."
+        ],
+        "answer": "$y = -\\frac{5}{2}x - 3$; $x$-intercept $\\left(-\\frac{6}{5}, 0\\right)$."
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Two delivery plans charge a flat fee plus a per-mile rate. Plan A is described by $y = 3x + 8$ and Plan B passes through $(2, 10)$ and $(5, 16)$, where $y$ is total cost in dollars and $x$ is miles. Write Plan B's equation, compare the per-mile rates and flat fees, and find the number of miles at which both plans cost the same.",
+      "answer": "Plan B: $y = 2x + 6$. Plan A costs $3$ per mile with an $\\$8$ fee; Plan B costs $2$ per mile with a $\\$6$ fee. Both cost the same at $x = -2$ miles, which is outside the valid range, so the plans never cost the same for $x \\ge 0$.",
+      "solution": {
+        "steps": [
+          "Plan B slope: $m = \\frac{16 - 10}{5 - 2} = \\frac{6}{3} = 2$.",
+          "Find Plan B's intercept using $(2, 10)$: $10 = 2(2) + b$, so $b = 6$. Plan B is $y = 2x + 6$.",
+          "Compare: Plan A charges $\\$3$ per mile with an $\\$8$ flat fee; Plan B charges $\\$2$ per mile with a $\\$6$ flat fee. Plan B is cheaper per mile and has the smaller fee.",
+          "Set equal: $3x + 8 = 2x + 6$, so $x = -2$.",
+          "A negative mileage is not meaningful, so for any real trip ($x \\ge 0$) Plan B is always cheaper and the two plans never cost the same."
+        ],
+        "answer": "Plan B: $y = 2x + 6$. Plan A costs $3$ per mile with an $\\$8$ fee; Plan B costs $2$ per mile with a $\\$6$ fee. Both cost the same at $x = -2$ miles, which is outside the valid range, so the plans never cost the same for $x \\ge 0$."
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A slope triangle on a line has a run of $6$ and a rise of $4$. A student claims that a different slope triangle on the same line, with a run of $9$, must have a rise of $7$ because $9 - 6 = 3$ and $4 + 3 = 7$. Explain the student's error and find the correct rise.",
+      "answer": "The student added instead of scaling proportionally. The correct rise is $6$, since $\\frac{4}{6} = \\frac{\\text{rise}}{9}$.",
+      "solution": {
+        "steps": [
+          "Slope is a ratio of rise to run, not a fixed amount added on. The two slope triangles are similar (AA), so corresponding sides are proportional, not equal in difference.",
+          "Set up the correct proportion: $\\frac{4}{6} = \\frac{\\text{rise}}{9}$.",
+          "Simplify the left ratio: $\\frac{4}{6} = \\frac{2}{3}$.",
+          "Solve: rise $= 9 \\cdot \\frac{2}{3} = 6$.",
+          "The student's additive reasoning ($4 + 3 = 7$) ignores that the run scaled by a factor of $\\frac{9}{6} = \\frac{3}{2}$, so the rise must also scale by $\\frac{3}{2}$: $4 \\cdot \\frac{3}{2} = 6$."
+        ],
+        "answer": "The student added instead of scaling proportionally. The correct rise is $6$, since $\\frac{4}{6} = \\frac{\\text{rise}}{9}$."
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A line passes through $\\left(-3, \\frac{1}{2}\\right)$ and $\\left(1, -\\frac{7}{2}\\right)$. Derive the equation in the form $y = mx + b$, then determine whether the point $(2, -5)$ lies on the line.",
+      "answer": "$y = -x - \\frac{5}{2}$; the point $(2, -5)$ does not lie on the line (it gives $y = -\\frac{9}{2}$).",
+      "solution": {
+        "steps": [
+          "Slope: $m = \\frac{-\\frac{7}{2} - \\frac{1}{2}}{1 - (-3)} = \\frac{-4}{4} = -1$.",
+          "Find $b$ using $\\left(1, -\\frac{7}{2}\\right)$: $-\\frac{7}{2} = -1(1) + b$, so $b = -\\frac{7}{2} + 1 = -\\frac{5}{2}$.",
+          "Equation: $y = -x - \\frac{5}{2}$.",
+          "Test $(2, -5)$: $y = -(2) - \\frac{5}{2} = -2 - \\frac{5}{2} = -\\frac{9}{2}$.",
+          "Since $-\\frac{9}{2} \\ne -5$, the point $(2, -5)$ does not lie on the line."
+        ],
+        "answer": "$y = -x - \\frac{5}{2}$; the point $(2, -5)$ does not lie on the line (it gives $y = -\\frac{9}{2}$)."
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A hot-air balloon descends at a constant rate. At $x = 0$ minutes its altitude is $y$ meters, and the balloon's altitude follows a line with slope $-25$ that passes through $(6, 350)$. Derive the equation, state the starting altitude, and find the altitude after $10$ minutes.",
+      "answer": "$y = -25x + 500$; starting altitude $500$ m; after $10$ minutes, $250$ m.",
+      "solution": {
+        "steps": [
+          "Use $y = mx + b$ with $m = -25$: $y = -25x + b$.",
+          "Substitute $(6, 350)$: $350 = -25(6) + b = -150 + b$, so $b = 500$.",
+          "Equation: $y = -25x + 500$. The starting altitude is the intercept $b = 500$ meters.",
+          "Evaluate at $x = 10$: $y = -25(10) + 500 = -250 + 500 = 250$ meters."
+        ],
+        "answer": "$y = -25x + 500$; starting altitude $500$ m; after $10$ minutes, $250$ m."
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Show how to derive the general slope-intercept form $y = mx + b$ from the geometry of a line with slope $m$ that crosses the $y$-axis at $(0, b)$. Use a slope triangle between $(0, b)$ and a general point $(x, y)$ on the line.",
+      "answer": "From the slope triangle, $m = \\frac{y - b}{x - 0}$, which rearranges to $y = mx + b$.",
+      "solution": {
+        "steps": [
+          "Take the fixed point where the line meets the $y$-axis, $(0, b)$, and any other point $(x, y)$ on the line.",
+          "Draw the slope triangle between them: the run is $x - 0 = x$ and the rise is $y - b$.",
+          "By the constant-slope property (all slope triangles on the line are similar), this ratio equals the slope $m$: $m = \\frac{y - b}{x}$.",
+          "Multiply both sides by $x$: $mx = y - b$.",
+          "Add $b$ to both sides: $y = mx + b$. This holds for every point $(x, y)$ on the line, so it is the equation of the line."
+        ],
+        "answer": "From the slope triangle, $m = \\frac{y - b}{x - 0}$, which rearranges to $y = mx + b$."
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Line $p$ has equation $y = \\frac{2}{3}x - 1$. Line $q$ passes through the origin and through the point $(9, 6)$. Write the equation of line $q$, explain how the two lines are related, and find the vertical distance between the lines at $x = 6$.",
+      "answer": "Line $q$: $y = \\frac{2}{3}x$. The lines have the same slope $\\frac{2}{3}$, so they are parallel and never intersect; at $x = 6$ the vertical distance is $1$ unit.",
+      "solution": {
+        "steps": [
+          "Line $q$ passes through the origin, so $y = mx$ with $m = \\frac{6}{9} = \\frac{2}{3}$. Thus $q$ is $y = \\frac{2}{3}x$.",
+          "Both lines have slope $\\frac{2}{3}$ but different intercepts ($-1$ for $p$, $0$ for $q$), so they are parallel and never meet.",
+          "At $x = 6$, line $p$: $y = \\frac{2}{3}(6) - 1 = 4 - 1 = 3$. Line $q$: $y = \\frac{2}{3}(6) = 4$.",
+          "The vertical distance is $|4 - 3| = 1$ unit, which matches the constant difference in intercepts."
+        ],
+        "answer": "Line $q$: $y = \\frac{2}{3}x$. The lines have the same slope $\\frac{2}{3}$, so they are parallel and never intersect; at $x = 6$ the vertical distance is $1$ unit."
+      }
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "id": "GEO.S-CP.A.5--worksheet",
+  "standard": "GEO.S-CP.A.5",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Understand independence and conditional probability and use them to interpret data",
+  "clusterCode": "A",
+  "skillName": "Everyday Conditional Probability",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Conditional probability $P(A \\mid B)$ is the chance that $A$ happens given that $B$ has happened. You find it by restricting attention to the cases where $B$ is true: $P(A \\mid B) = \\dfrac{\\text{count}(A \\text{ and } B)}{\\text{count}(B)}$. This worksheet ramps from translating everyday phrasing into notation, through reading two-way tables, up to testing independence and reasoning about why $P(A \\mid B)$ and $P(B \\mid A)$ usually differ.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A report states: 'Among adults who exercise daily, $15\\%$ have high blood pressure.' Let $E$ be 'exercises daily' and $H$ be 'has high blood pressure.' Write the matching conditional-probability statement using $P(\\,\\cdot \\mid \\cdot\\,)$ notation.",
+      "answer": "$P(H \\mid E) = 0.15$",
+      "solution": {
+        "steps": [
+          "The word 'among' names the group we are restricting to: adults who exercise daily, so the condition is $E$.",
+          "The reported figure ($15\\%$) describes how many of that group have high blood pressure, so the target event is $H$.",
+          "Put the target first and the condition after the bar: $P(H \\mid E)$.",
+          "Therefore $P(H \\mid E) = 0.15$."
+        ],
+        "answer": "$P(H \\mid E) = 0.15$"
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "In a class of $30$ students, $18$ play a sport, and of those $18$ sport players, $12$ also play a musical instrument. Find the probability that a student plays an instrument given that they play a sport.",
+      "answer": "$P(I \\mid S) = \\dfrac{2}{3}$",
+      "solution": {
+        "steps": [
+          "The condition is 'plays a sport,' so restrict to the $18$ sport players.",
+          "Among those $18$, the number who also play an instrument is $12$.",
+          "Conditional probability: $P(I \\mid S) = \\dfrac{12}{18}$.",
+          "Reduce: $\\dfrac{12}{18} = \\dfrac{2}{3}$."
+        ],
+        "answer": "$P(I \\mid S) = \\dfrac{2}{3}$"
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A survey finds $P(\\text{likes coffee}) = 0.6$ and $P(\\text{likes coffee} \\mid \\text{works night shift}) = 0.6$. Are 'likes coffee' and 'works night shift' independent? Answer yes or no and give the reason.",
+      "answer": "Yes, they are independent because $P(A \\mid B) = P(A)$.",
+      "solution": {
+        "steps": [
+          "Let $A$ be 'likes coffee' and $B$ be 'works night shift.'",
+          "Two events are independent when conditioning on one does not change the probability of the other: $P(A \\mid B) = P(A)$.",
+          "Here $P(A \\mid B) = 0.6$ and $P(A) = 0.6$, so the two values are equal.",
+          "Since knowing $B$ does not change the chance of $A$, the events are independent."
+        ],
+        "answer": "Yes, independent, since $P(A \\mid B) = P(A) = 0.6$."
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Of $50$ shoppers surveyed, $20$ used a coupon, and $8$ of those coupon users bought dessert. Find $P(\\text{bought dessert} \\mid \\text{used a coupon})$.",
+      "answer": "$\\dfrac{2}{5}$",
+      "solution": {
+        "steps": [
+          "The condition is 'used a coupon,' so restrict to the $20$ coupon users.",
+          "Of those $20$, the number who bought dessert is $8$.",
+          "$P(\\text{dessert} \\mid \\text{coupon}) = \\dfrac{8}{20}$.",
+          "Reduce: $\\dfrac{8}{20} = \\dfrac{2}{5} = 0.4$."
+        ],
+        "answer": "$\\dfrac{2}{5}$ (that is $0.4$)"
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A weather log says: 'On days when it is cloudy, it rains $40\\%$ of the time.' Let $C$ be 'cloudy' and $R$ be 'rains.' Write this as a conditional probability, then state whether it also tells you $P(C \\mid R)$.",
+      "answer": "$P(R \\mid C) = 0.40$; it does not tell you $P(C \\mid R)$.",
+      "solution": {
+        "steps": [
+          "'On days when it is cloudy' is the condition, so $B = C$; 'it rains' is the target, so $A = R$.",
+          "The sentence gives $P(R \\mid C) = 0.40$.",
+          "Conditioning is not symmetric: $P(R \\mid C)$ and $P(C \\mid R)$ generally differ.",
+          "So this statement alone does not tell us $P(C \\mid R)$."
+        ],
+        "answer": "$P(R \\mid C) = 0.40$, and it gives no information about $P(C \\mid R)$."
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A two-way table records $100$ students by whether they own a bike (rows) and whether they walk to school (columns):\n\n|           | Walks | Does not walk | Total |\n|-----------|-------|---------------|-------|\n| Owns bike | $15$  | $25$          | $40$  |\n| No bike   | $35$  | $25$          | $60$  |\n| Total     | $50$  | $50$          | $100$ |\n\nFind $P(\\text{walks} \\mid \\text{owns a bike})$.",
+      "answer": "$\\dfrac{3}{8}$",
+      "solution": {
+        "steps": [
+          "The condition is 'owns a bike,' so restrict to the bike-owner row, total $40$.",
+          "Within that row, the number who walk is $15$.",
+          "$P(\\text{walks} \\mid \\text{owns bike}) = \\dfrac{15}{40}$.",
+          "Reduce: $\\dfrac{15}{40} = \\dfrac{3}{8}$."
+        ],
+        "answer": "$\\dfrac{3}{8}$ (that is $0.375$)"
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Using the same table from item 6:\n\n|           | Walks | Does not walk | Total |\n|-----------|-------|---------------|-------|\n| Owns bike | $15$  | $25$          | $40$  |\n| No bike   | $35$  | $25$          | $60$  |\n| Total     | $50$  | $50$          | $100$ |\n\nFind $P(\\text{owns a bike} \\mid \\text{walks})$. Then explain in one sentence why your answer differs from $P(\\text{walks} \\mid \\text{owns a bike}) = \\dfrac{3}{8}$.",
+      "answer": "$P(\\text{owns a bike} \\mid \\text{walks}) = \\dfrac{3}{10}$; the two conditionals use different denominators (the walker total vs. the bike-owner total).",
+      "solution": {
+        "steps": [
+          "Now the condition is 'walks,' so restrict to the walks column, total $50$.",
+          "Within that column, the number who own a bike is $15$.",
+          "$P(\\text{owns bike} \\mid \\text{walks}) = \\dfrac{15}{50} = \\dfrac{3}{10}$.",
+          "This differs from $\\dfrac{3}{8}$ because $P(A \\mid B)$ and $P(B \\mid A)$ divide the same overlap count ($15$) by different group totals ($50$ walkers versus $40$ bike owners)."
+        ],
+        "answer": "$\\dfrac{3}{10}$; the conditionals differ because the conditioning group (denominator) is different."
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A clinic tests $200$ patients. A two-way table shows test result by disease status:\n\n|                | Has disease | No disease | Total |\n|----------------|-------------|------------|-------|\n| Positive test  | $24$        | $16$       | $40$  |\n| Negative test  | $6$         | $154$      | $160$ |\n| Total          | $30$        | $170$      | $200$ |\n\nFind $P(\\text{has disease} \\mid \\text{positive test})$.",
+      "answer": "$\\dfrac{3}{5}$",
+      "solution": {
+        "steps": [
+          "The condition is 'positive test,' so restrict to the positive-test row, total $40$.",
+          "Within that row, the number who have the disease is $24$.",
+          "$P(\\text{disease} \\mid \\text{positive}) = \\dfrac{24}{40}$.",
+          "Reduce: $\\dfrac{24}{40} = \\dfrac{3}{5} = 0.6$."
+        ],
+        "answer": "$\\dfrac{3}{5}$ (that is $0.6$)"
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Using the clinic table from item 8:\n\n|                | Has disease | No disease | Total |\n|----------------|-------------|------------|-------|\n| Positive test  | $24$        | $16$       | $40$  |\n| Negative test  | $6$         | $154$      | $160$ |\n| Total          | $30$        | $170$      | $200$ |\n\nFind the joint probability $P(\\text{positive test and has disease})$ and contrast it with the conditional $P(\\text{has disease} \\mid \\text{positive test})$ from item 8.",
+      "answer": "$P(\\text{positive and disease}) = \\dfrac{3}{25}$, while $P(\\text{disease} \\mid \\text{positive}) = \\dfrac{3}{5}$.",
+      "solution": {
+        "steps": [
+          "A joint probability divides the overlap cell by the grand total: $\\dfrac{24}{200}$.",
+          "Reduce: $\\dfrac{24}{200} = \\dfrac{3}{25} = 0.12$.",
+          "The conditional from item 8 divides the same $24$ by the positive-test total $40$, giving $\\dfrac{24}{40} = \\dfrac{3}{5}$.",
+          "The joint uses the grand total ($200$); the conditional uses the condition's total ($40$). They are different probabilities."
+        ],
+        "answer": "$P(\\text{positive and disease}) = \\dfrac{3}{25}$ versus $P(\\text{disease} \\mid \\text{positive}) = \\dfrac{3}{5}$."
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A store records $120$ online orders by device (rows) and whether the order was returned (columns):\n\n|         | Returned | Kept | Total |\n|---------|----------|------|-------|\n| Phone   | $18$     | $42$ | $60$  |\n| Laptop  | $27$     | $33$ | $60$  |\n| Total   | $45$     | $75$ | $120$ |\n\nFind $P(\\text{returned} \\mid \\text{ordered on a laptop})$.",
+      "answer": "$\\dfrac{9}{20}$",
+      "solution": {
+        "steps": [
+          "The condition is 'ordered on a laptop,' so restrict to the laptop row, total $60$.",
+          "Within that row, the number returned is $27$.",
+          "$P(\\text{returned} \\mid \\text{laptop}) = \\dfrac{27}{60}$.",
+          "Reduce: $\\dfrac{27}{60} = \\dfrac{9}{20} = 0.45$."
+        ],
+        "answer": "$\\dfrac{9}{20}$ (that is $0.45$)"
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Use the store table from item 10:\n\n|         | Returned | Kept | Total |\n|---------|----------|------|-------|\n| Phone   | $18$     | $42$ | $60$  |\n| Laptop  | $27$     | $33$ | $60$  |\n| Total   | $45$     | $75$ | $120$ |\n\nIs 'returned' independent of 'ordered on a laptop'? Test by comparing $P(\\text{returned} \\mid \\text{laptop})$ with the overall $P(\\text{returned})$, and state your verdict.",
+      "answer": "Not independent: $P(\\text{returned} \\mid \\text{laptop}) = \\dfrac{9}{20}$ but $P(\\text{returned}) = \\dfrac{3}{8}$, and $\\dfrac{9}{20} \\ne \\dfrac{3}{8}$.",
+      "solution": {
+        "steps": [
+          "From item 10, $P(\\text{returned} \\mid \\text{laptop}) = \\dfrac{27}{60} = \\dfrac{9}{20}$.",
+          "The overall (marginal) return rate uses the grand total: $P(\\text{returned}) = \\dfrac{45}{120} = \\dfrac{3}{8}$.",
+          "Independence requires $P(\\text{returned} \\mid \\text{laptop}) = P(\\text{returned})$.",
+          "Compare with a common denominator: $\\dfrac{9}{20} = \\dfrac{18}{40}$ and $\\dfrac{3}{8} = \\dfrac{15}{40}$, so they are not equal.",
+          "Since the conditional differs from the marginal, the events are dependent: ordering on a laptop is associated with a higher return rate."
+        ],
+        "answer": "Dependent, because $P(\\text{returned} \\mid \\text{laptop}) = \\dfrac{9}{20} \\ne \\dfrac{3}{8} = P(\\text{returned})$."
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A marketing study reports $P(\\text{buys} \\mid \\text{saw the ad}) = 0.30$, $P(\\text{buys}) = 0.30$, and $P(\\text{saw the ad}) = 0.45$. First decide whether 'buys' and 'saw the ad' are independent, then verify your verdict using the multiplication rule $P(A \\text{ and } B) = P(A)\\,P(B)$ by computing $P(\\text{buys and saw the ad})$.",
+      "answer": "Independent; $P(\\text{buys and saw the ad}) = 0.135$.",
+      "solution": {
+        "steps": [
+          "Let $A$ be 'buys' and $B$ be 'saw the ad.'",
+          "Compare the conditional to the marginal: $P(A \\mid B) = 0.30 = P(A)$, so the events are independent.",
+          "For independent events the multiplication rule gives $P(A \\text{ and } B) = P(A)\\,P(B)$.",
+          "Compute: $P(A \\text{ and } B) = 0.30 \\times 0.45 = 0.135$.",
+          "So $P(\\text{buys and saw the ad}) = 0.135$, consistent with independence."
+        ],
+        "answer": "Independent, and $P(\\text{buys and saw the ad}) = 0.30 \\times 0.45 = 0.135$."
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "From the clinic table in item 8, $P(\\text{has disease} \\mid \\text{positive test}) = 0.60$ but the overall disease rate is $P(\\text{has disease}) = \\dfrac{30}{200} = 0.15$. Explain in everyday language what the gap between $0.60$ and $0.15$ means, and state whether 'has disease' and 'positive test' are independent.",
+      "answer": "A positive test raises the chance of disease from $15\\%$ to $60\\%$, so the events are dependent.",
+      "solution": {
+        "steps": [
+          "Without any test information, a randomly chosen patient has a $15\\%$ chance of the disease ($P(\\text{disease}) = 0.15$).",
+          "Once we know the test came back positive, that chance jumps to $60\\%$ ($P(\\text{disease} \\mid \\text{positive}) = 0.60$).",
+          "Because the conditional ($0.60$) is much larger than the marginal ($0.15$), knowing the result changes the probability, so the events are dependent.",
+          "In plain terms: a positive test is strong evidence, multiplying the patient's chance of disease by four, which is exactly why the test is useful."
+        ],
+        "answer": "The positive result raises the disease probability from $0.15$ to $0.60$, so the two events are dependent (knowing the test result changes the chance)."
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A town logs $80$ days. A two-way table records cloud cover (rows) and rain (columns):\n\n|             | Rain | No rain | Total |\n|-------------|------|---------|-------|\n| Cloudy      | $24$ | $16$    | $40$  |\n| Not cloudy  | $6$  | $34$    | $40$  |\n| Total       | $30$ | $50$    | $80$  |\n\nCompute both $P(\\text{rain} \\mid \\text{cloudy})$ and $P(\\text{cloudy} \\mid \\text{rain})$, then explain why the two values are not equal even though both involve rain and clouds.",
+      "answer": "$P(\\text{rain} \\mid \\text{cloudy}) = \\dfrac{3}{5}$ and $P(\\text{cloudy} \\mid \\text{rain}) = \\dfrac{4}{5}$; they differ because each divides the same overlap by a different conditioning total.",
+      "solution": {
+        "steps": [
+          "For $P(\\text{rain} \\mid \\text{cloudy})$, restrict to the cloudy row (total $40$): rainy-and-cloudy is $24$, so $\\dfrac{24}{40} = \\dfrac{3}{5}$.",
+          "For $P(\\text{cloudy} \\mid \\text{rain})$, restrict to the rain column (total $30$): rainy-and-cloudy is again $24$, so $\\dfrac{24}{30} = \\dfrac{4}{5}$.",
+          "Both use the same overlap count $24$, but the denominators differ: $40$ cloudy days versus $30$ rainy days.",
+          "Because the conditioning groups have different sizes, $P(\\text{rain} \\mid \\text{cloudy}) = \\dfrac{3}{5} \\ne \\dfrac{4}{5} = P(\\text{cloudy} \\mid \\text{rain})$. Conditioning is not symmetric."
+        ],
+        "answer": "$P(\\text{rain} \\mid \\text{cloudy}) = \\dfrac{3}{5}$, $P(\\text{cloudy} \\mid \\text{rain}) = \\dfrac{4}{5}$; unequal because the denominators ($40$ cloudy days vs. $30$ rainy days) differ."
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Use the weather table from item 14:\n\n|             | Rain | No rain | Total |\n|-------------|------|---------|-------|\n| Cloudy      | $24$ | $16$    | $40$  |\n| Not cloudy  | $6$  | $34$    | $40$  |\n| Total       | $30$ | $50$    | $80$  |\n\nDecide whether 'rain' and 'cloudy' are independent. Use BOTH the conditional test ($P(\\text{rain} \\mid \\text{cloudy})$ vs. $P(\\text{rain})$) and the multiplication rule ($P(\\text{rain and cloudy})$ vs. $P(\\text{rain})\\,P(\\text{cloudy})$), and interpret the result for someone planning an outdoor event.",
+      "answer": "Dependent: $P(\\text{rain} \\mid \\text{cloudy}) = \\dfrac{3}{5} \\ne \\dfrac{3}{8} = P(\\text{rain})$, and $P(\\text{rain and cloudy}) = \\dfrac{3}{10} \\ne \\dfrac{3}{16} = P(\\text{rain})\\,P(\\text{cloudy})$.",
+      "solution": {
+        "steps": [
+          "Conditional test: $P(\\text{rain} \\mid \\text{cloudy}) = \\dfrac{24}{40} = \\dfrac{3}{5}$, while the overall rain rate is $P(\\text{rain}) = \\dfrac{30}{80} = \\dfrac{3}{8}$. Since $\\dfrac{3}{5} \\ne \\dfrac{3}{8}$, the events fail the independence test.",
+          "Multiplication rule: $P(\\text{rain and cloudy}) = \\dfrac{24}{80} = \\dfrac{3}{10}$.",
+          "Compute the product $P(\\text{rain})\\,P(\\text{cloudy}) = \\dfrac{3}{8} \\times \\dfrac{40}{80} = \\dfrac{3}{8} \\times \\dfrac{1}{2} = \\dfrac{3}{16}$.",
+          "Compare with a common denominator: $\\dfrac{3}{10} = \\dfrac{24}{80}$ and $\\dfrac{3}{16} = \\dfrac{15}{80}$, so $\\dfrac{3}{10} \\ne \\dfrac{3}{16}$. Both tests agree the events are dependent.",
+          "Interpretation: clouds and rain are associated. On a cloudy day the chance of rain ($60\\%$) is well above the typical day ($37.5\\%$), so an event planner seeing clouds should treat rain as more likely than usual."
+        ],
+        "answer": "Dependent by both tests: $P(\\text{rain} \\mid \\text{cloudy}) = \\dfrac{3}{5} \\ne \\dfrac{3}{8} = P(\\text{rain})$ and $P(\\text{rain and cloudy}) = \\dfrac{3}{10} \\ne \\dfrac{3}{16} = P(\\text{rain})\\,P(\\text{cloudy})$. Clouds make rain more likely."
+      }
+    }
+  ]
+}

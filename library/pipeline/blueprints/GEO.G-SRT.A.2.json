@@ -1,0 +1,133 @@
+{
+  "standard": "GEO.G-SRT.A.2",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Similarity, Right Triangles, and Trigonometry",
+  "domainCode": "G-SRT",
+  "cluster": "Understand similarity in terms of similarity transformations",
+  "clusterCode": "A",
+  "skillName": "Similarity Transformations and Triangles",
+
+  "description": "Students use the transformational definition of similarity: two figures are similar if a sequence of rigid motions (translation, rotation, reflection) together with a dilation maps one exactly onto the other. Given two figures, they decide whether such a sequence exists and describe it. They explain, using similarity transformations, why similar triangles have all corresponding angles equal and all corresponding sides proportional (the same scale factor $k$). They identify the scale factor of a dilation, write similarity statements with correctly ordered correspondence, and use the angle and proportionality consequences to find missing side lengths and angle measures in similar triangles.",
+
+  "subSkills": [
+    "State the transformational definition of similarity: one figure maps to the other by rigid motions plus a dilation",
+    "Decide whether two given figures are similar and describe a sequence of transformations (rigid motions and a dilation) that maps one onto the other",
+    "Find the scale factor $k$ of a dilation as the ratio of a corresponding image length to preimage length",
+    "Explain why a dilation preserves angle measures and multiplies every length by $k$, so similar triangles have equal corresponding angles and proportional corresponding sides",
+    "Write a similarity statement (e.g. $\\triangle ABC \\sim \\triangle DEF$) with vertices in corresponding order and read off corresponding angles and sides from it",
+    "Use corresponding-angle equality and the common ratio of corresponding sides to solve for unknown side lengths and angle measures in similar triangles"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Identify similarity from a transformation sequence",
+      "example": "Figure $B$ is the image of figure $A$ under a rotation followed by a dilation with scale factor $2$. Are $A$ and $B$ similar? (Yes: a rigid motion followed by a dilation is a similarity transformation, so $A \\sim B$.)"
+    },
+    {
+      "name": "Find the scale factor of a dilation",
+      "example": "$\\triangle ABC \\sim \\triangle DEF$ with $AB = 6$ corresponding to $DE = 9$. Find the scale factor from $\\triangle ABC$ to $\\triangle DEF$. ($k = \\frac{9}{6} = \\frac{3}{2}$.)"
+    },
+    {
+      "name": "Decide similarity and describe the mapping",
+      "example": "Triangle $A$ has sides $3, 4, 5$ and triangle $B$ has sides $9, 12, 15$. Are they similar, and what maps $A$ to $B$? (Yes: each side of $B$ is $3$ times the corresponding side of $A$, so a dilation with $k=3$ composed with a rigid motion maps $A$ to $B$.)"
+    },
+    {
+      "name": "Use proportional sides to find a missing length",
+      "example": "$\\triangle PQR \\sim \\triangle STU$ with $PQ = 8$, $ST = 12$, and $QR = 10$. Find $TU$. ($\\frac{TU}{QR}=\\frac{ST}{PQ}=\\frac{12}{8}$, so $TU = 10 \\cdot \\frac{3}{2} = 15$.)"
+    },
+    {
+      "name": "Corresponding angles from a similarity statement",
+      "example": "Given $\\triangle ABC \\sim \\triangle DEF$ with $\\angle A = 50^\\circ$ and $\\angle B = 70^\\circ$, find $\\angle F$. (Corresponding angles are equal, so $\\angle C = \\angle F = 180^\\circ - 50^\\circ - 70^\\circ = 60^\\circ$.)"
+    },
+    {
+      "name": "Explain the meaning of similarity for triangles",
+      "example": "Explain using transformations why a dilation with center $O$ and scale factor $k$ produces a triangle similar to the original. (A dilation maps each vertex along a ray from $O$, scaling distances by $k$; it preserves angle measures and multiplies all side lengths by $k$, giving equal corresponding angles and proportional corresponding sides.)"
+    },
+    {
+      "name": "Verify a proposed correspondence",
+      "example": "Two triangles have sides $4, 6, 8$ and $6, 9, 12$. Show they are similar and state the scale factor. (Each ratio equals $\\frac{6}{4}=\\frac{9}{6}=\\frac{12}{8}=\\frac{3}{2}$, so the triangles are similar with $k=\\frac{3}{2}$.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recall or computation with the correspondence and ratios given explicitly. Student states whether a named transformation sequence yields similarity, reads off the scale factor from one pair of corresponding sides, or names a corresponding angle/side directly from a given similarity statement. No multi-ratio checking and no equation setup.",
+      "constraints": [
+        "Scale factor computed from one explicitly paired set of side lengths, with small integer or simple fraction results (e.g. $k=2$, $k=\\frac{3}{2}$)",
+        "Similarity-or-not judged from a stated transformation list (rigid motion plus dilation = similar)",
+        "Corresponding angles/sides read directly from a given statement $\\triangle ABC \\sim \\triangle DEF$",
+        "Side lengths and angle measures are whole numbers; correspondence order is given",
+        "These items anchor the start of the single worksheet and form the lower half of tier1"
+      ]
+    },
+    "Medium": {
+      "description": "One layer of reasoning beyond a lookup. Student checks all three side ratios to decide similarity, sets up a single proportion to find one missing side, applies the triangle angle sum after using corresponding-angle equality, or describes a transformation sequence in words. The correspondence may need to be inferred from a figure or matching side lengths.",
+      "constraints": [
+        "Decide similarity by confirming all corresponding side ratios are equal",
+        "Solve a single proportion $\\frac{a}{b}=\\frac{c}{x}$ for one unknown length",
+        "Find a missing angle using corresponding-angle equality together with the $180^\\circ$ triangle sum",
+        "Describe a sequence of rigid motions plus a dilation that maps one figure to the other",
+        "These items occupy the middle of the single worksheet; they form the top of tier1 and the bottom of tier2"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step or justification-based. Student infers the correct correspondence before computing, chains a scale factor through several lengths, solves for an unknown that appears in an algebraic side expression, or explains why two figures are or are not similar using the transformational definition. Requires combining the angle and proportionality consequences.",
+      "constraints": [
+        "Determine the correct vertex correspondence from a figure, then solve for a missing length",
+        "Unknown appears in an algebraic expression, e.g. corresponding sides $2x+1$ and $15$ with known scale factor, solve for $x$",
+        "Use a single scale factor to find more than one missing length or a perimeter",
+        "Justify with the definition why two figures fail to be similar (no single $k$ scales all sides) or why all corresponding angles must be equal",
+        "These items close the single worksheet and form the upper half of tier2"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student thinks similar figures must be congruent, treating a dilation with $k \\neq 1$ as breaking similarity",
+      "distractor": "Says triangles with sides $3,4,5$ and $6,8,10$ are not similar because the side lengths differ, instead of recognizing $k=2$"
+    },
+    {
+      "misconception": "Student inverts the scale factor, dividing preimage by image instead of image by preimage (or vice versa)",
+      "distractor": "From $AB=6$ mapping to $DE=9$ reports $k=\\frac{6}{9}=\\frac{2}{3}$ instead of $k=\\frac{9}{6}=\\frac{3}{2}$"
+    },
+    {
+      "misconception": "Student believes a dilation changes angle measures the way it changes lengths",
+      "distractor": "Says a dilation with scale factor $3$ multiplies each angle by $3$, so a $40^\\circ$ angle becomes $120^\\circ$, instead of leaving angles unchanged"
+    },
+    {
+      "misconception": "Student adds the scale factor to side lengths instead of multiplying",
+      "distractor": "With $k=2$ and side $QR=10$ reports the corresponding side as $10+2=12$ instead of $10\\cdot 2=20$"
+    },
+    {
+      "misconception": "Student matches sides or angles in the wrong correspondence, ignoring the order of the similarity statement",
+      "distractor": "Given $\\triangle ABC \\sim \\triangle DEF$ pairs $AB$ with $EF$ instead of $DE$, producing the wrong proportion"
+    },
+    {
+      "misconception": "Student checks only one pair of corresponding sides and declares similarity without verifying all three ratios are equal",
+      "distractor": "Calls triangles with sides $4,6,8$ and $8,12,15$ similar because the first ratio is $2$, missing that $\\frac{15}{8}\\neq 2$"
+    },
+    {
+      "misconception": "Student confuses the equal-area or equal-perimeter idea with similarity, expecting the scale factor to apply to area linearly",
+      "distractor": "States that with scale factor $k=2$ the area is also multiplied by $2$ instead of $k^2=4$, then uses this to mis-judge similarity"
+    },
+    {
+      "misconception": "Student thinks any two triangles with one pair of equal angles are similar, ignoring the full transformational/AA requirement",
+      "distractor": "Declares two triangles similar from a single shared $60^\\circ$ angle, without equal remaining angles or proportional sides"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

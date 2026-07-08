@@ -1,0 +1,221 @@
+{
+  "id": "A1.S-ID.C.8--worksheet",
+  "standard": "A1.S-ID.C.8",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Interpret linear models",
+  "clusterCode": "C",
+  "skillName": "Correlation Coefficient",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "The correlation coefficient $r$ measures the direction and strength of a linear association between two quantities. It always satisfies $-1 \\le r \\le 1$. The sign of $r$ matches the slope of the line of best fit, and the magnitude $|r|$ tells you how tightly the points cluster around that line: $|r|$ near $1$ is strong, near $0.5$ is moderate, and near $0$ is weak. These items ramp from reading a given $r$ to computing $r$ from a small data set and reasoning about correlation versus causation.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A line of best fit for hours studied versus test score has correlation coefficient $r = 0.92$. Describe the direction (positive, negative, or none) and the strength (strong or weak) of the linear association.",
+      "answer": "Strong positive linear association.",
+      "solution": {
+        "steps": [
+          "The sign of $r$ gives the direction. Here $r = 0.92$ is positive, so the association is positive: as study hours increase, scores tend to increase.",
+          "The magnitude $|r| = 0.92$ is close to $1$, so the association is strong: the points cluster tightly around the line of best fit.",
+          "Therefore the association is strong and positive."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "The amount of daylight and the average monthly heating bill for a house have a line of best fit with $r = -0.88$. State the direction and strength of this linear association.",
+      "answer": "Strong negative linear association.",
+      "solution": {
+        "steps": [
+          "The sign of $r = -0.88$ is negative, so the direction is negative: as daylight increases, the heating bill tends to decrease.",
+          "The magnitude $|r| = 0.88$ is close to $1$, so the association is strong.",
+          "Therefore the association is strong and negative."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A student computes a correlation coefficient of $r = 1.4$ for a data set. Explain why this value must be an error.",
+      "answer": "Impossible: $r$ must satisfy $-1 \\le r \\le 1$, and $1.4 > 1$.",
+      "solution": {
+        "steps": [
+          "The correlation coefficient is always bounded: $-1 \\le r \\le 1$.",
+          "The reported value $r = 1.4$ is greater than $1$, so it lies outside the allowed interval.",
+          "Therefore $r = 1.4$ cannot be a correct correlation coefficient; the student made an error."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "On a scatter plot, the points fall almost exactly along a straight line that rises from left to right. Which value of $r$ is most plausible: $-0.95$, $0$, $0.4$, or $0.95$?",
+      "answer": "$0.95$",
+      "solution": {
+        "steps": [
+          "The points rise from left to right, so the trend is positive and $r$ must be positive. This rules out $-0.95$.",
+          "The points fall almost exactly along the line, so the association is very strong and $|r|$ must be near $1$. This rules out $0$ (no trend) and $0.4$ (weak to moderate).",
+          "The only positive, near-$1$ value is $r = 0.95$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A scatter plot of students' shoe sizes versus their quiz scores shows points scattered all over with no upward or downward pattern. Which value of $r$ best matches this plot: $-0.9$, $0.05$, or $0.85$?",
+      "answer": "$0.05$",
+      "solution": {
+        "steps": [
+          "No upward or downward pattern means there is essentially no linear association, so $r$ should be near $0$.",
+          "Both $-0.9$ and $0.85$ have large magnitude, indicating a strong association, which contradicts the random scatter.",
+          "The value closest to $0$ is $r = 0.05$, which best matches a plot with no linear trend."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A linear fit for two quantities has $r = 0.45$. Describe the direction and strength of the association, and explain what $r = 0.45$ says about how the points cluster around the line.",
+      "answer": "Weak-to-moderate positive linear association; the points are loosely clustered around the line.",
+      "solution": {
+        "steps": [
+          "The sign of $r = 0.45$ is positive, so the direction is positive.",
+          "The magnitude $|r| = 0.45$ is roughly halfway between $0$ and $1$, indicating a weak-to-moderate strength, not a strong one.",
+          "Because $|r|$ is only moderate, the points are loosely scattered around the line of best fit rather than tightly clustered.",
+          "So the association is a weak-to-moderate positive linear association."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Rank these three correlation coefficients from weakest linear association to strongest: $r = -0.82$, $r = 0.30$, $r = 0.60$.",
+      "answer": "Weakest to strongest: $r = 0.30$, then $r = 0.60$, then $r = -0.82$.",
+      "solution": {
+        "steps": [
+          "Strength depends on the magnitude $|r|$, not the sign. Compute each magnitude: $|-0.82| = 0.82$, $|0.30| = 0.30$, $|0.60| = 0.60$.",
+          "Order the magnitudes from smallest to largest: $0.30 < 0.60 < 0.82$.",
+          "So from weakest to strongest the order is $r = 0.30$, then $r = 0.60$, then $r = -0.82$.",
+          "Note that $r = -0.82$ is the strongest even though it is negative, because strength is about magnitude."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A linear regression has correlation coefficient $r = -0.8$. Find the coefficient of determination $r^2$ and interpret what it means about the variation in $y$.",
+      "answer": "$r^2 = 0.64$; about $64\\%$ of the variation in $y$ is explained by the linear relationship with $x$.",
+      "solution": {
+        "steps": [
+          "Square the correlation coefficient: $r^2 = (-0.8)^2 = 0.64$.",
+          "The coefficient of determination is the fraction of the variation in $y$ explained by the linear model.",
+          "So $r^2 = 0.64$ means about $64\\%$ of the variation in $y$ is explained by the linear relationship with $x$; the remaining $36\\%$ is not."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A scatter plot of $y$ versus $x$ trends clearly downward, and the linear fit has coefficient of determination $r^2 = 0.49$. Find $r$ (with the correct sign).",
+      "answer": "$r = -0.7$",
+      "solution": {
+        "steps": [
+          "Take the square root of $r^2$ to find the magnitude: $\\sqrt{0.49} = 0.7$, so $|r| = 0.7$.",
+          "The sign of $r$ matches the direction of the trend. The plot trends downward, so $r$ is negative.",
+          "Therefore $r = -0.7$.",
+          "A common error is to keep $r$ positive after taking the square root; the downward trend forces the negative sign."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "For the three points $(1, 2)$, $(2, 3)$, $(3, 7)$, the mean of the $x$-values is $\\bar{x} = 2$ and the mean of the $y$-values is $\\bar{y} = 4$. Use the formula $r = \\dfrac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sqrt{\\sum (x_i - \\bar{x})^2}\\,\\sqrt{\\sum (y_i - \\bar{y})^2}}$ to compute $r$. Round to two decimal places.",
+      "answer": "$r \\approx 0.94$",
+      "solution": {
+        "steps": [
+          "Find the deviations $x_i - \\bar{x}$: $1 - 2 = -1$, $2 - 2 = 0$, $3 - 2 = 1$.",
+          "Find the deviations $y_i - \\bar{y}$: $2 - 4 = -2$, $3 - 4 = -1$, $7 - 4 = 3$.",
+          "Products $(x_i - \\bar{x})(y_i - \\bar{y})$: $(-1)(-2) = 2$, $(0)(-1) = 0$, $(1)(3) = 3$. Sum $= 2 + 0 + 3 = 5$.",
+          "$\\sum (x_i - \\bar{x})^2 = (-1)^2 + 0^2 + 1^2 = 2$, so $\\sqrt{2} \\approx 1.4142$.",
+          "$\\sum (y_i - \\bar{y})^2 = (-2)^2 + (-1)^2 + 3^2 = 4 + 1 + 9 = 14$, so $\\sqrt{14} \\approx 3.7417$.",
+          "$r = \\dfrac{5}{\\sqrt{2}\\,\\sqrt{14}} = \\dfrac{5}{\\sqrt{28}} = \\dfrac{5}{5.2915} \\approx 0.9449$.",
+          "Rounded to two decimal places, $r \\approx 0.94$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Two data sets each have a line of best fit with slope $3$. The first has $r = 0.55$ and the second has $r = 0.97$. Both slopes are equal, so does that mean the two associations are equally strong? Explain.",
+      "answer": "No. Equal slopes only mean the lines are equally steep; strength is measured by $r$, so the second set ($r = 0.97$) is a much stronger linear association.",
+      "solution": {
+        "steps": [
+          "The slope of the line of best fit measures steepness, not strength. Both lines rise $3$ units of $y$ per unit of $x$.",
+          "The correlation coefficient $r$ measures how tightly the points cluster around the line. A larger $|r|$ means tighter clustering and a stronger linear association.",
+          "Here $|0.97| > |0.55|$, so the second data set's points cluster much more tightly around its line.",
+          "Therefore the associations are not equally strong: the second is far stronger, even though the slopes match. Slope and $r$ describe different things."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "For the four points $(1, 1)$, $(2, 4)$, $(3, 5)$, $(4, 6)$, the means are $\\bar{x} = 2.5$ and $\\bar{y} = 4$. Compute the correlation coefficient $r$ using $r = \\dfrac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sqrt{\\sum (x_i - \\bar{x})^2}\\,\\sqrt{\\sum (y_i - \\bar{y})^2}}$, rounded to two decimal places, and state the direction and strength.",
+      "answer": "$r \\approx 0.96$; a strong positive linear association.",
+      "solution": {
+        "steps": [
+          "Deviations $x_i - \\bar{x}$: $1 - 2.5 = -1.5$, $2 - 2.5 = -0.5$, $3 - 2.5 = 0.5$, $4 - 2.5 = 1.5$.",
+          "Deviations $y_i - \\bar{y}$: $1 - 4 = -3$, $4 - 4 = 0$, $5 - 4 = 1$, $6 - 4 = 2$.",
+          "Products: $(-1.5)(-3) = 4.5$, $(-0.5)(0) = 0$, $(0.5)(1) = 0.5$, $(1.5)(2) = 3$. Sum $= 4.5 + 0 + 0.5 + 3 = 8$.",
+          "$\\sum (x_i - \\bar{x})^2 = (-1.5)^2 + (-0.5)^2 + (0.5)^2 + (1.5)^2 = 2.25 + 0.25 + 0.25 + 2.25 = 5$, so $\\sqrt{5} \\approx 2.2361$.",
+          "$\\sum (y_i - \\bar{y})^2 = (-3)^2 + 0^2 + 1^2 + 2^2 = 9 + 0 + 1 + 4 = 14$, so $\\sqrt{14} \\approx 3.7417$.",
+          "$r = \\dfrac{8}{\\sqrt{5}\\,\\sqrt{14}} = \\dfrac{8}{\\sqrt{70}} = \\dfrac{8}{8.3666} \\approx 0.9562$.",
+          "Rounded, $r \\approx 0.96$. Since it is positive and near $1$, the association is strong and positive."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Across a year, the number of ice cream cones sold and the number of drowning incidents at local lakes have a correlation coefficient of $r = 0.85$. A reporter concludes that buying ice cream causes drownings. Explain why this conclusion is not justified and name a plausible confounding variable.",
+      "answer": "Not justified: a strong correlation does not prove causation. A confounding variable, hot summer weather, increases both ice cream sales and the number of people swimming (and so drownings).",
+      "solution": {
+        "steps": [
+          "An $r$ of $0.85$ shows a strong positive linear association between cone sales and drownings, but correlation alone does not establish that one variable causes the other.",
+          "A third variable can drive both quantities at once. Hot summer weather increases ice cream sales and also increases how many people swim, which raises drowning incidents.",
+          "Because hot weather is a plausible confounding variable, the link between ice cream and drownings can be entirely indirect.",
+          "Therefore the causal conclusion is not justified; the strong correlation is explained by the confounder, not by ice cream causing drownings."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "For the five points $(0, 5)$, $(1, 4)$, $(2, 4)$, $(3, 2)$, $(4, 0)$, the means are $\\bar{x} = 2$ and $\\bar{y} = 3$. Compute the correlation coefficient $r$ using the defining formula, round to two decimal places, and interpret the result.",
+      "answer": "$r \\approx -0.95$; a strong negative linear association.",
+      "solution": {
+        "steps": [
+          "Deviations $x_i - \\bar{x}$: $0 - 2 = -2$, $1 - 2 = -1$, $2 - 2 = 0$, $3 - 2 = 1$, $4 - 2 = 2$.",
+          "Deviations $y_i - \\bar{y}$: $5 - 3 = 2$, $4 - 3 = 1$, $4 - 3 = 1$, $2 - 3 = -1$, $0 - 3 = -3$.",
+          "Products: $(-2)(2) = -4$, $(-1)(1) = -1$, $(0)(1) = 0$, $(1)(-1) = -1$, $(2)(-3) = -6$. Sum $= -4 - 1 + 0 - 1 - 6 = -12$.",
+          "$\\sum (x_i - \\bar{x})^2 = (-2)^2 + (-1)^2 + 0^2 + 1^2 + 2^2 = 4 + 1 + 0 + 1 + 4 = 10$, so $\\sqrt{10} \\approx 3.1623$.",
+          "$\\sum (y_i - \\bar{y})^2 = 2^2 + 1^2 + 1^2 + (-1)^2 + (-3)^2 = 4 + 1 + 1 + 1 + 9 = 16$, so $\\sqrt{16} = 4$.",
+          "$r = \\dfrac{-12}{\\sqrt{10}\\cdot 4} = \\dfrac{-12}{12.6491} \\approx -0.9487$.",
+          "Rounded, $r \\approx -0.95$. The negative sign and magnitude near $1$ mean a strong negative linear association: as $x$ increases, $y$ tends to decrease, with points clustered tightly around the line."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A researcher fits a line to data on weekly exercise hours ($x$) versus resting heart rate ($y$) and reports a slope of $-3$ and a correlation coefficient of $r = -0.68$. A second researcher studies a different group, also finds a slope of $-3$, but reports $r = -0.94$. Compare the two studies in terms of slope, $r$, and $r^2$, and explain in context which fit lets you predict heart rate more reliably from exercise hours.",
+      "answer": "Both lines have the same steepness (slope $-3$), but the second has stronger correlation ($|{-0.94}| > |{-0.68}|$) and a larger $r^2$ ($0.8836$ vs $0.4624$), so the second fit predicts heart rate from exercise hours more reliably.",
+      "solution": {
+        "steps": [
+          "Slope: both studies have slope $-3$, so on average each extra hour of exercise is associated with a $3$ beat-per-minute drop in resting heart rate. The lines are equally steep.",
+          "Correlation $r$: the magnitudes are $|-0.68| = 0.68$ and $|-0.94| = 0.94$. The second study has the larger $|r|$, so its points cluster more tightly around its line, a stronger linear association.",
+          "Coefficient of determination $r^2$: first study $r^2 = (-0.68)^2 = 0.4624$ (about $46\\%$ of the variation in heart rate explained); second study $r^2 = (-0.94)^2 = 0.8836$ (about $88\\%$ explained).",
+          "Because the second model explains a much larger share of the variation, predictions of resting heart rate from exercise hours are more reliable for the second study, even though both lines fall at the same rate.",
+          "This shows slope and $r$ measure different things: slope is steepness, while $r$ and $r^2$ measure how well the line fits the data."
+        ]
+      }
+    }
+  ]
+}

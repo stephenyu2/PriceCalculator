@@ -1,0 +1,212 @@
+{
+  "id": "A2.N-CN.C--cluster-test",
+  "standard": null,
+  "clusterId": "A2.N-CN.C",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Number and Quantity — The Complex Number System",
+  "domainCode": "N-CN",
+  "cluster": "Use complex numbers in polynomial identities and equations",
+  "clusterCode": "C",
+  "skillName": "Use complex numbers in polynomial identities and equations",
+  "materialType": "cluster-test",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "intro": "End-of-cluster mastery check for using complex numbers in polynomial equations: classifying roots by the discriminant, simplifying square roots of negatives, and solving quadratics with non-real complex-conjugate solutions in standard form $a+bi$.",
+  "items": [
+    {
+      "id": 1,
+      "standard": "A2.N-CN.C.7",
+      "difficulty": "Easy",
+      "prompt": "Solve $x^2+49=0$.\nA) $x=\\pm7$\nB) $x=\\pm7i$\nC) $x=\\pm49i$\nD) $x=-7$",
+      "answer": "B) $x=\\pm7i$",
+      "solution": {
+        "steps": [
+          "Isolate $x^2$: $x^2=-49$.",
+          "Take the square root of both sides: $x=\\pm\\sqrt{-49}$.",
+          "Rewrite using $\\sqrt{-1}=i$: $\\sqrt{-49}=\\sqrt{49}\\cdot i=7i$, so $x=\\pm7i$.",
+          "A drops the imaginary unit, treating $\\sqrt{-49}$ as a real number. C fails to take the square root of $49$. D keeps only one root and is real."
+        ],
+        "answer": "B) $x=\\pm7i$"
+      }
+    },
+    {
+      "id": 2,
+      "standard": "A2.N-CN.C.7",
+      "difficulty": "Easy",
+      "prompt": "Solve $3x^2+48=0$.\nA) $x=\\pm16i$\nB) $x=\\pm4$\nC) $x=\\pm4i$\nD) $x=\\pm16$",
+      "answer": "C) $x=\\pm4i$",
+      "solution": {
+        "steps": [
+          "Divide both sides by $3$: $x^2+16=0$, so $x^2=-16$.",
+          "Take the square root: $x=\\pm\\sqrt{-16}=\\pm\\sqrt{16}\\cdot i=\\pm4i$.",
+          "A forgets to take the square root of $16$. B drops the imaginary unit. D both drops $i$ and fails to take the root."
+        ],
+        "answer": "C) $x=\\pm4i$"
+      }
+    },
+    {
+      "id": 3,
+      "standard": "A2.N-CN.C.7",
+      "difficulty": "Easy",
+      "prompt": "Without solving, what is the nature of the roots of $2x^2-3x+5=0$?\nA) Two distinct real roots\nB) One repeated real root\nC) Two complex-conjugate roots\nD) No solutions of any kind",
+      "answer": "C) Two complex-conjugate roots",
+      "solution": {
+        "steps": [
+          "Compute the discriminant $b^2-4ac$ with $a=2$, $b=-3$, $c=5$: $(-3)^2-4(2)(5)=9-40=-31$.",
+          "Since the discriminant is negative, the quadratic has two complex-conjugate solutions.",
+          "A and B require a positive or zero discriminant respectively. D misreads a negative discriminant as 'no solutions'; over the complex numbers there are always two roots."
+        ],
+        "answer": "C) Two complex-conjugate roots"
+      }
+    },
+    {
+      "id": 4,
+      "standard": "A2.N-CN.C.7",
+      "difficulty": "Easy",
+      "prompt": "Simplify $\\sqrt{-50}$.\nA) $5\\sqrt{2}$\nB) $25i\\sqrt{2}$\nC) $-5\\sqrt{2}$\nD) $5i\\sqrt{2}$",
+      "answer": "D) $5i\\sqrt{2}$",
+      "solution": {
+        "steps": [
+          "Factor out $-1$: $\\sqrt{-50}=\\sqrt{-1}\\cdot\\sqrt{50}=i\\sqrt{50}$.",
+          "Reduce the radical: $\\sqrt{50}=\\sqrt{25\\cdot2}=5\\sqrt{2}$.",
+          "So $\\sqrt{-50}=5i\\sqrt{2}$.",
+          "A drops the imaginary unit. B mis-reduces $\\sqrt{50}$ to $25\\sqrt{2}$. C drops the imaginary unit and mis-handles $i^2=-1$, producing a negative real."
+        ],
+        "answer": "D) $5i\\sqrt{2}$"
+      }
+    },
+    {
+      "id": 5,
+      "standard": "A2.N-CN.C.7",
+      "difficulty": "Medium",
+      "prompt": "Solve $x^2-4x+13=0$.\nA) $x=2\\pm3i$\nB) $x=4\\pm3i$\nC) $x=-2\\pm3i$\nD) $x=2\\pm9i$",
+      "answer": "A) $x=2\\pm3i$",
+      "solution": {
+        "steps": [
+          "Apply the quadratic formula with $a=1$, $b=-4$, $c=13$: $x=\\dfrac{4\\pm\\sqrt{(-4)^2-4(1)(13)}}{2}$.",
+          "Discriminant: $16-52=-36$, so $\\sqrt{-36}=6i$.",
+          "$x=\\dfrac{4\\pm6i}{2}=2\\pm3i$.",
+          "B divides only the imaginary term by $2a$, forgetting the real part. C mis-signs $-b$. D fails to take the square root of $36$ inside the imaginary part."
+        ],
+        "answer": "A) $x=2\\pm3i$"
+      }
+    },
+    {
+      "id": 6,
+      "standard": "A2.N-CN.C.7",
+      "difficulty": "Medium",
+      "prompt": "Solve $x^2+6x+34=0$.\nA) $x=3\\pm5i$\nB) $x=-3\\pm5i$\nC) $x=-6\\pm5i$\nD) $x=-3\\pm25i$",
+      "answer": "B) $x=-3\\pm5i$",
+      "solution": {
+        "steps": [
+          "Complete the square: $x^2+6x=-34$, then add $\\left(\\dfrac{6}{2}\\right)^2=9$ to both sides: $x^2+6x+9=-34+9$.",
+          "$(x+3)^2=-25$, so $x+3=\\pm\\sqrt{-25}=\\pm5i$.",
+          "$x=-3\\pm5i$.",
+          "A mis-signs the real part. C uses $-b=-6$ without halving it. D fails to take the square root of $25$."
+        ],
+        "answer": "B) $x=-3\\pm5i$"
+      }
+    },
+    {
+      "id": 7,
+      "standard": "A2.N-CN.C.7",
+      "difficulty": "Medium",
+      "prompt": "Solve $x^2-2x+5=0$.\nA) $x=1\\pm2i$\nB) $x=-1\\pm2i$\nC) $x=2\\pm2i$\nD) $x=1\\pm4i$",
+      "answer": "A) $x=1\\pm2i$",
+      "solution": {
+        "steps": [
+          "Quadratic formula with $a=1$, $b=-2$, $c=5$: $x=\\dfrac{2\\pm\\sqrt{4-20}}{2}$.",
+          "Discriminant: $4-20=-16$, so $\\sqrt{-16}=4i$.",
+          "$x=\\dfrac{2\\pm4i}{2}=1\\pm2i$.",
+          "B mis-signs $-b$. C divides only the imaginary part by $2a$. D fails to take the square root of $16$."
+        ],
+        "answer": "A) $x=1\\pm2i$"
+      }
+    },
+    {
+      "id": 8,
+      "standard": "A2.N-CN.C.7",
+      "difficulty": "Medium",
+      "prompt": "Solve $x^2+10x+29=0$.\nA) $x=-5\\pm2i$\nB) $x=5\\pm2i$\nC) $x=-10\\pm2i$\nD) $x=-5\\pm4i$",
+      "answer": "A) $x=-5\\pm2i$",
+      "solution": {
+        "steps": [
+          "Complete the square: $x^2+10x=-29$, add $\\left(\\dfrac{10}{2}\\right)^2=25$: $(x+5)^2=-29+25=-4$.",
+          "$x+5=\\pm\\sqrt{-4}=\\pm2i$.",
+          "$x=-5\\pm2i$.",
+          "B mis-signs the real part. C uses $-b=-10$ without halving. D fails to take the square root of $4$."
+        ],
+        "answer": "A) $x=-5\\pm2i$"
+      }
+    },
+    {
+      "id": 9,
+      "standard": "A2.N-CN.C.7",
+      "difficulty": "Hard",
+      "prompt": "Solve $x^2-2x+4=0$.\nA) $x=1\\pm i\\sqrt{12}$\nB) $x=1\\pm 2i\\sqrt{3}$\nC) $x=1\\pm i\\sqrt{3}$\nD) $x=2\\pm i\\sqrt{3}$",
+      "answer": "C) $x=1\\pm i\\sqrt{3}$",
+      "solution": {
+        "steps": [
+          "Quadratic formula with $a=1$, $b=-2$, $c=4$: $x=\\dfrac{2\\pm\\sqrt{4-16}}{2}=\\dfrac{2\\pm\\sqrt{-12}}{2}$.",
+          "Simplify the radical: $\\sqrt{-12}=i\\sqrt{12}=i\\cdot2\\sqrt{3}=2i\\sqrt{3}$.",
+          "$x=\\dfrac{2\\pm2i\\sqrt{3}}{2}=1\\pm i\\sqrt{3}$.",
+          "A leaves $\\sqrt{12}$ unreduced. B reduces the radical but forgets to divide by $2a$. D divides only the real part by $2a$."
+        ],
+        "answer": "C) $x=1\\pm i\\sqrt{3}$"
+      }
+    },
+    {
+      "id": 10,
+      "standard": "A2.N-CN.C.7",
+      "difficulty": "Hard",
+      "prompt": "Solve $2x^2-2x+1=0$.\nA) $x=\\dfrac{1}{2}\\pm\\dfrac{1}{2}i$\nB) $x=1\\pm i$\nC) $x=\\dfrac{1}{2}\\pm i$\nD) $x=2\\pm2i$",
+      "answer": "A) $x=\\dfrac{1}{2}\\pm\\dfrac{1}{2}i$",
+      "solution": {
+        "steps": [
+          "Quadratic formula with $a=2$, $b=-2$, $c=1$: $x=\\dfrac{2\\pm\\sqrt{(-2)^2-4(2)(1)}}{2(2)}=\\dfrac{2\\pm\\sqrt{4-8}}{4}$.",
+          "Discriminant: $4-8=-4$, so $\\sqrt{-4}=2i$.",
+          "$x=\\dfrac{2\\pm2i}{4}=\\dfrac{1}{2}\\pm\\dfrac{1}{2}i$.",
+          "B and D divide by $2$ instead of $2a=4$. C divides only the real part by $4$, leaving the imaginary part as $i$."
+        ],
+        "answer": "A) $x=\\dfrac{1}{2}\\pm\\dfrac{1}{2}i$"
+      }
+    },
+    {
+      "id": 11,
+      "standard": "A2.N-CN.C.7",
+      "difficulty": "Hard",
+      "prompt": "A quadratic with real coefficients has $3-2i$ as one of its roots. Which equation could it be?\nA) $x^2-6x+5=0$\nB) $x^2-6x+13=0$\nC) $x^2+6x+13=0$\nD) $x^2-3x+13=0$",
+      "answer": "B) $x^2-6x+13=0$",
+      "solution": {
+        "steps": [
+          "Because the coefficients are real, the conjugate $3+2i$ must also be a root.",
+          "Sum of roots: $(3-2i)+(3+2i)=6$. Product of roots: $(3-2i)(3+2i)=9-(2i)^2=9-(-4)=13$.",
+          "For $x^2-(\\text{sum})x+(\\text{product})=0$, this gives $x^2-6x+13=0$.",
+          "A uses product $9-4=5$, forgetting $i^2=-1$. C mis-signs the sum. D uses only the given root's real part as the sum."
+        ],
+        "answer": "B) $x^2-6x+13=0$"
+      }
+    },
+    {
+      "id": 12,
+      "standard": "A2.N-CN.C.7",
+      "difficulty": "Hard",
+      "prompt": "Verify which value is a solution of $x^2-4x+13=0$ by substitution.\nA) $x=2+3i$\nB) $x=2+3i$ is rejected because the discriminant is negative\nC) $x=4+3i$\nD) $x=2+9i$",
+      "answer": "A) $x=2+3i$",
+      "solution": {
+        "steps": [
+          "Substitute $x=2+3i$. First $(2+3i)^2=4+12i+9i^2=4+12i-9=-5+12i$ (using $i^2=-1$).",
+          "Then $-4(2+3i)=-8-12i$.",
+          "Add all terms: $(-5+12i)+(-8-12i)+13=(-5-8+13)+(12i-12i)=0+0i=0$. So $x=2+3i$ is a solution.",
+          "B wrongly treats a negative discriminant as 'no solution'. C and D are not roots; for example $(4+3i)^2-4(4+3i)+13\\neq0$."
+        ],
+        "answer": "A) $x=2+3i$"
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T19:56:47.282Z",
+  "generatedAt": "2026-06-24T19:56:47.282Z"
+}

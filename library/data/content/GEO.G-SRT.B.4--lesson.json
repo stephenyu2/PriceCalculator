@@ -1,0 +1,168 @@
+{
+  "id": "GEO.G-SRT.B.4--lesson",
+  "standard": "GEO.G-SRT.B.4",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Similarity, Right Triangles, and Trigonometry",
+  "domainCode": "G-SRT",
+  "cluster": "Prove theorems involving similarity",
+  "clusterCode": "B",
+  "skillName": "Triangle Similarity Theorems",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Two big theorems follow from triangle similarity. The Triangle Proportionality Theorem says that a line parallel to one side of a triangle cuts the other two sides into proportional pieces, so in $\\triangle ABC$ with $\\overline{DE} \\parallel \\overline{BC}$ we get $\\frac{AD}{DB} = \\frac{AE}{EC}$. Its converse lets you test parallelism by comparing ratios. In a right triangle, the altitude to the hypotenuse creates three similar triangles, and the resulting geometric-mean relationships ($h = \\sqrt{pq}$ for the altitude and $a = \\sqrt{c\\,p}$ for a leg) lead directly to a proof of the Pythagorean Theorem. In every problem, name the similarity criterion (AA, SSS$\\sim$, SAS$\\sim$) that justifies each step.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "In $\\triangle ABC$, point $D$ lies on $\\overline{AB}$ and point $E$ lies on $\\overline{AC}$ with $\\overline{DE} \\parallel \\overline{BC}$. If $AD = 6$, $DB = 4$, and $AE = 9$, find $EC$.",
+      "solution": {
+        "steps": [
+          "Because $\\overline{DE} \\parallel \\overline{BC}$, the Triangle Proportionality Theorem gives proportional pieces on the two sides: $\\frac{AD}{DB} = \\frac{AE}{EC}$.",
+          "Substitute the known lengths: $\\frac{6}{4} = \\frac{9}{EC}$.",
+          "Cross multiply: $6 \\cdot EC = 4 \\cdot 9 = 36$.",
+          "Solve for $EC$: $EC = \\frac{36}{6} = 6$."
+        ],
+        "answer": "$EC = 6$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "In $\\triangle PQR$, $S$ is on $\\overline{PQ}$ and $T$ is on $\\overline{PR}$ with $PS = 8$, $SQ = 12$, $PT = 10$, and $TR = 15$. Determine whether $\\overline{ST} \\parallel \\overline{QR}$.",
+      "solution": {
+        "steps": [
+          "By the Converse of the Triangle Proportionality Theorem, $\\overline{ST} \\parallel \\overline{QR}$ exactly when $\\frac{PS}{SQ} = \\frac{PT}{TR}$.",
+          "Compute the first ratio: $\\frac{PS}{SQ} = \\frac{8}{12} = \\frac{2}{3}$.",
+          "Compute the second ratio: $\\frac{PT}{TR} = \\frac{10}{15} = \\frac{2}{3}$.",
+          "The ratios are equal ($\\frac{2}{3} = \\frac{2}{3}$), so the converse applies."
+        ],
+        "answer": "Yes, $\\overline{ST} \\parallel \\overline{QR}$ because $\\frac{PS}{SQ} = \\frac{PT}{TR} = \\frac{2}{3}$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Right $\\triangle ABC$ has its right angle at $C$, and the altitude $\\overline{CD}$ is drawn to the hypotenuse $\\overline{AB}$, meeting it at $D$. If $AD = 4$ and $DB = 9$, find the altitude $CD$.",
+      "solution": {
+        "steps": [
+          "The altitude to the hypotenuse splits the right triangle into two smaller triangles, each similar to the original, giving $\\triangle ACD \\sim \\triangle CBD$ by AA.",
+          "From that similarity, $\\frac{AD}{CD} = \\frac{CD}{DB}$, so $CD$ is the geometric mean of the two hypotenuse segments: $CD = \\sqrt{AD \\cdot DB}$.",
+          "Substitute: $CD = \\sqrt{4 \\cdot 9} = \\sqrt{36}$.",
+          "Simplify: $CD = 6$."
+        ],
+        "answer": "$CD = 6$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "In $\\triangle ABC$, $\\overline{DE} \\parallel \\overline{BC}$ with $D$ on $\\overline{AB}$ and $E$ on $\\overline{AC}$. Given $AD = x$, $DB = x + 2$, $AE = 6$, and $EC = 10$, solve for $x$.",
+      "solution": {
+        "steps": [
+          "Since $\\overline{DE} \\parallel \\overline{BC}$, the Triangle Proportionality Theorem gives $\\frac{AD}{DB} = \\frac{AE}{EC}$.",
+          "Substitute: $\\frac{x}{x+2} = \\frac{6}{10}$, which simplifies to $\\frac{x}{x+2} = \\frac{3}{5}$.",
+          "Cross multiply: $5x = 3(x+2)$.",
+          "Distribute and collect like terms: $5x = 3x + 6$, so $2x = 6$.",
+          "Solve: $x = 3$."
+        ],
+        "answer": "$x = 3$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Right $\\triangle ABC$ has its right angle at $C$ and altitude $\\overline{CD}$ drawn to hypotenuse $\\overline{AB}$. Using the similar triangles $\\triangle ACD \\sim \\triangle ABC$ and $\\triangle CBD \\sim \\triangle ABC$, derive the Pythagorean Theorem $a^2 + b^2 = c^2$, where $a = BC$, $b = AC$, and $c = AB$.",
+      "solution": {
+        "steps": [
+          "Let $AD = p$ and $DB = q$ be the two pieces of the hypotenuse, so $c = p + q$.",
+          "From $\\triangle ACD \\sim \\triangle ABC$, corresponding sides give $\\frac{AC}{AB} = \\frac{AD}{AC}$, so $AC^2 = AB \\cdot AD$, that is $b^2 = c\\,p$.",
+          "From $\\triangle CBD \\sim \\triangle ABC$, corresponding sides give $\\frac{BC}{AB} = \\frac{DB}{BC}$, so $BC^2 = AB \\cdot DB$, that is $a^2 = c\\,q$.",
+          "Add the two leg relations: $a^2 + b^2 = c\\,q + c\\,p = c(p + q)$.",
+          "Since $p + q = c$, this becomes $a^2 + b^2 = c \\cdot c = c^2$, which is the Pythagorean Theorem."
+        ],
+        "answer": "$a^2 + b^2 = c^2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "In $\\triangle ABC$, $D$ is on $\\overline{AB}$ and $E$ is on $\\overline{AC}$ with $\\overline{DE} \\parallel \\overline{BC}$. If $AD = 8$, $DB = 6$, and $AE = 12$, find $EC$.",
+      "hint": "Set up part-to-part: $\\frac{AD}{DB} = \\frac{AE}{EC}$, then cross multiply.",
+      "solution": {
+        "steps": [
+          "By the Triangle Proportionality Theorem, $\\frac{AD}{DB} = \\frac{AE}{EC}$.",
+          "Substitute: $\\frac{8}{6} = \\frac{12}{EC}$.",
+          "Cross multiply: $8 \\cdot EC = 6 \\cdot 12 = 72$.",
+          "Solve: $EC = \\frac{72}{8} = 9$."
+        ],
+        "answer": "$EC = 9$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "In $\\triangle PQR$, $S$ is on $\\overline{PQ}$ and $T$ is on $\\overline{PR}$ with $PS = 6$, $SQ = 9$, $PT = 8$, and $TR = 10$. Is $\\overline{ST} \\parallel \\overline{QR}$?",
+      "hint": "Compare $\\frac{PS}{SQ}$ with $\\frac{PT}{TR}$. They must be equal for the segment to be parallel.",
+      "solution": {
+        "steps": [
+          "By the converse of the Triangle Proportionality Theorem, $\\overline{ST} \\parallel \\overline{QR}$ only if $\\frac{PS}{SQ} = \\frac{PT}{TR}$.",
+          "First ratio: $\\frac{PS}{SQ} = \\frac{6}{9} = \\frac{2}{3}$.",
+          "Second ratio: $\\frac{PT}{TR} = \\frac{8}{10} = \\frac{4}{5}$.",
+          "Since $\\frac{2}{3} \\ne \\frac{4}{5}$, the ratios are unequal."
+        ],
+        "answer": "No, $\\overline{ST}$ is not parallel to $\\overline{QR}$ because $\\frac{2}{3} \\ne \\frac{4}{5}$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Right $\\triangle ABC$ has its right angle at $C$ and altitude $\\overline{CD}$ to hypotenuse $\\overline{AB}$. If $AD = 3$ and $DB = 12$, find the altitude $CD$.",
+      "hint": "The altitude is the geometric mean of the two hypotenuse segments: $CD = \\sqrt{AD \\cdot DB}$.",
+      "solution": {
+        "steps": [
+          "The altitude to the hypotenuse satisfies $CD = \\sqrt{AD \\cdot DB}$.",
+          "Substitute: $CD = \\sqrt{3 \\cdot 12} = \\sqrt{36}$.",
+          "Simplify: $CD = 6$."
+        ],
+        "answer": "$CD = 6$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Right $\\triangle ABC$ has its right angle at $C$ and altitude $\\overline{CD}$ to hypotenuse $\\overline{AB}$, with $AD = 3$ and $DB = 12$. Find the leg $AC$.",
+      "hint": "A leg is the geometric mean of the whole hypotenuse and the adjacent segment: $AC = \\sqrt{AB \\cdot AD}$. First find $AB = AD + DB$.",
+      "solution": {
+        "steps": [
+          "The whole hypotenuse is $AB = AD + DB = 3 + 12 = 15$.",
+          "The leg adjacent to segment $AD$ satisfies the leg geometric-mean relation $AC = \\sqrt{AB \\cdot AD}$.",
+          "Substitute: $AC = \\sqrt{15 \\cdot 3} = \\sqrt{45}$.",
+          "Simplify the radical: $\\sqrt{45} = \\sqrt{9 \\cdot 5} = 3\\sqrt{5}$."
+        ],
+        "answer": "$AC = 3\\sqrt{5}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "In $\\triangle ABC$, $\\overline{DE} \\parallel \\overline{BC}$ with $D$ on $\\overline{AB}$ and $E$ on $\\overline{AC}$. Given $AD = x$, $DB = x + 3$, $AE = 4$, and $EC = 8$, solve for $x$.",
+      "hint": "Write $\\frac{AD}{DB} = \\frac{AE}{EC}$, reduce the numeric ratio, then cross multiply.",
+      "solution": {
+        "steps": [
+          "By the Triangle Proportionality Theorem, $\\frac{AD}{DB} = \\frac{AE}{EC}$.",
+          "Substitute: $\\frac{x}{x+3} = \\frac{4}{8} = \\frac{1}{2}$.",
+          "Cross multiply: $2x = 1 \\cdot (x + 3)$, so $2x = x + 3$.",
+          "Solve: $2x - x = 3$, giving $x = 3$."
+        ],
+        "answer": "$x = 3$"
+      }
+    }
+  ]
+}

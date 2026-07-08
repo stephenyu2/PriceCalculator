@@ -1,0 +1,168 @@
+{
+  "id": "GEO.G-CO.A.1--lesson",
+  "standard": "GEO.G-CO.A.1",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Experiment with transformations in the plane",
+  "clusterCode": "A",
+  "skillName": "Precise Geometric Definitions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Geometry starts from a few terms we agree to leave undefined: point, line, distance along a line, and distance around a circular arc. We take these as primitive starting points because any attempt to define them would have to use other words that themselves need defining, leading in a circle. Every other term is then built precisely from these primitives. A good definition is complete (it includes every condition needed), precise (it rules out near-miss figures), and non-circular (it never uses the word being defined). In this lesson we state the precise definitions of a line segment, an angle, a circle, perpendicular lines, and parallel lines, and we use them to identify terms, repair flawed definitions, and run short distance and angle computations.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Which of these is an undefined term in geometry: point, angle, circle, or line segment? Explain why the other three are not undefined.",
+      "solution": {
+        "steps": [
+          "The undefined notions of plane geometry are point, line, distance along a line, and distance around a circular arc. They are taken as primitives because defining them would require other words that themselves need defining (circularity).",
+          "Of the four choices, only point appears on that list, so point is the undefined term.",
+          "An angle is defined as the union of two rays sharing a common endpoint, so it is a defined term.",
+          "A circle is defined as the set of points at a fixed distance from a center, so it is a defined term.",
+          "A line segment is defined as the points of a line between two endpoints together with those endpoints, so it is a defined term."
+        ],
+        "answer": "$\\text{point}$ (it is one of the four undefined notions; angle, circle, and segment are all defined from the primitives)"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Choose the precise definition of a circle and explain why the other descriptions fail: (i) a round closed curve; (ii) the set of all points in a plane at a fixed distance $r$ from a given center point; (iii) a curve that has no corners.",
+      "solution": {
+        "steps": [
+          "A precise definition must state every condition needed to determine the figure exactly, using the undefined notions.",
+          "Description (ii) names the plane, a fixed center point, and the fixed distance $r$ (a distance along a line). That fully determines the figure, so (ii) is the precise definition.",
+          "Description (i), 'a round closed curve,' is vague: many closed curves are round (an ellipse, an oval) but are not circles, because it omits the fixed-distance-from-a-center condition.",
+          "Description (iii), 'a curve with no corners,' also describes ellipses and many other smooth curves, so it does not single out the circle either.",
+          "Only (ii) uses the primitives to pin down exactly one figure for a given center and radius."
+        ],
+        "answer": "(ii) the set of all points in a plane at a fixed distance $r$ from a given center point"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A student writes: \"An angle is two lines that meet at a point.\" Identify the flaw and rewrite the definition precisely.",
+      "solution": {
+        "steps": [
+          "Check the definition against the figure it should describe. Two lines extend forever in both directions, so two intersecting lines create four angles, not one, and the figure is 'a pair of intersecting lines,' not a single angle.",
+          "The fix is to use rays, not lines. A ray has exactly one endpoint and extends in one direction.",
+          "The two rays must share that endpoint, which is called the vertex of the angle.",
+          "Corrected definition: an angle is the union of two rays that share a common endpoint, called the vertex."
+        ],
+        "answer": "The error is using 'lines' instead of 'rays.' Precise definition: an angle is the union of two rays sharing a common endpoint (the vertex)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A circle is defined as all points in a plane that are exactly $7$ units from center $O$. Point $P$ lies on this circle, and point $Q$ is the center. What is the distance $PQ$, and how does the definition justify your answer?",
+      "solution": {
+        "steps": [
+          "Identify the center: the problem says $Q$ is the center, so $Q = O$.",
+          "By the definition of a circle, every point on the circle is exactly the fixed distance (the radius) from the center.",
+          "Here the radius is $7$ units, and $P$ lies on the circle, so $P$ is $7$ units from the center $O = Q$.",
+          "Therefore $PQ = 7$ units. No computation beyond reading the definition is needed: the radius is the fixed distance built into the definition."
+        ],
+        "answer": "$PQ = 7$ units, because every point on the circle is the fixed radius distance ($7$) from the center."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Lines $m$ and $n$ are perpendicular and intersect at point $X$. One of the four angles formed measures $(2x + 10)^\\circ$. Find $x$, citing the definition of perpendicular lines.",
+      "solution": {
+        "steps": [
+          "By definition, perpendicular lines are two lines that intersect to form a right angle, which measures $90^\\circ$.",
+          "So each of the four angles at $X$ is a right angle, and in particular $(2x + 10)^\\circ = 90^\\circ$.",
+          "Set up the equation: $2x + 10 = 90$.",
+          "Subtract $10$ from both sides: $2x = 80$.",
+          "Divide both sides by $2$: $x = 40$."
+        ],
+        "answer": "$x = 40$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Which one of these is a defined term rather than an undefined notion: distance along a line, line, perpendicular lines, or point?",
+      "hint": "The undefined notions are point, line, distance along a line, and distance around a circular arc. Anything built from those is a defined term.",
+      "solution": {
+        "steps": [
+          "List the undefined notions: point, line, distance along a line, and distance around a circular arc.",
+          "Three of the four choices (distance along a line, line, and point) are on that list, so they are undefined.",
+          "Perpendicular lines are defined as two lines that intersect to form a right angle, so perpendicular lines is the defined term."
+        ],
+        "answer": "$\\text{perpendicular lines}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Two distinct coplanar lines never meet, no matter how far they are extended. What are they called, and which condition stops this from describing skew lines?",
+      "hint": "Skew lines also never meet, but they are not in the same plane.",
+      "solution": {
+        "steps": [
+          "Two lines in the same plane that never intersect are parallel lines.",
+          "The word 'coplanar' (in the same plane) is the condition that rules out skew lines.",
+          "Skew lines never meet either, but they lie in different planes, so requiring the lines to be coplanar excludes them and leaves exactly the parallel case."
+        ],
+        "answer": "Parallel lines; the 'coplanar' condition is what excludes skew lines."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Which undefined notions does the definition of a circle depend on? List them.",
+      "hint": "Reread the circle definition: 'the set of all points in a plane at a fixed distance $r$ from a center point.' Pick out each primitive idea it uses.",
+      "solution": {
+        "steps": [
+          "The circle definition refers to a center point and to the points that make up the circle, so it depends on the undefined notion point.",
+          "It says the points lie in a plane, so it uses the notion of a plane (built from points and lines).",
+          "It requires the points to be a fixed distance $r$ from the center, so it depends on distance along a line.",
+          "Putting these together, the circle definition rests on point, plane, and distance along a line."
+        ],
+        "answer": "Point, plane, and distance along a line."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A student defines a line segment as \"a line between two points.\" Explain the flaw and write a precise definition.",
+      "hint": "A line has no endpoints, but a segment does. What set of points should the definition single out?",
+      "solution": {
+        "steps": [
+          "The phrase 'a line' is wrong: a line extends forever in both directions and has no endpoints, while a segment is bounded by two endpoints.",
+          "A precise definition must single out only the points between (and including) the two endpoints.",
+          "Let the endpoints be $A$ and $B$. The segment is the set of points on the line through $A$ and $B$ that lie between $A$ and $B$, together with $A$ and $B$ themselves.",
+          "This includes the endpoints and excludes everything past them, fixing the flaw."
+        ],
+        "answer": "Flaw: a line has no endpoints. Precise definition: a line segment is the set of points on the line between two endpoints $A$ and $B$, together with $A$ and $B$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Lines $p$ and $q$ are perpendicular and meet at point $Y$. One of the angles formed measures $(5x - 5)^\\circ$. Find $x$.",
+      "hint": "Perpendicular lines form right angles, so set the angle expression equal to $90$.",
+      "solution": {
+        "steps": [
+          "By the definition of perpendicular lines, the lines intersect to form a right angle of $90^\\circ$.",
+          "So $(5x - 5)^\\circ = 90^\\circ$, giving the equation $5x - 5 = 90$.",
+          "Add $5$ to both sides: $5x = 95$.",
+          "Divide both sides by $5$: $x = 19$."
+        ],
+        "answer": "$x = 19$"
+      }
+    }
+  ]
+}

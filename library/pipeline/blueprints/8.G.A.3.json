@@ -1,0 +1,137 @@
+{
+  "standard": "8.G.A.3",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand congruence and similarity using physical models, transparencies, or geometry software",
+  "clusterCode": "A",
+  "skillName": "Transformations on the Coordinate Plane",
+
+  "description": "Students describe and carry out the four basic transformations (translations, reflections, rotations, and dilations) on two-dimensional figures using coordinates. Given a point or a polygon's vertices, they apply a transformation rule to produce image coordinates, and conversely they identify which transformation maps a preimage onto a given image. They distinguish rigid motions (translations, reflections, rotations) which preserve size and shape from dilations which preserve shape but scale size by a factor $k$ about a center (typically the origin).",
+
+  "subSkills": [
+    "Apply a translation by a vector: $(x,y)\\to(x+a,\\;y+b)$",
+    "Reflect a point over the $x$-axis $(x,y)\\to(x,-y)$, the $y$-axis $(x,y)\\to(-x,y)$, the line $y=x$ $(x,y)\\to(y,x)$, and $y=-x$ $(x,y)\\to(-y,-x)$",
+    "Rotate a point about the origin by $90^\\circ$, $180^\\circ$, and $270^\\circ$ using the coordinate rules",
+    "Dilate a point about the origin by scale factor $k$: $(x,y)\\to(kx,\\;ky)$",
+    "Apply a transformation to every vertex of a polygon to find the image figure",
+    "Given a preimage and image, identify the single transformation (and its parameters) that produced it",
+    "Recognize that translations, reflections, and rotations preserve side lengths and angles (congruence) while dilations preserve angles and shape but scale lengths by $k$ (similarity)",
+    "Compose two transformations in sequence and find the final coordinates"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Translate a point",
+      "example": "The point $A(3,-2)$ is translated $4$ units left and $5$ units up. What are the coordinates of $A'$? Answer: $A'(-1,3)$."
+    },
+    {
+      "name": "Reflect a point over an axis or line",
+      "example": "Reflect $P(-6,2)$ over the $x$-axis. Answer: $P'(-6,-2)$. Reflect $Q(5,3)$ over the line $y=x$. Answer: $Q'(3,5)$."
+    },
+    {
+      "name": "Rotate a point about the origin",
+      "example": "Rotate $B(4,1)$ by $90^\\circ$ counterclockwise about the origin. Using $(x,y)\\to(-y,x)$, $B'(-1,4)$."
+    },
+    {
+      "name": "Dilate a point about the origin",
+      "example": "Dilate $C(6,-9)$ by scale factor $k=\\frac{1}{3}$ centered at the origin. Using $(x,y)\\to(kx,ky)$, $C'(2,-3)$."
+    },
+    {
+      "name": "Transform a polygon (all vertices)",
+      "example": "Triangle with vertices $D(1,2)$, $E(4,2)$, $F(1,5)$ is translated by $(x,y)\\to(x-3,y+1)$. Image: $D'(-2,3)$, $E'(1,3)$, $F'(-2,6)$."
+    },
+    {
+      "name": "Identify the transformation from preimage and image",
+      "example": "A figure has vertex $G(2,7)$ and its image has vertex $G'(-7,2)$. What single transformation maps $G$ to $G'$? A $90^\\circ$ counterclockwise rotation about the origin, since $(x,y)\\to(-y,x)$."
+    },
+    {
+      "name": "Congruence vs. similarity / effect on lengths",
+      "example": "A segment of length $8$ is dilated by $k=\\frac{3}{2}$ about the origin. The image length is $12$, and the figures are similar but not congruent."
+    },
+    {
+      "name": "Composition of transformations",
+      "example": "Point $H(2,3)$ is first reflected over the $y$-axis, then translated $5$ units down. After reflection: $(-2,3)$; after translation: $H''(-2,-2)$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single transformation applied to one point with a directly stated rule. Coordinates are small integers and the transformation type (translate, reflect over an axis, rotate $180^\\circ$, or dilate by an integer factor) is named in the prompt.",
+      "constraints": [
+        "Exactly one point and one transformation",
+        "Transformation explicitly named with all parameters given",
+        "Coordinates are integers with absolute value $\\le 8$",
+        "Dilations (if any) use integer scale factor $k=2$ or $k=3$ about the origin",
+        "Reflections limited to the $x$-axis or $y$-axis; rotations limited to $180^\\circ$"
+      ]
+    },
+    "Medium": {
+      "description": "A single transformation applied to a full polygon (3 to 4 vertices), or a single point transformed under a less routine rule (rotation by $90^\\circ$ or $270^\\circ$, reflection over $y=x$ or $y=-x$, dilation by a fractional factor). Student must apply the rule consistently to every vertex.",
+      "constraints": [
+        "One transformation applied to all vertices of a polygon, OR a $90^\\circ/270^\\circ$ rotation or $y=x$ / $y=-x$ reflection of a point",
+        "Coordinates are integers with absolute value $\\le 10$",
+        "Dilations may use a unit fraction $k=\\frac{1}{2}$ or $\\frac{1}{3}$ chosen so image coordinates stay integers",
+        "May ask the student to state the effect on a side length under a dilation"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning: a composition of two transformations, identifying an unknown transformation from preimage and image, or solving for a missing scale factor / vector / vertex. Requires interpreting the result, not just applying a stated rule.",
+      "constraints": [
+        "Composition of two transformations in sequence, OR identify the single transformation mapping a given preimage to a given image",
+        "May require solving for an unknown parameter (scale factor $k$, translation vector, or center)",
+        "May combine a dilation with a rigid motion and ask whether figures are congruent, similar, or neither",
+        "Coordinates may be larger or include reasoning about preserved vs. changed lengths and angles"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Confuses the direction of a translation, treating 'left/down' as adding instead of subtracting",
+      "distractor": "For $A(3,-2)$ translated $4$ left and $5$ up, computes $(3+4,\\,-2-5)=(7,-7)$ instead of $(-1,3)$"
+    },
+    {
+      "misconception": "Reflects over the wrong axis, negating the wrong coordinate",
+      "distractor": "Reflecting $P(-6,2)$ over the $x$-axis gives $(6,2)$ (negated $x$) instead of $(-6,-2)$"
+    },
+    {
+      "misconception": "Uses the wrong rotation rule, e.g. swaps coordinates without negating, or negates the wrong one",
+      "distractor": "For a $90^\\circ$ counterclockwise rotation of $B(4,1)$, computes $(1,4)$ (just swapped) or $(1,-4)$ instead of $(-1,4)$"
+    },
+    {
+      "misconception": "Confuses $90^\\circ$ clockwise with $90^\\circ$ counterclockwise (mixes up $(-y,x)$ and $(y,-x)$)",
+      "distractor": "For a $90^\\circ$ counterclockwise rotation of $B(4,1)$, applies the clockwise rule to get $(1,-4)$ instead of $(-1,4)$"
+    },
+    {
+      "misconception": "Adds the scale factor to each coordinate instead of multiplying when dilating",
+      "distractor": "Dilating $C(6,-9)$ by $k=\\frac{1}{3}$ gives $(6+\\frac{1}{3},\\,-9+\\frac{1}{3})$ or $(6\\cdot 3,-9\\cdot 3)=(18,-27)$ instead of $(2,-3)$"
+    },
+    {
+      "misconception": "Believes a dilation produces a congruent figure (does not change side lengths)",
+      "distractor": "Says a segment of length $8$ dilated by $k=\\frac{3}{2}$ still has length $8$, or that the figures are congruent, instead of length $12$ and similar"
+    },
+    {
+      "misconception": "Reflects over $y=x$ by negating instead of swapping coordinates",
+      "distractor": "Reflecting $Q(5,3)$ over $y=x$ gives $(-5,3)$ or $(5,-3)$ instead of swapping to $(3,5)$"
+    },
+    {
+      "misconception": "In a composition, applies the two transformations in the wrong order or to the original point twice",
+      "distractor": "For 'reflect over $y$-axis then translate $5$ down' on $H(2,3)$, translates first or applies translation to $(2,3)$ to get $(2,-2)$ instead of $(-2,-2)$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

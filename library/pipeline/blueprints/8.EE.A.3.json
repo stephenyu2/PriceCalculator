@@ -1,0 +1,118 @@
+{
+  "standard": "8.EE.A.3",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Expressions and Equations",
+  "domainCode": "EE",
+  "cluster": "Work with radicals and integer exponents",
+  "clusterCode": "A",
+  "skillName": "Powers of 10 and Estimation",
+
+  "description": "Students express very large or very small quantities as a single digit times an integer power of 10 (for example $3 \\times 10^{8}$ or $5 \\times 10^{-6}$), use that form to estimate quantities, and determine how many times as large one quantity is than another by dividing the leading digits and subtracting the exponents. They round a given number to one significant digit, write it in single-digit-times-power-of-10 form, and reason about magnitude through the exponents.",
+
+  "subSkills": [
+    "Round a large or small number to a single nonzero digit and write it as $a \\times 10^{n}$ where $1 \\le a < 10$ is an integer estimate",
+    "Convert between standard (decimal) form and single-digit-times-power-of-10 form, including negative exponents for small numbers",
+    "Compare two quantities by subtracting the exponents to find the order-of-magnitude difference",
+    "Divide two numbers in single-digit-times-power-of-10 form by dividing leading digits and subtracting exponents to answer 'how many times as much'",
+    "Multiply numbers in power-of-10 form by adding exponents",
+    "Interpret the exponent as the number of places the decimal point moves"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Round and express in single-digit times power of 10",
+      "example": "Express the estimated population $7{,}900{,}000{,}000$ as a single digit times an integer power of 10. Answer: $8 \\times 10^{9}$."
+    },
+    {
+      "name": "Small quantity with negative exponent",
+      "example": "The width of a red blood cell is about $0.000008$ m. Write it as a single digit times a power of 10. Answer: $8 \\times 10^{-6}$ m."
+    },
+    {
+      "name": "How many times as much (large vs large)",
+      "example": "The Sun is about $1 \\times 10^{9}$ m wide and the Moon is about $4 \\times 10^{6}$ m wide. About how many times as wide as the Moon is the Sun? Answer: $\\dfrac{1 \\times 10^{9}}{4 \\times 10^{6}} = 0.25 \\times 10^{3} = 250$ times."
+    },
+    {
+      "name": "How many times as much (large vs small / order of magnitude)",
+      "example": "Quantity A is $6 \\times 10^{5}$ and quantity B is $3 \\times 10^{-2}$. How many times as large is A than B? Answer: $\\dfrac{6 \\times 10^{5}}{3 \\times 10^{-2}} = 2 \\times 10^{7}$ times."
+    },
+    {
+      "name": "Estimate a product or total",
+      "example": "A country has about $3 \\times 10^{8}$ people who each use about $4 \\times 10^{2}$ gallons of water per day. Estimate the daily total. Answer: $(3 \\times 4) \\times 10^{8+2} = 1.2 \\times 10^{11}$ gallons."
+    },
+    {
+      "name": "Compare exponents to judge magnitude",
+      "example": "Which is larger, $9 \\times 10^{4}$ or $2 \\times 10^{6}$, and by about how many powers of 10? Answer: $2 \\times 10^{6}$ is larger; its exponent is 2 greater, so it is roughly $10^{2} = 100$ times as large."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step conversion or comparison with friendly numbers. The student rounds to one digit and writes $a \\times 10^{n}$, or reads off which of two power-of-10 numbers is larger. Exponents are positive (large numbers) and the leading digits divide evenly.",
+      "constraints": [
+        "Exponent $n$ is a positive integer between $3$ and $9$",
+        "Rounding to one significant digit requires no carrying ambiguity (the digit after the lead is clearly $<5$ or clearly $\\ge 5$)",
+        "Comparisons use leading digit $1$ or equal leading digits so the answer is a clean power of 10",
+        "Single operation only"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step problems: divide leading digits AND subtract exponents to answer 'how many times as much', or convert a small number to a negative exponent, or estimate a product by combining multiplication of digits with addition of exponents. May require normalizing a result so the leading factor is a single digit.",
+      "constraints": [
+        "May involve negative exponents (small quantities, $10^{-1}$ to $10^{-9}$)",
+        "Leading-digit division does not always come out whole (for example $\\dfrac{1}{4} = 0.25$) so the student renormalizes, e.g. $0.25 \\times 10^{3} = 250$",
+        "Two operations: digit operation plus exponent operation",
+        "Context drawn from science (mass, distance, time) requiring the student to extract the two quantities"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning: combine large and small magnitudes (subtracting a negative exponent), chain an estimate then a comparison, or interpret/critique a magnitude claim. Requires careful sign handling on exponents and renormalization of the leading factor.",
+      "constraints": [
+        "Mixes a positive and a negative exponent so exponent subtraction yields a sign change (for example $5 - (-2) = 7$)",
+        "Requires at least three reasoning steps (extract, operate on digits, operate on exponents, renormalize/interpret)",
+        "May ask the student to evaluate whether a stated 'times as much' claim is reasonable and justify with exponents",
+        "Answer must be re-expressed in single-digit-times-power-of-10 form when the raw quotient is not"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student adds the exponents when dividing instead of subtracting them",
+      "distractor": "For $\\dfrac{6 \\times 10^{5}}{3 \\times 10^{-2}}$ computes $2 \\times 10^{5+(-2)} = 2 \\times 10^{3}$ instead of $2 \\times 10^{7}$"
+    },
+    {
+      "misconception": "Student mishandles the sign when subtracting a negative exponent",
+      "distractor": "For $\\dfrac{10^{5}}{10^{-2}}$ writes $10^{5-2} = 10^{3}$ instead of $10^{5-(-2)} = 10^{7}$"
+    },
+    {
+      "misconception": "Student counts the digits or zeros wrong when writing the power of 10",
+      "distractor": "Writes $7{,}900{,}000{,}000 \\approx 8 \\times 10^{8}$ (off by one in the exponent) instead of $8 \\times 10^{9}$"
+    },
+    {
+      "misconception": "Student uses a positive exponent for a number less than 1",
+      "distractor": "Writes $0.000008 = 8 \\times 10^{6}$ instead of $8 \\times 10^{-6}$"
+    },
+    {
+      "misconception": "Student divides the larger leading digit into the smaller (wrong order) or forgets to renormalize a quotient under 1",
+      "distractor": "For $\\dfrac{1 \\times 10^{9}}{4 \\times 10^{6}}$ writes $4 \\times 10^{3} = 4000$ instead of $0.25 \\times 10^{3} = 250$"
+    },
+    {
+      "misconception": "Student adds exponents but multiplies leading digits incorrectly, or adds the digits, when estimating a product",
+      "distractor": "For $(3 \\times 10^{8})(4 \\times 10^{2})$ writes $7 \\times 10^{10}$ (added $3+4$) instead of $1.2 \\times 10^{11}$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

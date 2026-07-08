@@ -1,0 +1,131 @@
+{
+  "standard": "A1.S-ID.C.7",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Interpret linear models",
+  "clusterCode": "C",
+  "skillName": "Interpreting Slope and Intercept",
+
+  "description": "Given a linear model $y=mx+b$ (often a line of best fit) that summarizes a real-world bivariate data set, students interpret the slope and the $y$-intercept in the context of the data. They explain the slope $m$ as a rate of change, the predicted change in the response variable $y$ for each one-unit increase in the explanatory variable $x$, stated with correct sign and the units of the data. They explain the intercept $b$ as the constant term, the predicted value of $y$ when $x=0$, again with units, and judge whether that value is meaningful for the situation. Students read $m$ and $b$ from an equation, compute them from two data points or a table, extract them from a graphed trend line, and translate a verbal context into the correct interpretation. They also evaluate whether a given interpretation is correct, including whether the intercept makes sense or is an extrapolation beyond the data.",
+
+  "subSkills": [
+    "Identify the slope $m$ and the intercept $b$ from a linear model written as $y=mx+b$",
+    "Interpret the slope as a rate of change: the predicted change in $y$ per one-unit increase in $x$, with correct sign and units",
+    "Interpret the $y$-intercept as the predicted value of $y$ when $x=0$, with units",
+    "Compute the slope from two data points or a table as $m=\\dfrac{y_2-y_1}{x_2-x_1}$ and state its contextual meaning",
+    "Read the slope and intercept from a graphed line of best fit and interpret each",
+    "Decide whether the intercept is meaningful or an unrealistic extrapolation outside the range of the data",
+    "Evaluate or correct a proposed interpretation of a slope or intercept"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Interpret the slope of a given model",
+      "example": "A line of best fit for plant height $y$ (cm) versus weeks $x$ is $y=2.5x+4$. Interpret the slope. The slope $2.5$ means the plant grows about $2.5$ cm taller for each additional week."
+    },
+    {
+      "name": "Interpret the y-intercept of a given model",
+      "example": "For the model $y=2.5x+4$, interpret the intercept. The intercept $4$ means that at week $x=0$ the plant was about $4$ cm tall."
+    },
+    {
+      "name": "Interpret a negative slope",
+      "example": "The value of a phone is modeled by $y=-35x+600$ dollars after $x$ months. The slope $-35$ means the phone loses about $\\$35$ in value each month, and the intercept $600$ is its value when new at $x=0$."
+    },
+    {
+      "name": "Compute the slope from data and interpret it",
+      "example": "A table shows a taxi fare of $\\$5.50$ at $2$ miles and $\\$11.50$ at $6$ miles. The slope $m=\\dfrac{11.50-5.50}{6-2}=1.5$ means the fare increases by $\\$1.50$ per mile."
+    },
+    {
+      "name": "Read slope and intercept from a graphed trend line and interpret",
+      "example": "A scatter plot of monthly sales has a best-fit line passing through $(0,200)$ and $(4,360)$. The slope $\\dfrac{360-200}{4-0}=40$ means sales rise by about $40$ units per month, and the intercept $200$ is the predicted sales in month $0$."
+    },
+    {
+      "name": "Judge whether the intercept is meaningful or an extrapolation",
+      "example": "A model for test score $y$ versus hours studied $x$ is $y=8x+45$. The intercept $45$ predicts a score of $45$ for a student who studies $x=0$ hours; this is meaningful only if $x=0$ is within or near the observed data."
+    },
+    {
+      "name": "Evaluate or correct a flawed interpretation",
+      "example": "For $y=2.5x+4$, a student says 'the slope means the plant is $2.5$ cm tall.' This is wrong; the slope is a rate, the growth of $2.5$ cm per week, not a single height."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A model is given explicitly as $y=mx+b$ with a positive slope and intercept and clearly stated units. The student identifies and interprets exactly ONE parameter (slope OR intercept) whose meaning maps directly: slope as 'amount of change per unit' or intercept as 'value when $x=0$.' No computation and no judgment about meaningfulness are required. tier1 lives here and ramps into Medium.",
+      "constraints": [
+        "Model supplied explicitly in $y=mx+b$ form with a positive slope and positive intercept",
+        "Exactly one of slope or intercept is asked about",
+        "Slope maps directly to 'change in $y$ per one unit of $x$'; intercept maps directly to 'value of $y$ at $x=0$'",
+        "Units and variable meanings are stated in the prompt; context is familiar (cost, height, distance)"
+      ]
+    },
+    "Medium": {
+      "description": "Interpret a negative or decimal slope with correct sign and units, interpret both slope and intercept of the same model, or compute the slope from two data points or a table before interpreting it. Requires attention to sign, units, and the $\\dfrac{\\Delta y}{\\Delta x}$ setup. tier1 ends here and tier2 begins here.",
+      "constraints": [
+        "Slope may be negative or a decimal and must be interpreted with the correct direction (increase vs. decrease) and units",
+        "Interpret both parameters of one model, or compute $m=\\dfrac{y_2-y_1}{x_2-x_1}$ from two given points or a table before interpreting",
+        "Read slope and/or intercept from a described graphed line of best fit (two stated points)",
+        "Context may be less familiar (depreciation, cooling, fuel use) but variables and units are given"
+      ]
+    },
+    "Hard": {
+      "description": "Judge whether an intercept is meaningful or an unrealistic extrapolation, evaluate or correct a flawed interpretation, distinguish slope-as-rate from intercept-as-value when both are present, or build and justify a full interpretation from a multi-clause context. Requires reasoning about the model AND the data context, not just reading parameters. tier2 lives here.",
+      "constraints": [
+        "Decide whether the intercept makes sense in context or is an extrapolation outside the observed range of $x$, and justify the decision",
+        "Critique a proposed interpretation (e.g. slope stated as a single value rather than a rate, or units/sign dropped) and give the corrected statement",
+        "Interpret a model where the data range, units, or variable roles must be inferred from a worded description before stating the meaning of $m$ and $b$",
+        "Compare two interpretations or two models and decide which correctly describes the rate of change or starting value, identifying the error in the other"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student interprets the slope as a single value of $y$ rather than a rate of change",
+      "distractor": "For $y=2.5x+4$, says the slope means the plant is $2.5$ cm tall, instead of growing $2.5$ cm per week"
+    },
+    {
+      "misconception": "Student swaps the roles of slope and intercept, calling the intercept the rate or the slope the starting value",
+      "distractor": "For $y=2.5x+4$, says the plant grows $4$ cm per week and started at $2.5$ cm, reversing $m$ and $b$"
+    },
+    {
+      "misconception": "Student drops the sign of a negative slope, describing a decreasing quantity as increasing",
+      "distractor": "For $y=-35x+600$, says the phone gains $\\$35$ in value each month instead of losing $\\$35$ each month"
+    },
+    {
+      "misconception": "Student omits or mismatches the units, giving a bare number with no per-unit rate",
+      "distractor": "For a fare model with slope $1.5$, says the fare increases by $\\$1.50$ total or by $1.5$ with no units, instead of $\\$1.50$ per mile"
+    },
+    {
+      "misconception": "Student interprets the intercept as the value of $x$ when $y=0$ instead of the value of $y$ when $x=0$",
+      "distractor": "For $y=2.5x+4$, says the intercept $4$ means the plant reaches its measurement after $4$ weeks, instead of being $4$ cm tall at week $0$"
+    },
+    {
+      "misconception": "Student inverts the slope formula, computing $\\dfrac{\\Delta x}{\\Delta y}$ instead of $\\dfrac{\\Delta y}{\\Delta x}$",
+      "distractor": "From $(2,5.50)$ and $(6,11.50)$, computes $\\dfrac{6-2}{11.50-5.50}=\\dfrac{2}{3}$ instead of the rate $1.5$ dollars per mile"
+    },
+    {
+      "misconception": "Student treats every intercept as physically meaningful and ignores extrapolation beyond the data",
+      "distractor": "Claims an intercept that requires $x=0$ far outside the observed data range is a reliable real prediction rather than a possibly unrealistic extrapolation"
+    },
+    {
+      "misconception": "Student reads the slope as the total change over the whole data set rather than the change per one unit of $x$",
+      "distractor": "For slope $40$ over $4$ months, says sales increased by $40$ units total across the period instead of $40$ units each month"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "id": "8.SP.A.2--worksheet--hard",
+  "standard": "8.SP.A.2",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate patterns of association in bivariate data",
+  "clusterCode": "A",
+  "skillName": "Fitting Lines to Scatter Plots",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "Each problem asks you to fit a line to bivariate data, write its equation in the form $y = mx + b$, and interpret or assess the fit in context. Use two representative points to find the slope, then back-substitute for the intercept, and always check your answer against the spread of the data.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A study records hours spent exercising per week $(x)$ and resting heart rate in beats per minute $(y)$ for several adults. A line of best fit passes through the representative points $(2, 76)$ and $(8, 58)$. Write the equation of the line in the form $y = mx + b$, then interpret the slope in context.",
+      "answer": "$y = -3x + 82$; each additional hour of exercise per week is associated with a decrease of about $3$ beats per minute in resting heart rate.",
+      "solution": {
+        "steps": [
+          "Find the slope using the two points: $m = \\frac{58 - 76}{8 - 2} = \\frac{-18}{6} = -3$.",
+          "Substitute $m = -3$ and the point $(2, 76)$ into $y = mx + b$: $76 = -3(2) + b$, so $76 = -6 + b$.",
+          "Solve for the intercept: $b = 76 + 6 = 82$.",
+          "The equation is $y = -3x + 82$.",
+          "The slope $-3$ means that for each extra hour of weekly exercise, the model predicts resting heart rate drops by about $3$ beats per minute."
+        ],
+        "answer": "$y = -3x + 82$; each additional hour of exercise per week is associated with a decrease of about $3$ beats per minute in resting heart rate."
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "The table shows the number of pages read $(x)$ and minutes spent reading $(y)$ for one student over several sessions: $(10, 12)$, $(20, 26)$, $(30, 38)$, $(40, 52)$. Using the first and last points as representative points of a line of fit, write the equation in the form $y = mx + b$ and predict the time to read $50$ pages.",
+      "answer": "$y = \\frac{4}{3}x - \\frac{4}{3}$; about $65.3$ minutes to read $50$ pages.",
+      "solution": {
+        "steps": [
+          "Use the representative points $(10, 12)$ and $(40, 52)$: $m = \\frac{52 - 12}{40 - 10} = \\frac{40}{30} = \\frac{4}{3}$.",
+          "Substitute $m = \\frac{4}{3}$ and $(10, 12)$: $12 = \\frac{4}{3}(10) + b = \\frac{40}{3} + b$.",
+          "Solve: $b = 12 - \\frac{40}{3} = \\frac{36}{3} - \\frac{40}{3} = -\\frac{4}{3}$.",
+          "The equation is $y = \\frac{4}{3}x - \\frac{4}{3}$.",
+          "Predict for $x = 50$: $y = \\frac{4}{3}(50) - \\frac{4}{3} = \\frac{200}{3} - \\frac{4}{3} = \\frac{196}{3} \\approx 65.3$ minutes."
+        ],
+        "answer": "$y = \\frac{4}{3}x - \\frac{4}{3}$; about $65.3$ minutes to read $50$ pages."
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A scatter plot relates outdoor temperature in degrees Fahrenheit $(x)$ to daily hot-chocolate sales in dollars $(y)$ at a cafe. A trend line passes through $(30, 240)$ and $(60, 120)$. Write the equation in the form $y = mx + b$ and interpret both the slope and the $y$-intercept in context.",
+      "answer": "$y = -4x + 360$; sales drop about $\\$4$ for each $1^\\circ$F rise in temperature, and the intercept $\\$360$ is the predicted sales at $0^\\circ$F.",
+      "solution": {
+        "steps": [
+          "Compute the slope: $m = \\frac{120 - 240}{60 - 30} = \\frac{-120}{30} = -4$.",
+          "Substitute $m = -4$ and $(30, 240)$: $240 = -4(30) + b = -120 + b$.",
+          "Solve: $b = 240 + 120 = 360$.",
+          "The equation is $y = -4x + 360$.",
+          "Slope: each $1^\\circ$F increase in temperature is associated with about a $\\$4$ decrease in hot-chocolate sales. Intercept: at $0^\\circ$F the model predicts about $\\$360$ in sales."
+        ],
+        "answer": "$y = -4x + 360$; sales drop about $\\$4$ for each $1^\\circ$F rise in temperature, and the intercept $\\$360$ is the predicted sales at $0^\\circ$F."
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Two students fit lines to the same scatter plot of $9$ points. Line P is $y = 2x + 1$ and line Q is $y = x + 5$. The data points are $(1, 6)$, $(2, 7)$, $(3, 8)$, $(4, 9)$, $(5, 10)$, $(6, 11)$, $(7, 12)$, $(8, 13)$, $(9, 14)$. Which line fits better, and justify your answer using the closeness of the points to each line.",
+      "answer": "Line Q, $y = x + 5$, fits better because every data point lies exactly on it (zero spread), while line P misses most points by large amounts.",
+      "solution": {
+        "steps": [
+          "Test line Q $y = x + 5$ on a few points: at $x = 1$, $y = 6$ matches; at $x = 5$, $y = 10$ matches; at $x = 9$, $y = 14$ matches. Every point satisfies $y = x + 5$, so the spread around line Q is zero.",
+          "Test line P $y = 2x + 1$ at $x = 5$: $y = 2(5) + 1 = 11$, but the data value is $10$, an error of $1$; at $x = 9$: $y = 19$, but the data is $14$, an error of $5$.",
+          "Line P's errors grow large as $x$ increases, so the points are far from line P overall.",
+          "Because line Q passes through (or extremely close to) every point while line P does not, line Q minimizes the vertical spread and is the better fit."
+        ],
+        "answer": "Line Q, $y = x + 5$, fits better because every data point lies exactly on it (zero spread), while line P misses most points by large amounts."
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "An online seller tracks advertising spend in hundreds of dollars $(x)$ and weekly revenue in hundreds of dollars $(y)$: $(1, 9)$, $(2, 11)$, $(3, 16)$, $(4, 18)$, $(5, 21)$. A line of fit is drawn through the representative points $(1, 9)$ and $(5, 21)$. Write its equation in $y = mx + b$ form and use it to predict revenue when $\\$600$ (that is, $x = 6$) is spent on advertising.",
+      "answer": "$y = 3x + 6$; predicted revenue is $24$ hundred dollars, or $\\$2400$.",
+      "solution": {
+        "steps": [
+          "Slope from $(1, 9)$ and $(5, 21)$: $m = \\frac{21 - 9}{5 - 1} = \\frac{12}{4} = 3$.",
+          "Substitute $m = 3$ and $(1, 9)$: $9 = 3(1) + b$, so $b = 9 - 3 = 6$.",
+          "The equation is $y = 3x + 6$.",
+          "Predict at $x = 6$: $y = 3(6) + 6 = 18 + 6 = 24$ hundred dollars.",
+          "So the model predicts about $\\$2400$ in revenue."
+        ],
+        "answer": "$y = 3x + 6$; predicted revenue is $24$ hundred dollars, or $\\$2400$."
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A scatter plot shows car age in years $(x)$ versus resale value in thousands of dollars $(y)$. A fitted line passes through $(2, 18)$ and $(7, 8)$. Write the equation in $y = mx + b$ form, then explain why the $y$-intercept makes sense as the value of a brand-new car.",
+      "answer": "$y = -2x + 22$; the intercept $22$ predicts a value of about $\\$22{,}000$ for a $0$-year-old (brand-new) car.",
+      "solution": {
+        "steps": [
+          "Slope: $m = \\frac{8 - 18}{7 - 2} = \\frac{-10}{5} = -2$.",
+          "Substitute $m = -2$ and $(2, 18)$: $18 = -2(2) + b = -4 + b$, so $b = 22$.",
+          "The equation is $y = -2x + 22$.",
+          "The $y$-intercept occurs at $x = 0$, meaning a car of age $0$ years. The model predicts a resale value of $22$ thousand dollars, which is a reasonable price for a brand-new car."
+        ],
+        "answer": "$y = -2x + 22$; the intercept $22$ predicts a value of about $\\$22{,}000$ for a $0$-year-old (brand-new) car."
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A coach records weekly practice hours $(x)$ and free-throw percentage $(y)$ for $6$ players: $(3, 55)$, $(4, 58)$, $(5, 62)$, $(6, 65)$, $(7, 68)$, $(8, 72)$. A line of fit passes through $(3, 55)$ and $(8, 72)$. Write the equation in $y = mx + b$ form and explain whether the line is a good fit by referring to how close the points stay to the line.",
+      "answer": "$y = 3.4x + 44.8$; it is a good fit because the data rise steadily and each point lies within about $1$ percentage point of the line.",
+      "solution": {
+        "steps": [
+          "Slope from $(3, 55)$ and $(8, 72)$: $m = \\frac{72 - 55}{8 - 3} = \\frac{17}{5} = 3.4$.",
+          "Substitute $m = 3.4$ and $(3, 55)$: $55 = 3.4(3) + b = 10.2 + b$, so $b = 44.8$.",
+          "The equation is $y = 3.4x + 44.8$.",
+          "Check closeness: at $x = 5$ the line gives $3.4(5) + 44.8 = 61.8$ versus data $62$ (off by $0.2$); at $x = 6$ it gives $65.2$ versus $65$ (off by $0.2$).",
+          "Since every data point lies within roughly $1$ unit of the line, the spread is small and the line is a good fit."
+        ],
+        "answer": "$y = 3.4x + 44.8$; it is a good fit because the data rise steadily and each point lies within about $1$ percentage point of the line."
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A scientist plots the depth of a pond in feet $(x)$ against water temperature in degrees Celsius $(y)$: $(0, 22)$, $(5, 19)$, $(10, 16)$, $(15, 13)$, $(20, 10)$. Write the equation of the line of fit in $y = mx + b$ form, then predict the depth at which the temperature reaches $4^\\circ$C.",
+      "answer": "$y = -\\frac{3}{5}x + 22$; the temperature reaches $4^\\circ$C at a depth of $30$ feet.",
+      "solution": {
+        "steps": [
+          "The points fall on a straight line. Use $(0, 22)$ and $(20, 10)$: $m = \\frac{10 - 22}{20 - 0} = \\frac{-12}{20} = -\\frac{3}{5}$.",
+          "Since $(0, 22)$ is on the line, the $y$-intercept is $b = 22$.",
+          "The equation is $y = -\\frac{3}{5}x + 22$.",
+          "Set $y = 4$: $4 = -\\frac{3}{5}x + 22$, so $-\\frac{3}{5}x = 4 - 22 = -18$.",
+          "Solve: $x = -18 \\cdot \\left(-\\frac{5}{3}\\right) = \\frac{90}{3} = 30$ feet."
+        ],
+        "answer": "$y = -\\frac{3}{5}x + 22$; the temperature reaches $4^\\circ$C at a depth of $30$ feet."
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Two trend lines are proposed for a scatter plot relating shoe size $(x)$ to test score $(y)$ for students of mixed ages. The points form a random cloud with no upward or downward pattern. One classmate insists line $y = 4x + 30$ is a good fit. Explain, referring to the association in the data, whether fitting any straight line is appropriate here.",
+      "answer": "No straight line is an appropriate model because the data show no linear association; a randomly scattered cloud has no trend for a line to capture, so the spread around any line stays large.",
+      "solution": {
+        "steps": [
+          "A line of fit is only meaningful when the scatter plot shows a linear association, points trending consistently upward or downward.",
+          "Here the points form a random cloud with no upward or downward pattern, so there is no linear association.",
+          "Any straight line, including $y = 4x + 30$, will leave many points far above and far below it, so the vertical spread around the line stays large.",
+          "Therefore fitting a straight line is not appropriate, and the claim that $y = 4x + 30$ is a good fit is incorrect."
+        ],
+        "answer": "No straight line is an appropriate model because the data show no linear association; a randomly scattered cloud has no trend for a line to capture, so the spread around any line stays large."
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A bakery tracks the number of customers $(x)$ and loaves of bread sold $(y)$ over six days: $(20, 14)$, $(25, 17)$, $(30, 21)$, $(35, 24)$, $(40, 28)$, $(45, 31)$. A line of fit passes through $(20, 14)$ and $(45, 31)$. Write its equation in $y = mx + b$ form (round the slope to two decimal places) and interpret the slope in context.",
+      "answer": "$y = 0.68x + 0.4$; about $0.68$ more loaves are sold for each additional customer.",
+      "solution": {
+        "steps": [
+          "Slope from $(20, 14)$ and $(45, 31)$: $m = \\frac{31 - 14}{45 - 20} = \\frac{17}{25} = 0.68$.",
+          "Substitute $m = 0.68$ and $(20, 14)$: $14 = 0.68(20) + b = 13.6 + b$, so $b = 0.4$.",
+          "The equation is $y = 0.68x + 0.4$.",
+          "The slope $0.68$ means that for each additional customer, the bakery sells about $0.68$ more loaves of bread."
+        ],
+        "answer": "$y = 0.68x + 0.4$; about $0.68$ more loaves are sold for each additional customer."
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A scatter plot of plant height in centimeters $(y)$ versus days since planting $(x)$ has two candidate lines: line A is $y = \\frac{1}{2}x + 2$ and line B is $y = 2x + 2$. The data points are $(2, 3)$, $(4, 4)$, $(6, 5)$, $(8, 6)$, $(10, 7)$. Decide which line fits better and justify using the closeness of the points to each line.",
+      "answer": "Line A, $y = \\frac{1}{2}x + 2$, fits better because every point lies exactly on it, while line B passes far above the data.",
+      "solution": {
+        "steps": [
+          "Test line A $y = \\frac{1}{2}x + 2$: at $x = 2$, $y = 3$ matches; at $x = 6$, $y = 5$ matches; at $x = 10$, $y = 7$ matches. Every point lies on line A.",
+          "Test line B $y = 2x + 2$: at $x = 2$, $y = 6$ but the data is $3$ (off by $3$); at $x = 10$, $y = 22$ but the data is $7$ (off by $15$).",
+          "Line B's vertical errors are huge and grow with $x$, so the points are far from line B.",
+          "Because line A passes through every point while line B does not, line A has the smaller spread and is the better fit."
+        ],
+        "answer": "Line A, $y = \\frac{1}{2}x + 2$, fits better because every point lies exactly on it, while line B passes far above the data."
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A delivery company plots distance in miles $(x)$ against delivery time in minutes $(y)$. A line of fit passes through $(4, 22)$ and $(10, 40)$. Write the equation in $y = mx + b$ form and explain what the $y$-intercept represents in this context.",
+      "answer": "$y = 3x + 10$; the $y$-intercept $10$ represents a fixed start-up time of about $10$ minutes that applies even for a $0$-mile delivery.",
+      "solution": {
+        "steps": [
+          "Slope from $(4, 22)$ and $(10, 40)$: $m = \\frac{40 - 22}{10 - 4} = \\frac{18}{6} = 3$.",
+          "Substitute $m = 3$ and $(4, 22)$: $22 = 3(4) + b = 12 + b$, so $b = 10$.",
+          "The equation is $y = 3x + 10$.",
+          "The $y$-intercept is the value of $y$ when $x = 0$, that is, the delivery time for a distance of $0$ miles. It represents a fixed overhead of about $10$ minutes (loading, paperwork) before any driving begins."
+        ],
+        "answer": "$y = 3x + 10$; the $y$-intercept $10$ represents a fixed start-up time of about $10$ minutes that applies even for a $0$-mile delivery."
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A student fits a line to data on hours of sleep $(x)$ and number of errors made on a quiz $(y)$. The data clearly decrease from left to right: $(4, 10)$, $(6, 7)$, $(8, 4)$, $(9, 2)$ approximately. The student writes $y = \\frac{3}{2}x + 1$. Explain what error the student made, then write a corrected equation using the representative points $(4, 10)$ and $(8, 4)$.",
+      "answer": "The student used a positive slope for clearly decreasing data; the corrected line is $y = -\\frac{3}{2}x + 16$.",
+      "solution": {
+        "steps": [
+          "The data decrease from left to right, so the slope must be negative. The student's slope $\\frac{3}{2}$ is positive, which is the error: the sign of the slope was reversed.",
+          "Compute the correct slope from $(4, 10)$ and $(8, 4)$: $m = \\frac{4 - 10}{8 - 4} = \\frac{-6}{4} = -\\frac{3}{2}$.",
+          "Substitute $m = -\\frac{3}{2}$ and $(4, 10)$: $10 = -\\frac{3}{2}(4) + b = -6 + b$, so $b = 16$.",
+          "The corrected equation is $y = -\\frac{3}{2}x + 16$."
+        ],
+        "answer": "The student used a positive slope for clearly decreasing data; the corrected line is $y = -\\frac{3}{2}x + 16$."
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A gym tracks membership length in months $(x)$ and average weekly visits $(y)$: $(1, 2)$, $(3, 3)$, $(5, 4)$, $(7, 5)$, $(9, 6)$. Write the equation of the line of fit in $y = mx + b$ form, then determine after how many months the model predicts an average of $8$ weekly visits.",
+      "answer": "$y = \\frac{1}{2}x + \\frac{3}{2}$; the model predicts $8$ weekly visits after $13$ months.",
+      "solution": {
+        "steps": [
+          "Use representative points $(1, 2)$ and $(9, 6)$: $m = \\frac{6 - 2}{9 - 1} = \\frac{4}{8} = \\frac{1}{2}$.",
+          "Substitute $m = \\frac{1}{2}$ and $(1, 2)$: $2 = \\frac{1}{2}(1) + b = \\frac{1}{2} + b$, so $b = 2 - \\frac{1}{2} = \\frac{3}{2}$.",
+          "The equation is $y = \\frac{1}{2}x + \\frac{3}{2}$.",
+          "Set $y = 8$: $8 = \\frac{1}{2}x + \\frac{3}{2}$, so $\\frac{1}{2}x = 8 - \\frac{3}{2} = \\frac{13}{2}$.",
+          "Solve: $x = 2 \\cdot \\frac{13}{2} = 13$ months."
+        ],
+        "answer": "$y = \\frac{1}{2}x + \\frac{3}{2}$; the model predicts $8$ weekly visits after $13$ months."
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Two analysts model the relationship between rainfall in inches $(x)$ and reservoir level in feet $(y)$. The data are $(1, 41)$, $(2, 44)$, $(3, 47)$, $(4, 50)$, $(5, 53)$. Analyst 1 proposes $y = 3x + 38$ and Analyst 2 proposes $y = 3x + 30$. Determine which model fits better by comparing the vertical distance from the points to each line, and state the better equation.",
+      "answer": "Analyst 1's model $y = 3x + 38$ fits better because every point lies exactly on it, while Analyst 2's line sits $8$ feet below every point.",
+      "solution": {
+        "steps": [
+          "Test Analyst 1 $y = 3x + 38$: at $x = 1$, $y = 41$ matches; at $x = 3$, $y = 47$ matches; at $x = 5$, $y = 53$ matches. Every point lies on this line, so the spread is zero.",
+          "Test Analyst 2 $y = 3x + 30$: at $x = 1$, $y = 33$ but the data is $41$ (off by $8$); at $x = 5$, $y = 45$ but the data is $53$ (off by $8$).",
+          "Analyst 2's line lies a constant $8$ feet below every data point, so its spread is large and uniform.",
+          "Because Analyst 1's line passes through every point with zero vertical distance, it is the better fit. The better equation is $y = 3x + 38$."
+        ],
+        "answer": "Analyst 1's model $y = 3x + 38$ fits better because every point lies exactly on it, while Analyst 2's line sits $8$ feet below every point."
+      }
+    }
+  ]
+}

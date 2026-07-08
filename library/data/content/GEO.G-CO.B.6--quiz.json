@@ -1,0 +1,150 @@
+{
+  "id": "GEO.G-CO.B.6--quiz",
+  "standard": "GEO.G-CO.B.6",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Understand congruence in terms of rigid motions",
+  "clusterCode": "B",
+  "skillName": "Rigid Motions and Congruence",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "An 8-question check on rigid motions and congruence: applying translation, reflection, and rotation rules, predicting their effect on lengths, angles, and orientation, composing motions, and deciding congruence.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Point $P(3, 5)$ is reflected over the $x$-axis. What are the coordinates of the image $P'$?\nA) $(-3, 5)$\nB) $(3, -5)$\nC) $(-3, -5)$\nD) $(5, 3)$",
+      "answer": "B) $(3, -5)$",
+      "solution": {
+        "steps": [
+          "A reflection over the $x$-axis uses the rule $(a, b) \\mapsto (a, -b)$: keep $x$, negate $y$.",
+          "Apply it: $(3, 5) \\mapsto (3, -5)$, so the answer is B.",
+          "A is the reflection-over-$y$-axis rule $(a, b) \\mapsto (-a, b)$, applied to the wrong axis.",
+          "C is a rotation of $180^\\circ$ about the origin $(a, b) \\mapsto (-a, -b)$, not a reflection over the $x$-axis.",
+          "D swaps the coordinates, which is reflection over $y = x$, the wrong line."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "The point $A(2, -4)$ is translated by the rule $(x, y) \\mapsto (x + 3, y + 5)$. What is the image $A'$?\nA) $(5, 1)$\nB) $(-1, -9)$\nC) $(5, -9)$\nD) $(6, -20)$",
+      "answer": "A) $(5, 1)$",
+      "solution": {
+        "steps": [
+          "Add the vector components to the coordinates: $x$-coordinate $2 + 3 = 5$, $y$-coordinate $-4 + 5 = 1$.",
+          "So $A' = (5, 1)$, which is A.",
+          "B subtracts instead of adds, applying $(x - 3, y - 5)$.",
+          "C adds correctly in $x$ but subtracts in $y$, mixing the signs.",
+          "D multiplies the coordinates by the components rather than adding, treating the translation like a dilation."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "A rotation of $180^\\circ$ about the origin is applied to triangle $DEF$, in which $DE = 7$ and $m\\angle D = 40^\\circ$. What are $D'E'$ and $m\\angle D'$?\nA) $D'E' = 7$ and $m\\angle D' = 40^\\circ$\nB) $D'E' = 14$ and $m\\angle D' = 80^\\circ$\nC) $D'E' = 7$ and $m\\angle D' = 140^\\circ$\nD) $D'E' = 3.5$ and $m\\angle D' = 40^\\circ$",
+      "answer": "A) $D'E' = 7$ and $m\\angle D' = 40^\\circ$",
+      "solution": {
+        "steps": [
+          "A rotation is a rigid motion, so it preserves all side lengths and all angle measures.",
+          "Therefore $D'E' = DE = 7$ and $m\\angle D' = m\\angle D = 40^\\circ$, which is A.",
+          "B doubles both measures, treating the rotation like a dilation by scale factor $2$.",
+          "C changes the angle to its supplement, which a rigid motion never does.",
+          "D halves the side length, again incorrectly treating the motion as a dilation."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Point $B(6, -2)$ is rotated $90^\\circ$ counterclockwise about the origin. What is the image $B'$?\nA) $(-2, -6)$\nB) $(2, 6)$\nC) $(2, -6)$\nD) $(-6, 2)$",
+      "answer": "B) $(2, 6)$",
+      "solution": {
+        "steps": [
+          "A $90^\\circ$ counterclockwise rotation about the origin uses the rule $(a, b) \\mapsto (-b, a)$.",
+          "Apply it to $(6, -2)$: $-b = -(-2) = 2$ and $a = 6$, so $B' = (2, 6)$, which is B.",
+          "A uses $(b, -a) = (-2, -6)$, which is the $90^\\circ$ clockwise (or $270^\\circ$ counterclockwise) rule, the swapped sign pattern.",
+          "C negates only one coordinate without swapping correctly.",
+          "D is the $180^\\circ$ rule $(a, b) \\mapsto (-a, -b)$ applied to $(6, -2)$."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Point $C(-4, 7)$ is reflected over the line $y = x$. What are the coordinates of the image $C'$?\nA) $(4, -7)$\nB) $(-7, -4)$\nC) $(7, -4)$\nD) $(7, 4)$",
+      "answer": "C) $(7, -4)$",
+      "solution": {
+        "steps": [
+          "A reflection over the line $y = x$ swaps the coordinates: $(a, b) \\mapsto (b, a)$.",
+          "Apply it to $(-4, 7)$: $C' = (7, -4)$, which is C.",
+          "A negates both coordinates $(a, b) \\mapsto (-a, -b)$ without swapping, a common error for reflection over $y = x$.",
+          "B both swaps and negates, which is the rule for reflection over $y = -x$, the wrong line.",
+          "D swaps but also negates the $y$-coordinate, mixing the rule up."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Segment $PQ$ with $P(2, 3)$ and $Q(5, 1)$ maps to $P'(-2, 3)$ and $Q'(-5, 1)$. Which single rigid motion accomplishes this?\nA) Reflection over the $y$-axis\nB) Reflection over the $x$-axis\nC) Rotation of $180^\\circ$ about the origin\nD) Translation by $(x, y) \\mapsto (x - 4, y)$",
+      "answer": "A) Reflection over the $y$-axis",
+      "solution": {
+        "steps": [
+          "Compare each point to its image: $(2, 3) \\mapsto (-2, 3)$ and $(5, 1) \\mapsto (-5, 1)$. The $x$-coordinate is negated and the $y$-coordinate is unchanged.",
+          "The rule $(a, b) \\mapsto (-a, b)$ is reflection over the $y$-axis, which is A.",
+          "B (reflection over the $x$-axis) would negate $y$ and keep $x$, giving $(2, -3)$, which does not match.",
+          "C (rotation $180^\\circ$) would negate both coordinates, giving $(-2, -3)$, which does not match.",
+          "D translates every point left by $4$, giving $(-2, 3)$ for $P$ but $(1, 1)$ for $Q$, which does not match $Q'$."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Point $A(3, -2)$ is first translated by $(x, y) \\mapsto (x - 1, y + 4)$, then the result is reflected over the $x$-axis. What is the final image $A''$?\nA) $(2, -2)$\nB) $(-2, 2)$\nC) $(4, 2)$\nD) $(2, 2)$",
+      "answer": "A) $(2, -2)$",
+      "solution": {
+        "steps": [
+          "Perform the translation first: $(3, -2) \\mapsto (3 - 1, -2 + 4) = (2, 2)$.",
+          "Now reflect $(2, 2)$ over the $x$-axis using $(a, b) \\mapsto (a, -b)$: $(2, 2) \\mapsto (2, -2)$.",
+          "So $A'' = (2, -2)$, which is A.",
+          "D stops after the translation at $(2, 2)$ and forgets the reflection.",
+          "B reflects first and then translates (wrong order), and C mishandles the signs by applying the reflection before the translation."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Triangle $ABC$ has vertices $A(0, 0)$, $B(3, 0)$, $C(3, 4)$. Triangle $DEF$ has vertices $D(0, 0)$, $E(0, 3)$, $F(-4, 3)$. Which statement is correct?\nA) The triangles are congruent; a rotation of $90^\\circ$ counterclockwise about the origin maps $ABC$ onto $DEF$.\nB) The triangles are not congruent because their coordinates are different.\nC) The triangles are not congruent because $ABC$ has a longer hypotenuse than $DEF$.\nD) The triangles are congruent; a single translation maps $ABC$ onto $DEF$.",
+      "answer": "A) The triangles are congruent; a rotation of $90^\\circ$ counterclockwise about the origin maps $ABC$ onto $DEF$.",
+      "solution": {
+        "steps": [
+          "Apply a $90^\\circ$ counterclockwise rotation about the origin, $(a, b) \\mapsto (-b, a)$, to each vertex of $ABC$: $A(0,0) \\mapsto (0,0)$, $B(3,0) \\mapsto (0,3)$, $C(3,4) \\mapsto (-4,3)$.",
+          "These images are exactly $D(0,0)$, $E(0,3)$, $F(-4,3)$, so the rotation maps $ABC$ onto $DEF$ and the triangles are congruent. The answer is A.",
+          "B is wrong: differing coordinates do not prevent congruence, since a rigid motion can map one figure onto the other.",
+          "C is wrong: both triangles are right triangles with legs $3$ and $4$, so each hypotenuse is $5$; the hypotenuses are equal.",
+          "D is wrong: a translation preserves orientation and direction, but $DEF$ is a turned (rotated) version of $ABC$, so no single translation works."
+        ]
+      }
+    }
+  ]
+}

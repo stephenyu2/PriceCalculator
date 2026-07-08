@@ -1,0 +1,130 @@
+{
+  "standard": "A1.A-REI.C.6",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Reasoning with Equations and Inequalities",
+  "domainCode": "A-REI",
+  "cluster": "Solve systems of equations",
+  "clusterCode": "C",
+  "skillName": "Solving Linear Systems",
+
+  "description": "Students solve systems of two linear equations in two variables both exactly (by substitution and by elimination/linear combination) and approximately (by graphing). They identify the solution as the ordered pair where the lines intersect, recognize systems with no solution (parallel lines) and infinitely many solutions (coincident lines), choose an efficient method for a given system, and interpret and check the solution in context.",
+
+  "subSkills": [
+    "Verify whether an ordered pair is a solution of a system by substituting into both equations",
+    "Solve a system by substitution: isolate one variable, substitute, solve, back-substitute",
+    "Solve a system by elimination: scale one or both equations to create opposite coefficients, add to eliminate a variable, then back-substitute",
+    "Solve a system approximately by graphing both lines and reading the intersection point",
+    "Classify a system as having one solution, no solution, or infinitely many solutions",
+    "Choose the most efficient method (substitution vs. elimination) based on the form of the equations",
+    "Set up and solve a system from a real-world word problem and interpret the answer with units"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Verify a solution",
+      "example": "Is $(2,\\,-1)$ a solution of the system $\\begin{cases} 3x + 2y = 4 \\\\ x - y = 3 \\end{cases}$? Substitute to check both equations."
+    },
+    {
+      "name": "Solve by substitution (one variable pre-isolated)",
+      "example": "Solve $\\begin{cases} y = 2x - 1 \\\\ 3x + y = 9 \\end{cases}$ by substituting the expression for $y$."
+    },
+    {
+      "name": "Solve by elimination (coefficients already aligned)",
+      "example": "Solve $\\begin{cases} x + y = 7 \\\\ x - y = 3 \\end{cases}$ by adding the equations to eliminate $y$."
+    },
+    {
+      "name": "Solve by elimination with scaling",
+      "example": "Solve $\\begin{cases} 2x + 3y = 12 \\\\ 5x - y = 13 \\end{cases}$ by multiplying the second equation by $3$, then adding to eliminate $y$."
+    },
+    {
+      "name": "Solve approximately by graphing",
+      "example": "Graph $y = \\frac{1}{2}x + 1$ and $y = -x + 4$ and read the intersection point as the approximate solution $(2,\\,2)$."
+    },
+    {
+      "name": "Special cases (no solution / infinitely many)",
+      "example": "Solve $\\begin{cases} y = 3x + 2 \\\\ -6x + 2y = 10 \\end{cases}$; the variables cancel to a false statement $4 = 10$, so there is no solution (parallel lines)."
+    },
+    {
+      "name": "Word problem requiring a system",
+      "example": "A coffee shop sells small drinks for $\\$3$ and large drinks for $\\$5$. One morning they sold $40$ drinks for $\\$164$. How many of each size were sold? Let $s$ and $l$ be the counts and solve the system."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-method, low-step systems with small integer coefficients and a clean integer solution. Either one variable is already isolated (direct substitution) or coefficients already align for elimination (add/subtract with no scaling). The method is essentially dictated by the form.",
+      "constraints": [
+        "Coefficients are small integers ($|a|,|b| \\le 5$); solution is an integer ordered pair",
+        "Substitution: one equation is already solved for a variable, e.g. $y = mx + b$",
+        "Elimination: a variable already has opposite or equal coefficients, so adding/subtracting eliminates it with no scaling",
+        "Exactly one solution; no special cases; no context (pure system)"
+      ]
+    },
+    "Medium": {
+      "description": "Student must do setup work before solving: isolate a variable themselves for substitution, or scale ONE equation to make coefficients opposite for elimination. Solutions may be fractions. Includes recognizing a special case (no solution or infinitely many) from the algebra, and short familiar word problems.",
+      "constraints": [
+        "Substitution requires isolating a variable from standard form $ax + by = c$",
+        "Elimination requires scaling one equation by a single integer to align coefficients",
+        "Solution may be a fraction, e.g. $\\left(\\frac{3}{2},\\,-\\frac{1}{4}\\right)$",
+        "May be a special case that cancels to a true or false statement",
+        "Simple word problems (mixture, money, two-item totals) with a direct system"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step systems requiring scaling BOTH equations (least common multiple of coefficients) before eliminating, fractional or decimal coefficients that must first be cleared, method-choice justification, or multi-step word problems where the student must define variables, build both equations, solve, and interpret the answer in context.",
+      "constraints": [
+        "Elimination requires scaling both equations to a common coefficient",
+        "Coefficients may be fractions or decimals that must be cleared first, e.g. $\\frac{1}{2}x + \\frac{1}{3}y = 4$",
+        "Word problems require defining variables and constructing both equations before solving",
+        "May ask the student to justify the chosen method or interpret the solution and its units",
+        "Solution may be fractional and must still be checked in both original equations"
+      ]
+    },
+    "tierSplit": "If split into two worksheets: tier1 covers Easy to Medium (verifying solutions, direct substitution, no-scaling and single-scaling elimination, integer and simple fractional solutions, recognizing special cases). tier2 covers Medium to Hard (isolating variables for substitution, double-scaling elimination, clearing fraction/decimal coefficients, method choice, and full word problems with interpretation). No item overlap between tiers."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Adds the two equations without first making a pair of coefficients opposite, so no variable is eliminated",
+      "distractor": "Adds $2x + 3y = 12$ and $5x - y = 13$ directly to get $7x + 2y = 25$ and then guesses, instead of scaling to eliminate"
+    },
+    {
+      "misconception": "Substitutes the expression back into the SAME equation it came from, yielding an identity like $0 = 0$ and concluding 'infinitely many solutions'",
+      "distractor": "From $y = 2x - 1$ substitutes into $y = 2x - 1$ to get $0 = 0$ instead of substituting into the other equation"
+    },
+    {
+      "misconception": "Sign error when distributing or moving terms across the equals sign during substitution/elimination",
+      "distractor": "Computes $3x + (2x - 1) = 9 \\Rightarrow 5x - 1 = 9 \\Rightarrow 5x = 8$ as $5x = 10$, giving $x = 2$ from a dropped sign"
+    },
+    {
+      "misconception": "Finds the value of only one variable and reports it as the solution, never back-substituting for the second",
+      "distractor": "Solves and reports $x = 3$ as the answer instead of the ordered pair $(3,\\,1)$"
+    },
+    {
+      "misconception": "Writes the solution ordered pair with the coordinates reversed",
+      "distractor": "Reports $(1,\\,3)$ when the solution is actually $(3,\\,1)$, swapping $x$ and $y$"
+    },
+    {
+      "misconception": "Confuses the special cases: treats a false statement (no solution) as infinitely many, or a true statement (infinitely many) as no solution",
+      "distractor": "Reaches the false statement $4 = 10$ and concludes 'infinitely many solutions' instead of 'no solution'"
+    },
+    {
+      "misconception": "When scaling an equation, multiplies only one side or only the variable terms, not the entire equation including the constant",
+      "distractor": "Multiplies $5x - y = 13$ by $3$ to get $15x - 3y = 13$ (constant not scaled) instead of $15x - 3y = 39$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

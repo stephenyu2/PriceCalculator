@@ -1,0 +1,133 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent.",
+
+  "standard": "6.SP.B.5",
+  "grade": "6",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Summarize and describe distributions",
+  "clusterCode": "B",
+  "skillName": "Summarizing Numerical Data Sets",
+
+  "description": "Students summarize a numerical data set in relation to its context. They report the number of observations and describe what is being measured along with its units. They give quantitative measures of center (mean and median) and of variability (range, interquartile range, and mean absolute deviation), and they describe overall patterns such as clusters, peaks, gaps, and outliers. Crucially, they relate the choice of measure to the shape of the distribution: a symmetric distribution is well summarized by the mean, while a skewed distribution or one with outliers is better summarized by the median, and they explain why.",
+
+  "subSkills": [
+    "Report the number of observations $n$ in a data set",
+    "Describe the attribute under investigation, including its units of measurement",
+    "Compute the mean $\\bar{x}=\\dfrac{\\sum x_i}{n}$ of a data set",
+    "Find the median by ordering the data and locating the middle value (or averaging the two middle values when $n$ is even)",
+    "Compute the range as $\\text{max}-\\text{min}$",
+    "Find the quartiles $Q_1$ and $Q_3$ and compute the interquartile range $\\text{IQR}=Q_3-Q_1$",
+    "Compute the mean absolute deviation $\\text{MAD}=\\dfrac{\\sum |x_i-\\bar{x}|}{n}$",
+    "Describe the shape of a distribution (symmetric, skewed, clusters, peaks, gaps, outliers)",
+    "Choose mean vs. median based on distribution shape and justify the choice in context",
+    "Interpret a measure of center or spread back in the context of the original question"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Count and context",
+      "example": "A list gives the daily high temperature in degrees Fahrenheit for one week: $68, 71, 65, 70, 73, 69, 72$. State how many observations there are, what attribute is measured, and its units. Answer: $n=7$ observations of daily high temperature measured in degrees Fahrenheit."
+    },
+    {
+      "name": "Mean and median together",
+      "example": "Find the mean and median of the data set $4, 7, 7, 9, 13$. Mean $=\\dfrac{4+7+7+9+13}{5}=\\dfrac{40}{5}=8$; median (middle of five ordered values) $=7$."
+    },
+    {
+      "name": "Range and IQR",
+      "example": "For the ordered data $3, 5, 6, 8, 9, 12, 15, 18$, find the range and the interquartile range. Range $=18-3=15$; $Q_1=\\dfrac{5+6}{2}=\\dfrac{11}{2}$, $Q_3=\\dfrac{12+15}{2}=\\dfrac{27}{2}$, so $\\text{IQR}=\\dfrac{27}{2}-\\dfrac{11}{2}=8$."
+    },
+    {
+      "name": "Mean absolute deviation",
+      "example": "Compute the MAD of $2, 4, 6, 8$. Mean $=5$; deviations $|2-5|,|4-5|,|6-5|,|8-5|=3,1,1,3$; $\\text{MAD}=\\dfrac{3+1+1+3}{4}=\\dfrac{8}{4}=2$."
+    },
+    {
+      "name": "Describe shape (clusters, peaks, gaps, outliers)",
+      "example": "A dot plot of quiz scores shows most dots between $7$ and $9$ with one dot at $1$. Describe the distribution. Answer: most scores cluster from $7$ to $9$ with a peak at $8$; the value $1$ is an outlier and creates a gap."
+    },
+    {
+      "name": "Choose and justify center for the context",
+      "example": "House prices on a street are $\\$210{,}000, \\$220{,}000, \\$230{,}000, \\$240{,}000$, and $\\$900{,}000$. Which measure of center better summarizes a typical price, the mean or the median, and why? Answer: the median ($\\$230{,}000$) is better because the single very large value pulls the mean up, so the mean ($\\$360{,}000$) is not typical of most homes."
+    }
+  ],
+
+  "difficultyRubric": {
+    "_split": "tier1 = Easy to Medium (compute a single named measure from a small ready-to-use list). tier2 = Medium to Hard (multi-measure, MAD, and shape-based justification). The single ramped worksheet runs Easy items 1-5, Medium 6-11, Hard 12-15.",
+    "Easy": {
+      "description": "Compute one explicitly named measure from a short, already-ordered data set with $n\\le 6$ that yields whole-number or simple results. Reporting $n$, the attribute, and units. One step.",
+      "constraints": [
+        "Data set already in order, $n\\le 6$",
+        "Single named measure requested: mean, median, or range",
+        "Mean divides evenly (whole-number result); odd $n$ for median so the middle is a single value",
+        "Values are small whole numbers $\\le 20$"
+      ]
+    },
+    "Medium": {
+      "description": "Compute a measure that requires an intermediate step: ordering an unordered list first, averaging two middle values for an even $n$ median, finding $Q_1$/$Q_3$ for an IQR, or computing a mean that is a fraction. Two to three steps.",
+      "constraints": [
+        "Data may be unordered and must be sorted first",
+        "Even $n$ (median or quartiles fall between two values, giving a fraction such as $\\frac{11}{2}$)",
+        "IQR requires locating both quartiles",
+        "Mean may be a non-integer expressed as an exact fraction"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-measure or interpretive: compute the MAD (mean, then deviations, then average), OR describe distribution shape and choose mean vs. median with a context justification, OR detect how an outlier changes a measure. Requires connecting the computation back to the situation.",
+      "constraints": [
+        "MAD requires computing the mean first, then $|x_i-\\bar{x}|$ for every point, then averaging",
+        "Requires identifying clusters, peaks, gaps, or outliers and naming the effect on center/spread",
+        "Asks the student to justify choosing median over mean (or vice versa) in context",
+        "May compare two data sets by spread (MAD or IQR) or report how removing an outlier shifts the mean"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student finds the median without ordering the data first",
+      "distractor": "Reports the middle value of the unsorted list, e.g. for $4, 9, 7, 7, 13$ gives $7$ only because it sits in the middle as written, ignoring that the true ordered middle must come from $4, 7, 7, 9, 13$"
+    },
+    {
+      "misconception": "Student confuses mean and median, reporting the most common or middle-position value when the mean is asked",
+      "distractor": "For $4, 7, 7, 9, 13$ (mean $=8$) answers $7$ (the median/mode) instead of $8$"
+    },
+    {
+      "misconception": "Student computes range as $\\text{max}+\\text{min}$ or forgets to subtract",
+      "distractor": "For data with max $18$ and min $3$ answers $21$ instead of $15$"
+    },
+    {
+      "misconception": "Student computes IQR as $\\text{max}-\\text{min}$ (the full range) instead of $Q_3-Q_1$",
+      "distractor": "Reports the range $15$ in place of the interquartile range $8$"
+    },
+    {
+      "misconception": "Student forgets the absolute value when computing MAD and the deviations cancel to zero",
+      "distractor": "Sums signed deviations $\\sum(x_i-\\bar{x})=0$ and reports a MAD of $0$"
+    },
+    {
+      "misconception": "Student divides the sum of absolute deviations by the wrong count or by $n-1$ instead of $n$",
+      "distractor": "For deviations summing to $8$ with $n=4$ answers $\\frac{8}{3}$ instead of $\\frac{8}{4}=2$"
+    },
+    {
+      "misconception": "Student chooses the mean to summarize a skewed data set with a large outlier",
+      "distractor": "Says the mean ($\\$360{,}000$) is the typical price, not recognizing the outlier inflates it and the median is more representative"
+    },
+    {
+      "misconception": "Student treats an outlier as the peak or reports it as the center of the data",
+      "distractor": "Describes the lone far value as 'where most data is' rather than as an outlier that sits in a gap away from the cluster"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

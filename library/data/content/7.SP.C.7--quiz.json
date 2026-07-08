@@ -1,0 +1,148 @@
+{
+  "id": "7.SP.C.7--quiz",
+  "standard": "7.SP.C.7",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate chance processes and develop, use, and evaluate probability models",
+  "clusterCode": "C",
+  "skillName": "Probability Models",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "Eight multiple-choice questions on probability models: assigning probabilities in uniform models, building empirical models from data, predicting expected counts, checking that a model is valid, comparing model probabilities to observed frequencies, and explaining discrepancies.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "A fair spinner has $5$ equal sections numbered $1$ through $5$. What is the probability of landing on the section numbered $3$?\nA) $\\frac{1}{3}$\nB) $\\frac{1}{5}$\nC) $\\frac{3}{5}$\nD) $3$",
+      "answer": "B) $\\frac{1}{5}$",
+      "solution": {
+        "steps": [
+          "The spinner has $5$ equally likely sections, so each outcome gets probability $\\frac{1}{n} = \\frac{1}{5}$.",
+          "There is exactly one section numbered $3$, so $P(3) = \\frac{1}{5}$. B is correct.",
+          "A uses the number $3$ as a denominator, which has nothing to do with the $5$ outcomes.",
+          "C treats the label $3$ as a count of favorable sections, and D reports the label itself as a probability instead of dividing by the total."
+        ],
+        "answer": "B) $\\frac{1}{5}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "A fair number cube has faces $1$ through $6$. What is the probability of rolling a number greater than $4$?\nA) $\\frac{4}{6}$\nB) $\\frac{1}{6}$\nC) $\\frac{1}{3}$\nD) $\\frac{2}{3}$",
+      "answer": "C) $\\frac{1}{3}$",
+      "solution": {
+        "steps": [
+          "Each face is equally likely with probability $\\frac{1}{6}$.",
+          "Numbers greater than $4$ are $5$ and $6$, which is $2$ favorable outcomes, so $P = \\frac{2}{6} = \\frac{1}{3}$. C is correct.",
+          "A uses the number $4$ as the favorable count instead of counting the faces above $4$.",
+          "B counts only one favorable face, and D is $\\frac{4}{6}$ reduced, again from miscounting the favorable outcomes."
+        ],
+        "answer": "C) $\\frac{1}{3}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "A bag of marbles is drawn $50$ times with replacement: red $20$, blue $18$, green $12$. Based on this data, what is $P(\\text{blue})$?\nA) $\\frac{1}{3}$\nB) $18$\nC) $\\frac{18}{50}$\nD) $\\frac{18}{3}$",
+      "answer": "C) $\\frac{18}{50}$",
+      "solution": {
+        "steps": [
+          "An empirical probability is $\\frac{\\text{observed frequency}}{\\text{total trials}}$.",
+          "Blue occurred $18$ times in $50$ draws, so $P(\\text{blue}) = \\frac{18}{50} = \\frac{9}{25}$. C is correct.",
+          "A wrongly assumes the three colors are equally likely; the data show they are not.",
+          "B uses the raw count as the probability, and D divides by the number of colors ($3$) instead of the number of trials ($50$)."
+        ],
+        "answer": "C) $\\frac{18}{50}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "A fair number cube is rolled $60$ times. About how many times should you expect to roll a $4$?\nA) $10$\nB) $60$\nC) $66$\nD) $4$",
+      "answer": "A) $10$",
+      "solution": {
+        "steps": [
+          "The expected count is $P(\\text{outcome}) \\times (\\text{number of trials})$.",
+          "$P(4) = \\frac{1}{6}$, so the expected count is $\\frac{1}{6} \\times 60 = 10$. A is correct.",
+          "C adds the probability's denominator idea to the trials, giving $\\frac{1}{6} + 60 \\approx 66$, but you must multiply, not add.",
+          "B forgets the probability factor entirely, and D just repeats the face value."
+        ],
+        "answer": "A) $10$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Survey data show a class picks pizza $\\frac{1}{2}$, tacos $\\frac{3}{10}$, salad $\\frac{1}{5}$. What is $P(\\text{not salad})$?\nA) $\\frac{1}{5}$\nB) $\\frac{4}{5}$\nC) $\\frac{1}{2}$\nD) $\\frac{3}{10}$",
+      "answer": "B) $\\frac{4}{5}$",
+      "solution": {
+        "steps": [
+          "First confirm the model is valid: $\\frac{1}{2} + \\frac{3}{10} + \\frac{1}{5} = \\frac{5}{10} + \\frac{3}{10} + \\frac{2}{10} = \\frac{10}{10} = 1$.",
+          "Use the complement: $P(\\text{not salad}) = 1 - P(\\text{salad}) = 1 - \\frac{1}{5} = \\frac{4}{5}$. B is correct.",
+          "A gives $P(\\text{salad})$ itself instead of its complement.",
+          "C and D report the probabilities of pizza and tacos individually, not the combined chance of not getting salad."
+        ],
+        "answer": "B) $\\frac{4}{5}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "A coin is modeled as fair, so $P(\\text{heads}) = \\frac{1}{2} = 0.5$. In $40$ flips it lands heads $22$ times. What is the observed relative frequency of heads, and is it close to the model?\nA) $0.55$, fairly close to $0.5$\nB) $22$, far from $0.5$\nC) $0.45$, fairly close to $0.5$\nD) $\\frac{22}{18}$, close to $0.5$",
+      "answer": "A) $0.55$, fairly close to $0.5$",
+      "solution": {
+        "steps": [
+          "The observed relative frequency is $\\frac{\\text{heads}}{\\text{flips}} = \\frac{22}{40} = \\frac{11}{20} = 0.55$.",
+          "$0.55$ is only $0.05$ away from the model's $0.5$, so the agreement is fairly good. A is correct.",
+          "B uses the raw count $22$ instead of dividing by the $40$ trials.",
+          "C divides correctly in spirit but uses the tails count idea or $\\frac{18}{40}$ by mistake; heads is $22$, not $18$. D divides heads by tails ($\\frac{22}{18}$) instead of by the total flips."
+        ],
+        "answer": "A) $0.55$, fairly close to $0.5$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A model for a game uses three results: win $\\frac{1}{4}$, draw $\\frac{1}{2}$, and lose $p$. For this to be a valid probability model, what must $p$ equal?\nA) $\\frac{1}{4}$\nB) $\\frac{3}{4}$\nC) $1$\nD) $\\frac{1}{2}$",
+      "answer": "A) $\\frac{1}{4}$",
+      "solution": {
+        "steps": [
+          "A valid model has all probabilities summing to $1$: $\\frac{1}{4} + \\frac{1}{2} + p = 1$.",
+          "Rewrite with a common denominator: $\\frac{1}{4} + \\frac{2}{4} = \\frac{3}{4}$, so $p = 1 - \\frac{3}{4} = \\frac{1}{4}$. A is correct.",
+          "B is the running total $\\frac{3}{4}$ of the first two outcomes, not the missing value.",
+          "C ignores the other two probabilities, and D simply copies the draw probability."
+        ],
+        "answer": "A) $\\frac{1}{4}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A spinner is assumed fair with $4$ equal colors, so each color should have probability $\\frac{1}{4}$. In $200$ spins, red comes up $90$ times, an observed relative frequency of $0.45$. Which is the best explanation?\nA) The model is exactly correct and red just happened to win.\nB) The spinner is likely not fair; it appears biased toward red, so the equal-likelihood assumption is wrong.\nC) The data must be recorded incorrectly, since a fair spinner can never differ from the model.\nD) Red is impossible because $0.45$ is greater than $\\frac{1}{4}$.",
+      "answer": "B) The spinner is likely not fair; it appears biased toward red, so the equal-likelihood assumption is wrong.",
+      "solution": {
+        "steps": [
+          "The model predicts red about $\\frac{1}{4} \\times 200 = 50$ times, but red actually appeared $90$ times ($0.45$).",
+          "A gap this large over $200$ spins is far more than ordinary chance variation, so the most likely cause is that the spinner is biased and the equal-likelihood assumption is wrong. B is correct.",
+          "A ignores the size of the discrepancy and the large number of trials.",
+          "C wrongly claims a fair spinner must match the model exactly, and D treats a higher-than-expected frequency as impossible rather than as evidence of bias."
+        ],
+        "answer": "B) The spinner is likely not fair; it appears biased toward red, so the equal-likelihood assumption is wrong."
+      }
+    }
+  ]
+}

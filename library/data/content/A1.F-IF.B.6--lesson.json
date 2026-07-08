@@ -1,0 +1,171 @@
+{
+  "id": "A1.F-IF.B.6--lesson",
+  "standard": "A1.F-IF.B.6",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Functions",
+  "domainCode": "F-IF",
+  "cluster": "Interpret functions that arise in applications in terms of the context",
+  "clusterCode": "B",
+  "skillName": "Average Rate of Change",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "The average rate of change of a function $f$ over an interval $[a,b]$ measures how fast the output changes per unit of input, on average, across that interval. You compute it with $\\dfrac{f(b)-f(a)}{b-a}$, which is exactly the slope of the secant line joining the endpoints $(a,f(a))$ and $(b,f(b))$. For a linear function this rate is constant and equals the slope. For a nonlinear function it depends on which interval you choose. In context, attach units of output per input, and read the sign: positive means the quantity increases on average, negative means it decreases, and zero means the endpoints are equal.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Find the average rate of change of $f(x)=3x-4$ over the interval $[1,5]$.",
+      "solution": {
+        "steps": [
+          "Identify the endpoints: $a=1$ and $b=5$.",
+          "Evaluate $f$ at each endpoint: $f(1)=3(1)-4=-1$ and $f(5)=3(5)-4=11$.",
+          "Apply the average rate of change formula: $\\dfrac{f(5)-f(1)}{5-1}=\\dfrac{11-(-1)}{4}$.",
+          "Simplify: $\\dfrac{11+1}{4}=\\dfrac{12}{4}=3$.",
+          "Because $f$ is linear, this rate equals the slope $3$, so it would be the same over any interval."
+        ],
+        "answer": "$3$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find the average rate of change of $f(x)=x^2$ over the interval $[2,5]$.",
+      "solution": {
+        "steps": [
+          "Identify the endpoints: $a=2$ and $b=5$.",
+          "Evaluate $f$ at each endpoint: $f(2)=2^2=4$ and $f(5)=5^2=25$.",
+          "Apply the formula: $\\dfrac{f(5)-f(2)}{5-2}=\\dfrac{25-4}{3}$.",
+          "Simplify: $\\dfrac{21}{3}=7$.",
+          "Since $f$ is nonlinear, this rate of $7$ applies only to $[2,5]$; a different interval would give a different rate."
+        ],
+        "answer": "$7$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A table gives values of a function: $f(0)=2$, $f(2)=6$, $f(4)=18$, and $f(6)=38$. Find the average rate of change over the interval $[2,6]$.",
+      "solution": {
+        "steps": [
+          "The interval $[2,6]$ uses the rows where $x=2$ and $x=6$, so $a=2$ and $b=6$.",
+          "Read the outputs from the table: $f(2)=6$ and $f(6)=38$.",
+          "Apply the formula: $\\dfrac{f(6)-f(2)}{6-2}=\\dfrac{38-6}{4}$.",
+          "Simplify: $\\dfrac{32}{4}=8$.",
+          "The output rises by $8$ units per $1$ unit of input on average across this interval."
+        ],
+        "answer": "$8$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A population is modeled by $P(t)=200+50t$, where $t$ is measured in years and $P$ in people. Find the average rate of change of $P$ over $[0,4]$ and interpret it in context with units.",
+      "solution": {
+        "steps": [
+          "Identify the endpoints: $a=0$ and $b=4$.",
+          "Evaluate $P$ at each endpoint: $P(0)=200+50(0)=200$ and $P(4)=200+50(4)=400$.",
+          "Apply the formula: $\\dfrac{P(4)-P(0)}{4-0}=\\dfrac{400-200}{4}$.",
+          "Simplify: $\\dfrac{200}{4}=50$.",
+          "Attach units of output per input: people per year, giving $50$ people per year.",
+          "Interpret: the population increases by about $50$ people per year on average over these $4$ years. The rate is positive, so the population is growing."
+        ],
+        "answer": "$50$ people per year; the population grows by about $50$ people per year on average over the interval."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "For $f(x)=x^2$, compute the average rate of change over $[0,2]$ and over $[2,4]$, then state what the comparison says about how $f$ is changing.",
+      "solution": {
+        "steps": [
+          "Over $[0,2]$: $f(0)=0$ and $f(2)=4$, so the rate is $\\dfrac{4-0}{2-0}=\\dfrac{4}{2}=2$.",
+          "Over $[2,4]$: $f(2)=4$ and $f(4)=16$, so the rate is $\\dfrac{16-4}{4-2}=\\dfrac{12}{2}=6$.",
+          "Compare the two rates: $6>2$, so the average rate of change is greater on the later interval.",
+          "Both rates are positive, so $f$ is increasing on each interval, but it is increasing faster on $[2,4]$ than on $[0,2]$.",
+          "This confirms that for a nonlinear function the average rate of change depends on the interval chosen."
+        ],
+        "answer": "The rate is $2$ over $[0,2]$ and $6$ over $[2,4]$; $f$ increases faster on the later interval."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Find the average rate of change of $f(x)=4x+1$ over the interval $[2,6]$.",
+      "hint": "Evaluate $f(2)$ and $f(6)$, then divide the change in output by the change in input. For a linear function the answer equals the slope.",
+      "solution": {
+        "steps": [
+          "Evaluate: $f(2)=4(2)+1=9$ and $f(6)=4(6)+1=25$.",
+          "Apply the formula: $\\dfrac{f(6)-f(2)}{6-2}=\\dfrac{25-9}{4}$.",
+          "Simplify: $\\dfrac{16}{4}=4$, which matches the slope of the line."
+        ],
+        "answer": "$4$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Find the average rate of change of $f(x)=-2x+10$ over the interval $[1,4]$.",
+      "hint": "Be careful with signs: use $\\dfrac{f(b)-f(a)}{b-a}$ with $b=4$ and $a=1$, not the reverse.",
+      "solution": {
+        "steps": [
+          "Evaluate: $f(1)=-2(1)+10=8$ and $f(4)=-2(4)+10=2$.",
+          "Apply the formula: $\\dfrac{f(4)-f(1)}{4-1}=\\dfrac{2-8}{3}$.",
+          "Simplify: $\\dfrac{-6}{3}=-2$.",
+          "The negative rate means $f$ is decreasing on average over this interval."
+        ],
+        "answer": "$-2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Find the average rate of change of $f(x)=x^2-3$ over the interval $[1,4]$.",
+      "hint": "Compute $f(1)$ and $f(4)$ first, then form the secant slope $\\dfrac{f(4)-f(1)}{4-1}$.",
+      "solution": {
+        "steps": [
+          "Evaluate: $f(1)=1^2-3=-2$ and $f(4)=4^2-3=13$.",
+          "Apply the formula: $\\dfrac{f(4)-f(1)}{4-1}=\\dfrac{13-(-2)}{3}$.",
+          "Simplify: $\\dfrac{15}{3}=5$."
+        ],
+        "answer": "$5$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "For $f(x)=2^x$, find the average rate of change over the interval $[0,3]$. Give the exact value.",
+      "hint": "Evaluate the exponential at both endpoints, then divide. Leave the answer as a fraction if it does not simplify to a whole number.",
+      "solution": {
+        "steps": [
+          "Evaluate: $f(0)=2^0=1$ and $f(3)=2^3=8$.",
+          "Apply the formula: $\\dfrac{f(3)-f(0)}{3-0}=\\dfrac{8-1}{3}$.",
+          "Simplify: $\\dfrac{7}{3}$, which does not reduce further."
+        ],
+        "answer": "$\\dfrac{7}{3}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A balloon's height is given by $h(t)=120-15t$, where $t$ is in seconds and $h$ in feet. Find the average rate of change of $h$ over $[0,6]$ and interpret it in context with units.",
+      "hint": "Compute $\\dfrac{h(6)-h(0)}{6-0}$, attach units of feet per second, and explain what the sign means.",
+      "solution": {
+        "steps": [
+          "Evaluate: $h(0)=120-15(0)=120$ and $h(6)=120-15(6)=30$.",
+          "Apply the formula: $\\dfrac{h(6)-h(0)}{6-0}=\\dfrac{30-120}{6}$.",
+          "Simplify: $\\dfrac{-90}{6}=-15$.",
+          "Attach units: feet per second, giving $-15$ feet per second.",
+          "Interpret: the balloon descends by $15$ feet per second on average; the negative sign shows the height is decreasing."
+        ],
+        "answer": "$-15$ feet per second; the balloon's height decreases by about $15$ feet per second on average over the interval."
+      }
+    }
+  ]
+}

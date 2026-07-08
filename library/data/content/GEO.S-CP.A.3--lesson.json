@@ -1,0 +1,169 @@
+{
+  "id": "GEO.S-CP.A.3--lesson",
+  "standard": "GEO.S-CP.A.3",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Understand independence and conditional probability and use them to interpret data",
+  "clusterCode": "A",
+  "skillName": "Conditional Probability Defined",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "intro": "The conditional probability of $A$ given $B$, written $P(A\\mid B)$, is the probability that $A$ happens once you already know $B$ has happened. You compute it by restricting your attention to the outcomes inside $B$ and asking what fraction of those are also in $A$. The defining formula is $P(A\\mid B)=\\dfrac{P(A\\text{ and }B)}{P(B)}$, valid whenever $P(B)>0$. Notice that $P(A\\mid B)$ and $P(B\\mid A)$ divide the same joint probability by different denominators, so they are usually different. Rearranging the rule gives $P(A\\text{ and }B)=P(A\\mid B)\\,P(B)$, and comparing $P(A\\mid B)$ to $P(A)$ tells you whether $A$ and $B$ are independent.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Given $P(A\\text{ and }B)=\\frac{1}{5}$ and $P(B)=\\frac{1}{2}$, find $P(A\\mid B)$.",
+      "solution": {
+        "steps": [
+          "Write the definition: $P(A\\mid B)=\\dfrac{P(A\\text{ and }B)}{P(B)}$, valid since $P(B)=\\frac{1}{2}>0$.",
+          "Substitute the given values: $P(A\\mid B)=\\dfrac{\\frac{1}{5}}{\\frac{1}{2}}$.",
+          "Divide the fractions by multiplying by the reciprocal: $\\frac{1}{5}\\times\\frac{2}{1}=\\frac{2}{5}$.",
+          "Notice this is larger than the joint probability $\\frac{1}{5}$, which makes sense: conditioning on $B$ shrinks the sample space, so the same overlap counts for a larger share."
+        ],
+        "answer": "$P(A\\mid B)=\\frac{2}{5}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A survey of $80$ students records whether each plays a sport. Exactly $30$ students play a sport, and of those, $18$ are seniors. Given that a randomly chosen student plays a sport, find the probability the student is a senior.",
+      "solution": {
+        "steps": [
+          "Let $S=\\{\\text{plays a sport}\\}$ and $R=\\{\\text{is a senior}\\}$. We want $P(R\\mid S)=\\dfrac{P(R\\text{ and }S)}{P(S)}$.",
+          "Because all $80$ students are equally likely, count instead of using probabilities: restrict to the $30$ students who play a sport.",
+          "Among those $30$ sport players, $18$ are seniors, so $P(R\\mid S)=\\dfrac{18}{30}$.",
+          "Simplify by dividing numerator and denominator by $6$: $\\dfrac{18}{30}=\\dfrac{3}{5}$.",
+          "Do not divide by the grand total $80$; conditioning on 'plays a sport' makes $30$, not $80$, the denominator."
+        ],
+        "answer": "$P(\\text{senior}\\mid\\text{sport})=\\frac{3}{5}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A fair six-sided die is rolled. Let $A=\\{\\text{the result is prime}\\}$ and $B=\\{\\text{the result is odd}\\}$. Find $P(A\\mid B)$.",
+      "solution": {
+        "steps": [
+          "List the events: $A=\\{2,3,5\\}$ (the primes) and $B=\\{1,3,5\\}$ (the odd numbers).",
+          "Find the overlap: $A\\cap B=\\{3,5\\}$, so $A\\text{ and }B$ has $2$ favorable outcomes out of $6$, giving $P(A\\text{ and }B)=\\frac{2}{6}$.",
+          "The condition $B=\\{1,3,5\\}$ has $3$ outcomes, so $P(B)=\\frac{3}{6}$.",
+          "Apply the definition: $P(A\\mid B)=\\dfrac{2/6}{3/6}=\\dfrac{2}{3}$.",
+          "Check by counting directly: inside $B=\\{1,3,5\\}$, the primes are $3$ and $5$, which is $2$ of the $3$ outcomes, confirming $\\frac{2}{3}$."
+        ],
+        "answer": "$P(A\\mid B)=\\frac{2}{3}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "For two events, $P(A\\text{ and }B)=\\frac{12}{50}$, $P(A)=\\frac{20}{50}$, and $P(B)=\\frac{15}{50}$. Compute both $P(A\\mid B)$ and $P(B\\mid A)$, and state whether they are equal.",
+      "solution": {
+        "steps": [
+          "Use $P(A\\mid B)=\\dfrac{P(A\\text{ and }B)}{P(B)}=\\dfrac{12/50}{15/50}$. The common denominator $50$ cancels, leaving $\\dfrac{12}{15}=\\dfrac{4}{5}$.",
+          "Use $P(B\\mid A)=\\dfrac{P(A\\text{ and }B)}{P(A)}=\\dfrac{12/50}{20/50}=\\dfrac{12}{20}=\\dfrac{3}{5}$.",
+          "Compare: $P(A\\mid B)=\\frac{4}{5}$ but $P(B\\mid A)=\\frac{3}{5}$.",
+          "They are not equal. Both divide the same joint probability $\\frac{12}{50}$, but by different marginals, so the order of conditioning matters."
+        ],
+        "answer": "$P(A\\mid B)=\\frac{4}{5}$ and $P(B\\mid A)=\\frac{3}{5}$; they are not equal."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Suppose $P(A)=\\frac{1}{3}$, $P(B)=\\frac{1}{2}$, and $P(A\\text{ and }B)=\\frac{1}{6}$. Determine whether $A$ and $B$ are independent.",
+      "solution": {
+        "steps": [
+          "Independence means $P(A\\mid B)=P(A)$. Compute the conditional probability and compare it to $P(A)$.",
+          "$P(A\\mid B)=\\dfrac{P(A\\text{ and }B)}{P(B)}=\\dfrac{1/6}{1/2}=\\frac{1}{6}\\times\\frac{2}{1}=\\frac{1}{3}$.",
+          "Compare to $P(A)=\\frac{1}{3}$. Since $P(A\\mid B)=\\frac{1}{3}=P(A)$, knowing $B$ occurred does not change the probability of $A$.",
+          "Compare to $P(A)$, not to $P(B)$: matching the wrong marginal is a common error.",
+          "Therefore $A$ and $B$ are independent."
+        ],
+        "answer": "$P(A\\mid B)=\\frac{1}{3}=P(A)$, so $A$ and $B$ are independent."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Given $P(A\\text{ and }B)=\\frac{3}{10}$ and $P(B)=\\frac{3}{5}$, find $P(A\\mid B)$.",
+      "hint": "Substitute into $P(A\\mid B)=\\dfrac{P(A\\text{ and }B)}{P(B)}$, then divide by multiplying by the reciprocal of $P(B)$.",
+      "solution": {
+        "steps": [
+          "$P(A\\mid B)=\\dfrac{P(A\\text{ and }B)}{P(B)}=\\dfrac{3/10}{3/5}$.",
+          "Multiply by the reciprocal: $\\frac{3}{10}\\times\\frac{5}{3}=\\frac{15}{30}$.",
+          "Simplify: $\\frac{15}{30}=\\frac{1}{2}$."
+        ],
+        "answer": "$P(A\\mid B)=\\frac{1}{2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A two-way table classifies $40$ people by whether they own a pet and whether they own a car. There are $24$ pet owners, and $9$ of those pet owners also own a car. Given that a randomly chosen person owns a pet, find the probability the person owns a car.",
+      "hint": "Restrict to the pet owners only. Of those $24$ people, how many own a car?",
+      "solution": {
+        "steps": [
+          "We want $P(\\text{car}\\mid\\text{pet})=\\dfrac{P(\\text{car and pet})}{P(\\text{pet})}$.",
+          "Restrict the sample space to the $24$ pet owners; the denominator is $24$, not the grand total $40$.",
+          "Of those $24$ pet owners, $9$ own a car, so $P(\\text{car}\\mid\\text{pet})=\\dfrac{9}{24}$.",
+          "Simplify by dividing by $3$: $\\dfrac{9}{24}=\\dfrac{3}{8}$."
+        ],
+        "answer": "$P(\\text{car}\\mid\\text{pet})=\\frac{3}{8}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A card is drawn from a standard deck of $52$ cards. Let $A=\\{\\text{the card is a king}\\}$ and $B=\\{\\text{the card is a face card (jack, queen, or king)}\\}$. Find $P(A\\mid B)$.",
+      "hint": "Count the face cards to get the condition, then count how many of those are kings.",
+      "solution": {
+        "steps": [
+          "Count the face cards: jacks, queens, and kings give $3\\times 4=12$ cards, so $P(B)=\\dfrac{12}{52}$.",
+          "Every king is a face card, so $A\\cap B$ is just the $4$ kings, giving $P(A\\text{ and }B)=\\dfrac{4}{52}$.",
+          "Apply the definition: $P(A\\mid B)=\\dfrac{4/52}{12/52}=\\dfrac{4}{12}=\\dfrac{1}{3}$.",
+          "Check directly: among the $12$ face cards, $4$ are kings, and $\\dfrac{4}{12}=\\dfrac{1}{3}$."
+        ],
+        "answer": "$P(A\\mid B)=\\frac{1}{3}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Given $P(A\\mid B)=\\frac{3}{4}$ and $P(B)=\\frac{2}{5}$, find the joint probability $P(A\\text{ and }B)$.",
+      "hint": "Rearrange the definition to $P(A\\text{ and }B)=P(A\\mid B)\\,P(B)$, then multiply.",
+      "solution": {
+        "steps": [
+          "Start from $P(A\\mid B)=\\dfrac{P(A\\text{ and }B)}{P(B)}$ and multiply both sides by $P(B)$ to get $P(A\\text{ and }B)=P(A\\mid B)\\,P(B)$.",
+          "Substitute: $P(A\\text{ and }B)=\\frac{3}{4}\\times\\frac{2}{5}$.",
+          "Multiply across: $\\frac{3\\times 2}{4\\times 5}=\\frac{6}{20}$.",
+          "Simplify by dividing by $2$: $\\frac{6}{20}=\\frac{3}{10}$. Note you multiply the probabilities here, not add them."
+        ],
+        "answer": "$P(A\\text{ and }B)=\\frac{3}{10}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A spinner is equally likely to land on any number from $1$ to $8$. Let $A=\\{\\text{the result is greater than }4\\}$ and $B=\\{\\text{the result is even}\\}$. Compute $P(A\\mid B)$ and decide whether $A$ and $B$ are independent.",
+      "hint": "List $A$, $B$, and $A\\cap B$ from $\\{1,2,3,4,5,6,7,8\\}$. Then compare $P(A\\mid B)$ with $P(A)$, not with $P(B)$.",
+      "solution": {
+        "steps": [
+          "List the events on $\\{1,2,3,4,5,6,7,8\\}$: $A=\\{5,6,7,8\\}$ and $B=\\{2,4,6,8\\}$, so $P(A)=\\frac{4}{8}=\\frac{1}{2}$ and $P(B)=\\frac{4}{8}=\\frac{1}{2}$.",
+          "Find the overlap: $A\\cap B=\\{6,8\\}$, so $P(A\\text{ and }B)=\\frac{2}{8}=\\frac{1}{4}$.",
+          "Compute the conditional: $P(A\\mid B)=\\dfrac{P(A\\text{ and }B)}{P(B)}=\\dfrac{1/4}{1/2}=\\frac{1}{2}$.",
+          "Compare to $P(A)=\\frac{1}{2}$. Since $P(A\\mid B)=\\frac{1}{2}=P(A)$, knowing the result is even does not change the chance it is greater than $4$.",
+          "Therefore $A$ and $B$ are independent."
+        ],
+        "answer": "$P(A\\mid B)=\\frac{1}{2}=P(A)$, so $A$ and $B$ are independent."
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "generatedAt": "2026-06-24T21:01:54.123Z"
+}

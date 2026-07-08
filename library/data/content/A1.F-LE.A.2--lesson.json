@@ -1,0 +1,172 @@
+{
+  "id": "A1.F-LE.A.2--lesson",
+  "standard": "A1.F-LE.A.2",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Linear, Quadratic, and Exponential Models",
+  "domainCode": "F-LE",
+  "cluster": "Construct and compare linear, quadratic, and exponential models and solve problems",
+  "clusterCode": "A",
+  "skillName": "Constructing Linear and Exponential Functions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "To build a function from data, first decide what kind of growth you see. If the outputs change by a constant amount each step, the relationship is linear, $f(x)=mx+b$, where $m$ is the rate of change and $b$ is the value at $x=0$. If the outputs are multiplied by a constant factor each step, the relationship is exponential, $f(x)=ab^{x}$, where $a$ is the starting amount and $b$ is the common ratio. Sequences are the same idea on the term number $n$: an arithmetic sequence is linear, $a_n=a_1+(n-1)d$, and a geometric sequence is exponential, $a_n=a_1\\cdot r^{\\,n-1}$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A line passes through the points $(2,7)$ and $(5,16)$. Write the linear function $f(x)=mx+b$.",
+      "solution": {
+        "steps": [
+          "Find the slope using $m=\\frac{y_2-y_1}{x_2-x_1}$: $m=\\frac{16-7}{5-2}=\\frac{9}{3}=3$.",
+          "Find $b$ by substituting one point into $y=mx+b$. Using $(2,7)$: $7=3(2)+b$, so $7=6+b$.",
+          "Solve for $b$: $b=7-6=1$.",
+          "Write the rule with $m=3$ and $b=1$: $f(x)=3x+1$.",
+          "Check with the other point $(5,16)$: $f(5)=3(5)+1=16$. It matches."
+        ],
+        "answer": "$f(x)=3x+1$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A table shows $g(0)=80,\\ g(1)=40,\\ g(2)=20,\\ g(3)=10$. Write a function $g(x)$ that fits the table.",
+      "solution": {
+        "steps": [
+          "Test for a constant difference: $40-80=-40$ but $20-40=-20$. The differences are not constant, so the relationship is not linear.",
+          "Test for a constant ratio: $\\frac{40}{80}=\\frac{1}{2}$, $\\frac{20}{40}=\\frac{1}{2}$, $\\frac{10}{20}=\\frac{1}{2}$. The ratio is constant, so the relationship is exponential.",
+          "Identify the parameters for $g(x)=ab^{x}$: the starting amount is $a=g(0)=80$ and the common ratio is $b=\\frac{1}{2}$.",
+          "Write the rule: $g(x)=80\\left(\\frac{1}{2}\\right)^{x}$.",
+          "Check with $x=2$: $g(2)=80\\left(\\frac{1}{2}\\right)^{2}=80\\cdot\\frac{1}{4}=20$. It matches."
+        ],
+        "answer": "$g(x)=80\\left(\\frac{1}{2}\\right)^{x}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "An exponential function satisfies $f(0)=6$ and $f(2)=54$. Write the function $f(x)=ab^{x}$.",
+      "solution": {
+        "steps": [
+          "Use $f(0)=6$ to find the starting amount: $f(0)=ab^{0}=a$, so $a=6$.",
+          "Substitute the second point into $f(x)=6b^{x}$: $f(2)=6b^{2}=54$.",
+          "Solve for $b^{2}$: $b^{2}=\\frac{54}{6}=9$.",
+          "Take the positive square root (the base of an exponential function is positive): $b=\\sqrt{9}=3$.",
+          "Write the rule: $f(x)=6\\cdot 3^{x}$. Check $x=2$: $6\\cdot 3^{2}=6\\cdot 9=54$. It matches."
+        ],
+        "answer": "$f(x)=6\\cdot 3^{x}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A town's population is $2000$ and grows by $5\\%$ each year. Write a function $P(t)$ for the population after $t$ years.",
+      "solution": {
+        "steps": [
+          "Percent change means each year the population is multiplied by a constant factor, so the model is exponential, $P(t)=ab^{t}$.",
+          "The starting amount is the value at $t=0$: $a=2000$.",
+          "Convert the percent to a base. Growth of $5\\%$ means the base is $1+0.05=1.05$ (the whole amount plus the increase).",
+          "Write the rule: $P(t)=2000(1.05)^{t}$.",
+          "Check $t=1$: $P(1)=2000(1.05)=2100$, which is $2000$ plus $5\\%$ of $2000$. It matches."
+        ],
+        "answer": "$P(t)=2000(1.05)^{t}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A sequence begins $5,\\ 10,\\ 20,\\ 40,\\dots$. Write an explicit rule $a_n$ for the $n$th term.",
+      "solution": {
+        "steps": [
+          "Check whether the terms change by a constant difference or a constant ratio: $10-5=5$ but $20-10=10$, so it is not arithmetic.",
+          "Check the ratio: $\\frac{10}{5}=2$, $\\frac{20}{10}=2$, $\\frac{40}{20}=2$. The ratio is constant, so the sequence is geometric with common ratio $r=2$.",
+          "Identify the first term: $a_1=5$.",
+          "Use the geometric rule $a_n=a_1\\cdot r^{\\,n-1}$ with $a_1=5$ and $r=2$: $a_n=5\\cdot 2^{\\,n-1}$.",
+          "Check $n=3$: $a_3=5\\cdot 2^{2}=5\\cdot 4=20$. It matches the third term."
+        ],
+        "answer": "$a_n=5\\cdot 2^{\\,n-1}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A line crosses the $y$-axis at $(0,4)$ and rises $2$ units for every $1$ unit it moves right. Write the linear function $f(x)$.",
+      "hint": "The point on the $y$-axis gives $b$, and \"rises $2$ for every $1$ right\" is the slope $m$.",
+      "solution": {
+        "steps": [
+          "The $y$-intercept is the value at $x=0$, so $b=4$.",
+          "Rising $2$ for every $1$ unit right means the slope is $m=\\frac{2}{1}=2$.",
+          "Substitute $m=2$ and $b=4$ into $f(x)=mx+b$: $f(x)=2x+4$.",
+          "Check $x=1$: $f(1)=2(1)+4=6$, which is $4$ plus a rise of $2$. It matches."
+        ],
+        "answer": "$f(x)=2x+4$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A line passes through the points $(1,5)$ and $(4,14)$. Write the linear function $f(x)$.",
+      "hint": "First compute the slope with $m=\\frac{y_2-y_1}{x_2-x_1}$, then back-solve for $b$ using one of the points.",
+      "solution": {
+        "steps": [
+          "Find the slope: $m=\\frac{14-5}{4-1}=\\frac{9}{3}=3$.",
+          "Substitute $(1,5)$ into $y=3x+b$: $5=3(1)+b$, so $5=3+b$.",
+          "Solve for $b$: $b=5-3=2$.",
+          "Write the rule: $f(x)=3x+2$. Check $(4,14)$: $3(4)+2=14$. It matches."
+        ],
+        "answer": "$f(x)=3x+2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A table shows $h(0)=3,\\ h(1)=6,\\ h(2)=12,\\ h(3)=24$. Decide whether the relationship is linear or exponential, then write a function $h(x)$.",
+      "hint": "Compare the first differences to the ratios. A constant difference means linear; a constant ratio means exponential.",
+      "solution": {
+        "steps": [
+          "Check the differences: $6-3=3$ but $12-6=6$. The differences are not constant, so it is not linear.",
+          "Check the ratios: $\\frac{6}{3}=2$, $\\frac{12}{6}=2$, $\\frac{24}{12}=2$. The ratio is constant, so the model is exponential.",
+          "Identify $a=h(0)=3$ and the common ratio $b=2$.",
+          "Write the rule $h(x)=ab^{x}$: $h(x)=3\\cdot 2^{x}$. Check $x=3$: $3\\cdot 2^{3}=3\\cdot 8=24$. It matches."
+        ],
+        "answer": "$h(x)=3\\cdot 2^{x}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A sample of $200$ milligrams of a substance decreases by $20\\%$ each hour. Write a function $A(t)$ for the amount remaining after $t$ hours.",
+      "hint": "Decay means you multiply by $1-r$ each hour, not by the percent itself.",
+      "solution": {
+        "steps": [
+          "A constant percent change each hour means the model is exponential, $A(t)=ab^{t}$.",
+          "The starting amount is $a=200$.",
+          "A decrease of $20\\%$ gives base $1-0.20=0.80$.",
+          "Write the rule: $A(t)=200(0.8)^{t}$. Check $t=1$: $200(0.8)=160$, which is $200$ minus $20\\%$ of $200$. It matches."
+        ],
+        "answer": "$A(t)=200(0.8)^{t}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A sequence begins $4,\\ 7,\\ 10,\\ 13,\\dots$. Write an explicit rule $a_n$ for the $n$th term and simplify it to the form $a_n=mn+c$. Then find the $20$th term.",
+      "hint": "The terms increase by a constant amount, so this is arithmetic. Use $a_n=a_1+(n-1)d$, then distribute.",
+      "solution": {
+        "steps": [
+          "The terms increase by a constant difference: $7-4=3$, $10-7=3$, $13-10=3$, so $d=3$ and the sequence is arithmetic.",
+          "The first term is $a_1=4$. Use $a_n=a_1+(n-1)d$: $a_n=4+(n-1)3$.",
+          "Distribute and simplify: $a_n=4+3n-3=3n+1$.",
+          "Find the $20$th term: $a_{20}=3(20)+1=60+1=61$."
+        ],
+        "answer": "$a_n=3n+1$, and $a_{20}=61$"
+      }
+    }
+  ]
+}

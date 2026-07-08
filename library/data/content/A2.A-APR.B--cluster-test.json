@@ -1,0 +1,214 @@
+{
+  "id": "A2.A-APR.B--cluster-test",
+  "standard": null,
+  "clusterId": "A2.A-APR.B",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Arithmetic with Polynomials and Rational Expressions",
+  "domainCode": "A-APR",
+  "cluster": "Understand the relationship between zeros and factors of polynomials",
+  "clusterCode": "B",
+  "skillName": "Understand the relationship between zeros and factors of polynomials",
+  "materialType": "cluster-test",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:56:47.282Z",
+  "intro": "End-of-cluster mastery check on the relationship between zeros and factors of polynomials. Items 1 to 6 cover the Remainder and Factor Theorems (A2.A-APR.B.2); items 7 to 12 cover zeros, multiplicity, and polynomial graphs (A2.A-APR.B.3).",
+  "items": [
+    {
+      "standard": "A2.A-APR.B.2",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Find the remainder when $p(x)=x^3-4x^2+2x-5$ is divided by $x-3$.\nA) $-8$\nB) $-2$\nC) $8$\nD) $0$",
+      "answer": "A) $-8$",
+      "solution": {
+        "steps": [
+          "By the Remainder Theorem, the remainder of $p(x)\\div(x-a)$ equals $p(a)$. Here the divisor is $x-3$, so $a=3$.",
+          "Evaluate: $p(3)=3^3-4(3)^2+2(3)-5=27-36+6-5=-8$.",
+          "The remainder is $-8$, choice A.",
+          "B ($-2$) drops the $-5$ constant. C ($8$) is just $3^3$ with the wrong sign handling. D ($0$) would mean $x-3$ is a factor, but $p(3)\\ne 0$."
+        ],
+        "answer": "A) $-8$"
+      }
+    },
+    {
+      "standard": "A2.A-APR.B.2",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Which statement correctly applies the Factor Theorem to $p(x)=x^3-x^2-4x+4$ given that $p(2)=0$?\nA) $(x-2)$ is a factor of $p(x)$\nB) $(x+2)$ is a factor of $p(x)$\nC) $(x-2)$ is not a factor of $p(x)$\nD) $2$ is the remainder when $p(x)$ is divided by $x-2$",
+      "answer": "A) $(x-2)$ is a factor of $p(x)$",
+      "solution": {
+        "steps": [
+          "The Factor Theorem says $(x-a)$ is a factor of $p(x)$ if and only if $p(a)=0$.",
+          "We are told $p(2)=0$, so taking $a=2$ gives that $(x-2)$ is a factor. This is choice A.",
+          "B uses the wrong sign: $p(2)=0$ corresponds to $(x-2)$, not $(x+2)$.",
+          "C reverses the theorem, denying a factor when $p(a)=0$. D is wrong because $p(2)=0$ means the remainder is $0$, not $2$."
+        ],
+        "answer": "A) $(x-2)$ is a factor of $p(x)$"
+      }
+    },
+    {
+      "standard": "A2.A-APR.B.2",
+      "id": 3,
+      "difficulty": "Medium",
+      "prompt": "Find the remainder when $p(x)=2x^3+5x^2-3$ is divided by $x+2$.\nA) $1$\nB) $33$\nC) $-3$\nD) $5$",
+      "answer": "A) $1$",
+      "solution": {
+        "steps": [
+          "The divisor is $x+2=x-(-2)$, so $a=-2$.",
+          "Note the missing $x$ term: $p(x)=2x^3+5x^2+0x-3$.",
+          "Evaluate: $p(-2)=2(-8)+5(4)-3=-16+20-3=1$.",
+          "The remainder is $1$, choice A. B ($33$) comes from using $a=2$ instead of $-2$. C ($-3$) ignores the cubic and quadratic terms. D ($5$) misreads a coefficient as the remainder."
+        ],
+        "answer": "A) $1$"
+      }
+    },
+    {
+      "standard": "A2.A-APR.B.2",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Using synthetic division, what is the remainder when $p(x)=x^3-2x^2-5x+6$ is divided by $x-3$?\nA) $0$\nB) $-2$\nC) $1$\nD) $6$",
+      "answer": "A) $0$",
+      "solution": {
+        "steps": [
+          "Set up synthetic division with $a=3$ and coefficients $1,\\ -2,\\ -5,\\ 6$.",
+          "Bring down $1$. Multiply $1\\cdot 3=3$, add to $-2$ to get $1$. Multiply $1\\cdot 3=3$, add to $-5$ to get $-2$. Multiply $-2\\cdot 3=-6$, add to $6$ to get $0$.",
+          "The last entry, $0$, is the remainder, so the remainder is $0$ (and $x-3$ is a factor). This is choice A.",
+          "B ($-2$) and C ($1$) are middle entries of the synthetic row (quotient coefficients), not the remainder. D ($6$) is the original constant term."
+        ],
+        "answer": "A) $0$"
+      }
+    },
+    {
+      "standard": "A2.A-APR.B.2",
+      "id": 5,
+      "difficulty": "Hard",
+      "prompt": "Find the value of $k$ so that $x-2$ is a factor of $p(x)=x^3+kx-6$.\nA) $k=-1$\nB) $k=1$\nC) $k=-7$\nD) $k=3$",
+      "answer": "A) $k=-1$",
+      "solution": {
+        "steps": [
+          "For $(x-2)$ to be a factor, the Factor Theorem requires $p(2)=0$.",
+          "Compute $p(2)=2^3+k(2)-6=8+2k-6=2+2k$.",
+          "Set $2+2k=0$, so $2k=-2$ and $k=-1$. This is choice A.",
+          "B ($k=1$) comes from a sign slip on the constant. C ($k=-7$) sets $p(2)=2$ instead of $0$ in part. D ($k=3$) ignores the $-6$ term when solving."
+        ],
+        "answer": "A) $k=-1$"
+      }
+    },
+    {
+      "standard": "A2.A-APR.B.2",
+      "id": 6,
+      "difficulty": "Hard",
+      "prompt": "Is $2x-1$ a factor of $p(x)=2x^3+x^2-1$?\nA) No, because $p\\!\\left(\\tfrac{1}{2}\\right)=-\\tfrac{1}{2}\\ne 0$\nB) Yes, because $p\\!\\left(\\tfrac{1}{2}\\right)=0$\nC) No, because $p(2)=19\\ne 0$\nD) Yes, because $p\\!\\left(-\\tfrac{1}{2}\\right)=0$",
+      "answer": "A) No, because $p\\!\\left(\\tfrac{1}{2}\\right)=-\\tfrac{1}{2}\\ne 0$",
+      "solution": {
+        "steps": [
+          "Set $2x-1=0$ to find the value to test: $x=\\tfrac{1}{2}$.",
+          "Evaluate $p\\!\\left(\\tfrac{1}{2}\\right)=2\\cdot\\tfrac{1}{8}+\\tfrac{1}{4}-1=\\tfrac{1}{4}+\\tfrac{1}{4}-1=-\\tfrac{1}{2}$.",
+          "Since $p\\!\\left(\\tfrac{1}{2}\\right)=-\\tfrac{1}{2}\\ne 0$, $2x-1$ is not a factor. This is choice A.",
+          "C tests at $x=2$, the wrong value for a divisor with leading coefficient $2$. B and D claim a zero remainder, but the correct value is $-\\tfrac{1}{2}$, and D also uses the wrong sign $x=-\\tfrac{1}{2}$."
+        ],
+        "answer": "A) No, because $p\\!\\left(\\tfrac{1}{2}\\right)=-\\tfrac{1}{2}\\ne 0$"
+      }
+    },
+    {
+      "standard": "A2.A-APR.B.3",
+      "id": 7,
+      "difficulty": "Easy",
+      "prompt": "What are the real zeros of $f(x)=(x-2)(x+5)(x-1)$?\nA) $x=2,\\ x=-5,\\ x=1$\nB) $x=-2,\\ x=5,\\ x=-1$\nC) $x=2,\\ x=5,\\ x=1$\nD) $x=-2,\\ x=-5,\\ x=-1$",
+      "answer": "A) $x=2,\\ x=-5,\\ x=1$",
+      "solution": {
+        "steps": [
+          "Set each factor equal to $0$ (Zero Product Property).",
+          "$x-2=0\\Rightarrow x=2$; $x+5=0\\Rightarrow x=-5$; $x-1=0\\Rightarrow x=1$.",
+          "The zeros are $x=2,\\ x=-5,\\ x=1$, choice A.",
+          "B negates every zero (wrong sign on all factors). C mishandles the sign on $x+5$. D negates all three constants."
+        ],
+        "answer": "A) $x=2,\\ x=-5,\\ x=1$"
+      }
+    },
+    {
+      "standard": "A2.A-APR.B.3",
+      "id": 8,
+      "difficulty": "Easy",
+      "prompt": "Find the $y$-intercept of $f(x)=2(x-3)(x+1)$.\nA) $(0,-6)$\nB) $(0,6)$\nC) $(0,-3)$\nD) $(0,2)$",
+      "answer": "A) $(0,-6)$",
+      "solution": {
+        "steps": [
+          "The $y$-intercept is $f(0)$.",
+          "$f(0)=2(0-3)(0+1)=2(-3)(1)=-6$.",
+          "So the $y$-intercept is $(0,-6)$, choice A.",
+          "B drops the negative sign. C drops the leading factor of $2$. D mistakes the leading coefficient $2$ for the intercept."
+        ],
+        "answer": "A) $(0,-6)$"
+      }
+    },
+    {
+      "standard": "A2.A-APR.B.3",
+      "id": 9,
+      "difficulty": "Medium",
+      "prompt": "For $f(x)=(x+1)^2(x-3)$, what is the behavior of the graph at each zero?\nA) Tangent at $x=-1$ (multiplicity $2$); crosses at $x=3$ (multiplicity $1$)\nB) Crosses at $x=-1$ (multiplicity $2$); tangent at $x=3$ (multiplicity $1$)\nC) Tangent at $x=1$ and crosses at $x=-3$\nD) Crosses at both $x=-1$ and $x=3$",
+      "answer": "A) Tangent at $x=-1$ (multiplicity $2$); crosses at $x=3$ (multiplicity $1$)",
+      "solution": {
+        "steps": [
+          "Zeros come from each factor: $x=-1$ (from $(x+1)^2$) and $x=3$ (from $(x-3)$).",
+          "Even multiplicity ($2$) means the graph is tangent to the axis (touches and turns); odd multiplicity ($1$) means it crosses.",
+          "So the graph is tangent at $x=-1$ and crosses at $x=3$. This is choice A.",
+          "B reverses the touch-vs-cross rule. C reads the zeros with the wrong signs. D ignores multiplicity entirely."
+        ],
+        "answer": "A) Tangent at $x=-1$ (multiplicity $2$); crosses at $x=3$ (multiplicity $1$)"
+      }
+    },
+    {
+      "standard": "A2.A-APR.B.3",
+      "id": 10,
+      "difficulty": "Medium",
+      "prompt": "Find all real zeros of $f(x)=x^3-4x$.\nA) $x=0,\\ x=2,\\ x=-2$\nB) $x=2,\\ x=-2$\nC) $x=0,\\ x=4$\nD) $x=0,\\ x=2$",
+      "answer": "A) $x=0,\\ x=2,\\ x=-2$",
+      "solution": {
+        "steps": [
+          "Factor out the GCF: $f(x)=x(x^2-4)$.",
+          "Recognize the difference of squares: $x^2-4=(x-2)(x+2)$, so $f(x)=x(x-2)(x+2)$.",
+          "Set each factor to $0$: $x=0,\\ x=2,\\ x=-2$. This is choice A.",
+          "B drops the $x=0$ zero (forgets the GCF factor). D misses $x=-2$ (incomplete difference of squares). C fails to factor $x^2-4$ at all."
+        ],
+        "answer": "A) $x=0,\\ x=2,\\ x=-2$"
+      }
+    },
+    {
+      "standard": "A2.A-APR.B.3",
+      "id": 11,
+      "difficulty": "Hard",
+      "prompt": "Find all real zeros of $f(x)=x^4-5x^2+4$.\nA) $x=1,\\ x=-1,\\ x=2,\\ x=-2$\nB) $x=1,\\ x=4$\nC) $x=2,\\ x=-2$\nD) $x=1,\\ x=-1$",
+      "answer": "A) $x=1,\\ x=-1,\\ x=2,\\ x=-2$",
+      "solution": {
+        "steps": [
+          "Treat the expression as a quadratic in $x^2$: $x^4-5x^2+4=(x^2-1)(x^2-4)$.",
+          "Factor each difference of squares: $(x^2-1)=(x-1)(x+1)$ and $(x^2-4)=(x-2)(x+2)$.",
+          "So $f(x)=(x-1)(x+1)(x-2)(x+2)$, giving zeros $x=1,\\ x=-1,\\ x=2,\\ x=-2$. This is choice A.",
+          "B stops at $x^2=1$ and $x^2=4$ without taking both roots. C and D each keep only one of the two difference-of-squares factors."
+        ],
+        "answer": "A) $x=1,\\ x=-1,\\ x=2,\\ x=-2$"
+      }
+    },
+    {
+      "standard": "A2.A-APR.B.3",
+      "id": 12,
+      "difficulty": "Hard",
+      "prompt": "Which factored polynomial has zeros only at $x=-3$ and $x=1$, is tangent to the $x$-axis at $x=1$, and falls on both ends (as $x\\to\\pm\\infty$, $f(x)\\to-\\infty$)?\nA) $f(x)=-(x+3)(x-1)^2$\nB) $f(x)=(x+3)(x-1)^2$\nC) $f(x)=-(x-3)(x+1)^2$\nD) $f(x)=-(x+3)^2(x-1)$",
+      "answer": "A) $f(x)=-(x+3)(x-1)^2$",
+      "solution": {
+        "steps": [
+          "Zeros at $x=-3$ and $x=1$ require factors $(x+3)$ and $(x-1)$.",
+          "Tangent at $x=1$ means that zero has even multiplicity, so the factor is $(x-1)^2$; the zero at $x=-3$ is a simple crossing, factor $(x+3)$.",
+          "The degree is $3$ (odd). For both ends to fall, the leading coefficient must be negative, so a front minus sign is needed: $f(x)=-(x+3)(x-1)^2$. This is choice A.",
+          "B has a positive leading coefficient, so its ends do not both fall. C puts the tangency at the wrong zero ($x=-1$, $x=3$). D makes $x=-3$ the tangent (squared) zero instead of $x=1$."
+        ],
+        "answer": "A) $f(x)=-(x+3)(x-1)^2$"
+      }
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "standard": "A1.F-IF.C.9",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Functions",
+  "domainCode": "F-IF",
+  "cluster": "Analyze functions using different representations",
+  "clusterCode": "C",
+  "skillName": "Comparing Functions Across Representations",
+
+  "description": "Students compare properties of two functions even when each function is presented in a different form: as an equation, as a graph, as a table of values, or as a verbal description. To compare fairly, students first extract the property in question (slope or rate of change, $y$-intercept or initial value, a maximum or minimum, an output at a chosen input, a zero, or average rate of change over an interval) from each representation, converting between forms as needed, and then decide which function is greater, faster, larger, or steeper. For linear functions this usually means comparing rates of change and initial values; for quadratic functions it often means comparing maximum or minimum values (vertices) or comparing outputs. Students justify the comparison by naming the property and the value each function takes.",
+
+  "subSkills": [
+    "Read the rate of change (slope) of a linear function from an equation $y=mx+b$, from two points in a table, from a graph, and from a verbal description such as 'increases by $3$ each hour'",
+    "Read the initial value ($y$-intercept) of a function from each representation",
+    "Find the maximum or minimum value of a quadratic from a graph (vertex), from a table, or by evaluating, and compare it to a maximum or minimum given another way",
+    "Evaluate a function at a specified input in any representation to compare outputs",
+    "Compute the average rate of change of a function over an interval $[a,b]$ as $\\frac{f(b)-f(a)}{b-a}$ from a table or graph",
+    "Convert a representation into a comparable form (e.g. derive a table's slope, or read a verbal description's intercept) before comparing",
+    "State a well-formed comparison conclusion that names the property and both values (e.g. 'Function $A$ grows faster because its rate is $5$ versus $3$')"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Compare slopes (equation vs. graph)",
+      "example": "Function $A$ is $y=4x+1$. Function $B$ is shown as a line passing through $(0,3)$ and $(2,7)$. Which function has the greater rate of change? $A$ has slope $4$; $B$ has slope $\\frac{7-3}{2-0}=2$, so $A$ has the greater rate of change."
+    },
+    {
+      "name": "Compare initial values (table vs. verbal)",
+      "example": "Function $A$ is given by a table with $f(0)=5$ and $f(1)=8$. Function $B$ is described: 'A plant starts at $7$ cm and grows $2$ cm per day.' Which function has the greater initial value? $A$ starts at $5$, $B$ starts at $7$, so $B$ has the greater initial value."
+    },
+    {
+      "name": "Compare maximum or minimum values (graph vs. equation)",
+      "example": "Function $A$ is the parabola $y=-(x-2)^2+9$. Function $B$ is a parabola graphed with vertex $(1,7)$ opening down. Which function has the greater maximum? $A$ has maximum $9$ and $B$ has maximum $7$, so $A$ has the greater maximum."
+    },
+    {
+      "name": "Compare outputs at a given input",
+      "example": "Function $A$ is $y=2x+3$. Function $B$ is given by a table where $g(4)=10$. Which function is greater at $x=4$? $f(4)=11$ and $g(4)=10$, so $A$ is greater at $x=4$."
+    },
+    {
+      "name": "Compare average rates of change over an interval",
+      "example": "Function $A$ is $f(x)=x^2$ on $[1,3]$. Function $B$ is a table with $g(1)=2$ and $g(3)=14$. Which has the greater average rate of change on $[1,3]$? $A$: $\\frac{9-1}{3-1}=4$; $B$: $\\frac{14-2}{3-1}=6$, so $B$ is greater."
+    },
+    {
+      "name": "Decide which model reaches a target first or wins long-run",
+      "example": "Plan $A$: $y=3x+50$ dollars saved after $x$ weeks. Plan $B$ (table): $\\$60$ at week $0$ and $\\$80$ at week $4$. Which plan saves more per week, and which has more saved at week $0$? $A$ saves $\\$3$/week vs. $B$'s $\\$5$/week, but $B$ starts higher at $\\$60$ versus $\\$50$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Compare a single, directly readable property of two linear functions where each value can be read off without computation or with one subtraction. The property is the same kind in both representations and the answer is an unambiguous 'which is greater.' tier1 lives here and ramps into Medium.",
+      "constraints": [
+        "Both functions are linear; the property is slope or $y$-intercept",
+        "At least one function is an equation $y=mx+b$ so its value is read directly; the other is a graph through lattice points or a table with integer entries",
+        "Slope from the table/graph uses points one unit apart or yields a whole number",
+        "Numbers are integers with absolute value $\\le 12$ and the two values are clearly different"
+      ]
+    },
+    "Medium": {
+      "description": "Compare a property that requires real extraction from each form: compute a slope from two non-adjacent points, evaluate each function at a given input, or compare a quadratic maximum/minimum read as a vertex. Representations differ (e.g. table vs. verbal, equation vs. graph) and at least one side needs a computation. tier1 ends here and tier2 begins here.",
+      "constraints": [
+        "Compare outputs at a stated input by evaluating, or compare slopes computed via $\\frac{y_2-y_1}{x_2-x_1}$ with points more than one unit apart",
+        "May involve a quadratic given in vertex form $y=a(x-h)^2+k$ compared to a graphed or tabulated parabola's max/min",
+        "The two representations are different forms and at least one value is not directly visible",
+        "Values may be non-integer slopes such as $\\frac{3}{2}$ but remain exact fractions, not rounded decimals"
+      ]
+    },
+    "Hard": {
+      "description": "Compare across three or more representations or compare a property that itself requires multi-step work, such as average rate of change over an interval, or a comparison whose answer depends on conditions (one function is greater at first but the other overtakes it). Requires synthesizing two properties or reasoning about when one function exceeds the other. tier2 lives here.",
+      "constraints": [
+        "Compute and compare average rate of change $\\frac{f(b)-f(a)}{b-a}$ for both functions from possibly different forms",
+        "Compare two properties at once (e.g. one function has the greater initial value but the smaller rate of change) and resolve which wins by a stated week/value or in the long run",
+        "Mix at least two non-equation representations (graph, table, verbal) so multiple conversions are required",
+        "May require finding where two functions are equal, or comparing a linear model to a quadratic model and reasoning about which is greater on an interval"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student compares the $y$-intercepts when the question asks about rate of change (or vice versa), comparing the wrong property",
+      "distractor": "For $y=4x+1$ versus a line with $y$-intercept $3$, concludes function $B$ grows faster because $3>1$, comparing initial values instead of slopes"
+    },
+    {
+      "misconception": "Student computes slope from a table or graph as $\\frac{\\Delta x}{\\Delta y}$ (run over rise) instead of $\\frac{\\Delta y}{\\Delta x}$",
+      "distractor": "From points $(0,3)$ and $(2,7)$ reports the slope as $\\frac{2}{4}=\\frac{1}{2}$ instead of $\\frac{4}{2}=2$"
+    },
+    {
+      "misconception": "Student forgets to convert and compares the raw equation coefficient to a table difference without scaling for the change in $x$",
+      "distractor": "Reads a table where $x$ jumps by $2$ and $y$ jumps by $6$ and calls the rate $6$ instead of $\\frac{6}{2}=3$, then compares $6$ to the other function's slope"
+    },
+    {
+      "misconception": "Student reports the $x$-coordinate of a vertex as the maximum/minimum value instead of the $y$-coordinate",
+      "distractor": "For $y=-(x-2)^2+9$ with vertex $(2,9)$, gives the maximum as $2$ instead of $9$, then compares $2$ to the other function's max"
+    },
+    {
+      "misconception": "Student assumes the function with the larger rate of change is always greater, ignoring the initial value or the specific input asked about",
+      "distractor": "Concludes the steeper line is greater at $x=0$, even though the other line has the larger $y$-intercept and is actually greater there"
+    },
+    {
+      "misconception": "Student evaluates at the wrong input or plugs the input into the wrong function when comparing outputs",
+      "distractor": "Asked for the greater value at $x=4$, computes $f(4)$ for one function but reads $g(2)$ from the other's table, comparing mismatched inputs"
+    },
+    {
+      "misconception": "Student treats average rate of change as the change in $y$ only, omitting the division by the change in $x$",
+      "distractor": "On $[1,3]$ with $f(1)=1,f(3)=9$ reports the average rate of change as $8$ instead of $\\frac{9-1}{3-1}=4$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

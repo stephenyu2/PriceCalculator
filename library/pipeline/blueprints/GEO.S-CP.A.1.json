@@ -1,0 +1,133 @@
+{
+  "standard": "GEO.S-CP.A.1",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Understand independence and conditional probability and use them to interpret data",
+  "clusterCode": "A",
+  "skillName": "Events as Subsets of Sample Space",
+
+  "description": "Students describe a chance experiment's sample space as the set of all possible outcomes, then describe events as subsets of that sample space. They identify which outcomes belong to an event given a characteristic or category, and they build new events from existing ones using the set operations union ($A \\cup B$, 'or'), intersection ($A \\cap B$, 'and'), and complement ($A^c$ or $\\overline{A}$, 'not'). They translate fluently among verbal descriptions, set-builder/roster notation, and the listed outcomes themselves.",
+
+  "subSkills": [
+    "List the sample space $S$ of a simple experiment in roster form (e.g. rolling a die, flipping two coins, drawing a card)",
+    "Describe an event as the subset of outcomes satisfying a stated characteristic or category",
+    "Form the union $A \\cup B$ of two events ('or', inclusive) and list its outcomes",
+    "Form the intersection $A \\cap B$ of two events ('and') and list its outcomes",
+    "Form the complement $A^c$ of an event ('not') relative to the sample space $S$",
+    "Translate among verbal descriptions, set notation, and explicit outcome lists",
+    "Recognize when two events are mutually exclusive (disjoint), i.e. $A \\cap B = \\varnothing$",
+    "Apply union, intersection, and complement to outcomes organized in a two-way table or Venn diagram"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "List the sample space",
+      "example": "A fair six-sided die is rolled once. Write the sample space $S$ in roster form. Answer: $S = \\{1, 2, 3, 4, 5, 6\\}$."
+    },
+    {
+      "name": "Event as a subset by characteristic",
+      "example": "For one roll of a die, let $E$ be the event 'the result is even.' List $E$ as a subset of $S$. Answer: $E = \\{2, 4, 6\\}$."
+    },
+    {
+      "name": "Union of two events ('or')",
+      "example": "With $A = \\{2, 4, 6\\}$ (even) and $B = \\{1, 2, 3\\}$ (less than $4$) for a die roll, list $A \\cup B$. Answer: $A \\cup B = \\{1, 2, 3, 4, 6\\}$."
+    },
+    {
+      "name": "Intersection of two events ('and')",
+      "example": "With $A = \\{2, 4, 6\\}$ and $B = \\{1, 2, 3\\}$, list $A \\cap B$. Answer: $A \\cap B = \\{2\\}$."
+    },
+    {
+      "name": "Complement of an event ('not')",
+      "example": "For a die roll with $S = \\{1,2,3,4,5,6\\}$ and $A = \\{2, 4, 6\\}$, list $A^c$. Answer: $A^c = \\{1, 3, 5\\}$."
+    },
+    {
+      "name": "Multi-outcome sample space (compound experiment)",
+      "example": "Two fair coins are flipped. Write $S$, then list the event $E$ = 'at least one head.' Answer: $S = \\{HH, HT, TH, TT\\}$, $E = \\{HH, HT, TH\\}$."
+    },
+    {
+      "name": "Verbal to set operation translation",
+      "example": "Describe 'a card that is a heart and a face card' and 'a card that is red or a king' using $\\cap$ and $\\cup$. Answer: $H \\cap F$ and $R \\cup K$."
+    },
+    {
+      "name": "Two-way table / category context",
+      "example": "Students are classified by grade (junior/senior) and whether they play a sport. Using the table, describe the event 'senior and plays a sport' as an intersection and count its outcomes."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single small, explicitly given sample space (one die, one coin, a short letter/card set) with at most one set operation. Outcomes are listed for the student; the task is to apply one of union, intersection, or complement, or to write a sample space or single event in roster form.",
+      "constraints": [
+        "Sample space has at most $6$ outcomes and is single-stage (one die, one spinner, drawing one labeled item)",
+        "At most one set operation per problem ($A \\cup B$, $A \\cap B$, or $A^c$)",
+        "Events $A$ and $B$ are given directly as outcome lists, no extraction from a category needed",
+        "Answer is a short roster-form set"
+      ]
+    },
+    "Medium": {
+      "description": "The student must first extract events from stated characteristics or a small two-way table, then apply one or two set operations. Sample spaces may be two-stage (two coins, a card deck, an ordered pair of dice restricted to a small range).",
+      "constraints": [
+        "Sample space may be two-stage or have up to $\\sim 12$ outcomes",
+        "Events must be built from a verbal characteristic or category before operating",
+        "One or two set operations, possibly nested such as $A \\cap B^c$",
+        "Includes translating between verbal phrasing and $\\cup$, $\\cap$, $A^c$ notation"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step combinations of operations over a larger or compound sample space, recognizing mutually exclusive events, or reasoning about counts of outcomes in a region of a Venn diagram or two-way table. May require expressing the same event two equivalent ways or identifying $(A \\cup B)^c$ versus $A^c \\cap B^c$.",
+      "constraints": [
+        "Compound sample space (two dice = $36$ outcomes, full $52$-card deck, three coins) or a two-way table with subtotals",
+        "Nested or chained operations: $(A \\cup B)^c$, $A^c \\cap B$, $A \\cup (B \\cap C)$",
+        "Requires recognizing disjoint events ($A \\cap B = \\varnothing$) or applying De Morgan-style equivalence informally",
+        "May ask for the count of outcomes in the resulting event, not just the list"
+      ]
+    },
+    "tierSplit": "If this standard were built as two worksheets: tier1 covers Easy to Medium (writing sample spaces, single events as subsets, and one operation at a time on given lists). tier2 covers Medium to Hard (extracting events from characteristics and two-way tables, then nested operations, complements of compound events, and mutually exclusive recognition). The default build is a single 15-item worksheet ramping Easy to Hard."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Confuses union with intersection, treating 'or' as 'and'",
+      "distractor": "For $A \\cup B$ the student lists only outcomes in both sets, giving $A \\cap B = \\{2\\}$ instead of $A \\cup B = \\{1, 2, 3, 4, 6\\}$"
+    },
+    {
+      "misconception": "Treats union as exclusive 'or', dropping the shared outcome",
+      "distractor": "Lists $A \\cup B = \\{1, 3, 4, 6\\}$, omitting the overlap element $2$ that belongs to both events"
+    },
+    {
+      "misconception": "Takes the complement relative to the event rather than the sample space, or forgets boundary outcomes",
+      "distractor": "For $A = \\{2, 4, 6\\}$ with $S = \\{1,2,3,4,5,6\\}$, gives $A^c = \\{2, 4, 6\\}$ or $\\{1, 3\\}$ instead of $A^c = \\{1, 3, 5\\}$"
+    },
+    {
+      "misconception": "Includes the event's own outcomes inside its complement (double counting)",
+      "distractor": "Reports $A^c = \\{1, 2, 3, 4, 5, 6\\}$ (the whole sample space) instead of removing the outcomes of $A$"
+    },
+    {
+      "misconception": "Mis-builds the compound sample space, dropping order or outcomes",
+      "distractor": "For two coins gives $S = \\{HH, HT, TT\\}$ (treating $HT$ and $TH$ as the same) instead of $\\{HH, HT, TH, TT\\}$"
+    },
+    {
+      "misconception": "Applies De Morgan incorrectly, equating $(A \\cup B)^c$ with $A^c \\cup B^c$",
+      "distractor": "Computes $(A \\cup B)^c$ as $A^c \\cup B^c$ (too large) rather than $A^c \\cap B^c$"
+    },
+    {
+      "misconception": "Confuses mutually exclusive with complementary events",
+      "distractor": "Claims disjoint events $A$ and $B$ must satisfy $A \\cup B = S$, treating $A \\cap B = \\varnothing$ as if it forced $B = A^c$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

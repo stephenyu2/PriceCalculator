@@ -1,0 +1,140 @@
+{
+  "standard": "A2.A-SSE.B.4",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Seeing Structure in Expressions",
+  "domainCode": "A-SSE",
+  "cluster": "Write expressions in equivalent forms to solve problems",
+  "clusterCode": "B",
+  "skillName": "Geometric Series Formula",
+
+  "description": "Students derive and apply the closed form for the sum of a finite geometric series when the common ratio is not $1$. A finite geometric series with first term $a$, common ratio $r \\neq 1$, and $n$ terms is $a + ar + ar^2 + \\cdots + ar^{n-1}$, and its sum is $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$ (equivalently $S_n = a\\,\\dfrac{r^n - 1}{r - 1}$). Students must reproduce the derivation by the multiply-by-$r$-and-subtract trick (form $S_n - rS_n$ so the middle terms telescope), identify $a$, $r$, and $n$ from a sum written in expanded or sigma form, evaluate $S_n$ exactly, and apply the formula to real-world contexts such as compound-interest savings, loan and mortgage payments, depreciation totals, and population or dosage accumulation. They distinguish the $n$th term $a r^{n-1}$ from the sum of $n$ terms, and they recognize why the derivation requires $r \\neq 1$ (the factor $1 - r$ would be zero).",
+
+  "subSkills": [
+    "Identify the first term $a$, common ratio $r$, and number of terms $n$ from a geometric series given in expanded form, e.g. $3 + 6 + 12 + \\cdots + 3\\cdot 2^{7}$",
+    "Translate sigma notation $\\sum_{k=0}^{n-1} a r^{k}$ or $\\sum_{k=1}^{n} a r^{k-1}$ into $a$, $r$, $n$ and back",
+    "Derive $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$ by writing $S_n$, multiplying by $r$, subtracting $S_n - r S_n$, and solving (the multiply-and-subtract / telescoping derivation)",
+    "Explain why the derivation and formula require $r \\neq 1$ (division by $1 - r = 0$ is undefined; when $r = 1$ the sum is simply $a n$)",
+    "Substitute $a$, $r$, $n$ into $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$ and evaluate the sum exactly, keeping fractions or radicals as needed",
+    "Distinguish the $n$th term $a r^{n-1}$ from the partial sum $S_n$, and recover $a$, $r$, or $n$ when one is unknown",
+    "Determine the number of terms $n$ from the index range in sigma notation or from a first and last term",
+    "Model a real-world accumulation (savings deposits with compound interest, total loan or mortgage payments, depreciation, repeated dosing) as a finite geometric series and solve with the formula",
+    "Solve for an unknown parameter ($a$, $r$, or $n$) given the sum $S_n$, including using logarithms to solve for $n$"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Identify a, r, n from an expanded series",
+      "example": "For the series $5 + 15 + 45 + 135 + 405$, identify $a$, $r$, and $n$. Answer: $a = 5$, $r = 3$, $n = 5$."
+    },
+    {
+      "name": "Evaluate a finite geometric sum from expanded form",
+      "example": "Find $2 + 6 + 18 + 54 + 162$. Using $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$ with $a = 2$, $r = 3$, $n = 5$: $S_5 = 2\\cdot\\dfrac{1 - 3^5}{1 - 3} = 2\\cdot\\dfrac{1 - 243}{-2} = 242$."
+    },
+    {
+      "name": "Evaluate a sum given in sigma notation",
+      "example": "Evaluate $\\displaystyle\\sum_{k=0}^{6} 4\\left(\\tfrac{1}{2}\\right)^{k}$. Here $a = 4$, $r = \\frac{1}{2}$, $n = 7$, so $S_7 = 4\\cdot\\dfrac{1 - \\left(\\frac{1}{2}\\right)^{7}}{1 - \\frac{1}{2}} = 8\\left(1 - \\tfrac{1}{128}\\right) = \\dfrac{127}{16}$."
+    },
+    {
+      "name": "Derive the closed form (multiply and subtract)",
+      "example": "Derive $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$ for $r \\neq 1$. Write $S_n = a + ar + \\cdots + ar^{n-1}$, then $rS_n = ar + ar^2 + \\cdots + ar^{n}$. Subtract: $S_n - rS_n = a - ar^{n}$, so $S_n(1 - r) = a(1 - r^n)$ and $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$."
+    },
+    {
+      "name": "Fractional or negative ratio (exact value)",
+      "example": "Find the sum of the first $5$ terms of a geometric series with $a = 9$ and $r = -\\tfrac{1}{3}$. $S_5 = 9\\cdot\\dfrac{1 - \\left(-\\frac{1}{3}\\right)^{5}}{1 - \\left(-\\frac{1}{3}\\right)} = 9\\cdot\\dfrac{1 + \\frac{1}{243}}{\\frac{4}{3}} = \\dfrac{61}{9}$."
+    },
+    {
+      "name": "Solve for an unknown parameter",
+      "example": "A geometric series has $a = 3$, $r = 2$, and sum $S_n = 381$. Find $n$. Solve $3\\cdot\\dfrac{2^n - 1}{2 - 1} = 381 \\Rightarrow 2^n - 1 = 127 \\Rightarrow 2^n = 128 \\Rightarrow n = 7$."
+    },
+    {
+      "name": "Savings / compound-interest accumulation",
+      "example": "You deposit $\\$200$ at the end of each year into an account earning $5\\%$ annual interest for $10$ years. The future value is $200\\cdot\\dfrac{1.05^{10} - 1}{1.05 - 1} \\approx \\$2515.61$."
+    },
+    {
+      "name": "Loan / mortgage payment (context)",
+      "example": "A loan is repaid with monthly payments; the present value of the payment stream is a finite geometric series $P\\cdot\\dfrac{1 - (1+i)^{-n}}{i}$. Given a balance and rate, set this equal to the balance and solve for the payment $P$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step identification or direct substitution with small, friendly integers. Student reads $a$, $r$, $n$ off a short expanded series, or substitutes given small integer values of $a$, $r$ (positive integer ratio like $2$ or $3$), and $n \\leq 5$ into $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$ and evaluates to an integer. No context, no sigma notation, no solving for an unknown. This is the bottom of a ramped sheet and the start of tier1.",
+      "constraints": [
+        "Series given in expanded form with $4$ to $6$ visible terms",
+        "Positive integer common ratio, e.g. $r = 2$ or $r = 3$, and integer first term",
+        "Number of terms $n \\leq 5$ and the sum is a clean integer",
+        "Target is either to identify $a, r, n$ or to compute the sum directly; the formula may be provided",
+        "No context, no sigma notation, no $r = 1$ edge case"
+      ]
+    },
+    "Medium": {
+      "description": "Two ideas or a sign or fraction to track. Student translates sigma notation to $a, r, n$ (watching whether the index starts at $0$ or $1$ to get $n$ right), evaluates a sum with a fractional or negative ratio keeping the answer exact, distinguishes the $n$th term from $S_n$, or reproduces the multiply-and-subtract derivation. This is the top of tier1 and the bottom of tier2.",
+      "constraints": [
+        "Series given in sigma notation, requiring correct count of terms from the index range",
+        "Fractional ratio (e.g. $r = \\tfrac{1}{2}$, $\\tfrac{2}{3}$) or negative ratio (e.g. $r = -\\tfrac{1}{3}$); answer left as an exact fraction",
+        "May ask the student to derive $S_n$ via multiply-by-$r$-and-subtract, or to explain why $r \\neq 1$ is required",
+        "May require separating the $n$th term $ar^{n-1}$ from the partial sum $S_n$",
+        "$n$ may be up to about $8$ to $10$"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems that combine modeling, solving for an unknown, or a full justified derivation. Student sets up a finite geometric series from a real-world description (savings with compound interest, total payments, depreciation, dosing), solves for an unknown parameter (using logarithms for $n$), or completes the derivation and applies it. Several steps chain together so a single algebra or exponent error propagates to the wrong conclusion. This is the top of tier2 and the end of a ramped sheet.",
+      "constraints": [
+        "Real-world context requiring the student to build the series ($a$, $r$, $n$) before applying the formula, e.g. annual deposits at a fixed interest rate or a mortgage/loan payment stream",
+        "Solve for an unknown $a$, $r$, or $n$ given $S_n$, including using $\\log$ to isolate $n$",
+        "Provide a complete justified derivation of $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$ and identify where $r \\neq 1$ is used",
+        "Answers may be exact fractions, may use a stated rounding for a money amount, or may require a percent rate",
+        "Multi-step chaining where exponent rules and the $1 - r$ denominator must be handled carefully"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student uses the $n$th-term formula $a r^{n-1}$ where the sum formula is required, reporting the last term instead of the total",
+      "distractor": "For $2 + 6 + 18 + 54 + 162$ answers $162$ (the $5$th term $2\\cdot 3^{4}$) instead of the sum $242$"
+    },
+    {
+      "misconception": "Student uses exponent $n - 1$ instead of $n$ inside the sum formula, confusing the term exponent with the sum exponent",
+      "distractor": "Computes $a\\,\\dfrac{1 - r^{\\,n-1}}{1 - r}$, e.g. $2\\cdot\\dfrac{1 - 3^{4}}{1 - 3} = 80$ instead of $2\\cdot\\dfrac{1 - 3^{5}}{1 - 3} = 242$"
+    },
+    {
+      "misconception": "Student miscounts the number of terms from sigma notation, ignoring that an index starting at $0$ adds one term",
+      "distractor": "For $\\sum_{k=0}^{6} a r^{k}$ uses $n = 6$ instead of $n = 7$, dropping the last term and undercounting the sum"
+    },
+    {
+      "misconception": "Student inverts or mismatches the numerator and denominator signs, e.g. pairs $1 - r^n$ with $r - 1$",
+      "distractor": "Writes $a\\,\\dfrac{1 - r^n}{r - 1}$, giving the negative of the correct sum (e.g. $-242$ instead of $242$ for $a=2, r=3, n=5$)"
+    },
+    {
+      "misconception": "Student evaluates $(-r)^n$ or $r^n$ with the wrong sign, mishandling a negative ratio raised to an odd versus even power",
+      "distractor": "For $r = -\\tfrac{1}{3}$, $n = 5$ treats $\\left(-\\tfrac{1}{3}\\right)^{5}$ as $+\\tfrac{1}{243}$, getting $\\dfrac{60}{9}$ instead of the correct $\\dfrac{61}{9}$"
+    },
+    {
+      "misconception": "Student applies the finite formula as if $r = 1$ or divides by $1 - r$ when $r = 1$, ignoring the $r \\neq 1$ restriction",
+      "distractor": "For a series with $r = 1$ (e.g. $7 + 7 + 7 + 7$) plugs into $a\\,\\dfrac{1 - r^n}{1 - r}$ and reports $0$ or undefined instead of recognizing the sum is $a n = 28$"
+    },
+    {
+      "misconception": "Student multiplies the first term by $n$ (treating the series as arithmetic-like or constant) instead of using the geometric sum",
+      "distractor": "For $a = 5$, $r = 3$, $n = 5$ answers $5 \\cdot 5 = 25$, or uses an arithmetic average of first and last term, instead of $S_5 = 605$"
+    },
+    {
+      "misconception": "Student forgets to multiply the whole quotient by the first term $a$, computing only $\\dfrac{1 - r^n}{1 - r}$",
+      "distractor": "For $a = 2$, $r = 3$, $n = 5$ reports $\\dfrac{1 - 243}{1 - 3} = 121$ instead of $2 \\cdot 121 = 242$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

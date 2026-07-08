@@ -1,0 +1,138 @@
+{
+  "standard": "A1.S-ID.A.1",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on a single count or measurement variable",
+  "clusterCode": "A",
+  "skillName": "Data Plots on the Number Line",
+
+  "description": "Students represent a univariate quantitative data set with the three plot types built on the real number line: dot plots, histograms, and box plots. For dot plots they place one mark above each value on a number-line scale and read frequencies back off the stack heights. For histograms they group continuous data into equal-width intervals (bins), tally the frequency in each bin, and read or build bars whose heights are those frequencies, attending to the bin boundary convention (a value on a boundary belongs to one bin only). For box plots they compute the five-number summary (minimum, first quartile $Q_1$, median, third quartile $Q_3$, maximum), locate those five values on a number-line scale, draw the box from $Q_1$ to $Q_3$ with a line at the median and whiskers to the extremes, and compute the interquartile range $\\text{IQR}=Q_3-Q_1$. Students choose an appropriate display for a given data set and read values, counts, and proportions back off each display.",
+
+  "subSkills": [
+    "Build and read a dot plot: stack one dot per data value over a number-line scale and recover the frequency of any value from the stack height",
+    "Order a data set and find the five-number summary: minimum, $Q_1$, median, $Q_3$, maximum",
+    "Compute the median of a data set with an odd or an even number of values",
+    "Compute the quartiles $Q_1$ and $Q_3$ as the medians of the lower and upper halves",
+    "Compute the interquartile range $\\text{IQR}=Q_3-Q_1$ and the range $\\text{max}-\\text{min}$",
+    "Construct a box plot by plotting the five-number summary on a number-line scale with box and whiskers",
+    "Read counts and the five-number summary back off an existing box plot",
+    "Group quantitative data into equal-width intervals and tally frequencies for a frequency table",
+    "Construct and read a histogram, applying the boundary convention so each value is counted in exactly one bin",
+    "Choose an appropriate display (dot plot, histogram, or box plot) for a given data set and purpose"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Read a dot plot",
+      "example": "A dot plot of quiz scores shows stacks of heights $1,3,4,2$ over the values $6,7,8,9$. How many students scored at least $8$? Add the stacks at $8$ and $9$: $4+2=6$ students."
+    },
+    {
+      "name": "Build the five-number summary",
+      "example": "For the data $4,7,8,8,10,12,15$ find the five-number summary. Ordered, $n=7$: minimum $4$, median $8$, lower half $4,7,8$ gives $Q_1=7$, upper half $10,12,15$ gives $Q_3=12$, maximum $15$."
+    },
+    {
+      "name": "Compute the IQR",
+      "example": "A data set has $Q_1=23$ and $Q_3=41$. Find the interquartile range: $\\text{IQR}=Q_3-Q_1=41-23=18$."
+    },
+    {
+      "name": "Construct a box plot",
+      "example": "Given the data $5,6,8,9,11,12,14,18$ (with $n=8$), find the five-number summary and describe the box plot. Median $=\\dfrac{9+11}{2}=10$, $Q_1=\\dfrac{6+8}{2}=7$, $Q_3=\\dfrac{12+14}{2}=13$, minimum $5$, maximum $18$; the box runs from $7$ to $13$ with a line at $10$ and whiskers to $5$ and $18$."
+    },
+    {
+      "name": "Read a box plot",
+      "example": "A box plot has minimum $12$, $Q_1=18$, median $25$, $Q_3=30$, maximum $40$. What fraction of the data lies between $18$ and $30$? About $\\dfrac{1}{2}$ of the data lies in the box (from $Q_1$ to $Q_3$)."
+    },
+    {
+      "name": "Build a frequency table for a histogram",
+      "example": "Group the data $2,4,5,7,9,11,12,14,15,19$ into bins of width $5$ starting at $0$ ($[0,5),[5,10),[10,15),[15,20)$). The frequencies are $2,2,3,3$, using the convention that a value on the right boundary belongs to the next bin."
+    },
+    {
+      "name": "Read a histogram",
+      "example": "A histogram of ages has bars of heights $4,7,5,2$ over the bins $[10,20),[20,30),[30,40),[40,50)$. How many people are younger than $30$? Add the first two bars: $4+7=11$."
+    },
+    {
+      "name": "Choose an appropriate display",
+      "example": "A teacher has the test scores of $120$ students and wants to show the overall shape and spread. A histogram (or box plot) is appropriate because the data set is large; a dot plot would require $120$ stacked dots and become unreadable."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Direct reads and single-step counts off a fully described display, or a five-number summary for a small data set with an odd count where the quartiles land on actual data values. tier1 lives here and ramps into Medium.",
+      "constraints": [
+        "Dot-plot and histogram items state every stack height or bar height in the prompt; the task is to add a few of them",
+        "Five-number-summary items use an odd $n$ between $5$ and $9$ so the median is a single middle value and quartiles are the middles of clean halves",
+        "All data values are positive whole numbers with $\\text{max}\\le 30$",
+        "IQR and range tasks give $Q_1,Q_3$ (or min, max) directly and ask for one subtraction"
+      ]
+    },
+    "Medium": {
+      "description": "A full five-number summary for an even-count data set where the median and quartiles are averages of two values, building a frequency table from raw data with the boundary convention, or computing the IQR after first finding the quartiles. tier1 ends here and tier2 begins here.",
+      "constraints": [
+        "Even $n$ between $8$ and $12$, so the median is $\\dfrac{a+b}{2}$ and at least one quartile is an average of two values",
+        "Histogram items require grouping raw data into equal-width bins and applying the boundary rule (value on a boundary counts in exactly one bin)",
+        "Data values may reach the hundreds and a quartile or median may be a value ending in $.5$",
+        "Box-plot construction requires computing the five-number summary first, not just plotting given values"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning that chains the summary with interpretation or a follow-up: comparing two distributions, reasoning about the percent of data in a region of a box plot, working backward from a display to a missing value or count, or justifying a choice of display. tier2 lives here.",
+      "constraints": [
+        "Reason about proportions of data using the quartile rule (each whisker and each box half holds about $25\\%$ of the data)",
+        "Work backward: given a box plot or partial summary, recover a missing data value, an unknown frequency, or the original sample size",
+        "Compare two data sets' box plots or histograms and justify which has the greater median, range, or IQR in a sentence",
+        "Justify the most appropriate display for a described data set, citing size, shape, or the need to show individual values"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student finds the five-number summary without first ordering the data",
+      "distractor": "For $12,4,8,15,7,10,8$ takes the median as the physical middle entry $15$ instead of ordering to $4,7,8,8,10,12,15$ and reading the true median $8$"
+    },
+    {
+      "misconception": "Student confuses the range with the interquartile range",
+      "distractor": "For a set with min $4$, $Q_1=7$, $Q_3=12$, max $15$ reports the IQR as $15-4=11$ instead of $Q_3-Q_1=12-7=5$"
+    },
+    {
+      "misconception": "Student includes the median value in both halves when finding quartiles for an odd-count set",
+      "distractor": "For $4,7,8,8,10,12,15$ uses the lower half $4,7,8,8$ and gets $Q_1=\\dfrac{7+8}{2}=7.5$ instead of excluding the median and using $4,7,8$ to get $Q_1=7$"
+    },
+    {
+      "misconception": "Student double-counts a value that sits exactly on a histogram bin boundary",
+      "distractor": "For data $5,5,10$ with bins $[0,5),[5,10),[10,15)$ counts the value $5$ in both the first and second bins, reporting frequencies $1,3,1$ instead of $0,2,1$"
+    },
+    {
+      "misconception": "Student reads dot-plot stack height as the data value rather than the frequency",
+      "distractor": "For a dot plot with a stack of height $4$ over the value $8$ reports that the value is $4$ instead of reporting that $4$ students scored $8$"
+    },
+    {
+      "misconception": "Student assumes each region of a box plot contains an equal length rather than an equal share of the data",
+      "distractor": "For a box plot with min $12$, $Q_1=18$, median $25$, $Q_3=30$, max $40$ claims the long left whisker ($12$ to $18$) holds more data than the short box, instead of recognizing each quarter holds about $25\\%$"
+    },
+    {
+      "misconception": "Student takes the median of an even-count set as one of the two middle values instead of their average",
+      "distractor": "For $5,6,8,9,11,12,14,18$ reports the median as $9$ (or $11$) instead of $\\dfrac{9+11}{2}=10$"
+    },
+    {
+      "misconception": "Student chooses a dot plot for a large data set where it becomes unreadable",
+      "distractor": "Recommends a dot plot to display the test scores of $120$ students instead of a histogram or box plot suited to large data"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "id": "A1.S-ID.A--cluster-test",
+  "standard": null,
+  "clusterId": "A1.S-ID.A",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on a single count or measurement variable",
+  "clusterCode": "A",
+  "skillName": "Summarize, represent, and interpret data on a single count or measurement variable",
+  "materialType": "cluster-test",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:01:15.547Z",
+  "intro": "This end-of-cluster test covers single-variable data displays and statistics. The first group builds and reads dot plots, histograms, and box plots and computes the five-number summary. The second group computes and compares center (mean, median) and spread (IQR, standard deviation) and chooses the right statistic for a distribution's shape. The third group describes shape, applies the $1.5\\times\\text{IQR}$ outlier rule, and reasons about how outliers shift center and spread. Always order a data set before finding a median or quartiles, and remember $\\text{IQR}=Q_3-Q_1$.",
+  "items": [
+    {
+      "id": 1,
+      "standard": "A1.S-ID.A.1",
+      "difficulty": "Easy",
+      "prompt": "A dot plot of quiz scores shows stacks of heights $1, 3, 4, 2$ over the values $6, 7, 8, 9$. How many students scored at least $8$?\nA) $4$\nB) $6$\nC) $8$\nD) $10$",
+      "answer": "B) $6$",
+      "solution": {
+        "steps": [
+          "In a dot plot, the height of the stack over a value is the frequency of that value.",
+          "Scores of at least $8$ are the values $8$ and $9$, with stack heights $4$ and $2$.",
+          "Add the frequencies: $4+2=6$ students.",
+          "A) $4$ counts only the value $8$. C) $8$ reads the data value instead of a frequency. D) $10$ is the total of all stacks, not just those at $8$ and above."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "standard": "A1.S-ID.A.1",
+      "difficulty": "Easy",
+      "prompt": "Find the five-number summary of the data set $4, 7, 8, 8, 10, 12, 15$. What is $Q_1$?\nA) $4$\nB) $7$\nC) $7.5$\nD) $8$",
+      "answer": "B) $7$",
+      "solution": {
+        "steps": [
+          "The data is already ordered with $n=7$, so the median is the $4$th value, $8$.",
+          "The lower half (values below the median) is $4, 7, 8$.",
+          "$Q_1$ is the median of the lower half: the middle value $7$.",
+          "A) $4$ is the minimum, not $Q_1$. C) $7.5$ wrongly includes the median $8$ in the lower half, giving $\\frac{7+8}{2}$. D) $8$ is the median of the whole set."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "standard": "A1.S-ID.A.1",
+      "difficulty": "Medium",
+      "prompt": "Group the data $2, 4, 5, 7, 9, 11, 12, 14, 15, 19$ into bins of width $5$: $[0,5), [5,10), [10,15), [15,20)$, where each bin includes its left edge but not its right edge. What are the four bin frequencies in order?\nA) $2, 2, 3, 3$\nB) $3, 2, 3, 2$\nC) $2, 3, 3, 2$\nD) $3, 3, 2, 2$",
+      "answer": "C) $2, 3, 3, 2$",
+      "solution": {
+        "steps": [
+          "$[0,5)$ holds values $\\ge 0$ and $<5$: $2, 4$, a frequency of $2$.",
+          "$[5,10)$ holds values $\\ge 5$ and $<10$: $5, 7, 9$, a frequency of $3$ (the value $5$ counts here, on the bin's left edge).",
+          "$[10,15)$ holds values $\\ge 10$ and $<15$: $11, 12, 14$, a frequency of $3$.",
+          "$[15,20)$ holds values $\\ge 15$ and $<20$: $15, 19$, a frequency of $2$.",
+          "So the frequencies are $2, 3, 3, 2$. A) $2,2,3,3$ double-misplaces the boundary values $5$ and $15$. B) and D) miscount the first bin."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "standard": "A1.S-ID.A.1",
+      "difficulty": "Hard",
+      "prompt": "A box plot has minimum $12$, $Q_1=18$, median $25$, $Q_3=30$, and maximum $40$. About what fraction of the data lies between $18$ and $30$?\nA) About $\\frac{1}{4}$\nB) About $\\frac{1}{2}$\nC) About $\\frac{3}{4}$\nD) It cannot be determined",
+      "answer": "B) About $\\frac{1}{2}$",
+      "solution": {
+        "steps": [
+          "The interval from $Q_1=18$ to $Q_3=30$ is the box of the box plot.",
+          "Each quarter of a box plot (each whisker and each half of the box) holds about $25\\%$ of the data.",
+          "The box from $Q_1$ to $Q_3$ spans two quarters, so it holds about $25\\%+25\\%=50\\%$, or $\\frac{1}{2}$ of the data.",
+          "A) $\\frac{1}{4}$ counts only one half of the box. C) $\\frac{3}{4}$ adds an extra whisker. D) is wrong because the quartiles fix the shares regardless of the box's width."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "standard": "A1.S-ID.A.2",
+      "difficulty": "Easy",
+      "prompt": "Find the mean of the data set $4, 6, 8, 8, 14$.\nA) $8$\nB) $7$\nC) $10$\nD) $40$",
+      "answer": "A) $8$",
+      "solution": {
+        "steps": [
+          "Add the values: $4+6+8+8+14=40$.",
+          "Divide by the number of values, $n=5$: $\\bar{x}=\\frac{40}{5}=8$.",
+          "B) $7$ is the median, not the mean. C) $10$ is a miscount of $n$. D) $40$ is the sum before dividing."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "standard": "A1.S-ID.A.2",
+      "difficulty": "Medium",
+      "prompt": "Find the median and IQR of $3, 5, 7, 9, 11, 13$. Which pair is correct?\nA) Median $8$, $\\text{IQR}=6$\nB) Median $7$, $\\text{IQR}=6$\nC) Median $8$, $\\text{IQR}=10$\nD) Median $9$, $\\text{IQR}=8$",
+      "answer": "A) Median $8$, $\\text{IQR}=6$",
+      "solution": {
+        "steps": [
+          "The data is ordered with $n=6$, so the median is the average of the $3$rd and $4$th values: $\\frac{7+9}{2}=8$.",
+          "The lower half is $3, 5, 7$, so $Q_1=5$; the upper half is $9, 11, 13$, so $Q_3=11$.",
+          "$\\text{IQR}=Q_3-Q_1=11-5=6$.",
+          "B) takes the median as a single middle value $7$. C) uses the range $13-3=10$ instead of the IQR. D) misplaces the quartiles."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "standard": "A1.S-ID.A.2",
+      "difficulty": "Medium",
+      "prompt": "For the data set $4, 6, 8, 8, 14$ the mean is $8$. Find the population standard deviation $\\sigma=\\sqrt{\\frac{\\sum (x_i-\\bar{x})^2}{n}}$.\nA) $\\sqrt{11.2}\\approx 3.35$\nB) $11.2$\nC) $\\sqrt{14}\\approx 3.74$\nD) $56$",
+      "answer": "A) $\\sqrt{11.2}\\approx 3.35$",
+      "solution": {
+        "steps": [
+          "Find each deviation from the mean $8$ and square it: $(4-8)^2=16$, $(6-8)^2=4$, $(8-8)^2=0$, $(8-8)^2=0$, $(14-8)^2=36$.",
+          "Sum the squared deviations: $16+4+0+0+36=56$.",
+          "Divide by $n=5$: $\\frac{56}{5}=11.2$ (this is the variance).",
+          "Take the square root: $\\sigma=\\sqrt{11.2}\\approx 3.35$.",
+          "B) $11.2$ is the variance, missing the square root. C) divides by $n-1=4$ to get $14$. D) $56$ is the sum of squared deviations before dividing."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "standard": "A1.S-ID.A.2",
+      "difficulty": "Hard",
+      "prompt": "A data set of home prices is strongly skewed right by a few very expensive houses. Which pair of statistics best describes its center and spread, and why?\nA) Mean and range, because they use every value\nB) Mean and standard deviation, because the data is quantitative\nC) Median and IQR, because they resist the skew and extreme values\nD) Mode and range, because the mode is most common",
+      "answer": "C) Median and IQR, because they resist the skew and extreme values",
+      "solution": {
+        "steps": [
+          "For data that is strongly skewed or has outliers, the mean is pulled toward the extreme values and the standard deviation and range are inflated.",
+          "The median and IQR are resistant: they depend on position, not on the size of the extreme values, so they better summarize a skewed distribution.",
+          "A) and B) rely on the non-resistant mean, which the high prices distort. D) the mode and range do not summarize center and spread well for continuous skewed data."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "standard": "A1.S-ID.A.3",
+      "difficulty": "Easy",
+      "prompt": "A dot plot of quiz scores piles up at the high end with a long tail stretching toward the low scores. What is the shape of the distribution?\nA) Symmetric\nB) Skewed right\nC) Skewed left\nD) Uniform",
+      "answer": "C) Skewed left",
+      "solution": {
+        "steps": [
+          "Skew is named for the side with the long tail, not the side with the bulk of the data.",
+          "Here the tail stretches toward the low (left) scores, so the distribution is skewed left.",
+          "A) symmetric would have matching tails. B) skewed right would have the tail on the high side. D) uniform would have roughly equal heights."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "standard": "A1.S-ID.A.3",
+      "difficulty": "Medium",
+      "prompt": "A data set has $Q_1=12$ and $Q_3=20$, so $\\text{IQR}=8$. Using the $1.5\\times\\text{IQR}$ rule, is the value $35$ an outlier?\nA) No, because $35$ is less than the maximum\nB) Yes, because $35>32$, the upper fence\nC) No, because $35<36$\nD) Yes, because $35$ is more than twice $Q_1$",
+      "answer": "B) Yes, because $35>32$, the upper fence",
+      "solution": {
+        "steps": [
+          "The upper fence is $Q_3+1.5\\cdot\\text{IQR}=20+1.5\\cdot 8=20+12=32$.",
+          "Any value above $32$ is an outlier. Since $35>32$, the value $35$ is an outlier.",
+          "A) compares to the maximum, which is not the test. C) uses an incorrect fence of $36$. D) invents a rule about twice $Q_1$ instead of the $1.5\\times\\text{IQR}$ fence."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "standard": "A1.S-ID.A.3",
+      "difficulty": "Medium",
+      "prompt": "The values $8, 9, 10, 11, 12$ have mean $10$ and median $10$. If $12$ is replaced with $42$, what happens to the mean and the median?\nA) Mean rises to $16$; median stays $10$\nB) Both the mean and the median rise to $16$\nC) Mean stays $10$; median rises to $16$\nD) Mean rises to $16$; median rises to $11$",
+      "answer": "A) Mean rises to $16$; median stays $10$",
+      "solution": {
+        "steps": [
+          "New data set ordered: $8, 9, 10, 11, 42$.",
+          "New mean: $\\frac{8+9+10+11+42}{5}=\\frac{80}{5}=16$.",
+          "The median is still the $3$rd of five ordered values, which is $10$.",
+          "The mean is pulled toward the outlier $42$, while the median resists it. B) and D) wrongly move the resistant median. C) wrongly leaves the mean unchanged."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "standard": "A1.S-ID.A.3",
+      "difficulty": "Hard",
+      "prompt": "Class A scores have median $78$ and $\\text{IQR}=6$. Class B scores have median $78$ and $\\text{IQR}=20$. Which statement best compares the two classes?\nA) The classes performed identically because the medians are equal\nB) Class A is more variable because it has the smaller IQR\nC) Class B has a higher typical score because its IQR is larger\nD) The classes have the same typical score, but Class B's scores are far more spread out",
+      "answer": "D) The classes have the same typical score, but Class B's scores are far more spread out",
+      "solution": {
+        "steps": [
+          "Both classes share the median $78$, so their typical (center) scores are the same.",
+          "Spread is measured by the IQR. Class B's $\\text{IQR}=20$ is much larger than Class A's $\\text{IQR}=6$, so Class B's scores are far more spread out and less consistent.",
+          "A) ignores spread. B) reverses the meaning of IQR: a smaller IQR means less variability. C) confuses spread with center; a larger IQR does not raise the typical score."
+        ]
+      }
+    }
+  ]
+}

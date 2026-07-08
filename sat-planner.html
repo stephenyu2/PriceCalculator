@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>SAT Prep Planner | Launch Valley Tutoring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ============================================
+       SAT PLANNER: page-specific styles
+    ============================================ */
+    .planner-section {
+      padding: var(--section-pad) 1.5rem;
+    }
+
+    .planner-container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .planner-intro {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .planner-heading {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--white);
+      margin: 0 0 1rem;
+    }
+
+    .planner-subtext {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* --- Form --- */
+    .planner-form {
+      background: var(--navy-light);
+      border: 1px solid rgba(0, 0, 0, 0.11);
+      border-radius: 12px;
+      padding: 2rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4rem;
+    }
+
+    @media (max-width: 560px) {
+      .field-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .field label {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--white);
+    }
+
+    .field-hint {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0 0 0.2rem;
+    }
+
+    .field input {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--white);
+      background: var(--navy);
+      border: 1px solid rgba(0, 0, 0, 0.18);
+      border-radius: 8px;
+      padding: 0.75rem 0.9rem;
+      width: 100%;
+      transition: border-color var(--transition);
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .field input:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+
+    .field input[readonly] {
+      color: var(--text-muted);
+      background: var(--navy-mid);
+    }
+
+    /* --- Test date chips --- */
+    .date-selector {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.6rem;
+    }
+
+    @media (max-width: 560px) {
+      .date-selector {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .date-btn {
+      background: var(--navy);
+      border: 1px solid rgba(0, 0, 0, 0.18);
+      border-radius: 8px;
+      padding: 0.8rem 0.5rem;
+      text-align: center;
+      font-family: var(--font-body);
+      font-size: 0.86rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: border-color var(--transition), color var(--transition);
+    }
+
+    .date-btn:hover {
+      border-color: rgba(0, 0, 0, 0.32);
+      color: var(--white);
+    }
+
+    .date-btn.active {
+      border-color: var(--gold);
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .other-date-wrap {
+      display: none;
+      margin-top: 0.6rem;
+    }
+
+    .other-date-wrap.visible {
+      display: block;
+    }
+
+    /* --- Split toggle --- */
+    .split-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .split-toggle input {
+      width: auto;
+      accent-color: var(--gold);
+      cursor: pointer;
+    }
+
+    .split-fields {
+      display: none;
+    }
+
+    .split-fields.visible {
+      display: grid;
+    }
+
+    .planner-error {
+      display: none;
+      background: var(--navy);
+      border: 1px solid rgba(0, 0, 0, 0.18);
+      border-left: 3px solid var(--gold);
+      border-radius: 8px;
+      padding: 0.85rem 1.1rem;
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    .planner-error.visible {
+      display: block;
+    }
+
+    .planner-submit {
+      background: var(--gold);
+      border: 1px solid var(--gold);
+      color: var(--on-gold);
+      padding: 0.95rem 1.5rem;
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background var(--transition), border-color var(--transition);
+    }
+
+    .planner-submit:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+    }
+
+    /* --- Results --- */
+    .planner-results {
+      display: none;
+      margin-top: 2.5rem;
+    }
+
+    .planner-results.visible {
+      display: block;
+    }
+
+    .plan-summary {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      color: var(--white);
+      line-height: 1.7;
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto 1rem;
+    }
+
+    .plan-summary strong {
+      font-weight: 600;
+    }
+
+    .pace-note {
+      display: none;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: center;
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .pace-note.visible {
+      display: block;
+    }
+
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.4rem;
+      align-items: stretch;
+    }
+
+    @media (max-width: 640px) {
+      .tier-grid {
+        grid-template-columns: 1fr;
+        max-width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .tier-card {
+      background: var(--navy-light);
+      border: 1px solid rgba(0, 0, 0, 0.11);
+      border-radius: 12px;
+      padding: 2rem 1.4rem 1.6rem;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.75rem;
+      position: relative;
+      text-align: left;
+      font-family: var(--font-body);
+      transition: border-color 0.3s ease, background 0.3s ease;
+    }
+
+    /* Align the cards' sections (name / hours / pace / description / checks /
+       total / button) into shared rows so the checkmarks and totals line up
+       across both cards regardless of text length. */
+    @supports (grid-template-rows: subgrid) {
+      @media (min-width: 641px) {
+        .tier-card {
+          display: grid;
+          grid-template-rows: subgrid;
+          grid-row: span 7;
+        }
+      }
+    }
+
+    .tier-card.popular {
+      border-color: var(--gold);
+    }
+
+    .tier-card.selected {
+      border-color: var(--gold);
+      background: var(--navy-mid);
+    }
+
+    .tier-popular-badge {
+      position: absolute;
+      top: -0.75rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--on-gold);
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.32rem 0.85rem;
+      border-radius: 50px;
+      white-space: nowrap;
+    }
+
+    .tier-name {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .tier-hours {
+      font-family: var(--font-heading);
+      font-size: clamp(1.7rem, 3.5vw, 2.1rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+    }
+
+    .tier-pace,
+    .tier-tagline {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .tier-includes {
+      list-style: none;
+      margin: 0.2rem 0 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .tier-includes li {
+      font-size: 0.82rem;
+      color: var(--white);
+      line-height: 1.5;
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
+
+    .tier-includes li .mark {
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .tier-total {
+      margin-top: auto;
+      padding-top: 0.8rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .tier-total strong {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-left: 0.35rem;
+    }
+
+    .tier-total .total-was {
+      text-decoration: line-through;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-left: 0.35rem;
+    }
+
+    .choose-btn {
+      width: 100%;
+      background: var(--gold);
+      border: 1px solid var(--gold);
+      color: var(--on-gold);
+      padding: 0.85rem 1.2rem;
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background var(--transition), border-color var(--transition);
+    }
+
+    .choose-btn:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+    }
+
+    /* --- Payment choice (appears after a package is chosen) --- */
+    .payment-choice {
+      display: none;
+      margin-top: 2.5rem;
+    }
+
+    .payment-choice.visible {
+      display: block;
+    }
+
+    .payment-choice-title {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--white);
+      text-align: center;
+      margin: 0 0 1.2rem;
+    }
+
+    .pay-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 560px) {
+      .pay-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+      }
+    }
+
+    .pay-btn {
+      width: 100%;
+      background: var(--navy);
+      border: 1px solid rgba(0, 0, 0, 0.18);
+      border-radius: 8px;
+      padding: 0.75rem 0.9rem;
+      font-family: var(--font-body);
+      color: var(--white);
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      transition: border-color var(--transition);
+    }
+
+    .pay-btn:hover {
+      border-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .pay-btn.selected {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 1px var(--gold);
+    }
+
+    .pay-btn .pay-main {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .pay-btn .pay-sub {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    .pay-btn:disabled {
+      opacity: 0.65;
+      cursor: default;
+    }
+
+    .checkout-error {
+      max-width: 600px;
+      margin: 1rem auto 0;
+    }
+
+    .checkout-note {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      text-align: center;
+      max-width: 480px;
+      margin: 1.2rem auto 0;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===========================
+       PAGE HERO
+  =========================== -->
+  <section class="page-hero">
+    <img class="page-hero-bg" src="Images/GroupPhoto.jpeg" alt="" aria-hidden="true" />
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+    <div class="page-hero-content">
+      <h1 class="hero-heading">SAT Prep Planner</h1>
+    </div>
+  </section>
+
+
+  <!-- ===========================
+       PLANNER
+  =========================== -->
+  <section class="planner-section">
+    <div class="planner-container">
+
+      <div class="planner-intro">
+        <h2 class="planner-heading">Plan Your SAT Prep</h2>
+        <p class="planner-subtext">Enter your diagnostic results and test date, and we'll recommend a program length, weekly pace, and payment options.</p>
+      </div>
+
+      <form class="planner-form" id="planner-form" novalidate>
+
+        <div class="field">
+          <label for="student-name">Student's Name</label>
+          <input type="text" id="student-name" autocomplete="name" required />
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="current-math">Current Math Score</label>
+            <input type="number" id="current-math" inputmode="numeric" min="200" max="800" step="10" placeholder="200&#8211;800" required />
+          </div>
+          <div class="field">
+            <label for="current-rw">Current Reading &amp; Writing Score</label>
+            <input type="number" id="current-rw" inputmode="numeric" min="200" max="800" step="10" placeholder="200&#8211;800" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="target-total">Target Total Score</label>
+          <p class="field-hint">Give this number real thought. Your target should be a score you'd be fully satisfied with, one where you'd be comfortable never taking the SAT again. Research the colleges you want, what their admitted students typically score, and what your intended major expects, then set your target there.</p>
+          <input type="number" id="target-total" inputmode="numeric" min="400" max="1600" step="10" placeholder="400&#8211;1600" required />
+          <label class="split-toggle">
+            <input type="checkbox" id="split-toggle" />
+            I care about a specific Math / Reading &amp; Writing split
+          </label>
+        </div>
+
+        <div class="field-row split-fields" id="split-fields">
+          <div class="field">
+            <label for="target-math">Target Math Score</label>
+            <input type="number" id="target-math" inputmode="numeric" min="200" max="800" step="10" placeholder="200&#8211;800" />
+          </div>
+          <div class="field">
+            <label for="target-rw">Target Reading &amp; Writing Score</label>
+            <input type="number" id="target-rw" inputmode="numeric" min="200" max="800" step="10" placeholder="200&#8211;800" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Test Date</label>
+          <div class="date-selector" id="date-selector"></div>
+          <div class="other-date-wrap" id="other-date-wrap">
+            <input type="date" id="test-date" aria-label="Other test date" />
+          </div>
+        </div>
+
+        <p class="planner-error" id="planner-error" role="alert"></p>
+
+        <button type="submit" class="planner-submit">Calculate My Plan</button>
+      </form>
+
+      <!-- Results -->
+      <div class="planner-results" id="planner-results">
+        <p class="plan-summary" id="plan-summary"></p>
+        <p class="pace-note" id="pace-note"></p>
+
+        <div class="tier-grid" id="tier-grid"></div>
+
+        <!-- Payment choice -->
+        <div class="payment-choice" id="payment-choice">
+          <p class="payment-choice-title" id="payment-choice-title"></p>
+          <div class="pay-grid" id="pay-grid"></div>
+          <p class="planner-error checkout-error" id="checkout-error" role="alert"></p>
+          <p class="checkout-note">You'll be taken to our secure Stripe checkout to finish signing up.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <script src="sat-pricing.js"></script>
+  <script>
+    (function () {
+      // ============================================
+      // PRICING: the formula and every tunable dollar
+      // constant live in sat-pricing.js (shared with the
+      // server-side checkout function). Edit numbers THERE.
+      // ============================================
+      var pricing = window.SatPricing;
+
+      var INTENSIVE_HOURS_PER_WEEK = 4; // above this, show the "consider a later date" note
+
+      // Official College Board SAT weekend dates (satsuite.collegeboard.org/sat/dates-deadlines).
+      // Update this list as new dates are announced. The page shows the 3 closest upcoming.
+      var SAT_DATES = [
+        '2026-08-22', '2026-09-12', '2026-10-03', '2026-11-07', '2026-12-05',
+        '2027-03-06', '2027-05-01', '2027-06-05',
+        '2027-08-28', '2027-09-18', '2027-10-02', '2027-11-06', '2027-12-04',
+        '2028-03-04', '2028-05-06', '2028-06-03'
+      ];
+
+      var form = document.getElementById('planner-form');
+      var errorEl = document.getElementById('planner-error');
+      var resultsEl = document.getElementById('planner-results');
+      var summaryEl = document.getElementById('plan-summary');
+      var paceNoteEl = document.getElementById('pace-note');
+      var tierGrid = document.getElementById('tier-grid');
+      var paymentChoice = document.getElementById('payment-choice');
+      var paymentChoiceTitle = document.getElementById('payment-choice-title');
+      var payGrid = document.getElementById('pay-grid');
+      var checkoutError = document.getElementById('checkout-error');
+      var splitToggle = document.getElementById('split-toggle');
+      var splitFields = document.getElementById('split-fields');
+      var targetTotalInput = document.getElementById('target-total');
+      var targetMathInput = document.getElementById('target-math');
+      var targetRWInput = document.getElementById('target-rw');
+      var dateSelector = document.getElementById('date-selector');
+      var otherDateWrap = document.getElementById('other-date-wrap');
+      var otherDateInput = document.getElementById('test-date');
+
+      var plan = null;           // holds the last calculated plan (inputs + all three tiers)
+      var selection = null;      // { tierKey, pay: 'upfront' | 'monthly' }
+      var selectedDate = null;   // 'YYYY-MM-DD' from a chip, or 'other'
+      // Weakness concentration is not asked on the page; every plan uses the
+      // neutral 'mixed' multiplier (1.0) from sat-pricing.js.
+      var selectedConc = 'mixed';
+
+      function money(n) {
+        return '$' + n.toLocaleString('en-US');
+      }
+
+
+      function parseISO(iso) {
+        var p = iso.split('-');
+        return new Date(parseInt(p[0], 10), parseInt(p[1], 10) - 1, parseInt(p[2], 10));
+      }
+
+      function todayMidnight() {
+        var t = new Date();
+        t.setHours(0, 0, 0, 0);
+        return t;
+      }
+
+      // --- Build the test date chips: 3 closest upcoming official dates + Other ---
+      var today = todayMidnight();
+      var upcoming = SAT_DATES.filter(function (iso) { return parseISO(iso) > today; }).slice(0, 3);
+
+      upcoming.forEach(function (iso) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'date-btn';
+        btn.dataset.date = iso;
+        btn.textContent = parseISO(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        dateSelector.appendChild(btn);
+      });
+
+      var otherBtn = document.createElement('button');
+      otherBtn.type = 'button';
+      otherBtn.className = 'date-btn';
+      otherBtn.dataset.date = 'other';
+      otherBtn.textContent = 'Other';
+      dateSelector.appendChild(otherBtn);
+
+      dateSelector.addEventListener('click', function (e) {
+        var btn = e.target.closest('.date-btn');
+        if (!btn) return;
+        selectedDate = btn.dataset.date;
+        dateSelector.querySelectorAll('.date-btn').forEach(function (b) {
+          b.classList.toggle('active', b === btn);
+        });
+        otherDateWrap.classList.toggle('visible', selectedDate === 'other');
+        if (selectedDate === 'other') otherDateInput.focus();
+      });
+
+
+      // --- Optional Math / RW target split ---
+      function syncSplitTotal() {
+        var m = parseInt(targetMathInput.value, 10);
+        var r = parseInt(targetRWInput.value, 10);
+        if (!isNaN(m) && !isNaN(r)) targetTotalInput.value = m + r;
+      }
+
+      splitToggle.addEventListener('change', function () {
+        splitFields.classList.toggle('visible', splitToggle.checked);
+        targetTotalInput.readOnly = splitToggle.checked;
+        if (splitToggle.checked) syncSplitTotal();
+      });
+
+      targetMathInput.addEventListener('input', syncSplitTotal);
+      targetRWInput.addEventListener('input', syncSplitTotal);
+
+      function showError(msg) {
+        errorEl.textContent = msg;
+        errorEl.classList.add('visible');
+        resultsEl.classList.remove('visible');
+      }
+
+      function clearError() {
+        errorEl.textContent = '';
+        errorEl.classList.remove('visible');
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        clearError();
+
+        var name = document.getElementById('student-name').value.trim();
+        var currentMath = parseInt(document.getElementById('current-math').value, 10);
+        var currentRW = parseInt(document.getElementById('current-rw').value, 10);
+
+        // --- Validation ---
+        if (!name) {
+          showError("Please enter the student's name.");
+          return;
+        }
+        if (isNaN(currentMath) || currentMath < 200 || currentMath > 800) {
+          showError('Math scores range from 200 to 800. Please double-check your Math score.');
+          return;
+        }
+        if (isNaN(currentRW) || currentRW < 200 || currentRW > 800) {
+          showError('Reading & Writing scores range from 200 to 800. Please double-check that score.');
+          return;
+        }
+
+        // Target: either a total, or a Math / RW split that defines the total
+        var targetMath = null;
+        var targetRW = null;
+        var targetTotal;
+        if (splitToggle.checked) {
+          targetMath = parseInt(targetMathInput.value, 10);
+          targetRW = parseInt(targetRWInput.value, 10);
+          if (isNaN(targetMath) || targetMath < 200 || targetMath > 800) {
+            showError('Target Math scores range from 200 to 800. Please double-check your target split.');
+            return;
+          }
+          if (isNaN(targetRW) || targetRW < 200 || targetRW > 800) {
+            showError('Target Reading & Writing scores range from 200 to 800. Please double-check your target split.');
+            return;
+          }
+          targetTotal = targetMath + targetRW;
+        } else {
+          targetTotal = parseInt(targetTotalInput.value, 10);
+          if (isNaN(targetTotal) || targetTotal < 400 || targetTotal > 1600) {
+            showError('Target total scores range from 400 to 1600. Please double-check your target.');
+            return;
+          }
+        }
+
+        var currentTotal = currentMath + currentRW;
+        if (targetTotal <= currentTotal) {
+          showError('Great news, you’re already at ' + currentTotal + ', which meets your target of ' + targetTotal + '. Try setting a higher target to see a plan.');
+          return;
+        }
+
+        if (!selectedDate) {
+          showError('Please pick your test date.');
+          return;
+        }
+        var dateValue = selectedDate === 'other' ? otherDateInput.value : selectedDate;
+        if (!dateValue) {
+          showError('Please pick your test date.');
+          return;
+        }
+        var testDate = parseISO(dateValue);
+        var now = todayMidnight();
+        if (testDate <= now) {
+          showError('Your test date needs to be in the future. Please pick an upcoming test date.');
+          return;
+        }
+
+        // --- Calculation (shared formula in sat-pricing.js) ---
+        var calc = pricing.buildTiers({
+          currentMath: currentMath,
+          currentRW: currentRW,
+          targetTotal: targetTotal,
+          concentration: selectedConc,
+          testDate: testDate,
+          now: now
+        });
+
+        var complete = null;
+        calc.tiers.forEach(function (t) { if (t.key === 'complete') complete = t; });
+
+        var testDateText = testDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+
+        plan = {
+          name: name,
+          currentMath: currentMath,
+          currentRW: currentRW,
+          currentTotal: calc.currentTotal,
+          targetTotal: targetTotal,
+          targetMath: targetMath,
+          targetRW: targetRW,
+          concentration: selectedConc,
+          testDateISO: dateValue,
+          testDateText: testDateText,
+          calc: calc
+        };
+        selection = null;
+
+        // --- Render results ---
+        summaryEl.innerHTML = 'To go from <strong>' + calc.currentTotal + '</strong> to <strong>' + calc.targetTotal +
+          '</strong> by your <strong>' + testDateText + '</strong> test, we recommend <strong>' + complete.hours +
+          ' hours</strong> of tutoring, <strong>' + complete.hoursPerWeek + ' hours/week</strong> over <strong>' +
+          calc.weeks + (calc.weeks === 1 ? ' week' : ' weeks') + '</strong> starting next week. Choose how thorough you want to go:';
+
+        paceNoteEl.textContent = complete.hoursPerWeek + ' hours/week is a demanding pace. If that feels like too much, we recommend choosing a later test date to spread the plan out.';
+        paceNoteEl.classList.toggle('visible', complete.hoursPerWeek > INTENSIVE_HOURS_PER_WEEK);
+
+        renderTiers(calc);
+
+        paymentChoice.classList.remove('visible');
+        checkoutError.classList.remove('visible');
+        resultsEl.classList.add('visible');
+        resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+
+      // --- Tier cards ---
+      function renderTiers(calc) {
+        tierGrid.innerHTML = '';
+        calc.tiers.forEach(function (t) {
+          var card = document.createElement('div');
+          card.className = 'tier-card' + (t.mostPopular ? ' popular' : '');
+          card.dataset.key = t.key;
+
+          var html = '';
+          if (t.mostPopular) html += '<span class="tier-popular-badge">Most Popular</span>';
+          html += '<span class="tier-name">' + t.name + '</span>';
+          html += '<span class="tier-hours">' + t.hours + ' hours</span>';
+          html += '<span class="tier-pace">' + t.hoursPerWeek + ' hours/week over ' + calc.weeks + (calc.weeks === 1 ? ' week' : ' weeks') + '</span>';
+          html += '<p class="tier-tagline">' + t.description + '</p>';
+          html += '<ul class="tier-includes">';
+          t.perks.forEach(function (perk) {
+            html += '<li><span class="mark">✓</span><span>' + perk + '</span></li>';
+          });
+          html += '</ul>';
+          html += '<div class="tier-total">Total' +
+            (t.fullTotal > t.total ? '<span class="total-was">' + money(t.fullTotal) + '</span>' : '') +
+            '<strong>' + money(t.total) + '</strong></div>';
+          html += '<button type="button" class="choose-btn" data-key="' + t.key + '">Choose ' + t.name + '</button>';
+
+          card.innerHTML = html;
+          tierGrid.appendChild(card);
+        });
+      }
+
+      function findTier(key) {
+        var tier = null;
+        if (plan) plan.calc.tiers.forEach(function (t) { if (t.key === key) tier = t; });
+        return tier;
+      }
+
+      // --- Step 2: choose a package ---
+      tierGrid.addEventListener('click', function (e) {
+        var btn = e.target.closest('.choose-btn');
+        if (!btn || !plan) return;
+        var tier = findTier(btn.dataset.key);
+        if (!tier) return;
+        selection = { tierKey: tier.key, pay: null };
+
+        tierGrid.querySelectorAll('.tier-card').forEach(function (c) {
+          c.classList.toggle('selected', c.dataset.key === tier.key);
+        });
+
+        paymentChoiceTitle.innerHTML = 'How would you like to pay for the <strong>' + tier.name +
+          '</strong> package (' + money(tier.total) + ')?';
+
+        payGrid.innerHTML =
+          '<button type="button" class="pay-btn" data-pay="upfront">' +
+            '<span class="pay-main">Pay All at Once ' + money(tier.upfrontPrice) + '</span>' +
+            '<span class="pay-sub">Save ' + money(tier.upfrontSavings) + '</span></button>' +
+          '<button type="button" class="pay-btn" data-pay="monthly">' +
+            '<span class="pay-main">Pay Monthly ' + money(tier.monthlyPayment) + '/mo</span>' +
+            '<span class="pay-sub">' + tier.months + (tier.months === 1 ? ' payment' : ' payments') + ', total ' + money(tier.total) + '</span></button>';
+
+        checkoutError.classList.remove('visible');
+        paymentChoice.classList.add('visible');
+        paymentChoice.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+
+      // --- Step 3: choose how to pay → Stripe hosted checkout ---
+      // The server recomputes the price from these raw inputs using the same
+      // shared formula (sat-pricing.js); no price is ever sent from here.
+      payGrid.addEventListener('click', function (e) {
+        var btn = e.target.closest('.pay-btn');
+        if (!btn || btn.disabled || !plan || !selection) return;
+        selection.pay = btn.dataset.pay;
+
+        payGrid.querySelectorAll('.pay-btn').forEach(function (b) {
+          b.classList.toggle('selected', b === btn);
+          b.disabled = true;
+        });
+        checkoutError.classList.remove('visible');
+
+        var mainEl = btn.querySelector('.pay-main');
+        var originalText = mainEl.textContent;
+        mainEl.textContent = 'Taking you to secure checkout…';
+
+        fetch('/.netlify/functions/create-checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            studentName: plan.name,
+            currentMath: plan.currentMath,
+            currentRW: plan.currentRW,
+            targetTotal: plan.targetTotal,
+            testDate: plan.testDateISO,
+            tierKey: selection.tierKey,
+            pay: selection.pay
+          })
+        })
+          .then(function (res) {
+            return res.json().catch(function () { return {}; }).then(function (data) {
+              if (!res.ok || !data.url) throw new Error(data.error || 'Checkout failed');
+              window.location.href = data.url;
+            });
+          })
+          .catch(function () {
+            mainEl.textContent = originalText;
+            payGrid.querySelectorAll('.pay-btn').forEach(function (b) { b.disabled = false; });
+            checkoutError.textContent = 'Sorry, we couldn’t start checkout just now. Please try again in a moment, or contact Stephen, Mark, or Derek directly.';
+            checkoutError.classList.add('visible');
+          });
+      });
+    })();
+  </script>
+</body>
+</html>

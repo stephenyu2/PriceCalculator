@@ -1,0 +1,120 @@
+{
+  "standard": "8.SP.A.1",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate patterns of association in bivariate data",
+  "clusterCode": "A",
+  "skillName": "Scatter Plots and Association",
+
+  "description": "Students construct and interpret scatter plots for bivariate measurement data. Given paired data $(x, y)$, they plot points on a coordinate grid, then describe the overall pattern of association between the two quantities. They identify the direction (positive, negative, or no association), the form (linear vs. nonlinear), the strength of the relationship, and notable features such as clustering and outliers. They connect these visual patterns back to the real-world context of the two measured variables.",
+
+  "subSkills": [
+    "Plot ordered pairs $(x, y)$ from a data table onto a scatter plot with appropriately scaled axes",
+    "Read coordinates of points off an existing scatter plot",
+    "Classify the direction of association as positive, negative, or none",
+    "Classify the form of association as linear or nonlinear",
+    "Describe the strength of association (strong vs. weak / loose vs. tight clustering)",
+    "Identify outliers as points that fall far from the overall pattern",
+    "Identify clustering as groups of points concentrated in regions of the plot",
+    "Interpret the meaning of the pattern in terms of the two real-world quantities"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Construct from table",
+      "example": "The table shows hours studied $x$ and test score $y$ for $8$ students: $(1,55),(2,60),(2,68),(3,70),(4,78),(5,82),(6,88),(7,92)$. Plot these points and describe the association."
+    },
+    {
+      "name": "Classify direction",
+      "example": "A scatter plot of outdoor temperature versus heating-bill cost shows points falling from upper left to lower right. Is the association positive, negative, or none? Explain."
+    },
+    {
+      "name": "Classify form (linear vs. nonlinear)",
+      "example": "A scatter plot of a ball's height versus time after being thrown shows points rising then falling in a curve. Is the association linear or nonlinear?"
+    },
+    {
+      "name": "Identify outlier",
+      "example": "Eight points lie nearly along a rising line, but the point $(5, 12)$ sits far below the others. Which point is the outlier?"
+    },
+    {
+      "name": "Identify clustering",
+      "example": "Most points fall in two separate groups, one near $(2, 3)$ and one near $(9, 10)$, with a gap between. Describe the clustering shown."
+    },
+    {
+      "name": "Full interpretation in context",
+      "example": "Given a scatter plot of car age (years) versus resale value (\\$), describe the direction, form, strength, and any outliers, and state what the pattern means for car buyers."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-feature identification from a plot or small table. The pattern is unambiguous (clearly positive, clearly negative, or clearly none) and the student reports one characteristic or plots a few given points.",
+      "constraints": [
+        "Data set has $\\le 6$ points or the scatter plot is already drawn",
+        "Asks for exactly one feature: direction OR a single point's coordinates OR whether a clear outlier exists",
+        "Pattern is strong and obvious with no competing interpretation",
+        "Axis values are small positive integers"
+      ]
+    },
+    "Medium": {
+      "description": "Two-feature description or construction with interpretation. The student plots a table of points and names both direction and form, or reads a plot and reports direction plus strength or identifies an outlier and its effect.",
+      "constraints": [
+        "Data set has $7$ to $10$ points",
+        "Requires naming two characteristics (e.g., direction AND form, or direction AND strength)",
+        "May require recognizing a nonlinear (curved) pattern",
+        "May include one outlier the student must both spot and describe"
+      ]
+    },
+    "Hard": {
+      "description": "Full multi-feature analysis with contextual reasoning. The student must integrate direction, form, strength, clustering, and outliers, and explain what the relationship means for the underlying quantities or how an outlier or cluster changes the interpretation.",
+      "constraints": [
+        "Data set has $\\ge 10$ points or two patterns must be compared",
+        "Requires three or more characteristics named together",
+        "Requires interpreting the pattern in real-world context, not just labeling it",
+        "May require reasoning about whether association implies a clear trend despite an outlier or distinct clusters"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student reverses positive and negative association, reading a downward (falling) cloud as positive because the $y$-values are large at the start",
+      "distractor": "Labels a pattern where $y$ decreases as $x$ increases as 'positive association'"
+    },
+    {
+      "misconception": "Student confuses no association with negative association, treating any non-positive scatter as negative",
+      "distractor": "Calls a random, patternless cloud of points 'negative association'"
+    },
+    {
+      "misconception": "Student equates linear with positive, assuming any straight-line trend must slope upward",
+      "distractor": "States a clearly curved (nonlinear) rising pattern is 'linear' because it goes up"
+    },
+    {
+      "misconception": "Student mistakes a tight cluster of typical points for an outlier, or calls the single far-off point 'clustering'",
+      "distractor": "Identifies the dense main group as the outlier instead of the lone distant point"
+    },
+    {
+      "misconception": "Student reverses the coordinates when plotting, graphing $(y, x)$ instead of $(x, y)$",
+      "distractor": "Plots the point $(3, 70)$ at horizontal position $70$ and vertical position $3$"
+    },
+    {
+      "misconception": "Student assumes strong association requires every point to lie exactly on a line and so calls a clear-but-scattered trend 'no association'",
+      "distractor": "Concludes there is 'no association' for a clearly rising cloud because the points are not perfectly collinear"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

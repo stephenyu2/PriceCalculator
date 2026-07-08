@@ -1,0 +1,148 @@
+{
+  "id": "7.SP.B.3--quiz",
+  "standard": "7.SP.B.3",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Draw informal comparative inferences about two populations",
+  "clusterCode": "B",
+  "skillName": "Comparing Data Distributions",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "Quiz: Comparing Data Distributions. For each question, choose the single best answer. To compare two distributions with similar spreads, express the difference between their centers as a multiple of one measure of variability (MAD or IQR).",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Team A scores a mean of $\\bar{x}_A = 14$ points per game and Team B scores a mean of $\\bar{x}_B = 20$ points per game. Both distributions have a mean absolute deviation (MAD) of about $3$ points. The difference between the means is how many times the MAD?\nA) $0.5$ times the MAD\nB) $2$ times the MAD\nC) $6$ times the MAD\nD) $34$ times the MAD",
+      "answer": "B) $2$ times the MAD",
+      "solution": {
+        "steps": [
+          "Find the difference between the centers: $|20 - 14| = 6$ points.",
+          "Express that difference as a multiple of the MAD: $\\frac{6}{3} = 2$.",
+          "So the means differ by $2$ times the MAD, which is option B.",
+          "Option A reverses the division ($\\frac{3}{6} = 0.5$). Option C gives the raw difference $6$ without dividing by the MAD. Option D adds the means ($\\frac{14 + 20}{3} \\approx 11$ is not even shown correctly; adding instead of subtracting is the error type)."
+        ],
+        "answer": "B) $2$ times the MAD"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "The medians of two box plots differ by $12$ seconds. Both box plots have an interquartile range (IQR) of about $4$ seconds. The difference between the medians is how many times the IQR?\nA) $3$ times the IQR\nB) $8$ times the IQR\nC) $12$ times the IQR\nD) $48$ times the IQR",
+      "answer": "A) $3$ times the IQR",
+      "solution": {
+        "steps": [
+          "The difference between the centers is $12$ seconds.",
+          "Express that difference as a multiple of the IQR: $\\frac{12}{4} = 3$.",
+          "So the medians differ by $3$ times the IQR, which is option A.",
+          "Option B subtracts ($12 - 4 = 8$) instead of dividing. Option C is the raw difference $12$ with no division. Option D multiplies ($12 \\times 4 = 48$) instead of dividing."
+        ],
+        "answer": "A) $3$ times the IQR"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "The difference between the centers of two distributions is $0.5$ times the MAD. What does this multiple tell you about the two distributions?\nA) The centers are far apart relative to the spread, so the distributions barely overlap\nB) The centers are close relative to the spread, so the distributions overlap a great deal\nC) The two distributions have no overlap at all\nD) The two distributions are identical",
+      "answer": "B) The centers are close relative to the spread, so the distributions overlap a great deal",
+      "solution": {
+        "steps": [
+          "A multiple less than $1$ means the gap between the centers is smaller than one typical deviation of spread.",
+          "When the centers are close compared to the spread, the two distributions overlap a great deal, which is option B.",
+          "Option A describes a large multiple, not a small one. Option C overstates the result: a small multiple means heavy overlap, not zero overlap. Option D is wrong because a nonzero difference in centers means the distributions are not identical."
+        ],
+        "answer": "B) The centers are close relative to the spread, so the distributions overlap a great deal"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Compute the mean absolute deviation (MAD) of the data set $4, 6, 6, 8, 11$. (The mean is $7$.)\nA) $0$\nB) $2$\nC) $5$\nD) $7$",
+      "answer": "B) $2$",
+      "solution": {
+        "steps": [
+          "The mean is $\\frac{4+6+6+8+11}{5} = \\frac{35}{5} = 7$.",
+          "Find each absolute deviation from the mean: $|4-7| = 3$, $|6-7| = 1$, $|6-7| = 1$, $|8-7| = 1$, $|11-7| = 4$.",
+          "Average the absolute deviations: $\\frac{3 + 1 + 1 + 1 + 4}{5} = \\frac{10}{5} = 2$. The MAD is $2$, option B.",
+          "Option A comes from averaging the signed deviations, which sum to $0$. Option C is the range ($11 - 4 = 7$) divided incorrectly or a misread. Option D uses the range $11 - 4 = 7$ instead of the MAD."
+        ],
+        "answer": "B) $2$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Two seventh-grade classes timed how long they could hold a plank. Class 1 has a median of $40$ seconds and Class 2 has a median of $55$ seconds. Both box plots have an IQR of about $10$ seconds. How many times the IQR do the medians differ, and what does it suggest?\nA) $1.5$ times the IQR; the distributions overlap but are noticeably separated\nB) $1.5$ times the IQR; the distributions are identical\nC) $15$ times the IQR; the distributions barely overlap\nD) $0.67$ times the IQR; the distributions are far apart",
+      "answer": "A) $1.5$ times the IQR; the distributions overlap but are noticeably separated",
+      "solution": {
+        "steps": [
+          "Difference between the medians: $|55 - 40| = 15$ seconds.",
+          "Express as a multiple of the IQR: $\\frac{15}{10} = 1.5$.",
+          "A multiple of $1.5$ means the centers are separated by more than one IQR, so the distributions overlap somewhat but are noticeably separated. That matches option A.",
+          "Option B has the right multiple but a wrong interpretation (a nonzero gap means they are not identical). Option C forgets to divide by the IQR ($15$). Option D reverses the division ($\\frac{10}{15} \\approx 0.67$) and misreads a small multiple as far apart."
+        ],
+        "answer": "A) $1.5$ times the IQR; the distributions overlap but are noticeably separated"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "A sample of plants given Fertilizer X has a mean height of $24$ cm and a sample given Fertilizer Y has a mean height of $30$ cm. Both samples have a MAD of about $2$ cm. Expressed as a multiple of the MAD, how separated are the two means?\nA) $\\frac{2}{6} = 0.33$ times the MAD\nB) $24 + 30 = 54$ times the MAD\nC) $\\frac{30 - 24}{2} = 3$ times the MAD\nD) $\\frac{30 - 24}{2 + 2} = 1.5$ times the MAD",
+      "answer": "C) $\\frac{30 - 24}{2} = 3$ times the MAD",
+      "solution": {
+        "steps": [
+          "Difference between the means: $|30 - 24| = 6$ cm.",
+          "Divide by the single shared MAD: $\\frac{6}{2} = 3$. The means differ by $3$ MADs, which is option C.",
+          "Option A reverses the division ($\\frac{2}{6}$). Option B adds the means instead of working with the difference and ignores the MAD. Option D divides by the sum of the two MADs ($2 + 2 = 4$) instead of the single shared MAD."
+        ],
+        "answer": "C) $\\frac{30 - 24}{2} = 3$ times the MAD"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Garden A heights (cm): $20, 22, 22, 22, 24$, with mean $22$. Garden B heights (cm): $29, 31, 31, 31, 33$, with mean $31$. Each data set has a MAD of about $0.8$ cm, so the spreads are similar. Expressed as a multiple of the MAD, how far apart are the two means?\nA) $\\frac{|31 - 22|}{0.8} \\approx 11.3$ times the MAD\nB) $|31 - 22| = 9$ times the MAD\nC) $\\frac{0.8}{9} \\approx 0.09$ times the MAD\nD) $\\frac{31 + 22}{0.8} \\approx 66$ times the MAD",
+      "answer": "A) $\\frac{|31 - 22|}{0.8} \\approx 11.3$ times the MAD",
+      "solution": {
+        "steps": [
+          "Check the spreads: both MADs are about $0.8$ cm, so the variabilities are similar and the centers can be compared fairly.",
+          "Difference between the means: $|31 - 22| = 9$ cm.",
+          "Divide by the shared MAD: $\\frac{9}{0.8} = 11.25 \\approx 11.3$. The means differ by about $11.3$ MADs, option A.",
+          "A multiple this large means the two gardens' heights barely overlap, strong evidence that Garden B plants are typically taller.",
+          "Option B reports the raw difference without dividing. Option C reverses the division. Option D adds the means instead of subtracting."
+        ],
+        "answer": "A) $\\frac{|31 - 22|}{0.8} \\approx 11.3$ times the MAD"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Route A travel times (min): $18, 20, 20, 22$, with mean $20$. Route B travel times (min): $25, 27, 29, 31$, with mean $28$. Route A has a MAD of $1$ min and Route B has a MAD of $2$ min, so the spreads are similar. Using the larger MAD of $2$ min as the shared measure of variability, which inference is best supported?\nA) The means differ by $\\frac{|28 - 20|}{2} = 4$ MADs, so Route A is typically faster and the times barely overlap\nB) The means differ by $\\frac{|28 - 20|}{2} = 4$ MADs, so the two routes have nearly identical travel times\nC) The means differ by $|28 - 20| = 8$ MADs, so Route B is typically faster\nD) The means differ by $\\frac{2}{|28 - 20|} = 0.25$ MADs, so the times overlap heavily",
+      "answer": "A) The means differ by $\\frac{|28 - 20|}{2} = 4$ MADs, so Route A is typically faster and the times barely overlap",
+      "solution": {
+        "steps": [
+          "Both MADs are small and close ($1$ and $2$ min), so the spreads are similar enough to compare the centers.",
+          "Difference between the means: $|28 - 20| = 8$ min.",
+          "Divide by the shared MAD of $2$ min: $\\frac{8}{2} = 4$. The means differ by $4$ MADs.",
+          "A multiple of $4$ is large, so the distributions barely overlap; Route A's smaller mean means it is typically faster. That matches option A.",
+          "Option B has the right multiple but the wrong conclusion (a large multiple means clear separation, not identical times). Option C skips dividing by the MAD and reverses which route is faster. Option D reverses the division and misreads the result."
+        ],
+        "answer": "A) The means differ by $\\frac{|28 - 20|}{2} = 4$ MADs, so Route A is typically faster and the times barely overlap"
+      }
+    }
+  ]
+}

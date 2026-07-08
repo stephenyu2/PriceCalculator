@@ -1,0 +1,125 @@
+{
+  "standard": "GEO.S-CP.B.7",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Use the rules of probability to compute probabilities of compound events in a uniform probability model",
+  "clusterCode": "B",
+  "skillName": "Addition Rule for Probability",
+
+  "description": "Students apply the Addition Rule, $P(A \\text{ or } B) = P(A) + P(B) - P(A \\text{ and } B)$, to compute the probability that at least one of two events occurs. They identify $P(A)$, $P(B)$, and the overlap $P(A \\text{ and } B)$ from words, tables, or Venn diagrams; subtract the double-counted intersection exactly once; recognize when events are mutually exclusive so $P(A \\text{ and } B) = 0$; and interpret the result in terms of the uniform probability model. They also rearrange the rule to solve for a missing piece (for example, find $P(A \\text{ and } B)$ given $P(A \\text{ or } B)$).",
+
+  "subSkills": [
+    "Identify $P(A)$, $P(B)$, and $P(A \\text{ and } B)$ from a verbal description, two-way table, or Venn diagram",
+    "Apply $P(A \\text{ or } B) = P(A) + P(B) - P(A \\text{ and } B)$ and subtract the intersection exactly once",
+    "Recognize mutually exclusive (disjoint) events and use $P(A \\text{ and } B) = 0$",
+    "Rearrange the Addition Rule to solve for a missing probability ($P(A \\text{ and } B)$, $P(A)$, or $P(B)$)",
+    "Compute probabilities in a uniform model by counting favorable outcomes over total outcomes",
+    "Interpret the computed probability as a chance of at least one event in context"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Direct application with given probabilities",
+      "example": "Given $P(A) = \\frac{1}{2}$, $P(B) = \\frac{1}{3}$, and $P(A \\text{ and } B) = \\frac{1}{6}$, find $P(A \\text{ or } B)$. Answer: $\\frac{1}{2} + \\frac{1}{3} - \\frac{1}{6} = \\frac{2}{3}$."
+    },
+    {
+      "name": "Mutually exclusive events",
+      "example": "A single card is drawn from a standard deck. Find $P(\\text{King or Queen})$. Since the events are disjoint, $P = \\frac{4}{52} + \\frac{4}{52} - 0 = \\frac{8}{52} = \\frac{2}{13}$."
+    },
+    {
+      "name": "Overlapping events in a uniform model (cards or dice)",
+      "example": "A single card is drawn from a standard deck. Find $P(\\text{King or heart})$. $P = \\frac{4}{52} + \\frac{13}{52} - \\frac{1}{52} = \\frac{16}{52} = \\frac{4}{13}$."
+    },
+    {
+      "name": "Two-way table or survey data",
+      "example": "Of $40$ students, $18$ play soccer, $15$ play basketball, and $7$ play both. Find the probability a random student plays soccer or basketball. $P = \\frac{18}{40} + \\frac{15}{40} - \\frac{7}{40} = \\frac{26}{40} = \\frac{13}{20}$."
+    },
+    {
+      "name": "Venn diagram region reasoning",
+      "example": "A Venn diagram shows $P(A \\text{ only}) = 0.3$, $P(B \\text{ only}) = 0.25$, and $P(A \\text{ and } B) = 0.15$. Find $P(A \\text{ or } B) = 0.3 + 0.25 + 0.15 = 0.7$."
+    },
+    {
+      "name": "Solve for the missing piece (rearranged rule)",
+      "example": "Given $P(A) = 0.6$, $P(B) = 0.5$, and $P(A \\text{ or } B) = 0.8$, find $P(A \\text{ and } B)$. Rearranging, $P(A \\text{ and } B) = 0.6 + 0.5 - 0.8 = 0.3$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Direct substitution into the Addition Rule with the three probabilities given outright, or a clearly mutually exclusive situation where the overlap is obviously $0$. One arithmetic step, friendly fractions or decimals.",
+      "constraints": [
+        "$P(A)$, $P(B)$, and $P(A \\text{ and } B)$ are stated explicitly, or the events are stated to be mutually exclusive so $P(A \\text{ and } B) = 0$",
+        "Denominators are common or easy to combine (halves, thirds, sixths, tenths, or a shared count)",
+        "Single substitution then simplify; no extraction from a table required",
+        "Context is concrete and familiar (cards, dice, marbles, simple yes/no)"
+      ]
+    },
+    "Medium": {
+      "description": "Student must extract $P(A)$, $P(B)$, and the overlap $P(A \\text{ and } B)$ from a uniform model, a two-way table, or a Venn diagram before substituting. Overlap is nonzero and must be identified and subtracted once.",
+      "constraints": [
+        "Probabilities are computed by counting favorable over total outcomes (deck, dice, survey of $n$ people)",
+        "The intersection $P(A \\text{ and } B)$ is nonzero and must be found, not given",
+        "Fractions require finding a common denominator before combining",
+        "May read counts from a two-way table or labeled Venn diagram"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning: rearrange the Addition Rule to solve for a missing quantity, combine with the complement rule, or determine the overlap from partial information before applying the rule. Requires interpreting the result in context.",
+      "constraints": [
+        "Requires algebraic rearrangement to solve for $P(A \\text{ and } B)$, $P(A)$, or $P(B)$",
+        "May chain with the complement rule, e.g. find $P(\\text{neither}) = 1 - P(A \\text{ or } B)$",
+        "Overlap must be deduced from partial data (totals, complements, or 'exactly one' phrasing)",
+        "Includes an interpretation sentence stating what the probability means in the model"
+      ]
+    }
+  },
+
+  "_difficultyNote": "Single ramped worksheet of 15 items: Easy items (direct substitution / mutually exclusive) appear first, Medium (extract overlap from model/table/Venn) in the middle, Hard (rearranged rule, complement chaining, deduced overlap) last. If split into two tiers, tier1 covers Easy to Medium (given probabilities and mutually exclusive cases through table/Venn extraction) and tier2 covers Medium to Hard (overlap extraction through rearrangement and complement chaining), with no item overlap.",
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student forgets to subtract the intersection and just adds the two probabilities",
+      "distractor": "Computes $P(A) + P(B)$ and reports it as $P(A \\text{ or } B)$, double-counting the overlap (for King or heart, gives $\\frac{4}{52} + \\frac{13}{52} = \\frac{17}{52}$ instead of $\\frac{16}{52}$)"
+    },
+    {
+      "misconception": "Student adds the intersection instead of subtracting it",
+      "distractor": "Computes $P(A) + P(B) + P(A \\text{ and } B)$, inflating the answer (gives $\\frac{18}{52}$ instead of $\\frac{16}{52}$ for King or heart)"
+    },
+    {
+      "misconception": "Student treats overlapping events as mutually exclusive and uses $P(A \\text{ and } B) = 0$ when the events actually intersect",
+      "distractor": "Reports $P(A) + P(B)$ as if disjoint, ignoring a nonzero overlap (e.g. $\\frac{17}{52}$ for King or heart)"
+    },
+    {
+      "misconception": "Student multiplies the probabilities (confuses the Addition Rule with independence / the Multiplication Rule)",
+      "distractor": "Computes $P(A) \\cdot P(B)$ for $P(A \\text{ or } B)$ (e.g. $\\frac{4}{52} \\cdot \\frac{13}{52} = \\frac{1}{52}$ for King or heart)"
+    },
+    {
+      "misconception": "Student rearranges the rule with the wrong sign when solving for the intersection",
+      "distractor": "Computes $P(A \\text{ and } B) = P(A \\text{ or } B) - P(A) - P(B)$ (gives a negative or wrong value, e.g. $0.8 - 0.6 - 0.5 = -0.3$ instead of $0.3$)"
+    },
+    {
+      "misconception": "Student miscounts the intersection in a uniform model, taking it as the full size of one event rather than the genuine overlap",
+      "distractor": "Uses the wrong overlap count (e.g. subtracts $\\frac{4}{52}$ instead of $\\frac{1}{52}$ for the King of hearts), giving $\\frac{13}{52} = \\frac{1}{4}$"
+    },
+    {
+      "misconception": "Student answers the complement or 'neither' probability instead of 'A or B'",
+      "distractor": "Reports $1 - P(A \\text{ or } B)$ as the answer (e.g. $\\frac{36}{52} = \\frac{9}{13}$ instead of $\\frac{4}{13}$ for King or heart)"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet (15 items, Easy->Hard). tier1/tier2 only if generator deems standard complex enough; default is single.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

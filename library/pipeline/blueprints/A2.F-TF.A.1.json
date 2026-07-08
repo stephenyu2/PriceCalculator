@@ -1,0 +1,123 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent. One blueprint per standard.",
+
+  "standard": "A2.F-TF.A.1",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Functions — Trigonometric Functions",
+  "domainCode": "F-TF",
+  "cluster": "Extend the domain of trigonometric functions using the unit circle",
+  "clusterCode": "A",
+  "skillName": "Radian Measure",
+
+  "description": "Students understand the radian measure of an angle as the length of the arc on the unit circle subtended by that angle, where one full revolution corresponds to an arc of length $2\\pi$. They connect this definition to the general arc-length relationship $s = r\\theta$, convert fluently between degrees and radians using $\\pi\\text{ rad} = 180^\\circ$, locate radian angles on the unit circle, and compute arc lengths for circles of any radius. The central insight is that radian measure is a pure ratio (arc length divided by radius) and is therefore dimensionless, which is why it is the natural unit for trigonometric functions.",
+
+  "subSkills": [
+    "Define radian measure as the ratio of subtended arc length to radius on a circle ($\\theta = \\frac{s}{r}$), and recognize that on the unit circle the radian measure equals the arc length itself",
+    "State that a full revolution is $2\\pi$ radians, a half revolution is $\\pi$ radians, and a quarter revolution is $\\frac{\\pi}{2}$ radians",
+    "Convert from degrees to radians by multiplying by $\\frac{\\pi}{180^\\circ}$",
+    "Convert from radians to degrees by multiplying by $\\frac{180^\\circ}{\\pi}$",
+    "Compute the arc length subtended by a central angle using $s = r\\theta$ with $\\theta$ in radians",
+    "Find a central angle (in radians) given arc length and radius, or find a radius given arc length and angle",
+    "Identify the radian measures of the common reference angles ($\\frac{\\pi}{6}$, $\\frac{\\pi}{4}$, $\\frac{\\pi}{3}$, $\\frac{\\pi}{2}$, and their multiples) and place them on the unit circle"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Degree to radian conversion",
+      "example": "Convert $135^\\circ$ to radians, giving the exact value. Answer: $135^\\circ \\cdot \\frac{\\pi}{180^\\circ} = \\frac{3\\pi}{4}$."
+    },
+    {
+      "name": "Radian to degree conversion",
+      "example": "Convert $\\frac{5\\pi}{6}$ radians to degrees. Answer: $\\frac{5\\pi}{6} \\cdot \\frac{180^\\circ}{\\pi} = 150^\\circ$."
+    },
+    {
+      "name": "Unit-circle arc length as radian measure",
+      "example": "On the unit circle, an angle subtends an arc of length $\\frac{2\\pi}{3}$. What is the radian measure of the angle? Answer: $\\frac{2\\pi}{3}$, because on the unit circle the radian measure equals the arc length."
+    },
+    {
+      "name": "Arc length from central angle and radius ($s = r\\theta$)",
+      "example": "A circle has radius $r = 6$. Find the length of the arc subtended by a central angle of $\\frac{\\pi}{3}$ radians. Answer: $s = 6 \\cdot \\frac{\\pi}{3} = 2\\pi$."
+    },
+    {
+      "name": "Solve for angle or radius given arc length",
+      "example": "An arc of length $10$ on a circle of radius $4$ subtends what central angle in radians? Answer: $\\theta = \\frac{s}{r} = \\frac{10}{4} = \\frac{5}{2}$ radians."
+    },
+    {
+      "name": "Locate / interpret a radian angle on the unit circle",
+      "example": "Which standard-position angle, in radians, terminates on the negative $y$-axis (pointing straight down)? Answer: $\\frac{3\\pi}{2}$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "_comment": "A single ramped worksheet of 15 items moves Easy (items 1-5) to Medium (6-11) to Hard (12-15). If this standard were split, tier1 = Easy to Medium (conversions and unit-circle arc length), tier2 = Medium to Hard (general $s = r\\theta$, solving for any variable, multi-step). This standard is conceptually contained, so the default single ramped worksheet is used.",
+    "Easy": {
+      "description": "One-step conversion or direct definition recall. Degree to radian for benchmark angles ($30^\\circ$, $45^\\circ$, $60^\\circ$, $90^\\circ$, $180^\\circ$), or stating arc length on the unit circle equals radian measure. Numbers are clean and the $\\pi$ factor cancels neatly.",
+      "constraints": [
+        "Single conversion step using $\\frac{\\pi}{180^\\circ}$ or $\\frac{180^\\circ}{\\pi}$",
+        "Angles are common benchmarks whose radian forms are familiar ($\\frac{\\pi}{6}$, $\\frac{\\pi}{4}$, $\\frac{\\pi}{3}$, $\\frac{\\pi}{2}$, $\\pi$)",
+        "Unit-circle items use $r = 1$ so $s = \\theta$ directly",
+        "No simplification beyond reducing one fraction"
+      ]
+    },
+    "Medium": {
+      "description": "Conversion of non-benchmark angles requiring fraction reduction, or a direct application of $s = r\\theta$ where two of the three quantities are given and the radius is not 1. Two computational steps with simplification.",
+      "constraints": [
+        "Angles such as $135^\\circ$, $210^\\circ$, $300^\\circ$, $\\frac{5\\pi}{6}$, $\\frac{7\\pi}{4}$ that need GCF reduction after multiplying",
+        "Arc-length problems $s = r\\theta$ with integer radius greater than 1 and a radian angle",
+        "Solving $s = r\\theta$ for $r$ or $\\theta$ when the other two are clean values",
+        "Answer may be a multiple of $\\pi$ that must be simplified"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems combining a conversion with an arc-length computation, solving for a variable that requires rearranging $\\theta = \\frac{s}{r}$, or interpreting/justifying the definition in a non-routine context (e.g., why radians are dimensionless, comparing arcs on circles of different radii).",
+      "constraints": [
+        "Requires first converting a degree angle to radians, then applying $s = r\\theta$",
+        "Solve for an unknown radius or angle where the result is a non-benchmark exact value",
+        "Word problems (rotating wheel, pendulum sweep, sector of a track) that must be modeled before computing",
+        "Conceptual justification or comparison items, e.g. explaining that the same central angle subtends a longer arc on a larger circle while the radian measure stays the same"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student inverts the conversion factor, multiplying by $\\frac{180^\\circ}{\\pi}$ when converting degrees to radians (or vice versa)",
+      "distractor": "For $135^\\circ$ produces $135 \\cdot \\frac{180}{\\pi} = \\frac{24300}{\\pi}$ degrees-style nonsense, or reports a degree measure when radians were requested"
+    },
+    {
+      "misconception": "Student believes a full circle is $360$ radians (confuses radians with degrees) or that $\\pi$ radians $= 360^\\circ$",
+      "distractor": "Converts using $\\pi\\text{ rad} = 360^\\circ$, so $\\frac{5\\pi}{6}$ becomes $300^\\circ$ instead of $150^\\circ$"
+    },
+    {
+      "misconception": "Student uses the area formula or $s = \\frac{1}{2} r^2 \\theta$ / $s = \\pi r \\theta$ instead of $s = r\\theta$ for arc length",
+      "distractor": "For $r = 6$, $\\theta = \\frac{\\pi}{3}$ computes $\\frac{1}{2}(6)^2 \\cdot \\frac{\\pi}{3} = 6\\pi$ instead of $2\\pi$"
+    },
+    {
+      "misconception": "Student plugs a degree value directly into $s = r\\theta$ without converting to radians first",
+      "distractor": "For $r = 6$ and a $60^\\circ$ angle computes $s = 6 \\cdot 60 = 360$ instead of $s = 6 \\cdot \\frac{\\pi}{3} = 2\\pi$"
+    },
+    {
+      "misconception": "Student forgets the radian measure is arc length over radius and just reports the arc length $s$ as the angle even when $r \\neq 1$",
+      "distractor": "For an arc of length $10$ on radius $4$ answers $\\theta = 10$ radians instead of $\\theta = \\frac{10}{4} = \\frac{5}{2}$"
+    },
+    {
+      "misconception": "Student leaves an unreduced fraction or drops the factor of $\\pi$ during simplification",
+      "distractor": "Converts $135^\\circ$ to $\\frac{135\\pi}{180}$ but reports $\\frac{135}{180}$ (no $\\pi$) or fails to reduce to $\\frac{3\\pi}{4}$"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet (Easy to Hard across 15 items). lesson 5+5, quiz 8.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

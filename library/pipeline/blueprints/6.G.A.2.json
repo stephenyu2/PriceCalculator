@@ -1,0 +1,133 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent. One blueprint per standard.",
+
+  "standard": "6.G.A.2",
+  "grade": "6",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Solve real-world and mathematical problems involving area, surface area, and volume",
+  "clusterCode": "A",
+  "skillName": "Volume of Rectangular Prisms",
+
+  "description": "Students find the volume of a right rectangular prism with fractional edge lengths. They build the idea by packing the prism with unit cubes whose edge is an appropriate unit fraction (e.g. cubes $\\frac{1}{2}$ unit on a side), counting the cubes, and showing the count matches the result of multiplying the edge lengths. They then apply the formulas $V = lwh$ and $V = Bh$ (where $B$ is the area of the base) to compute volumes with whole-number, fractional, and mixed-number edge lengths, and they use these formulas to solve real-world and mathematical problems, including finding a missing edge length when the volume is known.",
+
+  "subSkills": [
+    "Pack a right rectangular prism with unit-fraction cubes and count the cubes to find the volume",
+    "Show that counting unit-fraction cubes gives the same volume as multiplying the edge lengths",
+    "Find the volume of a prism using $V = lwh$ with fractional and mixed-number edge lengths",
+    "Find the volume of a prism using $V = Bh$, computing the base area $B$ first",
+    "Multiply three fractions or mixed numbers, simplifying to lowest terms and converting improper results to mixed numbers",
+    "Attach correct cubic units to a volume answer (e.g. cubic inches, $\\text{ft}^3$)",
+    "Solve real-world problems involving volume of rectangular prisms (containers, boxes, tanks, packing)",
+    "Find a missing edge length given the volume and the other two edges by dividing"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Pack with unit-fraction cubes (count)",
+      "example": "A box is $\\frac{3}{2}$ units long, $1$ unit wide, and $\\frac{1}{2}$ unit tall. Packing it with cubes of edge $\\frac{1}{2}$ unit, how many cubes fit, and what is the volume? There are $3 \\times 2 \\times 1 = 6$ cubes, each of volume $\\frac{1}{8}$ cubic unit, so $V = 6 \\times \\frac{1}{8} = \\frac{3}{4}$ cubic units. This matches $\\frac{3}{2} \\times 1 \\times \\frac{1}{2} = \\frac{3}{4}$."
+    },
+    {
+      "name": "Volume from $V = lwh$, fractional edges",
+      "example": "Find the volume of a prism with $l = \\frac{3}{4}$ ft, $w = \\frac{2}{3}$ ft, $h = \\frac{1}{2}$ ft. $V = \\frac{3}{4} \\times \\frac{2}{3} \\times \\frac{1}{2} = \\frac{1}{4}$ cubic feet."
+    },
+    {
+      "name": "Volume from $V = Bh$, base area first",
+      "example": "A prism has a rectangular base of area $B = \\frac{5}{6}\\ \\text{m}^2$ and height $h = \\frac{3}{5}$ m. $V = Bh = \\frac{5}{6} \\times \\frac{3}{5} = \\frac{1}{2}$ cubic meters."
+    },
+    {
+      "name": "Volume with mixed-number edges",
+      "example": "Find the volume of a box that is $2\\frac{1}{2}$ in by $1\\frac{1}{2}$ in by $3$ in. Convert: $\\frac{5}{2} \\times \\frac{3}{2} \\times 3 = \\frac{45}{4} = 11\\frac{1}{4}$ cubic inches."
+    },
+    {
+      "name": "Real-world volume word problem",
+      "example": "A fish tank is $1\\frac{1}{2}$ ft long, $\\frac{3}{4}$ ft wide, and $\\frac{2}{3}$ ft deep. What is its volume? $V = \\frac{3}{2} \\times \\frac{3}{4} \\times \\frac{2}{3} = \\frac{3}{4}$ cubic feet."
+    },
+    {
+      "name": "Find a missing edge length from the volume",
+      "example": "A box has volume $\\frac{3}{8}\\ \\text{ft}^3$, length $\\frac{3}{4}$ ft, and width $\\frac{1}{2}$ ft. Find the height. $h = \\frac{3}{8} \\div \\left(\\frac{3}{4} \\times \\frac{1}{2}\\right) = \\frac{3}{8} \\div \\frac{3}{8} = 1$ ft."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Direct substitution into $V = lwh$ where edges are whole numbers and/or simple unit or proper fractions, or a unit-fraction cube-packing count with small dimensions. The three-factor product is short and the answer is a whole number or a simple proper fraction in lowest terms with no mixed-number conversion. tier1 starts here.",
+      "constraints": [
+        "All three edges are whole numbers or simple proper/unit fractions ($\\frac{1}{2}, \\frac{1}{3}, \\frac{1}{4}, \\frac{2}{3}, \\frac{3}{4}$)",
+        "No mixed numbers; numerators and denominators are small ($\\le 8$)",
+        "Answer is a whole number or a proper fraction already in lowest terms",
+        "Cube-packing items use a unit-fraction cube and small whole counts in each direction",
+        "Context, if any, is a single direct 'find the volume' question with units given"
+      ]
+    },
+    "Medium": {
+      "description": "Volume of a prism where at least one edge is a mixed number that must be converted to an improper fraction first, or a $V = Bh$ problem requiring the student to compute the base area $B$ before multiplying. The product is often an improper fraction that must be reduced and rewritten as a mixed number. Includes one-step real-world problems where the student sets up $V = lwh$ from a description. This is the tier1/tier2 split: tier1 covers Easy to Medium, tier2 covers Medium to Hard.",
+      "constraints": [
+        "Exactly one or two edges are mixed numbers requiring conversion, OR a $V = Bh$ problem where $B$ must be computed first",
+        "Product is frequently improper and must be reduced and written as a mixed number",
+        "Simplification may require finding a GCF",
+        "Word problems are one step: identify the three dimensions and multiply, attaching cubic units"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems: all three edges are mixed numbers, or the student must work backward to find a missing edge length from a known volume, or a multi-part real-world problem (e.g. find volume then how many smaller boxes/cubes fit, or relate cube-packing to the edge-length product as a justification). Requires reading comprehension to build the equation and interpretation of the result in context. tier2 ends here.",
+      "constraints": [
+        "May involve three mixed numbers, all converted to improper fractions before multiplying",
+        "Reverse problems: given $V$ and two edges, divide to find the third edge",
+        "Multi-part: compute a volume, then divide by a smaller cube/box volume to count how many fit",
+        "May ask the student to justify that the cube-packing count equals the edge-length product",
+        "Requires correct cubic units and interpretation of the answer in context"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student adds the edge lengths instead of multiplying them",
+      "distractor": "For $\\frac{3}{4} \\times \\frac{2}{3} \\times \\frac{1}{2}$ computes $\\frac{3}{4} + \\frac{2}{3} + \\frac{1}{2} = \\frac{23}{12}$ instead of $\\frac{1}{4}$"
+    },
+    {
+      "misconception": "Student multiplies only two of the three dimensions (computes area, not volume)",
+      "distractor": "For a prism $\\frac{3}{4} \\times \\frac{2}{3} \\times \\frac{1}{2}$ reports the base area $\\frac{3}{4} \\times \\frac{2}{3} = \\frac{1}{2}$ as the volume instead of $\\frac{1}{4}$"
+    },
+    {
+      "misconception": "Student multiplies whole-number parts and fraction parts of mixed numbers separately without converting to improper fractions",
+      "distractor": "For $2\\frac{1}{2} \\times 1\\frac{1}{2} \\times 3$ computes $(2 \\times 1 \\times 3) + (\\frac{1}{2} \\times \\frac{1}{2}) = 6\\frac{1}{4}$ instead of $\\frac{5}{2} \\times \\frac{3}{2} \\times 3 = 11\\frac{1}{4}$"
+    },
+    {
+      "misconception": "Student multiplies numerators and adds denominators (or otherwise mishandles fraction multiplication)",
+      "distractor": "For $\\frac{3}{4} \\times \\frac{2}{3}$ computes $\\frac{3 \\times 2}{4 + 3} = \\frac{6}{7}$ instead of $\\frac{6}{12} = \\frac{1}{2}$"
+    },
+    {
+      "misconception": "Student counts the unit-fraction cubes but forgets each cube's volume is a fraction of a cubic unit, reporting the cube count as the volume",
+      "distractor": "For $6$ cubes of edge $\\frac{1}{2}$ unit reports $V = 6$ cubic units instead of $6 \\times \\frac{1}{8} = \\frac{3}{4}$ cubic units"
+    },
+    {
+      "misconception": "Student uses the wrong cube volume, treating a $\\frac{1}{2}$-unit cube as having volume $\\frac{1}{2}$ instead of $\\left(\\frac{1}{2}\\right)^3 = \\frac{1}{8}$",
+      "distractor": "Computes each $\\frac{1}{2}$-unit cube as $\\frac{1}{2}$ cubic unit, giving $6 \\times \\frac{1}{2} = 3$ instead of $\\frac{3}{4}$"
+    },
+    {
+      "misconception": "Student multiplies instead of divides when finding a missing edge length from a known volume",
+      "distractor": "For $V = \\frac{3}{8}$, $l = \\frac{3}{4}$, $w = \\frac{1}{2}$, computes $h = \\frac{3}{8} \\times \\frac{3}{4} \\times \\frac{1}{2} = \\frac{9}{64}$ instead of $\\frac{3}{8} \\div \\frac{3}{8} = 1$"
+    },
+    {
+      "misconception": "Student labels the volume with square units instead of cubic units",
+      "distractor": "Reports the answer as '$\\frac{1}{4}\\ \\text{ft}^2$' (square feet) instead of '$\\frac{1}{4}\\ \\text{ft}^3$' (cubic feet)"
+    }
+  ],
+
+  "_comment_itemCounts": "lesson = 5 worked examples + 5 practice problems. worksheet.single = one ramped sheet of 15 items (Easy -> Hard). tier1/tier2 provided per schema default but this standard uses the single ramped worksheet. quiz = 8 multiple-choice items.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

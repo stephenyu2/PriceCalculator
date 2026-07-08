@@ -1,0 +1,150 @@
+{
+  "id": "A1.F-LE.B.5--quiz",
+  "standard": "A1.F-LE.B.5",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Linear, Quadratic, and Exponential Models",
+  "domainCode": "F-LE",
+  "cluster": "Interpret expressions for functions in terms of the situation they model",
+  "clusterCode": "B",
+  "skillName": "Parameters in Linear and Exponential Models",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "intro": "Eight multiple-choice questions on interpreting the parameters of linear and exponential models in context: initial values, rates of change, growth and decay factors, and percent rates.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "A gym membership costs $C(t)=40t+75$ dollars after $t$ months. What does the $75$ represent?\nA) The one-time sign-up fee, the cost at $t=0$\nB) The monthly cost that is added each month\nC) The total cost after $1$ month\nD) The number of months in the plan",
+      "answer": "A) The one-time sign-up fee, the cost at $t=0$",
+      "solution": {
+        "steps": [
+          "In a linear model $f(t)=mt+b$, the constant term $b$ is the value when $t=0$, the initial amount.",
+          "Here $C(0)=40(0)+75=75$, so $75$ is the starting cost before any months pass, the one-time sign-up fee. The key is A.",
+          "B is wrong: the amount added each month is the slope $40$, not $75$ (this swaps the roles of the initial value and the rate).",
+          "C is wrong: after $1$ month the cost is $C(1)=40+75=115$, not $75$.",
+          "D is wrong: $75$ has units of dollars, not months; it is a cost, not a count of months."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "A population is modeled by $P(t)=500\\cdot(1.05)^{t}$, where $t$ is in years. What does the base $1.05$ tell you?\nA) The population grows by $5\\%$ each year\nB) The population grows by $105\\%$ each year\nC) The population grows by $1.05$ people each year\nD) The starting population is $1.05$",
+      "answer": "A) The population grows by $5\\%$ each year",
+      "solution": {
+        "steps": [
+          "In an exponential model $a\\cdot b^{t}$, the base $b$ is the growth factor. Write $b=1+r$, so $r=b-1$.",
+          "Here $1.05=1+0.05$, so $r=0.05=5\\%$: the population grows by $5\\%$ each year. The key is A.",
+          "B is wrong: it reads $1.05$ as $105\\%$ instead of converting with $r=|b-1|$.",
+          "C is wrong: exponential growth multiplies by a factor, it does not add a constant number of people each year.",
+          "D is wrong: the starting population is $a=500$ (the value at $t=0$), not the base $1.05$."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "A car's value is modeled by $V(t)=24000\\cdot(0.90)^{t}$ dollars after $t$ years. What is the initial value of the car?\nA) $\\$24000$\nB) $\\$0.90$\nC) $\\$21600$\nD) $\\$90$",
+      "answer": "A) $\\$24000$",
+      "solution": {
+        "steps": [
+          "The initial value is the function value at $t=0$: $V(0)=24000\\cdot(0.90)^{0}=24000\\cdot 1=24000$.",
+          "So the car is worth $\\$24000$ to start. The key is A.",
+          "B is wrong: $0.90$ is the decay factor (base), not the initial dollar value.",
+          "C is wrong: $\\$21600$ is the value after $1$ year, $V(1)=24000\\cdot 0.90=21600$, not the initial value.",
+          "D is wrong: $90$ misreads the base $0.90$ as a dollar amount."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "A car's value is modeled by $V(t)=24000\\cdot(0.85)^{t}$ dollars after $t$ years. Which statement correctly interprets the base $0.85$?\nA) The value decreases by $15\\%$ each year\nB) The value decreases by $85\\%$ each year\nC) The value increases by $85\\%$ each year\nD) The value increases by $15\\%$ each year",
+      "answer": "A) The value decreases by $15\\%$ each year",
+      "solution": {
+        "steps": [
+          "Since $0<0.85<1$, the base is a decay factor, so the value is decreasing.",
+          "Write $0.85=1-r$, so $r=1-0.85=0.15=15\\%$: the value decreases by $15\\%$ each year. The key is A.",
+          "B is wrong: it reports the base $0.85$ as $85\\%$ instead of computing $1-0.85$.",
+          "C is wrong: a base less than $1$ means decay, not growth, and it also misreads the percent.",
+          "D is wrong: the percent $15\\%$ is correct but the direction is wrong, the value decreases, not increases."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "A tank holds $200$ gallons of water and drains at a constant rate, modeled by $W(t)=200-15t$ gallons after $t$ minutes. What does the $-15$ represent?\nA) The water decreases by $15$ gallons each minute\nB) The water increases by $15$ gallons each minute\nC) The tank starts with $15$ gallons\nD) The tank is empty after $15$ minutes",
+      "answer": "A) The water decreases by $15$ gallons each minute",
+      "solution": {
+        "steps": [
+          "In $W(t)=200-15t$ the slope is $-15$, the constant rate of change per minute.",
+          "A negative slope means the quantity is decreasing, so the water drops by $15$ gallons each minute. The key is A.",
+          "B is wrong: it drops the negative sign, treating a draining tank as filling.",
+          "C is wrong: the starting amount is the initial value $200$ (at $t=0$), not $15$.",
+          "D is wrong: the tank empties when $W(t)=0$, i.e. $200-15t=0$ at about $t\\approx 13.3$ minutes, not at $t=15$."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "A table shows a bacteria count at hours $0,1,2,3$ as $300,\\,600,\\,1200,\\,2400$. Which model fits the data, and what is the initial value?\nA) Exponential $f(t)=300\\cdot 2^{t}$ with initial value $300$\nB) Linear $f(t)=300t+300$ with initial value $300$\nC) Exponential $f(t)=600\\cdot 2^{t}$ with initial value $600$\nD) Linear $f(t)=300\\cdot 2^{t}$ with initial value $300$",
+      "answer": "A) Exponential $f(t)=300\\cdot 2^{t}$ with initial value $300$",
+      "solution": {
+        "steps": [
+          "Check how the values change: $600\\div300=2$, $1200\\div600=2$, $2400\\div1200=2$. Each value is multiplied by $2$, a constant factor, so the model is exponential.",
+          "The value at $t=0$ is $300$, so $f(t)=300\\cdot 2^{t}$ with initial value $300$. The key is A.",
+          "B is wrong: a constant factor (ratio) indicates exponential, not linear; the differences here are not constant ($300,600,1200$).",
+          "C is wrong: it misreads the initial value as $600$ (the $t=1$ entry) instead of the $t=0$ entry $300$.",
+          "D is wrong: $f(t)=300\\cdot 2^{t}$ is an exponential rule, so calling it 'linear' is a mislabel."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "An investment of $\\$800$ increases by $7\\%$ each year. Which model correctly represents the value $A(t)$ after $t$ years?\nA) $A(t)=800\\cdot(1.07)^{t}$\nB) $A(t)=800\\cdot(0.07)^{t}$\nC) $A(t)=800+7t$\nD) $A(t)=800\\cdot(7)^{t}$",
+      "answer": "A) $A(t)=800\\cdot(1.07)^{t}$",
+      "solution": {
+        "steps": [
+          "A constant percent change each year is exponential, with base $b=1+r$ for growth.",
+          "Here $r=7\\%=0.07$, so $b=1+0.07=1.07$, and the initial value is $800$. Thus $A(t)=800\\cdot(1.07)^{t}$. The key is A.",
+          "B is wrong: using $0.07$ as the base ($r$ instead of $1+r$) describes rapid decay, multiplying by $0.07$ each year.",
+          "C is wrong: $800+7t$ is linear (adds a constant amount), but a $7\\%$ change is a constant factor, not a constant amount.",
+          "D is wrong: a base of $7$ means the value multiplies by $7$ (grows $600\\%$) each year, far more than $7\\%$ growth."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A savings plan adds $\\$50$ to an account each week, starting from a balance of $\\$120$. Let $x$ be the number of weeks. Which model fits, and why?\nA) Linear $B(x)=50x+120$, because a constant amount is added each week\nB) Exponential $B(x)=120\\cdot(1.50)^{x}$, because the balance grows each week\nC) Linear $B(x)=120x+50$, because $120$ is the weekly rate\nD) Exponential $B(x)=50\\cdot(1.20)^{x}$, because $\\$120$ is the starting balance",
+      "answer": "A) Linear $B(x)=50x+120$, because a constant amount is added each week",
+      "solution": {
+        "steps": [
+          "Adding the same dollar amount each week is a constant rate of change, which is linear, $f(x)=mx+b$.",
+          "The weekly addition is the slope $m=50$ and the starting balance is the initial value $b=120$, so $B(x)=50x+120$. The key is A.",
+          "B is wrong: a fixed $\\$50$ added each week is a constant amount, not a constant percent, so it is not exponential.",
+          "C is wrong: it swaps the roles, $120$ is the starting balance (initial value), not the weekly rate; the rate is $50$.",
+          "D is wrong: adding a constant amount is linear, and $50\\cdot(1.20)^{x}$ also misplaces the parameters as an exponential growth factor."
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T11:30:04.469Z"
+}

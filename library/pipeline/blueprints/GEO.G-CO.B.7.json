@@ -1,0 +1,127 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent. One blueprint per standard.",
+
+  "standard": "GEO.G-CO.B.7",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Understand congruence in terms of rigid motions",
+  "clusterCode": "B",
+  "skillName": "Congruent Triangles via Rigid Motions",
+
+  "description": "Students use the definition of congruence in terms of rigid motions to establish the biconditional link between triangle congruence and corresponding parts. Forward direction: if a sequence of rigid motions maps one triangle exactly onto another, then because rigid motions preserve distance and angle, every pair of corresponding sides and every pair of corresponding angles is congruent. Reverse direction: if all three pairs of corresponding sides and all three pairs of corresponding angles are congruent, then a sequence of rigid motions (typically a translation to match one vertex, a rotation to align one side, and if needed a reflection) maps one triangle onto the other, so the triangles are congruent. Students read a triangle congruence statement to name corresponding parts, justify why corresponding parts are congruent (a coordinate-rigid-motion form of CPCTC), and construct or describe the mapping sequence that proves two triangles congruent.",
+
+  "subSkills": [
+    "Read a triangle congruence statement such as $\\triangle ABC \\cong \\triangle DEF$ and list the corresponding vertices, the three pairs of corresponding sides, and the three pairs of corresponding angles in matched order",
+    "Use the fact that rigid motions preserve length and angle measure to conclude that corresponding sides and corresponding angles of mapped triangles are congruent (forward direction)",
+    "Given $\\triangle ABC \\cong \\triangle DEF$, find an unknown side length or angle measure by setting the corresponding part equal (a coordinate-free application of CPCTC)",
+    "Describe an explicit sequence of rigid motions (translation, rotation, reflection) that maps one triangle onto another and conclude the triangles are congruent (reverse direction)",
+    "Decide whether all six pairs of corresponding parts being congruent is sufficient to declare two triangles congruent, and explain using the definition of congruence in terms of rigid motions",
+    "Determine when a reflection must be included in the mapping sequence (triangles of opposite orientation) versus when only translations and rotations suffice (same orientation)",
+    "Verify or refute a claimed congruence by checking whether corresponding parts match or by exhibiting a mapping sequence"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Name corresponding parts from a congruence statement",
+      "example": "Given $\\triangle ABC \\cong \\triangle DEF$, list the three pairs of corresponding sides and the three pairs of corresponding angles."
+    },
+    {
+      "name": "Find a missing measure by CPCTC",
+      "example": "Given $\\triangle ABC \\cong \\triangle DEF$ with $AB = 8$, $BC = 5$, and $m\\angle A = 47^\\circ$, find $DE$ and $m\\angle D$."
+    },
+    {
+      "name": "Justify why corresponding parts are congruent",
+      "example": "A sequence of rigid motions maps $\\triangle PQR$ onto $\\triangle STU$. Explain why $PQ = ST$ and $m\\angle Q = m\\angle T$, citing the property of rigid motions used."
+    },
+    {
+      "name": "Build the mapping sequence (reverse direction)",
+      "example": "Triangle $ABC$ has vertices $A(0, 0)$, $B(4, 0)$, $C(4, 3)$ and triangle $DEF$ has vertices $D(1, 1)$, $E(5, 1)$, $F(5, 4)$. Describe a sequence of rigid motions that maps $\\triangle ABC$ onto $\\triangle DEF$ and conclude $\\triangle ABC \\cong \\triangle DEF$."
+    },
+    {
+      "name": "Decide whether a reflection is needed",
+      "example": "Triangle $ABC$ has vertices $A(0, 0)$, $B(4, 0)$, $C(4, 3)$ and triangle $DEF$ has vertices $D(0, 0)$, $E(4, 0)$, $F(4, -3)$. Decide whether a reflection must be part of any mapping sequence and explain why."
+    },
+    {
+      "name": "Evaluate a congruence claim using the biconditional",
+      "example": "Two triangles have all three pairs of corresponding sides and all three pairs of corresponding angles congruent. Is that enough to conclude the triangles are congruent? Justify using the definition of congruence in terms of rigid motions."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Read a single triangle congruence statement and identify ONE level of correspondence: name a corresponding side, a corresponding angle, or substitute one given measure into its corresponding part. One direct lookup from the matched-letter order, no mapping sequence required.",
+      "constraints": [
+        "Given an explicit congruence statement like $\\triangle ABC \\cong \\triangle DEF$",
+        "Asks for a single corresponding side, single corresponding angle, or a single CPCTC substitution (one length or one angle)",
+        "All needed measures are given directly; integer side lengths $\\le 20$ and integer angle measures in degrees",
+        "No coordinate work and no description of a rigid-motion sequence"
+      ]
+    },
+    "Medium": {
+      "description": "Use CPCTC across several parts at once, or reason about orientation. Either find multiple missing measures from a congruence statement (possibly using the triangle angle sum for the third angle), or apply the forward direction by stating which property of rigid motions guarantees a corresponding pair is congruent, or decide from coordinates whether a reflection is needed.",
+      "constraints": [
+        "May require finding two or three corresponding parts, including using the $180^\\circ$ angle-sum to recover a third angle",
+        "Includes 'cite the rigid-motion property' justification tasks (length preservation, angle preservation)",
+        "Orientation tasks: compare same vs. opposite orientation from coordinates to decide whether a reflection is required",
+        "Integer coordinates with absolute value $\\le 8$ when coordinates appear"
+      ]
+    },
+    "Hard": {
+      "description": "Construct or fully justify a mapping sequence for the reverse direction, or evaluate a congruence claim using the full biconditional. Multi-step: typically translate to align one vertex, rotate to align one side, and reflect if orientation differs, then verify the third vertex coincides and conclude congruence, or expose a flaw in a claimed congruence.",
+      "constraints": [
+        "Requires describing an explicit sequence of two or three rigid motions that maps one triangle onto another, in correct order",
+        "Reverse-direction tasks must verify the mapping actually carries all three vertices, not just one",
+        "Evaluation tasks must invoke the definition of congruence in terms of rigid motions (the biconditional), not a single matching measurement",
+        "May include a non-congruence case justified by an unmatched corresponding side or angle, or by mismatched orientation that no rigid motion can fix"
+      ]
+    },
+    "tierSplit": "If split into two worksheets: tier1 covers Easy to Medium, reading congruence statements and applying CPCTC, identifying corresponding parts, finding missing measures, and the forward direction (why corresponding parts are congruent because rigid motions preserve length and angle). tier2 covers Medium to Hard, the reverse direction, constructing and ordering mapping sequences from coordinates, deciding when a reflection is required, and evaluating congruence claims with the full biconditional. No item overlap between tiers."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Matches corresponding parts by position in the figure or alphabetical order rather than by the order of the letters in the congruence statement",
+      "distractor": "Given $\\triangle ABC \\cong \\triangle DEF$, pairs $\\angle A$ with $\\angle F$ or side $AB$ with $EF$ instead of the correct $\\angle A \\leftrightarrow \\angle D$ and $AB \\leftrightarrow DE$"
+    },
+    {
+      "misconception": "Believes a rigid motion can change a triangle's side lengths or angle measures, so corresponding parts need not be equal",
+      "distractor": "Claims $DE \\ne AB$ even though $\\triangle ABC \\cong \\triangle DEF$, or assigns a scaled value such as $DE = 16$ when $AB = 8$"
+    },
+    {
+      "misconception": "Thinks that matching only one pair of sides or one pair of angles is enough to declare two triangles congruent",
+      "distractor": "Concludes the triangles are congruent because a single side matches, ignoring that the definition requires a full mapping by rigid motions"
+    },
+    {
+      "misconception": "Treats triangle congruence as a one-directional implication and denies the reverse direction of the biconditional",
+      "distractor": "States that all six corresponding parts being congruent does not guarantee congruence, failing to recognize that those equalities force a mapping sequence to exist"
+    },
+    {
+      "misconception": "Ignores orientation and omits the required reflection, assuming translations and rotations always suffice",
+      "distractor": "Describes a mapping with only a translation and a rotation for two triangles of opposite orientation, when a reflection is actually required"
+    },
+    {
+      "misconception": "Misapplies the triangle angle sum and finds a wrong third corresponding angle",
+      "distractor": "For corresponding angles, computes the third angle as $180^\\circ - 47^\\circ = 133^\\circ$ using only one given angle instead of $180^\\circ - 47^\\circ - 63^\\circ = 70^\\circ$"
+    },
+    {
+      "misconception": "Confuses the preserved-property justification, citing area or orientation preservation instead of distance and angle preservation",
+      "distractor": "Says corresponding sides are congruent because rigid motions preserve orientation, instead of because rigid motions preserve distance (length)"
+    }
+  ],
+
+  "_comment_itemCounts": "worksheet.single = one ramped sheet (Easy->Hard across 15 items). tier1/tier2 only if the standard is split into two worksheets (15 each, no overlap).",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

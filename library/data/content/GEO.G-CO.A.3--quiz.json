@@ -1,0 +1,126 @@
+{
+  "id": "GEO.G-CO.A.3--quiz",
+  "standard": "GEO.G-CO.A.3",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Experiment with transformations in the plane",
+  "clusterCode": "A",
+  "skillName": "Symmetries of Polygons",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Eight multiple-choice questions on the reflective and rotational symmetries of polygons: counting lines of symmetry, listing rotation angles, finding the order of the symmetry group, and verifying symmetries with coordinates.",
+  "items": [
+    {
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "How many lines of reflective symmetry does a square have?\nA) $2$\nB) $3$\nC) $4$\nD) $8$",
+      "answer": "C) $4$",
+      "solution": {
+        "steps": [
+          "A square has two lines through the midpoints of opposite sides (one horizontal, one vertical) and two lines through opposite vertices (the diagonals).",
+          "That is $2 + 2 = 4$ lines of symmetry, so the answer is C.",
+          "A is wrong because it counts only the side-midpoint lines and forgets the diagonals. B is not a count that matches any of the square's symmetry lines. D confuses the total number of symmetries ($2n = 8$ for a square) with the number of lines of symmetry."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "What is the smallest positive angle of rotation that carries a regular pentagon onto itself?\nA) $36^\\circ$\nB) $72^\\circ$\nC) $90^\\circ$\nD) $108^\\circ$",
+      "answer": "B) $72^\\circ$",
+      "solution": {
+        "steps": [
+          "The smallest rotation angle of a regular $n$-gon is $\\frac{360^\\circ}{n}$.",
+          "For a pentagon, $n = 5$, so the smallest angle is $\\frac{360^\\circ}{5} = 72^\\circ$. The answer is B.",
+          "A comes from the wrong rule $\\frac{180^\\circ}{n} = \\frac{180^\\circ}{5} = 36^\\circ$. C comes from $\\frac{360^\\circ}{n-1} = \\frac{360^\\circ}{4} = 90^\\circ$. D is the interior angle of a regular pentagon, not its rotation angle."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "How many lines of reflective symmetry does a rectangle that is not a square have?\nA) $0$\nB) $1$\nC) $2$\nD) $4$",
+      "answer": "C) $2$",
+      "solution": {
+        "steps": [
+          "A non-square rectangle has one horizontal line of symmetry through the midpoints of its left and right sides and one vertical line through the midpoints of its top and bottom sides.",
+          "Its diagonals are NOT lines of symmetry, because reflecting across a diagonal does not map the rectangle onto itself. So there are exactly $2$ lines, and the answer is C.",
+          "A is wrong because the rectangle does have symmetry lines. B forgets one of the two. D counts both diagonals as symmetry lines, the classic mistake; only a square has $4$ lines of symmetry."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Which symmetries carry a parallelogram that is neither a rectangle nor a rhombus onto itself?\nA) Only the $180^\\circ$ rotation about its center, with no lines of symmetry\nB) Two lines of symmetry and a $180^\\circ$ rotation\nC) Four lines of symmetry and rotations of $90^\\circ$, $180^\\circ$, $270^\\circ$\nD) No symmetries other than the identity",
+      "answer": "A) Only the $180^\\circ$ rotation about its center, with no lines of symmetry",
+      "solution": {
+        "steps": [
+          "A generic parallelogram has a center of symmetry: rotating $180^\\circ$ about the intersection of its diagonals maps it onto itself.",
+          "It has no line of reflective symmetry, because neither its diagonals nor the lines through its side midpoints reflect it onto itself. So the answer is A.",
+          "B wrongly assigns it $2$ lines of symmetry, confusing rotational with reflective symmetry. C describes a square. D is wrong because the $180^\\circ$ rotation is a genuine nontrivial symmetry."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "What is the total number of symmetries (all reflections and all rotations, including the identity) of a regular hexagon?\nA) $6$\nB) $8$\nC) $12$\nD) $36$",
+      "answer": "C) $12$",
+      "solution": {
+        "steps": [
+          "A regular $n$-gon has $n$ rotational symmetries (including the identity) and $n$ reflective symmetries, for a total of $2n$.",
+          "For a hexagon $n = 6$, so the total is $2 \\times 6 = 12$. The answer is C.",
+          "A counts only the $6$ rotations and forgets the $6$ reflections. B does not match any correct count for a hexagon. D is $6^2$, not a symmetry count."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Which list gives ALL the angles of rotation strictly between $0^\\circ$ and $360^\\circ$ that carry a regular pentagon onto itself?\nA) $72^\\circ, 144^\\circ, 216^\\circ, 288^\\circ$\nB) $0^\\circ, 72^\\circ, 144^\\circ, 216^\\circ, 288^\\circ$\nC) $72^\\circ, 144^\\circ, 216^\\circ, 288^\\circ, 360^\\circ$\nD) $36^\\circ, 72^\\circ, 108^\\circ, 144^\\circ$",
+      "answer": "A) $72^\\circ, 144^\\circ, 216^\\circ, 288^\\circ$",
+      "solution": {
+        "steps": [
+          "The rotations are the positive multiples of $\\frac{360^\\circ}{5} = 72^\\circ$ that are less than a full turn: $72^\\circ, 144^\\circ, 216^\\circ, 288^\\circ$. The answer is A.",
+          "B includes $0^\\circ$, which is the identity (a full $0$ or $360^\\circ$ turn), not a rotation strictly between $0^\\circ$ and $360^\\circ$. C includes $360^\\circ$, which is the full turn and is excluded for the same reason. D uses the wrong base angle ($36^\\circ$) and does not list multiples of $72^\\circ$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A rectangle has vertices $(-3,-1)$, $(3,-1)$, $(3,1)$, and $(-3,1)$. Which transformation carries this rectangle onto itself?\nA) Reflection across the line $y = x$, since it maps every vertex to a vertex of the rectangle\nB) Reflection across the $y$-axis, $(x,y)\\to(-x,y)$, since it maps every vertex to a vertex of the rectangle\nC) Rotation of $90^\\circ$ about the origin, $(x,y)\\to(-y,x)$, since it maps every vertex to a vertex of the rectangle\nD) The map $(x,y)\\to(-x,-y)$ fails, so no symmetry carries the rectangle onto itself",
+      "answer": "B) Reflection across the $y$-axis, $(x,y)\\to(-x,y)$, since it maps every vertex to a vertex of the rectangle",
+      "solution": {
+        "steps": [
+          "Reflect across the $y$-axis with $(x,y)\\to(-x,y)$: $(-3,-1)\\to(3,-1)$, $(3,-1)\\to(-3,-1)$, $(3,1)\\to(-3,1)$, $(-3,1)\\to(3,1)$. Each image is again a vertex of the rectangle, so this reflection is a symmetry. The answer is B.",
+          "A fails: $(x,y)\\to(y,x)$ sends $(-3,-1)\\to(-1,-3)$, which is not a vertex of the rectangle (the rectangle is wider than it is tall, so the diagonal is not a symmetry line).",
+          "C fails: $(x,y)\\to(-y,x)$ sends $(3,-1)\\to(1,3)$, not a vertex of this rectangle. A $90^\\circ$ rotation would only work for a square.",
+          "D is wrong: the map $(x,y)\\to(-x,-y)$ is the $180^\\circ$ rotation, and it DOES map the rectangle onto itself ($(-3,-1)\\to(3,1)$, a vertex), so it is incorrect to conclude no symmetry exists."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A regular polygon has exactly $9$ lines of reflective symmetry and rotational symmetry of order $9$. How many sides does it have, and how many symmetries does it have in total?\nA) $9$ sides and $9$ total symmetries\nB) $18$ sides and $9$ total symmetries\nC) $9$ sides and $18$ total symmetries\nD) $9$ sides and $81$ total symmetries",
+      "answer": "C) $9$ sides and $18$ total symmetries",
+      "solution": {
+        "steps": [
+          "A regular $n$-gon has exactly $n$ lines of symmetry and rotational symmetry of order $n$. Here both equal $9$, so $n = 9$: the polygon is a regular nonagon with $9$ sides.",
+          "The total number of symmetries of a regular $n$-gon is $2n = 2 \\times 9 = 18$ ($9$ rotations including the identity plus $9$ reflections). So the answer is C.",
+          "A forgets the reflections and reports only the $9$ rotations as the total. B miscounts the number of sides; the number of lines of symmetry equals the number of sides for a regular polygon, so $n = 9$, not $18$. D uses $9^2 = 81$ instead of $2n$."
+        ]
+      }
+    }
+  ]
+}

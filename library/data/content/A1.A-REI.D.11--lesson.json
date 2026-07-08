@@ -1,0 +1,184 @@
+{
+  "id": "A1.A-REI.D.11--lesson",
+  "standard": "A1.A-REI.D.11",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Reasoning with Equations and Inequalities",
+  "domainCode": "A-REI",
+  "cluster": "Represent and solve equations and inequalities graphically",
+  "clusterCode": "D",
+  "skillName": "Solving f(x) = g(x) Graphically",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "The equation $f(x) = g(x)$ asks for the inputs where two functions return the same output. Graphically, $y = f(x)$ and $y = g(x)$ have the same output exactly where their graphs cross, so the solutions of $f(x) = g(x)$ are the $x$-coordinates of the intersection points. The shared $y$-coordinate is the common output, not the solution. When a crossing is not at a lattice point, you can approximate it from a graph, narrow it with a table, or refine it by successive approximation, checking the sign of $f(x) - g(x)$ on each side of the root.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "The graphs of $y = f(x)$ and $y = g(x)$ are straight lines that cross at the single point $(2, 5)$. What is the solution of $f(x) = g(x)$?",
+      "solution": {
+        "steps": [
+          "The equation $f(x) = g(x)$ is true at any input where the two functions give the same output.",
+          "On a graph, the functions give the same output exactly where the curves meet, which is the intersection point $(2, 5)$.",
+          "The solution is the $x$-coordinate of that point, because $x$ is the input we are solving for.",
+          "Here the $x$-coordinate is $2$. The number $5$ is the shared output $f(2) = g(2) = 5$, not the solution.",
+          "So the solution is $x = 2$."
+        ],
+        "answer": "$x = 2$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Let $f(x) = 2x + 1$ and $g(x) = -x + 7$. Solve $f(x) = g(x)$ by finding where the two lines intersect.",
+      "solution": {
+        "steps": [
+          "Set the two outputs equal: $2x + 1 = -x + 7$.",
+          "Add $x$ to both sides to collect the $x$-terms: $3x + 1 = 7$.",
+          "Subtract $1$ from both sides: $3x = 6$.",
+          "Divide both sides by $3$: $x = 2$.",
+          "Check by finding the shared output: $f(2) = 2(2) + 1 = 5$ and $g(2) = -2 + 7 = 5$, so the lines meet at $(2, 5)$.",
+          "The solution is the $x$-coordinate of the intersection, $x = 2$."
+        ],
+        "answer": "$x = 2$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A table gives $f(x)$ and $g(x)$ at several inputs. At $x = 0$, $f = 1$ and $g = 7$. At $x = 1$, $f = 3$ and $g = 6$. At $x = 2$, $f = 5$ and $g = 5$. At $x = 3$, $f = 7$ and $g = 4$. Use the table to solve $f(x) = g(x)$.",
+      "solution": {
+        "steps": [
+          "Scan the table for the input where the $f$ column and the $g$ column hold the same value.",
+          "At $x = 0$: $f = 1$, $g = 7$, not equal.",
+          "At $x = 1$: $f = 3$, $g = 6$, not equal.",
+          "At $x = 2$: $f = 5$, $g = 5$, equal.",
+          "At $x = 3$: $f = 7$, $g = 4$, not equal.",
+          "The only input where the outputs match is $x = 2$, where both functions equal $5$.",
+          "The solution is $x = 2$."
+        ],
+        "answer": "$x = 2$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Solve $x^2 - 3 = 2x$ graphically by rewriting it as $f(x) = g(x)$ and finding where the two graphs meet.",
+      "solution": {
+        "steps": [
+          "Let the two sides be separate functions: $f(x) = x^2 - 3$ (a parabola) and $g(x) = 2x$ (a line).",
+          "The solutions of $f(x) = g(x)$ are the $x$-coordinates of the points where the parabola and line cross.",
+          "Set them equal: $x^2 - 3 = 2x$, then move all terms to one side: $x^2 - 2x - 3 = 0$.",
+          "Factor: $(x - 3)(x + 1) = 0$, so $x = 3$ or $x = -1$.",
+          "Check: at $x = 3$, $f = 9 - 3 = 6$ and $g = 6$, meeting at $(3, 6)$; at $x = -1$, $f = 1 - 3 = -2$ and $g = -2$, meeting at $(-1, -2)$.",
+          "The graphs cross twice, so there are two solutions: $x = -1$ and $x = 3$."
+        ],
+        "answer": "$x = -1$ and $x = 3$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "For $f(x) = 2^x$ and $g(x) = x + 3$, a solution of $f(x) = g(x)$ lies between $x = 2$ and $x = 3$. Use the sign of $f(x) - g(x)$ and one midpoint test to locate the solution to within an interval of width $0.5$, then estimate it to the nearest tenth.",
+      "solution": {
+        "steps": [
+          "Form $d(x) = f(x) - g(x) = 2^x - (x + 3)$. A solution of $f(x) = g(x)$ is where $d(x) = 0$.",
+          "At $x = 2$: $d(2) = 2^2 - (2 + 3) = 4 - 5 = -1 < 0$.",
+          "At $x = 3$: $d(3) = 2^3 - (3 + 3) = 8 - 6 = 2 > 0$.",
+          "Since $d$ changes sign between $x = 2$ and $x = 3$, the root lies in the interval $(2, 3)$.",
+          "Test the midpoint $x = 2.5$: $d(2.5) = 2^{2.5} - (2.5 + 3) \\approx 5.657 - 5.5 = 0.157 > 0$.",
+          "The sign changed between $x = 2$ (negative) and $x = 2.5$ (positive), so the root is in $(2, 2.5)$.",
+          "Since $d(2.5)$ is only slightly positive, the crossing is near $x = 2.5$ but a bit to the left; estimating to the nearest tenth gives $x \\approx 2.4$."
+        ],
+        "answer": "The solution lies in $(2, 2.5)$, approximately $x \\approx 2.4$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "The graphs of $y = f(x)$ and $y = g(x)$ cross at the single point $(-4, 9)$. What is the solution of $f(x) = g(x)$?",
+      "hint": "The solution is the $x$-coordinate of the intersection, not the shared output $y$.",
+      "solution": {
+        "steps": [
+          "The functions are equal where their graphs meet, at $(-4, 9)$.",
+          "The solution is the $x$-coordinate of that point.",
+          "The $x$-coordinate is $-4$; the value $9$ is the common output, not the solution.",
+          "So the solution is $x = -4$."
+        ],
+        "answer": "$x = -4$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Let $f(x) = 3x - 4$ and $g(x) = x + 2$. Solve $f(x) = g(x)$ graphically by finding where the lines intersect.",
+      "hint": "Set the rules equal and collect the $x$-terms on one side.",
+      "solution": {
+        "steps": [
+          "Set the outputs equal: $3x - 4 = x + 2$.",
+          "Subtract $x$ from both sides: $2x - 4 = 2$.",
+          "Add $4$ to both sides: $2x = 6$.",
+          "Divide by $2$: $x = 3$.",
+          "Check: $f(3) = 3(3) - 4 = 5$ and $g(3) = 3 + 2 = 5$, so the lines meet at $(3, 5)$.",
+          "The solution is $x = 3$."
+        ],
+        "answer": "$x = 3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A table lists $f(x)$ and $g(x)$. At $x = -1$, $f = 8$ and $g = 2$. At $x = 0$, $f = 6$ and $g = 4$. At $x = 1$, $f = 4$ and $g = 6$. At $x = 2$, $f = 2$ and $g = 8$. Between which two inputs does the solution of $f(x) = g(x)$ lie, and explain why no input in the table is itself the solution.",
+      "hint": "Look at where $f - g$ switches from positive to negative; the solution is between those inputs.",
+      "solution": {
+        "steps": [
+          "Compute $f - g$ at each input. At $x = 0$: $6 - 4 = 2 > 0$. At $x = 1$: $4 - 6 = -2 < 0$.",
+          "The difference $f - g$ changes sign between $x = 0$ and $x = 1$, so the graphs cross somewhere in that interval.",
+          "No listed input gives $f = g$ exactly: the columns are never equal in the table, so the exact solution is not one of the tabulated $x$-values.",
+          "Therefore the solution lies between $x = 0$ and $x = 1$. By symmetry of the $\\pm 2$ gaps, it is at the midpoint $x = 0.5$, where $f = 5$ and $g = 5$."
+        ],
+        "answer": "The solution is between $x = 0$ and $x = 1$ (in fact $x = 0.5$); no table input is exact because the columns are never equal at a listed $x$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Solve $x^2 = x + 6$ graphically by writing it as $f(x) = g(x)$, naming the two graphs, and finding all intersection $x$-coordinates.",
+      "hint": "Let $f(x) = x^2$ (parabola) and $g(x) = x + 6$ (line), then set them equal and solve.",
+      "solution": {
+        "steps": [
+          "Let $f(x) = x^2$ and $g(x) = x + 6$. The solutions are the $x$-coordinates where the parabola meets the line.",
+          "Set equal: $x^2 = x + 6$, then move all terms to one side: $x^2 - x - 6 = 0$.",
+          "Factor: $(x - 3)(x + 2) = 0$, so $x = 3$ or $x = -2$.",
+          "Check: at $x = 3$, $f = 9$ and $g = 9$, meeting at $(3, 9)$; at $x = -2$, $f = 4$ and $g = 4$, meeting at $(-2, 4)$.",
+          "The graphs cross twice, so there are two solutions: $x = -2$ and $x = 3$."
+        ],
+        "answer": "$x = -2$ and $x = 3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "For $f(x) = 2^x$ and $g(x) = 3x$, a solution of $f(x) = g(x)$ lies between $x = 3$ and $x = 4$. Use the sign of $f(x) - g(x)$ and one midpoint test to narrow the root to an interval of width $0.5$, then estimate it to the nearest tenth.",
+      "hint": "Compute $d(x) = 2^x - 3x$ at the endpoints and at the midpoint $x = 3.5$; the root is where $d$ changes sign.",
+      "solution": {
+        "steps": [
+          "Form $d(x) = f(x) - g(x) = 2^x - 3x$. A solution of $f(x) = g(x)$ is where $d(x) = 0$.",
+          "At $x = 3$: $d(3) = 2^3 - 3(3) = 8 - 9 = -1 < 0$.",
+          "At $x = 4$: $d(4) = 2^4 - 3(4) = 16 - 12 = 4 > 0$.",
+          "The sign changes on $(3, 4)$, so the root is in that interval.",
+          "Test the midpoint $x = 3.5$: $d(3.5) = 2^{3.5} - 3(3.5) \\approx 11.314 - 10.5 = 0.814 > 0$.",
+          "The sign changed between $x = 3$ (negative) and $x = 3.5$ (positive), so the root is in $(3, 3.5)$.",
+          "Within $(3, 3.5)$, $d(3) = -1$ while $d(3.5) \\approx 0.81$, so the crossing sits a little left of the midpoint; refining (e.g. $d(3.3) \\approx -0.05 < 0$, $d(3.4) \\approx 0.36 > 0$) places the root just above $3.3$, so to the nearest tenth $x \\approx 3.3$."
+        ],
+        "answer": "The solution lies in $(3, 3.5)$, approximately $x \\approx 3.3$."
+      }
+    }
+  ]
+}

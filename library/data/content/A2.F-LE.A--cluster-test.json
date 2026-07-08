@@ -1,0 +1,226 @@
+{
+  "id": "A2.F-LE.A--cluster-test",
+  "standard": null,
+  "clusterId": "A2.F-LE.A",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Functions — Linear, Quadratic, and Exponential Models",
+  "domainCode": "F-LE",
+  "cluster": "Construct and compare linear, quadratic, and exponential models and solve problems",
+  "clusterCode": "A",
+  "skillName": "Construct and compare linear, quadratic, and exponential models and solve problems",
+  "materialType": "cluster-test",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "intro": "End-of-cluster mastery check for Construct and compare linear, quadratic, and exponential models and solve problems. Twelve multiple-choice items on logarithms and exponential models (A2.F-LE.A.4): rewriting exponential equations as logarithms, isolating the power, applying the natural and common logarithms and the change-of-base formula, and solving real-world growth and decay models for time.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "standard": "A2.F-LE.A.4",
+      "difficulty": "Easy",
+      "prompt": "Express the solution of $10^{t}=350$ as a logarithm.\nA) $t=\\log 350$\nB) $t=\\dfrac{350}{10}$\nC) $t=350\\log 10$\nD) $t=\\log 10 - \\log 350$",
+      "answer": "A) $t=\\log 350$",
+      "solution": {
+        "steps": [
+          "By the definition of a logarithm, $10^{t}=350$ is equivalent to $t=\\log_{10} 350=\\log 350$.",
+          "This evaluates to $t\\approx 2.544$.",
+          "B treats exponentiation like multiplication, dividing $350$ by $10$ to get $35$, which is wrong.",
+          "C and D misuse log properties; there is no product or quotient of logs here, just the direct rewrite $t=\\log 350$."
+        ],
+        "answer": "A) $t=\\log 350$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "standard": "A2.F-LE.A.4",
+      "difficulty": "Easy",
+      "prompt": "Solve $e^{t}=20$ for $t$, giving the exact value.\nA) $t=\\log 20$\nB) $t=\\ln 20$\nC) $t=\\dfrac{20}{e}$\nD) $t=20\\ln e$",
+      "answer": "B) $t=\\ln 20$",
+      "solution": {
+        "steps": [
+          "The base is $e$, so take the natural logarithm of both sides: $\\ln(e^{t})=\\ln 20$.",
+          "Since $\\ln(e^{t})=t$, we get $t=\\ln 20\\approx 2.996$.",
+          "A uses the common log $\\log=\\log_{10}$ instead of $\\ln$, which is the wrong base.",
+          "C divides by the base instead of taking a logarithm. D wrongly multiplies, and $\\ln e=1$ would just give $20$."
+        ],
+        "answer": "B) $t=\\ln 20$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "standard": "A2.F-LE.A.4",
+      "difficulty": "Easy",
+      "prompt": "Express the solution of $2^{t}=50$ using the change-of-base formula.\nA) $t=\\dfrac{\\ln 2}{\\ln 50}$\nB) $t=\\ln 50-\\ln 2$\nC) $t=\\dfrac{\\ln 50}{\\ln 2}$\nD) $t=\\dfrac{50}{2}$",
+      "answer": "C) $t=\\dfrac{\\ln 50}{\\ln 2}$",
+      "solution": {
+        "steps": [
+          "Rewrite $2^{t}=50$ as $t=\\log_2 50$.",
+          "By the change-of-base formula, $\\log_2 50=\\dfrac{\\ln 50}{\\ln 2}\\approx 5.644$.",
+          "A inverts the change-of-base formula, dividing by the wrong logarithm; $\\dfrac{\\ln 2}{\\ln 50}\\approx 0.177$ is wrong.",
+          "B confuses the change-of-base quotient with a difference of logs. D divides the numbers, treating the base like a factor."
+        ],
+        "answer": "C) $t=\\dfrac{\\ln 50}{\\ln 2}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "standard": "A2.F-LE.A.4",
+      "difficulty": "Easy",
+      "prompt": "Solve $10^{t}=1000$ for $t$.\nA) $t=3$\nB) $t=100$\nC) $t=\\log 100$\nD) $t=\\dfrac{1000}{10}$",
+      "answer": "A) $t=3$",
+      "solution": {
+        "steps": [
+          "Rewrite as $t=\\log 1000=\\log_{10} 1000$.",
+          "Since $10^{3}=1000$, we have $t=3$.",
+          "B and D divide instead of taking a logarithm, treating exponentiation like multiplication.",
+          "C uses the wrong argument: $\\log 100=2$, but we need $\\log 1000=3$."
+        ],
+        "answer": "A) $t=3$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "standard": "A2.F-LE.A.4",
+      "difficulty": "Medium",
+      "prompt": "Solve $5\\cdot 10^{t}=2000$ for $t$.\nA) $t=\\log 2000\\approx 3.301$\nB) $t=\\log 400\\approx 2.602$\nC) $t=\\dfrac{\\log 2000}{\\log 5}\\approx 4.723$\nD) $t=\\dfrac{2000}{5}=400$",
+      "answer": "B) $t=\\log 400\\approx 2.602$",
+      "solution": {
+        "steps": [
+          "First isolate the power by dividing both sides by $5$: $10^{t}=\\dfrac{2000}{5}=400$.",
+          "Rewrite as a logarithm: $t=\\log 400\\approx 2.602$.",
+          "A forgets to divide by $5$ first and uses $\\log 2000\\approx 3.301$.",
+          "C wrongly applies a quotient of logs. D takes the log only conceptually but reports the quotient $400$ as $t$ instead of $\\log 400$."
+        ],
+        "answer": "B) $t=\\log 400\\approx 2.602$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "standard": "A2.F-LE.A.4",
+      "difficulty": "Medium",
+      "prompt": "Solve $e^{2t}=16$ for $t$, giving the exact value.\nA) $t=\\ln 16$\nB) $t=\\dfrac{\\ln 16}{2}$\nC) $t=2\\ln 16$\nD) $t=\\dfrac{16}{2}=8$",
+      "answer": "B) $t=\\dfrac{\\ln 16}{2}$",
+      "solution": {
+        "steps": [
+          "Take the natural logarithm of both sides: $\\ln(e^{2t})=\\ln 16$, so $2t=\\ln 16$.",
+          "Divide by the exponent coefficient $2$: $t=\\dfrac{\\ln 16}{2}\\approx 1.386$.",
+          "A ignores the coefficient $c=2$, reporting $t=\\ln 16\\approx 2.773$, which is twice too large.",
+          "C multiplies by $2$ instead of dividing. D divides the constant by $2$ instead of taking a logarithm."
+        ],
+        "answer": "B) $t=\\dfrac{\\ln 16}{2}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "standard": "A2.F-LE.A.4",
+      "difficulty": "Medium",
+      "prompt": "Solve $3\\cdot e^{2t}=48$ for $t$, giving the exact value.\nA) $t=\\dfrac{\\ln 16}{2}$\nB) $t=\\dfrac{\\ln 48}{2}$\nC) $t=\\ln 16$\nD) $t=\\dfrac{\\ln 48}{3}$",
+      "answer": "A) $t=\\dfrac{\\ln 16}{2}$",
+      "solution": {
+        "steps": [
+          "Divide both sides by the leading coefficient $3$: $e^{2t}=\\dfrac{48}{3}=16$.",
+          "Take the natural log: $2t=\\ln 16$, then divide by $2$: $t=\\dfrac{\\ln 16}{2}\\approx 1.386$.",
+          "B forgets to divide by $3$ first, using $\\ln 48$ instead of $\\ln 16$.",
+          "C ignores the exponent coefficient $2$. D divides by the leading coefficient $3$ at the wrong stage instead of dividing the argument by $3$."
+        ],
+        "answer": "A) $t=\\dfrac{\\ln 16}{2}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "standard": "A2.F-LE.A.4",
+      "difficulty": "Medium",
+      "prompt": "A population is modeled by $P=500e^{0.03t}$, where $t$ is in years. Find the time $t$ when $P=1500$.\nA) $t=\\dfrac{\\ln 3}{0.03}\\approx 36.6$ years\nB) $t=\\dfrac{\\ln 1500}{0.03}\\approx 243.8$ years\nC) $t=\\dfrac{\\ln 3}{3}\\approx 0.366$ years\nD) $t=\\ln 3\\approx 1.099$ years",
+      "answer": "A) $t=\\dfrac{\\ln 3}{0.03}\\approx 36.6$ years",
+      "solution": {
+        "steps": [
+          "Set $500e^{0.03t}=1500$ and divide by $500$: $e^{0.03t}=3$.",
+          "Take the natural log: $0.03t=\\ln 3$, so $t=\\dfrac{\\ln 3}{0.03}\\approx 36.6$ years.",
+          "B forgets to divide by $500$ first, using $\\ln 1500$ instead of $\\ln 3$.",
+          "C uses the rate as $3$ instead of $0.03$. D ignores the rate coefficient entirely, leaving $t=\\ln 3$."
+        ],
+        "answer": "A) $t=\\dfrac{\\ln 3}{0.03}\\approx 36.6$ years"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 9,
+      "standard": "A2.F-LE.A.4",
+      "difficulty": "Hard",
+      "prompt": "How long will it take $\\$1000$ to grow to $\\$2500$ at $6\\%$ annual interest compounded continuously? Round to the nearest tenth of a year.\nA) $t\\approx 0.2$ years\nB) $t\\approx 15.3$ years\nC) $t\\approx 41.7$ years\nD) $t\\approx 25.0$ years",
+      "answer": "B) $t\\approx 15.3$ years",
+      "solution": {
+        "steps": [
+          "Use continuous compounding $A=Pe^{rt}$ with $P=1000$, $A=2500$, $r=0.06$: $1000e^{0.06t}=2500$.",
+          "Divide by $1000$: $e^{0.06t}=2.5$, then take the natural log: $0.06t=\\ln 2.5$.",
+          "Solve: $t=\\dfrac{\\ln 2.5}{0.06}\\approx\\dfrac{0.9163}{0.06}\\approx 15.3$ years.",
+          "A uses $r=6$ instead of $0.06$, giving $\\dfrac{\\ln 2.5}{6}\\approx 0.15$. C and D do not come from the correct setup $\\dfrac{\\ln 2.5}{0.06}$."
+        ],
+        "answer": "B) $t\\approx 15.3$ years"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 10,
+      "standard": "A2.F-LE.A.4",
+      "difficulty": "Hard",
+      "prompt": "A radioactive sample decays according to $A=80\\cdot 2^{-t/12}$, where $t$ is in hours. Find the time $t$ when $A=10$ grams.\nA) $t=12$ hours\nB) $t=24$ hours\nC) $t=36$ hours\nD) $t=4$ hours",
+      "answer": "C) $t=36$ hours",
+      "solution": {
+        "steps": [
+          "Set $80\\cdot 2^{-t/12}=10$ and divide by $80$: $2^{-t/12}=\\dfrac{10}{80}=\\dfrac{1}{8}$.",
+          "Since $\\dfrac{1}{8}=2^{-3}$, we have $-\\dfrac{t}{12}=-3$.",
+          "Multiply both sides by $-12$: $t=36$ hours.",
+          "A and B correspond to dropping to $\\tfrac{1}{2}$ or $\\tfrac{1}{4}$ of the original (one or two half-lives), not $\\tfrac{1}{8}$. D divides $12$ by $3$ instead of multiplying."
+        ],
+        "answer": "C) $t=36$ hours"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 11,
+      "standard": "A2.F-LE.A.4",
+      "difficulty": "Hard",
+      "prompt": "An investment is modeled by $A=Pe^{0.045t}$. How long, to the nearest tenth of a year, does it take the investment to double?\nA) $t\\approx 15.4$ years\nB) $t\\approx 22.2$ years\nC) $t\\approx 0.7$ years\nD) $t\\approx 30.8$ years",
+      "answer": "A) $t\\approx 15.4$ years",
+      "solution": {
+        "steps": [
+          "Doubling means $A=2P$, so $Pe^{0.045t}=2P$. Divide by $P$: $e^{0.045t}=2$.",
+          "Take the natural log: $0.045t=\\ln 2$, so $t=\\dfrac{\\ln 2}{0.045}\\approx\\dfrac{0.6931}{0.045}\\approx 15.4$ years.",
+          "B uses $\\dfrac{1}{0.045}\\approx 22.2$ without the $\\ln 2$ factor. C ignores the rate coefficient, leaving $t=\\ln 2\\approx 0.7$.",
+          "D doubles the correct doubling time, as if reaching $4P$ instead of $2P$."
+        ],
+        "answer": "A) $t\\approx 15.4$ years"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 12,
+      "standard": "A2.F-LE.A.4",
+      "difficulty": "Hard",
+      "prompt": "A bacteria culture starts at $200$ cells and grows according to $N=200\\cdot 2^{t}$, where $t$ is in hours. To the nearest hundredth of an hour, when does the culture reach $5000$ cells?\nA) $t=\\dfrac{\\ln 25}{\\ln 2}\\approx 4.64$ hours\nB) $t=\\dfrac{\\ln 2}{\\ln 25}\\approx 0.22$ hours\nC) $t=\\dfrac{\\ln 5000}{\\ln 2}\\approx 12.29$ hours\nD) $t=\\dfrac{5000}{200}=25$ hours",
+      "answer": "A) $t=\\dfrac{\\ln 25}{\\ln 2}\\approx 4.64$ hours",
+      "solution": {
+        "steps": [
+          "Set $200\\cdot 2^{t}=5000$ and divide by $200$: $2^{t}=\\dfrac{5000}{200}=25$.",
+          "Rewrite as a logarithm: $t=\\log_2 25=\\dfrac{\\ln 25}{\\ln 2}\\approx\\dfrac{3.2189}{0.6931}\\approx 4.64$ hours.",
+          "B inverts the change-of-base formula, dividing by the wrong logarithm.",
+          "C forgets to divide by $200$ first, using $\\ln 5000$ instead of $\\ln 25$. D divides the cell counts and stops, treating exponentiation like multiplication."
+        ],
+        "answer": "A) $t=\\dfrac{\\ln 25}{\\ln 2}\\approx 4.64$ hours"
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T19:56:47.282Z",
+  "generatedAt": "2026-06-24T19:56:47.282Z"
+}

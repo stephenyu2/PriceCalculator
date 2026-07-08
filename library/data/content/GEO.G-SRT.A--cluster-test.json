@@ -1,0 +1,245 @@
+{
+  "id": "GEO.G-SRT.A--cluster-test",
+  "standard": null,
+  "clusterId": "GEO.G-SRT.A",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Similarity, Right Triangles, and Trigonometry",
+  "domainCode": "G-SRT",
+  "cluster": "Understand similarity in terms of similarity transformations",
+  "clusterCode": "A",
+  "skillName": "Understand similarity in terms of similarity transformations",
+  "materialType": "cluster-test",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "intro": "This cluster test covers the properties of dilations (GEO.G-SRT.A.1), similarity transformations and triangles (GEO.G-SRT.A.2), and the AA similarity criterion (GEO.G-SRT.A.3). Choose the single best answer for each multiple-choice item.",
+  "items": [
+    {
+      "id": 1,
+      "standard": "GEO.G-SRT.A.1",
+      "difficulty": "Easy",
+      "type": "multiple-choice",
+      "prompt": "A dilation centered at the origin has scale factor $k = 3$. What is the image of the point $A = (-2, 5)$?\nA) $(-6, 15)$\nB) $(1, 8)$\nC) $(-\\frac{2}{3}, \\frac{5}{3})$\nD) $(-8, 11)$",
+      "answer": "A) $(-6, 15)$",
+      "solution": {
+        "steps": [
+          "For a dilation centered at the origin, multiply each coordinate by $k$: $(x, y) \\mapsto (kx, ky)$.",
+          "Apply $k = 3$: $(-2, 5) \\mapsto (3 \\cdot -2,\\ 3 \\cdot 5) = (-6, 15)$.",
+          "B) $(1, 8)$ adds $3$ to each coordinate instead of multiplying.",
+          "C) $(-\\frac{2}{3}, \\frac{5}{3})$ divides by $3$ instead of multiplying.",
+          "D) $(-8, 11)$ multiplies one coordinate and adds to the other, mixing the rules."
+        ],
+        "answer": "A) $(-6, 15)$"
+      }
+    },
+    {
+      "id": 2,
+      "standard": "GEO.G-SRT.A.1",
+      "difficulty": "Easy",
+      "type": "multiple-choice",
+      "prompt": "Segment $AB$ has length $12$. After a dilation with scale factor $k = \\frac{2}{3}$, what is the length of the image segment $A'B'$?\nA) $8$\nB) $18$\nC) $48$\nD) $\\frac{2}{3}$",
+      "answer": "A) $8$",
+      "solution": {
+        "steps": [
+          "A dilation multiplies every length by $|k|$, so $A'B' = |k| \\cdot AB$.",
+          "Compute $A'B' = \\frac{2}{3} \\cdot 12 = 8$.",
+          "B) $18$ multiplies by $\\frac{3}{2}$, the reciprocal of $k$.",
+          "C) $48$ multiplies by $k^2 \\cdot$ something or scales as area, not length.",
+          "D) $\\frac{2}{3}$ reports the scale factor itself instead of the new length."
+        ],
+        "answer": "A) $8$"
+      }
+    },
+    {
+      "id": 3,
+      "standard": "GEO.G-SRT.A.1",
+      "difficulty": "Medium",
+      "type": "multiple-choice",
+      "prompt": "A dilation centered at $C = (1, 2)$ has scale factor $k = 2$. What is the image of the point $P = (5, 8)$?\nA) $(9, 14)$\nB) $(10, 16)$\nC) $(6, 10)$\nD) $(11, 18)$",
+      "answer": "A) $(9, 14)$",
+      "solution": {
+        "steps": [
+          "For a center $C = (a, b)$, the rule is $(x, y) \\mapsto (a + k(x - a),\\ b + k(y - b))$.",
+          "Compute the $x$-coordinate: $1 + 2(5 - 1) = 1 + 2 \\cdot 4 = 1 + 8 = 9$.",
+          "Compute the $y$-coordinate: $2 + 2(8 - 2) = 2 + 2 \\cdot 6 = 2 + 12 = 14$, giving $(9, 14)$.",
+          "B) $(10, 16)$ dilates about the origin, multiplying $(5, 8)$ by $2$ and ignoring the center.",
+          "C) $(6, 10)$ adds the center to $P$ instead of scaling around it.",
+          "D) $(11, 18)$ uses $1 + 2 \\cdot 5$ and $2 + 2 \\cdot 8$, forgetting to subtract the center first."
+        ],
+        "answer": "A) $(9, 14)$"
+      }
+    },
+    {
+      "id": 4,
+      "standard": "GEO.G-SRT.A.1",
+      "difficulty": "Hard",
+      "type": "multiple-choice",
+      "prompt": "Under a dilation centered at the origin with scale factor $k = -\\frac{1}{2}$, what is the image of the point $Q = (8, -6)$?\nA) $(-4, 3)$\nB) $(4, -3)$\nC) $(-16, 12)$\nD) $(7.5, -6.5)$",
+      "answer": "A) $(-4, 3)$",
+      "solution": {
+        "steps": [
+          "For a dilation centered at the origin, multiply each coordinate by $k$, here $k = -\\frac{1}{2}$.",
+          "Compute the $x$-coordinate: $-\\frac{1}{2} \\cdot 8 = -4$.",
+          "Compute the $y$-coordinate: $-\\frac{1}{2} \\cdot (-6) = 3$, so the image is $(-4, 3)$.",
+          "B) $(4, -3)$ uses $k = +\\frac{1}{2}$, ignoring the negative sign that reflects the point through the center.",
+          "C) $(-16, 12)$ multiplies by $-2$, the reciprocal instead of $k$.",
+          "D) $(7.5, -6.5)$ adds $k$ to each coordinate instead of multiplying."
+        ],
+        "answer": "A) $(-4, 3)$"
+      }
+    },
+    {
+      "id": 5,
+      "standard": "GEO.G-SRT.A.2",
+      "difficulty": "Easy",
+      "type": "multiple-choice",
+      "prompt": "$\\triangle ABC \\sim \\triangle DEF$ with $AB = 6$ corresponding to $DE = 9$. What is the scale factor from $\\triangle ABC$ to $\\triangle DEF$?\nA) $\\frac{3}{2}$\nB) $\\frac{2}{3}$\nC) $3$\nD) $\\frac{1}{3}$",
+      "answer": "A) $\\frac{3}{2}$",
+      "solution": {
+        "steps": [
+          "The scale factor from the preimage to the image is $k = \\frac{\\text{image length}}{\\text{preimage length}}$.",
+          "Mapping $\\triangle ABC$ to $\\triangle DEF$, $AB$ is the preimage and $DE$ is the image: $k = \\frac{DE}{AB} = \\frac{9}{6} = \\frac{3}{2}$.",
+          "B) $\\frac{2}{3}$ inverts the ratio, dividing preimage by image.",
+          "C) $3$ uses only the difference or the numerator without forming the full ratio.",
+          "D) $\\frac{1}{3}$ is unrelated to either correct ratio."
+        ],
+        "answer": "A) $\\frac{3}{2}$"
+      }
+    },
+    {
+      "id": 6,
+      "standard": "GEO.G-SRT.A.2",
+      "difficulty": "Easy",
+      "type": "multiple-choice",
+      "prompt": "Figure $B$ is the image of figure $A$ under a rotation followed by a dilation with scale factor $2$. Which statement is true?\nA) $A$ and $B$ are similar, because a rigid motion followed by a dilation is a similarity transformation.\nB) $A$ and $B$ are congruent, because a rotation preserves size.\nC) $A$ and $B$ are neither similar nor congruent, because the dilation changes the angles.\nD) $A$ and $B$ are similar only if the scale factor is $1$.",
+      "answer": "A) $A$ and $B$ are similar, because a rigid motion followed by a dilation is a similarity transformation.",
+      "solution": {
+        "steps": [
+          "Two figures are similar exactly when a sequence of rigid motions and a dilation maps one onto the other.",
+          "A rotation (rigid motion) followed by a dilation is such a sequence, so $A \\sim B$.",
+          "B) is wrong because the dilation with $k = 2$ changes the size, so the figures are not congruent.",
+          "C) is wrong because a dilation preserves angle measures; it does not distort angles.",
+          "D) is wrong because similarity allows any nonzero scale factor, not just $k = 1$."
+        ],
+        "answer": "A) $A$ and $B$ are similar, because a rigid motion followed by a dilation is a similarity transformation."
+      }
+    },
+    {
+      "id": 7,
+      "standard": "GEO.G-SRT.A.2",
+      "difficulty": "Medium",
+      "type": "multiple-choice",
+      "prompt": "$\\triangle PQR \\sim \\triangle STU$ with $PQ = 8$, $ST = 12$, and $QR = 10$. What is the length of $TU$?\nA) $15$\nB) $14$\nC) $\\frac{20}{3}$\nD) $6$",
+      "answer": "A) $15$",
+      "solution": {
+        "steps": [
+          "From the similarity statement, $PQ$ corresponds to $ST$ and $QR$ corresponds to $TU$.",
+          "The corresponding sides share one ratio: $\\frac{TU}{QR} = \\frac{ST}{PQ} = \\frac{12}{8} = \\frac{3}{2}$.",
+          "Solve for $TU$: $TU = 10 \\cdot \\frac{3}{2} = 15$.",
+          "B) $14$ adds the scale factor difference ($10 + 4$) instead of multiplying.",
+          "C) $\\frac{20}{3}$ uses the reciprocal ratio $\\frac{8}{12}$.",
+          "D) $6$ subtracts instead of scaling."
+        ],
+        "answer": "A) $15$"
+      }
+    },
+    {
+      "id": 8,
+      "standard": "GEO.G-SRT.A.2",
+      "difficulty": "Hard",
+      "type": "multiple-choice",
+      "prompt": "$\\triangle ABC \\sim \\triangle DEF$ with a scale factor of $\\frac{5}{2}$ from $\\triangle ABC$ to $\\triangle DEF$. Side $BC = 4$ corresponds to side $EF$, which is given by the expression $2x + 1$. What is the value of $x$?\nA) $\\frac{9}{2}$\nB) $\\frac{11}{2}$\nC) $\\frac{3}{2}$\nD) $5$",
+      "answer": "A) $\\frac{9}{2}$",
+      "solution": {
+        "steps": [
+          "The image side $EF$ equals the scale factor times the preimage side $BC$: $EF = \\frac{5}{2} \\cdot 4 = 10$.",
+          "Set the expression equal to this length: $2x + 1 = 10$.",
+          "Solve: $2x = 9$, so $x = \\frac{9}{2}$.",
+          "B) $\\frac{11}{2}$ comes from solving $2x + 1 = 12$, using the wrong product.",
+          "C) $\\frac{3}{2}$ comes from $2x + 1 = 4$, forgetting to apply the scale factor.",
+          "D) $5$ solves $2x = 10$, dropping the $+1$ term."
+        ],
+        "answer": "A) $\\frac{9}{2}$"
+      }
+    },
+    {
+      "id": 9,
+      "standard": "GEO.G-SRT.A.3",
+      "difficulty": "Easy",
+      "type": "multiple-choice",
+      "prompt": "In $\\triangle ABC$, $m\\angle A = 50^\\circ$ and $m\\angle B = 60^\\circ$. In $\\triangle DEF$, $m\\angle D = 50^\\circ$ and $m\\angle E = 60^\\circ$. What can you conclude?\nA) $\\triangle ABC \\sim \\triangle DEF$ by the AA criterion.\nB) $\\triangle ABC \\cong \\triangle DEF$ by the AA criterion.\nC) The triangles are not similar, because only their angles match.\nD) Nothing can be concluded without side lengths.",
+      "answer": "A) $\\triangle ABC \\sim \\triangle DEF$ by the AA criterion.",
+      "solution": {
+        "steps": [
+          "Two pairs of corresponding angles are congruent: $\\angle A \\cong \\angle D$ and $\\angle B \\cong \\angle E$.",
+          "By the AA criterion, two pairs of congruent angles guarantee the triangles are similar, with vertices in order $\\triangle ABC \\sim \\triangle DEF$.",
+          "B) is wrong because AA gives similarity, not congruence; equal angles do not force equal side lengths.",
+          "C) is wrong because matching two angle pairs is exactly what AA requires for similarity.",
+          "D) is wrong because AA needs no side lengths to conclude similarity."
+        ],
+        "answer": "A) $\\triangle ABC \\sim \\triangle DEF$ by the AA criterion."
+      }
+    },
+    {
+      "id": 10,
+      "standard": "GEO.G-SRT.A.3",
+      "difficulty": "Medium",
+      "type": "multiple-choice",
+      "prompt": "$\\triangle PQR$ has $m\\angle P = 35^\\circ$ and $m\\angle Q = 95^\\circ$. $\\triangle XYZ$ has $m\\angle X = 35^\\circ$ and $m\\angle Z = 50^\\circ$. Are the triangles similar by AA?\nA) Yes, because the third angles are $50^\\circ$ and $95^\\circ$, so both triangles have angles $35^\\circ, 95^\\circ, 50^\\circ$.\nB) No, because $\\angle Q = 95^\\circ$ has no matching angle in $\\triangle XYZ$.\nC) No, because the triangles share only one angle.\nD) Yes, but only because $\\angle P = \\angle X = 35^\\circ$.",
+      "answer": "A) Yes, because the third angles are $50^\\circ$ and $95^\\circ$, so both triangles have angles $35^\\circ, 95^\\circ, 50^\\circ$.",
+      "solution": {
+        "steps": [
+          "Find the third angle of $\\triangle PQR$: $180^\\circ - 35^\\circ - 95^\\circ = 50^\\circ$.",
+          "Find the third angle of $\\triangle XYZ$: $180^\\circ - 35^\\circ - 50^\\circ = 95^\\circ$.",
+          "Both triangles have the angle set $\\{35^\\circ, 95^\\circ, 50^\\circ\\}$, so two pairs of angles are congruent and AA gives similarity.",
+          "B) is wrong because once the third angle of $\\triangle XYZ$ is computed, it equals $95^\\circ$, matching $\\angle Q$.",
+          "C) is wrong because completing the angle sums shows two matching pairs, not one.",
+          "D) is wrong because a single equal angle is not enough; the second pair (the computed $95^\\circ$) is what completes AA."
+        ],
+        "answer": "A) Yes, because the third angles are $50^\\circ$ and $95^\\circ$, so both triangles have angles $35^\\circ, 95^\\circ, 50^\\circ$."
+      }
+    },
+    {
+      "id": 11,
+      "standard": "GEO.G-SRT.A.3",
+      "difficulty": "Medium",
+      "type": "multiple-choice",
+      "prompt": "In $\\triangle ABC$, segment $\\overline{DE}$ is drawn with $D$ on $\\overline{AB}$ and $E$ on $\\overline{AC}$ so that $\\overline{DE} \\parallel \\overline{BC}$. Why is $\\triangle ADE \\sim \\triangle ABC$ by AA?\nA) $\\angle A$ is common to both triangles, and $\\angle ADE \\cong \\angle ABC$ as corresponding angles formed by the parallel lines.\nB) All three sides of $\\triangle ADE$ are half the corresponding sides of $\\triangle ABC$.\nC) $\\overline{DE}$ and $\\overline{BC}$ are congruent because they are parallel.\nD) The triangles are congruent because they share vertex $A$.",
+      "answer": "A) $\\angle A$ is common to both triangles, and $\\angle ADE \\cong \\angle ABC$ as corresponding angles formed by the parallel lines.",
+      "solution": {
+        "steps": [
+          "Both triangles include vertex $A$, so $\\angle A \\cong \\angle A$ (a shared angle).",
+          "Since $\\overline{DE} \\parallel \\overline{BC}$ cut by transversal $\\overline{AB}$, the corresponding angles $\\angle ADE$ and $\\angle ABC$ are congruent.",
+          "Two pairs of congruent angles give $\\triangle ADE \\sim \\triangle ABC$ by AA.",
+          "B) assumes a specific scale factor of $\\frac{1}{2}$, which is not given and is not how AA is justified.",
+          "C) is false: parallel lines are not necessarily congruent segments.",
+          "D) is wrong because sharing a vertex gives one common angle, not congruence; AA yields similarity."
+        ],
+        "answer": "A) $\\angle A$ is common to both triangles, and $\\angle ADE \\cong \\angle ABC$ as corresponding angles formed by the parallel lines."
+      }
+    },
+    {
+      "id": 12,
+      "standard": "GEO.G-SRT.A.3",
+      "difficulty": "Hard",
+      "type": "multiple-choice",
+      "prompt": "Segments $\\overline{AB}$ and $\\overline{CD}$ intersect at point $P$ with $\\overline{AC} \\parallel \\overline{BD}$. By AA, $\\triangle APC \\sim \\triangle BPD$. If $AP = 6$, $PC = 8$, and $PB = 9$, what is the length of $PD$?\nA) $12$\nB) $\\frac{16}{3}$\nC) $11$\nD) $\\frac{27}{4}$",
+      "answer": "A) $12$",
+      "solution": {
+        "steps": [
+          "The vertical angles at $P$ give $\\angle APC \\cong \\angle BPD$, and the parallel lines give $\\angle ACP \\cong \\angle BDP$ (alternate interior angles), so $\\triangle APC \\sim \\triangle BPD$ by AA.",
+          "From the correspondence $A\\to B$, $P\\to P$, $C\\to D$, the sides $PC$ and $PD$ correspond, as do $AP$ and $BP$.",
+          "Set up the proportion $\\frac{PD}{PC} = \\frac{PB}{AP} = \\frac{9}{6} = \\frac{3}{2}$, so $PD = 8 \\cdot \\frac{3}{2} = 12$.",
+          "B) $\\frac{16}{3}$ uses the reciprocal ratio $\\frac{6}{9}$.",
+          "C) $11$ adds $\\frac{3}{2}$ as a length offset instead of scaling.",
+          "D) $\\frac{27}{4}$ pairs the wrong sides, using $\\frac{9 \\cdot 6}{8}$ rather than the correct correspondence."
+        ],
+        "answer": "A) $12$"
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T21:16:48.217Z"
+}

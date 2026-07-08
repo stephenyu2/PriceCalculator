@@ -1,0 +1,182 @@
+{
+  "id": "GEO.G-CO.C.11--lesson",
+  "standard": "GEO.G-CO.C.11",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Prove geometric theorems",
+  "clusterCode": "C",
+  "skillName": "Theorems about Parallelograms",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "A parallelogram is a quadrilateral with both pairs of opposite sides parallel. From that single definition flow four key properties: opposite sides are congruent, opposite angles are congruent, consecutive (same-side) angles are supplementary, and the diagonals bisect each other. The converses tell you when a quadrilateral must be a parallelogram, and a parallelogram is a rectangle exactly when its diagonals are congruent. In this lesson you will prove these theorems with triangle congruence and CPCTC, then use the properties to solve for unknown sides, angles, and diagonal segments.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "In parallelogram $ABCD$, $AB = 3x + 5$ and $CD = 5x - 9$. Find $x$ and the length of $AB$.",
+      "solution": {
+        "steps": [
+          "In a parallelogram, opposite sides are congruent, so $AB = CD$.",
+          "Set the expressions equal: $3x + 5 = 5x - 9$.",
+          "Subtract $3x$ from both sides: $5 = 2x - 9$.",
+          "Add $9$ to both sides: $14 = 2x$, so $x = 7$.",
+          "Substitute into $AB$: $AB = 3(7) + 5 = 21 + 5 = 26$.",
+          "Check with $CD$: $CD = 5(7) - 9 = 35 - 9 = 26$, which matches."
+        ],
+        "answer": "$x = 7$ and $AB = 26$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "In parallelogram $PQRS$, $m\\angle P = (2x + 10)^\\circ$ and $m\\angle Q = (3x - 30)^\\circ$. Vertices are labeled in order, so $\\angle P$ and $\\angle Q$ are consecutive angles. Find $m\\angle P$.",
+      "solution": {
+        "steps": [
+          "Consecutive (same-side) angles of a parallelogram are supplementary, so $m\\angle P + m\\angle Q = 180^\\circ$.",
+          "Set up the equation: $(2x + 10) + (3x - 30) = 180$.",
+          "Combine like terms: $5x - 20 = 180$.",
+          "Add $20$ to both sides: $5x = 200$, so $x = 40$.",
+          "Substitute into $m\\angle P$: $m\\angle P = 2(40) + 10 = 80 + 10 = 90^\\circ$.",
+          "Check: $m\\angle Q = 3(40) - 30 = 90^\\circ$, and $90 + 90 = 180^\\circ$."
+        ],
+        "answer": "$m\\angle P = 90^\\circ$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "The diagonals of parallelogram $ABCD$ meet at $E$. If $AE = 2y - 1$ and $EC = y + 4$, find the length of diagonal $AC$.",
+      "solution": {
+        "steps": [
+          "The diagonals of a parallelogram bisect each other, so $E$ is the midpoint of $\\overline{AC}$. That means $AE = EC$.",
+          "Set the expressions equal: $2y - 1 = y + 4$.",
+          "Subtract $y$ from both sides: $y - 1 = 4$.",
+          "Add $1$ to both sides: $y = 5$.",
+          "Find the half-segment: $AE = 2(5) - 1 = 9$ (and $EC = 5 + 4 = 9$).",
+          "Since $E$ bisects $\\overline{AC}$, the full diagonal is $AC = 2 \\cdot AE = 2(9) = 18$."
+        ],
+        "answer": "$AC = 18$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Given parallelogram $ABCD$ with diagonal $\\overline{AC}$, prove that $\\overline{AB} \\cong \\overline{CD}$. Write a two-column proof.",
+      "solution": {
+        "steps": [
+          "Statement: $ABCD$ is a parallelogram. Reason: Given.",
+          "Statement: $\\overline{AB} \\parallel \\overline{CD}$ and $\\overline{AD} \\parallel \\overline{BC}$. Reason: Definition of a parallelogram (both pairs of opposite sides parallel).",
+          "Statement: $\\angle BAC \\cong \\angle DCA$. Reason: Alternate interior angles formed by transversal $\\overline{AC}$ cutting the parallel sides $\\overline{AB}$ and $\\overline{CD}$.",
+          "Statement: $\\angle BCA \\cong \\angle DAC$. Reason: Alternate interior angles formed by transversal $\\overline{AC}$ cutting the parallel sides $\\overline{AD}$ and $\\overline{BC}$.",
+          "Statement: $\\overline{AC} \\cong \\overline{AC}$. Reason: Reflexive property of congruence.",
+          "Statement: $\\triangle BAC \\cong \\triangle DCA$. Reason: ASA (the two pairs of congruent angles with the included congruent side $\\overline{AC}$).",
+          "Statement: $\\overline{AB} \\cong \\overline{CD}$. Reason: CPCTC (corresponding parts of congruent triangles are congruent)."
+        ],
+        "answer": "$\\overline{AB} \\cong \\overline{CD}$, proven by drawing diagonal $\\overline{AC}$, showing $\\triangle BAC \\cong \\triangle DCA$ by ASA (alternate interior angles plus the reflexive side), and applying CPCTC."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Quadrilateral $WXYZ$ has vertices $W(0,0)$, $X(4,0)$, $Y(4,3)$, and $Z(0,3)$. Show that $WXYZ$ is a rectangle by proving it is a parallelogram with congruent diagonals.",
+      "solution": {
+        "steps": [
+          "First show it is a parallelogram using midpoints of the diagonals. Diagonal $\\overline{WY}$ has midpoint $\\left(\\frac{0+4}{2}, \\frac{0+3}{2}\\right) = (2, 1.5)$.",
+          "Diagonal $\\overline{XZ}$ has midpoint $\\left(\\frac{4+0}{2}, \\frac{0+3}{2}\\right) = (2, 1.5)$.",
+          "The diagonals share the same midpoint, so they bisect each other, which means $WXYZ$ is a parallelogram.",
+          "Now compare the diagonal lengths. $WY = \\sqrt{(4-0)^2 + (3-0)^2} = \\sqrt{16 + 9} = \\sqrt{25} = 5$.",
+          "$XZ = \\sqrt{(0-4)^2 + (3-0)^2} = \\sqrt{16 + 9} = \\sqrt{25} = 5$.",
+          "The diagonals are congruent ($WY = XZ = 5$). A parallelogram with congruent diagonals is a rectangle, so $WXYZ$ is a rectangle."
+        ],
+        "answer": "$WXYZ$ is a rectangle: the diagonals share midpoint $(2, 1.5)$ (so it is a parallelogram) and both have length $5$ (congruent diagonals), and a parallelogram with congruent diagonals is a rectangle."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "In parallelogram $JKLM$, $JK = 4x - 3$ and $LM = 2x + 11$. Find $x$ and the length of $JK$.",
+      "hint": "$JK$ and $LM$ are opposite sides, so they are congruent. Set the two expressions equal.",
+      "solution": {
+        "steps": [
+          "Opposite sides of a parallelogram are congruent, so $JK = LM$: $4x - 3 = 2x + 11$.",
+          "Subtract $2x$ from both sides: $2x - 3 = 11$.",
+          "Add $3$ to both sides: $2x = 14$, so $x = 7$.",
+          "Substitute: $JK = 4(7) - 3 = 28 - 3 = 25$ (and $LM = 2(7) + 11 = 25$)."
+        ],
+        "answer": "$x = 7$ and $JK = 25$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "In parallelogram $ABCD$, $m\\angle A = (4x + 6)^\\circ$ and $m\\angle C = (6x - 18)^\\circ$. Recall that $\\angle A$ and $\\angle C$ are opposite angles. Find $m\\angle A$.",
+      "hint": "Opposite angles of a parallelogram are congruent, not supplementary. Set the two measures equal.",
+      "solution": {
+        "steps": [
+          "Opposite angles of a parallelogram are congruent, so $m\\angle A = m\\angle C$: $4x + 6 = 6x - 18$.",
+          "Subtract $4x$ from both sides: $6 = 2x - 18$.",
+          "Add $18$ to both sides: $24 = 2x$, so $x = 12$.",
+          "Substitute: $m\\angle A = 4(12) + 6 = 48 + 6 = 54^\\circ$ (and $m\\angle C = 6(12) - 18 = 54^\\circ$)."
+        ],
+        "answer": "$m\\angle A = 54^\\circ$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "The diagonals of parallelogram $PQRS$ intersect at $T$. If $QT = 3z + 2$ and $TS = 5z - 8$, find the length of diagonal $QS$.",
+      "hint": "The diagonals bisect each other, so $T$ is the midpoint of $\\overline{QS}$ and $QT = TS$. After finding $z$, remember $QS = 2 \\cdot QT$.",
+      "solution": {
+        "steps": [
+          "Diagonals of a parallelogram bisect each other, so $QT = TS$: $3z + 2 = 5z - 8$.",
+          "Subtract $3z$ from both sides: $2 = 2z - 8$.",
+          "Add $8$ to both sides: $10 = 2z$, so $z = 5$.",
+          "Find the half-segment: $QT = 3(5) + 2 = 17$ (and $TS = 5(5) - 8 = 17$).",
+          "Since $T$ bisects $\\overline{QS}$, the full diagonal is $QS = 2 \\cdot QT = 2(17) = 34$."
+        ],
+        "answer": "$QS = 34$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Given quadrilateral $ABCD$ with $\\overline{AB} \\cong \\overline{CD}$ and $\\overline{AB} \\parallel \\overline{CD}$, prove that $ABCD$ is a parallelogram. Outline a paragraph proof.",
+      "hint": "Draw diagonal $\\overline{AC}$ to create two triangles. Use the alternate interior angles from $\\overline{AB} \\parallel \\overline{CD}$ and the reflexive side, then aim for SAS and CPCTC.",
+      "solution": {
+        "steps": [
+          "Draw diagonal $\\overline{AC}$, splitting $ABCD$ into $\\triangle BAC$ and $\\triangle DCA$.",
+          "Because $\\overline{AB} \\parallel \\overline{CD}$ with transversal $\\overline{AC}$, the alternate interior angles are congruent: $\\angle BAC \\cong \\angle DCA$.",
+          "It is given that $\\overline{AB} \\cong \\overline{CD}$, and $\\overline{AC} \\cong \\overline{AC}$ by the reflexive property.",
+          "So $\\triangle BAC \\cong \\triangle DCA$ by SAS (side $\\overline{AB}$, included angle, side $\\overline{AC}$).",
+          "By CPCTC, $\\overline{BC} \\cong \\overline{AD}$, so both pairs of opposite sides are congruent.",
+          "A quadrilateral with both pairs of opposite sides congruent is a parallelogram, so $ABCD$ is a parallelogram. (Equivalently, the converse 'one pair of sides both parallel and congruent' directly gives a parallelogram.)"
+        ],
+        "answer": "$ABCD$ is a parallelogram: drawing $\\overline{AC}$ gives $\\triangle BAC \\cong \\triangle DCA$ by SAS (alternate interior angles, the given congruent side, and the reflexive side), and CPCTC makes both pairs of opposite sides congruent."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Quadrilateral $WXYZ$ has vertices $W(1,1)$, $X(6,1)$, $Y(7,4)$, and $Z(2,4)$. Determine whether $WXYZ$ is a parallelogram by checking whether both pairs of opposite sides are parallel (equal slopes).",
+      "hint": "Two segments are parallel when they have the same slope. Use $\\text{slope} = \\frac{y_2 - y_1}{x_2 - x_1}$ for $\\overline{WX}$ vs $\\overline{ZY}$ and for $\\overline{XY}$ vs $\\overline{WZ}$.",
+      "solution": {
+        "steps": [
+          "Slope of $\\overline{WX}$: $\\frac{1 - 1}{6 - 1} = \\frac{0}{5} = 0$.",
+          "Slope of $\\overline{ZY}$: $\\frac{4 - 4}{7 - 2} = \\frac{0}{5} = 0$. So $\\overline{WX} \\parallel \\overline{ZY}$.",
+          "Slope of $\\overline{XY}$: $\\frac{4 - 1}{7 - 6} = \\frac{3}{1} = 3$.",
+          "Slope of $\\overline{WZ}$: $\\frac{4 - 1}{2 - 1} = \\frac{3}{1} = 3$. So $\\overline{XY} \\parallel \\overline{WZ}$.",
+          "Both pairs of opposite sides are parallel, which is the definition of a parallelogram."
+        ],
+        "answer": "Yes, $WXYZ$ is a parallelogram, because $\\overline{WX} \\parallel \\overline{ZY}$ (both slope $0$) and $\\overline{XY} \\parallel \\overline{WZ}$ (both slope $3$)."
+      }
+    }
+  ]
+}

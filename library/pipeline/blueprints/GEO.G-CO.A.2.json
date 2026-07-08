@@ -1,0 +1,140 @@
+{
+  "standard": "GEO.G-CO.A.2",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Experiment with transformations in the plane",
+  "clusterCode": "A",
+  "skillName": "Transformations as Functions",
+
+  "description": "Students treat a geometric transformation as a function that takes a point $(x,y)$ as input and returns a new point as output. They write and apply coordinate rules for the rigid motions (translations, reflections across the $x$-axis, $y$-axis, $y=x$, and $y=-x$, and rotations of $90^\\circ$, $180^\\circ$, and $270^\\circ$ about the origin) as well as non-rigid transformations (dilations and horizontal or vertical stretches). They evaluate a rule on individual points, find the image of a whole figure, and recover the rule from a preimage-image pair. Crucially, they compare transformations that preserve distance and angle (the rigid motions, which produce congruent images) with those that do not (stretches and dilations, which change side lengths and may change angles), justifying the classification by measuring distances before and after.",
+
+  "subSkills": [
+    "Read a transformation as a function with notation such as $T(x,y)=(x+3,\\,y-2)$ and evaluate it on an input point",
+    "Apply the coordinate rules for the four standard reflections: $(x,y)\\to(x,-y)$, $(x,y)\\to(-x,y)$, $(x,y)\\to(y,x)$, $(x,y)\\to(-y,-x)$",
+    "Apply origin-centered rotation rules: $90^\\circ$ gives $(x,y)\\to(-y,x)$, $180^\\circ$ gives $(x,y)\\to(-x,-y)$, $270^\\circ$ gives $(x,y)\\to(y,-x)$",
+    "Apply a translation rule $(x,y)\\to(x+a,\\,y+b)$ and a dilation about the origin $(x,y)\\to(kx,\\,ky)$",
+    "Apply a one-directional stretch such as a horizontal stretch $(x,y)\\to(kx,\\,y)$ or vertical stretch $(x,y)\\to(x,\\,ky)$",
+    "Find the image of an entire polygon by applying the rule to each vertex",
+    "Recover the function rule from a given preimage and its image",
+    "Compute a side length with the distance formula and compare preimage to image to test distance preservation",
+    "Classify a transformation as rigid (preserves distance and angle, image is congruent) or non-rigid (does not), and justify the classification"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Evaluate a rule on a point",
+      "example": "Let $T(x,y)=(x-4,\\,y+1)$. Find $T(6,-2)$. Answer: $(2,-1)$."
+    },
+    {
+      "name": "Apply a reflection rule",
+      "example": "Reflect $P(3,-5)$ across the line $y=x$. Using $(x,y)\\to(y,x)$, the image is $(-5,3)$."
+    },
+    {
+      "name": "Apply a rotation rule about the origin",
+      "example": "Rotate $A(2,7)$ by $90^\\circ$ counterclockwise about the origin. Using $(x,y)\\to(-y,x)$, the image is $(-7,2)$."
+    },
+    {
+      "name": "Image of a whole figure",
+      "example": "Triangle with vertices $A(1,2)$, $B(4,2)$, $C(4,6)$ is translated by $(x,y)\\to(x+2,\\,y-3)$. Find the images. Answer: $A'(3,-1)$, $B'(6,-1)$, $C'(6,3)$."
+    },
+    {
+      "name": "Recover the rule from preimage and image",
+      "example": "A transformation sends $(2,3)\\to(2,-3)$ and $(-1,5)\\to(-1,-5)$. Write the rule. Answer: $(x,y)\\to(x,-y)$, a reflection across the $x$-axis."
+    },
+    {
+      "name": "Apply a non-rigid transformation (dilation or stretch)",
+      "example": "Apply the horizontal stretch $(x,y)\\to(3x,\\,y)$ to $Q(2,5)$. Answer: $(6,5)$."
+    },
+    {
+      "name": "Test distance preservation",
+      "example": "Segment with endpoints $(0,0)$ and $(4,0)$ has length $4$. After $(x,y)\\to(2x,\\,y)$ the endpoints are $(0,0)$ and $(8,0)$, length $8$. The transformation does not preserve distance."
+    },
+    {
+      "name": "Classify rigid vs non-rigid",
+      "example": "Decide whether $(x,y)\\to(-y,x)$ preserves distance and angle. It is a $90^\\circ$ rotation, a rigid motion, so the image is congruent to the preimage; it preserves both."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step application of one named rule to a single point, or direct recall of a coordinate rule. The rule is given explicitly in function form and the student substitutes once. No figure, no distance computation, no classification reasoning beyond naming the obvious type.",
+      "constraints": [
+        "One input point with small integer coordinates, magnitudes $\\leq 8$",
+        "Rule is supplied explicitly, e.g. $(x,y)\\to(x+a,\\,y+b)$ or one of the four standard reflections",
+        "Only translations, axis reflections, $180^\\circ$ rotation, or evaluating given function notation",
+        "Exactly one substitution step with no follow-up question",
+        "If classification is asked, it is a direct one-word answer (rigid or not) for a familiar rule"
+      ]
+    },
+    "Medium": {
+      "description": "Two or three linked steps. The student applies a rule to every vertex of a figure, applies a less-routine rule (reflection across $y=x$ or $y=-x$, $90^\\circ$ or $270^\\circ$ rotation, a dilation), recovers a rule from a preimage-image pair, or computes one distance to begin testing preservation.",
+      "constraints": [
+        "Apply a rule to all three or four vertices of a polygon, or recover the rule from a single preimage-image pair",
+        "Includes $90^\\circ$/$270^\\circ$ rotations, reflections across $y=x$ or $y=-x$, or a dilation $(x,y)\\to(kx,ky)$ with integer $k$",
+        "May require one distance-formula computation to compare a preimage segment to its image",
+        "Classification requires justifying with the rule's effect rather than naming it from memory",
+        "Coordinates may be negative but remain small integers"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step synthesis. The student recovers a rule from data and then classifies it, composes or compares two transformations, computes and compares distances on both preimage and image to prove or disprove congruence, or reasons about why a stretch fails to preserve distance and angle while a rigid motion does.",
+      "constraints": [
+        "Combine recovering a rule with classifying it and justifying via distance or angle measurement",
+        "Compare two transformations (e.g. a rotation versus a horizontal stretch) and determine which preserves congruence",
+        "Require two distance-formula computations (preimage and image) yielding radical lengths such as $\\sqrt{13}$ or $2\\sqrt{5}$ to confirm or refute distance preservation",
+        "Involve a non-origin or general stretch/dilation where the student must reason about angle change, not just side length",
+        "May ask for a counterexample or a justification, e.g. show that $(x,y)\\to(2x,\\,y)$ does not preserve the angle of a segment that is not axis-aligned"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student swaps the coordinate order or signs in a rotation rule, confusing the $90^\\circ$ rule with the $270^\\circ$ rule",
+      "distractor": "Embodies applying $(x,y)\\to(y,-x)$ when a $90^\\circ$ counterclockwise rotation requires $(x,y)\\to(-y,x)$, so $A(2,7)$ maps to $(7,-2)$ instead of $(-7,2)$"
+    },
+    {
+      "misconception": "Student reflects across the wrong axis, negating the wrong coordinate",
+      "distractor": "For a reflection across the $x$-axis applies $(x,y)\\to(-x,y)$, sending $(3,-5)$ to $(-3,-5)$ instead of the correct $(3,5)$"
+    },
+    {
+      "misconception": "Student reflects across $y=x$ by negating both coordinates instead of swapping them",
+      "distractor": "Maps $(3,-5)$ to $(-3,5)$ (treating $y=x$ like a point reflection) instead of swapping to $(-5,3)$"
+    },
+    {
+      "misconception": "Student applies a translation by multiplying instead of adding, or moves in the wrong direction on the sign",
+      "distractor": "For $(x,y)\\to(x-4,\\,y+1)$ on $(6,-2)$ adds $4$ instead of subtracting, giving $(10,-1)$ instead of $(2,-1)$"
+    },
+    {
+      "misconception": "Student believes a dilation or stretch is a rigid motion because the shape still looks similar",
+      "distractor": "Classifies $(x,y)\\to(3x,\\,y)$ as distance-preserving, asserting the image is congruent to the preimage when in fact the horizontal stretch changes side lengths and angles"
+    },
+    {
+      "misconception": "Student thinks a uniform dilation preserves angles and therefore preserves distance too, conflating similarity with congruence",
+      "distractor": "States that $(x,y)\\to(2x,\\,2y)$ preserves distance because angles are unchanged, ignoring that every length is doubled so distance is not preserved"
+    },
+    {
+      "misconception": "Student applies the function rule to only the $x$-coordinate or only one vertex and copies the rest unchanged",
+      "distractor": "Transforms one vertex of a polygon and leaves the others fixed, producing an image figure that is distorted rather than the correctly translated or reflected figure"
+    },
+    {
+      "misconception": "Student computes the distance between a preimage point and its image (the displacement) instead of comparing a preimage segment length to its image segment length",
+      "distractor": "Concludes a transformation fails to preserve distance because the point moved, measuring how far each point traveled rather than whether segment lengths are unchanged"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

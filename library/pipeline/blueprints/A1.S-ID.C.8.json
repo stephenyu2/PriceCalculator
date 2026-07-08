@@ -1,0 +1,131 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent.",
+
+  "standard": "A1.S-ID.C.8",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Interpret linear models",
+  "clusterCode": "C",
+  "skillName": "Correlation Coefficient",
+
+  "description": "Students compute (using technology or, for small sets, the defining formula) and interpret the correlation coefficient $r$ of a linear fit to bivariate data. They read $r$ as a number in the interval $-1 \\le r \\le 1$ whose sign matches the slope of the line of best fit and whose magnitude measures how closely the points cluster around that line. Given a scatter plot, a value of $r$, or a small data table, students describe the direction (positive, negative, none) and strength (strong, moderate, weak) of the linear association, match scatter plots to candidate $r$-values, distinguish $r$ from the slope and from $r^2$, and reason that a strong correlation does not by itself establish causation.",
+
+  "subSkills": [
+    "Read the sign of $r$ to determine the direction of a linear association (positive $r$ with positive slope, negative $r$ with negative slope, $r\\approx 0$ for no linear trend)",
+    "Read the magnitude $|r|$ to judge strength (near $1$ is strong, near $0.5$ is moderate, near $0$ is weak)",
+    "Match a scatter plot to a plausible value of $r$ and reject impossible values (anything with $|r|>1$)",
+    "Estimate $r$ from a described or shown scatter plot",
+    "Compute $r$ from a small data set using the formula $r=\\dfrac{\\sum (x_i-\\bar{x})(y_i-\\bar{y})}{\\sqrt{\\sum (x_i-\\bar{x})^2}\\,\\sqrt{\\sum (y_i-\\bar{y})^2}}$ or recover $r$ from technology output",
+    "Distinguish the correlation coefficient $r$ from the slope of the regression line and from the coefficient of determination $r^2$",
+    "Interpret a correlation in context and explain why correlation does not imply causation"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Direction and strength from a value of r",
+      "example": "A line of best fit for hours studied versus test score has $r=0.91$. Describe the association. Strong positive linear association: as study hours increase, scores tend to increase, and the points cluster tightly around the line."
+    },
+    {
+      "name": "Match a scatter plot to r",
+      "example": "Points fall almost exactly along a downward line. Which value of $r$ is most plausible: $-0.95$, $-0.4$, $0$, or $0.95$? $-0.95$, because the trend is strongly negative."
+    },
+    {
+      "name": "Reject an impossible r",
+      "example": "A student reports $r=1.4$ for a data set. Explain why this must be an error. The correlation coefficient always satisfies $-1 \\le r \\le 1$, so $1.4$ is impossible."
+    },
+    {
+      "name": "Compute r from a small data set",
+      "example": "For the points $(1,2),(2,3),(3,5)$, the means are $\\bar{x}=2$ and $\\bar{y}=\\dfrac{10}{3}$. Using $r=\\dfrac{\\sum (x_i-\\bar{x})(y_i-\\bar{y})}{\\sqrt{\\sum (x_i-\\bar{x})^2}\\sqrt{\\sum (y_i-\\bar{y})^2}}$ gives $r\\approx 0.99$, a strong positive correlation."
+    },
+    {
+      "name": "Distinguish r from slope",
+      "example": "Two data sets both have a line of best fit with slope $2$, but one has $r=0.6$ and the other has $r=0.98$. What does this tell you? Both trend upward equally steeply, but the second set's points cluster much more tightly around the line."
+    },
+    {
+      "name": "Relate r and r-squared",
+      "example": "A linear fit has $r=-0.8$. Find the coefficient of determination $r^2$ and interpret it. $r^2=0.64$, so about $64\\%$ of the variation in $y$ is explained by the linear relationship with $x$."
+    },
+    {
+      "name": "Correlation versus causation in context",
+      "example": "Ice cream sales and drowning deaths have $r=0.85$ across the year. Does buying ice cream cause drownings? No; a strong correlation does not prove causation. A third variable, hot weather, drives both."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "One-step reading of a single given $r$-value or an obvious scatter plot. Student states direction (positive/negative/none) and a coarse strength (strong/weak), or rejects an out-of-range $r$. No computation.",
+      "constraints": [
+        "$r$ is given directly and is clearly strong ($|r|\\ge 0.8$) or clearly near $0$",
+        "Scatter plots show an unmistakable upward, downward, or no trend",
+        "Tasks: name the sign, name strong vs weak, or flag $|r|>1$ as impossible",
+        "No formula use; answer is a short description or a single choice"
+      ]
+    },
+    "Medium": {
+      "description": "Matching, ordering, or interpreting that requires judgment about magnitude, or a short computation. Student matches several scatter plots to $r$-values, ranks correlations by strength, interprets a moderate $r$, converts between $r$ and $r^2$, or computes $r$ for a 3-point set with integer-friendly means.",
+      "constraints": [
+        "Match two or three scatter plots to candidate $r$-values that differ in magnitude and sign",
+        "Interpret a moderate value such as $r=0.45$ as a weak-to-moderate positive association",
+        "Compute $r^2$ from $r$ (or recover $|r|$ from $r^2$ and the known sign) and interpret the percentage of explained variation",
+        "Compute $r$ for a small set ($n=3$) where $\\bar{x}$ is an integer, using the defining formula or technology output"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning in context or a fuller computation. Student computes $r$ for a 4 to 5 point set, separates the roles of slope, $r$, and $r^2$, or argues about correlation versus causation and confounding variables, justifying the conclusion.",
+      "constraints": [
+        "Compute $r$ for $n=4$ or $n=5$ from a table, using the formula or technology, then interpret it",
+        "Disentangle slope from $r$: explain that equal slopes can have very different $r$, or that a steeper line is not necessarily a stronger correlation",
+        "Given context, decide whether a strong correlation supports a causal claim and name a plausible confounding variable",
+        "Conclusion must state both direction and strength and tie back to the real-world context"
+      ]
+    },
+    "tierSplit": "If split into two worksheets: tier1 covers Easy to Medium (reading sign and strength from a given $r$, matching and ranking scatter plots, rejecting impossible $r$, $r$ versus $r^2$ conversions). tier2 covers Medium to Hard (computing $r$ from $3$ to $5$ point tables, distinguishing $r$ from slope, and correlation-versus-causation reasoning with confounders). No item overlap between tiers."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student confuses the correlation coefficient with the slope, thinking a steeper line means a stronger correlation or that $r$ equals the slope",
+      "distractor": "Claims the data set with the larger slope has the larger $r$, or reports the slope value (e.g. $2$) as the correlation, ignoring that $r$ is bounded by $1$ and measures clustering, not steepness"
+    },
+    {
+      "misconception": "Student reverses the meaning of the sign, reading a negative $r$ as a weak correlation or a positive $r$ as strong by default",
+      "distractor": "Calls $r=-0.9$ a weak association because it is negative, instead of recognizing it as a strong negative association"
+    },
+    {
+      "misconception": "Student thinks $|r|$ near $0$ means a strong relationship or that any nonzero $r$ is strong",
+      "distractor": "Interprets $r=0.15$ as a strong positive correlation rather than a very weak one"
+    },
+    {
+      "misconception": "Student accepts an out-of-range value of $r$ such as $1.4$ or $-2$",
+      "distractor": "Selects $r=1.4$ as a valid 'very strong' correlation instead of recognizing that $r$ must lie in $[-1,1]$"
+    },
+    {
+      "misconception": "Student confuses $r$ with $r^2$, reporting one when the other is asked or forgetting the sign when going from $r^2$ back to $r$",
+      "distractor": "Reports $r^2=0.8$ as the correlation when $r=-0.8$, or recovers $r=+0.8$ from $r^2=0.64$ even though the scatter trends downward"
+    },
+    {
+      "misconception": "Student concludes that a strong correlation proves that one variable causes the other",
+      "distractor": "Concludes that ice cream sales cause drownings because $r=0.85$, ignoring the confounding variable (hot weather) and the principle that correlation does not imply causation"
+    },
+    {
+      "misconception": "Student sign-flips during the computation, mismatching the sum of products of deviations with the sign of the trend",
+      "distractor": "Computes $r=+0.99$ for a clearly decreasing data set because the negative sum $\\sum (x_i-\\bar{x})(y_i-\\bar{y})$ was taken as positive"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet (Easy->Hard across 15 items). tier1/tier2 listed for schema completeness but this standard uses the single sheet.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

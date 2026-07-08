@@ -1,0 +1,169 @@
+{
+  "id": "A1.A-CED.A.3--lesson",
+  "standard": "A1.A-CED.A.3",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Creating Equations",
+  "domainCode": "A-CED",
+  "cluster": "Create equations that describe numbers or relationships",
+  "clusterCode": "A",
+  "skillName": "Constraints via Equations and Inequalities",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "A constraint is a restriction that a real-world situation places on the quantities involved: a budget you cannot exceed, a minimum you must reach, a capacity you cannot pass, or the simple fact that you cannot have a negative number of buses. To model a situation, first define each variable with its units, then translate each restriction into an equation or inequality, choosing the direction carefully ('at most' means $\\le$, 'at least' means $\\ge$). When several restrictions act at once, collect them into a system. Finally, remember the hidden constraints context forces on you, such as non-negativity ($x \\ge 0$) and whole-number counts. A candidate solution is viable only if it satisfies every constraint, including the real-world ones, so a mathematically valid answer can still be rejected.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Notebooks cost $\\$3$ each and pens cost $\\$2$ each. You have at most $\\$30$ to spend. Let $x$ be the number of notebooks and $y$ the number of pens. Write an inequality that represents the spending constraint.",
+      "solution": {
+        "steps": [
+          "Identify the cost of each item: notebooks contribute $3x$ dollars and pens contribute $2y$ dollars.",
+          "The total spent is $3x + 2y$ dollars.",
+          "The phrase 'at most $\\$30$' means the total cannot exceed $30$, which is the $\\le$ direction.",
+          "Write the constraint: $3x + 2y \\le 30$."
+        ],
+        "answer": "$3x + 2y \\le 30$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A school booth must sell at least $50$ tickets to break even. Let $a$ be the number of adult tickets and $c$ the number of child tickets sold. Write an inequality for the requirement that the total number of tickets meets the minimum.",
+      "solution": {
+        "steps": [
+          "The total number of tickets sold is $a + c$.",
+          "The phrase 'at least $50$' means the total must be $50$ or more, which is the $\\ge$ direction.",
+          "Write the constraint: $a + c \\ge 50$.",
+          "Note this is a minimum requirement, so we use $\\ge$, not $\\le$."
+        ],
+        "answer": "$a + c \\ge 50$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A farmer plants $x$ acres of corn and $y$ acres of wheat on a field of $40$ acres. Seed costs $\\$50$ per acre of corn and $\\$80$ per acre of wheat, and the farmer can spend at most $\\$2400$ on seed. Write the full system of constraints that models this situation, including any non-negativity constraints.",
+      "solution": {
+        "steps": [
+          "Define the land constraint: corn acres plus wheat acres cannot exceed the $40$-acre field, so $x + y \\le 40$.",
+          "Define the budget constraint: seed costs $50x$ for corn and $80y$ for wheat, and this must be at most $\\$2400$, so $50x + 80y \\le 2400$.",
+          "Add the hidden constraints: you cannot plant a negative number of acres, so $x \\ge 0$ and $y \\ge 0$.",
+          "Collect all four restrictions into one system."
+        ],
+        "answer": "$x + y \\le 40,\\ \\ 50x + 80y \\le 2400,\\ \\ x \\ge 0,\\ \\ y \\ge 0$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A model has the constraints $3x + 2y \\le 30,\\ x \\ge 0,\\ y \\ge 0$, where $x$ and $y$ are whole numbers. Decide whether the candidate $(x, y) = (8, 4)$ is viable, and explain.",
+      "solution": {
+        "steps": [
+          "Check the non-negativity constraints first: $x = 8 \\ge 0$ is true and $y = 4 \\ge 0$ is true.",
+          "Now test the budget constraint $3x + 2y \\le 30$: substitute to get $3(8) + 2(4) = 24 + 8 = 32$.",
+          "Compare: $32 \\le 30$ is false, since $32 > 30$.",
+          "Because the candidate fails one constraint, it cannot be viable. Testing only $x \\ge 0$ and $y \\ge 0$ would have missed this.",
+          "The point $(8, 4)$ is non-viable; it violates $3x + 2y \\le 30$."
+        ],
+        "answer": "Non-viable: $3(8) + 2(4) = 32 > 30$, so it violates the budget constraint $3x + 2y \\le 30$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A school is renting buses and vans for a trip. Each bus seats $40$ students and each van seats $8$ students, and at least $200$ students must be transported. There is space to park at most $7$ vehicles total. Let $b$ be the number of buses and $v$ the number of vans. Write the full system of constraints. Then explain whether solving the model and getting $b = -2,\\ v = 5$ gives a viable option.",
+      "solution": {
+        "steps": [
+          "Capacity (minimum requirement): buses seat $40b$ students and vans seat $8v$ students, and at least $200$ must be seated, so $40b + 8v \\ge 200$.",
+          "Parking limit: the total number of vehicles is at most $7$, so $b + v \\le 7$.",
+          "Hidden constraints: you cannot rent a negative number of vehicles, so $b \\ge 0$ and $v \\ge 0$, and counts of vehicles must be whole numbers.",
+          "The full system is $40b + 8v \\ge 200,\\ \\ b + v \\le 7,\\ \\ b \\ge 0,\\ \\ v \\ge 0$.",
+          "Now interpret $b = -2,\\ v = 5$: although it may satisfy some inequalities, $b = -2$ violates $b \\ge 0$ because you cannot rent $-2$ buses.",
+          "Reject the option: it is non-viable in context even if the algebra produced it."
+        ],
+        "answer": "System: $40b + 8v \\ge 200,\\ \\ b + v \\le 7,\\ \\ b \\ge 0,\\ \\ v \\ge 0$. The solution $b = -2,\\ v = 5$ is non-viable because $b \\ge 0$ is required and a count of buses cannot be negative."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Apples cost $\\$2$ each and oranges cost $\\$3$ each. You want to spend no more than $\\$24$. Let $x$ be the number of apples and $y$ the number of oranges. Write an inequality that represents the spending constraint.",
+      "hint": "Multiply each price by its variable, add, then choose the direction for 'no more than'.",
+      "solution": {
+        "steps": [
+          "Apples contribute $2x$ dollars and oranges contribute $3y$ dollars, so the total spent is $2x + 3y$.",
+          "'No more than $\\$24$' means the total cannot exceed $24$, which is the $\\le$ direction.",
+          "Write the constraint: $2x + 3y \\le 24$."
+        ],
+        "answer": "$2x + 3y \\le 24$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A team needs to raise at least $\\$500$. They sell car-wash tickets for $\\$5$ each and bake-sale items for $\\$4$ each. Let $t$ be the number of tickets and $s$ the number of bake-sale items sold. Write an inequality for the fundraising goal.",
+      "hint": "'At least' points to a minimum. Which inequality symbol means 'or more'?",
+      "solution": {
+        "steps": [
+          "Tickets raise $5t$ dollars and bake-sale items raise $4s$ dollars, so the total raised is $5t + 4s$.",
+          "'At least $\\$500$' means the total must be $500$ or more, which is the $\\ge$ direction.",
+          "Write the constraint: $5t + 4s \\ge 500$."
+        ],
+        "answer": "$5t + 4s \\ge 500$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A carpenter builds $x$ chairs and $y$ tables. Each chair uses $5$ board-feet of wood and each table uses $20$ board-feet, and only $200$ board-feet are available. Write the full system of constraints, including non-negativity.",
+      "hint": "Write the wood constraint, then remember you cannot build a negative number of chairs or tables.",
+      "solution": {
+        "steps": [
+          "Wood constraint: chairs use $5x$ board-feet and tables use $20y$ board-feet, and this cannot exceed $200$, so $5x + 20y \\le 200$.",
+          "Non-negativity: counts of furniture cannot be negative, so $x \\ge 0$ and $y \\ge 0$.",
+          "Collect the restrictions into one system."
+        ],
+        "answer": "$5x + 20y \\le 200,\\ \\ x \\ge 0,\\ \\ y \\ge 0$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "For the system $4x + 5y \\le 40,\\ x \\ge 0,\\ y \\ge 0$ with $x$ and $y$ whole numbers, decide whether the candidate $(x, y) = (6, 4)$ is viable, and explain which constraint, if any, it violates.",
+      "hint": "Check the non-negativity constraints, then substitute into $4x + 5y$ and compare with $40$.",
+      "solution": {
+        "steps": [
+          "Check non-negativity: $x = 6 \\ge 0$ and $y = 4 \\ge 0$ are both true.",
+          "Test the main constraint: $4(6) + 5(4) = 24 + 20 = 44$.",
+          "Compare: $44 \\le 40$ is false because $44 > 40$.",
+          "The candidate fails $4x + 5y \\le 40$, so it is non-viable."
+        ],
+        "answer": "Non-viable: $4(6) + 5(4) = 44 > 40$, so it violates $4x + 5y \\le 40$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A baker makes $x$ loaves of bread and $y$ batches of muffins. Each loaf needs $3$ cups of flour and each batch needs $4$ cups, with at most $48$ cups available. The baker must make at least $6$ loaves of bread to fill standing orders. Write the full system of constraints, including non-negativity. Then explain whether the solution $x = 4,\\ y = 9$ is viable in context.",
+      "hint": "There are three written restrictions plus non-negativity. After writing the system, check the standing-order minimum carefully.",
+      "solution": {
+        "steps": [
+          "Flour constraint: loaves use $3x$ cups and muffin batches use $4y$ cups, at most $48$ cups, so $3x + 4y \\le 48$.",
+          "Standing-order minimum: at least $6$ loaves are required, so $x \\ge 6$.",
+          "Non-negativity for muffins: $y \\ge 0$ (and $x \\ge 6$ already forces $x$ to be non-negative).",
+          "The full system is $3x + 4y \\le 48,\\ \\ x \\ge 6,\\ \\ y \\ge 0$.",
+          "Test $x = 4,\\ y = 9$: the standing-order constraint $x \\ge 6$ requires at least $6$ loaves, but $4 < 6$, so it fails.",
+          "Even though $3(4) + 4(9) = 12 + 36 = 48 \\le 48$ holds, the solution is non-viable because it violates $x \\ge 6$."
+        ],
+        "answer": "System: $3x + 4y \\le 48,\\ \\ x \\ge 6,\\ \\ y \\ge 0$. The solution $x = 4,\\ y = 9$ is non-viable because $x = 4$ violates the minimum $x \\ge 6$, even though the flour constraint is satisfied."
+      }
+    }
+  ]
+}

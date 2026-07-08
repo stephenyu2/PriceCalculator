@@ -1,0 +1,168 @@
+{
+  "id": "A1.F-BF.B.3--lesson",
+  "standard": "A1.F-BF.B.3",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Building Functions",
+  "domainCode": "F-BF",
+  "cluster": "Build new functions from existing functions",
+  "clusterCode": "B",
+  "skillName": "Transformations of Functions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "Starting from a parent function $f(x)$, four building blocks reshape its graph. Adding outside, $f(x)+k$, shifts the graph up for $k>0$ and down for $k<0$. Multiplying outside, $kf(x)$, scales the height: it stretches vertically for $|k|>1$, compresses for $0<|k|<1$, and a negative $k$ also reflects across the $x$-axis. The two inside changes act in reverse of what you expect: $f(x+k)$ shifts left for $k>0$ and right for $k<0$, while $f(kx)$ compresses horizontally for $|k|>1$ and stretches for $0<|k|<1$. Watch the direction of every horizontal move carefully, because the sign and the effect always feel backward.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Describe how the graph of $g(x)=f(x)-4$ compares to the graph of $f(x)$.",
+      "solution": {
+        "steps": [
+          "The change is added to the outside of the function: $g(x)=f(x)+k$ with $k=-4$.",
+          "An outside addition is a vertical shift. The output of every point changes by $k$.",
+          "Since $k=-4$ is negative, every point moves down by $|{-4}|=4$ units.",
+          "So $g$ is the graph of $f$ shifted vertically down $4$ units."
+        ],
+        "answer": "A vertical shift down $4$ units."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Describe how the graph of $g(x)=-3f(x)$ compares to the graph of $f(x)$.",
+      "solution": {
+        "steps": [
+          "The change multiplies the outside of the function: $g(x)=kf(x)$ with $k=-3$.",
+          "An outside multiplier scales the outputs by $|k|$. Here $|k|=3$, and since $3>1$ this is a vertical stretch by a factor of $3$.",
+          "Because $k=-3$ is negative, the graph is also reflected across the $x$-axis.",
+          "Combining both effects, $g$ is a reflection across the $x$-axis together with a vertical stretch by a factor of $3$."
+        ],
+        "answer": "A reflection across the $x$-axis and a vertical stretch by a factor of $3$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Describe how the graph of $g(x)=f(x+5)$ compares to the graph of $f(x)$.",
+      "solution": {
+        "steps": [
+          "The change is added to the input, inside the function: $g(x)=f(x+k)$ with $k=5$.",
+          "An inside addition is a horizontal shift, and its direction is opposite the sign of $k$.",
+          "Since $k=5$ is positive, the graph shifts to the left by $5$ units, not to the right.",
+          "Check with a point: if $(0,b)$ is on $f$, then $g(-5)=f(-5+5)=f(0)=b$, so the point that was at $x=0$ now sits at $x=-5$, confirming a shift left.",
+          "So $g$ is the graph of $f$ shifted horizontally left $5$ units."
+        ],
+        "answer": "A horizontal shift left $5$ units."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Describe how the graph of $g(x)=f(2x)$ compares to the graph of $f(x)$.",
+      "solution": {
+        "steps": [
+          "The change multiplies the input, inside the function: $g(x)=f(kx)$ with $k=2$.",
+          "An inside multiplier is a horizontal scaling, and its effect is the reciprocal of $|k|$.",
+          "Since $|k|=2>1$, the graph compresses horizontally toward the $y$-axis by a factor of $\\frac{1}{2}$.",
+          "Check with a point: if $(4,b)$ is on $f$, then $g(2)=f(2\\cdot 2)=f(4)=b$, so the point that was at $x=4$ now sits at $x=2$, confirming the horizontal compression.",
+          "So $g$ is a horizontal compression by a factor of $\\frac{1}{2}$ toward the $y$-axis."
+        ],
+        "answer": "A horizontal compression by a factor of $\\frac{1}{2}$ (toward the $y$-axis)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "The point $(3,8)$ lies on the graph of $y=f(x)$. Find the image of this point on $y=f(x)+5$ and on $y=2f(x)$.",
+      "solution": {
+        "steps": [
+          "For $y=f(x)+5$, the transformation adds $5$ to every output, so the $y$-coordinate increases by $5$ while the $x$-coordinate stays the same.",
+          "The image on $y=f(x)+5$ is $(3,\\,8+5)=(3,13)$.",
+          "For $y=2f(x)$, the transformation multiplies every output by $2$, so the $y$-coordinate is doubled while the $x$-coordinate stays the same.",
+          "The image on $y=2f(x)$ is $(3,\\,2\\cdot 8)=(3,16)$.",
+          "In both cases the input $x=3$ is unchanged because each transformation acts on the output."
+        ],
+        "answer": "$(3,13)$ on $y=f(x)+5$ and $(3,16)$ on $y=2f(x)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Describe how the graph of $g(x)=f(x)+7$ compares to the graph of $f(x)$.",
+      "hint": "The number is added outside the function, so think about whether the graph moves vertically or horizontally, and in which direction for a positive value.",
+      "solution": {
+        "steps": [
+          "Here $g(x)=f(x)+k$ with $k=7$, an outside addition, so this is a vertical shift.",
+          "Since $k=7$ is positive, the graph moves up by $7$ units.",
+          "So $g$ is the graph of $f$ shifted vertically up $7$ units."
+        ],
+        "answer": "A vertical shift up $7$ units."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Describe how the graph of $g(x)=\\frac{1}{2}f(x)$ compares to the graph of $f(x)$.",
+      "hint": "An outside multiplier scales the outputs. A factor between $0$ and $1$ makes the graph shorter, not taller.",
+      "solution": {
+        "steps": [
+          "Here $g(x)=kf(x)$ with $k=\\frac{1}{2}$, an outside multiplier, so this is a vertical scaling.",
+          "Since $0<\\frac{1}{2}<1$, the outputs shrink toward the $x$-axis, which is a vertical compression.",
+          "The factor is $\\frac{1}{2}$, and $k$ is positive, so there is no reflection.",
+          "So $g$ is a vertical compression by a factor of $\\frac{1}{2}$."
+        ],
+        "answer": "A vertical compression by a factor of $\\frac{1}{2}$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Describe how the graph of $g(x)=f(x-3)$ compares to the graph of $f(x)$.",
+      "hint": "The change is inside the function, so it is a horizontal shift. Remember the direction is opposite the sign you see.",
+      "solution": {
+        "steps": [
+          "Here $g(x)=f(x+k)$ with $k=-3$, an inside addition, so this is a horizontal shift.",
+          "The direction is opposite the sign of $k$. Since $k=-3$ is negative, the graph shifts to the right by $3$ units.",
+          "Check with a point: if $(0,b)$ is on $f$, then $g(3)=f(3-3)=f(0)=b$, so the point at $x=0$ moves to $x=3$, confirming a shift right.",
+          "So $g$ is the graph of $f$ shifted horizontally right $3$ units."
+        ],
+        "answer": "A horizontal shift right $3$ units."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Let $f(x)=x^{2}$. Write the equation of the function whose graph is the graph of $f$ shifted right $3$ units and up $1$ unit.",
+      "hint": "A shift right $h$ units replaces $x$ with $x-h$ inside the function, and a shift up adds to the outside.",
+      "solution": {
+        "steps": [
+          "A horizontal shift right $3$ units replaces $x$ with $x-3$, giving $f(x-3)=(x-3)^{2}$.",
+          "A vertical shift up $1$ unit adds $1$ to the outside, giving $(x-3)^{2}+1$.",
+          "So the equation is $g(x)=(x-3)^{2}+1$."
+        ],
+        "answer": "$g(x)=(x-3)^{2}+1$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "The graph of $g$ is the graph of $f(x)=x^{2}$ moved so that its vertex is at $(0,-6)$. Find the value of $k$ in $g(x)=f(x)+k$.",
+      "hint": "The vertex of $f(x)=x^{2}$ starts at $(0,0)$. Compare its new height to find how far up or down the graph moved.",
+      "solution": {
+        "steps": [
+          "The vertex of $f(x)=x^{2}$ is at $(0,0)$, and the new vertex is at $(0,-6)$.",
+          "Only the $y$-coordinate changed, from $0$ to $-6$, so this is a vertical shift down $6$ units.",
+          "In $g(x)=f(x)+k$, a downward shift of $6$ means $k=-6$.",
+          "So $k=-6$, giving $g(x)=x^{2}-6$."
+        ],
+        "answer": "$k=-6$"
+      }
+    }
+  ]
+}

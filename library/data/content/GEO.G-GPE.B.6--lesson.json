@@ -1,0 +1,176 @@
+{
+  "id": "GEO.G-GPE.B.6--lesson",
+  "standard": "GEO.G-GPE.B.6",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Expressing Geometric Properties with Equations",
+  "domainCode": "G-GPE",
+  "cluster": "Use coordinates to prove simple geometric theorems algebraically",
+  "clusterCode": "B",
+  "skillName": "Partitioning a Line Segment",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "intro": "To partition a directed segment from $A(x_1, y_1)$ to $B(x_2, y_2)$ in the ratio $m:n$ means to find the point $P$ on the segment so that $AP:PB = m:n$. Start at $A$ and move toward $B$ by the fraction $k = \\frac{m}{m+n}$ of the way: $P = \\left(x_1 + k(x_2 - x_1),\\; y_1 + k(y_2 - y_1)\\right)$. The midpoint is just the special case $1:1$, where $k = \\frac{1}{2}$. Direction matters: always measure the deltas from the starting point toward the ending point, and keep your answers as exact fractions.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Find the midpoint $M$ of the segment from $A(2, 3)$ to $B(8, 11)$.",
+      "solution": {
+        "steps": [
+          "The midpoint is the partition point for the ratio $1:1$, so $k = \\frac{1}{2}$. Use $M = \\left(\\frac{x_1 + x_2}{2},\\; \\frac{y_1 + y_2}{2}\\right)$.",
+          "Average the $x$-coordinates: $\\frac{2 + 8}{2} = \\frac{10}{2} = 5$.",
+          "Average the $y$-coordinates: $\\frac{3 + 11}{2} = \\frac{14}{2} = 7$.",
+          "So the midpoint is $M = (5, 7)$."
+        ],
+        "answer": "$M = (5, 7)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find the point $P$ that partitions the directed segment from $A(-2, 1)$ to $B(6, 9)$ in the ratio $1:3$.",
+      "solution": {
+        "steps": [
+          "Compute the partition fraction from the ratio: $k = \\frac{m}{m+n} = \\frac{1}{1+3} = \\frac{1}{4}$.",
+          "Find the run and rise from $A$ to $B$: $\\Delta x = 6 - (-2) = 8$ and $\\Delta y = 9 - 1 = 8$.",
+          "Apply the section formula to the $x$-coordinate: $x_P = -2 + \\frac{1}{4}(8) = -2 + 2 = 0$.",
+          "Apply it to the $y$-coordinate: $y_P = 1 + \\frac{1}{4}(8) = 1 + 2 = 3$.",
+          "So $P = (0, 3)$, the point one quarter of the way from $A$ to $B$."
+        ],
+        "answer": "$P = (0, 3)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Find the point $P$ that partitions the directed segment from $A(1, 2)$ to $B(7, 5)$ in the ratio $2:3$.",
+      "solution": {
+        "steps": [
+          "The ratio $m:n = 2:3$, so $k = \\frac{m}{m+n} = \\frac{2}{2+3} = \\frac{2}{5}$.",
+          "Compute the deltas from $A$ to $B$: $\\Delta x = 7 - 1 = 6$ and $\\Delta y = 5 - 2 = 3$.",
+          "$x$-coordinate: $x_P = 1 + \\frac{2}{5}(6) = 1 + \\frac{12}{5} = \\frac{5}{5} + \\frac{12}{5} = \\frac{17}{5}$.",
+          "$y$-coordinate: $y_P = 2 + \\frac{2}{5}(3) = 2 + \\frac{6}{5} = \\frac{10}{5} + \\frac{6}{5} = \\frac{16}{5}$.",
+          "Keep the answer as exact fractions: $P = \\left(\\frac{17}{5}, \\frac{16}{5}\\right)$."
+        ],
+        "answer": "$P = \\left(\\frac{17}{5}, \\frac{16}{5}\\right)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "On the segment from $A(0, 0)$ to $B(12, 8)$, the point $P(3, 2)$ lies on $\\overline{AB}$. Find the ratio $AP:PB$.",
+      "solution": {
+        "steps": [
+          "If $P = A + k(B - A)$, then $k$ is the fraction of the way from $A$ to $B$. Solve for $k$ using one coordinate.",
+          "Using the $x$-coordinate: $3 = 0 + k(12 - 0) = 12k$, so $k = \\frac{3}{12} = \\frac{1}{4}$.",
+          "Check with the $y$-coordinate: $2 = 0 + k(8 - 0) = 8k$ gives $k = \\frac{2}{8} = \\frac{1}{4}$, which agrees.",
+          "Since $k = \\frac{m}{m+n} = \\frac{1}{4}$, the point is $\\frac{1}{4}$ of the way along, so $AP$ is $1$ part and $PB$ is the remaining $3$ parts.",
+          "Therefore $AP:PB = 1:3$."
+        ],
+        "answer": "$AP:PB = 1:3$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "The point $P(4, 1)$ partitions the directed segment from $A(-2, -5)$ to $B$ in the ratio $3:1$. Find the coordinates of $B$.",
+      "solution": {
+        "steps": [
+          "The ratio $3:1$ gives $k = \\frac{3}{3+1} = \\frac{3}{4}$. The section formula says $P = \\left(x_1 + k(x_2 - x_1),\\; y_1 + k(y_2 - y_1)\\right)$, where $B = (x_2, y_2)$ is unknown.",
+          "Set up the $x$-equation: $4 = -2 + \\frac{3}{4}(x_2 - (-2)) = -2 + \\frac{3}{4}(x_2 + 2)$.",
+          "Solve: $6 = \\frac{3}{4}(x_2 + 2)$, so $x_2 + 2 = 6 \\cdot \\frac{4}{3} = 8$, giving $x_2 = 6$.",
+          "Set up the $y$-equation: $1 = -5 + \\frac{3}{4}(y_2 - (-5)) = -5 + \\frac{3}{4}(y_2 + 5)$.",
+          "Solve: $6 = \\frac{3}{4}(y_2 + 5)$, so $y_2 + 5 = 8$, giving $y_2 = 3$.",
+          "Therefore $B = (6, 3)$."
+        ],
+        "answer": "$B = (6, 3)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Find the midpoint $M$ of the segment from $A(-4, 6)$ to $B(10, -2)$.",
+      "hint": "The midpoint uses $k = \\frac{1}{2}$: average the $x$-coordinates and average the $y$-coordinates.",
+      "solution": {
+        "steps": [
+          "Average the $x$-coordinates: $\\frac{-4 + 10}{2} = \\frac{6}{2} = 3$.",
+          "Average the $y$-coordinates: $\\frac{6 + (-2)}{2} = \\frac{4}{2} = 2$.",
+          "So the midpoint is $M = (3, 2)$."
+        ],
+        "answer": "$M = (3, 2)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Find the point $P$ that partitions the directed segment from $A(1, 4)$ to $B(13, 10)$ in the ratio $1:2$.",
+      "hint": "First find $k = \\frac{m}{m+n} = \\frac{1}{1+2}$, then use $P = \\left(x_1 + k\\,\\Delta x,\\; y_1 + k\\,\\Delta y\\right)$.",
+      "solution": {
+        "steps": [
+          "The partition fraction is $k = \\frac{1}{1+2} = \\frac{1}{3}$.",
+          "Deltas from $A$ to $B$: $\\Delta x = 13 - 1 = 12$ and $\\Delta y = 10 - 4 = 6$.",
+          "$x$-coordinate: $x_P = 1 + \\frac{1}{3}(12) = 1 + 4 = 5$.",
+          "$y$-coordinate: $y_P = 4 + \\frac{1}{3}(6) = 4 + 2 = 6$.",
+          "So $P = (5, 6)$."
+        ],
+        "answer": "$P = (5, 6)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Find the point $P$ that partitions the directed segment from $A(-3, 2)$ to $B(5, -4)$ in the ratio $3:5$.",
+      "hint": "Use $k = \\frac{3}{3+5}$ and watch the signs when computing $\\Delta x$ and $\\Delta y$. Leave the answer as exact fractions.",
+      "solution": {
+        "steps": [
+          "The partition fraction is $k = \\frac{3}{3+5} = \\frac{3}{8}$.",
+          "Deltas from $A$ to $B$: $\\Delta x = 5 - (-3) = 8$ and $\\Delta y = -4 - 2 = -6$.",
+          "$x$-coordinate: $x_P = -3 + \\frac{3}{8}(8) = -3 + 3 = 0$.",
+          "$y$-coordinate: $y_P = 2 + \\frac{3}{8}(-6) = 2 - \\frac{18}{8} = 2 - \\frac{9}{4} = \\frac{8}{4} - \\frac{9}{4} = -\\frac{1}{4}$.",
+          "So $P = \\left(0, -\\frac{1}{4}\\right)$."
+        ],
+        "answer": "$P = \\left(0, -\\frac{1}{4}\\right)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Point $P$ partitions the directed segment from $B(9, 7)$ to $A(1, 3)$ in the ratio $1:3$. Find the coordinates of $P$.",
+      "hint": "Read the direction carefully: the segment starts at $B$ and goes toward $A$, so $B$ is the starting point $(x_1, y_1)$ and $A$ is the ending point.",
+      "solution": {
+        "steps": [
+          "The directed segment starts at $B(9, 7)$ and ends at $A(1, 3)$, so use $B$ as $(x_1, y_1)$ and $A$ as $(x_2, y_2)$.",
+          "The partition fraction is $k = \\frac{1}{1+3} = \\frac{1}{4}$.",
+          "Deltas from $B$ to $A$: $\\Delta x = 1 - 9 = -8$ and $\\Delta y = 3 - 7 = -4$.",
+          "$x$-coordinate: $x_P = 9 + \\frac{1}{4}(-8) = 9 - 2 = 7$.",
+          "$y$-coordinate: $y_P = 7 + \\frac{1}{4}(-4) = 7 - 1 = 6$.",
+          "So $P = (7, 6)$."
+        ],
+        "answer": "$P = (7, 6)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "The point $P(0, 5)$ partitions the directed segment from $A$ to $B(6, 1)$ in the ratio $2:1$. Find the coordinates of $A$.",
+      "hint": "With $k = \\frac{2}{3}$, write $P = \\left(x_1 + k(x_2 - x_1),\\; y_1 + k(y_2 - y_1)\\right)$ where $A = (x_1, y_1)$ is unknown, and solve each equation.",
+      "solution": {
+        "steps": [
+          "The ratio $2:1$ gives $k = \\frac{2}{2+1} = \\frac{2}{3}$. Here $B = (6, 1)$ is the ending point and $A = (x_1, y_1)$ is unknown.",
+          "Set up the $x$-equation: $0 = x_1 + \\frac{2}{3}(6 - x_1)$.",
+          "Expand: $0 = x_1 + 4 - \\frac{2}{3}x_1 = \\frac{1}{3}x_1 + 4$, so $\\frac{1}{3}x_1 = -4$ and $x_1 = -12$.",
+          "Set up the $y$-equation: $5 = y_1 + \\frac{2}{3}(1 - y_1) = \\frac{1}{3}y_1 + \\frac{2}{3}$.",
+          "Solve: $5 - \\frac{2}{3} = \\frac{1}{3}y_1$, so $\\frac{13}{3} = \\frac{1}{3}y_1$ and $y_1 = 13$.",
+          "Therefore $A = (-12, 13)$."
+        ],
+        "answer": "$A = (-12, 13)$"
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "generatedAt": "2026-06-24T21:01:54.123Z"
+}

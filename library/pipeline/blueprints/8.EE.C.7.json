@@ -1,0 +1,123 @@
+{
+  "standard": "8.EE.C.7",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Expressions and Equations",
+  "domainCode": "EE",
+  "cluster": "Analyze and solve linear equations and pairs of simultaneous linear equations",
+  "clusterCode": "C",
+  "skillName": "Solving Linear Equations",
+
+  "description": "Students solve linear equations in one variable. They use the distributive property, combine like terms, and apply inverse operations to isolate the variable. They handle equations with variables on both sides, and they recognize when an equation has one solution, infinitely many solutions (an identity such as $2x+3=2x+3$), or no solution (a contradiction such as $x+1=x+2$).",
+
+  "subSkills": [
+    "Solve one- and two-step linear equations such as $3x+5=20$",
+    "Apply the distributive property to clear parentheses, e.g. $4(x-2)=12$",
+    "Combine like terms on one or both sides before solving",
+    "Solve equations with the variable on both sides, e.g. $5x-3=2x+9$",
+    "Solve equations involving fractional or decimal coefficients, e.g. $\\frac{1}{2}x+\\frac{3}{4}=\\frac{5}{4}$",
+    "Determine the number of solutions: one solution, infinitely many solutions (identity), or no solution (contradiction)",
+    "Justify each step using properties of equality and check the solution by substitution"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Two-step equation",
+      "example": "Solve $3x+5=20$. Answer: $x=5$."
+    },
+    {
+      "name": "Distributive property",
+      "example": "Solve $4(x-2)=12$. Answer: $x=5$."
+    },
+    {
+      "name": "Combine like terms then solve",
+      "example": "Solve $2x+3x-4=11$. Answer: $x=3$."
+    },
+    {
+      "name": "Variable on both sides",
+      "example": "Solve $5x-3=2x+9$. Answer: $x=4$."
+    },
+    {
+      "name": "Fractional or decimal coefficients",
+      "example": "Solve $\\frac{2}{3}x-1=\\frac{1}{3}x+2$. Answer: $x=9$."
+    },
+    {
+      "name": "Number of solutions (identity vs. contradiction)",
+      "example": "Solve $3(x+2)=3x+6$. The equation is an identity, so there are infinitely many solutions. Solve $2x+5=2x-1$. The equation is a contradiction, so there is no solution."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "One- and two-step equations with integer coefficients and the variable on only one side. The variable isolates in at most two inverse operations with no expanding or collecting needed.",
+      "constraints": [
+        "Variable appears on one side only",
+        "Integer coefficients and constants with absolute value $\\le 20$",
+        "At most two steps to isolate (one add/subtract, one multiply/divide)",
+        "Solution is an integer, e.g. $2x-7=9$ giving $x=8$"
+      ]
+    },
+    "Medium": {
+      "description": "Requires distributing or combining like terms, or moving a variable term across the equals sign. Three to four steps. Solutions may be fractions but remain exact.",
+      "constraints": [
+        "Distributive property required, e.g. $3(2x-1)=15$, or like terms on one side",
+        "Variable may appear on both sides, e.g. $7x+2=4x+17$",
+        "Coefficients are integers; solution may be a fraction such as $x=\\frac{5}{2}$",
+        "Three to four operations to reach the solution"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step equations that combine distribution on both sides, fractional or decimal coefficients, and variables on both sides; or equations whose solution type (one, none, or infinitely many) must be determined and justified.",
+      "constraints": [
+        "Distribution on both sides and collecting like terms, e.g. $2(3x-4)=4(x+1)-6$",
+        "Fractional or decimal coefficients requiring clearing denominators, e.g. $\\frac{1}{2}(x-3)=\\frac{1}{3}(x+2)$",
+        "May yield an identity (infinitely many solutions) or a contradiction (no solution) that the student must name and explain",
+        "Five or more steps, exact fractional answers expected (no rounding)"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student distributes to only the first term inside the parentheses",
+      "distractor": "For $4(x-2)=12$ writes $4x-2=12$ giving $x=\\frac{7}{2}$ instead of $4x-8=12$ giving $x=5$"
+    },
+    {
+      "misconception": "Student forgets to distribute the sign to the second term",
+      "distractor": "For $-3(x-5)$ writes $-3x-15$ instead of $-3x+15$, producing a wrong solution"
+    },
+    {
+      "misconception": "Student performs the inverse operations in the wrong order (divides before subtracting the constant)",
+      "distractor": "For $3x+5=20$ divides first to get $x+5=\\frac{20}{3}$, ending with $x=\\frac{5}{3}$ instead of $x=5$"
+    },
+    {
+      "misconception": "Student adds variable terms to constants as if they were like terms",
+      "distractor": "For $2x+3=11$ writes $5x=11$ giving $x=\\frac{11}{5}$ instead of $2x=8$ giving $x=4$"
+    },
+    {
+      "misconception": "Student moves a term across the equals sign without changing its sign",
+      "distractor": "For $5x-3=2x+9$ writes $5x-2x=9-3$ as $3x=6$ giving $x=2$, mishandling signs, instead of $3x=12$ giving $x=4$"
+    },
+    {
+      "misconception": "Student concludes 'no solution' when both sides reduce to the same expression (an identity)",
+      "distractor": "For $3(x+2)=3x+6$ reaches $6=6$ and answers 'no solution' instead of 'infinitely many solutions'"
+    },
+    {
+      "misconception": "Student concludes 'infinitely many' or picks a number when the variables cancel to a false statement (a contradiction)",
+      "distractor": "For $2x+5=2x-1$ reaches $5=-1$ and answers $x=0$ or 'infinitely many' instead of 'no solution'"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

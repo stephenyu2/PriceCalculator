@@ -1,0 +1,220 @@
+{
+  "id": "PC.EXP.A.2--worksheet",
+  "standard": "PC.EXP.A.2",
+  "clusterId": null,
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Exponential and Logarithmic Functions",
+  "domainCode": "EXP",
+  "cluster": "Properties and graphs",
+  "clusterCode": "A",
+  "skillName": "Logarithmic Functions",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Rewrite $2^5 = 32$ in logarithmic form.",
+      "answer": "$\\log_2 32 = 5$",
+      "solution": {
+        "steps": [
+          "The exponential form $b^y = x$ corresponds to the logarithmic form $y = \\log_b x$.",
+          "Here the base is $b = 2$, the exponent is $y = 5$, and the result is $x = 32$.",
+          "So $\\log_2 32 = 5$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Rewrite $\\log_3 81 = 4$ in exponential form.",
+      "answer": "$3^4 = 81$",
+      "solution": {
+        "steps": [
+          "The logarithmic form $y = \\log_b x$ corresponds to the exponential form $b^y = x$.",
+          "Here the base is $b = 3$, the logarithm value is $y = 4$, and the argument is $x = 81$.",
+          "So $3^4 = 81$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Evaluate $\\log_2 8$ without a calculator.",
+      "answer": "$3$",
+      "solution": {
+        "steps": [
+          "Ask: to what power must $2$ be raised to give $8$?",
+          "Since $2^3 = 8$, the exponent is $3$.",
+          "So $\\log_2 8 = 3$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Evaluate $\\log_{10} 1000$ without a calculator.",
+      "answer": "$3$",
+      "solution": {
+        "steps": [
+          "Ask: to what power must $10$ be raised to give $1000$?",
+          "Since $10^3 = 1000$, the exponent is $3$.",
+          "So $\\log_{10} 1000 = 3$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "State the domain and the vertical asymptote of $y = \\log_2(x - 3)$.",
+      "answer": "Domain: $x > 3$; vertical asymptote: $x = 3$",
+      "solution": {
+        "steps": [
+          "The argument of a logarithm must be positive: $x - 3 > 0$.",
+          "Solve: $x > 3$, so the domain is $x > 3$.",
+          "The vertical asymptote occurs where the argument equals $0$: $x - 3 = 0$, giving $x = 3$.",
+          "Domain: $x > 3$; vertical asymptote: $x = 3$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Evaluate $\\log_5 \\frac{1}{25}$ without a calculator.",
+      "answer": "$-2$",
+      "solution": {
+        "steps": [
+          "Write the argument as a power of the base: $\\frac{1}{25} = \\frac{1}{5^2} = 5^{-2}$.",
+          "Then $\\log_5 \\frac{1}{25} = \\log_5 (5^{-2})$.",
+          "Using $\\log_b(b^k) = k$, this equals $-2$.",
+          "So $\\log_5 \\frac{1}{25} = -2$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Evaluate $\\log_8 2$ without a calculator.",
+      "answer": "$\\frac{1}{3}$",
+      "solution": {
+        "steps": [
+          "Write $2$ as a power of the base $8$: since $8 = 2^3$, we have $2 = 8^{1/3}$.",
+          "Then $\\log_8 2 = \\log_8 (8^{1/3})$.",
+          "Using $\\log_b(b^k) = k$, this equals $\\frac{1}{3}$.",
+          "So $\\log_8 2 = \\frac{1}{3}$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Simplify $5^{\\log_5 12}$ and $\\log_3(3^7)$ using the inverse-function relationship.",
+      "answer": "$5^{\\log_5 12} = 12$ and $\\log_3(3^7) = 7$",
+      "solution": {
+        "steps": [
+          "The functions $b^x$ and $\\log_b x$ are inverses, so $b^{\\log_b x} = x$ and $\\log_b(b^x) = x$.",
+          "For $5^{\\log_5 12}$, apply $b^{\\log_b x} = x$ with $b = 5$, $x = 12$: the result is $12$.",
+          "For $\\log_3(3^7)$, apply $\\log_b(b^x) = x$ with $b = 3$, $x = 7$: the result is $7$.",
+          "So $5^{\\log_5 12} = 12$ and $\\log_3(3^7) = 7$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Express $\\log_7 20$ using natural logarithms with the change-of-base formula, then approximate to three decimal places.",
+      "answer": "$\\frac{\\ln 20}{\\ln 7} \\approx 1.540$",
+      "solution": {
+        "steps": [
+          "The change-of-base formula is $\\log_b x = \\frac{\\ln x}{\\ln b}$.",
+          "With $b = 7$ and $x = 20$: $\\log_7 20 = \\frac{\\ln 20}{\\ln 7}$.",
+          "Approximate: $\\ln 20 \\approx 2.9957$ and $\\ln 7 \\approx 1.9459$.",
+          "Divide: $\\frac{2.9957}{1.9459} \\approx 1.540$.",
+          "So $\\log_7 20 = \\frac{\\ln 20}{\\ln 7} \\approx 1.540$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "State the domain, range, and vertical asymptote of $y = \\log_2(x + 1) + 4$.",
+      "answer": "Domain: $x > -1$; range: all real numbers; vertical asymptote: $x = -1$",
+      "solution": {
+        "steps": [
+          "The argument must be positive: $x + 1 > 0$, so $x > -1$. The domain is $x > -1$.",
+          "The vertical asymptote occurs where the argument is $0$: $x + 1 = 0$, so $x = -1$.",
+          "A vertical shift of $+4$ moves the graph up but does NOT move a vertical asymptote, so the asymptote stays at $x = -1$.",
+          "The range of any logarithmic function is all real numbers; the vertical shift does not change this.",
+          "Domain: $x > -1$; range: all real numbers; vertical asymptote: $x = -1$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Describe each transformation of $y = -2\\log_2(x + 1) + 4$ from the parent function $y = \\log_2 x$, and state the domain, range, and vertical asymptote.",
+      "answer": "Reflect across the $x$-axis, vertical stretch by factor $2$, shift left $1$, shift up $4$; domain: $x > -1$; range: all real numbers; vertical asymptote: $x = -1$",
+      "solution": {
+        "steps": [
+          "Compare $y = -2\\log_2(x + 1) + 4$ to the parent $y = \\log_2 x$, matching the form $y = a\\log_b(x - h) + k$.",
+          "Here $a = -2$, $h = -1$, $k = 4$. The negative sign in $a = -2$ reflects the graph across the $x$-axis.",
+          "The factor $|a| = 2$ gives a vertical stretch by factor $2$.",
+          "$x - h = x + 1$ means $h = -1$, a shift left $1$; $k = 4$ is a shift up $4$.",
+          "The argument must be positive: $x + 1 > 0$, so the domain is $x > -1$ and the vertical asymptote is $x = -1$.",
+          "The range of a logarithmic function is all real numbers.",
+          "Transformations: reflect across the $x$-axis, vertical stretch by $2$, shift left $1$, shift up $4$; domain $x > -1$; range all reals; asymptote $x = -1$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A logarithmic graph has vertical asymptote $x = 2$ and passes through the points $(3, 0)$ and $(5, 1)$. Write an equation of the form $y = \\log_b(x - h)$.",
+      "answer": "$y = \\log_3(x - 2)$",
+      "solution": {
+        "steps": [
+          "The vertical asymptote $x = 2$ means the argument is $x - h$ with $h = 2$, so $y = \\log_b(x - 2)$.",
+          "Check the point $(3, 0)$: $\\log_b(3 - 2) = \\log_b 1 = 0$ for any base, which is consistent.",
+          "Use the point $(5, 1)$: $\\log_b(5 - 2) = \\log_b 3 = 1$, which means $b^1 = 3$, so $b = 3$.",
+          "Therefore $y = \\log_3(x - 2)$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Solve for $x$: $\\log_x 81 = 4$.",
+      "answer": "$x = 3$",
+      "solution": {
+        "steps": [
+          "Convert to exponential form using $\\log_b a = c \\Leftrightarrow b^c = a$.",
+          "Here $\\log_x 81 = 4$ becomes $x^4 = 81$.",
+          "Solve: $x = 81^{1/4}$. Since $81 = 3^4$, we get $x = 3$.",
+          "A logarithm base must be positive and not equal to $1$, so the negative fourth root is rejected.",
+          "Therefore $x = 3$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Evaluate the composite expression $\\log_2\\big(\\log_3 81\\big)$ exactly.",
+      "answer": "$2$",
+      "solution": {
+        "steps": [
+          "Work from the inside out. First evaluate the inner logarithm: $\\log_3 81$.",
+          "Since $81 = 3^4$, we have $\\log_3 81 = 4$.",
+          "Substitute into the outer logarithm: $\\log_2(4)$.",
+          "Since $4 = 2^2$, we have $\\log_2 4 = 2$.",
+          "So $\\log_2\\big(\\log_3 81\\big) = 2$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A graph of $y = a\\log_2(x - h) + k$ has vertical asymptote $x = 1$, passes through $(2, 5)$, and passes through $(5, 1)$. Determine $a$, $h$, and $k$, and write the equation.",
+      "answer": "$a = -2$, $h = 1$, $k = 5$; equation $y = -2\\log_2(x - 1) + 5$",
+      "solution": {
+        "steps": [
+          "The vertical asymptote $x = 1$ gives the argument $x - h$ with $h = 1$, so $y = a\\log_2(x - 1) + k$.",
+          "Use $(2, 5)$: $a\\log_2(2 - 1) + k = a\\log_2 1 + k = a(0) + k = k$. Setting this equal to $5$ gives $k = 5$.",
+          "Use $(5, 1)$: $a\\log_2(5 - 1) + 5 = a\\log_2 4 + 5 = a(2) + 5$. Set equal to $1$: $2a + 5 = 1$.",
+          "Solve: $2a = -4$, so $a = -2$.",
+          "Therefore $a = -2$, $h = 1$, $k = 5$, and the equation is $y = -2\\log_2(x - 1) + 5$."
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T21:27:56.866Z",
+  "generatedAt": "2026-06-24T21:27:56.866Z"
+}

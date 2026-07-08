@@ -1,0 +1,175 @@
+{
+  "id": "A1.A-SSE.A.2--lesson",
+  "standard": "A1.A-SSE.A.2",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Seeing Structure in Expressions",
+  "domainCode": "A-SSE",
+  "cluster": "Interpret the structure of expressions",
+  "clusterCode": "A",
+  "skillName": "Rewriting Expressions by Structure",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "Rewriting an expression starts with reading its structure. Before you reach for a procedure, ask what the pieces look like: Is there a common factor in every term? Do you see two perfect squares separated by a minus sign (a difference of squares $a^2-b^2=(a-b)(a+b)$)? Does a trinomial match a perfect square $a^2\\pm 2ab+b^2=(a\\pm b)^2$, or factor as $(x+p)(x+q)$? Sometimes a whole chunk like $x^2$ or $(x+1)$ behaves as a single quantity, letting you spot a familiar pattern in disguise. The goal is to choose the rewrite that reveals what you need, such as a common factor, the zeros, or the sign of the expression.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Rewrite $12x^4-8x^2$ by factoring out the greatest common factor.",
+      "solution": {
+        "steps": [
+          "Find the GCF of the coefficients $12$ and $8$: the largest number dividing both is $4$.",
+          "Find the GCF of the variable parts $x^4$ and $x^2$: take the smallest power, $x^2$.",
+          "So the full GCF is $4x^2$. Divide each term by it: $\\frac{12x^4}{4x^2}=3x^2$ and $\\frac{8x^2}{4x^2}=2$.",
+          "Write the expression as the GCF times what remains: $12x^4-8x^2=4x^2(3x^2-2)$.",
+          "Check by distributing: $4x^2\\cdot 3x^2=12x^4$ and $4x^2\\cdot 2=8x^2$, which matches the original."
+        ],
+        "answer": "$4x^2(3x^2-2)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Use structure to rewrite $9x^2-25$ as a product of two binomials.",
+      "solution": {
+        "steps": [
+          "Look at the structure: two terms separated by a minus sign. Check whether each term is a perfect square.",
+          "$9x^2=(3x)^2$ and $25=(5)^2$, so this is a difference of squares $a^2-b^2$ with $a=3x$ and $b=5$.",
+          "Apply the pattern $a^2-b^2=(a-b)(a+b)$: substitute $a=3x$ and $b=5$.",
+          "This gives $(3x-5)(3x+5)$.",
+          "Check by multiplying: $(3x-5)(3x+5)=9x^2+15x-15x-25=9x^2-25$, matching the original."
+        ],
+        "answer": "$(3x-5)(3x+5)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Rewrite $x^2+7x+12$ as a product of two binomials.",
+      "solution": {
+        "steps": [
+          "The leading coefficient is $1$, so look for two numbers $p$ and $q$ with $p+q=7$ (the middle coefficient) and $pq=12$ (the constant).",
+          "List factor pairs of $12$: $1$ and $12$, $2$ and $6$, $3$ and $4$.",
+          "Check the sums: $1+12=13$, $2+6=8$, $3+4=7$. The pair $3$ and $4$ works because it matches BOTH the product $12$ and the sum $7$.",
+          "Write the factors: $x^2+7x+12=(x+3)(x+4)$.",
+          "Check by expanding: $(x+3)(x+4)=x^2+4x+3x+12=x^2+7x+12$, matching the original."
+        ],
+        "answer": "$(x+3)(x+4)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Rewrite the perfect-square trinomial $x^2+10x+25$ as a squared binomial.",
+      "solution": {
+        "steps": [
+          "Test whether the first and last terms are perfect squares: $x^2=(x)^2$ and $25=(5)^2$.",
+          "For a perfect-square trinomial $a^2+2ab+b^2=(a+b)^2$, the middle term must equal $2ab$. Here $a=x$ and $b=5$, so $2ab=2\\cdot x\\cdot 5=10x$.",
+          "The middle term of the expression is exactly $10x$, so the perfect-square pattern fits.",
+          "Write it as a squared binomial: $x^2+10x+25=(x+5)^2$.",
+          "Check by expanding: $(x+5)^2=x^2+10x+25$, matching the original."
+        ],
+        "answer": "$(x+5)^2$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Rewrite $x^4-16$ completely as a product, using structure in stages.",
+      "solution": {
+        "steps": [
+          "Read the structure: $x^4=(x^2)^2$ and $16=(4)^2$, so this is a difference of squares with $a=x^2$ and $b=4$.",
+          "Apply $a^2-b^2=(a-b)(a+b)$: $x^4-16=(x^2-4)(x^2+4)$.",
+          "Do not stop yet. Examine each factor: $x^2-4$ is itself a difference of squares since $x^2=(x)^2$ and $4=(2)^2$.",
+          "Factor that piece: $x^2-4=(x-2)(x+2)$. The factor $x^2+4$ is a sum of squares, which is prime over the real numbers, so it cannot be factored further.",
+          "Combine the stages: $x^4-16=(x-2)(x+2)(x^2+4)$.",
+          "Check the leading and constant terms: $(x)(x)(x^2)=x^4$ and $(-2)(2)(4)=-16$, consistent with the original."
+        ],
+        "answer": "$(x-2)(x+2)(x^2+4)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Rewrite $5x^2+15x$ by factoring out the greatest common factor.",
+      "hint": "Find the largest number that divides both coefficients and the smallest power of $x$ in both terms.",
+      "solution": {
+        "steps": [
+          "The GCF of $5$ and $15$ is $5$, and both terms contain at least one $x$, so the variable GCF is $x$. The full GCF is $5x$.",
+          "Divide each term: $\\frac{5x^2}{5x}=x$ and $\\frac{15x}{5x}=3$.",
+          "Write the result: $5x^2+15x=5x(x+3)$.",
+          "Check: $5x\\cdot x=5x^2$ and $5x\\cdot 3=15x$, matching the original."
+        ],
+        "answer": "$5x(x+3)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Use structure to rewrite $x^2-49$ as a product of two binomials.",
+      "hint": "Two terms with a minus sign and both perfect squares signals a difference of squares. Do not write it as $(x-7)^2$.",
+      "solution": {
+        "steps": [
+          "Recognize $x^2=(x)^2$ and $49=(7)^2$, so this is a difference of squares with $a=x$ and $b=7$.",
+          "Apply $a^2-b^2=(a-b)(a+b)$: $x^2-49=(x-7)(x+7)$.",
+          "Check by expanding: $(x-7)(x+7)=x^2+7x-7x-49=x^2-49$, matching the original."
+        ],
+        "answer": "$(x-7)(x+7)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Rewrite $x^2-7x+12$ as a product of two binomials. Watch the signs.",
+      "hint": "You need $p+q=-7$ and $pq=12$. Since $c>0$ and $b<0$, both numbers must be negative.",
+      "solution": {
+        "steps": [
+          "Look for $p$ and $q$ with $p+q=-7$ and $pq=12$. Because the product is positive and the sum is negative, both numbers are negative.",
+          "Test the negative factor pairs of $12$: $-3$ and $-4$ give $(-3)(-4)=12$ and $-3+(-4)=-7$. This pair works.",
+          "Write the factors: $x^2-7x+12=(x-3)(x-4)$.",
+          "Check by expanding: $(x-3)(x-4)=x^2-4x-3x+12=x^2-7x+12$, matching the original."
+        ],
+        "answer": "$(x-3)(x-4)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Rewrite $2x^2+7x+3$ as a product of two binomials using the AC method.",
+      "hint": "Multiply $a\\cdot c=2\\cdot 3=6$ and find two numbers that multiply to $6$ and add to $7$. Then factor by grouping.",
+      "solution": {
+        "steps": [
+          "Here $a=2$, $b=7$, $c=3$. Compute $ac=2\\cdot 3=6$ and find two numbers with product $6$ and sum $7$: those are $1$ and $6$.",
+          "Split the middle term using $1$ and $6$: $2x^2+7x+3=2x^2+x+6x+3$.",
+          "Group in pairs and factor each: $(2x^2+x)+(6x+3)=x(2x+1)+3(2x+1)$.",
+          "Both groups share the factor $(2x+1)$, so factor it out: $(2x+1)(x+3)$.",
+          "Check by expanding: $(2x+1)(x+3)=2x^2+6x+x+3=2x^2+7x+3$, matching the original."
+        ],
+        "answer": "$(2x+1)(x+3)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Rewrite $(x+1)^2-9$ as a product of two binomials by treating $x+1$ as a single chunk.",
+      "hint": "Let $u=x+1$. Then the expression is $u^2-9$, a difference of squares. Factor, then substitute $x+1$ back in and simplify.",
+      "solution": {
+        "steps": [
+          "Let $u=x+1$ so the expression becomes $u^2-9$.",
+          "Recognize $u^2-9$ as a difference of squares with $a=u$ and $b=3$: $u^2-9=(u-3)(u+3)$.",
+          "Substitute $u=x+1$ back in: $((x+1)-3)((x+1)+3)$.",
+          "Simplify each factor: $(x+1)-3=x-2$ and $(x+1)+3=x+4$.",
+          "So $(x+1)^2-9=(x-2)(x+4)$.",
+          "Check by expanding: $(x-2)(x+4)=x^2+2x-8$, and $(x+1)^2-9=x^2+2x+1-9=x^2+2x-8$, which match."
+        ],
+        "answer": "$(x-2)(x+4)$"
+      }
+    }
+  ]
+}

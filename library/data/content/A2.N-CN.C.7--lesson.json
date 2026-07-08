@@ -1,0 +1,181 @@
+{
+  "id": "A2.N-CN.C.7--lesson",
+  "standard": "A2.N-CN.C.7",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Number and Quantity — The Complex Number System",
+  "domainCode": "N-CN",
+  "cluster": "Use complex numbers in polynomial identities and equations",
+  "clusterCode": "C",
+  "skillName": "Complex Solutions of Quadratics",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "A quadratic $ax^2+bx+c=0$ with real coefficients has no real solutions exactly when its discriminant $b^2-4ac$ is negative. Such an equation still has two solutions, but they are non-real complex numbers that come as a conjugate pair $p\\pm qi$. The key tool is $\\sqrt{-1}=i$, so $\\sqrt{-k}=i\\sqrt{k}$ for $k>0$. In this lesson you will classify roots from the discriminant, solve pure quadratics like $x^2+k=0$, run the quadratic formula and completing the square through a negative discriminant, simplify the resulting radicals, and write every answer in standard form $a+bi$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Solve $x^2+49=0$, writing the solutions in the form $a+bi$.",
+      "solution": {
+        "steps": [
+          "Isolate the squared term: $x^2=-49$.",
+          "Take the square root of both sides, keeping both signs: $x=\\pm\\sqrt{-49}$.",
+          "Use $\\sqrt{-49}=\\sqrt{49}\\cdot\\sqrt{-1}=7i$.",
+          "So $x=\\pm 7i$, i.e. $x=7i$ or $x=-7i$.",
+          "In standard form these are $0+7i$ and $0-7i$, a conjugate pair with real part $0$."
+        ],
+        "answer": "$x=7i$ or $x=-7i$ (that is, $x=\\pm 7i$)"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Without solving, use the discriminant to classify the nature of the roots of $2x^2-3x+5=0$.",
+      "solution": {
+        "steps": [
+          "Identify the coefficients: $a=2$, $b=-3$, $c=5$.",
+          "Compute the discriminant $b^2-4ac=(-3)^2-4(2)(5)=9-40=-31$.",
+          "The discriminant is $-31<0$.",
+          "A negative discriminant means the equation has no real roots; instead it has two non-real complex-conjugate roots.",
+          "Note that $-31<0$ does not mean 'no solutions': it means the two solutions are complex."
+        ],
+        "answer": "Two complex-conjugate (non-real) solutions, since $b^2-4ac=-31<0$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Solve $x^2-4x+13=0$ using the quadratic formula and write the solutions in standard form $a+bi$.",
+      "solution": {
+        "steps": [
+          "Identify $a=1$, $b=-4$, $c=13$.",
+          "Quadratic formula: $x=\\dfrac{-b\\pm\\sqrt{b^2-4ac}}{2a}=\\dfrac{4\\pm\\sqrt{(-4)^2-4(1)(13)}}{2}$.",
+          "Compute the discriminant: $(-4)^2-4(1)(13)=16-52=-36$.",
+          "Simplify the radical: $\\sqrt{-36}=6i$, so $x=\\dfrac{4\\pm 6i}{2}$.",
+          "Divide BOTH terms of the numerator by $2$: $x=\\dfrac{4}{2}\\pm\\dfrac{6i}{2}=2\\pm 3i$.",
+          "The solutions are the conjugate pair $2+3i$ and $2-3i$."
+        ],
+        "answer": "$x=2+3i$ or $x=2-3i$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Solve $x^2-2x+4=0$ with the quadratic formula, simplifying the radical fully and writing each solution in standard form.",
+      "solution": {
+        "steps": [
+          "Identify $a=1$, $b=-2$, $c=4$.",
+          "Apply the formula: $x=\\dfrac{2\\pm\\sqrt{(-2)^2-4(1)(4)}}{2}=\\dfrac{2\\pm\\sqrt{4-16}}{2}$.",
+          "The discriminant is $4-16=-12$, so $x=\\dfrac{2\\pm\\sqrt{-12}}{2}$.",
+          "Rewrite the negative radical and reduce: $\\sqrt{-12}=i\\sqrt{12}=i\\sqrt{4\\cdot 3}=2i\\sqrt{3}$.",
+          "Substitute: $x=\\dfrac{2\\pm 2i\\sqrt{3}}{2}$.",
+          "Divide both numerator terms by $2$: $x=1\\pm i\\sqrt{3}$.",
+          "The solutions are $1+i\\sqrt{3}$ and $1-i\\sqrt{3}$."
+        ],
+        "answer": "$x=1+i\\sqrt{3}$ or $x=1-i\\sqrt{3}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Solve $x^2+6x+34=0$ by completing the square, and verify that one of your answers satisfies the equation using $i^2=-1$.",
+      "solution": {
+        "steps": [
+          "Move the constant to the right: $x^2+6x=-34$.",
+          "Take half of the linear coefficient $6$, which is $3$, and square it: $3^2=9$. Add $9$ to both sides: $x^2+6x+9=-34+9$.",
+          "The left side is a perfect square: $(x+3)^2=-25$.",
+          "Take the square root of both sides: $x+3=\\pm\\sqrt{-25}=\\pm 5i$.",
+          "Solve for $x$: $x=-3\\pm 5i$, giving $-3+5i$ and $-3-5i$.",
+          "Verify $x=-3+5i$: first $(-3+5i)^2=9-30i+25i^2=9-30i-25=-16-30i$ (using $i^2=-1$).",
+          "Then $x^2+6x+34=(-16-30i)+6(-3+5i)+34=(-16-30i)+(-18+30i)+34$.",
+          "Combine real parts: $-16-18+34=0$; combine imaginary parts: $-30i+30i=0$. The total is $0$, so $-3+5i$ checks."
+        ],
+        "answer": "$x=-3+5i$ or $x=-3-5i$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Solve $x^2+36=0$, writing the solutions in the form $a+bi$.",
+      "hint": "Isolate $x^2$, then use $\\sqrt{-36}=\\sqrt{36}\\cdot i$. Do not drop the $i$.",
+      "solution": {
+        "steps": [
+          "Isolate the squared term: $x^2=-36$.",
+          "Take the square root of both sides: $x=\\pm\\sqrt{-36}$.",
+          "Simplify: $\\sqrt{-36}=6i$.",
+          "So $x=\\pm 6i$, i.e. $x=6i$ or $x=-6i$."
+        ],
+        "answer": "$x=6i$ or $x=-6i$ (that is, $x=\\pm 6i$)"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Solve $3x^2+48=0$, writing the solutions in the form $a+bi$.",
+      "hint": "First divide the whole equation by $3$ so the leading coefficient is $1$, then isolate $x^2$.",
+      "solution": {
+        "steps": [
+          "Divide every term by $3$: $x^2+16=0$.",
+          "Isolate the squared term: $x^2=-16$.",
+          "Take the square root: $x=\\pm\\sqrt{-16}=\\pm 4i$.",
+          "So $x=4i$ or $x=-4i$."
+        ],
+        "answer": "$x=4i$ or $x=-4i$ (that is, $x=\\pm 4i$)"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Solve $x^2-6x+25=0$ using the quadratic formula and write the solutions in standard form $a+bi$.",
+      "hint": "With $a=1$, $b=-6$, $c=25$, the discriminant is negative. Remember to divide BOTH numerator terms by $2a$.",
+      "solution": {
+        "steps": [
+          "Identify $a=1$, $b=-6$, $c=25$.",
+          "Apply the formula: $x=\\dfrac{6\\pm\\sqrt{(-6)^2-4(1)(25)}}{2}=\\dfrac{6\\pm\\sqrt{36-100}}{2}$.",
+          "The discriminant is $36-100=-64$, so $\\sqrt{-64}=8i$.",
+          "Then $x=\\dfrac{6\\pm 8i}{2}$.",
+          "Divide both numerator terms by $2$: $x=3\\pm 4i$."
+        ],
+        "answer": "$x=3+4i$ or $x=3-4i$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Solve $2x^2-2x+1=0$ using the quadratic formula. Write each solution in standard form $a+bi$ with fractional parts.",
+      "hint": "Here $a=2$, so the denominator is $2a=4$. The discriminant is negative; simplify $\\dfrac{2\\pm 2i}{4}$ by reducing.",
+      "solution": {
+        "steps": [
+          "Identify $a=2$, $b=-2$, $c=1$.",
+          "Apply the formula: $x=\\dfrac{2\\pm\\sqrt{(-2)^2-4(2)(1)}}{2(2)}=\\dfrac{2\\pm\\sqrt{4-8}}{4}$.",
+          "The discriminant is $4-8=-4$, so $\\sqrt{-4}=2i$.",
+          "Then $x=\\dfrac{2\\pm 2i}{4}$.",
+          "Divide both numerator terms by $4$ and reduce: $x=\\dfrac{2}{4}\\pm\\dfrac{2}{4}i=\\dfrac{1}{2}\\pm\\dfrac{1}{2}i$."
+        ],
+        "answer": "$x=\\dfrac{1}{2}+\\dfrac{1}{2}i$ or $x=\\dfrac{1}{2}-\\dfrac{1}{2}i$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Find a quadratic equation with real coefficients, written as $x^2+bx+c=0$, that has $3-2i$ as one of its roots.",
+      "hint": "Real-coefficient quadratics have complex roots in conjugate pairs, so $3+2i$ is also a root. Use sum and product of roots: $x^2-(\\text{sum})x+(\\text{product})=0$.",
+      "solution": {
+        "steps": [
+          "Because the coefficients are real, the conjugate $3+2i$ must also be a root.",
+          "Sum of the roots: $(3-2i)+(3+2i)=6$.",
+          "Product of the roots: $(3-2i)(3+2i)=3^2-(2i)^2=9-4i^2=9-4(-1)=9+4=13$.",
+          "A quadratic with these roots is $x^2-(\\text{sum})x+(\\text{product})=0$, i.e. $x^2-6x+13=0$.",
+          "Check the discriminant: $(-6)^2-4(1)(13)=36-52=-16<0$, consistent with complex-conjugate roots."
+        ],
+        "answer": "$x^2-6x+13=0$"
+      }
+    }
+  ]
+}

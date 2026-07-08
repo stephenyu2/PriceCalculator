@@ -1,0 +1,127 @@
+{
+  "standard": "GEO.G-CO.A.3",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Experiment with transformations in the plane",
+  "clusterCode": "A",
+  "skillName": "Symmetries of Polygons",
+
+  "description": "Given a rectangle, parallelogram, trapezoid, or regular polygon, students describe all the rotations and reflections that carry the figure onto itself. They identify lines of reflective symmetry, the center and angles of rotational symmetry, and count the total number of symmetries (the order of the symmetry group), connecting each symmetry to the geometric structure of the figure.",
+
+  "subSkills": [
+    "Identify all lines of reflective symmetry of a polygon and describe each (vertical, horizontal, diagonal, through a vertex, or through a midpoint of a side)",
+    "Determine the center of rotation and list every angle of rotation (other than full turns) that maps a figure onto itself",
+    "Compute the order of rotational symmetry of a regular $n$-gon and the smallest positive angle of rotation $\\frac{360^\\circ}{n}$",
+    "Count the total number of symmetries of a figure (reflections plus rotations, including the identity) and recognize regular $n$-gons have $2n$ symmetries",
+    "Distinguish figures with only reflective, only rotational, both, or no nontrivial symmetry (e.g., a non-special parallelogram has $180^\\circ$ rotational symmetry but no line of symmetry)",
+    "Use coordinates to verify that a stated reflection or rotation maps each vertex of the figure to a vertex of the same figure"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Count lines of symmetry of a regular polygon",
+      "example": "How many lines of reflective symmetry does a regular hexagon have? Answer: $6$ (three through opposite vertices, three through opposite side midpoints)."
+    },
+    {
+      "name": "List rotation angles that carry a figure onto itself",
+      "example": "List all angles of rotation between $0^\\circ$ and $360^\\circ$ that carry a regular pentagon onto itself. Answer: $72^\\circ, 144^\\circ, 216^\\circ, 288^\\circ$."
+    },
+    {
+      "name": "Symmetries of a special quadrilateral",
+      "example": "Describe all rotations and reflections that carry a rectangle (not a square) onto itself. Answer: rotations of $180^\\circ$ about the center, plus reflections across the horizontal and vertical lines through the center; $4$ symmetries total including the identity."
+    },
+    {
+      "name": "Rotational-only figure",
+      "example": "A parallelogram that is not a rectangle or rhombus has which symmetries? Answer: only the $180^\\circ$ rotation about its center; it has no lines of reflective symmetry."
+    },
+    {
+      "name": "Order of the symmetry group",
+      "example": "What is the total number of symmetries (reflections and rotations, including the identity) of a regular octagon? Answer: $16$, since a regular $n$-gon has $2n$ symmetries with $n=8$."
+    },
+    {
+      "name": "Coordinate verification of a symmetry",
+      "example": "A rectangle has vertices $(-3,-1),(3,-1),(3,1),(-3,1)$. Show that reflection across the $y$-axis carries it onto itself. Answer: reflection $(x,y)\\to(-x,y)$ sends $(-3,-1)\\to(3,-1)$, etc., so each vertex maps to a vertex of the rectangle."
+    },
+    {
+      "name": "Compare symmetries of two figures",
+      "example": "Which has more lines of symmetry, a square or a regular pentagon? Answer: a square has $4$ and a regular pentagon has $5$, so the regular pentagon has more."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-property recall on a familiar named figure. Student counts lines of symmetry or gives the smallest rotation angle of a square, equilateral triangle, or rectangle, where the answer follows directly from a known fact.",
+      "constraints": [
+        "Figure is a square, equilateral triangle, rectangle, or regular polygon with $n\\le 6$",
+        "Asks for one quantity: number of lines of symmetry, smallest rotation angle $\\frac{360^\\circ}{n}$, or order of rotational symmetry",
+        "No coordinates required; figure named or shown",
+        "Answer is a single number or single angle"
+      ]
+    },
+    "Medium": {
+      "description": "Student must enumerate a full set of symmetries or distinguish reflective from rotational symmetry, including figures where the two differ. Requires combining the $\\frac{360^\\circ}{n}$ rotation rule with the $2n$ total-symmetry count, or describing where lines of symmetry lie.",
+      "constraints": [
+        "List ALL rotation angles, or ALL lines of symmetry, or total symmetry count for a regular $n$-gon with $n$ up to $12$",
+        "Includes parallelogram / non-special trapezoid cases where rotational and reflective symmetry diverge",
+        "May require classifying a figure by its symmetry type",
+        "Distinguishing through-vertex vs through-side-midpoint reflection lines"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning: coordinate verification of a symmetry vertex-by-vertex, deriving a polygon's identity from its symmetry data, or composing/comparing symmetries and reasoning about the symmetry group structure.",
+      "constraints": [
+        "Requires coordinate computation: apply $(x,y)\\to(-x,y)$, $(x,y)\\to(y,x)$, or a rotation and check every vertex maps to a vertex",
+        "Or: given a symmetry description (e.g. exactly $5$ lines of symmetry and order-$5$ rotation), identify the figure",
+        "Or: compose two reflections to obtain a rotation, or compare symmetry groups of two figures",
+        "Two or more linked sub-questions or a justification step"
+      ]
+    },
+    "tierSplit": "This standard uses a single ramped worksheet. If split, tier1 covers Easy-to-Medium (named figures, counting lines and rotation angles, the $\\frac{360^\\circ}{n}$ and $2n$ rules, special-quadrilateral symmetry) and tier2 covers Medium-to-Hard (coordinate verification, identifying figures from symmetry data, composing and comparing symmetries). No item overlap between tiers."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student counts the diagonals of a figure as lines of symmetry, even when the diagonals are not symmetry lines",
+      "distractor": "Claims a (non-square) rectangle has $4$ lines of symmetry by counting both diagonals, instead of the correct $2$"
+    },
+    {
+      "misconception": "Student gives a regular $n$-gon $n$ total symmetries instead of $2n$, forgetting that reflections and rotations both count",
+      "distractor": "Says a regular hexagon has $6$ symmetries total instead of $12$"
+    },
+    {
+      "misconception": "Student confuses line (reflective) symmetry with rotational symmetry and reports a non-special parallelogram as having lines of symmetry",
+      "distractor": "Claims a parallelogram (not a rectangle/rhombus) has $2$ lines of symmetry, instead of $0$ lines and only $180^\\circ$ rotational symmetry"
+    },
+    {
+      "misconception": "Student uses $\\frac{180^\\circ}{n}$ or $\\frac{360^\\circ}{n-1}$ for the smallest rotation angle instead of $\\frac{360^\\circ}{n}$",
+      "distractor": "Gives the smallest rotation of a regular pentagon as $\\frac{180^\\circ}{5}=36^\\circ$ or $\\frac{360^\\circ}{4}=90^\\circ$ instead of $72^\\circ$"
+    },
+    {
+      "misconception": "Student includes $0^\\circ$ or $360^\\circ$ as a distinct nontrivial rotation, or omits the identity when total symmetries are requested, miscounting by one",
+      "distractor": "Lists $0^\\circ, 72^\\circ, 144^\\circ, 216^\\circ, 288^\\circ$ as five distinct rotations of a regular pentagon, double-counting the identity / full turn"
+    },
+    {
+      "misconception": "Student assumes every quadrilateral with equal-looking sides has all the symmetries of a square, ignoring the specific figure given",
+      "distractor": "Assigns a generic isosceles trapezoid $4$ lines of symmetry instead of its single vertical line of symmetry"
+    },
+    {
+      "misconception": "Under a reflection or rotation in coordinates, student applies the wrong rule and concludes a vertex maps outside the figure (or vice versa)",
+      "distractor": "Applies $(x,y)\\to(-x,-y)$ when asked to reflect across the $y$-axis, sending $(-3,-1)\\to(3,1)$ instead of $(3,-1)$ and wrongly rejecting the symmetry"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

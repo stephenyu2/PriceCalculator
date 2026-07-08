@@ -1,0 +1,125 @@
+{
+  "standard": "A1.S-ID.C.9",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Interpret linear models",
+  "clusterCode": "C",
+  "skillName": "Correlation vs. Causation",
+
+  "description": "Students distinguish correlation from causation. Given a scatterplot, a correlation coefficient $r$, or a described association between two variables, they decide whether the data supports a claim that one variable causes a change in the other. They explain why a strong correlation alone does not establish causation, identify plausible confounding (lurking) variables, recognize reverse causation and coincidence, and state that only a well-designed randomized controlled experiment can justify a causal conclusion. They also interpret the sign and approximate strength of $r$ where $-1 \\le r \\le 1$ as it relates to association, not cause.",
+
+  "subSkills": [
+    "Read the direction and strength of an association from a scatterplot or a correlation coefficient $r$ (with $-1 \\le r \\le 1$)",
+    "State that correlation measures association, not cause, and explain why",
+    "Identify a plausible confounding (lurking) variable that could produce an observed correlation",
+    "Recognize reverse causation (the effect could run the other way)",
+    "Recognize coincidental correlation (no real mechanism linking the variables)",
+    "Distinguish an observational study from a randomized controlled experiment and explain why only the latter can establish causation",
+    "Evaluate and critique a causal claim made from correlational data"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Correlation does not imply causation (identify the flaw)",
+      "example": "A study finds that towns with more firefighters tend to have more fire damage, with $r = 0.86$. A reporter concludes that firefighters cause fire damage. Identify the lurking variable and explain why the causal claim is unjustified. (Answer: fire size is the confounder; larger fires draw more firefighters and cause more damage.)"
+    },
+    {
+      "name": "Name the confounding (lurking) variable",
+      "example": "Ice cream sales and drowning deaths are positively correlated. Name a lurking variable that explains both. (Answer: hot weather / summer temperature increases both ice cream sales and swimming.)"
+    },
+    {
+      "name": "Reverse causation",
+      "example": "Researchers note a negative correlation between hours of exercise per week and resting heart rate. A claim states that a low heart rate causes people to exercise more. Explain why the direction of causation could plausibly be reversed. (Answer: exercising more lowers resting heart rate, so the causal arrow likely runs the other way.)"
+    },
+    {
+      "name": "Coincidence vs. real association",
+      "example": "Over ten years, the number of films a particular actor appears in is correlated with national cheese consumption at $r = 0.94$. Decide whether this supports a causal link and justify. (Answer: coincidental; no plausible mechanism, so high $r$ does not imply cause.)"
+    },
+    {
+      "name": "Observational study vs. randomized experiment",
+      "example": "Two designs are described for testing whether a tutoring program raises test scores: (a) compare students who chose to enroll with those who did not, or (b) randomly assign students to tutoring or no tutoring. Which design can support a causal conclusion and why? (Answer: (b); random assignment balances confounders so a difference can be attributed to the program.)"
+    },
+    {
+      "name": "Interpret $r$ as association, not cause",
+      "example": "A scatterplot of study time vs. exam score has $r = 0.78$. State what $r$ tells you and what it does not. (Answer: a fairly strong positive linear association; it does not prove that studying more causes higher scores, since other factors may be involved.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "One-step recognition. Student reads the sign/strength of an association or applies the single rule 'correlation is not causation' to a clear, familiar context. Only one cause-vs-association judgment is required and the lurking variable (if any) is obvious.",
+      "constraints": [
+        "Familiar everyday context (ice cream, weather, exercise, sleep)",
+        "Either interpret the sign of $r$ OR judge a single causal claim true/false, not both",
+        "Any lurking variable is obvious and commonly known",
+        "No comparison of study designs required"
+      ]
+    },
+    "Medium": {
+      "description": "Student must name the specific type of flaw (confounding, reverse causation, or coincidence) and justify it, OR identify a plausible lurking variable that is not obvious. May combine reading $r$ with judging a causal claim.",
+      "constraints": [
+        "Student must classify WHY the causal claim fails (lurking variable / reverse causation / coincidence), not just say it fails",
+        "Lurking variable requires some reasoning to surface",
+        "May ask student to interpret the strength of $r$ and the causal status together",
+        "Context may be less familiar (economics, health, demographics)"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step evaluation. Student compares an observational study to a randomized controlled experiment, designs or critiques a study that could establish causation, or analyzes a scenario with more than one competing explanation and must rank or rule them out with justification.",
+      "constraints": [
+        "Requires distinguishing observational data from a randomized controlled experiment",
+        "Student must explain HOW random assignment removes confounding, or propose such a design",
+        "Scenario admits multiple competing explanations that must be weighed",
+        "Answer is a written justification, not a single word"
+      ]
+    },
+    "tierSplit": "This standard is conceptual and answerable in a single ramped worksheet, so the default single sheet is used (15 items, Easy early to Hard late). If split: tier1 (Easy to Medium) covers reading $r$, the basic 'correlation is not causation' rule, and naming an obvious lurking variable; tier2 (Medium to Hard) covers classifying the flaw type, reverse causation, coincidence, and observational-vs-randomized-experiment reasoning. No item overlap."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Believes a strong correlation proves causation",
+      "distractor": "Reasons that because $r$ is close to $1$ (e.g. $r = 0.9$), one variable must be causing the other, so the causal claim is justified."
+    },
+    {
+      "misconception": "Thinks a small or zero correlation means the variables cannot be causally related at all",
+      "distractor": "Reasons that since $r \\approx 0$, there is definitely no relationship of any kind, ignoring nonlinear association or causation masked by other factors."
+    },
+    {
+      "misconception": "Confuses the sign of $r$ with the presence/absence of causation",
+      "distractor": "Reasons that a negative $r$ means there is no causation while a positive $r$ means there is, treating the sign as a cause indicator rather than a direction-of-association indicator."
+    },
+    {
+      "misconception": "Fails to consider a confounding (lurking) variable",
+      "distractor": "Accepts that the two correlated variables directly cause each other and overlooks a third variable that drives both."
+    },
+    {
+      "misconception": "Assumes causation runs in only one direction without checking reverse causation",
+      "distractor": "Concludes A causes B from the correlation, never considering that B could just as plausibly cause A."
+    },
+    {
+      "misconception": "Treats an observational study as if it could establish causation",
+      "distractor": "Claims that comparing self-selected groups (e.g. people who chose to enroll vs. those who did not) proves the treatment caused the difference, ignoring that confounders were not controlled by random assignment."
+    },
+    {
+      "misconception": "Dismisses every correlation as 'just coincidence'",
+      "distractor": "Reasons that since correlation never implies causation, the association must be meaningless coincidence, even when a plausible mechanism or a controlled experiment exists."
+    }
+  ],
+
+  "_comment_itemCounts": "Conceptual reasoning standard. Quiz items are multiple choice with one defensible best answer; distractors embody the misconceptions above. Single ramped worksheet (no tier split).",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

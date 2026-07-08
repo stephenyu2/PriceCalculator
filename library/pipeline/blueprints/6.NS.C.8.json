@@ -1,0 +1,127 @@
+{
+  "standard": "6.NS.C.8",
+  "grade": "6",
+  "subject": "math",
+  "domain": "The Number System",
+  "domainCode": "NS",
+  "cluster": "Apply and extend previous understandings of numbers to the system of rational numbers",
+  "clusterCode": "C",
+  "skillName": "Graphing in All Four Quadrants",
+
+  "description": "Students plot and name ordered pairs $(x, y)$ in all four quadrants of the coordinate plane, including points with negative and rational coordinates. They use coordinates to identify a point's quadrant or axis, recognize how signs flip a point's location under reflection across an axis, and find the distance between two points that lie on the same vertical line (same first coordinate) or the same horizontal line (same second coordinate) by computing the absolute value of the difference of the coordinates that change. They apply this to real-world contexts such as maps, grids, and ordered-pair data.",
+
+  "subSkills": [
+    "Plot an ordered pair $(x, y)$ in the correct quadrant given signed and rational coordinates",
+    "Name the ordered pair of a plotted point, reading the $x$-coordinate (horizontal) before the $y$-coordinate (vertical)",
+    "Identify the quadrant (I, II, III, IV) or axis of a point from the signs of its coordinates",
+    "Relate two points whose coordinates differ only in sign to reflection across the $x$-axis, $y$-axis, or both",
+    "Find the distance between two points with the same first coordinate using $|y_2 - y_1|$ (a vertical segment)",
+    "Find the distance between two points with the same second coordinate using $|x_2 - x_1|$ (a horizontal segment)",
+    "Solve real-world and mathematical problems on a coordinate grid, including perimeter of axis-aligned figures"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Plot a signed ordered pair",
+      "example": "Plot the point $(-4, 3)$ on the coordinate plane and state which quadrant it lies in. Answer: Quadrant II."
+    },
+    {
+      "name": "Name a plotted point",
+      "example": "A point is located $5$ units left of the origin and $2$ units down. Write its ordered pair. Answer: $(-5, -2)$."
+    },
+    {
+      "name": "Identify quadrant or axis from signs",
+      "example": "In which quadrant is the point $(7, -1)$? Answer: Quadrant IV."
+    },
+    {
+      "name": "Reflection across an axis",
+      "example": "The point $(-6, 2)$ is reflected across the $x$-axis. What are the coordinates of its image? Answer: $(-6, -2)$."
+    },
+    {
+      "name": "Vertical distance (same first coordinate)",
+      "example": "Find the distance between $(3, -2)$ and $(3, 5)$. Since the $x$-coordinates match, distance $= |5 - (-2)| = 7$ units."
+    },
+    {
+      "name": "Horizontal distance (same second coordinate)",
+      "example": "Find the distance between $(-4, 1)$ and $(6, 1)$. Since the $y$-coordinates match, distance $= |6 - (-4)| = 10$ units."
+    },
+    {
+      "name": "Real-world grid problem",
+      "example": "On a city map, the library is at $(-3, 4)$ and the school is at $(-3, -2)$, where each unit is $1$ block. How many blocks apart are they (straight line)? Answer: $|4 - (-2)| = 6$ blocks."
+    },
+    {
+      "name": "Perimeter of an axis-aligned rectangle",
+      "example": "A rectangle has vertices $(-2, 3)$, $(4, 3)$, $(4, -1)$, and $(-2, -1)$. Find its perimeter. Width $= |4 - (-2)| = 6$, height $= |3 - (-1)| = 4$, perimeter $= 2(6) + 2(4) = 20$ units."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Plot or name a single point, or identify its quadrant, using integer coordinates. Distance items use one zero coordinate or points sharing an axis where the difference is between two values of the same sign (e.g. both positive), so the subtraction does not cross zero.",
+      "constraints": [
+        "Integer coordinates only, magnitudes $\\le 6$",
+        "Plot/name/quadrant tasks, or a single straightforward reflection across one axis",
+        "Distance is between coordinates of the same sign or involving $0$, so $|y_2 - y_1|$ needs no negative subtraction (e.g. $|5 - 2|$)"
+      ]
+    },
+    "Medium": {
+      "description": "Distance between two points where one coordinate is negative and one positive, so the student must subtract across zero and the absolute value of a difference of opposite-sign numbers matters (e.g. $|4 - (-2)|$). Reflections across both axes, or naming a point requiring careful sign reading. May involve a one-step real-world context.",
+      "constraints": [
+        "Integer coordinates, magnitudes $\\le 10$",
+        "Vertical or horizontal distance where the changing coordinate spans both signs, requiring $|a - (-b)| = a + b$",
+        "Reflection across both axes (sign of both coordinates flips), or a single-step grid/map context"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems: perimeter of an axis-aligned rectangle from four vertices, comparing two distances, finding a missing coordinate so a given distance is achieved, or rational (fraction/decimal) coordinates. Real-world context that requires extracting the points before computing.",
+      "constraints": [
+        "May use rational coordinates (e.g. $(-2, 1.5)$ or $(\\tfrac{1}{2}, -3)$)",
+        "Two or more distance computations combined (perimeter, total path length, or comparison)",
+        "Solve for an unknown coordinate given a target distance, e.g. find $y$ so the distance from $(3, -2)$ to $(3, y)$ is $7$",
+        "Multi-sentence real-world setup requiring the student to assign coordinates"
+      ]
+    },
+    "tierSplit": "This standard is built as a single ramped worksheet of 15 items (Easy early, Hard late). If split, tier1 (Easy to Medium) covers plotting, naming, quadrant identification, reflections, and same-sign or cross-zero distances; tier2 (Medium to Hard) covers cross-zero distances, perimeter/multi-distance problems, missing-coordinate problems, and rational-coordinate contexts."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student reverses the coordinates, plotting or reading $(y, x)$ instead of $(x, y)$",
+      "distractor": "For a point $4$ left and $3$ up, gives $(3, -4)$ instead of $(-4, 3)$"
+    },
+    {
+      "misconception": "Student subtracts coordinates without absolute value and reports a negative distance",
+      "distractor": "For $(3, -2)$ and $(3, 5)$, computes $-2 - 5 = -7$ and answers $-7$ instead of $7$"
+    },
+    {
+      "misconception": "Student treats subtraction across zero as a simple difference of magnitudes, dropping a sign",
+      "distractor": "For $(-4, 1)$ and $(6, 1)$, computes $|6 - 4| = 2$ instead of $|6 - (-4)| = 10$"
+    },
+    {
+      "misconception": "Student tries to use the (unneeded) coordinates that are the same, or adds the two whole points",
+      "distractor": "For $(3, -2)$ and $(3, 5)$, adds everything to get $3 + 3 - 2 + 5 = 9$ instead of $7$"
+    },
+    {
+      "misconception": "Student misidentifies the quadrant by ignoring a negative sign",
+      "distractor": "Calls $(-7, -1)$ Quadrant I instead of Quadrant III, treating all points as positive"
+    },
+    {
+      "misconception": "Student reflects across the wrong axis, flipping the wrong coordinate's sign",
+      "distractor": "Reflecting $(-6, 2)$ across the $x$-axis, flips $x$ to get $(6, 2)$ instead of flipping $y$ to get $(-6, -2)$"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet (Easy->Hard across 15 items). tier1/tier2 supplied for schema completeness but this standard ships as one worksheet.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

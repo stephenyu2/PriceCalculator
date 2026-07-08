@@ -1,0 +1,146 @@
+{
+  "id": "7.G.A.2--quiz",
+  "standard": "7.G.A.2",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Draw, construct, and describe geometrical figures and describe the relationships between them",
+  "clusterCode": "A",
+  "skillName": "Drawing Geometric Shapes with Given Conditions",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "Eight multiple-choice questions on drawing and classifying triangles from given conditions: the triangle inequality, the $180^\\circ$ angle sum, and the congruence criteria (SSS, SAS, ASA, AAS) versus the AAA and ambiguous SSA cases.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Can a triangle be drawn with side lengths $4\\text{ cm}$, $5\\text{ cm}$, and $11\\text{ cm}$?\nA) Yes, because all three lengths are positive.\nB) No, because $4 + 5 = 9 < 11$.\nC) Yes, because $5 + 11 > 4$.\nD) No, because the sides are all different lengths.",
+      "answer": "B) No, because $4 + 5 = 9 < 11$.",
+      "solution": {
+        "steps": [
+          "Apply the triangle inequality: the sum of the two shorter sides must be greater than the longest side.",
+          "The two shorter sides are $4$ and $5$, and the longest side is $11$. Check $4 + 5 = 9$.",
+          "Since $9 < 11$, the two shorter sides cannot reach across the longest side, so no triangle exists. Answer B is correct.",
+          "A is wrong: positive lengths alone do not guarantee a triangle. C is wrong: it tests the longest side plus a short side ($5 + 11 > 4$) instead of the two shortest sides. D is wrong: triangles can have three different side lengths (scalene)."
+        ],
+        "answer": "B) No, because $4 + 5 = 9 < 11$."
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Can a triangle have interior angles measuring $40^\\circ$, $60^\\circ$, and $90^\\circ$?\nA) No, because the angles sum to $190^\\circ$, not $180^\\circ$.\nB) Yes, because the angles are all different.\nC) Yes, because the angles could sum to $360^\\circ$ overall.\nD) No, because a triangle cannot contain a $90^\\circ$ angle.",
+      "answer": "A) No, because the angles sum to $190^\\circ$, not $180^\\circ$.",
+      "solution": {
+        "steps": [
+          "The three interior angles of any triangle must sum to exactly $180^\\circ$.",
+          "Add the given angles: $40 + 60 + 90 = 190$.",
+          "Since $190^\\circ \\ne 180^\\circ$, no triangle has these angles. Answer A is correct.",
+          "B is wrong: distinct angles do not guarantee a valid sum. C is wrong: $360^\\circ$ is the angle sum of a quadrilateral, not a triangle. D is wrong: a right triangle has a $90^\\circ$ angle, so that is allowed."
+        ],
+        "answer": "A) No, because the angles sum to $190^\\circ$, not $180^\\circ$."
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Which set of three side lengths CAN form a triangle?\nA) $3\\text{ cm}$, $4\\text{ cm}$, $7\\text{ cm}$\nB) $2\\text{ cm}$, $2\\text{ cm}$, $9\\text{ cm}$\nC) $6\\text{ cm}$, $8\\text{ cm}$, $10\\text{ cm}$\nD) $1\\text{ cm}$, $5\\text{ cm}$, $9\\text{ cm}$",
+      "answer": "C) $6\\text{ cm}$, $8\\text{ cm}$, $10\\text{ cm}$",
+      "solution": {
+        "steps": [
+          "A triangle is possible only when the two shorter sides sum to MORE than the longest side.",
+          "For C: $6 + 8 = 14 > 10$, so a triangle can be formed. Answer C is correct.",
+          "A is wrong: $3 + 4 = 7$, which equals the longest side, so it collapses into a straight segment (degenerate, no triangle).",
+          "B is wrong: $2 + 2 = 4 < 9$. D is wrong: $1 + 5 = 6 < 9$. Both fail the triangle inequality."
+        ],
+        "answer": "C) $6\\text{ cm}$, $8\\text{ cm}$, $10\\text{ cm}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "A triangle is described by two sides of $6\\text{ cm}$ and $8\\text{ cm}$ with an included angle of $40^\\circ$ between them. How many triangles satisfy these conditions, and which criterion applies?\nA) More than one triangle; AAA\nB) Exactly one triangle; SAS\nC) No triangle; the sides are too short\nD) Exactly one triangle; SSS",
+      "answer": "B) Exactly one triangle; SAS",
+      "solution": {
+        "steps": [
+          "Two sides and the angle BETWEEN them are given. This is the Side-Angle-Side (SAS) configuration.",
+          "SAS fixes the two sides and the angle between them, so the third side and the figure are completely determined: exactly one triangle (up to congruence). Answer B is correct.",
+          "A is wrong: AAA needs three angles and gives infinitely many similar triangles, not this case. C is wrong: SAS always produces a valid triangle. D is wrong: SSS requires all three side lengths, but here an angle is given instead of the third side."
+        ],
+        "answer": "B) Exactly one triangle; SAS"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Conditions: a triangle has interior angles of $50^\\circ$, $60^\\circ$, and $70^\\circ$, with no side length given. How many triangles meet these conditions?\nA) Exactly one triangle, because the angles are fixed.\nB) No triangle, because the angles do not sum to $180^\\circ$.\nC) More than one triangle (infinitely many similar triangles of different sizes).\nD) Exactly one triangle, by the SSS criterion.",
+      "answer": "C) More than one triangle (infinitely many similar triangles of different sizes).",
+      "solution": {
+        "steps": [
+          "First check feasibility: $50 + 60 + 70 = 180^\\circ$, so the angles are valid for a triangle.",
+          "Only the three angles are given (the AAA case). Angles fix the shape but not the size.",
+          "With no side length to set the scale, you can draw infinitely many similar triangles of different sizes, so more than one triangle exists. Answer C is correct.",
+          "A is wrong: angles alone do not fix size. B is wrong: the angles do sum to $180^\\circ$. D is wrong: SSS requires three sides, none are given here."
+        ],
+        "answer": "C) More than one triangle (infinitely many similar triangles of different sizes)."
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Using a ruler and protractor, you draw a $7\\text{ cm}$ base, then a $45^\\circ$ angle at one end of the base and a $60^\\circ$ angle at the other end, extending the two rays until they meet. How many triangles result, and which criterion applies?\nA) Exactly one triangle; ASA\nB) More than one triangle; AAA\nC) No triangle; the angles are too small\nD) Two triangles; the ambiguous SSA case",
+      "answer": "A) Exactly one triangle; ASA",
+      "solution": {
+        "steps": [
+          "A side (the $7\\text{ cm}$ base) is given with the two angles at its endpoints. This is Angle-Side-Angle (ASA).",
+          "The two rays from the ends of the fixed base meet at exactly one point, so exactly one triangle is determined. Answer A is correct.",
+          "B is wrong: a side length is fixed, so this is ASA, not AAA, and the triangle is unique. C is wrong: $45 + 60 = 105^\\circ < 180^\\circ$, leaving a valid third angle of $75^\\circ$. D is wrong: SSA needs two sides and a non-included angle, but here only one side is given."
+        ],
+        "answer": "A) Exactly one triangle; ASA"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Two sides of a triangle measure $5\\text{ cm}$ and $9\\text{ cm}$. What is the range of possible lengths $c$ for the third side?\nA) $5 < c < 9$\nB) $4 < c < 14$\nC) $c > 14$\nD) $0 < c < 14$",
+      "answer": "B) $4 < c < 14$",
+      "solution": {
+        "steps": [
+          "The third side $c$ must satisfy the triangle inequality with both given sides: $|a - b| < c < a + b$.",
+          "Compute the bounds with $a = 5$ and $b = 9$: $|5 - 9| = 4$ and $5 + 9 = 14$.",
+          "So the third side must satisfy $4 < c < 14$. Answer B is correct.",
+          "A is wrong: it just lists the two given sides as bounds. C is wrong: $c$ must be less than $14$, not greater. D is wrong: it omits the lower bound, allowing values like $c = 3$ for which $3 + 5 = 8 < 9$ fails."
+        ],
+        "answer": "B) $4 < c < 14$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A triangle has one angle of $35^\\circ$ and another angle of $85^\\circ$, plus a side of $10\\text{ cm}$ included between those two angles. How many triangles satisfy these conditions, and what is the third angle?\nA) More than one triangle; third angle $60^\\circ$\nB) No triangle; the angles exceed $180^\\circ$\nC) Exactly one triangle; third angle $60^\\circ$\nD) Two triangles (ambiguous SSA); third angle $60^\\circ$",
+      "answer": "C) Exactly one triangle; third angle $60^\\circ$",
+      "solution": {
+        "steps": [
+          "Find the third angle using the angle sum: $180 - 35 - 85 = 60^\\circ$.",
+          "The given side lies between the two known angles, so this is the Angle-Side-Angle (ASA) configuration.",
+          "ASA determines a unique triangle, so exactly one triangle exists with a third angle of $60^\\circ$. Answer C is correct.",
+          "A is wrong: a fixed included side makes the triangle unique (this is not AAA). B is wrong: $35 + 85 = 120^\\circ < 180^\\circ$, so the angles are valid. D is wrong: SSA needs two sides and a non-included angle, but here only one side is given, so there is no ambiguity."
+        ],
+        "answer": "C) Exactly one triangle; third angle $60^\\circ$"
+      }
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "id": "GEO.G-SRT.B--cluster-test",
+  "standard": null,
+  "clusterId": "GEO.G-SRT.B",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Similarity, Right Triangles, and Trigonometry",
+  "domainCode": "G-SRT",
+  "cluster": "Prove theorems involving similarity",
+  "clusterCode": "B",
+  "skillName": "Prove theorems involving similarity",
+  "materialType": "cluster-test",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:16:48.217Z",
+  "intro": "End-of-cluster mastery check for Prove theorems involving similarity. Items 1 to 6 cover Triangle Similarity Theorems (GEO.G-SRT.B.4): the Triangle Proportionality Theorem, its converse, and the right-triangle geometric mean relationships. Items 7 to 12 cover Congruence and Similarity Problem Solving (GEO.G-SRT.B.5): congruence and similarity criteria, proportions from corresponding sides, scale factor, and CPCTC.",
+  "items": [
+    {
+      "standard": "GEO.G-SRT.B.4",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "In $\\triangle ABC$, point $D$ lies on $\\overline{AB}$ and point $E$ lies on $\\overline{AC}$ with $\\overline{DE} \\parallel \\overline{BC}$. If $AD = 6$, $DB = 4$, and $AE = 9$, find $EC$.\nA) $EC = 6$\nB) $EC = \\frac{2}{3}$\nC) $EC = \\frac{27}{2}$\nD) $EC = 13$",
+      "answer": "A) $EC = 6$",
+      "solution": {
+        "steps": [
+          "By the Triangle Proportionality Theorem, a line parallel to one side divides the other two sides proportionally: $\\frac{AD}{DB} = \\frac{AE}{EC}$.",
+          "Substitute the known lengths: $\\frac{6}{4} = \\frac{9}{EC}$.",
+          "Cross multiply: $6 \\cdot EC = 4 \\cdot 9 = 36$, so $EC = 6$.",
+          "B comes from inverting the right ratio to $\\frac{AD}{DB} = \\frac{EC}{AE}$. C comes from pairing the whole side with a part. D comes from adding $AD + DB + EC$ instead of using the proportion."
+        ],
+        "answer": "A) $EC = 6$"
+      }
+    },
+    {
+      "standard": "GEO.G-SRT.B.4",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "In right $\\triangle ABC$ the right angle is at $C$, and the altitude $\\overline{CD}$ meets the hypotenuse $\\overline{AB}$ at $D$. If $AD = 4$ and $DB = 9$, find the altitude $CD$.\nA) $CD = 13$\nB) $CD = 6$\nC) $CD = \\frac{9}{4}$\nD) $CD = \\sqrt{13}$",
+      "answer": "B) $CD = 6$",
+      "solution": {
+        "steps": [
+          "The altitude to the hypotenuse is the geometric mean of the two segments it creates: $CD = \\sqrt{AD \\cdot DB}$.",
+          "Substitute: $CD = \\sqrt{4 \\cdot 9} = \\sqrt{36} = 6$.",
+          "A comes from adding the segments ($4 + 9$) instead of taking the geometric mean. C comes from dividing the segments. D comes from taking the square root of the sum $\\sqrt{4+9}$."
+        ],
+        "answer": "B) $CD = 6$"
+      }
+    },
+    {
+      "standard": "GEO.G-SRT.B.4",
+      "id": 3,
+      "difficulty": "Medium",
+      "prompt": "In $\\triangle PQR$, $S$ lies on $\\overline{PQ}$ and $T$ lies on $\\overline{PR}$ with $PS = 8$, $SQ = 12$, $PT = 10$, and $TR = 15$. Is $\\overline{ST} \\parallel \\overline{QR}$?\nA) Yes, because $\\frac{8}{12} = \\frac{10}{15}$\nB) No, because $\\frac{8}{12} \\ne \\frac{10}{15}$\nC) Yes, because $8 + 12 = 10 + 15$\nD) Cannot be determined from the given information",
+      "answer": "A) Yes, because $\\frac{8}{12} = \\frac{10}{15}$",
+      "solution": {
+        "steps": [
+          "By the converse of the Triangle Proportionality Theorem, $\\overline{ST} \\parallel \\overline{QR}$ exactly when $\\frac{PS}{SQ} = \\frac{PT}{TR}$.",
+          "Compute each ratio: $\\frac{8}{12} = \\frac{2}{3}$ and $\\frac{10}{15} = \\frac{2}{3}$.",
+          "The ratios are equal, so $\\overline{ST} \\parallel \\overline{QR}$.",
+          "B is wrong because the ratios are in fact equal. C uses sums rather than ratios. D is wrong because the converse gives a definite answer from these lengths."
+        ],
+        "answer": "A) Yes, because $\\frac{8}{12} = \\frac{10}{15}$"
+      }
+    },
+    {
+      "standard": "GEO.G-SRT.B.4",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "In $\\triangle ABC$, $\\overline{DE} \\parallel \\overline{BC}$ with $D$ on $\\overline{AB}$ and $E$ on $\\overline{AC}$. If $AD = x$, $DB = x + 2$, $AE = 6$, and $EC = 10$, solve for $x$.\nA) $x = 3$\nB) $x = 5$\nC) $x = \\frac{12}{4}$ rounded to $x = 4$\nD) $x = 8$",
+      "answer": "A) $x = 3$",
+      "solution": {
+        "steps": [
+          "By the Triangle Proportionality Theorem, $\\frac{AD}{DB} = \\frac{AE}{EC}$, so $\\frac{x}{x+2} = \\frac{6}{10}$.",
+          "Cross multiply: $10x = 6(x + 2) = 6x + 12$.",
+          "Subtract $6x$: $4x = 12$, so $x = 3$.",
+          "B comes from solving $10x = 6x + 30$ after mis-copying $EC$. C and D come from arithmetic slips after an incorrect cross multiplication."
+        ],
+        "answer": "A) $x = 3$"
+      }
+    },
+    {
+      "standard": "GEO.G-SRT.B.4",
+      "id": 5,
+      "difficulty": "Hard",
+      "prompt": "In right $\\triangle ABC$ the right angle is at $C$ and the altitude $\\overline{CD}$ is drawn to the hypotenuse $\\overline{AB}$. If $AD = 3$ and $DB = 12$, find the leg $AC$.\nA) $AC = 6$\nB) $AC = 3\\sqrt{5}$\nC) $AC = 9$\nD) $AC = \\sqrt{15}$",
+      "answer": "B) $AC = 3\\sqrt{5}$",
+      "solution": {
+        "steps": [
+          "A leg is the geometric mean of the whole hypotenuse and the segment of the hypotenuse adjacent to that leg: $AC = \\sqrt{AB \\cdot AD}$.",
+          "The full hypotenuse is $AB = AD + DB = 3 + 12 = 15$.",
+          "Substitute: $AC = \\sqrt{15 \\cdot 3} = \\sqrt{45} = \\sqrt{9 \\cdot 5} = 3\\sqrt{5}$.",
+          "A uses the altitude relation $\\sqrt{AD \\cdot DB} = \\sqrt{36} = 6$ instead of the leg relation. C mis-simplifies $\\sqrt{45}$ as $\\sqrt{81}$. D forgets to include the full hypotenuse, using $\\sqrt{AD \\cdot DB}$ incorrectly written as $\\sqrt{15}$."
+        ],
+        "answer": "B) $AC = 3\\sqrt{5}$"
+      }
+    },
+    {
+      "standard": "GEO.G-SRT.B.4",
+      "id": 6,
+      "difficulty": "Hard",
+      "prompt": "Right $\\triangle ABC$ has its right angle at $C$, and the altitude $\\overline{CD}$ is drawn to the hypotenuse $\\overline{AB}$, creating $\\triangle ACD \\sim \\triangle ABC$ and $\\triangle CBD \\sim \\triangle ABC$. These similar triangles give $b^2 = c \\cdot AD$ and $a^2 = c \\cdot DB$, where $a = BC$, $b = AC$, and $c = AB$. Which statement correctly completes the proof that $a^2 + b^2 = c^2$?\nA) Add the relations: $a^2 + b^2 = c(DB + AD) = c \\cdot c = c^2$\nB) Multiply the relations: $a^2 b^2 = c^2 (AD \\cdot DB)$, so $a^2 + b^2 = c^2$\nC) Since $AD = DB$, $a^2 + b^2 = 2c \\cdot AD = c^2$\nD) Subtract the relations: $a^2 - b^2 = c(DB - AD) = c^2$",
+      "answer": "A) Add the relations: $a^2 + b^2 = c(DB + AD) = c \\cdot c = c^2$",
+      "solution": {
+        "steps": [
+          "Start with the two geometric mean relations for the legs: $b^2 = c \\cdot AD$ and $a^2 = c \\cdot DB$.",
+          "Add them: $a^2 + b^2 = c \\cdot DB + c \\cdot AD = c(DB + AD)$.",
+          "Because $D$ lies on the hypotenuse, $DB + AD = AB = c$, so $a^2 + b^2 = c \\cdot c = c^2$. This is the Pythagorean Theorem.",
+          "B multiplies the relations, which does not yield a sum. C falsely assumes $AD = DB$, which is true only for an isosceles right triangle. D subtracts, which does not produce $c^2$."
+        ],
+        "answer": "A) Add the relations: $a^2 + b^2 = c(DB + AD) = c \\cdot c = c^2$"
+      }
+    },
+    {
+      "standard": "GEO.G-SRT.B.5",
+      "id": 7,
+      "difficulty": "Easy",
+      "prompt": "In $\\triangle ABC$ and $\\triangle DEF$, $AB = DE$, $\\angle A = \\angle D$, and $AC = DF$. Which criterion proves $\\triangle ABC \\cong \\triangle DEF$?\nA) $\\text{SSS}$\nB) $\\text{SAS}$\nC) $\\text{ASA}$\nD) $\\text{SSA}$",
+      "answer": "B) $\\text{SAS}$",
+      "solution": {
+        "steps": [
+          "List the given parts in order around the marked angle: side $AB$, included angle $\\angle A$, side $AC$.",
+          "Two sides and the angle between them are congruent, which is the Side-Angle-Side pattern.",
+          "Therefore $\\triangle ABC \\cong \\triangle DEF$ by $\\text{SAS}$.",
+          "A requires three pairs of sides, but only two sides are given. C requires two angles and the included side, but only one angle is given. D ($\\text{SSA}$) is not a valid congruence criterion."
+        ],
+        "answer": "B) $\\text{SAS}$"
+      }
+    },
+    {
+      "standard": "GEO.G-SRT.B.5",
+      "id": 8,
+      "difficulty": "Easy",
+      "prompt": "$\\triangle ABC \\sim \\triangle DEF$ with $AB = 6$, $DE = 9$, and $BC = 8$. Find $EF$.\nA) $EF = 12$\nB) $EF = \\frac{16}{3}$\nC) $EF = 8$\nD) $EF = 11$",
+      "answer": "A) $EF = 12$",
+      "solution": {
+        "steps": [
+          "Corresponding sides of similar triangles are proportional: $\\frac{AB}{DE} = \\frac{BC}{EF}$.",
+          "Substitute: $\\frac{6}{9} = \\frac{8}{EF}$.",
+          "Cross multiply: $6 \\cdot EF = 9 \\cdot 8 = 72$, so $EF = 12$.",
+          "B comes from inverting the ratio to $\\frac{9}{6} = \\frac{8}{EF}$. C wrongly assumes similar triangles have equal sides. D adds the scale difference $8 + 3$ instead of multiplying."
+        ],
+        "answer": "A) $EF = 12$"
+      }
+    },
+    {
+      "standard": "GEO.G-SRT.B.5",
+      "id": 9,
+      "difficulty": "Medium",
+      "prompt": "In $\\triangle ABC$, $D$ lies on $\\overline{AB}$ and $E$ lies on $\\overline{AC}$ with $\\overline{DE} \\parallel \\overline{BC}$. If $AD = 4$, $DB = 6$, and $AE = 5$, find $EC$.\nA) $EC = \\frac{15}{2}$\nB) $EC = \\frac{25}{2}$\nC) $EC = \\frac{10}{3}$\nD) $EC = 3$",
+      "answer": "A) $EC = \\frac{15}{2}$",
+      "solution": {
+        "steps": [
+          "By the Side-Splitter relationship, $\\frac{AD}{DB} = \\frac{AE}{EC}$.",
+          "Substitute: $\\frac{4}{6} = \\frac{5}{EC}$.",
+          "Cross multiply: $4 \\cdot EC = 6 \\cdot 5 = 30$, so $EC = \\frac{30}{4} = \\frac{15}{2}$.",
+          "B comes from the part-to-whole error $\\frac{AD}{AB} = \\frac{AE}{EC}$ using $AB = 10$. C inverts the proportion. D ignores the second side entirely."
+        ],
+        "answer": "A) $EC = \\frac{15}{2}$"
+      }
+    },
+    {
+      "standard": "GEO.G-SRT.B.5",
+      "id": 10,
+      "difficulty": "Medium",
+      "prompt": "A $6$ ft tall person casts a $4$ ft shadow at the same time a nearby flagpole casts a $26$ ft shadow. Using similar triangles, find the height of the flagpole.\nA) $h = 39$ ft\nB) $h = 28$ ft\nC) $h = \\frac{52}{3}$ ft\nD) $h = 17.3$ ft",
+      "answer": "A) $h = 39$ ft",
+      "solution": {
+        "steps": [
+          "The person and flagpole form similar triangles with the sun's rays, so height and shadow length are proportional: $\\frac{6}{4} = \\frac{h}{26}$.",
+          "Cross multiply: $4h = 6 \\cdot 26 = 156$.",
+          "Divide by $4$: $h = 39$ ft.",
+          "B comes from adding the difference $26 + 2$ rather than scaling. C inverts the ratio to $\\frac{4}{6} = \\frac{h}{26}$. D divides incorrectly and rounds a mismatched setup."
+        ],
+        "answer": "A) $h = 39$ ft"
+      }
+    },
+    {
+      "standard": "GEO.G-SRT.B.5",
+      "id": 11,
+      "difficulty": "Hard",
+      "prompt": "$\\triangle PQR \\sim \\triangle STU$ with scale factor $\\frac{PQ}{ST} = \\frac{2}{3}$. If the area of $\\triangle PQR$ is $12$ square units, find the area of $\\triangle STU$.\nA) $27$ square units\nB) $18$ square units\nC) $8$ square units\nD) $36$ square units",
+      "answer": "A) $27$ square units",
+      "solution": {
+        "steps": [
+          "The ratio of areas of similar triangles equals the square of the scale factor: $\\frac{[\\triangle PQR]}{[\\triangle STU]} = \\left(\\frac{2}{3}\\right)^2 = \\frac{4}{9}$.",
+          "So $\\frac{12}{[\\triangle STU]} = \\frac{4}{9}$, giving $4 \\cdot [\\triangle STU] = 12 \\cdot 9 = 108$.",
+          "Therefore $[\\triangle STU] = \\frac{108}{4} = 27$ square units.",
+          "B scales the area by the linear factor $\\frac{3}{2}$ instead of its square. C scales by $\\frac{2}{3}$, the wrong direction and unsquared. D squares incorrectly or doubles the linear result."
+        ],
+        "answer": "A) $27$ square units"
+      }
+    },
+    {
+      "standard": "GEO.G-SRT.B.5",
+      "id": 12,
+      "difficulty": "Hard",
+      "prompt": "Given $\\overline{AB} \\cong \\overline{CB}$ and that $\\overline{BD}$ bisects $\\angle ABC$, a student wants to prove $\\overline{AD} \\cong \\overline{CD}$. Which justification is valid?\nA) $\\triangle ABD \\cong \\triangle CBD$ by $\\text{SAS}$ ($\\overline{AB} \\cong \\overline{CB}$, $\\angle ABD \\cong \\angle CBD$, $\\overline{BD} \\cong \\overline{BD}$), then $\\overline{AD} \\cong \\overline{CD}$ by $\\text{CPCTC}$\nB) $\\overline{AD} \\cong \\overline{CD}$ by $\\text{CPCTC}$, which then proves $\\triangle ABD \\cong \\triangle CBD$\nC) $\\triangle ABD \\cong \\triangle CBD$ by $\\text{AAA}$, then $\\overline{AD} \\cong \\overline{CD}$ by $\\text{CPCTC}$\nD) $\\triangle ABD \\sim \\triangle CBD$, so $\\overline{AD} = \\overline{CD}$ because similar triangles have equal sides",
+      "answer": "A) $\\triangle ABD \\cong \\triangle CBD$ by $\\text{SAS}$ ($\\overline{AB} \\cong \\overline{CB}$, $\\angle ABD \\cong \\angle CBD$, $\\overline{BD} \\cong \\overline{BD}$), then $\\overline{AD} \\cong \\overline{CD}$ by $\\text{CPCTC}$",
+      "solution": {
+        "steps": [
+          "Identify the congruent parts: $\\overline{AB} \\cong \\overline{CB}$ (given), $\\angle ABD \\cong \\angle CBD$ (since $\\overline{BD}$ bisects $\\angle ABC$), and $\\overline{BD} \\cong \\overline{BD}$ (Reflexive Property, shared side).",
+          "These form a Side-Angle-Side pattern with the angle included between the two sides, so $\\triangle ABD \\cong \\triangle CBD$ by $\\text{SAS}$.",
+          "Once the triangles are congruent, corresponding parts are congruent, so $\\overline{AD} \\cong \\overline{CD}$ by $\\text{CPCTC}$.",
+          "B is circular: it uses $\\text{CPCTC}$ before the congruence is established. C uses $\\text{AAA}$, which proves only similarity, not congruence. D wrongly claims similar triangles have equal sides; similarity alone does not give congruent segments."
+        ],
+        "answer": "A) $\\triangle ABD \\cong \\triangle CBD$ by $\\text{SAS}$ ($\\overline{AB} \\cong \\overline{CB}$, $\\angle ABD \\cong \\angle CBD$, $\\overline{BD} \\cong \\overline{BD}$), then $\\overline{AD} \\cong \\overline{CD}$ by $\\text{CPCTC}$"
+      }
+    }
+  ]
+}

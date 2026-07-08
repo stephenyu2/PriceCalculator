@@ -1,0 +1,114 @@
+{
+  "standard": "6.NS.B.2",
+  "grade": "6",
+  "subject": "math",
+  "domain": "The Number System",
+  "domainCode": "NS",
+  "cluster": "Compute fluently with multi-digit numbers and find common factors and multiples",
+  "clusterCode": "B",
+  "skillName": "Multi-Digit Division",
+
+  "description": "Students fluently divide multi-digit whole numbers using the standard (long division) algorithm. Given a dividend and divisor, they carry out the divide-multiply-subtract-bring-down cycle accurately, place each digit of the quotient correctly, and express any remainder. They interpret the result in context (quotient, remainder, or exact division) and check their work by multiplying the quotient by the divisor and adding the remainder.",
+
+  "subSkills": [
+    "Divide a multi-digit number by a one-digit divisor with the standard algorithm",
+    "Divide a multi-digit number by a two-digit divisor, estimating each quotient digit",
+    "Place quotient digits correctly, including writing $0$ in the quotient when the divisor does not go into a partial dividend",
+    "Identify and express the remainder, distinguishing exact division ($r=0$) from division with a remainder",
+    "Check a division result using $\\text{quotient} \\times \\text{divisor} + \\text{remainder} = \\text{dividend}$",
+    "Interpret the quotient and remainder in a word-problem context (how many groups, how many left over)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "One-digit divisor, exact",
+      "example": "Divide using the standard algorithm: $1{,}512 \\div 6$. Answer: $252$."
+    },
+    {
+      "name": "Two-digit divisor with remainder",
+      "example": "Divide using the standard algorithm: $4{,}827 \\div 23$. Answer: $209\\text{ R }20$."
+    },
+    {
+      "name": "Quotient containing an interior zero",
+      "example": "Divide using the standard algorithm: $6{,}018 \\div 3$. Answer: $2{,}006$ (a $0$ appears in the tens place of the quotient)."
+    },
+    {
+      "name": "Check a division result",
+      "example": "Verify that $7{,}854 \\div 34 = 231$. Compute $231 \\times 34 = 7{,}854$, so the quotient is correct and the remainder is $0$."
+    },
+    {
+      "name": "Word problem (interpret quotient and remainder)",
+      "example": "A school packs $3{,}458$ pencils into boxes of $24$. How many full boxes are filled and how many pencils are left over? $3{,}458 \\div 24 = 144\\text{ R }2$, so $144$ full boxes with $2$ pencils left over."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "One-digit divisor dividing a three- or four-digit dividend, exact division ($r=0$), no interior zeros in the quotient. A single pass of divide-multiply-subtract-bring-down per digit with no tricky estimation.",
+      "constraints": [
+        "Divisor is a single digit ($2$ through $9$)",
+        "Dividend has $3$ or $4$ digits",
+        "Division is exact (remainder $0$)",
+        "Quotient has no interior $0$ digits"
+      ]
+    },
+    "Medium": {
+      "description": "Two-digit divisor, or a one-digit divisor producing a remainder or an interior-zero quotient. Requires estimating each quotient digit and may leave a remainder. This is where a two-worksheet split would put the upper bound of tier1 and the lower bound of tier2.",
+      "constraints": [
+        "Divisor is two digits ($10$ through $99$) OR a one-digit divisor with a nonzero remainder",
+        "Dividend has $4$ or $5$ digits",
+        "May produce a remainder, an interior $0$ in the quotient, or both",
+        "Estimation of each quotient digit is required for two-digit divisors"
+      ]
+    },
+    "Hard": {
+      "description": "Two-digit divisor dividing a five-digit dividend, often with a remainder and an interior zero, or a multi-step word problem that requires setting up the division, interpreting the remainder, and possibly checking the answer. Estimation must be adjusted (the first guess for a quotient digit is too large or too small).",
+      "constraints": [
+        "Divisor is two digits and dividend has $5$ digits",
+        "Result has a remainder and/or an interior $0$ in the quotient",
+        "May require interpreting the remainder in context (round up, drop, or report the leftover)",
+        "May require checking the result with $\\text{quotient} \\times \\text{divisor} + \\text{remainder} = \\text{dividend}$"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student omits a needed $0$ in the quotient, shifting all later digits and shortening the quotient",
+      "distractor": "For $6{,}018 \\div 3$ writes $216$ instead of $2{,}006$ by skipping the $0$ in the tens place"
+    },
+    {
+      "misconception": "Student misaligns place value and brings digits down into the wrong column",
+      "distractor": "For $4{,}827 \\div 23$ reports $29$ instead of $209$ because a quotient digit was dropped during alignment"
+    },
+    {
+      "misconception": "Student treats the leftover after the final subtraction as part of the quotient instead of as a remainder",
+      "distractor": "For $4{,}827 \\div 23$ reports $20920$ (jamming the remainder $20$ onto $209$) instead of $209\\text{ R }20$"
+    },
+    {
+      "misconception": "Student stops subtracting too early so the remainder is larger than the divisor",
+      "distractor": "For $3{,}458 \\div 24$ reports $143\\text{ R }26$ instead of continuing, since $26 > 24$ means another $24$ can still be divided out ($144\\text{ R }2$)"
+    },
+    {
+      "misconception": "Student reverses dividend and divisor (divides the smaller into the larger incorrectly or swaps roles)",
+      "distractor": "For $1{,}512 \\div 6$ computes $6 \\div 1{,}512$ style reasoning and reports $0$ or a tiny quotient instead of $252$"
+    },
+    {
+      "misconception": "Student makes a single-digit multiplication or subtraction slip inside the algorithm, producing an off-by-a-small-amount answer",
+      "distractor": "For $7{,}854 \\div 34$ reports $232$ instead of $231$ due to an estimation error on one quotient digit"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "id": "GEO.G-CO.A--cluster-worksheet",
+  "standard": null,
+  "clusterId": "GEO.G-CO.A",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Experiment with transformations in the plane",
+  "clusterCode": "A",
+  "skillName": "Experiment with transformations in the plane",
+  "materialType": "cluster-worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "intro": "This cluster worksheet covers all five standards of cluster G-CO.A: building precise geometric definitions, treating transformations as functions on points, describing the symmetries of polygons, defining the rigid motions from geometric primitives, and drawing transformed figures in the coordinate plane. Problems are grouped by standard and ramp from easier to harder within each group.",
+  "items": [
+    {
+      "id": 1,
+      "standard": "GEO.G-CO.A.1",
+      "prompt": "Which of the following is an undefined term (a primitive notion) in geometry: point, angle, circle, or line segment?",
+      "answer": "$\\text{point}$",
+      "solution": {
+        "steps": [
+          "The undefined notions in geometry are point, line, distance along a line, and distance around a circular arc.",
+          "Angle, circle, and line segment are all defined terms built from those primitives.",
+          "So the only undefined term in the list is the point."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "standard": "GEO.G-CO.A.1",
+      "prompt": "A circle is defined as the set of all points in a plane at a fixed distance $7$ units from a center point $O$. Point $P$ lies on this circle. What is the distance $OP$?",
+      "answer": "$OP = 7$ units",
+      "solution": {
+        "steps": [
+          "By the precise definition, every point on the circle is exactly the fixed distance (the radius) from the center.",
+          "Here the radius is $7$ units, and $P$ lies on the circle.",
+          "Therefore $OP = 7$ units, directly from the definition."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "standard": "GEO.G-CO.A.1",
+      "prompt": "A student writes: \"An angle is two lines that meet at a point.\" Identify the flaw in this definition and rewrite it precisely.",
+      "answer": "It should use rays, not lines: an angle is the union of two rays that share a common endpoint, called the vertex.",
+      "solution": {
+        "steps": [
+          "Lines extend without end in both directions, so two intersecting lines actually form four angles, not one.",
+          "An angle is built from rays, each having a single endpoint and one direction.",
+          "The precise definition: an angle is the union of two rays that share a common endpoint, the vertex.",
+          "This fixes the flaw by replacing \"lines\" with \"rays sharing a common endpoint.\""
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "standard": "GEO.G-CO.A.2",
+      "prompt": "Let $T(x,y) = (x - 4,\\, y + 1)$. Find $T(6, -2)$.",
+      "answer": "$(2, -1)$",
+      "solution": {
+        "steps": [
+          "Treat the transformation as a function and substitute the input point $(6,-2)$.",
+          "Compute the new $x$-coordinate: $6 - 4 = 2$.",
+          "Compute the new $y$-coordinate: $-2 + 1 = -1$.",
+          "So $T(6,-2) = (2,-1)$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "standard": "GEO.G-CO.A.2",
+      "prompt": "Reflect the point $P(3, -5)$ across the line $y = x$ using the rule $(x,y) \\to (y, x)$.",
+      "answer": "$(-5, 3)$",
+      "solution": {
+        "steps": [
+          "Reflection across $y = x$ swaps the coordinates: $(x,y) \\to (y,x)$.",
+          "Swap the coordinates of $P(3,-5)$ to get $(-5, 3)$.",
+          "The image is $P'(-5, 3)$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "standard": "GEO.G-CO.A.2",
+      "prompt": "A segment has endpoints $(0,0)$ and $(4,0)$. Apply the horizontal stretch $(x,y) \\to (2x,\\, y)$ to both endpoints, then determine whether this transformation preserves distance. Justify with the side lengths.",
+      "answer": "No. The original length is $4$ but the image length is $8$, so distance is not preserved (the transformation is non-rigid).",
+      "solution": {
+        "steps": [
+          "Apply the rule to each endpoint: $(0,0) \\to (0,0)$ and $(4,0) \\to (8,0)$.",
+          "Original length: the distance from $(0,0)$ to $(4,0)$ is $4$.",
+          "Image length: the distance from $(0,0)$ to $(8,0)$ is $8$.",
+          "Since $8 \\ne 4$, the side length changed, so the transformation does not preserve distance.",
+          "A horizontal stretch is therefore a non-rigid transformation."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "standard": "GEO.G-CO.A.3",
+      "prompt": "How many lines of reflective symmetry does a square have?",
+      "answer": "$4$",
+      "solution": {
+        "steps": [
+          "A square has reflective symmetry across the two lines through the midpoints of opposite sides (one vertical, one horizontal).",
+          "It also has reflective symmetry across its two diagonals.",
+          "That gives $2 + 2 = 4$ lines of symmetry."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "standard": "GEO.G-CO.A.3",
+      "prompt": "List all angles of rotation strictly between $0^\\circ$ and $360^\\circ$ that carry a regular pentagon onto itself.",
+      "answer": "$72^\\circ,\\ 144^\\circ,\\ 216^\\circ,\\ 288^\\circ$",
+      "solution": {
+        "steps": [
+          "A regular $n$-gon has rotational symmetry through multiples of $\\frac{360^\\circ}{n}$.",
+          "For a pentagon, $n = 5$, so the smallest rotation is $\\frac{360^\\circ}{5} = 72^\\circ$.",
+          "The multiples strictly between $0^\\circ$ and $360^\\circ$ are $72^\\circ, 144^\\circ, 216^\\circ, 288^\\circ$.",
+          "These four angles carry the regular pentagon onto itself."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "standard": "GEO.G-CO.A.3",
+      "prompt": "A parallelogram that is not a rectangle or rhombus is given. Describe all of its symmetries (reflections and rotations, other than the identity), and state its total number of symmetries including the identity.",
+      "answer": "Only a $180^\\circ$ rotation about its center; it has no lines of reflective symmetry. Total symmetries including the identity: $2$.",
+      "solution": {
+        "steps": [
+          "A general parallelogram has point symmetry: a $180^\\circ$ rotation about the intersection of its diagonals maps it onto itself.",
+          "It has no line of reflective symmetry, because reflecting across any line through the center sends a vertex off the figure (its sides are not all equal and its angles are not all right).",
+          "So the nontrivial symmetries are exactly the single $180^\\circ$ rotation.",
+          "Counting the identity plus that rotation gives a total of $2$ symmetries."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "standard": "GEO.G-CO.A.4",
+      "prompt": "Which rigid motion is defined by the condition that its line is the perpendicular bisector of the segment joining each point to its image?",
+      "answer": "a reflection",
+      "solution": {
+        "steps": [
+          "A reflection across a line $m$ sends each off-line point $P$ to $P'$ so that $m$ is the perpendicular bisector of $\\overline{PP'}$.",
+          "A translation is defined by a directed segment, and a rotation by a center and angle, so neither matches this condition.",
+          "Therefore the motion described is a reflection."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "standard": "GEO.G-CO.A.4",
+      "prompt": "Point $P$ is reflected across line $m$. The foot of the perpendicular from $P$ to $m$ is $F$, with $PF = 3$. Using the definition of a reflection, find the distance $PP'$ from $P$ to its image $P'$.",
+      "answer": "$PP' = 6$",
+      "solution": {
+        "steps": [
+          "By definition, $m$ is the perpendicular bisector of $\\overline{PP'}$, so $F$ is the midpoint of $\\overline{PP'}$.",
+          "Then $FP' = PF = 3$, with $P$ and $P'$ on opposite sides of $m$ along the perpendicular.",
+          "So $PP' = PF + FP' = 3 + 3 = 6$.",
+          "The image lies twice the foot-distance away: $PP' = 2\\,PF = 6$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "standard": "GEO.G-CO.A.4",
+      "prompt": "A point $P$ maps to $P'$ with $CP = CP' = 4$ and $m\\angle PCP' = 90^\\circ$. Identify the rigid motion and all of its parameters, then explain why it preserves distance.",
+      "answer": "A $90^\\circ$ rotation about center $C$. It preserves distance because $CP = CP'$ for every point, so each point and its image lie on the same circle about $C$ and segment lengths are unchanged.",
+      "solution": {
+        "steps": [
+          "A rotation about center $C$ through angle $\\theta$ maps $P$ to $P'$ so that $CP = CP'$ and $m\\angle PCP' = \\theta$.",
+          "Here $CP = CP' = 4$ and $m\\angle PCP' = 90^\\circ$, so the motion is a rotation about $C$ through $\\theta = 90^\\circ$.",
+          "For any two points $P, Q$ and their images, $CP = CP'$, $CQ = CQ'$, and the angle $PCQ$ equals $P'CQ'$, so $\\triangle PCQ \\cong \\triangle P'CQ'$ by SAS.",
+          "Therefore $P'Q' = PQ$: the rotation preserves distance."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "standard": "GEO.G-CO.A.5",
+      "prompt": "Triangle $ABC$ has vertices $A(1,2)$, $B(4,2)$, $C(4,6)$. Draw the image under the translation $(x,y) \\to (x - 3,\\, y + 1)$ by giving the coordinates of $A'$, $B'$, and $C'$.",
+      "answer": "$A'(-2, 3)$, $B'(1, 3)$, $C'(1, 7)$",
+      "solution": {
+        "steps": [
+          "Apply the rule $(x,y) \\to (x-3,\\, y+1)$ to each vertex.",
+          "$A(1,2) \\to (1-3,\\, 2+1) = (-2, 3)$.",
+          "$B(4,2) \\to (4-3,\\, 2+1) = (1, 3)$.",
+          "$C(4,6) \\to (4-3,\\, 6+1) = (1, 7)$.",
+          "The image is $A'(-2,3)$, $B'(1,3)$, $C'(1,7)$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "standard": "GEO.G-CO.A.5",
+      "prompt": "Rotate $\\triangle DEF$ with $D(3,0)$, $E(3,4)$, $F(0,4)$ by $90^\\circ$ counterclockwise about the origin using the rule $(x,y) \\to (-y,\\, x)$. Give the image coordinates.",
+      "answer": "$D'(0, 3)$, $E'(-4, 3)$, $F'(-4, 0)$",
+      "solution": {
+        "steps": [
+          "Apply the $90^\\circ$ counterclockwise rule $(x,y) \\to (-y,\\, x)$ to each vertex.",
+          "$D(3,0) \\to (-0,\\, 3) = (0, 3)$.",
+          "$E(3,4) \\to (-4,\\, 3) = (-4, 3)$.",
+          "$F(0,4) \\to (-4,\\, 0) = (-4, 0)$.",
+          "The image is $D'(0,3)$, $E'(-4,3)$, $F'(-4,0)$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "standard": "GEO.G-CO.A.5",
+      "prompt": "Apply to $\\triangle ABC$ with $A(1,1)$, $B(3,1)$, $C(3,2)$ a reflection across the $x$-axis followed by the translation $(x,y) \\to (x + 2,\\, y)$. Give the intermediate image after the reflection and the final image after the translation.",
+      "answer": "After reflection: $(1,-1)$, $(3,-1)$, $(3,-2)$. Final image: $A''(3,-1)$, $B''(5,-1)$, $C''(5,-2)$.",
+      "solution": {
+        "steps": [
+          "First reflect across the $x$-axis with $(x,y) \\to (x,\\, -y)$.",
+          "$A(1,1) \\to (1,-1)$, $B(3,1) \\to (3,-1)$, $C(3,2) \\to (3,-2)$; this is the intermediate image.",
+          "Next translate with $(x,y) \\to (x+2,\\, y)$.",
+          "$(1,-1) \\to (3,-1)$, $(3,-1) \\to (5,-1)$, $(3,-2) \\to (5,-2)$.",
+          "The final image is $A''(3,-1)$, $B''(5,-1)$, $C''(5,-2)$."
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T21:16:48.217Z"
+}

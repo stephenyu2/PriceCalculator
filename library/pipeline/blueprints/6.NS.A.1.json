@@ -1,0 +1,127 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent. One blueprint per standard.",
+
+  "standard": "6.NS.A.1",
+  "grade": "6",
+  "subject": "math",
+  "domain": "The Number System",
+  "domainCode": "NS",
+  "cluster": "Apply and extend previous understandings of multiplication and division to divide fractions by fractions",
+  "clusterCode": "A",
+  "skillName": "Dividing Fractions by Fractions",
+
+  "description": "Students interpret and compute quotients of fractions divided by fractions. They divide a fraction by a fraction by multiplying by the reciprocal, simplify the result to lowest terms (including converting improper-fraction results to mixed numbers), and interpret what a fraction quotient means using visual fraction models and the 'how many groups of $\\frac{a}{b}$ fit in $\\frac{c}{d}$' question. They write equations to represent and solve real-world word problems involving division of fractions by fractions.",
+
+  "subSkills": [
+    "Interpret $\\frac{c}{d} \\div \\frac{a}{b}$ as 'how many groups of $\\frac{a}{b}$ are in $\\frac{c}{d}$'",
+    "Find the reciprocal (multiplicative inverse) of a fraction",
+    "Divide a fraction by a fraction by multiplying by the reciprocal: $\\frac{a}{b} \\div \\frac{c}{d} = \\frac{a}{b} \\times \\frac{d}{c}$",
+    "Simplify a fraction quotient to lowest terms and rewrite an improper-fraction quotient as a mixed number",
+    "Use a visual fraction model (number line or area model) to represent and check a fraction division",
+    "Convert mixed numbers to improper fractions before dividing",
+    "Translate a word problem into a division equation and interpret the quotient in context, including remainders expressed as a fraction of a group"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Bare computation, proper fractions",
+      "example": "Compute $\\frac{2}{3} \\div \\frac{3}{4}$. Answer: $\\frac{8}{9}$."
+    },
+    {
+      "name": "Unit-fraction divisor (how many fit)",
+      "example": "How many $\\frac{1}{4}$-cup servings are in $\\frac{3}{4}$ cup? Compute $\\frac{3}{4} \\div \\frac{1}{4} = 3$."
+    },
+    {
+      "name": "Mixed-number division",
+      "example": "Compute $2\\frac{1}{2} \\div \\frac{3}{4}$. Convert to $\\frac{5}{2} \\div \\frac{3}{4} = \\frac{5}{2} \\times \\frac{4}{3} = \\frac{10}{3} = 3\\frac{1}{3}$."
+    },
+    {
+      "name": "Visual model interpretation",
+      "example": "A number line from $0$ to $\\frac{6}{8}$ is partitioned into pieces of length $\\frac{2}{8}$. Write the division shown and its quotient: $\\frac{6}{8} \\div \\frac{2}{8} = 3$."
+    },
+    {
+      "name": "Word problem, equal-sharing or how-many-groups",
+      "example": "A recipe uses $\\frac{2}{3}$ cup of flour for one batch. How many batches can you make with $\\frac{8}{3}$ cups? Equation: $\\frac{8}{3} \\div \\frac{2}{3} = 4$ batches."
+    },
+    {
+      "name": "Word problem with fractional remainder",
+      "example": "A ribbon is $\\frac{7}{8}$ yard long, cut into pieces $\\frac{1}{4}$ yard each. How many full pieces, and what fraction of a piece is left? $\\frac{7}{8} \\div \\frac{1}{4} = \\frac{7}{2} = 3\\frac{1}{2}$, so $3$ full pieces with $\\frac{1}{2}$ of a piece left over."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Direct computation where at least one fraction is a unit fraction (e.g. $\\frac{1}{2}, \\frac{1}{3}, \\frac{1}{4}$) or the two fractions share the same denominator so the quotient is a whole number. The reciprocal-and-multiply step is short and the answer simplifies to a whole number or a simple proper fraction with no mixed-number conversion.",
+      "constraints": [
+        "Both fractions proper, no mixed numbers",
+        "Numerators and denominators are small integers ($\\le 8$)",
+        "Divisor is a unit fraction OR both fractions share a denominator so the answer is a whole number",
+        "Answer is a whole number or a proper fraction already in lowest terms or reducible in one step",
+        "Context, if any, is a single 'how many groups fit' question"
+      ]
+    },
+    "Medium": {
+      "description": "Both fractions are non-unit proper fractions, or one operand is a mixed number that must be converted to an improper fraction first. The quotient often is an improper fraction that must be simplified and rewritten as a mixed number. Includes one-step word problems requiring the student to set up the division equation.",
+      "constraints": [
+        "Both fractions non-unit proper fractions, OR exactly one mixed number that must be converted",
+        "Quotient is frequently improper and must be reduced and written as a mixed number",
+        "Simplification may require finding a GCF",
+        "Word problems are one step: extract two quantities and divide"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems: dividing two mixed numbers, or a word problem where the student must interpret a fractional remainder (number of full groups plus the leftover as a fraction of a group), or compare/justify a quotient using a visual model. Requires reading comprehension to build the equation and interpretation of the answer in context.",
+      "constraints": [
+        "May involve two mixed numbers, both converted to improper fractions before dividing",
+        "Word problems require interpreting a non-whole quotient: full groups plus a fractional-remainder interpretation",
+        "May ask the student to choose/explain the correct equation or match a visual fraction model to the division",
+        "Multi-step: set up, compute, simplify, and interpret in context"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student multiplies straight across instead of multiplying by the reciprocal of the divisor",
+      "distractor": "For $\\frac{2}{3} \\div \\frac{3}{4}$ computes $\\frac{2}{3} \\times \\frac{3}{4} = \\frac{6}{12} = \\frac{1}{2}$ instead of $\\frac{2}{3} \\times \\frac{4}{3} = \\frac{8}{9}$"
+    },
+    {
+      "misconception": "Student takes the reciprocal of the dividend instead of the divisor (flips the wrong fraction)",
+      "distractor": "For $\\frac{2}{3} \\div \\frac{3}{4}$ computes $\\frac{3}{2} \\times \\frac{3}{4} = \\frac{9}{8}$ instead of $\\frac{2}{3} \\times \\frac{4}{3} = \\frac{8}{9}$"
+    },
+    {
+      "misconception": "Student divides numerator by numerator and denominator by denominator",
+      "distractor": "For $\\frac{6}{8} \\div \\frac{2}{8}$ computes $\\frac{6 \\div 2}{8 \\div 8} = \\frac{3}{1} = 3$ by luck on matching denominators but for $\\frac{2}{3} \\div \\frac{3}{4}$ produces $\\frac{2 \\div 3}{3 \\div 4}$, an undefined or wrong value, typically reported as a flipped ratio"
+    },
+    {
+      "misconception": "Student inverts the order of division (computes divisor ÷ dividend)",
+      "distractor": "For $\\frac{3}{4} \\div \\frac{1}{4}$ computes $\\frac{1}{4} \\div \\frac{3}{4} = \\frac{1}{3}$ instead of $3$"
+    },
+    {
+      "misconception": "Student forgets to convert a mixed number to an improper fraction before dividing",
+      "distractor": "For $2\\frac{1}{2} \\div \\frac{3}{4}$ divides only the fraction part, $\\frac{1}{2} \\div \\frac{3}{4} = \\frac{2}{3}$, and reports $2\\frac{2}{3}$ instead of $\\frac{5}{2} \\div \\frac{3}{4} = 3\\frac{1}{3}$"
+    },
+    {
+      "misconception": "Student leaves an improper-fraction quotient unsimplified or fails to convert it to a mixed number",
+      "distractor": "Reports $\\frac{10}{3}$ as the final answer where the item asks for a mixed number $3\\frac{1}{3}$, or reports an unreduced fraction like $\\frac{8}{12}$ instead of $\\frac{2}{3}$"
+    },
+    {
+      "misconception": "Student misinterprets a fractional remainder as a count of leftover whole units rather than a fraction of a group",
+      "distractor": "For $\\frac{7}{8} \\div \\frac{1}{4} = 3\\frac{1}{2}$ reports '3 pieces with $\\frac{1}{8}$ yard left' (treating the $\\frac{1}{2}$ as the leftover length) instead of '3 full pieces and $\\frac{1}{2}$ of a piece left'"
+    }
+  ],
+
+  "_comment_itemCounts": "lesson = 5 worked examples + 5 practice problems. worksheet.single = one ramped sheet of 15 items (Easy -> Hard). tier1/tier2 provided per schema default but this standard uses the single ramped worksheet. quiz = 8 multiple-choice items.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

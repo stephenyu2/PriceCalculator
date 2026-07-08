@@ -1,0 +1,152 @@
+{
+  "id": "A1.S-ID.A.3--quiz",
+  "standard": "A1.S-ID.A.3",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on a single count or measurement variable",
+  "clusterCode": "A",
+  "skillName": "Shape, Center, Spread, and Outliers",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "An eight-question check on describing the shape of a distribution, computing center (mean and median) and spread (range and IQR), testing for outliers with the $1.5\\times\\text{IQR}$ rule, and choosing the best summary measures.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "A dot plot of test scores has most of its dots stacked at the high end, with a few scattered dots trailing off toward the low scores. What is the shape of this distribution?\nA) Skewed left\nB) Skewed right\nC) Symmetric\nD) Uniform",
+      "answer": "A) Skewed left",
+      "solution": {
+        "steps": [
+          "The shape of a skewed distribution is named for the direction of its tail, not the side where the bulk of the data sits.",
+          "Here the long tail of scattered points stretches toward the low scores, which is the left side of the number line.",
+          "A tail pointing left means the distribution is skewed left, so the answer is A.",
+          "B is the classic skew-direction error: it names the distribution for the side with the bulk of the data (the high end) instead of the tail.",
+          "C (symmetric) would require the two sides to mirror each other, but one side has a long tail. D (uniform) would require the dots to be evenly spread with no pile-up, which is not the case."
+        ],
+        "answer": "A) Skewed left"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Find the median of the data set $\\{4, 6, 6, 7, 9, 12, 15\\}$.\nA) $6$\nB) $7$\nC) $\\frac{59}{7}$\nD) $11$",
+      "answer": "B) $7$",
+      "solution": {
+        "steps": [
+          "The data are already sorted and there are $n=7$ values, an odd count.",
+          "The median is the middle value, the $4$th of the $7$ entries: $\\{4, 6, 6, \\mathbf{7}, 9, 12, 15\\}$.",
+          "So the median is $7$, which is B.",
+          "A ($6$) takes the wrong middle position. C ($\\frac{59}{7}$) is the mean $\\frac{4+6+6+7+9+12+15}{7}$, a measure of center but not the median. D ($11$) is simply a value in the data's range that is neither the mean nor the median."
+        ],
+        "answer": "B) $7$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Which of the following is a measure of spread rather than a measure of center?\nA) Mean\nB) Median\nC) Interquartile range\nD) Mode",
+      "answer": "C) Interquartile range",
+      "solution": {
+        "steps": [
+          "Measures of center describe a typical value: the mean, the median, and the mode all do this.",
+          "Measures of spread describe how variable the data are: the range, the interquartile range (IQR), and the standard deviation.",
+          "The interquartile range $\\text{IQR}=Q_3-Q_1$ measures spread, so the answer is C.",
+          "A (mean) and B (median) are measures of center, and D (mode) is also a measure of center, not spread. Confusing center with spread is the misconception this item tests."
+        ],
+        "answer": "C) Interquartile range"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "For the data set $\\{5, 7, 8, 10, 12, 14, 15, 19\\}$, the quartiles are $Q_1=7.5$ and $Q_3=14.5$. What is the interquartile range?\nA) $22$\nB) $7$\nC) $14$\nD) $11$",
+      "answer": "B) $7$",
+      "solution": {
+        "steps": [
+          "The interquartile range is defined as $\\text{IQR}=Q_3-Q_1$.",
+          "Substitute: $\\text{IQR}=14.5-7.5=7$, so the answer is B.",
+          "A ($22$) is the error $Q_3+Q_1=14.5+7.5$, adding the quartiles instead of subtracting.",
+          "C ($14$) is the full range $19-5$, not the IQR. D ($11$) is the midpoint $\\frac{7.5+14.5}{2}$, which is not a spread measure at all."
+        ],
+        "answer": "B) $7$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "A data set has $Q_1=12$ and $Q_3=20$, so $\\text{IQR}=8$. Using the $1.5\\times\\text{IQR}$ rule, is the value $35$ an outlier?\nA) No, because $35<2\\cdot 8 + 20 = 36$\nB) Yes, because $35>Q_3+\\text{IQR}=28$\nC) Yes, because $35>Q_3+1.5\\cdot\\text{IQR}=32$\nD) No, because $35$ is less than the maximum allowed value $40$",
+      "answer": "C) Yes, because $35>Q_3+1.5\\cdot\\text{IQR}=32$",
+      "solution": {
+        "steps": [
+          "The upper fence in the $1.5\\times\\text{IQR}$ rule is $Q_3+1.5\\cdot\\text{IQR}=20+1.5\\cdot 8=20+12=32$.",
+          "Compare the value to the fence: $35>32$, so $35$ lies beyond the upper fence and IS an outlier. The answer is C.",
+          "A uses a wrong multiplier of $2$ and reaches the wrong verdict. B uses $Q_3+\\text{IQR}=28$, forgetting the $1.5$ multiplier; it gets the right verdict by luck but for the wrong reason and the threshold is wrong.",
+          "D invents an arbitrary cutoff of $40$ with no basis in the IQR rule, so it is incorrect."
+        ],
+        "answer": "C) Yes, because $35>Q_3+1.5\\cdot\\text{IQR}=32$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "The values $\\{8, 9, 10, 11, 12\\}$ have mean $10$ and median $10$. If the value $12$ is replaced by $42$, what happens to the mean and the median?\nA) Both the mean and the median increase\nB) The mean increases to $16$, but the median stays $10$\nC) The median increases to $16$, but the mean stays $10$\nD) Neither the mean nor the median changes",
+      "answer": "B) The mean increases to $16$, but the median stays $10$",
+      "solution": {
+        "steps": [
+          "After replacing $12$ with $42$, the data set is $\\{8, 9, 10, 11, 42\\}$.",
+          "New mean: $\\frac{8+9+10+11+42}{5}=\\frac{80}{5}=16$, so the mean rises from $10$ to $16$.",
+          "New median: the sorted set is $\\{8, 9, 10, 11, 42\\}$ and the middle value is still $10$, so the median is unchanged.",
+          "The mean is pulled toward the extreme value while the median resists it, so the answer is B.",
+          "A wrongly claims the median also rises, treating it as non-resistant. C swaps the two roles, and D ignores the effect on the mean entirely."
+        ],
+        "answer": "B) The mean increases to $16$, but the median stays $10$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Home prices in a neighborhood are strongly skewed right because of a few very expensive mansions. Which measures of center and spread best summarize the data, and why?\nA) The mean and the range, because they use every data value\nB) The mean and the standard deviation, because the data are quantitative\nC) The median and the IQR, because they resist the pull of the extreme high values\nD) The mode and the range, because the mode is the most common price",
+      "answer": "C) The median and the IQR, because they resist the pull of the extreme high values",
+      "solution": {
+        "steps": [
+          "When a distribution is strongly skewed with extreme values, the goal is to summarize the typical home using measures that are not distorted by those extremes.",
+          "The median and the IQR are resistant: extreme high prices barely move the median and do not affect the IQR, so they describe the bulk of the homes faithfully. The answer is C.",
+          "A and B rely on the mean, range, or standard deviation, all of which are pulled upward by the mansions and overstate the typical price and spread. This is the 'mean is always best' misconception.",
+          "D uses the mode and range; the range is again sensitive to the extreme mansion price, so it is a poor choice for skewed data."
+        ],
+        "answer": "C) The median and the IQR, because they resist the pull of the extreme high values"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Class A scores have median $78$ with $\\text{IQR}=6$. Class B scores have median $78$ with $\\text{IQR}=20$. What is the best comparison of the two classes?\nA) The two classes performed identically, since their medians are equal\nB) Class A scores are more consistent, since its smaller IQR means less spread\nC) Class B scores are more consistent, since its larger IQR means the scores are closer together\nD) Class A is centered higher than Class B, since a smaller IQR raises the center",
+      "answer": "B) Class A scores are more consistent, since its smaller IQR means less spread",
+      "solution": {
+        "steps": [
+          "Both classes share the same center: a median of $78$. So neither typically scored higher than the other.",
+          "The IQR measures spread: a smaller IQR means the middle half of the scores are packed into a narrower range, indicating more consistency.",
+          "Class A has $\\text{IQR}=6$ versus Class B's $\\text{IQR}=20$, so Class A's scores are much more consistent. The answer is B.",
+          "A ignores spread and assumes equal medians mean equal distributions, the misconception this item targets. C reverses the meaning of IQR (larger IQR means more spread, not less). D wrongly claims the IQR changes the center; spread and center are independent here."
+        ],
+        "answer": "B) Class A scores are more consistent, since its smaller IQR means less spread"
+      }
+    }
+  ]
+}

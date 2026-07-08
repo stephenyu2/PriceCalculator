@@ -1,0 +1,139 @@
+{
+  "standard": "A1.A-SSE.A.1",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Seeing Structure in Expressions",
+  "domainCode": "A-SSE",
+  "cluster": "Interpret the structure of expressions",
+  "clusterCode": "A",
+  "skillName": "Interpreting Expression Parts",
+
+  "description": "Students read an algebraic expression that models a real-world quantity and interpret the meaning of its individual parts (terms, factors, coefficients, and exponents) in the context that produced it. They identify what a single term contributes to the whole, explain what a coefficient or constant represents in the situation, and recognize when a complicated expression can be viewed as a single chunk built from simpler parts, e.g. seeing $P(1+r)^n$ as a principal $P$ scaled by the growth factor $(1+r)$ applied $n$ times. They move fluently between the symbolic structure and its contextual meaning in both directions: given a context, name the part that answers a question; given a part, state what it means.",
+
+  "subSkills": [
+    "Name the terms of an expression and distinguish a term from a factor",
+    "Identify the coefficient, the variable part, and the constant term of a term",
+    "Interpret a coefficient in context (rate of change, price per unit, growth multiplier)",
+    "Interpret a constant term in context (starting amount, fixed cost, initial value)",
+    "Interpret an exponent in context (number of compounding periods, repeated growth)",
+    "View a compound expression as a single quantity, e.g. treat $(1+r)$ or $(x+3)$ as one chunk",
+    "Match a verbal description of a quantity to the part of the expression that represents it",
+    "Explain how a change in one part of the expression changes the quantity it models"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Identify the part that answers a contextual question",
+      "example": "A landscaping cost is modeled by $C = 45h + 120$, where $h$ is hours worked. Which part of the expression represents the fixed setup fee? Answer: the constant term $120$."
+    },
+    {
+      "name": "Interpret a coefficient as a rate",
+      "example": "In the revenue model $R = 8n$, where $n$ is the number of tickets sold, what does the coefficient $8$ represent? Answer: the price of $\\$8$ per ticket."
+    },
+    {
+      "name": "Interpret a constant term as a starting value",
+      "example": "A tank's water level is modeled by $W = 50 - 3t$, where $t$ is minutes. Interpret the $50$. Answer: the tank starts with $50$ liters of water."
+    },
+    {
+      "name": "Distinguish terms from factors",
+      "example": "In the expression $3x(x+5)$, is $(x+5)$ a term or a factor, and how many factors does the product have? Answer: $(x+5)$ is a factor; the product has three factors: $3$, $x$, and $(x+5)$."
+    },
+    {
+      "name": "Interpret an exponent / growth factor",
+      "example": "An investment is modeled by $A = 600(1.04)^t$. Interpret the base $1.04$ and the exponent $t$. Answer: $1.04$ is the yearly growth factor (a $4\\%$ annual increase) and $t$ is the number of years it is applied."
+    },
+    {
+      "name": "View a chunk as a single quantity",
+      "example": "The expression $P(1+r)^n$ models a balance. Explain what the single chunk $(1+r)$ represents and why it is raised to the power $n$. Answer: $(1+r)$ is the one-period growth factor, and the exponent $n$ applies that same growth once for each of the $n$ periods."
+    },
+    {
+      "name": "Effect of changing a part",
+      "example": "In the cost model $C = 12m + 30$, the monthly rate $12$ increases to $15$. Which part of the expression changes, and does the fixed cost change? Answer: only the coefficient changes to $15$; the constant fixed cost $30$ stays the same."
+    },
+    {
+      "name": "Interpret a difference or sum of two interpreted parts",
+      "example": "Profit is modeled by $P = 20q - (5q + 200)$, where $q$ is units sold. Identify the part representing total revenue and the part representing total cost. Answer: revenue is $20q$; total cost is the grouped expression $5q + 200$, where $5q$ is variable cost and $200$ is fixed cost."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step interpretation of one clearly visible part of a one- or two-term linear expression. The context is familiar (cost, distance, money) and the target part (a coefficient, a constant, or a single term) maps directly to a named quantity. Tier1 worksheet items live here through early Medium.",
+      "constraints": [
+        "Expression is linear with at most two terms, e.g. $C = 45h + 120$",
+        "Student identifies or interprets exactly one part: a coefficient, a constant term, or a single term",
+        "All numbers are small positive integers and the context word maps directly to one part",
+        "No grouping, no exponents, no chunk-as-single-quantity reasoning required",
+        "Vocabulary stays at term, coefficient, and constant"
+      ]
+    },
+    "Medium": {
+      "description": "Two linked interpretive steps or a part that requires distinguishing structure (term vs factor, or interpreting one factor in a product). Includes simple exponential or product models where a coefficient and a base or two separate terms must each be interpreted. This band straddles the tier1/tier2 split: the upper edge belongs to tier2.",
+      "constraints": [
+        "Expression may be a product such as $3x(x+5)$ or an exponential such as $A = 600(1.04)^t$",
+        "Student must distinguish a term from a factor, or interpret a coefficient and a base in the same item",
+        "May require interpreting a growth factor $(1+r)$ or a decay factor and the meaning of its exponent",
+        "Two parts are interpreted, or one part is interpreted and its effect on the quantity is described",
+        "Negative coefficients or subtraction modeling a decrease may appear"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step structural reasoning: viewing a compound chunk as a single quantity, interpreting parts of a grouped or layered expression such as profit = revenue minus cost, or reasoning about how changing one part propagates through the model. Tier2 worksheet items concentrate here.",
+      "constraints": [
+        "Expression layers structure, e.g. $P(1+r)^n$, $20q-(5q+200)$, or a quantity built from two interpreted sub-expressions",
+        "Student must treat a grouped expression as a single chunk and justify why",
+        "Item asks for the contextual effect of changing a coefficient, base, exponent, or constant",
+        "Requires coordinating two or more interpretations and explaining their relationship",
+        "May require recognizing that an entire factor or grouped term, not a single number, answers the question"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student confuses a term with a factor, treating pieces joined by multiplication as if they were separate terms",
+      "distractor": "Embodies calling $(x+5)$ in $3x(x+5)$ a term and reporting the expression as having two terms instead of recognizing $3$, $x$, and $(x+5)$ as three factors of a single product"
+    },
+    {
+      "misconception": "Student interprets the coefficient and the constant in reversed roles",
+      "distractor": "For $C = 45h + 120$ states that $120$ is the hourly rate and $45$ is the fixed setup fee, swapping the rate and the starting value"
+    },
+    {
+      "misconception": "Student reads the growth factor's base as the percent change itself rather than as one plus the rate",
+      "distractor": "For $A = 600(1.04)^t$ claims the account grows by $104\\%$ each year (reading $1.04$ as the rate) instead of $4\\%$"
+    },
+    {
+      "misconception": "Student thinks the exponent is a coefficient or a quantity of money rather than a count of periods",
+      "distractor": "For $A = 600(1.04)^t$ interprets $t$ as a dollar amount or as how much is multiplied, instead of the number of years the growth factor is applied"
+    },
+    {
+      "misconception": "Student ignores a leading negative sign and interprets a decreasing quantity as increasing",
+      "distractor": "For $W = 50 - 3t$ interprets $3$ as an amount of water being added each minute rather than the rate at which water drains, missing that the term decreases $W$"
+    },
+    {
+      "misconception": "Student picks a single number when the part that answers the question is an entire grouped expression",
+      "distractor": "For $20q-(5q+200)$ names only $200$ as the total cost, ignoring the variable cost $5q$ that is also inside the grouped cost expression"
+    },
+    {
+      "misconception": "Student treats the constant term as if it scaled with the variable",
+      "distractor": "For $C = 12m + 30$ claims that when $m$ doubles the fixed cost $30$ also doubles, instead of recognizing the constant stays fixed while only $12m$ changes"
+    },
+    {
+      "misconception": "Student fails to see a compound expression as a single chunk and mis-attributes the exponent",
+      "distractor": "For $P(1+r)^n$ states that only $r$ (not the whole factor $1+r$) is raised to the power $n$, or that $P$ is raised to the power $n$, instead of the whole growth factor $(1+r)$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

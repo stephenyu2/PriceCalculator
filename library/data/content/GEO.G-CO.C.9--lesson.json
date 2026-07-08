@@ -1,0 +1,182 @@
+{
+  "id": "GEO.G-CO.C.9--lesson",
+  "standard": "GEO.G-CO.C.9",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Prove geometric theorems",
+  "clusterCode": "C",
+  "skillName": "Theorems about Lines and Angles",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "This lesson builds the core theorems about lines and angles. When two lines cross, the angles directly across from each other (vertical angles) are congruent, and any two angles forming a straight line (a linear pair) are supplementary, meaning they add to $180^\\circ$. When a transversal cuts two parallel lines, matching-position angles (corresponding) are congruent, the inside-and-opposite-side angles (alternate interior) are congruent, and the two inside angles on the same side (co-interior or same-side interior) are supplementary. Finally, a point lies on the perpendicular bisector of a segment if and only if it is equidistant from the two endpoints. Each step of a proof needs a precise reason: a definition, a postulate, or a previously proven theorem.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Two lines intersect. One angle measures $(3x + 10)^\\circ$ and the angle vertical to it measures $(5x - 24)^\\circ$. Find $x$ and the measure of each angle.",
+      "solution": {
+        "steps": [
+          "Vertical angles are congruent, so their measures are equal: $3x + 10 = 5x - 24$.",
+          "Subtract $3x$ from both sides: $10 = 2x - 24$.",
+          "Add $24$ to both sides: $34 = 2x$.",
+          "Divide by $2$: $x = 17$.",
+          "Substitute back to find each angle: $3(17) + 10 = 51 + 10 = 61^\\circ$, and check $5(17) - 24 = 85 - 24 = 61^\\circ$.",
+          "Both angles measure $61^\\circ$, which confirms they are congruent."
+        ],
+        "answer": "$x = 17$, and each angle measures $61^\\circ$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Lines $p$ and $q$ are parallel and are cut by a transversal. A pair of alternate interior angles measure $(2x + 15)^\\circ$ and $(4x - 35)^\\circ$. Find $x$ and the measure of each angle.",
+      "solution": {
+        "steps": [
+          "When parallel lines are cut by a transversal, alternate interior angles are congruent.",
+          "Set the measures equal: $2x + 15 = 4x - 35$.",
+          "Subtract $2x$ from both sides: $15 = 2x - 35$.",
+          "Add $35$ to both sides: $50 = 2x$.",
+          "Divide by $2$: $x = 25$.",
+          "Substitute back: $2(25) + 15 = 50 + 15 = 65^\\circ$, and $4(25) - 35 = 100 - 35 = 65^\\circ$.",
+          "Each angle measures $65^\\circ$."
+        ],
+        "answer": "$x = 25$, and each alternate interior angle measures $65^\\circ$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Lines $a$ and $b$ are parallel with transversal $c$. Two same-side interior (co-interior) angles measure $(3x)^\\circ$ and $(2x + 20)^\\circ$. Find $x$ and the measure of each angle.",
+      "solution": {
+        "steps": [
+          "When parallel lines are cut by a transversal, same-side interior angles are supplementary, so their measures sum to $180^\\circ$.",
+          "Write the equation: $3x + (2x + 20) = 180$.",
+          "Combine like terms: $5x + 20 = 180$.",
+          "Subtract $20$ from both sides: $5x = 160$.",
+          "Divide by $5$: $x = 32$.",
+          "Substitute back: $3(32) = 96^\\circ$ and $2(32) + 20 = 64 + 20 = 84^\\circ$.",
+          "Check: $96^\\circ + 84^\\circ = 180^\\circ$, confirming the angles are supplementary."
+        ],
+        "answer": "$x = 32$; the angles measure $96^\\circ$ and $84^\\circ$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Point $P$ lies on the perpendicular bisector of segment $\\overline{AB}$. The distances are given by $PA = 4x - 7$ and $PB = 2x + 5$. Find $x$ and the length $PA$.",
+      "solution": {
+        "steps": [
+          "By the Perpendicular Bisector Theorem, any point on the perpendicular bisector of a segment is equidistant from the endpoints, so $PA = PB$.",
+          "Set the expressions equal: $4x - 7 = 2x + 5$.",
+          "Subtract $2x$ from both sides: $2x - 7 = 5$.",
+          "Add $7$ to both sides: $2x = 12$.",
+          "Divide by $2$: $x = 6$.",
+          "Substitute back into $PA$: $PA = 4(6) - 7 = 24 - 7 = 17$.",
+          "Check with $PB = 2(6) + 5 = 12 + 5 = 17$, so $PA = PB$ as required."
+        ],
+        "answer": "$x = 6$ and $PA = 17$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Two lines intersect at a point, forming angles labeled $\\angle 1$, $\\angle 2$, and $\\angle 3$ in order around the point, where $\\angle 1$ and $\\angle 3$ are vertical angles and $\\angle 2$ is between them. Write a two-column proof that $\\angle 1 \\cong \\angle 3$.",
+      "solution": {
+        "steps": [
+          "Statement: $\\angle 1$ and $\\angle 2$ form a linear pair, and $\\angle 2$ and $\\angle 3$ form a linear pair. Reason: definition of a linear pair (adjacent angles whose non-common sides form a straight line).",
+          "Statement: $m\\angle 1 + m\\angle 2 = 180^\\circ$ and $m\\angle 2 + m\\angle 3 = 180^\\circ$. Reason: Linear Pair Postulate (the angles of a linear pair are supplementary).",
+          "Statement: $m\\angle 1 + m\\angle 2 = m\\angle 2 + m\\angle 3$. Reason: substitution (both sums equal $180^\\circ$).",
+          "Statement: $m\\angle 1 = m\\angle 3$. Reason: Subtraction Property of Equality (subtract $m\\angle 2$ from both sides).",
+          "Statement: $\\angle 1 \\cong \\angle 3$. Reason: definition of congruent angles (angles with equal measure are congruent).",
+          "This is exactly the Vertical Angles Theorem: vertical angles are congruent."
+        ],
+        "answer": "$\\angle 1 \\cong \\angle 3$, proven by the Linear Pair Postulate followed by the Subtraction Property of Equality."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Two lines intersect. One angle measures $(2x + 18)^\\circ$ and its vertical angle measures $(4x - 26)^\\circ$. Find $x$ and the measure of each angle.",
+      "hint": "Vertical angles are congruent, so set the two expressions equal to each other (do not add them to $180^\\circ$).",
+      "solution": {
+        "steps": [
+          "Vertical angles are congruent: $2x + 18 = 4x - 26$.",
+          "Subtract $2x$ from both sides: $18 = 2x - 26$.",
+          "Add $26$ to both sides: $44 = 2x$, so $x = 22$.",
+          "Substitute back: $2(22) + 18 = 44 + 18 = 62^\\circ$, and $4(22) - 26 = 88 - 26 = 62^\\circ$."
+        ],
+        "answer": "$x = 22$, and each angle measures $62^\\circ$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Lines $m$ and $n$ are parallel and cut by a transversal $t$. A pair of corresponding angles measure $(5x - 12)^\\circ$ and $(3x + 28)^\\circ$. Find $x$ and the measure of each angle.",
+      "hint": "Corresponding angles formed by a transversal across parallel lines are congruent. Set the two expressions equal.",
+      "solution": {
+        "steps": [
+          "Corresponding angles are congruent: $5x - 12 = 3x + 28$.",
+          "Subtract $3x$ from both sides: $2x - 12 = 28$.",
+          "Add $12$ to both sides: $2x = 40$, so $x = 20$.",
+          "Substitute back: $5(20) - 12 = 100 - 12 = 88^\\circ$, and $3(20) + 28 = 60 + 28 = 88^\\circ$."
+        ],
+        "answer": "$x = 20$, and each corresponding angle measures $88^\\circ$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Lines $a$ and $b$ are parallel with transversal $c$. Two same-side interior angles measure $(4x + 10)^\\circ$ and $(6x)^\\circ$. Find $x$ and the measure of each angle.",
+      "hint": "Same-side interior (co-interior) angles across parallel lines are supplementary, so their measures add to $180^\\circ$.",
+      "solution": {
+        "steps": [
+          "Same-side interior angles are supplementary: $(4x + 10) + 6x = 180$.",
+          "Combine like terms: $10x + 10 = 180$.",
+          "Subtract $10$ from both sides: $10x = 170$, so $x = 17$.",
+          "Substitute back: $4(17) + 10 = 68 + 10 = 78^\\circ$, and $6(17) = 102^\\circ$.",
+          "Check: $78^\\circ + 102^\\circ = 180^\\circ$."
+        ],
+        "answer": "$x = 17$; the angles measure $78^\\circ$ and $102^\\circ$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Point $P$ lies on the perpendicular bisector of segment $\\overline{AB}$, with $PA = 5x - 9$ and $PB = 3x + 7$. Find $x$ and the length $PB$.",
+      "hint": "A point on the perpendicular bisector is equidistant from the endpoints, so $PA = PB$. Solve, then substitute to find the requested length.",
+      "solution": {
+        "steps": [
+          "By the Perpendicular Bisector Theorem, $PA = PB$: $5x - 9 = 3x + 7$.",
+          "Subtract $3x$ from both sides: $2x - 9 = 7$.",
+          "Add $9$ to both sides: $2x = 16$, so $x = 8$.",
+          "Substitute into $PB$: $PB = 3(8) + 7 = 24 + 7 = 31$.",
+          "Check with $PA = 5(8) - 9 = 40 - 9 = 31$, so $PA = PB$."
+        ],
+        "answer": "$x = 8$ and $PB = 31$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "The endpoints of a segment are $A(-2, 1)$ and $B(6, 1)$. A point $P$ is equidistant from $A$ and $B$. What is the $x$-coordinate of $P$?",
+      "hint": "Every point equidistant from $A$ and $B$ lies on the perpendicular bisector of $\\overline{AB}$. Find the $x$-coordinate of the midpoint, since the segment is horizontal.",
+      "solution": {
+        "steps": [
+          "A point equidistant from $A$ and $B$ lies on the perpendicular bisector of $\\overline{AB}$ (converse of the Perpendicular Bisector Theorem).",
+          "Since $A$ and $B$ share the $y$-coordinate $1$, the segment is horizontal, so its perpendicular bisector is the vertical line through the midpoint.",
+          "Find the $x$-coordinate of the midpoint: $\\frac{-2 + 6}{2} = \\frac{4}{2} = 2$.",
+          "The perpendicular bisector is the vertical line $x = 2$, so every equidistant point has $x$-coordinate $2$."
+        ],
+        "answer": "The $x$-coordinate of $P$ is $2$."
+      }
+    }
+  ]
+}

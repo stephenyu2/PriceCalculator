@@ -1,0 +1,171 @@
+{
+  "id": "7.SP.C.8--lesson",
+  "standard": "7.SP.C.8",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate chance processes and develop, use, and evaluate probability models",
+  "clusterCode": "C",
+  "skillName": "Compound Events",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "A compound event is made of two or more simple events, such as flipping a coin and spinning a spinner. To find its probability, first list every equally likely outcome in the sample space using an organized list, a two-way table, or a tree diagram. Then count the outcomes that make the event happen and write $P(\\text{event})=\\frac{\\text{favorable outcomes}}{\\text{total outcomes}}$ in lowest terms. When you draw without replacing, the total shrinks at the second stage, so the events are dependent. When a probability is hard to compute directly, you can design a simulation with random digits and estimate it from trial results.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "You spin a spinner with three equal sections (red, blue, green) and flip a fair coin. Find $P(\\text{green and heads})$.",
+      "solution": {
+        "steps": [
+          "List the sample space as ordered (spinner, coin) outcomes: $\\{(R,H),(R,T),(B,H),(B,T),(G,H),(G,T)\\}$.",
+          "There are $3\\times 2=6$ equally likely outcomes in total.",
+          "Exactly one outcome is 'green and heads': $(G,H)$, so there is $1$ favorable outcome.",
+          "Write the probability: $P(\\text{green and heads})=\\frac{1}{6}$.",
+          "Note: do not add $\\frac{1}{3}+\\frac{1}{2}$. A compound 'and' event uses the joint sample space, here $\\frac{1}{3}\\cdot\\frac{1}{2}=\\frac{1}{6}$."
+        ],
+        "answer": "$\\frac{1}{6}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Two fair number cubes are rolled. Using the $6\\times 6$ table of outcomes, find $P(\\text{sum}=7)$.",
+      "solution": {
+        "steps": [
+          "Each cube has $6$ faces, so the table has $6\\times 6=36$ equally likely ordered outcomes.",
+          "List the ordered pairs whose entries add to $7$: $(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)$.",
+          "That is $6$ favorable outcomes (count $(3,4)$ and $(4,3)$ separately, since the cubes are distinct).",
+          "Write the probability: $P(\\text{sum}=7)=\\frac{6}{36}$.",
+          "Simplify by dividing top and bottom by $6$: $\\frac{6}{36}=\\frac{1}{6}$."
+        ],
+        "answer": "$\\frac{1}{6}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A fair coin is flipped $3$ times. Using a tree diagram of all the outcomes, find $P(\\text{exactly two heads})$.",
+      "solution": {
+        "steps": [
+          "Each flip branches into H or T, so a $3$-stage tree has $2\\times 2\\times 2=8$ equally likely outcomes.",
+          "List them: $\\{HHH, HHT, HTH, HTT, THH, THT, TTH, TTT\\}$.",
+          "Pick out the outcomes with exactly two heads: $HHT, HTH, THH$.",
+          "That is $3$ favorable outcomes out of $8$.",
+          "Write the probability: $P(\\text{exactly two heads})=\\frac{3}{8}$, which is already in lowest terms."
+        ],
+        "answer": "$\\frac{3}{8}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A bag holds $3$ red and $2$ blue marbles. Two marbles are drawn without replacement. Find $P(\\text{both red})$.",
+      "solution": {
+        "steps": [
+          "There are $5$ marbles in all. On the first draw, $P(\\text{red})=\\frac{3}{5}$.",
+          "Because you do not replace the first marble, only $4$ marbles remain and $2$ of them are red.",
+          "So the second draw, given the first was red, has $P(\\text{red})=\\frac{2}{4}$.",
+          "Multiply the stage probabilities: $\\frac{3}{5}\\cdot\\frac{2}{4}=\\frac{6}{20}$.",
+          "Simplify: $\\frac{6}{20}=\\frac{3}{10}$. (Treating it as with-replacement, $\\frac{3}{5}\\cdot\\frac{3}{5}=\\frac{9}{25}$, would be wrong here.)"
+        ],
+        "answer": "$\\frac{3}{10}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Each cereal box contains one of $4$ equally likely prizes. Describe a simulation to estimate the probability of collecting all $4$ different prizes in $4$ boxes, and find the estimate from $10$ trials that produced these box-draw groups: $1234, 2134, 1123, 4321, 2243, 3142, 1224, 4213, 3331, 1432$.",
+      "solution": {
+        "steps": [
+          "Assign one digit to each prize: $1,2,3,4$ stand for the four prizes; ignore the digits $0,5,6,7,8,9$.",
+          "Define a trial as reading a group of $4$ digits (one per box). A trial 'succeeds' when all four digits $1,2,3,4$ appear, meaning all $4$ prizes were collected.",
+          "Check each trial: $1234$ has all four (success); $2134$ all four (success); $1123$ missing $4$; $4321$ all four (success); $2243$ missing $1$; $3142$ all four (success); $1224$ missing $3$; $4213$ all four (success); $3331$ missing $2,4$; $1432$ all four (success).",
+          "Count successes: $1234, 2134, 4321, 3142, 4213, 1432$ are $6$ successes out of $10$ trials.",
+          "Estimate the probability: $\\frac{\\text{successful trials}}{\\text{total trials}}=\\frac{6}{10}=\\frac{3}{5}$. (Reading digits one at a time instead of in groups of $4$ would model the wrong experiment.)"
+        ],
+        "answer": "$\\frac{3}{5}$ (estimated from $6$ successes in $10$ trials)"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Two fair coins are flipped. Using the sample space $\\{HH, HT, TH, TT\\}$, find $P(\\text{at least one head})$.",
+      "hint": "Either count the outcomes with one or more heads, or use $1$ minus the probability of no heads ($TT$).",
+      "solution": {
+        "steps": [
+          "There are $4$ equally likely outcomes: $HH, HT, TH, TT$.",
+          "'At least one head' includes $HH, HT, TH$, which is $3$ outcomes.",
+          "So $P(\\text{at least one head})=\\frac{3}{4}$.",
+          "Check with the complement: the only 'no head' outcome is $TT$, so $1-\\frac{1}{4}=\\frac{3}{4}$."
+        ],
+        "answer": "$\\frac{3}{4}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A spinner has four equal sections numbered $1,2,3,4$. You spin it twice. Find $P(\\text{both spins land on even numbers})$.",
+      "hint": "List ordered pairs, or notice each spin lands even with probability $\\frac{2}{4}$. The spins are independent.",
+      "solution": {
+        "steps": [
+          "Each spin has $4$ outcomes, so the two spins have $4\\times 4=16$ equally likely ordered pairs.",
+          "The even numbers are $2$ and $4$. 'Both even' pairs are $(2,2),(2,4),(4,2),(4,4)$, which is $4$ outcomes.",
+          "So $P(\\text{both even})=\\frac{4}{16}$.",
+          "Simplify: $\\frac{4}{16}=\\frac{1}{4}$."
+        ],
+        "answer": "$\\frac{1}{4}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A drawer has $4$ black socks and $2$ white socks. You pull out two socks without replacement. Find $P(\\text{both black})$.",
+      "hint": "The events are dependent. The second draw has one fewer sock in the drawer.",
+      "solution": {
+        "steps": [
+          "There are $6$ socks total, so the first draw is black with probability $\\frac{4}{6}$.",
+          "After removing one black sock, $5$ socks remain and $3$ are black, so the second draw is black with probability $\\frac{3}{5}$.",
+          "Multiply: $\\frac{4}{6}\\cdot\\frac{3}{5}=\\frac{12}{30}$.",
+          "Simplify: $\\frac{12}{30}=\\frac{2}{5}$."
+        ],
+        "answer": "$\\frac{2}{5}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Two fair number cubes are rolled. Find $P(\\text{sum}=4)$, writing your answer in lowest terms.",
+      "hint": "There are $36$ ordered outcomes. List every ordered pair whose entries add to $4$.",
+      "solution": {
+        "steps": [
+          "There are $6\\times 6=36$ equally likely ordered outcomes.",
+          "Ordered pairs that add to $4$: $(1,3),(2,2),(3,1)$, which is $3$ favorable outcomes.",
+          "So $P(\\text{sum}=4)=\\frac{3}{36}$.",
+          "Simplify by dividing by $3$: $\\frac{3}{36}=\\frac{1}{12}$."
+        ],
+        "answer": "$\\frac{1}{12}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A fair coin is flipped and a fair number cube is rolled. Find $P(\\text{heads and a number greater than }4)$.",
+      "hint": "List ordered (coin, cube) outcomes, or multiply $P(\\text{heads})$ by $P(\\text{number} > 4)$.",
+      "solution": {
+        "steps": [
+          "The sample space has $2\\times 6=12$ equally likely ordered outcomes.",
+          "'Heads' fixes the coin, and 'greater than $4$' means the cube shows $5$ or $6$.",
+          "The favorable outcomes are $(H,5)$ and $(H,6)$, which is $2$ outcomes.",
+          "So $P(\\text{heads and number} > 4)=\\frac{2}{12}$.",
+          "Simplify: $\\frac{2}{12}=\\frac{1}{6}$."
+        ],
+        "answer": "$\\frac{1}{6}$"
+      }
+    }
+  ]
+}

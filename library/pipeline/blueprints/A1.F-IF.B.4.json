@@ -1,0 +1,123 @@
+{
+  "standard": "A1.F-IF.B.4",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Functions",
+  "domainCode": "F-IF",
+  "cluster": "Interpret functions that arise in applications in terms of the context",
+  "clusterCode": "B",
+  "skillName": "Key Features of Function Graphs",
+
+  "description": "For a function that models a relationship between two quantities, students interpret the key features of its graph or table in terms of the real-world quantities involved, and sketch a graph that shows those key features given only a verbal description. Key features include $x$- and $y$-intercepts; intervals where the function is increasing, decreasing, or constant; relative maximums and minimums; positive and negative intervals; and end behavior. Students attach contextual meaning to each feature (for example, a $y$-intercept is the starting value at time $0$, a maximum is the greatest height reached, an $x$-intercept is when a quantity equals zero), read these features from graphs and tables, and translate a written story of a relationship into a rough sketch with correctly placed and labeled features.",
+
+  "subSkills": [
+    "Identify and interpret $x$-intercepts and the $y$-intercept of a graph in terms of the modeled quantities",
+    "Determine intervals where a function is increasing, decreasing, or constant and state them in interval or inequality form",
+    "Locate relative maximum and relative minimum points and interpret them in context",
+    "Interpret a coordinate point $(a,b)$ on the graph as a fact about the two quantities (e.g. 'at $3$ seconds the height was $20$ feet')",
+    "Read key features from a table of values rather than a graph",
+    "Describe end behavior or the long-run trend of a model in plain language",
+    "Sketch a graph from a verbal description so that intercepts, direction of change, and extrema match the story"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Interpret an intercept in context",
+      "example": "A graph models the height $h$ (in feet) of a ball after $t$ seconds. The graph crosses the $t$-axis at $t=4$. What does the point $(4,0)$ mean? It means the ball hits the ground $4$ seconds after being thrown."
+    },
+    {
+      "name": "Identify increasing/decreasing intervals",
+      "example": "A car's distance from home (in miles) versus time (in hours) increases from $t=0$ to $t=2$, stays constant from $t=2$ to $t=3$, then decreases. Over which interval is the function increasing? Answer: $0<t<2$."
+    },
+    {
+      "name": "Interpret a relative maximum or minimum",
+      "example": "A parabola models a rocket's height $h$ (feet) after $t$ seconds with vertex at $(3,144)$. Interpret the vertex: the rocket reaches its maximum height of $144$ feet at $t=3$ seconds."
+    },
+    {
+      "name": "Read a key feature from a table",
+      "example": "A table gives a plant's height (cm) at weeks $0,1,2,3,4$ as $2,5,8,8,6$. Between which weeks does growth stop, and when does the height start to decrease? Growth is constant between weeks $2$ and $3$ and the height decreases after week $3$."
+    },
+    {
+      "name": "Sketch a graph from a verbal description",
+      "example": "Sketch a graph: a drone starts on the ground, rises steadily for $5$ seconds to $30$ feet, hovers for $3$ seconds, then descends to the ground in $4$ seconds. The sketch should start at $(0,0)$, increase to $(5,30)$, stay constant to $(8,30)$, and decrease to $(12,0)$."
+    },
+    {
+      "name": "Interpret positive/negative intervals or end behavior",
+      "example": "A company's profit $P$ (in thousands of dollars) versus month $m$ is negative for $0<m<3$ and positive for $m>3$. What does the $x$-intercept at $m=3$ represent, and what does the positive interval mean? It is the break-even point; after month $3$ the company earns a profit."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single key feature read directly from a clearly labeled graph or short table and stated or interpreted in context. The feature is unambiguous (one intercept, one obviously increasing stretch, or one labeled vertex) and no computation beyond reading a coordinate is required. tier1 lives here and ramps into Medium.",
+      "constraints": [
+        "Read one intercept, one extremum, or one direction-of-change from a graph/table with integer gridlines",
+        "Coordinates are whole numbers with absolute value $\\le 12$",
+        "Exactly one key feature is asked about and it is visually obvious",
+        "Context is familiar (height vs. time, distance vs. time, money vs. time) and the axis labels are given"
+      ]
+    },
+    "Medium": {
+      "description": "Interpret two or more key features together, state increasing/decreasing intervals in correct interval notation, distinguish a relative maximum from an endpoint, or read features from a table that requires comparing consecutive values. tier1 ends here and tier2 begins here.",
+      "constraints": [
+        "Identify and interpret at least two features (e.g. an intercept and an extremum, or two intervals)",
+        "Express an increasing/decreasing/constant interval using inequality or interval notation",
+        "Tables require comparing successive entries to locate where behavior changes",
+        "May require distinguishing 'relative maximum' from the highest plotted endpoint, or a positive interval from an increasing interval"
+      ]
+    },
+    "Hard": {
+      "description": "Translate a multi-part verbal description into a sketch with several correctly ordered and labeled features, or interpret an unlabeled/partially labeled graph by reasoning about which feature answers a contextual question. Requires synthesizing intercepts, extrema, intervals, and end behavior into one coherent description or drawing. tier2 lives here.",
+      "constraints": [
+        "Sketch from a verbal story containing at least three phases (e.g. increase, constant, decrease) with labeled intercepts and a maximum or minimum",
+        "Distinguish and correctly place multiple distinct features in one problem (intercepts, extremum, intervals, end behavior)",
+        "Match a verbal description to the correct graph among look-alikes, or correct a flawed sketch",
+        "Interpret end behavior or compare two modeled relationships shown together"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student confuses the $x$-intercept with the $y$-intercept (reads the wrong axis crossing for the starting value)",
+      "distractor": "For a height-vs-time model, reports the starting height as the $t$-value where the graph hits the axis (e.g. says the ball starts at height $4$ for a graph crossing the $t$-axis at $4$) instead of reading the $y$-intercept"
+    },
+    {
+      "misconception": "Student reads coordinates in reversed order, swapping the input and output quantities",
+      "distractor": "Interprets the vertex $(3,144)$ as 'maximum time of $144$ at height $3$' instead of 'maximum height $144$ at time $3$'"
+    },
+    {
+      "misconception": "Student confuses where a function is increasing with where it is positive (or decreasing with negative)",
+      "distractor": "States the function is increasing on the interval where it lies above the $x$-axis, choosing the positive interval instead of the actual increasing interval"
+    },
+    {
+      "misconception": "Student reports the $x$-value of a maximum as the maximum, instead of the $y$-value (the output)",
+      "distractor": "For a vertex at $(3,144)$, gives the maximum height as $3$ feet instead of $144$ feet"
+    },
+    {
+      "misconception": "Student includes the constant (flat) interval inside the increasing or decreasing interval",
+      "distractor": "For a graph that rises on $0<t<2$ then is flat on $2<t<3$, reports the increasing interval as $0<t<3$, absorbing the constant stretch"
+    },
+    {
+      "misconception": "Student mislabels a relative minimum or endpoint as a maximum (or vice versa) by ignoring direction of change",
+      "distractor": "Calls the lowest point of a U-shaped cost curve a maximum, or treats the right endpoint of a decreasing graph as a relative minimum"
+    },
+    {
+      "misconception": "Student sketches a graph whose features are out of order or unlabeled, ignoring the sequence in the verbal story",
+      "distractor": "For 'rises, hovers, then descends,' draws a graph that decreases first or omits the constant segment, so the intercepts and maximum land in the wrong order"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

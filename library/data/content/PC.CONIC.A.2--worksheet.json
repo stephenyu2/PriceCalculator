@@ -1,0 +1,229 @@
+{
+  "id": "PC.CONIC.A.2--worksheet",
+  "standard": "PC.CONIC.A.2",
+  "clusterId": null,
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Analytic Geometry",
+  "domainCode": "CONIC",
+  "cluster": "Conic sections",
+  "clusterCode": "A",
+  "skillName": "Ellipses",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:27:56.866Z",
+  "intro": "Work with ellipses in the coordinate plane. Read features from standard form, handle translated centers, write equations from given features, and convert general form to standard form by completing the square. Recall that for $\\frac{(x-h)^2}{a^2}+\\frac{(y-k)^2}{b^2}=1$ the larger denominator is $a^2$ and lies under the variable along the major axis, with $c^2=a^2-b^2$.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "For the ellipse $\\frac{x^2}{25}+\\frac{y^2}{9}=1$, state the center and the lengths $a$ and $b$.",
+      "answer": "Center $(0,0)$, $a=5$, $b=3$",
+      "solution": {
+        "steps": [
+          "The equation is in standard form $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1$ with no shifts, so the center is $(0,0)$.",
+          "The larger denominator is $25$, so $a^2=25$ and $a=5$.",
+          "The smaller denominator is $9$, so $b^2=9$ and $b=3$.",
+          "Center $(0,0)$, $a=5$, $b=3$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "For the ellipse $\\frac{x^2}{16}+\\frac{y^2}{4}=1$, is the major axis horizontal or vertical, and what are the vertices?",
+      "answer": "Major axis horizontal; vertices $(\\pm 4,0)$",
+      "solution": {
+        "steps": [
+          "The larger denominator $16$ sits under $x^2$, so the major axis is horizontal.",
+          "Then $a^2=16$, giving $a=4$.",
+          "Vertices are the endpoints of the major axis: $(\\pm a,0)=(\\pm 4,0)$.",
+          "Major axis horizontal; vertices $(4,0)$ and $(-4,0)$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "For the ellipse $\\frac{x^2}{9}+\\frac{y^2}{36}=1$, find the vertices and the co-vertices.",
+      "answer": "Vertices $(0,\\pm 6)$; co-vertices $(\\pm 3,0)$",
+      "solution": {
+        "steps": [
+          "The larger denominator $36$ is under $y^2$, so the major axis is vertical with $a^2=36$, $a=6$.",
+          "The smaller denominator $9$ is under $x^2$, so $b^2=9$, $b=3$.",
+          "Vertices lie on the major (vertical) axis: $(0,\\pm a)=(0,\\pm 6)$.",
+          "Co-vertices lie on the minor (horizontal) axis: $(\\pm b,0)=(\\pm 3,0)$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "For the ellipse $\\frac{x^2}{25}+\\frac{y^2}{9}=1$, compute $c$ and give the foci.",
+      "answer": "$c=4$; foci $(\\pm 4,0)$",
+      "solution": {
+        "steps": [
+          "The larger denominator $25$ is under $x^2$, so $a^2=25$, $b^2=9$, and the major axis is horizontal.",
+          "Use $c^2=a^2-b^2=25-9=16$.",
+          "So $c=\\sqrt{16}=4$.",
+          "The foci sit on the major axis at $(\\pm c,0)=(\\pm 4,0)$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "For the ellipse $\\frac{x^2}{4}+\\frac{y^2}{25}=1$, give the center, vertices, co-vertices, and foci.",
+      "answer": "Center $(0,0)$; vertices $(0,\\pm 5)$; co-vertices $(\\pm 2,0)$; foci $(0,\\pm\\sqrt{21})$",
+      "solution": {
+        "steps": [
+          "No shifts, so the center is $(0,0)$.",
+          "The larger denominator $25$ is under $y^2$, so the major axis is vertical with $a^2=25$, $a=5$; the minor axis has $b^2=4$, $b=2$.",
+          "Vertices: $(0,\\pm 5)$; co-vertices: $(\\pm 2,0)$.",
+          "$c^2=a^2-b^2=25-4=21$, so $c=\\sqrt{21}$.",
+          "Foci on the major (vertical) axis: $(0,\\pm\\sqrt{21})$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "For the ellipse $\\frac{(x-2)^2}{16}+\\frac{(y+3)^2}{4}=1$, find the center and the vertices.",
+      "answer": "Center $(2,-3)$; vertices $(6,-3)$ and $(-2,-3)$",
+      "solution": {
+        "steps": [
+          "Match to $\\frac{(x-h)^2}{a^2}+\\frac{(y-k)^2}{b^2}=1$: $x-h=x-2$ gives $h=2$, and $y-k=y+3$ gives $k=-3$.",
+          "Center is $(2,-3)$.",
+          "The larger denominator $16$ is under the $x$-term, so the major axis is horizontal with $a^2=16$, $a=4$.",
+          "Vertices are $a=4$ left and right of the center: $(2\\pm 4,-3)$, i.e. $(6,-3)$ and $(-2,-3)$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "For the ellipse $\\frac{(x-2)^2}{4}+\\frac{(y+3)^2}{16}=1$, give the center, the orientation of the major axis, and the foci.",
+      "answer": "Center $(2,-3)$; major axis vertical; foci $(2,-3\\pm 2\\sqrt{3})$",
+      "solution": {
+        "steps": [
+          "Center: $h=2$, $k=-3$, so $(2,-3)$.",
+          "The larger denominator $16$ is under the $y$-term, so the major axis is vertical with $a^2=16$, $a=4$; $b^2=4$.",
+          "$c^2=a^2-b^2=16-4=12$, so $c=\\sqrt{12}=2\\sqrt{3}$.",
+          "Foci are $c$ above and below the center along the vertical axis: $(2,-3\\pm 2\\sqrt{3})$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Write the standard-form equation of the ellipse with center $(0,0)$, a vertex at $(0,6)$, and a focus at $(0,4)$.",
+      "answer": "$\\frac{x^2}{20}+\\frac{y^2}{36}=1$",
+      "solution": {
+        "steps": [
+          "The vertex $(0,6)$ and focus $(0,4)$ lie on the $y$-axis, so the major axis is vertical.",
+          "Distance from center to vertex is $a=6$, so $a^2=36$.",
+          "Distance from center to focus is $c=4$, so $c^2=16$.",
+          "Use $b^2=a^2-c^2=36-16=20$.",
+          "For a vertical major axis the larger denominator goes under $y^2$: $\\frac{x^2}{20}+\\frac{y^2}{36}=1$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Write the standard-form equation of the ellipse centered at the origin with a horizontal major axis of length $10$ and a minor axis of length $6$.",
+      "answer": "$\\frac{x^2}{25}+\\frac{y^2}{9}=1$",
+      "solution": {
+        "steps": [
+          "Major axis length is $2a=10$, so $a=5$ and $a^2=25$.",
+          "Minor axis length is $2b=6$, so $b=3$ and $b^2=9$.",
+          "The major axis is horizontal, so $a^2$ goes under $x^2$.",
+          "Equation: $\\frac{x^2}{25}+\\frac{y^2}{9}=1$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "For the ellipse $\\frac{(x+1)^2}{9}+\\frac{(y-2)^2}{25}=1$, give the center, both vertices, both co-vertices, and both foci.",
+      "answer": "Center $(-1,2)$; vertices $(-1,7)$ and $(-1,-3)$; co-vertices $(2,2)$ and $(-4,2)$; foci $(-1,6)$ and $(-1,-2)$",
+      "solution": {
+        "steps": [
+          "Center: $x+1=x-(-1)$ gives $h=-1$; $y-2$ gives $k=2$. Center $(-1,2)$.",
+          "Larger denominator $25$ under the $y$-term means a vertical major axis with $a^2=25$, $a=5$; minor axis $b^2=9$, $b=3$.",
+          "Vertices: $5$ up and down from center: $(-1,2\\pm 5)=(-1,7)$ and $(-1,-3)$.",
+          "Co-vertices: $3$ left and right: $(-1\\pm 3,2)=(2,2)$ and $(-4,2)$.",
+          "$c^2=a^2-b^2=25-9=16$, so $c=4$. Foci $4$ up and down: $(-1,2\\pm 4)=(-1,6)$ and $(-1,-2)$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Rewrite $9x^2+4y^2-18x+16y-11=0$ in standard form and state the center.",
+      "answer": "$\\frac{(x-1)^2}{4}+\\frac{(y+2)^2}{9}=1$; center $(1,-2)$",
+      "solution": {
+        "steps": [
+          "Group: $9x^2-18x+4y^2+16y=11$.",
+          "Factor leading coefficients: $9(x^2-2x)+4(y^2+4y)=11$.",
+          "Complete the square inside each group: $x^2-2x+1=(x-1)^2$ and $y^2+4y+4=(y+2)^2$.",
+          "Add the balancing constants times their factors to both sides: $9\\cdot 1=9$ and $4\\cdot 4=16$, so $9(x-1)^2+4(y+2)^2=11+9+16=36$.",
+          "Divide every term by $36$: $\\frac{9(x-1)^2}{36}+\\frac{4(y+2)^2}{36}=1$, i.e. $\\frac{(x-1)^2}{4}+\\frac{(y+2)^2}{9}=1$.",
+          "Center is $(1,-2)$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Rewrite $4x^2+25y^2+8x-100y+4=0$ in standard form and identify the center and the orientation of the major axis.",
+      "answer": "$\\frac{(x+1)^2}{25}+\\frac{(y-2)^2}{4}=1$; center $(-1,2)$; major axis horizontal",
+      "solution": {
+        "steps": [
+          "Group: $4x^2+8x+25y^2-100y=-4$.",
+          "Factor leading coefficients: $4(x^2+2x)+25(y^2-4y)=-4$.",
+          "Complete the square: $x^2+2x+1=(x+1)^2$ and $y^2-4y+4=(y-2)^2$.",
+          "Add $4\\cdot 1=4$ and $25\\cdot 4=100$ to both sides: $4(x+1)^2+25(y-2)^2=-4+4+100=100$.",
+          "Divide by $100$: $\\frac{4(x+1)^2}{100}+\\frac{25(y-2)^2}{100}=1$, i.e. $\\frac{(x+1)^2}{25}+\\frac{(y-2)^2}{4}=1$.",
+          "Center $(-1,2)$. The larger denominator $25$ is under the $x$-term, so the major axis is horizontal."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "An ellipse centered at the origin has a horizontal major axis, passes through the point $(5,0)$, and has eccentricity $e=\\frac{3}{5}$. Write its standard-form equation.",
+      "answer": "$\\frac{x^2}{25}+\\frac{y^2}{16}=1$",
+      "solution": {
+        "steps": [
+          "The point $(5,0)$ is a vertex on the horizontal major axis, so $a=5$ and $a^2=25$.",
+          "Eccentricity $e=\\frac{c}{a}=\\frac{3}{5}$, so $c=ea=\\frac{3}{5}\\cdot 5=3$.",
+          "Use $b^2=a^2-c^2=25-9=16$.",
+          "Horizontal major axis puts $a^2$ under $x^2$: $\\frac{x^2}{25}+\\frac{y^2}{16}=1$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "An ellipse has center $(3,-1)$, one vertex at $(3,4)$, and one focus at $(3,2)$. Write its standard-form equation.",
+      "answer": "$\\frac{(x-3)^2}{16}+\\frac{(y+1)^2}{25}=1$",
+      "solution": {
+        "steps": [
+          "The vertex $(3,4)$ and focus $(3,2)$ share the center's $x$-coordinate $3$, so the major axis is vertical.",
+          "Distance from center $(3,-1)$ to vertex $(3,4)$ is $a=|4-(-1)|=5$, so $a^2=25$.",
+          "Distance from center to focus $(3,2)$ is $c=|2-(-1)|=3$, so $c^2=9$.",
+          "Use $b^2=a^2-c^2=25-9=16$, so the minor-axis denominator is $16$.",
+          "Write the center using $x-h=x-3$ and $y-k=y-(-1)=y+1$, so $h=3$, $k=-1$.",
+          "Vertical major axis puts $a^2=25$ under $(y+1)^2$ and $b^2=16$ under $(x-3)^2$: $\\frac{(x-3)^2}{16}+\\frac{(y+1)^2}{25}=1$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Rewrite $x^2+9y^2+4x-54y+76=0$ in standard form, then give the center, the vertices, and the foci.",
+      "answer": "$\\frac{(x+2)^2}{9}+\\frac{(y-3)^2}{1}=1$; center $(-2,3)$; vertices $(1,3)$ and $(-5,3)$; foci $(-2\\pm 2\\sqrt{2},3)$",
+      "solution": {
+        "steps": [
+          "Group: $x^2+4x+9y^2-54y=-76$.",
+          "Factor: $(x^2+4x)+9(y^2-6y)=-76$.",
+          "Complete the square: $x^2+4x+4=(x+2)^2$ and $y^2-6y+9=(y-3)^2$.",
+          "Add $4$ and $9\\cdot 9=81$ to both sides: $(x+2)^2+9(y-3)^2=-76+4+81=9$.",
+          "Divide by $9$: $\\frac{(x+2)^2}{9}+\\frac{(y-3)^2}{1}=1$. Center $(-2,3)$.",
+          "Larger denominator $9$ under the $x$-term, so horizontal major axis with $a^2=9$, $a=3$, $b^2=1$, $b=1$. Vertices $(-2\\pm 3,3)=(1,3)$ and $(-5,3)$.",
+          "$c^2=a^2-b^2=9-1=8$, so $c=2\\sqrt{2}$. Foci $(-2\\pm 2\\sqrt{2},3)$."
+        ]
+      }
+    }
+  ]
+}

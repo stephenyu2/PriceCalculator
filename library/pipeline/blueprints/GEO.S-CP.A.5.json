@@ -1,0 +1,120 @@
+{
+  "standard": "GEO.S-CP.A.5",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Understand independence and conditional probability and use them to interpret data",
+  "clusterCode": "A",
+  "skillName": "Everyday Conditional Probability",
+
+  "description": "Students recognize, explain, and interpret conditional probability and independence in everyday situations and plain language. Given a context (medical screening, weather, sports, marketing, two-way data), they identify which event is the condition, translate phrases like 'given that', 'among', 'if you know', and 'the rate of X among Y' into conditional-probability notation $P(A \\mid B)$, compute conditional probabilities from counts and two-way tables, and decide whether two events are independent by comparing $P(A \\mid B)$ with $P(A)$. They explain in words why conditioning changes a probability and what independence means for real decisions.",
+
+  "subSkills": [
+    "Translate everyday phrasing ('given', 'among', 'of those who', 'if we know') into the conditional event $B$ and the target event $A$ in $P(A \\mid B)$",
+    "Compute a conditional probability from raw counts using $P(A \\mid B) = \\dfrac{P(A \\text{ and } B)}{P(B)} = \\dfrac{\\text{count}(A \\text{ and } B)}{\\text{count}(B)}$",
+    "Read and use a two-way frequency table to extract conditional probabilities by restricting to a row or column",
+    "Decide whether two events are independent by testing whether $P(A \\mid B) = P(A)$ (equivalently $P(A \\text{ and } B) = P(A)\\,P(B)$)",
+    "Explain in everyday language what a conditional probability means and why $P(A \\mid B) \\ne P(B \\mid A)$ in general",
+    "Interpret independence and dependence as statements about real-world association (whether knowing $B$ changes the chance of $A$)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Phrase-to-notation translation",
+      "example": "A report says 'among adults who exercise daily, 15% have high blood pressure.' Let $E$ be 'exercises daily' and $H$ be 'has high blood pressure.' Which statement matches the sentence: $P(H \\mid E) = 0.15$ or $P(E \\mid H) = 0.15$? Answer: $P(H \\mid E) = 0.15$."
+    },
+    {
+      "name": "Conditional probability from counts",
+      "example": "In a class of $30$ students, $18$ play a sport and of those $18$, $12$ also play an instrument. Find the probability a student plays an instrument given they play a sport. Answer: $P(I \\mid S) = \\dfrac{12}{18} = \\dfrac{2}{3}$."
+    },
+    {
+      "name": "Conditional probability from a two-way table",
+      "example": "A two-way table records $200$ people by whether they own a pet (row) and whether they rent or own a home (column). Given the cell counts, find $P(\\text{owns home} \\mid \\text{owns a pet})$ by dividing the matching cell by the pet-owner row total."
+    },
+    {
+      "name": "Independence test",
+      "example": "A survey finds $P(\\text{likes coffee}) = 0.6$ and $P(\\text{likes coffee} \\mid \\text{works night shift}) = 0.6$. Are 'likes coffee' and 'works night shift' independent? Answer: yes, because $P(A \\mid B) = P(A)$."
+    },
+    {
+      "name": "Compare and interpret two conditionals",
+      "example": "From a medical-screening table, $P(\\text{disease} \\mid \\text{positive test}) = 0.31$ while $P(\\text{disease}) = 0.05$. Explain what the gap means: a positive test raises the chance of disease, so the events are dependent."
+    },
+    {
+      "name": "Direction-of-conditioning distinction",
+      "example": "Given $P(\\text{rain} \\mid \\text{cloudy}) = 0.5$, can you conclude $P(\\text{cloudy} \\mid \\text{rain}) = 0.5$? Explain. Answer: no, the two conditionals are generally different."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recognition or computation. The condition and target are stated almost explicitly, or the conditional probability is one division of two given counts. No table assembly required.",
+      "constraints": [
+        "Translate one everyday sentence into $P(A \\mid B)$ with the events named in the prompt",
+        "Compute $P(A \\mid B)$ from two directly given counts, e.g. $\\dfrac{12}{18}$",
+        "Answers reduce to simple fractions, percents, or decimals like $\\dfrac{2}{3}$ or $0.4$",
+        "Independence question phrased as a direct comparison of two given numbers $P(A \\mid B)$ vs $P(A)$"
+      ]
+    },
+    "Medium": {
+      "description": "Two steps: read a small two-way table or compute a row/column total first, then form the conditional probability. May require choosing the correct denominator (the condition's total, not the grand total).",
+      "constraints": [
+        "Extract counts from a $2 \\times 2$ or $2 \\times 3$ two-way table before dividing",
+        "Distinguish $P(A \\mid B)$ from $P(A)$ and from $P(A \\text{ and } B)$ using the same table",
+        "Independence decided by computing $P(A \\mid B)$ and comparing to a computed $P(A)$",
+        "Some answers are non-trivial fractions that must be reduced, e.g. $\\dfrac{45}{120} = \\dfrac{3}{8}$"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step interpretation: compute two conditionals (and possibly a marginal), compare them, and explain the real-world meaning, or reason about the asymmetry $P(A \\mid B) \\ne P(B \\mid A)$. Requires a short written justification of independence or dependence.",
+      "constraints": [
+        "Compute both $P(A \\mid B)$ and $P(B \\mid A)$ and explain why they differ",
+        "Use the multiplication form $P(A \\text{ and } B) = P(A)\\,P(B)$ to confirm or reject independence",
+        "Interpret the comparison in everyday terms (a screening, marketing, or weather decision)",
+        "Combine table reading, conditional computation, and an independence verdict in one item"
+      ]
+    },
+    "_singleWorksheetRamp": "The single 15-item worksheet ramps from Easy (items 1 to 5: phrase translation and one-division conditionals) through Medium (items 6 to 11: two-way table extraction and denominator selection) to Hard (items 12 to 15: two-conditional comparison, independence verdicts with explanation, and asymmetry reasoning).",
+    "_tierSplit": "If split into two worksheets: tier1 (Easy to Medium) covers translation, count-based conditionals, and basic two-way table reads; tier2 (Medium to Hard) covers independence testing via $P(A \\mid B) = P(A)$, the multiplication rule, asymmetry of conditioning, and interpretive explanations. No item overlap."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student reverses the condition and target, computing $P(B \\mid A)$ when $P(A \\mid B)$ was asked",
+      "distractor": "From '$12$ of the $18$ sport players also play an instrument,' reports $P(S \\mid I)$ using an instrument total instead of $P(I \\mid S) = \\dfrac{12}{18} = \\dfrac{2}{3}$"
+    },
+    {
+      "misconception": "Student divides by the grand total instead of the condition's total, confusing $P(A \\text{ and } B)$ with $P(A \\mid B)$",
+      "distractor": "Computes $\\dfrac{12}{30}$ (the joint probability) instead of $\\dfrac{12}{18}$ (the conditional)"
+    },
+    {
+      "misconception": "Student assumes $P(A \\mid B) = P(B \\mid A)$ (treats conditioning as symmetric)",
+      "distractor": "Concludes $P(\\text{cloudy} \\mid \\text{rain}) = 0.5$ directly from $P(\\text{rain} \\mid \\text{cloudy}) = 0.5$"
+    },
+    {
+      "misconception": "Student confuses independent with mutually exclusive, deciding events are independent because they 'do not overlap'",
+      "distractor": "Calls two events independent when $P(A \\text{ and } B) = 0$, instead of testing $P(A \\mid B) = P(A)$"
+    },
+    {
+      "misconception": "Student declares dependence whenever $P(A \\mid B) \\ne P(B \\mid A)$ rather than comparing $P(A \\mid B)$ with $P(A)$",
+      "distractor": "Uses the wrong independence test, comparing the two conditionals to each other instead of the conditional to the marginal $P(A)$"
+    },
+    {
+      "misconception": "Student adds the two probabilities instead of dividing when forming a conditional",
+      "distractor": "Reports $P(A) + P(B)$ or $P(A \\text{ and } B) + P(B)$ in place of $\\dfrac{P(A \\text{ and } B)}{P(B)}$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "id": "A2.A-APR.C.4--lesson",
+  "standard": "A2.A-APR.C.4",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Arithmetic with Polynomials and Rational Expressions",
+  "domainCode": "A-APR",
+  "cluster": "Use polynomial identities to solve problems",
+  "clusterCode": "C",
+  "skillName": "Polynomial Identities",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "intro": "A polynomial identity is an equation that is true for every value of its variables, not just a few special ones. You prove an identity by transforming one side until it matches the other, usually by expanding products and collecting like terms. Once an identity is proven, you can run it in reverse to factor, substitute numbers into it to compute quickly or explain a pattern, and even use it to generate Pythagorean triples. Key identities to know: $(a\\pm b)^2=a^2\\pm 2ab+b^2$, $a^2-b^2=(a-b)(a+b)$, $a^3\\pm b^3=(a\\pm b)(a^2\\mp ab+b^2)$, and the triple generator $(x^2+y^2)^2=(x^2-y^2)^2+(2xy)^2$. Watch the signs and never distribute an exponent over a sum.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Prove the identity $(x+3)^2=x^2+6x+9$ by expanding the left side.",
+      "solution": {
+        "steps": [
+          "Rewrite the square as a product: $(x+3)^2=(x+3)(x+3)$.",
+          "Apply the distributive property to every pair of terms: $(x+3)(x+3)=x\\cdot x+x\\cdot 3+3\\cdot x+3\\cdot 3=x^2+3x+3x+9$.",
+          "Combine the two like middle terms $3x+3x=6x$: $x^2+6x+9$.",
+          "This matches the right side exactly, so the equation holds for every value of $x$, making it an identity.",
+          "Note the middle term $6x=2\\cdot x\\cdot 3$ comes from $2ab$; do not drop it, $(x+3)^2$ is not $x^2+9$."
+        ],
+        "answer": "$(x+3)^2=x^2+6x+9$, a proven identity"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Use a polynomial identity to factor $49x^2-25$.",
+      "solution": {
+        "steps": [
+          "Check whether each term is a perfect square: $49x^2=(7x)^2$ and $25=5^2$, and the expression is a difference, so this fits $a^2-b^2$.",
+          "Identify $a=7x$ and $b=5$.",
+          "Apply the difference-of-squares identity $a^2-b^2=(a-b)(a+b)$: $49x^2-25=(7x-5)(7x+5)$.",
+          "Check by expanding: $(7x-5)(7x+5)=49x^2+35x-35x-25=49x^2-25$, which confirms the factorization."
+        ],
+        "answer": "$49x^2-25=(7x-5)(7x+5)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Use a cube identity to factor $8x^3+27$.",
+      "solution": {
+        "steps": [
+          "Recognize a sum of cubes: $8x^3=(2x)^3$ and $27=3^3$, so this is $a^3+b^3$ with $a=2x$ and $b=3$.",
+          "Recall the sum-of-cubes identity $a^3+b^3=(a+b)(a^2-ab+b^2)$. The middle term of the trinomial is $-ab$, not $+ab$.",
+          "Substitute $a=2x$, $b=3$: $a^2=(2x)^2=4x^2$, $ab=(2x)(3)=6x$, $b^2=9$.",
+          "Assemble: $8x^3+27=(2x+3)(4x^2-6x+9)$.",
+          "Check the trinomial does not factor further: its discriminant is $(-6)^2-4(4)(9)=36-144=-108<0$, so the factorization is complete."
+        ],
+        "answer": "$8x^3+27=(2x+3)(4x^2-6x+9)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Use the identity $a^2-b^2=(a-b)(a+b)$ to compute $103\\cdot 97$ without a calculator.",
+      "solution": {
+        "steps": [
+          "Notice $103$ and $97$ are equally spaced around $100$: $103=100+3$ and $97=100-3$.",
+          "So the product matches $(a+b)(a-b)$ with $a=100$ and $b=3$.",
+          "The identity gives $(a+b)(a-b)=a^2-b^2$, so $103\\cdot 97=100^2-3^2$.",
+          "Evaluate: $100^2=10000$ and $3^2=9$, so $10000-9=9991$.",
+          "Therefore $103\\cdot 97=9991$."
+        ],
+        "answer": "$103\\cdot 97=9991$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Use the identity $(x^2+y^2)^2=(x^2-y^2)^2+(2xy)^2$ with $x=3$ and $y=2$ to generate a Pythagorean triple, and verify it.",
+      "solution": {
+        "steps": [
+          "Compute the three pieces from $x=3$, $y=2$: $x^2-y^2=9-4=5$, $2xy=2(3)(2)=12$, and $x^2+y^2=9+4=13$.",
+          "The identity says $(x^2-y^2)$ and $2xy$ are the legs and $x^2+y^2$ is the hypotenuse, giving the triple $(5,12,13)$.",
+          "Verify with the Pythagorean theorem: $5^2+12^2=25+144=169$.",
+          "And $13^2=169$, so $5^2+12^2=13^2$ checks out.",
+          "The hypotenuse is the largest value $13=x^2+y^2$, not $2xy=12$; be careful not to mislabel the legs and hypotenuse."
+        ],
+        "answer": "The triple $(5,12,13)$, and $5^2+12^2=13^2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Prove the identity $(x-4)^2=x^2-8x+16$ by expanding the left side.",
+      "hint": "Write $(x-4)^2=(x-4)(x-4)$ and distribute. The middle term is $2ab$ with $a=x$, $b=-4$, so it must be negative.",
+      "solution": {
+        "steps": [
+          "Rewrite as a product: $(x-4)^2=(x-4)(x-4)$.",
+          "Distribute: $x\\cdot x+x\\cdot(-4)+(-4)\\cdot x+(-4)(-4)=x^2-4x-4x+16$.",
+          "Combine like middle terms $-4x-4x=-8x$: $x^2-8x+16$.",
+          "This equals the right side, so the identity holds for all $x$. The middle term is $-8x$, not $+8x$, and the constant is $+16$."
+        ],
+        "answer": "$(x-4)^2=x^2-8x+16$, a proven identity"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Use a polynomial identity to factor $36x^2-81$.",
+      "hint": "Both terms are perfect squares and the expression is a difference. Identify $a$ and $b$ for $a^2-b^2=(a-b)(a+b)$.",
+      "solution": {
+        "steps": [
+          "Write each term as a square: $36x^2=(6x)^2$ and $81=9^2$, a difference of squares.",
+          "Set $a=6x$ and $b=9$.",
+          "Apply $a^2-b^2=(a-b)(a+b)$: $36x^2-81=(6x-9)(6x+9)$.",
+          "Each factor shares a $3$, so factor it out for the fully factored form: $3(2x-3)\\cdot 3(2x+3)=9(2x-3)(2x+3)$.",
+          "Check: $9(2x-3)(2x+3)=9(4x^2-9)=36x^2-81$, which confirms the result."
+        ],
+        "answer": "$36x^2-81=(6x-9)(6x+9)=9(2x-3)(2x+3)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Use a cube identity to factor $x^3-64$.",
+      "hint": "This is a difference of cubes with $a=x$ and $b=4$. Use $a^3-b^3=(a-b)(a^2+ab+b^2)$; the middle term of the trinomial is $+ab$.",
+      "solution": {
+        "steps": [
+          "Recognize $x^3-64=x^3-4^3$, a difference of cubes with $a=x$, $b=4$.",
+          "Apply $a^3-b^3=(a-b)(a^2+ab+b^2)$.",
+          "Substitute: $a^2=x^2$, $ab=4x$, $b^2=16$.",
+          "Assemble: $x^3-64=(x-4)(x^2+4x+16)$.",
+          "The trinomial has discriminant $4^2-4(1)(16)=16-64=-48<0$, so it does not factor further over the reals."
+        ],
+        "answer": "$x^3-64=(x-4)(x^2+4x+16)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Is $(x+y)^2=x^2+y^2$ an identity? If not, give a counterexample and state the correct identity.",
+      "hint": "Test a pair where neither variable is $0$, such as $x=1$, $y=1$, and compare both sides.",
+      "solution": {
+        "steps": [
+          "Test $x=1$, $y=1$. Left side: $(1+1)^2=2^2=4$. Right side: $1^2+1^2=2$.",
+          "Since $4\\neq 2$, the equation fails for this pair, so it is not true for all values and is not an identity.",
+          "Expanding correctly gives $(x+y)^2=x^2+2xy+y^2$, which differs from $x^2+y^2$ by the middle term $2xy$.",
+          "The mistake is distributing the exponent over the sum; the correct identity keeps the $2xy$ term."
+        ],
+        "answer": "Not an identity. Counterexample $x=y=1$ gives $4\\neq 2$. The correct identity is $(x+y)^2=x^2+2xy+y^2$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Use the identity $(x^2+y^2)^2=(x^2-y^2)^2+(2xy)^2$ with $x=4$ and $y=1$ to generate a Pythagorean triple, and verify it.",
+      "hint": "Compute $x^2-y^2$, $2xy$, and $x^2+y^2$. The largest one, $x^2+y^2$, is the hypotenuse.",
+      "solution": {
+        "steps": [
+          "With $x=4$, $y=1$: $x^2-y^2=16-1=15$, $2xy=2(4)(1)=8$, and $x^2+y^2=16+1=17$.",
+          "The legs are $15$ and $8$, and the hypotenuse is $17$, giving the triple $(8,15,17)$.",
+          "Verify: $8^2+15^2=64+225=289$.",
+          "And $17^2=289$, so $8^2+15^2=17^2$, confirming a valid Pythagorean triple."
+        ],
+        "answer": "The triple $(8,15,17)$, and $8^2+15^2=17^2$"
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "generatedAt": "2026-06-24T19:38:44.935Z"
+}

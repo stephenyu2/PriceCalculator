@@ -1,0 +1,129 @@
+{
+  "standard": "GEO.G-C.A.2",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Circles",
+  "domainCode": "G-C",
+  "cluster": "Understand and apply theorems about circles",
+  "clusterCode": "A",
+  "skillName": "Angles, Radii, and Chords",
+
+  "description": "Students identify and apply relationships among central angles, inscribed angles, radii, chords, and tangents in a circle. They use the Inscribed Angle Theorem (an inscribed angle is half the central angle subtending the same arc), the corollary that an inscribed angle subtending a diameter is a right angle ($90^\\circ$), the property that a radius drawn to a point of tangency is perpendicular to the tangent line, and the chord relationships (equal chords subtend equal arcs; a radius perpendicular to a chord bisects it). Given measures of some arcs, angles, or segment lengths, students solve for unknown angle measures or segment lengths and justify each step with the relevant theorem.",
+
+  "subSkills": [
+    "Relate a central angle to its intercepted arc ($m\\angle = m\\overset{\\frown}{arc}$)",
+    "Apply the Inscribed Angle Theorem: inscribed angle $= \\tfrac{1}{2}$ the intercepted arc, so it $= \\tfrac{1}{2}$ the central angle on the same arc",
+    "Recognize that inscribed angles intercepting the same arc are congruent",
+    "Apply Thales' corollary: an inscribed angle that subtends a diameter is a right angle ($90^\\circ$)",
+    "Use the radius-to-tangent perpendicularity ($90^\\circ$ at the point of tangency) to find angles or solve right triangles",
+    "Use the perpendicular-from-center bisects-the-chord property (and its converse) to find segment lengths",
+    "Apply equal chords subtend equal arcs / equal central angles",
+    "Set up and solve linear or right-triangle (Pythagorean) equations from circle relationships and justify each with a named theorem"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Central-to-inscribed angle",
+      "example": "Points $A$, $B$, $C$ lie on circle $O$. The central angle $\\angle AOB = 80^\\circ$. Find the inscribed angle $\\angle ACB$ that intercepts the same arc $AB$. Answer: $\\angle ACB = \\frac{1}{2}(80^\\circ) = 40^\\circ$."
+    },
+    {
+      "name": "Inscribed angle from arc",
+      "example": "An inscribed angle intercepts an arc of measure $130^\\circ$. Find the angle. Answer: $\\frac{1}{2}(130^\\circ) = 65^\\circ$."
+    },
+    {
+      "name": "Angle in a semicircle (Thales)",
+      "example": "$BC$ is a diameter of circle $O$ and $A$ is on the circle. If $\\angle ABC = 35^\\circ$, find $\\angle BAC$ and $\\angle ACB$. Since $\\angle BAC$ subtends the diameter, $\\angle BAC = 90^\\circ$, so $\\angle ACB = 180^\\circ - 90^\\circ - 35^\\circ = 55^\\circ$."
+    },
+    {
+      "name": "Radius perpendicular to tangent",
+      "example": "Line $\\ell$ is tangent to circle $O$ at point $P$, and $Q$ is a point on $\\ell$ with $OQ = 13$ and radius $OP = 5$. Find $PQ$. Because $OP \\perp \\ell$, triangle $OPQ$ is right-angled at $P$, so $PQ = \\sqrt{13^2 - 5^2} = \\sqrt{144} = 12$."
+    },
+    {
+      "name": "Perpendicular bisector of a chord",
+      "example": "A radius of length $10$ is drawn perpendicular to chord $AB$, meeting it at $M$. If the distance $OM$ from the center to the chord is $6$, find the chord length $AB$. Since the radius bisects the chord, $AM = \\sqrt{10^2 - 6^2} = 8$, so $AB = 16$."
+    },
+    {
+      "name": "Equal chords / equal arcs",
+      "example": "In circle $O$, chords $AB$ and $CD$ are congruent. If arc $AB = 70^\\circ$, find arc $CD$. Equal chords subtend equal arcs, so arc $CD = 70^\\circ$."
+    },
+    {
+      "name": "Multi-theorem solve for $x$",
+      "example": "$BC$ is a diameter; the inscribed angle $\\angle BAC$ subtends it. A tangent at $C$ makes the radius $OC$ perpendicular to it. Given $\\angle ABC = (2x+10)^\\circ$ and $\\angle ACB = (3x)^\\circ$ with $\\angle BAC = 90^\\circ$, solve $2x+10+3x+90 = 180$ for $x = 16$, then find each angle."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-theorem, one-step application with whole-number degree or length values. Direct use of central-to-inscribed halving/doubling, the semicircle right-angle corollary, or radius-tangent perpendicularity stated outright. No equation to solve beyond a single arithmetic step. A clearly labeled given is plugged directly into one relationship.",
+      "constraints": [
+        "Exactly one theorem applied",
+        "Given values are whole numbers that halve/double cleanly (e.g. central angle $80^\\circ \\to$ inscribed $40^\\circ$)",
+        "Right-triangle cases use Pythagorean triples ($3$-$4$-$5$, $5$-$12$-$13$, $8$-$15$-$17$)",
+        "Answer is a single angle measure or length, no variable"
+      ]
+    },
+    "Medium": {
+      "description": "Two linked steps or one theorem combined with the triangle angle-sum / Pythagorean theorem. Student must select the correct relationship, then finish with a second deduction (e.g. semicircle gives $90^\\circ$, then angle-sum gives the third angle; or perpendicular bisects chord, then Pythagoras gives half-chord then full chord). May include solving a simple linear equation for $x$.",
+      "constraints": [
+        "Two chained relationships, or one circle theorem plus angle-sum/Pythagoras",
+        "Lengths may yield a non-triple radical kept exact (e.g. $\\sqrt{20} = 2\\sqrt{5}$)",
+        "A one-step linear equation in $x$ may be required",
+        "Requires choosing which arc/angle pairs correspond"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step proof-style reasoning combining three or more relationships, or a setup that must be extracted from a verbal/figure description before any theorem applies. Includes solving a multi-term linear equation, comparing two configurations, or justifying with a named theorem at each step. Distinguishing same-arc vs. different-arc inscribed angles and reasoning about tangent-radius right triangles inside a larger figure.",
+      "constraints": [
+        "Three or more theorems chained, with named justifications",
+        "Multi-term linear equation (e.g. $(2x+10)+(3x)+90 = 180$) or system",
+        "Mixed tangent + inscribed + chord configuration in one figure",
+        "Exact radical or fractional answers; no rounding unless an approximation is explicitly requested"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student thinks the inscribed angle equals the central angle (or the intercepted arc) instead of half of it",
+      "distractor": "Reports the inscribed angle as $80^\\circ$ (equal to the central angle) rather than $40^\\circ$"
+    },
+    {
+      "misconception": "Student doubles when they should halve, treating the inscribed angle as twice the central angle",
+      "distractor": "Reports $160^\\circ$ for an inscribed angle on an $80^\\circ$ central angle"
+    },
+    {
+      "misconception": "Student does not recognize that an angle subtending a diameter is $90^\\circ$ and instead guesses or uses the given arc directly",
+      "distractor": "Gives $\\angle BAC = 55^\\circ$ or $70^\\circ$ instead of the $90^\\circ$ forced by the semicircle"
+    },
+    {
+      "misconception": "Student treats the radius-tangent angle as something other than $90^\\circ$ (e.g. assumes the tangent passes through the center or uses the wrong leg)",
+      "distractor": "Computes $PQ = \\sqrt{13^2 + 5^2} = \\sqrt{194}$ (adds instead of subtracting) rather than $\\sqrt{13^2 - 5^2} = 12$"
+    },
+    {
+      "misconception": "Student forgets that the perpendicular from the center bisects the chord and reports the half-chord as the full chord",
+      "distractor": "Gives $AB = 8$ (the half-chord) instead of $AB = 16$"
+    },
+    {
+      "misconception": "Student misidentifies which arc an inscribed angle intercepts, pairing the angle with the major arc instead of the minor arc (or vice versa)",
+      "distractor": "Uses $360^\\circ - 130^\\circ = 230^\\circ$ then halves to get $115^\\circ$ instead of $\\frac{1}{2}(130^\\circ) = 65^\\circ$"
+    },
+    {
+      "misconception": "Student applies the Pythagorean theorem with the radius as a leg instead of the hypotenuse (or vice versa) in chord/tangent right triangles",
+      "distractor": "Computes $\\sqrt{10^2 + 6^2} = \\sqrt{136}$ for the half-chord instead of $\\sqrt{10^2 - 6^2} = 8$"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet (Easy->Hard across 15 items). lesson 5 worked examples + 5 practice, quiz 8 multiple choice.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

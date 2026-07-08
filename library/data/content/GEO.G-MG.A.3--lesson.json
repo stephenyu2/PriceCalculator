@@ -1,0 +1,183 @@
+{
+  "id": "GEO.G-MG.A.3--lesson",
+  "standard": "GEO.G-MG.A.3",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Modeling with Geometry",
+  "domainCode": "G-MG",
+  "cluster": "Apply geometric concepts in modeling situations",
+  "clusterCode": "A",
+  "skillName": "Geometric Methods in Design Problems",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Design problems ask you to build or analyze an object that must meet a constraint: a target area, a fixed volume, a budget, or a ratio. The strategy is always the same. First decide which geometric quantity controls the design (area, volume, perimeter, cost, or a ratio), write the governing equation such as $A = \\ell w$, $V = \\ell w h$, or $A = \\pi r^2$, solve it for the unknown dimension, and then check that your answer satisfies every stated constraint. Report exact values (radicals, multiples of $\\pi$, fractions) when the numbers allow, and a clearly labeled rounded value when a real measurement requires it. Remember that when a design is scaled by a factor $k$, lengths scale by $k$, areas by $k^2$, and volumes by $k^3$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A rectangular garden must have an area of $48$ square meters, and its length must be $3$ times its width. Find the width and length of the garden.",
+      "solution": {
+        "steps": [
+          "The controlling quantity is area, so the governing equation is $A = \\ell w$.",
+          "Let the width be $w$. The length is $3$ times the width, so $\\ell = 3w$.",
+          "Substitute into the area equation: $(3w)(w) = 48$, which gives $3w^2 = 48$.",
+          "Divide both sides by $3$: $w^2 = 16$.",
+          "Take the positive square root (a width must be positive): $w = 4$ m.",
+          "Find the length: $\\ell = 3w = 3(4) = 12$ m.",
+          "Check: $\\ell w = 12 \\cdot 4 = 48$ square meters, and $12 = 3 \\cdot 4$, so both constraints hold."
+        ],
+        "answer": "Width $= 4$ m and length $= 12$ m."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A cylindrical storage tank must hold a volume of $V = 100\\pi$ cubic feet and stand $h = 4$ feet tall. Find the radius of the tank.",
+      "solution": {
+        "steps": [
+          "The controlling quantity is volume, so the governing equation is $V = \\pi r^2 h$.",
+          "Substitute the known values: $\\pi r^2 (4) = 100\\pi$.",
+          "Divide both sides by $\\pi$: $4 r^2 = 100$.",
+          "Divide both sides by $4$: $r^2 = 25$.",
+          "Take the positive square root: $r = 5$ ft.",
+          "Check: $\\pi (5)^2 (4) = \\pi (25)(4) = 100\\pi$ cubic feet, which matches the target."
+        ],
+        "answer": "The radius is $5$ ft."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A circular patio must cover an area of $A = 30$ square meters. Find the exact radius of the patio, then give a rounded value to the nearest hundredth of a meter.",
+      "solution": {
+        "steps": [
+          "The controlling quantity is area, so the governing equation is $A = \\pi r^2$.",
+          "Substitute the target area: $\\pi r^2 = 30$.",
+          "Divide both sides by $\\pi$: $r^2 = \\frac{30}{\\pi}$.",
+          "Take the positive square root to get the exact radius: $r = \\sqrt{\\frac{30}{\\pi}}$ m.",
+          "Approximate: $\\frac{30}{\\pi} \\approx 9.549$, and $\\sqrt{9.549} \\approx 3.09$ m.",
+          "Check: $\\pi (3.09)^2 \\approx \\pi (9.548) \\approx 30$ square meters, as required."
+        ],
+        "answer": "Exact radius $r = \\sqrt{\\frac{30}{\\pi}}$ m $\\approx 3.09$ m."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Two boxes each hold $64$ cubic inches. Box A measures $4 \\times 4 \\times 4$ inches and box B measures $8 \\times 2 \\times 4$ inches. The cardboard costs the same per square inch for both. Which box uses less cardboard?",
+      "solution": {
+        "steps": [
+          "Equal volume does not mean equal cost. Cardboard cost depends on surface area, so compare surface areas.",
+          "Surface area of a box is $S = 2(\\ell w + \\ell h + w h)$.",
+          "Box A: $S_A = 2(4\\cdot 4 + 4\\cdot 4 + 4\\cdot 4) = 2(16 + 16 + 16) = 2(48) = 96$ square inches.",
+          "Box B: $S_B = 2(8\\cdot 2 + 8\\cdot 4 + 2\\cdot 4) = 2(16 + 32 + 8) = 2(56) = 112$ square inches.",
+          "Compare: $96 < 112$, so box A uses less cardboard.",
+          "Since cost is the same per square inch, box A is the cheaper design."
+        ],
+        "answer": "Box A uses less cardboard ($96$ square inches versus $112$ square inches), so it is cheaper."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A scale model uses the scale $1$ inch $= 4$ feet. On the model, a rectangular patio measures $3$ inches by $5$ inches. Find the real area of the patio.",
+      "solution": {
+        "steps": [
+          "Lengths scale by the linear factor. Each model inch represents $4$ real feet, so the scale factor is $k = 4$.",
+          "Convert each model length to a real length: real width $= 3 \\cdot 4 = 12$ ft and real length $= 5 \\cdot 4 = 20$ ft.",
+          "Compute the real area directly: $A = \\ell w = 20 \\cdot 12 = 240$ square feet.",
+          "Check with the area scale factor: the model area is $3 \\cdot 5 = 15$ square inches, and area scales by $k^2 = 4^2 = 16$.",
+          "So the real area is $15 \\cdot 16 = 240$ square feet, which matches.",
+          "Note: do not multiply the area by $k = 4$ alone; areas scale by $k^2$, not $k$."
+        ],
+        "answer": "The real patio area is $240$ square feet."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A rectangular sandbox must have an area of $72$ square feet, and its length must be twice its width. Find the width and length of the sandbox.",
+      "hint": "Let the width be $w$, write the length as $2w$, and set $\\ell w = 72$. Solve for $w^2$ first, then take the square root.",
+      "solution": {
+        "steps": [
+          "Use $A = \\ell w$ with $\\ell = 2w$: $(2w)(w) = 72$, so $2w^2 = 72$.",
+          "Divide both sides by $2$: $w^2 = 36$.",
+          "Take the positive square root: $w = 6$ ft.",
+          "Find the length: $\\ell = 2w = 2(6) = 12$ ft.",
+          "Check: $12 \\cdot 6 = 72$ square feet and $12 = 2 \\cdot 6$, so both constraints hold."
+        ],
+        "answer": "Width $= 6$ ft and length $= 12$ ft."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "How many $2$ ft by $2$ ft square tiles are needed to cover a rectangular floor that measures $10$ ft by $14$ ft?",
+      "hint": "Divide the area of the floor by the area of one tile. Do not add the side lengths.",
+      "solution": {
+        "steps": [
+          "Find the area of the floor: $10 \\cdot 14 = 140$ square feet.",
+          "Find the area of one tile: $2 \\cdot 2 = 4$ square feet.",
+          "Divide the floor area by the tile area: $\\frac{140}{4} = 35$ tiles.",
+          "Since both side lengths ($10$ and $14$) are multiples of $2$, the tiles fit with no cutting, so $35$ whole tiles cover the floor."
+        ],
+        "answer": "$35$ tiles."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A banner must keep a $16:9$ aspect ratio (width to height) and fit a width of $640$ pixels. Find the height of the banner.",
+      "hint": "Height $=$ width $\\times \\frac{9}{16}$. The smaller number in the ratio goes with the height.",
+      "solution": {
+        "steps": [
+          "The aspect ratio width$:$height is $16:9$, so $\\frac{\\text{height}}{\\text{width}} = \\frac{9}{16}$.",
+          "Solve for the height: $\\text{height} = \\frac{9}{16} \\cdot \\text{width}$.",
+          "Substitute the width: $\\text{height} = \\frac{9}{16} \\cdot 640 = 9 \\cdot 40 = 360$ px.",
+          "Check the ratio: $\\frac{640}{360} = \\frac{16}{9}$, so the aspect ratio is correct."
+        ],
+        "answer": "The height is $360$ px."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A rectangular pen with an area of $36$ square meters is built against a long wall, so only three sides need fencing (one length and two widths, with the other length along the wall). Among the integer dimensions $6 \\times 6$, $9 \\times 4$, and $12 \\times 3$ (length along the wall $\\times$ width), which design uses the least fencing?",
+      "hint": "With one length against the wall, the fencing needed is $\\ell + 2w$, not the full perimeter. Compute it for each design and compare.",
+      "solution": {
+        "steps": [
+          "Only three sides are fenced: one length plus two widths, so fencing $= \\ell + 2w$.",
+          "Confirm each design has area $36$: $6 \\cdot 6 = 36$, $9 \\cdot 4 = 36$, and $12 \\cdot 3 = 36$, so all are valid.",
+          "Design $6 \\times 6$: fencing $= 6 + 2(6) = 6 + 12 = 18$ m.",
+          "Design $9 \\times 4$: fencing $= 9 + 2(4) = 9 + 8 = 17$ m.",
+          "Design $12 \\times 3$: fencing $= 12 + 2(3) = 12 + 6 = 18$ m.",
+          "Compare: $17 < 18$, so the $9 \\times 4$ design uses the least fencing."
+        ],
+        "answer": "The $9 \\times 4$ design uses the least fencing, $17$ m."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A designer enlarges a logo by a scale factor of $k = 3$. The original logo has an area of $20$ square centimeters and is printed on a base that holds a volume of $5$ cubic centimeters of ink. Find the area and the ink volume of the enlarged design.",
+      "hint": "Areas scale by $k^2$ and volumes scale by $k^3$. Apply the correct power to each quantity.",
+      "solution": {
+        "steps": [
+          "When a design is scaled by $k$, areas scale by $k^2$ and volumes scale by $k^3$.",
+          "Compute the area scale factor: $k^2 = 3^2 = 9$.",
+          "Enlarged area: $20 \\cdot 9 = 180$ square centimeters.",
+          "Compute the volume scale factor: $k^3 = 3^3 = 27$.",
+          "Enlarged ink volume: $5 \\cdot 27 = 135$ cubic centimeters.",
+          "Note: do not use $k = 3$ for the area or volume; the powers $k^2$ and $k^3$ are required."
+        ],
+        "answer": "Enlarged area $= 180$ square centimeters and ink volume $= 135$ cubic centimeters."
+      }
+    }
+  ]
+}

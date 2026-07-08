@@ -1,0 +1,233 @@
+{
+  "id": "8.G.A.2--worksheet--hard",
+  "standard": "8.G.A.2",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand congruence and similarity using physical models, transparencies, or geometry software",
+  "clusterCode": "A",
+  "skillName": "Congruence and Rigid Motions",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "These problems require you to describe full sequences of rigid motions that exhibit congruence, build or reverse sequences, and use the fact that rotations, reflections, and translations preserve lengths and angle measures to find unknown values. Give precise descriptions (type, direction, center or line, and amount) and exact answers.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Triangle $ABC$ has vertices $A(1,2)$, $B(5,2)$, $C(5,4)$. Triangle $A'B'C'$ has vertices $A'(-1,-2)$, $B'(-5,-2)$, $C'(-5,-4)$. Describe a single rigid motion that maps $\\triangle ABC$ onto $\\triangle A'B'C'$, and explain why this proves the triangles are congruent.",
+      "answer": "A $180^\\circ$ rotation about the origin; the triangles are congruent because rotation is a rigid motion that preserves all lengths and angles.",
+      "solution": {
+        "steps": [
+          "Compare each vertex with its image: $A(1,2)\\to A'(-1,-2)$, $B(5,2)\\to B'(-5,-2)$, $C(5,4)\\to C'(-5,-4)$.",
+          "Every image has both coordinates negated: $(x,y)\\to(-x,-y)$.",
+          "The rule $(x,y)\\to(-x,-y)$ is exactly a $180^\\circ$ rotation about the origin.",
+          "Because a rotation is a rigid motion, it preserves every distance and angle, so the image is congruent to the original."
+        ],
+        "answer": "A $180^\\circ$ rotation about the origin; congruent because rotation preserves lengths and angles."
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Triangle $DEF$ with $D(2,1)$, $E(6,1)$, $F(2,4)$ is congruent to triangle $D'E'F'$ with $D'(2,-1)$, $E'(6,-1)$, $F'(2,-4)$. Describe a single rigid motion that maps $\\triangle DEF$ onto $\\triangle D'E'F'$.",
+      "answer": "A reflection over the $x$-axis.",
+      "solution": {
+        "steps": [
+          "Compare vertices: $D(2,1)\\to D'(2,-1)$, $E(6,1)\\to E'(6,-1)$, $F(2,4)\\to F'(2,-4)$.",
+          "The $x$-coordinate stays the same and the $y$-coordinate changes sign: $(x,y)\\to(x,-y)$.",
+          "The rule $(x,y)\\to(x,-y)$ is a reflection over the $x$-axis.",
+          "A reflection is a rigid motion, so the figures are congruent."
+        ],
+        "answer": "A reflection over the $x$-axis."
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Triangle $PQR$ has vertices $P(1,1)$, $Q(4,1)$, $R(1,3)$. Triangle $P''Q''R''$ has vertices $P''(1,2)$, $Q''(1,5)$, $R''(-1,2)$. Describe a sequence of two rigid motions that maps $\\triangle PQR$ onto $\\triangle P''Q''R''$.",
+      "answer": "A $90^\\circ$ counterclockwise rotation about the origin, then a translation by $(x,y)\\to(x+2,\\,y+1)$.",
+      "solution": {
+        "steps": [
+          "Apply a $90^\\circ$ counterclockwise rotation about the origin: $(x,y)\\to(-y,x)$.",
+          "$P(1,1)\\to(-1,1)$, $Q(4,1)\\to(-1,4)$, $R(1,3)\\to(-3,1)$.",
+          "Now translate by $(x,y)\\to(x+2,\\,y+1)$: $(-1,1)\\to(1,2)=P''$, $(-1,4)\\to(1,5)=Q''$, $(-3,1)\\to(-1,2)=R''$.",
+          "All three images match, so the sequence is a $90^\\circ$ counterclockwise rotation about the origin followed by the translation $(x,y)\\to(x+2,\\,y+1)$. Order matters: doing the translation first would not give the same result."
+        ],
+        "answer": "A $90^\\circ$ counterclockwise rotation about the origin, then a translation by $(x,y)\\to(x+2,\\,y+1)$."
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Triangle $JKL$ is mapped onto triangle $MNP$ by a sequence of a reflection over the $y$-axis followed by a translation. Given that $JK=9$, $KL=12$, and $m\\angle K=58^\\circ$, find $MN$ (the image of $JK$) and the measure of $\\angle N$ (the image of $\\angle K$). Justify your answers.",
+      "answer": "$MN=9$ and $m\\angle N=58^\\circ$, because reflections and translations are rigid motions that preserve lengths and angle measures.",
+      "solution": {
+        "steps": [
+          "A reflection and a translation are both rigid motions.",
+          "Rigid motions preserve distance, so the image of $\\overline{JK}$ has the same length: $MN=JK=9$.",
+          "Rigid motions preserve angle measure, so the image of $\\angle K$ has the same measure: $m\\angle N=m\\angle K=58^\\circ$.",
+          "The side $KL=12$ is extra information not needed for $MN$ or $\\angle N$."
+        ],
+        "answer": "$MN=9$, $m\\angle N=58^\\circ$."
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Quadrilateral $WXYZ$ maps onto $W'X'Y'Z'$ by a $180^\\circ$ rotation about the origin followed by a translation by $(x,y)\\to(x+5,\\,y)$. Given $W(1,2)$, find $W'$. Then describe a sequence of rigid motions that maps $W'X'Y'Z'$ back onto $WXYZ$.",
+      "answer": "$W'(4,-2)$. To reverse: translate by $(x,y)\\to(x-5,\\,y)$, then rotate $180^\\circ$ about the origin.",
+      "solution": {
+        "steps": [
+          "Apply the $180^\\circ$ rotation to $W(1,2)$: $(x,y)\\to(-x,-y)$ gives $(-1,-2)$.",
+          "Apply the translation $(x,y)\\to(x+5,\\,y)$: $(-1,-2)\\to(4,-2)$, so $W'(4,-2)$.",
+          "To undo the sequence, reverse the steps in reverse order.",
+          "First undo the translation: translate by $(x,y)\\to(x-5,\\,y)$.",
+          "Then undo the rotation: a $180^\\circ$ rotation is its own inverse, so rotate $180^\\circ$ about the origin again.",
+          "Sequence back: translate by $(x,y)\\to(x-5,\\,y)$, then rotate $180^\\circ$ about the origin."
+        ],
+        "answer": "$W'(4,-2)$; reverse with a translation $(x,y)\\to(x-5,\\,y)$ then a $180^\\circ$ rotation about the origin."
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Triangle $ABC$ has vertices $A(2,1)$, $B(6,1)$, $C(2,4)$. Triangle $A'B'C'$ has vertices $A'(-1,2)$, $B'(-1,6)$, $C'(-4,2)$. Describe a single rigid motion that maps $\\triangle ABC$ onto $\\triangle A'B'C'$.",
+      "answer": "A $90^\\circ$ counterclockwise rotation about the origin.",
+      "solution": {
+        "steps": [
+          "A $90^\\circ$ counterclockwise rotation about the origin uses the rule $(x,y)\\to(-y,x)$.",
+          "$A(2,1)\\to(-1,2)=A'$, $B(6,1)\\to(-1,6)=B'$, $C(2,4)\\to(-4,2)=C'$.",
+          "All three vertices match, so a single $90^\\circ$ counterclockwise rotation about the origin maps $\\triangle ABC$ onto $\\triangle A'B'C'$.",
+          "Since rotation is a rigid motion, the triangles are congruent."
+        ],
+        "answer": "A $90^\\circ$ counterclockwise rotation about the origin."
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Point $P(3,-2)$ is reflected over the line $y=x$, then rotated $90^\\circ$ counterclockwise about the origin. Find the coordinates of the final image $P''$, showing each step.",
+      "answer": "$P''(-3,-2)$",
+      "solution": {
+        "steps": [
+          "Reflect over $y=x$: $(x,y)\\to(y,x)$, so $P(3,-2)\\to(-2,3)=P'$.",
+          "Rotate $P'(-2,3)$ by $90^\\circ$ counterclockwise about the origin: $(x,y)\\to(-y,x)$.",
+          "Apply the rule to $(-2,3)$: $-y=-3$ and $x=-2$, giving $(-3,-2)$.",
+          "So $P''(-3,-2)$."
+        ],
+        "answer": "$P''(-3,-2)$"
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Triangle $GHI$ with $G(-4,1)$, $H(-1,1)$, $I(-4,5)$ is congruent to triangle $G'H'I'$ with $G'(4,1)$, $H'(1,1)$, $I'(4,5)$. Describe a single rigid motion that exhibits this congruence, and explain why a reflection (not a translation) is required.",
+      "answer": "A reflection over the $y$-axis; a translation cannot reverse the orientation of the triangle.",
+      "solution": {
+        "steps": [
+          "Compare vertices: $G(-4,1)\\to G'(4,1)$, $H(-1,1)\\to H'(1,1)$, $I(-4,5)\\to I'(4,5)$.",
+          "The $x$-coordinate changes sign and the $y$-coordinate stays the same: $(x,y)\\to(-x,y)$.",
+          "The rule $(x,y)\\to(-x,y)$ is a reflection over the $y$-axis.",
+          "Going around $G\\to H\\to I$ the orientation is reversed compared to $G'\\to H'\\to I'$ (the figure is a mirror image), and only a reflection reverses orientation; a translation keeps orientation, so a translation alone cannot do it."
+        ],
+        "answer": "A reflection over the $y$-axis (a translation cannot reverse orientation)."
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Triangle $RST$ is the image of triangle $JKL$ under a sequence of two reflections. A student claims that because there are two reflections, the side lengths must be doubled, so if $JK=8$ then $RS=16$. Find the correct value of $RS$ and explain the error in the student's reasoning.",
+      "answer": "$RS=8$. Reflections are rigid motions and never change side lengths, no matter how many are applied.",
+      "solution": {
+        "steps": [
+          "A reflection is a rigid motion: it preserves all distances.",
+          "Applying a rigid motion to a figure and then applying another rigid motion is still a sequence of rigid motions, so lengths are still preserved.",
+          "Therefore $RS=JK=8$.",
+          "The student confused rigid motion with dilation. Only a dilation (a non-rigid scaling) changes lengths; reflections do not multiply lengths, and 'two reflections' does not mean 'multiply by two.'"
+        ],
+        "answer": "$RS=8$ (reflections preserve length; they do not scale it)."
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Triangle $ABC$ has vertices $A(1,1)$, $B(3,1)$, $C(1,2)$. After a sequence of two rigid motions the image is $A''(-1,-1)$, $B''(-3,-1)$, $C''(-1,-2)$. The first motion is a reflection over the $x$-axis. Determine the second motion that completes the mapping.",
+      "answer": "A reflection over the $y$-axis.",
+      "solution": {
+        "steps": [
+          "Apply the first motion, a reflection over the $x$-axis $(x,y)\\to(x,-y)$: $A(1,1)\\to(1,-1)$, $B(3,1)\\to(3,-1)$, $C(1,2)\\to(1,-2)$.",
+          "Compare these intermediate points with the final image: $(1,-1)\\to(-1,-1)$, $(3,-1)\\to(-3,-1)$, $(1,-2)\\to(-1,-2)$.",
+          "The $x$-coordinate changes sign while the $y$-coordinate stays the same: $(x,y)\\to(-x,y)$.",
+          "That rule is a reflection over the $y$-axis, so the second motion is a reflection over the $y$-axis.",
+          "Note: reflecting over the $x$-axis then the $y$-axis together equals a $180^\\circ$ rotation about the origin, which matches $(x,y)\\to(-x,-y)$."
+        ],
+        "answer": "A reflection over the $y$-axis."
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Quadrilateral $ABCD$ has $A(2,3)$, $B(5,3)$, $C(5,1)$, $D(2,1)$. It is mapped by a translation $(x,y)\\to(x-4,\\,y+2)$ followed by a reflection over the $y$-axis. Find the coordinates of $A''$ and $C''$.",
+      "answer": "$A''(2,5)$ and $C''(-1,3)$",
+      "solution": {
+        "steps": [
+          "Apply the translation $(x,y)\\to(x-4,\\,y+2)$: $A(2,3)\\to(-2,5)$ and $C(5,1)\\to(1,3)$.",
+          "Apply the reflection over the $y$-axis $(x,y)\\to(-x,y)$: $(-2,5)\\to(2,5)$ so $A''(2,5)$.",
+          "And $(1,3)\\to(-1,3)$ so $C''(-1,3)$.",
+          "Order matters: the translation is done first, then the reflection."
+        ],
+        "answer": "$A''(2,5)$, $C''(-1,3)$"
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Triangle $UVW$ with $U(1,2)$, $V(4,2)$, $W(1,6)$ is congruent to triangle $U'V'W'$ with $U'(-2,0)$, $V'(-2,3)$, $W'(-6,0)$. Describe a sequence of two rigid motions mapping $\\triangle UVW$ onto $\\triangle U'V'W'$, then state the length of $U'W'$ given that $UW=4$.",
+      "answer": "A $90^\\circ$ counterclockwise rotation about the origin, then a translation by $(x,y)\\to(x,\\,y-1)$; $U'W'=4$.",
+      "solution": {
+        "steps": [
+          "Rotate $90^\\circ$ counterclockwise about the origin $(x,y)\\to(-y,x)$: $U(1,2)\\to(-2,1)$, $V(4,2)\\to(-2,4)$, $W(1,6)\\to(-6,1)$.",
+          "Translate by $(x,y)\\to(x,\\,y-1)$: $(-2,1)\\to(-2,0)=U'$, $(-2,4)\\to(-2,3)=V'$, $(-6,1)\\to(-6,0)=W'$.",
+          "All three images match, so the sequence is a $90^\\circ$ counterclockwise rotation about the origin followed by the translation $(x,y)\\to(x,\\,y-1)$.",
+          "Because the mapping is by rigid motions, lengths are preserved: $U'W'=UW=4$."
+        ],
+        "answer": "A $90^\\circ$ counterclockwise rotation about the origin, then a translation by $(x,y)\\to(x,\\,y-1)$; $U'W'=4$."
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Point $Q(-3,4)$ undergoes the sequence: reflect over the $x$-axis, then translate by $(x,y)\\to(x+6,\\,y-1)$, then rotate $180^\\circ$ about the origin. Find the final image $Q'''$.",
+      "answer": "$Q'''(-3,5)$",
+      "solution": {
+        "steps": [
+          "Reflect over the $x$-axis $(x,y)\\to(x,-y)$: $Q(-3,4)\\to(-3,-4)$.",
+          "Translate $(x,y)\\to(x+6,\\,y-1)$: $(-3,-4)\\to(3,-5)$.",
+          "Rotate $180^\\circ$ about the origin $(x,y)\\to(-x,-y)$: $(3,-5)\\to(-3,5)$.",
+          "So $Q'''(-3,5)$."
+        ],
+        "answer": "$Q'''(-3,5)$"
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Triangle $XYZ$ is the image of triangle $ABC$ under a sequence of rigid motions, so the triangles are congruent. In $\\triangle ABC$, $AB=10$, $BC=7$, $m\\angle A=40^\\circ$, and $m\\angle B=85^\\circ$. The correspondence is $A\\leftrightarrow X$, $B\\leftrightarrow Y$, $C\\leftrightarrow Z$. Find $XY$, $YZ$, $m\\angle X$, and $m\\angle Z$.",
+      "answer": "$XY=10$, $YZ=7$, $m\\angle X=40^\\circ$, $m\\angle Z=55^\\circ$",
+      "solution": {
+        "steps": [
+          "Rigid motions preserve lengths, so corresponding sides are equal: $XY=AB=10$ and $YZ=BC=7$.",
+          "Rigid motions preserve angles, so $m\\angle X=m\\angle A=40^\\circ$.",
+          "Find $m\\angle C$ using the triangle angle sum: $m\\angle C=180^\\circ-40^\\circ-85^\\circ=55^\\circ$.",
+          "Since $C\\leftrightarrow Z$, $m\\angle Z=m\\angle C=55^\\circ$."
+        ],
+        "answer": "$XY=10$, $YZ=7$, $m\\angle X=40^\\circ$, $m\\angle Z=55^\\circ$"
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Figure $1$ has vertices $(0,0)$, $(3,0)$, $(3,2)$ and Figure $2$ has vertices $(0,0)$, $(0,3)$, $(-2,3)$. Decide whether the two figures are congruent. If they are, describe a sequence of rigid motions that maps Figure $1$ onto Figure $2$.",
+      "answer": "Yes, they are congruent. A $90^\\circ$ counterclockwise rotation about the origin maps Figure $1$ onto Figure $2$.",
+      "solution": {
+        "steps": [
+          "Apply a $90^\\circ$ counterclockwise rotation about the origin $(x,y)\\to(-y,x)$ to each vertex of Figure $1$.",
+          "$(0,0)\\to(0,0)$, $(3,0)\\to(0,3)$, $(3,2)\\to(-2,3)$.",
+          "The images are $(0,0)$, $(0,3)$, $(-2,3)$, which are exactly the vertices of Figure $2$.",
+          "Since a single rigid motion (a rotation) maps Figure $1$ onto Figure $2$, the figures are congruent."
+        ],
+        "answer": "Yes; a $90^\\circ$ counterclockwise rotation about the origin maps Figure $1$ onto Figure $2$."
+      }
+    }
+  ]
+}

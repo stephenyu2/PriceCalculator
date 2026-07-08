@@ -1,0 +1,118 @@
+{
+  "standard": "8.G.A.2",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand congruence and similarity using physical models, transparencies, or geometry software",
+  "clusterCode": "A",
+  "skillName": "Congruence and Rigid Motions",
+
+  "description": "Students understand that two two-dimensional figures are congruent exactly when one can be mapped onto the other by a sequence of rigid motions (rotations, reflections, and translations). They identify whether two figures are congruent, determine the rigid motions (and the order) that carry one figure onto the other, predict the image of a figure under a given sequence of transformations, and use the fact that rigid motions preserve lengths and angle measures to justify congruence of corresponding parts.",
+
+  "subSkills": [
+    "Recognize that rotations, reflections, and translations preserve distance and angle measure, so the image is congruent to the original",
+    "Apply a single rigid motion to a figure on the coordinate plane (translate by $(a,b)$, reflect over the $x$-axis, $y$-axis, or line $y=x$, rotate $90^\\circ$, $180^\\circ$, or $270^\\circ$ about the origin)",
+    "Apply a sequence of two or more rigid motions and find the resulting image coordinates",
+    "Decide whether two given figures are congruent by testing whether a sequence of rigid motions maps one onto the other",
+    "Describe a specific sequence of rigid motions that exhibits the congruence between two congruent figures",
+    "Use congruence from rigid motions to conclude that corresponding sides and corresponding angles are equal"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Apply a single rigid motion (coordinates)",
+      "example": "Triangle $ABC$ has vertices $A(1,2)$, $B(4,2)$, and $C(4,6)$. Find the coordinates of the image after a translation by $(x,y)\\to(x-3,\\,y+1)$."
+    },
+    {
+      "name": "Apply a sequence of rigid motions (coordinates)",
+      "example": "Point $P(2,5)$ is reflected over the $y$-axis and then translated by $(x,y)\\to(x,\\,y-4)$. What are the coordinates of the final image $P''$?"
+    },
+    {
+      "name": "Decide congruence",
+      "example": "Figure $1$ has vertices $(0,0),(2,0),(2,3)$ and Figure $2$ has vertices $(0,0),(0,2),(-3,2)$. Are the figures congruent? Justify using rigid motions."
+    },
+    {
+      "name": "Describe the sequence that exhibits congruence",
+      "example": "Triangle $DEF$ with $D(1,1),E(4,1),F(1,5)$ is congruent to triangle $D'E'F'$ with $D'(-1,-1),E'(-4,-1),F'(-1,-5)$. Describe a single rigid motion that maps $DEF$ onto $D'E'F'$."
+    },
+    {
+      "name": "Use preservation of length and angle",
+      "example": "Triangle $RST$ is the image of triangle $JKL$ under a sequence of reflections and translations. If $JK=7$ and $\\angle K=52^\\circ$, find $RS$ and the measure of the corresponding angle $\\angle S$."
+    },
+    {
+      "name": "Reverse / build the sequence",
+      "example": "Quadrilateral $WXYZ$ maps onto $W'X'Y'Z'$ by a $180^\\circ$ rotation about the origin followed by a translation by $(x,y)\\to(x+5,y)$. Given $W(1,2)$, find $W'$, then give a sequence that maps $W'X'Y'Z'$ back onto $WXYZ$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single rigid motion applied to a small figure (point or triangle) on the coordinate plane, or a direct recall of which transformations preserve congruence. One step, no composition.",
+      "constraints": [
+        "Exactly one rigid motion: a translation $(x,y)\\to(x\\pm a,\\,y\\pm b)$ with small integers, a reflection over the $x$-axis or $y$-axis, or a $180^\\circ$ rotation about the origin",
+        "Coordinates are small integers with absolute value $\\le 6$",
+        "Answer is a single image point or a set of image vertices; no justification required",
+        "Includes simple conceptual recall (e.g., 'Do rigid motions change side lengths?')"
+      ]
+    },
+    "Medium": {
+      "description": "A sequence of two rigid motions, or deciding congruence between two given figures, requiring the student to track coordinates through composition or test a mapping.",
+      "constraints": [
+        "Compose exactly two rigid motions and report the final image (order matters)",
+        "Reflections may include the line $y=x$; rotations may be $90^\\circ$ or $270^\\circ$ about the origin",
+        "Determine whether two figures are congruent and name the transformation type(s)",
+        "Coordinates may be larger or include a mix of positive and negative values"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning: describe a full sequence (often two or three motions) that exhibits the congruence between two given figures, build or reverse a sequence, or combine congruence with preservation of length and angle to solve for unknown measures.",
+      "constraints": [
+        "Student must devise a sequence of two or three rigid motions that maps one figure exactly onto another and specify it precisely (type, direction, center/line, amount)",
+        "May require reversing a given sequence or composing three motions",
+        "Combines the congruence conclusion with the fact that corresponding sides and angles are preserved to find an unknown length or angle",
+        "Requires justification, not just a numerical image"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student thinks rigid motions can change the size of a figure (confuses rigid motion with dilation)",
+      "distractor": "Claims the image is larger or smaller, or scales coordinates by a factor (e.g., reports $RS=14$ when $JK=7$ because they 'doubled' it)"
+    },
+    {
+      "misconception": "Student swaps the sign rules for reflections, reflecting over the wrong axis",
+      "distractor": "Reflects over the $x$-axis by negating $x$ instead of $y$, e.g., maps $(2,5)$ to $(-2,5)$ instead of $(2,-5)$"
+    },
+    {
+      "misconception": "Student applies a sequence of motions in the wrong order",
+      "distractor": "Translates first then reflects when the problem says reflect then translate, producing a different final point such as $(-2,1)$ instead of the correct $(-2,9)$"
+    },
+    {
+      "misconception": "Student confuses the rotation rules, mixing up $90^\\circ$, $180^\\circ$, and $270^\\circ$",
+      "distractor": "For a $90^\\circ$ rotation about the origin maps $(x,y)\\to(y,-x)$ but the student writes $(-y,x)$ or $(-x,-y)$, e.g., turns $(3,1)$ into $(-3,-1)$ instead of $(1,-3)$"
+    },
+    {
+      "misconception": "Student believes two figures are congruent only if they have the same orientation (does not accept reflections as congruence)",
+      "distractor": "States two mirror-image figures are 'not congruent' because one is flipped, ignoring that a reflection is a valid rigid motion"
+    },
+    {
+      "misconception": "Student translates by adding to one coordinate but forgets to apply the rule to every vertex or to the second coordinate",
+      "distractor": "Shifts only one vertex or changes only $x$, leaving $y$ unchanged, e.g., reports image vertices that are not a rigid copy of the original"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

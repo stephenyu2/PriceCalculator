@@ -1,0 +1,164 @@
+{
+  "id": "A1.S-ID.C.9--lesson",
+  "standard": "A1.S-ID.C.9",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Interpret linear models",
+  "clusterCode": "C",
+  "skillName": "Correlation vs. Causation",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "Two variables are correlated when they tend to move together. The correlation coefficient $r$, where $-1 \\le r \\le 1$, measures the direction and strength of a linear association: $r > 0$ means as one variable rises the other tends to rise, $r < 0$ means as one rises the other tends to fall, and values near $\\pm 1$ mean a strong linear pattern. But association is not the same as cause. A strong $r$ never proves that one variable makes the other change. The observed pattern could come from a confounding (lurking) variable that drives both, from reverse causation, or from pure coincidence. Only a well-designed randomized controlled experiment, where subjects are randomly assigned to treatment or control, balances out confounders and lets us claim that a treatment caused a difference.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A scatterplot of weekly study time versus exam score for a class has correlation coefficient $r = 0.78$. State what this value tells you about the association and what it does not tell you.",
+      "solution": {
+        "steps": [
+          "Check the sign of $r$. Since $r = 0.78 > 0$, the association is positive: students who study more tend to score higher.",
+          "Check the strength. The value $0.78$ is fairly close to $1$, so the points cluster reasonably tightly around a rising line. This is a fairly strong positive linear association.",
+          "Recall what $r$ measures: it summarizes how closely the data follow a straight line, in other words the strength and direction of association.",
+          "Recall what $r$ does NOT measure: it does not establish cause. A high $r$ does not prove that studying more causes higher scores, because other factors (prior preparation, sleep, ability) could influence both, and $r$ alone cannot rule them out."
+        ],
+        "answer": "$r = 0.78$ indicates a fairly strong positive linear association between study time and exam score. It does not prove that studying more causes higher scores, since correlation measures association only and confounding factors are not ruled out."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Across many towns, the number of firefighters sent to a blaze is strongly correlated with the amount of fire damage, $r = 0.86$. A reporter concludes that sending more firefighters causes more damage. Identify the lurking variable and explain why the causal claim is unjustified.",
+      "solution": {
+        "steps": [
+          "Note the data are observational: towns and fires were observed, not randomly assigned, so confounders are not controlled.",
+          "Look for a third variable that could drive BOTH the number of firefighters and the amount of damage. The size of the fire fits: a bigger fire is the cause here.",
+          "Explain the mechanism: a larger fire causes more damage, and a larger fire also prompts dispatchers to send more firefighters. So fire size produces the correlation between firefighters and damage.",
+          "Conclude: because the lurking variable (fire size) explains both quantities, the high $r = 0.86$ does not show that firefighters cause damage. Reducing firefighters would not reduce damage; it would likely make it worse."
+        ],
+        "answer": "Fire size is the lurking variable: a bigger fire both causes more damage and draws more firefighters. This confounder produces the correlation, so the claim that firefighters cause damage is unjustified even though $r$ is high."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Researchers find a negative correlation between hours of exercise per week and resting heart rate. Someone claims that having a low resting heart rate causes people to exercise more. Explain why the direction of causation is more likely the reverse, and name what kind of flaw this is.",
+      "solution": {
+        "steps": [
+          "Interpret the negative correlation: people who exercise more tend to have lower resting heart rates.",
+          "Consider the proposed direction: low heart rate causes more exercise. Ask whether the opposite direction is more plausible.",
+          "Apply known biology: regular aerobic exercise strengthens the heart so it pumps more blood per beat, which lowers resting heart rate. So exercising more is what produces the lower heart rate.",
+          "Name the flaw: this is reverse causation. The claim has the causal arrow pointing the wrong way. The same correlation is consistent with exercise causing a lower heart rate, not the other way around."
+        ],
+        "answer": "This is reverse causation. Exercising more lowers resting heart rate, so the causal arrow most plausibly runs from exercise to heart rate, the opposite of the claim. The correlation alone cannot fix the direction."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Over ten years, the number of films a particular actor releases each year is correlated with annual national cheese consumption, with $r = 0.94$. Does this high correlation support a causal link? Justify your answer.",
+      "solution": {
+        "steps": [
+          "Acknowledge the value: $r = 0.94$ is very strong, so the two series rise and fall together closely over these ten years.",
+          "Ask the key question for causation: is there any plausible mechanism by which an actor's film count could change how much cheese a nation eats, or vice versa? There is none.",
+          "Recognize that with only ten data points, unrelated quantities can line up by chance, especially when many possible pairs are searched.",
+          "Conclude: with no plausible mechanism, the strong $r$ is a coincidental correlation. A high correlation coefficient does not imply causation when nothing connects the variables."
+        ],
+        "answer": "No. Despite $r = 0.94$, there is no plausible mechanism linking film releases and cheese consumption, so this is a coincidental correlation. A strong $r$ does not establish cause."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A school wants to know whether a new tutoring program raises test scores. Design A compares students who chose to enroll in tutoring with those who did not. Design B randomly assigns students to tutoring or to no tutoring, then compares scores. Which design can support a causal conclusion, and explain how it removes the problem the other design has.",
+      "solution": {
+        "steps": [
+          "Examine Design A. Students chose whether to enroll, so the two groups may differ in motivation, prior achievement, or available time. These confounders, not the tutoring, could cause any score difference. Design A is observational and cannot establish causation.",
+          "Examine Design B. Random assignment decides who gets tutoring, independent of any student trait.",
+          "Explain how randomization helps: on average it balances confounders (motivation, prior achievement, study habits) across the tutoring and no-tutoring groups, so the groups start out comparable.",
+          "Conclude: because the groups differ only by the treatment, a score difference in Design B can be attributed to the tutoring. So Design B (the randomized controlled experiment) can support a causal conclusion."
+        ],
+        "answer": "Design B, the randomized controlled experiment, can support a causal conclusion. Random assignment balances confounding variables across the groups so the only systematic difference is the tutoring, which Design A cannot do because its self-selected groups differ in ways that confound the comparison."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A scatterplot of daily hours of screen time versus hours of sleep for a group of teens has correlation coefficient $r = -0.65$. Describe the direction and approximate strength of this association, and state whether $r$ proves that screen time causes less sleep.",
+      "hint": "The sign of $r$ gives the direction and how close $|r|$ is to $1$ gives the strength. Remember that $r$ measures association, not cause.",
+      "solution": {
+        "steps": [
+          "The sign is negative, so the association is negative: more screen time goes with less sleep.",
+          "Since $|r| = 0.65$ is moderately close to $1$, this is a moderate negative linear association.",
+          "Correlation measures association only, so $r = -0.65$ does not prove screen time causes less sleep; other factors could be involved."
+        ],
+        "answer": "A moderate negative linear association: more screen time tends to go with less sleep. It does not prove screen time causes less sleep, because $r$ measures association, not causation."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "In a city's records, ice cream sales and the number of drowning incidents are positively correlated. A blogger claims that buying ice cream causes drownings. Name a lurking variable that explains both, and use it to explain why the claim is wrong.",
+      "hint": "Think of a single seasonal factor that would push BOTH ice cream sales and swimming activity up at the same time.",
+      "solution": {
+        "steps": [
+          "Look for a third variable that raises both ice cream sales and drownings. Hot summer weather fits.",
+          "Explain the mechanism: hot weather makes people buy more ice cream, and it also makes more people swim, which raises drowning incidents.",
+          "Since the lurking variable (hot weather) drives both, the correlation does not mean ice cream causes drownings."
+        ],
+        "answer": "Hot weather is the lurking variable: it increases ice cream sales and increases swimming, which raises drownings. The two are linked through weather, so ice cream does not cause drownings."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Researchers report a positive correlation between the number of books in a child's home and the child's reading score. A claim states that adding books to a home will directly raise a child's reading score. Identify the type of flaw in this claim and name a plausible confounding variable.",
+      "hint": "Ask what kind of household might both own many books and support strong reading. Then classify the flaw: confounding, reverse causation, or coincidence.",
+      "solution": {
+        "steps": [
+          "The data are observational, so look for a variable that drives both book count and reading score.",
+          "A plausible confounder is the family's emphasis on education or parental literacy and income: households that value reading tend to own more books and to support reading skills.",
+          "Classify the flaw: this is confounding (a lurking variable), because a third factor produces both the books and the reading score.",
+          "So simply adding books would not necessarily raise scores, since the books were a marker of the confounder, not the cause."
+        ],
+        "answer": "The flaw is confounding. A plausible lurking variable is the family's emphasis on education (or parental literacy and income), which raises both the number of books at home and the child's reading score, so the correlation does not show that adding books directly causes higher scores."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A wellness company tests whether a new sleep app improves sleep quality. In Study 1, people who downloaded the app on their own are compared with people who did not. In Study 2, volunteers are randomly assigned to use the app or not, then sleep quality is measured. Which study can establish that the app causes better sleep, and explain why the other cannot.",
+      "hint": "Decide which study uses random assignment, and explain what self-selection does to the comparison in the other study.",
+      "solution": {
+        "steps": [
+          "Study 1 is observational: people chose to download the app, so the two groups may already differ in health habits or motivation. Those confounders, not the app, could explain any difference.",
+          "Study 2 uses random assignment, which on average balances confounders across the app and no-app groups so they start comparable.",
+          "Because the groups in Study 2 differ only by app use, a difference in sleep quality can be attributed to the app.",
+          "Therefore Study 2, the randomized controlled experiment, can establish causation, while Study 1 cannot because its self-selected groups are not comparable."
+        ],
+        "answer": "Study 2 can establish causation because random assignment balances confounders so the only systematic difference is using the app. Study 1 cannot, because its self-selected groups may differ in other ways that confound the comparison."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A news article reports that countries with more cellphones per person tend to have longer life expectancy, with $r = 0.88$, and concludes that giving people cellphones will make them live longer. Give two distinct reasons this conclusion is not justified by the correlation.",
+      "hint": "Consider a lurking variable (what kind of country has many cellphones?) and also the difference between observational data and a randomized experiment.",
+      "solution": {
+        "steps": [
+          "First reason, confounding: wealthier, more developed countries tend to have both more cellphones and better healthcare, nutrition, and sanitation, which raise life expectancy. National wealth is a lurking variable driving both, so the correlation does not show cellphones cause longer life.",
+          "Second reason, study design: the data are observational, comparing countries as they are. Without a randomized controlled experiment that assigns cellphones independently of wealth, confounders are not controlled and no causal claim is warranted.",
+          "Both reasons show the strong $r = 0.88$ reflects association tied to development level, not a causal effect of cellphones."
+        ],
+        "answer": "First, national wealth is a confounding variable: richer countries have both more cellphones and better healthcare, so the correlation is explained by development level. Second, the data are observational, not from a randomized controlled experiment, so confounders are uncontrolled and the correlation cannot justify a causal claim."
+      }
+    }
+  ]
+}

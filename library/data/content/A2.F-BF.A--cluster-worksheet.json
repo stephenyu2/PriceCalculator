@@ -1,0 +1,230 @@
+{
+  "id": "A2.F-BF.A--cluster-worksheet",
+  "standard": null,
+  "clusterId": "A2.F-BF.A",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Functions — Building Functions",
+  "domainCode": "F-BF",
+  "cluster": "Build a function that models a relationship between two quantities",
+  "clusterCode": "A",
+  "skillName": "Build a function that models a relationship between two quantities",
+  "materialType": "cluster-worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:56:47.282Z",
+  "intro": "Build new functions from existing ones using the algebra of functions (sum, difference, product, quotient) and composition $(f \\circ g)(x) = f(g(x))$, translate verbal processes into function rules, and determine the domain of combined and composed functions.",
+  "items": [
+    {
+      "id": 1,
+      "standard": "A2.F-BF.A.1",
+      "prompt": "Given $f(x) = 3x + 2$ and $g(x) = x - 5$, write $(f + g)(x)$ in simplest form.",
+      "answer": "$(f+g)(x) = 4x - 3$",
+      "solution": {
+        "steps": [
+          "By definition, $(f+g)(x) = f(x) + g(x)$.",
+          "Substitute: $(3x + 2) + (x - 5)$.",
+          "Combine like terms: $4x - 3$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "standard": "A2.F-BF.A.1",
+      "prompt": "Given $f(x) = x^2 - 3x$ and $g(x) = 2x + 5$, write $(f - g)(x)$ in simplest form.",
+      "answer": "$(f-g)(x) = x^2 - 5x - 5$",
+      "solution": {
+        "steps": [
+          "By definition, $(f-g)(x) = f(x) - g(x)$.",
+          "Substitute, keeping $g$ in parentheses: $(x^2 - 3x) - (2x + 5)$.",
+          "Distribute the minus sign across every term of $g$: $x^2 - 3x - 2x - 5$.",
+          "Combine like terms: $x^2 - 5x - 5$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "standard": "A2.F-BF.A.1",
+      "prompt": "Given $f(x) = x + 6$ and $g(x) = x - 2$, write $(fg)(x)$ in simplest form.",
+      "answer": "$(fg)(x) = x^2 + 4x - 12$",
+      "solution": {
+        "steps": [
+          "By definition, $(fg)(x) = f(x) \\cdot g(x) = (x + 6)(x - 2)$.",
+          "Multiply using FOIL: $x \\cdot x - 2x + 6x - 12 = x^2 - 2x + 6x - 12$.",
+          "Combine like terms: $x^2 + 4x - 12$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "standard": "A2.F-BF.A.1",
+      "prompt": "Given $f(x) = 5x - 1$ and $g(x) = 2x + 3$, evaluate $(f + g)(4)$.",
+      "answer": "$(f+g)(4) = 30$",
+      "solution": {
+        "steps": [
+          "$(f+g)(4) = f(4) + g(4)$.",
+          "$f(4) = 5(4) - 1 = 20 - 1 = 19$.",
+          "$g(4) = 2(4) + 3 = 8 + 3 = 11$.",
+          "Add: $19 + 11 = 30$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "standard": "A2.F-BF.A.1",
+      "prompt": "Given $f(x) = x + 4$ and $g(x) = x - 2$, write $\\left(\\frac{f}{g}\\right)(x)$ and state its domain.",
+      "answer": "$\\left(\\frac{f}{g}\\right)(x) = \\frac{x+4}{x-2}$, domain $x \\neq 2$",
+      "solution": {
+        "steps": [
+          "By definition, $\\left(\\frac{f}{g}\\right)(x) = \\frac{f(x)}{g(x)} = \\frac{x+4}{x-2}$.",
+          "The numerator and denominator share no common factor, so the rule is already in simplest form.",
+          "The expression is undefined when the denominator is zero: set $x - 2 = 0$, giving $x = 2$.",
+          "Exclude that value: domain is $x \\neq 2$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "standard": "A2.F-BF.A.1",
+      "prompt": "Given $f(x) = 3x - 1$ and $g(x) = x^2 + 2$, write $(f \\circ g)(x)$ in simplest form.",
+      "answer": "$(f \\circ g)(x) = 3x^2 + 5$",
+      "solution": {
+        "steps": [
+          "Composition means $(f \\circ g)(x) = f(g(x))$: substitute all of $g(x)$ into $f$.",
+          "Replace the input of $f$ with $g(x) = x^2 + 2$: $f(x^2 + 2) = 3(x^2 + 2) - 1$.",
+          "Distribute the $3$: $3x^2 + 6 - 1$.",
+          "Combine the constants: $3x^2 + 5$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "standard": "A2.F-BF.A.1",
+      "prompt": "Given $f(x) = \\sqrt{x}$ and $g(x) = 2x + 7$, find $(f \\circ g)(9)$.",
+      "answer": "$(f \\circ g)(9) = 5$",
+      "solution": {
+        "steps": [
+          "$(f \\circ g)(9) = f(g(9))$, so evaluate the inner function $g$ at $9$ first.",
+          "$g(9) = 2(9) + 7 = 18 + 7 = 25$.",
+          "Feed that output into $f$: $f(25) = \\sqrt{25}$.",
+          "$\\sqrt{25} = 5$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "standard": "A2.F-BF.A.1",
+      "prompt": "A taxi charges a $\\$3$ flat fee plus $\\$2$ per mile. Write a function $C(m)$ for the cost of an $m$-mile ride, then find the cost of a $7$-mile ride.",
+      "answer": "$C(m) = 2m + 3$; a $7$-mile ride costs $\\$17$",
+      "solution": {
+        "steps": [
+          "The cost is the flat fee plus the per-mile rate times the number of miles: $C(m) = 2m + 3$.",
+          "Evaluate at $m = 7$: $C(7) = 2(7) + 3$.",
+          "$2 \\times 7 = 14$, so $C(7) = 14 + 3 = 17$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "standard": "A2.F-BF.A.1",
+      "prompt": "Given $f(x) = 2x + 3$ and $g(x) = x - 4$, write $(g \\circ f)(x)$ in simplest form.",
+      "answer": "$(g \\circ f)(x) = 2x - 1$",
+      "solution": {
+        "steps": [
+          "$(g \\circ f)(x) = g(f(x))$: $f$ is the inner function, so substitute $f(x) = 2x + 3$ into $g$.",
+          "$g(2x + 3) = (2x + 3) - 4$.",
+          "Combine the constants: $2x - 1$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "standard": "A2.F-BF.A.1",
+      "prompt": "Given $f(x) = x^2 + 1$ and $g(x) = x - 3$, find $(f \\circ g)(5)$.",
+      "answer": "$(f \\circ g)(5) = 5$",
+      "solution": {
+        "steps": [
+          "$(f \\circ g)(5) = f(g(5))$, so find $g(5)$ first.",
+          "$g(5) = 5 - 3 = 2$.",
+          "Apply $f$ to that output: $f(2) = 2^2 + 1 = 4 + 1 = 5$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "standard": "A2.F-BF.A.1",
+      "prompt": "Given $f(x) = x - 1$ and $g(x) = x^2 + 3x$, write $(f \\circ g)(x)$ in simplest form.",
+      "answer": "$(f \\circ g)(x) = x^2 + 3x - 1$",
+      "solution": {
+        "steps": [
+          "$(f \\circ g)(x) = f(g(x))$: substitute $g(x) = x^2 + 3x$ into $f$.",
+          "$f(x^2 + 3x) = (x^2 + 3x) - 1$.",
+          "Simplify: $x^2 + 3x - 1$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "standard": "A2.F-BF.A.1",
+      "prompt": "Given $f(x) = x^2 - 4$ and $g(x) = x + 2$, write $\\left(\\frac{f}{g}\\right)(x)$ in simplest form and state its domain.",
+      "answer": "$\\left(\\frac{f}{g}\\right)(x) = x - 2$, domain $x \\neq -2$",
+      "solution": {
+        "steps": [
+          "$\\left(\\frac{f}{g}\\right)(x) = \\frac{x^2 - 4}{x + 2}$.",
+          "Factor the numerator as a difference of squares: $x^2 - 4 = (x + 2)(x - 2)$.",
+          "Cancel the common factor $x + 2$: $\\frac{(x + 2)(x - 2)}{x + 2} = x - 2$.",
+          "The original denominator $x + 2$ is zero at $x = -2$, so that value must still be excluded from the domain even though it cancels.",
+          "Simplified rule $x - 2$ with domain $x \\neq -2$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "standard": "A2.F-BF.A.1",
+      "prompt": "A store takes $20\\%$ off the marked price $p$, then an $8\\%$ sales tax is applied to the discounted price. Write the final cost as a composition of two functions and simplify it to a single rule.",
+      "answer": "$d(p) = 0.8p$, $t(x) = 1.08x$, final cost $t(d(p)) = 0.864p$",
+      "solution": {
+        "steps": [
+          "Model the discount: taking $20\\%$ off leaves $80\\%$, so $d(p) = 0.8p$.",
+          "Model the tax on whatever price it acts on: adding $8\\%$ multiplies by $1.08$, so $t(x) = 1.08x$.",
+          "The tax is applied after the discount, so the final cost is the composition $t(d(p))$.",
+          "Substitute: $t(d(p)) = 1.08(0.8p)$.",
+          "Multiply the constants: $1.08 \\times 0.8 = 0.864$, so the final cost is $0.864p$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "standard": "A2.F-BF.A.1",
+      "prompt": "Given $f(x) = \\sqrt{x - 1}$ and $g(x) = x^2$, write $(f \\circ g)(x)$ and state its domain.",
+      "answer": "$(f \\circ g)(x) = \\sqrt{x^2 - 1}$, domain $x \\leq -1$ or $x \\geq 1$",
+      "solution": {
+        "steps": [
+          "$(f \\circ g)(x) = f(g(x))$: substitute $g(x) = x^2$ into $f$.",
+          "$f(x^2) = \\sqrt{x^2 - 1}$.",
+          "The radicand must be nonnegative: $x^2 - 1 \\geq 0$.",
+          "Solve $x^2 \\geq 1$: this holds when $x \\leq -1$ or $x \\geq 1$.",
+          "So $(f \\circ g)(x) = \\sqrt{x^2 - 1}$ with domain $x \\leq -1$ or $x \\geq 1$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "standard": "A2.F-BF.A.1",
+      "prompt": "A spherical balloon's radius grows so that after $t$ seconds the radius is $r(t) = 2t$ centimeters. The volume of a sphere is $V(r) = \\frac{4}{3}\\pi r^3$. Write the volume as a function of time by composing $V$ with $r$, and find the volume after $3$ seconds.",
+      "answer": "$V(r(t)) = \\frac{32}{3}\\pi t^3$; after $3$ seconds $V = 288\\pi$ cubic centimeters",
+      "solution": {
+        "steps": [
+          "Compose: $V(r(t)) = V(2t) = \\frac{4}{3}\\pi (2t)^3$.",
+          "Cube the inner expression: $(2t)^3 = 8t^3$.",
+          "Multiply: $\\frac{4}{3}\\pi \\cdot 8t^3 = \\frac{32}{3}\\pi t^3$.",
+          "Evaluate at $t = 3$: $\\frac{32}{3}\\pi (3)^3 = \\frac{32}{3}\\pi \\cdot 27$.",
+          "$\\frac{32 \\cdot 27}{3} = 32 \\cdot 9 = 288$, so the volume is $288\\pi$ cubic centimeters."
+        ]
+      }
+    }
+  ]
+}

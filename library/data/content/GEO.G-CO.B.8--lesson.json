@@ -1,0 +1,170 @@
+{
+  "id": "GEO.G-CO.B.8--lesson",
+  "standard": "GEO.G-CO.B.8",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Understand congruence in terms of rigid motions",
+  "clusterCode": "B",
+  "skillName": "Triangle Congruence Criteria",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Two figures are congruent exactly when some sequence of rigid motions (translations, rotations, reflections) carries one onto the other. Because rigid motions preserve every length and angle measure, you do not need to check all six parts of a triangle. The criteria ASA, SAS, and SSS each give just enough matched parts to force the entire mapping, and so each one follows from the single rigid-motion definition of congruence. In this lesson you will name the criterion shown by a set of marked parts, build and justify the translate, rotate, reflect sequence, write correct correspondence statements, and see why SSA and AAA are not congruence criteria.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "In triangles $ABC$ and $DEF$ you are given $AB = DE$, $m\\angle A = m\\angle D$, and $AC = DF$. Which congruence criterion (ASA, SAS, or SSS) proves $\\triangle ABC \\cong \\triangle DEF$?",
+      "solution": {
+        "steps": [
+          "List the matched parts: side $AB \\cong DE$, angle $\\angle A \\cong \\angle D$, side $AC \\cong DF$.",
+          "Check the position of the angle. $\\angle A$ is formed by sides $AB$ and $AC$, so it sits between the two given sides. An angle between the two given sides is the included angle.",
+          "Two sides and the included angle gives the pattern Side, Angle, Side.",
+          "This is the SAS criterion."
+        ],
+        "answer": "SAS (the angle $\\angle A$ is included between the two given sides $AB$ and $AC$)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "You know $\\angle B \\cong \\angle E$ and $\\angle C \\cong \\angle F$ in triangles $ABC$ and $DEF$. Which additional pair of corresponding parts would let you apply ASA, and why does ASA force the triangles to coincide?",
+      "solution": {
+        "steps": [
+          "ASA needs two angles and the side included between them. The side between $\\angle B$ and $\\angle C$ is side $BC$; the matching side between $\\angle E$ and $\\angle F$ is $EF$.",
+          "So the part to add is $BC \\cong EF$, the included side.",
+          "Why it works: apply a rigid motion that places $B$ onto $E$ and the ray $BC$ along ray $EF$. Since $BC = EF$ and rigid motions preserve length, $C$ lands exactly on $F$.",
+          "Because $\\angle B \\cong \\angle E$, ray $BA$ now lies along ray $ED$; because $\\angle C \\cong \\angle F$, ray $CA$ lies along ray $FD$ (reflect across line $EF$ first if orientation is opposite).",
+          "Vertex $A$ must be the intersection of those two rays, which is exactly $D$. The mapping carries $\\triangle ABC$ onto $\\triangle DEF$, so they are congruent."
+        ],
+        "answer": "Add the included side $BC \\cong EF$; then ASA applies, because placing $BC$ on $EF$ forces the two angle rays to meet at the third vertex $D$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Triangle $ABC$ has vertices $A(0, 0)$, $B(4, 0)$, $C(1, 3)$ and triangle $DEF$ has vertices $D(5, 1)$, $E(9, 1)$, $F(6, 4)$. Describe a sequence of rigid motions that maps $\\triangle ABC$ onto $\\triangle DEF$, then state which criterion the matched parts illustrate.",
+      "solution": {
+        "steps": [
+          "Compare $A(0,0)$ with $D(5,1)$. Translate $\\triangle ABC$ by the vector $\\langle 5, 1 \\rangle$, that is $(x, y) \\mapsto (x+5,\\, y+1)$.",
+          "Track the images: $A(0,0) \\mapsto (5,1) = D$, $B(4,0) \\mapsto (9,1) = E$, $C(1,3) \\mapsto (6,4) = F$.",
+          "Every vertex already lands on its target, so a single translation maps $\\triangle ABC$ onto $\\triangle DEF$; no rotation or reflection is needed (the orientations match).",
+          "Since a translation is a rigid motion, all corresponding sides and angles are congruent: $AB = DE = 4$, $AC = DF$, $BC = EF$, so all three sides match.",
+          "Three pairs of congruent sides illustrate the SSS criterion."
+        ],
+        "answer": "Translate by $\\langle 5, 1 \\rangle$; this single rigid motion sends $A \\mapsto D$, $B \\mapsto E$, $C \\mapsto F$, illustrating SSS."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "In triangles $ABC$ and $DEF$, $AB = DE$, $BC = EF$, and $m\\angle A = m\\angle D$ (a non-included angle). Does this guarantee $\\triangle ABC \\cong \\triangle DEF$? Justify which criterion does or does not apply.",
+      "solution": {
+        "steps": [
+          "Locate the angle. $\\angle A$ is formed by sides $AB$ and $AC$. The two given sides are $AB$ and $BC$, and $\\angle A$ is not between them, so this is a non-included angle.",
+          "Two sides and a non-included angle is the SSA arrangement, which is not one of the criteria (ASA, SAS, SSS).",
+          "SSA fails because of the ambiguous case: fixing $AB$, the angle at $A$, and the length $BC$ can leave two different positions for the third vertex (one acute, one obtuse triangle), so the second triangle is not forced.",
+          "Concrete counterexample: with $AB = DE = 5$, $m\\angle A = m\\angle D = 30^\\circ$, and $BC = EF = 3$, the side of length $3$ swung from $B$ can meet the opposite ray at two distinct points, producing two non-congruent triangles.",
+          "So the given parts do not guarantee congruence."
+        ],
+        "answer": "No. The given angle is non-included, so this is SSA, which is not a congruence criterion (the ambiguous case allows two non-congruent triangles)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Explain, using the definition of congruence in terms of rigid motions, why two triangles with SAS matched (two pairs of corresponding sides and the included angle congruent) must be congruent. Use $\\triangle ABC$ and $\\triangle DEF$ with $AB = DE$, $m\\angle A = m\\angle D$, and $AC = DF$.",
+      "solution": {
+        "steps": [
+          "Goal: build a sequence of rigid motions mapping $\\triangle ABC$ onto $\\triangle DEF$. Recall every rigid motion preserves all lengths and angle measures.",
+          "Step 1 (translate): translate $\\triangle ABC$ so that vertex $A$ lands on $D$.",
+          "Step 2 (rotate): rotate about $D$ so that ray $AB$ lies along ray $DE$. Because $AB = DE$ and length is preserved, $B$ now coincides with $E$.",
+          "Step 3 (reflect if needed): if $C$ is on the opposite side of line $DE$ from $F$, reflect across line $DE$. Orientation is now matched and $A \\mapsto D$, $B \\mapsto E$ still hold.",
+          "Now the included angle: since $m\\angle A = m\\angle D$ and the image of $\\angle A$ has its vertex at $D$ with one ray along $DE$, the other ray (image of ray $AC$) lies exactly along ray $DF$.",
+          "Along that ray, $AC = DF$ and length is preserved, so $C$ lands exactly on $F$.",
+          "All three vertices coincide, so the sequence of rigid motions maps $\\triangle ABC$ onto $\\triangle DEF$. By the definition, the triangles are congruent. This shows SAS follows from the rigid-motion definition."
+        ],
+        "answer": "Translate $A$ to $D$, rotate ray $AB$ onto ray $DE$ (so $B \\mapsto E$ since $AB = DE$), reflect if orientation differs; then $m\\angle A = m\\angle D$ aligns ray $AC$ with ray $DF$ and $AC = DF$ forces $C \\mapsto F$. A rigid motion maps one triangle onto the other, so they are congruent."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "In triangles $ABC$ and $DEF$, $AB = DE$, $BC = EF$, and $CA = FD$. Which congruence criterion proves $\\triangle ABC \\cong \\triangle DEF$?",
+      "hint": "Count how many pairs of sides and how many pairs of angles are given.",
+      "solution": {
+        "steps": [
+          "All three pairs of corresponding sides are congruent: $AB \\cong DE$, $BC \\cong EF$, $CA \\cong FD$.",
+          "No angles are given, only the three sides.",
+          "Three pairs of congruent sides is the Side, Side, Side pattern."
+        ],
+        "answer": "SSS"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Triangles $ABC$ and $DEF$ have $\\angle A \\cong \\angle D$ and $\\angle C \\cong \\angle F$. Which additional pair of corresponding parts would let you apply ASA?",
+      "hint": "ASA needs the side that is included between the two given angles. Which side lies between $\\angle A$ and $\\angle C$?",
+      "solution": {
+        "steps": [
+          "The two given angles are $\\angle A$ and $\\angle C$. The side between them is $AC$; the matching side between $\\angle D$ and $\\angle F$ is $DF$.",
+          "To apply ASA you need that included side congruent: $AC \\cong DF$.",
+          "With $\\angle A \\cong \\angle D$, $AC \\cong DF$, and $\\angle C \\cong \\angle F$, the parts form angle, included side, angle, so ASA applies."
+        ],
+        "answer": "The included side $AC \\cong DF$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Triangle $ABC$ has vertices $A(0, 0)$, $B(3, 0)$, $C(0, 2)$ and triangle $DEF$ has vertices $D(-1, 4)$, $E(2, 4)$, $F(-1, 6)$. Describe a single rigid motion that maps $\\triangle ABC$ onto $\\triangle DEF$, and state the criterion the matched parts illustrate.",
+      "hint": "Find the translation vector that sends $A$ to $D$, then check that $B$ and $C$ also land on their targets.",
+      "solution": {
+        "steps": [
+          "Compare $A(0,0)$ with $D(-1,4)$. The translation vector is $\\langle -1, 4 \\rangle$, that is $(x,y) \\mapsto (x-1,\\, y+4)$.",
+          "Check the other vertices: $B(3,0) \\mapsto (2,4) = E$ and $C(0,2) \\mapsto (-1,6) = F$.",
+          "All three vertices land on their targets, so the single translation $\\langle -1, 4 \\rangle$ maps $\\triangle ABC$ onto $\\triangle DEF$.",
+          "A translation is a rigid motion, so all three pairs of sides are congruent, illustrating SSS."
+        ],
+        "answer": "Translate by $\\langle -1, 4 \\rangle$; this maps $A \\mapsto D$, $B \\mapsto E$, $C \\mapsto F$, illustrating SSS."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Mara says that because triangles $ABC$ and $DEF$ have $\\angle A \\cong \\angle D$, $\\angle B \\cong \\angle E$, and $\\angle C \\cong \\angle F$, they must be congruent. Is she correct? Explain using a reason or counterexample.",
+      "hint": "Three pairs of equal angles is the AAA pattern. Think about whether two triangles can have the same angles but different sizes.",
+      "solution": {
+        "steps": [
+          "The three given pairs are all angles, with no sides, so this is the AAA arrangement.",
+          "AAA is not a congruence criterion. Equal angles guarantee the triangles have the same shape, which is similarity, but not necessarily the same size.",
+          "Counterexample: a triangle with angles $60^\\circ, 60^\\circ, 60^\\circ$ and side $2$ and another equilateral triangle with side $4$ have all three angles congruent but are not congruent (the second is twice as large).",
+          "So Mara is incorrect; AAA gives similarity, not congruence."
+        ],
+        "answer": "No. AAA only guarantees similarity (same shape), not congruence. For example two equilateral triangles with sides $2$ and $4$ have equal angles but are not congruent."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "It is established that $\\triangle ABC \\cong \\triangle DEF$ by SSS, with $AB = DE = 6$, $BC = EF = 5$, and $CA = FD = 7$. Write the congruence correspondence and find $m\\angle B$ given that $m\\angle E = 80^\\circ$.",
+      "hint": "Match the vertices in the order they appear in $\\triangle ABC \\cong \\triangle DEF$: $A \\leftrightarrow D$, $B \\leftrightarrow E$, $C \\leftrightarrow F$. Then use CPCTC.",
+      "solution": {
+        "steps": [
+          "The statement $\\triangle ABC \\cong \\triangle DEF$ pairs vertices in order: $A \\leftrightarrow D$, $B \\leftrightarrow E$, $C \\leftrightarrow F$.",
+          "By CPCTC (corresponding parts of congruent triangles are congruent), $\\angle B$ corresponds to $\\angle E$, so $m\\angle B = m\\angle E$.",
+          "Therefore $m\\angle B = 80^\\circ$."
+        ],
+        "answer": "$\\angle B$ corresponds to $\\angle E$, so $m\\angle B = 80^\\circ$."
+      }
+    }
+  ]
+}

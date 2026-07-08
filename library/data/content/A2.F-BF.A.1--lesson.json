@@ -1,0 +1,163 @@
+{
+  "id": "A2.F-BF.A.1--lesson",
+  "standard": "A2.F-BF.A.1",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Functions — Building Functions",
+  "domainCode": "F-BF",
+  "cluster": "Build a function that models a relationship between two quantities",
+  "clusterCode": "A",
+  "skillName": "Building Functions from Operations",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "You can build new functions from ones you already have. The algebra of functions lets you add, subtract, multiply, or divide two functions: $(f+g)(x) = f(x)+g(x)$, $(f-g)(x) = f(x)-g(x)$, $(fg)(x) = f(x)\\,g(x)$, and $\\left(\\frac{f}{g}\\right)(x) = \\frac{f(x)}{g(x)}$ wherever $g(x) \\neq 0$. Composition chains them instead: $(f \\circ g)(x) = f(g(x))$ means you run $x$ through $g$ first, then feed that output into $f$. Order matters, so $f(g(x))$ usually differs from $g(f(x))$. You will also translate real-world processes into a function rule and recognize when one process feeds into another as a composition.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Given $f(x) = x^2 - 3x$ and $g(x) = 2x + 5$, write $(f - g)(x)$ in simplest form.",
+      "solution": {
+        "steps": [
+          "By definition, $(f-g)(x) = f(x) - g(x)$.",
+          "Substitute both functions, keeping $g$ in parentheses: $(x^2 - 3x) - (2x + 5)$.",
+          "Distribute the minus sign across every term of $g$: $x^2 - 3x - 2x - 5$.",
+          "Combine like terms: $x^2 - 5x - 5$."
+        ],
+        "answer": "$(f-g)(x) = x^2 - 5x - 5$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Given $f(x) = x + 4$ and $g(x) = x - 2$, write $\\left(\\frac{f}{g}\\right)(x)$ and state its domain.",
+      "solution": {
+        "steps": [
+          "By definition, $\\left(\\frac{f}{g}\\right)(x) = \\frac{f(x)}{g(x)} = \\frac{x+4}{x-2}$.",
+          "The numerator and denominator share no common factor, so the rule is already simplified.",
+          "The expression is undefined when the denominator is zero: set $x - 2 = 0$, giving $x = 2$.",
+          "Exclude that value from the domain."
+        ],
+        "answer": "$\\left(\\frac{f}{g}\\right)(x) = \\frac{x+4}{x-2}$, domain $x \\neq 2$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Given $f(x) = 3x - 1$ and $g(x) = x^2 + 2$, write $(f \\circ g)(x)$ in simplest form.",
+      "solution": {
+        "steps": [
+          "Composition means $(f \\circ g)(x) = f(g(x))$: run $x$ through $g$ first, then through $f$.",
+          "Replace the input of $f$ with the entire expression $g(x) = x^2 + 2$: $f(x^2 + 2) = 3(x^2 + 2) - 1$.",
+          "Distribute the $3$ across both terms inside the parentheses: $3x^2 + 6 - 1$.",
+          "Combine the constants: $3x^2 + 5$."
+        ],
+        "answer": "$(f \\circ g)(x) = 3x^2 + 5$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Given $f(x) = \\sqrt{x}$ and $g(x) = 2x + 7$, find $(f \\circ g)(9)$.",
+      "solution": {
+        "steps": [
+          "$(f \\circ g)(9) = f(g(9))$, so evaluate the inner function $g$ at $9$ first.",
+          "$g(9) = 2(9) + 7 = 18 + 7 = 25$.",
+          "Feed that output into $f$: $f(25) = \\sqrt{25}$.",
+          "$\\sqrt{25} = 5$."
+        ],
+        "answer": "$(f \\circ g)(9) = 5$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A store takes $20\\%$ off the marked price $p$, then a $8\\%$ sales tax is applied to the discounted price. Write the final cost as a composition of two functions and simplify it to a single rule.",
+      "solution": {
+        "steps": [
+          "Model the discount as a function: taking $20\\%$ off leaves $80\\%$, so $d(p) = 0.8p$.",
+          "Model the tax as a function of whatever price it acts on: adding $8\\%$ multiplies by $1.08$, so $t(x) = 1.08x$.",
+          "The tax is applied after the discount, so the final cost is the composition $t(d(p))$.",
+          "Substitute: $t(d(p)) = 1.08(0.8p)$.",
+          "Multiply the constants: $1.08 \\times 0.8 = 0.864$, so the final cost is $0.864p$."
+        ],
+        "answer": "$d(p) = 0.8p$, $t(x) = 1.08x$, final cost $t(d(p)) = 0.864p$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Given $f(x) = 4x + 1$ and $g(x) = x^2 - 6$, write $(f + g)(x)$ in simplest form.",
+      "hint": "Add the two rules term by term: $(f+g)(x) = f(x) + g(x)$.",
+      "solution": {
+        "steps": [
+          "$(f+g)(x) = f(x) + g(x) = (4x + 1) + (x^2 - 6)$.",
+          "Remove the parentheses (addition keeps every sign): $x^2 + 4x + 1 - 6$.",
+          "Combine the constants: $x^2 + 4x - 5$."
+        ],
+        "answer": "$(f+g)(x) = x^2 + 4x - 5$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Given $f(x) = x - 3$ and $g(x) = x + 1$, write $(fg)(x)$ in simplest form.",
+      "hint": "Multiply the two rules: $(fg)(x) = f(x) \\cdot g(x)$. Use FOIL.",
+      "solution": {
+        "steps": [
+          "$(fg)(x) = f(x) \\cdot g(x) = (x - 3)(x + 1)$.",
+          "Multiply using FOIL: $x \\cdot x + x \\cdot 1 - 3 \\cdot x - 3 \\cdot 1 = x^2 + x - 3x - 3$.",
+          "Combine like terms: $x^2 - 2x - 3$."
+        ],
+        "answer": "$(fg)(x) = x^2 - 2x - 3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Given $f(x) = 2x + 3$ and $g(x) = x - 4$, write $(g \\circ f)(x)$ in simplest form.",
+      "hint": "$(g \\circ f)(x) = g(f(x))$, so substitute all of $f(x)$ into $g$. Be careful about which function is inside.",
+      "solution": {
+        "steps": [
+          "$(g \\circ f)(x) = g(f(x))$: $f$ is the inner function here, so substitute $f(x) = 2x + 3$ into $g$.",
+          "$g(2x + 3) = (2x + 3) - 4$.",
+          "Combine the constants: $2x - 1$."
+        ],
+        "answer": "$(g \\circ f)(x) = 2x - 1$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Given $f(x) = x^2$ and $g(x) = x - 5$, find $(f \\circ g)(8)$.",
+      "hint": "Evaluate the inner function $g$ at $8$ first, then apply $f$ to that result.",
+      "solution": {
+        "steps": [
+          "$(f \\circ g)(8) = f(g(8))$, so find $g(8)$ first.",
+          "$g(8) = 8 - 5 = 3$.",
+          "Apply $f$ to that output: $f(3) = 3^2 = 9$."
+        ],
+        "answer": "$(f \\circ g)(8) = 9$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A rideshare charges a $\\$4$ flat fee plus $\\$1.50$ per mile. Write a function $C(m)$ for the cost of an $m$-mile ride, then use it to find the cost of a $6$-mile ride.",
+      "hint": "The flat fee is a constant; the per-mile charge multiplies the number of miles $m$.",
+      "solution": {
+        "steps": [
+          "The cost is the flat fee plus the per-mile rate times the number of miles: $C(m) = 1.50m + 4$.",
+          "Evaluate at $m = 6$: $C(6) = 1.50(6) + 4$.",
+          "$1.50 \\times 6 = 9$, so $C(6) = 9 + 4 = 13$."
+        ],
+        "answer": "$C(m) = 1.50m + 4$; a $6$-mile ride costs $\\$13$"
+      }
+    }
+  ]
+}

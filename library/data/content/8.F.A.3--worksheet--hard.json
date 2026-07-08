@@ -1,0 +1,231 @@
+{
+  "id": "8.F.A.3--worksheet--hard",
+  "standard": "8.F.A.3",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Functions",
+  "domainCode": "F",
+  "cluster": "Define, evaluate, and compare functions",
+  "clusterCode": "A",
+  "skillName": "Linear vs. Nonlinear Functions",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "These problems require multi-step reasoning. You will simplify disguised equations, compare functions across different representations, build equations from tables, and justify every classification using the constant-rate-of-change criterion.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "The equation $y = \\frac{4x + 8}{2}$ looks like it might be nonlinear because of the fraction. Simplify it, then classify the function as linear or nonlinear and identify $m$ and $b$.",
+      "answer": "Linear; $m = 2$, $b = 4$ (the simplified equation is $y = 2x + 4$)",
+      "solution": {
+        "steps": [
+          "Split the single fraction over its two terms: $y = \\frac{4x}{2} + \\frac{8}{2}$.",
+          "Simplify each term: $\\frac{4x}{2} = 2x$ and $\\frac{8}{2} = 4$, so $y = 2x + 4$.",
+          "The result is in the form $y = mx + b$ with $x$ to the first power and not in a denominator, so the function is linear.",
+          "Read off the parameters: $m = 2$ (slope) and $b = 4$ (y-intercept)."
+        ],
+        "answer": "Linear; $m = 2$, $b = 4$ (the simplified equation is $y = 2x + 4$)"
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Decide whether $y = \\frac{6}{x}$ is linear or nonlinear. Justify your answer by referring to the rate of change, using the points where $x = 1$, $x = 2$, and $x = 3$.",
+      "answer": "Nonlinear; the rate of change is not constant ($-3$ from $x=1$ to $x=2$, then $-1$ from $x=2$ to $x=3$).",
+      "solution": {
+        "steps": [
+          "Compute points: at $x = 1$, $y = \\frac{6}{1} = 6$; at $x = 2$, $y = \\frac{6}{2} = 3$; at $x = 3$, $y = \\frac{6}{3} = 2$.",
+          "Rate of change from $x=1$ to $x=2$: $\\frac{3 - 6}{2 - 1} = \\frac{-3}{1} = -3$.",
+          "Rate of change from $x=2$ to $x=3$: $\\frac{2 - 3}{3 - 2} = \\frac{-1}{1} = -1$.",
+          "Since $-3 \\neq -1$, the rate of change is not constant, so the function is nonlinear. Having $x$ in the denominator means it is not of the form $y = mx + b$."
+        ],
+        "answer": "Nonlinear; the rate of change is not constant ($-3$ from $x=1$ to $x=2$, then $-1$ from $x=2$ to $x=3$)."
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A function passes through the points $(2, 7)$, $(4, 13)$, and $(6, 19)$. Verify that these points lie on a single line, then write the equation $y = mx + b$ and use it to find $y$ when $x = 10$.",
+      "answer": "$y = 3x + 1$; when $x = 10$, $y = 31$",
+      "solution": {
+        "steps": [
+          "Find the rate of change between the first two points: $m = \\frac{13 - 7}{4 - 2} = \\frac{6}{2} = 3$.",
+          "Check the next interval: $\\frac{19 - 13}{6 - 4} = \\frac{6}{2} = 3$. The rate of change is constant, so the points are linear.",
+          "Find $b$ using $(2, 7)$: $7 = 3(2) + b$, so $7 = 6 + b$ and $b = 1$. The equation is $y = 3x + 1$.",
+          "Evaluate at $x = 10$: $y = 3(10) + 1 = 30 + 1 = 31$."
+        ],
+        "answer": "$y = 3x + 1$; when $x = 10$, $y = 31$"
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Two functions are described. Function A: $y = 5x - 2$. Function B: a table with $(0, 3)$, $(1, 5)$, $(2, 9)$, $(3, 15)$. Which function is linear and which is nonlinear? Justify each using the rate of change.",
+      "answer": "Function A is linear (constant slope $5$); Function B is nonlinear (rate of change goes $2, 4, 6$, not constant).",
+      "solution": {
+        "steps": [
+          "Function A is $y = 5x - 2$, already in $y = mx + b$ form with $x$ to the first power, so it is linear with constant rate of change $m = 5$.",
+          "For Function B, compute differences in $y$ over equal $x$-gaps of $1$: $5 - 3 = 2$, $9 - 5 = 4$, $15 - 9 = 6$.",
+          "The rates of change $2$, $4$, $6$ are not equal, so the rate of change is not constant.",
+          "Therefore Function A is linear and Function B is nonlinear."
+        ],
+        "answer": "Function A is linear (constant slope $5$); Function B is nonlinear (rate of change goes $2, 4, 6$, not constant)."
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Simplify and classify: is $y = x(x - 4)$ linear or nonlinear? Explain why, and check your reasoning with the rate of change using $x = 0, 1, 2$.",
+      "answer": "Nonlinear; expanding gives $y = x^2 - 4x$, which contains $x^2$, and the rate of change ($-3$ then $-1$) is not constant.",
+      "solution": {
+        "steps": [
+          "Expand the product: $y = x(x - 4) = x^2 - 4x$.",
+          "The expression contains $x^2$, so it is not of the form $y = mx + b$; this signals a nonlinear function.",
+          "Check with points: at $x = 0$, $y = 0$; at $x = 1$, $y = 1 - 4 = -3$; at $x = 2$, $y = 4 - 8 = -4$.",
+          "Rate of change from $x=0$ to $x=1$: $\\frac{-3 - 0}{1 - 0} = -3$. From $x=1$ to $x=2$: $\\frac{-4 - (-3)}{2 - 1} = -1$. Since $-3 \\neq -1$, the rate of change is not constant, confirming the function is nonlinear."
+        ],
+        "answer": "Nonlinear; expanding gives $y = x^2 - 4x$, which contains $x^2$, and the rate of change ($-3$ then $-1$) is not constant."
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A table shows $(1, 4)$, $(3, 10)$, $(4, 13)$, $(7, 22)$. The $x$-values are not evenly spaced. Determine whether the function is linear by computing the rate of change for each interval, and if it is linear write $y = mx + b$.",
+      "answer": "Linear; the rate of change is $3$ for every interval, so $y = 3x + 1$.",
+      "solution": {
+        "steps": [
+          "Interval $(1,4)$ to $(3,10)$: $\\frac{10 - 4}{3 - 1} = \\frac{6}{2} = 3$.",
+          "Interval $(3,10)$ to $(4,13)$: $\\frac{13 - 10}{4 - 3} = \\frac{3}{1} = 3$.",
+          "Interval $(4,13)$ to $(7,22)$: $\\frac{22 - 13}{7 - 4} = \\frac{9}{3} = 3$.",
+          "All intervals give the same rate of change $3$, so despite the unequal $x$-spacing the function is linear with $m = 3$.",
+          "Find $b$ using $(1, 4)$: $4 = 3(1) + b$, so $b = 1$. The equation is $y = 3x + 1$."
+        ],
+        "answer": "Linear; the rate of change is $3$ for every interval, so $y = 3x + 1$."
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Compare the slopes of two linear functions and state which is steeper. Function P: $y = \\frac{3}{4}x + 2$. Function Q: passes through $(0, -1)$ and $(4, 4)$. Find the slope of each and compare.",
+      "answer": "Function P has slope $\\frac{3}{4}$; Function Q has slope $\\frac{5}{4}$. Q is steeper because $\\frac{5}{4} > \\frac{3}{4}$.",
+      "solution": {
+        "steps": [
+          "Function P is already in $y = mx + b$ form, so its slope is $m = \\frac{3}{4}$.",
+          "Function Q slope: $m = \\frac{4 - (-1)}{4 - 0} = \\frac{5}{4}$.",
+          "Compare the slopes: $\\frac{5}{4} = 1.25$ and $\\frac{3}{4} = 0.75$, so $\\frac{5}{4} > \\frac{3}{4}$.",
+          "The function with the greater absolute slope is steeper, so Function Q is steeper than Function P."
+        ],
+        "answer": "Function P has slope $\\frac{3}{4}$; Function Q has slope $\\frac{5}{4}$. Q is steeper because $\\frac{5}{4} > \\frac{3}{4}$."
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A bacteria sample doubles every hour. After $0, 1, 2, 3$ hours the counts are $5, 10, 20, 40$. A student claims this is linear because the counts follow a regular pattern. Is the student correct? Justify using the rate of change and name the type of function.",
+      "answer": "The student is incorrect; it is nonlinear (exponential). The rate of change is $5, 10, 20$ over equal time steps, which is not constant.",
+      "solution": {
+        "steps": [
+          "Over equal $x$-gaps of $1$ hour, compute the change in $y$: $10 - 5 = 5$, $20 - 10 = 10$, $40 - 20 = 20$.",
+          "The rates of change $5$, $10$, $20$ are not equal, so the rate of change is not constant.",
+          "A linear function requires a constant rate of change (a constant difference), but this table has a constant ratio (each value is multiplied by $2$), which describes an exponential function such as $y = 5 \\cdot 2^x$.",
+          "Therefore the student is wrong: the function is nonlinear, not linear."
+        ],
+        "answer": "The student is incorrect; it is nonlinear (exponential). The rate of change is $5, 10, 20$ over equal time steps, which is not constant."
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Rewrite the equation $3x + 2y = 12$ in slope-intercept form, classify it, and identify $m$ and $b$. Then state the $y$-value when $x = 0$.",
+      "answer": "Linear; $y = -\\frac{3}{2}x + 6$, so $m = -\\frac{3}{2}$ and $b = 6$. When $x = 0$, $y = 6$.",
+      "solution": {
+        "steps": [
+          "Isolate the $y$-term: $2y = 12 - 3x$.",
+          "Divide every term by $2$: $y = 6 - \\frac{3}{2}x$, which rearranges to $y = -\\frac{3}{2}x + 6$.",
+          "The equation is in $y = mx + b$ form with $x$ to the first power, so it is linear with $m = -\\frac{3}{2}$ and $b = 6$.",
+          "When $x = 0$, $y = -\\frac{3}{2}(0) + 6 = 6$, which matches the y-intercept $b = 6$."
+        ],
+        "answer": "Linear; $y = -\\frac{3}{2}x + 6$, so $m = -\\frac{3}{2}$ and $b = 6$. When $x = 0$, $y = 6$."
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Three relationships are given. (I) $y = x^3$; (II) the table $(0, 1), (2, 5), (4, 9)$; (III) a graph that is a straight line through $(0, 0)$ and $(1, 4)$. List which of I, II, III are linear and justify each classification.",
+      "answer": "II and III are linear; I is nonlinear. (I) has $x^3$; (II) has constant rate $2$; (III) is a straight line through the origin with slope $4$.",
+      "solution": {
+        "steps": [
+          "Relationship I: $y = x^3$ contains $x$ to the third power, so it is not of the form $y = mx + b$ and is nonlinear (its graph is a curve).",
+          "Relationship II: rate of change from $(0,1)$ to $(2,5)$ is $\\frac{5 - 1}{2 - 0} = 2$, and from $(2,5)$ to $(4,9)$ is $\\frac{9 - 5}{4 - 2} = 2$. The constant rate $2$ means it is linear.",
+          "Relationship III: the graph is a single straight line, which by definition represents a linear function (slope $\\frac{4 - 0}{1 - 0} = 4$).",
+          "Therefore II and III are linear, and I is nonlinear."
+        ],
+        "answer": "II and III are linear; I is nonlinear. (I) has $x^3$; (II) has constant rate $2$; (III) is a straight line through the origin with slope $4$."
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "The cost to rent a kayak is modeled by $C = 8h + 15$, where $h$ is hours. A competitor's prices are in a table: $(1, 26)$, $(2, 38)$, $(3, 50)$. Both look linear. Find each rate of change (price per hour) and state which company charges more per hour.",
+      "answer": "First company: $\\$8$ per hour. Competitor: $\\$12$ per hour. The competitor charges more per hour.",
+      "solution": {
+        "steps": [
+          "The first company's model $C = 8h + 15$ is in $y = mx + b$ form, so its rate of change is $\\$8$ per hour (the coefficient of $h$).",
+          "For the competitor, compute the rate from the table: $\\frac{38 - 26}{2 - 1} = 12$ and $\\frac{50 - 38}{3 - 2} = 12$. The constant rate confirms it is linear at $\\$12$ per hour.",
+          "Compare the per-hour rates: $\\$12 > \\$8$.",
+          "Therefore the competitor charges more per hour."
+        ],
+        "answer": "First company: $\\$8$ per hour. Competitor: $\\$12$ per hour. The competitor charges more per hour."
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Determine whether $y = \\frac{1}{2}x - \\frac{3}{x}$ is linear or nonlinear. Explain which part of the expression decides the answer.",
+      "answer": "Nonlinear; the term $-\\frac{3}{x}$ has $x$ in the denominator, so it is not of the form $y = mx + b$.",
+      "solution": {
+        "steps": [
+          "Examine each term. The term $\\frac{1}{2}x$ is linear (a constant times $x$).",
+          "The term $-\\frac{3}{x}$ has the variable $x$ in the denominator, which is the same as $-3x^{-1}$.",
+          "A linear function requires $x$ to appear only to the first power and never in a denominator. The presence of $-\\frac{3}{x}$ violates this.",
+          "Because one term is nonlinear, the whole function is nonlinear; its rate of change is not constant."
+        ],
+        "answer": "Nonlinear; the term $-\\frac{3}{x}$ has $x$ in the denominator, so it is not of the form $y = mx + b$."
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A table gives $(1, 2)$, $(2, 8)$, $(3, 18)$, $(4, 32)$. Show that the first differences are not constant, then show that this table fits $y = 2x^2$. State whether the function is linear or nonlinear.",
+      "answer": "Nonlinear; first differences are $6, 10, 14$ (not constant), and every point satisfies $y = 2x^2$.",
+      "solution": {
+        "steps": [
+          "First differences over equal $x$-gaps of $1$: $8 - 2 = 6$, $18 - 8 = 10$, $32 - 18 = 14$. These are $6, 10, 14$, which are not constant.",
+          "A non-constant rate of change means the function is nonlinear.",
+          "Test $y = 2x^2$: at $x=1$, $2(1)^2 = 2$; at $x=2$, $2(2)^2 = 8$; at $x=3$, $2(3)^2 = 18$; at $x=4$, $2(4)^2 = 32$. All match.",
+          "Since the function follows $y = 2x^2$ and has a non-constant rate of change, it is nonlinear."
+        ],
+        "answer": "Nonlinear; first differences are $6, 10, 14$ (not constant), and every point satisfies $y = 2x^2$."
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A linear function has the same $y$-intercept as $y = 4x - 6$ but a slope that is the opposite (negative) of that function's slope. Write the new function's equation and find where it crosses the x-axis (the value of $x$ when $y = 0$).",
+      "answer": "$y = -4x - 6$; it crosses the x-axis at $x = -\\frac{3}{2}$.",
+      "solution": {
+        "steps": [
+          "The given function $y = 4x - 6$ has slope $4$ and y-intercept $-6$.",
+          "The opposite of the slope is $-4$, and the y-intercept stays $-6$, so the new equation is $y = -4x - 6$.",
+          "To find the x-intercept, set $y = 0$: $0 = -4x - 6$.",
+          "Solve: $4x = -6$, so $x = -\\frac{6}{4} = -\\frac{3}{2}$."
+        ],
+        "answer": "$y = -4x - 6$; it crosses the x-axis at $x = -\\frac{3}{2}$."
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A student says the table $(0, 0)$, $(1, 1)$, $(2, 4)$, $(3, 9)$ is linear because the $y$-values are perfect squares that increase steadily. Use the constant-rate-of-change criterion to explain why the student is wrong, and name a function that fits the table.",
+      "answer": "Nonlinear; the rate of change is $1, 3, 5$ (not constant). The table fits $y = x^2$.",
+      "solution": {
+        "steps": [
+          "Increasing steadily is not the same as a constant rate of change. Compute the change in $y$ over equal $x$-gaps of $1$: $1 - 0 = 1$, $4 - 1 = 3$, $9 - 4 = 5$.",
+          "The rates of change $1$, $3$, $5$ are not equal, so the rate of change is not constant.",
+          "A linear function must have a constant rate of change, so this function is nonlinear.",
+          "Each $y$-value equals $x^2$ ($0^2 = 0$, $1^2 = 1$, $2^2 = 4$, $3^2 = 9$), so the table fits $y = x^2$, whose graph is a parabola, not a line."
+        ],
+        "answer": "Nonlinear; the rate of change is $1, 3, 5$ (not constant). The table fits $y = x^2$."
+      }
+    }
+  ]
+}

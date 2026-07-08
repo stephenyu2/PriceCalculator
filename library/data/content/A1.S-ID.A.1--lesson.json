@@ -1,0 +1,172 @@
+{
+  "id": "A1.S-ID.A.1--lesson",
+  "standard": "A1.S-ID.A.1",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on a single count or measurement variable",
+  "clusterCode": "A",
+  "skillName": "Data Plots on the Number Line",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "intro": "There are three common ways to display a single set of numerical data on the real number line: a dot plot, a histogram, and a box plot. A dot plot stacks one dot per value, so a stack's height is the frequency of that value. A histogram groups values into equal-width intervals called bins and draws a bar whose height is the number of values in each bin (a value landing exactly on a boundary belongs to only one bin). A box plot displays the five-number summary, the minimum, first quartile $Q_1$, median, third quartile $Q_3$, and maximum, with a box from $Q_1$ to $Q_3$ and whiskers to the extremes; the interquartile range is $\\text{IQR}=Q_3-Q_1$. In this lesson you will read these displays, build the five-number summary, and choose an appropriate display for a data set.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A dot plot of quiz scores has stacks of heights $1,3,4,2$ over the values $6,7,8,9$. How many students scored at least $8$?",
+      "solution": {
+        "steps": [
+          "In a dot plot, the height of a stack is the frequency (the number of students) at that value, not the value itself.",
+          "Scoring at least $8$ means scoring $8$ or $9$, so add the stack heights over $8$ and $9$.",
+          "The stack over $8$ has height $4$ and the stack over $9$ has height $2$.",
+          "$4+2=6$ students scored at least $8$."
+        ],
+        "answer": "$6$ students"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find the five-number summary of the data set $4,7,8,8,10,12,15$.",
+      "solution": {
+        "steps": [
+          "The data is already ordered from least to greatest and there are $n=7$ values.",
+          "The minimum is $4$ and the maximum is $15$.",
+          "With $7$ values the median is the $4$th value, which is $8$.",
+          "Exclude the median and use the lower half $4,7,8$; its median is $Q_1=7$.",
+          "Use the upper half $10,12,15$; its median is $Q_3=12$.",
+          "The five-number summary is minimum $4$, $Q_1=7$, median $8$, $Q_3=12$, maximum $15$."
+        ],
+        "answer": "minimum $4$, $Q_1=7$, median $8$, $Q_3=12$, maximum $15$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "For the data set $5,6,8,9,11,12,14,18$ (with $n=8$), find the five-number summary and describe the box plot.",
+      "solution": {
+        "steps": [
+          "The data is ordered and there are $n=8$ values, so the median is the average of the $4$th and $5$th values: $\\text{median}=\\frac{9+11}{2}=10$.",
+          "The lower half is $5,6,8,9$; its median is $Q_1=\\frac{6+8}{2}=7$.",
+          "The upper half is $11,12,14,18$; its median is $Q_3=\\frac{12+14}{2}=13$.",
+          "The minimum is $5$ and the maximum is $18$.",
+          "On the box plot, draw the box from $Q_1=7$ to $Q_3=13$ with a line at the median $10$, then extend whiskers to the minimum $5$ and the maximum $18$."
+        ],
+        "answer": "minimum $5$, $Q_1=7$, median $10$, $Q_3=13$, maximum $18$; box from $7$ to $13$ with a line at $10$ and whiskers to $5$ and $18$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Group the data $2,4,5,7,9,11,12,14,15,19$ into bins of width $5$ starting at $0$, using the intervals $[0,5),[5,10),[10,15),[15,20)$. Give the frequency of each bin for the histogram.",
+      "solution": {
+        "steps": [
+          "Each bin includes its left endpoint and excludes its right endpoint, so a value on a boundary belongs to the bin to its right.",
+          "Bin $[0,5)$ holds values from $0$ up to but not including $5$: that is $2$ and $4$, a frequency of $2$.",
+          "Bin $[5,10)$ holds $5,7,9$ (the value $5$ goes here, not in the first bin), a frequency of $3$.",
+          "Bin $[10,15)$ holds $11,12,14$ (the value $15$ does not go here), a frequency of $3$.",
+          "Bin $[15,20)$ holds $15$ and $19$, a frequency of $2$.",
+          "The bar heights of the histogram are $2,3,3,2$."
+        ],
+        "answer": "frequencies $2,3,3,2$ for $[0,5),[5,10),[10,15),[15,20)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A box plot of a data set has minimum $12$, $Q_1=18$, median $25$, $Q_3=30$, and maximum $40$. About what fraction of the data lies between $18$ and $30$? Also find the IQR.",
+      "solution": {
+        "steps": [
+          "Each of the four sections of a box plot, the two whiskers and the two halves of the box, contains about $25\\%$ of the data, regardless of how long that section looks.",
+          "The values $18$ and $30$ are $Q_1$ and $Q_3$, so the region between them is the whole box.",
+          "The box runs from $Q_1$ to $Q_3$ and holds about $25\\%+25\\%=50\\%$ of the data, which is $\\frac{1}{2}$.",
+          "The interquartile range is $\\text{IQR}=Q_3-Q_1=30-18=12$."
+        ],
+        "answer": "about $\\frac{1}{2}$ of the data; $\\text{IQR}=12$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A histogram of ages has bars of heights $4,7,5,2$ over the bins $[10,20),[20,30),[30,40),[40,50)$. How many people are younger than $30$?",
+      "hint": "Younger than $30$ means the age falls in the bins $[10,20)$ or $[20,30)$. Add those two bar heights.",
+      "solution": {
+        "steps": [
+          "People younger than $30$ are counted in the bins $[10,20)$ and $[20,30)$.",
+          "The bar over $[10,20)$ has height $4$ and the bar over $[20,30)$ has height $7$.",
+          "Add the two frequencies: $4+7=11$.",
+          "So $11$ people are younger than $30$."
+        ],
+        "answer": "$11$ people"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Find the five-number summary of the data set $3,5,9,9,11,14,20$.",
+      "hint": "There are $7$ values, so the median is the $4$th value. Find $Q_1$ from the three values below the median and $Q_3$ from the three values above it.",
+      "solution": {
+        "steps": [
+          "The data is ordered with $n=7$ values; the minimum is $3$ and the maximum is $20$.",
+          "The median is the $4$th value, which is $9$.",
+          "The lower half (excluding the median) is $3,5,9$, so $Q_1=5$.",
+          "The upper half is $11,14,20$, so $Q_3=14$.",
+          "The five-number summary is minimum $3$, $Q_1=5$, median $9$, $Q_3=14$, maximum $20$."
+        ],
+        "answer": "minimum $3$, $Q_1=5$, median $9$, $Q_3=14$, maximum $20$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A data set has first quartile $Q_1=23$ and third quartile $Q_3=41$. Find the interquartile range.",
+      "hint": "The IQR is the difference between the third and first quartiles. Do not subtract the minimum from the maximum, that would be the range.",
+      "solution": {
+        "steps": [
+          "The interquartile range is defined as $\\text{IQR}=Q_3-Q_1$.",
+          "Substitute the given values: $\\text{IQR}=41-23$.",
+          "$41-23=18$."
+        ],
+        "answer": "$\\text{IQR}=18$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Find the median of the data set $6,8,10,13,15,19$.",
+      "hint": "There are $6$ values, an even count, so the median is the average of the two middle values.",
+      "solution": {
+        "steps": [
+          "The data is ordered and there are $n=6$ values, an even count.",
+          "The two middle values are the $3$rd and $4$th values, $10$ and $13$.",
+          "Average them: $\\text{median}=\\frac{10+13}{2}=\\frac{23}{2}=11.5$.",
+          "The median is $11.5$."
+        ],
+        "answer": "$11.5$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A teacher has the test scores of $120$ students and wants to display the overall shape and spread of the scores. Which display is more appropriate, a dot plot or a histogram, and why?",
+      "hint": "Think about how many dots a dot plot would need for $120$ students versus how a histogram summarizes large data into a few bars.",
+      "solution": {
+        "steps": [
+          "A dot plot places one dot per data value, so $120$ scores would require $120$ stacked dots and become crowded and hard to read.",
+          "A histogram groups the scores into a few equal-width bins and draws one bar per bin, so it summarizes a large data set into a small number of bars.",
+          "Because the data set is large, the histogram clearly shows the overall shape and spread while the dot plot would be unreadable.",
+          "Therefore a histogram is the more appropriate display."
+        ],
+        "answer": "A histogram, because it summarizes a large data set ($120$ values) into a few bars that show the shape and spread, while a dot plot would need $120$ stacked dots and be unreadable."
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T11:30:04.469Z"
+}

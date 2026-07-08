@@ -1,0 +1,149 @@
+{
+  "id": "A1.S-ID.C.8--quiz",
+  "standard": "A1.S-ID.C.8",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Interpret linear models",
+  "clusterCode": "C",
+  "skillName": "Correlation Coefficient",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "Eight multiple-choice questions on reading, computing, and interpreting the correlation coefficient $r$ for a linear fit. Choose the single best answer for each.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "A line of best fit for hours studied versus test score has $r = 0.92$. Which best describes the association?\nA) Strong positive linear association\nB) Strong negative linear association\nC) Weak positive linear association\nD) No linear association",
+      "answer": "A) Strong positive linear association",
+      "solution": {
+        "steps": [
+          "The sign of $r$ gives the direction. Here $r = 0.92$ is positive, so the association is positive: as study hours increase, scores tend to increase.",
+          "The magnitude $|r| = 0.92$ is close to $1$, so the association is strong (the points cluster tightly around the line).",
+          "B is wrong: a positive $r$ is a positive, not negative, association.",
+          "C is wrong: $|r| = 0.92$ is near $1$, so the correlation is strong, not weak.",
+          "D is wrong: $r$ is far from $0$, so there is a clear linear trend."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "A student reports a correlation coefficient of $r = 1.4$ for a data set. Why must this be an error?\nA) Because $r$ must be a whole number\nB) Because $r$ must satisfy $-1 \\le r \\le 1$\nC) Because $r$ can only be negative\nD) Because $r$ must equal the slope of the line",
+      "answer": "B) Because $r$ must satisfy $-1 \\le r \\le 1$",
+      "solution": {
+        "steps": [
+          "The correlation coefficient always lies in the interval $-1 \\le r \\le 1$.",
+          "Since $1.4 > 1$, the value is outside the allowed range and cannot be a correlation coefficient.",
+          "A is wrong: $r$ is usually a decimal, not a whole number.",
+          "C is wrong: $r$ can be positive, negative, or zero.",
+          "D is wrong: $r$ is not the slope; the slope can be any real number, but $r$ is bounded by $1$ in absolute value. Accepting $1.4$ as a 'very strong' correlation ignores that bound."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "On a scatter plot the points fall almost exactly along a straight line that slopes downward from upper left to lower right. Which value of $r$ is most plausible?\nA) $r = 0.95$\nB) $r = 0$\nC) $r = -0.95$\nD) $r = -0.30$",
+      "answer": "C) $r = -0.95$",
+      "solution": {
+        "steps": [
+          "The trend slopes downward, so the association is negative and $r$ must be negative. This rules out A ($0.95$) and B ($0$).",
+          "The points fall almost exactly on the line, so the association is very strong and $|r|$ is close to $1$.",
+          "Of the negative options, $-0.95$ is much closer to $-1$ than $-0.30$, so $-0.95$ matches a tight downward cluster.",
+          "D is wrong: $r = -0.30$ would describe a weak, scattered downward trend, not points lying almost on the line."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "A scatter plot of variables that trend downward has correlation coefficient $r = -0.9$. How should this association be described?\nA) Weak, because $r$ is negative\nB) Strong negative\nC) Strong positive\nD) No association",
+      "answer": "B) Strong negative",
+      "solution": {
+        "steps": [
+          "Strength depends on the magnitude $|r|$, not the sign. Here $|r| = 0.9$ is close to $1$, so the association is strong.",
+          "The sign is negative, so the direction is negative.",
+          "A is wrong: a negative sign does not make a correlation weak; it only sets the direction. $r = -0.9$ is strong.",
+          "C is wrong: the sign is negative, so the association trends downward, not upward.",
+          "D is wrong: $r$ is far from $0$, so there is a clear linear association."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "A survey finds that the number of hats a person owns and their shoe size have $r = 0.15$. How should this be interpreted?\nA) A very strong positive correlation\nB) A very weak positive correlation\nC) A strong negative correlation\nD) A perfect correlation",
+      "answer": "B) A very weak positive correlation",
+      "solution": {
+        "steps": [
+          "The sign of $r$ is positive, so any trend is positive, ruling out C.",
+          "The magnitude $|r| = 0.15$ is close to $0$, so the linear association is very weak.",
+          "A is wrong: $r = 0.15$ is near $0$, the opposite of strong. A nonzero $r$ is not automatically strong.",
+          "C is wrong: the sign is positive, not negative.",
+          "D is wrong: a perfect correlation requires $|r| = 1$."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "A linear fit between two variables has correlation coefficient $r = -0.8$. What is the coefficient of determination $r^2$, and what does it mean?\nA) $r^2 = -0.64$; about $64\\%$ of the variation is explained\nB) $r^2 = 0.64$; about $64\\%$ of the variation in $y$ is explained by the linear relationship with $x$\nC) $r^2 = 0.8$; about $80\\%$ of the variation is explained\nD) $r^2 = -0.8$; the correlation itself is the explained variation",
+      "answer": "B) $r^2 = 0.64$; about $64\\%$ of the variation in $y$ is explained by the linear relationship with $x$",
+      "solution": {
+        "steps": [
+          "Square the correlation: $r^2 = (-0.8)^2 = 0.64$. Squaring removes the sign, so $r^2$ is positive.",
+          "The coefficient of determination $r^2 = 0.64$ means about $64\\%$ of the variation in $y$ is explained by the linear relationship with $x$.",
+          "A is wrong: $r^2$ cannot be negative; squaring a real number gives a nonnegative result.",
+          "C is wrong: $0.8$ is $|r|$, not $r^2$; confusing $r$ with $r^2$.",
+          "D is wrong: $r^2$ is not just $r$; you must square it, and it cannot be negative."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Two data sets each have a line of best fit with slope $2$. Set A has $r = 0.6$ and Set B has $r = 0.98$. Which statement is correct?\nA) Set A has a stronger correlation because slope and $r$ are the same thing\nB) Both lines rise equally steeply, but Set B's points cluster more tightly around its line\nC) Set B's line is steeper because its $r$ is larger\nD) The slopes differ because the correlations differ",
+      "answer": "B) Both lines rise equally steeply, but Set B's points cluster more tightly around its line",
+      "solution": {
+        "steps": [
+          "Both sets have the same slope $2$, so both lines rise equally steeply. Steepness is set by the slope, not by $r$.",
+          "The correlation $r$ measures how tightly the points cluster around the line. Set B's $r = 0.98$ is closer to $1$ than Set A's $r = 0.6$, so Set B's points cluster more tightly.",
+          "A is wrong: $r$ is not the slope, and a larger slope does not mean a larger $r$. Also Set A has the smaller $r$.",
+          "C is wrong: the slopes are equal ($2$ each); a larger $r$ does not make the line steeper.",
+          "D is wrong: the slopes are stated to be equal, so they do not differ."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Across a year, monthly ice cream sales and the number of drowning incidents have $r = 0.85$. Which conclusion is best supported?\nA) Buying ice cream causes drownings, since the correlation is strong\nB) Drownings cause people to buy ice cream\nC) There is a strong positive correlation, but correlation does not prove causation; hot weather is a likely confounding variable that raises both\nD) Because $r = 0.85$ is less than $1$, the two variables are unrelated",
+      "answer": "C) There is a strong positive correlation, but correlation does not prove causation; hot weather is a likely confounding variable that raises both",
+      "solution": {
+        "steps": [
+          "$r = 0.85$ is positive and close to $1$, so there is a strong positive linear association between the two variables.",
+          "A strong correlation does not establish causation. A confounding variable, hot summer weather, plausibly increases both ice cream sales and swimming (and thus drownings).",
+          "A is wrong: a strong correlation alone never proves that one variable causes the other.",
+          "B is wrong: this reverses a causal claim that the data still do not support.",
+          "D is wrong: $r = 0.85$ is far from $0$, so the variables are strongly associated, not unrelated; $r$ need not equal $1$ to show a strong relationship."
+        ]
+      }
+    }
+  ]
+}

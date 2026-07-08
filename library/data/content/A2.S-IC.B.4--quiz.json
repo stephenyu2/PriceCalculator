@@ -1,0 +1,157 @@
+{
+  "id": "A2.S-IC.B.4--quiz",
+  "standard": "A2.S-IC.B.4",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+  "domainCode": "S-IC",
+  "cluster": "Make inferences and justify conclusions from sample surveys, experiments, and observational studies",
+  "clusterCode": "B",
+  "skillName": "Estimating Population Parameters",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "In a random sample of $200$ registered voters, $116$ say they support a new measure. What is the point estimate $\\hat{p}$ of the population proportion that supports the measure?\nA) $\\hat{p}=0.58$\nB) $\\hat{p}=0.42$\nC) $\\hat{p}=116$\nD) $\\hat{p}=1.72$",
+      "answer": "A) $\\hat{p}=0.58$",
+      "solution": {
+        "steps": [
+          "The point estimate of a population proportion is the sample proportion $\\hat{p}=\\dfrac{x}{n}$, where $x$ is the count of successes and $n$ is the sample size.",
+          "Here $x=116$ and $n=200$, so $\\hat{p}=\\dfrac{116}{200}=0.58$. The key is A.",
+          "B is $\\dfrac{84}{200}=0.42$, the proportion who do NOT support the measure, not the proportion asked for.",
+          "C just reports the raw count $116$, which is not a proportion (a proportion is between $0$ and $1$).",
+          "D inverts the fraction as $\\dfrac{200}{116}\\approx 1.72$, which exceeds $1$ and cannot be a proportion."
+        ],
+        "answer": "A) $\\hat{p}=0.58$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "A random sample of $5$ daily commute times (in minutes) is $22, 18, 25, 30, 20$. What is the point estimate $\\bar{x}$ of the population mean commute time?\nA) $23$ minutes\nB) $25$ minutes\nC) $115$ minutes\nD) $12$ minutes",
+      "answer": "A) $23$ minutes",
+      "solution": {
+        "steps": [
+          "The point estimate of a population mean is the sample mean $\\bar{x}=\\dfrac{\\sum x_i}{n}$.",
+          "Add the values: $22+18+25+30+20=115$. Divide by $n=5$: $\\bar{x}=\\dfrac{115}{5}=23$. The key is A.",
+          "B, $25$, is just one of the data values (or a median-ish guess), not the computed average.",
+          "C, $115$, is the sum $\\sum x_i$ without dividing by $n$.",
+          "D, $12$, would come from dividing the sum by the wrong number; $\\dfrac{115}{5}=23$, not $12$."
+        ],
+        "answer": "A) $23$ minutes"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "A polling company wants to estimate the true proportion $p$ of all $50{,}000$ city residents who recycle. They survey $400$ residents and find a sample proportion $\\hat{p}=0.62$. Which statement correctly identifies the parameter?\nA) The parameter is $p$, the true proportion of all $50{,}000$ residents who recycle.\nB) The parameter is $\\hat{p}=0.62$, the sample proportion.\nC) The parameter is $n=400$, the sample size.\nD) The parameter is $50{,}000$, the population size.",
+      "answer": "A) The parameter is $p$, the true proportion of all $50{,}000$ residents who recycle.",
+      "solution": {
+        "steps": [
+          "A parameter is a fixed (usually unknown) number describing the whole population; a statistic is computed from a sample and varies sample to sample.",
+          "The unknown population value here is $p$, the true proportion of all residents who recycle, so A is the parameter. The key is A.",
+          "B, $\\hat{p}=0.62$, is the sample proportion, which is a statistic, not the parameter.",
+          "C, $n=400$, is the sample size, a fixed design choice but not the quantity being estimated.",
+          "D, $50{,}000$, is the population size, not the proportion being estimated; the margin of error depends on the sample size, not this number."
+        ],
+        "answer": "A) The parameter is $p$, the true proportion of all $50{,}000$ residents who recycle."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "A simulation resamples $n=50$ many times and produces sample proportions whose middle $95\\%$ run from $0.46$ to $0.62$, centered at $0.54$. What is the estimated margin of error?\nA) $0.08$\nB) $0.16$\nC) $0.54$\nD) $0.04$",
+      "answer": "A) $0.08$",
+      "solution": {
+        "steps": [
+          "The margin of error from a simulation is the half-width of the middle $95\\%$ of the simulated estimates.",
+          "Width $=0.62-0.46=0.16$. Half-width $=\\dfrac{0.16}{2}=0.08$. The key is A.",
+          "B, $0.16$, is the FULL width of the middle $95\\%$, not the half-width; the margin of error is half of this.",
+          "C, $0.54$, is the center of the distribution, not a measure of spread.",
+          "D, $0.04$, halves the width twice (or quarters it); the correct margin of error is $\\dfrac{0.62-0.46}{2}=0.08$."
+        ],
+        "answer": "A) $0.08$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "A sample of $n=64$ boxes has mean weight $\\bar{x}=23$ ounces and sample standard deviation $s=8$ ounces. Using $\\text{ME}\\approx 2\\cdot SE$ with $SE_{\\bar{x}}=\\dfrac{s}{\\sqrt{n}}$, what is the $95\\%$ margin of error for the mean weight?\nA) $2$ ounces\nB) $1$ ounce\nC) $0.25$ ounce\nD) $16$ ounces",
+      "answer": "A) $2$ ounces",
+      "solution": {
+        "steps": [
+          "Compute the standard error: $SE=\\dfrac{s}{\\sqrt{n}}=\\dfrac{8}{\\sqrt{64}}=\\dfrac{8}{8}=1$.",
+          "Apply $\\text{ME}\\approx 2\\cdot SE=2(1)=2$ ounces. The key is A.",
+          "B, $1$, is the standard error itself; it drops the factor of about $2$ needed for $95\\%$ confidence.",
+          "C, $0.25$, uses $n$ instead of $\\sqrt{n}$: $\\dfrac{8}{64}=0.125$ then doubled gives $0.25$, which is wrong because the denominator must be $\\sqrt{n}=8$.",
+          "D, $16$, comes from $2\\cdot s=2(8)$, forgetting to divide by $\\sqrt{n}$ at all."
+        ],
+        "answer": "A) $2$ ounces"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "In a random sample of $200$ voters, $\\hat{p}=0.58$ support a measure. Using $SE_{\\hat{p}}=\\sqrt{\\dfrac{\\hat{p}(1-\\hat{p})}{n}}$ and $\\text{ME}\\approx 2\\cdot SE$, the $95\\%$ margin of error is about $0.07$. Which interval correctly reports the $95\\%$ confidence interval for $p$?\nA) $0.51$ to $0.65$\nB) $0.58$ to $0.65$\nC) $0.07$ to $0.58$\nD) $0.49$ to $0.67$",
+      "answer": "A) $0.51$ to $0.65$",
+      "solution": {
+        "steps": [
+          "A confidence interval is $\\text{estimate}\\pm\\text{ME}$, applied to BOTH sides of the point estimate.",
+          "Here $0.58\\pm 0.07$ gives $0.58-0.07=0.51$ to $0.58+0.07=0.65$. The key is A.",
+          "B, $0.58$ to $0.65$, adds the margin of error to one side only; it must be subtracted as well as added.",
+          "C, $0.07$ to $0.58$, treats the margin of error itself as an endpoint, which is not how the interval is built.",
+          "D, $0.49$ to $0.67$, uses $\\hat{p}\\pm 2\\,\\text{ME}=0.58\\pm 0.18$ style spread; the correct half-width is the single $\\text{ME}=0.07$."
+        ],
+        "answer": "A) $0.51$ to $0.65$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A poll of $n=400$ people has a margin of error of $0.05$. The polling firm wants to cut the margin of error in half to $0.025$. Because $\\text{ME}\\propto\\dfrac{1}{\\sqrt{n}}$, what sample size is needed?\nA) $1600$\nB) $800$\nC) $200$\nD) $40{,}000$",
+      "answer": "A) $1600$",
+      "solution": {
+        "steps": [
+          "The margin of error shrinks like $\\dfrac{1}{\\sqrt{n}}$, so to halve $\\text{ME}$ you must make $\\sqrt{n}$ twice as large, which means multiplying $n$ by $2^2=4$.",
+          "New sample size $=4\\times 400=1600$. Check: $\\dfrac{1}{\\sqrt{1600}}=\\dfrac{1}{40}$ versus $\\dfrac{1}{\\sqrt{400}}=\\dfrac{1}{20}$, exactly half. The key is A.",
+          "B, $800$, doubles $n$, but doubling $n$ only multiplies the precision by $\\dfrac{1}{\\sqrt{2}}\\approx 0.71$, not by $\\dfrac{1}{2}$.",
+          "C, $200$, halves $n$, which makes the margin of error LARGER, the opposite of the goal.",
+          "D, $40{,}000$, multiplies $n$ by $100$ (using the population scale), far more than the factor of $4$ that halving the margin of error requires."
+        ],
+        "answer": "A) $1600$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A survey reports a $95\\%$ confidence interval of $0.51$ to $0.65$ for the proportion of voters who support a measure, from a sample with $\\hat{p}=0.58$. Which interpretation is correct?\nA) We are $95\\%$ confident that the true population proportion $p$ lies between $0.51$ and $0.65$.\nB) There is a $95\\%$ chance that the sample proportion $\\hat{p}=0.58$ falls between $0.51$ and $0.65$.\nC) Exactly $95\\%$ of the voters in the sample support the measure.\nD) The margin of error means $95\\%$ of all voters fall between $0.51$ and $0.65$ support.",
+      "answer": "A) We are $95\\%$ confident that the true population proportion $p$ lies between $0.51$ and $0.65$.",
+      "solution": {
+        "steps": [
+          "A $95\\%$ confidence interval is a statement about the unknown population parameter $p$: the procedure produces intervals that capture $p$ about $95\\%$ of the time.",
+          "So the correct reading is that we are $95\\%$ confident the true population proportion $p$ lies between $0.51$ and $0.65$. The key is A.",
+          "B is the common misconception of turning the interval into a probability about the sample statistic $\\hat{p}$; $\\hat{p}=0.58$ is a known fixed number at the center, not a random quantity to bound.",
+          "C confuses the confidence level $95\\%$ with the sample proportion; the sample proportion is $0.58$, not $0.95$.",
+          "D misreads the interval as describing how individual voters are spread; the interval bounds the single population proportion, not the distribution of individuals."
+        ],
+        "answer": "A) We are $95\\%$ confident that the true population proportion $p$ lies between $0.51$ and $0.65$."
+      }
+    }
+  ]
+}

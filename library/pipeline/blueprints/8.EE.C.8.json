@@ -1,0 +1,132 @@
+{
+  "standard": "8.EE.C.8",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Expressions and Equations",
+  "domainCode": "EE",
+  "cluster": "Analyze and solve linear equations and pairs of simultaneous linear equations",
+  "clusterCode": "C",
+  "skillName": "Systems of Linear Equations",
+
+  "description": "Students analyze and solve pairs of simultaneous linear equations in two variables. They understand that a solution $(x, y)$ is a point that satisfies both equations at once and corresponds to the intersection of the two lines. They solve systems graphically (estimating the intersection), by substitution, and by elimination, and they determine the number of solutions: exactly one (intersecting lines), no solution (distinct parallel lines), or infinitely many (the same line). They also set up and solve systems arising from real-world problems and check solutions by substituting back into both equations.",
+
+  "subSkills": [
+    "Understand that a solution to a system is an ordered pair $(x, y)$ satisfying both equations simultaneously, geometrically the point where the two lines intersect",
+    "Solve a system by graphing and estimate or read the intersection point",
+    "Solve a system by substitution (isolate one variable, substitute into the other equation)",
+    "Solve a system by elimination (add or subtract scaled equations to cancel a variable)",
+    "Determine the number of solutions by comparing slopes and intercepts: one solution, no solution, or infinitely many solutions",
+    "Verify a candidate solution by substituting into both original equations",
+    "Set up a system of two linear equations from a real-world context and solve it",
+    "Recognize special cases algebraically: a false statement (e.g. $0 = 5$) means no solution; a true statement (e.g. $0 = 0$) means infinitely many solutions"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Solve by substitution",
+      "example": "Solve the system $\\begin{cases} y = 2x - 1 \\\\ 3x + y = 9 \\end{cases}$. Substituting gives $3x + (2x - 1) = 9$, so $5x = 10$, $x = 2$, and $y = 3$. Solution: $(2, 3)$."
+    },
+    {
+      "name": "Solve by elimination",
+      "example": "Solve $\\begin{cases} 2x + 3y = 12 \\\\ 2x - y = 4 \\end{cases}$. Subtracting the equations: $4y = 8$, so $y = 2$ and $x = 3$. Solution: $(3, 2)$."
+    },
+    {
+      "name": "Solve by graphing / read the intersection",
+      "example": "Graph $y = x + 1$ and $y = -x + 5$ and identify the intersection point $(2, 3)$ as the solution of the system."
+    },
+    {
+      "name": "Determine the number of solutions",
+      "example": "How many solutions does $\\begin{cases} y = 3x + 2 \\\\ y = 3x - 4 \\end{cases}$ have? The lines have equal slopes ($3$) but different intercepts, so they are parallel: no solution."
+    },
+    {
+      "name": "Special case: infinitely many solutions",
+      "example": "Solve $\\begin{cases} 2x + 4y = 6 \\\\ x + 2y = 3 \\end{cases}$. The second equation is half the first, so they are the same line: infinitely many solutions."
+    },
+    {
+      "name": "Real-world system (word problem)",
+      "example": "Tickets cost $\\$8$ for adults and $\\$5$ for children. A group of $7$ people pays $\\$47$. How many adults and children? Solve $\\begin{cases} a + c = 7 \\\\ 8a + 5c = 47 \\end{cases}$ to get $a = 4$, $c = 3$."
+    },
+    {
+      "name": "Verify a proposed solution",
+      "example": "Is $(1, -2)$ a solution of $\\begin{cases} x - y = 3 \\\\ 2x + y = 0 \\end{cases}$? Check: $1 - (-2) = 3$ true, and $2(1) + (-2) = 0$ true, so yes."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "One equation is already solved for a variable so substitution is direct, or the system is ready for one-step elimination (a variable already cancels by simple addition or subtraction). Solutions are small integers. Also includes identifying the number of solutions when both equations are in slope-intercept form so slopes and intercepts are read directly.",
+      "constraints": [
+        "At least one equation in the form $y = mx + b$ or $x = \\ldots$",
+        "Elimination requires no scaling: coefficients already match or are opposites",
+        "Solution is a pair of small integers with $|x|, |y| \\le 6$",
+        "Number-of-solutions items give both equations in $y = mx + b$ form"
+      ]
+    },
+    "Medium": {
+      "description": "Both equations are in standard form $ax + by = c$. Substitution requires isolating a variable first, or elimination requires scaling exactly one equation before adding. Determining the number of solutions may require rewriting an equation into slope-intercept form. Solutions may include simple fractions.",
+      "constraints": [
+        "Equations typically in standard form $ax + by = c$",
+        "Elimination needs one equation multiplied by an integer to create matching or opposite coefficients",
+        "Solutions are integers or simple fractions (denominators $\\le 4$)",
+        "Special-case items require algebraic manipulation to reveal $0 = c$ or $0 = 0$"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems: translate a real-world situation into a system before solving, or solve a system where elimination requires scaling both equations. May ask the student to find a derived quantity (a difference, total, or per-unit value) after solving, or to determine a parameter value that makes the system have no solution or infinitely many solutions.",
+      "constraints": [
+        "Word problems requiring the student to define variables and build two equations",
+        "Elimination may require multiplying both equations by different integers",
+        "Follow-up question asks for a combination of $x$ and $y$ rather than the pair itself",
+        "May ask for the value of a constant $k$ so the system has no solution or infinitely many solutions"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student solves only one equation and reports a single value, ignoring that a system solution is an ordered pair",
+      "distractor": "Gives just $x = 2$ (or only the $y$-value) instead of the pair $(2, 3)$"
+    },
+    {
+      "misconception": "Student substitutes back into the same equation used to isolate the variable, so any value appears to work, or substitutes into the wrong equation",
+      "distractor": "Finds $x = 2$ then mislabels the partner value, e.g. reports $(2, 5)$ instead of $(2, 3)$"
+    },
+    {
+      "misconception": "Sign error during elimination: adds equations when they should be subtracted (or vice versa), failing to cancel the variable",
+      "distractor": "From $2x + 3y = 12$ and $2x - y = 4$, adds to get $4x + 2y = 16$ and produces a wrong pair such as $(4, 0)$"
+    },
+    {
+      "misconception": "Student scales only one side of an equation when multiplying to set up elimination",
+      "distractor": "Multiplies $x + 2y = 3$ by $2$ to get $2x + 4y = 3$ instead of $2x + 4y = 6$, yielding an incorrect solution"
+    },
+    {
+      "misconception": "Student confuses the special cases: thinks equal slopes always means infinitely many solutions without checking the intercepts",
+      "distractor": "Claims $\\begin{cases} y = 3x + 2 \\\\ y = 3x - 4 \\end{cases}$ has infinitely many solutions instead of no solution"
+    },
+    {
+      "misconception": "Student thinks a system always has exactly one solution and never considers no solution or infinitely many",
+      "distractor": "Reports a single ordered pair for a parallel-line or same-line system instead of 'no solution' or 'infinitely many solutions'"
+    },
+    {
+      "misconception": "Student reverses the coordinates of the solution, writing $(y, x)$ instead of $(x, y)$",
+      "distractor": "Writes $(3, 2)$ when the correct solution is $(2, 3)$"
+    },
+    {
+      "misconception": "In word problems, student sets up only one equation or assigns the wrong quantity to each variable",
+      "distractor": "Solves $8a + 5c = 47$ alone and reports a non-integer or swapped count such as $a = 3$, $c = 4$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

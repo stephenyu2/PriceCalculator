@@ -1,0 +1,118 @@
+{
+  "standard": "6.EE.A.3",
+  "grade": "6",
+  "subject": "math",
+  "domain": "Expressions and Equations",
+  "domainCode": "EE",
+  "cluster": "Apply and extend previous understandings of arithmetic to algebraic expressions",
+  "clusterCode": "A",
+  "skillName": "Generating Equivalent Expressions",
+
+  "description": "Students apply the properties of operations (commutative, associative, and especially the distributive property) to rewrite algebraic expressions in equivalent forms. They distribute a factor over a sum or difference (e.g. $3(x+4)=3x+12$), factor out a common factor (e.g. $6x+15=3(2x+5)$), and combine like terms (e.g. $7y+2y=9y$). They recognize that two expressions are equivalent when they name the same value for every value of the variable, and can justify each rewriting step by naming the property used.",
+
+  "subSkills": [
+    "Apply the distributive property to expand $a(b+c)=ab+ac$ over a sum or difference",
+    "Identify like terms (same variable raised to the same power, or constants) and combine their coefficients",
+    "Factor out the greatest common factor from the terms of an expression, e.g. $8x+12=4(2x+3)$",
+    "Use the commutative and associative properties to reorder and regroup terms before combining",
+    "Combine distributing and combining-like-terms in a single multi-step simplification, e.g. $2(x+3)+4x$",
+    "Verify equivalence of two expressions by substituting a value for the variable and checking both give the same result"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Distribute over a sum",
+      "example": "Use the distributive property to write an equivalent expression: $5(x+2)$. Answer: $5x+10$."
+    },
+    {
+      "name": "Distribute over a difference (and with a variable factor)",
+      "example": "Expand: $4(2y-3)$. Answer: $8y-12$. And $x(x+6)=x^2+6x$."
+    },
+    {
+      "name": "Combine like terms",
+      "example": "Write an equivalent expression by combining like terms: $9a+3+2a-1$. Answer: $11a+2$."
+    },
+    {
+      "name": "Factor out the greatest common factor",
+      "example": "Factor the expression: $18x+24$. Answer: $6(3x+4)$."
+    },
+    {
+      "name": "Distribute then combine like terms (multi-step)",
+      "example": "Simplify: $3(x+4)+2x$. Distribute to get $3x+12+2x$, then combine like terms: $5x+12$."
+    },
+    {
+      "name": "Check equivalence by substitution",
+      "example": "Are $2(x+5)$ and $2x+10$ equivalent? Substitute $x=3$: $2(8)=16$ and $2(3)+10=16$. They match, so the expressions are equivalent."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single property applied in one step: distribute a one-digit factor over a sum of a single variable term and a constant, or combine two like terms, or factor out an obvious common factor. All coefficients are small positive integers and only one operation type appears. This is the bottom of a ramped sheet and the start of tier1.",
+      "constraints": [
+        "Single-step: distribute, OR combine two like terms, OR factor once",
+        "Coefficients and constants are positive integers $\\le 10$",
+        "Distribution is over a sum only (no subtraction inside the parentheses)",
+        "One variable, no exponents, no nested grouping"
+      ]
+    },
+    "Medium": {
+      "description": "Two ideas at once or a sign to track: distribute over a difference, combine three or more like terms (possibly with a leftover constant), or factor out a larger GCF. May require distributing and then combining like terms in two steps. This is the top of tier1 and the bottom of tier2.",
+      "constraints": [
+        "Distribution over a difference, OR three or more terms to combine, OR factoring a two-digit GCF",
+        "May require a distribute-then-combine sequence of two steps",
+        "Coefficients up to about $24$; a variable times a variable may appear ($x \\cdot x = x^2$)",
+        "Subtraction inside parentheses introduces a sign to manage"
+      ]
+    },
+    "Hard": {
+      "description": "A genuinely multi-step simplification: distribute one or two grouped factors, then combine like terms while tracking signs, or factor an expression whose GCF is not obvious, or reason about why two expressions are or are not equivalent. Several properties chain together and a sign or distribution error would propagate. This is the top of tier2 and the end of a ramped sheet.",
+      "constraints": [
+        "Three or more chained steps, e.g. $2(x+4)+3(x-1)$ requires two distributions then combining",
+        "Distributing a negative or subtracting a grouped quantity, e.g. $5x-2(x+3)$",
+        "Factoring where the GCF must be found from coefficients with multiple common factors",
+        "May ask the student to justify equivalence by substitution or to identify the property used in each step"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student distributes the factor to only the first term inside the parentheses and forgets the second",
+      "distractor": "For $5(x+2)$ writes $5x+2$ instead of $5x+10$"
+    },
+    {
+      "misconception": "Student combines unlike terms, adding a variable term to a constant",
+      "distractor": "For $9a+3+2a-1$ writes $13a$ (treats $9a$, $3$, $2a$, $-1$ as all combinable) instead of $11a+2$"
+    },
+    {
+      "misconception": "Student adds the exponents or treats $x+x$ as $x^2$ when combining like terms",
+      "distractor": "For $7x+2x$ writes $9x^2$ instead of $9x$ (adds coefficients but wrongly creates an exponent)"
+    },
+    {
+      "misconception": "Student mishandles the sign when distributing over a difference or distributing a negative",
+      "distractor": "For $4(2y-3)$ writes $8y+12$, or for $5x-2(x+3)$ writes $5x-2x+6=3x+6$ instead of $3x-6$"
+    },
+    {
+      "misconception": "Student factors out a common factor but leaves it inside instead of fully dividing each term, or pulls out a factor that is not common to every term",
+      "distractor": "For $18x+24$ writes $6(3x+24)$ (forgot to divide the constant) or $2(9x+24)$ (used a non-GCF and left a reducible result) instead of $6(3x+4)$"
+    },
+    {
+      "misconception": "Student multiplies the coefficients of like terms instead of adding them",
+      "distractor": "For $7y+2y$ writes $14y$ (multiplied $7 \\times 2$) instead of $9y$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

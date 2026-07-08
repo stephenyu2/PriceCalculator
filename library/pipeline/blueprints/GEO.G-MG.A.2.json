@@ -1,0 +1,138 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent. One blueprint per standard.",
+
+  "standard": "GEO.G-MG.A.2",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Modeling with Geometry",
+  "domainCode": "G-MG",
+  "cluster": "Apply geometric concepts in modeling situations",
+  "clusterCode": "A",
+  "skillName": "Density in Area and Volume Models",
+
+  "description": "Students apply the concept of density as a rate of some quantity per unit of geometric measure, where the measure is either an area or a volume. They recognize area density as $\\text{(quantity)} \\div \\text{(area)}$ (for example persons per square mile, trees per acre, or grams per square centimeter) and volume density as $\\text{(quantity)} \\div \\text{(volume)}$ (for example BTUs per cubic foot, mass per cubic centimeter, or people per cubic meter of a building). The core skill is to (1) compute the area or volume of the relevant region using geometry formulas (rectangle, triangle, circle, composite regions, prism, cylinder, sphere, cone), (2) divide the given quantity by that measure to get a density, or multiply a given density by a measure to recover a total, and (3) carry and convert units correctly, since density answers are always rates such as $\\frac{\\text{persons}}{\\text{mi}^2}$ or $\\frac{\\text{BTU}}{\\text{ft}^3}$. They set up density problems from verbal modeling descriptions, choose whether area or volume density applies, solve for any one of the three quantities (total, density, or measure) given the other two, and compare densities across regions. Answers are kept exact (fractions, multiples of $\\pi$) unless an approximation is requested, in which case they round sensibly and state units.",
+
+  "subSkills": [
+    "Identify whether a situation calls for area density (quantity per unit area) or volume density (quantity per unit volume)",
+    "Compute the area of the relevant region (rectangle, triangle, parallelogram, trapezoid, circle, or composite figure) before dividing",
+    "Compute the volume of the relevant solid (prism, cylinder, cone, sphere, or composite solid) before dividing",
+    "Compute a density as $D = \\frac{Q}{M}$ where $Q$ is the quantity and $M$ is the area or volume, and attach the correct compound unit",
+    "Recover a total quantity as $Q = D \\cdot M$ given a density and a measure",
+    "Solve for the measure (area or volume) as $M = \\frac{Q}{D}$ given a quantity and a density, then back out a linear dimension when asked",
+    "Convert units consistently (square and cubic unit conversions such as $1\\text{ mi}^2 = 640\\text{ acres}$, $1\\text{ ft}^3 = 1728\\text{ in}^3$) so the density is expressed in the requested units",
+    "Compare densities of two regions to decide which is more crowded, more concentrated, or more efficient",
+    "Translate a verbal modeling scenario (population, heating, agriculture, manufacturing) into a density equation and interpret the numerical answer in context"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Area density from quantity and area (direct)",
+      "example": "A rectangular county is $12$ mi by $8$ mi and has a population of $76{,}800$ people. Find the population density in persons per square mile. Answer: area $= 12 \\cdot 8 = 96\\text{ mi}^2$, so $D = \\frac{76{,}800}{96} = 800$ persons per $\\text{mi}^2$."
+    },
+    {
+      "name": "Volume density from quantity and volume (direct)",
+      "example": "A storage room is a rectangular prism $20$ ft by $15$ ft by $10$ ft and the furnace must supply $90{,}000$ BTU to heat it. Find the heating requirement in BTUs per cubic foot. Answer: volume $= 20 \\cdot 15 \\cdot 10 = 3000\\text{ ft}^3$, so $D = \\frac{90{,}000}{3000} = 30$ BTU per $\\text{ft}^3$."
+    },
+    {
+      "name": "Total quantity from density times measure",
+      "example": "A circular irrigated field has radius $50$ m and is planted at a density of $4$ corn plants per square meter. How many plants are there? Answer: area $= \\pi(50)^2 = 2500\\pi\\text{ m}^2$, so $Q = 4 \\cdot 2500\\pi = 10{,}000\\pi \\approx 31{,}416$ plants."
+    },
+    {
+      "name": "Solve for the measure (and back out a dimension)",
+      "example": "A town has $54{,}000$ residents and a population density of $1500$ persons per square mile. If the town is a square, find its side length. Answer: area $= \\frac{54{,}000}{1500} = 36\\text{ mi}^2$, so the side is $\\sqrt{36} = 6$ mi."
+    },
+    {
+      "name": "Volume density with a cylinder, cone, or sphere",
+      "example": "A cylindrical grain silo has radius $4$ ft and height $18$ ft and holds $90{,}000$ lb of grain. Find the density in pounds per cubic foot. Answer: volume $= \\pi(4)^2(18) = 288\\pi\\text{ ft}^3$, so $D = \\frac{90{,}000}{288\\pi} = \\frac{3125}{\\pi} \\approx 994.7$ lb per $\\text{ft}^3$."
+    },
+    {
+      "name": "Composite region with unit conversion",
+      "example": "A park is an L-shaped region made of a $300$ ft by $200$ ft rectangle with a $100$ ft by $100$ ft square removed, and it contains $250$ trees. Find the planting density in trees per acre, using $1\\text{ acre} = 43{,}560\\text{ ft}^2$. Answer: area $= 300 \\cdot 200 - 100 \\cdot 100 = 50{,}000\\text{ ft}^2 = \\frac{50{,}000}{43{,}560}\\text{ acres} \\approx 1.148\\text{ acres}$, so $D = \\frac{250}{1.148} \\approx 218$ trees per acre."
+    },
+    {
+      "name": "Compare densities of two regions",
+      "example": "City A has $240{,}000$ people on $80\\text{ mi}^2$; City B has $315{,}000$ people on $90\\text{ mi}^2$. Which is more densely populated? Answer: $D_A = \\frac{240{,}000}{80} = 3000$ and $D_B = \\frac{315{,}000}{90} = 3500$ persons per $\\text{mi}^2$, so City B is denser."
+    }
+  ],
+
+  "difficultyRubric": {
+    "_comment": "A single ramped worksheet of 15 items moves Easy (items 1-5) to Medium (6-11) to Hard (12-15). If split, tier1 = Easy to Medium (compute area/volume of a single basic figure, then divide or multiply for a density or total in already-matching units), tier2 = Medium to Hard (solve for the measure or a dimension, use curved/composite solids, convert square or cubic units, or compare two regions). This standard is conceptually contained around one relationship Q = D times M, so the default single ramped worksheet is used.",
+    "Easy": {
+      "description": "One-step density computation. The area or volume is found from a single basic formula with whole-number dimensions (rectangle, triangle, or rectangular prism), and the units already match the requested density unit. The student either divides quantity by measure to get a density, or multiplies a given density by a measure to get a total. No unit conversion and no solving backward.",
+      "constraints": [
+        "Region is a single rectangle, triangle, or rectangular prism with small whole-number dimensions",
+        "Exactly one geometry formula plus one division or one multiplication",
+        "Given units already match the requested density units (no square or cubic conversion)",
+        "Numbers divide evenly so the density is a clean whole number or simple fraction"
+      ]
+    },
+    "Medium": {
+      "description": "A two-step computation or a single algebraic rearrangement. Either the area/volume requires a circle, cylinder, or a two-piece composite figure (so $\\pi$ appears and answers may stay exact in terms of $\\pi$), or the student must solve $Q = D \\cdot M$ for the measure $M$ given $Q$ and $D$. May require one straightforward unit conversion (such as acres to square miles when the conversion factor is supplied) or interpreting a density before computing a total.",
+      "constraints": [
+        "Region involves a circle, cylinder, or a composite of two basic shapes",
+        "Answer may be exact in terms of $\\pi$ (such as $2500\\pi$) or require one rearrangement to solve for $M$",
+        "At most one unit conversion, with the conversion factor provided",
+        "Dimensions may be non-trivial whole numbers; squaring or cubing them stays manageable"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems that chain geometry, the density relationship, and unit handling, or that require setup from an extended verbal model. Includes solving for a linear dimension after solving for the measure (taking a square root, cube root, or isolating a radius or height), using a cone or sphere volume, computing a composite area or volume then converting between square or cubic units, or comparing two regions and justifying which is denser. The student must decide which quantity is unknown and may need to extract the relevant numbers from a paragraph-length scenario.",
+      "constraints": [
+        "Two or more chained steps: geometry formula, then the density relationship, then a conversion or a back-solve for a dimension",
+        "May use a cone, sphere, or composite solid, or a composite/irregular planar region",
+        "May require converting square units ($\\text{mi}^2$ to acres, $\\text{ft}^2$ to acres) or cubic units ($\\text{ft}^3$ to $\\text{in}^3$, $\\text{m}^3$ to $\\text{cm}^3$)",
+        "Comparison or interpretation: decide which region is denser, or back out a side length, radius, or height from a computed area or volume",
+        "Exact answers (fractions, multiples of $\\pi$, radicals) unless a decimal approximation with units is explicitly requested"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student divides in the wrong direction, computing measure divided by quantity instead of quantity divided by measure",
+      "distractor": "For $76{,}800$ people on $96\\text{ mi}^2$ reports $\\frac{96}{76{,}800} = 0.00125$ instead of $\\frac{76{,}800}{96} = 800$ persons per $\\text{mi}^2$"
+    },
+    {
+      "misconception": "Student uses area when the situation calls for volume (or volume when it calls for area), dividing by the wrong kind of measure",
+      "distractor": "For a $20 \\times 15 \\times 10$ ft room needing $90{,}000$ BTU divides by a face area $20 \\cdot 15 = 300\\text{ ft}^2$ to get $300$ BTU per $\\text{ft}^2$ instead of dividing by the volume $3000\\text{ ft}^3$ to get $30$ BTU per $\\text{ft}^3$"
+    },
+    {
+      "misconception": "Student forgets to square the radius in a circle's area, using $\\pi r$ instead of $\\pi r^2$",
+      "distractor": "For a field of radius $50$ m at $4$ plants per $\\text{m}^2$ uses area $\\pi(50) = 50\\pi$ and gets $200\\pi \\approx 628$ plants instead of area $2500\\pi$ giving $10{,}000\\pi \\approx 31{,}416$ plants"
+    },
+    {
+      "misconception": "Student forgets to take the square root (or cube root) when backing a linear dimension out of an area (or volume)",
+      "distractor": "After finding a square town has area $36\\text{ mi}^2$ reports the side as $36$ mi instead of $\\sqrt{36} = 6$ mi"
+    },
+    {
+      "misconception": "Student converts square or cubic units with a linear factor instead of squaring or cubing it",
+      "distractor": "Converts $2\\text{ mi}^2$ to acres using $640$ once per mile, getting $2 \\cdot 640 = 1280$, when the correct factor for square miles is $640$ acres per $\\text{mi}^2$ so $2\\text{ mi}^2 = 1280$ acres only by coincidence of factor; for $\\text{ft}^3$ to $\\text{in}^3$ multiplies by $12$ instead of $12^3 = 1728$, e.g. treats $2\\text{ ft}^3$ as $24\\text{ in}^3$ instead of $3456\\text{ in}^3$"
+    },
+    {
+      "misconception": "Student multiplies density by measure when they should divide, or divides when they should multiply, mixing up which quantity is unknown",
+      "distractor": "Given density $1500$ persons per $\\text{mi}^2$ and population $54{,}000$, multiplies $1500 \\cdot 54{,}000$ instead of computing area $= \\frac{54{,}000}{1500} = 36\\text{ mi}^2$"
+    },
+    {
+      "misconception": "Student omits the factor $\\frac{1}{3}$ in a cone volume or $\\frac{4}{3}$ in a sphere volume, using the cylinder volume instead",
+      "distractor": "For a conical pile of radius $3$ and height $9$ uses $\\pi(3)^2(9) = 81\\pi$ instead of $\\frac{1}{3}\\pi(3)^2(9) = 27\\pi$, tripling the volume and underreporting the density"
+    },
+    {
+      "misconception": "Student drops or mislabels the compound unit, reporting a bare number or the wrong rate units",
+      "distractor": "Reports the population density as $800$ (no unit) or as $800$ persons per mile instead of $800$ persons per square mile"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet (Easy->Hard across 15 items). lesson 5 worked examples + 5 practice, quiz 8 multiple choice.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

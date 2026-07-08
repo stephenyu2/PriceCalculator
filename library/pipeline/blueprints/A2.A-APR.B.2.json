@@ -1,0 +1,139 @@
+{
+  "standard": "A2.A-APR.B.2",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Arithmetic with Polynomials and Rational Expressions",
+  "domainCode": "A-APR",
+  "cluster": "Understand the relationship between zeros and factors of polynomials",
+  "clusterCode": "B",
+  "skillName": "Remainder Theorem",
+
+  "description": "Students know and apply the Remainder Theorem: for a polynomial $p(x)$ and a number $a$, the remainder when $p(x)$ is divided by $x-a$ equals $p(a)$. As a consequence, $p(a)=0$ if and only if $(x-a)$ is a factor of $p(x)$ (the Factor Theorem). Students evaluate $p(a)$ directly by substitution to obtain a remainder without performing full division, and they confirm the same value using synthetic division (the last entry of a synthetic-division row is the remainder). They reverse the logic to test whether a given linear binomial $(x-a)$ is a factor: it is a factor exactly when $p(a)=0$. They locate $a$ correctly when the divisor is written as $x-a$ (so for $x+3$, $a=-3$) and when the divisor has a leading coefficient, e.g. for $2x-1$ they evaluate at $x=\\tfrac{1}{2}$. The core moves are: (1) given $p(x)$ and $a$, find the remainder on division by $x-a$ as $p(a)$; (2) given $p(x)$ and a candidate $(x-a)$, decide whether it is a factor by checking if $p(a)=0$; (3) use synthetic division to find a remainder and read it as $p(a)$; and (4) solve for an unknown coefficient so that a specified remainder or factor condition holds, e.g. find $k$ so that $x-2$ is a factor of $p(x)=x^3+kx-6$.",
+
+  "subSkills": [
+    "Evaluate a polynomial $p(x)$ at a number $a$ by substitution, handling signs and powers correctly, e.g. $p(-2)$ for $p(x)=x^3-4x+1$",
+    "Identify $a$ from a divisor written as $x-a$, including sign cases such as $x+3\\Rightarrow a=-3$ and fractional cases such as $2x-1\\Rightarrow a=\\tfrac{1}{2}$",
+    "State and apply the Remainder Theorem: the remainder of $p(x)\\div(x-a)$ is $p(a)$",
+    "Use synthetic division to divide $p(x)$ by $x-a$ and read the final entry as the remainder $p(a)$",
+    "Apply the Factor Theorem: $(x-a)$ is a factor of $p(x)$ if and only if $p(a)=0$",
+    "Decide whether a given linear binomial is a factor by testing the corresponding value of $a$",
+    "Connect a zero of $p$, a root of $p(x)=0$, an $x$-intercept of the graph, and a linear factor $(x-a)$ as four ways of saying the same thing",
+    "Solve for an unknown coefficient so a remainder equals a given value or so a given binomial is a factor, by setting $p(a)$ equal to that value (or to $0$) and solving"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Remainder by direct evaluation",
+      "example": "Find the remainder when $p(x)=x^3-4x^2+2x-5$ is divided by $x-3$. Answer: $p(3)=27-36+6-5=-8$, so the remainder is $-8$."
+    },
+    {
+      "name": "Remainder with a negative value of a",
+      "example": "Find the remainder when $p(x)=2x^3+5x^2-3$ is divided by $x+2$. Here $a=-2$, so $p(-2)=2(-8)+5(4)-3=-16+20-3=1$. Answer: $1$."
+    },
+    {
+      "name": "Remainder via synthetic division",
+      "example": "Use synthetic division to find the remainder of $p(x)=x^3-2x^2-5x+6$ divided by $x-3$. The synthetic row gives quotient $x^2+x-2$ with last entry $0$, so the remainder is $0=p(3)$."
+    },
+    {
+      "name": "Factor test (is x-a a factor?)",
+      "example": "Is $x-2$ a factor of $p(x)=x^3-x^2-4x+4$? Compute $p(2)=8-4-8+4=0$, so yes, $(x-2)$ is a factor."
+    },
+    {
+      "name": "Factor test with a fractional or signed value",
+      "example": "Is $2x-1$ a factor of $p(x)=2x^3+x^2-1$? Evaluate at $x=\\tfrac{1}{2}$: $p\\!\\left(\\tfrac{1}{2}\\right)=2\\cdot\\tfrac{1}{8}+\\tfrac{1}{4}-1=\\tfrac{1}{4}+\\tfrac{1}{4}-1=-\\tfrac{1}{2}\\ne 0$, so $2x-1$ is not a factor."
+    },
+    {
+      "name": "Solve for an unknown coefficient (factor condition)",
+      "example": "Find $k$ so that $x-2$ is a factor of $p(x)=x^3+kx-6$. Set $p(2)=8+2k-6=0$, so $2k=-2$ and $k=-1$."
+    },
+    {
+      "name": "Solve for an unknown coefficient (given remainder)",
+      "example": "Find $c$ so that the remainder when $p(x)=x^3+cx^2-4$ is divided by $x+1$ is $3$. Set $p(-1)=-1+c-4=3$, so $c=8$."
+    },
+    {
+      "name": "Conceptual / equivalence",
+      "example": "A polynomial $p(x)$ satisfies $p(5)=0$. Explain what this tells you about the factors and graph of $p$. Answer: $(x-5)$ is a factor of $p(x)$ and the graph crosses or touches the $x$-axis at $x=5$, because $p(a)=0$ if and only if $(x-a)$ is a factor."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single direct evaluation with a small, positive or simple integer value of $a$ read straight from a divisor of the form $x-a$. The student substitutes into a quadratic or simple cubic with small integer coefficients and reports the remainder, or checks a factor where $a$ is a positive integer. One clean substitution, no leading-coefficient twist. This is the bottom of a ramped sheet and the start of tier1.",
+      "constraints": [
+        "Divisor is $x-a$ with $a$ a positive integer from $1$ to $4$",
+        "$p(x)$ is degree $2$ or degree $3$ with integer coefficients $\\le 9$ in absolute value",
+        "Remainder found by direct substitution $p(a)$; no synthetic division required",
+        "Factor questions use a value where the arithmetic is small and exact",
+        "No fractional $a$, no unknown coefficients"
+      ]
+    },
+    "Medium": {
+      "description": "Two things to track at once: a negative value of $a$ from a divisor like $x+b$, a degree-3 or degree-4 polynomial, or a synthetic-division computation read as the remainder. Includes a factor test that requires correctly turning $x+b$ into $a=-b$ and a true/false factor conclusion. This is the top of tier1 and the bottom of tier2.",
+      "constraints": [
+        "Divisor may be $x+b$ so $a=-b$ is negative, or $a$ may be a larger integer up to $\\pm 6$",
+        "$p(x)$ up to degree $4$, possibly with a missing term (zero coefficient) the student must account for",
+        "At least some items solved by synthetic division, reading the last entry as the remainder",
+        "Factor tests that yield both 'is a factor' ($p(a)=0$) and 'is not a factor' ($p(a)\\ne 0$) outcomes",
+        "Careful sign tracking through powers of a negative $a$"
+      ]
+    },
+    "Hard": {
+      "description": "A multi-step problem: solve for an unknown coefficient so a factor or remainder condition holds, evaluate at a fractional value coming from a divisor with a leading coefficient (e.g. $2x-1\\Rightarrow x=\\tfrac{1}{2}$), or reason conceptually about the equivalence of zeros, roots, intercepts, and factors. A single sign or substitution slip propagates to the wrong $k$ or the wrong conclusion. This is the top of tier2 and the end of a ramped sheet.",
+      "constraints": [
+        "Solve $p(a)=0$ or $p(a)=r$ for an unknown coefficient $k$ or $c$ inside $p(x)$",
+        "Fractional value of $a$ from a divisor with leading coefficient, e.g. evaluate at $x=\\tfrac{1}{2}$ or $x=\\tfrac{2}{3}$",
+        "Degree-4 (or higher) polynomials, or problems combining a factor test with finding the remaining quotient",
+        "Conceptual items linking $p(a)=0$, $(x-a)$ a factor, $a$ a root of $p(x)=0$, and an $x$-intercept at $x=a$",
+        "Answers may be fractions or require justification, and must be exact (radicals or fractions, not rounded decimals)"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student uses the wrong sign for $a$, plugging in the value shown in the divisor instead of its negative (or vice versa)",
+      "distractor": "For division by $x+2$ evaluates $p(2)$ instead of $p(-2)$, e.g. reports $p(2)$ for $p(x)=2x^3+5x^2-3$ as the remainder rather than $p(-2)=1$"
+    },
+    {
+      "misconception": "Student reverses the Factor Theorem, concluding $(x-a)$ is a factor when $p(a)\\ne 0$ or that it is not a factor when $p(a)=0$",
+      "distractor": "Finds $p(2)=0$ for $p(x)=x^3-x^2-4x+4$ but concludes $x-2$ is NOT a factor, or finds a nonzero remainder and still calls $(x-a)$ a factor"
+    },
+    {
+      "misconception": "Student makes a sign error evaluating powers of a negative number, treating $(-a)^2$ or $(-a)^3$ with the wrong sign",
+      "distractor": "Computes $p(-2)$ for $p(x)=x^3+x^2$ as $-8+(-4)=-12$ (taking $(-2)^2=-4$) instead of $-8+4=-4$"
+    },
+    {
+      "misconception": "Student forgets a missing term, omitting a zero coefficient when substituting or when setting up synthetic division",
+      "distractor": "For $p(x)=x^3-5x+2$ divided by $x-2$ drops the missing $x^2$ term and miscomputes, e.g. gets $p(2)=8-5+2=5$ via a shifted synthetic row instead of $p(2)=8-10+2=0$"
+    },
+    {
+      "misconception": "Student divides $a$ by the leading coefficient incorrectly, or evaluates at the wrong fractional value for a divisor like $2x-1$",
+      "distractor": "For $2x-1$ evaluates at $x=2$ or $x=-\\tfrac{1}{2}$ instead of $x=\\tfrac{1}{2}$ when testing whether $2x-1$ is a factor"
+    },
+    {
+      "misconception": "Student reads the quotient's leading coefficient (or another synthetic-division entry) as the remainder instead of the final entry",
+      "distractor": "After synthetic division of $p(x)=x^3-2x^2-5x+6$ by $x-3$ reports a middle entry such as $1$ or $-2$ as the remainder instead of the last entry $0$"
+    },
+    {
+      "misconception": "Student sets up the unknown-coefficient equation incorrectly, setting $p(a)$ equal to the divisor or to $a$ instead of to $0$ (factor) or the given remainder",
+      "distractor": "To make $x-2$ a factor of $p(x)=x^3+kx-6$ solves $p(2)=2$ giving $k=0$, instead of $p(2)=0$ giving $k=-1$"
+    },
+    {
+      "misconception": "Student confuses the remainder with the quotient, reporting the whole quotient polynomial (or its constant term) when only the remainder $p(a)$ is asked for",
+      "distractor": "When asked for the remainder of $p(x)=x^3-2x^2-5x+6$ divided by $x-3$, reports the quotient $x^2+x-2$ (or its constant $-2$) instead of the remainder $0$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

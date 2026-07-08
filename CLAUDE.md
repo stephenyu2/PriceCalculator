@@ -1,14 +1,23 @@
 # Launch Valley Tutoring — Claude Code Briefing
 
 ## Project overview
-Plain HTML5 / CSS3 / Vanilla JS. No framework, no build step, no package.json.
-Deployed on Netlify (auto-deploy from `main` branch). Forms use Netlify Forms (`data-netlify="true"`).
+Plain HTML5 / CSS3 / Vanilla JS. No framework, no build step.
+Deployed on Netlify. Forms use Netlify Forms (`data-netlify="true"`).
+One serverless function: `netlify/functions/create-checkout.js` (Stripe checkout for /sat-planner; dependency-free, reads `STRIPE_SECRET_KEY` from Netlify env vars — never put keys in front-end code).
+
+## Deploying (IMPORTANT — do not drag-and-drop)
+The site is NOT auto-deployed from git. Deploy with the Netlify CLI from the project root:
+```
+netlify deploy --prod --dir .
+```
+The CLI is installed and already logged in / linked to the site (`glittering-smakager-f5fc2f` → launchvalleytutoring.com). This uploads only changed files AND packages the serverless function.
+**Never deploy by dragging the folder into the Netlify UI** — drag-and-drop cannot package functions and would publish a site with a broken checkout. (Stephen's old workflow was drag-and-drop; it ended 2026-07-03.)
 
 ## Running locally
 ```
 python3 -m http.server 8080
 ```
-Open http://localhost:8080.
+Open http://localhost:8080. Note: the Stripe checkout function does NOT run under this server (pages and calculator work; the pay buttons will error). To test checkout locally use `netlify dev` instead, or test on the live site.
 
 ## Site structure
 ```
@@ -21,6 +30,8 @@ Open http://localhost:8080.
 /member-pricing            → member-pricing.html (hub)
 /member-pricing-tutoring   → member-pricing-tutoring.html
 /member-pricing-sat-act    → member-pricing-sat-act.html
+/sat-planner               → sat-planner.html (hidden SAT prep plan calculator: noindex/nofollow, unlinked, direct URL only). Two-tier packages (Essentials/Complete) + Stripe hosted checkout via the create-checkout function. ALL pricing math lives in sat-pricing.js (repo root), shared by the page (browser) and the function (server) — never duplicate the formula; edit constants there only.
+/payment-success           → payment-success.html (post-checkout landing page, noindex)
 
 /tutoring/                 → tutoring/index.html (hub with video panels)
 /tutoring/<subject>/       → individual subject pages (14 total)

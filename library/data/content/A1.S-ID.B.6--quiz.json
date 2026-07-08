@@ -1,0 +1,158 @@
+{
+  "id": "A1.S-ID.B.6--quiz",
+  "standard": "A1.S-ID.B.6",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on two categorical and quantitative variables",
+  "clusterCode": "B",
+  "skillName": "Scatter Plots and Fitted Functions",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "An 8-item multiple-choice quiz on scatter plots and fitted functions: describing associations, computing the slope of a line of fit, writing and using the equation $y=mx+b$, interpreting slope and intercept, computing residuals, and choosing a linear or nonlinear model.",
+  "items": [
+    {
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "On a scatter plot of hours studied $x$ versus test score $y$, the points fall in a tight band rising from the lower-left to the upper-right. Which best describes the association?\nA) Strong positive\nB) Strong negative\nC) Weak positive\nD) No association",
+      "answer": "A) Strong positive",
+      "solution": {
+        "steps": [
+          "Points that rise from lower-left to upper-right go up as $x$ increases, so the direction is positive.",
+          "The points lie in a tight band, so the association is strong.",
+          "B is wrong: negative would mean the points fall as $x$ increases.",
+          "C is wrong: a tight band is strong, not weak.",
+          "D is wrong: there is a clear pattern, so the association is not absent.",
+          "The association is strong positive, so the answer is A."
+        ],
+        "answer": "A) Strong positive"
+      }
+    },
+    {
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "A trend line passes through the representative points $(2,5)$ and $(8,23)$. What is the slope of the line?\nA) $\\frac{1}{3}$\nB) $3$\nC) $-3$\nD) $6$",
+      "answer": "B) $3$",
+      "solution": {
+        "steps": [
+          "Use $m=\\frac{y_2-y_1}{x_2-x_1}=\\frac{23-5}{8-2}=\\frac{18}{6}=3$.",
+          "A is wrong: it inverts the formula as $\\frac{8-2}{23-5}=\\frac{6}{18}=\\frac{1}{3}$.",
+          "C is wrong: $-3$ has the right magnitude but the wrong sign; both $\\Delta y$ and $\\Delta x$ are positive, so the slope is positive.",
+          "D is wrong: $6$ is $\\Delta x$, not the slope.",
+          "The slope is $3$, so the answer is B."
+        ],
+        "answer": "B) $3$"
+      }
+    },
+    {
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "A data set has the points $(0,3),(1,6),(2,12),(3,24)$, where each $y$-value is double the one before it. Which type of function best models this data?\nA) Linear\nB) Exponential\nC) Constant\nD) Negative linear",
+      "answer": "B) Exponential",
+      "solution": {
+        "steps": [
+          "Check the ratios: $\\frac{6}{3}=2$, $\\frac{12}{6}=2$, $\\frac{24}{12}=2$. A constant ratio means exponential growth.",
+          "A is wrong: a line needs a constant difference, but the differences $3,6,12$ are not constant.",
+          "C is wrong: the values change, so the function is not constant.",
+          "D is wrong: the values increase, not decrease.",
+          "A constant multiplier of $2$ gives the model $y=3\\cdot 2^{x}$, which is exponential, so the answer is B."
+        ],
+        "answer": "B) Exponential"
+      }
+    },
+    {
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "A line of fit passes through the point $(2,5)$ with slope $3$. What is the equation of the line?\nA) $y=3x$\nB) $y=3x+11$\nC) $y=3x-1$\nD) $y=2x+5$",
+      "answer": "C) $y=3x-1$",
+      "solution": {
+        "steps": [
+          "Find the intercept with $b=y-mx=5-3(2)=5-6=-1$.",
+          "So the equation is $y=3x-1$.",
+          "A is wrong: it drops the intercept, using $y=3x$ instead of adding $b=-1$.",
+          "B is wrong: it sign-errors the intercept as $b=5+3(2)=11$.",
+          "D is wrong: it reuses the point coordinates instead of the slope and computed intercept.",
+          "The equation is $y=3x-1$, so the answer is C."
+        ],
+        "answer": "C) $y=3x-1$"
+      }
+    },
+    {
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "A line of fit models a city's population $y$ (in thousands) $x$ years after 2010 as $y=2.5x+40$. Predict the population in the year 2026.\nA) $80$ thousand\nB) $5105$ thousand\nC) $42.5$ thousand\nD) $100$ thousand",
+      "answer": "A) $80$ thousand",
+      "solution": {
+        "steps": [
+          "The year 2026 is $x=2026-2010=16$ years after 2010.",
+          "Substitute: $y=2.5(16)+40=40+40=80$ thousand.",
+          "B is wrong: it uses $x=2026$ instead of $x=16$, giving $2.5(2026)+40=5105$, a meaningless extrapolation.",
+          "C is wrong: it uses $x=1$ instead of $x=16$.",
+          "D is wrong: it forgets the slope multiplier and just adds $40+40+20$ incorrectly.",
+          "The predicted population is $80$ thousand, so the answer is A."
+        ],
+        "answer": "A) $80$ thousand"
+      }
+    },
+    {
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "For plant height $y=1.5x+4$ (in centimeters) after $x$ weeks, which statement correctly interprets the slope and intercept?\nA) The plant started at $1.5$ cm and grows $4$ cm per week.\nB) The plant started at $4$ cm and grows $1.5$ cm per week.\nC) The plant started at $4$ cm and grows $4$ cm per week.\nD) The plant started at $1.5$ cm and shrinks $1.5$ cm per week.",
+      "answer": "B) The plant started at $4$ cm and grows $1.5$ cm per week.",
+      "solution": {
+        "steps": [
+          "The intercept $b=4$ is the value at $x=0$, so the plant started at $4$ cm.",
+          "The slope $1.5$ is the rate of change, so the plant grows $1.5$ cm per week.",
+          "A is wrong: it swaps the meanings of slope and intercept.",
+          "C is wrong: it uses $4$ for both the start and the rate.",
+          "D is wrong: a positive slope means growth, not shrinking.",
+          "The plant started at $4$ cm and grows $1.5$ cm per week, so the answer is B."
+        ],
+        "answer": "B) The plant started at $4$ cm and grows $1.5$ cm per week."
+      }
+    },
+    {
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A model predicts $\\hat{y}=2x+1$ for the number of customers $y$ at hour $x$. At $x=5$ the store actually had $13$ customers. What is the residual, and does the model overestimate or underestimate?\nA) $-2$; the model overestimates\nB) $2$; the model underestimates\nC) $2$; the model overestimates\nD) $24$; the model underestimates",
+      "answer": "B) $2$; the model underestimates",
+      "solution": {
+        "steps": [
+          "Find the predicted value: $\\hat{y}=2(5)+1=11$.",
+          "Residual $=y_{\\text{actual}}-y_{\\text{predicted}}=13-11=2$.",
+          "A positive residual means the actual value is above the prediction, so the model underestimates.",
+          "A is wrong: it flips the subtraction to $11-13=-2$.",
+          "C is wrong: a positive residual means underestimate, not overestimate.",
+          "D is wrong: it adds the actual and predicted values instead of subtracting.",
+          "The residual is $2$ and the model underestimates, so the answer is B."
+        ],
+        "answer": "B) $2$; the model underestimates"
+      }
+    },
+    {
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A table gives $(1,4),(2,7),(3,9),(4,12),(5,14)$. Using the representative points $(1,4)$ and $(5,14)$ to build a line of fit, what is the equation?\nA) $y=2.5x+1.5$\nB) $y=2.5x$\nC) $y=2.5x+4$\nD) $y=4x+2.5$",
+      "answer": "A) $y=2.5x+1.5$",
+      "solution": {
+        "steps": [
+          "Slope: $m=\\frac{14-4}{5-1}=\\frac{10}{4}=2.5$.",
+          "Intercept: $b=y-mx=4-2.5(1)=4-2.5=1.5$.",
+          "So the line of fit is $y=2.5x+1.5$.",
+          "B is wrong: it drops the intercept, writing $y=2.5x$.",
+          "C is wrong: it reuses the $y$-value $4$ as the intercept instead of computing $b=1.5$.",
+          "D is wrong: it swaps the slope and intercept.",
+          "The line of fit is $y=2.5x+1.5$, so the answer is A."
+        ],
+        "answer": "A) $y=2.5x+1.5$"
+      }
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "id": "A1.A-SSE.B--cluster-test",
+  "standard": null,
+  "clusterId": "A1.A-SSE.B",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Seeing Structure in Expressions",
+  "domainCode": "A-SSE",
+  "cluster": "Write expressions in equivalent forms to solve problems",
+  "clusterCode": "B",
+  "skillName": "Write expressions in equivalent forms to solve problems",
+  "materialType": "cluster-test",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "intro": "This cluster test checks whether you can choose and produce an equivalent form of an expression to reveal a property: factoring to reveal zeros, completing the square to reveal a maximum or minimum, and using exponent properties to reveal a growth or decay rate.",
+  "items": [
+    {
+      "standard": "A1.A-SSE.B.3",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Factor $x^2-7x+12$ to reveal its zeros, then state the zeros.\nA) $(x-3)(x-4)$; zeros $x=3$ and $x=4$\nB) $(x+3)(x+4)$; zeros $x=-3$ and $x=-4$\nC) $(x-3)(x-4)$; zeros $x=-3$ and $x=-4$\nD) $(x-2)(x-6)$; zeros $x=2$ and $x=6$",
+      "answer": "A) $(x-3)(x-4)$; zeros $x=3$ and $x=4$",
+      "solution": {
+        "steps": [
+          "Find two numbers that multiply to $12$ and add to $-7$: those are $-3$ and $-4$.",
+          "So $x^2-7x+12=(x-3)(x-4)$.",
+          "Set each factor to $0$: $x-3=0$ gives $x=3$, and $x-4=0$ gives $x=4$.",
+          "A is correct. B factors the wrong signs. C uses the right factors but reads the zeros with the wrong sign (taking the number inside the parentheses). D factors $x^2-8x+12$, not this expression."
+        ],
+        "answer": "A) $(x-3)(x-4)$; zeros $x=3$ and $x=4$"
+      }
+    },
+    {
+      "standard": "A1.A-SSE.B.3",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Rewrite $x^2-36$ to reveal its zeros, then state the zeros.\nA) $(x-6)^2$; zero $x=6$\nB) $(x-6)(x+6)$; zeros $x=6$ and $x=-6$\nC) $(x-36)(x+1)$; zeros $x=36$ and $x=-1$\nD) Not factorable over the reals",
+      "answer": "B) $(x-6)(x+6)$; zeros $x=6$ and $x=-6$",
+      "solution": {
+        "steps": [
+          "Recognize a difference of squares: $x^2-36=x^2-6^2$.",
+          "Apply $a^2-b^2=(a-b)(a+b)$: $x^2-36=(x-6)(x+6)$.",
+          "Set each factor to $0$: $x=6$ and $x=-6$.",
+          "B is correct. A treats it as a perfect square, which would expand to $x^2-12x+36$. C does not multiply to give $x^2-36$. D would be correct for a sum of squares like $x^2+36$, but a difference of squares does factor."
+        ],
+        "answer": "B) $(x-6)(x+6)$; zeros $x=6$ and $x=-6$"
+      }
+    },
+    {
+      "standard": "A1.A-SSE.B.3",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Rewrite $x^2-4x+1$ in vertex form $(x-h)^2+k$, then state the minimum value.\nA) $(x-2)^2+1$; minimum $1$\nB) $(x-2)^2-3$; minimum $-3$\nC) $(x-4)^2-15$; minimum $-15$\nD) $(x+2)^2-3$; minimum $-3$",
+      "answer": "B) $(x-2)^2-3$; minimum $-3$",
+      "solution": {
+        "steps": [
+          "Half of the $x$-coefficient $-4$ is $-2$, and $(-2)^2=4$.",
+          "Write $x^2-4x+1=(x^2-4x+4)+1-4=(x-2)^2-3$.",
+          "Since $(x-2)^2\\ge 0$, the minimum value is $-3$, at $x=2$.",
+          "B is correct. A forgets to subtract the $4$ that was added. C uses $b$ instead of $b/2$ inside the square. D has the wrong sign on $h$, since $(x+2)^2$ would come from $x^2+4x+\\dots$."
+        ],
+        "answer": "B) $(x-2)^2-3$; minimum $-3$"
+      }
+    },
+    {
+      "standard": "A1.A-SSE.B.3",
+      "id": 4,
+      "difficulty": "Easy",
+      "prompt": "Use a property of exponents to rewrite $2^{4t}$ as a single base raised to the power $t$, revealing the growth factor per unit of $t$.\nA) $8^t$\nB) $6^t$\nC) $16^t$\nD) $2^4\\cdot 2^t$",
+      "answer": "C) $16^t$",
+      "solution": {
+        "steps": [
+          "Use $(x^m)^n=x^{mn}$ in reverse: $2^{4t}=(2^4)^t$.",
+          "Evaluate $2^4=16$, so $2^{4t}=16^t$.",
+          "C is correct. A evaluates $2^3$ instead of $2^4$. B multiplies the base by the exponent ($2\\cdot 4=8$... actually $6$ here is just a misuse) instead of raising to a power. D splits the exponent as a sum, but $4t$ is a product, not $4+t$."
+        ],
+        "answer": "C) $16^t$"
+      }
+    },
+    {
+      "standard": "A1.A-SSE.B.3",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Factor $2x^2+7x+3$ to reveal its zeros, then state the zeros.\nA) $(2x+3)(x+1)$; zeros $x=-\\frac{3}{2}$ and $x=-1$\nB) $(2x+1)(x+3)$; zeros $x=-\\frac{1}{2}$ and $x=-3$\nC) $(2x+1)(x+3)$; zeros $x=\\frac{1}{2}$ and $x=3$\nD) $(x+1)(x+3)$; zeros $x=-1$ and $x=-3$",
+      "answer": "B) $(2x+1)(x+3)$; zeros $x=-\\frac{1}{2}$ and $x=-3$",
+      "solution": {
+        "steps": [
+          "Use the form $(2x+\\,?)(x+\\,?)$ since $2x\\cdot x=2x^2$, with constants multiplying to $3$.",
+          "Test $(2x+1)(x+3)=2x^2+6x+x+3=2x^2+7x+3$. Correct.",
+          "Set each factor to $0$: $2x+1=0$ gives $x=-\\frac{1}{2}$, and $x+3=0$ gives $x=-3$.",
+          "B is correct. A expands to $2x^2+5x+3$, the wrong middle term. C uses the right factors but reads the zeros with the wrong signs. D ignores the leading coefficient $2$."
+        ],
+        "answer": "B) $(2x+1)(x+3)$; zeros $x=-\\frac{1}{2}$ and $x=-3$"
+      }
+    },
+    {
+      "standard": "A1.A-SSE.B.3",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Rewrite $9x^2-25$ to reveal its zeros, then state the zeros.\nA) $(3x-5)(3x+5)$; zeros $x=\\frac{5}{3}$ and $x=-\\frac{5}{3}$\nB) $(3x-5)^2$; zero $x=\\frac{5}{3}$\nC) $(9x-5)(x+5)$; zeros $x=\\frac{5}{9}$ and $x=-5$\nD) $(3x-5)(3x+5)$; zeros $x=5$ and $x=-5$",
+      "answer": "A) $(3x-5)(3x+5)$; zeros $x=\\frac{5}{3}$ and $x=-\\frac{5}{3}$",
+      "solution": {
+        "steps": [
+          "Recognize a difference of squares: $9x^2=(3x)^2$ and $25=5^2$.",
+          "Apply $a^2-b^2=(a-b)(a+b)$: $9x^2-25=(3x-5)(3x+5)$.",
+          "Set each factor to $0$: $3x-5=0$ gives $x=\\frac{5}{3}$, and $3x+5=0$ gives $x=-\\frac{5}{3}$.",
+          "A is correct. B treats a difference of squares as a perfect square. C does not multiply back to $9x^2-25$. D has the right factors but solves the factors incorrectly, ignoring the coefficient $3$ on $x$."
+        ],
+        "answer": "A) $(3x-5)(3x+5)$; zeros $x=\\frac{5}{3}$ and $x=-\\frac{5}{3}$"
+      }
+    },
+    {
+      "standard": "A1.A-SSE.B.3",
+      "id": 7,
+      "difficulty": "Medium",
+      "prompt": "Rewrite $x^2+5x+1$ in vertex form, then state where the minimum occurs.\nA) $\\left(x+\\frac{5}{2}\\right)^2-\\frac{21}{4}$; minimum at $x=-\\frac{5}{2}$\nB) $\\left(x+\\frac{5}{2}\\right)^2+\\frac{21}{4}$; minimum at $x=-\\frac{5}{2}$\nC) $(x+5)^2-24$; minimum at $x=-5$\nD) $\\left(x+\\frac{5}{2}\\right)^2-\\frac{21}{4}$; minimum at $x=\\frac{5}{2}$",
+      "answer": "A) $\\left(x+\\frac{5}{2}\\right)^2-\\frac{21}{4}$; minimum at $x=-\\frac{5}{2}$",
+      "solution": {
+        "steps": [
+          "Half of $5$ is $\\frac{5}{2}$, and $\\left(\\frac{5}{2}\\right)^2=\\frac{25}{4}$.",
+          "Write $x^2+5x+1=\\left(x+\\frac{5}{2}\\right)^2+1-\\frac{25}{4}=\\left(x+\\frac{5}{2}\\right)^2-\\frac{21}{4}$, since $1-\\frac{25}{4}=-\\frac{21}{4}$.",
+          "The minimum occurs where the square is $0$: $x+\\frac{5}{2}=0$, so $x=-\\frac{5}{2}$.",
+          "A is correct. B has the wrong sign on the constant. C uses $b$ instead of $b/2$. D reads the vertex $x$-value with the wrong sign."
+        ],
+        "answer": "A) $\\left(x+\\frac{5}{2}\\right)^2-\\frac{21}{4}$; minimum at $x=-\\frac{5}{2}$"
+      }
+    },
+    {
+      "standard": "A1.A-SSE.B.3",
+      "id": 8,
+      "difficulty": "Medium",
+      "prompt": "The expression $1.12^t$ models annual growth, where $t$ is in years. Rewrite it to reveal an approximate monthly factor.\nA) $\\left(1.12^{1/12}\\right)^{12t}\\approx 1.0095^{12t}$\nB) $\\left(1.12^{12}\\right)^{t/12}\\approx 1.0095^{12t}$\nC) $\\left(\\frac{1.12}{12}\\right)^{12t}\\approx 0.093^{12t}$\nD) $12\\cdot 1.12^{t}$",
+      "answer": "A) $\\left(1.12^{1/12}\\right)^{12t}\\approx 1.0095^{12t}$",
+      "solution": {
+        "steps": [
+          "Write the annual factor as a monthly factor to the $12$th power: $1.12=\\left(1.12^{1/12}\\right)^{12}$.",
+          "Substitute: $1.12^t=\\left(\\left(1.12^{1/12}\\right)^{12}\\right)^t=\\left(1.12^{1/12}\\right)^{12t}$ by $(x^m)^n=x^{mn}$.",
+          "Evaluate the monthly factor: $1.12^{1/12}\\approx 1.0095$, about a $0.95\\%$ monthly rate.",
+          "A is correct. B leaves the exponent as $t/12$ inside, which does not produce a per-month factor over $12t$. C divides the base by $12$, which is not a valid exponent rule. D multiplies by $12$, confusing a factor with a rate."
+        ],
+        "answer": "A) $\\left(1.12^{1/12}\\right)^{12t}\\approx 1.0095^{12t}$"
+      }
+    },
+    {
+      "standard": "A1.A-SSE.B.3",
+      "id": 9,
+      "difficulty": "Hard",
+      "prompt": "A rocket's height in feet after $t$ seconds is $h=-16t^2+64t+5$. Rewrite in vertex form to reveal the maximum height, then state that height.\nA) $-16(t-2)^2+69$; maximum height $69$ feet\nB) $-16(t-2)^2+5$; maximum height $5$ feet\nC) $-16(t-4)^2+261$; maximum height $261$ feet\nD) $-16(t-2)^2-59$; maximum height $-59$ feet",
+      "answer": "A) $-16(t-2)^2+69$; maximum height $69$ feet",
+      "solution": {
+        "steps": [
+          "Factor out the leading coefficient from the first two terms: $h=-16(t^2-4t)+5$.",
+          "Half of $-4$ is $-2$, and $(-2)^2=4$. Add and subtract $4$ inside: $h=-16(t^2-4t+4-4)+5=-16\\left((t-2)^2-4\\right)+5$.",
+          "Distribute the $-16$: $-16\\cdot(-4)=64$, so $h=-16(t-2)^2+64+5=-16(t-2)^2+69$.",
+          "The coefficient $-16$ is negative, so the maximum is the constant $69$ feet, at $t=2$ seconds.",
+          "A is correct. B forgets to re-multiply the $-16$ across the subtracted term. C uses $b=-4$ instead of $b/2=-2$ inside the square. D adds the constant with the wrong sign."
+        ],
+        "answer": "A) $-16(t-2)^2+69$; maximum height $69$ feet"
+      }
+    },
+    {
+      "standard": "A1.A-SSE.B.3",
+      "id": 10,
+      "difficulty": "Hard",
+      "prompt": "Rewrite $2x^2+8x+5$ in vertex form $a(x-h)^2+k$, then state the minimum value.\nA) $2(x+2)^2-3$; minimum $-3$\nB) $2(x+4)^2-27$; minimum $-27$\nC) $2(x+2)^2+5$; minimum $5$\nD) $(2x+4)^2-3$; minimum $-3$",
+      "answer": "A) $2(x+2)^2-3$; minimum $-3$",
+      "solution": {
+        "steps": [
+          "Factor $2$ from the first two terms: $2x^2+8x+5=2(x^2+4x)+5$.",
+          "Half of $4$ is $2$, and $2^2=4$. Add and subtract $4$ inside: $2(x^2+4x+4-4)+5=2\\left((x+2)^2-4\\right)+5$.",
+          "Distribute: $2\\cdot(-4)=-8$, so $2(x+2)^2-8+5=2(x+2)^2-3$.",
+          "Since $2(x+2)^2\\ge 0$, the minimum value is $-3$, at $x=-2$.",
+          "A is correct. B forgets to factor out the $2$ before completing the square, applying $(b/2)^2$ to the original $b=8$. C drops the re-multiplied constant. D distributes the square over $2x$ incorrectly, since $2(x+2)^2\\ne(2x+4)^2$."
+        ],
+        "answer": "A) $2(x+2)^2-3$; minimum $-3$"
+      }
+    },
+    {
+      "standard": "A1.A-SSE.B.3",
+      "id": 11,
+      "difficulty": "Hard",
+      "prompt": "For the profit function $P(x)=x^2-8x+12$, which equivalent form best shows the break-even points (where $P=0$), and what are they?\nA) Factored form $(x-2)(x-6)$ shows break-even at $x=2$ and $x=6$\nB) Vertex form $(x-4)^2-4$ shows break-even at $x=4$\nC) Factored form $(x-2)(x-6)$ shows the minimum profit is $-2$\nD) Vertex form $(x-4)^2-4$ shows break-even at $x=2$ and $x=6$",
+      "answer": "A) Factored form $(x-2)(x-6)$ shows break-even at $x=2$ and $x=6$",
+      "solution": {
+        "steps": [
+          "Break-even means $P=0$, and zeros are read directly from factored form.",
+          "Factor: $x^2-8x+12=(x-2)(x-6)$, so $P=0$ at $x=2$ and $x=6$.",
+          "Vertex form $(x-4)^2-4$ instead reveals the minimum value $-4$ at $x=4$, not the zeros.",
+          "A is correct. B uses vertex form, which shows the extreme value, not the zeros. C reads a 'minimum' off the factored form, but factored form shows zeros. D claims vertex form shows zeros, confusing which property each form reveals."
+        ],
+        "answer": "A) Factored form $(x-2)(x-6)$ shows break-even at $x=2$ and $x=6$"
+      }
+    },
+    {
+      "standard": "A1.A-SSE.B.3",
+      "id": 12,
+      "difficulty": "Hard",
+      "prompt": "Rewrite $\\left(\\frac{1}{2}\\right)^{t/4}$ as a single base raised to the power $t$ to reveal the per-unit decay factor, then state that factor (to three decimal places).\nA) $\\left(2^{-1/4}\\right)^{t}\\approx (0.841)^t$\nB) $\\left(\\frac{1}{2}\\right)^{4t}\\approx (0.063)^t$\nC) $\\left(2^{1/4}\\right)^{t}\\approx (1.189)^t$\nD) $\\left(\\frac{1}{8}\\right)^{t}\\approx (0.125)^t$",
+      "answer": "A) $\\left(2^{-1/4}\\right)^{t}\\approx (0.841)^t$",
+      "solution": {
+        "steps": [
+          "Write $\\frac{1}{2}=2^{-1}$, so $\\left(\\frac{1}{2}\\right)^{t/4}=\\left(2^{-1}\\right)^{t/4}$.",
+          "Apply $(x^m)^n=x^{mn}$: $\\left(2^{-1}\\right)^{t/4}=2^{-t/4}=\\left(2^{-1/4}\\right)^{t}$.",
+          "Evaluate the per-unit factor: $2^{-1/4}\\approx 0.841$, about a $15.9\\%$ decay each unit of time.",
+          "A is correct. B multiplies the exponent by $4$ instead of dividing, and the base is a decay base so the value is far too small. C drops the negative sign, giving growth instead of decay. D applies the exponent as if $t/4$ meant cubing or similar, which is not a valid step."
+        ],
+        "answer": "A) $\\left(2^{-1/4}\\right)^{t}\\approx (0.841)^t$"
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T18:54:16.004Z"
+}

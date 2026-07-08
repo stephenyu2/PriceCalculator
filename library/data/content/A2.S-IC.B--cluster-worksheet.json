@@ -1,0 +1,222 @@
+{
+  "id": "A2.S-IC.B--cluster-worksheet",
+  "standard": null,
+  "clusterId": "A2.S-IC.B",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+  "domainCode": "S-IC",
+  "cluster": "Make inferences and justify conclusions from sample surveys, experiments, and observational studies",
+  "clusterCode": "B",
+  "skillName": "Make inferences and justify conclusions from sample surveys, experiments, and observational studies",
+  "materialType": "cluster-worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "intro": "This worksheet spans the whole cluster: classifying study designs and the roles of randomization (A2.S-IC.B.3), estimating population parameters with margins of error (A2.S-IC.B.4), comparing two treatments with re-randomization simulations (A2.S-IC.B.5), and critically evaluating data reports (A2.S-IC.B.6). Items are grouped by standard and ramp from straightforward to multi-step.",
+  "items": [
+    {
+      "id": 1,
+      "standard": "A2.S-IC.B.3",
+      "prompt": "A pollster phones $800$ adults chosen at random from a state voter list and asks whether they support a new transit tax. No treatment is given to anyone. Classify this study as a sample survey, an experiment, or an observational study.",
+      "answer": "It is a sample survey.",
+      "solution": {
+        "steps": [
+          "Check whether the researcher imposes a treatment. Here nobody is given a treatment; respondents are only asked a question.",
+          "Check the purpose. The goal is to estimate the proportion of all voters who support the tax by measuring a representative sample.",
+          "Measuring a representative sample to estimate a population characteristic, with no treatment imposed, defines a sample survey."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "standard": "A2.S-IC.B.3",
+      "prompt": "A lab randomly assigns $150$ volunteers to take either a new allergy drug or a placebo for six weeks, then compares their symptom scores. Classify the study and state its purpose.",
+      "answer": "It is an experiment; its purpose is to test whether the drug causes a change in symptoms.",
+      "solution": {
+        "steps": [
+          "The researchers actively impose a treatment: each subject is assigned the drug or a placebo.",
+          "Outcomes in the treatment and control groups are then compared.",
+          "Imposing a treatment and comparing outcomes is the definition of an experiment, and its purpose is to establish whether the drug causes a change (cause and effect)."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "standard": "A2.S-IC.B.3",
+      "prompt": "A study selects $600$ teenagers at random from a national registry and then randomly assigns each one to either a sleep-education program or a control group, comparing later test scores. Identify the two uses of randomization and state what each accomplishes.",
+      "answer": "Selecting the $600$ teenagers at random is random sampling (it makes the result generalize to the population); splitting them into program and control at random is random assignment (it makes the causal comparison valid).",
+      "solution": {
+        "steps": [
+          "Random sampling is choosing the subjects at random from the population. Here the $600$ teenagers are drawn at random from the registry, so this is random sampling, and it lets the result generalize to the population it was drawn from.",
+          "Random assignment is splitting the chosen subjects at random into treatment groups. Here the teenagers are randomly placed into the program or control group, so this is random assignment.",
+          "Random assignment balances confounding variables across the two groups, which justifies a cause-and-effect comparison between the program and the control."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "standard": "A2.S-IC.B.3",
+      "prompt": "An observational study finds that towns with more ice cream sales also report more drownings, and a writer concludes that ice cream causes drowning. Name a plausible lurking (confounding) variable, explain the mechanism, and state the defensible conclusion.",
+      "answer": "Hot summer weather is the lurking variable; it raises both ice cream sales and swimming (and so drownings). The data only support an association between ice cream sales and drownings, not causation.",
+      "solution": {
+        "steps": [
+          "This is an observational study: no treatment was imposed, so it can show association but not causation.",
+          "Identify a variable linked to both measurements. Hot weather drives people to buy more ice cream and also to swim more, which increases drownings.",
+          "Because hot weather influences both, it confounds the comparison, so the observed link is explained by weather, not by ice cream causing drowning.",
+          "The defensible conclusion is that ice cream sales and drownings are associated, both rising in hot weather, with no evidence that one causes the other."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "standard": "A2.S-IC.B.4",
+      "prompt": "In a random sample of $250$ households, $160$ own at least one streaming subscription. Estimate the population proportion $p$ of all households that own a streaming subscription.",
+      "answer": "$\\hat{p} = 0.64$",
+      "solution": {
+        "steps": [
+          "The point estimate of a population proportion is the sample proportion $\\hat{p} = \\dfrac{x}{n}$.",
+          "Substitute $x = 160$ and $n = 250$: $\\hat{p} = \\dfrac{160}{250}$.",
+          "Simplify: $\\dfrac{160}{250} = 0.64$. The best estimate of the population proportion is $0.64$, or $64\\%$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "standard": "A2.S-IC.B.4",
+      "prompt": "A random sample of $6$ daily high temperatures (in degrees Fahrenheit) is $71, 68, 74, 70, 66, 75$. Estimate the population mean daily high temperature $\\mu$.",
+      "answer": "$\\bar{x} = 70.\\overline{6} \\approx 70.7$ degrees Fahrenheit",
+      "solution": {
+        "steps": [
+          "The point estimate of a population mean is the sample mean $\\bar{x} = \\dfrac{\\sum x_i}{n}$.",
+          "Add the values: $71 + 68 + 74 + 70 + 66 + 75 = 424$.",
+          "Divide by $n = 6$: $\\bar{x} = \\dfrac{424}{6} = \\dfrac{212}{3} \\approx 70.7$ degrees Fahrenheit."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "standard": "A2.S-IC.B.4",
+      "prompt": "From a random sample of $400$ voters, the sample proportion who favor a measure is $\\hat{p} = 0.55$. Compute the $95\\%$ margin of error using $\\text{ME} \\approx 2 \\cdot SE$ with $SE_{\\hat{p}} = \\sqrt{\\dfrac{\\hat{p}(1-\\hat{p})}{n}}$, then state the $95\\%$ interval estimate.",
+      "answer": "$\\text{ME} \\approx 0.05$, giving a $95\\%$ interval of about $0.50$ to $0.60$ ($0.55 \\pm 0.05$).",
+      "solution": {
+        "steps": [
+          "Compute the standard error: $SE = \\sqrt{\\dfrac{\\hat{p}(1-\\hat{p})}{n}} = \\sqrt{\\dfrac{0.55(0.45)}{400}}$.",
+          "Evaluate the numerator: $0.55 \\times 0.45 = 0.2475$, so $SE = \\sqrt{\\dfrac{0.2475}{400}} = \\sqrt{0.000619} \\approx 0.0249$.",
+          "Margin of error for $95\\%$ confidence: $\\text{ME} \\approx 2 \\cdot SE = 2(0.0249) \\approx 0.0497 \\approx 0.05$.",
+          "Build the interval: $0.55 \\pm 0.05$, i.e. from $0.50$ to $0.60$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "standard": "A2.S-IC.B.4",
+      "prompt": "A poll with sample size $n = 500$ reports a $95\\%$ margin of error of $0.04$. A researcher wants to cut the margin of error in half to $0.02$. Using $\\text{ME} \\propto \\dfrac{1}{\\sqrt{n}}$, find the sample size needed and explain the reasoning.",
+      "answer": "$n = 2000$ is needed.",
+      "solution": {
+        "steps": [
+          "The margin of error is proportional to $\\dfrac{1}{\\sqrt{n}}$, so halving $\\text{ME}$ requires multiplying $\\sqrt{n}$ by $2$.",
+          "Multiplying $\\sqrt{n}$ by $2$ multiplies $n$ itself by $2^2 = 4$.",
+          "Therefore the new sample size is $4 \\times 500 = 2000$.",
+          "Quadrupling the sample size from $500$ to $2000$ halves the margin of error from $0.04$ to $0.02$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "standard": "A2.S-IC.B.5",
+      "prompt": "In a randomized experiment, $40$ patients received Drug A and $40$ received a placebo. The Drug A group had a mean recovery time of $\\bar{x}_A = 4.8$ days and the placebo group had $\\bar{x}_B = 6.5$ days. Find the observed difference $\\bar{x}_A - \\bar{x}_B$.",
+      "answer": "$\\bar{x}_A - \\bar{x}_B = -1.7$ days",
+      "solution": {
+        "steps": [
+          "Identify the two group means: $\\bar{x}_A = 4.8$ days and $\\bar{x}_B = 6.5$ days.",
+          "Subtract in the stated order: $\\bar{x}_A - \\bar{x}_B = 4.8 - 6.5$.",
+          "Compute: $4.8 - 6.5 = -1.7$ days. The Drug A group recovered $1.7$ days faster on average."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "standard": "A2.S-IC.B.5",
+      "prompt": "A study randomly assigned $300$ seedlings to two fertilizers. Fertilizer 1 had a survival proportion of $\\hat{p}_1 = 0.72$ and Fertilizer 2 had $\\hat{p}_2 = 0.58$. Find the observed difference $\\hat{p}_1 - \\hat{p}_2$ in survival rates.",
+      "answer": "$\\hat{p}_1 - \\hat{p}_2 = 0.14$",
+      "solution": {
+        "steps": [
+          "Identify the two group proportions: $\\hat{p}_1 = 0.72$ and $\\hat{p}_2 = 0.58$.",
+          "Subtract in the stated order: $\\hat{p}_1 - \\hat{p}_2 = 0.72 - 0.58$.",
+          "Compute: $0.72 - 0.58 = 0.14$. Fertilizer 1 had a survival rate $0.14$ (or $14$ percentage points) higher."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "standard": "A2.S-IC.B.5",
+      "prompt": "A re-randomization simulation shuffled the pooled recovery times $200$ times, each time recomputing (group 1 mean) $-$ (group 2 mean). Only $8$ of the $200$ simulated differences were at least as extreme as the observed difference. Estimate the empirical p-value and explain why the simulated differences are centered near $0$.",
+      "answer": "The empirical p-value is $\\dfrac{8}{200} = 0.04$. The simulated differences center near $0$ because shuffling assumes the treatment has no effect.",
+      "solution": {
+        "steps": [
+          "The empirical p-value is the fraction of simulated differences at least as extreme as the observed one: $\\dfrac{8}{200}$.",
+          "Compute: $\\dfrac{8}{200} = 0.04$.",
+          "Re-randomization shuffles the pooled outcomes, which models the situation where the treatment label does not matter (no effect). Under no effect the differences are equally likely to be positive or negative, so the distribution is centered at $0$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "standard": "A2.S-IC.B.5",
+      "prompt": "Researchers randomly split $90$ students into two study methods and measured test scores, finding an observed difference of means of $4.2$ points. A re-randomization simulation of $500$ trials produced $20$ differences at least as extreme as $4.2$. Compute the empirical p-value, decide whether the difference is statistically significant at the $0.05$ level, and state the conclusion in context.",
+      "answer": "The empirical p-value is $\\dfrac{20}{500} = 0.04$, which is less than $0.05$, so the difference is statistically significant: the two study methods produce a real difference in test scores in this experiment.",
+      "solution": {
+        "steps": [
+          "Form the empirical p-value as (extreme trials) / (total trials): $\\dfrac{20}{500}$.",
+          "Compute: $\\dfrac{20}{500} = 0.04$.",
+          "Compare to the threshold: $0.04 < 0.05$, so the observed difference is rare under chance assignment and the result is statistically significant.",
+          "Because the students were randomly assigned, the significant difference is evidence that the study method causes a real difference in scores for students like these. It does not prove the effect holds for every population or that the gap is large in practical terms."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "standard": "A2.S-IC.B.6",
+      "prompt": "A magazine reports that $78\\%$ of readers who mailed back a survey card favor a four-day school week, and concludes that most parents nationwide favor it. Is the conclusion justified? Name the flaw and state the defensible conclusion.",
+      "answer": "No. The mailed-in cards are a voluntary-response sample of one magazine's readers, so the $78\\%$ is biased and cannot generalize to all parents nationwide.",
+      "solution": {
+        "steps": [
+          "Identify how the data were collected: only readers who chose to mail back a card responded, which is a voluntary-response sample.",
+          "Voluntary-response samples over-represent people with strong opinions and are not a random sample of all parents, so the result is biased.",
+          "Because the sample is biased and limited to one magazine's readers, the $78\\%$ cannot be generalized to all parents. The defensible conclusion is only that most of the readers who chose to respond favor a four-day school week."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "standard": "A2.S-IC.B.6",
+      "prompt": "A poll reports candidate A at $49\\%$ and candidate B at $47\\%$ with a margin of error of $\\pm 3\\%$, and the headline declares A is winning. Form the plausible interval for each candidate and decide whether the $2$-point lead is statistically meaningful.",
+      "answer": "A's interval is $46\\%$ to $52\\%$ and B's is $44\\%$ to $50\\%$. The intervals overlap and the $2$-point gap is within the $\\pm 3\\%$ margin, so the lead is not statistically meaningful; the race is effectively a tie.",
+      "solution": {
+        "steps": [
+          "Apply the margin of error to each estimate. Candidate A: $49\\% \\pm 3\\%$ gives $46\\%$ to $52\\%$.",
+          "Candidate B: $47\\% \\pm 3\\%$ gives $44\\%$ to $50\\%$.",
+          "The two intervals overlap (from $46\\%$ to $50\\%$), and the $2$-point difference is smaller than the $\\pm 3\\%$ margin of error.",
+          "A difference smaller than the margin of error is not statistically meaningful, so the headline overstates the result: the race is effectively a tie."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "standard": "A2.S-IC.B.6",
+      "prompt": "An advertisement claims \"$4$ out of $5$ dentists recommend BrightWhite\" based on a company-funded survey of $25$ dentists who were selected because they already use the product. The ad concludes that nearly all dentists everywhere recommend it. Evaluate the report: name the flaws and write the corrected, defensible conclusion.",
+      "answer": "The sample is small, not random, hand-picked from product users, and funded by the seller, so the $4/5$ figure cannot generalize to all dentists. The defensible conclusion is only that most of these $25$ selected dentists recommended BrightWhite.",
+      "solution": {
+        "steps": [
+          "Identify how the data were collected: $25$ dentists were chosen because they already use the product, a convenience sample, and the study was funded by the seller.",
+          "These flaws (non-random selection, small size, and a conflict of interest) bias the result upward and prevent generalizing beyond the people chosen.",
+          "The ad also overgeneralizes scope, claiming the result applies to all dentists everywhere, which the sample does not support.",
+          "The corrected, defensible conclusion is that most of these $25$ hand-picked, product-using dentists recommended BrightWhite, which says nothing reliable about dentists in general."
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T19:56:47.282Z",
+  "generatedAt": "2026-06-24T19:56:47.282Z"
+}

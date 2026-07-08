@@ -1,0 +1,178 @@
+{
+  "id": "A2.S-ID.B.6--lesson",
+  "standard": "A2.S-ID.B.6",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on two categorical and quantitative variables",
+  "clusterCode": "B",
+  "skillName": "Fitting Functions to Data",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "When two quantities are related, a scatter plot of the data lets you see the shape of the relationship and choose a function to model it. The key is to decide which family fits: a constant first difference between equally spaced $y$-values signals a linear model $y=mx+b$, a constant second difference signals a quadratic $y=ax^2+bx+c$, and a constant ratio of successive $y$-values signals an exponential $y=ab^{x}$. Once you pick the family you fit the model from the data, use it to interpolate and extrapolate, interpret its parameters in context, and check the fit with residuals $y_{\\text{actual}}-y_{\\text{predicted}}$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "The table gives points $(0,4),(1,7),(2,10),(3,13)$. Decide which function family fits and write the model.",
+      "solution": {
+        "steps": [
+          "List the $y$-values for equally spaced $x$: $4,7,10,13$.",
+          "First differences: $7-4=3$, $10-7=3$, $13-10=3$. They are a constant $3$.",
+          "A constant first difference means the data is linear with slope $m=3$.",
+          "The value at $x=0$ is the $y$-intercept: $b=4$.",
+          "Write the model: $y=3x+4$.",
+          "Check at $x=2$: $3(2)+4=10$, which matches the table."
+        ],
+        "answer": "Linear; $y=3x+4$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Data on bacteria count gives $(0,5),(1,15),(2,45),(3,135)$. Fit an appropriate model.",
+      "solution": {
+        "steps": [
+          "Test for a constant first difference: $15-5=10$, $45-15=30$. Not constant, so it is not linear.",
+          "Test the ratios of successive $y$-values: $\\frac{15}{5}=3$, $\\frac{45}{15}=3$, $\\frac{135}{45}=3$. The ratio is a constant $3$.",
+          "A constant ratio means the data is exponential, $y=ab^{x}$, with base $b=3$.",
+          "The initial value at $x=0$ is $a=5$.",
+          "Write the model: $y=5\\cdot 3^{x}$.",
+          "Check at $x=2$: $5\\cdot 3^{2}=5\\cdot 9=45$, which matches the table."
+        ],
+        "answer": "Exponential; $y=5\\cdot 3^{x}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A roughly linear trend passes through the representative points $(2,7)$ and $(8,25)$. Find a line of fit $y=mx+b$.",
+      "solution": {
+        "steps": [
+          "Compute the slope using $m=\\frac{y_2-y_1}{x_2-x_1}=\\frac{25-7}{8-2}$.",
+          "Simplify: $m=\\frac{18}{6}=3$.",
+          "Back-solve for the intercept with $b=y-mx$ using the point $(2,7)$: $b=7-3(2)$.",
+          "Simplify: $b=7-6=1$.",
+          "Write the line of fit: $y=3x+1$.",
+          "Check with the other point $(8,25)$: $3(8)+1=25$, which matches."
+        ],
+        "answer": "$y=3x+1$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A savings balance is modeled by $y=1000\\cdot 1.05^{x}$, where $x$ is the number of years. Interpret the parameters $1000$ and $1.05$ in context, then predict the balance after $3$ years.",
+      "solution": {
+        "steps": [
+          "The initial value is $a=1000$: it is the balance at $x=0$, the starting deposit of $\\$1000$.",
+          "The base is $b=1.05$: each year the balance is multiplied by $1.05$.",
+          "Since $1.05=1+0.05$, the balance grows by $5\\%$ per year.",
+          "To predict the balance after $3$ years, substitute $x=3$: $y=1000\\cdot 1.05^{3}$.",
+          "Evaluate $1.05^{3}=1.157625$, so $y=1000\\cdot 1.157625=1157.625$.",
+          "After $3$ years the balance is about $\\$1157.63$."
+        ],
+        "answer": "Initial deposit $\\$1000$, growing $5\\%$ per year; balance after $3$ years $\\approx \\$1157.63$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A line $\\hat{y}=4x+2$ is fit to a data set. The actual values at $x=1,2,3$ are $5,12,21$. Compute the residual at each point and decide whether a line is the right model family.",
+      "solution": {
+        "steps": [
+          "A residual is $y_{\\text{actual}}-y_{\\text{predicted}}$, where $\\hat{y}=4x+2$.",
+          "At $x=1$: predicted $4(1)+2=6$, actual $5$, residual $5-6=-1$.",
+          "At $x=2$: predicted $4(2)+2=10$, actual $12$, residual $12-10=2$.",
+          "At $x=3$: predicted $4(3)+2=14$, actual $21$, residual $21-14=7$.",
+          "The residuals $-1,2,7$ are not scattered randomly; they grow steadily and stay positive after the first point.",
+          "This systematic pattern shows the line is the wrong family. The actual values $5,12,21$ have second difference $(12-5)=7$, $(21-12)=9$, difference $9-7=2$, a constant second difference, so a quadratic fits better."
+        ],
+        "answer": "Residuals $-1,2,7$; the patterned residuals show a line is the wrong family and a quadratic fits better."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "The table gives $(0,6),(1,9),(2,12),(3,15)$. Decide which function family fits and write the model.",
+      "hint": "Check the first differences of the $y$-values. If they are constant, the data is linear and that constant is the slope.",
+      "solution": {
+        "steps": [
+          "First differences: $9-6=3$, $12-9=3$, $15-12=3$, a constant $3$.",
+          "A constant first difference means linear with slope $m=3$.",
+          "The value at $x=0$ is the intercept: $b=6$.",
+          "Write the model: $y=3x+6$."
+        ],
+        "answer": "Linear; $y=3x+6$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A population is recorded as $(0,2),(1,6),(2,18),(3,54)$. Fit an appropriate model.",
+      "hint": "These values are not increasing by a constant amount. Try dividing each $y$-value by the one before it to look for a constant ratio.",
+      "solution": {
+        "steps": [
+          "First differences $6-2=4$ and $18-6=12$ are not constant, so it is not linear.",
+          "Ratios: $\\frac{6}{2}=3$, $\\frac{18}{6}=3$, $\\frac{54}{18}=3$, a constant $3$.",
+          "A constant ratio means exponential with base $b=3$.",
+          "The initial value at $x=0$ is $a=2$.",
+          "Write the model: $y=2\\cdot 3^{x}$."
+        ],
+        "answer": "Exponential; $y=2\\cdot 3^{x}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A trend line passes through the representative points $(1,5)$ and $(5,21)$. Find a line of fit $y=mx+b$.",
+      "hint": "Use $m=\\frac{y_2-y_1}{x_2-x_1}$ first, then back-solve $b=y-mx$ with either point.",
+      "solution": {
+        "steps": [
+          "Slope: $m=\\frac{21-5}{5-1}=\\frac{16}{4}=4$.",
+          "Intercept using $(1,5)$: $b=y-mx=5-4(1)=1$.",
+          "Write the line of fit: $y=4x+1$.",
+          "Check with $(5,21)$: $4(5)+1=21$, which matches."
+        ],
+        "answer": "$y=4x+1$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Using the model $y=5\\cdot 3^{x}$ for a bacteria count after $x$ hours, predict the count at $x=4$.",
+      "hint": "Substitute $x=4$ into the model and evaluate the power before multiplying.",
+      "solution": {
+        "steps": [
+          "Substitute $x=4$: $y=5\\cdot 3^{4}$.",
+          "Evaluate the power: $3^{4}=81$.",
+          "Multiply: $y=5\\cdot 81=405$.",
+          "The model predicts a count of $405$ at $x=4$ hours."
+        ],
+        "answer": "$405$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A model predicts $\\hat{y}=4x+2$. At $x=5$ the actual data value is $25$. Compute the residual and state whether the model overestimates or underestimates.",
+      "hint": "Residual $=y_{\\text{actual}}-y_{\\text{predicted}}$. A positive residual means the actual value is above the prediction.",
+      "solution": {
+        "steps": [
+          "Find the predicted value: $\\hat{y}=4(5)+2=22$.",
+          "Compute the residual: $y_{\\text{actual}}-y_{\\text{predicted}}=25-22=3$.",
+          "The residual is positive, so the actual value is above the prediction.",
+          "The model underestimates by $3$."
+        ],
+        "answer": "Residual $=3$; the model underestimates by $3$."
+      }
+    }
+  ]
+}

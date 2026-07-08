@@ -1,0 +1,180 @@
+{
+  "id": "A2.F-TF.B.5--lesson",
+  "standard": "A2.F-TF.B.5",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Functions — Trigonometric Functions",
+  "domainCode": "F-TF",
+  "cluster": "Model periodic phenomena with trigonometric functions",
+  "clusterCode": "B",
+  "skillName": "Modeling with Trig Functions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "Many real-world quantities rise and fall in a repeating pattern: daily temperature, tides, hours of daylight, the height of a Ferris wheel seat. A sinusoidal model captures this with $f(x)=a\\sin(b(x-h))+k$ or $f(x)=a\\cos(b(x-h))+k$. The four parameters each have a physical meaning: the amplitude $|a|=\\frac{\\text{max}-\\text{min}}{2}$ is how far the value swings above and below center, the midline $y=k=\\frac{\\text{max}+\\text{min}}{2}$ is the average or rest value, the period $T=\\frac{2\\pi}{|b|}$ is how long one full cycle takes (so $b=\\frac{2\\pi}{T}$), and the phase shift $h$ slides the curve so a known feature lands at the right input. Choose cosine when the cycle starts at a maximum (or $-\\cos$ when it starts at a minimum) and sine when it starts at the midline going up. This lesson builds and uses these models step by step.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Write a sine function with amplitude $3$, midline $y=5$, and period $4\\pi$ that passes through its midline going upward at $x=0$.",
+      "solution": {
+        "steps": [
+          "Identify the parameters that are stated directly: amplitude $a=3$ and midline $k=5$.",
+          "Find $b$ from the period using $b=\\frac{2\\pi}{T}$: $b=\\frac{2\\pi}{4\\pi}=\\frac{1}{2}$.",
+          "Because the graph crosses its midline going upward at $x=0$, a plain sine with no phase shift fits, so $h=0$.",
+          "Assemble the model: $f(x)=a\\sin(b(x-h))+k=3\\sin\\!\\left(\\tfrac{1}{2}x\\right)+5$.",
+          "Check: at $x=0$, $f(0)=3\\sin(0)+5=5$ (on the midline) and $f$ is increasing there, as required."
+        ],
+        "answer": "$f(x)=3\\sin\\!\\left(\\tfrac{1}{2}x\\right)+5$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A sound wave completes $4$ cycles per second with amplitude $2$, oscillating about the line $y=0$. Write a sine model $h(t)$ for the wave, with $t$ in seconds, assuming it starts at the midline going up.",
+      "solution": {
+        "steps": [
+          "Read off amplitude $a=2$ and midline $k=0$.",
+          "The frequency is $f=4$ cycles per second. The period is $T=\\frac{1}{f}=\\frac{1}{4}$ second.",
+          "Convert to $b$ with $b=\\frac{2\\pi}{T}=2\\pi f=2\\pi\\cdot 4=8\\pi$.",
+          "Starting at the midline going up means a plain sine with $h=0$.",
+          "Assemble: $h(t)=2\\sin(8\\pi t)$."
+        ],
+        "answer": "$h(t)=2\\sin(8\\pi t)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A Ferris wheel rider boards at the lowest point, $2$ meters above the ground. The wheel reaches its highest point of $30$ meters and returns to the bottom every $20$ seconds. Write a model $H(t)$ for the rider's height in meters, with $t$ in seconds after boarding.",
+      "solution": {
+        "steps": [
+          "Find the amplitude from the max and min: $a=\\frac{\\text{max}-\\text{min}}{2}=\\frac{30-2}{2}=14$.",
+          "Find the midline: $k=\\frac{\\text{max}+\\text{min}}{2}=\\frac{30+2}{2}=16$.",
+          "Find $b$ from the period $T=20$ s: $b=\\frac{2\\pi}{T}=\\frac{2\\pi}{20}=\\frac{\\pi}{10}$.",
+          "The motion starts at a minimum, so use a reflected cosine: $-\\cos$ starts at its low point. Take $a=-14$ with the cosine form and $h=0$.",
+          "Assemble: $H(t)=-14\\cos\\!\\left(\\tfrac{\\pi}{10}t\\right)+16$.",
+          "Check: at $t=0$, $H(0)=-14\\cos(0)+16=-14+16=2$ m (the bottom), and after half a period $t=10$, $H(10)=-14\\cos(\\pi)+16=14+16=30$ m (the top). Correct."
+        ],
+        "answer": "$H(t)=-14\\cos\\!\\left(\\tfrac{\\pi}{10}t\\right)+16$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "In a northern city the number of daylight hours peaks at $14.5$ hours on day $172$ of the year and dips to a minimum of $9.5$ hours. The pattern repeats with period $365$ days. Using a sine model $D(t)=a\\sin\\!\\left(\\tfrac{2\\pi}{365}(t-h)\\right)+k$, find $a$, $k$, and the phase shift $h$.",
+      "solution": {
+        "steps": [
+          "Amplitude: $a=\\frac{\\text{max}-\\text{min}}{2}=\\frac{14.5-9.5}{2}=2.5$.",
+          "Midline: $k=\\frac{\\text{max}+\\text{min}}{2}=\\frac{14.5+9.5}{2}=12$.",
+          "The value of $b$ is already given as $\\frac{2\\pi}{365}$ from the period $365$.",
+          "A sine reaches its maximum a quarter period after its midline-up crossing. One quarter of $365$ is $\\frac{365}{4}=91.25$ days.",
+          "We want the maximum at $t=172$, so the upward midline crossing happens at $172-91.25=80.75$. That crossing is where the sine argument is $0$, so $h=80.75$.",
+          "Assemble: $D(t)=2.5\\sin\\!\\left(\\tfrac{2\\pi}{365}(t-80.75)\\right)+12$.",
+          "Check the peak: at $t=172$, the argument is $\\frac{2\\pi}{365}(172-80.75)=\\frac{2\\pi}{365}\\cdot 91.25=\\frac{2\\pi}{365}\\cdot\\frac{365}{4}=\\frac{\\pi}{2}$, and $\\sin\\frac{\\pi}{2}=1$, giving the maximum $2.5+12=14.5$ h. Correct."
+        ],
+        "answer": "$a=2.5$, $k=12$, $h=80.75$, so $D(t)=2.5\\sin\\!\\left(\\tfrac{2\\pi}{365}(t-80.75)\\right)+12$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "The depth of water at a dock is modeled by $h(t)=4\\sin\\!\\left(\\tfrac{\\pi}{6}t\\right)+7$, where $h$ is in feet and $t$ is in hours after midnight. Find the first two times $t\\ge 0$ when the depth is exactly $9$ feet, and state the period of the tide.",
+      "solution": {
+        "steps": [
+          "Set the model equal to the target: $4\\sin\\!\\left(\\tfrac{\\pi}{6}t\\right)+7=9$.",
+          "Isolate the sine: $4\\sin\\!\\left(\\tfrac{\\pi}{6}t\\right)=2$, so $\\sin\\!\\left(\\tfrac{\\pi}{6}t\\right)=\\frac{1}{2}$.",
+          "Solve $\\sin\\theta=\\frac{1}{2}$ for the first two angles in $[0,2\\pi)$: $\\theta=\\frac{\\pi}{6}$ and $\\theta=\\frac{5\\pi}{6}$.",
+          "Set the argument equal to each angle. First: $\\frac{\\pi}{6}t=\\frac{\\pi}{6}\\Rightarrow t=1$. Second: $\\frac{\\pi}{6}t=\\frac{5\\pi}{6}\\Rightarrow t=5$.",
+          "Find the period: $T=\\frac{2\\pi}{|b|}=\\frac{2\\pi}{\\pi/6}=12$ hours.",
+          "So the depth first reaches $9$ ft at $t=1$ hour (1 a.m.) and again at $t=5$ hours (5 a.m.), and the tide repeats every $12$ hours."
+        ],
+        "answer": "$t=1$ hour and $t=5$ hours; period $T=12$ hours"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Write a sine function with amplitude $6$, midline $y=-2$, and period $\\pi$ that passes through its midline going upward at $x=0$.",
+      "hint": "Use $a$ and $k$ directly, then get $b$ from $b=\\frac{2\\pi}{T}$. A midline-up crossing at $x=0$ means $h=0$.",
+      "solution": {
+        "steps": [
+          "Amplitude $a=6$ and midline $k=-2$ are given directly.",
+          "Compute $b=\\frac{2\\pi}{T}=\\frac{2\\pi}{\\pi}=2$.",
+          "The midline-up crossing at $x=0$ gives $h=0$, so a plain sine works.",
+          "Assemble: $f(x)=6\\sin(2x)-2$."
+        ],
+        "answer": "$f(x)=6\\sin(2x)-2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A vibrating string oscillates with amplitude $5$ about the line $y=0$ and completes $3$ cycles per second. Write a sine model $y(t)$ (with $t$ in seconds) assuming it starts at the midline moving upward.",
+      "hint": "Convert the frequency to $b$ using $b=2\\pi f$. The midline is $y=0$ and there is no phase shift.",
+      "solution": {
+        "steps": [
+          "Amplitude $a=5$ and midline $k=0$.",
+          "The frequency is $f=3$ cycles per second, so $b=2\\pi f=2\\pi\\cdot 3=6\\pi$.",
+          "Starting at the midline going up means $h=0$ with a plain sine.",
+          "Assemble: $y(t)=5\\sin(6\\pi t)$."
+        ],
+        "answer": "$y(t)=5\\sin(6\\pi t)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A buoy bobs on waves. Its highest point is $4$ feet above sea level and its lowest is $-2$ feet, and it returns to the top every $8$ seconds, starting at the highest point. Write a cosine model $b(t)$ for its height in feet, with $t$ in seconds.",
+      "hint": "Get amplitude from $\\frac{\\text{max}-\\text{min}}{2}$ and midline from $\\frac{\\text{max}+\\text{min}}{2}$. Starting at a maximum means a plain $+\\cos$ with $h=0$.",
+      "solution": {
+        "steps": [
+          "Amplitude: $a=\\frac{4-(-2)}{2}=\\frac{6}{2}=3$.",
+          "Midline: $k=\\frac{4+(-2)}{2}=\\frac{2}{2}=1$.",
+          "Period $T=8$ s gives $b=\\frac{2\\pi}{8}=\\frac{\\pi}{4}$.",
+          "Starting at the maximum fits a plain cosine, so $h=0$ and $a=+3$.",
+          "Assemble: $b(t)=3\\cos\\!\\left(\\tfrac{\\pi}{4}t\\right)+1$. Check: $b(0)=3\\cos(0)+1=4$ ft (the top). Correct."
+        ],
+        "answer": "$b(t)=3\\cos\\!\\left(\\tfrac{\\pi}{4}t\\right)+1$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "The temperature in a town is modeled by $T(t)=15\\cos\\!\\left(\\tfrac{\\pi}{12}(t-15)\\right)+60$, where $T$ is in degrees Fahrenheit and $t$ is the number of hours after midnight. Find $T(15)$ and state what time of day it represents and what is special about it.",
+      "hint": "Substitute $t=15$. Notice that $t-15=0$ makes the cosine argument $0$, where $\\cos$ is at its maximum.",
+      "solution": {
+        "steps": [
+          "Substitute $t=15$: $T(15)=15\\cos\\!\\left(\\tfrac{\\pi}{12}(15-15)\\right)+60$.",
+          "The inside is $\\frac{\\pi}{12}\\cdot 0=0$, and $\\cos(0)=1$.",
+          "So $T(15)=15\\cdot 1+60=75$ degrees Fahrenheit.",
+          "Since $t=15$ is $15$ hours after midnight, this is $3$ p.m.",
+          "Because the cosine reaches its maximum of $1$ here, $75^{\\circ}$F is the daily high temperature, occurring at $3$ p.m."
+        ],
+        "answer": "$T(15)=75^{\\circ}$F, the daily maximum temperature, reached at $3$ p.m."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "On a Ferris wheel, a rider's height is modeled by $H(t)=10\\sin\\!\\left(\\tfrac{\\pi}{15}t\\right)+12$, where $H$ is in meters and $t$ is in seconds. Find the first two times $t\\ge 0$ when the rider is $17$ meters high, and state the period of the ride.",
+      "hint": "Set $H(t)=17$, isolate the sine, and solve $\\sin\\theta=\\frac{1}{2}$ for the first two angles $\\frac{\\pi}{6}$ and $\\frac{5\\pi}{6}$.",
+      "solution": {
+        "steps": [
+          "Set the model equal to $17$: $10\\sin\\!\\left(\\tfrac{\\pi}{15}t\\right)+12=17$.",
+          "Isolate the sine: $10\\sin\\!\\left(\\tfrac{\\pi}{15}t\\right)=5$, so $\\sin\\!\\left(\\tfrac{\\pi}{15}t\\right)=\\frac{1}{2}$.",
+          "The first two solutions of $\\sin\\theta=\\frac{1}{2}$ are $\\theta=\\frac{\\pi}{6}$ and $\\theta=\\frac{5\\pi}{6}$.",
+          "Solve $\\frac{\\pi}{15}t=\\frac{\\pi}{6}\\Rightarrow t=\\frac{15}{6}=2.5$ seconds.",
+          "Solve $\\frac{\\pi}{15}t=\\frac{5\\pi}{6}\\Rightarrow t=\\frac{15\\cdot 5}{6}=\\frac{75}{6}=12.5$ seconds.",
+          "Period: $T=\\frac{2\\pi}{\\pi/15}=30$ seconds."
+        ],
+        "answer": "$t=2.5$ seconds and $t=12.5$ seconds; period $T=30$ seconds"
+      }
+    }
+  ]
+}

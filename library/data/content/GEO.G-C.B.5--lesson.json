@@ -1,0 +1,164 @@
+{
+  "id": "GEO.G-C.B.5--lesson",
+  "standard": "GEO.G-C.B.5",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Circles",
+  "domainCode": "G-C",
+  "cluster": "Find arc lengths and areas of sectors of circles",
+  "clusterCode": "B",
+  "skillName": "Arc Length and Sector Area",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Because all circles are similar, a central angle $\\theta$ cuts off an arc and a sector that are the same fixed fraction of the whole circle. In degrees, that fraction is $\\frac{\\theta}{360^\\circ}$, so the arc length is $s = \\frac{\\theta}{360^\\circ}\\cdot 2\\pi r$ and the sector area is $A = \\frac{\\theta}{360^\\circ}\\cdot \\pi r^2$. The radian measure of the angle is the constant of proportionality between arc length and radius, $\\theta = \\frac{s}{r}$, which gives the cleaner forms $s = r\\theta$ and $A = \\frac{1}{2}r^2\\theta$. Keep answers exact in terms of $\\pi$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A circle has radius $r = 9$. Find the length of the arc intercepted by a central angle of $40^\\circ$.",
+      "solution": {
+        "steps": [
+          "Use the degree arc-length formula $s = \\frac{\\theta}{360^\\circ}\\cdot 2\\pi r$.",
+          "The fraction of the circle is $\\frac{40^\\circ}{360^\\circ} = \\frac{1}{9}$.",
+          "The full circumference is $2\\pi r = 2\\pi(9) = 18\\pi$.",
+          "Multiply: $s = \\frac{1}{9}\\cdot 18\\pi = 2\\pi$."
+        ],
+        "answer": "$s = 2\\pi$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A circle has radius $r = 6$ and a central angle of $\\frac{\\pi}{3}$ radians. Find the length of the intercepted arc.",
+      "solution": {
+        "steps": [
+          "When the angle is in radians, arc length is $s = r\\theta$ directly, with no $360^\\circ$ fraction.",
+          "Substitute $r = 6$ and $\\theta = \\frac{\\pi}{3}$: $s = 6\\cdot\\frac{\\pi}{3}$.",
+          "Simplify: $s = \\frac{6\\pi}{3} = 2\\pi$."
+        ],
+        "answer": "$s = 2\\pi$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Find the area of a sector with radius $r = 10$ and central angle $72^\\circ$.",
+      "solution": {
+        "steps": [
+          "Use the degree sector-area formula $A = \\frac{\\theta}{360^\\circ}\\cdot \\pi r^2$.",
+          "The fraction of the circle is $\\frac{72^\\circ}{360^\\circ} = \\frac{1}{5}$.",
+          "Square the radius: $r^2 = 10^2 = 100$, so the whole circle has area $\\pi r^2 = 100\\pi$.",
+          "Multiply: $A = \\frac{1}{5}\\cdot 100\\pi = 20\\pi$."
+        ],
+        "answer": "$A = 20\\pi$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "An arc of length $5\\pi$ lies on a circle of radius $r = 15$. Find the central angle in degrees.",
+      "solution": {
+        "steps": [
+          "Start from $s = \\frac{\\theta}{360^\\circ}\\cdot 2\\pi r$ and substitute the known values: $5\\pi = \\frac{\\theta}{360^\\circ}\\cdot 2\\pi(15)$.",
+          "The circumference is $2\\pi(15) = 30\\pi$, so $5\\pi = \\frac{\\theta}{360^\\circ}\\cdot 30\\pi$.",
+          "Solve for the fraction: $\\frac{\\theta}{360^\\circ} = \\frac{5\\pi}{30\\pi} = \\frac{1}{6}$.",
+          "Multiply both sides by $360^\\circ$: $\\theta = \\frac{1}{6}\\cdot 360^\\circ = 60^\\circ$."
+        ],
+        "answer": "$\\theta = 60^\\circ$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A pizza of radius $14$ in is cut into $8$ equal slices. Find the area of one slice and the length of its curved crust. Give exact answers in terms of $\\pi$.",
+      "solution": {
+        "steps": [
+          "Eight equal slices means each slice is $\\frac{1}{8}$ of the circle, a central angle of $\\frac{360^\\circ}{8} = 45^\\circ$.",
+          "Area of one slice: $A = \\frac{1}{8}\\cdot \\pi r^2 = \\frac{1}{8}\\cdot \\pi(14)^2 = \\frac{1}{8}\\cdot 196\\pi = \\frac{196\\pi}{8} = \\frac{49\\pi}{2}$ in$^2$.",
+          "Length of the curved crust is the arc: $s = \\frac{1}{8}\\cdot 2\\pi r = \\frac{1}{8}\\cdot 2\\pi(14) = \\frac{28\\pi}{8} = \\frac{7\\pi}{2}$ in.",
+          "So each slice has area $\\frac{49\\pi}{2}$ in$^2$ and a curved crust of length $\\frac{7\\pi}{2}$ in."
+        ],
+        "answer": "Area $= \\frac{49\\pi}{2}$ in$^2$; crust length $= \\frac{7\\pi}{2}$ in"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A circle has radius $r = 12$. Find the length of the arc intercepted by a central angle of $30^\\circ$.",
+      "hint": "Find the fraction $\\frac{30^\\circ}{360^\\circ}$, then multiply by the circumference $2\\pi r$.",
+      "solution": {
+        "steps": [
+          "Fraction of the circle: $\\frac{30^\\circ}{360^\\circ} = \\frac{1}{12}$.",
+          "Circumference: $2\\pi r = 2\\pi(12) = 24\\pi$.",
+          "Arc length: $s = \\frac{1}{12}\\cdot 24\\pi = 2\\pi$."
+        ],
+        "answer": "$s = 2\\pi$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Find the area of a sector with radius $r = 4$ and central angle $\\frac{3\\pi}{4}$ radians.",
+      "hint": "In radians, use $A = \\frac{1}{2}r^2\\theta$. Do not forget the factor of $\\frac{1}{2}$.",
+      "solution": {
+        "steps": [
+          "Use the radian sector-area formula $A = \\frac{1}{2}r^2\\theta$.",
+          "Square the radius: $r^2 = 4^2 = 16$.",
+          "Substitute: $A = \\frac{1}{2}(16)\\cdot\\frac{3\\pi}{4} = 8\\cdot\\frac{3\\pi}{4}$.",
+          "Simplify: $A = \\frac{24\\pi}{4} = 6\\pi$."
+        ],
+        "answer": "$A = 6\\pi$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A sector with central angle $90^\\circ$ has area $9\\pi$. Find the radius of the circle.",
+      "hint": "Set up $9\\pi = \\frac{90^\\circ}{360^\\circ}\\cdot \\pi r^2$, solve for $r^2$, then take the square root.",
+      "solution": {
+        "steps": [
+          "Start from $A = \\frac{\\theta}{360^\\circ}\\cdot \\pi r^2$: $9\\pi = \\frac{90^\\circ}{360^\\circ}\\cdot \\pi r^2$.",
+          "Reduce the fraction: $\\frac{90^\\circ}{360^\\circ} = \\frac{1}{4}$, so $9\\pi = \\frac{1}{4}\\pi r^2$.",
+          "Divide both sides by $\\pi$ and multiply by $4$: $r^2 = 36$.",
+          "Take the positive square root (a radius is positive): $r = 6$."
+        ],
+        "answer": "$r = 6$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Find the area of a sector with radius $r = 6$ and central angle $75^\\circ$. Give the exact answer in terms of $\\pi$.",
+      "hint": "Reduce $\\frac{75^\\circ}{360^\\circ}$ to lowest terms before multiplying by $\\pi r^2$.",
+      "solution": {
+        "steps": [
+          "Fraction of the circle: $\\frac{75^\\circ}{360^\\circ} = \\frac{5}{24}$ after dividing numerator and denominator by $15$.",
+          "Whole-circle area: $\\pi r^2 = \\pi(6)^2 = 36\\pi$.",
+          "Sector area: $A = \\frac{5}{24}\\cdot 36\\pi = \\frac{180\\pi}{24}$.",
+          "Simplify: $\\frac{180\\pi}{24} = \\frac{15\\pi}{2}$."
+        ],
+        "answer": "$A = \\frac{15\\pi}{2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A circle has radius $r = 8$. A sector has a central angle of $90^\\circ$. Find the perimeter of the sector (the two radii plus the arc). Give the exact answer in terms of $\\pi$.",
+      "hint": "The perimeter is $2r + s$, where $s$ is the arc length. Find $s$ first using $\\frac{90^\\circ}{360^\\circ}$.",
+      "solution": {
+        "steps": [
+          "Arc length: the fraction is $\\frac{90^\\circ}{360^\\circ} = \\frac{1}{4}$, and the circumference is $2\\pi(8) = 16\\pi$, so $s = \\frac{1}{4}\\cdot 16\\pi = 4\\pi$.",
+          "A sector is bounded by two radii and the arc, so its perimeter is $2r + s$.",
+          "Substitute: $P = 2(8) + 4\\pi = 16 + 4\\pi$."
+        ],
+        "answer": "$P = 16 + 4\\pi$"
+      }
+    }
+  ]
+}

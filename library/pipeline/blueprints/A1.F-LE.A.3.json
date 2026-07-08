@@ -1,0 +1,122 @@
+{
+  "standard": "A1.F-LE.A.3",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Linear, Quadratic, and Exponential Models",
+  "domainCode": "F-LE",
+  "cluster": "Construct and compare linear, quadratic, and exponential models and solve problems",
+  "clusterCode": "A",
+  "skillName": "Exponential Exceeds Polynomial Growth",
+
+  "description": "Students use tables and graphs to observe that a quantity growing exponentially, such as $f(x)=2^{x}$, eventually overtakes and then permanently exceeds a quantity growing linearly ($g(x)=mx+b$), quadratically ($g(x)=ax^{2}+bx+c$), or as any polynomial. They build value tables for competing functions, compare outputs row by row, identify the input value where the exponential first surpasses its rival, read the same crossover from a graph, and explain why exponential growth wins in the long run even when it starts behind for small inputs.",
+
+  "subSkills": [
+    "Evaluate an exponential function such as $f(x)=2^{x}$, $3^{x}$, or $a\\cdot b^{x}$ at consecutive whole-number inputs",
+    "Evaluate a linear or quadratic function at the same inputs and tabulate both side by side",
+    "Compare two outputs at a given input and decide which function is larger",
+    "Identify the smallest input at which the exponential function first exceeds the polynomial function",
+    "Read a crossover or intersection point from a graph of an exponential curve and a line or parabola",
+    "Recognize that an exponential function multiplies by a constant factor each step while a linear function adds a constant and a quadratic grows by an increasing-but-bounded amount",
+    "Justify in words that exponential growth eventually exceeds any polynomial growth, even when it begins smaller for small inputs"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Table comparison, find the crossover input",
+      "example": "Compare $f(x)=2^{x}$ and $g(x)=4x$ for $x=0,1,2,3,4,5$. At what whole-number input does $f$ first exceed $g$? Table: $f$ gives $1,2,4,8,16,32$ and $g$ gives $0,4,8,12,16,20$; they tie at $x=4$ ($16=16$), so $f$ first exceeds $g$ at $x=5$ ($32>20$)."
+    },
+    {
+      "name": "Exponential vs. linear, which is larger at a given input",
+      "example": "Let $f(x)=3^{x}$ and $g(x)=10x+5$. Which is larger at $x=4$? $f(4)=81$ and $g(4)=45$, so $f$ is larger. Answer: $f(x)=3^{x}$."
+    },
+    {
+      "name": "Exponential vs. quadratic, eventual dominance",
+      "example": "Compare $f(x)=2^{x}$ and $g(x)=x^{2}$ for $x=0,1,2,3,4,5$. For small $x$ the quadratic is ahead or tied (at $x=2$ both equal $4$; at $x=3$, $g=9>f=8$), but at $x=5$, $f=32>g=25$. The exponential overtakes and stays ahead."
+    },
+    {
+      "name": "Read the crossover from a graph",
+      "example": "A graph shows the curve $y=2^{x}$ and the line $y=3x+1$. The curve starts below the line, crosses it once near $x=4$, and stays above it afterward. State the input where the exponential begins to exceed the linear function and which function dominates for large $x$. Answer: it dominates after about $x=4$; the exponential dominates."
+    },
+    {
+      "name": "Explain why exponential wins in the long run",
+      "example": "$f(x)=1.5^{x}$ is far below $g(x)=x^{3}$ for $x\\le 10$. Explain whether $f$ will ever exceed $g$. Answer: yes; an exponential multiplies by a fixed factor ($1.5$) each step while a polynomial's growth rate slows relative to that, so $f$ eventually and permanently exceeds $g$ for large enough $x$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single comparison from a small ready-made table or a direct evaluation. The exponential is a clean base ($2^{x}$ or $3^{x}$) and the rival is linear with small whole-number coefficients. Student either reads which function is larger at one stated input or finds the crossover when the table is already filled in and the crossover is at a small input.",
+      "constraints": [
+        "Exponential base is $2$ or $3$ with no leading coefficient, e.g. $f(x)=2^{x}$",
+        "Rival is linear with small positive whole-number slope, e.g. $g(x)=4x$ or $g(x)=5x+1$",
+        "Inputs restricted to $x=0$ through $5$ and supplied in a table or asked at one given input",
+        "Crossover, if asked, occurs at $x\\le 5$ and only the exponential-vs-linear case appears",
+        "No graph reading and no written justification required"
+      ]
+    },
+    "Medium": {
+      "description": "Student must build at least part of the table by evaluating both functions, then locate the crossover. Includes exponential-vs-quadratic comparisons where the polynomial leads for small inputs before the exponential overtakes, and may require reading a crossover from a provided graph. Exact whole-number outputs throughout.",
+      "constraints": [
+        "Student evaluates $f(x)=2^{x}$ or $3^{x}$ and a quadratic such as $g(x)=x^{2}$ or $g(x)=2x^{2}$ at $x=0$ through $6$",
+        "Crossover may occur after an initial range where the polynomial is ahead, so a row-by-row scan past the tie is required",
+        "May ask the student to read the approximate crossover input from a graph of a curve and a line or parabola",
+        "Outputs remain exact whole numbers; no decimals beyond clean bases like $1.5$",
+        "tier1 (Easy to Medium) lives here: exponential-vs-linear tables and the simplest exponential-vs-quadratic comparisons, ramping from one-input reads up to building a short table to find the crossover"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning about eventual dominance: the exponential starts well behind and the crossover is beyond the easily tabulated range, an exponential with a leading coefficient or a higher-degree polynomial is involved, or the item asks the student to justify in words why the exponential must eventually exceed the polynomial. May combine a table, a graph read, and a written explanation.",
+      "constraints": [
+        "Exponential may carry a coefficient or non-integer base, e.g. $f(x)=1.5^{x}$ or $f(x)=2\\cdot 2^{x}$, and the rival may be cubic, e.g. $g(x)=x^{3}$",
+        "Crossover lies past $x=6$, so the student must reason that dominance still occurs rather than read it from a tiny table",
+        "Requires a written justification that exponential growth (constant multiplicative factor) eventually beats any polynomial growth",
+        "May ask the student to compare growth rates or interpret a real-world long-run consequence",
+        "tier2 (Medium to Hard) lives here: delayed crossovers, coefficients/non-integer bases, cubic rivals, and explain-why-it-wins prompts, with no item overlap with tier1"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student assumes the function that is larger for small inputs stays larger forever, ignoring eventual dominance",
+      "distractor": "For $f(x)=2^{x}$ vs. $g(x)=x^{2}$, concludes $g$ is always larger because $g(3)=9>f(3)=8$, instead of seeing $f$ overtakes at $x=5$"
+    },
+    {
+      "misconception": "Student treats the exponential as if it grew by adding rather than multiplying, so its values stay too small",
+      "distractor": "Evaluates $f(x)=2^{x}$ as $0,2,4,6,8,10$ (adding $2$ each step) instead of $1,2,4,8,16,32$"
+    },
+    {
+      "misconception": "Student confuses $2^{x}$ with $2x$ when filling the table",
+      "distractor": "For $f(x)=2^{x}$ at $x=5$ writes $10$ instead of $32$"
+    },
+    {
+      "misconception": "Student reports the tie row as the crossover instead of the next input where the exponential is strictly greater",
+      "distractor": "For $f(x)=2^{x}$ vs. $g(x)=4x$, answers $x=4$ (where both equal $16$) instead of $x=5$, the first input where $f>g$"
+    },
+    {
+      "misconception": "Student believes a quadratic or cubic will always beat an exponential because polynomials feel like they grow fast",
+      "distractor": "For $f(x)=2^{x}$ vs. $g(x)=x^{3}$, says the cubic exceeds the exponential forever, instead of recognizing the exponential eventually and permanently overtakes it"
+    },
+    {
+      "misconception": "Student evaluates the exponent base and exponent in the wrong roles, computing $x^{2}$ for $2^{x}$",
+      "distractor": "For $f(x)=2^{x}$ at $x=3$ writes $9$ (computing $3^{2}$) instead of $8$"
+    },
+    {
+      "misconception": "Student uses the leading coefficient of the exponential as a constant addend instead of a multiplier of the power",
+      "distractor": "For $f(x)=2\\cdot 2^{x}$ at $x=3$ writes $2+2^{3}=10$ instead of $2\\cdot 2^{3}=16$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "standard": "A1.A-SSE.A.2",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Seeing Structure in Expressions",
+  "domainCode": "A-SSE",
+  "cluster": "Interpret the structure of expressions",
+  "clusterCode": "A",
+  "skillName": "Rewriting Expressions by Structure",
+
+  "description": "Students see an algebraic expression as built from recognizable structural pieces and use that structure to rewrite it in an equivalent, more useful form. They identify a greatest common factor; recognize when an expression matches a known pattern such as a difference of squares $a^2-b^2=(a-b)(a+b)$, a perfect-square trinomial $a^2\\pm 2ab+b^2=(a\\pm b)^2$, or a quadratic $x^2+bx+c$ that factors into two binomials; treat a compound chunk (like $x^2$, $(x+1)$, or $3y$) as a single quantity so the expression can be factored or viewed as a difference of squares in disguise; and choose which equivalent form best reveals a desired feature. The emphasis is on reading structure to decide HOW to rewrite, not on memorizing one procedure.",
+
+  "subSkills": [
+    "Identify and factor out the greatest common factor (numeric and variable) from a polynomial, e.g. $6x^3+9x^2=3x^2(2x+3)$",
+    "Recognize the difference-of-squares pattern $a^2-b^2=(a-b)(a+b)$ and apply it, including when $a$ or $b$ is itself a power such as $x^4-16=(x^2-4)(x^2+4)$",
+    "Recognize a perfect-square trinomial $a^2\\pm 2ab+b^2=(a\\pm b)^2$ and rewrite it as a squared binomial",
+    "Factor a quadratic trinomial $x^2+bx+c$ (leading coefficient $1$) into $(x+p)(x+q)$ by finding $p+q=b$, $pq=c$",
+    "Factor a quadratic trinomial $ax^2+bx+c$ ($a\\ne 1$) by grouping or the AC method",
+    "Treat a compound expression as a single chunk (e.g. let $u=x^2$ or $u=x+1$) to reveal a familiar pattern, then substitute back",
+    "Choose among equivalent forms the one that best exposes a requested feature, and justify why two forms are equivalent"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Factor out the GCF",
+      "example": "Rewrite $12x^4-8x^2$ by factoring out the greatest common factor. Answer: $4x^2(3x^2-2)$."
+    },
+    {
+      "name": "Difference of squares (basic)",
+      "example": "Use structure to rewrite $x^2-49$ as a product. Answer: $(x-7)(x+7)$."
+    },
+    {
+      "name": "Difference of squares in disguise (higher powers / coefficients)",
+      "example": "Rewrite $9x^2-25$ and $x^4-16$ as products. Answers: $(3x-5)(3x+5)$ and $(x^2-4)(x^2+4)=(x-2)(x+2)(x^2+4)$."
+    },
+    {
+      "name": "Perfect-square trinomial",
+      "example": "Rewrite $x^2+10x+25$ as a squared binomial by recognizing the perfect-square structure. Answer: $(x+5)^2$."
+    },
+    {
+      "name": "Factor a monic quadratic trinomial",
+      "example": "Rewrite $x^2+7x+12$ as a product of two binomials. Answer: $(x+3)(x+4)$."
+    },
+    {
+      "name": "Factor a non-monic quadratic trinomial",
+      "example": "Rewrite $2x^2+7x+3$ as a product of two binomials. Answer: $(2x+1)(x+3)$."
+    },
+    {
+      "name": "Treat a chunk as a single quantity (substitution structure)",
+      "example": "Rewrite $(x+1)^2-9$ using the difference-of-squares structure with $a=x+1$, $b=3$. Answer: $((x+1)-3)((x+1)+3)=(x-2)(x+4)$."
+    },
+    {
+      "name": "Choose the equivalent form that reveals a feature",
+      "example": "Lou claims $x^2-6x+9$ and $(x-3)^2$ are equivalent. Verify they are equal, and state which form shows that the expression is never negative. Answer: both expand to $x^2-6x+9$; the form $(x-3)^2$ shows it is a square, hence $\\ge 0$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single, clearly visible structural move on a one- or two-term-pattern expression: pull out a GCF, or apply difference of squares / a monic trinomial with small integer parts that come straight from the integer factor pairs. The pattern is recognizable at a glance and uses one technique.",
+      "constraints": [
+        "Coefficients are small integers (absolute value $\\le 12$) and the leading coefficient is $1$ for trinomials",
+        "Difference of squares uses perfect squares of a single variable, e.g. $x^2-16$ or $x^2-1$",
+        "GCF problems factor out a monomial leaving a binomial, e.g. $5x^2+15x=5x(x+3)$",
+        "Exactly one factoring technique is needed; no nested or repeated factoring",
+        "Worksheet ramp: items 1 to 5 (single sheet); these are the bulk of tier1's opening"
+      ]
+    },
+    "Medium": {
+      "description": "The structure is present but partly hidden: a non-monic quadratic requiring grouping/AC, a difference of squares with coefficients (perfect-square coefficients) such as $9x^2-25$, a perfect-square trinomial that must be recognized as such, or a problem where the GCF must be removed first to expose the pattern.",
+      "constraints": [
+        "Non-monic trinomials $ax^2+bx+c$ with $2\\le a\\le 6$, solved by grouping or AC",
+        "Difference of squares with coefficient squares, e.g. $16x^2-49$ or $25-4y^2$",
+        "Perfect-square trinomials $a^2\\pm 2ab+b^2$ with $a,b$ small integers, recognized and written as $(a\\pm b)^2$",
+        "May require a GCF factored out first, then a second pattern applied to the remaining factor, e.g. $3x^2-27=3(x-3)(x+3)$",
+        "Worksheet ramp: items 6 to 11 (single sheet); this is the overlap region where tier1 (Easy to Medium) ends and tier2 (Medium to Hard) begins"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-layer structure: a compound expression treated as one chunk (substitution), higher-power difference of squares that factors in stages, or a justify/choose-the-form task that asks the student to argue equivalence or pick the form revealing a stated feature. More than one structural insight and more than one step are required.",
+      "constraints": [
+        "Chunked structure such as $(x+1)^2-9$ or $(2x-3)^2-(x+1)^2$ treated with $u$-substitution, then expanded/back-substituted",
+        "Higher-power patterns such as $x^4-81$ requiring repeated difference of squares to $(x-3)(x+3)(x^2+9)$, or $x^4-13x^2+36$ factored as a quadratic in $x^2$",
+        "Justification or selection: prove two forms are equivalent by expansion, or state which equivalent form reveals the zeros, the vertex, the sign, or a common factor, and why",
+        "Combines two or more techniques (GCF then pattern, or substitution then difference of squares) in sequence",
+        "Worksheet ramp: items 12 to 15 (single sheet); the closing block of tier2"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student treats a sum of squares as factorable like a difference of squares",
+      "distractor": "Writes $x^2+9=(x+3)(x-3)$ or $(x+3)^2$, instead of recognizing $x^2+9$ is prime over the reals; for $x^2-9$ the correct form is $(x-3)(x+3)$"
+    },
+    {
+      "misconception": "Student factors the difference of squares as a square of a difference",
+      "distractor": "Writes $x^2-16=(x-4)^2$ instead of $(x-4)(x+4)$, confusing $a^2-b^2$ with $(a-b)^2$"
+    },
+    {
+      "misconception": "Student only takes out part of the greatest common factor (wrong variable power or numeric factor)",
+      "distractor": "Factors $12x^4-8x^2$ as $2x^2(6x^2-4)$ or $4x(3x^3-2x)$ instead of the complete $4x^2(3x^2-2)$"
+    },
+    {
+      "misconception": "Student finds factor pairs that match the product but not the sum (or matches the sum but not the product) for a monic trinomial",
+      "distractor": "Factors $x^2+7x+12$ as $(x+2)(x+6)$ ($2\\cdot 6=12$ but $2+6=8\\ne 7$) instead of $(x+3)(x+4)$"
+    },
+    {
+      "misconception": "Student gets the signs wrong when $c>0$ but $b<0$, mixing one positive and one negative factor",
+      "distractor": "Factors $x^2-7x+12$ as $(x-3)(x+4)$ instead of $(x-3)(x-4)$, ignoring that $c>0,\\ b<0$ forces both factors negative"
+    },
+    {
+      "misconception": "Student ignores the leading coefficient when factoring a non-monic trinomial",
+      "distractor": "Factors $2x^2+7x+3$ as $(x+1)(x+3)$ (which expands to $x^2+4x+3$) instead of $(2x+1)(x+3)$"
+    },
+    {
+      "misconception": "Student assumes any quadratic-looking trinomial is a perfect square",
+      "distractor": "Rewrites $x^2+10x+16$ as $(x+4)^2$ (which would need a $+16$ middle-term match of $8x$, not $10x$) instead of factoring it as $(x+2)(x+8)$"
+    },
+    {
+      "misconception": "Student stops after one stage of a higher-power difference of squares",
+      "distractor": "Rewrites $x^4-16$ as $(x^2-4)(x^2+4)$ and stops, instead of continuing to $(x-2)(x+2)(x^2+4)$ since $x^2-4$ still factors"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

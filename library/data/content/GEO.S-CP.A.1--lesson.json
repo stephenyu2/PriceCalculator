@@ -1,0 +1,164 @@
+{
+  "id": "GEO.S-CP.A.1--lesson",
+  "standard": "GEO.S-CP.A.1",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Understand independence and conditional probability and use them to interpret data",
+  "clusterCode": "A",
+  "skillName": "Events as Subsets of Sample Space",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "intro": "The sample space $S$ of a chance experiment is the set of all possible outcomes. An event is any subset of $S$, the collection of outcomes that share some characteristic. You can build new events from old ones using three set operations: union $A \\cup B$ ('$A$ or $B$', every outcome in at least one of them), intersection $A \\cap B$ ('$A$ and $B$', the outcomes in both), and complement $A^c$ ('not $A$', every outcome of $S$ that is not in $A$). Two events are mutually exclusive when $A \\cap B = \\varnothing$, meaning they share no outcomes.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A fair six-sided die is rolled once. Write the sample space $S$ in roster form. Then let $E$ be the event 'the result is even' and list $E$ as a subset of $S$.",
+      "solution": {
+        "steps": [
+          "The sample space is the set of every outcome that can occur on one roll. A die shows $1, 2, 3, 4, 5,$ or $6$, so $S = \\{1, 2, 3, 4, 5, 6\\}$.",
+          "The event $E$ collects the outcomes that satisfy the characteristic 'even', so keep only the even numbers in $S$.",
+          "The even values are $2, 4,$ and $6$, so $E = \\{2, 4, 6\\}$.",
+          "Notice $E \\subseteq S$: every element of $E$ is also an element of $S$, which is exactly what it means for $E$ to be an event."
+        ],
+        "answer": "$S = \\{1, 2, 3, 4, 5, 6\\}$ and $E = \\{2, 4, 6\\}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "For one roll of a fair die with $S = \\{1, 2, 3, 4, 5, 6\\}$, let $A = \\{2, 4, 6\\}$ (the result is even) and $B = \\{1, 2, 3\\}$ (the result is less than $4$). List the union $A \\cup B$ and the intersection $A \\cap B$.",
+      "solution": {
+        "steps": [
+          "The union $A \\cup B$ is 'in $A$ or in $B$ (or both)', so gather every outcome that appears in at least one of the two events.",
+          "From $A$ take $2, 4, 6$ and from $B$ take $1, 2, 3$. List each distinct outcome once: $A \\cup B = \\{1, 2, 3, 4, 6\\}$. The outcome $5$ is missing because it is in neither event.",
+          "The intersection $A \\cap B$ is 'in $A$ and in $B$', so keep only outcomes that belong to both events.",
+          "The only outcome in both $\\{2, 4, 6\\}$ and $\\{1, 2, 3\\}$ is $2$, so $A \\cap B = \\{2\\}$."
+        ],
+        "answer": "$A \\cup B = \\{1, 2, 3, 4, 6\\}$ and $A \\cap B = \\{2\\}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A standard die is rolled, so $S = \\{1, 2, 3, 4, 5, 6\\}$. Let $A = \\{2, 4, 6\\}$ be the event 'even'. List the complement $A^c$, and explain what it represents.",
+      "solution": {
+        "steps": [
+          "The complement $A^c$ is 'not $A$': every outcome of the sample space $S$ that does not belong to $A$.",
+          "Start with all of $S = \\{1, 2, 3, 4, 5, 6\\}$ and remove the outcomes of $A = \\{2, 4, 6\\}$.",
+          "What remains is $A^c = \\{1, 3, 5\\}$, the odd results.",
+          "Check: $A$ and $A^c$ together account for every outcome of $S$ and share none, so $A \\cup A^c = S$ and $A \\cap A^c = \\varnothing$."
+        ],
+        "answer": "$A^c = \\{1, 3, 5\\}$, the event 'the result is odd'"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Two fair coins are flipped, one after the other. Write the sample space $S$ using ordered outcomes like $HT$. Then list the event $E$ = 'at least one head' and the event $F$ = 'the two coins match.'",
+      "solution": {
+        "steps": [
+          "Each coin can land $H$ or $T$, and order matters, so pair every first-coin result with every second-coin result: $S = \\{HH, HT, TH, TT\\}$.",
+          "Keep $HT$ and $TH$ as distinct outcomes; they are different even though both have one head and one tail.",
+          "Event $E$ = 'at least one head' includes any outcome with one or two heads: $E = \\{HH, HT, TH\\}$. Only $TT$ is excluded.",
+          "Event $F$ = 'the two coins match' needs both coins the same: $F = \\{HH, TT\\}$."
+        ],
+        "answer": "$S = \\{HH, HT, TH, TT\\}$, $E = \\{HH, HT, TH\\}$, and $F = \\{HH, TT\\}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A single card is drawn from a deck reduced to the eight cards $\\{2\\heartsuit, 5\\heartsuit, K\\heartsuit, 2\\spadesuit, 5\\spadesuit, K\\spadesuit, 8\\clubsuit, K\\clubsuit\\}$, so this set is $S$. Let $H$ be 'the card is a heart' and $K$ be 'the card is a king.' Express 'a heart and a king' and 'a heart or a king' in set notation, then list the event $(H \\cup K)^c$.",
+      "solution": {
+        "steps": [
+          "First identify the events. $H = \\{2\\heartsuit, 5\\heartsuit, K\\heartsuit\\}$ (the hearts) and $K = \\{K\\heartsuit, K\\spadesuit, K\\clubsuit\\}$ (the kings).",
+          "'A heart and a king' means both characteristics at once, the intersection $H \\cap K$. The only such card is $K\\heartsuit$, so $H \\cap K = \\{K\\heartsuit\\}$.",
+          "'A heart or a king' means the union $H \\cup K$. Combine the two lists, writing each card once: $H \\cup K = \\{2\\heartsuit, 5\\heartsuit, K\\heartsuit, K\\spadesuit, K\\clubsuit\\}$.",
+          "The complement $(H \\cup K)^c$ is every card of $S$ not in that union. Removing those five cards from the eight leaves $(H \\cup K)^c = \\{2\\spadesuit, 5\\spadesuit, 8\\clubsuit\\}$, the cards that are neither a heart nor a king."
+        ],
+        "answer": "$H \\cap K = \\{K\\heartsuit\\}$, $H \\cup K = \\{2\\heartsuit, 5\\heartsuit, K\\heartsuit, K\\spadesuit, K\\clubsuit\\}$, and $(H \\cup K)^c = \\{2\\spadesuit, 5\\spadesuit, 8\\clubsuit\\}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A spinner has eight equal sectors numbered $1$ through $8$ and is spun once, so $S = \\{1, 2, 3, 4, 5, 6, 7, 8\\}$. Let $A = \\{1, 2, 3, 4\\}$ be 'the number is at most $4$.' List the complement $A^c$.",
+      "hint": "The complement keeps every outcome of $S$ that is not in $A$. Start with all of $S$ and remove the elements of $A$.",
+      "solution": {
+        "steps": [
+          "Begin with the full sample space $S = \\{1, 2, 3, 4, 5, 6, 7, 8\\}$.",
+          "Remove the outcomes of $A = \\{1, 2, 3, 4\\}$.",
+          "The outcomes left are $A^c = \\{5, 6, 7, 8\\}$, the numbers greater than $4$."
+        ],
+        "answer": "$A^c = \\{5, 6, 7, 8\\}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "For a single die roll with $S = \\{1, 2, 3, 4, 5, 6\\}$, let $P = \\{2, 3, 5\\}$ (the result is prime) and $T = \\{3, 6\\}$ (the result is a multiple of $3$). List $P \\cup T$ and $P \\cap T$.",
+      "hint": "Union is 'in either set'; intersection is 'in both sets'. Write each shared outcome only once in the union.",
+      "solution": {
+        "steps": [
+          "Union: combine $\\{2, 3, 5\\}$ and $\\{3, 6\\}$, listing each outcome once. $P \\cup T = \\{2, 3, 5, 6\\}$.",
+          "Intersection: keep only outcomes in both sets. The only number in both $\\{2, 3, 5\\}$ and $\\{3, 6\\}$ is $3$.",
+          "So $P \\cap T = \\{3\\}$."
+        ],
+        "answer": "$P \\cup T = \\{2, 3, 5, 6\\}$ and $P \\cap T = \\{3\\}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A bag holds tiles lettered $S = \\{a, b, c, d, e, f\\}$ and one tile is drawn. Let $V = \\{a, e\\}$ be 'the tile is a vowel' and let $W = \\{a, b, c\\}$ be 'the tile is among the first three letters.' List the event $V^c \\cap W$ and describe it in words.",
+      "hint": "First find $V^c$ (every letter of $S$ that is not a vowel from $V$). Then intersect that with $W$, keeping only letters in both.",
+      "solution": {
+        "steps": [
+          "Find the complement first: $V^c$ is all of $S$ except $a$ and $e$, so $V^c = \\{b, c, d, f\\}$.",
+          "Now intersect with $W = \\{a, b, c\\}$: keep the letters in both $\\{b, c, d, f\\}$ and $\\{a, b, c\\}$.",
+          "Those letters are $b$ and $c$, so $V^c \\cap W = \\{b, c\\}$.",
+          "In words, this is the event 'the tile is among the first three letters and is not a vowel.'"
+        ],
+        "answer": "$V^c \\cap W = \\{b, c\\}$, the first-three letters that are not vowels"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Two fair dice, one red and one blue, are rolled and the ordered pair (red, blue) is recorded, giving a sample space of $36$ outcomes. Let $D$ be 'the two dice show the same number' (doubles). List $D$, and state whether $D$ and the event $M = \\{(r, b) : r + b = 7\\}$ are mutually exclusive.",
+      "hint": "Doubles are pairs $(r, b)$ with $r = b$. Two events are mutually exclusive if no outcome belongs to both, that is $D \\cap M = \\varnothing$.",
+      "solution": {
+        "steps": [
+          "Doubles require equal faces, so $D = \\{(1,1), (2,2), (3,3), (4,4), (5,5), (6,6)\\}$, six outcomes.",
+          "For an outcome to be in both $D$ and $M$, it must be a double with $r + b = 7$. A double has $r + b = 2r$, which is even, but $7$ is odd, so no double can sum to $7$.",
+          "Therefore $D \\cap M = \\varnothing$, so $D$ and $M$ share no outcomes.",
+          "Because their intersection is empty, $D$ and $M$ are mutually exclusive."
+        ],
+        "answer": "$D = \\{(1,1), (2,2), (3,3), (4,4), (5,5), (6,6)\\}$; $D \\cap M = \\varnothing$, so $D$ and $M$ are mutually exclusive"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "In a class of $30$ students, each is classified by grade (junior or senior) and by whether they play a sport. The two-way table shows: juniors who play a sport $= 8$, juniors who do not $= 6$, seniors who play a sport $= 10$, seniors who do not $= 6$. Let $J$ be 'is a junior' and $P$ be 'plays a sport.' Write the event 'senior and plays a sport' using set operations, and give the number of outcomes (students) in it.",
+      "hint": "'Senior' is the complement of 'junior', $J^c$. 'Senior and plays a sport' is an intersection. Read the matching cell of the table for the count.",
+      "solution": {
+        "steps": [
+          "'Senior' means 'not a junior', which is $J^c$.",
+          "'Senior and plays a sport' combines two characteristics with 'and', so it is the intersection $J^c \\cap P$.",
+          "The table cell for seniors who play a sport gives the count of outcomes in this event: $10$.",
+          "So $J^c \\cap P$ describes those $10$ students."
+        ],
+        "answer": "$J^c \\cap P$, which contains $10$ students"
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "generatedAt": "2026-06-24T21:01:54.123Z"
+}

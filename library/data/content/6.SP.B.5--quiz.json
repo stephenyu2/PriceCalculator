@@ -1,0 +1,151 @@
+{
+  "id": "6.SP.B.5--quiz",
+  "standard": "6.SP.B.5",
+  "clusterId": null,
+  "grade": "6",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Summarize and describe distributions",
+  "clusterCode": "B",
+  "skillName": "Summarizing Numerical Data Sets",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:41:22.446Z",
+  "intro": "Eight multiple-choice questions on summarizing numerical data sets: number of observations, mean, median, range, IQR, MAD, distribution shape, and choosing the better measure of center.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "A scientist records the number of seeds in each of these pea pods: $5, 6, 6, 7, 8, 9$. How many observations are in this data set?\nA) $6$\nB) $5$\nC) $9$\nD) $41$",
+      "answer": "A) $6$",
+      "solution": {
+        "steps": [
+          "The number of observations $n$ is just how many values are listed, regardless of their size.",
+          "Count the values: $5, 6, 6, 7, 8, 9$, which is $6$ values.",
+          "So $n=6$, making A correct.",
+          "B ($5$) is the smallest value, not the count of values. C ($9$) is the largest value, not the count. D ($41$) is the sum of the values, not the number of them."
+        ],
+        "answer": "A) $6$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Find the mean of the data set $4, 7, 7, 9, 13$.\nA) $8$\nB) $7$\nC) $9$\nD) $40$",
+      "answer": "A) $8$",
+      "solution": {
+        "steps": [
+          "The mean is the sum of the values divided by the number of values: $\\bar{x}=\\dfrac{\\sum x_i}{n}$.",
+          "Add the values: $4+7+7+9+13=40$.",
+          "There are $n=5$ values, so $\\bar{x}=\\dfrac{40}{5}=8$, making A correct.",
+          "B ($7$) confuses the mean with the median or mode (the middle/most common value), not the mean. C ($9$) is just a value from the list. D ($40$) is the sum without dividing by $n$."
+        ],
+        "answer": "A) $8$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "For the ordered data set $3, 5, 6, 8, 9, 12, 15, 18$, what is the range?\nA) $15$\nB) $21$\nC) $8$\nD) $18$",
+      "answer": "A) $15$",
+      "solution": {
+        "steps": [
+          "The range is the maximum value minus the minimum value: $\\text{range}=\\text{max}-\\text{min}$.",
+          "The maximum is $18$ and the minimum is $3$.",
+          "So the range is $18-3=15$, making A correct.",
+          "B ($21$) comes from adding $\\text{max}+\\text{min}=18+3$ instead of subtracting. C ($8$) is the interquartile range, not the full range. D ($18$) is just the maximum value, not the difference."
+        ],
+        "answer": "A) $15$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Find the median of the data set $4, 9, 7, 7, 13$.\nA) $7$\nB) $9$\nC) $8$\nD) $13$",
+      "answer": "A) $7$",
+      "solution": {
+        "steps": [
+          "The median is the middle value, but you must order the data first.",
+          "Ordered, the data is $4, 7, 7, 9, 13$.",
+          "With $n=5$ values, the middle is the $3$rd value, which is $7$, making A correct.",
+          "B ($9$) is the middle of the unordered list as written, which ignores the required ordering step. C ($8$) is the mean, not the median. D ($13$) is the maximum value."
+        ],
+        "answer": "A) $7$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Find the median of the data set $2, 5, 8, 11, 14, 20$.\nA) $\\dfrac{19}{2}$\nB) $8$\nC) $11$\nD) $\\dfrac{17}{2}$",
+      "answer": "A) $\\dfrac{19}{2}$",
+      "solution": {
+        "steps": [
+          "The data is already in order: $2, 5, 8, 11, 14, 20$.",
+          "Because $n=6$ is even, the median is the average of the two middle values, the $3$rd and $4$th: $8$ and $11$.",
+          "Median $=\\dfrac{8+11}{2}=\\dfrac{19}{2}$, making A correct.",
+          "B ($8$) and C ($11$) each pick only one of the two middle values instead of averaging them. D ($\\frac{17}{2}$) averages $5$ and $12$ or mislocates the middle pair."
+        ],
+        "answer": "A) $\\dfrac{19}{2}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "For the ordered data set $3, 5, 6, 8, 9, 12, 15, 18$, what is the interquartile range (IQR)?\nA) $8$\nB) $15$\nC) $\\dfrac{11}{2}$\nD) $\\dfrac{27}{2}$",
+      "answer": "A) $8$",
+      "solution": {
+        "steps": [
+          "The IQR is $Q_3-Q_1$. Split the $8$ ordered values into a lower half $3, 5, 6, 8$ and an upper half $9, 12, 15, 18$.",
+          "$Q_1$ is the median of the lower half: $Q_1=\\dfrac{5+6}{2}=\\dfrac{11}{2}$.",
+          "$Q_3$ is the median of the upper half: $Q_3=\\dfrac{12+15}{2}=\\dfrac{27}{2}$.",
+          "So $\\text{IQR}=Q_3-Q_1=\\dfrac{27}{2}-\\dfrac{11}{2}=\\dfrac{16}{2}=8$, making A correct.",
+          "B ($15$) is the full range ($\\text{max}-\\text{min}$), not the IQR. C ($\\frac{11}{2}$) is just $Q_1$ and D ($\\frac{27}{2}$) is just $Q_3$, neither of which is the difference."
+        ],
+        "answer": "A) $8$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Compute the mean absolute deviation (MAD) of the data set $2, 4, 6, 8$.\nA) $2$\nB) $0$\nC) $\\dfrac{8}{3}$\nD) $5$",
+      "answer": "A) $2$",
+      "solution": {
+        "steps": [
+          "First find the mean: $\\bar{x}=\\dfrac{2+4+6+8}{4}=\\dfrac{20}{4}=5$.",
+          "Find each absolute deviation from the mean: $|2-5|=3$, $|4-5|=1$, $|6-5|=1$, $|8-5|=3$.",
+          "MAD is the average of these absolute deviations: $\\text{MAD}=\\dfrac{3+1+1+3}{4}=\\dfrac{8}{4}=2$, making A correct.",
+          "B ($0$) drops the absolute values, so the signed deviations cancel to $0$. C ($\\frac{8}{3}$) divides by $n-1=3$ instead of by $n=4$. D ($5$) is the mean itself, not the MAD."
+        ],
+        "answer": "A) $2$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "The home prices on a street are $\\$210{,}000, \\$220{,}000, \\$230{,}000, \\$240{,}000$, and $\\$900{,}000$. Which measure of center better summarizes a typical home price, and why?\nA) The median, because the single very large value pulls the mean upward and makes it unrepresentative\nB) The mean, because it uses every value so it is always the most typical\nC) The mean, because $\\$900{,}000$ is where most of the homes are priced\nD) The median, because it equals the most expensive home",
+      "answer": "A) The median, because the single very large value pulls the mean upward and makes it unrepresentative",
+      "solution": {
+        "steps": [
+          "Compute both measures. The mean is $\\dfrac{210000+220000+230000+240000+900000}{5}=\\dfrac{1{,}800{,}000}{5}=\\$360{,}000$.",
+          "The median is the middle of the ordered prices: $\\$230{,}000$.",
+          "The value $\\$900{,}000$ is a high outlier that pulls the mean ($\\$360{,}000$) far above the cluster of homes near $\\$200{,}000$ to $\\$240{,}000$, so the median ($\\$230{,}000$) is more typical. A is correct.",
+          "B wrongly claims the mean is always best, ignoring that an outlier inflates it. C treats the outlier as where most homes are priced, but only one home is near $\\$900{,}000$. D misdescribes the median; it is the middle value ($\\$230{,}000$), not the most expensive home."
+        ],
+        "answer": "A) The median, because the single very large value pulls the mean upward and makes it unrepresentative"
+      }
+    }
+  ]
+}

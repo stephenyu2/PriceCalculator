@@ -1,0 +1,181 @@
+{
+  "id": "A2.A-REI.A.2--lesson",
+  "standard": "A2.A-REI.A.2",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Reasoning with Equations and Inequalities",
+  "domainCode": "A-REI",
+  "cluster": "Understand solving equations as a process of reasoning",
+  "clusterCode": "A",
+  "skillName": "Rational and Radical Equations",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "When an equation has a variable in a denominator or under a radical, solving it is a process of reasoning, not just symbol pushing. Multiplying by an expression that could be $0$, or squaring both sides, can produce a candidate that does NOT satisfy the original equation. Such a value is called an extraneous solution. The cure is always the same: note the domain restrictions first, then substitute every candidate back into the ORIGINAL equation and keep only the ones that check. All answers stay exact, as fractions or simplified radicals.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Solve the rational equation $\\dfrac{3}{x-2}=\\dfrac{5}{x+4}$.",
+      "solution": {
+        "steps": [
+          "Note the restrictions: a denominator cannot be $0$, so $x\\neq 2$ and $x\\neq -4$.",
+          "Because this is one fraction equal to one fraction, cross multiply: $3(x+4)=5(x-2)$.",
+          "Distribute: $3x+12=5x-10$.",
+          "Collect like terms: $12+10=5x-3x$, so $22=2x$.",
+          "Divide: $x=11$.",
+          "Check the restriction: $11\\neq 2$ and $11\\neq -4$, so $x=11$ is allowed. Confirm in the original: $\\dfrac{3}{11-2}=\\dfrac{3}{9}=\\dfrac{1}{3}$ and $\\dfrac{5}{11+4}=\\dfrac{5}{15}=\\dfrac{1}{3}$. Both sides match."
+        ],
+        "answer": "$x=11$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Solve the rational equation $\\dfrac{1}{x}+\\dfrac{1}{6}=\\dfrac{1}{4}$.",
+      "solution": {
+        "steps": [
+          "Restriction: $x\\neq 0$ since $x$ is a denominator.",
+          "The least common denominator of $x$, $6$, and $4$ is $12x$. Multiply EVERY term by $12x$.",
+          "$12x\\cdot\\dfrac{1}{x}+12x\\cdot\\dfrac{1}{6}=12x\\cdot\\dfrac{1}{4}$ gives $12+2x=3x$.",
+          "Solve: subtract $2x$ from both sides to get $12=x$.",
+          "Check: $12\\neq 0$, so it is allowed. In the original, $\\dfrac{1}{12}+\\dfrac{1}{6}=\\dfrac{1}{12}+\\dfrac{2}{12}=\\dfrac{3}{12}=\\dfrac{1}{4}$. It checks."
+        ],
+        "answer": "$x=12$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Solve the rational equation $\\dfrac{x}{x-3}=\\dfrac{3}{x-3}+2$, then state whether your candidate is valid.",
+      "solution": {
+        "steps": [
+          "Restriction: the denominator $x-3$ cannot be $0$, so $x\\neq 3$.",
+          "Multiply every term by the LCD $x-3$: $x=3+2(x-3)$.",
+          "Distribute on the right: $x=3+2x-6$, so $x=2x-3$.",
+          "Solve: subtract $2x$ from both sides to get $-x=-3$, so $x=3$.",
+          "Check against the restriction: $x=3$ makes the denominator $x-3=0$, which is not allowed. Substituting $3$ into the original would divide by $0$.",
+          "The only candidate is extraneous, so the equation has NO solution. This is exactly how multiplying by an expression that can equal $0$ can introduce a false root."
+        ],
+        "answer": "No solution ($x=3$ is extraneous)"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Solve the radical equation $\\sqrt{2x+3}=x$.",
+      "solution": {
+        "steps": [
+          "The radical is already isolated. Square both sides: $\\left(\\sqrt{2x+3}\\right)^2=x^2$, so $2x+3=x^2$.",
+          "Rearrange into standard form: $x^2-2x-3=0$.",
+          "Factor: $(x-3)(x+1)=0$, so the candidates are $x=3$ and $x=-1$.",
+          "Squaring can create extraneous roots, so check each in the ORIGINAL equation.",
+          "Check $x=3$: $\\sqrt{2(3)+3}=\\sqrt{9}=3$, which equals $x=3$. Valid.",
+          "Check $x=-1$: $\\sqrt{2(-1)+3}=\\sqrt{1}=1$, but $x=-1$, and $1\\neq -1$. Extraneous, because the principal square root is never negative.",
+          "Only $x=3$ survives."
+        ],
+        "answer": "$x=3$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Solve the two-radical equation $\\sqrt{x+7}-\\sqrt{x}=1$.",
+      "solution": {
+        "steps": [
+          "Isolate one radical: $\\sqrt{x+7}=1+\\sqrt{x}$.",
+          "Square both sides, treating the right side as a whole: $(\\sqrt{x+7})^2=(1+\\sqrt{x})^2$, so $x+7=1+2\\sqrt{x}+x$.",
+          "Subtract $x$ and $1$ from both sides: $6=2\\sqrt{x}$, so $\\sqrt{x}=3$.",
+          "Square again: $x=9$.",
+          "Check in the original: $\\sqrt{9+7}-\\sqrt{9}=\\sqrt{16}-3=4-3=1$. It checks.",
+          "Note that you must square the side $1+\\sqrt{x}$ as a binomial, keeping the $2\\sqrt{x}$ cross term. Dropping it would wrongly give no solution."
+        ],
+        "answer": "$x=9$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Solve the rational equation $\\dfrac{4}{x+1}=\\dfrac{6}{x+5}$.",
+      "hint": "One fraction equals one fraction, so cross multiply. First note the restrictions $x\\neq -1$ and $x\\neq -5$.",
+      "solution": {
+        "steps": [
+          "Restrictions: $x\\neq -1$ and $x\\neq -5$.",
+          "Cross multiply: $4(x+5)=6(x+1)$.",
+          "Distribute: $4x+20=6x+6$.",
+          "Collect terms: $20-6=6x-4x$, so $14=2x$, giving $x=7$.",
+          "Check: $7$ violates no restriction, and $\\dfrac{4}{8}=\\dfrac{1}{2}$ while $\\dfrac{6}{12}=\\dfrac{1}{2}$. Valid."
+        ],
+        "answer": "$x=7$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Solve the radical equation $\\sqrt{x+5}=4$.",
+      "hint": "The radical is already isolated. Square BOTH sides; remember $4^2=16$, not $4$.",
+      "solution": {
+        "steps": [
+          "Square both sides: $\\left(\\sqrt{x+5}\\right)^2=4^2$, so $x+5=16$.",
+          "Subtract $5$: $x=11$.",
+          "Check in the original: $\\sqrt{11+5}=\\sqrt{16}=4$. It checks."
+        ],
+        "answer": "$x=11$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Solve the cube-root equation $\\sqrt[3]{2x-1}=3$.",
+      "hint": "Undo a cube root by cubing both sides. Cubing is one-to-one, so no extraneous roots can appear.",
+      "solution": {
+        "steps": [
+          "Cube both sides: $\\left(\\sqrt[3]{2x-1}\\right)^3=3^3$, so $2x-1=27$.",
+          "Add $1$: $2x=28$.",
+          "Divide: $x=14$.",
+          "Check: $\\sqrt[3]{2(14)-1}=\\sqrt[3]{27}=3$. Because cube roots are defined for all real radicands and cubing is one-to-one, $x=14$ is the unique solution; no check for extraneous roots is needed."
+        ],
+        "answer": "$x=14$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Solve the rational equation $\\dfrac{1}{x}+\\dfrac{1}{x-2}=\\dfrac{3}{4}$.",
+      "hint": "The LCD is $4x(x-2)$. Multiply EVERY term by it; the equation will reduce to a quadratic. Watch the restrictions $x\\neq 0$ and $x\\neq 2$.",
+      "solution": {
+        "steps": [
+          "Restrictions: $x\\neq 0$ and $x\\neq 2$.",
+          "Multiply every term by the LCD $4x(x-2)$: $4(x-2)+4x=3x(x-2)$.",
+          "Expand: $4x-8+4x=3x^2-6x$, so $8x-8=3x^2-6x$.",
+          "Bring all terms to one side: $0=3x^2-14x+8$.",
+          "Factor: $(3x-2)(x-4)=0$, so $x=\\dfrac{2}{3}$ or $x=4$.",
+          "Check both against the restrictions: neither is $0$ or $2$, and substituting confirms each works. For $x=4$: $\\dfrac{1}{4}+\\dfrac{1}{2}=\\dfrac{3}{4}$. For $x=\\dfrac{2}{3}$: $\\dfrac{3}{2}+\\dfrac{1}{\\,-4/3\\,}=\\dfrac{3}{2}-\\dfrac{3}{4}=\\dfrac{3}{4}$. Both valid."
+        ],
+        "answer": "$x=\\dfrac{2}{3}$ or $x=4$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Solve the radical equation $\\sqrt{3x+1}-x=-1$, checking for extraneous roots.",
+      "hint": "Isolate the radical first: $\\sqrt{3x+1}=x-1$. Then square both sides and check each candidate in the original equation.",
+      "solution": {
+        "steps": [
+          "Isolate the radical: $\\sqrt{3x+1}=x-1$.",
+          "Square both sides: $3x+1=(x-1)^2=x^2-2x+1$.",
+          "Rearrange: $0=x^2-5x$, so $0=x(x-5)$, giving $x=0$ or $x=5$.",
+          "Check $x=0$ in the original: $\\sqrt{3(0)+1}=\\sqrt{1}=1$, but $x-1=0-1=-1$, and $1\\neq -1$. Extraneous.",
+          "Check $x=5$: $\\sqrt{3(5)+1}=\\sqrt{16}=4$, and $x-1=5-1=4$. Valid.",
+          "Only $x=5$ survives, because squaring erased the sign conflict that ruled out $x=0$."
+        ],
+        "answer": "$x=5$"
+      }
+    }
+  ]
+}

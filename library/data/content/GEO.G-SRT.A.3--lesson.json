@@ -1,0 +1,171 @@
+{
+  "id": "GEO.G-SRT.A.3--lesson",
+  "standard": "GEO.G-SRT.A.3",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Similarity, Right Triangles, and Trigonometry",
+  "domainCode": "G-SRT",
+  "cluster": "Understand similarity in terms of similarity transformations",
+  "clusterCode": "A",
+  "skillName": "AA Similarity Criterion",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "The Angle-Angle (AA) criterion says that if two angles of one triangle are congruent to two angles of another triangle, then the triangles are similar. Why two angles are enough: the three angles of any triangle add to $180^\\circ$, so once two pairs match, the third pair is forced to match as well. Having all three angles equal means one triangle is a scaled copy of the other. You can make this precise with a similarity transformation: dilate one triangle by the scale factor $k = \\frac{\\text{new side}}{\\text{old side}}$ so a pair of corresponding sides match, then use rigid motions (a rotation, reflection, or translation) to line up the equal angles, and the triangles coincide. Once similarity is established, corresponding sides are proportional, which lets you solve for unknown lengths. Watch the vertex order: in $\\triangle ABC \\sim \\triangle DEF$, the matching pairs are $A \\leftrightarrow D$, $B \\leftrightarrow E$, $C \\leftrightarrow F$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "In $\\triangle ABC$, $m\\angle A = 50^\\circ$ and $m\\angle B = 60^\\circ$. In $\\triangle DEF$, $m\\angle D = 50^\\circ$ and $m\\angle E = 60^\\circ$. Are the triangles similar by AA? If so, write a similarity statement.",
+      "solution": {
+        "steps": [
+          "Compare the given angle pairs: $\\angle A \\cong \\angle D$ since both measure $50^\\circ$, and $\\angle B \\cong \\angle E$ since both measure $60^\\circ$.",
+          "Two pairs of angles are congruent, so the AA criterion applies.",
+          "Match vertices by their angles: $A \\leftrightarrow D$ ($50^\\circ$), $B \\leftrightarrow E$ ($60^\\circ$), and the third vertices $C \\leftrightarrow F$.",
+          "Note this gives similarity, not congruence, because AA says nothing about side lengths matching, only their proportionality."
+        ],
+        "answer": "Yes, by AA: $\\triangle ABC \\sim \\triangle DEF$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "$\\triangle PQR$ has $m\\angle P = 35^\\circ$ and $m\\angle Q = 95^\\circ$. $\\triangle XYZ$ has $m\\angle X = 35^\\circ$ and $m\\angle Z = 50^\\circ$. Use the Triangle Angle Sum to find the missing angle in each triangle, then decide whether $\\triangle PQR \\sim \\triangle XYZ$.",
+      "solution": {
+        "steps": [
+          "Find the third angle of $\\triangle PQR$: $m\\angle R = 180^\\circ - 35^\\circ - 95^\\circ = 50^\\circ$.",
+          "Find the third angle of $\\triangle XYZ$: $m\\angle Y = 180^\\circ - 35^\\circ - 50^\\circ = 95^\\circ$.",
+          "Now list each triangle's angle set: $\\triangle PQR$ has $35^\\circ, 95^\\circ, 50^\\circ$ and $\\triangle XYZ$ has $35^\\circ, 95^\\circ, 50^\\circ$. Both triangles have the same three angle measures.",
+          "Match equal angles to get the correspondence: $P \\leftrightarrow X$ ($35^\\circ$), $Q \\leftrightarrow Y$ ($95^\\circ$), $R \\leftrightarrow Z$ ($50^\\circ$).",
+          "Two pairs (in fact all three) of congruent angles satisfy AA, so the triangles are similar with that vertex order."
+        ],
+        "answer": "Yes, by AA: $\\triangle PQR \\sim \\triangle XYZ$ (each has angles $35^\\circ$, $95^\\circ$, $50^\\circ$)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "In $\\triangle ABC$, point $D$ lies on $\\overline{AB}$ and point $E$ lies on $\\overline{AC}$ so that $\\overline{DE} \\parallel \\overline{BC}$. Explain why $\\triangle ADE \\sim \\triangle ABC$ by AA.",
+      "solution": {
+        "steps": [
+          "Identify a shared angle: $\\angle A$ belongs to both $\\triangle ADE$ and $\\triangle ABC$, so $\\angle DAE \\cong \\angle BAC$ (it is the same angle).",
+          "Use the parallel lines: $\\overline{DE} \\parallel \\overline{BC}$ with the transversal $\\overline{AB}$ creates corresponding angles, so $\\angle ADE \\cong \\angle ABC$.",
+          "That is two pairs of congruent angles: $\\angle A \\cong \\angle A$ and $\\angle ADE \\cong \\angle ABC$, which satisfies the AA criterion.",
+          "Match the vertices in order of equal angles: $A \\leftrightarrow A$, $D \\leftrightarrow B$, $E \\leftrightarrow C$.",
+          "As a check, the transversal $\\overline{AC}$ also gives $\\angle AED \\cong \\angle ACB$ (corresponding angles), confirming the third pair matches."
+        ],
+        "answer": "$\\triangle ADE \\sim \\triangle ABC$ by AA (shared angle $A$ plus corresponding angles from $\\overline{DE} \\parallel \\overline{BC}$)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Segments $\\overline{AB}$ and $\\overline{CD}$ intersect at point $P$, and $\\overline{AC} \\parallel \\overline{BD}$. Show that $\\triangle APC \\sim \\triangle BPD$ by AA, then write the similarity statement.",
+      "solution": {
+        "steps": [
+          "Look at the angles at $P$: $\\angle APC$ and $\\angle BPD$ are vertical angles formed by the two intersecting segments, so $\\angle APC \\cong \\angle BPD$.",
+          "Use the parallel lines $\\overline{AC} \\parallel \\overline{BD}$ with transversal $\\overline{AB}$: the alternate interior angles give $\\angle CAP \\cong \\angle DBP$ (that is, $\\angle A \\cong \\angle B$).",
+          "Two pairs of congruent angles ($\\angle APC \\cong \\angle BPD$ and $\\angle A \\cong \\angle B$) satisfy the AA criterion.",
+          "Determine the correspondence from the equal angles: $A \\leftrightarrow B$, $P \\leftrightarrow P$, $C \\leftrightarrow D$.",
+          "By the third-angle property, $\\angle ACP \\cong \\angle BDP$ as well (alternate interior angles across transversal $\\overline{CD}$), consistent with the correspondence."
+        ],
+        "answer": "$\\triangle APC \\sim \\triangle BPD$ by AA (vertical angles at $P$ and alternate interior angles from $\\overline{AC} \\parallel \\overline{BD}$)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "$\\triangle ABC$ and $\\triangle DEF$ have $\\angle A \\cong \\angle D$ and $\\angle B \\cong \\angle E$, with $AB = 6$ and $DE = 9$. Describe a similarity transformation that maps $\\triangle ABC$ onto $\\triangle DEF$, then use the resulting proportion to find $EF$ given $BC = 8$.",
+      "solution": {
+        "steps": [
+          "Since $\\angle A \\cong \\angle D$ and $\\angle B \\cong \\angle E$, the Triangle Angle Sum forces $\\angle C \\cong \\angle F$, so all three angle pairs match.",
+          "Choose the dilation scale factor so that side $\\overline{AB}$ maps to side $\\overline{DE}$: $k = \\frac{DE}{AB} = \\frac{9}{6} = \\frac{3}{2}$.",
+          "Dilate $\\triangle ABC$ by $k = \\frac{3}{2}$. The image has the same angles as $\\triangle ABC$ (dilations preserve angles) and the side from $A$ to $B$ now has length $6 \\cdot \\frac{3}{2} = 9 = DE$.",
+          "Apply rigid motions (a translation, rotation, and/or reflection) to carry the dilated image so that its $\\overline{AB}$ image lands exactly on $\\overline{DE}$. Because $\\angle A \\cong \\angle D$ and $\\angle B \\cong \\angle E$, the rays along the other sides line up, so the image of $C$ lands on $F$ and the triangles coincide. This proves $\\triangle ABC \\sim \\triangle DEF$.",
+          "Corresponding sides are in the ratio $k = \\frac{3}{2}$, so $\\frac{DE}{AB} = \\frac{EF}{BC}$, giving $\\frac{9}{6} = \\frac{EF}{8}$.",
+          "Solve: $EF = 8 \\cdot \\frac{9}{6} = 8 \\cdot \\frac{3}{2} = 12$."
+        ],
+        "answer": "Dilate by $k = \\frac{3}{2}$ then apply rigid motions to align the equal angles; $EF = 12$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "In $\\triangle GHJ$, $m\\angle G = 72^\\circ$ and $m\\angle H = 41^\\circ$. In $\\triangle KLM$, $m\\angle K = 72^\\circ$ and $m\\angle L = 41^\\circ$. Are the triangles similar by AA? If so, write a similarity statement.",
+      "hint": "Check whether two pairs of angles are congruent, then match the equal angles vertex to vertex.",
+      "solution": {
+        "steps": [
+          "Compare angles: $\\angle G \\cong \\angle K$ (both $72^\\circ$) and $\\angle H \\cong \\angle L$ (both $41^\\circ$).",
+          "Two pairs of congruent angles satisfy AA, so the triangles are similar.",
+          "Match vertices by equal angles: $G \\leftrightarrow K$, $H \\leftrightarrow L$, $J \\leftrightarrow M$."
+        ],
+        "answer": "Yes, by AA: $\\triangle GHJ \\sim \\triangle KLM$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "$\\triangle RST$ has $m\\angle R = 28^\\circ$ and $m\\angle S = 102^\\circ$. $\\triangle UVW$ has $m\\angle U = 28^\\circ$ and $m\\angle W = 50^\\circ$. Find the missing third angle in each triangle, then determine whether $\\triangle RST \\sim \\triangle UVW$.",
+      "hint": "Use $\\text{third angle} = 180^\\circ - (\\text{sum of the two given angles})$ for each triangle, then compare the full angle sets.",
+      "solution": {
+        "steps": [
+          "Third angle of $\\triangle RST$: $m\\angle T = 180^\\circ - 28^\\circ - 102^\\circ = 50^\\circ$.",
+          "Third angle of $\\triangle UVW$: $m\\angle V = 180^\\circ - 28^\\circ - 50^\\circ = 102^\\circ$.",
+          "Angle sets: $\\triangle RST$ has $28^\\circ, 102^\\circ, 50^\\circ$ and $\\triangle UVW$ has $28^\\circ, 102^\\circ, 50^\\circ$, so all three pairs are congruent.",
+          "Match equal angles: $R \\leftrightarrow U$ ($28^\\circ$), $S \\leftrightarrow V$ ($102^\\circ$), $T \\leftrightarrow W$ ($50^\\circ$). AA is satisfied."
+        ],
+        "answer": "Yes, by AA: $\\triangle RST \\sim \\triangle UVW$ (each has angles $28^\\circ$, $102^\\circ$, $50^\\circ$)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "In $\\triangle ABC$, point $M$ lies on $\\overline{AB}$ and point $N$ lies on $\\overline{AC}$ with $\\overline{MN} \\parallel \\overline{BC}$. Explain why $\\triangle AMN \\sim \\triangle ABC$ by AA.",
+      "hint": "One angle is shared by both triangles. The parallel sides create a pair of congruent corresponding angles.",
+      "solution": {
+        "steps": [
+          "The angle at $A$ is shared, so $\\angle MAN \\cong \\angle BAC$ (it is the same angle).",
+          "Because $\\overline{MN} \\parallel \\overline{BC}$, the transversal $\\overline{AB}$ makes corresponding angles equal: $\\angle AMN \\cong \\angle ABC$.",
+          "Two pairs of congruent angles satisfy AA.",
+          "Match vertices in angle order: $A \\leftrightarrow A$, $M \\leftrightarrow B$, $N \\leftrightarrow C$."
+        ],
+        "answer": "$\\triangle AMN \\sim \\triangle ABC$ by AA (shared angle $A$ and corresponding angles from $\\overline{MN} \\parallel \\overline{BC}$)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "$\\triangle ABC \\sim \\triangle DEF$ by AA. The corresponding sides satisfy $AB = 10$, $DE = 15$, and $BC = 14$. Find the length of $EF$.",
+      "hint": "Corresponding sides are proportional. Set up $\\frac{DE}{AB} = \\frac{EF}{BC}$ and solve for $EF$.",
+      "solution": {
+        "steps": [
+          "Find the scale factor from $\\triangle ABC$ to $\\triangle DEF$: $k = \\frac{DE}{AB} = \\frac{15}{10} = \\frac{3}{2}$.",
+          "Set up the proportion for the corresponding sides $\\overline{BC}$ and $\\overline{EF}$: $\\frac{EF}{BC} = \\frac{3}{2}$.",
+          "Substitute $BC = 14$: $\\frac{EF}{14} = \\frac{3}{2}$.",
+          "Solve: $EF = 14 \\cdot \\frac{3}{2} = 21$."
+        ],
+        "answer": "$EF = 21$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "$\\triangle ABC$ has $m\\angle A = 40^\\circ$ and $m\\angle B = 75^\\circ$. $\\triangle DEF$ has $m\\angle D = 40^\\circ$, and that is the only angle given. Can you conclude $\\triangle ABC \\sim \\triangle DEF$ by AA? Explain.",
+      "hint": "AA requires two pairs of congruent angles, not one. Ask whether the second triangle's other angles are pinned down.",
+      "solution": {
+        "steps": [
+          "AA requires two pairs of congruent angles between the triangles.",
+          "Here only one pair is known to be congruent: $\\angle A \\cong \\angle D = 40^\\circ$.",
+          "The other angles of $\\triangle DEF$ are not given, so $\\triangle DEF$ could have a second angle of $75^\\circ$ (matching) or some other value (not matching). The information does not force a second congruent pair.",
+          "Therefore AA cannot be applied; the given information is insufficient to conclude similarity."
+        ],
+        "answer": "No. Only one pair of angles is known to be congruent, so AA does not apply and the information is insufficient."
+      }
+    }
+  ]
+}

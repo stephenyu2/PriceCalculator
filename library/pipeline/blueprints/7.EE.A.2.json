@@ -1,0 +1,123 @@
+{
+  "standard": "7.EE.A.2",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Expressions and Equations",
+  "domainCode": "EE",
+  "cluster": "Use properties of operations to generate equivalent expressions",
+  "clusterCode": "A",
+  "skillName": "Rewriting Expressions",
+
+  "description": "Students rewrite a linear expression into an equivalent form that exposes the underlying structure of a problem, then interpret what the new form reveals about how the quantities are related. The signature case is recognizing that adding a percent of a quantity to the quantity is the same as scaling by a single multiplier, for example $a + 0.05a = 1.05a$ shows that an increase of $5\\%$ is the same as multiplying by $1.05$, and $a - 0.20a = 0.80a$ shows that a $20\\%$ decrease is the same as multiplying by $0.80$. Students must produce the equivalent form (by combining like terms, factoring, or distributing) and explain the meaning of that form in context.",
+
+  "subSkills": [
+    "Combine like terms to collapse $a + ra$ into $(1+r)a$",
+    "Convert a percent increase or decrease into a single decimal multiplier",
+    "Factor a common factor out of a sum or difference to reveal structure, e.g. $0.9p + 0.9t = 0.9(p+t)$",
+    "Distribute to expand a factored form into the form a problem requires, e.g. $1.08(x) = x + 0.08x$",
+    "Interpret what an equivalent expression tells you about the quantities (which form shows the original amount, which shows the change, which shows the result)",
+    "Recognize when two expressions are equivalent and when they are not"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Percent increase to single multiplier",
+      "example": "A price $p$ is increased by $5\\%$. Write $p + 0.05p$ as a single product and explain what the multiplier tells you. ($p + 0.05p = 1.05p$, so increasing by $5\\%$ is the same as multiplying by $1.05$.)"
+    },
+    {
+      "name": "Percent decrease to single multiplier",
+      "example": "A value $a$ is decreased by $20\\%$. Rewrite $a - 0.20a$ as a single product. ($a - 0.20a = 0.80a$, so a $20\\%$ decrease is the same as multiplying by $0.80$.)"
+    },
+    {
+      "name": "Combine like terms to reveal structure",
+      "example": "Rewrite $w + 0.15w$ in an equivalent form and state what the coefficient means. ($w + 0.15w = 1.15w$; a $15\\%$ increase.)"
+    },
+    {
+      "name": "Factor a common factor",
+      "example": "A store applies the same $10\\%$ discount to a shirt costing $s$ and pants costing $t$. The total paid is $0.9s + 0.9t$. Rewrite it to show the discount is applied once to the combined price. ($0.9s + 0.9t = 0.9(s+t)$.)"
+    },
+    {
+      "name": "Distribute / expand for interpretation",
+      "example": "A bill is computed as $1.08m$ where $m$ is the meal cost. Rewrite this to separate the original cost from the $8\\%$ tax. ($1.08m = m + 0.08m$, the meal plus $8\\%$ tax.)"
+    },
+    {
+      "name": "Interpret which form answers the question",
+      "example": "Tickets cost $t$ each and there is a $\\$3$ fee per order. For $n$ tickets the cost is $tn + 3$. Which equivalent form, $tn + 3$ or $n(t) + 3$, makes the fee easiest to identify, and what is the fee? (Both are equivalent; the constant $3$ is the flat fee.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single, direct rewrite with one operation. Combine $a + ra$ into $(1+r)a$, or convert a stated percent increase to its multiplier, with friendly percents.",
+      "constraints": [
+        "One step: combine like terms or convert one percent to a multiplier",
+        "Percents are multiples of $5\\%$ or $10\\%$ ($5\\%, 10\\%, 20\\%, 25\\%, 50\\%$)",
+        "Only increase cases or the most familiar decrease cases",
+        "Numbers in context, if any, are whole numbers",
+        "Answer is a single product such as $1.05a$ or $0.90a$"
+      ]
+    },
+    "Medium": {
+      "description": "Two related steps or a less familiar structure. Includes percent decreases that require subtraction first, factoring a common decimal factor out of two terms, or expanding a single multiplier back into a sum to interpret it.",
+      "constraints": [
+        "Requires forming the expression from words before rewriting, or two terms to factor",
+        "Includes decrease cases ($a - ra$) and factoring such as $0.9(s+t)$",
+        "Percents may include $8\\%, 12\\%, 15\\%, 30\\%$",
+        "Student must state what the rewritten form means, not just compute it"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning that chains rewrites or compares forms. Includes successive changes, combining a percent change with a fixed term, or deciding which of several equivalent forms best answers a contextual question and justifying it.",
+      "constraints": [
+        "Two or more transformations, e.g. apply a percent change then add a fee, or compare $1.05a$ to $a + 0.05a$ across a scenario",
+        "May involve a constant term plus a variable term, e.g. $tn + 3$ versus a factored alternative",
+        "Requires interpreting which equivalent form sheds light on a specific question",
+        "Distractors include equivalent-looking but unequal expressions"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student treats the lone variable as having coefficient $0$ instead of $1$ when combining like terms",
+      "distractor": "Writes $a + 0.05a = 0.05a$ instead of $1.05a$"
+    },
+    {
+      "misconception": "Student multiplies the coefficients instead of adding them when combining like terms",
+      "distractor": "Writes $a + 0.05a = 0.05a^2$ or $0.05a$ by treating $a \\cdot 0.05a$"
+    },
+    {
+      "misconception": "Student subtracts the percent from $1$ incorrectly for a decrease, or subtracts from $100$ wrongly",
+      "distractor": "Writes $a - 0.20a = 1.20a$ (added instead of subtracted) or $0.20a$ instead of $0.80a$"
+    },
+    {
+      "misconception": "Student confuses a percent increase with its multiplier by using the percent as the whole multiplier",
+      "distractor": "Says a $5\\%$ increase means multiply by $0.05$ instead of $1.05$"
+    },
+    {
+      "misconception": "Student fails to factor the common factor from both terms, distributing to only one",
+      "distractor": "Writes $0.9s + 0.9t = 0.9(s) + t$ or $0.9(s+t) \\ne 0.9s + t$"
+    },
+    {
+      "misconception": "Student moves the decimal point wrong when converting a percent to a decimal",
+      "distractor": "Treats $8\\%$ as $0.8$, giving $1.8m$ instead of $1.08m$"
+    },
+    {
+      "misconception": "Student thinks any rearrangement changes value, judging equivalent expressions as not equal (or vice versa)",
+      "distractor": "Claims $1.05a$ and $a + 0.05a$ are different, or claims $a + 0.05a$ equals $a + 5$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

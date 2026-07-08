@@ -1,0 +1,131 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent.",
+
+  "standard": "A1.S-ID.A.2",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on a single count or measurement variable",
+  "clusterCode": "A",
+  "skillName": "Center and Spread of Data",
+
+  "description": "Students compute and compare measures of center (median and mean) and spread (interquartile range and standard deviation) for two or more data sets, and choose which statistics are appropriate to the shape of each distribution. They reason that the mean and standard deviation are best for roughly symmetric data with no extreme outliers, while the median and IQR are more resistant to skew and outliers. Given the five-number summary, a histogram, a box plot, or raw data, students decide which set has the greater center, which is more spread out, and justify the choice of statistic from the distribution's shape.",
+
+  "subSkills": [
+    "Compute the mean $\\bar{x}=\\dfrac{\\sum x_i}{n}$ of a small data set",
+    "Order data and find the median (and quartiles $Q_1,Q_3$) for odd and even $n$",
+    "Compute the interquartile range $\\text{IQR}=Q_3-Q_1$ from a five-number summary or box plot",
+    "Compute the population standard deviation $\\sigma=\\sqrt{\\dfrac{\\sum (x_i-\\bar{x})^2}{n}}$ for a small data set",
+    "Identify distribution shape (symmetric, skewed left, skewed right) from a histogram, dot plot, or box plot",
+    "Choose mean/standard deviation for symmetric data and median/IQR for skewed or outlier-laden data, and justify the choice",
+    "Compare center and spread across two or more data sets and interpret the comparison in context"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Compute center and spread from raw data",
+      "example": "For the data set $\\{4, 6, 8, 8, 14\\}$, find the mean and the population standard deviation. Mean $=\\dfrac{40}{5}=8$; deviations squared $\\{16,4,0,0,36\\}$ sum to $56$, so $\\sigma=\\sqrt{\\dfrac{56}{5}}=\\sqrt{11.2}\\approx 3.35$."
+    },
+    {
+      "name": "IQR from a five-number summary or box plot",
+      "example": "A box plot has $Q_1=12$ and $Q_3=27$. Find the IQR. $\\text{IQR}=27-12=15$."
+    },
+    {
+      "name": "Median and quartiles from ordered data",
+      "example": "Find the median and IQR of $\\{3, 5, 7, 9, 11, 13\\}$. Median $=\\dfrac{7+9}{2}=8$; $Q_1=5$, $Q_3=11$, so $\\text{IQR}=6$."
+    },
+    {
+      "name": "Choose the appropriate statistic from shape",
+      "example": "A data set is strongly skewed right with one large outlier. Which pair of statistics best describes its center and spread, and why? Median and IQR, because they are resistant to the outlier while the mean is pulled toward it and the standard deviation is inflated."
+    },
+    {
+      "name": "Compare two data sets' center",
+      "example": "Class A scores have median $82$; Class B scores have median $76$. Both distributions are skewed. Which class had the higher typical score? Class A, since the median is the appropriate center for skewed data and $82>76$."
+    },
+    {
+      "name": "Compare two data sets' spread",
+      "example": "Set A has $\\sigma=2.1$ and Set B has $\\sigma=5.4$ (both roughly symmetric). Which is more consistent (less spread)? Set A, because its smaller standard deviation means values cluster more tightly around the mean."
+    },
+    {
+      "name": "Effect of an outlier on statistics",
+      "example": "A set is $\\{10, 12, 12, 13, 60\\}$. Explain why the median ($12$) better represents the center than the mean ($21.4$). The value $60$ is an outlier that inflates the mean but barely affects the median."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-statistic computation on small, clean, already-ordered data sets ($n \\le 6$), or reading a value directly off a five-number summary or box plot. One step, no shape judgment required.",
+      "constraints": [
+        "Find the mean of 4 to 6 integers that divide evenly",
+        "Find the median of an already-ordered list",
+        "Compute IQR directly from given $Q_1$ and $Q_3$ or a labeled box plot",
+        "All numbers are small positive integers; the answer is exact"
+      ]
+    },
+    "Medium": {
+      "description": "Multi-step computation or a shape-based choice. Students must order data themselves, compute quartiles for even/odd $n$, or compute a standard deviation, then interpret. Includes identifying skew/symmetry from a histogram or dot plot and naming the appropriate statistic.",
+      "constraints": [
+        "Order an unsorted list before finding median/quartiles",
+        "Compute population standard deviation for $n \\le 6$ with a mean that is an integer",
+        "Identify shape (symmetric, skewed left, skewed right) from a described or shown display",
+        "Choose mean/$\\sigma$ vs median/IQR and give a one-sentence justification"
+      ]
+    },
+    "Hard": {
+      "description": "Compare two or more data sets and synthesize: decide which statistic is appropriate from each set's shape, compute or read it, compare centers and spreads, and justify the conclusion in context. May require recognizing an outlier and reasoning about its effect on which statistic to trust.",
+      "constraints": [
+        "Two data sets given as raw data, histograms, or box plots with different shapes",
+        "Student must select the resistant statistic when an outlier or skew is present",
+        "Conclusion must compare both center and spread and reference shape",
+        "Multi-step: compute/extract, judge shape, then interpret"
+      ]
+    },
+    "tierSplit": "If split into two worksheets: tier1 covers Easy to Medium (single-statistic computation, ordering, IQR from summaries, basic shape identification and statistic choice). tier2 covers Medium to Hard (standard deviation computation, comparing two distributions, outlier reasoning, and full justified comparisons of center and spread). No item overlap between tiers."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student uses the mean (and standard deviation) for strongly skewed or outlier-laden data instead of the resistant median and IQR",
+      "distractor": "Concludes the set with the larger mean has the higher typical value even though it is skewed by an outlier, e.g. picks the inflated mean $21.4$ over the median $12$"
+    },
+    {
+      "misconception": "Student confuses range with interquartile range",
+      "distractor": "Computes $\\text{max}-\\text{min}$ instead of $Q_3-Q_1$, e.g. reports $48$ (range) instead of $15$ (IQR)"
+    },
+    {
+      "misconception": "Student forgets to order the data before finding the median or quartiles",
+      "distractor": "Takes the middle value of the unordered list, e.g. calls $7$ the median of $\\{9,7,3,11,5\\}$ instead of the true median $7$ after ordering, or picks a wrong middle entry"
+    },
+    {
+      "misconception": "Student divides the sum of squared deviations by $n-1$ then forgets the square root, or skips the square root entirely",
+      "distractor": "Reports the variance $11.2$ as the standard deviation instead of $\\sqrt{11.2}\\approx 3.35$"
+    },
+    {
+      "misconception": "Student treats a larger center as meaning larger spread (confuses 'bigger numbers' with 'more variability')",
+      "distractor": "Claims the data set with the higher mean is automatically more spread out, ignoring that spread is measured by IQR or $\\sigma$, not by the size of the center"
+    },
+    {
+      "misconception": "Student computes deviations from the median instead of the mean when finding standard deviation",
+      "distractor": "Uses $\\sum (x_i-\\text{median})^2$ in the standard deviation formula, producing a wrong value"
+    },
+    {
+      "misconception": "Student misidentifies the direction of skew (calls a right-skewed distribution 'skewed left')",
+      "distractor": "Reads the long tail on the right (high values) as 'skewed left' and therefore picks the wrong appropriate statistic"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet (Easy->Hard across 15 items). tier1/tier2 listed for schema completeness but this standard uses the single sheet.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

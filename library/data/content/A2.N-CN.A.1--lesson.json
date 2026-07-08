@@ -1,0 +1,163 @@
+{
+  "id": "A2.N-CN.A.1--lesson",
+  "standard": "A2.N-CN.A.1",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Number and Quantity — The Complex Number System",
+  "domainCode": "N-CN",
+  "cluster": "Perform arithmetic operations with complex numbers",
+  "clusterCode": "A",
+  "skillName": "Intro to Complex Numbers",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "The imaginary unit $i$ is defined by $i^2 = -1$, which is the same as saying $i = \\sqrt{-1}$. This single idea lets us take square roots of negative numbers: $\\sqrt{-n} = i\\sqrt{n}$ for positive $n$. Every complex number can be written in standard form $a + bi$, where $a$ is the real part and $b$ is the imaginary part (just the coefficient, without the $i$). When $b = 0$ the number is real; when $a = 0$ and $b \\neq 0$ it is pure imaginary. Powers of $i$ repeat in a cycle of four: $i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$, then the pattern starts over.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Write $\\sqrt{-49}$ in terms of $i$.",
+      "solution": {
+        "steps": [
+          "Separate the negative one from the radical: $\\sqrt{-49} = \\sqrt{49 \\cdot (-1)} = \\sqrt{49}\\,\\sqrt{-1}$.",
+          "Use the definition $\\sqrt{-1} = i$: $\\sqrt{49}\\,\\sqrt{-1} = 7 \\cdot i$.",
+          "So $\\sqrt{-49} = 7i$."
+        ],
+        "answer": "$7i$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Write $\\sqrt{-72}$ in simplest form.",
+      "solution": {
+        "steps": [
+          "Pull out the $\\sqrt{-1}$: $\\sqrt{-72} = \\sqrt{72}\\,\\sqrt{-1} = i\\sqrt{72}$.",
+          "Find the largest perfect-square factor of $72$: $72 = 36 \\cdot 2$.",
+          "Simplify the radical: $\\sqrt{72} = \\sqrt{36}\\,\\sqrt{2} = 6\\sqrt{2}$.",
+          "Combine: $\\sqrt{-72} = 6i\\sqrt{2}$."
+        ],
+        "answer": "$6i\\sqrt{2}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "For the complex number $-3 + 5i$, state the real part and the imaginary part. Then classify the number as real, pure imaginary, or non-real complex.",
+      "solution": {
+        "steps": [
+          "Compare $-3 + 5i$ to the standard form $a + bi$, so $a = -3$ and $b = 5$.",
+          "The real part is $a = -3$.",
+          "The imaginary part is $b = 5$. It is the coefficient $5$, not $5i$.",
+          "Since $a \\neq 0$ and $b \\neq 0$, the number has both a nonzero real and a nonzero imaginary part, so it is non-real complex."
+        ],
+        "answer": "Real part $-3$, imaginary part $5$; the number is non-real complex."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Simplify $i^{23}$.",
+      "solution": {
+        "steps": [
+          "Powers of $i$ repeat every $4$: $i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$.",
+          "Divide the exponent by $4$ and keep the remainder: $23 = 4 \\cdot 5 + 3$, so the remainder is $3$.",
+          "Replace $i^{23}$ with $i^3$: $i^{23} = i^3$.",
+          "From the cycle, $i^3 = -i$.",
+          "So $i^{23} = -i$."
+        ],
+        "answer": "$-i$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Find real numbers $x$ and $y$ so that $x + yi = 6 - 2i$.",
+      "solution": {
+        "steps": [
+          "Two complex numbers are equal exactly when their real parts match and their imaginary parts match.",
+          "Match the real parts: $x = 6$.",
+          "Match the imaginary parts (the coefficients of $i$): $y = -2$.",
+          "So $x = 6$ and $y = -2$."
+        ],
+        "answer": "$x = 6,\\ y = -2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Write $\\sqrt{-81}$ in terms of $i$.",
+      "hint": "Rewrite as $\\sqrt{81}\\,\\sqrt{-1}$ and use $\\sqrt{-1} = i$.",
+      "solution": {
+        "steps": [
+          "$\\sqrt{-81} = \\sqrt{81}\\,\\sqrt{-1} = 9 \\cdot i$.",
+          "So $\\sqrt{-81} = 9i$."
+        ],
+        "answer": "$9i$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Write $\\sqrt{-50}$ in simplest form.",
+      "hint": "Factor $50$ to find its largest perfect-square factor, then pull it out of the radical.",
+      "solution": {
+        "steps": [
+          "$\\sqrt{-50} = i\\sqrt{50}$.",
+          "$50 = 25 \\cdot 2$, so $\\sqrt{50} = \\sqrt{25}\\,\\sqrt{2} = 5\\sqrt{2}$.",
+          "Combine: $\\sqrt{-50} = 5i\\sqrt{2}$."
+        ],
+        "answer": "$5i\\sqrt{2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Classify $-4i$ as real, pure imaginary, or non-real complex. State its real part and imaginary part.",
+      "hint": "Write the number in the form $a + bi$. What are $a$ and $b$?",
+      "solution": {
+        "steps": [
+          "Write $-4i$ as $0 + (-4)i$, so $a = 0$ and $b = -4$.",
+          "The real part is $a = 0$ and the imaginary part is $b = -4$.",
+          "Since $a = 0$ and $b \\neq 0$, the number is pure imaginary."
+        ],
+        "answer": "Pure imaginary; real part $0$, imaginary part $-4$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Simplify $i^{30}$.",
+      "hint": "Divide $30$ by $4$ and use the remainder with the cycle $i, -1, -i, 1$.",
+      "solution": {
+        "steps": [
+          "$30 = 4 \\cdot 7 + 2$, so the remainder is $2$.",
+          "Replace $i^{30}$ with $i^2$: $i^{30} = i^2$.",
+          "From the cycle, $i^2 = -1$.",
+          "So $i^{30} = -1$."
+        ],
+        "answer": "$-1$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Write $\\sqrt{-16} - 5$ in the form $a + bi$, then state $a$ and $b$.",
+      "hint": "First rewrite $\\sqrt{-16}$ as a pure imaginary number, then put the expression in $a + bi$ order.",
+      "solution": {
+        "steps": [
+          "Simplify the radical: $\\sqrt{-16} = \\sqrt{16}\\,\\sqrt{-1} = 4i$.",
+          "Substitute: $\\sqrt{-16} - 5 = 4i - 5$.",
+          "Write the real part first to match standard form: $4i - 5 = -5 + 4i$.",
+          "So $a = -5$ and $b = 4$."
+        ],
+        "answer": "$-5 + 4i$, with $a = -5$ and $b = 4$"
+      }
+    }
+  ]
+}

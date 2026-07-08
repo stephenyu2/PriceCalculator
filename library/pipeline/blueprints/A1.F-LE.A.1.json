@@ -1,0 +1,117 @@
+{
+  "standard": "A1.F-LE.A.1",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Linear, Quadratic, and Exponential Models",
+  "domainCode": "F-LE",
+  "cluster": "Construct and compare linear, quadratic, and exponential models and solve problems",
+  "clusterCode": "A",
+  "skillName": "Linear vs. Exponential Growth",
+
+  "description": "Students distinguish situations that are modeled by linear functions from those modeled by exponential functions. They recognize that linear functions grow by equal differences (a constant rate of change, $+m$ per unit) over equal intervals, while exponential functions grow by equal factors (a constant ratio, $\\times b$ per unit) over equal intervals. Given a verbal description, a table, a graph, or an equation, they decide which model fits, justify the choice by appealing to constant difference versus constant ratio, and identify the slope $m$ of a linear model or the growth/decay factor $b$ of an exponential model $f(x)=a\\cdot b^{x}$.",
+
+  "subSkills": [
+    "Test a table for a constant first difference (linear) versus a constant ratio (exponential)",
+    "Translate 'increases by a fixed amount per unit' to linear and 'increases by a fixed percent or factor per unit' to exponential",
+    "Recognize a constant rate of change as the slope $m$ in $y=mx+b$ and a constant factor as the base $b$ in $f(x)=a\\cdot b^{x}$",
+    "Identify exponential growth ($b>1$) versus exponential decay ($0<b<1$)",
+    "Compute the growth factor $b$ from a percent rate using $b=1+r$ (growth) or $b=1-r$ (decay)",
+    "Distinguish equations of the form $y=mx+b$ (linear) from $y=a\\cdot b^{x}$ (exponential)",
+    "Justify a model choice with the equal-differences-versus-equal-factors argument"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Classify from a table",
+      "example": "A table gives $f(0)=3,\\ f(1)=6,\\ f(2)=12,\\ f(3)=24$. Is this linear or exponential, and what is the constant difference or ratio? (Exponential; constant ratio $\\times 2$.)"
+    },
+    {
+      "name": "Classify from a verbal scenario",
+      "example": "A pool is filled at a steady $20$ gallons per minute; a bacteria colony doubles every hour. Which is linear and which is exponential? (Steady amount per minute is linear; doubling is exponential.)"
+    },
+    {
+      "name": "Classify from an equation",
+      "example": "For $y=5(1.08)^{x}$ and $y=5+8x$, identify which is linear and which is exponential, and state the slope or growth factor. ($y=5+8x$ is linear with slope $8$; $y=5(1.08)^{x}$ is exponential with growth factor $1.08$.)"
+    },
+    {
+      "name": "Growth versus decay from a factor or percent",
+      "example": "A car worth \\$20000 loses $15\\%$ of its value each year. Write the model type and the factor $b$. (Exponential decay; $b=1-0.15=0.85$.)"
+    },
+    {
+      "name": "Compare two models / which wins",
+      "example": "Plan A pays \\$100 plus \\$50 each week; Plan B pays \\$1 the first week and doubles each week. Identify each model type and decide which grows faster in the long run. (A linear, B exponential; exponential eventually overtakes linear.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single representation (a clean table, a one-line scenario, or a single equation) where the pattern is obvious. Student names the model type and reads off the constant difference or ratio directly. One conceptual step.",
+      "constraints": [
+        "Table has 3 to 4 rows with integer, equally spaced inputs and an obvious $+k$ or $\\times k$ pattern with small whole numbers",
+        "Scenario uses explicit cue words: 'each year it increases by 5' (linear) or 'doubles' / 'triples' / 'cut in half' (exponential)",
+        "Equation is given in clean form $y=mx+b$ or $y=a\\cdot b^{x}$; only classification is asked",
+        "Answer is the model name plus the value of $m$ or $b$, no percent conversion"
+      ]
+    },
+    "Medium": {
+      "description": "Requires testing the data rather than reading it off, or converting between a percent rate and a factor. Two steps: examine differences AND ratios, or compute $b=1\\pm r$, then classify.",
+      "constraints": [
+        "Tables require computing both first differences and ratios to rule one out; values may be non-integer or include a wider range",
+        "Percent language ('grows $6\\%$ per year', 'falls $20\\%$ each hour') must be converted to a factor $b=1+r$ or $b=1-r$",
+        "Distinguishing growth ($b>1$) from decay ($0<b<1$) is required",
+        "May present an equation that looks linear but is exponential (or vice versa) and ask for a justification"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning or comparison: build the implied model from a description, compare a linear and an exponential model, or reason about long-run behavior and crossover. Student must justify with the equal-differences-versus-equal-factors principle.",
+      "constraints": [
+        "Compare two models given in different representations and decide which is linear, which is exponential, and which eventually grows faster",
+        "Given a partial table with a missing entry, decide the model type then extend it",
+        "Reason that exponential growth eventually exceeds any linear growth regardless of starting values",
+        "Require an explicit justification sentence referencing constant difference versus constant ratio"
+      ]
+    },
+    "tierSplitNote": "This standard is conceptual and well served by ONE ramped worksheet (single). Items 1 to 5 are Easy (direct classification from one clean representation), items 6 to 11 are Medium (test the data, percent-to-factor conversions, growth vs. decay), items 12 to 15 are Hard (compare models, long-run/crossover reasoning, justify with equal differences vs. equal factors). If split into two sheets, tier1 = Easy to Medium (single-representation classification plus factor conversions) and tier2 = Medium to Hard (comparison, growth-vs-decay justification, long-run behavior), with no item overlap."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student assumes any increasing pattern is linear and ignores the possibility of a constant ratio",
+      "distractor": "Calls a table with values $3, 6, 12, 24$ 'linear' because 'the numbers keep going up by more each time' instead of recognizing the constant ratio $\\times 2$"
+    },
+    {
+      "misconception": "Student confuses constant difference with constant ratio",
+      "distractor": "Labels $f(0)=2,\\ f(1)=6,\\ f(2)=18$ as linear with a 'rate of change of $4$' from the first two points, ignoring that the ratio $\\times 3$ is constant but the difference is not"
+    },
+    {
+      "misconception": "Student converts a percent rate to the factor incorrectly, using $r$ instead of $1+r$",
+      "distractor": "For '$8\\%$ growth per year' writes the factor as $b=0.08$ instead of $b=1.08$"
+    },
+    {
+      "misconception": "Student mishandles decay, treating a $15\\%$ loss as a factor of $0.15$ instead of $0.85$",
+      "distractor": "For 'loses $15\\%$ each year' uses $b=0.15$ instead of $b=1-0.15=0.85$"
+    },
+    {
+      "misconception": "Student reads the base of an exponential equation as a slope",
+      "distractor": "For $y=5(1.08)^{x}$ reports a 'slope of $1.08$' or calls it linear because of the constant $1.08$"
+    },
+    {
+      "misconception": "Student believes a faster-starting linear model always stays ahead of an exponential one",
+      "distractor": "Concludes a linear model with a large slope 'always beats' a doubling model, missing that exponential growth eventually overtakes any linear growth"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet (15 items, Easy->Hard). lesson 5 worked examples + 5 practice, quiz 8.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

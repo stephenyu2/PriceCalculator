@@ -1,0 +1,158 @@
+{
+  "id": "A2.A-APR.C.4--quiz",
+  "standard": "A2.A-APR.C.4",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Arithmetic with Polynomials and Rational Expressions",
+  "domainCode": "A-APR",
+  "cluster": "Use polynomial identities to solve problems",
+  "clusterCode": "C",
+  "skillName": "Polynomial Identities",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "intro": "Eight multiple-choice questions on polynomial identities: expanding binomial squares, the difference of squares, sum and difference of cubes, distinguishing identities from conditional equations, and generating Pythagorean triples.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Expand $(x+5)^2$.\nA) $x^2+25$\nB) $x^2+10x+25$\nC) $x^2+5x+25$\nD) $x^2+10x+10$",
+      "answer": "B) $x^2+10x+25$",
+      "solution": {
+        "steps": [
+          "Use the perfect-square pattern $(a+b)^2=a^2+2ab+b^2$ with $a=x$ and $b=5$.",
+          "Then $a^2=x^2$, $2ab=2\\cdot x\\cdot 5=10x$, and $b^2=25$, giving $x^2+10x+25$, which is B.",
+          "A drops the middle term ($2ab=10x$), the freshman's-dream error $(x+5)^2=x^2+25$.",
+          "C uses $5x$ instead of $2\\cdot 5\\cdot x=10x$ for the middle term.",
+          "D incorrectly writes $b^2$ as $10$ instead of $25$."
+        ],
+        "answer": "B) $x^2+10x+25$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Expand $(x-4)^2$.\nA) $x^2-16$\nB) $x^2+8x+16$\nC) $x^2-8x+16$\nD) $x^2-8x-16$",
+      "answer": "C) $x^2-8x+16$",
+      "solution": {
+        "steps": [
+          "Use $(a-b)^2=a^2-2ab+b^2$ with $a=x$ and $b=4$.",
+          "Then $a^2=x^2$, $-2ab=-2\\cdot x\\cdot 4=-8x$, and $b^2=16$, giving $x^2-8x+16$, which is C.",
+          "A drops the middle term entirely, writing $x^2-16$.",
+          "B flips the sign of the middle term to $+8x$ instead of $-8x$.",
+          "D mis-signs the constant: $b^2=(-4)^2=+16$, not $-16$."
+        ],
+        "answer": "C) $x^2-8x+16$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Factor $25x^2-49$ using the difference-of-squares identity.\nA) $(5x-7)(5x+7)$\nB) $(5x-7)^2$\nC) $(25x-49)(x+1)$\nD) does not factor",
+      "answer": "A) $(5x-7)(5x+7)$",
+      "solution": {
+        "steps": [
+          "Recognize $a^2-b^2=(a-b)(a+b)$ with $a=5x$ (since $(5x)^2=25x^2$) and $b=7$ (since $7^2=49$).",
+          "So $25x^2-49=(5x-7)(5x+7)$, which is A.",
+          "B is the perfect-square factoring $(5x-7)^2=25x^2-70x+49$, which has a middle term and is not equal to $25x^2-49$.",
+          "C does not multiply back to $25x^2-49$.",
+          "D is the misconception that a difference of squares cannot be factored."
+        ],
+        "answer": "A) $(5x-7)(5x+7)$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Factor $x^3-27$ using a cube identity.\nA) $(x-3)(x^2-3x+9)$\nB) $(x-3)(x^2+3x+9)$\nC) $(x-3)^3$\nD) $(x-3)(x^2+9)$",
+      "answer": "B) $(x-3)(x^2+3x+9)$",
+      "solution": {
+        "steps": [
+          "Use the difference-of-cubes identity $a^3-b^3=(a-b)(a^2+ab+b^2)$ with $a=x$ and $b=3$.",
+          "Then $a^2=x^2$, $ab=3x$, and $b^2=9$, giving $(x-3)(x^2+3x+9)$, which is B.",
+          "A uses the wrong sign on the middle term ($-3x$ instead of $+3x$).",
+          "C squares and cubes the linear factor, but $(x-3)^3=x^3-9x^2+27x-27\\neq x^3-27$.",
+          "D drops the $+3x$ middle term of the quadratic factor."
+        ],
+        "answer": "B) $(x-3)(x^2+3x+9)$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Factor $8x^3+27$ using a cube identity.\nA) $(2x+3)(4x^2+6x+9)$\nB) $(2x+3)(4x^2+12x+9)$\nC) $(2x+3)(4x^2-6x+9)$\nD) $(2x+3)^3$",
+      "answer": "C) $(2x+3)(4x^2-6x+9)$",
+      "solution": {
+        "steps": [
+          "Use the sum-of-cubes identity $a^3+b^3=(a+b)(a^2-ab+b^2)$ with $a=2x$ (since $(2x)^3=8x^3$) and $b=3$ (since $3^3=27$).",
+          "Then $a^2=4x^2$, $ab=6x$, and $b^2=9$, giving $(2x+3)(4x^2-6x+9)$, which is C.",
+          "A uses $+6x$ instead of $-6x$ on the middle term of the trinomial.",
+          "B writes the quadratic factor as the square $(2x+3)^2=4x^2+12x+9$ instead of the correct $a^2-ab+b^2$.",
+          "D cubes the linear factor; $(2x+3)^3$ is not equal to $8x^3+27$."
+        ],
+        "answer": "C) $(2x+3)(4x^2-6x+9)$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Which statement about $x^2-9=(x-3)(x+3)$ is correct?\nA) It is a conditional equation, true only at $x=\\pm 3$.\nB) It is an identity, true for all real $x$.\nC) It is false because $(x-3)(x+3)=x^2+9$.\nD) It is true only when $x=3$.",
+      "answer": "B) It is an identity, true for all real $x$.",
+      "solution": {
+        "steps": [
+          "Expand the right side: $(x-3)(x+3)=x^2+3x-3x-9=x^2-9$, which matches the left side for every value of $x$.",
+          "An equation true for all values of the variable is an identity, so B is correct.",
+          "A and D treat the identity as a conditional equation to solve; the equality holds for all $x$, not just special values.",
+          "C confuses $a^2-b^2$ with $a^2+b^2$; the product is $x^2-9$, not $x^2+9$."
+        ],
+        "answer": "B) It is an identity, true for all real $x$."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Use the identity $(x^2+y^2)^2=(x^2-y^2)^2+(2xy)^2$ with $x=3$ and $y=2$ to generate a Pythagorean triple. Which triple results, with the hypotenuse listed last?\nA) $(5,12,13)$\nB) $(5,12,12)$\nC) $(13,12,5)$\nD) $(6,5,13)$",
+      "answer": "A) $(5,12,13)$",
+      "solution": {
+        "steps": [
+          "Compute the three pieces: $x^2-y^2=9-4=5$, $2xy=2\\cdot 3\\cdot 2=12$, and $x^2+y^2=9+4=13$.",
+          "The legs are $5$ and $12$ and the hypotenuse is $x^2+y^2=13$, giving $(5,12,13)$, which is A.",
+          "Check: $5^2+12^2=25+144=169=13^2$.",
+          "B uses $2xy=12$ as the hypotenuse instead of $x^2+y^2=13$.",
+          "C lists $13$ as a leg and $5$ as the hypotenuse, so the hypotenuse is not last.",
+          "D uses $2xy$ incorrectly as $6$ (forgetting the factor of $2$ or computing $xy$) and mis-orders the entries."
+        ],
+        "answer": "A) $(5,12,13)$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Is $(x+y)^2=x^2+y^2$ an identity? Choose the correct conclusion.\nA) Yes, it holds for all $x$ and $y$.\nB) Yes, because it holds when $y=0$.\nC) No; at $x=y=1$ the left side is $4$ but the right side is $2$, so the equation fails.\nD) No; the correct identity is $(x+y)^2=x^2-2xy+y^2$.",
+      "answer": "C) No; at $x=y=1$ the left side is $4$ but the right side is $2$, so the equation fails.",
+      "solution": {
+        "steps": [
+          "An identity must hold for every choice of the variables, so a single counterexample disproves it.",
+          "Test $x=y=1$: the left side is $(1+1)^2=4$, while the right side is $1^2+1^2=2$. Since $4\\neq 2$, the equation is not an identity, so C is correct.",
+          "A is false; the equation fails as the counterexample shows.",
+          "B checks only the convenient case $y=0$, where both sides equal $x^2$; one value is not enough to prove an identity.",
+          "D correctly says 'No' but supplies a wrong corrected form; the true identity is $(x+y)^2=x^2+2xy+y^2$, with a $+2xy$ middle term."
+        ],
+        "answer": "C) No; at $x=y=1$ the left side is $4$ but the right side is $2$, so the equation fails."
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T19:38:44.935Z"
+}

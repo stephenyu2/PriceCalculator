@@ -1,0 +1,220 @@
+{
+  "id": "A2.S-IC.B.4--worksheet",
+  "standard": "A2.S-IC.B.4",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+  "domainCode": "S-IC",
+  "cluster": "Make inferences and justify conclusions from sample surveys, experiments, and observational studies",
+  "clusterCode": "B",
+  "skillName": "Estimating Population Parameters",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "In a random sample of $200$ registered voters, $116$ say they support a new park measure. Use the sample to estimate the population proportion $p$ of all voters who support the measure.",
+      "answer": "$\\hat{p}=0.58$",
+      "solution": {
+        "steps": [
+          "The point estimate of a population proportion is the sample proportion $\\hat{p}=\\dfrac{x}{n}$.",
+          "Here $x=116$ supporters out of $n=200$ sampled, so $\\hat{p}=\\dfrac{116}{200}$.",
+          "Divide: $\\hat{p}=\\dfrac{116}{200}=0.58$.",
+          "The best estimate of the population proportion is $\\hat{p}=0.58$, or $58\\%$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A random sample of $5$ daily commute times (in minutes) is $22,\\ 18,\\ 25,\\ 30,\\ 20$. Use the sample to estimate the population mean commute time $\\mu$.",
+      "answer": "$\\bar{x}=23$ minutes",
+      "solution": {
+        "steps": [
+          "The point estimate of a population mean is the sample mean $\\bar{x}=\\dfrac{\\sum x_i}{n}$.",
+          "Add the values: $22+18+25+30+20=115$.",
+          "Divide by the sample size $n=5$: $\\bar{x}=\\dfrac{115}{5}=23$.",
+          "The best estimate of the population mean commute time is $\\bar{x}=23$ minutes."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A simulation resamples $n=50$ many times and produces sample proportions whose middle $95\\%$ run from $0.46$ to $0.62$, centered at $0.54$. Estimate the margin of error for the proportion.",
+      "answer": "$\\text{ME}=0.08$",
+      "solution": {
+        "steps": [
+          "The margin of error from a simulation is the half-width of the middle $95\\%$ of the simulated estimates.",
+          "Find the full width of the interval: $0.62-0.46=0.16$.",
+          "Take half of that width: $\\text{ME}=\\dfrac{0.16}{2}=0.08$.",
+          "The margin of error is $0.08$, so the estimate would be reported as $0.54\\pm 0.08$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A quality inspector reports that the true mean weight $\\mu$ of all cereal boxes in a production run is unknown, while a random sample of $30$ boxes has mean weight $\\bar{x}=24.7$ ounces. State which value is the population parameter and which is the sample statistic.",
+      "answer": "$\\mu$ is the parameter; $\\bar{x}=24.7$ is the statistic.",
+      "solution": {
+        "steps": [
+          "A parameter is a fixed numerical fact about the entire population; a statistic is computed from a sample and varies sample to sample.",
+          "The true mean weight $\\mu$ of all boxes describes the whole population and is fixed but unknown, so it is the parameter.",
+          "The mean $\\bar{x}=24.7$ ounces is computed from the sample of $30$ boxes, so it is the statistic.",
+          "Thus $\\mu$ is the parameter and $\\bar{x}=24.7$ is the statistic; we use the statistic to estimate the parameter."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "In a random sample of $400$ households, $96$ own an electric vehicle. Estimate the population proportion $p$ of households that own an electric vehicle.",
+      "answer": "$\\hat{p}=0.24$",
+      "solution": {
+        "steps": [
+          "Use the sample proportion $\\hat{p}=\\dfrac{x}{n}$ as the point estimate.",
+          "Substitute $x=96$ and $n=400$: $\\hat{p}=\\dfrac{96}{400}$.",
+          "Divide: $\\hat{p}=\\dfrac{96}{400}=0.24$.",
+          "The best estimate of the population proportion is $\\hat{p}=0.24$, or $24\\%$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "From the voter survey, $\\hat{p}=0.58$ with $n=200$. Compute the standard error $SE_{\\hat{p}}=\\sqrt{\\dfrac{\\hat{p}(1-\\hat{p})}{n}}$, rounding to three decimal places.",
+      "answer": "$SE_{\\hat{p}}\\approx 0.035$",
+      "solution": {
+        "steps": [
+          "Find $1-\\hat{p}=1-0.58=0.42$.",
+          "Multiply: $\\hat{p}(1-\\hat{p})=0.58\\times 0.42=0.2436$.",
+          "Divide by $n=200$: $\\dfrac{0.2436}{200}=0.001218$.",
+          "Take the square root: $SE_{\\hat{p}}=\\sqrt{0.001218}\\approx 0.0349$.",
+          "Rounded to three decimal places, $SE_{\\hat{p}}\\approx 0.035$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A random sample of $n=64$ commute times has mean $\\bar{x}=23$ minutes and sample standard deviation $s=8$ minutes. Compute the standard error of the mean, $SE_{\\bar{x}}=\\dfrac{s}{\\sqrt{n}}$, then the $95\\%$ margin of error $\\text{ME}\\approx 2\\cdot SE$.",
+      "answer": "$SE_{\\bar{x}}=1$ minute and $\\text{ME}\\approx 2$ minutes",
+      "solution": {
+        "steps": [
+          "Compute $\\sqrt{n}=\\sqrt{64}=8$.",
+          "Find the standard error: $SE_{\\bar{x}}=\\dfrac{s}{\\sqrt{n}}=\\dfrac{8}{8}=1$ minute.",
+          "Apply the $95\\%$ factor: $\\text{ME}\\approx 2\\cdot SE=2(1)=2$ minutes.",
+          "So $SE_{\\bar{x}}=1$ minute and the margin of error is about $2$ minutes."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A poll estimates the proportion of adults who exercise daily as $\\hat{p}=0.40$ from a sample of $n=100$. Compute the $95\\%$ margin of error using $SE_{\\hat{p}}=\\sqrt{\\dfrac{\\hat{p}(1-\\hat{p})}{n}}$ and $\\text{ME}\\approx 2\\cdot SE$. Round the margin of error to two decimal places.",
+      "answer": "$\\text{ME}\\approx 0.10$",
+      "solution": {
+        "steps": [
+          "Find $1-\\hat{p}=1-0.40=0.60$, so $\\hat{p}(1-\\hat{p})=0.40\\times 0.60=0.24$.",
+          "Divide by $n=100$: $\\dfrac{0.24}{100}=0.0024$.",
+          "Take the square root: $SE_{\\hat{p}}=\\sqrt{0.0024}\\approx 0.049$.",
+          "Apply the factor of $2$: $\\text{ME}\\approx 2(0.049)=0.098$.",
+          "Rounded to two decimal places, $\\text{ME}\\approx 0.10$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "From the voter survey, $\\hat{p}=0.58$ and the margin of error is $\\text{ME}=0.07$. Write the $95\\%$ confidence interval as $\\hat{p}\\pm\\text{ME}$ and give its two endpoints.",
+      "answer": "$0.58\\pm 0.07$, from $0.51$ to $0.65$",
+      "solution": {
+        "steps": [
+          "The interval estimate is $\\text{(point estimate)}\\pm\\text{ME}=0.58\\pm 0.07$.",
+          "Lower endpoint: $0.58-0.07=0.51$.",
+          "Upper endpoint: $0.58+0.07=0.65$.",
+          "The $95\\%$ confidence interval runs from $0.51$ to $0.65$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A survey reports a $95\\%$ confidence interval of $0.51$ to $0.65$ for the proportion of all voters who support a park measure. Write one sentence interpreting this interval in context.",
+      "answer": "We are $95\\%$ confident that the true proportion of all voters who support the measure is between $0.51$ and $0.65$ (that is, between $51\\%$ and $65\\%$).",
+      "solution": {
+        "steps": [
+          "A confidence interval is a statement about the unknown population parameter $p$, not about the sample.",
+          "The confidence level $95\\%$ describes how often this method captures the true parameter over many samples.",
+          "State it in context: we are $95\\%$ confident the true proportion $p$ of all voters supporting the measure lies between $0.51$ and $0.65$.",
+          "Equivalently, the true support is plausibly between $51\\%$ and $65\\%$ of all voters."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A national poll using a random sample of $n=400$ reports a margin of error of $0.05$ for a proportion. To cut the margin of error to $0.025$, what sample size $n$ is needed? Justify using the relationship $\\text{ME}\\propto\\dfrac{1}{\\sqrt{n}}$.",
+      "answer": "$n=1600$",
+      "solution": {
+        "steps": [
+          "The margin of error shrinks like $\\dfrac{1}{\\sqrt{n}}$, so halving the margin of error requires multiplying $\\sqrt{n}$ by $2$.",
+          "Multiplying $\\sqrt{n}$ by $2$ multiplies $n$ itself by $2^2=4$.",
+          "Cutting $\\text{ME}$ from $0.05$ to $0.025$ is halving it, so the sample size must grow by a factor of $4$.",
+          "Compute: $n=4\\times 400=1600$.",
+          "A sample of $n=1600$ is needed to reach a margin of error of $0.025$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A pollster knows that $\\hat{p}=0.50$ and the $95\\%$ margin of error came out to exactly $0.05$ using $\\text{ME}=2\\sqrt{\\dfrac{\\hat{p}(1-\\hat{p})}{n}}$. Work backward to recover the sample size $n$.",
+      "answer": "$n=400$",
+      "solution": {
+        "steps": [
+          "Start from $\\text{ME}=2\\sqrt{\\dfrac{\\hat{p}(1-\\hat{p})}{n}}$ with $\\hat{p}=0.50$, so $\\hat{p}(1-\\hat{p})=0.50\\times 0.50=0.25$.",
+          "Substitute the known margin of error: $0.05=2\\sqrt{\\dfrac{0.25}{n}}$.",
+          "Divide both sides by $2$: $0.025=\\sqrt{\\dfrac{0.25}{n}}$.",
+          "Square both sides: $0.025^2=\\dfrac{0.25}{n}$, so $0.000625=\\dfrac{0.25}{n}$.",
+          "Solve for $n$: $n=\\dfrac{0.25}{0.000625}=400$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A factory takes a random sample of $n=100$ bolts and records lengths with sample mean $\\bar{x}=50.2$ mm and sample standard deviation $s=4$ mm. Compute the standard error, the $95\\%$ margin of error ($\\text{ME}\\approx 2\\cdot SE$), state the interval estimate, and interpret it in one sentence.",
+      "answer": "$SE=0.4$ mm, $\\text{ME}=0.8$ mm, interval $50.2\\pm 0.8$ mm (from $49.4$ to $51.0$ mm); we are $95\\%$ confident the true mean bolt length is between $49.4$ and $51.0$ mm.",
+      "solution": {
+        "steps": [
+          "Compute $\\sqrt{n}=\\sqrt{100}=10$, so $SE_{\\bar{x}}=\\dfrac{s}{\\sqrt{n}}=\\dfrac{4}{10}=0.4$ mm.",
+          "Find the margin of error: $\\text{ME}\\approx 2\\cdot SE=2(0.4)=0.8$ mm.",
+          "Build the interval: $\\bar{x}\\pm\\text{ME}=50.2\\pm 0.8$, giving endpoints $50.2-0.8=49.4$ and $50.2+0.8=51.0$ mm.",
+          "Interpret in context: we are $95\\%$ confident the true mean length of all bolts is between $49.4$ mm and $51.0$ mm."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Study A samples $n=900$ residents and Study B samples $n=100$ residents from the same city, each estimating the same proportion. Which study gives the more precise estimate (smaller margin of error), and by what factor is its margin of error smaller? Justify with $\\text{ME}\\propto\\dfrac{1}{\\sqrt{n}}$.",
+      "answer": "Study A is more precise; its margin of error is $3$ times smaller.",
+      "solution": {
+        "steps": [
+          "Since $\\text{ME}\\propto\\dfrac{1}{\\sqrt{n}}$, a larger sample size gives a smaller margin of error, so Study A ($n=900$) is more precise than Study B ($n=100$).",
+          "Compare the margins of error by the ratio of the reciprocals of the square roots: $\\dfrac{\\text{ME}_A}{\\text{ME}_B}=\\dfrac{1/\\sqrt{900}}{1/\\sqrt{100}}=\\dfrac{\\sqrt{100}}{\\sqrt{900}}=\\dfrac{10}{30}=\\dfrac{1}{3}$.",
+          "So Study A's margin of error is $\\dfrac{1}{3}$ as large, i.e. $3$ times smaller than Study B's.",
+          "Study A gives the more precise estimate, with a margin of error $3$ times smaller."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A reporter sees a $95\\%$ confidence interval of $0.51$ to $0.65$ for a proportion and writes: \"There is a $95\\%$ chance that the sample proportion $\\hat{p}=0.58$ lies between $0.51$ and $0.65$.\" Explain what is wrong with this interpretation and state the correct one.",
+      "answer": "The interval is a statement about the population parameter $p$, not the sample statistic $\\hat{p}$; correctly, we are $95\\%$ confident the true population proportion $p$ lies between $0.51$ and $0.65$.",
+      "solution": {
+        "steps": [
+          "The sample proportion $\\hat{p}=0.58$ is a known fixed number that sits at the center of the interval, so there is no chance involved about where it lands; the claim wrongly attaches probability to the statistic.",
+          "A $95\\%$ confidence interval is built to capture the unknown population parameter $p$, not to describe the sample value.",
+          "The confidence level $95\\%$ refers to the long-run success rate of the method across many samples, not a probability about one fixed parameter or about the sample.",
+          "Correct interpretation: we are $95\\%$ confident that the true population proportion $p$ lies between $0.51$ and $0.65$."
+        ]
+      }
+    }
+  ]
+}

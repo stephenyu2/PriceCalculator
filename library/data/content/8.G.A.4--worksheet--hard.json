@@ -1,0 +1,230 @@
+{
+  "id": "8.G.A.4--worksheet--hard",
+  "standard": "8.G.A.4",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand congruence and similarity using physical models, transparencies, or geometry software",
+  "clusterCode": "A",
+  "skillName": "Similarity and Dilations",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "These problems ask you to recover the center and scale factor of a dilation, describe complete sequences of transformations that exhibit similarity, and chain several proportional steps with full justification. Work with exact values (fractions and radicals), keep transformations in the correct order, and remember that dilations preserve angle measure while scaling lengths by $k$ and areas by $k^2$.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A dilation centered at the origin maps $A(3,6)$ to $A'(2,4)$. The same dilation maps $B(-6,9)$ to $B'$. Find the scale factor $k$ and the coordinates of $B'$.",
+      "answer": "$k=\\frac{2}{3}$, and $B'=(-4,6)$",
+      "solution": {
+        "steps": [
+          "For a dilation about the origin, $A'=(kx,ky)$, so $k=\\frac{\\text{image coordinate}}{\\text{original coordinate}}$.",
+          "Use the $x$-coordinates of $A$ and $A'$: $k=\\frac{2}{3}$. Check with $y$: $\\frac{2}{3}\\cdot 6=4$. Confirmed.",
+          "Apply $k=\\frac{2}{3}$ to $B(-6,9)$: $B'=\\big(\\tfrac{2}{3}(-6),\\,\\tfrac{2}{3}(9)\\big)$.",
+          "$\\frac{2}{3}\\cdot(-6)=-4$ and $\\frac{2}{3}\\cdot 9=6$, so $B'=(-4,6)$."
+        ],
+        "answer": "$k=\\frac{2}{3}$, $B'=(-4,6)$"
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Segment $\\overline{PQ}$ has endpoints $P(2,3)$ and $Q(6,5)$. A dilation maps it to $\\overline{P'Q'}$ with $P'(2,3)$ and $Q'(14,9)$. Find the center of dilation and the scale factor $k$.",
+      "answer": "The center is $P(2,3)$ (a fixed point) and $k=3$.",
+      "solution": {
+        "steps": [
+          "A point that maps to itself under a dilation is the center, unless $k=1$. Since $P'=P=(2,3)$ but the segment changed size, the center is $C(2,3)$.",
+          "Find $k$ from $Q$ and $Q'$ relative to the center: $k=\\frac{Q'-C}{Q-C}$ component-wise.",
+          "$x$: $\\frac{14-2}{6-2}=\\frac{12}{4}=3$. $y$: $\\frac{9-3}{5-3}=\\frac{6}{2}=3$.",
+          "Both components give $k=3$, so the dilation has center $(2,3)$ and scale factor $3$."
+        ],
+        "answer": "Center $(2,3)$, $k=3$"
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A dilation maps $A(1,2)$ to $A'(7,8)$ and $B(4,2)$ to $B'(16,8)$. Determine the center of dilation and the scale factor.",
+      "answer": "The center is $C(-2,-1)$ and $k=3$.",
+      "solution": {
+        "steps": [
+          "The scale factor equals the ratio of image-segment length to original-segment length. $AB$ runs from $(1,2)$ to $(4,2)$, length $3$. $A'B'$ runs from $(7,8)$ to $(16,8)$, length $9$. So $k=\\frac{9}{3}=3$.",
+          "The center, original, and image are collinear with $A'-C=k(A-C)$. Solve $7=c_x+3(1-c_x)$ for $c_x$: $7=3-2c_x$, so $-2c_x=4$, $c_x=-2$.",
+          "Solve $8=c_y+3(2-c_y)$: $8=6-2c_y$, so $-2c_y=2$, $c_y=-1$.",
+          "Check with $B$: $-2+3(4-(-2))=-2+18=16$ ✓ and $-1+3(2-(-1))=-1+9=8$ ✓. Center $(-2,-1)$, $k=3$."
+        ],
+        "answer": "Center $(-2,-1)$, $k=3$"
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Triangle $ABC$ has vertices $A(0,0)$, $B(4,0)$, $C(0,3)$. Triangle $A'B'C'$ has vertices $A'(1,1)$, $B'(1,9)$, $C'(-5,1)$. Describe a complete sequence of transformations (including a dilation) that maps $\\triangle ABC$ onto $\\triangle A'B'C'$, and state the scale factor.",
+      "answer": "Dilate by $k=2$ about the origin, rotate $90^\\circ$ counterclockwise about the origin, then translate by $(1,1)$. Scale factor $k=2$.",
+      "solution": {
+        "steps": [
+          "Compare side lengths. $AB=4$, $A'B'=8$; $AC=3$, $A'C'=6$. Each image side is twice the original, so $k=2$.",
+          "Dilate $\\triangle ABC$ about the origin by $k=2$: $A\\to(0,0)$, $B\\to(8,0)$, $C\\to(0,6)$.",
+          "The image is rotated relative to the target, so rotate $90^\\circ$ counterclockwise about the origin: $(x,y)\\mapsto(-y,x)$. Then $(0,0)\\to(0,0)$, $(8,0)\\to(0,8)$, $(0,6)\\to(-6,0)$.",
+          "Translate by $(1,1)$: $(0,0)\\to(1,1)=A'$, $(0,8)\\to(1,9)=B'$, $(-6,0)\\to(-5,1)=C'$. All three match, confirming the sequence."
+        ],
+        "answer": "Dilation $k=2$ about the origin, then a $90^\\circ$ counterclockwise rotation about the origin, then a translation by $(1,1)$"
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A dilation about the origin with scale factor $k=4$ is applied to a triangle whose area is $\\frac{5}{2}$ square units. Find the area of the image, and explain why the side ratio and the area ratio differ.",
+      "answer": "The image area is $40$ square units. Lengths scale by $k=4$ but area scales by $k^2=16$.",
+      "solution": {
+        "steps": [
+          "A dilation multiplies every length by $k$. Area depends on two dimensions, so it is multiplied by $k^2$.",
+          "Here $k=4$, so $k^2=16$.",
+          "Image area $=16\\times\\frac{5}{2}=\\frac{80}{2}=40$ square units.",
+          "The side ratio is $4$ (one factor of $k$) while the area ratio is $16$ (two factors of $k$); that is why they differ."
+        ],
+        "answer": "$40$ square units; area scales by $k^2=16$, not by $k=4$"
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "$\\triangle ABC\\sim\\triangle DEF$. In $\\triangle ABC$, $AB=9$, $BC=12$, and $AC=15$. In $\\triangle DEF$, the side corresponding to $BC$ has length $18$. Find the perimeter of $\\triangle DEF$.",
+      "answer": "The perimeter of $\\triangle DEF$ is $54$.",
+      "solution": {
+        "steps": [
+          "The scale factor from $\\triangle ABC$ to $\\triangle DEF$ uses corresponding sides $BC$ and $EF$: $k=\\frac{18}{12}=\\frac{3}{2}$.",
+          "Perimeter scales by the same factor as the sides. Perimeter of $\\triangle ABC=9+12+15=36$.",
+          "Perimeter of $\\triangle DEF=\\frac{3}{2}\\times 36=54$.",
+          "Check by scaling each side: $9\\cdot\\frac{3}{2}=13.5$, $12\\cdot\\frac{3}{2}=18$, $15\\cdot\\frac{3}{2}=22.5$; sum $=54$ ✓."
+        ],
+        "answer": "$54$"
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Point $P(7,-1)$ is dilated about center $C(3,1)$ with scale factor $k=\\frac{5}{2}$. Find the image $P'$.",
+      "answer": "$P'=(13,-4)$",
+      "solution": {
+        "steps": [
+          "Use $(x,y)\\mapsto\\big(c_x+k(x-c_x),\\,c_y+k(y-c_y)\\big)$ with $C(3,1)$ and $k=\\frac{5}{2}$.",
+          "$x$-coordinate: $3+\\frac{5}{2}(7-3)=3+\\frac{5}{2}(4)=3+10=13$.",
+          "$y$-coordinate: $1+\\frac{5}{2}(-1-1)=1+\\frac{5}{2}(-2)=1-5=-4$.",
+          "So $P'=(13,-4)$."
+        ],
+        "answer": "$(13,-4)$"
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Rectangle $R$ measures $6$ by $10$. Rectangle $S$ measures $9$ by $16$. Determine whether $R$ and $S$ are similar. Justify your answer using corresponding side ratios.",
+      "answer": "They are not similar, because $\\frac{9}{6}=\\frac{3}{2}$ but $\\frac{16}{10}=\\frac{8}{5}$, and $\\frac{3}{2}\\neq\\frac{8}{5}$.",
+      "solution": {
+        "steps": [
+          "Similar figures require equal ratios of all corresponding sides, not merely equal differences.",
+          "Compare shorter sides: $\\frac{9}{6}=\\frac{3}{2}=1.5$.",
+          "Compare longer sides: $\\frac{16}{10}=\\frac{8}{5}=1.6$.",
+          "Since $\\frac{3}{2}\\neq\\frac{8}{5}$, no single scale factor maps $R$ to $S$, so the rectangles are not similar."
+        ],
+        "answer": "Not similar: $\\frac{9}{6}=\\frac{3}{2}\\neq\\frac{8}{5}=\\frac{16}{10}$"
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A figure is mapped to its image by a reflection across the $x$-axis followed by a dilation about the origin with scale factor $k=\\frac{1}{2}$. Is the image congruent to the original, similar but not congruent, or neither? Explain.",
+      "answer": "Similar but not congruent, because the dilation with $k=\\frac{1}{2}\\neq 1$ changes the size.",
+      "solution": {
+        "steps": [
+          "A reflection is a rigid motion: it preserves both size and shape.",
+          "A dilation preserves shape (angles and side ratios) but changes size unless $k=1$.",
+          "Here $k=\\frac{1}{2}$, so all lengths are halved; the image is smaller than the original.",
+          "Because shape is preserved but size changes, the image is similar but not congruent to the original."
+        ],
+        "answer": "Similar but not congruent"
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A dilation about the origin maps $T(-8,12)$ to $T'(-6,9)$. A second figure has a side of length $20$. After the same dilation, what is the length of the corresponding side, and is the image larger or smaller than the original?",
+      "answer": "The corresponding side is $15$, and the image is smaller because $0<k<1$.",
+      "solution": {
+        "steps": [
+          "Find $k$ from $T$ and $T'$ about the origin: $k=\\frac{-6}{-8}=\\frac{3}{4}$. Check with $y$: $\\frac{9}{12}=\\frac{3}{4}$ ✓.",
+          "Lengths scale by $k$, so the side of length $20$ becomes $\\frac{3}{4}\\times 20=15$.",
+          "Since $0<k=\\frac{3}{4}<1$, the dilation reduces the figure.",
+          "Therefore the corresponding side is $15$ and the image is smaller than the original."
+        ],
+        "answer": "$15$; smaller (since $k=\\frac{3}{4}<1$)"
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Triangle $JKL$ has vertices $J(2,2)$, $K(2,6)$, $L(5,2)$. It is dilated about center $C(2,2)$ with scale factor $k=\\frac{3}{2}$. Find the coordinates of all three image vertices.",
+      "answer": "$J'(2,2)$, $K'(2,8)$, $L'(6.5,2)$",
+      "solution": {
+        "steps": [
+          "Use $(x,y)\\mapsto\\big(2+\\tfrac{3}{2}(x-2),\\,2+\\tfrac{3}{2}(y-2)\\big)$ for center $C(2,2)$, $k=\\frac{3}{2}$.",
+          "$J(2,2)$ is the center, so it is fixed: $J'=(2,2)$.",
+          "$K(2,6)$: $x=2+\\frac{3}{2}(0)=2$; $y=2+\\frac{3}{2}(4)=2+6=8$, so $K'=(2,8)$.",
+          "$L(5,2)$: $x=2+\\frac{3}{2}(3)=2+4.5=6.5$; $y=2+\\frac{3}{2}(0)=2$, so $L'=(6.5,2)$."
+        ],
+        "answer": "$J'(2,2)$, $K'(2,8)$, $L'(6.5,2)$"
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A photo is $4$ inches by $6$ inches. It is enlarged so that the longer side becomes $15$ inches, keeping the picture similar. Find the new shorter side and the ratio of the enlarged area to the original area.",
+      "answer": "The new shorter side is $10$ inches and the area ratio is $\\frac{25}{4}$.",
+      "solution": {
+        "steps": [
+          "For the picture to stay similar, both sides scale by the same factor. From the longer side: $k=\\frac{15}{6}=\\frac{5}{2}$.",
+          "New shorter side $=\\frac{5}{2}\\times 4=10$ inches.",
+          "Area scales by $k^2=\\left(\\frac{5}{2}\\right)^2=\\frac{25}{4}$.",
+          "So the enlarged area is $\\frac{25}{4}$ times the original (check: original $24$, enlarged $10\\times15=150$, and $\\frac{150}{24}=\\frac{25}{4}$ ✓)."
+        ],
+        "answer": "Shorter side $10$ inches; area ratio $\\frac{25}{4}$"
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "$\\triangle ABC\\sim\\triangle PQR$ with $\\angle A=2x+10$ degrees and the corresponding angle $\\angle P=4x-30$ degrees. Also $AB=12$ and the corresponding side $PQ=30$. Find the value of $x$, the measure of $\\angle A$, and the scale factor from $\\triangle ABC$ to $\\triangle PQR$.",
+      "answer": "$x=20$, $\\angle A=50^\\circ$, and $k=\\frac{5}{2}$.",
+      "solution": {
+        "steps": [
+          "Similar triangles have equal corresponding angles, so $\\angle A=\\angle P$: $2x+10=4x-30$.",
+          "Solve: $10+30=4x-2x$, so $40=2x$, giving $x=20$.",
+          "Then $\\angle A=2(20)+10=50^\\circ$ (and $\\angle P=4(20)-30=50^\\circ$ ✓).",
+          "The scale factor from $\\triangle ABC$ to $\\triangle PQR$ uses corresponding sides: $k=\\frac{PQ}{AB}=\\frac{30}{12}=\\frac{5}{2}$."
+        ],
+        "answer": "$x=20$, $\\angle A=50^\\circ$, $k=\\frac{5}{2}$"
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A dilation about the origin with scale factor $k=-2$ maps $D(3,-1)$ to $D'$. Find $D'$, and explain what the negative scale factor does geometrically compared with $k=2$.",
+      "answer": "$D'=(-6,2)$. A negative scale factor enlarges by $|k|=2$ and also sends each point to the opposite side of the center (a $180^\\circ$ rotation about the origin), unlike $k=2$ which keeps points on the same side.",
+      "solution": {
+        "steps": [
+          "About the origin, $(x,y)\\mapsto(kx,ky)$ with $k=-2$.",
+          "$D(3,-1)\\mapsto(-2\\cdot3,\\,-2\\cdot(-1))=(-6,2)$, so $D'=(-6,2)$.",
+          "The magnitude $|k|=2$ doubles every distance from the center, so the figure is enlarged.",
+          "The negative sign reverses direction through the center, the same effect as a $180^\\circ$ rotation about the origin; with $k=2$ the image stays on the same side as the original."
+        ],
+        "answer": "$D'=(-6,2)$; the negative sign reflects each point through the origin (a $180^\\circ$ rotation) while $|k|=2$ doubles distances"
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Quadrilateral $W$ has vertices $(0,0)$, $(2,0)$, $(2,2)$, $(0,2)$. Quadrilateral $W'$ has vertices $(3,1)$, $(3,7)$, $(-3,7)$, $(-3,1)$. Describe a sequence of transformations (including a dilation) mapping $W$ onto $W'$, state the scale factor, and find the ratio of the area of $W'$ to the area of $W$.",
+      "answer": "Dilate $W$ by $k=3$ about the origin, rotate $90^\\circ$ counterclockwise about the origin, then translate by $(3,1)$. Scale factor $k=3$, and the area ratio is $9$.",
+      "solution": {
+        "steps": [
+          "Side length of $W$ is $2$. Side length of $W'$: from $(3,1)$ to $(3,7)$ is $6$. So $k=\\frac{6}{2}=3$.",
+          "Dilate $W$ about the origin by $k=3$: the vertices become $(0,0)$, $(6,0)$, $(6,6)$, $(0,6)$.",
+          "Rotate $90^\\circ$ counterclockwise about the origin, $(x,y)\\mapsto(-y,x)$: $(0,0)\\to(0,0)$, $(6,0)\\to(0,6)$, $(6,6)\\to(-6,6)$, $(0,6)\\to(-6,0)$.",
+          "Translate by $(3,1)$: $(0,0)\\to(3,1)$, $(0,6)\\to(3,7)$, $(-6,6)\\to(-3,7)$, $(-6,0)\\to(-3,1)$, matching $W'$. Area scales by $k^2=3^2=9$, so the area ratio is $9$."
+        ],
+        "answer": "Dilation $k=3$ about the origin, then a $90^\\circ$ counterclockwise rotation about the origin, then a translation by $(3,1)$; area ratio $=k^2=9$"
+      }
+    }
+  ]
+}

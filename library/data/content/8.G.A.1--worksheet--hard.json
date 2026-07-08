@@ -1,0 +1,217 @@
+{
+  "id": "8.G.A.1--worksheet--hard",
+  "standard": "8.G.A.1",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand congruence and similarity using physical models, transparencies, or geometry software",
+  "clusterCode": "A",
+  "skillName": "Properties of Rigid Transformations",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "Rotations, reflections, and translations are rigid motions: they preserve segment length, angle measure, and parallelism. These problems ask you to identify transformations, verify two invariants at once, work with compositions, and reason about orientation and why dilations are excluded.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Triangle $ABC$ has vertices $A(1,2)$, $B(4,2)$, and $C(1,6)$. Its image is $A'(-2,1)$, $B'(-2,4)$, $C'(-6,1)$. Identify the single rigid motion that maps $ABC$ onto $A'B'C'$.",
+      "answer": "A $90^\\circ$ counterclockwise rotation about the origin, $(x,y)\\to(-y,x)$",
+      "solution": {
+        "steps": [
+          "Test the rule $(x,y)\\to(-y,x)$ on $A(1,2)$: $(-2,1)=A'$. Correct.",
+          "Test on $B(4,2)$: $(-2,4)=B'$. Correct.",
+          "Test on $C(1,6)$: $(-6,1)=C'$. Correct.",
+          "All three vertices follow $(x,y)\\to(-y,x)$, which is a $90^\\circ$ counterclockwise rotation about the origin."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Segment $\\overline{PQ}$ has endpoints $P(-3,1)$ and $Q(2,4)$. It is translated by $(x,y)\\to(x+5,\\;y-2)$. Verify both that the image has the same length as $\\overline{PQ}$ and that $\\overline{PQ}\\parallel\\overline{P'Q'}$.",
+      "answer": "Both segments have length $\\sqrt{34}$, and both have slope $\\frac{3}{5}$, so they are parallel.",
+      "solution": {
+        "steps": [
+          "Length of $\\overline{PQ}$: $\\sqrt{(2-(-3))^2+(4-1)^2}=\\sqrt{5^2+3^2}=\\sqrt{34}$.",
+          "Apply the rule: $P'=(-3+5,\\,1-2)=(2,-1)$ and $Q'=(2+5,\\,4-2)=(7,2)$.",
+          "Length of $\\overline{P'Q'}$: $\\sqrt{(7-2)^2+(2-(-1))^2}=\\sqrt{5^2+3^2}=\\sqrt{34}$. Lengths match.",
+          "Slope of $\\overline{PQ}$: $\\frac{4-1}{2-(-3)}=\\frac{3}{5}$. Slope of $\\overline{P'Q'}$: $\\frac{2-(-1)}{7-2}=\\frac{3}{5}$.",
+          "Equal slopes confirm the segments are parallel, and equal lengths confirm length is preserved."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Triangle $DEF$ with vertices $D(2,3)$, $E(5,3)$, $F(2,7)$ is reflected over the line $y=x$. Find the image vertices and state whether orientation is preserved or reversed.",
+      "answer": "$D'(3,2)$, $E'(3,5)$, $F'(7,2)$; orientation is reversed.",
+      "solution": {
+        "steps": [
+          "Reflection over $y=x$ uses $(x,y)\\to(y,x)$.",
+          "$D(2,3)\\to D'(3,2)$, $E(5,3)\\to E'(3,5)$, $F(2,7)\\to F'(7,2)$.",
+          "A reflection reverses orientation: if $D\\to E\\to F$ runs counterclockwise, then $D'\\to E'\\to F'$ runs clockwise.",
+          "Therefore orientation is reversed, while length and angle measure are preserved."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Lines $\\ell$ and $m$ are parallel, each with slope $-\\frac{3}{4}$. The plane is rotated $180^\\circ$ about the origin. Find the slopes of the image lines $\\ell'$ and $m'$ and state whether they are still parallel.",
+      "answer": "Both image lines have slope $-\\frac{3}{4}$; they are still parallel.",
+      "solution": {
+        "steps": [
+          "A $180^\\circ$ rotation about the origin uses $(x,y)\\to(-x,-y)$.",
+          "Take two points on a line, $(x_1,y_1)$ and $(x_2,y_2)$. Their images are $(-x_1,-y_1)$ and $(-x_2,-y_2)$.",
+          "Slope of the image: $\\frac{-y_2-(-y_1)}{-x_2-(-x_1)}=\\frac{-(y_2-y_1)}{-(x_2-x_1)}=\\frac{y_2-y_1}{x_2-x_1}$, the same slope.",
+          "So $\\ell'$ and $m'$ each have slope $-\\frac{3}{4}$.",
+          "Equal slopes mean the images are still parallel; rigid motions preserve parallelism."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Quadrilateral with vertices $(1,1),(3,1),(3,3),(1,3)$ maps to $(2,2),(6,2),(6,6),(2,6)$. Is this transformation a rigid motion? Justify using a length comparison.",
+      "answer": "No. One side has length $2$ in the pre-image but length $4$ in the image, so length is not preserved; this is a dilation with scale factor $2$, not a rigid motion.",
+      "solution": {
+        "steps": [
+          "Pre-image bottom side from $(1,1)$ to $(3,1)$ has length $\\sqrt{(3-1)^2+0^2}=2$.",
+          "Image bottom side from $(2,2)$ to $(6,2)$ has length $\\sqrt{(6-2)^2+0^2}=4$.",
+          "The length doubled, so length is not preserved.",
+          "Rigid motions must preserve length, so this cannot be a rigid motion. It is a dilation centered at the origin with scale factor $2$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Point $A(4,-1)$ is first reflected over the $x$-axis, then the result is translated by $(x,y)\\to(x-6,\\;y+2)$. Find the coordinates of the final image $A''$.",
+      "answer": "$A''(-2,3)$",
+      "solution": {
+        "steps": [
+          "Reflect $A(4,-1)$ over the $x$-axis with $(x,y)\\to(x,-y)$: $A'=(4,1)$.",
+          "Translate $A'(4,1)$ by $(x,y)\\to(x-6,\\,y+2)$: $A''=(4-6,\\,1+2)=(-2,3)$.",
+          "The final image is $A''(-2,3)$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Triangle $GHJ$ has vertices $G(-4,2)$, $H(-1,2)$, $J(-4,6)$. It maps to $G'(4,-2)$, $H'(1,-2)$, $J'(4,-6)$. Identify the rigid motion and explain how you know it is not a reflection over a single axis.",
+      "answer": "A $180^\\circ$ rotation about the origin, $(x,y)\\to(-x,-y)$. Both coordinates change sign, whereas an axis reflection negates only one coordinate.",
+      "solution": {
+        "steps": [
+          "Test $(x,y)\\to(-x,-y)$ on $G(-4,2)$: $(4,-2)=G'$. On $H(-1,2)$: $(1,-2)=H'$. On $J(-4,6)$: $(4,-6)=J'$. All match.",
+          "This rule is a $180^\\circ$ rotation about the origin.",
+          "A reflection over the $x$-axis would give $(x,-y)$, and over the $y$-axis $(-x,y)$; each negates only one coordinate.",
+          "Here both coordinates are negated, so it is a rotation, not a single-axis reflection."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "In triangle $RST$, angle $S$ measures $47^\\circ$ and side $\\overline{RS}$ has length $\\sqrt{52}$. The triangle is rotated $270^\\circ$ counterclockwise about the origin. State the measure of the corresponding angle $S'$ and the length of $\\overline{R'S'}$, with justification.",
+      "answer": "$m\\angle S'=47^\\circ$ and $R'S'=\\sqrt{52}=2\\sqrt{13}$, because rotations preserve both angle measure and length.",
+      "solution": {
+        "steps": [
+          "A $270^\\circ$ counterclockwise rotation about the origin is a rigid motion.",
+          "Rigid motions preserve angle measure, so $m\\angle S'=m\\angle S=47^\\circ$.",
+          "Rigid motions preserve segment length, so $R'S'=RS=\\sqrt{52}$.",
+          "Simplify the radical: $\\sqrt{52}=\\sqrt{4\\cdot 13}=2\\sqrt{13}$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Segment $\\overline{MN}$ has endpoints $M(-2,-3)$ and $N(3,1)$. It is rotated $90^\\circ$ clockwise about the origin using $(x,y)\\to(y,-x)$. Verify the image length equals the pre-image length.",
+      "answer": "Both segments have length $\\sqrt{41}$, so length is preserved.",
+      "solution": {
+        "steps": [
+          "Length of $\\overline{MN}$: $\\sqrt{(3-(-2))^2+(1-(-3))^2}=\\sqrt{5^2+4^2}=\\sqrt{41}$.",
+          "Apply $(x,y)\\to(y,-x)$: $M'=(-3,2)$ and $N'=(1,-3)$.",
+          "Length of $\\overline{M'N'}$: $\\sqrt{(1-(-3))^2+(-3-2)^2}=\\sqrt{4^2+(-5)^2}=\\sqrt{41}$.",
+          "The lengths are equal, confirming the rotation preserves length."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Triangle with vertices $K(2,-1)$, $L(5,-1)$, $M(2,-5)$ maps to $K'(-2,-1)$, $L'(-5,-1)$, $M'(-2,-5)$. Identify the transformation, and verify that side $\\overline{KM}$ stays parallel to its image $\\overline{K'M'}$.",
+      "answer": "A reflection over the $y$-axis, $(x,y)\\to(-x,y)$; both $\\overline{KM}$ and $\\overline{K'M'}$ are vertical (undefined slope), so they are parallel.",
+      "solution": {
+        "steps": [
+          "Test $(x,y)\\to(-x,y)$ on $K(2,-1)$: $(-2,-1)=K'$. On $L(5,-1)$: $(-5,-1)=L'$. On $M(2,-5)$: $(-2,-5)=M'$. All match, so it is a reflection over the $y$-axis.",
+          "$\\overline{KM}$ goes from $(2,-1)$ to $(2,-5)$: $x$ is constant, so it is a vertical line.",
+          "$\\overline{K'M'}$ goes from $(-2,-1)$ to $(-2,-5)$: $x$ is constant, so it is also vertical.",
+          "Two vertical lines are parallel, confirming parallelism is preserved."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Point $B(3,-2)$ is rotated $90^\\circ$ counterclockwise about the origin, then reflected over the $y$-axis. Find $B''$, and state whether the overall composition reverses orientation.",
+      "answer": "$B''(-2,3)$; the composition reverses orientation because it includes exactly one reflection.",
+      "solution": {
+        "steps": [
+          "Rotate $B(3,-2)$ by $90^\\circ$ counterclockwise, $(x,y)\\to(-y,x)$: $B'=(2,3)$.",
+          "Reflect $B'(2,3)$ over the $y$-axis, $(x,y)\\to(-x,y)$: $B''=(-2,3)$.",
+          "A rotation preserves orientation and a reflection reverses it.",
+          "With one reflection in the composition, the overall orientation is reversed."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Lines $\\ell$ and $m$ pass through $\\ell:\\,(0,1),(2,4)$ and $m:\\,(0,-2),(2,1)$. After a translation by $(x,y)\\to(x+4,\\;y-3)$, determine the slopes of the image lines and confirm whether the images are parallel, just as the originals are.",
+      "answer": "Both originals have slope $\\frac{3}{2}$, and both images have slope $\\frac{3}{2}$, so the images are parallel, matching the originals.",
+      "solution": {
+        "steps": [
+          "Slope of $\\ell$: $\\frac{4-1}{2-0}=\\frac{3}{2}$. Slope of $m$: $\\frac{1-(-2)}{2-0}=\\frac{3}{2}$. The originals are parallel.",
+          "Translate $\\ell$'s points: $(0,1)\\to(4,-2)$ and $(2,4)\\to(6,1)$. Image slope: $\\frac{1-(-2)}{6-4}=\\frac{3}{2}$.",
+          "Translate $m$'s points: $(0,-2)\\to(4,-5)$ and $(2,1)\\to(6,-2)$. Image slope: $\\frac{-2-(-5)}{6-4}=\\frac{3}{2}$.",
+          "Both image slopes equal $\\frac{3}{2}$, so the images are parallel; translation preserves parallelism."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Triangle $XYZ$ has $X(1,1)$, $Y(4,1)$, $Z(1,5)$. Triangle $X'Y'Z'$ has $X'(2,2)$, $Y'(8,2)$, $Z'(2,10)$. Determine whether the two triangles are related by a rigid motion. Justify with two side-length comparisons.",
+      "answer": "No. Side $\\overline{XY}=3$ maps to $X'Y'=6$, and $\\overline{XZ}=4$ maps to $X'Z'=8$; both doubled, so length is not preserved and the relation is a dilation, not a rigid motion.",
+      "solution": {
+        "steps": [
+          "$\\overline{XY}$ from $(1,1)$ to $(4,1)$ has length $\\sqrt{(4-1)^2+0^2}=3$; $\\overline{X'Y'}$ from $(2,2)$ to $(8,2)$ has length $\\sqrt{(8-2)^2+0^2}=6$.",
+          "$\\overline{XZ}$ from $(1,1)$ to $(1,5)$ has length $\\sqrt{0^2+(5-1)^2}=4$; $\\overline{X'Z'}$ from $(2,2)$ to $(2,10)$ has length $\\sqrt{0^2+(10-2)^2}=8$.",
+          "Each image side is twice the pre-image side, so length is not preserved.",
+          "A rigid motion preserves length, so these triangles are related by a dilation (scale factor $2$ from the origin), not a rigid motion."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Segment $\\overline{CD}$ has endpoints $C(-5,2)$ and $D(-1,-1)$. It is reflected over the line $y=x$. Verify both that the image length equals $CD$ and that the slope of $\\overline{C'D'}$ is the reciprocal of the slope of $\\overline{CD}$.",
+      "answer": "Both segments have length $5$; the slope of $\\overline{CD}$ is $-\\frac{3}{4}$ and the slope of $\\overline{C'D'}$ is $-\\frac{4}{3}$, the reciprocal.",
+      "solution": {
+        "steps": [
+          "Length of $\\overline{CD}$: $\\sqrt{(-1-(-5))^2+(-1-2)^2}=\\sqrt{4^2+(-3)^2}=\\sqrt{25}=5$.",
+          "Reflect over $y=x$ with $(x,y)\\to(y,x)$: $C'=(2,-5)$ and $D'=(-1,-1)$.",
+          "Length of $\\overline{C'D'}$: $\\sqrt{(-1-2)^2+(-1-(-5))^2}=\\sqrt{(-3)^2+4^2}=\\sqrt{25}=5$. Lengths match.",
+          "Slope of $\\overline{CD}$: $\\frac{-1-2}{-1-(-5)}=\\frac{-3}{4}=-\\frac{3}{4}$. Slope of $\\overline{C'D'}$: $\\frac{-1-(-5)}{-1-2}=\\frac{4}{-3}=-\\frac{4}{3}$.",
+          "The image slope $-\\frac{4}{3}$ is the reciprocal of $-\\frac{3}{4}$, which is the expected effect of reflecting over $y=x$, and length is preserved."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A triangle is mapped to its image so that one angle goes from $63^\\circ$ to $63^\\circ$ and every side keeps its length, but the orientation of the vertices changes from counterclockwise to clockwise. Name the type of rigid motion this must be, and explain why it cannot be a translation or a rotation.",
+      "answer": "It must be a reflection, because only a reflection reverses orientation while preserving length and angle measure; translations and rotations preserve orientation.",
+      "solution": {
+        "steps": [
+          "Length and angle measure are preserved, so the transformation is a rigid motion (not a dilation).",
+          "Among rigid motions, translations and rotations preserve orientation: counterclockwise stays counterclockwise.",
+          "The orientation reversed from counterclockwise to clockwise, so it cannot be a translation or a rotation.",
+          "A reflection is the rigid motion that reverses orientation while keeping length and angle measure, so the transformation must be a reflection."
+        ]
+      }
+    }
+  ]
+}

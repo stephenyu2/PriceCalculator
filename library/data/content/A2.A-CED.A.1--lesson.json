@@ -1,0 +1,188 @@
+{
+  "id": "A2.A-CED.A.1--lesson",
+  "standard": "A2.A-CED.A.1",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Creating Equations",
+  "domainCode": "A-CED",
+  "cluster": "Create equations that describe numbers or relationships",
+  "clusterCode": "A",
+  "skillName": "Creating Equations and Inequalities",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "Creating an equation in one variable means translating a situation into an algebraic statement, choosing the right relational operator ($=$, $<$, $\\le$, $>$, $\\ge$), solving with the method the model demands, and then interpreting the answer in context. In Algebra 2 the models span four families: linear, quadratic (which may need the quadratic formula and give irrational or complex roots), rational (which may produce extraneous roots to discard), and exponential (which usually require logarithms). Always finish by rejecting any root that cannot happen in context, attaching units, and answering the exact question asked.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A rectangular garden is $3$ feet longer than it is wide, and its area is $40$ square feet. Write and solve an equation for the width $w$, then state the dimensions.",
+      "solution": {
+        "steps": [
+          "Translate: width is $w$, length is $w + 3$, and area is length times width, so $w(w+3) = 40$.",
+          "Expand into standard form: $w^2 + 3w = 40$, so $w^2 + 3w - 40 = 0$.",
+          "Factor: find two numbers with product $-40$ and sum $3$, namely $8$ and $-5$, giving $(w + 8)(w - 5) = 0$.",
+          "Solve: $w = -8$ or $w = 5$.",
+          "Reject the negative root because a width cannot be negative, so $w = 5$ feet.",
+          "The length is $w + 3 = 8$ feet."
+        ],
+        "answer": "Width $5$ feet, length $8$ feet"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A ball is thrown upward and its height in feet after $t$ seconds is $h = -16t^2 + 48t + 6$. Write and solve an equation for the time when the ball hits the ground ($h = 0$). Give the exact time and a decimal approximation.",
+      "solution": {
+        "steps": [
+          "Set the height to zero: $-16t^2 + 48t + 6 = 0$.",
+          "Apply the quadratic formula with $a = -16$, $b = 48$, $c = 6$: $t = \\frac{-48 \\pm \\sqrt{48^2 - 4(-16)(6)}}{2(-16)}$.",
+          "Compute the discriminant: $48^2 - 4(-16)(6) = 2304 + 384 = 2688$.",
+          "Simplify the radical: $\\sqrt{2688} = \\sqrt{256 \\cdot 10.5}$ is messy, so factor as $2688 = 64 \\cdot 42$, giving $\\sqrt{2688} = 8\\sqrt{42}$.",
+          "So $t = \\frac{-48 \\pm 8\\sqrt{42}}{-32} = \\frac{6 \\mp \\sqrt{42}}{4}$, the two roots being $\\frac{6 - \\sqrt{42}}{4}$ and $\\frac{6 + \\sqrt{42}}{4}$.",
+          "Since $\\sqrt{42} \\approx 6.48$, the roots are about $-0.12$ and $3.12$. Reject the negative root.",
+          "The ball lands at $t = \\frac{6 + \\sqrt{42}}{4} \\approx 3.12$ seconds."
+        ],
+        "answer": "$t = \\frac{6 + \\sqrt{42}}{4} \\approx 3.12$ seconds"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Pump A fills a tank in $x$ hours and pump B fills the same tank in $x + 2$ hours. Working together they fill it in $3$ hours. Write and solve a rational equation for $x$, the time for pump A alone. Give the exact value and a decimal approximation.",
+      "solution": {
+        "steps": [
+          "Each pump's rate is the fraction of the tank filled per hour: pump A is $\\frac{1}{x}$, pump B is $\\frac{1}{x+2}$, and together $\\frac{1}{3}$.",
+          "Write the equation: $\\frac{1}{x} + \\frac{1}{x+2} = \\frac{1}{3}$.",
+          "Multiply every term by the common denominator $3x(x+2)$: $3(x+2) + 3x = x(x+2)$.",
+          "Expand: $3x + 6 + 3x = x^2 + 2x$, so $6x + 6 = x^2 + 2x$.",
+          "Rearrange to standard form: $x^2 - 4x - 6 = 0$.",
+          "Apply the quadratic formula: $x = \\frac{4 \\pm \\sqrt{16 + 24}}{2} = \\frac{4 \\pm \\sqrt{40}}{2} = 2 \\pm \\sqrt{10}$.",
+          "Since $\\sqrt{10} \\approx 3.16$, the roots are about $5.16$ and $-1.16$. A time cannot be negative, so reject $2 - \\sqrt{10}$.",
+          "Pump A alone takes $x = 2 + \\sqrt{10} \\approx 5.16$ hours."
+        ],
+        "answer": "$x = 2 + \\sqrt{10} \\approx 5.16$ hours"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "An investment of $\\$5000$ grows at $4\\%$ compounded annually, so its value after $t$ years is $5000(1.04)^t$. Write and solve an equation for the time it takes the investment to reach $\\$8000$. Give the exact log expression and a decimal approximation.",
+      "solution": {
+        "steps": [
+          "Set the value equal to $8000$: $5000(1.04)^t = 8000$.",
+          "Divide both sides by $5000$: $(1.04)^t = \\frac{8000}{5000} = 1.6$.",
+          "The variable is in the exponent, so take the natural log of both sides: $\\ln(1.04^t) = \\ln 1.6$.",
+          "Use the power rule $\\ln(a^t) = t\\ln a$: $t\\ln 1.04 = \\ln 1.6$.",
+          "Solve for $t$: $t = \\frac{\\ln 1.6}{\\ln 1.04}$ (the changing value $1.6$ goes on top).",
+          "Approximate: $\\ln 1.6 \\approx 0.4700$ and $\\ln 1.04 \\approx 0.0392$, so $t \\approx 11.98$ years."
+        ],
+        "answer": "$t = \\frac{\\ln 1.6}{\\ln 1.04} \\approx 11.98$ years"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A factory's daily profit in thousands of dollars is $P = -2x^2 + 40x - 150$, where $x$ is the number of units produced (in hundreds). Write and solve an inequality for the production levels that yield a profit of at least $\\$50$ thousand. Interpret the result.",
+      "solution": {
+        "steps": [
+          "\"At least $\\$50$ thousand\" means $P \\ge 50$, so $-2x^2 + 40x - 150 \\ge 50$.",
+          "Move everything to one side: $-2x^2 + 40x - 200 \\ge 0$.",
+          "Divide by $-2$, and because we divide by a negative the inequality sign flips: $x^2 - 20x + 100 \\le 0$.",
+          "Factor the left side: $x^2 - 20x + 100 = (x - 10)^2$, so $(x - 10)^2 \\le 0$.",
+          "A square is never negative, so $(x - 10)^2 \\le 0$ holds only when it equals $0$, that is $x = 10$.",
+          "Interpret: profit reaches at least $\\$50$ thousand only at the single production level $x = 10$ (that is $1000$ units), where profit is exactly $\\$50$ thousand."
+        ],
+        "answer": "$x = 10$ (only $1000$ units yields a profit of at least $\\$50$ thousand)"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "The length of a rectangle is $5$ cm more than its width, and its area is $84$ square cm. Write and solve an equation for the width $w$, then state the dimensions.",
+      "hint": "Length is $w + 5$, so the area equation is $w(w + 5) = 84$. Put it in standard form and factor.",
+      "solution": {
+        "steps": [
+          "Write the area equation: $w(w + 5) = 84$.",
+          "Expand and set to zero: $w^2 + 5w - 84 = 0$.",
+          "Factor: two numbers with product $-84$ and sum $5$ are $12$ and $-7$, so $(w + 12)(w - 7) = 0$.",
+          "Solve: $w = -12$ or $w = 7$; reject the negative width, so $w = 7$ cm.",
+          "The length is $w + 5 = 12$ cm."
+        ],
+        "answer": "Width $7$ cm, length $12$ cm"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A model rocket's height in meters after $t$ seconds is $h = -5t^2 + 30t + 2$. Write and solve an equation for when it returns to the ground ($h = 0$). Give the exact time and a decimal approximation.",
+      "hint": "Use the quadratic formula with $a = -5$, $b = 30$, $c = 2$. Keep only the positive root.",
+      "solution": {
+        "steps": [
+          "Set $h = 0$: $-5t^2 + 30t + 2 = 0$.",
+          "Quadratic formula: $t = \\frac{-30 \\pm \\sqrt{30^2 - 4(-5)(2)}}{2(-5)} = \\frac{-30 \\pm \\sqrt{900 + 40}}{-10}$.",
+          "Simplify the discriminant: $\\sqrt{940} = \\sqrt{4 \\cdot 235} = 2\\sqrt{235}$.",
+          "So $t = \\frac{-30 \\pm 2\\sqrt{235}}{-10} = \\frac{15 \\mp \\sqrt{235}}{5}$.",
+          "Since $\\sqrt{235} \\approx 15.33$, the roots are about $-0.07$ and $6.07$; reject the negative root.",
+          "The rocket lands at $t = \\frac{15 + \\sqrt{235}}{5} \\approx 6.07$ seconds."
+        ],
+        "answer": "$t = \\frac{15 + \\sqrt{235}}{5} \\approx 6.07$ seconds"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "It takes one hose $x$ hours to fill a pool and a second hose $x + 4$ hours. Together they fill it in $4$ hours. Write and solve a rational equation for $x$, the time for the first hose alone. Give the exact value and a decimal approximation.",
+      "hint": "Write $\\frac{1}{x} + \\frac{1}{x+4} = \\frac{1}{4}$ and multiply through by the common denominator $4x(x+4)$.",
+      "solution": {
+        "steps": [
+          "Set up the work equation: $\\frac{1}{x} + \\frac{1}{x+4} = \\frac{1}{4}$.",
+          "Multiply every term by $4x(x+4)$: $4(x+4) + 4x = x(x+4)$.",
+          "Expand: $4x + 16 + 4x = x^2 + 4x$, so $8x + 16 = x^2 + 4x$.",
+          "Rearrange: $x^2 - 4x - 16 = 0$.",
+          "Quadratic formula: $x = \\frac{4 \\pm \\sqrt{16 + 64}}{2} = \\frac{4 \\pm \\sqrt{80}}{2} = 2 \\pm 2\\sqrt{5}$.",
+          "Since $\\sqrt{5} \\approx 2.24$, the roots are about $6.47$ and $-2.47$; reject the negative time.",
+          "The first hose alone takes $x = 2 + 2\\sqrt{5} \\approx 6.47$ hours."
+        ],
+        "answer": "$x = 2 + 2\\sqrt{5} \\approx 6.47$ hours"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A culture of $300$ bacteria grows at $6\\%$ per hour, so the count after $t$ hours is $300(1.06)^t$. Write and solve an equation for the time it takes the culture to reach $900$ bacteria. Give the exact log expression and a decimal approximation.",
+      "hint": "Divide by $300$ first, then take the natural log of both sides and use $\\ln(a^t) = t\\ln a$.",
+      "solution": {
+        "steps": [
+          "Set the count equal to $900$: $300(1.06)^t = 900$.",
+          "Divide by $300$: $(1.06)^t = 3$.",
+          "Take the natural log of both sides: $t\\ln 1.06 = \\ln 3$.",
+          "Solve: $t = \\frac{\\ln 3}{\\ln 1.06}$.",
+          "Approximate: $\\ln 3 \\approx 1.0986$ and $\\ln 1.06 \\approx 0.0583$, so $t \\approx 18.85$ hours."
+        ],
+        "answer": "$t = \\frac{\\ln 3}{\\ln 1.06} \\approx 18.85$ hours"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A $160$ mg sample of a radioactive isotope has a half-life of $6$ years, so the amount remaining after $t$ years is $160\\left(\\frac{1}{2}\\right)^{t/6}$. Write and solve an equation for when $20$ mg remain. Use equal bases to find an exact answer.",
+      "hint": "Divide by $160$ to get $\\left(\\frac{1}{2}\\right)^{t/6} = \\frac{1}{8}$. Write $\\frac{1}{8}$ as a power of $\\frac{1}{2}$.",
+      "solution": {
+        "steps": [
+          "Set the amount equal to $20$: $160\\left(\\frac{1}{2}\\right)^{t/6} = 20$.",
+          "Divide by $160$: $\\left(\\frac{1}{2}\\right)^{t/6} = \\frac{20}{160} = \\frac{1}{8}$.",
+          "Write the right side as a power of $\\frac{1}{2}$: $\\frac{1}{8} = \\left(\\frac{1}{2}\\right)^3$.",
+          "With equal bases the exponents are equal: $\\frac{t}{6} = 3$.",
+          "Solve: $t = 18$ years."
+        ],
+        "answer": "$t = 18$ years"
+      }
+    }
+  ]
+}

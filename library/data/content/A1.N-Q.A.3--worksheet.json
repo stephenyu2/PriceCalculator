@@ -1,0 +1,240 @@
+{
+  "id": "A1.N-Q.A.3--worksheet",
+  "standard": "A1.N-Q.A.3",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Quantities",
+  "domainCode": "N-Q",
+  "cluster": "Reason quantitatively and use units to solve problems",
+  "clusterCode": "A",
+  "skillName": "Accuracy and Measurement Limitations",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "Measurements are never exact. This worksheet asks you to read the precision of a tool, count significant figures, round to a stated accuracy, and propagate precision through arithmetic so that your reported answer is no more precise than the data it came from. Carry full precision internally and round only at the end. Recall the rules: a product or quotient is reported to the fewest significant figures of any factor, while a sum or difference is reported to the least precise decimal place of any addend.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A ruler is marked in increments of $0.1\\text{ cm}$. To what reading uncertainty can a single length measurement be reported with this ruler? Express your answer as $\\pm$ a value in centimeters.",
+      "answer": "$\\pm 0.05\\text{ cm}$",
+      "solution": {
+        "steps": [
+          "The reading uncertainty of an analog scale is half of its smallest division.",
+          "The smallest division is $0.1\\text{ cm}$.",
+          "Half of $0.1\\text{ cm}$ is $\\frac{0.1}{2} = 0.05\\text{ cm}$.",
+          "So a length can be reported to $\\pm 0.05\\text{ cm}$."
+        ],
+        "answer": "$\\pm 0.05\\text{ cm}$"
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "How many significant figures are in the measured length $4.50\\text{ cm}$?",
+      "answer": "$3$ significant figures",
+      "solution": {
+        "steps": [
+          "All nonzero digits are significant: $4$ and $5$ count.",
+          "A trailing zero that appears after a decimal point is significant, so the final $0$ counts.",
+          "Total: $4$, $5$, and $0$ give $3$ significant figures."
+        ],
+        "answer": "$3$ significant figures"
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Round the measured length $12.847\\text{ cm}$ to $3$ significant figures.",
+      "answer": "$12.8\\text{ cm}$",
+      "solution": {
+        "steps": [
+          "Identify the first $3$ significant figures: $1$, $2$, and $8$.",
+          "The next digit decides the rounding; it is $4$.",
+          "Since $4 < 5$, round down (keep the $8$ as is).",
+          "The rounded value is $12.8\\text{ cm}$."
+        ],
+        "answer": "$12.8\\text{ cm}$"
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A graduated cylinder is marked in increments of $1\\text{ mL}$. A reading is $24\\text{ mL}$. Report this volume with its reading uncertainty in the form $\\text{value} \\pm \\text{uncertainty}$.",
+      "answer": "$24.0 \\pm 0.5\\text{ mL}$",
+      "solution": {
+        "steps": [
+          "The reading uncertainty is half the smallest division.",
+          "The smallest division is $1\\text{ mL}$, so the uncertainty is $\\frac{1}{2} = 0.5\\text{ mL}$.",
+          "The volume is reported as $24.0 \\pm 0.5\\text{ mL}$."
+        ],
+        "answer": "$24.0 \\pm 0.5\\text{ mL}$"
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Round the measured mass $0.067489\\text{ kg}$ to $2$ significant figures.",
+      "answer": "$0.067\\text{ kg}$",
+      "solution": {
+        "steps": [
+          "Leading zeros are not significant, so the first significant figure is $6$ and the second is $7$.",
+          "The digit after the second significant figure is $4$.",
+          "Since $4 < 5$, round down (keep the $7$).",
+          "The rounded value is $0.067\\text{ kg}$."
+        ],
+        "answer": "$0.067\\text{ kg}$"
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "How many significant figures are in the measured quantity $0.04060\\text{ kg}$?",
+      "answer": "$4$ significant figures",
+      "solution": {
+        "steps": [
+          "Leading zeros ($0.0$) are not significant, so they do not count.",
+          "The $4$ is significant.",
+          "The embedded zero between $4$ and $6$ is significant.",
+          "The $6$ is significant, and the trailing zero after the decimal point is significant.",
+          "Counting $4$, embedded $0$, $6$, and trailing $0$ gives $4$ significant figures."
+        ],
+        "answer": "$4$ significant figures"
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A rectangle is measured as $4.7\\text{ cm}$ by $2.31\\text{ cm}$. Compute its area and report it to the appropriate number of significant figures.",
+      "answer": "$11\\text{ cm}^2$",
+      "solution": {
+        "steps": [
+          "Multiply the measured side lengths: $4.7 \\times 2.31 = 10.857$.",
+          "For multiplication, the result keeps the fewest significant figures of any factor.",
+          "$4.7$ has $2$ significant figures and $2.31$ has $3$, so the limiting value is $2$ significant figures.",
+          "Round $10.857$ to $2$ significant figures: the third figure is $8 \\geq 5$, so round the $0$ up to $1$, giving $11$.",
+          "The area is reported as $11\\text{ cm}^2$."
+        ],
+        "answer": "$11\\text{ cm}^2$"
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Add the measured lengths $13.2\\text{ cm}$ and $0.057\\text{ cm}$ and report the sum to the correct decimal place.",
+      "answer": "$13.3\\text{ cm}$",
+      "solution": {
+        "steps": [
+          "Add the values exactly: $13.2 + 0.057 = 13.257$.",
+          "For addition, the result is reported to the least precise decimal place of any addend.",
+          "$13.2$ is precise to the tenths place; $0.057$ is precise to the thousandths place. The tenths place is the least precise.",
+          "Round $13.257$ to the tenths place: the hundredths digit is $5$, so round the tenths digit up from $2$ to $3$.",
+          "The sum is reported as $13.3\\text{ cm}$."
+        ],
+        "answer": "$13.3\\text{ cm}$"
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A measured distance of $36.0\\text{ m}$ is divided by a measured time of $4.8\\text{ s}$. Report the resulting speed to the appropriate number of significant figures.",
+      "answer": "$7.5\\text{ m/s}$",
+      "solution": {
+        "steps": [
+          "Divide the measurements: $\\frac{36.0}{4.8} = 7.5$.",
+          "For division, the result keeps the fewest significant figures of any input.",
+          "$36.0$ has $3$ significant figures and $4.8$ has $2$, so the limiting value is $2$ significant figures.",
+          "The quotient $7.5$ already has $2$ significant figures, so no further rounding is needed.",
+          "The speed is reported as $7.5\\text{ m/s}$."
+        ],
+        "answer": "$7.5\\text{ m/s}$"
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Subtract the measured volume $5.6\\text{ L}$ from the measured volume $20.41\\text{ L}$ and report the difference to the correct decimal place.",
+      "answer": "$14.8\\text{ L}$",
+      "solution": {
+        "steps": [
+          "Subtract exactly: $20.41 - 5.6 = 14.81$.",
+          "For subtraction, the result is reported to the least precise decimal place of any value.",
+          "$20.41$ is precise to the hundredths place; $5.6$ is precise to the tenths place. The tenths place is the least precise.",
+          "Round $14.81$ to the tenths place: the hundredths digit is $1 < 5$, so keep the tenths digit $8$.",
+          "The difference is reported as $14.8\\text{ L}$."
+        ],
+        "answer": "$14.8\\text{ L}$"
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A rectangular box has measured dimensions $3.25\\text{ cm}$, $1.4\\text{ cm}$, and $6.7\\text{ cm}$. Compute its volume, carrying full precision internally, and report the result to the appropriate number of significant figures with units.",
+      "answer": "$30\\text{ cm}^3$",
+      "solution": {
+        "steps": [
+          "Multiply all three measured dimensions, keeping full precision: $3.25 \\times 1.4 = 4.55$, then $4.55 \\times 6.7 = 30.485$.",
+          "For multiplication, the result keeps the fewest significant figures of any factor.",
+          "$3.25$ has $3$ significant figures, while $1.4$ and $6.7$ each have $2$, so the limiting value is $2$ significant figures.",
+          "Round $30.485$ to $2$ significant figures: the third significant figure is $4 < 5$, so the value rounds to $30$.",
+          "The volume is reported as $30\\text{ cm}^3$ (the trailing zero is the second significant figure)."
+        ],
+        "answer": "$30\\text{ cm}^3$"
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Three masses are measured as $12.4\\text{ g}$, $0.86\\text{ g}$, and $7.115\\text{ g}$. First add them, then report the total mass to the correct decimal place with units.",
+      "answer": "$20.4\\text{ g}$",
+      "solution": {
+        "steps": [
+          "Add the measured values exactly: $12.4 + 0.86 + 7.115 = 20.375$.",
+          "For addition, the total is reported to the least precise decimal place among the addends.",
+          "$12.4$ is precise to the tenths place, $0.86$ to the hundredths place, and $7.115$ to the thousandths place. The tenths place is the least precise.",
+          "Round $20.375$ to the tenths place: the hundredths digit is $7 \\geq 5$, so round the tenths digit up from $3$ to $4$.",
+          "The total mass is reported as $20.4\\text{ g}$."
+        ],
+        "answer": "$20.4\\text{ g}$"
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A car travels a measured distance of $26\\text{ mi}$ in a measured time of $1872\\text{ s}$. To how many significant figures should the average speed $\\dfrac{26\\text{ mi}}{1872\\text{ s}}$ be reported, and what is that reported speed in $\\text{mi/s}$?",
+      "answer": "$2$ significant figures; $0.014\\text{ mi/s}$",
+      "solution": {
+        "steps": [
+          "Divide the measurements, keeping full precision: $\\frac{26}{1872} = 0.0138\\overline{8}\\ldots\\text{ mi/s}$.",
+          "For division, the result keeps the fewest significant figures of any input.",
+          "$26$ has $2$ significant figures and $1872$ has $4$, so the speed is limited to $2$ significant figures.",
+          "Round $0.013888\\ldots$ to $2$ significant figures: the first two significant figures are $1$ and $3$, and the next digit is $8 \\geq 5$, so the $3$ rounds up to $4$.",
+          "The reported speed is $0.014\\text{ mi/s}$, justified to $2$ significant figures by the $2$-significant-figure distance."
+        ],
+        "answer": "$2$ significant figures; $0.014\\text{ mi/s}$"
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Two scales are tested against a known true mass of $50.0\\text{ g}$. Scale A reports $50.43\\text{ g}$, $50.41\\text{ g}$, and $50.42\\text{ g}$. Scale B reports $49.8\\text{ g}$, $50.2\\text{ g}$, and $50.0\\text{ g}$. Which scale is more precise, and which is more accurate? Justify each answer in one sentence.",
+      "answer": "Scale A is more precise; Scale B is more accurate.",
+      "solution": {
+        "steps": [
+          "Precision describes how tightly repeated readings cluster together (their spread).",
+          "Scale A's readings span only $50.41$ to $50.43$ (a range of $0.02\\text{ g}$), while Scale B's span $49.8$ to $50.2$ (a range of $0.4\\text{ g}$), so Scale A is more precise.",
+          "Accuracy describes how close the readings are to the true value of $50.0\\text{ g}$.",
+          "Scale A's readings center near $50.42\\text{ g}$, about $0.42\\text{ g}$ above the true value, while Scale B's readings center on $50.0\\text{ g}$, right on the true value, so Scale B is more accurate.",
+          "Conclusion: Scale A is more precise (tight cluster) but less accurate; Scale B is more accurate (centered on the true value) but less precise."
+        ],
+        "answer": "Scale A is more precise; Scale B is more accurate."
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A runner covers a measured distance of $5.0\\text{ km}$ in a measured time of $0.412\\text{ h}$, and a second runner covers $5.00\\text{ km}$ in $0.41\\text{ h}$. Report each runner's average speed in $\\text{km/h}$ to the appropriate number of significant figures, then state which reported speed is justified to more significant figures and why.",
+      "answer": "Runner 1: $12\\text{ km/h}$; Runner 2: $12\\text{ km/h}$; neither is justified to more significant figures, since both are limited to $2$ by their least-precise input.",
+      "solution": {
+        "steps": [
+          "Runner 1: $\\frac{5.0}{0.412} = 12.1359\\ldots\\text{ km/h}$. The inputs have $2$ ($5.0$) and $3$ ($0.412$) significant figures, so the result is limited to $2$.",
+          "Round $12.1359\\ldots$ to $2$ significant figures: the third figure is $1 < 5$, so it rounds to $12\\text{ km/h}$.",
+          "Runner 2: $\\frac{5.00}{0.41} = 12.1951\\ldots\\text{ km/h}$. The inputs have $3$ ($5.00$) and $2$ ($0.41$) significant figures, so the result is limited to $2$.",
+          "Round $12.1951\\ldots$ to $2$ significant figures: the third figure is $1 < 5$, so it rounds to $12\\text{ km/h}$.",
+          "Both reported speeds are $12\\text{ km/h}$. Each is limited to $2$ significant figures by its least-precise input, so neither is justified to more significant figures than the other; reporting extra digits would claim more precision than the data supports."
+        ],
+        "answer": "Runner 1: $12\\text{ km/h}$; Runner 2: $12\\text{ km/h}$; neither is justified to more significant figures, since each is limited to $2$ by its least-precise input."
+      }
+    }
+  ]
+}

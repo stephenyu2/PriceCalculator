@@ -1,0 +1,224 @@
+{
+  "id": "A1.S-ID.B--cluster-test",
+  "standard": null,
+  "clusterId": "A1.S-ID.B",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on two categorical and quantitative variables",
+  "clusterCode": "B",
+  "skillName": "Summarize, represent, and interpret data on two categorical and quantitative variables",
+  "materialType": "cluster-test",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "intro": "A $12$-question cluster mastery test covering two categorical and quantitative variables: two-way frequency tables (reading, completing, and computing joint, marginal, and conditional relative frequencies to judge association) and scatter plots with fitted functions (describing associations, building and using a line of fit, interpreting slope and intercept, residuals, and choosing a linear or nonlinear model).",
+  "items": [
+    {
+      "id": 1,
+      "standard": "A1.S-ID.B.5",
+      "difficulty": "Easy",
+      "prompt": "A survey of $60$ students records whether they bring lunch or buy lunch. The completed two-way table is shown. How many students in total buy lunch? $$\\begin{array}{l|cc|c} & \\text{Bring} & \\text{Buy} & \\text{Total} \\\\ \\hline \\text{Grade 7} & 15 & 10 & 25 \\\\ \\text{Grade 8} & 20 & 15 & 35 \\\\ \\hline \\text{Total} & 35 & 25 & 60 \\end{array}$$\nA) $10$\nB) $15$\nC) $25$\nD) $35$",
+      "answer": "C) $25$",
+      "solution": {
+        "steps": [
+          "The number who buy lunch is the column total under \"Buy,\" the bottom entry of that column.",
+          "$10 + 15 = 25$, so $25$ students buy lunch. C) is correct.",
+          "A) $10$ is only the Grade 7 buyers (a single cell), not the column total.",
+          "B) $15$ is only the Grade 8 buyers (a single cell).",
+          "D) $35$ is the \"Bring\" column total, the wrong column."
+        ],
+        "answer": "C) $25$"
+      }
+    },
+    {
+      "id": 2,
+      "standard": "A1.S-ID.B.5",
+      "difficulty": "Easy",
+      "prompt": "Of $100$ people surveyed, the cell \"owns a bike and is a student\" contains $35$. What is the joint relative frequency of being a student and owning a bike?\nA) $0.35$\nB) $3.5\\%$\nC) $0.035$\nD) $2.86$",
+      "answer": "A) $0.35$",
+      "solution": {
+        "steps": [
+          "A joint relative frequency is a cell count divided by the grand total: $\\frac{35}{100} = 0.35 = 35\\%$. A) is correct.",
+          "B) $3.5\\%$ misconverts $0.35$ to a percent; $0.35$ equals $35\\%$, not $3.5\\%$.",
+          "C) $0.035$ misplaces the decimal point when dividing $35$ by $100$.",
+          "D) $2.86$ inverts the fraction as $\\frac{100}{35}$ instead of $\\frac{35}{100}$."
+        ],
+        "answer": "A) $0.35$"
+      }
+    },
+    {
+      "id": 3,
+      "standard": "A1.S-ID.B.5",
+      "difficulty": "Medium",
+      "prompt": "In a class of $90$ students, $40$ are in band. Of the band members, $24$ also play a sport. To complete the two-way table, how many band members do NOT play a sport?\nA) $66$\nB) $50$\nC) $16$\nD) $24$",
+      "answer": "C) $16$",
+      "solution": {
+        "steps": [
+          "The band row total is $40$, and $24$ band members play a sport, so the missing cell is the row total minus the known cell: $40 - 24 = 16$. C) is correct.",
+          "A) $66$ subtracts from the grand total: $90 - 24 = 66$, using the wrong total.",
+          "B) $50$ subtracts the band total from the grand total: $90 - 40 = 50$, which counts non-band students.",
+          "D) $24$ just repeats the cell of band members who DO play a sport."
+        ],
+        "answer": "C) $16$"
+      }
+    },
+    {
+      "id": 4,
+      "standard": "A1.S-ID.B.5",
+      "difficulty": "Medium",
+      "prompt": "A two-way table classifies $120$ people by whether they have a library card and whether they read daily. Of the $75$ people who have a library card, $45$ read daily. What is the conditional relative frequency that a person reads daily, given that they have a library card?\nA) $37.5\\%$\nB) $60\\%$\nC) $62.5\\%$\nD) $167\\%$",
+      "answer": "B) $60\\%$",
+      "solution": {
+        "steps": [
+          "\"Given that they have a library card\" makes the card-holder total, $75$, the denominator: $\\frac{45}{75} = 0.60 = 60\\%$. B) is correct.",
+          "A) $37.5\\%$ wrongly divides by the grand total: $\\frac{45}{120} = 37.5\\%$ instead of the column total $75$.",
+          "C) $62.5\\%$ inverts the conditional, computing $\\frac{75}{120}$ (the share who hold a card).",
+          "D) $167\\%$ divides the wrong way as $\\frac{75}{45}$, giving an impossible value over $100\\%$."
+        ],
+        "answer": "B) $60\\%$"
+      }
+    },
+    {
+      "id": 5,
+      "standard": "A1.S-ID.B.5",
+      "difficulty": "Hard",
+      "prompt": "A two-way table classifies people by age group and whether they prefer streaming over cable. Among $80$ adults, $48$ prefer streaming; among $50$ teens, $40$ prefer streaming. Comparing the conditional relative frequencies of preferring streaming, what should you conclude about the association between age group and viewing preference?\nA) Not associated, because both conditional relative frequencies equal $60\\%$.\nB) Associated, because the streaming rate is higher among teens ($80\\%$) than adults ($60\\%$).\nC) Associated, because more adults ($48$) than teens ($40$) prefer streaming.\nD) Not associated, because $80$ and $50$ are different group sizes.",
+      "answer": "B) Associated, because the streaming rate is higher among teens ($80\\%$) than adults ($60\\%$).",
+      "solution": {
+        "steps": [
+          "Association is judged by comparing conditional relative frequencies, using each group total as the denominator.",
+          "Adults: $\\frac{48}{80} = 0.60 = 60\\%$ prefer streaming. Teens: $\\frac{40}{50} = 0.80 = 80\\%$ prefer streaming.",
+          "Since $80\\% \\neq 60\\%$, the streaming rate differs by age group, which suggests an association. B) is correct.",
+          "A) is false because the two conditionals ($60\\%$ vs. $80\\%$) are not equal.",
+          "C) compares raw counts $48$ and $40$ instead of rates; the groups have different sizes, so counts are misleading.",
+          "D) uses the group sizes $80$ and $50$, which are marginal totals and say nothing about preference rates."
+        ],
+        "answer": "B) Associated, because the streaming rate is higher among teens ($80\\%$) than adults ($60\\%$)."
+      }
+    },
+    {
+      "id": 6,
+      "standard": "A1.S-ID.B.5",
+      "difficulty": "Hard",
+      "prompt": "A survey of $160$ people records exercise habit and gender. Of $100$ people who exercise regularly, $60$ are female; of $60$ people who do not exercise regularly, $24$ are female. Comparing the conditional relative frequency of being female within each exercise group, which statement is best supported?\nA) The female rate is the same in both groups, so there is no association.\nB) The female rate is higher among non-exercisers ($40\\%$) than exercisers ($37.5\\%$).\nC) The female rate is higher among exercisers ($60\\%$) than non-exercisers ($40\\%$), suggesting an association.\nD) Most people exercise overall, so exercise and gender are associated.",
+      "answer": "C) The female rate is higher among exercisers ($60\\%$) than non-exercisers ($40\\%$), suggesting an association.",
+      "solution": {
+        "steps": [
+          "Compute the conditional relative frequency of being female within each exercise group, using the group total as the denominator.",
+          "Exercisers: $\\frac{60}{100} = 0.60 = 60\\%$ female. Non-exercisers: $\\frac{24}{60} = 0.40 = 40\\%$ female.",
+          "Since $60\\% \\neq 40\\%$, the female rate differs by exercise habit, which suggests an association. C) is correct.",
+          "A) is false because the two conditionals ($60\\%$ vs. $40\\%$) are not equal.",
+          "B) miscomputes the exerciser rate as $\\frac{60}{160} = 37.5\\%$ (dividing by the grand total instead of the exerciser total $100$).",
+          "D) compares an overall marginal ($\\frac{84}{160} = 52.5\\%$ female) rather than conditionals; a marginal alone cannot reveal association."
+        ],
+        "answer": "C) The female rate is higher among exercisers ($60\\%$) than non-exercisers ($40\\%$), suggesting an association."
+      }
+    },
+    {
+      "id": 7,
+      "standard": "A1.S-ID.B.6",
+      "difficulty": "Easy",
+      "prompt": "On a scatter plot of outside temperature $x$ versus hot-chocolate sales $y$, the points fall in a tight band sloping from the upper-left down to the lower-right. Which best describes the association?\nA) Strong positive\nB) Strong negative\nC) Weak negative\nD) No association",
+      "answer": "B) Strong negative",
+      "solution": {
+        "steps": [
+          "Points that fall from upper-left to lower-right go down as $x$ increases, so the direction is negative.",
+          "The points lie in a tight band, so the association is strong. B) is correct.",
+          "A) is wrong: positive would mean the points rise as $x$ increases.",
+          "C) is wrong: a tight band is strong, not weak.",
+          "D) is wrong: there is a clear pattern, so the association is not absent."
+        ],
+        "answer": "B) Strong negative"
+      }
+    },
+    {
+      "id": 8,
+      "standard": "A1.S-ID.B.6",
+      "difficulty": "Easy",
+      "prompt": "A trend line passes through the representative points $(3,4)$ and $(9,22)$. What is the slope of the line?\nA) $\\frac{1}{3}$\nB) $3$\nC) $6$\nD) $-3$",
+      "answer": "B) $3$",
+      "solution": {
+        "steps": [
+          "Use $m=\\frac{y_2-y_1}{x_2-x_1}=\\frac{22-4}{9-3}=\\frac{18}{6}=3$. B) is correct.",
+          "A) inverts the formula as $\\frac{9-3}{22-4}=\\frac{6}{18}=\\frac{1}{3}$.",
+          "C) $6$ is $\\Delta x$, not the slope.",
+          "D) $-3$ has the right magnitude but the wrong sign; both $\\Delta y$ and $\\Delta x$ are positive, so the slope is positive."
+        ],
+        "answer": "B) $3$"
+      }
+    },
+    {
+      "id": 9,
+      "standard": "A1.S-ID.B.6",
+      "difficulty": "Medium",
+      "prompt": "A line of fit passes through the point $(4,7)$ with slope $2$. What is the equation of the line?\nA) $y=2x$\nB) $y=2x+15$\nC) $y=2x-1$\nD) $y=4x+7$",
+      "answer": "C) $y=2x-1$",
+      "solution": {
+        "steps": [
+          "Find the intercept with $b=y-mx=7-2(4)=7-8=-1$.",
+          "So the equation is $y=2x-1$. C) is correct.",
+          "A) drops the intercept, using $y=2x$ instead of adding $b=-1$.",
+          "B) sign-errors the intercept as $b=7+2(4)=15$.",
+          "D) reuses the point coordinates as slope and intercept instead of the computed values."
+        ],
+        "answer": "C) $y=2x-1$"
+      }
+    },
+    {
+      "id": 10,
+      "standard": "A1.S-ID.B.6",
+      "difficulty": "Medium",
+      "prompt": "A line of fit models a tree's height $y$ (in feet) as $y=1.5x+5$, where $x$ is the tree's age in years. Predict the height at age $x=8$ years.\nA) $17$ feet\nB) $13$ feet\nC) $6.5$ feet\nD) $12$ feet",
+      "answer": "A) $17$ feet",
+      "solution": {
+        "steps": [
+          "Substitute $x=8$: $y=1.5(8)+5=12+5=17$ feet. A) is correct.",
+          "B) $13$ forgets the intercept, computing only $1.5(8)+1$ or otherwise dropping the $5$ incorrectly.",
+          "C) $6.5$ uses $x=1$ instead of $x=8$: $1.5(1)+5=6.5$.",
+          "D) $12$ stops after the slope term $1.5(8)=12$ and forgets to add the intercept $5$."
+        ],
+        "answer": "A) $17$ feet"
+      }
+    },
+    {
+      "id": 11,
+      "standard": "A1.S-ID.B.6",
+      "difficulty": "Hard",
+      "prompt": "A model predicts $\\hat{y}=3x+2$ for the number of books $y$ borrowed in week $x$. In week $x=4$ the library actually lent $20$ books. What is the residual, and does the model overestimate or underestimate?\nA) $6$; the model overestimates\nB) $-6$; the model overestimates\nC) $6$; the model underestimates\nD) $34$; the model underestimates",
+      "answer": "C) $6$; the model underestimates",
+      "solution": {
+        "steps": [
+          "Find the predicted value: $\\hat{y}=3(4)+2=14$.",
+          "Residual $=y_{\\text{actual}}-y_{\\text{predicted}}=20-14=6$.",
+          "A positive residual means the actual value is above the prediction, so the model underestimates. C) is correct.",
+          "A) is wrong: a positive residual means underestimate, not overestimate.",
+          "B) flips the subtraction to $14-20=-6$.",
+          "D) adds the actual and predicted values ($20+14=34$) instead of subtracting."
+        ],
+        "answer": "C) $6$; the model underestimates"
+      }
+    },
+    {
+      "id": 12,
+      "standard": "A1.S-ID.B.6",
+      "difficulty": "Hard",
+      "prompt": "A data set has the points $(0,5),(1,15),(2,45),(3,135)$. Which function best models this data, and why?\nA) Linear, because the differences are constant.\nB) Exponential, because each $y$-value is $3$ times the one before it, giving $y=5\\cdot 3^{x}$.\nC) Linear, because $y=10x+5$ fits the points.\nD) Exponential, because each $y$-value is $5$ more than the one before it.",
+      "answer": "B) Exponential, because each $y$-value is $3$ times the one before it, giving $y=5\\cdot 3^{x}$.",
+      "solution": {
+        "steps": [
+          "Check the ratios: $\\frac{15}{5}=3$, $\\frac{45}{15}=3$, $\\frac{135}{45}=3$. A constant ratio of $3$ means exponential growth.",
+          "The model is $y=5\\cdot 3^{x}$: at $x=0$, $y=5$; at $x=1$, $y=15$; at $x=2$, $y=45$; at $x=3$, $y=135$. B) is correct.",
+          "A) is wrong: the differences $10,30,90$ are not constant, so the data is not linear.",
+          "C) is wrong: $y=10x+5$ would give $5,15,25,35$, which does not match $45$ or $135$.",
+          "D) is wrong: the relationship is multiplicative ($\\times 3$), not additive ($+5$); only the first gap happens to be $10$, not $5$."
+        ],
+        "answer": "B) Exponential, because each $y$-value is $3$ times the one before it, giving $y=5\\cdot 3^{x}$."
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T19:01:15.547Z"
+}

@@ -1,0 +1,128 @@
+{
+  "standard": "A1.F-IF.B.6",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Functions",
+  "domainCode": "F-IF",
+  "cluster": "Interpret functions that arise in applications in terms of the context",
+  "clusterCode": "B",
+  "skillName": "Average Rate of Change",
+
+  "description": "Students calculate the average rate of change of a function over an interval $[a,b]$ as $\\dfrac{f(b)-f(a)}{b-a}$, the slope of the secant line joining the endpoints. They compute it when the function is given symbolically (linear, quadratic, exponential, or absolute value), from a table of input-output pairs, and by estimating from a graph by locating the two endpoint points and reading their coordinates. They interpret the result in context, attaching correct units (output units per input unit) and explaining what the number says about how the quantity changes on average over the interval, including the meaning of a positive, negative, or zero rate. They recognize that for a linear function the average rate of change is constant and equals the slope, while for a nonlinear function it varies with the interval chosen.",
+
+  "subSkills": [
+    "Apply the average rate of change formula $\\dfrac{f(b)-f(a)}{b-a}$ over a stated interval $[a,b]$",
+    "Compute the average rate of change of a function given symbolically by evaluating $f$ at both endpoints",
+    "Compute the average rate of change from a table by selecting the two rows that bound the interval",
+    "Estimate the average rate of change from a graph by reading the coordinates of the two endpoint points and forming the secant slope",
+    "Interpret the average rate of change in context with correct units (output per input) and a full sentence",
+    "Interpret the sign of the rate: positive means increasing on average, negative means decreasing, zero means equal endpoints",
+    "Recognize that a linear function has a constant average rate of change equal to its slope, while a nonlinear function's rate depends on the interval",
+    "Compare average rates of change over two different intervals to describe how a quantity speeds up or slows down"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Average rate of change of a linear function",
+      "example": "Find the average rate of change of $f(x)=3x-4$ over $[1,5]$. Compute $\\dfrac{f(5)-f(1)}{5-1}=\\dfrac{11-(-1)}{4}=3$, which equals the slope."
+    },
+    {
+      "name": "Average rate of change of a quadratic function",
+      "example": "Find the average rate of change of $f(x)=x^2$ over $[2,5]$. Compute $\\dfrac{f(5)-f(2)}{5-2}=\\dfrac{25-4}{3}=7$."
+    },
+    {
+      "name": "Average rate of change from a table",
+      "example": "A table gives $f(0)=2,\\ f(2)=6,\\ f(4)=18,\\ f(6)=38$. Find the average rate of change over $[2,6]$. Compute $\\dfrac{38-6}{6-2}=\\dfrac{32}{4}=8$."
+    },
+    {
+      "name": "Estimate average rate of change from a graph",
+      "example": "A graph passes through $(1,2)$ and $(4,11)$ at the ends of $[1,4]$. Estimate the average rate of change as $\\dfrac{11-2}{4-1}=3$."
+    },
+    {
+      "name": "Interpret the rate in context with units",
+      "example": "A population is $P(t)=200+50t$ where $t$ is in years. Find and interpret the average rate of change over $[0,4]$. It is $\\dfrac{P(4)-P(0)}{4-0}=\\dfrac{400-200}{4}=50$ people per year, so the population grows by $50$ people per year on average."
+    },
+    {
+      "name": "Compare rates over two intervals",
+      "example": "For $f(x)=x^2$, compare the average rate of change over $[0,2]$ and over $[2,4]$. The first is $\\dfrac{4-0}{2}=2$ and the second is $\\dfrac{16-4}{2}=6$, so the function is increasing faster on the later interval."
+    },
+    {
+      "name": "Average rate of change of an exponential function",
+      "example": "For $f(x)=2^x$, find the average rate of change over $[0,3]$. Compute $\\dfrac{f(3)-f(0)}{3-0}=\\dfrac{8-1}{3}=\\dfrac{7}{3}$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Direct application of the formula to a linear function over a whole-number interval, or a single average-rate computation from two clean table rows, with small positive values and at most one interpretation sentence naming units. tier1 lives here and ramps into Medium.",
+      "constraints": [
+        "Linear rule $f(x)=mx+b$ with small integer coefficients ($|m|,|b|\\le 10$), so the rate equals the slope",
+        "Interval endpoints are whole numbers with $0\\le a<b\\le 8$ and a positive difference $b-a$ that divides evenly",
+        "Table problems use exactly the two rows that match the endpoints, no interpolation",
+        "Context interpretation only states the numeric rate and its units"
+      ]
+    },
+    "Medium": {
+      "description": "Average rate of change of a quadratic or absolute-value function, computations producing a negative or fractional rate, estimating from a graph, or a context problem requiring a full sentence with units and sign meaning. tier1 ends here and tier2 begins here.",
+      "constraints": [
+        "Nonlinear rules such as $f(x)=x^2-3$, $f(x)=-x^2+4x$, or $f(x)=|x-2|$, or a linear context with negative slope",
+        "Result may be negative or a fraction such as $\\frac{7}{3}$ requiring careful sign handling",
+        "Graph estimation requires reading two endpoint coordinates from gridlines",
+        "Context answer must state units (output per input) and interpret the sign in a sentence"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning: average rate of change of an exponential function, comparison of the rate over two intervals to describe changing behavior, working backward from a known rate to a missing value, or a layered context that requires computing the rate and then answering a follow-up. tier2 lives here.",
+      "constraints": [
+        "Exponential rules like $f(x)=2^x$ or $f(x)=3\\cdot 2^x$, or intervals with negative or non-integer endpoints",
+        "Compare average rates over two intervals and justify which is greater and what that means",
+        "Solve for a missing endpoint value, output, or interval given the average rate of change",
+        "Layered context: compute the average rate of change, then use it to predict, compare, or explain a follow-up quantity"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student inverts the difference quotient, dividing the change in input by the change in output",
+      "distractor": "For $f(x)=x^2$ over $[2,5]$ computes $\\dfrac{5-2}{25-4}=\\dfrac{3}{21}=\\dfrac{1}{7}$ instead of $\\dfrac{25-4}{5-2}=7$"
+    },
+    {
+      "misconception": "Student forgets to divide by the change in input and reports only the change in output",
+      "distractor": "For $f(x)=3x-4$ over $[1,5]$ reports $f(5)-f(1)=12$ as the rate instead of dividing by $4$ to get $3$"
+    },
+    {
+      "misconception": "Student evaluates at only one endpoint or uses $f(b-a)$ instead of $f(b)-f(a)$",
+      "distractor": "For $f(x)=x^2$ over $[2,5]$ computes $f(5-2)=f(3)=9$ and divides incorrectly, instead of $\\dfrac{f(5)-f(2)}{3}=7$"
+    },
+    {
+      "misconception": "Student mishandles a sign and gets the wrong direction for a decreasing function",
+      "distractor": "For $f(x)=-2x+10$ over $[1,4]$ computes $\\dfrac{f(1)-f(4)}{4-1}=\\dfrac{8-2}{3}=2$ instead of $\\dfrac{f(4)-f(1)}{4-1}=\\dfrac{2-8}{3}=-2$"
+    },
+    {
+      "misconception": "Student assumes the average rate of change of a nonlinear function is constant or equals a single slope value",
+      "distractor": "For $f(x)=x^2$ claims the average rate over $[2,4]$ equals the rate over $[0,2]$, answering $2$ for both instead of $2$ and $6$ respectively"
+    },
+    {
+      "misconception": "Student reads the graph endpoints with reversed coordinates or off by the wrong gridline",
+      "distractor": "For a secant from $(1,2)$ to $(4,11)$ uses $\\dfrac{4-1}{11-2}=\\dfrac{3}{9}=\\dfrac{1}{3}$ instead of $\\dfrac{11-2}{4-1}=3$"
+    },
+    {
+      "misconception": "Student drops or inverts the units when interpreting in context",
+      "distractor": "For a population rate of $50$ people per year, states the answer as $50$ years per person or omits units entirely, reporting just $50$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

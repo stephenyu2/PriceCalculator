@@ -1,0 +1,214 @@
+{
+  "id": "8.G.A.4--worksheet",
+  "standard": "8.G.A.4",
+  "clusterId": null,
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand congruence and similarity using physical models, transparencies, or geometry software",
+  "clusterCode": "A",
+  "skillName": "Similarity and Dilations",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T10:24:32.274Z",
+  "intro": "Practice dilations and similarity. Items 1-5 are warm-up dilations about the origin and reading scale factors. Items 6-10 step up to non-origin centers, missing sides, and similarity tests. Items 11-15 ask you to recover centers and scale factors, describe full transformation sequences, and reason about area.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Point $A(3,5)$ is dilated about the origin with scale factor $k=2$. Find the image $A'$.",
+      "answer": "$A'(6,10)$",
+      "solution": {
+        "steps": [
+          "Dilation about the origin uses the rule $(x,y)\\mapsto(kx,ky)$.",
+          "Multiply each coordinate by $k=2$: $(2\\cdot 3,\\ 2\\cdot 5)$.",
+          "This gives $A'(6,10)$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Point $B(8,-4)$ is dilated about the origin with scale factor $k=\\frac{1}{2}$. Find the image $B'$.",
+      "answer": "$B'(4,-2)$",
+      "solution": {
+        "steps": [
+          "Use $(x,y)\\mapsto(kx,ky)$ with $k=\\frac{1}{2}$.",
+          "Multiply each coordinate by $\\frac{1}{2}$: $\\left(\\frac{1}{2}\\cdot 8,\\ \\frac{1}{2}\\cdot(-4)\\right)$.",
+          "This gives $B'(4,-2)$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Triangle $PQR$ has vertices $P(2,1)$, $Q(4,3)$, $R(-2,2)$. Find the image after a dilation centered at the origin with scale factor $k=3$.",
+      "answer": "$P'(6,3)$, $Q'(12,9)$, $R'(-6,6)$",
+      "solution": {
+        "steps": [
+          "Apply $(x,y)\\mapsto(3x,3y)$ to each vertex.",
+          "$P(2,1)\\mapsto P'(6,3)$.",
+          "$Q(4,3)\\mapsto Q'(12,9)$.",
+          "$R(-2,2)\\mapsto R'(-6,6)$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A figure is dilated about the origin so that the point $(5,2)$ maps to $(15,6)$. What is the scale factor $k$?",
+      "answer": "$k=3$",
+      "solution": {
+        "steps": [
+          "The scale factor is the ratio of an image coordinate to the matching original coordinate.",
+          "Using the $x$-coordinates: $k=\\frac{15}{5}=3$.",
+          "Check with the $y$-coordinates: $\\frac{6}{2}=3$. Both agree, so $k=3$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A dilation about the origin sends a segment of length $12$ to an image segment of length $4$. State the scale factor and whether the dilation is an enlargement or a reduction.",
+      "answer": "$k=\\frac{1}{3}$; it is a reduction",
+      "solution": {
+        "steps": [
+          "The scale factor is the ratio of image length to original length: $k=\\frac{4}{12}=\\frac{1}{3}$.",
+          "Because $0<k<1$, the image is smaller than the original.",
+          "So $k=\\frac{1}{3}$ and the dilation is a reduction."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Point $P(5,3)$ is dilated about center $C(1,1)$ with scale factor $k=3$. Find the image $P'$.",
+      "answer": "$P'(13,7)$",
+      "solution": {
+        "steps": [
+          "Use the non-origin rule $(x,y)\\mapsto\\big(c_x+k(x-c_x),\\,c_y+k(y-c_y)\\big)$ with $C(1,1)$ and $k=3$.",
+          "$x$-coordinate: $1+3(5-1)=1+3(4)=1+12=13$.",
+          "$y$-coordinate: $1+3(3-1)=1+3(2)=1+6=7$.",
+          "So $P'(13,7)$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Point $D(6,8)$ is dilated about center $C(2,2)$ with scale factor $k=\\frac{1}{2}$. Find the image $D'$.",
+      "answer": "$D'(4,5)$",
+      "solution": {
+        "steps": [
+          "Apply $(x,y)\\mapsto\\big(c_x+k(x-c_x),\\,c_y+k(y-c_y)\\big)$ with $C(2,2)$ and $k=\\frac{1}{2}$.",
+          "$x$-coordinate: $2+\\frac{1}{2}(6-2)=2+\\frac{1}{2}(4)=2+2=4$.",
+          "$y$-coordinate: $2+\\frac{1}{2}(8-2)=2+\\frac{1}{2}(6)=2+3=5$.",
+          "So $D'(4,5)$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "$\\triangle ABC\\sim\\triangle DEF$ with $AB=8$, $DE=12$, and $BC=10$. Find $EF$.",
+      "answer": "$EF=15$",
+      "solution": {
+        "steps": [
+          "Corresponding sides of similar triangles are proportional. The scale factor from $\\triangle ABC$ to $\\triangle DEF$ is $\\frac{DE}{AB}=\\frac{12}{8}=\\frac{3}{2}$.",
+          "$EF$ corresponds to $BC$, so $EF=\\frac{3}{2}\\cdot BC$.",
+          "$EF=\\frac{3}{2}\\cdot 10=15$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Rectangle $R$ measures $3$ by $5$ and rectangle $S$ measures $6$ by $9$. Are $R$ and $S$ similar? Justify using corresponding side ratios.",
+      "answer": "No, they are not similar",
+      "solution": {
+        "steps": [
+          "Two figures are similar only when all corresponding side ratios are equal.",
+          "Compare the ratios: $\\frac{6}{3}=2$ for one pair of sides, but $\\frac{9}{5}=1.8$ for the other pair.",
+          "Since $2\\neq\\frac{9}{5}$, no single scale factor maps $R$ onto $S$.",
+          "Therefore $R$ and $S$ are not similar."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A figure is mapped onto its image by a reflection followed by a dilation with scale factor $k=2$. Is the image congruent to the original, similar but not congruent, or neither? Explain.",
+      "answer": "Similar but not congruent",
+      "solution": {
+        "steps": [
+          "A reflection is a rigid motion, so it preserves size. A dilation with $k=2$ scales every length, so it changes size.",
+          "Because at least one dilation with $k\\neq 1$ is used, the figures are similar but the sizes differ.",
+          "Congruence requires the same size ($k=1$), which does not hold here.",
+          "So the image is similar but not congruent to the original."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Segment $\\overline{AB}$ with $A(2,2)$ and $B(4,2)$ maps to $A'(2,2)$, $B'(8,2)$ under a dilation. Find the scale factor and the center of dilation.",
+      "answer": "$k=3$; center $C(2,2)$",
+      "solution": {
+        "steps": [
+          "Compare image and original lengths. $AB=4-2=2$ and $A'B'=8-2=6$, so $k=\\frac{6}{2}=3$.",
+          "A point that maps to itself is the center of dilation. Here $A(2,2)$ maps to $A'(2,2)$, so the center is $C(2,2)$.",
+          "Check $B$: using center $(2,2)$ and $k=3$, the $x$-coordinate of the image is $2+3(4-2)=2+6=8$, matching $B'(8,2)$.",
+          "So $k=3$ and the center is $C(2,2)$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Under a dilation about the origin, $A(2,4)$ maps to $A'(3,6)$ and $B(-4,2)$ maps to $B'(-6,3)$. Find the scale factor, then find the image of $C(8,-2)$ under the same dilation.",
+      "answer": "$k=\\frac{3}{2}$; $C'(12,-3)$",
+      "solution": {
+        "steps": [
+          "Find $k$ from a corresponding pair: $\\frac{3}{2}$ from the $x$-coordinates of $A$ and $A'$.",
+          "Confirm with $B$: $\\frac{-6}{-4}=\\frac{3}{2}$ and $\\frac{3}{2}=\\frac{3}{2}$, so $k=\\frac{3}{2}$.",
+          "Apply $(x,y)\\mapsto\\left(\\frac{3}{2}x,\\frac{3}{2}y\\right)$ to $C(8,-2)$.",
+          "$\\left(\\frac{3}{2}\\cdot 8,\\ \\frac{3}{2}\\cdot(-2)\\right)=(12,-3)$, so $C'(12,-3)$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Triangle $T$ has vertices $A(0,0)$, $B(2,0)$, $C(0,2)$. Triangle $T'$ has vertices $A'(0,0)$, $B'(0,6)$, $C'(-6,0)$. Describe a complete sequence of transformations (including a dilation) that maps $T$ onto $T'$, and state the area ratio of $T'$ to $T$.",
+      "answer": "Rotate $90^\\circ$ counterclockwise about the origin, then dilate about the origin with $k=3$; area ratio $9:1$",
+      "solution": {
+        "steps": [
+          "First match shape orientation. A $90^\\circ$ counterclockwise rotation about the origin sends $(x,y)\\mapsto(-y,x)$: $A(0,0)\\mapsto(0,0)$, $B(2,0)\\mapsto(0,2)$, $C(0,2)\\mapsto(-2,0)$.",
+          "Compare with $T'$: the rotated image $(0,0),(0,2),(-2,0)$ has the same shape as $T'$ but is smaller. The dilation factor is $\\frac{6}{2}=3$.",
+          "Dilate about the origin with $k=3$: $(0,2)\\mapsto(0,6)=B'$ and $(-2,0)\\mapsto(-6,0)=C'$, and $A'$ stays at the origin.",
+          "So the sequence is a $90^\\circ$ counterclockwise rotation about the origin followed by a dilation about the origin with $k=3$.",
+          "Area scales by $k^2$, so the area ratio of $T'$ to $T$ is $3^2:1=9:1$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A photo $4$ inches wide and $6$ inches tall is enlarged so that the new width is $10$ inches, keeping the figures similar. Find the new height and the ratio of the enlarged area to the original area.",
+      "answer": "New height $15$ inches; area ratio $\\frac{25}{4}$",
+      "solution": {
+        "steps": [
+          "Similar figures share one scale factor. From the widths, $k=\\frac{10}{4}=\\frac{5}{2}$.",
+          "Apply the same factor to the height: new height $=\\frac{5}{2}\\cdot 6=15$ inches.",
+          "Area scales by $k^2$: $\\left(\\frac{5}{2}\\right)^2=\\frac{25}{4}$.",
+          "So the new height is $15$ inches and the enlarged area is $\\frac{25}{4}$ times the original."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "$\\triangle ABC$ has vertices $A(1,1)$, $B(3,1)$, $C(1,4)$. After a dilation about center $C(1,1)$ with scale factor $k=2$ followed by a translation $3$ units right, the image is $\\triangle A''B''C''$. Find the coordinates of $A''$, $B''$, and $C''$.",
+      "answer": "$A''(4,1)$, $B''(8,1)$, $C''(4,7)$",
+      "solution": {
+        "steps": [
+          "First dilate about $C(1,1)$ with $k=2$ using $(x,y)\\mapsto\\big(1+2(x-1),\\,1+2(y-1)\\big)$.",
+          "$A(1,1)\\mapsto\\big(1+2(0),\\,1+2(0)\\big)=(1,1)$.",
+          "$B(3,1)\\mapsto\\big(1+2(2),\\,1+2(0)\\big)=(5,1)$.",
+          "$C(1,4)\\mapsto\\big(1+2(0),\\,1+2(3)\\big)=(1,7)$.",
+          "Now translate each image point $3$ units right, $(x,y)\\mapsto(x+3,y)$: $(1,1)\\mapsto A''(4,1)$, $(5,1)\\mapsto B''(8,1)$, $(1,7)\\mapsto C''(4,7)$."
+        ]
+      }
+    }
+  ]
+}

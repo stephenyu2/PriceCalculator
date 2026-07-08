@@ -1,0 +1,133 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent.",
+
+  "standard": "A2.F-TF.B.5",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Functions — Trigonometric Functions",
+  "domainCode": "F-TF",
+  "cluster": "Model periodic phenomena with trigonometric functions",
+  "clusterCode": "B",
+  "skillName": "Modeling with Trig Functions",
+
+  "description": "Students choose and build a sinusoidal model $f(x)=a\\sin(b(x-h))+k$ (or the cosine form $f(x)=a\\cos(b(x-h))+k$) for periodic real-world phenomena. They translate a specified amplitude, frequency or period, and midline into the parameters $a$, $b$, $k$, and a phase shift $h$, then use the model to evaluate, interpret, and solve. The student must connect each transformation parameter to its physical meaning: amplitude $=|a|$ (half the peak-to-trough distance), midline $y=k$ (the average/rest value), period $T=\\frac{2\\pi}{|b|}$ (or $\\frac{1}{|b|}$ when $b$ is a frequency in cycles), frequency $=\\frac{1}{T}$, and the phase shift $h$ that aligns the curve with a given starting feature (max, min, or midline crossing).",
+
+  "subSkills": [
+    "Identify amplitude, midline, period, and frequency from a verbal description, a graph, or a data table",
+    "Convert between period and frequency, and compute $b$ from a period via $b=\\frac{2\\pi}{T}$",
+    "Choose between a sine and a cosine model based on the given starting feature (max/min vs. midline crossing) to minimize or set the phase shift",
+    "Assemble the parameters into $a\\sin(b(x-h))+k$ or $a\\cos(b(x-h))+k$ with correct signs",
+    "Determine the phase shift $h$ that places a known feature (peak, trough, or midline crossing) at a given input value",
+    "Evaluate the model at a given input and interpret the output in context (with units)",
+    "Solve the model for the input(s) that produce a target output over one period (read from a graph or by inverse reasoning)",
+    "Interpret amplitude, midline, period, and frequency back into the real-world quantity they represent"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Build the equation from stated amplitude, midline, and period",
+      "example": "Write a sine function with amplitude $3$, midline $y=5$, and period $4\\pi$ that passes through its midline going upward at $x=0$. Answer: $f(x)=3\\sin\\!\\left(\\tfrac{1}{2}x\\right)+5$."
+    },
+    {
+      "name": "Frequency-to-parameter conversion",
+      "example": "A wave completes $4$ cycles per second with amplitude $2$ about the line $y=0$. Write $h(t)=2\\sin(8\\pi t)$, since $b=2\\pi f=2\\pi\\cdot 4=8\\pi$."
+    },
+    {
+      "name": "Choose sine vs. cosine from the starting feature",
+      "example": "A Ferris wheel rider starts at the lowest point ($2$ m) and the wheel peaks at $30$ m every $20$ s. Model the height: $H(t)=-14\\cos\\!\\left(\\tfrac{\\pi}{10}t\\right)+16$, using $-\\cos$ because the motion starts at a minimum."
+    },
+    {
+      "name": "Determine the phase shift to align a feature",
+      "example": "Daylight peaks at $14.5$ h on day $172$ and the midline is $12$ h with period $365$. Write $D(t)=2.5\\sin\\!\\left(\\tfrac{2\\pi}{365}(t-81.25)\\right)+12$, choosing $h$ so the maximum lands at $t=172$."
+    },
+    {
+      "name": "Evaluate the model and interpret in context",
+      "example": "For $T(t)=15\\cos\\!\\left(\\tfrac{\\pi}{6}(t-3)\\right)+60$ (temperature in $^{\\circ}$F, $t$ in hours after midnight), find $T(9)$ and state what it means. Answer: $T(9)=60^{\\circ}$F, the daily average, reached $6$ hours after the $3$ a.m. low passes through midline."
+    },
+    {
+      "name": "Solve for inputs that give a target output",
+      "example": "Given the tide model $h(t)=4\\sin\\!\\left(\\tfrac{\\pi}{6}t\\right)+7$ (feet, $t$ in hours), find the first two times $t\\ge 0$ when the tide is $9$ ft. Answer: $t=1$ and $t=5$ hours."
+    }
+  ],
+
+  "difficultyRubric": {
+    "_comment": "A single ramped worksheet of 15 items runs Easy (items 1-5) to Medium (6-11) to Hard (12-15). If split: tier1 = Easy to Medium (read/convert/assemble parameters, no phase shift), tier2 = Medium to Hard (phase shift, interpretation, solving). Difficulty scales with the number of parameters that must be derived rather than read, whether a phase shift is required, and whether the student must also interpret or solve.",
+    "Easy": {
+      "description": "Amplitude, midline, and period (or $b$) are stated directly and only need to be placed into the standard form. No phase shift (curve starts at a midline crossing going up for sine, or at a max for cosine). One- or two-step.",
+      "constraints": [
+        "Amplitude, midline, and period given explicitly in words",
+        "$b$ is a clean value, $T$ a simple multiple or fraction of $\\pi$ (e.g. $2\\pi$, $\\pi$, $4\\pi$, $\\frac{\\pi}{3}$)",
+        "Phase shift $h=0$",
+        "Task is to write the equation OR identify one feature from a given equation"
+      ]
+    },
+    "Medium": {
+      "description": "At least one parameter must be derived: compute $b$ from a period, or get amplitude and midline from a stated max and min via $a=\\frac{\\text{max}-\\text{min}}{2}$ and $k=\\frac{\\text{max}+\\text{min}}{2}$, or convert a frequency to $b$. May choose sine vs. cosine based on the starting feature. Phase shift is $0$ or a simple value.",
+      "constraints": [
+        "Amplitude and/or midline derived from a given maximum and minimum",
+        "$b$ derived from a period or from a frequency in cycles per unit",
+        "Student selects sine or cosine (and sign of $a$) from the described start",
+        "Phase shift either $0$ or a single clean value",
+        "May ask for one evaluation of the finished model"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step real-world model where the student must extract every parameter from context, determine a non-trivial phase shift to align a stated peak/trough/crossing at a given input, and then either evaluate, interpret, or solve the model for target outputs over one period.",
+      "constraints": [
+        "All four features (amplitude, midline, period/frequency, phase reference) buried in a context paragraph",
+        "Requires a non-zero phase shift $h$ computed from a stated time of max or min",
+        "Follow-up requires evaluating in context with units OR solving for input value(s) yielding a target output",
+        "May require comparing two models or justifying the sine-vs-cosine choice"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student uses the period directly as $b$ instead of $b=\\frac{2\\pi}{T}$",
+      "distractor": "For period $4\\pi$ writes $f(x)=3\\sin(4\\pi x)+5$ instead of $f(x)=3\\sin\\!\\left(\\tfrac{1}{2}x\\right)+5$"
+    },
+    {
+      "misconception": "Student inverts the period-frequency relationship, taking $b=\\frac{T}{2\\pi}$",
+      "distractor": "For period $4\\pi$ uses $b=\\frac{4\\pi}{2\\pi}=2$, giving $f(x)=3\\sin(2x)+5$"
+    },
+    {
+      "misconception": "Student takes amplitude as the full peak-to-trough distance instead of half of it",
+      "distractor": "With max $30$ and min $2$ uses $a=28$ instead of $a=\\frac{30-2}{2}=14$"
+    },
+    {
+      "misconception": "Student computes the midline as the maximum (or as $0$) rather than the average of max and min",
+      "distractor": "With max $30$ and min $2$ uses $k=30$ (or $k=0$) instead of $k=\\frac{30+2}{2}=16$"
+    },
+    {
+      "misconception": "Student keeps $+\\cos$ when the motion starts at a minimum, ignoring the needed reflection",
+      "distractor": "Models a ride starting at the lowest point as $14\\cos\\!\\left(\\tfrac{\\pi}{10}t\\right)+16$ instead of $-14\\cos\\!\\left(\\tfrac{\\pi}{10}t\\right)+16$"
+    },
+    {
+      "misconception": "Student writes the phase shift with the wrong sign, using $(x+h)$ for a rightward shift",
+      "distractor": "To shift the peak to $t=172$ writes $\\sin\\!\\left(\\tfrac{2\\pi}{365}(t+81.25)\\right)$ instead of $(t-81.25)$"
+    },
+    {
+      "misconception": "Student confuses frequency with period, plugging the frequency in where the period belongs",
+      "distractor": "For $4$ cycles per second uses $b=\\frac{2\\pi}{4}=\\frac{\\pi}{2}$ instead of $b=2\\pi\\cdot4=8\\pi$"
+    },
+    {
+      "misconception": "Student adds the midline to the amplitude argument or otherwise mislocates $k$",
+      "distractor": "Writes $f(x)=3\\sin\\!\\left(\\tfrac{1}{2}x+5\\right)$ instead of $f(x)=3\\sin\\!\\left(\\tfrac{1}{2}x\\right)+5$"
+    }
+  ],
+
+  "_comment_itemCounts": "Standard uses a single ramped worksheet (Easy->Hard across 15 items). lesson 5 worked examples + 5 practice, quiz 8 multiple-choice.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "id": "GEO.G-SRT.A.2--quiz",
+  "standard": "GEO.G-SRT.A.2",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Similarity, Right Triangles, and Trigonometry",
+  "domainCode": "G-SRT",
+  "cluster": "Understand similarity in terms of similarity transformations",
+  "clusterCode": "A",
+  "skillName": "Similarity Transformations and Triangles",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Eight multiple-choice questions on the transformational definition of similarity: deciding whether figures are similar, finding scale factors, and using equal corresponding angles and proportional corresponding sides in similar triangles.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Figure $B$ is the image of figure $A$ under a rotation followed by a dilation with scale factor $2$. Which statement is true?\nA) $A$ and $B$ are similar, because a rigid motion followed by a dilation is a similarity transformation.\nB) $A$ and $B$ are not similar, because the dilation makes them different sizes.\nC) $A$ and $B$ are congruent, because a rotation preserves size.\nD) $A$ and $B$ are not similar, because only a single dilation can produce similar figures.",
+      "answer": "A) $A$ and $B$ are similar, because a rigid motion followed by a dilation is a similarity transformation.",
+      "solution": {
+        "steps": [
+          "A similarity transformation is any sequence of rigid motions (translations, rotations, reflections) together with a dilation.",
+          "A rotation is a rigid motion and a dilation is the size change, so their composition is a similarity transformation that maps $A$ exactly onto $B$. Therefore $A \\sim B$.",
+          "B is wrong: similar figures are allowed to differ in size; that is exactly what the dilation with $k=2$ produces.",
+          "C is wrong: a dilation with $k=2 \\neq 1$ doubles every length, so the figures are not congruent.",
+          "D is wrong: a rigid motion together with a dilation is still a similarity transformation; the rotation does not disqualify it."
+        ],
+        "answer": "A) $A$ and $B$ are similar, because a rigid motion followed by a dilation is a similarity transformation."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "$\\triangle ABC \\sim \\triangle DEF$ with $AB = 6$ corresponding to $DE = 9$. What is the scale factor $k$ from $\\triangle ABC$ to $\\triangle DEF$?\nA) $k = \\frac{2}{3}$\nB) $k = \\frac{3}{2}$\nC) $k = 3$\nD) $k = 15$",
+      "answer": "B) $k = \\frac{3}{2}$",
+      "solution": {
+        "steps": [
+          "The scale factor from a figure to its image is the ratio of an image length to the corresponding preimage length.",
+          "Here the preimage is $\\triangle ABC$ and the image is $\\triangle DEF$, so $k = \\frac{DE}{AB} = \\frac{9}{6} = \\frac{3}{2}$.",
+          "A is wrong: it inverts the ratio as $\\frac{6}{9} = \\frac{2}{3}$, dividing preimage by image instead of image by preimage.",
+          "C is wrong: $3$ comes from a wrong subtraction or mismatched lengths; $\\frac{9}{6}$ does not reduce to $3$.",
+          "D is wrong: $15 = 6 + 9$ adds the side lengths, which has nothing to do with the scale factor."
+        ],
+        "answer": "B) $k = \\frac{3}{2}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Given $\\triangle ABC \\sim \\triangle DEF$, which side corresponds to $\\overline{AB}$?\nA) $\\overline{DE}$\nB) $\\overline{EF}$\nC) $\\overline{DF}$\nD) $\\overline{ED}$ reversed to $\\overline{FE}$",
+      "answer": "A) $\\overline{DE}$",
+      "solution": {
+        "steps": [
+          "In a similarity statement, vertices are listed in corresponding order: $A \\leftrightarrow D$, $B \\leftrightarrow E$, $C \\leftrightarrow F$.",
+          "So $\\overline{AB}$ corresponds to $\\overline{DE}$, the segment joining the matching vertices.",
+          "B is wrong: $\\overline{EF}$ corresponds to $\\overline{BC}$, not $\\overline{AB}$; this pairs the sides in the wrong correspondence.",
+          "C is wrong: $\\overline{DF}$ corresponds to $\\overline{AC}$.",
+          "D is wrong: $\\overline{FE}$ corresponds to $\\overline{CB}$ (the same side as $\\overline{BC}$), still not $\\overline{AB}$."
+        ],
+        "answer": "A) $\\overline{DE}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "A triangle has sides $3, 4, 5$ and a second triangle has sides $6, 8, 10$. Are the triangles similar, and if so what is the scale factor from the first to the second?\nA) Yes, with $k = 2$, because every side of the second is $2$ times the corresponding side of the first.\nB) No, because the side lengths are different.\nC) Yes, with $k = 5$, because $5$ is added to one side to reach $10$.\nD) Yes, but the area is also multiplied by $2$.",
+      "answer": "A) Yes, with $k = 2$, because every side of the second is $2$ times the corresponding side of the first.",
+      "solution": {
+        "steps": [
+          "Check the three corresponding ratios: $\\frac{6}{3} = 2$, $\\frac{8}{4} = 2$, $\\frac{10}{5} = 2$.",
+          "All three ratios are equal, so a dilation with $k = 2$ composed with a rigid motion maps the first triangle onto the second. The triangles are similar with scale factor $2$.",
+          "B is wrong: differing side lengths do not break similarity; a dilation with $k \\neq 1$ is allowed.",
+          "C is wrong: the scale factor multiplies, it is not found by adding; $5 + 5 = 10$ is a coincidence and $\\frac{6}{3} \\neq 5$.",
+          "D is wrong: the area is multiplied by $k^2 = 4$, not by $k = 2$, so that statement is false."
+        ],
+        "answer": "A) Yes, with $k = 2$, because every side of the second is $2$ times the corresponding side of the first."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "$\\triangle PQR \\sim \\triangle STU$ with $PQ = 8$, $ST = 12$, and $QR = 10$. Find $TU$.\nA) $TU = 15$\nB) $TU = 14$\nC) $TU = \\frac{20}{3}$\nD) $TU = 6$",
+      "answer": "A) $TU = 15$",
+      "solution": {
+        "steps": [
+          "Corresponding sides: $PQ \\leftrightarrow ST$ and $QR \\leftrightarrow TU$.",
+          "The scale factor from $\\triangle PQR$ to $\\triangle STU$ is $\\frac{ST}{PQ} = \\frac{12}{8} = \\frac{3}{2}$.",
+          "Multiply the corresponding side by the scale factor: $TU = QR \\cdot \\frac{3}{2} = 10 \\cdot \\frac{3}{2} = 15$.",
+          "B is wrong: $14 = 10 + 4$ adds part of the scale factor instead of multiplying.",
+          "C is wrong: $\\frac{20}{3}$ uses the inverted ratio $\\frac{8}{12} = \\frac{2}{3}$ instead of $\\frac{3}{2}$.",
+          "D is wrong: $6$ comes from matching the wrong corresponding sides, ignoring the order of the similarity statement."
+        ],
+        "answer": "A) $TU = 15$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "A dilation with center $O$ and scale factor $3$ maps $\\triangle ABC$ to $\\triangle A'B'C'$. If $\\angle A = 40^\\circ$, what is $\\angle A'$?\nA) $\\angle A' = 40^\\circ$\nB) $\\angle A' = 120^\\circ$\nC) $\\angle A' = 43^\\circ$\nD) $\\angle A' = 13.3^\\circ$",
+      "answer": "A) $\\angle A' = 40^\\circ$",
+      "solution": {
+        "steps": [
+          "A dilation multiplies every length by the scale factor but preserves angle measures.",
+          "So the image angle equals the original: $\\angle A' = \\angle A = 40^\\circ$.",
+          "B is wrong: it multiplies the angle by the scale factor ($40 \\cdot 3 = 120$), but dilations do not scale angles.",
+          "C is wrong: it adds the scale factor to the angle ($40 + 3 = 43$), which is not how dilations act.",
+          "D is wrong: it divides the angle by the scale factor ($\\frac{40}{3} \\approx 13.3$); angles are left unchanged, not shrunk."
+        ],
+        "answer": "A) $\\angle A' = 40^\\circ$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Triangle one has sides $4, 6, 8$ and triangle two has sides $8, 12, 15$. Are the two triangles similar?\nA) No, because $\\frac{8}{4} = 2$ and $\\frac{12}{6} = 2$ but $\\frac{15}{8} \\neq 2$, so a single scale factor does not work for all three sides.\nB) Yes, with $k = 2$, because the first two ratios both equal $2$.\nC) Yes, because both triangles have a side of length $8$.\nD) Yes, because they share at least one equal angle.",
+      "answer": "A) No, because $\\frac{8}{4} = 2$ and $\\frac{12}{6} = 2$ but $\\frac{15}{8} \\neq 2$, so a single scale factor does not work for all three sides.",
+      "solution": {
+        "steps": [
+          "For similarity, all three corresponding side ratios must be equal to one common scale factor $k$.",
+          "Compute the ratios in order: $\\frac{8}{4} = 2$, $\\frac{12}{6} = 2$, $\\frac{15}{8} = 1.875$.",
+          "Since $\\frac{15}{8} \\neq 2$, no single $k$ scales all three sides, so the triangles are not similar.",
+          "B is wrong: it checks only the first two ratios and stops; all three must match, and the third does not.",
+          "C is wrong: a shared side length of $8$ does not establish proportional sides or matching correspondence.",
+          "D is wrong: a single equal angle is not enough (it is not even given here); similarity needs the full proportional-sides or AA condition."
+        ],
+        "answer": "A) No, because $\\frac{8}{4} = 2$ and $\\frac{12}{6} = 2$ but $\\frac{15}{8} \\neq 2$, so a single scale factor does not work for all three sides."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "$\\triangle ABC \\sim \\triangle DEF$ with a scale factor of $\\frac{5}{3}$ from $\\triangle ABC$ to $\\triangle DEF$. Side $\\overline{AB}$ has length $9$ and its corresponding side $\\overline{DE}$ has length $2x + 1$. Find $x$.\nA) $x = 7$\nB) $x = \\frac{14}{3}$\nC) $x = \\frac{13}{2}$\nD) $x = 8$",
+      "answer": "A) $x = 7$",
+      "solution": {
+        "steps": [
+          "The image length equals the scale factor times the preimage length: $DE = \\frac{5}{3} \\cdot AB = \\frac{5}{3} \\cdot 9 = 15$.",
+          "Set the algebraic expression equal to that length: $2x + 1 = 15$.",
+          "Solve: $2x = 14$, so $x = 7$.",
+          "B is wrong: it uses the inverted scale factor, $DE = \\frac{3}{5} \\cdot 9 = \\frac{27}{5}$, then mis-solves the equation.",
+          "C is wrong: it sets $2x + 1 = 9 \\cdot \\frac{5}{3}$ but treats $DE$ as $14$ from adding $9 + 5$, giving $x = \\frac{13}{2}$.",
+          "D is wrong: it forgets the $+1$ and solves $2x = 16$, giving $x = 8$."
+        ],
+        "answer": "A) $x = 7$"
+      }
+    }
+  ]
+}

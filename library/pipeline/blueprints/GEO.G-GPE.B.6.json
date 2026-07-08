@@ -1,0 +1,128 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent. One blueprint per standard.",
+
+  "standard": "GEO.G-GPE.B.6",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Expressing Geometric Properties with Equations",
+  "domainCode": "G-GPE",
+  "cluster": "Use coordinates to prove simple geometric theorems algebraically",
+  "clusterCode": "B",
+  "skillName": "Partitioning a Line Segment",
+
+  "description": "Given a directed line segment from point $A(x_1, y_1)$ to point $B(x_2, y_2)$ and a ratio $m:n$, students find the coordinates of the point $P$ that partitions the segment so that $AP:PB = m:n$. They use the section formula $P = \\left(x_1 + \\frac{m}{m+n}(x_2 - x_1),\\; y_1 + \\frac{m}{m+n}(y_2 - y_1)\\right)$, equivalently $P = \\left(\\frac{n x_1 + m x_2}{m+n},\\; \\frac{n y_1 + m y_2}{m+n}\\right)$. They must respect direction (start at $A$, move toward $B$), apply the fraction $k = \\frac{m}{m+n}$ correctly, and recognize the midpoint as the special case of ratio $1:1$.",
+
+  "subSkills": [
+    "Compute the partition fraction $k = \\frac{m}{m+n}$ from a given ratio $m:n$",
+    "Compute the run and rise of a directed segment: $\\Delta x = x_2 - x_1$ and $\\Delta y = y_2 - y_1$, in the correct direction from $A$ to $B$",
+    "Apply the section formula $P = \\left(x_1 + k(x_2 - x_1),\\; y_1 + k(y_2 - y_1)\\right)$ to locate the partition point",
+    "Recognize and use the midpoint formula $M = \\left(\\frac{x_1 + x_2}{2},\\; \\frac{y_1 + y_2}{2}\\right)$ as the ratio $1:1$ special case",
+    "Distinguish the directed ratio $AP:PB$ from $BP:PA$, accounting for which endpoint the segment starts at",
+    "Work with negative coordinates and fractional results without rounding (keep exact fractions)",
+    "Interpret and solve inverse problems: given a partition point or ratio, find a missing endpoint or the ratio itself"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Midpoint (ratio 1:1)",
+      "example": "Find the midpoint of the segment from $A(2, 3)$ to $B(8, 11)$. $M = \\left(\\frac{2+8}{2}, \\frac{3+11}{2}\\right) = (5, 7)$."
+    },
+    {
+      "name": "Partition in a clean ratio with the fraction reducing nicely",
+      "example": "Find the point $P$ that partitions the directed segment from $A(-2, 1)$ to $B(6, 9)$ in the ratio $1:3$. Here $k = \\frac{1}{1+3} = \\frac{1}{4}$, so $P = \\left(-2 + \\frac{1}{4}(6-(-2)),\\; 1 + \\frac{1}{4}(9-1)\\right) = \\left(-2 + 2,\\; 1 + 2\\right) = (0, 3)$."
+    },
+    {
+      "name": "Partition with a non-unit ratio and fractional result",
+      "example": "Find the point $P$ that partitions the directed segment from $A(1, 2)$ to $B(7, 5)$ in the ratio $2:3$. Then $k = \\frac{2}{5}$, so $P = \\left(1 + \\frac{2}{5}(6),\\; 2 + \\frac{2}{5}(3)\\right) = \\left(\\frac{17}{5}, \\frac{16}{5}\\right)$."
+    },
+    {
+      "name": "Direction sensitivity (ratio measured from the second endpoint)",
+      "example": "Point $P$ partitions the directed segment from $B(7, 5)$ to $A(1, 2)$ in the ratio $2:3$. Starting at $B$: $P = \\left(7 + \\frac{2}{5}(1-7),\\; 5 + \\frac{2}{5}(2-5)\\right) = \\left(\\frac{23}{5}, \\frac{19}{5}\\right)$, a different point than partitioning from $A$."
+    },
+    {
+      "name": "Inverse: find the ratio given the partition point",
+      "example": "On the segment from $A(0,0)$ to $B(12, 8)$, point $P(3, 2)$ lies on $\\overline{AB}$. Find $AP:PB$. Since $P = A + \\frac{1}{4}(B - A)$, the ratio $AP:PB = 1:3$."
+    },
+    {
+      "name": "Inverse: find a missing endpoint given the partition point and ratio",
+      "example": "$P(4, 1)$ partitions the directed segment from $A(-2, -5)$ to $B$ in the ratio $3:1$. With $k = \\frac{3}{4}$, solve $4 = -2 + \\frac{3}{4}(x_2 + 2)$ and $1 = -5 + \\frac{3}{4}(y_2 + 5)$ to get $B(6, 3)$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step application where the formula is essentially handed over. Midpoint problems (ratio $1:1$) or partition ratios whose fraction $\\frac{m}{m+n}$ is a clean unit fraction, with positive integer coordinates and a deltas $\\Delta x, \\Delta y$ that are divisible by $m+n$ so the answer is an integer point.",
+      "constraints": [
+        "Ratio is $1:1$ (midpoint) or a unit-style ratio like $1:2$, $1:3$, $3:1$",
+        "All coordinates are nonnegative integers",
+        "$\\Delta x$ and $\\Delta y$ are exact multiples of $m+n$, so $P$ has integer coordinates",
+        "Direction is from $A$ to $B$ as stated; no re-orientation needed",
+        "At most one partition computed per item"
+      ]
+    },
+    "Medium": {
+      "description": "Student applies the full section formula with a non-unit ratio and/or negative coordinates, and the result is a non-integer point that must be left as an exact fraction. Direction is still $A$ to $B$ as written, but the arithmetic (signed deltas, fraction multiplication) is the focus.",
+      "constraints": [
+        "Non-unit ratio such as $2:3$, $3:2$, $2:5$ giving $k = \\frac{2}{5}$ etc.",
+        "At least one negative coordinate, requiring careful signed subtraction for $\\Delta x$ or $\\Delta y$",
+        "Result is a fraction (e.g. $\\left(\\frac{17}{5}, \\frac{16}{5}\\right)$) kept exact, not rounded",
+        "Single directed segment, direction given explicitly"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step or inverse problems: direction sensitivity where the ratio is measured from a stated endpoint that must be tracked, finding the ratio given a partition point, or solving for a missing endpoint. May require setting up and solving an equation rather than a direct plug-in.",
+      "constraints": [
+        "Direction must be read carefully (ratio from $B$ to $A$, or 'closer to $B$'), changing which endpoint is $(x_1, y_1)$",
+        "Inverse tasks: given $P$ and a ratio, solve for an endpoint; or given $A$, $B$, $P$, find the ratio $AP:PB$",
+        "May combine with a geometric context (centroid leg, a point that divides a median, comparing two partition points)",
+        "Exact fractional or signed answers; an extra interpretation or verification step"
+      ]
+    },
+    "_split": "If authored as two worksheets, tier1 spans Easy to Medium (midpoints, unit-ratio integer partitions, then full section formula with non-unit ratios and signed/fractional results, direction always $A\\to B$) and tier2 spans Medium to Hard (fractional results, direction-sensitive partitions, and the inverse problems of finding the ratio or a missing endpoint). Default is a single 15-item ramped worksheet from midpoint Easy to inverse Hard."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student uses $\\frac{m}{n}$ as the partition fraction instead of $\\frac{m}{m+n}$",
+      "distractor": "For ratio $2:3$ multiplies the deltas by $\\frac{2}{3}$ instead of $\\frac{2}{5}$, e.g. gets $\\left(1 + \\frac{2}{3}(6), 2 + \\frac{2}{3}(3)\\right) = (5, 4)$ instead of $\\left(\\frac{17}{5}, \\frac{16}{5}\\right)$"
+    },
+    {
+      "misconception": "Student flips the ratio, using $\\frac{n}{m+n}$ (partitioning from the wrong end)",
+      "distractor": "For $AP:PB = 2:3$ from $A(1,2)$ to $B(7,5)$ uses $k = \\frac{3}{5}$, getting $\\left(\\frac{23}{5}, \\frac{19}{5}\\right)$, which is the point for ratio $3:2$, not $2:3$"
+    },
+    {
+      "misconception": "Student computes the deltas backward as $x_1 - x_2$ and $y_1 - y_2$ (wrong direction)",
+      "distractor": "Uses $\\Delta x = x_1 - x_2$, so $P = \\left(1 + \\frac{2}{5}(1-7), \\dots\\right) = \\left(-\\frac{7}{5}, \\dots\\right)$, moving away from $B$ instead of toward it"
+    },
+    {
+      "misconception": "Student averages the coordinates (treats every partition as a midpoint)",
+      "distractor": "For ratio $1:3$ from $A(-2,1)$ to $B(6,9)$ reports the midpoint $(2, 5)$ instead of the correct quarter point $(0, 3)$"
+    },
+    {
+      "misconception": "Student adds the partition fraction to each coordinate instead of multiplying it by the delta",
+      "distractor": "Computes $P = \\left(x_1 + k,\\; y_1 + k\\right) = \\left(1 + \\frac{2}{5}, 2 + \\frac{2}{5}\\right) = \\left(\\frac{7}{5}, \\frac{12}{5}\\right)$, ignoring $\\Delta x$ and $\\Delta y$"
+    },
+    {
+      "misconception": "Student mishandles a negative coordinate when subtracting, dropping the double-negative",
+      "distractor": "From $A(-2,1)$ to $B(6,9)$ computes $\\Delta x = 6 - 2 = 4$ instead of $6 - (-2) = 8$, landing at $(-1, 3)$ instead of $(0, 3)$ for ratio $1:3$"
+    },
+    {
+      "misconception": "Student uses the weighted-average form but pairs the weights with the wrong endpoints",
+      "distractor": "Writes $P = \\left(\\frac{m x_1 + n x_2}{m+n}, \\dots\\right)$ instead of $\\left(\\frac{n x_1 + m x_2}{m+n}, \\dots\\right)$, swapping the weights so the point lands on the wrong side of the segment"
+    }
+  ],
+
+  "_comment_itemCounts": "worksheet.single = one ramped sheet (Easy->Hard across 15 items). tier1/tier2 are the two sheets only if authored as a complex standard. This standard defaults to a single ramped worksheet.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

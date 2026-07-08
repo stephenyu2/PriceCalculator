@@ -1,0 +1,237 @@
+{
+  "id": "PC.EXP.A.3--worksheet",
+  "standard": "PC.EXP.A.3",
+  "clusterId": null,
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Exponential and Logarithmic Functions",
+  "domainCode": "EXP",
+  "cluster": "Properties and graphs",
+  "clusterCode": "A",
+  "skillName": "Logarithmic Properties and Equations",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:27:56.866Z",
+  "intro": "Apply the product, quotient, and power rules for logarithms, the change-of-base formula, and the basic log identities to expand, condense, and evaluate logarithmic expressions. Then solve exponential and logarithmic equations, checking every candidate solution against the requirement that the argument of every logarithm be positive. Items 1-5 are Easy, items 6-10 are Medium, and items 11-15 are Hard.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Use the product rule to expand $\\log_5(7x)$ as a sum of logarithms.",
+      "answer": "$\\log_5 7+\\log_5 x$",
+      "solution": {
+        "steps": [
+          "The product rule states $\\log_b(MN)=\\log_b M+\\log_b N$.",
+          "Here $M=7$ and $N=x$, so $\\log_5(7x)=\\log_5 7+\\log_5 x$.",
+          "There are no exponents or quotients, so this is fully expanded."
+        ],
+        "answer": "$\\log_5 7+\\log_5 x$"
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Use the quotient rule to expand $\\log_3\\left(\\frac{x}{4}\\right)$ as a difference of logarithms.",
+      "answer": "$\\log_3 x-\\log_3 4$",
+      "solution": {
+        "steps": [
+          "The quotient rule states $\\log_b\\left(\\frac{M}{N}\\right)=\\log_b M-\\log_b N$.",
+          "Here $M=x$ and $N=4$, so $\\log_3\\left(\\frac{x}{4}\\right)=\\log_3 x-\\log_3 4$."
+        ],
+        "answer": "$\\log_3 x-\\log_3 4$"
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Use the power rule to rewrite $\\log_2(x^5)$ with the exponent as a coefficient.",
+      "answer": "$5\\log_2 x$",
+      "solution": {
+        "steps": [
+          "The power rule states $\\log_b(M^p)=p\\log_b M$.",
+          "Here $M=x$ and $p=5$, so $\\log_2(x^5)=5\\log_2 x$."
+        ],
+        "answer": "$5\\log_2 x$"
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Solve the exponential equation $2^x=32$ for $x$.",
+      "answer": "$x=5$",
+      "solution": {
+        "steps": [
+          "Write the right side as a power of the base: $32=2^5$.",
+          "The equation becomes $2^x=2^5$.",
+          "Since the bases are equal, the exponents are equal: $x=5$."
+        ],
+        "answer": "$x=5$"
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Solve the logarithmic equation $\\log_4(2x-1)=2$ for $x$, and confirm the solution is valid.",
+      "answer": "$x=\\frac{17}{2}$",
+      "solution": {
+        "steps": [
+          "Rewrite $\\log_b A=k$ in exponential form as $A=b^k$: $2x-1=4^2$.",
+          "Evaluate the right side: $4^2=16$, so $2x-1=16$.",
+          "Solve: $2x=17$, so $x=\\frac{17}{2}$.",
+          "Check the domain: the argument $2x-1=16>0$, so $x=\\frac{17}{2}$ is valid."
+        ],
+        "answer": "$x=\\frac{17}{2}$"
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Expand $\\log_2\\left(\\frac{x^3 y}{z}\\right)$ as a sum and difference of logarithms with no products, quotients, or exponents inside any logarithm.",
+      "answer": "$3\\log_2 x+\\log_2 y-\\log_2 z$",
+      "solution": {
+        "steps": [
+          "Apply the quotient rule: $\\log_2\\left(\\frac{x^3 y}{z}\\right)=\\log_2(x^3 y)-\\log_2 z$.",
+          "Apply the product rule to the numerator: $\\log_2(x^3 y)=\\log_2(x^3)+\\log_2 y$.",
+          "Apply the power rule to $\\log_2(x^3)=3\\log_2 x$.",
+          "Combine: $3\\log_2 x+\\log_2 y-\\log_2 z$."
+        ],
+        "answer": "$3\\log_2 x+\\log_2 y-\\log_2 z$"
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Expand $\\log_b\\left(\\frac{\\sqrt{x}}{y^4}\\right)$, treating the square root as a fractional exponent.",
+      "answer": "$\\frac{1}{2}\\log_b x-4\\log_b y$",
+      "solution": {
+        "steps": [
+          "Rewrite the root as a power: $\\sqrt{x}=x^{1/2}$, so the expression is $\\log_b\\left(\\frac{x^{1/2}}{y^4}\\right)$.",
+          "Apply the quotient rule: $\\log_b(x^{1/2})-\\log_b(y^4)$.",
+          "Apply the power rule to each term: $\\frac{1}{2}\\log_b x-4\\log_b y$."
+        ],
+        "answer": "$\\frac{1}{2}\\log_b x-4\\log_b y$"
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Condense $2\\ln x+\\frac{1}{3}\\ln y-\\ln 5$ into a single logarithm with coefficient 1.",
+      "answer": "$\\ln\\left(\\frac{x^2\\sqrt[3]{y}}{5}\\right)$",
+      "solution": {
+        "steps": [
+          "Move each coefficient inside as an exponent (power rule): $2\\ln x=\\ln(x^2)$, $\\frac{1}{3}\\ln y=\\ln(y^{1/3})=\\ln\\sqrt[3]{y}$.",
+          "The expression becomes $\\ln(x^2)+\\ln\\sqrt[3]{y}-\\ln 5$.",
+          "Combine the sum with the product rule: $\\ln\\left(x^2\\sqrt[3]{y}\\right)-\\ln 5$.",
+          "Combine the difference with the quotient rule: $\\ln\\left(\\frac{x^2\\sqrt[3]{y}}{5}\\right)$."
+        ],
+        "answer": "$\\ln\\left(\\frac{x^2\\sqrt[3]{y}}{5}\\right)$"
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Evaluate $\\log_2 40-\\log_2 5$ exactly using logarithm properties.",
+      "answer": "$3$",
+      "solution": {
+        "steps": [
+          "Use the quotient rule in reverse: $\\log_2 40-\\log_2 5=\\log_2\\left(\\frac{40}{5}\\right)$.",
+          "Simplify the argument: $\\frac{40}{5}=8$, so the expression is $\\log_2 8$.",
+          "Since $8=2^3$, $\\log_2 8=3$."
+        ],
+        "answer": "$3$"
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Solve $3^{x+1}=20$ for $x$. Give the exact answer using a logarithm.",
+      "answer": "$x=\\log_3 20-1=\\frac{\\ln 20}{\\ln 3}-1$",
+      "solution": {
+        "steps": [
+          "Take a logarithm of both sides. Using $\\log_3$: $\\log_3\\left(3^{x+1}\\right)=\\log_3 20$.",
+          "The left side simplifies by the identity $\\log_b b^x=x$: $x+1=\\log_3 20$.",
+          "Solve for $x$: $x=\\log_3 20-1$.",
+          "Apply the change-of-base formula $\\log_3 20=\\frac{\\ln 20}{\\ln 3}$, so $x=\\frac{\\ln 20}{\\ln 3}-1$."
+        ],
+        "answer": "$x=\\log_3 20-1=\\frac{\\ln 20}{\\ln 3}-1$"
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Solve $\\log_3 x+\\log_3(x-2)=1$ for $x$. State the domain and reject any extraneous solution.",
+      "answer": "$x=3$",
+      "solution": {
+        "steps": [
+          "Domain: both arguments must be positive, so $x>0$ and $x-2>0$, meaning $x>2$.",
+          "Condense the left side with the product rule: $\\log_3\\big(x(x-2)\\big)=1$.",
+          "Rewrite in exponential form: $x(x-2)=3^1=3$.",
+          "Expand and form a quadratic: $x^2-2x-3=0$.",
+          "Factor: $(x-3)(x+1)=0$, so $x=3$ or $x=-1$.",
+          "Check against the domain $x>2$: $x=3$ is valid; $x=-1$ is rejected because it makes the arguments negative.",
+          "The only solution is $x=3$."
+        ],
+        "answer": "$x=3$"
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Solve $e^{2x}-5e^{x}+6=0$ for $x$. Give exact answers.",
+      "answer": "$x=\\ln 2$ or $x=\\ln 3$",
+      "solution": {
+        "steps": [
+          "Substitute $u=e^x$ (note $u>0$ for all real $x$): $u^2-5u+6=0$.",
+          "Factor: $(u-2)(u-3)=0$, so $u=2$ or $u=3$.",
+          "Both values are positive, so each gives a valid solution.",
+          "Back-substitute: $e^x=2\\Rightarrow x=\\ln 2$, and $e^x=3\\Rightarrow x=\\ln 3$.",
+          "The solutions are $x=\\ln 2$ and $x=\\ln 3$."
+        ],
+        "answer": "$x=\\ln 2$ or $x=\\ln 3$"
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Solve $\\log_2(x+3)+\\log_2(x-3)=4$ for $x$. State the domain and discard any extraneous root.",
+      "answer": "$x=5$",
+      "solution": {
+        "steps": [
+          "Domain: $x+3>0$ and $x-3>0$, so $x>3$.",
+          "Condense with the product rule: $\\log_2\\big((x+3)(x-3)\\big)=4$.",
+          "Simplify the argument: $(x+3)(x-3)=x^2-9$, so $\\log_2(x^2-9)=4$.",
+          "Rewrite in exponential form: $x^2-9=2^4=16$.",
+          "Solve: $x^2=25$, so $x=5$ or $x=-5$.",
+          "Check against the domain $x>3$: $x=5$ is valid; $x=-5$ is rejected.",
+          "The only solution is $x=5$."
+        ],
+        "answer": "$x=5$"
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Solve $\\log_5(x)+\\log_5(x+4)=1$ for $x$. State the domain and explain why exactly one candidate survives.",
+      "answer": "$x=1$",
+      "solution": {
+        "steps": [
+          "Domain: $x>0$ and $x+4>0$, which together require $x>0$.",
+          "Condense with the product rule: $\\log_5\\big(x(x+4)\\big)=1$.",
+          "Rewrite in exponential form: $x(x+4)=5^1=5$.",
+          "Expand into a quadratic: $x^2+4x-5=0$.",
+          "Factor: $(x+5)(x-1)=0$, so $x=-5$ or $x=1$.",
+          "Check against the domain $x>0$: $x=1$ is valid; $x=-5$ is extraneous because $\\log_5 x$ is undefined for negative $x$.",
+          "The only solution is $x=1$."
+        ],
+        "answer": "$x=1$"
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Solve $\\log_2(x-1)+\\log_2(x+2)=2$ for $x$. Show that one candidate is extraneous and give the valid solution exactly.",
+      "answer": "$x=2$",
+      "solution": {
+        "steps": [
+          "Domain: $x-1>0$ and $x+2>0$, which together require $x>1$.",
+          "Condense with the product rule: $\\log_2\\big((x-1)(x+2)\\big)=2$.",
+          "Rewrite in exponential form: $(x-1)(x+2)=2^2=4$.",
+          "Expand the left side: $(x-1)(x+2)=x^2+x-2$, so the equation is $x^2+x-2=4$.",
+          "Form the quadratic: $x^2+x-6=0$, then factor $(x+3)(x-2)=0$, so $x=-3$ or $x=2$.",
+          "Check against the domain $x>1$: $x=2$ is valid; $x=-3$ is extraneous since $\\log_2(x-1)$ would be undefined.",
+          "The only solution is $x=2$."
+        ],
+        "answer": "$x=2$"
+      }
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "id": "A2.F-IF.C.7--lesson",
+  "standard": "A2.F-IF.C.7",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Functions — Interpreting Functions",
+  "domainCode": "F-IF",
+  "cluster": "Analyze functions using different representations",
+  "clusterCode": "C",
+  "skillName": "Graphing Function Families",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "Every function family has a signature you can read straight from its symbolic rule. A polynomial in factored form tells you its zeros, how it behaves at each one, and how its ends point. An exponential $f(x)=a\\,b^{x}+k$ carries its horizontal asymptote $y=k$ and its $y$-intercept. A logarithm $f(x)=a\\log_b(x-h)+k$ carries a vertical asymptote $x=h$ and a domain $x>h$. A rational function hides its vertical asymptotes in the zeros of the denominator and its horizontal asymptote in a degree comparison, with holes where a factor cancels. A sinusoid $f(x)=a\\sin(b(x-c))+d$ packs amplitude $|a|$, period $\\frac{2\\pi}{|b|}$, phase shift $c$, and midline $y=d$. In this lesson you learn to pull these key features out of the rule, sketch each graph, and run the process in reverse to recover a parameter from a stated feature.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Graph $f(x)=(x+2)(x-1)^2$ by hand. State the zeros and their behavior, the $y$-intercept, and the end behavior.",
+      "solution": {
+        "steps": [
+          "Find the zeros by setting each factor to $0$: $x+2=0$ gives $x=-2$, and $(x-1)^2=0$ gives $x=1$.",
+          "Read the multiplicity. The factor $(x+2)$ appears once (multiplicity $1$, odd), so the graph crosses the $x$-axis at $x=-2$. The factor $(x-1)^2$ has multiplicity $2$ (even), so the graph touches and turns at $x=1$.",
+          "Find the $y$-intercept by evaluating $f(0)=(0+2)(0-1)^2=(2)(1)=2$, so the $y$-intercept is $(0,2)$.",
+          "Find the end behavior from the leading term. Multiplying the highest-degree pieces gives $x\\cdot x^2=x^3$, so the degree is $3$ (odd) with a positive leading coefficient.",
+          "An odd degree with a positive leading coefficient falls on the left and rises on the right: as $x\\to-\\infty,\\ f(x)\\to-\\infty$, and as $x\\to\\infty,\\ f(x)\\to\\infty$.",
+          "Sketch: come up from the lower left, cross at $x=-2$, pass through $(0,2)$, dip down to touch the axis at $x=1$, then rise to the upper right."
+        ],
+        "answer": "Zeros: $x=-2$ (crosses, multiplicity $1$) and $x=1$ (touches, multiplicity $2$); $y$-intercept $(0,2)$; as $x\\to-\\infty,\\ f(x)\\to-\\infty$ and as $x\\to\\infty,\\ f(x)\\to\\infty$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Graph $f(x)=2\\left(\\frac{1}{2}\\right)^{x}+1$ by hand. State the $y$-intercept, the horizontal asymptote, whether the function grows or decays, and the end behavior.",
+      "solution": {
+        "steps": [
+          "Identify the form $f(x)=a\\,b^{x}+k$ with $a=2$, base $b=\\frac{1}{2}$, and vertical shift $k=1$.",
+          "Find the $y$-intercept by evaluating $f(0)=2\\left(\\frac{1}{2}\\right)^{0}+1=2(1)+1=3$, so the $y$-intercept is $(0,3)$.",
+          "The horizontal asymptote is $y=k$, so $y=1$. The graph levels off toward this line, never $y=0$.",
+          "Because the base $b=\\frac{1}{2}$ is between $0$ and $1$, the function decays.",
+          "End behavior: as $x\\to\\infty$, $\\left(\\frac{1}{2}\\right)^{x}\\to0$ so $f(x)\\to1$; as $x\\to-\\infty$, $\\left(\\frac{1}{2}\\right)^{x}\\to\\infty$ so $f(x)\\to\\infty$.",
+          "Plot an anchor point at $x=1$: $f(1)=2\\left(\\frac{1}{2}\\right)+1=2$, giving $(1,2)$. Sketch a curve falling from the upper left through $(0,3)$ and $(1,2)$, flattening toward $y=1$."
+        ],
+        "answer": "$y$-intercept $(0,3)$; horizontal asymptote $y=1$; the function decays; as $x\\to-\\infty,\\ f(x)\\to\\infty$ and as $x\\to\\infty,\\ f(x)\\to1$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Graph $f(x)=\\log_2(x-1)$ by hand. State the vertical asymptote, the $x$-intercept, and the domain.",
+      "solution": {
+        "steps": [
+          "Compare to $f(x)=a\\log_b(x-h)+k$: here $b=2$, $h=1$, $a=1$, and $k=0$.",
+          "The argument $x-1$ must be positive, so $x-1>0$ gives the domain $x>1$.",
+          "The graph blows down toward $-\\infty$ as the argument approaches $0$, so the vertical asymptote is $x=1$.",
+          "Find the $x$-intercept by setting $f(x)=0$: $\\log_2(x-1)=0$ means $x-1=2^{0}=1$, so $x=2$. The $x$-intercept is $(2,0)$.",
+          "Plot one more anchor: at $x=3$, $f(3)=\\log_2(2)=1$, giving $(3,1)$.",
+          "Sketch a curve hugging the line $x=1$ from the right, rising through $(2,0)$ and $(3,1)$, increasing slowly to the right."
+        ],
+        "answer": "Vertical asymptote $x=1$; $x$-intercept $(2,0)$; domain $x>1$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Graph $f(x)=\\frac{x-3}{x^2-9}$ by hand. State all asymptotes, any hole, and the intercepts.",
+      "solution": {
+        "steps": [
+          "Factor the denominator: $x^2-9=(x-3)(x+3)$, so $f(x)=\\frac{x-3}{(x-3)(x+3)}$.",
+          "The common factor $(x-3)$ cancels, leaving $f(x)=\\frac{1}{x+3}$ for $x\\neq3$. The cancelled factor signals a hole at $x=3$.",
+          "Find the hole's height from the reduced form: $\\frac{1}{3+3}=\\frac{1}{6}$, so the hole is at $\\left(3,\\frac{1}{6}\\right)$.",
+          "The remaining denominator zero $x+3=0$ gives a vertical asymptote at $x=-3$.",
+          "Compare degrees in the original: numerator degree $1$ is less than denominator degree $2$, so the horizontal asymptote is $y=0$.",
+          "Find the $y$-intercept: $f(0)=\\frac{0-3}{0-9}=\\frac{-3}{-9}=\\frac{1}{3}$, giving $\\left(0,\\frac{1}{3}\\right)$. There is no $x$-intercept because the reduced numerator $1$ is never $0$.",
+          "Sketch the curve $\\frac{1}{x+3}$ with a vertical asymptote at $x=-3$ and horizontal asymptote $y=0$, then mark the open hole at $\\left(3,\\frac{1}{6}\\right)$."
+        ],
+        "answer": "Hole at $\\left(3,\\frac{1}{6}\\right)$; vertical asymptote $x=-3$; horizontal asymptote $y=0$; $y$-intercept $\\left(0,\\frac{1}{3}\\right)$; no $x$-intercept."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Graph $f(x)=3\\sin\\!\\left(2\\left(x-\\frac{\\pi}{4}\\right)\\right)+1$ by hand. State the amplitude, period, phase shift, and midline.",
+      "solution": {
+        "steps": [
+          "Match the form $f(x)=a\\sin(b(x-c))+d$ with $a=3$, $b=2$, $c=\\frac{\\pi}{4}$, and $d=1$.",
+          "The amplitude is $|a|=3$, so the graph rises $3$ above and falls $3$ below its midline.",
+          "The period is $\\frac{2\\pi}{|b|}=\\frac{2\\pi}{2}=\\pi$.",
+          "The phase shift is $c=\\frac{\\pi}{4}$. Since the rule is $(x-\\frac{\\pi}{4})$, the shift is $\\frac{\\pi}{4}$ to the right.",
+          "The midline is $y=d$, so $y=1$. The graph oscillates between $y=1+3=4$ and $y=1-3=-2$.",
+          "Sketch one cycle: start the sine at the midline going up at $x=\\frac{\\pi}{4}$, reach the maximum $4$ a quarter period later at $x=\\frac{\\pi}{4}+\\frac{\\pi}{4}=\\frac{\\pi}{2}$, return to the midline at $x=\\frac{3\\pi}{4}$, hit the minimum $-2$ at $x=\\pi$, and complete the cycle at $x=\\frac{5\\pi}{4}$."
+        ],
+        "answer": "Amplitude $3$; period $\\pi$; phase shift $\\frac{\\pi}{4}$ to the right; midline $y=1$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Graph $f(x)=3^{x}-2$ by hand. State the $y$-intercept, the horizontal asymptote, and whether the function grows or decays.",
+      "hint": "Write it as $a\\,b^{x}+k$. The asymptote is $y=k$, and the base $b$ tells you growth versus decay.",
+      "solution": {
+        "steps": [
+          "Here $a=1$, base $b=3$, and $k=-2$.",
+          "The $y$-intercept is $f(0)=3^{0}-2=1-2=-1$, giving $(0,-1)$.",
+          "The horizontal asymptote is $y=k=-2$.",
+          "Because the base $b=3>1$, the function grows. As $x\\to-\\infty,\\ f(x)\\to-2$, and as $x\\to\\infty,\\ f(x)\\to\\infty$."
+        ],
+        "answer": "$y$-intercept $(0,-1)$; horizontal asymptote $y=-2$; the function grows."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Graph $f(x)=-(x-2)(x+1)(x+3)$ by hand. State the zeros, the end behavior, and the $y$-intercept.",
+      "hint": "All three factors are simple (multiplicity $1$), so the graph crosses at each zero. Watch the leading sign for end behavior.",
+      "solution": {
+        "steps": [
+          "Set each factor to $0$: the zeros are $x=2$, $x=-1$, and $x=-3$, each multiplicity $1$, so the graph crosses at all three.",
+          "Find the leading term: multiplying $x\\cdot x\\cdot x=x^3$ and including the front $-1$ gives a leading term $-x^3$, so the degree is $3$ (odd) with a negative leading coefficient.",
+          "An odd degree with a negative leading coefficient rises on the left and falls on the right: as $x\\to-\\infty,\\ f(x)\\to\\infty$ and as $x\\to\\infty,\\ f(x)\\to-\\infty$.",
+          "Find the $y$-intercept: $f(0)=-(0-2)(0+1)(0+3)=-(-2)(1)(3)=-(-6)=6$, so the $y$-intercept is $(0,6)$."
+        ],
+        "answer": "Zeros $x=-3,\\ x=-1,\\ x=2$ (each crosses); as $x\\to-\\infty,\\ f(x)\\to\\infty$ and as $x\\to\\infty,\\ f(x)\\to-\\infty$; $y$-intercept $(0,6)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Graph $f(x)=\\log_3(x+2)$ by hand. State the vertical asymptote, the $x$-intercept, and the domain.",
+      "hint": "Compare to $\\log_b(x-h)$. Here the argument is $x+2$, so $h=-2$. The argument must be positive.",
+      "solution": {
+        "steps": [
+          "Write the argument $x+2$ and require $x+2>0$, so the domain is $x>-2$.",
+          "The vertical asymptote occurs where the argument is $0$: $x+2=0$ gives $x=-2$.",
+          "Find the $x$-intercept by setting $\\log_3(x+2)=0$, which means $x+2=3^{0}=1$, so $x=-1$. The $x$-intercept is $(-1,0)$.",
+          "Anchor check: at $x=1$, $f(1)=\\log_3(3)=1$, giving $(1,1)$. The curve hugs $x=-2$ and rises to the right."
+        ],
+        "answer": "Vertical asymptote $x=-2$; $x$-intercept $(-1,0)$; domain $x>-2$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Graph $f(x)=\\frac{2x}{x-1}$ by hand. State the vertical asymptote, the horizontal asymptote, and the intercepts.",
+      "hint": "There is no common factor, so no hole. Compare the degrees of numerator and denominator for the horizontal asymptote.",
+      "solution": {
+        "steps": [
+          "The denominator zero is $x-1=0$, so the vertical asymptote is $x=1$. There is no common factor, so no hole.",
+          "Numerator and denominator both have degree $1$, so the horizontal asymptote is the ratio of leading coefficients: $y=\\frac{2}{1}=2$.",
+          "Find the $y$-intercept: $f(0)=\\frac{2(0)}{0-1}=\\frac{0}{-1}=0$, giving $(0,0)$.",
+          "Find the $x$-intercept by setting the numerator $2x=0$, so $x=0$. The $x$-intercept is also $(0,0)$ (the curve passes through the origin)."
+        ],
+        "answer": "Vertical asymptote $x=1$; horizontal asymptote $y=2$; intercept at the origin $(0,0)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A sinusoid of the form $f(x)=a\\sin(bx)+d$ has amplitude $4$, midline $y=-2$, and period $4\\pi$. Find $a$, $b$, and $d$, and write the equation.",
+      "hint": "Amplitude gives $a$, the midline gives $d$, and solve $\\frac{2\\pi}{|b|}=\\text{period}$ for $b$.",
+      "solution": {
+        "steps": [
+          "The amplitude $4$ gives $a=4$ (take the positive value).",
+          "The midline $y=-2$ gives $d=-2$.",
+          "Use the period formula $\\frac{2\\pi}{|b|}=4\\pi$. Solve: $|b|=\\frac{2\\pi}{4\\pi}=\\frac{1}{2}$, so $b=\\frac{1}{2}$.",
+          "Substitute into the form: $f(x)=4\\sin\\!\\left(\\frac{1}{2}x\\right)-2$."
+        ],
+        "answer": "$a=4$, $b=\\frac{1}{2}$, $d=-2$; equation $f(x)=4\\sin\\!\\left(\\frac{1}{2}x\\right)-2$."
+      }
+    }
+  ]
+}

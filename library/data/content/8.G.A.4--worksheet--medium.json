@@ -1,0 +1,230 @@
+{
+  "id": "8.G.A.4--worksheet--medium",
+  "standard": "8.G.A.4",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand congruence and similarity using physical models, transparencies, or geometry software",
+  "clusterCode": "A",
+  "skillName": "Similarity and Dilations",
+  "materialType": "worksheet",
+  "difficulty": "Medium",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "These problems involve dilations about a non-origin center, non-unit scale factors, judging similarity by comparing side ratios, and finding missing side lengths in similar figures. Show your work and give exact values.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Point $P(5,3)$ is dilated about center $C(1,1)$ with scale factor $k=3$. Find the image $P'$.",
+      "answer": "$P'(13,7)$",
+      "solution": {
+        "steps": [
+          "Use the non-origin dilation rule $(x,y)\\mapsto\\big(c_x+k(x-c_x),\\,c_y+k(y-c_y)\\big)$ with $C(1,1)$ and $k=3$.",
+          "$x$-coordinate: $1+3(5-1)=1+3(4)=1+12=13$.",
+          "$y$-coordinate: $1+3(3-1)=1+3(2)=1+6=7$.",
+          "The image is $P'(13,7)$."
+        ],
+        "answer": "$P'(13,7)$"
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Point $Q(4,6)$ is dilated about center $C(2,2)$ with scale factor $k=\\frac{1}{2}$. Find the image $Q'$.",
+      "answer": "$Q'(3,4)$",
+      "solution": {
+        "steps": [
+          "Apply $(x,y)\\mapsto\\big(2+\\tfrac{1}{2}(x-2),\\,2+\\tfrac{1}{2}(y-2)\\big)$.",
+          "$x$-coordinate: $2+\\frac{1}{2}(4-2)=2+\\frac{1}{2}(2)=2+1=3$.",
+          "$y$-coordinate: $2+\\frac{1}{2}(6-2)=2+\\frac{1}{2}(4)=2+2=4$.",
+          "The image is $Q'(3,4)$."
+        ],
+        "answer": "$Q'(3,4)$"
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Triangle $ABC$ has vertices $A(3,2)$, $B(5,2)$, $C(3,5)$. It is dilated about center $C(3,2)$ (vertex $A$ is not the center) with scale factor $k=2$ about the point $(3,2)$. Find the images $A'$, $B'$, and $C'$.",
+      "answer": "$A'(3,2)$, $B'(7,2)$, $C'(3,8)$",
+      "solution": {
+        "steps": [
+          "The center of dilation is $(3,2)$, which coincides with vertex $A(3,2)$, so $A$ is fixed: $A'(3,2)$.",
+          "For $B(5,2)$: $\\big(3+2(5-3),\\,2+2(2-2)\\big)=(3+4,\\,2)=(7,2)$.",
+          "For $C(3,5)$: $\\big(3+2(3-3),\\,2+2(5-2)\\big)=(3,\\,2+6)=(3,8)$.",
+          "The image triangle has vertices $A'(3,2)$, $B'(7,2)$, $C'(3,8)$."
+        ],
+        "answer": "$A'(3,2)$, $B'(7,2)$, $C'(3,8)$"
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A figure is dilated about the origin so that the point $(4,8)$ maps to $(6,12)$. What is the scale factor $k$?",
+      "answer": "$k=\\frac{3}{2}$",
+      "solution": {
+        "steps": [
+          "For a dilation about the origin, the scale factor is the ratio of an image coordinate to the corresponding original coordinate: $k=\\frac{\\text{image}}{\\text{original}}$.",
+          "Using the $x$-coordinates: $k=\\frac{6}{4}=\\frac{3}{2}$.",
+          "Check with the $y$-coordinates: $\\frac{12}{8}=\\frac{3}{2}$. They agree.",
+          "The scale factor is $k=\\frac{3}{2}$."
+        ],
+        "answer": "$k=\\frac{3}{2}$"
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A dilation about the origin maps $(9,6)$ to $(6,4)$. Find the scale factor $k$.",
+      "answer": "$k=\\frac{2}{3}$",
+      "solution": {
+        "steps": [
+          "Compute $k=\\frac{\\text{image}}{\\text{original}}$ using the $x$-coordinates: $k=\\frac{6}{9}=\\frac{2}{3}$.",
+          "Check with the $y$-coordinates: $\\frac{4}{6}=\\frac{2}{3}$. They agree.",
+          "Since $0<k<1$, this is a reduction. The scale factor is $k=\\frac{2}{3}$."
+        ],
+        "answer": "$k=\\frac{2}{3}$"
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "$\\triangle ABC\\sim\\triangle DEF$ with $AB=8$, $DE=12$, and $BC=10$. Find $EF$.",
+      "answer": "$EF=15$",
+      "solution": {
+        "steps": [
+          "Corresponding sides $AB$ and $DE$ give the scale factor from $\\triangle ABC$ to $\\triangle DEF$: $k=\\frac{DE}{AB}=\\frac{12}{8}=\\frac{3}{2}$.",
+          "$EF$ corresponds to $BC$, so $EF=k\\cdot BC=\\frac{3}{2}\\cdot 10$.",
+          "$\\frac{3}{2}\\cdot 10=\\frac{30}{2}=15$.",
+          "$EF=15$."
+        ],
+        "answer": "$EF=15$"
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Rectangle $R$ measures $3$ by $5$ and rectangle $S$ measures $6$ by $9$. Are $R$ and $S$ similar? Justify by comparing corresponding side ratios.",
+      "answer": "No, they are not similar because the side ratios are unequal: $\\frac{6}{3}=2$ but $\\frac{9}{5}\\neq 2$.",
+      "solution": {
+        "steps": [
+          "Two rectangles are similar only if both pairs of corresponding sides share the same ratio.",
+          "Compare the shorter sides: $\\frac{6}{3}=2$.",
+          "Compare the longer sides: $\\frac{9}{5}=1.8$.",
+          "Since $2\\neq\\frac{9}{5}$, the ratios are not equal, so $R$ and $S$ are not similar.",
+          "(Comparing by subtraction, $6-3=3$ and $9-5=4$, is not a valid test; similarity requires equal ratios, not equal differences.)"
+        ],
+        "answer": "No, they are not similar because $\\frac{6}{3}=2$ while $\\frac{9}{5}=1.8$, and the ratios are unequal."
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Rectangle $R$ measures $4$ by $6$ and rectangle $S$ measures $10$ by $15$. Are $R$ and $S$ similar? Justify by comparing corresponding side ratios.",
+      "answer": "Yes, they are similar because $\\frac{10}{4}=\\frac{15}{6}=\\frac{5}{2}$.",
+      "solution": {
+        "steps": [
+          "Compare the shorter sides: $\\frac{10}{4}=\\frac{5}{2}$.",
+          "Compare the longer sides: $\\frac{15}{6}=\\frac{5}{2}$.",
+          "Both corresponding side ratios equal $\\frac{5}{2}$, so one rectangle is a dilation of the other with $k=\\frac{5}{2}$.",
+          "Therefore $R$ and $S$ are similar."
+        ],
+        "answer": "Yes, they are similar because both ratios equal $\\frac{5}{2}$."
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Point $M(-2,4)$ is dilated about center $C(0,2)$ with scale factor $k=\\frac{3}{2}$. Find the image $M'$.",
+      "answer": "$M'(-3,5)$",
+      "solution": {
+        "steps": [
+          "Apply $(x,y)\\mapsto\\big(0+\\tfrac{3}{2}(x-0),\\,2+\\tfrac{3}{2}(y-2)\\big)$.",
+          "$x$-coordinate: $\\frac{3}{2}(-2-0)=\\frac{3}{2}(-2)=-3$.",
+          "$y$-coordinate: $2+\\frac{3}{2}(4-2)=2+\\frac{3}{2}(2)=2+3=5$.",
+          "The image is $M'(-3,5)$."
+        ],
+        "answer": "$M'(-3,5)$"
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "$\\triangle PQR\\sim\\triangle STU$ with $PQ=15$, $ST=10$, and $QR=9$. Find $TU$.",
+      "answer": "$TU=6$",
+      "solution": {
+        "steps": [
+          "The scale factor from $\\triangle PQR$ to $\\triangle STU$ is $k=\\frac{ST}{PQ}=\\frac{10}{15}=\\frac{2}{3}$.",
+          "$TU$ corresponds to $QR$, so $TU=k\\cdot QR=\\frac{2}{3}\\cdot 9$.",
+          "$\\frac{2}{3}\\cdot 9=\\frac{18}{3}=6$.",
+          "$TU=6$."
+        ],
+        "answer": "$TU=6$"
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Triangle $ABC$ is similar to triangle $A'B'C'$, where $A'B'C'$ is the result of reflecting $ABC$ over the $y$-axis and then dilating about the origin by $k=2$. Describe a sequence of transformations that maps $\\triangle ABC$ onto $\\triangle A'B'C'$, and state whether the two triangles are congruent or similar but not congruent.",
+      "answer": "Reflect over the $y$-axis, then dilate about the origin by $k=2$. The triangles are similar but not congruent (the dilation with $k=2$ changes the size).",
+      "solution": {
+        "steps": [
+          "A sequence that exhibits the similarity must include the rigid motion and the dilation in order: first reflect $\\triangle ABC$ across the $y$-axis, then dilate the result about the origin with scale factor $k=2$.",
+          "The reflection is a rigid motion, so it preserves size; the dilation with $k=2$ doubles every length.",
+          "Because at least one length changes (the figure is enlarged), the image is not congruent to the original.",
+          "The angle measures are preserved and all sides scale by the same factor, so the figures are similar but not congruent."
+        ],
+        "answer": "Reflect over the $y$-axis, then dilate about the origin by $k=2$; the triangles are similar but not congruent."
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A photo $8$ inches wide and $10$ inches tall is enlarged so that its width becomes $12$ inches while keeping the same shape (similar). Find the new height.",
+      "answer": "$15$ inches",
+      "solution": {
+        "steps": [
+          "Keeping the same shape means the enlargement is a dilation, so width and height scale by the same factor.",
+          "Scale factor from the width: $k=\\frac{12}{8}=\\frac{3}{2}$.",
+          "New height $=k\\cdot 10=\\frac{3}{2}\\cdot 10=15$.",
+          "The new height is $15$ inches."
+        ],
+        "answer": "$15$ inches"
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Point $N(7,-1)$ is dilated about center $C(1,-1)$ with scale factor $k=\\frac{2}{3}$. Find the image $N'$.",
+      "answer": "$N'(5,-1)$",
+      "solution": {
+        "steps": [
+          "Apply $(x,y)\\mapsto\\big(1+\\tfrac{2}{3}(x-1),\\,-1+\\tfrac{2}{3}(y-(-1))\\big)$.",
+          "$x$-coordinate: $1+\\frac{2}{3}(7-1)=1+\\frac{2}{3}(6)=1+4=5$.",
+          "$y$-coordinate: $-1+\\frac{2}{3}(-1-(-1))=-1+\\frac{2}{3}(0)=-1$.",
+          "The image is $N'(5,-1)$."
+        ],
+        "answer": "$N'(5,-1)$"
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Two triangles are similar with a scale factor of $k=\\frac{5}{4}$ from the smaller to the larger. The smaller triangle has a side of length $16$. Find the length of the corresponding side of the larger triangle.",
+      "answer": "$20$",
+      "solution": {
+        "steps": [
+          "Going from the smaller triangle to the larger one, multiply the side length by the scale factor $k=\\frac{5}{4}$.",
+          "Corresponding side $=\\frac{5}{4}\\cdot 16=\\frac{80}{4}=20$.",
+          "The corresponding side of the larger triangle has length $20$."
+        ],
+        "answer": "$20$"
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A figure is mapped onto its image by a translation followed by a dilation with scale factor $k=\\frac{1}{2}$. Is the image congruent to the original, similar but not congruent, or neither? Explain, and state how the image's angle measures compare to the original's.",
+      "answer": "Similar but not congruent. The angle measures are unchanged because dilations and translations both preserve angles; only the size changes.",
+      "solution": {
+        "steps": [
+          "A translation is a rigid motion that preserves size and shape.",
+          "A dilation with $k=\\frac{1}{2}$ halves every length, so the size changes; the figure is reduced.",
+          "Because a length changes, the image is not congruent to the original.",
+          "Dilations preserve angle measure and produce proportional sides, so the image is similar but not congruent.",
+          "The angle measures are exactly the same as in the original; dilations do not change angles."
+        ],
+        "answer": "Similar but not congruent; the angle measures are unchanged."
+      }
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "standard": "A2.F-BF.A.1",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Functions — Building Functions",
+  "domainCode": "F-BF",
+  "cluster": "Build a function that models a relationship between two quantities",
+  "clusterCode": "A",
+  "skillName": "Building Functions from Operations",
+
+  "description": "Students write a function that describes a relationship between two quantities. They build new functions from existing ones by combining them through addition, subtraction, multiplication, and division (the algebra of functions), and by composition $(f \\circ g)(x) = f(g(x))$. They translate explicit verbal or contextual descriptions into a symbolic function $f(x)$, and they recognize and build situations where one process is applied to the output of another (composition), including evaluating composed functions at a point and simplifying combined expressions.",
+
+  "subSkills": [
+    "Combine two functions by addition, subtraction, multiplication, or division to form $(f+g)(x)$, $(f-g)(x)$, $(fg)(x)$, or $\\left(\\frac{f}{g}\\right)(x)$, and state the domain of the result",
+    "Form a composition $(f \\circ g)(x) = f(g(x))$ and simplify the resulting expression",
+    "Evaluate a combined or composed function at a specific input, e.g. $(f \\circ g)(2)$ or $(fg)(-1)$",
+    "Translate a verbal or real-world description of a process into an explicit function rule $f(x)$",
+    "Build a function for a context in which one quantity feeds into another (chained processes) and identify it as a composition",
+    "Determine the domain of a combined or composed function, excluding inputs that make a denominator zero or fall outside an inner function's range"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Sum or difference of functions",
+      "example": "Given $f(x) = x^2 - 3x$ and $g(x) = 2x + 5$, write $(f - g)(x)$ in simplest form. Answer: $(f-g)(x) = x^2 - 5x - 5$."
+    },
+    {
+      "name": "Product or quotient of functions with domain",
+      "example": "Given $f(x) = x + 4$ and $g(x) = x - 2$, write $\\left(\\frac{f}{g}\\right)(x)$ and state its domain. Answer: $\\frac{x+4}{x-2},\\ x \\neq 2$."
+    },
+    {
+      "name": "Composition simplified to a rule",
+      "example": "Given $f(x) = 3x - 1$ and $g(x) = x^2 + 2$, write $(f \\circ g)(x)$. Answer: $f(g(x)) = 3(x^2+2) - 1 = 3x^2 + 5$."
+    },
+    {
+      "name": "Composition evaluated at a point",
+      "example": "Given $f(x) = \\sqrt{x}$ and $g(x) = 2x + 7$, find $(f \\circ g)(9)$. Answer: $f(g(9)) = \\sqrt{25} = 5$."
+    },
+    {
+      "name": "Translate a context into a function",
+      "example": "A taxi charges a $\\$3$ flat fee plus $\\$2$ per mile. Write a function $C(m)$ for the cost of an $m$-mile ride. Answer: $C(m) = 2m + 3$."
+    },
+    {
+      "name": "Build a composition from a chained context",
+      "example": "A store takes $20\\%$ off the price $p$, then adds an $8\\%$ tax. Write the final cost as a composition. Answer: discount $d(p) = 0.8p$, tax $t(x) = 1.08x$, so final $= t(d(p)) = 1.08(0.8p) = 0.864p$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Combine two simple polynomial or linear functions with one operation (sum, difference, or product), or evaluate a single combination at a point. One algebraic step, no domain restriction needed, no simplification beyond combining like terms.",
+      "constraints": [
+        "Both $f$ and $g$ are linear or simple monomials/binomials with integer coefficients",
+        "Single operation: $(f+g)$, $(f-g)$, or evaluate $(f+g)(a)$ at an integer $a$",
+        "No domain to exclude (no division, no radicals)",
+        "Answer is a linear or simple quadratic expression"
+      ]
+    },
+    "Medium": {
+      "description": "Form a quotient (requiring a domain restriction) or a composition that must be expanded and simplified, or translate a one-step verbal context into a function rule. Two to three algebraic steps including distribution and combining like terms.",
+      "constraints": [
+        "Quotient $\\left(\\frac{f}{g}\\right)(x)$ with a stated domain restriction, e.g. $x \\neq c$",
+        "Composition $(f \\circ g)(x)$ where the inner function is substituted and the result is expanded",
+        "Or translate a single-process context (flat fee plus rate, scaling) into $f(x)$",
+        "Coefficients may be fractions or require careful distribution"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems: build a composition from a chained real-world context, compose functions involving radicals or rationals and state the domain, or compose three steps. Requires modeling, full simplification, and reasoning about the domain of the composite.",
+      "constraints": [
+        "Build a function by composing two or more processes described verbally (e.g. discount then tax, unit conversion then formula)",
+        "Composition involving a radical or rational inner/outer function where the domain of $(f \\circ g)$ must be determined",
+        "May require comparing $(f \\circ g)(x)$ with $(g \\circ f)(x)$ to show they differ",
+        "Answer requires both a simplified rule and a justified domain"
+      ]
+    },
+    "tierSplit": "This standard is complex enough to warrant two worksheets. tier1 (Easy to Medium) covers the algebra of functions: building $(f \\pm g)$, $(fg)$, $\\left(\\frac{f}{g}\\right)$ with domains, and simple verbal-to-function translation. tier2 (Medium to Hard) covers composition: forming and simplifying $(f \\circ g)(x)$, evaluating at points, building compositions from chained contexts, and composite-function domains."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student confuses composition with multiplication, computing $f(x) \\cdot g(x)$ instead of $f(g(x))$",
+      "distractor": "For $f(x)=3x-1$, $g(x)=x^2+2$, gives $(3x-1)(x^2+2) = 3x^3 - x^2 + 6x - 2$ instead of $3x^2 + 5$"
+    },
+    {
+      "misconception": "Student composes in the wrong order, computing $g(f(x))$ when $f(g(x))$ is asked",
+      "distractor": "For $f(x)=3x-1$, $g(x)=x^2+2$, gives $g(f(x)) = (3x-1)^2 + 2 = 9x^2 - 6x + 3$ instead of $3x^2 + 5$"
+    },
+    {
+      "misconception": "Student substitutes the inner expression but fails to distribute the outer coefficient across all terms",
+      "distractor": "For $f(x)=3x-1$, $g(x)=x^2+2$, writes $3 \\cdot x^2 + 2 - 1 = x^2 + 1$ instead of $3(x^2+2)-1 = 3x^2+5$"
+    },
+    {
+      "misconception": "Student subtracts only the first term of $g$ when forming $(f-g)(x)$, dropping the sign on remaining terms",
+      "distractor": "For $f(x)=x^2-3x$, $g(x)=2x+5$, gives $x^2 - 3x - 2x + 5 = x^2 - 5x + 5$ instead of $x^2 - 5x - 5$"
+    },
+    {
+      "misconception": "Student forgets to exclude the value that makes the denominator zero when stating the domain of a quotient",
+      "distractor": "For $\\left(\\frac{f}{g}\\right)(x) = \\frac{x+4}{x-2}$, states 'all real numbers' instead of $x \\neq 2$"
+    },
+    {
+      "misconception": "Student reverses the chained context, applying tax before discount (or otherwise mis-ordering the composition)",
+      "distractor": "For a $20\\%$ discount then $8\\%$ tax, builds $0.8(1.08p) = 0.864p$ but justifies it as tax-then-discount, or gives $1.08 + 0.8 = 1.88p$ by adding the factors"
+    }
+  ],
+
+  "_comment_itemCounts": "Complex standard: uses tier1 (algebra of functions) + tier2 (composition) worksheets, 15 each, no item overlap.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

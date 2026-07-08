@@ -1,0 +1,147 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent. One blueprint per standard.",
+
+  "standard": "GEO.G-C.A.3",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Circles",
+  "domainCode": "G-C",
+  "cluster": "Understand and apply theorems about circles",
+  "clusterCode": "A",
+  "skillName": "Inscribed and Circumscribed Circles",
+
+  "description": "Students construct and reason about the two special circles of a triangle and about cyclic quadrilaterals. They locate the circumcenter as the concurrency point of the three perpendicular bisectors of the sides (equidistant from the vertices, the center of the circumscribed circle that passes through all three vertices) and the incenter as the concurrency point of the three angle bisectors (equidistant from the sides, the center of the inscribed circle tangent to all three sides). They find these centers and the corresponding radii both from a verbal description and from vertex coordinates, classify where the circumcenter falls for acute, right, and obtuse triangles, and connect the right-triangle case to the fact that the hypotenuse is a diameter. They also prove and apply the central theorem for a quadrilateral inscribed in a circle: its opposite angles are supplementary, $m\\angle A + m\\angle C = 180^\\circ$ and $m\\angle B + m\\angle D = 180^\\circ$, using the Inscribed Angle Theorem that an inscribed angle is half its intercepted arc.",
+
+  "subSkills": [
+    "Distinguish the circumscribed circle (passes through all three vertices, center is the circumcenter) from the inscribed circle (tangent to all three sides, center is the incenter)",
+    "Identify the circumcenter as the intersection of the perpendicular bisectors of the sides and use that it is equidistant from the three vertices",
+    "Identify the incenter as the intersection of the angle bisectors and use that it is equidistant from the three sides",
+    "Construct, with compass and straightedge, the perpendicular bisectors to locate the circumcenter (and the circumscribed circle) and the angle bisectors to locate the incenter (and the inscribed circle)",
+    "Find the circumcenter and circumradius of a triangle given its vertex coordinates, using the midpoint and slope to write perpendicular-bisector equations or the equidistance condition",
+    "Use the fact that the circumradius equals the distance from the circumcenter to any vertex, and the inradius equals the perpendicular distance from the incenter to any side",
+    "Classify the location of the circumcenter as inside (acute), on the hypotenuse midpoint (right), or outside (obtuse) the triangle, and use that a right triangle's hypotenuse is a diameter of its circumscribed circle so the circumradius is half the hypotenuse",
+    "Apply the Inscribed Angle Theorem, that an inscribed angle measures half its intercepted arc",
+    "Apply the Inscribed Quadrilateral (cyclic quadrilateral) Theorem, that opposite angles of a quadrilateral inscribed in a circle are supplementary, to find missing angle measures, including from algebraic expressions",
+    "Prove that opposite angles of an inscribed quadrilateral are supplementary using the Inscribed Angle Theorem and that the intercepted arcs total $360^\\circ$"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Identify center and defining property",
+      "example": "Which point is equidistant from all three vertices of a triangle and is the center of its circumscribed circle: the circumcenter or the incenter? State which set of segments you would construct to locate it."
+    },
+    {
+      "name": "Circumradius of a right triangle",
+      "example": "A right triangle has legs $6$ and $8$ and hypotenuse $10$. Find the radius of its circumscribed circle."
+    },
+    {
+      "name": "Equidistance to find a radius",
+      "example": "The circumcenter of triangle $ABC$ is point $O$. If $OA = 5$ and $OB = 2x + 1$, find $x$ and the circumradius."
+    },
+    {
+      "name": "Classify circumcenter location",
+      "example": "A triangle has angles $40^\\circ$, $55^\\circ$, and $85^\\circ$. Is the circumcenter inside, on, or outside the triangle? Explain."
+    },
+    {
+      "name": "Circumcenter from coordinates",
+      "example": "Triangle $ABC$ has vertices $A(0, 0)$, $B(6, 0)$, and $C(0, 8)$. Find the coordinates of the circumcenter and the circumradius."
+    },
+    {
+      "name": "Cyclic quadrilateral missing angle",
+      "example": "Quadrilateral $ABCD$ is inscribed in a circle. If $m\\angle A = 95^\\circ$, find $m\\angle C$."
+    },
+    {
+      "name": "Cyclic quadrilateral with algebra",
+      "example": "Quadrilateral $ABCD$ is inscribed in a circle with $m\\angle B = (2x + 10)^\\circ$ and $m\\angle D = (4x - 40)^\\circ$. Solve for $x$ and find $m\\angle B$."
+    },
+    {
+      "name": "Inscribed quadrilateral proof",
+      "example": "Quadrilateral $ABCD$ is inscribed in circle $O$. Prove that $m\\angle A + m\\angle C = 180^\\circ$, justifying each step with the Inscribed Angle Theorem and the fact that the intercepted arcs sum to $360^\\circ$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-fact recall or one-step computation. Name the correct center and its defining property, identify which segments (perpendicular bisectors vs. angle bisectors) locate it, apply the equidistance fact directly with integers, find a circumradius as half a given hypotenuse, or find one missing angle of a cyclic quadrilateral by subtracting from $180^\\circ$. One theorem, one move, integer values, no algebra beyond a single subtraction or halving.",
+      "constraints": [
+        "Exactly one definition or theorem applied, named or obvious",
+        "Vocabulary and identification items (circumcenter/incenter, perpendicular bisector/angle bisector, inscribed/circumscribed) live here",
+        "Right-triangle circumradius given the hypotenuse directly (halve it)",
+        "Cyclic quadrilateral gives one angle, find its opposite by $180^\\circ$ minus that angle",
+        "All values are integers and only one quantity is unknown",
+        "No coordinate work and no algebraic expressions"
+      ]
+    },
+    "Medium": {
+      "description": "Two coordinated steps or a one-variable equation. Set up and solve an equidistance equation such as $OA = OB$ with linear expressions, find a circumradius from given legs by first computing the hypotenuse, classify the circumcenter's location from the triangle type, find the circumcenter from coordinates for an axis-aligned right triangle, or solve a cyclic-quadrilateral relationship of the form $ax + b = $ the supplement of another expression. Requires choosing the correct theorem and doing genuine algebra.",
+      "constraints": [
+        "A linear equation in one variable to solve, or two facts combined",
+        "Cyclic-quadrilateral items use algebraic angle expressions set supplementary to each other",
+        "Right-triangle circumradius items require finding the hypotenuse with the Pythagorean Theorem first",
+        "Circumcenter-from-coordinates limited to right triangles with legs along the axes (circumcenter is the hypotenuse midpoint)",
+        "Classifying circumcenter location by acute/right/obtuse belongs here",
+        "Answers may be exact non-integers (radicals or fractions)"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step synthesis, a general-position coordinate computation, or a full proof. Find the circumcenter of a non-axis-aligned triangle from coordinates by intersecting two perpendicular-bisector equations and then compute the circumradius, chain the inscribed-quadrilateral theorem with the Inscribed Angle Theorem on arcs, solve a cyclic quadrilateral where both pairs of opposite angles carry expressions, or prove that opposite angles of an inscribed quadrilateral are supplementary from scratch with every reason justified.",
+      "constraints": [
+        "Three or more linked steps, or a complete original proof with every reason justified",
+        "Circumcenter from coordinates for a general (non-right, non-axis-aligned) triangle, requiring two perpendicular-bisector equations solved simultaneously",
+        "Proof tasks must cite the Inscribed Angle Theorem and that the full set of intercepted arcs is $360^\\circ$",
+        "Cyclic-quadrilateral items may combine arc measures with inscribed angles, or solve for a variable then back-substitute",
+        "Radii and coordinates given as exact values, including radicals"
+      ]
+    },
+    "tierSplit": "If split into two worksheets: tier1 covers Easy to Medium identification and computation, distinguishing circumscribed from inscribed circles and circumcenter from incenter, the perpendicular-bisector and angle-bisector concurrency facts, equidistance computations, right-triangle circumradius, circumcenter-location classification, axis-aligned circumcenter-from-coordinates, and basic cyclic-quadrilateral angle finding. tier2 covers Medium to Hard, general-position circumcenter-from-coordinates, algebraic cyclic-quadrilateral problems, arc-and-inscribed-angle chains, and the proof that opposite angles of an inscribed quadrilateral are supplementary. No item overlap between tiers."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Swaps the two centers, thinking the incenter is equidistant from the vertices or the circumcenter is equidistant from the sides",
+      "distractor": "Names the incenter as the center of the circumscribed circle (through the vertices) instead of the circumcenter, or says the circumcenter is found by intersecting the angle bisectors instead of the perpendicular bisectors"
+    },
+    {
+      "misconception": "Pairs the wrong construction with the wrong center, using angle bisectors to find the circumcenter or perpendicular bisectors to find the incenter",
+      "distractor": "Claims the perpendicular bisectors of the sides meet at the incenter, or that the angle bisectors meet at the circumcenter, instead of the correct pairing"
+    },
+    {
+      "misconception": "Uses the full hypotenuse as the circumradius of a right triangle instead of half of it, forgetting the hypotenuse is a diameter",
+      "distractor": "For a right triangle with hypotenuse $10$, gives circumradius $10$ instead of $\\dfrac{10}{2} = 5$"
+    },
+    {
+      "misconception": "Treats a leg as the hypotenuse, or skips the Pythagorean step, when finding the circumradius from the two legs",
+      "distractor": "For legs $6$ and $8$, gives circumradius $\\dfrac{8}{2} = 4$ (halving a leg) instead of computing the hypotenuse $\\sqrt{6^2 + 8^2} = 10$ then halving to get $5$"
+    },
+    {
+      "misconception": "Believes opposite angles of an inscribed quadrilateral are congruent (equal) rather than supplementary",
+      "distractor": "For $m\\angle A = 95^\\circ$ in cyclic $ABCD$, gives $m\\angle C = 95^\\circ$ instead of $180^\\circ - 95^\\circ = 85^\\circ$"
+    },
+    {
+      "misconception": "Applies the supplementary relationship to adjacent angles of the cyclic quadrilateral instead of opposite angles",
+      "distractor": "Sets $m\\angle A + m\\angle B = 180^\\circ$ (adjacent) to solve for $m\\angle C$, rather than the correct opposite pair $m\\angle A + m\\angle C = 180^\\circ$"
+    },
+    {
+      "misconception": "Confuses the inscribed angle with its intercepted arc, using the arc measure directly as the angle (or doubling the angle the wrong way)",
+      "distractor": "Reports an inscribed angle as equal to its intercepted arc, e.g. calls a $120^\\circ$ arc a $120^\\circ$ inscribed angle instead of $\\dfrac{120^\\circ}{2} = 60^\\circ$"
+    },
+    {
+      "misconception": "When finding the circumcenter from coordinates, averages the three vertices (the centroid formula) instead of intersecting the perpendicular bisectors",
+      "distractor": "For $A(0,0)$, $B(6,0)$, $C(0,8)$, gives the centroid $\\left(\\dfrac{0+6+0}{3}, \\dfrac{0+0+8}{3}\\right) = (2, \\tfrac{8}{3})$ instead of the circumcenter $(3, 4)$, the midpoint of the hypotenuse"
+    }
+  ],
+
+  "_comment_itemCounts": "worksheet.single = one ramped sheet (Easy->Hard across 15 items). tier1/tier2 only if the standard is split into two worksheets (15 each, no overlap).",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

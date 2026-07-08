@@ -1,0 +1,131 @@
+{
+  "standard": "7.SP.C.5",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate chance processes and develop, use, and evaluate probability models",
+  "clusterCode": "C",
+  "skillName": "Probability Basics",
+
+  "description": "Students understand that the probability of a chance event is a number from $0$ to $1$ that measures how likely the event is to happen. They place probabilities on the $0$-to-$1$ scale, interpret the endpoints and midpoint ($0$ = impossible, $1$ = certain, $\\frac{1}{2}$ = equally likely as not), use the words impossible, unlikely, equally likely, likely, and certain, and connect a probability near $0$ with a rarely occurring event and a probability near $1$ with an event almost certain to occur. They compute simple theoretical probabilities as $\\frac{\\text{favorable outcomes}}{\\text{total outcomes}}$ for equally likely outcomes and recognize values outside $[0,1]$ as impossible probabilities.",
+
+  "subSkills": [
+    "Recognize that any probability is a number between $0$ and $1$ inclusive",
+    "Interpret the endpoints and benchmarks: $P=0$ impossible, $P=1$ certain, $P=\\frac{1}{2}$ equally likely as not",
+    "Match a verbal likelihood word (impossible, unlikely, equally likely, likely, certain) to a numerical probability",
+    "Locate a given probability on a $0$-to-$1$ number line and compare two probabilities by likelihood",
+    "Compute a simple theoretical probability as $\\frac{\\text{favorable outcomes}}{\\text{total outcomes}}$ for equally likely outcomes",
+    "Identify values (negative numbers, values greater than $1$, percents over $100\\%$) that cannot be probabilities",
+    "Convert among fraction, decimal, and percent forms of a probability and order them on the scale"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Likelihood word to value",
+      "example": "Which probability best describes an event that is unlikely but not impossible? Choose from $0$, $\\frac{1}{4}$, $\\frac{1}{2}$, or $1$."
+    },
+    {
+      "name": "Value to likelihood word",
+      "example": "An event has probability $\\frac{9}{10}$. Is the event impossible, unlikely, equally likely, likely, or certain?"
+    },
+    {
+      "name": "Locate or order on the number line",
+      "example": "Place the probabilities $\\frac{1}{5}$, $\\frac{1}{2}$, and $\\frac{4}{5}$ on a number line from $0$ to $1$ and list them from least to greatest likelihood."
+    },
+    {
+      "name": "Simple theoretical probability",
+      "example": "A bag has $3$ red and $5$ blue marbles. What is the probability of drawing a red marble? Answer: $\\frac{3}{8}$."
+    },
+    {
+      "name": "Endpoint events (impossible / certain)",
+      "example": "A standard number cube is rolled once. What is the probability of rolling a number from $1$ to $6$? Answer: $1$. What is the probability of rolling a $7$? Answer: $0$."
+    },
+    {
+      "name": "Valid vs. invalid probability",
+      "example": "Which of these could be the probability of an event: $-0.2$, $1.5$, $\\frac{3}{4}$, or $120\\%$? Answer: $\\frac{3}{4}$."
+    },
+    {
+      "name": "Form conversion and comparison",
+      "example": "Express the probability $\\frac{7}{10}$ as a decimal and a percent, and state whether the event is likely or unlikely. Answer: $0.7$, $70\\%$, likely."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recognition or interpretation using the endpoints and benchmark values. Probabilities are given directly or read from a tiny sample space; no computation beyond reading a fraction.",
+      "constraints": [
+        "Uses only $0$, $1$, $\\frac{1}{2}$, or a clearly small/large benchmark value",
+        "Match one likelihood word to one value, or one value to one word",
+        "Theoretical probability, if any, comes from a sample space with total outcomes $\\le 6$ and a single-step count",
+        "Answer is a single fraction, word, or yes/no with no conversion required"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step reasoning: compute a simple theoretical probability and then interpret it on the scale, or order/compare two to three probabilities given in mixed forms.",
+      "constraints": [
+        "Compute $\\frac{\\text{favorable}}{\\text{total}}$ with total outcomes between $6$ and $12$ and reduce the fraction",
+        "Then classify the result with a likelihood word or place it relative to $\\frac{1}{2}$",
+        "May require ordering two or three probabilities given as a mix of fractions, decimals, and percents",
+        "May require recognizing one invalid probability among valid ones"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step or multi-part reasoning that combines computation, conversion across forms, and justification, or that uses the complement or a constraint to back out a probability.",
+      "constraints": [
+        "Convert among fraction, decimal, and percent and order four or more values on the scale",
+        "Use the complement (probabilities of all outcomes sum to $1$) to find a missing probability",
+        "Reason about a described scenario to decide which of several given values is a plausible probability and justify why the others are impossible",
+        "Combine a theoretical-probability computation (total outcomes up to $20$) with a likelihood interpretation and a form conversion in one item"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student thinks a probability can be greater than $1$ or a percent greater than $100\\%$",
+      "distractor": "Selects a value such as $1.5$ or $120\\%$ as a valid probability"
+    },
+    {
+      "misconception": "Student thinks a probability can be negative",
+      "distractor": "Selects a value such as $-0.2$ or $-\\frac{1}{4}$ as a valid probability"
+    },
+    {
+      "misconception": "Student reverses the likelihood scale, treating values near $0$ as likely and values near $1$ as unlikely",
+      "distractor": "Calls a probability of $\\frac{9}{10}$ unlikely or a probability of $\\frac{1}{10}$ likely"
+    },
+    {
+      "misconception": "Student confuses impossible ($P=0$) with certain ($P=1$)",
+      "distractor": "Assigns $1$ to an event that cannot happen, such as rolling a $7$ on a standard number cube"
+    },
+    {
+      "misconception": "Student inverts the probability fraction, using $\\frac{\\text{total}}{\\text{favorable}}$",
+      "distractor": "Computes $\\frac{8}{3}$ instead of $\\frac{3}{8}$ for $3$ red marbles out of $8$"
+    },
+    {
+      "misconception": "Student uses unfavorable outcomes in the numerator instead of favorable outcomes",
+      "distractor": "Computes $\\frac{5}{8}$ (the blue marbles) instead of $\\frac{3}{8}$ for the probability of red"
+    },
+    {
+      "misconception": "Student treats 'equally likely as not' as any probability rather than exactly $\\frac{1}{2}$",
+      "distractor": "Calls a probability of $\\frac{1}{4}$ or $\\frac{3}{4}$ equally likely as not"
+    },
+    {
+      "misconception": "Student mishandles form conversion, misplacing the decimal or dropping the percent",
+      "distractor": "Writes $\\frac{7}{10}$ as $7\\%$ or as $0.07$ instead of $0.7$ or $70\\%$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

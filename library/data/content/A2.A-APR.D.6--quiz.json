@@ -1,0 +1,147 @@
+{
+  "id": "A2.A-APR.D.6--quiz",
+  "standard": "A2.A-APR.D.6",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Arithmetic with Polynomials and Rational Expressions",
+  "domainCode": "A-APR",
+  "cluster": "Rewrite rational expressions",
+  "clusterCode": "D",
+  "skillName": "Rewriting Rational Expressions",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "Rewrite each rational expression $\\frac{a(x)}{b(x)}$ as $q(x)+\\frac{r(x)}{b(x)}$, and apply the Remainder Theorem. Choose the single best answer for each item.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Rewrite $\\frac{6x^3-9x^2+3x}{3x}$ by splitting term by term.\nA) $2x^2-3x+1$\nB) $2x^2-9x^2+3x$\nC) $2x^2-3x$\nD) $6x^2-9x+3$",
+      "answer": "A) $2x^2-3x+1$",
+      "solution": {
+        "steps": [
+          "Divide every term of the numerator by $3x$: $\\frac{6x^3}{3x}-\\frac{9x^2}{3x}+\\frac{3x}{3x}$.",
+          "Simplify each term: $2x^2-3x+1$, with remainder $0$. So A is correct.",
+          "B comes from dividing only the first term and leaving the rest undivided. C drops the last term $\\frac{3x}{3x}=1$. D divides each coefficient by $3$ but forgets to reduce the powers of $x$."
+        ],
+        "answer": "A) $2x^2-3x+1$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Rewrite $\\frac{2x^2+7x+3}{x+3}$. (The division is exact.)\nA) $2x+1$\nB) $2x+1+\\frac{3}{x+3}$\nC) $2x+3$\nD) $2x-1$",
+      "answer": "A) $2x+1$",
+      "solution": {
+        "steps": [
+          "Divide: $2x^2+7x+3$ by $x+3$ gives $2x$ ($2x\\cdot(x+3)=2x^2+6x$). Subtracting leaves $x+3$.",
+          "Then $x+3$ divided by $x+3$ gives $+1$ with remainder $0$, so the quotient is $2x+1$. A is correct.",
+          "B incorrectly tacks on a remainder fraction even though the remainder is $0$. C and D use wrong constant terms; only $2x+1$ multiplies back to $2x^2+7x+3$."
+        ],
+        "answer": "A) $2x+1$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Rewrite $\\frac{x^3-8}{x-2}$. (Insert zero placeholders for the missing $x^2$ and $x$ terms.)\nA) $x^2+2x+4$\nB) $x^2-2x+4$\nC) $x^2+4$\nD) $x^2-2x-4$",
+      "answer": "A) $x^2+2x+4$",
+      "solution": {
+        "steps": [
+          "Use synthetic division with $c=2$ on coefficients $1,\\,0,\\,0,\\,-8$.",
+          "Bring down $1$; $1\\cdot2=2$ gives $0+2=2$; $2\\cdot2=4$ gives $0+4=4$; $4\\cdot2=8$ gives $-8+8=0$.",
+          "Quotient coefficients are $1,\\,2,\\,4$ with remainder $0$, so $x^2+2x+4$. A is correct.",
+          "B and D come from sign errors in the synthetic steps. C drops the missing-term placeholders and loses the $2x$ term."
+        ],
+        "answer": "A) $x^2+2x+4$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Write $\\frac{x^2+3x+5}{x+1}$ in the form $q(x)+\\frac{r(x)}{b(x)}$.\nA) $x+2+\\frac{3}{x+1}$\nB) $x+2$\nC) $x+4+\\frac{9}{x+1}$\nD) $x+2+\\frac{3}{x+2}$",
+      "answer": "A) $x+2+\\frac{3}{x+1}$",
+      "solution": {
+        "steps": [
+          "Divide $x^2+3x+5$ by $x+1$: $x\\cdot(x+1)=x^2+x$; subtracting leaves $2x+5$.",
+          "Then $2\\cdot(x+1)=2x+2$; subtracting leaves remainder $3$. So $q(x)=x+2$, $r(x)=3$.",
+          "The answer is $x+2+\\frac{3}{x+1}$, so A is correct.",
+          "B drops the remainder entirely. C comes from adding instead of subtracting the partial products (a sign error). D places the remainder over the quotient term $x+2$ instead of the divisor $x+1$."
+        ],
+        "answer": "A) $x+2+\\frac{3}{x+1}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Use synthetic division to rewrite $\\frac{2x^3-3x^2+4}{x-2}$ in the form $q(x)+\\frac{r(x)}{b(x)}$.\nA) $2x^2+x+2+\\frac{8}{x-2}$\nB) $2x^2+x+\\frac{4}{x-2}$\nC) $2x^2-7x+14+\\frac{-24}{x-2}$\nD) $2x^2+x+2$",
+      "answer": "A) $2x^2+x+2+\\frac{8}{x-2}$",
+      "solution": {
+        "steps": [
+          "The numerator is missing the $x$ term, so use coefficients $2,\\,-3,\\,0,\\,4$ with $c=2$.",
+          "Bring down $2$; $2\\cdot2=4$ gives $-3+4=1$; $1\\cdot2=2$ gives $0+2=2$; $2\\cdot2=4$ gives $4+4=8$.",
+          "Quotient $2x^2+x+2$, remainder $8$, so $2x^2+x+2+\\frac{8}{x-2}$. A is correct.",
+          "B omits the zero placeholder (uses $2,\\,-3,\\,4$), corrupting the quotient and remainder. C uses $c=-2$ (wrong sign, as if dividing by $x+2$). D drops the nonzero remainder."
+        ],
+        "answer": "A) $2x^2+x+2+\\frac{8}{x-2}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Find the remainder when $a(x)=x^3-4x+1$ is divided by $x-3$, using the Remainder Theorem.\nA) $16$\nB) $-14$\nC) $0$\nD) $13$",
+      "answer": "A) $16$",
+      "solution": {
+        "steps": [
+          "The Remainder Theorem says the remainder of $\\frac{a(x)}{x-c}$ equals $a(c)$. Here $c=3$.",
+          "Compute $a(3)=3^3-4\\cdot3+1=27-12+1=16$. So A is correct.",
+          "B comes from using the wrong sign $c=-3$ and computing $a(-3)=(-27)-4\\cdot(-3)+1=-27+12+1=-14$, which substitutes $-c$ instead of $c$. C is what you get by evaluating the divisor $x-3$ at $x=3$, which is $0$, not the dividend. D is a miscount of the arithmetic ($27-12+1$ is $16$, not $13$)."
+        ],
+        "answer": "A) $16$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Rewrite $\\frac{x^3+2x^2-x+5}{x^2+1}$ in the form $q(x)+\\frac{r(x)}{b(x)}$, stopping once $\\deg r<\\deg b$.\nA) $x+2+\\frac{-2x+3}{x^2+1}$\nB) $x+2+\\frac{-2x^2+3}{x^2+1}$\nC) $x+2+\\frac{-2x+3}{x^2}$\nD) $x+2$",
+      "answer": "A) $x+2+\\frac{-2x+3}{x^2+1}$",
+      "solution": {
+        "steps": [
+          "Divide $x^3+2x^2-x+5$ by $x^2+1$: $x\\cdot(x^2+1)=x^3+x$; subtracting leaves $2x^2-2x+5$.",
+          "Then $2\\cdot(x^2+1)=2x^2+2$; subtracting leaves $-2x+3$, which has degree $1<2=\\deg b$, so stop.",
+          "Quotient $x+2$, remainder $-2x+3$, giving $x+2+\\frac{-2x+3}{x^2+1}$. A is correct.",
+          "B stops too early and keeps a degree-$2$ remainder. C places the remainder over $x^2$ instead of the full divisor $x^2+1$. D drops the (nonzero) remainder."
+        ],
+        "answer": "A) $x+2+\\frac{-2x+3}{x^2+1}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Given $\\frac{a(x)}{x+4}=x-1+\\frac{6}{x+4}$, reconstruct the dividend $a(x)$ using $a(x)=b(x)q(x)+r(x)$.\nA) $x^2+3x+2$\nB) $x^2+3x-4$\nC) $x^2-3x+2$\nD) $x^2+3x+10$",
+      "answer": "A) $x^2+3x+2$",
+      "solution": {
+        "steps": [
+          "Here $b(x)=x+4$, $q(x)=x-1$, and $r(x)=6$.",
+          "Multiply back: $(x+4)(x-1)=x^2+3x-4$.",
+          "Add the remainder: $x^2+3x-4+6=x^2+3x+2$. So A is correct.",
+          "B forgets to add the remainder $6$ (it is just $b(x)q(x)$). C uses the wrong sign on the linear term. D adds $14$ instead of $6$, mishandling the remainder."
+        ],
+        "answer": "A) $x^2+3x+2$"
+      }
+    }
+  ]
+}

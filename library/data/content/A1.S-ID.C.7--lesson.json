@@ -1,0 +1,176 @@
+{
+  "id": "A1.S-ID.C.7--lesson",
+  "standard": "A1.S-ID.C.7",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Interpret linear models",
+  "clusterCode": "C",
+  "skillName": "Interpreting Slope and Intercept",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "When a line of best fit $y=mx+b$ models real-world data, each number tells a story. The slope $m$ is a rate of change: how much the response $y$ goes up or down for every one-unit increase in the explanatory variable $x$. The $y$-intercept $b$ is the predicted value of $y$ when $x=0$, the starting amount. To interpret a model well you must include the correct sign, the units of the data, and the words 'per one unit of $x$' for the slope. Sometimes you read $m$ and $b$ straight from the equation; sometimes you compute the slope from two points using $m=\\dfrac{y_2-y_1}{x_2-x_1}$; and sometimes you must judge whether the intercept is a sensible value or an unrealistic extrapolation beyond the data.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A line of best fit for a plant's height $y$ (in centimeters) after $x$ weeks is $y=2.5x+4$. Interpret the slope of this model in context.",
+      "solution": {
+        "steps": [
+          "Compare the model to the form $y=mx+b$. The slope is the coefficient of $x$, so $m=2.5$.",
+          "The slope is a rate of change: it tells how much $y$ (height, in cm) changes for each $1$-unit increase in $x$ (weeks).",
+          "Because $m=2.5$ is positive, the height is increasing as the weeks go up.",
+          "State the meaning with sign and units: the plant grows about $2.5$ cm taller for each additional week.",
+          "Note what the slope is NOT: it is not a single height of $2.5$ cm, it is a rate of $2.5$ cm per week."
+        ],
+        "answer": "The slope $2.5$ means the plant grows about $2.5$ cm taller for each additional week."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "For the same model $y=2.5x+4$, where $y$ is a plant's height in centimeters after $x$ weeks, interpret the $y$-intercept in context.",
+      "solution": {
+        "steps": [
+          "Compare to $y=mx+b$. The $y$-intercept is the constant term, so $b=4$.",
+          "The $y$-intercept is the predicted value of $y$ when $x=0$.",
+          "Substitute $x=0$ to confirm: $y=2.5(0)+4=4$.",
+          "Translate using the variables and units: when $x=0$ weeks (the start), the predicted height is $4$ cm.",
+          "State it in context: the plant was about $4$ cm tall at week $0$, when the measurements began."
+        ],
+        "answer": "The intercept $4$ means that at week $x=0$ (the start), the plant was about $4$ cm tall."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "The value of a phone $y$ (in dollars) after $x$ months of ownership is modeled by $y=-35x+600$. Interpret both the slope and the $y$-intercept in context.",
+      "solution": {
+        "steps": [
+          "Identify the parameters from $y=mx+b$: slope $m=-35$ and intercept $b=600$.",
+          "Interpret the slope as a rate of change. The sign is negative, so the value is decreasing as months increase.",
+          "Slope meaning: the phone loses about $\\$35$ in value for each additional month.",
+          "Interpret the intercept as the value of $y$ when $x=0$. Substitute: $y=-35(0)+600=600$.",
+          "Intercept meaning: when the phone is new at $x=0$ months, its predicted value is $\\$600$.",
+          "Keep the sign on the slope: do not say the phone gains $\\$35$ each month, it loses $\\$35$ each month."
+        ],
+        "answer": "The slope $-35$ means the phone loses about $\\$35$ in value each month, and the intercept $600$ means the phone was worth $\\$600$ when new at $x=0$ months."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A table of taxi fares shows that a $2$-mile ride costs $\\$5.50$ and a $6$-mile ride costs $\\$11.50$. A linear model fits these data with fare $y$ (dollars) and distance $x$ (miles). Compute the slope and interpret it in context.",
+      "solution": {
+        "steps": [
+          "Write the two data points as $(x_1,y_1)=(2,5.50)$ and $(x_2,y_2)=(6,11.50)$.",
+          "Use the slope formula $m=\\dfrac{y_2-y_1}{x_2-x_1}$.",
+          "Substitute: $m=\\dfrac{11.50-5.50}{6-2}=\\dfrac{6.00}{4}$.",
+          "Divide: $m=1.5$.",
+          "Interpret with units: the slope $1.5$ means the fare increases by $\\$1.50$ for each additional mile traveled.",
+          "Check the setup: change in $y$ goes on top and change in $x$ on the bottom, giving dollars per mile, not miles per dollar."
+        ],
+        "answer": "The slope is $m=1.5$, meaning the fare increases by $\\$1.50$ per mile traveled."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A model for a student's test score $y$ (out of $100$) versus hours studied $x$ is $y=8x+45$. The recorded data covers students who studied between $3$ and $10$ hours. A classmate says, 'The intercept $45$ is a reliable prediction of the score for a student who does not study at all.' Decide whether this interpretation is sound, and explain.",
+      "solution": {
+        "steps": [
+          "Read the intercept: with $b=45$, the model predicts $y=45$ when $x=0$ hours studied.",
+          "Mathematically the intercept is the predicted score at $x=0$, so '$45$ at $x=0$ hours' is the correct numerical reading.",
+          "But check whether $x=0$ falls within the observed data. The data only covers $x$ from $3$ to $10$ hours.",
+          "Since $x=0$ lies outside (below) the observed range, predicting there is an extrapolation, the model was never tested for students who study $0$ hours.",
+          "So the intercept's value is correctly $45$, but calling it a 'reliable' prediction is not justified; it is an extrapolation beyond the data.",
+          "Corrected statement: the intercept $45$ is the model's predicted score at $0$ hours, but because $x=0$ is outside the observed range of $3$ to $10$ hours, it is an unreliable extrapolation."
+        ],
+        "answer": "The interpretation is not sound. The intercept correctly gives a predicted score of $45$ at $x=0$ hours, but since $x=0$ lies outside the observed data range of $3$ to $10$ hours, that prediction is an extrapolation and is not reliable."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A line of best fit for the amount of water $y$ (in liters) in a tank after $x$ minutes of filling is $y=6x+10$. Interpret the slope in context.",
+      "hint": "The slope is the coefficient of $x$. State it as a change in $y$ (liters) per one-unit increase in $x$ (minutes), with the correct sign.",
+      "solution": {
+        "steps": [
+          "Compare to $y=mx+b$: the slope is $m=6$.",
+          "The slope is a rate of change in liters per minute.",
+          "Since $m=6$ is positive, the amount of water is increasing.",
+          "Interpret with units: the tank gains about $6$ liters of water for each additional minute of filling."
+        ],
+        "answer": "The slope $6$ means the tank gains about $6$ liters of water per minute."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "The monthly cost $y$ (in dollars) of a gym membership based on the number of months $x$ is modeled by $y=25x+40$. Interpret the $y$-intercept in context.",
+      "hint": "The $y$-intercept is the value of $y$ when $x=0$. It is the constant term $b$.",
+      "solution": {
+        "steps": [
+          "Compare to $y=mx+b$: the intercept is $b=40$.",
+          "The intercept is the predicted value of $y$ when $x=0$.",
+          "Substitute to confirm: $y=25(0)+40=40$.",
+          "Interpret with units: at $x=0$ months, the cost is $\\$40$, which represents a one-time starting fee before any monthly charges."
+        ],
+        "answer": "The intercept $40$ means there is a starting cost of $\\$40$ when $x=0$ months (before any monthly fees are added)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A cup of coffee cools according to the model $y=-4x+85$, where $y$ is the temperature in degrees Celsius after $x$ minutes. Interpret the slope in context.",
+      "hint": "The slope is negative here. Be sure to describe the temperature as decreasing, and include the units (degrees Celsius per minute).",
+      "solution": {
+        "steps": [
+          "Compare to $y=mx+b$: the slope is $m=-4$.",
+          "The slope is a rate of change in degrees Celsius per minute.",
+          "Since $m=-4$ is negative, the temperature is decreasing over time.",
+          "Interpret with sign and units: the coffee cools by about $4$ degrees Celsius for each additional minute."
+        ],
+        "answer": "The slope $-4$ means the coffee's temperature drops by about $4$ degrees Celsius each minute."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A scatter plot of a company's monthly sales has a line of best fit passing through the points $(0,200)$ and $(4,360)$, where $y$ is sales (in units) and $x$ is the month number. Compute the slope and interpret it in context.",
+      "hint": "Use $m=\\dfrac{y_2-y_1}{x_2-x_1}$ with the two points, then describe the result as units per month.",
+      "solution": {
+        "steps": [
+          "Write the points as $(x_1,y_1)=(0,200)$ and $(x_2,y_2)=(4,360)$.",
+          "Apply the slope formula: $m=\\dfrac{360-200}{4-0}=\\dfrac{160}{4}$.",
+          "Divide: $m=40$.",
+          "Interpret with units: the slope $40$ means sales rise by about $40$ units for each additional month."
+        ],
+        "answer": "The slope is $m=40$, meaning sales increase by about $40$ units per month."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "For the height model $y=2.5x+4$ (height in cm after $x$ weeks), a student writes: 'The slope means the plant is $2.5$ cm tall.' Explain why this interpretation is incorrect and give the corrected statement.",
+      "hint": "Remember that a slope is always a rate of change, not a single value of $y$. Compare 'cm' to 'cm per week.'",
+      "solution": {
+        "steps": [
+          "Identify the slope: $m=2.5$.",
+          "The error: the student treats $2.5$ as a single height (a value of $y$), but a slope is a rate of change.",
+          "A height of $2.5$ cm would be a value of $y$, which comes from substituting a specific $x$, not from the slope.",
+          "The slope describes how fast $y$ changes per one-unit change in $x$, so its units are cm per week, not cm.",
+          "Corrected statement: the slope $2.5$ means the plant grows about $2.5$ cm taller for each additional week, not that it is $2.5$ cm tall."
+        ],
+        "answer": "The interpretation is wrong because the slope is a rate of change, not a single height. Corrected: the slope $2.5$ means the plant grows about $2.5$ cm per week."
+      }
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "id": "A1.S-ID.B.5--quiz",
+  "standard": "A1.S-ID.B.5",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on two categorical and quantitative variables",
+  "clusterCode": "B",
+  "skillName": "Two-Way Frequency Tables",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "An $8$-question multiple-choice quiz on two-way frequency tables: reading cells and totals, completing tables, and computing joint, marginal, and conditional relative frequencies, then using them to judge association.",
+  "items": [
+    {
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "A survey of $50$ students records whether they walk or ride to school. The completed two-way table is shown. How many students in total ride to school? $$\\begin{array}{l|cc|c} & \\text{Walk} & \\text{Ride} & \\text{Total} \\\\ \\hline \\text{Grade 9} & 12 & 8 & 20 \\\\ \\text{Grade 10} & 14 & 16 & 30 \\\\ \\hline \\text{Total} & 26 & 24 & 50 \\end{array}$$\nA) $8$\nB) $16$\nC) $24$\nD) $26$",
+      "answer": "C) $24$",
+      "solution": {
+        "steps": [
+          "The number who ride is the column total under \"Ride,\" which is the bottom entry of that column.",
+          "$8 + 16 = 24$, so $24$ students ride to school.",
+          "A) $8$ is only the Grade 9 riders (a single cell), not the column total.",
+          "B) $16$ is only the Grade 10 riders (a single cell).",
+          "D) $26$ is the \"Walk\" column total, the wrong column."
+        ],
+        "answer": "C) $24$"
+      }
+    },
+    {
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Of $100$ people surveyed, the cell \"likes pizza and is an adult\" contains $40$. What is the joint relative frequency of being an adult and liking pizza?\nA) $0.40$\nB) $4\\%$\nC) $2.5$\nD) $0.04$",
+      "answer": "A) $0.40$",
+      "solution": {
+        "steps": [
+          "A joint relative frequency is a cell count divided by the grand total: $\\frac{40}{100} = 0.40 = 40\\%$.",
+          "A) $0.40$ is correct.",
+          "B) $4\\%$ comes from misconverting $0.40$ to a percent (it equals $40\\%$, not $4\\%$).",
+          "C) $2.5$ inverts the fraction as $\\frac{100}{40}$ instead of $\\frac{40}{100}$.",
+          "D) $0.04$ misplaces the decimal point when dividing $40$ by $100$."
+        ],
+        "answer": "A) $0.40$"
+      }
+    },
+    {
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "In a study of $200$ shoppers, the \"Total\" row shows that $120$ shoppers used a coupon. What is the marginal relative frequency of using a coupon?\nA) $0.40$\nB) $0.60$\nC) $1.67$\nD) $120$",
+      "answer": "B) $0.60$",
+      "solution": {
+        "steps": [
+          "A marginal relative frequency is a row or column total divided by the grand total: $\\frac{120}{200} = 0.60 = 60\\%$.",
+          "B) $0.60$ is correct.",
+          "A) $0.40$ is the relative frequency of NOT using a coupon, $\\frac{80}{200}$, the wrong margin.",
+          "C) $1.67$ inverts the ratio as $\\frac{200}{120}$.",
+          "D) $120$ is the raw count, not a relative frequency."
+        ],
+        "answer": "B) $0.60$"
+      }
+    },
+    {
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "A two-way table classifies $80$ students by whether they own a pet and whether they have a sibling. Of the $50$ students who own a pet, $32$ also have a sibling. What is the conditional relative frequency that a student has a sibling, given that they own a pet?\nA) $40\\%$\nB) $64\\%$\nC) $62.5\\%$\nD) $160\\%$",
+      "answer": "B) $64\\%$",
+      "solution": {
+        "steps": [
+          "\"Given that they own a pet\" makes the pet-owner total, $50$, the denominator: $\\frac{32}{50} = 0.64 = 64\\%$.",
+          "B) $64\\%$ is correct.",
+          "A) $40\\%$ wrongly divides by the grand total: $\\frac{32}{80} = 40\\%$ instead of the column total $50$.",
+          "C) $62.5\\%$ inverts the conditional, computing $\\frac{50}{80}$ (the share who own a pet).",
+          "D) $160\\%$ divides the wrong way as $\\frac{80}{50}$, giving an impossible value over $100\\%$."
+        ],
+        "answer": "B) $64\\%$"
+      }
+    },
+    {
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "A survey of $120$ people cross-classifies drink preference. The full \"prefers tea\" column total is $54$, but one tea cell (adults who prefer tea) shows $30$. What is the marginal relative frequency of preferring tea?\nA) $25\\%$\nB) $45\\%$\nC) $55\\%$\nD) $30\\%$",
+      "answer": "B) $45\\%$",
+      "solution": {
+        "steps": [
+          "The marginal relative frequency of preferring tea uses the full tea column total over the grand total: $\\frac{54}{120} = 0.45 = 45\\%$.",
+          "B) $45\\%$ is correct.",
+          "A) $25\\%$ uses a single tea cell instead of the column total: $\\frac{30}{120} = 25\\%$, confusing joint with marginal.",
+          "C) $55\\%$ is the marginal for the other drink ($\\frac{66}{120}$), the wrong category.",
+          "D) $30\\%$ just restates the raw cell count $30$ as a percent without dividing correctly."
+        ],
+        "answer": "B) $45\\%$"
+      }
+    },
+    {
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "In a class of $80$ students, $35$ are boys. Of the boys, $20$ play a sport. To complete the two-way table, how many boys do NOT play a sport?\nA) $60$\nB) $45$\nC) $15$\nD) $20$",
+      "answer": "C) $15$",
+      "solution": {
+        "steps": [
+          "The boys' row total is $35$, and $20$ boys play a sport, so the missing cell is the row total minus the known cell: $35 - 20 = 15$.",
+          "C) $15$ is correct.",
+          "A) $60$ subtracts from the grand total instead of the row total: $80 - 20 = 60$, using the wrong total.",
+          "B) $45$ subtracts the boys' total from the grand total: $80 - 35 = 45$, which counts girls, not non-sport boys.",
+          "D) $20$ just repeats the cell of boys who DO play a sport."
+        ],
+        "answer": "C) $15$"
+      }
+    },
+    {
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A two-way table classifies people by age group and whether they prefer online shopping. Among $60$ adults, $45$ prefer online; among $40$ teens, $30$ prefer online. Comparing the conditional relative frequencies of preferring online, what should you conclude about the association between age group and shopping preference?\nA) Associated, because more adults ($45$) than teens ($30$) prefer online.\nB) Not associated, because both conditional relative frequencies equal $75\\%$.\nC) Associated, because $60 \\neq 40$, so the groups differ in size.\nD) Not associated, because $45\\% + 30\\% = 75\\%$.",
+      "answer": "B) Not associated, because both conditional relative frequencies equal $75\\%$.",
+      "solution": {
+        "steps": [
+          "Association is judged by comparing conditional relative frequencies, not raw counts.",
+          "Adults: $\\frac{45}{60} = 75\\%$ prefer online. Teens: $\\frac{30}{40} = 75\\%$ prefer online.",
+          "The two conditionals are equal ($75\\% = 75\\%$), so there is no association between age group and shopping preference. B) is correct.",
+          "A) compares raw counts $45$ and $30$ instead of rates; the groups have different sizes, so counts are misleading.",
+          "C) uses the group sizes $60$ and $40$, which are marginal totals and say nothing about preference rates.",
+          "D) adds two percents meaninglessly; relative frequencies are compared, not summed."
+        ],
+        "answer": "B) Not associated, because both conditional relative frequencies equal $75\\%$."
+      }
+    },
+    {
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A survey of $150$ people records handedness and gender. Of $90$ right-handed people, $54$ are male; of $60$ left-handed people, $24$ are male. Comparing the conditional relative frequency of being male within each handedness group, which statement is best supported?\nA) The male rate is higher among right-handers ($60\\%$) than left-handers ($40\\%$), suggesting an association.\nB) The male rate is the same in both groups, so there is no association.\nC) Most people are male overall, so gender and handedness are associated.\nD) The male rate is higher among left-handers ($40\\%$) than right-handers ($36\\%$).",
+      "answer": "A) The male rate is higher among right-handers ($60\\%$) than left-handers ($40\\%$), suggesting an association.",
+      "solution": {
+        "steps": [
+          "Compute the conditional relative frequency of being male within each handedness group, using the group total as the denominator.",
+          "Right-handers: $\\frac{54}{90} = 0.60 = 60\\%$ male. Left-handers: $\\frac{24}{60} = 0.40 = 40\\%$ male.",
+          "Since $60\\% \\neq 40\\%$, the male rate differs by handedness, which suggests an association. A) is correct.",
+          "B) is false because the two conditionals ($60\\%$ vs. $40\\%$) are not equal.",
+          "C) compares an overall marginal ($\\frac{78}{150} = 52\\%$ male) rather than conditionals; a marginal alone cannot reveal association.",
+          "D) miscomputes the right-hander rate as $\\frac{54}{150} = 36\\%$ (dividing by the grand total instead of the right-hander total $90$)."
+        ],
+        "answer": "A) The male rate is higher among right-handers ($60\\%$) than left-handers ($40\\%$), suggesting an association."
+      }
+    }
+  ]
+}

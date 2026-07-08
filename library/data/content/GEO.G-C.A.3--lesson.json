@@ -1,0 +1,171 @@
+{
+  "id": "GEO.G-C.A.3--lesson",
+  "standard": "GEO.G-C.A.3",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Circles",
+  "domainCode": "G-C",
+  "cluster": "Understand and apply theorems about circles",
+  "clusterCode": "A",
+  "skillName": "Inscribed and Circumscribed Circles",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Every triangle has two special circles. The circumscribed circle passes through all three vertices; its center, the circumcenter, is where the three perpendicular bisectors of the sides meet, and it is equidistant from the vertices. The inscribed circle is tangent to all three sides; its center, the incenter, is where the three angle bisectors meet, and it is equidistant from the sides. A handy special case: a right triangle's hypotenuse is a diameter of its circumscribed circle, so its circumradius is half the hypotenuse. For a quadrilateral inscribed in a circle, the Inscribed Angle Theorem (an inscribed angle is half its intercepted arc) forces opposite angles to be supplementary: $m\\angle A + m\\angle C = 180^\\circ$ and $m\\angle B + m\\angle D = 180^\\circ$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Which center of a triangle is equidistant from all three vertices and is the center of the circumscribed circle: the circumcenter or the incenter? Name the set of segments you would construct to locate it.",
+      "solution": {
+        "steps": [
+          "The circumscribed circle must pass through all three vertices, so its center has to be the same distance from each vertex.",
+          "The point equidistant from the three vertices is the circumcenter.",
+          "A point is equidistant from two vertices exactly when it lies on the perpendicular bisector of the segment joining them.",
+          "So construct the three perpendicular bisectors of the sides; their common intersection is the circumcenter.",
+          "(The incenter, by contrast, is equidistant from the sides and is found with the angle bisectors.)"
+        ],
+        "answer": "The circumcenter; construct the three perpendicular bisectors of the sides."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A right triangle has legs $6$ and $8$ and hypotenuse $10$. Find the radius of its circumscribed circle.",
+      "solution": {
+        "steps": [
+          "In a right triangle inscribed in a circle, the hypotenuse is a diameter of that circle (the right angle is inscribed in a semicircle).",
+          "The hypotenuse here is $10$, so the diameter of the circumscribed circle is $10$.",
+          "The radius is half the diameter: $r = \\frac{10}{2}$.",
+          "$r = 5$.",
+          "Note we use the full hypotenuse, not a leg: halving a leg ($\\frac{8}{2}=4$) would be wrong."
+        ],
+        "answer": "$r = 5$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "The circumcenter of triangle $ABC$ is point $O$. If $OA = 5$ and $OB = 2x + 1$, find $x$ and the circumradius.",
+      "solution": {
+        "steps": [
+          "The circumcenter is equidistant from all three vertices, so $OA = OB = OC$ (each equals the circumradius).",
+          "Set the two expressions equal: $2x + 1 = 5$.",
+          "Subtract $1$ from both sides: $2x = 4$.",
+          "Divide both sides by $2$: $x = 2$.",
+          "The circumradius is the common distance $OA = 5$ (check: $OB = 2(2)+1 = 5$)."
+        ],
+        "answer": "$x = 2$, circumradius $= 5$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Triangle $ABC$ has vertices $A(0, 0)$, $B(6, 0)$, and $C(0, 8)$. Find the coordinates of the circumcenter and the circumradius.",
+      "solution": {
+        "steps": [
+          "Check the triangle's shape: $AB$ lies along the $x$-axis and $AC$ along the $y$-axis, so the angle at $A$ is a right angle. The hypotenuse is $BC$.",
+          "For a right triangle, the circumcenter is the midpoint of the hypotenuse, because the hypotenuse is a diameter.",
+          "Midpoint of $BC$: $\\left(\\frac{6+0}{2}, \\frac{0+8}{2}\\right) = (3, 4)$.",
+          "So the circumcenter is $O(3,4)$. (Averaging all three vertices would give the centroid $(2, \\frac{8}{3})$, which is not the circumcenter.)",
+          "Circumradius $=$ distance from $O$ to any vertex, say $A(0,0)$: $r = \\sqrt{(3-0)^2 + (4-0)^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.",
+          "Confirm with the hypotenuse: $BC = \\sqrt{(6-0)^2 + (0-8)^2} = \\sqrt{36+64} = 10$, and $\\frac{10}{2} = 5$."
+        ],
+        "answer": "Circumcenter $(3, 4)$, circumradius $= 5$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Quadrilateral $ABCD$ is inscribed in a circle with $m\\angle B = (2x + 10)^\\circ$ and $m\\angle D = (4x - 40)^\\circ$. Solve for $x$ and find $m\\angle B$.",
+      "solution": {
+        "steps": [
+          "Angles $B$ and $D$ are opposite angles of a cyclic quadrilateral, so they are supplementary by the Inscribed Quadrilateral Theorem.",
+          "Write the equation: $(2x + 10) + (4x - 40) = 180$.",
+          "Combine like terms: $6x - 30 = 180$.",
+          "Add $30$ to both sides: $6x = 210$.",
+          "Divide by $6$: $x = 35$.",
+          "Substitute back: $m\\angle B = 2(35) + 10 = 70 + 10 = 80^\\circ$ (check: $m\\angle D = 4(35)-40 = 100^\\circ$, and $80 + 100 = 180^\\circ$)."
+        ],
+        "answer": "$x = 35$, $m\\angle B = 80^\\circ$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Which center of a triangle is equidistant from all three sides and is the center of the inscribed circle, and which set of segments do you construct to locate it?",
+      "hint": "The inscribed circle is tangent to the sides, so its center is equally far from each side. Which segments are made of points equidistant from two sides of an angle?",
+      "solution": {
+        "steps": [
+          "The inscribed circle is tangent to all three sides, so its center is the same perpendicular distance from each side.",
+          "Points equidistant from the two sides of an angle lie on that angle's bisector.",
+          "So the center equidistant from all three sides is the incenter, located by intersecting the three angle bisectors."
+        ],
+        "answer": "The incenter; construct the three angle bisectors."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A right triangle has legs $5$ and $12$. Find the radius of its circumscribed circle.",
+      "hint": "First find the hypotenuse with the Pythagorean Theorem, then take half of it. Do not halve a leg.",
+      "solution": {
+        "steps": [
+          "Find the hypotenuse: $\\sqrt{5^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13$.",
+          "The hypotenuse is a diameter of the circumscribed circle, so the diameter is $13$.",
+          "The radius is half the hypotenuse: $r = \\frac{13}{2}$."
+        ],
+        "answer": "$r = \\frac{13}{2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A triangle has angles $40^\\circ$, $55^\\circ$, and $85^\\circ$. Is the circumcenter inside, on, or outside the triangle? Explain.",
+      "hint": "Compare the largest angle to $90^\\circ$. Acute triangles, right triangles, and obtuse triangles each place the circumcenter differently.",
+      "solution": {
+        "steps": [
+          "Look at the largest angle: $85^\\circ$, which is less than $90^\\circ$.",
+          "All three angles are less than $90^\\circ$, so the triangle is acute.",
+          "For an acute triangle the circumcenter lies inside the triangle. (It would be on the hypotenuse's midpoint for a right triangle, and outside for an obtuse triangle.)"
+        ],
+        "answer": "Inside the triangle, because the triangle is acute (all angles less than $90^\\circ$)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Quadrilateral $ABCD$ is inscribed in a circle. If $m\\angle A = 95^\\circ$, find $m\\angle C$.",
+      "hint": "Angles $A$ and $C$ are opposite angles of a cyclic quadrilateral. Opposite angles are supplementary, not equal.",
+      "solution": {
+        "steps": [
+          "$A$ and $C$ are opposite angles of a quadrilateral inscribed in a circle, so they are supplementary.",
+          "$m\\angle A + m\\angle C = 180^\\circ$.",
+          "$95 + m\\angle C = 180$, so $m\\angle C = 180 - 95 = 85^\\circ$."
+        ],
+        "answer": "$m\\angle C = 85^\\circ$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Quadrilateral $ABCD$ is inscribed in circle $O$. Prove that $m\\angle A + m\\angle C = 180^\\circ$.",
+      "hint": "Use the Inscribed Angle Theorem on $\\angle A$ and $\\angle C$, then use that the two arcs they intercept together make the whole circle.",
+      "solution": {
+        "steps": [
+          "Angle $A$ is an inscribed angle whose intercepted arc is $\\overset{\\frown}{BCD}$, so by the Inscribed Angle Theorem $m\\angle A = \\frac{1}{2}\\,m\\overset{\\frown}{BCD}$.",
+          "Angle $C$ is an inscribed angle whose intercepted arc is $\\overset{\\frown}{DAB}$, so $m\\angle C = \\frac{1}{2}\\,m\\overset{\\frown}{DAB}$.",
+          "Arcs $\\overset{\\frown}{BCD}$ and $\\overset{\\frown}{DAB}$ together make up the entire circle, so $m\\overset{\\frown}{BCD} + m\\overset{\\frown}{DAB} = 360^\\circ$.",
+          "Add the two angle equations: $m\\angle A + m\\angle C = \\frac{1}{2}\\,m\\overset{\\frown}{BCD} + \\frac{1}{2}\\,m\\overset{\\frown}{DAB} = \\frac{1}{2}\\left(m\\overset{\\frown}{BCD} + m\\overset{\\frown}{DAB}\\right)$.",
+          "Substitute the arc total: $m\\angle A + m\\angle C = \\frac{1}{2}(360^\\circ) = 180^\\circ$. $\\blacksquare$"
+        ],
+        "answer": "$m\\angle A + m\\angle C = \\frac{1}{2}(360^\\circ) = 180^\\circ$, so opposite angles are supplementary."
+      }
+    }
+  ]
+}

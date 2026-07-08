@@ -1,0 +1,119 @@
+{
+  "standard": "7.SP.C.8",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate chance processes and develop, use, and evaluate probability models",
+  "clusterCode": "C",
+  "skillName": "Compound Events",
+
+  "description": "Students find the probability of a compound event (an event made up of two or more simple events) by representing the full sample space with organized lists, tables (grids), and tree diagrams, and by designing and running simulations. They identify which outcomes in the sample space make up the event, count favorable outcomes against the total, and express the probability as a fraction in lowest terms. They distinguish independent from dependent (without-replacement) situations and recognize when a simulation can estimate a probability that is hard to compute directly.",
+
+  "subSkills": [
+    "List the full sample space of a compound event as an organized list of ordered outcomes",
+    "Build a two-way table (grid) for a two-stage experiment and read outcomes from cells",
+    "Draw a tree diagram showing every branch of a multi-stage experiment",
+    "Count the outcomes in the sample space and the outcomes favorable to a described event",
+    "Express a compound-event probability as a fraction $\\frac{\\text{favorable}}{\\text{total}}$ in lowest terms",
+    "Distinguish independent events (with replacement) from dependent events (without replacement) and adjust the sample space accordingly",
+    "Design a simulation (assign random digits or use a chance device) to model a compound event and estimate its probability from trial results"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Two-stage list / fundamental counting",
+      "example": "A spinner has sections red, blue, and green. You spin it and flip a fair coin. List all outcomes and find $P(\\text{green and heads})$. Answer: there are $6$ equally likely outcomes, so $P=\\frac{1}{6}$."
+    },
+    {
+      "name": "Two-dice table (grid)",
+      "example": "Two fair number cubes are rolled. Using a $6\\times 6$ table of the $36$ outcomes, find $P(\\text{sum}=7)$. Answer: $6$ favorable outcomes, so $\\frac{6}{36}=\\frac{1}{6}$."
+    },
+    {
+      "name": "Tree diagram for multi-stage event",
+      "example": "A fair coin is flipped $3$ times. Draw a tree diagram of the $8$ outcomes and find $P(\\text{exactly two heads})$. Answer: $\\frac{3}{8}$."
+    },
+    {
+      "name": "Drawing without replacement (dependent)",
+      "example": "A bag holds $3$ red and $2$ blue marbles. Two are drawn without replacement. List the sample space and find $P(\\text{both red})$. Answer: $\\frac{3}{5}\\cdot\\frac{2}{4}=\\frac{6}{20}=\\frac{3}{10}$."
+    },
+    {
+      "name": "Simulation design and estimate",
+      "example": "A cereal box contains one of $4$ equally likely prizes. To estimate the probability of getting all $4$ different prizes in $4$ boxes, assign digits $1$-$4$ to prizes (ignore $0,5$-$9$) and read groups of $4$ digits from a random table; the estimate is $\\frac{\\text{trials with all }4}{\\text{total trials}}$."
+    },
+    {
+      "name": "Compound 'at least one' event",
+      "example": "Two fair coins are flipped. Find $P(\\text{at least one head})$ using the sample space $\\{HH, HT, TH, TT\\}$. Answer: $\\frac{3}{4}$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Two-stage experiment with a small sample space (at most about $8$ outcomes) that the student lists or reads directly from a small table. Events are independent (with replacement or separate devices). The favorable outcomes are stated plainly and the answer is a simple fraction.",
+      "constraints": [
+        "Exactly two stages, total outcomes $\\le 8$",
+        "Independent events only (coin, spinner, single tag of cards)",
+        "Event description is direct, e.g. 'both heads' or 'red and even'",
+        "Answer is $\\frac{1}{n}$ or a fraction needing at most one reduction"
+      ]
+    },
+    "Medium": {
+      "description": "Larger sample space (up to $36$ outcomes) requiring an organized table or full tree diagram, or a three-stage independent experiment. Includes 'sum', 'at least one', or 'exactly k' events that require counting several favorable outcomes, and answers that must be reduced to lowest terms.",
+      "constraints": [
+        "Two number cubes ($36$ outcomes) or three coin/spinner stages ($8$-$27$ outcomes)",
+        "Event requires counting multiple favorable outcomes (sums, 'at least one', 'exactly two')",
+        "Answer must be simplified to lowest terms",
+        "May ask the student to choose or complete a table vs. tree representation"
+      ]
+    },
+    "Hard": {
+      "description": "Dependent (without-replacement) experiments, or multi-step problems combining representation with simulation design or interpretation. Student must set up the sample space themselves, account for the changing total at each stage, or read and interpret simulation trial data to estimate and compare to a theoretical value.",
+      "constraints": [
+        "Without-replacement draws where the second-stage outcomes depend on the first",
+        "Simulation: assign random digits, define a trial, and estimate probability from given trial results",
+        "May compare an experimental (simulated) probability to the theoretical probability",
+        "Two-part questions or events defined by a compound condition (e.g. 'first red and second blue')"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student adds the probabilities of the two stages instead of treating the compound event multiplicatively / by the joint sample space",
+      "distractor": "For $P(\\text{green and heads})$ computes $\\frac{1}{3}+\\frac{1}{2}=\\frac{5}{6}$ instead of $\\frac{1}{3}\\cdot\\frac{1}{2}=\\frac{1}{6}$"
+    },
+    {
+      "misconception": "Student undercounts the sample space by listing unordered pairs, so $HT$ and $TH$ are merged into one outcome",
+      "distractor": "Uses a total of $3$ outcomes for two coins ($HH, HT, TT$) and gets $P(\\text{one head})=\\frac{1}{3}$ instead of $\\frac{2}{4}=\\frac{1}{2}$"
+    },
+    {
+      "misconception": "Student treats a without-replacement (dependent) draw as if it were with replacement, keeping the same total at the second stage",
+      "distractor": "For two red from $3$ red and $2$ blue computes $\\frac{3}{5}\\cdot\\frac{3}{5}=\\frac{9}{25}$ instead of $\\frac{3}{5}\\cdot\\frac{2}{4}=\\frac{3}{10}$"
+    },
+    {
+      "misconception": "Student miscounts favorable outcomes for a 'sum' event, e.g. counts ordered pairs as a single outcome or forgets symmetric pairs",
+      "distractor": "For $P(\\text{sum}=7)$ on two cubes counts only $3$ favorable outcomes and gets $\\frac{3}{36}=\\frac{1}{12}$ instead of $\\frac{6}{36}=\\frac{1}{6}$"
+    },
+    {
+      "misconception": "Student computes the complement or the 'none' case when asked for 'at least one'",
+      "distractor": "For $P(\\text{at least one head})$ on two coins reports $\\frac{1}{4}$ (the $P(\\text{no heads})$ value) instead of $\\frac{3}{4}$"
+    },
+    {
+      "misconception": "Student confuses the random-digit assignment in a simulation, using the wrong number of digits per trial or the wrong digit range",
+      "distractor": "For a $4$-prize simulation reads digits one at a time per trial instead of groups of $4$, so the estimate of getting all $4$ prizes is far too high"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

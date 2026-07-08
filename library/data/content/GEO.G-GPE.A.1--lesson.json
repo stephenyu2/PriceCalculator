@@ -1,0 +1,176 @@
+{
+  "id": "GEO.G-GPE.A.1--lesson",
+  "standard": "GEO.G-GPE.A.1",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Expressing Geometric Properties with Equations",
+  "domainCode": "G-GPE",
+  "cluster": "Translate between the geometric description and the equation for a conic section",
+  "clusterCode": "A",
+  "skillName": "Equation of a Circle",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "A circle is the set of all points $(x,y)$ a fixed distance $r$ (the radius) from a fixed center $(h,k)$. Applying the Pythagorean Theorem to the right triangle with horizontal leg $x-h$, vertical leg $y-k$, and hypotenuse $r$ gives the standard form $(x-h)^2+(y-k)^2=r^2$. Reading a circle's equation, you negate the numbers inside the parentheses to get the center and take the square root of the right side to get the radius. Going the other way, a general-form equation $x^2+y^2+Dx+Ey+F=0$ is rewritten in standard form by completing the square in $x$ and in $y$. Watch the signs of $h$ and $k$, remember $r^2$ on the right is the radius squared, and add the completing-the-square constants to both sides.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Write the equation of the circle with center $(3,-2)$ and radius $5$.",
+      "solution": {
+        "steps": [
+          "Use the standard form $(x-h)^2+(y-k)^2=r^2$, where $(h,k)$ is the center and $r$ is the radius.",
+          "Here $h=3$, $k=-2$, and $r=5$.",
+          "Substitute: $(x-3)^2+(y-(-2))^2=5^2$.",
+          "Simplify the inner sign and square the radius: $(x-3)^2+(y+2)^2=25$.",
+          "Note that $y-(-2)$ becomes $y+2$, and $r^2=25$ goes on the right side, not $r=5$."
+        ],
+        "answer": "$(x-3)^2+(y+2)^2=25$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Identify the center and radius of the circle $(x+4)^2+(y-1)^2=49$.",
+      "solution": {
+        "steps": [
+          "Compare to $(x-h)^2+(y-k)^2=r^2$.",
+          "Rewrite $(x+4)$ as $(x-(-4))$, so $h=-4$.",
+          "From $(y-1)$ we read $k=1$, so the center is $(-4,1)$.",
+          "The right side is $r^2=49$, so take the square root: $r=\\sqrt{49}=7$.",
+          "The center is $(-4,1)$ and the radius is $7$. The right side $49$ is $r^2$, not $r$, so we must take the square root."
+        ],
+        "answer": "Center $(-4,1)$, radius $r=7$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Write the equation of the circle with center $(1,2)$ that passes through the point $(4,6)$.",
+      "solution": {
+        "steps": [
+          "The radius is the distance from the center $(1,2)$ to the point $(4,6)$ on the circle.",
+          "Apply the distance formula: $r=\\sqrt{(4-1)^2+(6-2)^2}$.",
+          "Compute each leg: $r=\\sqrt{3^2+4^2}=\\sqrt{9+16}$.",
+          "Add and take the square root: $r=\\sqrt{25}=5$, so $r^2=25$.",
+          "Substitute the center $(1,2)$ and $r^2=25$ into the standard form: $(x-1)^2+(y-2)^2=25$."
+        ],
+        "answer": "$(x-1)^2+(y-2)^2=25$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Find the center and radius of the circle $x^2+y^2-6x+8y-11=0$.",
+      "solution": {
+        "steps": [
+          "Group the $x$ terms and the $y$ terms, moving the constant to the right: $(x^2-6x)+(y^2+8y)=11$.",
+          "Complete the square in $x$: half of $-6$ is $-3$, and $(-3)^2=9$.",
+          "Complete the square in $y$: half of $8$ is $4$, and $4^2=16$.",
+          "Add $9$ and $16$ to BOTH sides: $(x^2-6x+9)+(y^2+8y+16)=11+9+16$.",
+          "Write each group as a square and add the right side: $(x-3)^2+(y+4)^2=36$.",
+          "Read off the center $(3,-4)$ and radius $r=\\sqrt{36}=6$."
+        ],
+        "answer": "Center $(3,-4)$, radius $r=6$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Find the center and radius of the circle $2x^2+2y^2-4x+12y-6=0$.",
+      "solution": {
+        "steps": [
+          "The leading coefficient is $2$, so divide every term by $2$ first: $x^2+y^2-2x+6y-3=0$.",
+          "Group and move the constant: $(x^2-2x)+(y^2+6y)=3$.",
+          "Complete the square in $x$: half of $-2$ is $-1$, and $(-1)^2=1$.",
+          "Complete the square in $y$: half of $6$ is $3$, and $3^2=9$.",
+          "Add $1$ and $9$ to both sides: $(x^2-2x+1)+(y^2+6y+9)=3+1+9$.",
+          "Write as squares: $(x-1)^2+(y+3)^2=13$.",
+          "The center is $(1,-3)$ and the radius is $r=\\sqrt{13}$, an exact radical because $13$ is not a perfect square."
+        ],
+        "answer": "Center $(1,-3)$, radius $r=\\sqrt{13}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Write the equation of the circle with center $(-5,2)$ and radius $3$.",
+      "hint": "Substitute into $(x-h)^2+(y-k)^2=r^2$. Remember $x-(-5)$ becomes $x+5$, and the right side is $r^2$.",
+      "solution": {
+        "steps": [
+          "Use $(x-h)^2+(y-k)^2=r^2$ with $h=-5$, $k=2$, $r=3$.",
+          "Substitute: $(x-(-5))^2+(y-2)^2=3^2$.",
+          "Simplify: $(x+5)^2+(y-2)^2=9$."
+        ],
+        "answer": "$(x+5)^2+(y-2)^2=9$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Identify the center and radius of the circle $(x-7)^2+(y+3)^2=20$.",
+      "hint": "Negate the numbers inside the parentheses for the center, and take the square root of the right side. Leave the radius as an exact radical.",
+      "solution": {
+        "steps": [
+          "Compare to $(x-h)^2+(y-k)^2=r^2$: $h=7$ and $k=-3$, so the center is $(7,-3)$.",
+          "The right side is $r^2=20$, so $r=\\sqrt{20}$.",
+          "Simplify the radical: $\\sqrt{20}=\\sqrt{4\\cdot 5}=2\\sqrt{5}$."
+        ],
+        "answer": "Center $(7,-3)$, radius $r=2\\sqrt{5}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Write the equation of the circle with center $(-2,-1)$ that passes through the point $(2,2)$.",
+      "hint": "First find the radius with the distance formula from the center to the given point, then square it for the right side.",
+      "solution": {
+        "steps": [
+          "Find the radius: $r=\\sqrt{(2-(-2))^2+(2-(-1))^2}=\\sqrt{4^2+3^2}$.",
+          "Compute: $r=\\sqrt{16+9}=\\sqrt{25}=5$, so $r^2=25$.",
+          "Substitute the center $(-2,-1)$ and $r^2=25$: $(x+2)^2+(y+1)^2=25$."
+        ],
+        "answer": "$(x+2)^2+(y+1)^2=25$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Find the center and radius of the circle $x^2+y^2+10x-4y+13=0$.",
+      "hint": "Group the $x$ and $y$ terms, complete the square in each, and add the new constants to both sides.",
+      "solution": {
+        "steps": [
+          "Group and move the constant: $(x^2+10x)+(y^2-4y)=-13$.",
+          "Complete the square in $x$: half of $10$ is $5$, $5^2=25$.",
+          "Complete the square in $y$: half of $-4$ is $-2$, $(-2)^2=4$.",
+          "Add $25$ and $4$ to both sides: $(x^2+10x+25)+(y^2-4y+4)=-13+25+4$.",
+          "Write as squares: $(x+5)^2+(y-2)^2=16$.",
+          "The center is $(-5,2)$ and the radius is $r=\\sqrt{16}=4$."
+        ],
+        "answer": "Center $(-5,2)$, radius $r=4$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Find the center and radius of the circle $x^2+y^2-3x+5y+\\frac{1}{2}=0$.",
+      "hint": "The linear coefficients are odd, so the center will have fractional coordinates. Half of $-3$ is $-\\frac{3}{2}$ and half of $5$ is $\\frac{5}{2}$; square each to complete the square.",
+      "solution": {
+        "steps": [
+          "Group and move the constant: $(x^2-3x)+(y^2+5y)=-\\frac{1}{2}$.",
+          "Complete the square in $x$: half of $-3$ is $-\\frac{3}{2}$, and $\\left(-\\frac{3}{2}\\right)^2=\\frac{9}{4}$.",
+          "Complete the square in $y$: half of $5$ is $\\frac{5}{2}$, and $\\left(\\frac{5}{2}\\right)^2=\\frac{25}{4}$.",
+          "Add $\\frac{9}{4}$ and $\\frac{25}{4}$ to both sides: $\\left(x-\\frac{3}{2}\\right)^2+\\left(y+\\frac{5}{2}\\right)^2=-\\frac{1}{2}+\\frac{9}{4}+\\frac{25}{4}$.",
+          "Combine the right side: $-\\frac{2}{4}+\\frac{9}{4}+\\frac{25}{4}=\\frac{32}{4}=8$.",
+          "So $\\left(x-\\frac{3}{2}\\right)^2+\\left(y+\\frac{5}{2}\\right)^2=8$, giving center $\\left(\\frac{3}{2},-\\frac{5}{2}\\right)$ and radius $r=\\sqrt{8}=2\\sqrt{2}$."
+        ],
+        "answer": "Center $\\left(\\frac{3}{2},-\\frac{5}{2}\\right)$, radius $r=2\\sqrt{2}$"
+      }
+    }
+  ]
+}

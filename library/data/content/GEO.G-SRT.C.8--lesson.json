@@ -1,0 +1,170 @@
+{
+  "id": "GEO.G-SRT.C.8--lesson",
+  "standard": "GEO.G-SRT.C.8",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Similarity, Right Triangles, and Trigonometry",
+  "domainCode": "G-SRT",
+  "cluster": "Define trigonometric ratios and solve problems involving right triangles",
+  "clusterCode": "C",
+  "skillName": "Trig Ratios in Applied Problems",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Many real-world situations, such as a ladder against a wall, a ramp, or a sightline to the top of a building, can be modeled as a right triangle. To solve them, pick an acute reference angle and label the sides as opposite, adjacent, or hypotenuse. Then use SOH-CAH-TOA: $\\sin\\theta = \\frac{\\text{opp}}{\\text{hyp}}$, $\\cos\\theta = \\frac{\\text{adj}}{\\text{hyp}}$, $\\tan\\theta = \\frac{\\text{opp}}{\\text{adj}}$. Use the Pythagorean Theorem $a^2 + b^2 = c^2$ to find a third side, and use inverse trig functions ($\\sin^{-1}$, $\\cos^{-1}$, $\\tan^{-1}$) to find a missing angle. An angle of elevation is measured upward from the horizontal; an angle of depression is measured downward from the horizontal. Make sure your calculator is in degree mode, and round sensibly with correct units.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A $20$ ft ladder leans against a wall, making a $65^\\circ$ angle with the ground. How high up the wall does the top of the ladder reach? Round to the nearest tenth of a foot.",
+      "solution": {
+        "steps": [
+          "Sketch the right triangle: the ladder is the hypotenuse ($20$ ft), the wall height $h$ is the side opposite the $65^\\circ$ angle, and the ground is the adjacent side.",
+          "We know the hypotenuse and want the opposite side, so use sine: $\\sin\\theta = \\frac{\\text{opp}}{\\text{hyp}}$.",
+          "Substitute: $\\sin 65^\\circ = \\frac{h}{20}$.",
+          "Solve for $h$ (it is in the numerator, so multiply both sides by $20$): $h = 20\\sin 65^\\circ$.",
+          "Evaluate in degree mode: $\\sin 65^\\circ \\approx 0.9063$, so $h \\approx 20(0.9063) \\approx 18.1$ ft."
+        ],
+        "answer": "$h = 20\\sin 65^\\circ \\approx 18.1$ ft"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A guy wire is anchored to the ground $9$ ft from the base of a vertical pole and runs straight to the top of the pole, which is $12$ ft tall. How long is the guy wire?",
+      "solution": {
+        "steps": [
+          "The pole and the ground meet at a right angle, so the pole ($12$ ft) and the ground distance ($9$ ft) are the two legs, and the wire $w$ is the hypotenuse.",
+          "Apply the Pythagorean Theorem: $w^2 = 9^2 + 12^2$.",
+          "Compute the squares: $w^2 = 81 + 144 = 225$.",
+          "Take the positive square root: $w = \\sqrt{225} = 15$.",
+          "This is the $9, 12, 15$ multiple of the $3, 4, 5$ triple, confirming the result."
+        ],
+        "answer": "$w = \\sqrt{9^2 + 12^2} = \\sqrt{225} = 15$ ft"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A wheelchair ramp rises $4$ ft over a horizontal run of $24$ ft. What angle does the ramp make with the ground? Round to the nearest tenth of a degree.",
+      "solution": {
+        "steps": [
+          "Let $\\theta$ be the angle the ramp makes with the horizontal ground. The rise ($4$ ft) is opposite $\\theta$ and the run ($24$ ft) is adjacent to $\\theta$.",
+          "Opposite over adjacent means tangent: $\\tan\\theta = \\frac{\\text{opp}}{\\text{adj}} = \\frac{4}{24} = \\frac{1}{6}$.",
+          "Because we are solving for the angle, apply the inverse tangent: $\\theta = \\tan^{-1}\\left(\\frac{1}{6}\\right)$.",
+          "Evaluate in degree mode: $\\tan^{-1}(0.1667) \\approx 9.5^\\circ$."
+        ],
+        "answer": "$\\theta = \\tan^{-1}\\frac{4}{24} \\approx 9.5^\\circ$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "From the top of a $50$ ft lighthouse, the angle of depression to a boat at sea is $15^\\circ$. How far is the boat from the base of the lighthouse? Round to the nearest tenth of a foot.",
+      "solution": {
+        "steps": [
+          "Draw a horizontal line from the lighthouse top. The angle of depression $15^\\circ$ is measured down from that horizontal to the line of sight.",
+          "By alternate interior angles, the angle of elevation from the boat up to the lighthouse top is also $15^\\circ$. Use that angle inside the right triangle whose legs are the lighthouse height ($50$ ft, opposite the $15^\\circ$) and the horizontal distance $d$ (adjacent).",
+          "Opposite over adjacent gives tangent: $\\tan 15^\\circ = \\frac{50}{d}$.",
+          "The unknown $d$ is in the denominator, so multiply both sides by $d$ and then divide by $\\tan 15^\\circ$: $d = \\frac{50}{\\tan 15^\\circ}$.",
+          "Evaluate in degree mode: $\\tan 15^\\circ \\approx 0.2679$, so $d \\approx \\frac{50}{0.2679} \\approx 186.6$ ft."
+        ],
+        "answer": "$d = \\frac{50}{\\tan 15^\\circ} \\approx 186.6$ ft"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A $13$ ft ladder rests against a wall and reaches $12$ ft up the wall. (a) How far is the foot of the ladder from the wall? (b) What angle does the ladder make with the ground? Round the angle to the nearest tenth of a degree.",
+      "solution": {
+        "steps": [
+          "Part (a): The ladder ($13$ ft) is the hypotenuse and the wall height ($12$ ft) is one leg. Find the base leg $b$ with the Pythagorean Theorem: $b = \\sqrt{13^2 - 12^2}$.",
+          "Compute: $b = \\sqrt{169 - 144} = \\sqrt{25} = 5$ ft. (Subtract, since the unknown is a leg, not the hypotenuse.)",
+          "Part (b): Let $\\theta$ be the angle with the ground. The base ($5$ ft) is adjacent to $\\theta$ and the hypotenuse is $13$ ft, so use cosine: $\\cos\\theta = \\frac{5}{13}$.",
+          "Solve for the angle with the inverse cosine: $\\theta = \\cos^{-1}\\left(\\frac{5}{13}\\right)$.",
+          "Evaluate in degree mode: $\\cos^{-1}(0.3846) \\approx 67.4^\\circ$."
+        ],
+        "answer": "(a) $b = \\sqrt{13^2 - 12^2} = 5$ ft; (b) $\\theta = \\cos^{-1}\\frac{5}{13} \\approx 67.4^\\circ$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A $25$ ft ladder leans against a wall, making a $70^\\circ$ angle with the ground. How high up the wall does the ladder reach? Round to the nearest tenth of a foot.",
+      "hint": "The height is opposite the $70^\\circ$ angle and the ladder is the hypotenuse, so use $\\sin 70^\\circ = \\frac{h}{25}$.",
+      "solution": {
+        "steps": [
+          "Identify the sides: hypotenuse $= 25$ ft, opposite side $= h$ (the wall height).",
+          "Use sine: $\\sin 70^\\circ = \\frac{h}{25}$.",
+          "Solve: $h = 25\\sin 70^\\circ$.",
+          "Evaluate in degree mode: $\\sin 70^\\circ \\approx 0.9397$, so $h \\approx 25(0.9397) \\approx 23.5$ ft."
+        ],
+        "answer": "$h = 25\\sin 70^\\circ \\approx 23.5$ ft"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A rectangular field is $8$ m wide and $15$ m long. How long is the diagonal path across the field?",
+      "hint": "The two sides and the diagonal form a right triangle. Use $d = \\sqrt{8^2 + 15^2}$.",
+      "solution": {
+        "steps": [
+          "The width and length are the two legs, and the diagonal $d$ is the hypotenuse.",
+          "Apply the Pythagorean Theorem: $d^2 = 8^2 + 15^2 = 64 + 225 = 289$.",
+          "Take the positive square root: $d = \\sqrt{289} = 17$.",
+          "This is the $8, 15, 17$ Pythagorean triple."
+        ],
+        "answer": "$d = \\sqrt{8^2 + 15^2} = 17$ m"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "From a point on level ground, the angle of elevation to the top of a tree is $40^\\circ$. The tree is $30$ ft tall. How far is the point from the base of the tree? Round to the nearest tenth of a foot.",
+      "hint": "The tree height is opposite the $40^\\circ$ angle and the ground distance $d$ is adjacent, so use $\\tan 40^\\circ = \\frac{30}{d}$. The unknown is in the denominator.",
+      "solution": {
+        "steps": [
+          "The tree height ($30$ ft) is opposite the $40^\\circ$ angle and the ground distance $d$ is adjacent, so use tangent: $\\tan 40^\\circ = \\frac{30}{d}$.",
+          "The unknown is in the denominator, so $d = \\frac{30}{\\tan 40^\\circ}$.",
+          "Evaluate in degree mode: $\\tan 40^\\circ \\approx 0.8391$, so $d \\approx \\frac{30}{0.8391} \\approx 35.8$ ft."
+        ],
+        "answer": "$d = \\frac{30}{\\tan 40^\\circ} \\approx 35.8$ ft"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A slide is $10$ ft long and its top is $6$ ft above the ground. What angle does the slide make with the ground? Round to the nearest tenth of a degree.",
+      "hint": "The $6$ ft height is opposite the angle and the $10$ ft slide is the hypotenuse, so use $\\sin\\theta = \\frac{6}{10}$, then apply $\\sin^{-1}$.",
+      "solution": {
+        "steps": [
+          "Let $\\theta$ be the angle the slide makes with the ground. The height ($6$ ft) is opposite $\\theta$ and the slide ($10$ ft) is the hypotenuse.",
+          "Use sine: $\\sin\\theta = \\frac{6}{10} = 0.6$.",
+          "Solve for the angle with the inverse sine: $\\theta = \\sin^{-1}(0.6)$.",
+          "Evaluate in degree mode: $\\theta \\approx 36.9^\\circ$."
+        ],
+        "answer": "$\\theta = \\sin^{-1}\\frac{6}{10} \\approx 36.9^\\circ$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A surveyor stands $120$ ft from the base of a building. Her measuring instrument is $5$ ft above the ground, and the angle of elevation from the instrument to the top of the building is $52^\\circ$. How tall is the building? Round to the nearest tenth of a foot.",
+      "hint": "First find the height of the top above the instrument using $\\tan 52^\\circ = \\frac{y}{120}$, then add the $5$ ft instrument height to get the full building height.",
+      "solution": {
+        "steps": [
+          "Let $y$ be the height of the building's top above the instrument. The horizontal distance ($120$ ft) is adjacent to the $52^\\circ$ angle and $y$ is opposite, so use tangent: $\\tan 52^\\circ = \\frac{y}{120}$.",
+          "Solve for $y$: $y = 120\\tan 52^\\circ$. In degree mode, $\\tan 52^\\circ \\approx 1.2799$, so $y \\approx 120(1.2799) \\approx 153.6$ ft.",
+          "The instrument sits $5$ ft above the ground, so add that offset to get the full height: $153.6 + 5 = 158.6$ ft.",
+          "Always add the instrument or eye-level height; the triangle alone gives only the part above the instrument."
+        ],
+        "answer": "Building height $= 120\\tan 52^\\circ + 5 \\approx 158.6$ ft"
+      }
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "id": "A1.S-ID.C.9--worksheet",
+  "standard": "A1.S-ID.C.9",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Interpret linear models",
+  "clusterCode": "C",
+  "skillName": "Correlation vs. Causation",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "A correlation coefficient $r$ measures the direction and strength of a linear association between two variables, where $-1 \\le r \\le 1$. A strong correlation tells you the variables move together, but it does NOT tell you that one causes the other. This worksheet builds from reading $r$ to identifying lurking variables, reverse causation, and coincidence, and finishes by comparing observational studies to randomized controlled experiments. Items progress from Easy to Hard.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A scatterplot of hours slept vs. number of yawns the next day has a correlation coefficient of $r = -0.74$. Describe the direction of the association (positive or negative) and roughly how strong it is.",
+      "answer": "A fairly strong negative association: as hours slept increases, the number of yawns tends to decrease.",
+      "solution": {
+        "steps": [
+          "The sign of $r$ gives the direction. Here $r = -0.74$ is negative, so the two variables move in opposite directions: more sleep goes with fewer yawns.",
+          "The size of $|r|$ gives the strength. Since $|{-0.74}| = 0.74$ is fairly close to $1$, the linear association is fairly strong.",
+          "So the association is fairly strong and negative."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Two variables have a correlation coefficient of $r = 0.05$. Is the linear association strong or weak? Is it positive or negative?",
+      "answer": "Very weak and (slightly) positive.",
+      "solution": {
+        "steps": [
+          "The sign of $r$ is positive ($+0.05$), so the linear association is positive in direction.",
+          "The strength is measured by how close $|r|$ is to $1$. Here $|0.05| = 0.05$ is very close to $0$, so the linear association is very weak, almost none.",
+          "So the association is positive in sign but very weak."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "True or false: 'Because the number of ice cream cones sold and the number of pool drownings are positively correlated during the summer, buying ice cream causes drownings.' Decide true or false and give the one-sentence reason.",
+      "answer": "False. A correlation between two variables does not prove that one causes the other.",
+      "solution": {
+        "steps": [
+          "The claim takes a correlation and treats it as proof of causation.",
+          "Correlation measures only that two variables tend to move together, not that one produces a change in the other.",
+          "So the causal claim is unjustified and the statement is false."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Ice cream sales and the number of people who get sunburned are positively correlated. Name a lurking (third) variable that helps explain both, instead of one causing the other.",
+      "answer": "Hot, sunny weather (high temperature / more time outdoors), which raises both ice cream sales and sunburns.",
+      "solution": {
+        "steps": [
+          "A lurking variable is a third factor that influences both of the correlated variables.",
+          "On hot, sunny days people buy more ice cream AND spend more time outside in the sun.",
+          "So warm, sunny weather drives both variables up at the same time, producing the correlation without ice cream causing sunburn."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A scatterplot of weekly study time vs. exam score for a class shows $r = 0.81$. State one thing $r$ does tell you and one thing $r$ does NOT tell you.",
+      "answer": "It tells you there is a fairly strong positive linear association between study time and exam score. It does NOT prove that studying more causes higher scores.",
+      "solution": {
+        "steps": [
+          "Since $r = 0.81$ is positive and close to $1$, $r$ tells you the two variables have a fairly strong positive linear association: students who study more tend to score higher.",
+          "What $r$ does not tell you is causation. A high $r$ does not establish that studying more causes the higher scores, because other factors (prior knowledge, motivation, sleep) could be involved.",
+          "So $r$ reports association and strength, not cause."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "In many cities, the number of police officers on duty and the number of crimes reported are positively correlated. A blogger concludes that adding police officers causes more crime. Classify the flaw in this reasoning (lurking variable, reverse causation, or coincidence) and justify it in one or two sentences.",
+      "answer": "Reverse causation (with a lurking factor of city size). The causal arrow likely runs the other way: cities with more crime hire more police officers, so high crime drives the number of officers up, not the reverse.",
+      "solution": {
+        "steps": [
+          "The blogger assumes officers $\\rightarrow$ crime, but the more plausible direction is crime $\\rightarrow$ officers: places with more crime respond by hiring more police.",
+          "This is reverse causation, because the proposed effect is actually closer to the cause.",
+          "(City population is also a lurking variable: larger cities have both more police and more crime.) Either way, the blogger's claim that police cause crime is unjustified."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Among elementary-school children, shoe size is strongly positively correlated with reading ability. A claim states that having bigger feet makes a child a better reader. Classify the flaw (lurking variable, reverse causation, or coincidence) and name the lurking variable.",
+      "answer": "Lurking variable: the child's age. Older children have both bigger feet and better reading ability, so age drives both, not feet causing reading.",
+      "solution": {
+        "steps": [
+          "Ask what third factor could increase both shoe size and reading ability at the same time.",
+          "Age does exactly that: as children get older they grow larger feet AND become stronger readers.",
+          "So this is a confounding (lurking) variable problem; once you account for age, the apparent link between feet and reading disappears, so the causal claim fails."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Over a 10-year period, the annual number of films a particular actor released is correlated with the country's annual cheese consumption at $r = 0.91$. A tabloid says the actor's films drive cheese sales. Decide whether the high value of $r$ supports a causal link, and explain.",
+      "answer": "No. This is almost certainly a coincidence: there is no plausible mechanism connecting one actor's films to national cheese consumption, so the high $r$ does not imply causation.",
+      "solution": {
+        "steps": [
+          "A large $|r|$ shows the two series happened to move together over these 10 years, but strength of correlation alone never establishes cause.",
+          "Ask whether there is any believable mechanism by which one actor's film count could change how much cheese a whole nation eats. There is none.",
+          "With no mechanism and only a short series, this is a coincidental (spurious) correlation, so the causal claim is unjustified despite $r = 0.91$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A health survey finds that people who take vitamin supplements have, on average, fewer illnesses, with a moderate positive association. A headline reads 'Supplements prevent illness.' Give one specific lurking variable that could produce this correlation without the supplements doing anything, and explain how it works.",
+      "answer": "Overall healthy lifestyle. People who choose to take supplements also tend to exercise more, eat better, and see doctors regularly, and those healthy behaviors (not the supplement) reduce illness.",
+      "solution": {
+        "steps": [
+          "The two groups (supplement takers and non-takers) were not randomly assigned; people self-selected into taking supplements.",
+          "People who take supplements tend to differ in other ways: they often exercise, eat well, and get regular checkups.",
+          "Those healthier behaviors are a lurking variable that lowers illness on their own, so the correlation can appear even if the supplement itself has no effect, and the headline overstates the evidence."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A scatterplot of daily minutes of screen time vs. a sleep-quality score has $r = -0.12$. A student claims, 'Since $r$ is close to $0$, screen time has absolutely no effect on sleep of any kind.' Explain what is wrong with this reasoning.",
+      "answer": "A value of $r$ near $0$ only means there is little LINEAR association in this data; it does not prove there is no relationship at all (the relationship could be nonlinear, or hidden by other variables).",
+      "solution": {
+        "steps": [
+          "The correlation coefficient $r$ measures only the strength of a straight-line (linear) relationship.",
+          "An $r$ near $0$, like $-0.12$, means the points show almost no linear trend, but two variables can still be related in a curved (nonlinear) way that $r$ does not capture.",
+          "Other factors could also mask a real effect. So 'no linear correlation' is not the same as 'no relationship of any kind,' and the student's claim is too strong."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A school district wants to know whether a new after-school tutoring program raises math grades. Design A: compare the grades of students who chose to sign up for tutoring with the grades of students who did not. Design B: randomly assign students to either receive tutoring or not, then compare grades. Which design can support a causal conclusion, and explain in two or three sentences why the other one cannot.",
+      "answer": "Design B (the randomized experiment) can support a causal conclusion. Design A cannot, because students who chose to sign up may differ from those who did not (motivation, prior ability), so any grade difference could be due to those confounders rather than the tutoring.",
+      "solution": {
+        "steps": [
+          "In Design A the groups are self-selected. Students who sign up for tutoring may already be more motivated or have different prior achievement, so these confounding variables differ between the groups.",
+          "If the groups differ in confounders to begin with, a difference in grades cannot be attributed to the tutoring alone.",
+          "In Design B, random assignment makes the two groups similar on average for both known and unknown confounders, so a grade difference can reasonably be attributed to the tutoring. Therefore only the randomized experiment (B) supports a causal claim."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Researchers report that adults who drink one cup of coffee per day have a lower rate of a certain disease than non-coffee-drinkers, based on a survey ($r$ for cups per day vs. disease rate is moderately negative). A news site concludes 'Coffee prevents the disease.' Explain why this observational result does not establish causation, then describe a study design that could.",
+      "answer": "Because the data is observational and self-selected, coffee drinkers may differ from non-drinkers in other ways (age, diet, smoking, income) that affect disease, so those confounders could explain the lower rate. A randomized controlled experiment, randomly assigning participants to drink coffee or not and then comparing disease rates, could establish causation.",
+      "solution": {
+        "steps": [
+          "The survey only observes existing coffee drinkers; nobody was assigned to drink coffee, so the groups can differ systematically (diet, smoking, age, wealth). These are confounding variables that could cause the lower disease rate on their own.",
+          "Because confounders are not controlled, the negative correlation does not prove coffee prevents the disease.",
+          "To establish causation, randomly assign participants to a 'coffee' group or a 'no coffee' group and follow both over time. Random assignment balances confounders across the groups, so a difference in disease rates can be attributed to the coffee itself."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A city observes that neighborhoods with more trees have lower average asthma rates ($r \\approx -0.6$). Give TWO different plausible explanations for this correlation: one in which planting trees actually reduces asthma, and one lurking-variable explanation in which planting trees would NOT help. Then state what kind of evidence would let the city decide between them.",
+      "answer": "Causal explanation: trees improve air quality, so more trees directly lowers asthma. Lurking-variable explanation: wealthier neighborhoods tend to have both more trees AND less pollution/better healthcare, so income (not the trees) drives the lower asthma. A randomized experiment, randomly choosing which similar neighborhoods get new trees and then comparing asthma rates, would let the city decide.",
+      "solution": {
+        "steps": [
+          "Explanation 1 (trees cause the drop): more trees filter pollutants and improve air quality, which directly reduces asthma. Under this story, planting trees would help.",
+          "Explanation 2 (lurking variable): higher-income neighborhoods often have more trees and also lower pollution, better housing, and better healthcare access. Income, not the trees, lowers asthma, so adding trees alone would not help.",
+          "Both explanations fit the negative correlation, so the observation alone cannot decide. To choose between them, run a controlled experiment: randomly assign which otherwise-similar neighborhoods receive new tree plantings, then compare asthma rates. Random assignment balances income and other confounders, isolating the effect of the trees."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A researcher finds a positive correlation ($r = 0.7$) between the number of hours teenagers spend on a particular social-media app and their reported anxiety level. List the three distinct types of explanation that could account for this correlation (besides 'the app causes anxiety'), give a one-line example of each in this context, and explain why a single observational survey cannot tell them apart.",
+      "answer": "The three are: (1) reverse causation, e.g. anxious teens use the app more to cope; (2) a lurking variable, e.g. lack of sleep raises both app use and anxiety; (3) coincidence, e.g. the link is a chance pattern in this particular sample. An observational survey only records associations and does not assign app use or control other factors, so it cannot distinguish which explanation is true.",
+      "solution": {
+        "steps": [
+          "Reverse causation: instead of app $\\rightarrow$ anxiety, anxiety could drive app use, e.g. anxious teens turn to the app to distract themselves, so anxiety $\\rightarrow$ app use.",
+          "Lurking variable: a third factor such as poor sleep, or stressful home life, could increase both app use and anxiety at the same time, producing the correlation with no direct link between the two.",
+          "Coincidence: in any one sample, two variables can line up by chance, especially with a limited number of teens, so the pattern might not reflect any real mechanism.",
+          "A single observational survey only measures the variables as they already are. It does not randomly assign app use and does not hold other factors constant, so it cannot rule out reverse causation, confounding, or chance. Only a randomized controlled experiment could separate a true causal effect from these alternatives."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Two studies look at whether a daily walking program lowers blood pressure. Study 1 (observational): 500 volunteers who already walk daily are compared with 500 who do not; the walkers have lower blood pressure ($r$ for steps vs. blood pressure is moderately negative). Study 2 (experiment): 1000 similar adults are randomly assigned to a walking group or a no-walking group and followed for six months; the walking group ends with lower blood pressure. Explain why Study 2 gives stronger evidence for causation, and describe specifically HOW random assignment removes the weakness in Study 1.",
+      "answer": "Study 2 is stronger because random assignment makes the two groups similar, on average, in every other factor (age, weight, diet, genetics), so the only systematic difference is whether they walked, and any blood-pressure difference can be attributed to walking. In Study 1 the walkers self-selected and likely differ in those confounders, so its lower blood pressure could be caused by those factors rather than the walking.",
+      "solution": {
+        "steps": [
+          "In Study 1 people chose for themselves whether to walk. Walkers may also be younger, lighter, or have healthier diets, so these confounding variables differ between the groups and could be the real reason their blood pressure is lower. The observed correlation therefore cannot establish that walking is the cause.",
+          "In Study 2 a coin flip (random assignment) decides who walks. Because assignment is random, the walking and no-walking groups end up similar on average for age, weight, diet, genetics, and even factors no one thought to measure.",
+          "With the groups balanced on all those confounders, the only systematic difference left between them is the walking program itself. So if the walking group ends with lower blood pressure, that difference can be attributed to the walking, which is why the randomized experiment supports a causal conclusion and the observational study does not."
+        ]
+      }
+    }
+  ]
+}

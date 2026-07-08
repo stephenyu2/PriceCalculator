@@ -1,0 +1,125 @@
+{
+  "standard": "A1.A-SSE.B.3",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Seeing Structure in Expressions",
+  "domainCode": "A-SSE",
+  "cluster": "Write expressions in equivalent forms to solve problems",
+  "clusterCode": "B",
+  "skillName": "Equivalent Forms Reveal Properties",
+
+  "description": "Students choose and produce an equivalent form of an expression so that a desired property of the quantity becomes visible. The three core moves are: (1) factoring a quadratic to reveal its zeros, e.g. rewriting $x^2-5x+6$ as $(x-2)(x-3)$ to read off the roots $x=2$ and $x=3$; (2) completing the square to reveal a maximum or minimum, e.g. rewriting $x^2-6x+11$ as $(x-3)^2+2$ to read off the vertex $(3,2)$ and minimum value $2$; and (3) using properties of exponents to rewrite an exponential expression and reveal a rate, e.g. rewriting $12^{12t}$ as $\\left(12^{12}\\right)^t$ or $1.15^t$ as a monthly factor $\\left(1.15^{1/12}\\right)^{12t}\\approx 1.0117^{12t}$. In every case the student must both produce the equivalent form AND explain which property (zeros, extreme value, growth rate, factors) the new form exposes.",
+
+  "subSkills": [
+    "Factor a quadratic expression of the form $x^2+bx+c$ and $ax^2+bx+c$ to reveal its zeros, and state those zeros from the factored form",
+    "Recognize and apply special-product structure: difference of squares $a^2-b^2=(a-b)(a+b)$ and perfect-square trinomials $a^2\\pm 2ab+b^2=(a\\pm b)^2$",
+    "Complete the square to rewrite $x^2+bx+c$ (and $a x^2+bx+c$) in vertex form $a(x-h)^2+k$, and read off the maximum or minimum value and where it occurs",
+    "Use properties of exponents ($x^{m+n}=x^m x^n$, $(x^m)^n=x^{mn}$, $x^{m/n}=\\sqrt[n]{x^m}$) to rewrite exponential expressions and reveal an equivalent growth or decay rate",
+    "Interpret the revealed feature in context: zeros as break-even or landing points, the vertex as a max profit or minimum height, the rewritten base as a monthly versus annual percent rate",
+    "Justify that the rewritten expression is equivalent by referencing the property used (distributive property, factoring, completing the square, laws of exponents)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Factor to reveal zeros",
+      "example": "Rewrite $x^2-5x+6$ in a form that shows its zeros, and state the zeros. Answer: $(x-2)(x-3)$; the zeros are $x=2$ and $x=3$."
+    },
+    {
+      "name": "Special-product factoring (difference of squares / perfect square)",
+      "example": "Rewrite $9x^2-16$ to reveal its zeros. Answer: $(3x-4)(3x+4)$; zeros at $x=\\frac{4}{3}$ and $x=-\\frac{4}{3}$."
+    },
+    {
+      "name": "Complete the square to reveal an extreme value",
+      "example": "Rewrite $x^2-6x+11$ in vertex form and state the minimum value. Answer: $(x-3)^2+2$; the minimum value is $2$, occurring at $x=3$."
+    },
+    {
+      "name": "Vertex form with a leading coefficient (max/min in context)",
+      "example": "A ball's height is $h=-16t^2+48t+4$. Rewrite to reveal the maximum height. Answer: $-16(t-1.5)^2+40$; the maximum height is $40$ feet at $t=1.5$ seconds."
+    },
+    {
+      "name": "Use exponent properties to reveal a growth rate",
+      "example": "The expression $P(1.18)^t$ models annual growth. Rewrite using $1.18=(1.18^{1/12})^{12}$ to reveal an approximate monthly rate. Answer: $P\\left(1.18^{1/12}\\right)^{12t}\\approx P(1.014)^{12t}$, about a $1.4\\%$ monthly rate."
+    },
+    {
+      "name": "Rewrite exponential base to expose decay or equivalent form",
+      "example": "Rewrite $\\left(\\frac{1}{2}\\right)^{t/8}$ as a single base to the power $t$ to reveal the per-unit decay factor. Answer: $\\left(2^{-1/8}\\right)^{t}\\approx (0.917)^t$, about an $8.3\\%$ decay each unit of time."
+    },
+    {
+      "name": "Choose the useful form and explain the property",
+      "example": "Given $P(x)=x^2-8x+12$ for profit, which form best shows the break-even points and which best shows the maximum loss? Factored $(x-2)(x-6)$ shows break-even at $x=2$ and $x=6$; vertex form $(x-4)^2-4$ shows the minimum value $-4$ at $x=4$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single, clean rewrite with small integers and an obvious target property. Factor a monic quadratic with integer roots, recognize a basic difference of squares, complete the square when $b$ is even and $a=1$, or apply one exponent law to a simple expression. The desired form is named for the student. This is the bottom of a ramped sheet and the start of tier1.",
+      "constraints": [
+        "Monic quadratics $x^2+bx+c$ with small integer roots, e.g. $x^2-5x+6$",
+        "Difference of squares with perfect-square integer terms, e.g. $x^2-25$",
+        "Completing the square only when $a=1$ and $b$ is even, e.g. $x^2+4x+1\\to(x+2)^2-3$",
+        "Exponent rewrites use a single law, e.g. $2^{3t}=(2^3)^t=8^t$",
+        "The target property (zeros or vertex) is stated explicitly in the prompt"
+      ]
+    },
+    "Medium": {
+      "description": "Two ideas at once or a sign or coefficient to track. Factor with a leading coefficient $a\\ne 1$, complete the square with an odd $b$ (producing a fraction), or rewrite an exponential between annual and monthly form with a fractional exponent. The student often must both produce the form and read off and interpret the feature. This is the top of tier1 and the bottom of tier2.",
+      "constraints": [
+        "Quadratics with $a\\ne 1$, e.g. $2x^2+7x+3=(2x+1)(x+3)$, or special products like $9x^2-16$",
+        "Complete the square with odd $b$ giving a fractional $h$ or $k$, e.g. $x^2+5x+1\\to\\left(x+\\frac{5}{2}\\right)^2-\\frac{21}{4}$",
+        "Exponential rewrites with a fractional exponent, e.g. $1.12^t=(1.12^{1/12})^{12t}$",
+        "Student must state the revealed zeros or vertex AND interpret them",
+        "Some negative roots or a negative leading coefficient appear"
+      ]
+    },
+    "Hard": {
+      "description": "A genuinely multi-step problem where the student must first choose the right form, then produce it while managing fractions, a leading coefficient, or a context, then interpret. Complete the square with $a\\ne 1$ (factor out $a$ first), reconcile two forms of the same expression, or extract and interpret a precise rate from a rewritten exponential. A single sign or distribution error propagates to the wrong conclusion. This is the top of tier2 and the end of a ramped sheet.",
+      "constraints": [
+        "Complete the square with $a\\ne 1$, e.g. $-16t^2+48t+4\\to-16(t-1.5)^2+40$, including the factor-out and re-multiply steps",
+        "Real-world context (projectile height, profit, population) where the student selects which equivalent form answers the question",
+        "Exponential rewrites requiring a precise percent rate, e.g. $1.18^t$ to a monthly factor and a stated monthly percent",
+        "Reconcile or compare two equivalent forms and justify which property each reveals",
+        "Answers may be exact fractions or radicals, e.g. vertex $\\left(\\frac{5}{2},-\\frac{21}{4}\\right)$, that must be kept exact"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student reads the zeros off the factored form with the wrong signs, taking the value inside the parentheses rather than the value that makes the factor zero",
+      "distractor": "For $(x-2)(x-3)$ states the zeros are $x=-2$ and $x=-3$ instead of $x=2$ and $x=3$"
+    },
+    {
+      "misconception": "Student treats a sum of squares as a difference of squares, or factors a difference of squares incorrectly as a perfect square",
+      "distractor": "Factors $x^2-25$ as $(x-5)^2$, or claims $x^2+25=(x+5)(x-5)$, instead of $(x-5)(x+5)$ for $x^2-25$ and 'not factorable over the reals' for $x^2+25$"
+    },
+    {
+      "misconception": "When completing the square the student adds $(b/2)^2$ inside without subtracting it back, changing the value of the expression",
+      "distractor": "Rewrites $x^2-6x+11$ as $(x-3)^2+11$ (forgets to subtract $9$) instead of $(x-3)^2+2$"
+    },
+    {
+      "misconception": "Student forgets to factor out the leading coefficient before completing the square, applying $(b/2)^2$ to the original $b$ rather than the $b$ after factoring out $a$",
+      "distractor": "For $2x^2+8x+5$ writes $2(x+4)^2-27$ instead of $2(x+2)^2-3$"
+    },
+    {
+      "misconception": "Student misapplies an exponent law, adding exponents that should be multiplied or vice versa when changing the base",
+      "distractor": "Rewrites $2^{3t}$ as $6^t$ (multiplies base by exponent) or as $2^3 \\cdot 2^t$ instead of $(2^3)^t=8^t$"
+    },
+    {
+      "misconception": "Student confuses which equivalent form reveals which property, looking to vertex form for zeros or to factored form for the maximum",
+      "distractor": "Claims the factored form $(x-2)(x-6)$ shows the minimum value is $-2$, or that vertex form $(x-4)^2-4$ shows zeros at $x=4$, instead of using factored form for zeros and vertex form for the extreme value"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

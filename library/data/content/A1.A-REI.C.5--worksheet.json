@@ -1,0 +1,221 @@
+{
+  "id": "A1.A-REI.C.5--worksheet",
+  "standard": "A1.A-REI.C.5",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Reasoning with Equations and Inequalities",
+  "domainCode": "A-REI",
+  "cluster": "Solve systems of equations",
+  "clusterCode": "C",
+  "skillName": "Equivalent Systems of Equations",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "These problems build the reasoning behind the elimination method. Replacing one equation of a system with the sum of that equation and a nonzero multiple of the other produces an equivalent system, one with exactly the same solution set. Work through forming combinations, choosing multipliers, deciding whether two systems match, and justifying why the replacement preserves solutions. Items ramp from Easy to Hard.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "The system $\\begin{cases} x + y = 7 \\\\ x - y = 1 \\end{cases}$ has solution $(4, 3)$. Form the new equation $E_1 + E_2$ (add the two equations term by term). Then check that $(4, 3)$ still satisfies it.",
+      "answer": "$E_1 + E_2$ is $2x = 8$, and $(4,3)$ satisfies it since $2(4) = 8$.",
+      "solution": {
+        "steps": [
+          "Add the left sides: $(x + y) + (x - y) = 2x$.",
+          "Add the right sides: $7 + 1 = 8$.",
+          "So $E_1 + E_2$ gives $2x = 8$.",
+          "Check $(4,3)$: $2(4) = 8$, which is true, so the solution is preserved."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "For the system $\\begin{cases} 3x + 2y = 12 \\\\ 5x - 2y = 4 \\end{cases}$, write the equation obtained from $E_1 + E_2$. Which variable is eliminated?",
+      "answer": "$8x = 16$; the variable $y$ is eliminated.",
+      "solution": {
+        "steps": [
+          "Add the left sides term by term: $(3x + 2y) + (5x - 2y) = 8x + 0y = 8x$.",
+          "Add the right sides: $12 + 4 = 16$.",
+          "The combined equation is $8x = 16$.",
+          "Because the $y$ terms $+2y$ and $-2y$ cancel, $y$ is eliminated."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "The system $\\begin{cases} 2x + y = 9 \\\\ x + y = 5 \\end{cases}$ has solution $(4, 1)$. Form $E_1 - E_2$ and verify that $(4, 1)$ satisfies the resulting equation.",
+      "answer": "$E_1 - E_2$ is $x = 4$, and $(4,1)$ satisfies it.",
+      "solution": {
+        "steps": [
+          "Subtract left sides: $(2x + y) - (x + y) = x$.",
+          "Subtract right sides: $9 - 5 = 4$.",
+          "So $E_1 - E_2$ gives $x = 4$.",
+          "Check $(4,1)$: $x = 4$ is true, so the known solution still works."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Given $\\begin{cases} 4x + 3y = 10 \\\\ 4x - y = 2 \\end{cases}$, write the equation obtained by computing $E_1 - E_2$.",
+      "answer": "$4y = 8$.",
+      "solution": {
+        "steps": [
+          "Subtract the left sides: $(4x + 3y) - (4x - y) = 4x - 4x + 3y + y = 4y$.",
+          "Subtract the right sides: $10 - 2 = 8$.",
+          "The resulting equation is $4y = 8$.",
+          "The $x$ terms cancelled because both equations had $4x$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "The system $\\begin{cases} x + 2y = 8 \\\\ 3x - 2y = 0 \\end{cases}$ has solution $(2, 3)$. Replace $E_1$ with $E_1 + E_2$ to get a new equation, and confirm that $(2, 3)$ satisfies the new system $\\begin{cases} E_1 + E_2 \\\\ E_2 \\end{cases}$.",
+      "answer": "$E_1 + E_2$ is $4x = 8$; $(2,3)$ satisfies both $4x = 8$ and $3x - 2y = 0$.",
+      "solution": {
+        "steps": [
+          "Add the equations: $(x + 2y) + (3x - 2y) = 4x$ and $8 + 0 = 8$, so $E_1 + E_2$ is $4x = 8$.",
+          "The new system is $\\begin{cases} 4x = 8 \\\\ 3x - 2y = 0 \\end{cases}$.",
+          "Check the first row at $(2,3)$: $4(2) = 8$, true.",
+          "Check the preserved row $E_2$ at $(2,3)$: $3(2) - 2(3) = 6 - 6 = 0$, true. The solution is preserved."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "For $\\begin{cases} 3x + 4y = 10 \\\\ x - 2y = -4 \\end{cases}$, what multiple $k$ of the second equation should be added to the first so that $y$ is eliminated? Write the resulting equation.",
+      "answer": "$k = 2$, giving $5x = 2$.",
+      "solution": {
+        "steps": [
+          "The $y$ coefficients are $4$ (in $E_1$) and $-2$ (in $E_2$). To cancel, $4 + k(-2) = 0$, so $k = 2$.",
+          "Compute $2E_2$: $2(x - 2y) = 2x - 4y$ and $2(-4) = -8$, so $2E_2$ is $2x - 4y = -8$.",
+          "Add to $E_1$: $(3x + 4y) + (2x - 4y) = 5x$ and $10 + (-8) = 2$.",
+          "The resulting equation is $5x = 2$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Given $\\begin{cases} 5x - 2y = 7 \\\\ 3x + y = 9 \\end{cases}$, write the equation obtained by replacing $E_1$ with $E_1 + 2E_2$.",
+      "answer": "$11x = 25$.",
+      "solution": {
+        "steps": [
+          "Compute $2E_2$, distributing over every term: $2(3x + y) = 6x + 2y$ and $2(9) = 18$.",
+          "Add $E_1 + 2E_2$ on the left: $(5x - 2y) + (6x + 2y) = 11x$.",
+          "Add the right sides: $7 + 18 = 25$.",
+          "The new equation is $11x = 25$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Is $\\begin{cases} x + y = 5 \\\\ 2x + 5y = 16 \\end{cases}$ equivalent to $\\begin{cases} x + y = 5 \\\\ 3y = 6 \\end{cases}$? Justify by expressing the new second row as a combination of the original rows.",
+      "answer": "Yes; the new second row is $E_2 - 2E_1$, so the systems are equivalent.",
+      "solution": {
+        "steps": [
+          "Keep the first row $x + y = 5$ in both, so only the second row needs checking.",
+          "Compute $E_2 - 2E_1$: $(2x + 5y) - 2(x + y) = 2x + 5y - 2x - 2y = 3y$ on the left.",
+          "On the right: $16 - 2(5) = 16 - 10 = 6$, giving $3y = 6$.",
+          "Since the new second row is exactly $E_2 - 2E_1$ (a nonzero combination) and the first row is preserved, the systems are equivalent."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "For $\\begin{cases} 2x + 3y = 12 \\\\ x - y = 1 \\end{cases}$, replace $E_1$ with $E_1 + 2E_2$. Write the new equation, and explain why a student who writes $4x + y = 12$ has made an error.",
+      "answer": "The new equation is $4x + y = 14$; the error is forgetting to multiply the constant $1$ by $2$.",
+      "solution": {
+        "steps": [
+          "Compute $2E_2$: $2(x - y) = 2x - 2y$ and $2(1) = 2$, so $2E_2$ is $2x - 2y = 2$.",
+          "Add $E_1 + 2E_2$ on the left: $(2x + 3y) + (2x - 2y) = 4x + y$.",
+          "Add the right sides: $12 + 2 = 14$.",
+          "The correct equation is $4x + y = 14$. A student who writes $4x + y = 12$ multiplied the left side of $E_2$ by $2$ but left the constant as $1 \\cdot 2 = 2$ off the right side, forgetting that the multiplier must distribute over every term, including the constant."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Decide whether $\\begin{cases} 4x - y = 22 \\\\ 2x + 3y = 4 \\end{cases}$ is equivalent to $\\begin{cases} 2x + 3y = 4 \\\\ -7y = 14 \\end{cases}$. Justify your decision.",
+      "answer": "Yes; the row $-7y = 14$ equals $E_1 - 2E_2$, and the row $2x + 3y = 4$ is preserved.",
+      "solution": {
+        "steps": [
+          "Let $E_1$ be $4x - y = 22$ and $E_2$ be $2x + 3y = 4$. The second system keeps $E_2$ as one row, so check the other row.",
+          "Compute $E_1 - 2E_2$: $(4x - y) - 2(2x + 3y) = 4x - y - 4x - 6y = -7y$ on the left.",
+          "On the right: $22 - 2(4) = 22 - 8 = 14$, giving $-7y = 14$.",
+          "Because $-7y = 14$ is exactly $E_1 - 2E_2$ (a nonzero combination) and the row $2x + 3y = 4$ is preserved, the two systems are equivalent."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Use the replacement principle to solve $\\begin{cases} 2x + 3y = 4 \\\\ 4x - y = 22 \\end{cases}$. Replace $E_2$ with $E_2 - 2E_1$, finish solving, and state the solution as an ordered pair.",
+      "answer": "$(x, y) = (5, -2)$.",
+      "solution": {
+        "steps": [
+          "Compute $E_2 - 2E_1$: $(4x - y) - 2(2x + 3y) = 4x - y - 4x - 6y = -7y$ on the left.",
+          "On the right: $22 - 2(4) = 22 - 8 = 14$, so the new row is $-7y = 14$.",
+          "Solve: $y = \\frac{14}{-7} = -2$.",
+          "Substitute $y = -2$ into $E_1$: $2x + 3(-2) = 4$, so $2x - 6 = 4$, giving $2x = 10$ and $x = 5$.",
+          "The solution is $(5, -2)$. Check in $E_2$: $4(5) - (-2) = 20 + 2 = 22$, correct."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Given $\\begin{cases} 2x + 5y = 1 \\\\ 3x - 2y = 8 \\end{cases}$, find integers $a$ and $b$ so that the combination $aE_1 + bE_2$ eliminates $x$. Then write the resulting equation in $y$.",
+      "answer": "$a = 3$, $b = -2$ (any nonzero multiple works), giving $19y = -13$.",
+      "solution": {
+        "steps": [
+          "The $x$ coefficients are $2$ (in $E_1$) and $3$ (in $E_2$). To cancel, $2a + 3b = 0$; the smallest integers are $a = 3$, $b = -2$.",
+          "Compute $3E_1$: $6x + 15y = 3$. Compute $-2E_2$: $-6x + 4y = -16$.",
+          "Add: the $x$ terms give $6x - 6x = 0$; the $y$ terms give $15y + 4y = 19y$.",
+          "Add the right sides: $3 + (-16) = -13$.",
+          "The resulting equation is $19y = -13$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A student claims that replacing $E_1$ with $0 \\cdot E_1 + 0 \\cdot E_2$ (the equation $0 = 0$) keeps the system $\\begin{cases} E_1 \\\\ E_2 \\end{cases}$ equivalent. Explain why this is false, and state the condition on the multiplier that the replacement principle actually requires.",
+      "answer": "It is false because $0 = 0$ imposes no constraint, so the new system loses the information in $E_1$ and gains extra solutions; the replacement equation must be $E_1 + kE_2$ with a NONZERO multiplier $k$ and $E_1$ kept (not erased).",
+      "solution": {
+        "steps": [
+          "The replacement principle replaces $E_1$ with $E_1 + kE_2$, keeping $E_2$ unchanged; here $k$ must be nonzero and $E_1$ itself is not deleted.",
+          "Replacing $E_1$ with $0 = 0$ is not of the form $E_1 + kE_2$; it discards $E_1$ entirely.",
+          "The equation $0 = 0$ is true for every $(x, y)$, so it imposes no constraint. The new system $\\begin{cases} 0 = 0 \\\\ E_2 \\end{cases}$ is satisfied by every point on the line $E_2$, not just the original single solution.",
+          "Therefore the solution set grows, so the systems are not equivalent. The valid move requires a nonzero combination of the rows that preserves all the original constraints."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Prove the replacement principle in general for $k \\neq 0$: explain why every solution $(x_0, y_0)$ of $\\begin{cases} E_1 \\\\ E_2 \\end{cases}$ is a solution of $\\begin{cases} E_1 + kE_2 \\\\ E_2 \\end{cases}$, AND why every solution of the new system is a solution of the original. Name the property that makes each direction work.",
+      "answer": "Both systems have identical solution sets: each direction follows from forming equal linear combinations of true equations (adding equal quantities to both sides keeps a true equation true), which is reversible because $k \\neq 0$.",
+      "solution": {
+        "steps": [
+          "Forward direction: Suppose $(x_0, y_0)$ satisfies $E_1$ and $E_2$. Then $E_2$ is a true numerical statement at $(x_0, y_0)$, so $kE_2$ is also true (multiplying both sides of a true equation by $k$ preserves equality). Adding the true statements $E_1$ and $kE_2$ keeps equality, so $E_1 + kE_2$ holds. Since $E_2$ is unchanged, $(x_0, y_0)$ satisfies the new system.",
+          "Backward direction: Suppose $(x_0, y_0)$ satisfies $E_1 + kE_2$ and $E_2$. Then $E_2$ is true, so $-kE_2$ is true. Add it to $E_1 + kE_2$: $(E_1 + kE_2) + (-kE_2) = E_1$, so $E_1$ holds. Thus $(x_0, y_0)$ satisfies the original system.",
+          "The property in both directions is that adding equal quantities to both sides of a true equation, and multiplying both sides by a constant, preserve equality (the addition and multiplication properties of equality).",
+          "Because each step is reversible (we could undo the combination by adding $-kE_2$), the two solution sets are identical, so the systems are equivalent. The argument uses $k$ as a fixed constant; the requirement $k \\neq 0$ ensures we are genuinely combining rows rather than discarding information about $E_1$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Solve $\\begin{cases} \\frac{1}{2}x + \\frac{1}{3}y = 4 \\\\ \\frac{1}{4}x - y = -3 \\end{cases}$ using the linear-combination (replacement) method. Eliminate $x$, give exact values, and state the solution as an ordered pair.",
+      "answer": "$(x, y) = \\left(\\frac{36}{7}, \\frac{30}{7}\\right)$.",
+      "solution": {
+        "steps": [
+          "Replace $E_1$ with $E_1 - 2E_2$ to eliminate $x$, since the $x$ coefficient of $E_2$ is $\\frac{1}{4}$ and $\\frac{1}{2} - 2 \\cdot \\frac{1}{4} = 0$.",
+          "Compute $2E_2$, distributing over every term: $2\\left(\\frac{1}{4}x - y\\right) = \\frac{1}{2}x - 2y$ and $2(-3) = -6$.",
+          "Compute $E_1 - 2E_2$ on the left: $\\left(\\frac{1}{2}x + \\frac{1}{3}y\\right) - \\left(\\frac{1}{2}x - 2y\\right) = \\frac{1}{3}y + 2y = \\frac{1}{3}y + \\frac{6}{3}y = \\frac{7}{3}y$.",
+          "On the right: $4 - (-6) = 10$, so $\\frac{7}{3}y = 10$, giving $y = 10 \\cdot \\frac{3}{7} = \\frac{30}{7}$.",
+          "Substitute $y = \\frac{30}{7}$ into $E_2$: $\\frac{1}{4}x - \\frac{30}{7} = -3$, so $\\frac{1}{4}x = -3 + \\frac{30}{7} = \\frac{-21 + 30}{7} = \\frac{9}{7}$, giving $x = \\frac{36}{7}$.",
+          "Check in $E_1$: $\\frac{1}{2}\\cdot\\frac{36}{7} + \\frac{1}{3}\\cdot\\frac{30}{7} = \\frac{18}{7} + \\frac{10}{7} = \\frac{28}{7} = 4$, correct. The solution is $\\left(\\frac{36}{7}, \\frac{30}{7}\\right)$."
+        ]
+      }
+    }
+  ]
+}

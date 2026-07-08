@@ -1,0 +1,240 @@
+{
+  "id": "A1.S-ID.A--cluster-worksheet",
+  "standard": null,
+  "clusterId": "A1.S-ID.A",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on a single count or measurement variable",
+  "clusterCode": "A",
+  "skillName": "Summarize, represent, and interpret data on a single count or measurement variable",
+  "materialType": "cluster-worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T18:54:16.004Z",
+  "intro": "This worksheet spans the whole cluster on single-variable data. The first group builds and reads dot plots, box plots, and histograms and computes the five-number summary. The second group computes and compares center (mean, median) and spread (IQR, standard deviation) and chooses the right statistic for a distribution's shape. The third group describes shape, applies the $1.5\\times\\text{IQR}$ outlier rule, and reasons about how outliers shift center and spread. Always order a data set before finding a median or quartiles, and remember $\\text{IQR}=Q_3-Q_1$.",
+  "items": [
+    {
+      "id": 1,
+      "standard": "A1.S-ID.A.1",
+      "prompt": "A dot plot of quiz scores shows stacks of heights $1, 3, 4, 2$ over the values $6, 7, 8, 9$. How many students scored an $8$?",
+      "answer": "$4$ students",
+      "solution": {
+        "steps": [
+          "In a dot plot, the height of the stack over a value is the frequency of that value.",
+          "The stack over $8$ has height $4$.",
+          "So $4$ students scored an $8$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "standard": "A1.S-ID.A.1",
+      "prompt": "A data set has $Q_1 = 23$ and $Q_3 = 41$. Find the interquartile range.",
+      "answer": "$\\text{IQR} = 18$",
+      "solution": {
+        "steps": [
+          "The interquartile range is $\\text{IQR} = Q_3 - Q_1$.",
+          "Substitute: $\\text{IQR} = 41 - 23$.",
+          "So $\\text{IQR} = 18$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "standard": "A1.S-ID.A.1",
+      "prompt": "Find the five-number summary of the data set $4, 7, 8, 8, 10, 12, 15$.",
+      "answer": "minimum $4$, $Q_1 = 7$, median $8$, $Q_3 = 12$, maximum $15$",
+      "solution": {
+        "steps": [
+          "The data is already in order with $n = 7$ values.",
+          "Minimum $= 4$ and maximum $= 15$.",
+          "The median is the middle (4th) value: $8$.",
+          "Exclude the median; the lower half is $4, 7, 8$, whose median is $Q_1 = 7$.",
+          "The upper half is $10, 12, 15$, whose median is $Q_3 = 12$.",
+          "Five-number summary: $4,\\ 7,\\ 8,\\ 12,\\ 15$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "standard": "A1.S-ID.A.1",
+      "prompt": "Group the data $2, 4, 5, 7, 9, 11, 12, 14, 15, 19$ into bins of width $5$ starting at $0$: $[0,5), [5,10), [10,15), [15,20)$. List the frequency in each bin, using the convention that a value on the right boundary belongs to the next bin.",
+      "answer": "frequencies $2, 3, 3, 2$",
+      "solution": {
+        "steps": [
+          "$[0,5)$ holds values from $0$ up to but not including $5$: that is $2, 4$, a frequency of $2$.",
+          "$[5,10)$ holds $5, 7, 9$ (the boundary value $5$ counts here, not in the lower bin): a frequency of $3$.",
+          "$[10,15)$ holds $11, 12, 14$ (the boundary value $10$ would count here): a frequency of $3$.",
+          "$[15,20)$ holds $15, 19$ (the boundary value $15$ counts here): a frequency of $2$.",
+          "The frequencies are $2, 3, 3, 2$ (total $10$, matching the $10$ data values)."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "standard": "A1.S-ID.A.1",
+      "prompt": "Find the five-number summary of $5, 6, 8, 9, 11, 12, 14, 18$ and describe the box plot you would draw from it.",
+      "answer": "minimum $5$, $Q_1 = 7$, median $10$, $Q_3 = 13$, maximum $18$; box from $7$ to $13$ with a line at $10$ and whiskers to $5$ and $18$",
+      "solution": {
+        "steps": [
+          "The data is ordered with $n = 8$ (even).",
+          "Median is the average of the 4th and 5th values: $\\frac{9 + 11}{2} = 10$.",
+          "Lower half is $5, 6, 8, 9$, so $Q_1 = \\frac{6 + 8}{2} = 7$.",
+          "Upper half is $11, 12, 14, 18$, so $Q_3 = \\frac{12 + 14}{2} = 13$.",
+          "Minimum $= 5$, maximum $= 18$.",
+          "The box plot has a box from $Q_1 = 7$ to $Q_3 = 13$ with a line at the median $10$, and whiskers extending to $5$ and $18$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "standard": "A1.S-ID.A.1",
+      "prompt": "A box plot has minimum $12$, $Q_1 = 18$, median $25$, $Q_3 = 30$, and maximum $40$. About what fraction of the data lies between $18$ and $30$, and explain why the left whisker (from $12$ to $18$) does not hold more data even though it is long.",
+      "answer": "About $\\frac{1}{2}$ of the data lies between $18$ and $30$; each of the four regions holds about $25\\%$ of the data regardless of its length.",
+      "solution": {
+        "steps": [
+          "A box plot splits the data into four regions by the quartiles, and each region holds about $25\\%$ of the values.",
+          "The interval from $Q_1 = 18$ to $Q_3 = 30$ is the box, which spans two of those quarters.",
+          "Two quarters is about $\\frac{1}{2}$, so roughly half of the data lies between $18$ and $30$.",
+          "Length on the number line shows how spread out a quarter is, not how many values it contains.",
+          "So the long left whisker from $12$ to $18$ still holds only about $25\\%$ of the data, the same share as the shorter box halves."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "standard": "A1.S-ID.A.2",
+      "prompt": "Find the mean of the data set $4, 6, 8, 8, 14$.",
+      "answer": "$\\bar{x} = 8$",
+      "solution": {
+        "steps": [
+          "The mean is $\\bar{x} = \\frac{\\sum x_i}{n}$.",
+          "Sum the values: $4 + 6 + 8 + 8 + 14 = 40$.",
+          "There are $n = 5$ values, so $\\bar{x} = \\frac{40}{5} = 8$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "standard": "A1.S-ID.A.2",
+      "prompt": "Find the median and the IQR of the ordered data set $3, 5, 7, 9, 11, 13$.",
+      "answer": "median $= 8$, $\\text{IQR} = 6$",
+      "solution": {
+        "steps": [
+          "There are $n = 6$ values (even), so the median is the average of the 3rd and 4th values: $\\frac{7 + 9}{2} = 8$.",
+          "Lower half is $3, 5, 7$, so $Q_1 = 5$.",
+          "Upper half is $9, 11, 13$, so $Q_3 = 11$.",
+          "$\\text{IQR} = Q_3 - Q_1 = 11 - 5 = 6$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "standard": "A1.S-ID.A.2",
+      "prompt": "Order the data set $9, 7, 3, 11, 5$ and find its median. Then state whether the median or the mean is the better description of center if a sixth value of $200$ is added, and why.",
+      "answer": "Ordered: $3, 5, 7, 9, 11$; median $= 7$. With $200$ added, the median is the better measure because it resists the outlier while the mean is pulled upward.",
+      "solution": {
+        "steps": [
+          "Order the values: $3, 5, 7, 9, 11$.",
+          "With $n = 5$ (odd), the median is the middle (3rd) value: $7$.",
+          "Adding $200$ creates an extreme outlier far above the other values.",
+          "The mean would be pulled sharply upward by $200$, no longer representing a typical value.",
+          "The median barely moves because it depends on position, not magnitude, so the median is the better measure of center here."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "standard": "A1.S-ID.A.2",
+      "prompt": "For the data set $4, 6, 8, 8, 14$ (mean $\\bar{x} = 8$), compute the population standard deviation $\\sigma = \\sqrt{\\frac{\\sum (x_i - \\bar{x})^2}{n}}$. Give an exact value and a decimal rounded to the nearest hundredth.",
+      "answer": "$\\sigma = \\sqrt{11.2} \\approx 3.35$",
+      "solution": {
+        "steps": [
+          "Find each deviation from the mean $8$: $4 - 8 = -4$, $6 - 8 = -2$, $8 - 8 = 0$, $8 - 8 = 0$, $14 - 8 = 6$.",
+          "Square the deviations: $16, 4, 0, 0, 36$.",
+          "Sum the squares: $16 + 4 + 0 + 0 + 36 = 56$.",
+          "Divide by $n = 5$: $\\frac{56}{5} = 11.2$. This is the variance.",
+          "Take the square root: $\\sigma = \\sqrt{11.2} \\approx 3.35$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "standard": "A1.S-ID.A.2",
+      "prompt": "Class A test scores are strongly skewed right because of a few very high outliers. Class A has mean $74$ and median $70$; Class B has a roughly symmetric distribution with mean $72$ and median $72$. Which measure of center should you use to compare the two classes' typical scores, what are those values, and which class had the higher typical score?",
+      "answer": "Use the median for both; Class A median $70$ versus Class B median $72$, so Class B had the higher typical score.",
+      "solution": {
+        "steps": [
+          "When distributions differ in shape, use the resistant measure that is fair to both: the median.",
+          "Class A is skewed with outliers, so its mean $74$ is inflated; the median $70$ better describes its center.",
+          "Class B is symmetric, so its mean and median agree at $72$.",
+          "Compare the medians: Class A $70$ versus Class B $72$.",
+          "Since $72 > 70$, Class B had the higher typical score."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "standard": "A1.S-ID.A.3",
+      "prompt": "A dot plot of quiz scores piles up at the high end with a long tail stretching toward the low scores. Describe the shape of the distribution.",
+      "answer": "Skewed left",
+      "solution": {
+        "steps": [
+          "The shape of a distribution is named for the side where the long tail points.",
+          "Here the tail stretches toward the low (left) scores while the data piles up on the high (right) side.",
+          "A tail on the left means the distribution is skewed left."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "standard": "A1.S-ID.A.3",
+      "prompt": "For the data set $4, 6, 6, 7, 9, 12$, find the mean, the median, the range, and the IQR.",
+      "answer": "mean $= \\frac{22}{3}$, median $= 6.5$, range $= 8$, $\\text{IQR} = 3$",
+      "solution": {
+        "steps": [
+          "Sum the values: $4 + 6 + 6 + 7 + 9 + 12 = 44$, so the mean is $\\bar{x} = \\frac{44}{6} = \\frac{22}{3}$.",
+          "With $n = 6$ (even), the median is the average of the 3rd and 4th values: $\\frac{6 + 7}{2} = 6.5$.",
+          "Range $= \\text{max} - \\text{min} = 12 - 4 = 8$.",
+          "Lower half $4, 6, 6$ gives $Q_1 = 6$; upper half $7, 9, 12$ gives $Q_3 = 9$.",
+          "$\\text{IQR} = Q_3 - Q_1 = 9 - 6 = 3$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "standard": "A1.S-ID.A.3",
+      "prompt": "A data set has $Q_1 = 12$ and $Q_3 = 20$. Using the $1.5 \\times \\text{IQR}$ rule, determine whether the value $35$ is an outlier.",
+      "answer": "Yes, $35$ is an outlier because it exceeds the upper fence of $32$.",
+      "solution": {
+        "steps": [
+          "Compute the IQR: $\\text{IQR} = Q_3 - Q_1 = 20 - 12 = 8$.",
+          "Find the upper fence: $Q_3 + 1.5 \\cdot \\text{IQR} = 20 + 1.5 \\cdot 8 = 20 + 12 = 32$.",
+          "Compare $35$ to the fence: since $35 > 32$, the value lies beyond the fence.",
+          "Therefore $35$ is an outlier."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "standard": "A1.S-ID.A.3",
+      "prompt": "The values $8, 9, 10, 11, 12$ have mean $10$ and median $10$. Replace $12$ with $42$. Compute the new mean and the new median, and explain what this shows about how an outlier affects each measure.",
+      "answer": "New mean $= 16$, new median $= 10$. The outlier pulls the mean up by $6$ but leaves the median unchanged, showing the median is resistant to outliers while the mean is not.",
+      "solution": {
+        "steps": [
+          "The new data set is $8, 9, 10, 11, 42$.",
+          "Sum the new values: $8 + 9 + 10 + 11 + 42 = 80$, so the new mean is $\\frac{80}{5} = 16$.",
+          "Order the values: $8, 9, 10, 11, 42$; with $n = 5$ the median is the middle (3rd) value, which is still $10$.",
+          "The mean rose from $10$ to $16$ because the large value $42$ inflates the total.",
+          "The median stayed at $10$ because it depends on position, not magnitude.",
+          "This shows the mean is sensitive to outliers while the median is resistant to them."
+        ]
+      }
+    }
+  ]
+}

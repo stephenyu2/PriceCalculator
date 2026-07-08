@@ -1,0 +1,170 @@
+{
+  "id": "A1.S-ID.B.5--lesson",
+  "standard": "A1.S-ID.B.5",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on two categorical and quantitative variables",
+  "clusterCode": "B",
+  "skillName": "Two-Way Frequency Tables",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "A two-way frequency table sorts a group of people or things by two categorical variables at the same time. Each inner cell is a joint count, the row and column totals are the marginal counts, and the bottom-right value is the grand total. Dividing a count by a total gives a relative frequency. A joint relative frequency divides a cell by the grand total, a marginal relative frequency divides a row or column total by the grand total, and a conditional relative frequency divides a cell by its own row or column total (a percent within one category). Comparing conditional relative frequencies across groups tells you whether the two variables are associated.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A class of $40$ students is surveyed about gender and whether they own a bike. The two-way table below is partly filled in. Find the two missing values, the cell for boys who own a bike and the grand total, then complete all totals.\n\n$\\begin{array}{l|cc|c} & \\text{Owns bike} & \\text{No bike} & \\text{Total} \\\\ \\hline \\text{Boys} & ? & 7 & 22 \\\\ \\text{Girls} & 9 & 9 & 18 \\\\ \\hline \\text{Total} & ? & 16 & ? \\end{array}$",
+      "solution": {
+        "steps": [
+          "The Boys row must sum to its row total: $(\\text{Owns bike}) + 7 = 22$, so the missing boys-own-bike cell is $22 - 7 = 15$.",
+          "The grand total is the sum of the row totals: $22 + 18 = 40$, which matches the $40$ students surveyed.",
+          "Fill the 'Owns bike' column total: $15 + 9 = 24$.",
+          "Check the other column total: 'No bike' is $7 + 9 = 16$, which matches the given value.",
+          "Check the grand total two ways: column totals $24 + 16 = 40$, and row totals $22 + 18 = 40$. They agree."
+        ],
+        "answer": "Boys who own a bike $= 15$; grand total $= 40$ (with column totals $24$ and $16$)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "In a survey of $120$ people, the two-way table cross-classifies drink preference and age group. The cell for 'prefers coffee and is an adult' contains $42$. Find the joint relative frequency of being an adult who prefers coffee, and express it as a fraction, a decimal, and a percent.",
+      "solution": {
+        "steps": [
+          "A joint relative frequency divides a single cell count by the grand total.",
+          "The cell count is $42$ and the grand total is $120$.",
+          "Compute the fraction: $\\frac{42}{120}$.",
+          "Reduce: $\\frac{42}{120} = \\frac{7}{20}$.",
+          "As a decimal, $\\frac{7}{20} = 0.35$, and as a percent that is $35\\%$."
+        ],
+        "answer": "$\\frac{42}{120} = \\frac{7}{20} = 0.35 = 35\\%$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Using the same survey of $120$ people, the 'prefers tea' column total is $54$. Find the marginal relative frequency of preferring tea, and explain how it differs from a joint relative frequency.",
+      "solution": {
+        "steps": [
+          "A marginal relative frequency divides a row total or a column total by the grand total. Here we use the tea column total.",
+          "The tea column total is $54$ and the grand total is $120$.",
+          "Compute: $\\frac{54}{120}$.",
+          "Reduce and convert: $\\frac{54}{120} = \\frac{9}{20} = 0.45 = 45\\%$.",
+          "This is marginal, not joint, because $54$ is a whole-column total (everyone who prefers tea), not the count in one single cell."
+        ],
+        "answer": "$\\frac{54}{120} = \\frac{9}{20} = 0.45 = 45\\%$ of all people prefer tea."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A study records pet ownership and whether each student has a sibling. Of the $50$ students who own a pet, $32$ also have a sibling. Find the conditional relative frequency that a student has a sibling, given that the student owns a pet. Identify the correct denominator from the wording.",
+      "solution": {
+        "steps": [
+          "The condition is 'given that the student owns a pet,' so we restrict to the pet-owner group. The denominator must be the pet-owner total, $50$, not the grand total.",
+          "The favorable count is the students who own a pet and have a sibling: $32$.",
+          "Compute the conditional relative frequency: $\\frac{32}{50}$.",
+          "Convert to a decimal: $\\frac{32}{50} = 0.64$.",
+          "As a percent, $0.64 = 64\\%$. Note that dividing by the grand total instead would give a different, incorrect value."
+        ],
+        "answer": "$\\frac{32}{50} = 0.64 = 64\\%$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A two-way table classifies people by age (teen or adult) and preferred shopping method. Among the $40$ teens, $30$ prefer online shopping. Among the $60$ adults, $39$ prefer online shopping. Compute the conditional relative frequency of preferring online shopping within each group, compare them, and state whether age and shopping preference appear to be associated.",
+      "solution": {
+        "steps": [
+          "For teens, divide the online-teen count by the teen total: $\\frac{30}{40} = 0.75 = 75\\%$.",
+          "For adults, divide the online-adult count by the adult total: $\\frac{39}{60} = 0.65 = 65\\%$.",
+          "Each conditional uses its own group total as the denominator, so the two groups can be compared fairly even though the groups are different sizes.",
+          "Compare: $75\\%$ of teens prefer online versus $65\\%$ of adults. These conditional relative frequencies are not equal.",
+          "Because the conditional relative frequency of preferring online shopping differs between teens and adults, the data suggest an association between age and shopping preference."
+        ],
+        "answer": "Teens $\\frac{30}{40} = 75\\%$ versus adults $\\frac{39}{60} = 65\\%$; the conditionals differ, so age and shopping preference appear to be associated."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A two-way table for $50$ students records whether they study music and whether they study a second language. The 'studies music' row total is $20$, the 'studies a second language' column total is $30$, and the cell for 'studies music and a second language' is $14$. Find the value of the cell 'studies music but not a second language.'",
+      "hint": "The entries in the music row must add up to the music row total of $20$.",
+      "solution": {
+        "steps": [
+          "The two cells in the music row are 'music and second language' and 'music but not second language,' and they sum to the music row total $20$.",
+          "Subtract the known cell: $20 - 14 = 6$.",
+          "So $6$ students study music but not a second language."
+        ],
+        "answer": "$6$ students"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "In a survey of $200$ shoppers, $36$ both used a coupon and bought a sale item. Find the joint relative frequency of using a coupon and buying a sale item. Give your answer as a percent.",
+      "hint": "A joint relative frequency divides the cell count by the grand total of $200$.",
+      "solution": {
+        "steps": [
+          "Divide the cell count by the grand total: $\\frac{36}{200}$.",
+          "Convert to a decimal: $\\frac{36}{200} = 0.18$.",
+          "As a percent, $0.18 = 18\\%$."
+        ],
+        "answer": "$\\frac{36}{200} = 0.18 = 18\\%$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "From a table of $80$ people, $25$ are left-handed. Find the marginal relative frequency of being left-handed, expressed as a percent rounded to the nearest whole percent.",
+      "hint": "Use the left-handed marginal total $25$ over the grand total $80$.",
+      "solution": {
+        "steps": [
+          "Divide the left-handed total by the grand total: $\\frac{25}{80}$.",
+          "Convert to a decimal: $\\frac{25}{80} = 0.3125$.",
+          "As a percent that is $31.25\\%$, which rounds to $31\\%$."
+        ],
+        "answer": "$\\frac{25}{80} = 0.3125 \\approx 31\\%$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Of the $45$ students who play a sport, $27$ also play an instrument. Find the conditional relative frequency that a student plays an instrument, given that the student plays a sport. Give the answer as a percent.",
+      "hint": "The condition 'given that the student plays a sport' means the denominator is the sport total $45$, not the grand total.",
+      "solution": {
+        "steps": [
+          "Restrict to students who play a sport, so the denominator is $45$.",
+          "The favorable count, students who play a sport and an instrument, is $27$.",
+          "Compute: $\\frac{27}{45} = 0.6$.",
+          "As a percent, $0.6 = 60\\%$."
+        ],
+        "answer": "$\\frac{27}{45} = 0.6 = 60\\%$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A survey asks whether people exercise regularly and whether they sleep at least $8$ hours. Among the $60$ regular exercisers, $45$ sleep at least $8$ hours. Among the $40$ non-exercisers, $20$ sleep at least $8$ hours. Compute the conditional relative frequency of sleeping at least $8$ hours within each group, compare them, and state whether the two variables appear to be associated.",
+      "hint": "Use each group's own total as its denominator, then compare the two percents.",
+      "solution": {
+        "steps": [
+          "For exercisers, divide by the exerciser total: $\\frac{45}{60} = 0.75 = 75\\%$.",
+          "For non-exercisers, divide by the non-exerciser total: $\\frac{20}{40} = 0.5 = 50\\%$.",
+          "Each conditional uses its own group total, so the comparison is fair despite the different group sizes.",
+          "Compare: $75\\%$ of exercisers sleep at least $8$ hours versus $50\\%$ of non-exercisers. The conditionals differ.",
+          "Because the conditional relative frequencies differ between the groups, exercising and getting at least $8$ hours of sleep appear to be associated."
+        ],
+        "answer": "Exercisers $\\frac{45}{60} = 75\\%$ versus non-exercisers $\\frac{20}{40} = 50\\%$; the conditionals differ, so the variables appear to be associated."
+      }
+    }
+  ]
+}

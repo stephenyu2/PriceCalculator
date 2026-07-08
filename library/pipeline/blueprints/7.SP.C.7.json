@@ -1,0 +1,123 @@
+{
+  "standard": "7.SP.C.7",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate chance processes and develop, use, and evaluate probability models",
+  "clusterCode": "C",
+  "skillName": "Probability Models",
+
+  "description": "Students develop probability models and use them to compute probabilities of events. They build uniform (equally likely) models by assigning each outcome probability $\\frac{1}{n}$, and they build empirical (observed-frequency) models by assigning probabilities from collected data. They compare model-predicted probabilities to observed relative frequencies, decide whether the agreement is good, and when it is not, explain plausible sources of the discrepancy (e.g., too few trials, a biased or unfair process, or a wrong assumption of equal likelihood).",
+
+  "subSkills": [
+    "Assign probability $\\frac{1}{n}$ to each outcome in a uniform model with $n$ equally likely outcomes",
+    "Verify that a probability model is valid: each probability is between $0$ and $1$ and all probabilities sum to $1$",
+    "Find the probability of an event by summing the probabilities of its favorable outcomes",
+    "Build an empirical (frequency-based) model: estimate $P(\\text{event}) = \\frac{\\text{observed frequency}}{\\text{total trials}}$",
+    "Predict the expected count of an outcome as $P(\\text{outcome}) \\times (\\text{number of trials})$",
+    "Compare model probabilities to observed relative frequencies and judge whether agreement is good",
+    "Explain sources of discrepancy when the model and the data disagree (small sample, bias/unfairness, wrong equal-likelihood assumption)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Uniform model probability",
+      "example": "A fair spinner has $5$ equal sections numbered $1$ through $5$. Assign a probability to each outcome and find $P(\\text{number greater than } 3)$. Answer: each outcome has probability $\\frac{1}{5}$, so $P(>3)=\\frac{2}{5}$."
+    },
+    {
+      "name": "Empirical model from data",
+      "example": "A bag of marbles is drawn $50$ times (with replacement): red $20$, blue $18$, green $12$. Estimate $P(\\text{blue})$ from the data. Answer: $P(\\text{blue})=\\frac{18}{50}=\\frac{9}{25}$."
+    },
+    {
+      "name": "Predict expected counts from a model",
+      "example": "A fair number cube is rolled $60$ times. About how many times do you expect to roll a $4$? Answer: $\\frac{1}{6}\\times 60 = 10$ times."
+    },
+    {
+      "name": "Compare model to observed frequencies",
+      "example": "A coin is modeled as fair, so $P(\\text{heads})=\\frac{1}{2}$. In $40$ flips it lands heads $22$ times, giving observed relative frequency $\\frac{22}{40}=\\frac{11}{20}=0.55$. Compare to the model and decide whether the agreement is good."
+    },
+    {
+      "name": "Explain the discrepancy",
+      "example": "A spinner is assumed fair with $4$ colors, so each should be $\\frac{1}{4}$. In $200$ spins red comes up $90$ times ($P=0.45$). Explain a likely source of the discrepancy. Answer: the spinner is probably not fair (biased toward red); the equal-likelihood assumption is wrong."
+    },
+    {
+      "name": "Build a non-uniform model and use it",
+      "example": "Survey data show a class picks pizza $\\frac{1}{2}$, tacos $\\frac{3}{10}$, salad $\\frac{1}{5}$. Verify this is a valid model and find $P(\\text{not salad})$. Answer: probabilities sum to $1$; $P(\\text{not salad})=1-\\frac{1}{5}=\\frac{4}{5}$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step use of a given or obviously uniform model. Student assigns $\\frac{1}{n}$ to each of a few equally likely outcomes and finds the probability of a simple event, or reads an empirical probability directly as a fraction over the total.",
+      "constraints": [
+        "Uniform model with $n \\le 6$ equally likely outcomes, or one event from a small data table",
+        "Event is a single outcome or an easy 'greater than / one color' event",
+        "Answer is a single fraction such as $\\frac{1}{6}$ or $\\frac{2}{5}$, reduced once at most",
+        "No comparison or explanation step"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step reasoning: build an empirical model from a frequency table and use it, predict an expected count via $P \\times (\\text{trials})$, or compute the observed relative frequency and state whether it is close to the model's probability.",
+      "constraints": [
+        "Requires forming $\\frac{\\text{frequency}}{\\text{total}}$ then simplifying, or multiplying a probability by a trial count",
+        "May ask for $P(\\text{not } A)$ using the complement $1 - P(A)$",
+        "Includes a simple comparison: convert one fraction to a decimal or common denominator to compare model vs. observed",
+        "Numbers chosen so totals divide cleanly (e.g., total of $50$, $60$, or $100$ trials)"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step modeling, comparison, and justification. Student verifies or completes a non-uniform model, compares model probabilities to observed frequencies across several outcomes, and explains the most likely source of any discrepancy, distinguishing small-sample noise from genuine bias.",
+      "constraints": [
+        "Build or complete a probability model whose values must sum to $1$ (solve for a missing probability)",
+        "Compare predicted counts to observed counts for two or more outcomes",
+        "Require an explanation: small sample size, biased/unfair process, or a wrong equal-likelihood assumption",
+        "May combine an expected-count prediction with a judgment about whether the data support the model"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student assumes all outcomes are equally likely even when data show they are not",
+      "distractor": "Reports $P(\\text{blue})=\\frac{1}{3}$ for three colors instead of using the observed frequency $\\frac{18}{50}$"
+    },
+    {
+      "misconception": "Student uses raw frequency (a count) as the probability instead of dividing by the total",
+      "distractor": "Gives $P(\\text{blue})=18$ or $\\frac{18}{1}$ instead of $\\frac{18}{50}=\\frac{9}{25}$"
+    },
+    {
+      "misconception": "Student divides by the wrong total (e.g., by the number of categories instead of the number of trials)",
+      "distractor": "Computes $\\frac{18}{3}=6$ instead of $\\frac{18}{50}$"
+    },
+    {
+      "misconception": "Student adds the trial count instead of multiplying when predicting expected counts",
+      "distractor": "Predicts $\\frac{1}{6}+60$ or $66$ rolls of a $4$ instead of $\\frac{1}{6}\\times 60 = 10$"
+    },
+    {
+      "misconception": "Student forgets to use the complement and reports $P(A)$ when asked for $P(\\text{not } A)$",
+      "distractor": "Gives $P(\\text{salad})=\\frac{1}{5}$ instead of $P(\\text{not salad})=1-\\frac{1}{5}=\\frac{4}{5}$"
+    },
+    {
+      "misconception": "Student accepts an invalid model whose probabilities do not sum to $1$",
+      "distractor": "Treats $\\frac{1}{2}, \\frac{1}{3}, \\frac{1}{3}$ as a valid model even though the sum exceeds $1$"
+    },
+    {
+      "misconception": "Student blames the wrong cause for a discrepancy, ignoring sample size or genuine bias",
+      "distractor": "Concludes 'the model must be exactly correct' or 'the data are wrong' rather than citing too few trials or an unfair process"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

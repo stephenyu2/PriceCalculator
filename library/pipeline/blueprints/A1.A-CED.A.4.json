@@ -1,0 +1,130 @@
+{
+  "_comment": "SKILL BLUEPRINT — Spec agent output, Generator input. One blueprint per standard.",
+
+  "standard": "A1.A-CED.A.4",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Creating Equations",
+  "domainCode": "A-CED",
+  "cluster": "Create equations that describe numbers or relationships",
+  "clusterCode": "A",
+  "skillName": "Rearranging Formulas",
+
+  "description": "Students rearrange a literal equation or formula to solve for a specified variable, treating every other letter as a known constant and using the same inverse-operation reasoning as in solving a numeric equation. They isolate the quantity of interest by undoing addition/subtraction, multiplication/division, distribution, and (when needed) squares and square roots, then state the result with the target variable alone on one side. Examples include solving $A = lw$ for $w$, $C = 2\\pi r$ for $r$, and $A = \\frac{1}{2}(b_1 + b_2)h$ for $b_1$.",
+
+  "subSkills": [
+    "Identify the target variable and treat all other symbols as constants",
+    "Undo addition and subtraction by adding or subtracting the same term to both sides",
+    "Undo multiplication and division, including dividing both sides by a coefficient that is itself a variable (e.g. divide by $\\pi r$)",
+    "Clear fractions by multiplying both sides by a denominator, and distribute or factor when the target variable appears inside parentheses or in two terms",
+    "Apply square roots and squaring to isolate a variable inside a power or radical (e.g. solve $A = \\pi r^2$ for $r$)",
+    "State and use restrictions implied by the rearrangement (no division by zero, non-negative radicand) and verify the result by substituting back"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "One-step literal equation",
+      "example": "Solve $A = lw$ for $w$. Answer: $w = \\frac{A}{l}$."
+    },
+    {
+      "name": "Two-step literal equation",
+      "example": "Solve $y = mx + b$ for $x$. Answer: $x = \\frac{y - b}{m}$."
+    },
+    {
+      "name": "Clear a fraction or coefficient with a constant factor",
+      "example": "Solve $C = 2\\pi r$ for $r$. Answer: $r = \\frac{C}{2\\pi}$."
+    },
+    {
+      "name": "Target variable appears in two terms (factoring required)",
+      "example": "Solve $ax + bx = c$ for $x$. Answer: $x = \\frac{c}{a + b}$."
+    },
+    {
+      "name": "Distribute then isolate a variable inside parentheses",
+      "example": "Solve $A = \\frac{1}{2}(b_1 + b_2)h$ for $b_1$. Answer: $b_1 = \\frac{2A}{h} - b_2$."
+    },
+    {
+      "name": "Power or radical (square root / squaring)",
+      "example": "Solve $A = \\pi r^2$ for $r$ (with $r \\ge 0$). Answer: $r = \\sqrt{\\frac{A}{\\pi}}$."
+    },
+    {
+      "name": "Rearrange then evaluate with given numbers",
+      "example": "The formula $d = rt$ gives distance. Solve for $t$, then find $t$ when $d = 150$ and $r = 50$. Answer: $t = \\frac{d}{r} = 3$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "One or two inverse operations isolate the target variable. The target appears exactly once, in a single term, with no fractions to clear, no distribution, and no powers. Pure literal manipulation.",
+      "constraints": [
+        "Formula is one-step ($A = lw$, $d = rt$) or two-step ($y = mx + b$, $P = 2l + 2w$ solved for $l$)",
+        "Target variable occurs once and in only one term",
+        "No square roots, no squares, no factoring, no distributing a variable",
+        "Answer is a single fraction or a sum/difference of two simple terms"
+      ]
+    },
+    "Medium": {
+      "description": "Three or more steps, OR the target sits inside a fraction or behind a distribution. Student must clear a denominator, distribute, or divide by a product that includes a constant such as $\\pi$. Still no need to factor the target out of two terms.",
+      "constraints": [
+        "Requires clearing a fraction (multiply both sides by a denominator) before isolating",
+        "Or requires distributing/undoing parentheses, e.g. solve $A = \\frac{1}{2}(b_1 + b_2)h$ for $h$ or $b_1$",
+        "Division by a multi-symbol product allowed, e.g. divide by $2\\pi$ or by $lw$",
+        "Answer may be a compound fraction or a difference of two terms over a common denominator"
+      ]
+    },
+    "Hard": {
+      "description": "The target variable appears in two terms (must be factored out before dividing) OR is locked inside a power or radical (requires squaring/taking a root, with a stated domain restriction), OR the rearrangement is followed by an evaluation or comparison step.",
+      "constraints": [
+        "Target variable appears in two or more terms and must be factored: $x(a + b) = c$",
+        "Or target is squared/under a radical: solve $A = \\pi r^2$ for $r$, $c^2 = a^2 + b^2$ for $a$",
+        "Must state a restriction (no division by zero, $r \\ge 0$, non-negative radicand)",
+        "May add a final step: substitute given values, or compare two rearranged forms"
+      ]
+    },
+    "_tierSplit": "If this standard is built as a two-worksheet pair: tier1 covers Easy to Medium (one- and two-step literal equations, clearing a single fraction, simple distribution) and tier2 covers Medium to Hard (distributing/factoring the target out of two terms, powers and radicals with restrictions, rearrange-then-evaluate). No item overlap between tiers. Most builds use the single ramped worksheet (Easy items 1-5, Medium 6-11, Hard 12-15)."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student moves a factor across the equals sign by subtraction instead of dividing",
+      "distractor": "From $A = lw$, writes $w = A - l$ instead of $w = \\frac{A}{l}$"
+    },
+    {
+      "misconception": "Student divides only one term by the coefficient, forgetting the other terms",
+      "distractor": "From $y = mx + b$, writes $x = \\frac{y}{m} + b$ instead of $x = \\frac{y - b}{m}$"
+    },
+    {
+      "misconception": "Student inverts the fraction, putting the target in the numerator when it belongs in the denominator (or vice versa)",
+      "distractor": "From $C = 2\\pi r$, writes $r = \\frac{2\\pi}{C}$ instead of $r = \\frac{C}{2\\pi}$"
+    },
+    {
+      "misconception": "Student fails to factor the target out of two terms and instead divides by only one of them",
+      "distractor": "From $ax + bx = c$, writes $x = \\frac{c}{a} + \\frac{c}{b}$ or $x = \\frac{c - bx}{a}$ instead of $x = \\frac{c}{a + b}$"
+    },
+    {
+      "misconception": "Student takes a square root of only part of an expression or drops the radical entirely",
+      "distractor": "From $A = \\pi r^2$, writes $r = \\frac{A}{\\pi}$ (forgetting the square root) instead of $r = \\sqrt{\\frac{A}{\\pi}}$"
+    },
+    {
+      "misconception": "Student distributes incorrectly when clearing parentheses, applying the multiplier to only one term",
+      "distractor": "From $A = \\frac{1}{2}(b_1 + b_2)h$, writes $b_1 = \\frac{2A}{h} + b_2$ or $b_1 = 2A - b_2 h$ instead of $b_1 = \\frac{2A}{h} - b_2$"
+    },
+    {
+      "misconception": "Student sign-flips when isolating a subtracted term",
+      "distractor": "From $y = mx + b$ solving for $b$, writes $b = y + mx$ instead of $b = y - mx$"
+    }
+  ],
+
+  "_comment_itemCounts": "worksheet.single = one ramped sheet, Easy->Hard across 15 items. tier1/tier2 = the two sheets if built as a complex two-worksheet standard (15 each, no overlap). lesson 5 worked examples + 5 practice. quiz 8 multiple choice.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

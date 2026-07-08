@@ -1,0 +1,124 @@
+{
+  "standard": "GEO.G-CO.D.13",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Make geometric constructions",
+  "clusterCode": "D",
+  "skillName": "Inscribed Regular Polygons",
+
+  "description": "Students construct an equilateral triangle, a square, and a regular hexagon inscribed in a given circle using only a compass and straightedge, and reason about the resulting figures. They justify each construction step (why a chord equal to the radius cuts a $60^\\circ$ arc, why perpendicular diameters give a square), order the steps correctly, and compute the exact side lengths, central angles, perimeters, and areas of the inscribed polygons in terms of the circle's radius $r$.",
+
+  "subSkills": [
+    "Recall that a chord equal in length to the radius subtends a $60^\\circ$ central angle, so stepping the radius around a circle of radius $r$ yields six points (the regular hexagon)",
+    "Construct a regular hexagon by marking off arcs of radius $r$ around the circle, then connect every vertex",
+    "Construct an equilateral triangle inscribed in a circle by connecting every other hexagon vertex (joining alternate $60^\\circ$ points to span $120^\\circ$ arcs)",
+    "Construct a square inscribed in a circle by drawing two perpendicular diameters (a diameter and its perpendicular bisector) and connecting the four endpoints",
+    "Justify each step from the postulates: all radii equal, the perpendicular bisector of a chord passes through the center, inscribed/central angle relationships",
+    "Compute the central angle of a regular $n$-gon as $\\frac{360^\\circ}{n}$ and the inscribed (vertex) angle as $\\frac{(n-2)180^\\circ}{n}$",
+    "Derive exact side length, perimeter, and area of the inscribed polygon in terms of radius $r$ using $30$-$60$-$90$ and $45$-$45$-$90$ triangles"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Identify the next construction step",
+      "example": "You are inscribing a regular hexagon in a circle of radius $r$. After drawing the circle and marking a point $A$ on it, what is the correct next step? (Set the compass to the radius $r$ and strike an arc from $A$ to locate the next vertex.)"
+    },
+    {
+      "name": "Justify why a step works",
+      "example": "When inscribing a hexagon, why does setting the compass width equal to the radius locate a vertex exactly $60^\\circ$ away? (The radius, the new radius, and the chord form an equilateral triangle, so the central angle is $60^\\circ$.)"
+    },
+    {
+      "name": "Central / interior angle of the inscribed polygon",
+      "example": "An equilateral triangle is inscribed in a circle. What central angle does each side subtend at the center? ($\\frac{360^\\circ}{3}=120^\\circ$.)"
+    },
+    {
+      "name": "Side length in terms of radius",
+      "example": "A square is inscribed in a circle of radius $r$. Find the exact side length of the square. (Side $=r\\sqrt{2}$, from the $45$-$45$-$90$ triangle formed by two radii.)"
+    },
+    {
+      "name": "Perimeter or area in terms of radius",
+      "example": "A regular hexagon is inscribed in a circle of radius $r$. Find its perimeter and area. (Perimeter $=6r$; area $=\\frac{3\\sqrt{3}}{2}r^2$.)"
+    },
+    {
+      "name": "Order the full construction",
+      "example": "Place the steps for inscribing a square in a circle in correct order: draw a diameter, construct its perpendicular bisector through the center, mark the four intersections with the circle, connect consecutive intersection points."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-fact recall and one-step recognition tied to the three named constructions. Student names a tool action, reads off a central angle from $\\frac{360^\\circ}{n}$, or recalls the radius-equals-side fact for the hexagon. No multi-step computation.",
+      "constraints": [
+        "Identify which polygon ($n=3,4,6$) a described construction produces, or the single next step",
+        "Compute a central angle $\\frac{360^\\circ}{n}$ for $n\\in\\{3,4,6\\}$ as an integer number of degrees",
+        "Recall that the hexagon side equals the radius $r$ and its perimeter is $6r$",
+        "Tools limited to compass and straightedge; one idea per item"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step reasoning: derive a side length or interior angle, or justify a single construction step using equilateral-triangle or perpendicular-bisector reasoning. Requires a $30$-$60$-$90$ or $45$-$45$-$90$ relationship.",
+      "constraints": [
+        "Find an exact side length such as $r\\sqrt{2}$ (square) or $r\\sqrt{3}$ (equilateral triangle) from a right triangle inside the circle",
+        "Compute interior (vertex) angle $\\frac{(n-2)180^\\circ}{n}$",
+        "Give a one-sentence justification for why the radius-step yields $60^\\circ$ or why perpendicular diameters yield a square",
+        "Answers are exact radicals in terms of $r$, never rounded decimals"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step synthesis: compute area in terms of $r$, order an entire construction, or chain a justification with a numeric result. Student combines the angle facts with right-triangle trig or apothem reasoning and may compare two of the three inscribed polygons.",
+      "constraints": [
+        "Derive exact area, e.g. hexagon $\\frac{3\\sqrt{3}}{2}r^2$, square $2r^2$, equilateral triangle $\\frac{3\\sqrt{3}}{4}r^2$",
+        "Order a complete 4-to-6 step compass-and-straightedge construction",
+        "Use the apothem $a=r\\cos\\!\\frac{180^\\circ}{n}$ or split into congruent isosceles triangles",
+        "May require comparing perimeters or areas of two inscribed polygons in the same circle"
+      ]
+    },
+    "tierSplit": "Single ramped worksheet. If split: tier1 covers Easy to Medium (naming constructions, next-step recognition, central/interior angles, hexagon side $=r$, square side $r\\sqrt{2}$); tier2 covers Medium to Hard (exact side/perimeter/area derivations, full step ordering, justifications, two-polygon comparisons)."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student thinks stepping the radius around the circle gives the side of an inscribed equilateral triangle rather than a hexagon",
+      "distractor": "Claims the radius-length chord cuts a $120^\\circ$ arc and yields a triangle, so a chord of length $r$ is the triangle's side instead of the hexagon's side"
+    },
+    {
+      "misconception": "Student confuses the central angle $\\frac{360^\\circ}{n}$ with the interior (vertex) angle $\\frac{(n-2)180^\\circ}{n}$",
+      "distractor": "For the inscribed square reports the central angle as $90^\\circ$ but the interior angle also as $90^\\circ$ where the central is asked, e.g. gives $60^\\circ$ for the hexagon's central angle by using $\\frac{(6-2)180^\\circ}{6}=120^\\circ$ in the wrong slot"
+    },
+    {
+      "misconception": "Student uses the diameter $2r$ as the inscribed square's side instead of computing the chord",
+      "distractor": "Reports the square side as $2r$ (the diameter) instead of $r\\sqrt{2}$"
+    },
+    {
+      "misconception": "Student forgets to take the reciprocal of the radius relationship and uses $\\sin/\\cos$ on the wrong angle, getting $r\\sqrt{3}$ for the square",
+      "distractor": "Computes the square side as $r\\sqrt{3}$ (the equilateral triangle's side) by using a $30$-$60$-$90$ triangle where a $45$-$45$-$90$ applies"
+    },
+    {
+      "misconception": "Student treats the inscribed equilateral triangle's side as equal to the radius (like the hexagon)",
+      "distractor": "States the equilateral triangle side is $r$ instead of $r\\sqrt{3}$"
+    },
+    {
+      "misconception": "Student computes a regular polygon area with the circle formula $\\pi r^2$ instead of the polygon's exact radical area",
+      "distractor": "Gives the inscribed hexagon area as $\\pi r^2$ or $6r^2$ instead of $\\frac{3\\sqrt{3}}{2}r^2$"
+    },
+    {
+      "misconception": "Student orders the square construction wrong, connecting diameter endpoints before constructing the perpendicular bisector",
+      "distractor": "Selects a step order that joins the two endpoints of a single diameter (giving a line, not four vertices) before any perpendicular is drawn"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

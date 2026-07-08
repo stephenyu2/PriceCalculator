@@ -1,0 +1,142 @@
+{
+  "id": "A2.A-APR.B.2--quiz",
+  "standard": "A2.A-APR.B.2",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Arithmetic with Polynomials and Rational Expressions",
+  "domainCode": "A-APR",
+  "cluster": "Understand the relationship between zeros and factors of polynomials",
+  "clusterCode": "B",
+  "skillName": "Remainder Theorem",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "Eight multiple-choice questions on the Remainder and Factor Theorems: finding remainders by evaluating $p(a)$, reading remainders from synthetic division, testing factors, and solving for unknown coefficients.",
+  "items": [
+    {
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Find the remainder when $p(x)=x^3-4x^2+2x-5$ is divided by $x-3$.\nA) $-8$\nB) $8$\nC) $-2$\nD) $4$",
+      "answer": "A) $-8$",
+      "solution": {
+        "steps": [
+          "By the Remainder Theorem, the remainder of $p(x)\\div(x-a)$ equals $p(a)$. Here $a=3$.",
+          "Evaluate: $p(3)=3^3-4\\cdot3^2+2\\cdot3-5=27-36+6-5=-8$.",
+          "The remainder is $-8$, so A is correct.",
+          "B ($8$) drops the sign of the result. C ($-2$) and D ($4$) come from arithmetic slips in the powers; the careful sum is $27-36+6-5=-8$."
+        ],
+        "answer": "A) $-8$"
+      }
+    },
+    {
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Find the remainder when $p(x)=x^2+5x-2$ is divided by $x-2$.\nA) $12$\nB) $8$\nC) $-12$\nD) $7$",
+      "answer": "A) $12$",
+      "solution": {
+        "steps": [
+          "The divisor is $x-2$, so $a=2$ and the remainder is $p(2)$.",
+          "Evaluate: $p(2)=2^2+5\\cdot2-2=4+10-2=12$.",
+          "The remainder is $12$, so A is correct.",
+          "B ($8$) forgets the $-2$ constant ($4+10=14$ is also wrong, but the slip lands near $8$). C ($-12$) flips the sign. D ($7$) drops the constant term differently; the correct sum is $4+10-2=12$."
+        ],
+        "answer": "A) $12$"
+      }
+    },
+    {
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Is $x-2$ a factor of $p(x)=x^3-x^2-4x+4$?\nA) Yes, because $p(2)=0$\nB) No, because $p(2)=0$\nC) Yes, because $p(2)=8$\nD) No, because $p(2)\\ne 0$",
+      "answer": "A) Yes, because $p(2)=0$",
+      "solution": {
+        "steps": [
+          "By the Factor Theorem, $(x-a)$ is a factor of $p(x)$ if and only if $p(a)=0$.",
+          "Evaluate: $p(2)=2^3-2^2-4\\cdot2+4=8-4-8+4=0$.",
+          "Since $p(2)=0$, $(x-2)$ IS a factor, so A is correct.",
+          "B reverses the Factor Theorem (saying $p(2)=0$ means NOT a factor). C miscomputes $p(2)$ as $8$. D states $p(2)\\ne0$, which is false here."
+        ],
+        "answer": "A) Yes, because $p(2)=0$"
+      }
+    },
+    {
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Find the remainder when $p(x)=2x^3+5x^2-3$ is divided by $x+2$.\nA) $1$\nB) $33$\nC) $-1$\nD) $17$",
+      "answer": "A) $1$",
+      "solution": {
+        "steps": [
+          "Write the divisor as $x-a$: $x+2=x-(-2)$, so $a=-2$ and the remainder is $p(-2)$.",
+          "Evaluate carefully: $p(-2)=2(-2)^3+5(-2)^2-3=2(-8)+5(4)-3=-16+20-3=1$.",
+          "The remainder is $1$, so A is correct.",
+          "B ($33$) plugs in $x=2$ instead of $x=-2$: $2(8)+5(4)-3=33$. C ($-1$) flips the sign of the answer. D ($17$) mishandles the sign of $(-2)^3$, giving $16+20-3-16$-type slips."
+        ],
+        "answer": "A) $1$"
+      }
+    },
+    {
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Using synthetic division to divide $p(x)=x^3-2x^2-5x+6$ by $x-3$, what is the remainder?\nA) $0$\nB) $-2$\nC) $1$\nD) $x^2+x-2$",
+      "answer": "A) $0$",
+      "solution": {
+        "steps": [
+          "Bring down $1$. Multiply by $3$ and add: $-2+3=1$; then $-5+3\\cdot1=-2$; then $6+3\\cdot(-2)=0$.",
+          "The synthetic row is $1\\;\\;1\\;\\;-2\\;\\,|\\;0$, so the quotient is $x^2+x-2$ and the LAST entry, the remainder, is $0$.",
+          "This matches $p(3)=27-18-15+6=0$. A is correct.",
+          "B ($-2$) and C ($1$) read middle entries of the row as the remainder instead of the final entry. D reports the quotient polynomial rather than the remainder."
+        ],
+        "answer": "A) $0$"
+      }
+    },
+    {
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Which linear binomial is a factor of $p(x)=x^3-5x+2$? (Hint: account for the missing $x^2$ term.)\nA) $x-2$\nB) $x-1$\nC) $x+1$\nD) $x-3$",
+      "answer": "A) $x-2$",
+      "solution": {
+        "steps": [
+          "By the Factor Theorem, $(x-a)$ is a factor exactly when $p(a)=0$. The polynomial has a missing $x^2$ term, so treat it as $x^3+0x^2-5x+2$.",
+          "Test $a=2$: $p(2)=8+0-10+2=0$. Since $p(2)=0$, $(x-2)$ is a factor, so A is correct.",
+          "B: $p(1)=1-5+2=-2\\ne0$. C: $p(-1)=-1+5+2=6\\ne0$. D: $p(3)=27-15+2=14\\ne0$.",
+          "Only $x-2$ gives a zero remainder."
+        ],
+        "answer": "A) $x-2$"
+      }
+    },
+    {
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Find the value of $k$ so that $x-2$ is a factor of $p(x)=x^3+kx-6$.\nA) $-1$\nB) $1$\nC) $0$\nD) $-7$",
+      "answer": "A) $-1$",
+      "solution": {
+        "steps": [
+          "$(x-2)$ is a factor exactly when $p(2)=0$ (Factor Theorem). Set the value, not the divisor, equal to $0$.",
+          "Compute $p(2)=2^3+k\\cdot2-6=8+2k-6=2+2k$.",
+          "Solve $2+2k=0$, so $2k=-2$ and $k=-1$. A is correct.",
+          "B ($1$) flips the sign when solving. C ($0$) comes from setting $p(2)=2$ (equal to $a$) instead of $0$. D ($-7$) comes from setting $p(2)=8+2k-6$ equal to $-6$ or another wrong target."
+        ],
+        "answer": "A) $-1$"
+      }
+    },
+    {
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Is $2x-1$ a factor of $p(x)=2x^3+x^2-1$?\nA) No, because $p\\!\\left(\\tfrac{1}{2}\\right)=-\\frac{1}{2}\\ne 0$\nB) Yes, because $p\\!\\left(\\tfrac{1}{2}\\right)=0$\nC) No, because $p(2)\\ne 0$\nD) No, because $p\\!\\left(-\\tfrac{1}{2}\\right)\\ne 0$",
+      "answer": "A) No, because $p\\!\\left(\\tfrac{1}{2}\\right)=-\\frac{1}{2}\\ne 0$",
+      "solution": {
+        "steps": [
+          "For a divisor with a leading coefficient, set $2x-1=0$ to find the test value: $x=\\tfrac{1}{2}$. The binomial is a factor iff $p\\!\\left(\\tfrac{1}{2}\\right)=0$.",
+          "Evaluate: $p\\!\\left(\\tfrac{1}{2}\\right)=2\\cdot\\tfrac{1}{8}+\\tfrac{1}{4}-1=\\tfrac{1}{4}+\\tfrac{1}{4}-1=\\tfrac{1}{2}-1=-\\tfrac{1}{2}$.",
+          "Since $p\\!\\left(\\tfrac{1}{2}\\right)=-\\tfrac{1}{2}\\ne0$, $2x-1$ is NOT a factor. A is correct.",
+          "B wrongly claims the value is $0$. C tests $x=2$ (dividing wrong) instead of $x=\\tfrac12$. D tests $x=-\\tfrac{1}{2}$; the correct test value from $2x-1=0$ is $x=+\\tfrac{1}{2}$."
+        ],
+        "answer": "A) No, because $p\\!\\left(\\tfrac{1}{2}\\right)=-\\frac{1}{2}\\ne 0$"
+      }
+    }
+  ]
+}

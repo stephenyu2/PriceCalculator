@@ -1,0 +1,147 @@
+{
+  "standard": "8.EE.A.4",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Expressions and Equations",
+  "domainCode": "EE",
+  "cluster": "Work with radicals and integer exponents",
+  "clusterCode": "A",
+  "skillName": "Operations in Scientific Notation",
+
+  "description": "Students perform arithmetic with numbers in scientific notation. They add, subtract, multiply, and divide numbers of the form $a \\times 10^{n}$ (where $1 \\le a < 10$ and $n$ is an integer), convert between standard form and scientific notation, and re-normalize results so the coefficient satisfies $1 \\le a < 10$. They handle problems mixing decimal and scientific notation, compare magnitudes of very large and very small quantities, and choose units of appropriate size (e.g. nanometers vs. kilometers) for real-world measurements.",
+
+  "subSkills": [
+    "Convert a number from standard (decimal) form to scientific notation $a \\times 10^{n}$ with $1 \\le a < 10$",
+    "Convert a number from scientific notation back to standard form",
+    "Multiply numbers in scientific notation: multiply coefficients, add exponents, then re-normalize",
+    "Divide numbers in scientific notation: divide coefficients, subtract exponents, then re-normalize",
+    "Add or subtract numbers in scientific notation by first matching the powers of 10",
+    "Re-normalize a result so the coefficient satisfies $1 \\le a < 10$ (adjust the exponent)",
+    "Operate on mixed forms where one quantity is in decimal form and the other in scientific notation",
+    "Compare two quantities in scientific notation to decide how many times larger one is",
+    "Choose units of appropriate size for very large or very small measurements"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Convert standard to scientific notation",
+      "example": "Write $0.000\\,062$ in scientific notation. Answer: $6.2 \\times 10^{-5}$."
+    },
+    {
+      "name": "Convert scientific to standard form",
+      "example": "Write $4.07 \\times 10^{6}$ in standard form. Answer: $4\\,070\\,000$."
+    },
+    {
+      "name": "Multiply in scientific notation",
+      "example": "Compute $(3 \\times 10^{4})(2 \\times 10^{5})$. Multiply coefficients and add exponents: $6 \\times 10^{9}$."
+    },
+    {
+      "name": "Divide in scientific notation",
+      "example": "Compute $\\dfrac{8 \\times 10^{7}}{4 \\times 10^{3}}$. Divide coefficients and subtract exponents: $2 \\times 10^{4}$."
+    },
+    {
+      "name": "Multiply or divide requiring re-normalization",
+      "example": "Compute $(6 \\times 10^{4})(5 \\times 10^{3})$. The coefficient $30$ is not in $[1,10)$, so rewrite $30 \\times 10^{7} = 3 \\times 10^{8}$."
+    },
+    {
+      "name": "Add or subtract with matching powers",
+      "example": "Compute $(4.5 \\times 10^{6}) + (3.2 \\times 10^{6})$. Same exponent, so add coefficients: $7.7 \\times 10^{6}$."
+    },
+    {
+      "name": "Add or subtract with different powers",
+      "example": "Compute $(7 \\times 10^{5}) + (3 \\times 10^{4})$. Rewrite as $70 \\times 10^{4} + 3 \\times 10^{4} = 73 \\times 10^{4} = 7.3 \\times 10^{5}$."
+    },
+    {
+      "name": "Mixed decimal and scientific notation",
+      "example": "A bacterium has length $2 \\times 10^{-6}$ m. How long are $0.0003$ of them lined up? Compute $(3 \\times 10^{-4})(2 \\times 10^{-6}) = 6 \\times 10^{-10}$ m."
+    },
+    {
+      "name": "Compare magnitudes (how many times larger)",
+      "example": "The Sun's mass is about $2 \\times 10^{30}$ kg and Earth's is about $6 \\times 10^{24}$ kg. About how many times more massive is the Sun? $\\dfrac{2 \\times 10^{30}}{6 \\times 10^{24}} \\approx 3.3 \\times 10^{5}$ times."
+    },
+    {
+      "name": "Choose an appropriate unit",
+      "example": "A virus is $3 \\times 10^{-8}$ m wide. Express this in nanometers ($1\\text{ nm} = 10^{-9}$ m): $30$ nm, a more natural unit."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single operation (one conversion, or one multiplication/division, or one addition/subtraction with matching powers) where the coefficient result is already in $[1,10)$ so no re-normalization is needed.",
+      "constraints": [
+        "Exactly one operation or one conversion",
+        "Coefficients are simple values (single digit or one decimal place)",
+        "For multiply/divide the resulting coefficient stays in $[1,10)$ (e.g. $2 \\times 3 = 6$, $8 \\div 4 = 2$)",
+        "For add/subtract the two numbers share the same power of 10",
+        "Exponents are small integers, magnitude $\\le 6$"
+      ]
+    },
+    "Medium": {
+      "description": "One operation that forces re-normalization of the coefficient, or add/subtract requiring the powers to be matched first, including negative exponents.",
+      "constraints": [
+        "Multiply/divide where the coefficient leaves $[1,10)$ and must be rewritten (e.g. $30 \\times 10^{7} = 3 \\times 10^{8}$ or $0.5 \\times 10^{3} = 5 \\times 10^{2}$)",
+        "Add/subtract where exponents differ and one term must be rewritten before combining",
+        "May include negative exponents",
+        "Coefficients may carry one or two decimal places"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step word problems that mix decimal and scientific notation, chain two or more operations, compare magnitudes, or require choosing an appropriate unit, and always demand a properly normalized final answer.",
+      "constraints": [
+        "Requires extracting quantities from a real-world context (astronomy, biology, computing, finance)",
+        "Two or more chained operations, or a comparison division followed by interpretation",
+        "Mixes a decimal-form quantity with a scientific-notation quantity",
+        "May require converting to or choosing a more appropriate unit",
+        "Final answer must be re-normalized to $1 \\le a < 10$ and labeled with correct units"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student multiplies the exponents instead of adding them when multiplying",
+      "distractor": "For $(3 \\times 10^{4})(2 \\times 10^{5})$ writes $6 \\times 10^{20}$ instead of $6 \\times 10^{9}$"
+    },
+    {
+      "misconception": "Student adds the exponents instead of subtracting them when dividing",
+      "distractor": "For $\\dfrac{8 \\times 10^{7}}{4 \\times 10^{3}}$ writes $2 \\times 10^{10}$ instead of $2 \\times 10^{4}$"
+    },
+    {
+      "misconception": "Student forgets to re-normalize when the coefficient is $\\ge 10$ or $< 1$",
+      "distractor": "Leaves the answer as $30 \\times 10^{7}$ instead of $3 \\times 10^{8}$"
+    },
+    {
+      "misconception": "Student adds the coefficients without first matching the powers of 10",
+      "distractor": "For $(7 \\times 10^{5}) + (3 \\times 10^{4})$ writes $10 \\times 10^{5} = 1 \\times 10^{6}$ instead of $7.3 \\times 10^{5}$"
+    },
+    {
+      "misconception": "Student also adds (or subtracts) the exponents when adding or subtracting the numbers",
+      "distractor": "For $(4.5 \\times 10^{6}) + (3.2 \\times 10^{6})$ writes $7.7 \\times 10^{12}$ instead of $7.7 \\times 10^{6}$"
+    },
+    {
+      "misconception": "Student miscounts decimal places or moves the point the wrong direction when converting",
+      "distractor": "Writes $0.000\\,062$ as $6.2 \\times 10^{-4}$ or $6.2 \\times 10^{5}$ instead of $6.2 \\times 10^{-5}$"
+    },
+    {
+      "misconception": "Student mishandles the sign of a negative exponent during multiply or divide",
+      "distractor": "For $(3 \\times 10^{-4})(2 \\times 10^{-6})$ writes $6 \\times 10^{2}$ or $6 \\times 10^{-2}$ instead of $6 \\times 10^{-10}$"
+    },
+    {
+      "misconception": "Student divides the larger coefficient by the smaller regardless of order in a comparison",
+      "distractor": "Inverts the comparison ratio, e.g. reports $3 \\times 10^{-6}$ times instead of $3.3 \\times 10^{5}$ times"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

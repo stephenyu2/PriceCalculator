@@ -1,0 +1,131 @@
+{
+  "standard": "6.SP.A.3",
+  "grade": "6",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Develop understanding of statistical variability",
+  "clusterCode": "A",
+  "skillName": "Measures of Center and Variation",
+
+  "description": "Students recognize that a measure of center (mean or median) summarizes an entire numerical data set with a single typical value, while a measure of variation (range, interquartile range, or mean absolute deviation) summarizes how spread out the values are with a single number. They distinguish which kind of summary a question calls for, compute center and spread for small data sets, and interpret what each number tells you about the data. This is a conceptual standard: the emphasis is on what center and spread mean and when each is the right description, not yet on building displays (that is 6.SP.B).",
+
+  "subSkills": [
+    "Classify a statistic as a measure of center or a measure of variation",
+    "Compute the mean as the sum of values divided by the count, $\\bar{x}=\\frac{\\sum x}{n}$",
+    "Find the median of an ordered data set (middle value, or mean of the two middle values when $n$ is even)",
+    "Compute the range as $\\text{max}-\\text{min}$",
+    "Find the interquartile range $\\text{IQR}=Q_3-Q_1$ from an ordered list",
+    "Compute mean absolute deviation (MAD) as the mean of the absolute distances from the mean",
+    "Interpret a single summary number in context (what a center or a spread tells you about the values)",
+    "Decide whether a question is asking for a typical value (center) or for how much values differ (variation)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Classify the statistic",
+      "example": "Which of these summarizes the spread of a data set rather than its center: mean, median, or interquartile range? Answer: interquartile range."
+    },
+    {
+      "name": "Compute a measure of center",
+      "example": "Find the mean of $4, 7, 7, 10, 12$. Sum is $40$, count is $5$, so $\\bar{x}=\\frac{40}{5}=8$."
+    },
+    {
+      "name": "Compute the median",
+      "example": "Find the median of $3, 9, 5, 12, 7, 7$. Ordered: $3, 5, 7, 7, 9, 12$; the two middle values are $7$ and $7$, so the median is $\\frac{7+7}{2}=7$."
+    },
+    {
+      "name": "Compute range and IQR",
+      "example": "For $2, 4, 5, 8, 9, 11, 14$ the range is $14-2=12$. With $Q_1=4$ and $Q_3=11$, the $\\text{IQR}=11-4=7$."
+    },
+    {
+      "name": "Compute mean absolute deviation",
+      "example": "For $5, 7, 9$ the mean is $7$; deviations are $2, 0, 2$, so $\\text{MAD}=\\frac{2+0+2}{3}=\\frac{4}{3}$."
+    },
+    {
+      "name": "Choose center vs. variation in context",
+      "example": "A coach wants one number for the typical height of players and one number for how much heights differ. Which measures should she use? A center (mean or median) for typical height, and a measure of variation (range, IQR, or MAD) for how heights differ."
+    },
+    {
+      "name": "Interpret a single summary number",
+      "example": "Two classes both have a mean quiz score of $80$, but class A has range $6$ and class B has range $40$. What does the difference in range tell you? Class B's scores vary far more even though the typical score is the same."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recall or one computation on a small, already-ordered data set. The student either classifies a named statistic as center vs. variation, or computes one measure where the arithmetic is clean (whole-number mean, odd count so the median is a listed value, range as a subtraction).",
+      "constraints": [
+        "Data set has 3 to 6 values, listed in increasing order",
+        "Mean comes out to a whole number; median is an odd-count middle value",
+        "Only one statistic is requested, and it is named explicitly (e.g. 'find the range')",
+        "No MAD or IQR; only mean, median, or range",
+        "Classification items ask only 'is this a center or a variation measure?'"
+      ]
+    },
+    "Medium": {
+      "description": "Requires an ordering step or a two-part computation. Median of an even-count set (average the two middle values), mean that is a non-whole fraction, range or IQR that requires first sorting an unordered list, or computing both a center and a spread for the same data set.",
+      "constraints": [
+        "Data may be given unordered and must be sorted first",
+        "Even count so the median is the mean of two middle values",
+        "Mean may be a fraction or decimal",
+        "IQR requires locating $Q_1$ and $Q_3$, or a simple MAD on 3 to 5 values",
+        "May ask for two statistics (one center, one spread) on the same set"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning or interpretation. Compute MAD fully, compare two data sets by center and by spread and explain what differs, work backward (find a missing value given the mean), or read a context and decide which kind of measure answers the question and justify why.",
+      "constraints": [
+        "MAD requiring mean, all absolute deviations, then their mean",
+        "Compare two data sets and interpret why equal centers can have different spreads",
+        "Reverse problems: given the mean and all but one value, find the missing value",
+        "Context items that require choosing center vs. variation and justifying the choice in words"
+      ]
+    },
+    "tierSplit": "This standard uses a single ramped worksheet (worksheet.single, 15 items, Easy to Hard). It is a conceptual standard with modest computation, so it does not warrant a tier1/tier2 split. If it were split, tier1 would cover classification plus mean/median/range (Easy to Medium) and tier2 would cover IQR, MAD, comparison, and interpretation (Medium to Hard)."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student confuses a measure of center with a measure of variation",
+      "distractor": "Calls the range a measure of center, or names the mean when asked for a measure of how the values vary"
+    },
+    {
+      "misconception": "Student finds the median without ordering the data first",
+      "distractor": "Reports the physically-middle value of the unordered list, e.g. for $3, 9, 5, 12, 7$ answers $5$ (the third value as written) instead of the true median $7$"
+    },
+    {
+      "misconception": "Student uses the wrong count when computing the mean (divides by a value other than $n$)",
+      "distractor": "Divides the correct sum by the largest value or by the number of distinct values instead of $n$, e.g. $\\frac{40}{4}=10$ instead of $\\frac{40}{5}=8$"
+    },
+    {
+      "misconception": "Student treats range as max plus min instead of max minus min",
+      "distractor": "For values from $2$ to $14$ reports $14+2=16$ instead of $14-2=12$"
+    },
+    {
+      "misconception": "Student computes MAD without taking absolute values, so the deviations cancel to zero",
+      "distractor": "Reports $\\text{MAD}=0$ because the signed deviations from the mean always sum to $0$"
+    },
+    {
+      "misconception": "Student confuses IQR with range, subtracting min from max instead of $Q_1$ from $Q_3$",
+      "distractor": "Reports $Q_3-Q_1$ replaced by $\\text{max}-\\text{min}$, giving the range value when the IQR is asked for"
+    },
+    {
+      "misconception": "Student assumes equal centers mean identical data sets",
+      "distractor": "Claims two sets with the same mean must have the same spread, ignoring that range or MAD can differ"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

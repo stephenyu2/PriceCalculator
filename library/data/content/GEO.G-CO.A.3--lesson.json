@@ -1,0 +1,168 @@
+{
+  "id": "GEO.G-CO.A.3--lesson",
+  "standard": "GEO.G-CO.A.3",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Experiment with transformations in the plane",
+  "clusterCode": "A",
+  "skillName": "Symmetries of Polygons",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "A symmetry of a figure is a rigid motion (a reflection or a rotation) that carries the figure exactly onto itself, vertex to vertex. A reflection symmetry has a line of symmetry; a rotational symmetry has a center and an angle. For a regular $n$-gon the smallest rotation that works is $\\frac{360^\\circ}{n}$, there are $n$ lines of symmetry, and counting reflections and rotations together (including the $0^\\circ$ identity) gives $2n$ symmetries in all. Special quadrilaterals are trickier: a non-square rectangle has rotational and reflective symmetry, while a generic parallelogram has only $180^\\circ$ rotational symmetry and no line of symmetry.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "How many lines of reflective symmetry does a regular hexagon have, and describe where they lie?",
+      "solution": {
+        "steps": [
+          "A regular $n$-gon has exactly $n$ lines of symmetry, so a regular hexagon ($n=6$) has $6$.",
+          "When $n$ is even, half the lines pass through pairs of opposite vertices and half pass through midpoints of pairs of opposite sides.",
+          "So $3$ lines pass through opposite vertices, and $3$ lines pass through the midpoints of opposite sides.",
+          "Total: $3 + 3 = 6$ lines of reflective symmetry."
+        ],
+        "answer": "$6$ lines of symmetry: $3$ through pairs of opposite vertices and $3$ through midpoints of opposite sides."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "List every angle of rotation strictly between $0^\\circ$ and $360^\\circ$ that carries a regular pentagon onto itself.",
+      "solution": {
+        "steps": [
+          "The smallest rotation that maps a regular $n$-gon onto itself is $\\frac{360^\\circ}{n}$.",
+          "For a pentagon, $n=5$, so the smallest angle is $\\frac{360^\\circ}{5} = 72^\\circ$.",
+          "Every multiple of $72^\\circ$ also works, until we reach a full turn.",
+          "The multiples strictly between $0^\\circ$ and $360^\\circ$ are $72^\\circ,\\ 144^\\circ,\\ 216^\\circ,\\ 288^\\circ$.",
+          "We exclude $0^\\circ$ and $360^\\circ$ because they are the identity (full turn), not a new nontrivial rotation."
+        ],
+        "answer": "$72^\\circ,\\ 144^\\circ,\\ 216^\\circ,\\ 288^\\circ$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Describe all the rotations and reflections that carry a rectangle that is not a square onto itself, and give the total number of symmetries including the identity.",
+      "solution": {
+        "steps": [
+          "Reflections: a non-square rectangle has exactly $2$ lines of symmetry, the horizontal line and the vertical line through its center. Its diagonals are NOT lines of symmetry because reflecting across a diagonal sends a long side onto a short side.",
+          "Rotations about the center: turning $180^\\circ$ swaps opposite vertices and carries the rectangle onto itself. A $90^\\circ$ rotation does not work because the side lengths differ.",
+          "Counting nontrivial symmetries: $2$ reflections and the $180^\\circ$ rotation, which is $3$.",
+          "Include the identity ($0^\\circ$ rotation), which always counts as a symmetry: $3 + 1 = 4$.",
+          "So the rectangle has $4$ symmetries in total."
+        ],
+        "answer": "Reflections across the horizontal and vertical center lines, plus a $180^\\circ$ rotation about the center; $4$ symmetries total including the identity."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A rectangle has vertices $(-3,-1),\\ (3,-1),\\ (3,1),\\ (-3,1)$. Show that reflection across the $y$-axis carries the rectangle onto itself.",
+      "solution": {
+        "steps": [
+          "Reflection across the $y$-axis uses the rule $(x,y) \\to (-x,y)$.",
+          "Apply it to each vertex: $(-3,-1) \\to (3,-1)$ and $(3,-1) \\to (-3,-1)$, so these two vertices swap.",
+          "Apply it to the others: $(3,1) \\to (-3,1)$ and $(-3,1) \\to (3,1)$, so these two swap.",
+          "Every image is again a vertex of the same rectangle, so the set of vertices is unchanged.",
+          "Because each vertex maps to a vertex of the figure, the reflection carries the rectangle onto itself."
+        ],
+        "answer": "Yes; under $(x,y)\\to(-x,y)$ the vertices pair up as $(-3,-1)\\leftrightarrow(3,-1)$ and $(-3,1)\\leftrightarrow(3,1)$, so the rectangle maps onto itself."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A figure has exactly $5$ lines of reflective symmetry and rotational symmetry of order $5$ (it maps onto itself under rotations of $72^\\circ,144^\\circ,216^\\circ,288^\\circ$). Identify the figure and state its total number of symmetries.",
+      "solution": {
+        "steps": [
+          "A figure with $n$ lines of symmetry and order-$n$ rotational symmetry is a regular $n$-gon.",
+          "Here $n = 5$ lines and order $5$, so the figure is a regular pentagon.",
+          "A regular $n$-gon has $2n$ symmetries in total: $n$ reflections plus $n$ rotations (counting the identity).",
+          "With $n=5$: $2 \\times 5 = 10$ symmetries.",
+          "These are $5$ reflections plus $5$ rotations ($0^\\circ,72^\\circ,144^\\circ,216^\\circ,288^\\circ$)."
+        ],
+        "answer": "A regular pentagon, with $2\\times 5 = 10$ total symmetries."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "What is the smallest positive angle of rotation that carries a regular octagon onto itself?",
+      "hint": "The smallest rotation angle for a regular $n$-gon is $\\frac{360^\\circ}{n}$.",
+      "solution": {
+        "steps": [
+          "A regular octagon has $n = 8$ sides.",
+          "The smallest rotation angle is $\\frac{360^\\circ}{n} = \\frac{360^\\circ}{8}$.",
+          "$\\frac{360^\\circ}{8} = 45^\\circ$."
+        ],
+        "answer": "$45^\\circ$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "How many lines of reflective symmetry does a regular octagon have?",
+      "hint": "A regular $n$-gon has exactly $n$ lines of symmetry.",
+      "solution": {
+        "steps": [
+          "A regular $n$-gon has $n$ lines of symmetry.",
+          "For an octagon, $n = 8$.",
+          "So it has $8$ lines of symmetry: $4$ through pairs of opposite vertices and $4$ through midpoints of opposite sides."
+        ],
+        "answer": "$8$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A parallelogram is not a rectangle and not a rhombus. Describe all of its symmetries.",
+      "hint": "Does reflecting across a line ever map this figure onto itself? What about a half-turn about its center?",
+      "solution": {
+        "steps": [
+          "A generic parallelogram has no line of reflective symmetry: reflecting across any line distorts its slanted sides, so $0$ lines of symmetry.",
+          "It does have rotational symmetry: a $180^\\circ$ rotation about the center (where the diagonals cross) swaps opposite vertices and maps the figure onto itself.",
+          "No other nontrivial rotation works, so the only symmetries are the identity and the $180^\\circ$ rotation."
+        ],
+        "answer": "Only the $180^\\circ$ rotation about its center (plus the identity); it has $0$ lines of symmetry."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "What is the total number of symmetries (reflections and rotations, including the identity) of a regular dodecagon (a $12$-gon)?",
+      "hint": "A regular $n$-gon has $2n$ symmetries in total.",
+      "solution": {
+        "steps": [
+          "A regular $n$-gon has $2n$ total symmetries: $n$ reflections and $n$ rotations (including the identity).",
+          "Here $n = 12$.",
+          "$2n = 2 \\times 12 = 24$."
+        ],
+        "answer": "$24$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A square has vertices $(-2,-2),\\ (2,-2),\\ (2,2),\\ (-2,2)$. Show that the rotation $(x,y)\\to(-y,x)$ (a $90^\\circ$ counterclockwise turn about the origin) carries the square onto itself.",
+      "hint": "Apply the rule $(x,y)\\to(-y,x)$ to each vertex and check that every image is again a vertex of the square.",
+      "solution": {
+        "steps": [
+          "Apply $(x,y)\\to(-y,x)$ to each vertex.",
+          "$(-2,-2)\\to(2,-2)$ and $(2,-2)\\to(2,2)$.",
+          "$(2,2)\\to(-2,2)$ and $(-2,2)\\to(-2,-2)$.",
+          "The four images are $(2,-2),(2,2),(-2,2),(-2,-2)$, which are exactly the four vertices of the square.",
+          "Since each vertex maps to a vertex of the same square, the $90^\\circ$ rotation carries the square onto itself."
+        ],
+        "answer": "Yes; the rule cycles the vertices $(-2,-2)\\to(2,-2)\\to(2,2)\\to(-2,2)\\to(-2,-2)$, so the square maps onto itself."
+      }
+    }
+  ]
+}

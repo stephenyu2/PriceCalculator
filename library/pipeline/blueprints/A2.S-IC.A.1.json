@@ -1,0 +1,119 @@
+{
+  "standard": "A2.S-IC.A.1",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+  "domainCode": "S-IC",
+  "cluster": "Understand and evaluate random processes underlying statistical experiments",
+  "clusterCode": "A",
+  "skillName": "Statistics and Inference",
+
+  "description": "Students understand that statistics is the process of using a random sample to make inferences about the parameters of a larger population. They distinguish a population from a sample, a parameter (a fixed numeric characteristic of a population, such as $\\mu$ or $p$) from a statistic (a numeric characteristic computed from a sample, such as $\\bar{x}$ or $\\hat{p}$), and explain why a sample must be randomly selected for the inference to be valid. They reason about how sampling variability and bias affect the trustworthiness of conclusions, and judge whether a claimed inference about a population is justified by the way the sample was collected.",
+
+  "subSkills": [
+    "Distinguish a population from a sample and identify each in context",
+    "Distinguish a parameter (population value: $\\mu$, $p$, $\\sigma$) from a statistic (sample value: $\\bar{x}$, $\\hat{p}$, $s$) and assign correct symbols",
+    "Explain why random selection is required for a sample to support a valid inference",
+    "Identify sources of bias (voluntary response, convenience, undercoverage, nonresponse) that make a sample unrepresentative",
+    "Recognize sampling variability: that a statistic changes from sample to sample while the parameter stays fixed",
+    "Judge whether an inference about a population is justified given how the sample was selected",
+    "Use a sample statistic as a point estimate of the corresponding population parameter"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Population vs. sample identification",
+      "example": "A polling firm surveys $1{,}200$ of the $480{,}000$ registered voters in a county about an upcoming ballot measure. Identify the population and the sample in this study."
+    },
+    {
+      "name": "Parameter vs. statistic classification",
+      "example": "Across all $480{,}000$ registered voters, exactly $52\\%$ support the measure; in the firm's sample of $1{,}200$ voters, $49\\%$ said they support it. Which value is the parameter and which is the statistic, and what symbol ($p$ or $\\hat{p}$) represents each?"
+    },
+    {
+      "name": "Why random sampling matters",
+      "example": "Explain why surveying only voters leaving a single downtown coffee shop would not give a trustworthy estimate of the proportion of all county voters who support the measure."
+    },
+    {
+      "name": "Identify the source of bias",
+      "example": "A radio host asks listeners to call in and vote on a tax proposal; $73\\%$ of the $900$ callers oppose it. Name the type of bias present and explain why the host cannot conclude that $73\\%$ of all residents oppose the proposal."
+    },
+    {
+      "name": "Sampling variability and point estimates",
+      "example": "Three different random samples of $50$ students give mean study times of $\\bar{x}_1 = 6.2$, $\\bar{x}_2 = 5.9$, and $\\bar{x}_3 = 6.5$ hours per week. Explain why the three means differ even though the population mean $\\mu$ is a single fixed number, and give the best single estimate of $\\mu$ from sample 1."
+    },
+    {
+      "name": "Judge whether an inference is justified",
+      "example": "A researcher randomly selects $200$ households from a city directory and finds $\\hat{p} = 0.34$ own a pet. Is it reasonable to infer that about $34\\%$ of all households in the city own a pet? Justify your answer in terms of the sampling method."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-concept recall and identification from a short, explicit context. The student labels population vs. sample, or classifies a given number as a parameter vs. a statistic, with the random method stated plainly and no competing distractor reasoning. One step, vocabulary-driven.",
+      "constraints": [
+        "Context names the full group and the surveyed subgroup directly",
+        "Sampling is stated as random; no bias to detect",
+        "Task is to name/identify or match a symbol ($\\mu$, $p$, $\\bar{x}$, $\\hat{p}$), not to evaluate",
+        "Tier1 worksheet opens here"
+      ]
+    },
+    "Medium": {
+      "description": "Two-concept reasoning: the student must both classify (parameter vs. statistic, population vs. sample) and explain a consequence, such as why random selection matters or that a statistic estimates a parameter. Sampling variability is introduced (a statistic changing across samples). Requires a short justification, not just a label.",
+      "constraints": [
+        "Requires choosing the correct symbol AND stating which estimates which ($\\hat{p}$ estimates $p$)",
+        "May ask why a random sample supports inference while still being clearly random",
+        "Introduces multiple sample statistics that differ, testing the fixed-parameter idea",
+        "Boundary between tier1 (ends here) and tier2 (begins here)"
+      ]
+    },
+    "Hard": {
+      "description": "Evaluation and critique: the student is given a flawed or non-random sampling scenario and must diagnose the specific bias, decide whether the inference is justified, and explain in terms of representativeness and randomness. Multi-step reasoning connecting method to validity, often distinguishing among bias types.",
+      "constraints": [
+        "Sampling method is non-random or biased; student must name the bias type",
+        "Requires judging validity of a stated inference and justifying the verdict",
+        "May contrast two studies and decide which supports a trustworthy inference",
+        "Tier2 worksheet ends here"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student swaps population and sample, treating the surveyed subgroup as the whole group",
+      "distractor": "Calls the $1{,}200$ surveyed voters the population and the $480{,}000$ registered voters the sample"
+    },
+    {
+      "misconception": "Student confuses parameter and statistic, attaching the sample symbol to the population value",
+      "distractor": "Labels the population proportion $52\\%$ as $\\hat{p}$ (a statistic) instead of $p$ (a parameter)"
+    },
+    {
+      "misconception": "Student believes a larger sample size overcomes biased selection",
+      "distractor": "Concludes the call-in poll is trustworthy because it had $900$ responses, ignoring that it is a voluntary-response sample"
+    },
+    {
+      "misconception": "Student thinks a convenience or voluntary-response sample is acceptable as long as data was collected",
+      "distractor": "Says the coffee-shop survey validly estimates all voters because real people were asked"
+    },
+    {
+      "misconception": "Student treats a sample statistic as the exact population parameter, denying sampling variability",
+      "distractor": "Claims the three sample means differing means at least two of them are wrong, rather than reflecting natural sampling variability around a fixed $\\mu$"
+    },
+    {
+      "misconception": "Student reverses the direction of inference, using a population fact to describe one sample as if statistics never vary",
+      "distractor": "Asserts every random sample of voters must show exactly $52\\%$ support because that is the population value"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

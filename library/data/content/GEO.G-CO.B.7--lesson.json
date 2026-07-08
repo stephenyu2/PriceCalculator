@@ -1,0 +1,174 @@
+{
+  "id": "GEO.G-CO.B.7--lesson",
+  "standard": "GEO.G-CO.B.7",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Understand congruence in terms of rigid motions",
+  "clusterCode": "B",
+  "skillName": "Congruent Triangles via Rigid Motions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Two triangles are congruent exactly when some sequence of rigid motions (translations, rotations, and reflections) maps one onto the other. Because rigid motions preserve distance and angle measure, congruent triangles have all three pairs of corresponding sides and all three pairs of corresponding angles congruent. This is a biconditional: a mapping forces the parts to match, and matching parts force a mapping to exist. Reading a congruence statement like $\\triangle ABC \\cong \\triangle DEF$ in matched-letter order tells you which parts correspond. In this lesson you will name corresponding parts, find missing measures with CPCTC, justify why parts are congruent, build mapping sequences from coordinates, and decide when a reflection is required.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Given $\\triangle ABC \\cong \\triangle DEF$, list the three pairs of corresponding sides and the three pairs of corresponding angles.",
+      "solution": {
+        "steps": [
+          "Read the congruence statement in matched-letter order: $A \\leftrightarrow D$, $B \\leftrightarrow E$, $C \\leftrightarrow F$.",
+          "A corresponding angle is named by the matched vertex. So $\\angle A \\leftrightarrow \\angle D$, $\\angle B \\leftrightarrow \\angle E$, $\\angle C \\leftrightarrow \\angle F$.",
+          "A corresponding side is named by the matched pair of vertices at its endpoints. Side $AB$ uses vertices $A,B$, which match $D,E$, so $AB \\leftrightarrow DE$.",
+          "Likewise $BC$ uses $B,C \\leftrightarrow E,F$, so $BC \\leftrightarrow EF$, and $CA$ uses $C,A \\leftrightarrow F,D$, so $CA \\leftrightarrow FD$.",
+          "These pairs come straight from the order of the letters, not from the picture or alphabetical order."
+        ],
+        "answer": "Sides: $AB \\leftrightarrow DE$, $BC \\leftrightarrow EF$, $CA \\leftrightarrow FD$. Angles: $\\angle A \\leftrightarrow \\angle D$, $\\angle B \\leftrightarrow \\angle E$, $\\angle C \\leftrightarrow \\angle F$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Given $\\triangle ABC \\cong \\triangle DEF$ with $AB = 8$, $BC = 5$, and $m\\angle A = 47^\\circ$, find $DE$ and $m\\angle D$.",
+      "solution": {
+        "steps": [
+          "Because $\\triangle ABC \\cong \\triangle DEF$, a sequence of rigid motions maps $\\triangle ABC$ onto $\\triangle DEF$.",
+          "Rigid motions preserve distance, so each side equals its corresponding side (CPCTC). The corresponding side of $AB$ is $DE$, so $DE = AB = 8$.",
+          "Rigid motions preserve angle measure, so each angle equals its corresponding angle. The corresponding angle of $\\angle A$ is $\\angle D$, so $m\\angle D = m\\angle A = 47^\\circ$.",
+          "The length $BC = 5$ was extra information; it corresponds to $EF$, not to $DE$ or $\\angle D$.",
+          "Do not scale the values: a rigid motion never changes a length, so $DE = 8$, not $16$."
+        ],
+        "answer": "$DE = 8$ and $m\\angle D = 47^\\circ$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A sequence of rigid motions maps $\\triangle PQR$ onto $\\triangle STU$. Explain why $PQ = ST$ and why $m\\angle Q = m\\angle T$, naming the property of rigid motions used in each case.",
+      "solution": {
+        "steps": [
+          "Identify corresponding parts from the order of the letters: $P \\leftrightarrow S$, $Q \\leftrightarrow T$, $R \\leftrightarrow U$. So side $PQ$ corresponds to side $ST$, and $\\angle Q$ corresponds to $\\angle T$.",
+          "The mapping sends $P$ to $S$ and $Q$ to $T$, so the image of segment $PQ$ is segment $ST$.",
+          "Rigid motions preserve distance (length). Since $PQ$ maps onto $ST$, the two segments have the same length, so $PQ = ST$.",
+          "The mapping sends $\\angle Q$ (at vertex $Q$) onto $\\angle T$ (at vertex $T$).",
+          "Rigid motions preserve angle measure. Since $\\angle Q$ maps onto $\\angle T$, the two angles have equal measure, so $m\\angle Q = m\\angle T$. Note the justification is distance and angle preservation, not orientation or area preservation."
+        ],
+        "answer": "$PQ = ST$ because rigid motions preserve distance (length); $m\\angle Q = m\\angle T$ because rigid motions preserve angle measure."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Triangle $ABC$ has vertices $A(0, 0)$, $B(4, 0)$, $C(4, 3)$, and triangle $DEF$ has vertices $D(1, 1)$, $E(5, 1)$, $F(5, 4)$. Describe a sequence of rigid motions that maps $\\triangle ABC$ onto $\\triangle DEF$, and conclude that $\\triangle ABC \\cong \\triangle DEF$.",
+      "solution": {
+        "steps": [
+          "Compare a starting vertex: $A(0,0)$ should land on $D(1,1)$. Translate $\\triangle ABC$ by the rule $(x, y) \\to (x + 1, y + 1)$.",
+          "Apply the translation to all three vertices: $A(0,0) \\to (1,1)$, $B(4,0) \\to (5,1)$, $C(4,3) \\to (5,4)$.",
+          "Compare the images to $\\triangle DEF$: $(1,1) = D$, $(5,1) = E$, $(5,4) = F$. All three vertices coincide with their corresponding vertices.",
+          "Check orientation to confirm no reflection is needed: both triangles list their vertices counterclockwise, so a single translation (which preserves orientation) suffices here.",
+          "A single rigid motion (this translation) carries $\\triangle ABC$ exactly onto $\\triangle DEF$. By the definition of congruence in terms of rigid motions, $\\triangle ABC \\cong \\triangle DEF$."
+        ],
+        "answer": "Translate by $(x, y) \\to (x + 1, y + 1)$; it maps $A \\to D$, $B \\to E$, $C \\to F$, so $\\triangle ABC \\cong \\triangle DEF$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Triangle $ABC$ has vertices $A(0, 0)$, $B(4, 0)$, $C(4, 3)$, and triangle $DEF$ has vertices $D(0, 0)$, $E(4, 0)$, $F(4, -3)$. Decide whether a reflection must be part of any sequence of rigid motions that maps $\\triangle ABC$ onto $\\triangle DEF$, and explain why.",
+      "solution": {
+        "steps": [
+          "Note that $A = D$ and $B = E$ already, so the side $AB$ lies exactly on top of side $DE$ along the $x$-axis.",
+          "Find the orientation of each triangle. Going $A \\to B \\to C$, the turn is counterclockwise (positive orientation): from $(0,0)$ to $(4,0)$ to $(4,3)$ sweeps upward to the left.",
+          "Going $D \\to E \\to F$, the turn is clockwise (negative orientation): from $(0,0)$ to $(4,0)$ to $(4,-3)$ sweeps downward. The two triangles have opposite orientation.",
+          "Translations and rotations preserve orientation, so no combination of them alone can turn a counterclockwise triangle into a clockwise one. A reflection reverses orientation.",
+          "Therefore a reflection is required. Concretely, reflecting $\\triangle ABC$ across the $x$-axis sends $A(0,0) \\to (0,0) = D$, $B(4,0) \\to (4,0) = E$, $C(4,3) \\to (4,-3) = F$, mapping $\\triangle ABC$ onto $\\triangle DEF$."
+        ],
+        "answer": "Yes, a reflection is required, because the triangles have opposite orientation and only a reflection reverses orientation. Reflecting across the $x$-axis maps $\\triangle ABC$ onto $\\triangle DEF$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Given $\\triangle MNP \\cong \\triangle QRS$, name the side that corresponds to $NP$ and the angle that corresponds to $\\angle M$.",
+      "hint": "Match the letters in order: $M \\leftrightarrow Q$, $N \\leftrightarrow R$, $P \\leftrightarrow S$. A side is named by its two endpoint letters.",
+      "solution": {
+        "steps": [
+          "Match the vertices in the order of the statement: $M \\leftrightarrow Q$, $N \\leftrightarrow R$, $P \\leftrightarrow S$.",
+          "Side $NP$ has endpoints $N$ and $P$, which match $R$ and $S$, so the corresponding side is $RS$.",
+          "Angle $\\angle M$ is at vertex $M$, which matches $Q$, so the corresponding angle is $\\angle Q$."
+        ],
+        "answer": "$NP$ corresponds to $RS$, and $\\angle M$ corresponds to $\\angle Q$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Given $\\triangle GHK \\cong \\triangle LMN$ with $GH = 12$, $m\\angle H = 35^\\circ$, and $m\\angle G = 90^\\circ$, find $LM$ and $m\\angle N$.",
+      "hint": "Use CPCTC for $LM$. For $m\\angle N$, first find $m\\angle K$ with the triangle angle sum, then use correspondence.",
+      "solution": {
+        "steps": [
+          "Match vertices: $G \\leftrightarrow L$, $H \\leftrightarrow M$, $K \\leftrightarrow N$.",
+          "Side $GH$ corresponds to $LM$. Rigid motions preserve distance, so $LM = GH = 12$.",
+          "Find the third angle of $\\triangle GHK$ using the angle sum: $m\\angle K = 180^\\circ - 90^\\circ - 35^\\circ = 55^\\circ$.",
+          "Angle $\\angle K$ corresponds to $\\angle N$, and rigid motions preserve angle measure, so $m\\angle N = m\\angle K = 55^\\circ$."
+        ],
+        "answer": "$LM = 12$ and $m\\angle N = 55^\\circ$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A sequence of rigid motions maps $\\triangle XYZ$ onto $\\triangle JKL$. Explain why $YZ = KL$, and state which property of rigid motions justifies your reasoning.",
+      "hint": "First find which side corresponds to $YZ$, then recall what rigid motions preserve.",
+      "solution": {
+        "steps": [
+          "Match vertices in order: $X \\leftrightarrow J$, $Y \\leftrightarrow K$, $Z \\leftrightarrow L$. So side $YZ$ corresponds to side $KL$.",
+          "The mapping sends $Y$ to $K$ and $Z$ to $L$, so the image of segment $YZ$ is segment $KL$.",
+          "Rigid motions preserve distance (length), so a segment and its image have the same length.",
+          "Therefore $YZ = KL$. The justification is length preservation, not orientation or area."
+        ],
+        "answer": "$YZ = KL$ because $YZ$ corresponds to $KL$ and rigid motions preserve distance (length)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Triangle $ABC$ has vertices $A(1, 1)$, $B(5, 1)$, $C(5, 4)$, and triangle $DEF$ has vertices $D(1, -2)$, $E(5, -2)$, $F(5, -5)$. Describe a single rigid motion that maps $\\triangle ABC$ onto $\\triangle DEF$ and conclude that the triangles are congruent.",
+      "hint": "Compare a vertex of $\\triangle ABC$ with its corresponding vertex of $\\triangle DEF$ to find a translation rule, then check all three vertices.",
+      "solution": {
+        "steps": [
+          "Compare corresponding vertices $A(1,1)$ and $D(1,-2)$: the $x$-coordinate is unchanged and the $y$-coordinate drops by $3$. Try the translation $(x, y) \\to (x, y - 3)$.",
+          "Apply it to every vertex: $A(1,1) \\to (1,-2)$, $B(5,1) \\to (5,-2)$, $C(5,4) \\to (5,1)$. Recompute $C$: $(5, 4-3) = (5, 1)$, which is not $F$.",
+          "Re-examine: $F = (5, -5)$, and $C(5,4) \\to (5, 4-3) = (5,1)$, so the rule $y - 3$ is wrong for $C$. Instead test $(x, y) \\to (x, y - 6)$ does not fix $A$. Recheck $A$ to $D$: $1$ to $-2$ is a drop of $3$; $C$ to $F$: $4$ to $-5$ is a drop of $9$. The vertical shift is not constant, so this is not a pure translation.",
+          "Since $A,B$ map down by $3$ but $C$ must map down by $9$, the bottom edge $AB$ slides to $DE$ while $C$ ends up below the line. The triangles have opposite orientation: $A \\to B \\to C$ is counterclockwise, while $D \\to E \\to F$ is clockwise.",
+          "Use a reflection plus a translation, or a single glide reflection. Reflect across the line $y = -\\tfrac{1}{2}$ (the horizontal line halfway between $y=1$ and $y=-2$): $A(1,1) \\to (1,-2) = D$, $B(5,1) \\to (5,-2) = E$, $C(5,4) \\to (5,-5) = F$. All three vertices land on $\\triangle DEF$.",
+          "A single reflection across $y = -\\tfrac{1}{2}$ maps $\\triangle ABC$ onto $\\triangle DEF$, so by the definition of congruence in terms of rigid motions, $\\triangle ABC \\cong \\triangle DEF$."
+        ],
+        "answer": "Reflect across the horizontal line $y = -\\tfrac{1}{2}$; it maps $A \\to D$, $B \\to E$, $C \\to F$, so $\\triangle ABC \\cong \\triangle DEF$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Two triangles have all three pairs of corresponding sides congruent and all three pairs of corresponding angles congruent. Is that enough to conclude the triangles are congruent? Justify your answer using the definition of congruence in terms of rigid motions.",
+      "hint": "Congruence is a biconditional. Think about whether matching all six parts forces a mapping sequence to exist.",
+      "solution": {
+        "steps": [
+          "Recall the definition: two figures are congruent exactly when a sequence of rigid motions maps one onto the other. This is a biconditional, so the reverse direction also holds.",
+          "Suppose all three pairs of corresponding sides and all three pairs of corresponding angles are congruent. Translate the first triangle so one vertex lands on its corresponding vertex.",
+          "Rotate about that shared vertex so one side aligns with its corresponding side; the sides match because the corresponding side lengths are equal.",
+          "If the third vertex is already on the correct side, the triangles coincide. If it is on the opposite side, reflect across the common side. The equal corresponding angles and sides guarantee the third vertex then lands exactly on its match.",
+          "This sequence of rigid motions maps the first triangle onto the second, so by definition the triangles are congruent. Yes, matching all six corresponding parts is sufficient."
+        ],
+        "answer": "Yes. By the biconditional definition, six congruent corresponding parts force a translation, rotation, and (if orientation differs) a reflection that maps one triangle onto the other, so the triangles are congruent."
+      }
+    }
+  ]
+}

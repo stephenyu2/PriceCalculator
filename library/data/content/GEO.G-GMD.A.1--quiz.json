@@ -1,0 +1,156 @@
+{
+  "id": "GEO.G-GMD.A.1--quiz",
+  "standard": "GEO.G-GMD.A.1",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Geometric Measurement and Dimension",
+  "domainCode": "G-GMD",
+  "cluster": "Explain volume formulas and use them to solve problems",
+  "clusterCode": "A",
+  "skillName": "Deriving Circle and Volume Formulas",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Eight multiple-choice questions on the informal arguments behind the circle and volume formulas: the definition of $\\pi$, the sector-rearrangement argument for circle area, Cavalieri's principle, the one-third factor for cones and pyramids, the role of the limit, and applying the justified formulas to exact values.",
+  "items": [
+    {
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "The number $\\pi$ is defined as the constant ratio $\\pi=\\frac{C}{d}$ for every circle, where $C$ is the circumference and $d$ is the diameter. Multiplying both sides by $d$ gives which equation?\nA) $C=\\pi d$\nB) $C=\\frac{\\pi}{d}$\nC) $C=\\pi r^2$\nD) $d=\\pi C$",
+      "answer": "A) $C=\\pi d$",
+      "solution": {
+        "steps": [
+          "Start from the definition $\\pi=\\frac{C}{d}$.",
+          "Multiply both sides by $d$: $\\pi\\cdot d=\\frac{C}{d}\\cdot d=C$, so $C=\\pi d$.",
+          "A is correct.",
+          "B keeps $d$ in the denominator, which is the original ratio, not the result of multiplying by $d$.",
+          "C is the area formula, a second-degree expression, not the circumference.",
+          "D solves for the wrong variable and misplaces $\\pi$."
+        ],
+        "answer": "A) $C=\\pi d$"
+      }
+    },
+    {
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "A circle has radius $5$. Using the justified formula $A=\\pi r^2$, what is its exact area?\nA) $10\\pi$\nB) $25\\pi$\nC) $5\\pi$\nD) $50\\pi$",
+      "answer": "B) $25\\pi$",
+      "solution": {
+        "steps": [
+          "Substitute $r=5$ into $A=\\pi r^2$: $A=\\pi(5)^2$.",
+          "Square the radius: $5^2=25$, so $A=25\\pi$.",
+          "B is correct.",
+          "A comes from computing $2\\pi r$ (the circumference), confusing area with circumference.",
+          "C comes from forgetting to square the radius, treating $\\pi r^2$ as $\\pi r=5\\pi$.",
+          "D doubles the correct value, as if the area were $2\\pi r^2$."
+        ],
+        "answer": "B) $25\\pi$"
+      }
+    },
+    {
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "In the sector-rearrangement argument, a disk of radius $r$ is cut into many thin congruent sectors and interlocked into a shape that approaches a rectangle. What is the height of that rectangle?\nA) $2\\pi r$\nB) $\\pi r$\nC) $r$\nD) $\\frac{r}{2}$",
+      "answer": "C) $r$",
+      "solution": {
+        "steps": [
+          "Each sector is bounded by two radii of length $r$, and these radii form the short sides of the rearranged figure.",
+          "So the rectangle's height equals the radius, $r$.",
+          "C is correct.",
+          "A is the full circumference, which is the total length contributed by all the arcs, not the height.",
+          "B is half the circumference, $\\pi r$, which is the rectangle's base, not its height.",
+          "D halves the radius, which has no role in the argument."
+        ],
+        "answer": "C) $r$"
+      }
+    },
+    {
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "In the sector-rearrangement argument the base of the near-rectangle is half the circumference and the height is $r$. Which computation gives the resulting area formula?\nA) $C\\cdot r=2\\pi r\\cdot r=2\\pi r^2$\nB) $\\frac{1}{2}C\\cdot r=\\pi r\\cdot r=\\pi r^2$\nC) $\\frac{1}{2}C\\cdot r=\\pi r\\cdot r=\\pi r$\nD) $\\frac{1}{2}d\\cdot r=r\\cdot r=r^2$",
+      "answer": "B) $\\frac{1}{2}C\\cdot r=\\pi r\\cdot r=\\pi r^2$",
+      "solution": {
+        "steps": [
+          "The base is half the circumference: $\\frac{1}{2}C=\\frac{1}{2}(2\\pi r)=\\pi r$, and the height is $r$.",
+          "Area of the rectangle is base times height: $\\pi r\\cdot r=\\pi r^2$.",
+          "B is correct.",
+          "A uses the full circumference $C$ as the base instead of $\\frac{1}{2}C$, doubling the result to $2\\pi r^2$.",
+          "C multiplies correctly but mis-simplifies $\\pi r\\cdot r$ as $\\pi r$, dropping a factor of $r$.",
+          "D replaces the half-circumference base with $\\frac{1}{2}d=r$, abandoning $\\pi$ entirely."
+        ],
+        "answer": "B) $\\frac{1}{2}C\\cdot r=\\pi r\\cdot r=\\pi r^2$"
+      }
+    },
+    {
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "A cone and a cylinder share the same base radius $r$ and the same height $h$, and exactly three such cones fill the cylinder. What is the exact volume of a cone with $r=3$ and $h=7$?\nA) $63\\pi$\nB) $189\\pi$\nC) $21\\pi$\nD) $7\\pi$",
+      "answer": "C) $21\\pi$",
+      "solution": {
+        "steps": [
+          "Three cones fill the cylinder, so the cone's volume is $\\frac{1}{3}$ of the cylinder's: $V=\\frac{1}{3}\\pi r^2 h$.",
+          "Substitute $r=3$, $h=7$: $V=\\frac{1}{3}\\pi(3)^2(7)=\\frac{1}{3}\\pi(9)(7)=\\frac{1}{3}\\pi(63)=21\\pi$.",
+          "C is correct.",
+          "A is $\\pi r^2 h=63\\pi$, the full cylinder volume, omitting the $\\frac{1}{3}$ factor.",
+          "B multiplies by $3$ instead of $\\frac{1}{3}$, giving $3\\pi r^2 h=189\\pi$.",
+          "D forgets to square the radius, computing $\\frac{1}{3}\\pi(3)(7)=7\\pi$."
+        ],
+        "answer": "C) $21\\pi$"
+      }
+    },
+    {
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Cavalieri's principle states that two solids have equal volume when which condition holds?\nA) The solids are congruent.\nB) They have the same height and the same cross-sectional area at every level.\nC) They have the same total surface area.\nD) They have the same base area only.",
+      "answer": "B) They have the same height and the same cross-sectional area at every level.",
+      "solution": {
+        "steps": [
+          "Cavalieri's principle: if two solids have equal heights and, at every level, equal cross-sectional areas, then they have equal volume.",
+          "B states exactly this condition and is correct.",
+          "A is too strong; the solids need not be congruent (an oblique cylinder and a right cylinder of matching cross-sections have equal volume though they are not congruent).",
+          "C uses surface area, which is irrelevant to the principle.",
+          "D requires matching only at the base, but Cavalieri requires matching cross-sections at every level."
+        ],
+        "answer": "B) They have the same height and the same cross-sectional area at every level."
+      }
+    },
+    {
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A right circular cylinder and an oblique (slanted) cylinder have the same height and the same circular cross-section of area $\\pi r^2$ at every level. Which statement is correct?\nA) They have equal volume because every cross-section matches, by Cavalieri's principle.\nB) The right cylinder has greater volume because the oblique one is slanted.\nC) The oblique cylinder has greater volume because it is longer along its slant.\nD) Their volumes cannot be compared without knowing the slant angle.",
+      "answer": "A) They have equal volume because every cross-section matches, by Cavalieri's principle.",
+      "solution": {
+        "steps": [
+          "Cavalieri's principle requires only equal height and equal cross-sectional area at every level, not congruence or uprightness.",
+          "Both solids have height $h$ and cross-sectional area $\\pi r^2$ at every level, so their volumes are equal, both $\\pi r^2 h$.",
+          "A is correct.",
+          "B and C wrongly assume that slanting changes volume; slant length is irrelevant because volume depends on perpendicular height and cross-sectional area, which match.",
+          "D claims the slant angle matters, but Cavalieri's principle makes the comparison without it."
+        ],
+        "answer": "A) They have equal volume because every cross-section matches, by Cavalieri's principle."
+      }
+    },
+    {
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "In the sector-rearrangement argument for circle area, why does the rearranged figure give the EXACT formula $A=\\pi r^2$ only in a limit?\nA) Because the area formula is only an approximation that mathematicians agreed to round.\nB) Because for any finite number of sectors the top and bottom edges stay bumpy and the ends stay slanted; only as the number of sectors increases without bound do they straighten into a true rectangle.\nC) Because a finite number of sectors already forms an exact rectangle, so no limit is needed.\nD) Because the height changes from $r$ to $\\pi r$ as more sectors are added.",
+      "answer": "B) Because for any finite number of sectors the top and bottom edges stay bumpy and the ends stay slanted; only as the number of sectors increases without bound do they straighten into a true rectangle.",
+      "solution": {
+        "steps": [
+          "With finitely many sectors, the rearranged figure has a scalloped top and bottom (made of arcs) and slanted end edges, so it is only approximately a rectangle.",
+          "As the number of sectors increases without bound, the arcs flatten and the ends become vertical, so the figure approaches an exact rectangle of base $\\pi r$ and height $r$, giving $A=\\pi r^2$ exactly.",
+          "B describes this limiting process correctly.",
+          "A is false; the formula is exact, not a rounded convention.",
+          "C ignores the limit, treating a finite dissection as already exact, which it is not.",
+          "D is false; the height stays $r$ throughout, while $\\pi r$ is the base, not the height."
+        ],
+        "answer": "B) Because for any finite number of sectors the top and bottom edges stay bumpy and the ends stay slanted; only as the number of sectors increases without bound do they straighten into a true rectangle."
+      }
+    }
+  ]
+}

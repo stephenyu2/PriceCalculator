@@ -1,0 +1,120 @@
+{
+  "standard": "GEO.S-CP.B.6",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Use the rules of probability to compute probabilities of compound events in a uniform probability model",
+  "clusterCode": "B",
+  "skillName": "Computing Conditional Probability",
+
+  "description": "Students find the conditional probability of $A$ given $B$ by treating $B$ as the new, restricted sample space and counting the fraction of $B$'s outcomes that also belong to $A$. They compute $P(A \\mid B) = \\dfrac{P(A \\cap B)}{P(B)}$ (equivalently $\\dfrac{n(A \\cap B)}{n(B)}$ for equally likely outcomes), extract counts from two-way tables, Venn diagrams, and word problems, and interpret the resulting probability in the context of the model.",
+
+  "subSkills": [
+    "Identify the restricting (conditioning) event $B$ and treat its outcomes as the new sample space",
+    "Count or compute $n(A \\cap B)$, the outcomes in $B$ that also belong to $A$",
+    "Apply $P(A \\mid B) = \\dfrac{n(A \\cap B)}{n(B)} = \\dfrac{P(A \\cap B)}{P(B)}$",
+    "Read joint, marginal, and conditional counts from a two-way frequency table",
+    "Distinguish $P(A \\mid B)$ from $P(B \\mid A)$ and from $P(A \\cap B)$",
+    "Interpret a conditional probability as a statement about the restricted population, in context"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Two-way table lookup",
+      "example": "A survey of $50$ students records grade level and whether they ride the bus. Of the $20$ freshmen, $12$ ride the bus. Find the probability a student rides the bus given that they are a freshman. Answer: $P(\\text{bus} \\mid \\text{freshman}) = \\dfrac{12}{20} = \\dfrac{3}{5}$."
+    },
+    {
+      "name": "Restricted-sample-space counting",
+      "example": "A fair die is rolled. Given that the result is even, find the probability it is greater than $3$. The conditioning event is $\\{2,4,6\\}$, so $P(>3 \\mid \\text{even}) = \\dfrac{2}{3}$ (the outcomes $4$ and $6$)."
+    },
+    {
+      "name": "Venn diagram counts",
+      "example": "In a class of $30$, $18$ play a sport ($S$) and $10$ are in band ($B$), with $6$ in both. Find $P(B \\mid S) = \\dfrac{n(S \\cap B)}{n(S)} = \\dfrac{6}{18} = \\dfrac{1}{3}$."
+    },
+    {
+      "name": "Conditional from probabilities (formula)",
+      "example": "Given $P(A \\cap B) = \\dfrac{1}{6}$ and $P(B) = \\dfrac{1}{2}$, find $P(A \\mid B) = \\dfrac{1/6}{1/2} = \\dfrac{1}{3}$."
+    },
+    {
+      "name": "Compare and interpret",
+      "example": "Using a two-way table, compute both $P(A \\mid B)$ and $P(A)$ and state, in context, whether knowing $B$ changed the likelihood of $A$ (informal independence check)."
+    },
+    {
+      "name": "Reverse / direction-aware",
+      "example": "From the same table, compute $P(\\text{freshman} \\mid \\text{bus})$ and contrast it with $P(\\text{bus} \\mid \\text{freshman})$ to show the two conditionals differ."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step restricted-sample-space count. The conditioning event $B$ and the count $n(A \\cap B)$ are given directly or read from one cell pair of a small two-way table or short outcome list. Answer is a simple fraction, reduced once.",
+      "constraints": [
+        "Both $n(A \\cap B)$ and $n(B)$ are read directly; no row/column totals must be computed",
+        "Sample spaces are small (single die, coin pair, table totals $\\le 50$)",
+        "Only one conditional asked; no comparison or interpretation beyond stating the fraction",
+        "Result reduces with at most one simplification, e.g. $\\dfrac{12}{20} = \\dfrac{3}{5}$"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step: the student must first compute a needed total (a row or column sum, a union via $n(A \\cap B)$, or $P(B)$ from a probability statement) before forming the fraction. May require choosing the correct conditioning direction.",
+      "constraints": [
+        "$n(B)$ or $n(A \\cap B)$ must be derived (sum a row/column, use $n(A)+n(B)-n(A\\cap B)$, or read $P(\\cdot)$ and convert)",
+        "Apply $P(A \\mid B) = \\dfrac{P(A \\cap B)}{P(B)}$ with fractional probabilities",
+        "Student must select $P(A \\mid B)$ vs $P(B \\mid A)$ from the wording",
+        "Table or Venn diagram has $4$+ cells/regions"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step setup and/or interpretation. The student builds the table or counts from a verbal description, computes a conditional, and then compares it to a marginal probability or another conditional and interprets the result in context (e.g. informal independence, or which subgroup is more likely).",
+      "constraints": [
+        "Requires constructing counts from prose before any division",
+        "Asks for a comparison ($P(A \\mid B)$ vs $P(A)$, or two conditionals) and a contextual interpretation",
+        "May chain $P(A \\cap B) = P(A \\mid B)\\,P(B)$ in reverse to back out a missing count",
+        "Answer must be stated as an exact fraction and interpreted in the model's language"
+      ]
+    },
+    "tierSplit": "If split into two worksheets: tier1 covers Easy to Medium (direct lookups and single-derived-total problems, archetypes 'Two-way table lookup', 'Restricted-sample-space counting', 'Venn diagram counts', 'Conditional from probabilities'). tier2 covers Medium to Hard (formula-based conditionals, direction-aware reverse conditionals, and the compare-and-interpret archetypes), with no item overlap. Most uses take the single ramped worksheet."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student uses the whole sample space as the denominator instead of restricting to $B$",
+      "distractor": "Computes $P(A \\cap B) = \\dfrac{n(A \\cap B)}{n(\\text{total})}$, e.g. $\\dfrac{12}{50}$, instead of $\\dfrac{n(A \\cap B)}{n(B)} = \\dfrac{12}{20}$"
+    },
+    {
+      "misconception": "Student inverts the condition and computes $P(B \\mid A)$ instead of $P(A \\mid B)$",
+      "distractor": "Reports $\\dfrac{n(A \\cap B)}{n(A)}$ in place of $\\dfrac{n(A \\cap B)}{n(B)}$, swapping the roles of the two events"
+    },
+    {
+      "misconception": "Student divides by $P(A)$ rather than by $P(B)$ in the conditional formula",
+      "distractor": "Computes $\\dfrac{P(A \\cap B)}{P(A)}$, e.g. from $P(A \\cap B)=\\dfrac{1}{6}$, $P(A)=\\dfrac{1}{3}$ gives $\\dfrac{1}{2}$ instead of dividing by $P(B)$"
+    },
+    {
+      "misconception": "Student uses the marginal $P(A)$ and ignores the conditioning information entirely",
+      "distractor": "Answers $P(A) = \\dfrac{n(A)}{n(\\text{total})}$ as if the 'given $B$' clause had no effect"
+    },
+    {
+      "misconception": "Student multiplies the two probabilities instead of dividing",
+      "distractor": "Computes $P(A \\cap B) \\cdot P(B)$ or $P(A)\\cdot P(B)$, e.g. $\\dfrac{1}{6}\\cdot\\dfrac{1}{2}=\\dfrac{1}{12}$, treating it like an 'and' problem"
+    },
+    {
+      "misconception": "Student takes the complement wrong, using $n(B) - n(A \\cap B)$ in the numerator",
+      "distractor": "Reports outcomes in $B$ that are NOT in $A$, e.g. $\\dfrac{8}{20}$ instead of $\\dfrac{12}{20}$"
+    }
+  ],
+
+  "_comment_itemCounts": "lesson 5 worked + 5 practice; single ramped worksheet of 15 (Easy->Hard); tier1/tier2 of 15 each only if split; quiz 8 multiple choice with distractors drawn from commonMisconceptions.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

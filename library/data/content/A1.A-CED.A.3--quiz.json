@@ -1,0 +1,167 @@
+{
+  "id": "A1.A-CED.A.3--quiz",
+  "standard": "A1.A-CED.A.3",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Creating Equations",
+  "domainCode": "A-CED",
+  "cluster": "Create equations that describe numbers or relationships",
+  "clusterCode": "A",
+  "skillName": "Constraints via Equations and Inequalities",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "Translate real-world restrictions into equations and inequalities, build systems of constraints, and judge whether a candidate solution is viable in context. Choose the single best answer for each question.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Notebooks cost $\\$3$ each and pens cost $\\$2$ each. Let $x$ be the number of notebooks and $y$ the number of pens. You can spend at most $\\$30$. Which inequality represents the spending constraint?\nA) $3x + 2y \\le 30$\nB) $3x + 2y \\ge 30$\nC) $3x + 2y = 30$\nD) $2x + 3y \\le 30$",
+      "answer": "A) $3x + 2y \\le 30$",
+      "solution": {
+        "steps": [
+          "Cost of notebooks is $3x$ and cost of pens is $2y$, so total spending is $3x + 2y$.",
+          "'At most $\\$30$' means spending can be $30$ or less, which is $\\le 30$.",
+          "This gives $3x + 2y \\le 30$, so A is correct.",
+          "B reverses the direction: $\\ge$ would mean you must spend at least $\\$30$, not at most.",
+          "C uses an equation, forcing the total to be exactly $\\$30$ instead of allowing any amount up to $\\$30$.",
+          "D attaches the coefficients to the wrong variables ($2$ on $x$ and $3$ on $y$), but notebooks ($x$) cost $\\$3$ and pens ($y$) cost $\\$2$."
+        ],
+        "answer": "A) $3x + 2y \\le 30$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "A food booth must sell at least $50$ tickets to break even. Adult tickets sold are $a$ and child tickets sold are $c$. Which inequality represents this requirement?\nA) $a + c \\le 50$\nB) $a + c \\ge 50$\nC) $a + c = 50$\nD) $a + c > 50$",
+      "answer": "B) $a + c \\ge 50$",
+      "solution": {
+        "steps": [
+          "The total number of tickets sold is $a + c$.",
+          "'At least $50$' means the total must be $50$ or more, which is $\\ge 50$.",
+          "This gives $a + c \\ge 50$, so B is correct.",
+          "A reverses the direction: $\\le$ would cap the tickets at $50$ instead of requiring a minimum.",
+          "C uses an equation, forcing exactly $50$ rather than $50$ or more.",
+          "D uses a strict $>$, which would exclude selling exactly $50$ tickets, but $50$ does meet 'at least $50$.'"
+        ],
+        "answer": "B) $a + c \\ge 50$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "A delivery van can carry no more than $1200$ pounds. Each large box weighs $40$ pounds and each small box weighs $25$ pounds. Let $b$ be the number of large boxes and $s$ the number of small boxes. Which inequality represents the weight constraint?\nA) $40b + 25s \\ge 1200$\nB) $25b + 40s \\le 1200$\nC) $40b + 25s \\le 1200$\nD) $40b + 25s = 1200$",
+      "answer": "C) $40b + 25s \\le 1200$",
+      "solution": {
+        "steps": [
+          "Total weight is $40b$ from large boxes plus $25s$ from small boxes, so $40b + 25s$.",
+          "'No more than $1200$ pounds' means the weight can be $1200$ or less, which is $\\le 1200$.",
+          "This gives $40b + 25s \\le 1200$, so C is correct.",
+          "A reverses the direction with $\\ge$, requiring a minimum weight instead of a maximum.",
+          "B attaches the weights to the wrong variables ($25$ on $b$ and $40$ on $s$).",
+          "D uses an equation, forcing the load to be exactly $1200$ pounds."
+        ],
+        "answer": "C) $40b + 25s \\le 1200$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "A farmer plants $x$ acres of corn and $y$ acres of wheat on a field that is at most $40$ acres. Seed costs $\\$50$ per acre of corn and $\\$80$ per acre of wheat, and the seed budget is at most $\\$2400$. Which system, including non-negativity, models this situation?\nA) $x + y \\le 40,\\ 50x + 80y \\le 2400$\nB) $x + y \\le 40,\\ 50x + 80y \\le 2400,\\ x \\ge 0,\\ y \\ge 0$\nC) $x + y \\ge 40,\\ 50x + 80y \\ge 2400,\\ x \\ge 0,\\ y \\ge 0$\nD) $x + y = 40,\\ 50x + 80y = 2400,\\ x \\ge 0,\\ y \\ge 0$",
+      "answer": "B) $x + y \\le 40,\\ 50x + 80y \\le 2400,\\ x \\ge 0,\\ y \\ge 0$",
+      "solution": {
+        "steps": [
+          "Acreage is capped: $x + y \\le 40$. Seed cost is capped: $50x + 80y \\le 2400$.",
+          "Acres cannot be negative, so the implicit constraints $x \\ge 0$ and $y \\ge 0$ must be included.",
+          "All four together appear in B, so B is correct.",
+          "A omits the implicit non-negativity constraints $x \\ge 0,\\ y \\ge 0$.",
+          "C reverses both caps to $\\ge$, requiring at least $40$ acres and at least $\\$2400$ of seed instead of at most.",
+          "D uses equations, forcing the farmer to use exactly $40$ acres and exactly $\\$2400$ rather than allowing less."
+        ],
+        "answer": "B) $x + y \\le 40,\\ 50x + 80y \\le 2400,\\ x \\ge 0,\\ y \\ge 0$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Consider the constraints $3x + 2y \\le 30,\\ x \\ge 0,\\ y \\ge 0$, where $x$ and $y$ are whole numbers. Is the candidate solution $(x, y) = (8, 4)$ viable?\nA) Viable, because $x \\ge 0$ and $y \\ge 0$ both hold\nB) Viable, because $x$ and $y$ are both whole numbers\nC) Non-viable, because $3(8) + 2(4) = 32 > 30$ violates the budget constraint\nD) Non-viable, because $x = 8$ is too large to be allowed",
+      "answer": "C) Non-viable, because $3(8) + 2(4) = 32 > 30$ violates the budget constraint",
+      "solution": {
+        "steps": [
+          "A viable solution must satisfy every constraint, not just one.",
+          "Check the budget: $3(8) + 2(4) = 24 + 8 = 32$, and $32 > 30$, so $3x + 2y \\le 30$ fails.",
+          "Because one constraint is violated, the point is non-viable, so C is correct.",
+          "A checks only the non-negativity constraints and ignores the budget, which is the violated one.",
+          "B checks only that the values are whole numbers and skips the budget check.",
+          "D gives no valid reason: $x = 8$ is fine on its own (for example $(8, 0)$ satisfies the budget); the violation comes from the combination $3x + 2y = 32$."
+        ],
+        "answer": "C) Non-viable, because $3(8) + 2(4) = 32 > 30$ violates the budget constraint"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "A bakery makes $m$ muffins and $b$ loaves of bread. Each muffin uses $2$ ounces of flour and each loaf uses $9$ ounces of flour. There are $180$ ounces of flour available, and the bakery wants to make at least $20$ items in total. Which system models the flour limit and the minimum-output requirement (with non-negativity)?\nA) $2m + 9b \\le 180,\\ m + b \\ge 20,\\ m \\ge 0,\\ b \\ge 0$\nB) $2m + 9b \\ge 180,\\ m + b \\ge 20,\\ m \\ge 0,\\ b \\ge 0$\nC) $2m + 9b \\le 180,\\ m + b \\le 20,\\ m \\ge 0,\\ b \\ge 0$\nD) $9m + 2b \\le 180,\\ m + b \\ge 20,\\ m \\ge 0,\\ b \\ge 0$",
+      "answer": "A) $2m + 9b \\le 180,\\ m + b \\ge 20,\\ m \\ge 0,\\ b \\ge 0$",
+      "solution": {
+        "steps": [
+          "Flour used is $2m + 9b$, and only $180$ ounces are available, so $2m + 9b \\le 180$.",
+          "'At least $20$ items' means $m + b \\ge 20$.",
+          "Counts cannot be negative, so $m \\ge 0$ and $b \\ge 0$. All of this appears in A, so A is correct.",
+          "B reverses the flour limit to $\\ge 180$, which would demand using at least $180$ ounces instead of at most.",
+          "C reverses the output requirement to $m + b \\le 20$, capping items instead of setting a minimum.",
+          "D attaches the flour amounts to the wrong variables ($9$ on muffins, $2$ on loaves)."
+        ],
+        "answer": "A) $2m + 9b \\le 180,\\ m + b \\ge 20,\\ m \\ge 0,\\ b \\ge 0$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A school is renting buses and vans for a trip. Solving the constraint model gives the solution $x = -2$ buses and $y = 5$ vans, and this pair satisfies every inequality in the system. How should this solution be interpreted?\nA) Viable, because it satisfies all of the inequalities in the system\nB) Non-viable, because the number of buses cannot be negative, so $x \\ge 0$ is required\nC) Viable, because $y = 5$ vans is a reasonable number\nD) Non-viable, because the total $x + y = 3$ is too small for a trip",
+      "answer": "B) Non-viable, because the number of buses cannot be negative, so $x \\ge 0$ is required",
+      "solution": {
+        "steps": [
+          "A solution must make sense in context, not just satisfy the listed algebra.",
+          "A count of vehicles must be a whole number that is zero or greater, so $x \\ge 0$ is a required real-world constraint.",
+          "Since $x = -2$ is negative, the school cannot rent $-2$ buses; the solution is non-viable, so B is correct.",
+          "A accepts the answer just because the inequalities hold, ignoring that a negative count is impossible.",
+          "C looks only at $y = 5$ and never checks the impossible value $x = -2$.",
+          "D gives a wrong reason: the total being $3$ is not the problem, and the model never stated a minimum number of vehicles; the real issue is the negative bus count."
+        ],
+        "answer": "B) Non-viable, because the number of buses cannot be negative, so $x \\ge 0$ is required"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A caterer buys $x$ full trays and $y$ half trays of food, where $x$ and $y$ are whole numbers. Each full tray feeds $20$ people and each half tray feeds $10$ people, and the event has at least $200$ guests. Each full tray costs $\\$60$ and each half tray costs $\\$35$, and the budget is at most $\\$900$. Which statement correctly classifies the proposal $(x, y) = (8, 4)$?\nA) Viable, because it feeds $200$ guests and costs $\\$620$, meeting both constraints\nB) Non-viable, because $20(8) + 10(4) = 200$ does not reach the required $200$ guests\nC) Non-viable, because $60(8) + 35(4) = 620$ exceeds the $\\$900$ budget\nD) Non-viable, because $y = 4$ half trays cannot be paired with $x = 8$ full trays",
+      "answer": "A) Viable, because it feeds $200$ guests and costs $\\$620$, meeting both constraints",
+      "solution": {
+        "steps": [
+          "The two real constraints here are guests fed, $20x + 10y \\ge 200$, and budget, $60x + 35y \\le 900$, with $x \\ge 0,\\ y \\ge 0$ whole numbers.",
+          "Test the guest constraint at $(8, 4)$: $20(8) + 10(4) = 160 + 40 = 200$, and $200 \\ge 200$ holds.",
+          "Test the budget at $(8, 4)$: $60(8) + 35(4) = 480 + 140 = 620$, and $620 \\le 900$ holds.",
+          "Both whole-number counts are non-negative, so $(8, 4)$ satisfies every constraint and is viable. A is correct.",
+          "B claims $200$ guests does not reach $200$, but 'at least $200$' includes exactly $200$, so the requirement is met.",
+          "C miscomputes the budget result: $620$ is not greater than $900$, so the budget is actually met and the solution is not rejected.",
+          "D invents a rule that does not exist; there is no constraint linking the number of full and half trays, so $(8, 4)$ is allowed."
+        ],
+        "answer": "A) Viable, because it feeds $200$ guests and costs $\\$620$, meeting both constraints"
+      }
+    }
+  ]
+}

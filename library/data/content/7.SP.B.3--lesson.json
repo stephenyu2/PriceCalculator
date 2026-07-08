@@ -1,0 +1,166 @@
+{
+  "id": "7.SP.B.3--lesson",
+  "standard": "7.SP.B.3",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Draw informal comparative inferences about two populations",
+  "clusterCode": "B",
+  "skillName": "Comparing Data Distributions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "When two data sets have about the same spread, you can compare them by measuring how far apart their centers are. The trick is to express the gap between the centers as a multiple of the variability. You find the difference between the two centers, then divide that difference by a single measure of variability such as the mean absolute deviation (MAD) or the interquartile range (IQR). A small multiple (less than about $1$) means the distributions overlap a lot; a large multiple (about $2$ or more) means they are clearly separated.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Team A scores a mean of $\\bar{x}_A = 12$ points per game and Team B scores a mean of $\\bar{x}_B = 18$ points per game. Both teams' game scores have a mean absolute deviation of about $3$ points. The difference between the means is how many times the MAD?",
+      "solution": {
+        "steps": [
+          "Find the difference between the two centers: $|\\bar{x}_B - \\bar{x}_A| = |18 - 12| = 6$ points.",
+          "Divide that difference by the shared measure of variability (the MAD): $\\dfrac{6}{3}$.",
+          "Compute: $\\dfrac{6}{3} = 2$.",
+          "The means differ by $2$ times the MAD."
+        ],
+        "answer": "$2$ times the MAD"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find the mean and the mean absolute deviation (MAD) of the data set $4, 6, 6, 8, 11$.",
+      "solution": {
+        "steps": [
+          "Add the values: $4 + 6 + 6 + 8 + 11 = 35$.",
+          "Divide by the number of values to get the mean: $\\dfrac{35}{5} = 7$.",
+          "Find each absolute deviation from the mean $7$: $|4-7| = 3$, $|6-7| = 1$, $|6-7| = 1$, $|8-7| = 1$, $|11-7| = 4$.",
+          "Add the absolute deviations: $3 + 1 + 1 + 1 + 4 = 10$.",
+          "Divide by the number of values to get the MAD: $\\dfrac{10}{5} = 2$."
+        ],
+        "answer": "Mean $= 7$, MAD $= 2$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Two seventh-grade classes timed how long each student could hold a plank. Class 1 has a median of $40$ seconds and Class 2 has a median of $55$ seconds. Both box plots have an interquartile range (IQR) of about $10$ seconds. Express the difference between the medians as a multiple of the IQR, and say what it means about overlap.",
+      "solution": {
+        "steps": [
+          "Find the difference between the centers (medians): $|55 - 40| = 15$ seconds.",
+          "Divide by the shared measure of variability (the IQR): $\\dfrac{15}{10}$.",
+          "Compute: $\\dfrac{15}{10} = 1.5$.",
+          "The medians differ by $1.5$ times the IQR.",
+          "Because the multiple is greater than $1$ but not large, the distributions overlap somewhat but are noticeably separated, with Class 2 typically holding the plank longer."
+        ],
+        "answer": "$1.5$ times the IQR; the distributions overlap but are noticeably separated"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A sample of plants given Fertilizer X has a mean height of $24$ cm and a sample given Fertilizer Y has a mean height of $30$ cm. Both samples have a MAD of about $2$ cm. Express the difference between the means as a multiple of the MAD and draw an inference about the two groups.",
+      "solution": {
+        "steps": [
+          "Find the difference between the centers: $|30 - 24| = 6$ cm.",
+          "Divide by the shared measure of variability (the MAD): $\\dfrac{6}{2}$.",
+          "Compute: $\\dfrac{6}{2} = 3$.",
+          "The means differ by $3$ times the MAD.",
+          "A multiple of $3$ is large, so the distributions barely overlap. This is strong evidence that plants given Fertilizer Y are typically taller than plants given Fertilizer X."
+        ],
+        "answer": "$3$ times the MAD; strong evidence that Fertilizer Y plants are typically taller"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "The math scores for Group 1 are $20, 22, 24, 22, 22$ and for Group 2 are $30, 32, 28, 30, 30$. Each group's scores have a MAD of about $1.2$. Compute the mean of each group, then express the difference between the means as a multiple of the MAD.",
+      "solution": {
+        "steps": [
+          "Mean of Group 1: $\\dfrac{20 + 22 + 24 + 22 + 22}{5} = \\dfrac{110}{5} = 22$.",
+          "Mean of Group 2: $\\dfrac{30 + 32 + 28 + 30 + 30}{5} = \\dfrac{150}{5} = 30$.",
+          "Find the difference between the centers: $|30 - 22| = 8$.",
+          "Divide by the shared MAD: $\\dfrac{8}{1.2} \\approx 6.7$.",
+          "The means differ by about $6.7$ times the MAD, a very large multiple, so the two groups are almost completely separated and Group 2 scores are clearly higher."
+        ],
+        "answer": "Means $22$ and $30$; difference $\\approx 6.7$ times the MAD"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Brand A batteries last a mean of $20$ hours and Brand B batteries last a mean of $26$ hours. Both brands have a MAD of about $2$ hours. The difference between the means is how many times the MAD?",
+      "hint": "First subtract the means to find the gap, then divide that gap by the MAD.",
+      "solution": {
+        "steps": [
+          "Difference between the means: $|26 - 20| = 6$ hours.",
+          "Divide by the MAD: $\\dfrac{6}{2} = 3$.",
+          "The means differ by $3$ times the MAD."
+        ],
+        "answer": "$3$ times the MAD"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Find the mean and the MAD of the data set $3, 5, 7, 9, 6$.",
+      "hint": "Add the values and divide by $5$ to get the mean. Then average the absolute distances of each value from the mean.",
+      "solution": {
+        "steps": [
+          "Sum: $3 + 5 + 7 + 9 + 6 = 30$, so the mean is $\\dfrac{30}{5} = 6$.",
+          "Absolute deviations from $6$: $|3-6| = 3$, $|5-6| = 1$, $|7-6| = 1$, $|9-6| = 3$, $|6-6| = 0$.",
+          "Sum of absolute deviations: $3 + 1 + 1 + 3 + 0 = 8$.",
+          "MAD: $\\dfrac{8}{5} = 1.6$."
+        ],
+        "answer": "Mean $= 6$, MAD $= 1.6$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Two soccer teams have a median number of goals per game. Team Red has a median of $2$ goals and Team Blue has a median of $5$ goals. Both have an IQR of about $2$ goals. Express the difference between the medians as a multiple of the IQR.",
+      "hint": "Use the medians as the centers. Divide the difference between the medians by the IQR.",
+      "solution": {
+        "steps": [
+          "Difference between the medians: $|5 - 2| = 3$ goals.",
+          "Divide by the IQR: $\\dfrac{3}{2} = 1.5$.",
+          "The medians differ by $1.5$ times the IQR."
+        ],
+        "answer": "$1.5$ times the IQR"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "The difference between the centers of two distributions is $0.5$ times the MAD. Do the two distributions overlap a lot or a little? Explain.",
+      "hint": "Compare the multiple to $1$. A multiple far below $1$ means the centers are close compared to the spread.",
+      "solution": {
+        "steps": [
+          "The multiple $0.5$ is less than $1$, so the gap between the centers is smaller than one MAD.",
+          "When the centers are that close relative to the spread, the data values from the two distributions land in many of the same places.",
+          "Therefore the two distributions overlap a great deal."
+        ],
+        "answer": "They overlap a lot, because the multiple $0.5$ is less than $1$, so the centers are close relative to the spread."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Two study groups recorded quiz scores. Group 1 has a mean of $14$ and Group 2 has a mean of $26$. Each group's scores have a MAD of about $4$. Express the difference between the means as a multiple of the MAD, then state whether the distributions are clearly separated or heavily overlapping.",
+      "hint": "Find the gap between the means, divide by the MAD, then decide based on whether the multiple is small or large.",
+      "solution": {
+        "steps": [
+          "Difference between the means: $|26 - 14| = 12$.",
+          "Divide by the MAD: $\\dfrac{12}{4} = 3$.",
+          "The means differ by $3$ times the MAD.",
+          "Because the multiple $3$ is large, the distributions are clearly separated, with Group 2 typically scoring higher."
+        ],
+        "answer": "$3$ times the MAD; the distributions are clearly separated"
+      }
+    }
+  ]
+}

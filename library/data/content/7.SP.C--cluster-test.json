@@ -1,0 +1,226 @@
+{
+  "id": "7.SP.C--cluster-test",
+  "standard": null,
+  "clusterId": "7.SP.C",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate chance processes and develop, use, and evaluate probability models",
+  "clusterCode": "C",
+  "skillName": "Investigate chance processes and develop, use, and evaluate probability models",
+  "materialType": "cluster-test",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T10:12:39.297Z",
+  "intro": "This cluster test checks your understanding of chance processes and probability models across the four standards in cluster 7.SP.C: probability basics and the $0$ to $1$ scale (7.SP.C.5), estimating probability from data and predicting frequencies (7.SP.C.6), building and using uniform and empirical probability models (7.SP.C.7), and finding probabilities of compound events (7.SP.C.8). Every item is multiple choice.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "standard": "7.SP.C.5",
+      "difficulty": "Easy",
+      "prompt": "A bag holds $4$ red marbles and $6$ yellow marbles, all the same size. You draw one marble without looking. What is the probability of drawing a red marble?\nA) $\\frac{2}{5}$\nB) $\\frac{2}{3}$\nC) $\\frac{4}{6}$\nD) $\\frac{1}{4}$",
+      "answer": "A) $\\frac{2}{5}$",
+      "solution": {
+        "steps": [
+          "For equally likely outcomes, $P(\\text{event}) = \\frac{\\text{favorable outcomes}}{\\text{total outcomes}}$.",
+          "There are $4 + 6 = 10$ marbles in all, and $4$ of them are red, so $P(\\text{red}) = \\frac{4}{10}$.",
+          "Simplify by dividing the numerator and denominator by their GCF $2$: $\\frac{4}{10} = \\frac{2}{5}$. Choice A is correct.",
+          "Choice B and C give $\\frac{4}{6}$, the wrong ratio of red to yellow instead of red to total. Choice D uses $\\frac{1}{4}$ from the count of red colors rather than the marble probability."
+        ],
+        "answer": "A) $\\frac{2}{5}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "standard": "7.SP.C.5",
+      "difficulty": "Medium",
+      "prompt": "An event has probability $\\frac{7}{8}$. Which word best describes how likely this event is to happen?\nA) Impossible\nB) Unlikely\nC) Likely\nD) Certain",
+      "answer": "C) Likely",
+      "solution": {
+        "steps": [
+          "On the probability scale, $0$ is impossible, $\\frac{1}{2}$ is equally likely as not, and $1$ is certain.",
+          "As a decimal, $\\frac{7}{8} = 0.875$, which is greater than $\\frac{1}{2}$ but less than $1$.",
+          "A value close to $1$ without reaching it means the event is likely. Choice C is correct.",
+          "Choice A would require a probability of $0$, and Choice D would require exactly $1$. Choice B is wrong because unlikely values fall below $\\frac{1}{2}$, not above it."
+        ],
+        "answer": "C) Likely"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "standard": "7.SP.C.5",
+      "difficulty": "Hard",
+      "prompt": "Which of these numbers could NOT be the probability of an event?\nA) $0$\nB) $\\frac{3}{4}$\nC) $0.45$\nD) $\\frac{5}{4}$",
+      "answer": "D) $\\frac{5}{4}$",
+      "solution": {
+        "steps": [
+          "Every probability must be a number from $0$ to $1$ inclusive.",
+          "$\\frac{5}{4} = 1.25$ is greater than $1$, so it cannot be a probability. Choice D is correct.",
+          "Choice A is allowed because $0$ marks an impossible event. Choice B is allowed because $\\frac{3}{4} = 0.75$ lies between $0$ and $1$.",
+          "Choice C is allowed because $0.45$ lies between $0$ and $1$."
+        ],
+        "answer": "D) $\\frac{5}{4}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "standard": "7.SP.C.6",
+      "difficulty": "Easy",
+      "prompt": "A spinner is spun $40$ times and lands on blue $16$ times. What is the experimental probability of landing on blue, written as a simplified fraction?\nA) $\\frac{16}{40}$\nB) $\\frac{2}{5}$\nC) $\\frac{2}{3}$\nD) $\\frac{1}{16}$",
+      "answer": "B) $\\frac{2}{5}$",
+      "solution": {
+        "steps": [
+          "Experimental probability is $\\frac{\\text{number of successes}}{\\text{total trials}} = \\frac{16}{40}$.",
+          "Simplify by dividing the numerator and denominator by their GCF $8$: $\\frac{16 \\div 8}{40 \\div 8} = \\frac{2}{5}$. Choice B is correct.",
+          "Choice A is the unsimplified form, so $\\frac{2}{5}$ is the better answer. Choice C uses the $24$ non-blue spins as $\\frac{16}{24}$, the wrong ratio.",
+          "Choice D divides $1$ by the number of blue spins, which is not how experimental probability is computed."
+        ],
+        "answer": "B) $\\frac{2}{5}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "standard": "7.SP.C.6",
+      "difficulty": "Medium",
+      "prompt": "The probability that a flipped bottle lands upright is $\\frac{1}{10}$. If the bottle is flipped $250$ times, about how many times is it expected to land upright?\nA) $10$ times\nB) $25$ times\nC) $50$ times\nD) $250$ times",
+      "answer": "B) $25$ times",
+      "solution": {
+        "steps": [
+          "To predict a frequency, multiply the probability by the number of trials: expected count $\\approx P \\times n$.",
+          "Here $P = \\frac{1}{10}$ and $n = 250$, so expected count $\\approx \\frac{1}{10} \\times 250 = \\frac{250}{10} = 25$. Choice B is correct.",
+          "Choice A uses the denominator $10$ alone instead of multiplying. Choice C doubles the correct value.",
+          "Choice D reports the total number of flips rather than the predicted number of successes."
+        ],
+        "answer": "B) $25$ times"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "standard": "7.SP.C.6",
+      "difficulty": "Hard",
+      "prompt": "A fair coin is flipped $20$ times and lands heads $13$ times, so the experimental probability of heads is $\\frac{13}{20}$, while the theoretical probability is $\\frac{1}{2}$. Which statement best explains this and predicts what happens with many more flips?\nA) The coin must be unfair, so the experimental probability will stay at $\\frac{13}{20}$.\nB) With only $20$ flips chance causes variation, and with many more flips the experimental probability should get closer to $\\frac{1}{2}$.\nC) The theoretical probability is wrong, so it should be changed to $\\frac{13}{20}$.\nD) Experimental and theoretical probability are always equal, so one of the values is a mistake.",
+      "answer": "B) With only $20$ flips chance causes variation, and with many more flips the experimental probability should get closer to $\\frac{1}{2}$.",
+      "solution": {
+        "steps": [
+          "Experimental probability comes from real data and varies, especially with a small number of trials.",
+          "By the law of large numbers, as the number of trials grows the experimental probability gets closer to the theoretical probability. Choice B is correct.",
+          "Choice A is wrong because a small sample can differ from $\\frac{1}{2}$ by chance without the coin being unfair, and more flips would change the relative frequency.",
+          "Choice C is wrong because the theoretical value $\\frac{1}{2}$ for a fair coin is not changed by one short experiment. Choice D is wrong because the two probabilities are usually close but not exactly equal."
+        ],
+        "answer": "B) With only $20$ flips chance causes variation, and with many more flips the experimental probability should get closer to $\\frac{1}{2}$."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "standard": "7.SP.C.7",
+      "difficulty": "Easy",
+      "prompt": "A fair spinner has $5$ equal sections numbered $1$ through $5$. What probability does a uniform model assign to each section?\nA) $\\frac{1}{2}$\nB) $\\frac{1}{4}$\nC) $\\frac{1}{5}$\nD) $5$",
+      "answer": "C) $\\frac{1}{5}$",
+      "solution": {
+        "steps": [
+          "A uniform model treats every outcome as equally likely, so each of $n$ outcomes gets probability $\\frac{1}{n}$.",
+          "There are $n = 5$ equal sections, so each section has probability $\\frac{1}{5}$. Choice C is correct.",
+          "Check: $\\frac{1}{5} \\times 5 = 1$, so the probabilities sum to $1$ as required.",
+          "Choices A and B use the wrong number of sections, and Choice D gives the count of sections instead of a probability."
+        ],
+        "answer": "C) $\\frac{1}{5}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "standard": "7.SP.C.7",
+      "difficulty": "Medium",
+      "prompt": "A four-color spinner is modeled with $P(\\text{red}) = \\frac{2}{5}$, $P(\\text{blue}) = \\frac{1}{5}$, $P(\\text{green}) = \\frac{1}{10}$, and $P(\\text{yellow}) = p$. What value of $p$ makes this a valid probability model?\nA) $\\frac{1}{10}$\nB) $\\frac{3}{10}$\nC) $\\frac{7}{10}$\nD) $\\frac{1}{2}$",
+      "answer": "B) $\\frac{3}{10}$",
+      "solution": {
+        "steps": [
+          "A valid model has probabilities that sum to $1$, so $\\frac{2}{5} + \\frac{1}{5} + \\frac{1}{10} + p = 1$.",
+          "Rewrite the known values with denominator $10$: $\\frac{2}{5} = \\frac{4}{10}$, $\\frac{1}{5} = \\frac{2}{10}$, and $\\frac{1}{10} = \\frac{1}{10}$.",
+          "Add the known parts: $\\frac{4}{10} + \\frac{2}{10} + \\frac{1}{10} = \\frac{7}{10}$, so $p = 1 - \\frac{7}{10} = \\frac{3}{10}$. Choice B is correct.",
+          "Choice C is the sum of the three known probabilities, not the missing one. Choices A and D do not make the four probabilities add to $1$."
+        ],
+        "answer": "B) $\\frac{3}{10}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 9,
+      "standard": "7.SP.C.7",
+      "difficulty": "Hard",
+      "prompt": "A six-sided number cube is rolled $30$ times and the number $6$ comes up $9$ times. The cube is modeled as fair, so $P(6) = \\frac{1}{6}$. Which statement best compares the data to the model?\nA) The observed relative frequency is $\\frac{1}{6}$, so the data match the model exactly.\nB) The observed relative frequency is $\\frac{3}{10}$, which is well above $\\frac{1}{6}$, so the data do not agree well with the fair model.\nC) The observed relative frequency is $\\frac{9}{6}$, which is impossible, so the model is wrong.\nD) The observed relative frequency is $\\frac{1}{30}$, which is below $\\frac{1}{6}$, so the cube is biased against $6$.",
+      "answer": "B) The observed relative frequency is $\\frac{3}{10}$, which is well above $\\frac{1}{6}$, so the data do not agree well with the fair model.",
+      "solution": {
+        "steps": [
+          "The observed relative frequency is $\\frac{\\text{sixes}}{\\text{total rolls}} = \\frac{9}{30} = \\frac{3}{10} = 0.3$.",
+          "The fair model predicts $P(6) = \\frac{1}{6} \\approx 0.167$, so the observed $0.3$ is noticeably higher. Choice B is correct.",
+          "Choice A is wrong because $\\frac{3}{10}$ does not equal $\\frac{1}{6}$. Choice C divides by the wrong total ($6$ instead of $30$) and gives a value above $1$, which cannot be a probability.",
+          "Choice D divides $1$ by the number of trials instead of dividing the sixes by the total, and the data actually show $6$ occurring more often than the model predicts, not less."
+        ],
+        "answer": "B) The observed relative frequency is $\\frac{3}{10}$, which is well above $\\frac{1}{6}$, so the data do not agree well with the fair model."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 10,
+      "standard": "7.SP.C.8",
+      "difficulty": "Easy",
+      "prompt": "You spin a spinner with three equal sections (red, blue, green) and flip a fair coin. What is the probability of getting green and heads?\nA) $\\frac{1}{2}$\nB) $\\frac{1}{3}$\nC) $\\frac{1}{6}$\nD) $\\frac{5}{6}$",
+      "answer": "C) $\\frac{1}{6}$",
+      "solution": {
+        "steps": [
+          "List the sample space of ordered (spinner, coin) outcomes: $(R,H),(R,T),(B,H),(B,T),(G,H),(G,T)$, which is $3 \\times 2 = 6$ equally likely outcomes.",
+          "Exactly one outcome, $(G,H)$, is 'green and heads', so $P(\\text{green and heads}) = \\frac{1}{6}$. Choice C is correct.",
+          "Choices A and B give the probability of just heads or just green, not the compound event.",
+          "Choice D comes from incorrectly adding $\\frac{1}{3} + \\frac{1}{2}$; an 'and' event for independent stages uses the product $\\frac{1}{3} \\times \\frac{1}{2} = \\frac{1}{6}$."
+        ],
+        "answer": "C) $\\frac{1}{6}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 11,
+      "standard": "7.SP.C.8",
+      "difficulty": "Medium",
+      "prompt": "Two fair number cubes are rolled. What is the probability that the sum of the two cubes is $7$?\nA) $\\frac{1}{6}$\nB) $\\frac{1}{12}$\nC) $\\frac{7}{36}$\nD) $\\frac{1}{2}$",
+      "answer": "A) $\\frac{1}{6}$",
+      "solution": {
+        "steps": [
+          "Two fair cubes give $6 \\times 6 = 36$ equally likely ordered outcomes.",
+          "The ordered pairs that add to $7$ are $(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)$, which is $6$ favorable outcomes.",
+          "So $P(\\text{sum} = 7) = \\frac{6}{36} = \\frac{1}{6}$. Choice A is correct.",
+          "Choice B counts only $3$ pairs by ignoring order. Choice C uses $7$ favorable outcomes by mistake. Choice D wrongly treats a sum of $7$ as a coin-flip event."
+        ],
+        "answer": "A) $\\frac{1}{6}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 12,
+      "standard": "7.SP.C.8",
+      "difficulty": "Hard",
+      "prompt": "A bag holds $3$ red and $2$ blue marbles. Two marbles are drawn without replacement. What is the probability that both marbles are red?\nA) $\\frac{9}{25}$\nB) $\\frac{6}{25}$\nC) $\\frac{3}{10}$\nD) $\\frac{2}{5}$",
+      "answer": "C) $\\frac{3}{10}$",
+      "solution": {
+        "steps": [
+          "There are $5$ marbles in all, so the first draw is red with probability $\\frac{3}{5}$.",
+          "Because the first marble is not replaced, only $4$ marbles remain and $2$ are red, so the second draw is red with probability $\\frac{2}{4}$.",
+          "Multiply the stage probabilities: $\\frac{3}{5} \\times \\frac{2}{4} = \\frac{6}{20} = \\frac{3}{10}$. Choice C is correct.",
+          "Choice A wrongly treats the draws as with replacement ($\\frac{3}{5} \\times \\frac{3}{5}$). Choice B and D come from other incorrect combinations of the stage probabilities."
+        ],
+        "answer": "C) $\\frac{3}{10}$"
+      }
+    }
+  ]
+}

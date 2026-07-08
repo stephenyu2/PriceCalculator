@@ -12,11 +12,19 @@ mistakes — do not work that way.
 **Procedure (in order):**
 
 1. **Deterministic structural gate — code execution, not eyeballing.**
-   Run `node pipeline/check.mjs pipeline/staging/<id>.json --blueprint
-   pipeline/blueprints/<standard>.json`. This mechanically verifies renderer
-   compatibility: `solution.steps` present everywhere, quiz options parse and the
-   answer letter maps to a real option, item counts match the blueprint, ids/tags
-   consistent. If it reports errors, the material FAILS — capture each error.
+   For a standard-scoped material run `node pipeline/check.mjs
+   pipeline/staging/<id>.json --blueprint pipeline/blueprints/<standard>.json`. For a
+   CLUSTER material (cluster-worksheet / cluster-test) there is no blueprint, so run
+   `node pipeline/check.mjs pipeline/staging/<id>.json` (no `--blueprint`). This
+   mechanically verifies renderer compatibility: `solution.steps` present everywhere,
+   quiz options parse and the answer letter maps to a real option, item counts match,
+   ids/tags consistent, and for cluster materials that `standard` is null, `clusterId`
+   is valid, and EVERY item carries its own `standard` field. If it reports errors, the
+   material FAILS — capture each error. Additionally confirm the expected count by hand:
+   single/tier worksheet = 15, quiz = 8, cluster-worksheet = 15, cluster-test = 12; for
+   a cluster material confirm every standard in the cluster is represented and the items
+   are ordered grouped by standard; for a `tier2` worksheet confirm NO item duplicates
+   the matching `tier1` sheet.
    For any item containing arithmetic, actually compute it with code (node/python),
    never by inspection. For math materials, use `pipeline/.venv/bin/python3` (sympy
    + numpy): sympy for exact values/identities/factoring/solving, numpy for numeric

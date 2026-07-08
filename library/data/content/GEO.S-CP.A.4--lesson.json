@@ -1,0 +1,169 @@
+{
+  "id": "GEO.S-CP.A.4--lesson",
+  "standard": "GEO.S-CP.A.4",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Understand independence and conditional probability and use them to interpret data",
+  "clusterCode": "A",
+  "skillName": "Two-Way Tables and Independence",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "A two-way frequency table sorts each member of a group by two categories at once, like class and sport. The row totals, column totals, and grand total turn the table into a sample space you can read probabilities from. A single row or column total over the grand total is a marginal probability $P(A)$; a single cell over the grand total is a joint probability $P(A \\cap B)$; and a cell over its row or column total is a conditional probability $P(B \\mid A) = \\dfrac{P(A \\cap B)}{P(A)}$. Two events are independent when $P(A \\cap B) = P(A)\\cdot P(B)$, or equivalently when $P(B \\mid A) = P(B)$ (knowing one category does not change the chance of the other).",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Of $40$ students surveyed, $22$ are seniors and the rest are juniors. Among the seniors, $15$ play a sport; among the juniors, $9$ play a sport. Build the two-way table of class (senior/junior) versus sport (yes/no) and find every row total, column total, and the grand total.",
+      "solution": {
+        "steps": [
+          "Seniors total $22$. If $15$ seniors play a sport, then $22 - 15 = 7$ seniors do not.",
+          "Juniors total $40 - 22 = 18$. If $9$ juniors play a sport, then $18 - 9 = 9$ juniors do not.",
+          "Sport 'yes' column total: $15 + 9 = 24$. Sport 'no' column total: $7 + 9 = 16$.",
+          "Check the grand total both ways: rows give $22 + 18 = 40$; columns give $24 + 16 = 40$. They agree.",
+          "Completed table: Seniors $15$ yes, $7$ no ($22$); Juniors $9$ yes, $9$ no ($18$); columns $24$ yes, $16$ no; grand total $40$."
+        ],
+        "answer": "Seniors: $15$ sport, $7$ no sport, row total $22$. Juniors: $9$ sport, $9$ no sport, row total $18$. Columns: $24$ sport, $16$ no sport. Grand total $40$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Using the completed table from Example 1 (grand total $40$, with $24$ students playing a sport and $22$ seniors), find the marginal probability $P(\\text{plays a sport})$ and the joint probability $P(\\text{senior and plays a sport})$.",
+      "solution": {
+        "steps": [
+          "A marginal probability is a row or column total over the grand total. The 'sport yes' column total is $24$.",
+          "$P(\\text{plays a sport}) = \\dfrac{24}{40} = \\dfrac{3}{5}$.",
+          "A joint probability is a single cell over the grand total. The 'senior and sport' cell holds $15$.",
+          "$P(\\text{senior and plays a sport}) = \\dfrac{15}{40} = \\dfrac{3}{8}$."
+        ],
+        "answer": "$P(\\text{plays a sport}) = \\dfrac{3}{5}$ and $P(\\text{senior and plays a sport}) = \\dfrac{3}{8}$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Using the same table ($15$ of the $22$ seniors play a sport, and $24$ of the $40$ students play a sport), find $P(\\text{plays a sport} \\mid \\text{senior})$ and $P(\\text{senior} \\mid \\text{plays a sport})$. Explain why the two answers differ.",
+      "solution": {
+        "steps": [
+          "A conditional probability uses a reduced sample space: the cell count over the conditioning total.",
+          "For $P(\\text{plays a sport} \\mid \\text{senior})$, condition on seniors, so the denominator is the senior row total $22$. The cell is $15$: $P = \\dfrac{15}{22}$.",
+          "For $P(\\text{senior} \\mid \\text{plays a sport})$, condition on sport-players, so the denominator is the sport column total $24$. The same cell is $15$: $P = \\dfrac{15}{24} = \\dfrac{5}{8}$.",
+          "The cell ($15$) is the same, but the conditioning total changes ($22$ seniors versus $24$ sport-players), so the two conditionals are different. The condition determines the denominator."
+        ],
+        "answer": "$P(\\text{plays a sport} \\mid \\text{senior}) = \\dfrac{15}{22}$ and $P(\\text{senior} \\mid \\text{plays a sport}) = \\dfrac{5}{8}$; they differ because each conditions on a different total."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "For the same table, test whether the events 'is a senior' and 'plays a sport' are independent using the product rule $P(A \\cap B) = P(A)\\cdot P(B)$. State a conclusion in context.",
+      "solution": {
+        "steps": [
+          "Compute the marginals: $P(\\text{senior}) = \\dfrac{22}{40} = 0.55$ and $P(\\text{sport}) = \\dfrac{24}{40} = 0.6$.",
+          "Multiply them: $P(\\text{senior})\\cdot P(\\text{sport}) = \\dfrac{22}{40}\\cdot\\dfrac{24}{40} = \\dfrac{528}{1600} = \\dfrac{33}{100} = 0.33$.",
+          "Find the actual joint probability from the cell: $P(\\text{senior and sport}) = \\dfrac{15}{40} = \\dfrac{3}{8} = 0.375$.",
+          "Compare: $0.375 \\ne 0.33$, so $P(A \\cap B) \\ne P(A)\\cdot P(B)$.",
+          "Conclusion: the events are not independent. Seniors play a sport more often than the product rule predicts, so knowing a student is a senior raises the chance they play a sport. Class and sport are dependent."
+        ],
+        "answer": "$P(A)\\cdot P(B) = \\dfrac{33}{100} = 0.33$ but $P(A \\cap B) = \\dfrac{3}{8} = 0.375$; since they are unequal, the events are dependent."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A two-way table for $200$ people classifies them by coffee drinker (yes/no) and morning person (yes/no). It is partly given: $80$ are coffee drinkers, $120$ are morning people, and the 'coffee and morning person' cell holds $48$. Test independence by comparing $P(\\text{morning} \\mid \\text{coffee})$ with $P(\\text{morning})$.",
+      "solution": {
+        "steps": [
+          "Conditional probability: condition on coffee drinkers, so the denominator is $80$. The 'coffee and morning' cell is $48$.",
+          "$P(\\text{morning} \\mid \\text{coffee}) = \\dfrac{48}{80} = \\dfrac{3}{5} = 0.6$.",
+          "Marginal probability: $P(\\text{morning}) = \\dfrac{120}{200} = \\dfrac{3}{5} = 0.6$.",
+          "Compare: $P(\\text{morning} \\mid \\text{coffee}) = 0.6 = P(\\text{morning})$. They are exactly equal.",
+          "Conclusion: knowing someone drinks coffee does not change the chance they are a morning person, so being a coffee drinker and being a morning person are independent."
+        ],
+        "answer": "$P(\\text{morning} \\mid \\text{coffee}) = \\dfrac{3}{5} = P(\\text{morning})$, so the events are independent."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A group of $50$ pets is sorted by type (cat/dog) and whether it has been microchipped. There are $30$ dogs, of which $24$ are chipped; among the cats, $11$ are chipped. Complete the two-way table with all row totals, column totals, and the grand total.",
+      "hint": "There are $50 - 30 = 20$ cats. Subtract the chipped count from each row total to get the 'not chipped' count, then add down each column.",
+      "solution": {
+        "steps": [
+          "Cats total $50 - 30 = 20$. Chipped cats $= 11$, so not chipped $= 20 - 11 = 9$.",
+          "Dogs total $30$. Chipped dogs $= 24$, so not chipped $= 30 - 24 = 6$.",
+          "Chipped column total: $24 + 11 = 35$. Not chipped column total: $6 + 9 = 15$.",
+          "Check: rows $30 + 20 = 50$; columns $35 + 15 = 50$. They agree, grand total $50$."
+        ],
+        "answer": "Dogs: $24$ chipped, $6$ not, total $30$. Cats: $11$ chipped, $9$ not, total $20$. Columns: $35$ chipped, $15$ not. Grand total $50$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Using the completed pet table (grand total $50$, with $35$ chipped pets and the 'dog and chipped' cell equal to $24$), find $P(\\text{chipped})$ and $P(\\text{dog and chipped})$.",
+      "hint": "Marginal probability is a column total over the grand total; joint probability is a single cell over the grand total.",
+      "solution": {
+        "steps": [
+          "$P(\\text{chipped})$ uses the chipped column total $35$ over the grand total: $\\dfrac{35}{50} = \\dfrac{7}{10}$.",
+          "$P(\\text{dog and chipped})$ uses the single cell $24$ over the grand total: $\\dfrac{24}{50} = \\dfrac{12}{25}$."
+        ],
+        "answer": "$P(\\text{chipped}) = \\dfrac{7}{10}$ and $P(\\text{dog and chipped}) = \\dfrac{12}{25}$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "From the same pet table ($24$ of the $30$ dogs are chipped, and $35$ of the $50$ pets are chipped), find $P(\\text{chipped} \\mid \\text{dog})$ and $P(\\text{dog} \\mid \\text{chipped})$.",
+      "hint": "Each conditional is the 'dog and chipped' cell over the conditioning total. For $P(\\text{chipped} \\mid \\text{dog})$ divide by the dog row total; for $P(\\text{dog} \\mid \\text{chipped})$ divide by the chipped column total.",
+      "solution": {
+        "steps": [
+          "$P(\\text{chipped} \\mid \\text{dog})$ conditions on dogs, so the denominator is the dog row total $30$. The cell is $24$: $\\dfrac{24}{30} = \\dfrac{4}{5}$.",
+          "$P(\\text{dog} \\mid \\text{chipped})$ conditions on chipped pets, so the denominator is the chipped column total $35$. The same cell is $24$: $\\dfrac{24}{35}$ (already in lowest terms).",
+          "The cell stays $24$, but the conditioning total changes, so the two conditionals differ."
+        ],
+        "answer": "$P(\\text{chipped} \\mid \\text{dog}) = \\dfrac{4}{5}$ and $P(\\text{dog} \\mid \\text{chipped}) = \\dfrac{24}{35}$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A survey of $80$ commuters records mode (bus/train) and whether each was late. There are $50$ bus riders, of whom $20$ were late; among the train riders, $6$ were late. Test whether 'rides the bus' and 'was late' are independent using $P(A \\cap B) = P(A)\\cdot P(B)$, and state a conclusion in context.",
+      "hint": "First complete the table to find the total number late, then compare $P(\\text{bus and late})$ with $P(\\text{bus})\\cdot P(\\text{late})$.",
+      "solution": {
+        "steps": [
+          "Train riders total $80 - 50 = 30$. Total late $= 20 + 6 = 26$.",
+          "Marginals: $P(\\text{bus}) = \\dfrac{50}{80} = \\dfrac{5}{8} = 0.625$ and $P(\\text{late}) = \\dfrac{26}{80} = \\dfrac{13}{40} = 0.325$.",
+          "Product: $P(\\text{bus})\\cdot P(\\text{late}) = \\dfrac{5}{8}\\cdot\\dfrac{13}{40} = \\dfrac{65}{320} = \\dfrac{13}{64} \\approx 0.203$.",
+          "Actual joint: the 'bus and late' cell is $20$, so $P(\\text{bus and late}) = \\dfrac{20}{80} = \\dfrac{1}{4} = 0.25$.",
+          "Compare: $0.25 \\ne 0.203$, so $P(A \\cap B) \\ne P(A)\\cdot P(B)$.",
+          "Conclusion: the events are dependent. Bus riders were late more often than the product rule predicts, so knowing a commuter rode the bus raises the chance they were late."
+        ],
+        "answer": "$P(\\text{bus})\\cdot P(\\text{late}) = \\dfrac{13}{64} \\approx 0.203$ but $P(\\text{bus and late}) = \\dfrac{1}{4} = 0.25$; since they are unequal, riding the bus and being late are dependent."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A two-way table for $120$ shoppers classifies them by membership (member/non-member) and whether they used a coupon. There are $60$ members and $40$ coupon users total. Fill in the 'member and coupon' cell so that membership and coupon use are independent, then give that cell count.",
+      "hint": "Independence means $P(\\text{member and coupon}) = P(\\text{member})\\cdot P(\\text{coupon})$. Multiply that probability by the grand total to recover the cell count.",
+      "solution": {
+        "steps": [
+          "Marginals: $P(\\text{member}) = \\dfrac{60}{120} = \\dfrac{1}{2}$ and $P(\\text{coupon}) = \\dfrac{40}{120} = \\dfrac{1}{3}$.",
+          "For independence, $P(\\text{member and coupon}) = P(\\text{member})\\cdot P(\\text{coupon}) = \\dfrac{1}{2}\\cdot\\dfrac{1}{3} = \\dfrac{1}{6}$.",
+          "Convert the joint probability back to a count: cell $= \\dfrac{1}{6}\\times 120 = 20$.",
+          "Check: with $20$ member coupon users, $P(\\text{coupon} \\mid \\text{member}) = \\dfrac{20}{60} = \\dfrac{1}{3} = P(\\text{coupon})$, confirming independence."
+        ],
+        "answer": "The 'member and coupon' cell must be $20$."
+      }
+    }
+  ]
+}

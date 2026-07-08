@@ -1,0 +1,150 @@
+{
+  "id": "A1.F-LE.A.3--quiz",
+  "standard": "A1.F-LE.A.3",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Linear, Quadratic, and Exponential Models",
+  "domainCode": "F-LE",
+  "cluster": "Construct and compare linear, quadratic, and exponential models and solve problems",
+  "clusterCode": "A",
+  "skillName": "Exponential Exceeds Polynomial Growth",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "items": [
+    {
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Let $f(x)=2^{x}$ and $g(x)=5x$. Which function is larger at $x=4$?\nA) $f(x)=2^{x}$, because $f(4)=16$ and $g(4)=20$\nB) $g(x)=5x$, because $f(4)=16$ and $g(4)=20$\nC) They are equal at $x=4$\nD) $f(x)=2^{x}$, because $f(4)=8$ and $g(4)=20$",
+      "answer": "B) $g(x)=5x$, because $f(4)=16$ and $g(4)=20$",
+      "solution": {
+        "steps": [
+          "Evaluate the exponential: $f(4)=2^{4}=16$.",
+          "Evaluate the linear function: $g(4)=5\\cdot 4=20$.",
+          "Compare: $20>16$, so $g$ is larger at $x=4$. The key is B.",
+          "A reverses the comparison, claiming $f$ wins even though $16<20$.",
+          "C is wrong because $16\\ne 20$.",
+          "D treats $2^{x}$ as if it added rather than multiplied, writing $f(4)=8$ instead of $16$."
+        ],
+        "answer": "B) $g(x)=5x$, because $f(4)=16$ and $g(4)=20$"
+      }
+    },
+    {
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "The table shows $f(x)=2^{x}$ and $g(x)=4x$ for $x=0,1,2,3,4,5$.\n\n| $x$ | 0 | 1 | 2 | 3 | 4 | 5 |\n| $f(x)=2^{x}$ | 1 | 2 | 4 | 8 | 16 | 32 |\n| $g(x)=4x$ | 0 | 4 | 8 | 12 | 16 | 20 |\n\nAt what whole-number input does $f$ first exceed $g$ and stay ahead?\nA) $x=3$\nB) $x=4$\nC) $x=5$\nD) $x=2$",
+      "answer": "C) $x=5$",
+      "solution": {
+        "steps": [
+          "Compare row by row: at $x=0$, $f(0)=1>g(0)=0$, but $g$ then pulls ahead for $x=1,2,3$ ($f$ gives $2,4,8$ while $g$ gives $4,8,12$).",
+          "At $x=4$ the values tie: $f(4)=16$ and $g(4)=16$, so $f$ does not yet exceed $g$.",
+          "At $x=5$, $f(5)=32>g(5)=20$, and the exponential stays ahead for all larger $x$, so this is where $f$ first exceeds $g$ and remains larger. The key is C.",
+          "B reports the tie row $x=4$ as the crossover, but $16=16$ is not strictly greater.",
+          "A and D pick inputs where $g$ is still ahead ($f(3)=8<12$ and $f(2)=4<8$)."
+        ],
+        "answer": "C) $x=5$"
+      }
+    },
+    {
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Complete the value table for $f(x)=2^{x}$. What is $f(5)$?\nA) $10$\nB) $25$\nC) $32$\nD) $16$",
+      "answer": "C) $32$",
+      "solution": {
+        "steps": [
+          "An exponential multiplies by its base each step: $1,2,4,8,16,32$ for $x=0,1,2,3,4,5$.",
+          "So $f(5)=2^{5}=32$. The key is C.",
+          "A comes from confusing $2^{x}$ with $2x$, giving $2\\cdot 5=10$.",
+          "B comes from computing $5^{2}=25$, swapping the base and exponent.",
+          "D is $2^{4}=16$, the value one step too early."
+        ],
+        "answer": "C) $32$"
+      }
+    },
+    {
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Compare $f(x)=2^{x}$ and $g(x)=x^{2}$ for whole-number inputs starting at $x=0$. At what input does $f$ first exceed $g$ and stay ahead?\nA) $x=2$\nB) $x=3$\nC) $x=4$\nD) $x=5$",
+      "answer": "D) $x=5$",
+      "solution": {
+        "steps": [
+          "Build both rows: $f$ gives $1,2,4,8,16,32$ and $g$ gives $0,1,4,9,16,25$ for $x=0,1,2,3,4,5$.",
+          "At $x=2$ they tie ($4=4$); at $x=3$ the quadratic leads ($9>8$); at $x=4$ they tie again ($16=16$).",
+          "At $x=5$, $f(5)=32>g(5)=25$, and the exponential stays ahead afterward. The key is D.",
+          "A and C are tie rows, not points where $f$ is strictly greater.",
+          "B is where the quadratic is actually ahead, reflecting the belief that whoever leads for small $x$ stays ahead."
+        ],
+        "answer": "D) $x=5$"
+      }
+    },
+    {
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Let $f(x)=3^{x}$ and $g(x)=10x+5$. Which is larger at $x=4$?\nA) $g(x)=10x+5$, because $g(4)=45$ and $f(4)=27$\nB) $f(x)=3^{x}$, because $f(4)=81$ and $g(4)=45$\nC) They are equal at $x=4$\nD) $g(x)=10x+5$, because $g(4)=45$ and $f(4)=12$",
+      "answer": "B) $f(x)=3^{x}$, because $f(4)=81$ and $g(4)=45$",
+      "solution": {
+        "steps": [
+          "Evaluate the exponential: $f(4)=3^{4}=81$.",
+          "Evaluate the linear function: $g(4)=10\\cdot 4+5=45$.",
+          "Compare: $81>45$, so $f$ is larger. The key is B.",
+          "A uses $f(4)=27=3^{3}$, off by one power.",
+          "D treats $3^{x}$ as adding, giving $f(4)=12$ instead of $81$.",
+          "C is wrong because $81\\ne 45$."
+        ],
+        "answer": "B) $f(x)=3^{x}$, because $f(4)=81$ and $g(4)=45$"
+      }
+    },
+    {
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "A graph shows the curve $y=2^{x}$ and the line $y=3x+1$. The curve starts below the line, crosses it once near $x=4$, and stays above it afterward. Which statement best describes the long-run behavior?\nA) The line $y=3x+1$ stays larger for all large $x$ because it started ahead\nB) The curve $y=2^{x}$ dominates for large $x$; the exponential eventually exceeds the line\nC) The two functions stay equal for all $x>4$\nD) Neither function is ever larger than the other",
+      "answer": "B) The curve $y=2^{x}$ dominates for large $x$; the exponential eventually exceeds the line",
+      "solution": {
+        "steps": [
+          "After the single crossing near $x=4$, the curve sits above the line and the gap only widens.",
+          "An exponential multiplies by a fixed factor each step, so it eventually exceeds any linear function. The key is B.",
+          "A reflects the misconception that whoever leads for small $x$ leads forever, ignoring eventual dominance.",
+          "C and D misread the graph: after the crossing the curve is strictly above the line, not equal or tied."
+        ],
+        "answer": "B) The curve $y=2^{x}$ dominates for large $x$; the exponential eventually exceeds the line"
+      }
+    },
+    {
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Consider $f(x)=2^{x}$ and the cubic $g(x)=x^{3}$. Which statement is true about their long-run behavior?\nA) The cubic $g(x)=x^{3}$ stays larger than $f$ for all $x$ because polynomials grow faster\nB) The exponential $f(x)=2^{x}$ eventually and permanently exceeds the cubic, even though $g$ leads for a while\nC) The two functions never cross, so the exponential never catches up\nD) The cubic and the exponential grow at exactly the same rate for large $x$",
+      "answer": "B) The exponential $f(x)=2^{x}$ eventually and permanently exceeds the cubic, even though $g$ leads for a while",
+      "solution": {
+        "steps": [
+          "For small inputs the cubic leads: at $x=3$, $g=27$ while $f=8$, and the cubic stays ahead through about $x=9$.",
+          "But $f$ multiplies by $2$ each step while the cubic's growth factor shrinks toward $1$, so the exponential overtakes near $x=10$ ($f(10)=1024>g(10)=1000$) and stays ahead. The key is B.",
+          "A is the misconception that a polynomial always beats an exponential; it fails because exponential growth eventually wins.",
+          "C is false because the curves do cross once and the exponential then dominates.",
+          "D is false because no polynomial keeps pace with an exponential in the long run."
+        ],
+        "answer": "B) The exponential $f(x)=2^{x}$ eventually and permanently exceeds the cubic, even though $g$ leads for a while"
+      }
+    },
+    {
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "For $f(x)=2\\cdot 2^{x}$, what is the correct value of $f(3)$?\nA) $10$, from $2+2^{3}$\nB) $16$, from $2\\cdot 2^{3}$\nC) $64$, from $(2\\cdot 2)^{3}$\nD) $18$, from $2\\cdot 3^{2}$",
+      "answer": "B) $16$, from $2\\cdot 2^{3}$",
+      "solution": {
+        "steps": [
+          "The leading coefficient $2$ multiplies the power $2^{x}$; it is not added.",
+          "First evaluate the power: $2^{3}=8$. Then multiply: $2\\cdot 8=16$. The key is B.",
+          "A adds the coefficient instead of multiplying, giving $2+8=10$.",
+          "C multiplies the base first and raises everything to the power, giving $4^{3}=64$.",
+          "D swaps base and exponent, giving $2\\cdot 3^{2}=2\\cdot 9=18$, which does not match the correct $16$."
+        ],
+        "answer": "B) $16$, from $2\\cdot 2^{3}$"
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T11:30:04.469Z"
+}

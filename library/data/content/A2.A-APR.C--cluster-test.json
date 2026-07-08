@@ -1,0 +1,190 @@
+{
+  "id": "A2.A-APR.C--cluster-test",
+  "standard": null,
+  "clusterId": "A2.A-APR.C",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Arithmetic with Polynomials and Rational Expressions",
+  "domainCode": "A-APR",
+  "cluster": "Use polynomial identities to solve problems",
+  "clusterCode": "C",
+  "skillName": "Use polynomial identities to solve problems",
+  "materialType": "cluster-test",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "items": [
+    {
+      "id": 1,
+      "standard": "A2.A-APR.C.4",
+      "difficulty": "Easy",
+      "prompt": "Expand $(x+5)^2$.\nA) $x^2+25$\nB) $x^2+10x+25$\nC) $x^2+5x+25$\nD) $x^2+25x+10$",
+      "answer": "B) $x^2+10x+25$",
+      "solution": {
+        "steps": [
+          "Write the square as a product: $(x+5)^2=(x+5)(x+5)$.",
+          "Distribute: $x^2+5x+5x+25$.",
+          "Combine the like middle terms: $5x+5x=10x$, giving $x^2+10x+25$, so B is correct.",
+          "A drops the $2ab$ middle term (the freshman's-dream error). C uses only one $5x$ instead of $2(5x)$. D mixes up the middle and constant terms."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "standard": "A2.A-APR.C.4",
+      "difficulty": "Easy",
+      "prompt": "Expand $(x-6)^2$.\nA) $x^2-36$\nB) $x^2+12x+36$\nC) $x^2-12x+36$\nD) $x^2-12x-36$",
+      "answer": "C) $x^2-12x+36$",
+      "solution": {
+        "steps": [
+          "Write $(x-6)^2=(x-6)(x-6)$ and distribute: $x^2-6x-6x+36$.",
+          "Combine the middle terms: $-6x-6x=-12x$, giving $x^2-12x+36$, so C is correct.",
+          "A drops the middle term. B flips the sign of the $-2ab$ term. D mis-signs the constant: $(-6)(-6)=+36$, not $-36$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "standard": "A2.A-APR.C.4",
+      "difficulty": "Easy",
+      "prompt": "Factor $x^2-49$ using a polynomial identity.\nA) $(x-7)(x+7)$\nB) $(x-7)^2$\nC) $(x+7)(x+7)$\nD) does not factor",
+      "answer": "A) $(x-7)(x+7)$",
+      "solution": {
+        "steps": [
+          "Both terms are perfect squares and the expression is a difference: $x^2-49=x^2-7^2$.",
+          "Apply the difference-of-squares identity $a^2-b^2=(a-b)(a+b)$ with $a=x$, $b=7$: $(x-7)(x+7)$, so A is correct.",
+          "B and C are perfect-square trinomials that expand to $x^2\\mp 14x+49$, not $x^2-49$. D is wrong because a difference of two squares always factors."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "standard": "A2.A-APR.C.4",
+      "difficulty": "Easy",
+      "prompt": "Substitute $a=10$ and $b=2$ into the identity $(a+b)(a-b)=a^2-b^2$. What value does the identity give?\nA) $144$\nB) $96$\nC) $104$\nD) $64$",
+      "answer": "B) $96$",
+      "solution": {
+        "steps": [
+          "The right side is $a^2-b^2=10^2-2^2=100-4=96$, so B is correct.",
+          "As a check, the left side is $(10+2)(10-2)=12\\cdot 8=96$, which agrees.",
+          "A is $(a+b)^2=144$. C is $a^2+b^2=104$. D is $(a-b)^2=64$, each using the wrong combination."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "standard": "A2.A-APR.C.4",
+      "difficulty": "Medium",
+      "prompt": "Factor $9x^2-64$ completely.\nA) $(3x-8)(3x+8)$\nB) $(9x-64)(9x+1)$\nC) $(3x-8)^2$\nD) $(3x+8)^2$",
+      "answer": "A) $(3x-8)(3x+8)$",
+      "solution": {
+        "steps": [
+          "Recognize a difference of squares: $9x^2=(3x)^2$ and $64=8^2$.",
+          "Apply $a^2-b^2=(a-b)(a+b)$ with $a=3x$, $b=8$: $(3x-8)(3x+8)$, so A is correct.",
+          "B does not multiply back to $9x^2-64$. C and D are perfect squares equal to $9x^2\\mp 48x+64$, which contain an unwanted middle term."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "standard": "A2.A-APR.C.4",
+      "difficulty": "Medium",
+      "prompt": "Factor $8x^3+125$ using a cube identity.\nA) $(2x+5)(4x^2+10x+25)$\nB) $(2x+5)(4x^2-10x+25)$\nC) $(2x+5)(2x+5)^2$\nD) $(2x-5)(4x^2+10x+25)$",
+      "answer": "B) $(2x+5)(4x^2-10x+25)$",
+      "solution": {
+        "steps": [
+          "This is a sum of cubes: $8x^3=(2x)^3$ and $125=5^3$, so $a=2x$, $b=5$.",
+          "Apply $a^3+b^3=(a+b)(a^2-ab+b^2)$. Here $a^2=4x^2$, $ab=10x$, $b^2=25$, giving $(2x+5)(4x^2-10x+25)$, so B is correct.",
+          "A uses $+ab$ instead of the required $-ab$ in the trinomial. C squares the linear factor instead of using the correct trinomial. D uses $(a-b)$, which belongs to a difference of cubes."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "standard": "A2.A-APR.C.4",
+      "difficulty": "Medium",
+      "prompt": "Use the identity $a^2-b^2=(a-b)(a+b)$ to compute $52\\cdot 48$ without a calculator.\nA) $2496$\nB) $2500$\nC) $2596$\nD) $2484$",
+      "answer": "A) $2496$",
+      "solution": {
+        "steps": [
+          "Write the factors as a sum and difference around $50$: $52=50+2$ and $48=50-2$.",
+          "So $52\\cdot 48=(50+2)(50-2)=50^2-2^2=2500-4=2496$, so A is correct.",
+          "B is $50^2$, forgetting to subtract $b^2$. C adds instead of subtracts. D uses $b^2=16$ from the wrong offset."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "standard": "A2.A-APR.C.4",
+      "difficulty": "Medium",
+      "prompt": "Which statement about $x^2-9=(x-3)(x+3)$ is correct?\nA) It is a conditional equation true only at $x=3$.\nB) It is a conditional equation true only at $x=\\pm 3$.\nC) It is an identity, true for every value of $x$.\nD) It is false for all $x$.",
+      "answer": "C) It is an identity, true for every value of $x$.",
+      "solution": {
+        "steps": [
+          "Expand the right side: $(x-3)(x+3)=x^2+3x-3x-9=x^2-9$, which matches the left side for every $x$.",
+          "Because both sides are equal for all values, the equation is an identity, so C is correct.",
+          "A and B confuse the identity with the separate equation $x^2-9=0$, which is conditional (true only at $x=\\pm 3$). D is wrong because the two sides are in fact always equal."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "standard": "A2.A-APR.C.4",
+      "difficulty": "Medium",
+      "prompt": "Use the identity $(x^2+y^2)^2=(x^2-y^2)^2+(2xy)^2$ with $x=3$ and $y=2$ to generate a Pythagorean triple.\nA) $(5,12,13)$\nB) $(5,12,12)$\nC) $(6,9,13)$\nD) $(12,13,5)$",
+      "answer": "A) $(5,12,13)$",
+      "solution": {
+        "steps": [
+          "Compute the pieces: $x^2-y^2=9-4=5$, $2xy=2(3)(2)=12$, and $x^2+y^2=9+4=13$.",
+          "The legs are $5$ and $12$ and the hypotenuse is the largest value $13$, giving $(5,12,13)$. Check: $5^2+12^2=25+144=169=13^2$, so A is correct.",
+          "B mislabels the hypotenuse as $2xy=12$. C uses $x^2+y^2$ and $2xy$ incorrectly as legs. D lists $5$ as the hypotenuse, which should be the smallest leg."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "standard": "A2.A-APR.C.4",
+      "difficulty": "Hard",
+      "prompt": "Factor $x^6-64$ completely over the integers.\nA) $(x^3-8)(x^3+8)$\nB) $(x-2)(x+2)(x^2+2x+4)(x^2-2x+4)$\nC) $(x^2-4)(x^4+4x^2+16)$\nD) $(x-2)^2(x+2)^2$",
+      "answer": "B) $(x-2)(x+2)(x^2+2x+4)(x^2-2x+4)$",
+      "solution": {
+        "steps": [
+          "First treat $x^6-64$ as a difference of squares: $x^6-64=(x^3)^2-8^2=(x^3-8)(x^3+8)$.",
+          "Factor each cube: $x^3-8=(x-2)(x^2+2x+4)$ and $x^3+8=(x+2)(x^2-2x+4)$.",
+          "Combine to get the complete factorization $(x-2)(x+2)(x^2+2x+4)(x^2-2x+4)$, so B is correct.",
+          "A stops after one step and is not complete. C factors as a difference of cubes only and leaves a reducible quartic. D is wrong because the quadratic factors are not perfect squares."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "standard": "A2.A-APR.C.4",
+      "difficulty": "Hard",
+      "prompt": "Is $(x+y)^2=x^2+y^2$ an identity, and if not what is the correct expansion?\nA) Yes, it is an identity for all $x,y$.\nB) No. A counterexample is $x=y=1$ giving $4\\neq 2$; the correct identity is $(x+y)^2=x^2+2xy+y^2$.\nC) No. The correct identity is $(x+y)^2=x^2-2xy+y^2$.\nD) Yes, because it holds when $y=0$.",
+      "answer": "B) No. A counterexample is $x=y=1$ giving $4\\neq 2$; the correct identity is $(x+y)^2=x^2+2xy+y^2$.",
+      "solution": {
+        "steps": [
+          "Test $x=1$, $y=1$: the left side is $(1+1)^2=4$ but $x^2+y^2=1+1=2$, and $4\\neq 2$, so it fails and is not an identity.",
+          "Expanding correctly: $(x+y)^2=x^2+2xy+y^2$, which keeps the $2xy$ middle term, so B is correct.",
+          "A and D wrongly accept the equation; D only checks $y=0$, a single convenient value. C has the wrong sign on the middle term, which applies to $(x-y)^2$, not $(x+y)^2$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "standard": "A2.A-APR.C.4",
+      "difficulty": "Hard",
+      "prompt": "You want a Pythagorean triple with hypotenuse $25$ from $(x^2+y^2)^2=(x^2-y^2)^2+(2xy)^2$. Which values of $x,y$ work, and what triple do they give?\nA) $x=5,\\,y=0$ giving $(25,0,25)$\nB) $x=4,\\,y=3$ giving $(7,24,25)$\nC) $x=5,\\,y=5$ giving $(0,50,25)$\nD) $x=12,\\,y=13$ giving $(25,312,313)$",
+      "answer": "B) $x=4,\\,y=3$ giving $(7,24,25)$",
+      "solution": {
+        "steps": [
+          "Need $x^2+y^2=25$ with $x>y>0$. Try $x=4$, $y=3$: $x^2+y^2=16+9=25$, which is the required hypotenuse.",
+          "Then $x^2-y^2=16-9=7$ and $2xy=2(4)(3)=24$, giving the triple $(7,24,25)$. Check: $7^2+24^2=49+576=625=25^2$, so B is correct.",
+          "A uses $y=0$, which gives a degenerate triple with a zero leg. C gives $x^2-y^2=0$, again degenerate. D has $x^2+y^2=313$, the wrong hypotenuse."
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T19:56:47.282Z",
+  "generatedAt": "2026-06-24T19:56:47.282Z"
+}

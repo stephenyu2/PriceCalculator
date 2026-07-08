@@ -1,0 +1,240 @@
+{
+  "id": "GEO.G-CO.B--cluster-test",
+  "standard": null,
+  "clusterId": "GEO.G-CO.B",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Understand congruence in terms of rigid motions",
+  "clusterCode": "B",
+  "skillName": "Understand congruence in terms of rigid motions",
+  "materialType": "cluster-test",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:16:48.217Z",
+  "intro": "This cluster test covers congruence in terms of rigid motions: applying and identifying rigid motions and deciding congruence (GEO.G-CO.B.6), establishing triangle congruence and corresponding parts via rigid motions (GEO.G-CO.B.7), and the ASA, SAS, and SSS congruence criteria (GEO.G-CO.B.8). Choose the single best answer for each multiple-choice item.",
+  "items": [
+    {
+      "id": 1,
+      "standard": "GEO.G-CO.B.6",
+      "difficulty": "Easy",
+      "type": "multiple-choice",
+      "prompt": "Triangle $ABC$ has a vertex at $A(3, 5)$. What is the image $A'$ after a reflection over the $x$-axis?\nA) $A'(3, -5)$\nB) $A'(-3, 5)$\nC) $A'(-3, -5)$\nD) $A'(5, 3)$",
+      "answer": "A) $A'(3, -5)$",
+      "solution": {
+        "steps": [
+          "A reflection over the $x$-axis uses the rule $(x, y) \\mapsto (x, -y)$: keep $x$, negate $y$.",
+          "Apply it to $A(3, 5)$: $(3, 5) \\mapsto (3, -5)$, so $A'(3, -5)$.",
+          "B) $A'(-3, 5)$ reflects over the $y$-axis instead, negating $x$.",
+          "C) $A'(-3, -5)$ negates both coordinates, which is a $180^\\circ$ rotation about the origin.",
+          "D) $A'(5, 3)$ swaps the coordinates, which is a reflection over $y = x$."
+        ],
+        "answer": "A) $A'(3, -5)$"
+      }
+    },
+    {
+      "id": 2,
+      "standard": "GEO.G-CO.B.6",
+      "difficulty": "Easy",
+      "type": "multiple-choice",
+      "prompt": "A rotation of $180^\\circ$ about the origin is applied to a triangle in which $DE = 7$ and $m\\angle D = 40^\\circ$. What are the length $D'E'$ and the measure of $\\angle D'$ in the image?\nA) $D'E' = 7$ and $m\\angle D' = 40^\\circ$\nB) $D'E' = 14$ and $m\\angle D' = 80^\\circ$\nC) $D'E' = 7$ and $m\\angle D' = 140^\\circ$\nD) $D'E' = 3.5$ and $m\\angle D' = 40^\\circ$",
+      "answer": "A) $D'E' = 7$ and $m\\angle D' = 40^\\circ$",
+      "solution": {
+        "steps": [
+          "A rotation is a rigid motion, so it preserves every side length and every angle measure.",
+          "Therefore $D'E' = DE = 7$ and $m\\angle D' = m\\angle D = 40^\\circ$.",
+          "B) $D'E' = 14$, $m\\angle D' = 80^\\circ$ doubles the measures, treating the rotation like a dilation by scale factor $2$.",
+          "C) keeps the length but changes the angle to $140^\\circ$; rotations do not alter angle measures.",
+          "D) halves the length; rigid motions preserve, not shrink, lengths."
+        ],
+        "answer": "A) $D'E' = 7$ and $m\\angle D' = 40^\\circ$"
+      }
+    },
+    {
+      "id": 3,
+      "standard": "GEO.G-CO.B.6",
+      "difficulty": "Medium",
+      "type": "multiple-choice",
+      "prompt": "Point $A(3, -2)$ is first translated by $(x, y) \\mapsto (x - 1, y + 4)$ and then reflected over the $x$-axis. What is the final image $A''$?\nA) $A''(2, -2)$\nB) $A''(2, 2)$\nC) $A''(4, -2)$\nD) $A''(-2, 2)$",
+      "answer": "A) $A''(2, -2)$",
+      "solution": {
+        "steps": [
+          "Apply the translation first: $A(3, -2) \\mapsto (3 - 1, -2 + 4) = (2, 2) = A'$.",
+          "Now reflect $A'(2, 2)$ over the $x$-axis with $(x, y) \\mapsto (x, -y)$: $(2, 2) \\mapsto (2, -2)$, so $A''(2, -2)$.",
+          "B) $A''(2, 2)$ stops after the translation and forgets to reflect.",
+          "C) $A''(4, -2)$ adds $1$ to $x$ instead of subtracting in the translation.",
+          "D) $A''(-2, 2)$ applies the reflection before the translation, the wrong order."
+        ],
+        "answer": "A) $A''(2, -2)$"
+      }
+    },
+    {
+      "id": 4,
+      "standard": "GEO.G-CO.B.6",
+      "difficulty": "Hard",
+      "type": "multiple-choice",
+      "prompt": "Triangle $ABC$ has vertices $A(0, 0)$, $B(3, 0)$, $C(3, 4)$ and triangle $DEF$ has vertices $D(0, 0)$, $E(0, 3)$, $F(-4, 3)$. Which statement is correct?\nA) The triangles are congruent; a $90^\\circ$ counterclockwise rotation about the origin maps $\\triangle ABC$ onto $\\triangle DEF$.\nB) The triangles are not congruent because their coordinates are different.\nC) The triangles are congruent; a reflection over the $y$-axis maps $\\triangle ABC$ onto $\\triangle DEF$.\nD) The triangles are not congruent because $\\triangle DEF$ has a longer hypotenuse.",
+      "answer": "A) The triangles are congruent; a $90^\\circ$ counterclockwise rotation about the origin maps $\\triangle ABC$ onto $\\triangle DEF$.",
+      "solution": {
+        "steps": [
+          "Apply the $90^\\circ$ counterclockwise rotation rule $(x, y) \\mapsto (-y, x)$ to each vertex of $\\triangle ABC$.",
+          "$A(0, 0) \\mapsto (0, 0) = D$; $B(3, 0) \\mapsto (0, 3) = E$; $C(3, 4) \\mapsto (-4, 3) = F$. All three vertices land exactly on $D$, $E$, $F$.",
+          "Because a sequence of rigid motions (this single rotation) maps $\\triangle ABC$ exactly onto $\\triangle DEF$, the triangles are congruent.",
+          "B) is wrong: differing coordinates do not prevent congruence, since a rigid motion can relocate a figure.",
+          "C) is wrong: reflecting over the $y$-axis sends $C(3, 4)$ to $(-3, 4)$, not $F(-4, 3)$, so it does not map the triangle.",
+          "D) is wrong: both right triangles have legs $3$ and $4$, hence the same hypotenuse $5$."
+        ],
+        "answer": "A) The triangles are congruent; a $90^\\circ$ counterclockwise rotation about the origin maps $\\triangle ABC$ onto $\\triangle DEF$."
+      }
+    },
+    {
+      "id": 5,
+      "standard": "GEO.G-CO.B.7",
+      "difficulty": "Easy",
+      "type": "multiple-choice",
+      "prompt": "Given $\\triangle ABC \\cong \\triangle DEF$, which side corresponds to $\\overline{AB}$?\nA) $\\overline{DE}$\nB) $\\overline{EF}$\nC) $\\overline{DF}$\nD) $\\overline{BC}$",
+      "answer": "A) $\\overline{DE}$",
+      "solution": {
+        "steps": [
+          "In a congruence statement, corresponding parts are read in matched letter order: $A \\leftrightarrow D$, $B \\leftrightarrow E$, $C \\leftrightarrow F$.",
+          "So $\\overline{AB}$ corresponds to $\\overline{DE}$.",
+          "B) $\\overline{EF}$ corresponds to $\\overline{BC}$, not $\\overline{AB}$.",
+          "C) $\\overline{DF}$ corresponds to $\\overline{AC}$.",
+          "D) $\\overline{BC}$ is a side of the same triangle, not the corresponding side in $\\triangle DEF$."
+        ],
+        "answer": "A) $\\overline{DE}$"
+      }
+    },
+    {
+      "id": 6,
+      "standard": "GEO.G-CO.B.7",
+      "difficulty": "Easy",
+      "type": "multiple-choice",
+      "prompt": "Given $\\triangle ABC \\cong \\triangle DEF$ with $AB = 8$ and $m\\angle A = 47^\\circ$, what are $DE$ and $m\\angle D$?\nA) $DE = 8$ and $m\\angle D = 47^\\circ$\nB) $DE = 16$ and $m\\angle D = 47^\\circ$\nC) $DE = 8$ and $m\\angle D = 133^\\circ$\nD) $DE = 47$ and $m\\angle D = 8^\\circ$",
+      "answer": "A) $DE = 8$ and $m\\angle D = 47^\\circ$",
+      "solution": {
+        "steps": [
+          "By CPCTC, corresponding parts of congruent triangles are congruent, and $A \\leftrightarrow D$, $B \\leftrightarrow E$.",
+          "So $DE = AB = 8$ and $m\\angle D = m\\angle A = 47^\\circ$.",
+          "B) $DE = 16$ scales the side, but rigid motions preserve length, so corresponding sides are equal.",
+          "C) $m\\angle D = 133^\\circ$ uses $180^\\circ - 47^\\circ$; corresponding angles are equal, not supplementary.",
+          "D) swaps the side length and the angle measure."
+        ],
+        "answer": "A) $DE = 8$ and $m\\angle D = 47^\\circ$"
+      }
+    },
+    {
+      "id": 7,
+      "standard": "GEO.G-CO.B.7",
+      "difficulty": "Medium",
+      "type": "multiple-choice",
+      "prompt": "In $\\triangle ABC \\cong \\triangle DEF$, $m\\angle A = 47^\\circ$ and $m\\angle B = 63^\\circ$. What is $m\\angle F$?\nA) $70^\\circ$\nB) $110^\\circ$\nC) $63^\\circ$\nD) $47^\\circ$",
+      "answer": "A) $70^\\circ$",
+      "solution": {
+        "steps": [
+          "First find $m\\angle C$ using the triangle angle sum: $m\\angle C = 180^\\circ - 47^\\circ - 63^\\circ = 70^\\circ$.",
+          "Since $\\triangle ABC \\cong \\triangle DEF$, $C \\leftrightarrow F$, so $m\\angle F = m\\angle C = 70^\\circ$.",
+          "B) $110^\\circ$ uses $180^\\circ - 70^\\circ$, the supplement, instead of the angle itself.",
+          "C) $63^\\circ$ matches $\\angle F$ with $\\angle B$ instead of $\\angle C$.",
+          "D) $47^\\circ$ matches $\\angle F$ with $\\angle A$ instead of $\\angle C$."
+        ],
+        "answer": "A) $70^\\circ$"
+      }
+    },
+    {
+      "id": 8,
+      "standard": "GEO.G-CO.B.7",
+      "difficulty": "Hard",
+      "type": "multiple-choice",
+      "prompt": "Triangle $ABC$ has vertices $A(0, 0)$, $B(4, 0)$, $C(4, 3)$ and triangle $DEF$ has vertices $D(0, 0)$, $E(4, 0)$, $F(4, -3)$. Which sequence of rigid motions maps $\\triangle ABC$ onto $\\triangle DEF$, and why is a reflection required?\nA) A reflection over the $x$-axis; the two triangles have opposite orientations, so a reflection is needed.\nB) A translation by $(x, y) \\mapsto (x, y - 3)$; no reflection is needed because the triangles match by sliding.\nC) A $180^\\circ$ rotation about the origin; the triangles have the same orientation.\nD) No sequence exists; the triangles are not congruent because $F$ has a negative coordinate.",
+      "answer": "A) A reflection over the $x$-axis; the two triangles have opposite orientations, so a reflection is needed.",
+      "solution": {
+        "steps": [
+          "Reflect $\\triangle ABC$ over the $x$-axis with $(x, y) \\mapsto (x, -y)$: $A(0,0) \\mapsto (0,0) = D$, $B(4,0) \\mapsto (4,0) = E$, $C(4,3) \\mapsto (4,-3) = F$. All vertices map onto $\\triangle DEF$.",
+          "Reading the vertices in order, $\\triangle ABC$ runs counterclockwise while $\\triangle DEF$ runs clockwise, so the triangles have opposite orientation; a reflection (which reverses orientation) is required.",
+          "B) A pure translation preserves orientation, so it cannot match two oppositely oriented triangles, and sliding down by $3$ does not carry $C(4,3)$ to $F(4,-3)$.",
+          "C) A $180^\\circ$ rotation sends $C(4,3)$ to $(-4,-3)$, not $F(4,-3)$, and it also preserves orientation.",
+          "D) is wrong: the triangles are congruent, since the reflection in choice A maps one exactly onto the other."
+        ],
+        "answer": "A) A reflection over the $x$-axis; the two triangles have opposite orientations, so a reflection is needed."
+      }
+    },
+    {
+      "id": 9,
+      "standard": "GEO.G-CO.B.8",
+      "difficulty": "Easy",
+      "type": "multiple-choice",
+      "prompt": "In triangles $ABC$ and $DEF$ you are given $AB = DE$, $m\\angle A = m\\angle D$, and $AC = DF$. Which congruence criterion proves $\\triangle ABC \\cong \\triangle DEF$?\nA) SAS\nB) ASA\nC) SSS\nD) SSA",
+      "answer": "A) SAS",
+      "solution": {
+        "steps": [
+          "Angle $A$ is included between sides $\\overline{AB}$ and $\\overline{AC}$, and the matching parts are two sides and the included angle.",
+          "Two sides and the included angle is the SAS criterion.",
+          "B) ASA requires two angles and the included side, but only one angle is given.",
+          "C) SSS requires all three pairs of sides, but only two side pairs are given.",
+          "D) SSA is not a valid congruence criterion, and in any case the given angle here is the included angle, so the configuration is SAS."
+        ],
+        "answer": "A) SAS"
+      }
+    },
+    {
+      "id": 10,
+      "standard": "GEO.G-CO.B.8",
+      "difficulty": "Medium",
+      "type": "multiple-choice",
+      "prompt": "In triangles $ABC$ and $DEF$ you know $\\angle B \\cong \\angle E$ and $\\angle C \\cong \\angle F$. Which additional pair of corresponding parts lets you apply the ASA criterion?\nA) $\\overline{BC} \\cong \\overline{EF}$\nB) $\\overline{AB} \\cong \\overline{DE}$\nC) $\\overline{AC} \\cong \\overline{DF}$\nD) $\\angle A \\cong \\angle D$",
+      "answer": "A) $\\overline{BC} \\cong \\overline{EF}$",
+      "solution": {
+        "steps": [
+          "ASA requires two angles and the side included between them.",
+          "The angles given are $\\angle B$ and $\\angle C$; the side included between them is $\\overline{BC}$ (corresponding to $\\overline{EF}$).",
+          "So $\\overline{BC} \\cong \\overline{EF}$ completes ASA.",
+          "B) $\\overline{AB}$ is not included between $\\angle B$ and $\\angle C$; using it gives AAS, not ASA.",
+          "C) $\\overline{AC}$ is also not the included side between $\\angle B$ and $\\angle C$.",
+          "D) Adding $\\angle A \\cong \\angle D$ gives AAA, which guarantees only similarity, not congruence."
+        ],
+        "answer": "A) $\\overline{BC} \\cong \\overline{EF}$"
+      }
+    },
+    {
+      "id": 11,
+      "standard": "GEO.G-CO.B.8",
+      "difficulty": "Hard",
+      "type": "multiple-choice",
+      "prompt": "In triangles $ABC$ and $DEF$, $AB = DE$, $BC = EF$, and $m\\angle A = m\\angle D$, where $\\angle A$ is a non-included angle. Is this enough to conclude $\\triangle ABC \\cong \\triangle DEF$?\nA) No; this is the SSA arrangement, which is not a valid congruence criterion because of the ambiguous case.\nB) Yes; two sides and an angle always force congruence by SAS.\nC) Yes; this is ASA, so the triangles are congruent.\nD) No; the triangles can never be congruent when an angle is non-included.",
+      "answer": "A) No; this is the SSA arrangement, which is not a valid congruence criterion because of the ambiguous case.",
+      "solution": {
+        "steps": [
+          "The given parts are two sides and an angle that is not between them, the SSA arrangement.",
+          "SSA does not guarantee congruence: for the same two side lengths and non-included angle, two differently shaped triangles can exist (the ambiguous case), so a sequence of rigid motions need not map one onto the other.",
+          "B) is wrong: SAS requires the angle to be included between the two given sides; here it is not, so this is not SAS.",
+          "C) is wrong: ASA requires two angles and the included side, not two sides and an angle.",
+          "D) overstates the case: SSA does not force congruence, but the triangles still could happen to be congruent, so 'never' is incorrect; the point is that the criterion fails to guarantee it."
+        ],
+        "answer": "A) No; this is the SSA arrangement, which is not a valid congruence criterion because of the ambiguous case."
+      }
+    },
+    {
+      "id": 12,
+      "standard": "GEO.G-CO.B.8",
+      "difficulty": "Hard",
+      "type": "multiple-choice",
+      "prompt": "Using the definition of congruence in terms of rigid motions, which statement best explains why SAS forces two triangles to be congruent?\nA) After a rigid motion places the included angle's vertex and aligns one given side, the second given side has fixed length and the included angle is fixed, so the second endpoint must coincide and the third vertex is forced into place.\nB) Because all three angles are equal, the triangles must be the same size.\nC) Because rigid motions can stretch a side to any length, the sides can always be made to match.\nD) Because SAS is an independent axiom that cannot be derived from rigid motions.",
+      "answer": "A) After a rigid motion places the included angle's vertex and aligns one given side, the second given side has fixed length and the included angle is fixed, so the second endpoint must coincide and the third vertex is forced into place.",
+      "solution": {
+        "steps": [
+          "Translate to map the included angle's vertex onto its image, then rotate (and reflect if orientation differs) to align one given side along its corresponding side; rigid motions preserve length, so the side endpoints coincide.",
+          "Because the included angle is preserved, the second given side lies along the correct ray, and since its length is also preserved, its far endpoint coincides with the corresponding vertex, forcing the third vertex into place. A sequence of rigid motions thus maps one triangle onto the other, so by definition they are congruent.",
+          "B) describes AAA, which yields only similarity, not congruence, and is not what SAS asserts.",
+          "C) is false: rigid motions preserve length and cannot stretch sides.",
+          "D) is wrong: SAS is not a separate axiom; it follows from the single definition of congruence in terms of rigid motions."
+        ],
+        "answer": "A) After a rigid motion places the included angle's vertex and aligns one given side, the second given side has fixed length and the included angle is fixed, so the second endpoint must coincide and the third vertex is forced into place."
+      }
+    }
+  ]
+}

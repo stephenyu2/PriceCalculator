@@ -1,0 +1,232 @@
+{
+  "id": "GEO.S-CP.B--cluster-test",
+  "standard": null,
+  "clusterId": "GEO.S-CP.B",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Use the rules of probability to compute probabilities of compound events in a uniform probability model",
+  "clusterCode": "B",
+  "skillName": "Use the rules of probability to compute probabilities of compound events in a uniform probability model",
+  "materialType": "cluster-test",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "intro": "End-of-cluster mastery check, $12$ multiple-choice questions. The first six cover conditional probability, $P(A \\mid B) = \\dfrac{P(A \\cap B)}{P(B)}$, and the last six cover the Addition Rule, $P(A \\text{ or } B) = P(A) + P(B) - P(A \\text{ and } B)$. Choose the single best answer for each.",
+  "items": [
+    {
+      "id": 1,
+      "standard": "GEO.S-CP.B.6",
+      "difficulty": "Easy",
+      "prompt": "A fair six-sided die is rolled. Given that the result is odd, what is the probability the result is less than $4$?\nA) $\\frac{2}{3}$\nB) $\\frac{1}{2}$\nC) $\\frac{2}{6}$\nD) $\\frac{1}{6}$",
+      "answer": "A) $\\frac{2}{3}$",
+      "solution": {
+        "steps": [
+          "The conditioning event is 'odd', so the restricted sample space is $\\{1,3,5\\}$, giving $n(B)=3$.",
+          "Among those, the outcomes less than $4$ are $1$ and $3$, so $n(A \\cap B)=2$.",
+          "$P(<4 \\mid \\text{odd}) = \\dfrac{n(A \\cap B)}{n(B)} = \\dfrac{2}{3}$, so the key is A.",
+          "B) $\\frac{1}{2}$ wrongly counts $1,2,3$ as if every value below $4$ were available, ignoring that only odd outcomes remain.",
+          "C) $\\frac{2}{6}$ keeps the full sample space of $6$ in the denominator instead of restricting to the $3$ odd outcomes.",
+          "D) $\\frac{1}{6}$ counts only a single favorable outcome over the full unrestricted sample space of $6$, ignoring both the condition and the second favorable outcome."
+        ],
+        "answer": "A) $\\frac{2}{3}$"
+      }
+    },
+    {
+      "id": 2,
+      "standard": "GEO.S-CP.B.6",
+      "difficulty": "Easy",
+      "prompt": "In a survey of $60$ adults, $25$ own a dog, and $10$ of those dog owners also own a cat. What is the probability an adult owns a cat, given that the adult owns a dog?\nA) $\\frac{10}{60}$\nB) $\\frac{2}{5}$\nC) $\\frac{15}{25}$\nD) $\\frac{25}{60}$",
+      "answer": "B) $\\frac{2}{5}$",
+      "solution": {
+        "steps": [
+          "Restrict to dog owners: $n(B)=25$.",
+          "Of those, $10$ also own a cat, so $n(A \\cap B)=10$.",
+          "$P(\\text{cat} \\mid \\text{dog}) = \\dfrac{10}{25} = \\dfrac{2}{5}$, so the key is B.",
+          "A) $\\frac{10}{60}$ uses the whole group of $60$ as the denominator instead of restricting to the $25$ dog owners; that is the joint probability, not the conditional.",
+          "C) $\\frac{15}{25}$ counts the dog owners who do NOT own a cat ($25-10=15$) in the numerator.",
+          "D) $\\frac{25}{60}$ is just the probability of owning a dog and ignores the cat information entirely."
+        ],
+        "answer": "B) $\\frac{2}{5}$"
+      }
+    },
+    {
+      "id": 3,
+      "standard": "GEO.S-CP.B.6",
+      "difficulty": "Medium",
+      "prompt": "For two events, $P(A \\cap B) = \\frac{1}{4}$ and $P(B) = \\frac{3}{4}$. What is $P(A \\mid B)$?\nA) $\\frac{3}{16}$\nB) $\\frac{1}{3}$\nC) $\\frac{1}{2}$\nD) $3$",
+      "answer": "B) $\\frac{1}{3}$",
+      "solution": {
+        "steps": [
+          "Use the conditional formula $P(A \\mid B) = \\dfrac{P(A \\cap B)}{P(B)}$.",
+          "Substitute: $\\dfrac{1/4}{3/4} = \\dfrac{1}{4} \\times \\dfrac{4}{3} = \\dfrac{4}{12} = \\dfrac{1}{3}$, so the key is B.",
+          "A) $\\frac{3}{16}$ comes from multiplying $\\frac{1}{4} \\cdot \\frac{3}{4}$ instead of dividing, treating it like an 'and' problem.",
+          "C) $\\frac{1}{2}$ does not result from any correct manipulation; it ignores the actual values and guesses a midpoint.",
+          "D) $3$ inverts the fraction, dividing $P(B)$ by $P(A \\cap B)$, giving a value above $1$ that cannot be a probability."
+        ],
+        "answer": "B) $\\frac{1}{3}$"
+      }
+    },
+    {
+      "id": 4,
+      "standard": "GEO.S-CP.B.6",
+      "difficulty": "Medium",
+      "prompt": "A two-way table records grade level and lunch choice for $80$ students. Of $48$ juniors, $18$ buy lunch; the other $32$ seniors include $20$ who buy lunch. What is the probability a student buys lunch, given that the student is a senior?\nA) $\\frac{20}{80}$\nB) $\\frac{38}{80}$\nC) $\\frac{5}{8}$\nD) $\\frac{18}{48}$",
+      "answer": "C) $\\frac{5}{8}$",
+      "solution": {
+        "steps": [
+          "Condition on senior: $n(B) = 32$.",
+          "Of the seniors, $20$ buy lunch, so $n(A \\cap B) = 20$.",
+          "$P(\\text{buys lunch} \\mid \\text{senior}) = \\dfrac{20}{32} = \\dfrac{5}{8}$, so the key is C.",
+          "A) $\\frac{20}{80}$ uses the full total of $80$ instead of restricting to the $32$ seniors.",
+          "B) $\\frac{38}{80}$ uses the total lunch-buyer count ($18+20=38$) over $80$, the marginal $P(\\text{buys lunch})$, ignoring the condition.",
+          "D) $\\frac{18}{48}$ conditions on junior by mistake instead of senior."
+        ],
+        "answer": "C) $\\frac{5}{8}$"
+      }
+    },
+    {
+      "id": 5,
+      "standard": "GEO.S-CP.B.6",
+      "difficulty": "Hard",
+      "prompt": "A two-way table classifies $90$ employees by department (Sales or Support) and whether they met a quota. Of $50$ Sales employees, $30$ met quota; of $40$ Support employees, $12$ met quota. Compare $P(\\text{met quota} \\mid \\text{Support})$ with the overall probability of meeting quota, $P(\\text{met quota})$. Which statement is correct?\nA) $P(\\text{met quota} \\mid \\text{Support}) = \\frac{3}{10}$, which is less than $P(\\text{met quota}) = \\frac{42}{90}$, so Support employees are less likely to meet quota.\nB) $P(\\text{met quota} \\mid \\text{Support}) = \\frac{12}{90}$, which is less than $P(\\text{met quota}) = \\frac{42}{90}$.\nC) $P(\\text{met quota} \\mid \\text{Support}) = \\frac{3}{10}$, which equals $P(\\text{met quota})$, so the department has no effect.\nD) $P(\\text{met quota} \\mid \\text{Support}) = \\frac{28}{40}$, which is greater than $P(\\text{met quota}) = \\frac{42}{90}$.",
+      "answer": "A) $P(\\text{met quota} \\mid \\text{Support}) = \\frac{3}{10}$, which is less than $P(\\text{met quota}) = \\frac{42}{90}$, so Support employees are less likely to meet quota.",
+      "solution": {
+        "steps": [
+          "Condition on Support: $n(\\text{Support})=40$ and $12$ of them met quota, so $P(\\text{met quota} \\mid \\text{Support}) = \\dfrac{12}{40} = \\dfrac{3}{10}$.",
+          "The overall met-quota count is $30+12=42$ out of $90$, so $P(\\text{met quota}) = \\dfrac{42}{90} = \\dfrac{7}{15}$.",
+          "Compare: $\\dfrac{3}{10} = 0.3$ and $\\dfrac{7}{15} \\approx 0.467$, so $\\dfrac{3}{10} < \\dfrac{42}{90}$; being in Support lowers the chance of meeting quota. Choice A is correct.",
+          "B) $\\frac{12}{90}$ uses the full total of $90$ as the denominator instead of restricting to the $40$ Support employees; that is the joint probability, not the conditional.",
+          "C) is wrong because $\\frac{3}{10} = \\frac{27}{90}$ does NOT equal $\\frac{42}{90}$, so the events are not independent.",
+          "D) $\\frac{28}{40}$ counts the Support employees who did NOT meet quota ($40-12=28$) in the numerator instead of those who did."
+        ],
+        "answer": "A) $P(\\text{met quota} \\mid \\text{Support}) = \\frac{3}{10}$, which is less than $P(\\text{met quota}) = \\frac{42}{90}$, so Support employees are less likely to meet quota."
+      }
+    },
+    {
+      "id": 6,
+      "standard": "GEO.S-CP.B.6",
+      "difficulty": "Hard",
+      "prompt": "At a college, $30\\%$ of students live on campus, and $18\\%$ of all students both live on campus and have a meal plan. Using $P(\\text{meal plan} \\mid \\text{on campus}) = \\dfrac{P(\\text{on campus} \\cap \\text{meal plan})}{P(\\text{on campus})}$, what fraction of on-campus students have a meal plan?\nA) $\\frac{27}{500}$\nB) $\\frac{3}{10}$\nC) $\\frac{3}{5}$\nD) $\\frac{5}{3}$",
+      "answer": "C) $\\frac{3}{5}$",
+      "solution": {
+        "steps": [
+          "Write the percentages as probabilities: $P(\\text{on campus}) = 0.30 = \\dfrac{3}{10}$ and $P(\\text{on campus} \\cap \\text{meal plan}) = 0.18 = \\dfrac{9}{50}$.",
+          "Apply the formula: $P(\\text{meal plan} \\mid \\text{on campus}) = \\dfrac{9/50}{3/10} = \\dfrac{9}{50} \\times \\dfrac{10}{3} = \\dfrac{90}{150} = \\dfrac{3}{5}$, so the key is C.",
+          "So $\\dfrac{3}{5} = 60\\%$ of on-campus students have a meal plan. Choice C is correct.",
+          "A) $\\frac{27}{500}$ comes from multiplying $\\frac{3}{10} \\cdot \\frac{9}{50}$ instead of dividing, treating it as an 'and' problem.",
+          "B) $\\frac{3}{10}$ just reports $P(\\text{on campus})$ and ignores the conditioning step.",
+          "D) $\\frac{5}{3}$ inverts the division, computing $\\dfrac{P(\\text{on campus})}{P(\\text{on campus} \\cap \\text{meal plan})}$, which exceeds $1$ and cannot be a probability."
+        ],
+        "answer": "C) $\\frac{3}{5}$"
+      }
+    },
+    {
+      "id": 7,
+      "standard": "GEO.S-CP.B.7",
+      "difficulty": "Easy",
+      "prompt": "Given $P(A) = \\frac{2}{5}$, $P(B) = \\frac{1}{2}$, and $P(A \\text{ and } B) = \\frac{1}{5}$, find $P(A \\text{ or } B)$.\nA) $\\frac{7}{10}$\nB) $\\frac{9}{10}$\nC) $\\frac{1}{5}$\nD) $1$",
+      "answer": "A) $\\frac{7}{10}$",
+      "solution": {
+        "steps": [
+          "Apply the Addition Rule: $P(A \\text{ or } B) = P(A) + P(B) - P(A \\text{ and } B)$.",
+          "Use a common denominator of $10$: $\\frac{4}{10} + \\frac{5}{10} - \\frac{2}{10} = \\frac{7}{10}$, so the key is A.",
+          "B) $\\frac{9}{10}$ adds the probabilities without subtracting the overlap: $\\frac{4}{10} + \\frac{5}{10} = \\frac{9}{10}$.",
+          "C) $\\frac{1}{5}$ reports just the intersection $P(A \\text{ and } B)$, not the union.",
+          "D) $1$ adds the intersection instead of subtracting it: $\\frac{4}{10} + \\frac{5}{10} + \\frac{2}{10} = \\frac{11}{10}$, then rounds down, which is impossible."
+        ],
+        "answer": "A) $\\frac{7}{10}$"
+      }
+    },
+    {
+      "id": 8,
+      "standard": "GEO.S-CP.B.7",
+      "difficulty": "Easy",
+      "prompt": "A single card is drawn from a standard $52$-card deck. The events 'Ace' and 'King' are mutually exclusive. Find $P(\\text{Ace or King})$.\nA) $\\frac{2}{13}$\nB) $\\frac{1}{169}$\nC) $\\frac{4}{13}$\nD) $\\frac{11}{13}$",
+      "answer": "A) $\\frac{2}{13}$",
+      "solution": {
+        "steps": [
+          "There are $4$ Aces and $4$ Kings, and no card is both, so $P(\\text{Ace and King}) = 0$.",
+          "Apply the Addition Rule: $\\frac{4}{52} + \\frac{4}{52} - 0 = \\frac{8}{52} = \\frac{2}{13}$, so the key is A.",
+          "B) $\\frac{1}{169}$ multiplies the probabilities, $\\frac{4}{52} \\cdot \\frac{4}{52}$, confusing the Addition Rule with the Multiplication Rule.",
+          "C) $\\frac{4}{13}$ doubles the correct count, treating the overlap as if it added in.",
+          "D) $\\frac{11}{13}$ is the complement $1 - \\frac{2}{13}$, the chance of drawing neither an Ace nor a King."
+        ],
+        "answer": "A) $\\frac{2}{13}$"
+      }
+    },
+    {
+      "id": 9,
+      "standard": "GEO.S-CP.B.7",
+      "difficulty": "Medium",
+      "prompt": "A single card is drawn from a standard $52$-card deck. Find $P(\\text{Queen or club})$.\nA) $\\frac{4}{13}$\nB) $\\frac{17}{52}$\nC) $\\frac{1}{4}$\nD) $\\frac{9}{13}$",
+      "answer": "A) $\\frac{4}{13}$",
+      "solution": {
+        "steps": [
+          "There are $4$ Queens, $13$ clubs, and the Queen of clubs belongs to both, so the overlap is $\\frac{1}{52}$.",
+          "Apply the Addition Rule: $\\frac{4}{52} + \\frac{13}{52} - \\frac{1}{52} = \\frac{16}{52} = \\frac{4}{13}$, so the key is A.",
+          "B) $\\frac{17}{52}$ forgets to subtract the overlap, double-counting the Queen of clubs.",
+          "C) $\\frac{1}{4} = \\frac{13}{52}$ subtracts $\\frac{4}{52}$ instead of $\\frac{1}{52}$, miscounting the genuine overlap.",
+          "D) $\\frac{9}{13} = \\frac{36}{52}$ is the complement $1 - \\frac{16}{52}$, the chance of drawing neither a Queen nor a club."
+        ],
+        "answer": "A) $\\frac{4}{13}$"
+      }
+    },
+    {
+      "id": 10,
+      "standard": "GEO.S-CP.B.7",
+      "difficulty": "Medium",
+      "prompt": "Of $50$ students, $22$ take chorus, $18$ take drama, and $8$ take both. A student is chosen at random. Find the probability the student takes chorus or drama.\nA) $\\frac{16}{25}$\nB) $\\frac{4}{5}$\nC) $\\frac{4}{25}$\nD) $\\frac{48}{50}$",
+      "answer": "A) $\\frac{16}{25}$",
+      "solution": {
+        "steps": [
+          "Identify the probabilities: $P(\\text{chorus}) = \\frac{22}{50}$, $P(\\text{drama}) = \\frac{18}{50}$, $P(\\text{both}) = \\frac{8}{50}$.",
+          "Apply the Addition Rule: $\\frac{22}{50} + \\frac{18}{50} - \\frac{8}{50} = \\frac{32}{50} = \\frac{16}{25}$, so the key is A.",
+          "B) $\\frac{4}{5} = \\frac{40}{50}$ adds $22 + 18$ without subtracting the $8$ who take both, double-counting them.",
+          "C) $\\frac{4}{25} = \\frac{8}{50}$ reports only the overlap, the probability of taking both.",
+          "D) $\\frac{48}{50}$ adds the overlap instead of subtracting it: $\\frac{22 + 18 + 8}{50}$."
+        ],
+        "answer": "A) $\\frac{16}{25}$"
+      }
+    },
+    {
+      "id": 11,
+      "standard": "GEO.S-CP.B.7",
+      "difficulty": "Hard",
+      "prompt": "For two events, $P(A) = 0.7$, $P(B) = 0.4$, and $P(A \\text{ or } B) = 0.9$. Find $P(A \\text{ and } B)$.\nA) $0.2$\nB) $-0.2$\nC) $1.1$\nD) $0.3$",
+      "answer": "A) $0.2$",
+      "solution": {
+        "steps": [
+          "Start from $P(A \\text{ or } B) = P(A) + P(B) - P(A \\text{ and } B)$ and solve for the intersection.",
+          "Rearrange: $P(A \\text{ and } B) = P(A) + P(B) - P(A \\text{ or } B) = 0.7 + 0.4 - 0.9 = 0.2$, so the key is A.",
+          "B) $-0.2$ rearranges with the wrong sign as $P(A \\text{ or } B) - P(A) - P(B) = 0.9 - 0.7 - 0.4$; a probability can never be negative.",
+          "C) $1.1$ adds all three values, $0.7 + 0.4 + 0.9$ minus a piece, ignoring the structure of the rule and exceeding $1$.",
+          "D) $0.3$ comes from $P(A \\text{ or } B) - P(A) = 0.9 - 0.7 + 0.1$ miscounting, using only one event instead of both."
+        ],
+        "answer": "A) $0.2$"
+      }
+    },
+    {
+      "id": 12,
+      "standard": "GEO.S-CP.B.7",
+      "difficulty": "Hard",
+      "prompt": "In a club, the probability a member plays chess is $0.50$, the probability a member plays checkers is $0.35$, and the probability a member plays both is $0.15$. Find the probability a randomly chosen member plays neither chess nor checkers.\nA) $0.30$\nB) $0.00$\nC) $0.70$\nD) $0.15$",
+      "answer": "A) $0.30$",
+      "solution": {
+        "steps": [
+          "First find $P(\\text{chess or checkers})$ with the Addition Rule: $0.50 + 0.35 - 0.15 = 0.70$.",
+          "'Neither' is the complement of 'chess or checkers': $P(\\text{neither}) = 1 - 0.70 = 0.30$, so the key is A.",
+          "This means $30\\%$ of the club plays neither game.",
+          "B) $0.00$ wrongly adds the overlap, $0.50 + 0.35 + 0.15 = 1.00$, then takes the complement of $1$.",
+          "C) $0.70$ reports $P(\\text{chess or checkers})$ itself and forgets to take the complement for 'neither'.",
+          "D) $0.15$ reports the overlap $P(\\text{both})$ rather than the probability of neither."
+        ],
+        "answer": "A) $0.30$"
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T21:16:48.217Z"
+}

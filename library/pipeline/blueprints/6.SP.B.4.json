@@ -1,0 +1,136 @@
+{
+  "standard": "6.SP.B.4",
+  "grade": "6",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Summarize and describe distributions",
+  "clusterCode": "B",
+  "skillName": "Displaying Data in Plots",
+
+  "description": "Students display numerical data sets on a number line using dot plots (line plots), histograms, and box plots. They must read a data set or frequency information, choose or build the requested display, place data correctly (one dot per value, data binned into equal-width intervals for histograms, and the five-number summary $\\min, Q_1, \\text{median}, Q_3, \\max$ for box plots), and read values back out of a given display. They also recognize which display fits a question and interpret features such as frequency, intervals, and quartiles.",
+
+  "subSkills": [
+    "Build a dot plot from a raw data list (one dot per data value, correctly scaled number line)",
+    "Read frequencies and individual values back out of a dot plot",
+    "Group data into equal-width intervals (bins) and build a histogram, choosing a sensible bin width",
+    "Read frequencies and interval membership out of a histogram (and recognize that individual values are not recoverable)",
+    "Order data and compute the five-number summary: $\\min$, lower quartile $Q_1$, median, upper quartile $Q_3$, $\\max$",
+    "Construct a box plot from the five-number summary and compute the interquartile range $\\text{IQR} = Q_3 - Q_1$",
+    "Read the five-number summary and IQR back out of a given box plot",
+    "Match a data set or question to the appropriate display type"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Build a dot plot",
+      "example": "The number of pets owned by $12$ students is $0, 1, 1, 2, 0, 3, 1, 2, 1, 0, 2, 4$. Describe the dot plot: how many dots sit above each value $0, 1, 2, 3, 4$ on the number line."
+    },
+    {
+      "name": "Read a dot plot",
+      "example": "A dot plot of daily absences shows dots above $0$ (4 dots), $1$ (3 dots), $2$ (2 dots), and $5$ (1 dot). How many days are recorded, and on how many days were there at least $2$ absences?"
+    },
+    {
+      "name": "Build a histogram from intervals",
+      "example": "Plant heights in cm are $4, 7, 9, 11, 12, 14, 18, 19, 21, 23$. Using equal-width intervals of width $5$ starting at $0$ ($0\\text{–}4$, $5\\text{–}9$, $10\\text{–}14$, $15\\text{–}19$, $20\\text{–}24$), give the frequency (bar height) for each interval."
+    },
+    {
+      "name": "Read a histogram",
+      "example": "A histogram of test scores has intervals $50\\text{–}59$ (height $2$), $60\\text{–}69$ (height $5$), $70\\text{–}79$ (height $8$), $80\\text{–}89$ (height $4$), $90\\text{–}99$ (height $1$). How many students scored at least $70$? Can you tell exactly how many scored $73$?"
+    },
+    {
+      "name": "Five-number summary and box plot",
+      "example": "Order the data $7, 3, 9, 5, 11, 8, 6, 10, 4$ and find $\\min$, $Q_1$, median, $Q_3$, and $\\max$. Then describe the box plot and compute the $\\text{IQR}$."
+    },
+    {
+      "name": "Read a box plot",
+      "example": "A box plot of quiz scores has $\\min = 4$, $Q_1 = 7$, median $= 10$, $Q_3 = 13$, $\\max = 18$. What is the $\\text{IQR}$, and what fraction of the data lies between $7$ and $13$?"
+    },
+    {
+      "name": "Choose the right display",
+      "example": "You want to show how $200$ commute times group into ranges without listing every value. Which display (dot plot, histogram, or box plot) is most appropriate, and why?"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single display, small clean data set or a fully labeled display already given. Reading or building a dot plot, reading a histogram's bar heights, or reading a five-number summary straight off a box plot. One step, no quartile computation, no binning decisions.",
+      "constraints": [
+        "Data set has $\\le 12$ values, all small non-negative integers",
+        "For dot plots: build or count dots, one dot per value",
+        "For histograms: intervals and bar heights are given; only read frequencies",
+        "For box plots: the five-number summary is given; only read a value or count what fraction lies in a region",
+        "No computation of $Q_1$, median, $Q_3$, or IQR required"
+      ]
+    },
+    "Medium": {
+      "description": "One full construction step. Bin a data set into given equal-width intervals to get histogram heights, OR order a data set and compute the median and quartiles for a box plot, OR compute the IQR from a five-number summary. Data sets are larger and may need ordering first.",
+      "constraints": [
+        "Data set has $12$ to $20$ values, may be unordered",
+        "Histogram: interval width and start are given; student assigns each value to a bin and counts",
+        "Box plot: student orders the data, then finds median, $Q_1$, $Q_3$ (odd or even count), and $\\text{IQR} = Q_3 - Q_1$",
+        "Quartiles fall on integer or half-integer values requiring averaging two middle numbers",
+        "Single display type per item"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step or judgment required. Choose an appropriate bin width and build the histogram from scratch, OR compute the full five-number summary AND interpret it (compare two box plots, reason about spread), OR decide which of the three displays fits a scenario and justify it, OR convert information between displays.",
+      "constraints": [
+        "Student must choose a reasonable interval width (not given) and justify the number of bins",
+        "Comparison of two distributions via two box plots or two histograms (which has greater spread / IQR / median)",
+        "Reason about what a display can and cannot show (e.g., a histogram hides individual values)",
+        "Data set has $\\ge 20$ values or includes a value that affects the quartile boundaries",
+        "May ask student to select the correct display and explain the choice"
+      ]
+    },
+    "_tierSplit": "This standard spans three distinct display types, so it warrants the two-worksheet split. tier1 (Easy to Medium) covers dot plots and histograms: building and reading dot plots, then binning data and reading/building histograms. tier2 (Medium to Hard) covers box plots and synthesis: the five-number summary, IQR, constructing and reading box plots, comparing distributions, and choosing the appropriate display. The single ramped worksheet, if used instead, runs dot plots (Easy) to histograms (Easy/Medium) to box plots and quartiles (Medium) to display-choice and comparison (Hard)."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student treats a histogram like a bar graph and leaves gaps or uses unequal-width intervals",
+      "distractor": "Reads or builds bars over single discrete values or with mismatched interval widths instead of equal-width contiguous bins"
+    },
+    {
+      "misconception": "Student thinks individual data values can be recovered from a histogram",
+      "distractor": "Claims to know exactly how many scored $73$ from an interval $70\\text{–}79$ of height $8$, e.g., answers $8$"
+    },
+    {
+      "misconception": "Student forgets to order the data before finding the median and quartiles",
+      "distractor": "Takes the middle of the unordered list as the median, e.g., calls the $5$th listed value the median without sorting"
+    },
+    {
+      "misconception": "Student finds the median by averaging the first and last value instead of the middle",
+      "distractor": "Computes $\\frac{\\min + \\max}{2}$ and calls it the median, e.g., $\\frac{3 + 11}{2} = 7$ for $3,4,5,6,7,8,9,10,11$ instead of the true median $7$ from the middle position"
+    },
+    {
+      "misconception": "Student computes the range instead of the IQR",
+      "distractor": "Gives $\\max - \\min$ instead of $Q_3 - Q_1$, e.g., reports $18 - 4 = 14$ when the IQR is $13 - 7 = 6$"
+    },
+    {
+      "misconception": "Student miscounts a dot plot by counting stacked dots as a single value or skipping empty values on the number line",
+      "distractor": "Reports the total number of distinct values instead of the total number of dots, e.g., answers $4$ for a plot with dots above $0,1,2,5$ rather than the $10$ data points"
+    },
+    {
+      "misconception": "Student swaps $Q_1$ and $Q_3$ or places the median outside the box",
+      "distractor": "Builds a box plot with $Q_3 < Q_1$ or with the median line outside the box, giving a negative IQR such as $7 - 13 = -6$"
+    },
+    {
+      "misconception": "Student chooses the wrong display for the question",
+      "distractor": "Picks a dot plot to summarize $200$ values into ranges, or a box plot to show every individual value, instead of a histogram"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

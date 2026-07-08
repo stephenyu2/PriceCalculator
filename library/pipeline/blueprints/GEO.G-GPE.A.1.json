@@ -1,0 +1,126 @@
+{
+  "standard": "GEO.G-GPE.A.1",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Expressing Geometric Properties with Equations",
+  "domainCode": "G-GPE",
+  "cluster": "Translate between the geometric description and the equation for a conic section",
+  "clusterCode": "A",
+  "skillName": "Equation of a Circle",
+
+  "description": "Students translate between a circle's geometric description (center and radius) and its equation. They derive the standard-form equation $(x-h)^2+(y-k)^2=r^2$ by applying the Pythagorean Theorem (distance formula) to a point $(x,y)$ on the circle and its center $(h,k)$, and they reverse the process: given an equation, they identify the center and radius, and given an equation in general form $x^2+y^2+Dx+Ey+F=0$, they complete the square in $x$ and in $y$ to rewrite it in standard form and read off the center $(h,k)$ and radius $r$. They handle integer and fractional offsets, exact radical radii, and recognize degenerate cases (a point circle when $r^2=0$, or no real graph when the constant is negative).",
+
+  "subSkills": [
+    "Derive $(x-h)^2+(y-k)^2=r^2$ from the Pythagorean Theorem applied to the legs $x-h$ and $y-k$ and the hypotenuse $r$ from center $(h,k)$ to a point $(x,y)$ on the circle",
+    "Write the equation of a circle given its center and radius",
+    "Write the equation of a circle given its center and a point on the circle (compute $r$ via the distance formula first)",
+    "Read the center $(h,k)$ and radius $r$ directly from an equation in standard form, taking the sign of $h$ and $k$ correctly and the square root of the right side for $r$",
+    "Complete the square in $x$ and in $y$ to convert $x^2+y^2+Dx+Ey+F=0$ into standard form",
+    "Handle a leading coefficient: divide the whole equation by $a$ when it appears as $ax^2+ay^2+\\dots$ before completing the square",
+    "Identify degenerate results: a single point when $r^2=0$, or no real circle when $r^2<0$",
+    "Solve for an unknown (radius, a coordinate of the center, or a constant) using a given condition such as a point on the circle or a stated radius"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Equation from center and radius",
+      "example": "Write the equation of the circle with center $(3,-2)$ and radius $5$. Answer: $(x-3)^2+(y+2)^2=25$."
+    },
+    {
+      "name": "Center and radius from standard form",
+      "example": "Identify the center and radius of $(x+4)^2+(y-1)^2=49$. Answer: center $(-4,1)$, radius $r=\\sqrt{49}=7$."
+    },
+    {
+      "name": "Equation from center and a point on the circle",
+      "example": "Write the equation of the circle with center $(1,2)$ that passes through $(4,6)$. Answer: $r=\\sqrt{(4-1)^2+(6-2)^2}=\\sqrt{9+16}=\\sqrt{25}=5$, so $(x-1)^2+(y-2)^2=25$."
+    },
+    {
+      "name": "Complete the square to find center and radius",
+      "example": "Find the center and radius of $x^2+y^2-6x+8y-11=0$. Answer: $(x^2-6x+9)+(y^2+8y+16)=11+9+16$, so $(x-3)^2+(y+4)^2=36$, giving center $(3,-4)$ and radius $r=6$."
+    },
+    {
+      "name": "Derive the standard form via the Pythagorean Theorem",
+      "example": "Using the right triangle with horizontal leg $x-h$, vertical leg $y-k$, and hypotenuse equal to the radius $r$ from center $(h,k)$ to a point $(x,y)$ on the circle, derive the equation of the circle. Answer: by the Pythagorean Theorem $(x-h)^2+(y-k)^2=r^2$."
+    },
+    {
+      "name": "Complete the square with a leading coefficient or exact radical radius",
+      "example": "Find the center and radius of $2x^2+2y^2-4x+12y-6=0$. Answer: divide by $2$ to get $x^2+y^2-2x+6y-3=0$; completing the square gives $(x-1)^2+(y+3)^2=13$, so center $(1,-3)$ and radius $r=\\sqrt{13}$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step direct translation between the standard form and the center/radius, with integer values. Either write $(x-h)^2+(y-k)^2=r^2$ from a stated center and radius, or read the center and radius from an equation already in standard form. No completing the square. This is where a tier1 worksheet starts and most of its items live.",
+      "constraints": [
+        "Center coordinates are integers with absolute value $\\le 8$, radius is a small positive integer $\\le 12$",
+        "Equation is already in standard form; $r$ is the square root of a perfect square",
+        "One step only: substitute into the template or read off signs and take a square root",
+        "Sign handling of $(x-h)$ and $(x+h)$ is the only subtlety"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step problems: either compute the radius from the center and a point via the distance formula before writing the equation, or complete the square on a monic equation $x^2+y^2+Dx+Ey+F=0$ with even linear coefficients to recover the center and radius. The radius may be an exact radical such as $\\sqrt{13}$. This band is the upper end of tier1 and the lower end of tier2.",
+      "constraints": [
+        "Distance-formula step required, OR one full completing-the-square conversion on a monic equation",
+        "Linear coefficients $D,E$ are even integers so the half-square is an integer",
+        "Radius may be left as an exact radical (non-perfect-square right side)",
+        "Center coordinates may be negative; correct sign of $h,k$ when written as $(x-h)$ must be tracked"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step or justified work: complete the square when a leading coefficient must be divided out first, complete the square with odd linear coefficients producing fractional centers, derive the standard form from the Pythagorean Theorem with explanation, solve for an unknown center coordinate or constant given a condition, or classify a degenerate equation. Requires either a stated derivation or several chained algebra steps with exact (radical or fractional) results. This is where a tier2 worksheet ends.",
+      "constraints": [
+        "A leading coefficient $a\\ne 1$ must be divided out before completing the square, OR linear coefficients are odd so the center has fractional coordinates such as $\\left(\\frac{5}{2},-\\frac{3}{2}\\right)$",
+        "Or the task is to derive $(x-h)^2+(y-k)^2=r^2$ from the Pythagorean Theorem with a written justification",
+        "Or solve for an unknown (a coordinate of the center, the radius, or $F$) using a given point or a stated radius condition",
+        "Or recognize a degenerate case: a single point when $r^2=0$, no real graph when the right side is negative",
+        "Answers are exact: radicals such as $\\sqrt{13}$ or fractions such as $\\frac{\\sqrt{29}}{2}$, never rounded decimals"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student reverses the sign of the center, reading $(x-h)$ as center $-h$ instead of $+h$ (and vice versa)",
+      "distractor": "From $(x+4)^2+(y-1)^2=49$ states the center is $(4,-1)$ instead of $(-4,1)$"
+    },
+    {
+      "misconception": "Student treats the right side as the radius rather than the radius squared, forgetting to take the square root",
+      "distractor": "From $(x-3)^2+(y+2)^2=25$ gives radius $r=25$ instead of $r=\\sqrt{25}=5$ (or writes $r^2=5$ when building an equation, using $5$ on the right for radius $5$ incorrectly as $(x-3)^2+(y+2)^2=5$)"
+    },
+    {
+      "misconception": "Student adds the completed-square constants only to the left side and forgets to add them to the right side when balancing the equation",
+      "distractor": "From $x^2+y^2-6x+8y-11=0$ writes $(x-3)^2+(y+4)^2=11$ (radius $\\sqrt{11}$) instead of adding $9+16$ to both sides to get $(x-3)^2+(y+4)^2=36$"
+    },
+    {
+      "misconception": "Student halves the linear coefficient but forgets to square it when forming the completed-square constant",
+      "distractor": "For $x^2-6x$ adds $3$ instead of $9$, writing $(x-3)^2+(y+4)^2=11+3+4=18$ instead of $36$"
+    },
+    {
+      "misconception": "Student uses the sign of the linear coefficient directly for the center instead of negating after halving",
+      "distractor": "From $x^2+y^2-6x+8y-11=0$ reads the center as $(-3,4)$ (using $-6$ and $+8$ directly) instead of $(3,-4)$"
+    },
+    {
+      "misconception": "Student fails to divide out the leading coefficient before completing the square",
+      "distractor": "For $2x^2+2y^2-4x+12y-6=0$ completes the square without dividing by $2$, getting an inflated radius such as $\\sqrt{26}$ instead of the correct $\\sqrt{13}$"
+    },
+    {
+      "misconception": "Student computes the radius from a point using the wrong formula, omitting the square root or adding instead of squaring the leg lengths",
+      "distractor": "For center $(1,2)$ through $(4,6)$ gives $r=(4-1)+(6-2)=7$ instead of $r=\\sqrt{3^2+4^2}=5$"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet covers this standard well; tier1/tier2 counts are provided per default in case a two-sheet split is used. Lesson 5+5, worksheet single/tier1/tier2 = 15 each, quiz 8.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

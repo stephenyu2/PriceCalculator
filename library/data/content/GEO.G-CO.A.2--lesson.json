@@ -1,0 +1,170 @@
+{
+  "id": "GEO.G-CO.A.2--lesson",
+  "standard": "GEO.G-CO.A.2",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Experiment with transformations in the plane",
+  "clusterCode": "A",
+  "skillName": "Transformations as Functions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "A transformation is a function: it takes an input point $(x,y)$ and returns an output point. We write rules like $T(x,y)=(x+3,\\,y-2)$ and apply them to points and to whole figures. The rigid motions, which are translations, reflections, and rotations, preserve distance and angle, so the image is congruent to the preimage. Dilations and one-directional stretches are non-rigid: they change side lengths and can change angles. To test whether distance is preserved, compare a segment length before and after the transformation using the distance formula $d=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Let $T(x,y)=(x-4,\\,y+1)$ be a translation. Find the image of the point $P(6,-2)$.",
+      "solution": {
+        "steps": [
+          "A transformation is a function, so substitute the input coordinates into the rule.",
+          "The new $x$-coordinate is $x-4=6-4=2$.",
+          "The new $y$-coordinate is $y+1=-2+1=-1$.",
+          "So $T(6,-2)=(2,-1)$."
+        ],
+        "answer": "$(2,-1)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Reflect the point $P(3,-5)$ across the line $y=x$. Use the coordinate rule for that reflection.",
+      "solution": {
+        "steps": [
+          "The rule for a reflection across the line $y=x$ is $(x,y)\\to(y,x)$, which swaps the two coordinates.",
+          "Here $x=3$ and $y=-5$.",
+          "Swapping gives the new point $(y,x)=(-5,3)$.",
+          "So the image is $P'(-5,3)$. Notice it is a swap, not a sign change."
+        ],
+        "answer": "$(-5,3)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Rotate the point $A(2,7)$ by $90^\\circ$ counterclockwise about the origin.",
+      "solution": {
+        "steps": [
+          "The rule for a $90^\\circ$ counterclockwise rotation about the origin is $(x,y)\\to(-y,x)$.",
+          "Here $x=2$ and $y=7$.",
+          "The new $x$-coordinate is $-y=-7$.",
+          "The new $y$-coordinate is $x=2$.",
+          "So the image is $A'(-7,2)$."
+        ],
+        "answer": "$(-7,2)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A transformation sends $(2,3)\\to(2,-3)$ and $(-1,5)\\to(-1,-5)$. Write the function rule and name the transformation.",
+      "solution": {
+        "steps": [
+          "Compare each input to its output. The $x$-coordinate is unchanged in both cases: $2\\to2$ and $-1\\to-1$.",
+          "The $y$-coordinate is negated in both cases: $3\\to-3$ and $5\\to-5$.",
+          "So the rule keeps $x$ and negates $y$: $(x,y)\\to(x,-y)$.",
+          "Negating only $y$ is a reflection across the $x$-axis."
+        ],
+        "answer": "$(x,y)\\to(x,-y)$, a reflection across the $x$-axis"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "The segment with endpoints $(0,0)$ and $(4,0)$ is transformed by the horizontal stretch $(x,y)\\to(2x,\\,y)$. Find the image endpoints and decide whether the transformation preserves distance.",
+      "solution": {
+        "steps": [
+          "Apply the rule to each endpoint. $(0,0)\\to(2\\cdot0,\\,0)=(0,0)$ and $(4,0)\\to(2\\cdot4,\\,0)=(8,0)$.",
+          "Find the preimage length: from $(0,0)$ to $(4,0)$, $d=\\sqrt{(4-0)^2+(0-0)^2}=\\sqrt{16}=4$.",
+          "Find the image length: from $(0,0)$ to $(8,0)$, $d=\\sqrt{(8-0)^2+(0-0)^2}=\\sqrt{64}=8$.",
+          "The length changed from $4$ to $8$, so distance is not preserved.",
+          "Because it does not preserve distance, the horizontal stretch is a non-rigid transformation and the image is not congruent to the preimage."
+        ],
+        "answer": "Image endpoints $(0,0)$ and $(8,0)$; distance is not preserved (length doubles from $4$ to $8$), so the transformation is non-rigid."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Let $T(x,y)=(x+5,\\,y-3)$. Find the image of the point $Q(-2,4)$.",
+      "hint": "Substitute $x=-2$ and $y=4$ into the rule, treating it like evaluating a function.",
+      "solution": {
+        "steps": [
+          "New $x$-coordinate: $x+5=-2+5=3$.",
+          "New $y$-coordinate: $y-3=4-3=1$.",
+          "So $T(-2,4)=(3,1)$."
+        ],
+        "answer": "$(3,1)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Reflect the point $R(-6,2)$ across the $y$-axis.",
+      "hint": "Reflecting across the $y$-axis uses the rule $(x,y)\\to(-x,y)$: negate only the $x$-coordinate.",
+      "solution": {
+        "steps": [
+          "The rule for a reflection across the $y$-axis is $(x,y)\\to(-x,y)$.",
+          "Negate the $x$-coordinate: $-x=-(-6)=6$.",
+          "Keep the $y$-coordinate: $y=2$.",
+          "So the image is $R'(6,2)$."
+        ],
+        "answer": "$(6,2)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Triangle $ABC$ has vertices $A(1,2)$, $B(4,2)$, and $C(4,6)$. Apply the translation $(x,y)\\to(x+2,\\,y-3)$ to find the image vertices $A'$, $B'$, and $C'$.",
+      "hint": "Apply the same rule to every vertex separately. Add $2$ to each $x$ and subtract $3$ from each $y$.",
+      "solution": {
+        "steps": [
+          "Apply the rule to $A(1,2)$: $(1+2,\\,2-3)=(3,-1)$, so $A'(3,-1)$.",
+          "Apply the rule to $B(4,2)$: $(4+2,\\,2-3)=(6,-1)$, so $B'(6,-1)$.",
+          "Apply the rule to $C(4,6)$: $(4+2,\\,6-3)=(6,3)$, so $C'(6,3)$.",
+          "Each vertex moves by the same amount, so the whole triangle is translated."
+        ],
+        "answer": "$A'(3,-1)$, $B'(6,-1)$, $C'(6,3)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Rotate the point $D(-3,5)$ by $180^\\circ$ about the origin, then state the rule you used.",
+      "hint": "A $180^\\circ$ rotation about the origin uses $(x,y)\\to(-x,-y)$: negate both coordinates.",
+      "solution": {
+        "steps": [
+          "The rule for a $180^\\circ$ rotation about the origin is $(x,y)\\to(-x,-y)$.",
+          "Negate the $x$-coordinate: $-x=-(-3)=3$.",
+          "Negate the $y$-coordinate: $-y=-(5)=-5$.",
+          "So the image is $D'(3,-5)$."
+        ],
+        "answer": "$(3,-5)$, using the rule $(x,y)\\to(-x,-y)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "The segment with endpoints $E(1,1)$ and $F(4,1)$ is transformed by the dilation $(x,y)\\to(2x,\\,2y)$. Find the image endpoints, compare the preimage and image lengths, and state whether the transformation is rigid.",
+      "hint": "Apply the rule to each endpoint, then use the distance formula on both segments. A rigid motion keeps the length the same.",
+      "solution": {
+        "steps": [
+          "Apply the rule to $E(1,1)$: $(2\\cdot1,\\,2\\cdot1)=(2,2)$, so $E'(2,2)$.",
+          "Apply the rule to $F(4,1)$: $(2\\cdot4,\\,2\\cdot1)=(8,2)$, so $F'(8,2)$.",
+          "Preimage length from $E(1,1)$ to $F(4,1)$: $d=\\sqrt{(4-1)^2+(1-1)^2}=\\sqrt{9}=3$.",
+          "Image length from $E'(2,2)$ to $F'(8,2)$: $d=\\sqrt{(8-2)^2+(2-2)^2}=\\sqrt{36}=6$.",
+          "The length doubled from $3$ to $6$, so distance is not preserved.",
+          "A dilation is a non-rigid transformation, so the image is similar but not congruent to the preimage."
+        ],
+        "answer": "$E'(2,2)$ and $F'(8,2)$; length goes from $3$ to $6$, so distance is not preserved and the dilation is not rigid."
+      }
+    }
+  ]
+}

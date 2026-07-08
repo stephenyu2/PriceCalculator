@@ -1,0 +1,135 @@
+{
+  "_comment": "SKILL BLUEPRINT — Spec agent output, Generator input. Standard GEO.G-SRT.B.4.",
+
+  "standard": "GEO.G-SRT.B.4",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Similarity, Right Triangles, and Trigonometry",
+  "domainCode": "G-SRT",
+  "cluster": "Prove theorems involving similarity",
+  "clusterCode": "B",
+  "skillName": "Triangle Similarity Theorems",
+
+  "description": "Students prove and apply theorems about triangles that follow from similarity. The two central results are the Triangle Proportionality Theorem (a line parallel to one side of a triangle divides the other two sides proportionally, and its converse) and a proof of the Pythagorean Theorem built from the similar triangles created by the altitude to the hypotenuse of a right triangle. Students must justify each step with a similarity criterion (AA, SSS~, SAS~), set up and solve the resulting proportions, decide from given measurements whether a segment is parallel to a side, and use the geometric mean relationships in a right triangle.",
+
+  "subSkills": [
+    "State and prove the Triangle Proportionality Theorem using AA similarity ($\\triangle ADE \\sim \\triangle ABC$ when $\\overline{DE} \\parallel \\overline{BC}$)",
+    "Apply the proportionality theorem to solve for an unknown segment length via a proportion such as $\\frac{AD}{DB} = \\frac{AE}{EC}$",
+    "Apply the converse: given segment lengths, test whether $\\frac{AD}{DB} = \\frac{AE}{EC}$ to decide if $\\overline{DE} \\parallel \\overline{BC}$",
+    "Identify the three similar triangles formed by the altitude to the hypotenuse of a right triangle",
+    "Write and apply the geometric mean (altitude and leg) relationships: $h = \\sqrt{pq}$ and $a = \\sqrt{c\\,p}$",
+    "Use the similar-triangle relationships to derive the Pythagorean Theorem $a^2 + b^2 = c^2$",
+    "Justify each step of a similarity proof with a named criterion (AA, SSS~, SAS~) or postulate"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Solve a proportion from a parallel segment",
+      "example": "In $\\triangle ABC$, point $D$ lies on $\\overline{AB}$ and point $E$ lies on $\\overline{AC}$ with $\\overline{DE} \\parallel \\overline{BC}$. If $AD = 6$, $DB = 4$, and $AE = 9$, find $EC$. (Answer: $\\frac{6}{4} = \\frac{9}{EC}$ gives $EC = 6$.)"
+    },
+    {
+      "name": "Converse test for parallelism",
+      "example": "In $\\triangle PQR$, $S$ is on $\\overline{PQ}$ and $T$ is on $\\overline{PR}$ with $PS = 8$, $SQ = 12$, $PT = 10$, $TR = 15$. Is $\\overline{ST} \\parallel \\overline{QR}$? (Answer: $\\frac{8}{12} = \\frac{2}{3}$ and $\\frac{10}{15} = \\frac{2}{3}$, so yes.)"
+    },
+    {
+      "name": "Geometric mean: altitude to the hypotenuse",
+      "example": "In right $\\triangle ABC$ with the right angle at $C$, the altitude $\\overline{CD}$ meets hypotenuse $\\overline{AB}$ at $D$. If $AD = 4$ and $DB = 9$, find the altitude $CD$. (Answer: $CD = \\sqrt{4 \\cdot 9} = 6$.)"
+    },
+    {
+      "name": "Geometric mean: leg of a right triangle",
+      "example": "In right $\\triangle ABC$ with the right angle at $C$ and altitude $\\overline{CD}$ to $\\overline{AB}$, if $AD = 3$ and $DB = 12$, find leg $AC$. (Answer: $AC = \\sqrt{AB \\cdot AD} = \\sqrt{15 \\cdot 3} = \\sqrt{45} = 3\\sqrt{5}$.)"
+    },
+    {
+      "name": "Two-step proportion with algebraic unknown",
+      "example": "In $\\triangle ABC$, $\\overline{DE} \\parallel \\overline{BC}$ with $AD = x$, $DB = x + 2$, $AE = 6$, $EC = 10$. Solve for $x$. (Answer: $\\frac{x}{x+2} = \\frac{6}{10}$ gives $10x = 6x + 12$, so $x = 3$.)"
+    },
+    {
+      "name": "Proof: justify the similarity / theorem",
+      "example": "Given $\\overline{DE} \\parallel \\overline{BC}$ in $\\triangle ABC$, prove $\\frac{AD}{DB} = \\frac{AE}{EC}$. (Answer: $\\angle ADE \\cong \\angle ABC$ and $\\angle AED \\cong \\angle ACB$ as corresponding angles, so $\\triangle ADE \\sim \\triangle ABC$ by AA; corresponding sides are proportional, then subtract to reach the segment ratio.)"
+    },
+    {
+      "name": "Pythagorean derivation from similar triangles",
+      "example": "Right $\\triangle ABC$ has the right angle at $C$ and altitude $\\overline{CD}$ to hypotenuse $\\overline{AB}$. Using $\\triangle ACD \\sim \\triangle ABC$ and $\\triangle CBD \\sim \\triangle ABC$, show $a^2 + b^2 = c^2$. (Answer: $b^2 = c \\cdot AD$ and $a^2 = c \\cdot DB$; adding gives $a^2 + b^2 = c(AD + DB) = c \\cdot c = c^2$.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step application of the proportionality theorem or a geometric mean with whole-number, perfect-result answers. The figure is described directly (which segment is parallel, which angle is right) and only one proportion or one square root is needed.",
+      "constraints": [
+        "One proportion of the form $\\frac{AD}{DB} = \\frac{AE}{EC}$ with three known lengths and one unknown",
+        "All given lengths are small integers ($\\le 15$) and the unknown comes out a whole number",
+        "Geometric mean items use perfect products, e.g. $\\sqrt{4 \\cdot 9} = 6$",
+        "No algebraic variable in the proportion; no proof writing"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step reasoning: set up a proportion or geometric mean that requires simplifying a radical, solving a linear equation for a variable, or applying the converse to test parallelism. The student must select the correct corresponding parts before computing.",
+      "constraints": [
+        "Proportion contains an algebraic expression (e.g. $AD = x$, $DB = x+2$) requiring a one-step or two-step linear solve",
+        "Geometric mean answers simplify to a radical such as $3\\sqrt{5}$ or $2\\sqrt{6}$",
+        "Converse problems: compute two ratios and decide whether $\\overline{DE} \\parallel \\overline{BC}$",
+        "Student must identify which two of the three triangles are similar before writing the relation"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step synthesis or proof: combine the proportionality theorem with the geometric mean relationships, derive the Pythagorean Theorem from the similar triangles, or supply a multi-line justification naming the similarity criterion at each step.",
+      "constraints": [
+        "Requires two chained relationships (e.g. find an altitude, then a leg, then the hypotenuse)",
+        "Proof items ask the student to name the criterion (AA, SSS~, SAS~) and order statements/reasons",
+        "Pythagorean-derivation items require building $a^2 = c\\cdot DB$ and $b^2 = c\\cdot AD$ and adding",
+        "Answers may stay in exact radical form and the figure must be reconstructed from text"
+      ]
+    },
+    "_split_note": "A single ramped worksheet runs Easy (items 1-5) to Medium (6-11) to Hard (12-15). If split into two sheets: tier1 covers the Triangle Proportionality Theorem and its converse (Easy to Medium proportions and parallelism tests); tier2 covers the right-triangle geometric mean relationships and the Pythagorean derivation (Medium to Hard), since that strand demands the altitude-to-hypotenuse similarity setup and radical work."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student pairs whole-side length with part length instead of part-to-part",
+      "distractor": "Writes $\\frac{AD}{AB} = \\frac{AE}{EC}$ (mixing the full side $AB$ with the part $EC$) instead of $\\frac{AD}{DB} = \\frac{AE}{EC}$, producing a wrong segment value"
+    },
+    {
+      "misconception": "Student inverts one side of the proportion",
+      "distractor": "Sets $\\frac{AD}{DB} = \\frac{EC}{AE}$ (flips the second ratio), yielding the reciprocal-style wrong answer"
+    },
+    {
+      "misconception": "Student adds the two segments instead of taking the geometric mean",
+      "distractor": "For the altitude computes $AD + DB$ (e.g. $4 + 9 = 13$) instead of $\\sqrt{AD \\cdot DB} = \\sqrt{36} = 6$"
+    },
+    {
+      "misconception": "Student uses the wrong geometric mean relationship for a leg",
+      "distractor": "Computes a leg as $\\sqrt{AD \\cdot DB}$ (the altitude relation) instead of $\\sqrt{AB \\cdot AD}$ (the leg relation), giving e.g. $6$ instead of $3\\sqrt{5}$"
+    },
+    {
+      "misconception": "Student treats 'equal ratios' loosely and declares parallel when ratios differ",
+      "distractor": "In a converse problem reports $\\overline{DE} \\parallel \\overline{BC}$ even though $\\frac{AD}{DB} \\ne \\frac{AE}{EC}$ (e.g. $\\frac{2}{3} \\ne \\frac{3}{4}$)"
+    },
+    {
+      "misconception": "Student leaves a radical unsimplified or mis-simplifies it",
+      "distractor": "Reports $\\sqrt{45}$ as $\\sqrt{9}\\cdot 5 = 15$ or as $9\\sqrt{5}$ instead of $3\\sqrt{5}$"
+    },
+    {
+      "misconception": "Student names the wrong similarity criterion in a proof",
+      "distractor": "Justifies $\\triangle ADE \\sim \\triangle ABC$ by 'SAS~' from a single shared angle, instead of AA from two pairs of congruent angles"
+    },
+    {
+      "misconception": "Student forgets the parallel-line angle pairing and assumes the triangles are congruent",
+      "distractor": "Concludes $\\overline{DE} = \\overline{BC}$ or sets corresponding sides equal rather than proportional, missing the scale factor"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet of 15 (Easy->Hard). tier1/tier2 provided per schema in case the standard is split (proportionality strand vs. right-triangle geometric-mean/Pythagorean strand).",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

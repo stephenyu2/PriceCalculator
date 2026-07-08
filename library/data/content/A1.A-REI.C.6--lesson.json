@@ -1,0 +1,179 @@
+{
+  "id": "A1.A-REI.C.6--lesson",
+  "standard": "A1.A-REI.C.6",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Reasoning with Equations and Inequalities",
+  "domainCode": "A-REI",
+  "cluster": "Solve systems of equations",
+  "clusterCode": "C",
+  "skillName": "Solving Linear Systems",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "intro": "A system of two linear equations asks for the single point $(x, y)$ that makes BOTH equations true at once, the point where the two lines cross. You can find it three ways: substitution (solve one equation for a variable and plug it into the other), elimination (add or subtract the equations to cancel a variable), or graphing (read the intersection point). When the variables all cancel, the system is special: a false statement means the lines are parallel and there is no solution, while a true statement means the lines coincide and there are infinitely many solutions. Always write the answer as an ordered pair and check it in both original equations.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Is $(2,\\,-1)$ a solution of the system $\\begin{cases} 3x + 2y = 4 \\\\ x - y = 3 \\end{cases}$?",
+      "solution": {
+        "steps": [
+          "An ordered pair is a solution only if it satisfies BOTH equations. Substitute $x = 2$ and $y = -1$ into each.",
+          "First equation: $3(2) + 2(-1) = 6 - 2 = 4$. This equals the right side $4$, so the first equation checks.",
+          "Second equation: $(2) - (-1) = 2 + 1 = 3$. This equals the right side $3$, so the second equation checks.",
+          "Because the pair satisfies both equations, it is a solution."
+        ],
+        "answer": "Yes, $(2,\\,-1)$ is a solution of the system."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Solve $\\begin{cases} y = 2x - 1 \\\\ 3x + y = 9 \\end{cases}$ by substitution.",
+      "solution": {
+        "steps": [
+          "The first equation is already solved for $y$, so substitute $2x - 1$ in place of $y$ in the OTHER equation: $3x + (2x - 1) = 9$.",
+          "Combine like terms: $5x - 1 = 9$.",
+          "Add $1$ to both sides: $5x = 10$.",
+          "Divide by $5$: $x = 2$.",
+          "Back-substitute $x = 2$ into $y = 2x - 1$: $y = 2(2) - 1 = 4 - 1 = 3$.",
+          "Check in $3x + y = 9$: $3(2) + 3 = 6 + 3 = 9$. It checks."
+        ],
+        "answer": "$(2,\\,3)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Solve $\\begin{cases} x + y = 7 \\\\ x - y = 3 \\end{cases}$ by elimination.",
+      "solution": {
+        "steps": [
+          "The $y$ terms are $+y$ and $-y$, which are already opposites, so adding the two equations eliminates $y$.",
+          "Add left sides and right sides: $(x + y) + (x - y) = 7 + 3$, which gives $2x = 10$.",
+          "Divide by $2$: $x = 5$.",
+          "Back-substitute $x = 5$ into $x + y = 7$: $5 + y = 7$, so $y = 2$.",
+          "Check in $x - y = 3$: $5 - 2 = 3$. It checks."
+        ],
+        "answer": "$(5,\\,2)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Solve $\\begin{cases} 2x + 3y = 12 \\\\ 5x - y = 13 \\end{cases}$ by elimination with scaling.",
+      "solution": {
+        "steps": [
+          "To eliminate $y$, make its coefficients opposites. Multiply the ENTIRE second equation by $3$: $3(5x - y) = 3(13)$ gives $15x - 3y = 39$.",
+          "The system is now $\\begin{cases} 2x + 3y = 12 \\\\ 15x - 3y = 39 \\end{cases}$, with $+3y$ and $-3y$ ready to cancel.",
+          "Add the two equations: $(2x + 15x) + (3y - 3y) = 12 + 39$, which gives $17x = 51$.",
+          "Divide by $17$: $x = 3$.",
+          "Back-substitute $x = 3$ into $2x + 3y = 12$: $6 + 3y = 12$, so $3y = 6$ and $y = 2$.",
+          "Check in $5x - y = 13$: $5(3) - 2 = 15 - 2 = 13$. It checks."
+        ],
+        "answer": "$(3,\\,2)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Solve $\\begin{cases} y = 3x + 2 \\\\ -6x + 2y = 10 \\end{cases}$ and classify the system as having one solution, no solution, or infinitely many solutions.",
+      "solution": {
+        "steps": [
+          "The first equation gives $y = 3x + 2$, so substitute into the second equation: $-6x + 2(3x + 2) = 10$.",
+          "Distribute the $2$: $-6x + 6x + 4 = 10$.",
+          "Combine like terms: the $x$ terms cancel, leaving $4 = 10$.",
+          "This is a FALSE statement, and no value of $x$ can make it true.",
+          "When the variables cancel and you get a false statement, the lines are parallel and never intersect."
+        ],
+        "answer": "No solution (the lines are parallel)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Is $(4,\\,1)$ a solution of the system $\\begin{cases} x + 3y = 7 \\\\ 2x - y = 7 \\end{cases}$?",
+      "hint": "Substitute $x = 4$ and $y = 1$ into both equations. It is a solution only if both come out true.",
+      "solution": {
+        "steps": [
+          "Substitute into the first equation: $4 + 3(1) = 4 + 3 = 7$. The first equation checks.",
+          "Substitute into the second equation: $2(4) - 1 = 8 - 1 = 7$. The second equation checks.",
+          "Both equations are satisfied."
+        ],
+        "answer": "Yes, $(4,\\,1)$ is a solution."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Solve $\\begin{cases} y = x + 4 \\\\ 2x + y = 13 \\end{cases}$ by substitution.",
+      "hint": "The first equation is solved for $y$. Replace $y$ in the second equation with $x + 4$.",
+      "solution": {
+        "steps": [
+          "Substitute $x + 4$ for $y$ in the second equation: $2x + (x + 4) = 13$.",
+          "Combine like terms: $3x + 4 = 13$.",
+          "Subtract $4$ from both sides: $3x = 9$, so $x = 3$.",
+          "Back-substitute into $y = x + 4$: $y = 3 + 4 = 7$.",
+          "Check in $2x + y = 13$: $2(3) + 7 = 6 + 7 = 13$. It checks."
+        ],
+        "answer": "$(3,\\,7)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Solve $\\begin{cases} 3x + 2y = 16 \\\\ 3x - 2y = 2 \\end{cases}$ by elimination.",
+      "hint": "The $y$ terms $+2y$ and $-2y$ are opposites. Add the equations to eliminate $y$.",
+      "solution": {
+        "steps": [
+          "Add the two equations: $(3x + 3x) + (2y - 2y) = 16 + 2$, which gives $6x = 18$.",
+          "Divide by $6$: $x = 3$.",
+          "Back-substitute $x = 3$ into $3x + 2y = 16$: $9 + 2y = 16$, so $2y = 7$ and $y = \\frac{7}{2}$.",
+          "Check in $3x - 2y = 2$: $9 - 2\\left(\\frac{7}{2}\\right) = 9 - 7 = 2$. It checks."
+        ],
+        "answer": "$\\left(3,\\,\\frac{7}{2}\\right)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Solve $\\begin{cases} 4x + 3y = 7 \\\\ 2x - y = 9 \\end{cases}$ by elimination with scaling.",
+      "hint": "Multiply the entire second equation by $3$ so the $y$ terms become $+3y$ and $-3y$, then add.",
+      "solution": {
+        "steps": [
+          "Multiply the entire second equation by $3$: $3(2x - y) = 3(9)$ gives $6x - 3y = 27$.",
+          "The system is now $\\begin{cases} 4x + 3y = 7 \\\\ 6x - 3y = 27 \\end{cases}$.",
+          "Add the equations: $(4x + 6x) + (3y - 3y) = 7 + 27$, which gives $10x = 34$.",
+          "Divide by $10$: $x = \\frac{34}{10} = \\frac{17}{5}$.",
+          "Back-substitute into $2x - y = 9$: $2\\left(\\frac{17}{5}\\right) - y = 9$, so $\\frac{34}{5} - y = 9$, which gives $y = \\frac{34}{5} - \\frac{45}{5} = -\\frac{11}{5}$.",
+          "Check in $4x + 3y = 7$: $4\\left(\\frac{17}{5}\\right) + 3\\left(-\\frac{11}{5}\\right) = \\frac{68}{5} - \\frac{33}{5} = \\frac{35}{5} = 7$. It checks."
+        ],
+        "answer": "$\\left(\\frac{17}{5},\\,-\\frac{11}{5}\\right)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A coffee shop sells small drinks for $\\$3$ and large drinks for $\\$5$. One morning they sold $40$ drinks for a total of $\\$164$. How many of each size were sold?",
+      "hint": "Let $s$ be the number of small drinks and $l$ the number of large drinks. Write one equation for the total number of drinks and one for the total money.",
+      "solution": {
+        "steps": [
+          "Define variables: let $s$ be the number of small drinks and $l$ the number of large drinks.",
+          "Total drinks: $s + l = 40$. Total money: $3s + 5l = 164$.",
+          "Solve the first equation for $s$: $s = 40 - l$.",
+          "Substitute into the money equation: $3(40 - l) + 5l = 164$.",
+          "Distribute: $120 - 3l + 5l = 164$, which simplifies to $120 + 2l = 164$.",
+          "Subtract $120$: $2l = 44$, so $l = 22$.",
+          "Back-substitute: $s = 40 - 22 = 18$.",
+          "Check the money total: $3(18) + 5(22) = 54 + 110 = 164$. It checks."
+        ],
+        "answer": "$18$ small drinks and $22$ large drinks."
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T11:30:04.469Z"
+}

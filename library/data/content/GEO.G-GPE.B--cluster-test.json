@@ -1,0 +1,220 @@
+{
+  "id": "GEO.G-GPE.B--cluster-test",
+  "standard": null,
+  "clusterId": "GEO.G-GPE.B",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Expressing Geometric Properties with Equations",
+  "domainCode": "G-GPE",
+  "cluster": "Use coordinates to prove simple geometric theorems algebraically",
+  "clusterCode": "B",
+  "skillName": "Use coordinates to prove simple geometric theorems algebraically",
+  "materialType": "cluster-test",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "intro": "End-of-cluster mastery check for using coordinates to prove geometric theorems algebraically. The twelve multiple-choice items are grouped by standard: coordinate proofs (B.4), slope criteria for parallel and perpendicular lines (B.5), partitioning a directed segment (B.6), and perimeter and area from coordinates (B.7).",
+  "items": [
+    {
+      "id": 1,
+      "standard": "GEO.G-GPE.B.4",
+      "difficulty": "Easy",
+      "prompt": "Triangle $ABC$ has vertices $A(1,2)$, $B(5,2)$, and $C(3,6)$. Which side-length computation correctly shows that $\\triangle ABC$ is isosceles?\nA) $AC=\\sqrt{(3-1)^2+(6-2)^2}=2\\sqrt{5}$ and $BC=\\sqrt{(3-5)^2+(6-2)^2}=2\\sqrt{5}$, so $AC=BC$\nB) $AB=\\sqrt{(5-1)^2+(2-2)^2}=4$ and $AC=4$, so $AB=AC$\nC) $AC=(3-1)+(6-2)=6$ and $BC=(3-5)+(6-2)=2$, so $AC\\ne BC$\nD) $BC=\\sqrt{(3-5)^2+(6-2)^2}=\\sqrt{-4+16}=2\\sqrt{3}$, so no sides are equal",
+      "answer": "A) $AC=\\sqrt{(3-1)^2+(6-2)^2}=2\\sqrt{5}$ and $BC=\\sqrt{(3-5)^2+(6-2)^2}=2\\sqrt{5}$, so $AC=BC$",
+      "solution": {
+        "steps": [
+          "Apply the distance formula to $AC$: $AC=\\sqrt{(3-1)^2+(6-2)^2}=\\sqrt{4+16}=\\sqrt{20}=2\\sqrt{5}$.",
+          "Apply it to $BC$: $BC=\\sqrt{(3-5)^2+(6-2)^2}=\\sqrt{4+16}=\\sqrt{20}=2\\sqrt{5}$.",
+          "Since $AC=BC=2\\sqrt{5}$, two sides are congruent, so $\\triangle ABC$ is isosceles. This is choice A.",
+          "B is wrong: $AC=2\\sqrt{5}\\ne 4$, so $AB\\ne AC$.",
+          "C drops the squares and the square root, the distance formula is $\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$, not a sum of differences.",
+          "D mishandles the sign of $(-2)^2$, treating it as $-4$; correctly $(3-5)^2=4$, giving $\\sqrt{4+16}=2\\sqrt{5}$, not $2\\sqrt{3}$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "standard": "GEO.G-GPE.B.4",
+      "difficulty": "Medium",
+      "prompt": "Quadrilateral $PQRS$ has vertices $P(0,0)$, $Q(4,0)$, $R(5,3)$, and $S(1,3)$. Using slopes, what is the most specific classification you can justify, and why?\nA) A parallelogram, because slope $PQ=$ slope $SR=0$ and slope $PS=$ slope $QR=3$, so both pairs of opposite sides are parallel\nB) A rectangle, because both pairs of opposite sides are parallel\nC) A square, because both pairs of opposite sides are parallel\nD) A trapezoid, because only one pair of opposite sides is parallel",
+      "answer": "A) A parallelogram, because slope $PQ=$ slope $SR=0$ and slope $PS=$ slope $QR=3$, so both pairs of opposite sides are parallel",
+      "solution": {
+        "steps": [
+          "Slope of $PQ=\\frac{0-0}{4-0}=0$ and slope of $SR=\\frac{3-3}{5-1}=0$, so $PQ\\parallel SR$.",
+          "Slope of $PS=\\frac{3-0}{1-0}=3$ and slope of $QR=\\frac{3-0}{5-4}=3$, so $PS\\parallel QR$.",
+          "Both pairs of opposite sides are parallel, so $PQRS$ is a parallelogram. This is choice A.",
+          "B and C over-conclude: a rectangle needs perpendicular adjacent sides, but slope $PQ=0$ and slope $PS=3$ give product $0\\ne -1$, so the angle is not a right angle; a square would also need equal side lengths.",
+          "D is wrong because two pairs of sides are parallel, not one, so the figure is not merely a trapezoid."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "standard": "GEO.G-GPE.B.4",
+      "difficulty": "Hard",
+      "prompt": "A rectangle is placed with general vertices $A(0,0)$, $B(2a,0)$, $C(2a,2b)$, and $D(0,2b)$. Which argument proves that the diagonals of every rectangle are congruent?\nA) $AC=\\sqrt{(2a)^2+(2b)^2}=\\sqrt{4a^2+4b^2}$ and $BD=\\sqrt{(0-2a)^2+(2b)^2}=\\sqrt{4a^2+4b^2}$, so $AC=BD$ for all $a,b$\nB) For $A(0,0),B(4,0),C(4,2),D(0,2)$ both diagonals equal $2\\sqrt{5}$, which proves it for all rectangles\nC) $AC=2a+2b$ and $BD=2a+2b$, so the diagonals are equal\nD) The diagonals look equal in the diagram, so they must be congruent",
+      "answer": "A) $AC=\\sqrt{(2a)^2+(2b)^2}=\\sqrt{4a^2+4b^2}$ and $BD=\\sqrt{(0-2a)^2+(2b)^2}=\\sqrt{4a^2+4b^2}$, so $AC=BD$ for all $a,b$",
+      "solution": {
+        "steps": [
+          "Use the distance formula symbolically on diagonal $AC$ from $A(0,0)$ to $C(2a,2b)$: $AC=\\sqrt{(2a-0)^2+(2b-0)^2}=\\sqrt{4a^2+4b^2}$.",
+          "On diagonal $BD$ from $B(2a,0)$ to $D(0,2b)$: $BD=\\sqrt{(0-2a)^2+(2b-0)^2}=\\sqrt{4a^2+4b^2}$.",
+          "Because $AC=BD=\\sqrt{4a^2+4b^2}$ holds for every $a$ and $b$, the diagonals of any rectangle are congruent. This is choice A.",
+          "B checks only one numerical rectangle, a single example does not prove the theorem for all rectangles.",
+          "C drops the squares and the square root, $\\sqrt{4a^2+4b^2}\\ne 2a+2b$ in general.",
+          "D appeals to appearance, which is not a proof."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "standard": "GEO.G-GPE.B.5",
+      "difficulty": "Easy",
+      "prompt": "What is the slope of the line through the points $(-2,3)$ and $(4,-1)$?\nA) $-\\frac{2}{3}$\nB) $-\\frac{3}{2}$\nC) $\\frac{2}{3}$\nD) $\\frac{3}{2}$",
+      "answer": "A) $-\\frac{2}{3}$",
+      "solution": {
+        "steps": [
+          "Apply the slope formula $m=\\frac{y_2-y_1}{x_2-x_1}=\\frac{-1-3}{4-(-2)}=\\frac{-4}{6}=-\\frac{2}{3}$. This is choice A.",
+          "B reverses the formula to $\\frac{x_2-x_1}{y_2-y_1}$ (run over rise), giving $-\\frac{3}{2}$.",
+          "C subtracts in inconsistent order, dropping the negative sign to get $\\frac{2}{3}$.",
+          "D combines both errors, flipping and changing the sign to $\\frac{3}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "standard": "GEO.G-GPE.B.5",
+      "difficulty": "Medium",
+      "prompt": "Which is the equation of the line through $(6,2)$ that is perpendicular to $y=\\frac{2}{3}x+1$?\nA) $y=-\\frac{3}{2}x+11$\nB) $y=\\frac{3}{2}x-7$\nC) $y=-\\frac{2}{3}x+6$\nD) $y=-\\frac{3}{2}x-7$",
+      "answer": "A) $y=-\\frac{3}{2}x+11$",
+      "solution": {
+        "steps": [
+          "The given line has slope $\\frac{2}{3}$; a perpendicular line has the opposite reciprocal slope $-\\frac{3}{2}$.",
+          "Substitute the point $(6,2)$ into $y=-\\frac{3}{2}x+b$: $2=-\\frac{3}{2}(6)+b=-9+b$, so $b=11$.",
+          "The equation is $y=-\\frac{3}{2}x+11$. This is choice A.",
+          "B uses just the reciprocal $\\frac{3}{2}$ without the sign flip.",
+          "C uses the negative of the slope, $-\\frac{2}{3}$, instead of the opposite reciprocal.",
+          "D uses the correct slope but substitutes the point wrong, giving $b=-7$ instead of $b=11$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "standard": "GEO.G-GPE.B.5",
+      "difficulty": "Hard",
+      "prompt": "For what value of $k$ is the line through $(1,2)$ and $(k,8)$ perpendicular to the line $y=-\\frac{1}{2}x+5$?\nA) $k=4$\nB) $k=-2$\nC) $k=7$\nD) $k=13$",
+      "answer": "A) $k=4$",
+      "solution": {
+        "steps": [
+          "The given line has slope $-\\frac{1}{2}$, so a perpendicular line must have the opposite reciprocal slope $2$.",
+          "Set the slope through $(1,2)$ and $(k,8)$ equal to $2$: $\\frac{8-2}{k-1}=2$, so $\\frac{6}{k-1}=2$.",
+          "Solve: $6=2(k-1)$, so $k-1=3$ and $k=4$. This is choice A.",
+          "B uses slope $-\\frac{1}{2}$ (parallel, not perpendicular), giving $\\frac{6}{k-1}=-\\frac{1}{2}\\Rightarrow k=-11$, none of which match, and is conceptually the parallel error.",
+          "C uses the reciprocal $\\frac{1}{2}$ without the sign flip, giving $\\frac{6}{k-1}=\\frac{1}{2}\\Rightarrow k=13$ logic but mis-set; it confuses the criterion.",
+          "D comes from solving $\\frac{6}{k-1}=\\frac{1}{2}$, using the wrong (non-flipped) reciprocal slope."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "standard": "GEO.G-GPE.B.6",
+      "difficulty": "Easy",
+      "prompt": "Find the midpoint of the segment from $A(2,3)$ to $B(8,11)$.\nA) $(5,7)$\nB) $(6,8)$\nC) $(3,4)$\nD) $(10,14)$",
+      "answer": "A) $(5,7)$",
+      "solution": {
+        "steps": [
+          "The midpoint is the partition point for the ratio $1:1$: $M=\\left(\\frac{x_1+x_2}{2},\\frac{y_1+y_2}{2}\\right)$.",
+          "Compute $M=\\left(\\frac{2+8}{2},\\frac{3+11}{2}\\right)=\\left(\\frac{10}{2},\\frac{14}{2}\\right)=(5,7)$. This is choice A.",
+          "B takes the difference of the coordinates $\\left(8-2,11-3\\right)=(6,8)$ instead of the average.",
+          "C halves only one endpoint or divides the first point by $2$.",
+          "D adds the coordinates without dividing by $2$, giving $(10,14)$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "standard": "GEO.G-GPE.B.6",
+      "difficulty": "Medium",
+      "prompt": "Find the point $P$ that partitions the directed segment from $A(1,2)$ to $B(7,5)$ in the ratio $AP:PB=2:3$.\nA) $\\left(\\frac{17}{5},\\frac{16}{5}\\right)$\nB) $(5,4)$\nC) $\\left(\\frac{23}{5},\\frac{19}{5}\\right)$\nD) $\\left(\\frac{7}{5},\\frac{12}{5}\\right)$",
+      "answer": "A) $\\left(\\frac{17}{5},\\frac{16}{5}\\right)$",
+      "solution": {
+        "steps": [
+          "The partition fraction is $k=\\frac{m}{m+n}=\\frac{2}{2+3}=\\frac{2}{5}$.",
+          "The deltas are $\\Delta x=7-1=6$ and $\\Delta y=5-2=3$.",
+          "Apply the section formula: $P=\\left(1+\\frac{2}{5}(6),\\;2+\\frac{2}{5}(3)\\right)=\\left(1+\\frac{12}{5},\\;2+\\frac{6}{5}\\right)=\\left(\\frac{17}{5},\\frac{16}{5}\\right)$. This is choice A.",
+          "B uses $\\frac{m}{n}=\\frac{2}{3}$ as the fraction instead of $\\frac{m}{m+n}=\\frac{2}{5}$.",
+          "C flips the ratio, using $k=\\frac{3}{5}$, which gives the point for ratio $3:2$.",
+          "D adds the fraction $\\frac{2}{5}$ to each coordinate instead of multiplying it by the delta."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "standard": "GEO.G-GPE.B.6",
+      "difficulty": "Hard",
+      "prompt": "Point $P(4,1)$ partitions the directed segment from $A(-2,-5)$ to $B$ in the ratio $AP:PB=3:1$. What are the coordinates of $B$?\nA) $(6,3)$\nB) $(2,-1)$\nC) $\\left(\\frac{14}{3},\\frac{7}{3}\\right)$\nD) $(10,7)$",
+      "answer": "A) $(6,3)$",
+      "solution": {
+        "steps": [
+          "The partition fraction is $k=\\frac{3}{3+1}=\\frac{3}{4}$, and $P=A+k(B-A)$.",
+          "For the $x$-coordinate: $4=-2+\\frac{3}{4}(x_2-(-2))$, so $6=\\frac{3}{4}(x_2+2)$, giving $x_2+2=8$ and $x_2=6$.",
+          "For the $y$-coordinate: $1=-5+\\frac{3}{4}(y_2-(-5))$, so $6=\\frac{3}{4}(y_2+5)$, giving $y_2+5=8$ and $y_2=3$.",
+          "Therefore $B=(6,3)$. This is choice A.",
+          "B is the midpoint of $A$ and the answer, from averaging instead of using the ratio.",
+          "C uses $k=\\frac{3}{1}$ or otherwise misapplies the fraction, and D solves with the wrong direction or fraction."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "standard": "GEO.G-GPE.B.7",
+      "difficulty": "Easy",
+      "prompt": "A rectangle has vertices $P(2,1)$, $Q(8,1)$, $R(8,5)$, and $S(2,5)$. What is its perimeter?\nA) $20$\nB) $24$\nC) $10$\nD) $48$",
+      "answer": "A) $20$",
+      "solution": {
+        "steps": [
+          "Side $PQ$ is horizontal with length $|8-2|=6$; side $QR$ is vertical with length $|5-1|=4$.",
+          "Perimeter $=2(6)+2(4)=12+8=20$. This is choice A.",
+          "B reports the area $6\\times 4=24$ instead of the perimeter.",
+          "C adds only one length and one width, $6+4=10$, forgetting to double.",
+          "D doubles the area, confusing the two formulas."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "standard": "GEO.G-GPE.B.7",
+      "difficulty": "Medium",
+      "prompt": "Triangle $ABC$ has vertices $A(0,0)$, $B(4,0)$, and $C(4,3)$. What is its perimeter?\nA) $12$\nB) $7$\nC) $14$\nD) $7+\\sqrt{7}$",
+      "answer": "A) $12$",
+      "solution": {
+        "steps": [
+          "Side $AB$ is horizontal: $|4-0|=4$. Side $BC$ is vertical: $|3-0|=3$.",
+          "Side $AC$ is slanted: $AC=\\sqrt{(4-0)^2+(3-0)^2}=\\sqrt{16+9}=\\sqrt{25}=5$.",
+          "Perimeter $=4+3+5=12$. This is choice A.",
+          "B sums only the two legs, $4+3=7$, forgetting the hypotenuse.",
+          "C distributes the square root over the sum, treating $\\sqrt{16+9}$ as $4+3=7$ and adding, giving $4+3+7=14$.",
+          "D adds inside the radical without squaring, $\\sqrt{4+3}=\\sqrt{7}$, instead of $\\sqrt{16+9}=5$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "standard": "GEO.G-GPE.B.7",
+      "difficulty": "Hard",
+      "prompt": "Triangle $DEF$ has vertices $D(-2,-1)$, $E(4,-1)$, and $F(1,4)$, with $\\overline{DE}$ a horizontal base. What is the area of $\\triangle DEF$?\nA) $15$\nB) $30$\nC) $\\frac{1}{2}\\left(6\\right)\\left(\\sqrt{34}\\right)$\nD) $18$",
+      "answer": "A) $15$",
+      "solution": {
+        "steps": [
+          "The base $DE$ is horizontal with length $|4-(-2)|=6$.",
+          "The height is the vertical distance from $F$ to the line $y=-1$: $|4-(-1)|=5$.",
+          "Area $=\\frac{1}{2}bh=\\frac{1}{2}(6)(5)=15$. This is choice A.",
+          "B forgets the factor of $\\frac{1}{2}$, giving $6\\times 5=30$.",
+          "C uses a slanted side $DF=\\sqrt{(1+2)^2+(4+1)^2}=\\sqrt{34}$ as the height instead of the perpendicular distance to the base.",
+          "D uses an incorrect height of $6$ in $\\frac{1}{2}(6)(6)=18$ rather than the correct vertical height $5$."
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T21:16:48.217Z",
+  "generatedAt": "2026-06-24T21:16:48.217Z"
+}

@@ -1,0 +1,169 @@
+{
+  "id": "A2.S-IC.B.5--lesson",
+  "standard": "A2.S-IC.B.5",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+  "domainCode": "S-IC",
+  "cluster": "Make inferences and justify conclusions from sample surveys, experiments, and observational studies",
+  "clusterCode": "B",
+  "skillName": "Comparing Two Treatments",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "In a randomized comparative experiment, two treatments are assigned at random, and we measure a response in each group. The two groups will almost never give exactly equal results, so the key question is: is the observed difference between the groups real (caused by the treatment), or could it just be the luck of how subjects happened to be split? To decide, we re-randomize: pool all the outcomes, shuffle them into two groups many times, and each time recompute the difference. This builds a distribution of differences that could occur by chance alone, centered near $0$. We then locate our observed difference in that distribution. The empirical p-value is the fraction of simulated differences at least as extreme as the observed one: $p = \\frac{\\text{number of trials at least as extreme}}{\\text{total trials}}$. If $p$ is small (commonly below $0.05$), the difference is statistically significant evidence that the treatments differ; if $p$ is large, the data are consistent with chance variation.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "In a randomized experiment, $30$ patients received Drug A and $30$ received a placebo. The Drug A group had a mean recovery time of $\\bar{x}_A = 5.4$ days and the placebo group had $\\bar{x}_B = 7.1$ days. Find the observed difference $\\bar{x}_A - \\bar{x}_B$ in mean recovery times, and say which treatment looks better.",
+      "solution": {
+        "steps": [
+          "Identify the two group statistics: $\\bar{x}_A = 5.4$ days for Drug A and $\\bar{x}_B = 7.1$ days for the placebo.",
+          "Subtract in the order asked, $\\bar{x}_A - \\bar{x}_B$: $5.4 - 7.1 = -1.7$ days.",
+          "The negative sign means the Drug A group recovered, on average, $1.7$ days faster (a shorter recovery time is better here).",
+          "So the observed difference is $-1.7$ days, and Drug A looks better. This is just the observed gap; we have not yet judged whether it is large enough to rule out chance."
+        ],
+        "answer": "$\\bar{x}_A - \\bar{x}_B = -1.7$ days; the Drug A group recovered about $1.7$ days faster on average."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A study randomly assigned $200$ seedlings to two fertilizers, $100$ to each. Fertilizer 1 had a survival rate of $\\hat{p}_1 = 0.68$ and Fertilizer 2 had $\\hat{p}_2 = 0.52$. Find the observed difference $\\hat{p}_1 - \\hat{p}_2$ in survival proportions.",
+      "solution": {
+        "steps": [
+          "Identify the two sample proportions: $\\hat{p}_1 = 0.68$ for Fertilizer 1 and $\\hat{p}_2 = 0.52$ for Fertilizer 2.",
+          "Compute the observed difference in the order asked: $\\hat{p}_1 - \\hat{p}_2 = 0.68 - 0.52$.",
+          "$0.68 - 0.52 = 0.16$.",
+          "The positive value means Fertilizer 1's survival rate is $0.16$ (16 percentage points) higher than Fertilizer 2's in this experiment."
+        ],
+        "answer": "$\\hat{p}_1 - \\hat{p}_2 = 0.16$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "To test whether the recovery-time gap in Example 1 could be due to chance, researchers pooled all $60$ recovery times and re-randomized them into two groups of $30$ a total of $200$ times, each time computing (group 1 mean) $-$ (group 2 mean). The simulated differences are centered at $0$ and range from about $-2.0$ to $2.0$ days. Explain why this distribution is centered at $0$, and describe where an observed difference of $1.7$ days falls.",
+      "solution": {
+        "steps": [
+          "Re-randomization shuffles the pooled outcomes and reassigns them at random, ignoring which treatment a patient actually got. This deliberately builds the situation where the treatment has no effect.",
+          "Under no effect, the two reshuffled groups should look about the same, so their means should be close. Sometimes group 1 lands a bit higher, sometimes lower, so the differences scatter symmetrically around $0$. That is why the distribution is centered at $0$.",
+          "An observed difference of $1.7$ days sits near the upper edge of the simulated range (which runs only to about $2.0$). It is out in the tail, not in the dense middle.",
+          "A value far in the tail is the kind of result that rarely happens by chance shuffling alone, which is early evidence that the difference may be real rather than random."
+        ],
+        "answer": "The distribution is centered at $0$ because shuffling assumes no treatment effect, so reshuffled group means are typically close. An observed difference of $1.7$ days falls far out in the tail, suggesting it is unlikely to arise from chance alone."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Out of the $200$ re-randomization trials in Example 3, only $6$ produced a difference of means at least as extreme as the observed $1.7$ days. Estimate the empirical p-value, and decide whether the difference between Drug A and the placebo is statistically significant at the $0.05$ level.",
+      "solution": {
+        "steps": [
+          "The empirical p-value is the fraction of simulated trials that were at least as extreme as the observed difference: $p = \\frac{\\text{extreme trials}}{\\text{total trials}}$.",
+          "Substitute the counts: $p = \\frac{6}{200}$.",
+          "Compute: $\\frac{6}{200} = 0.03$.",
+          "Compare to the threshold: $0.03 < 0.05$, so the observed result would be rare under chance assignment.",
+          "Because $p$ is below $0.05$, the difference is statistically significant. We reject the idea that the gap is just chance."
+        ],
+        "answer": "$p = \\frac{6}{200} = 0.03$. Since $0.03 < 0.05$, the difference is statistically significant at the $0.05$ level."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Researchers randomly split $80$ students into two study methods and measured test scores, finding a difference of means of $4.2$ points. A re-randomization simulation of $500$ trials produced $115$ differences at least as extreme as $4.2$. Compute the empirical p-value, decide whether the methods differ significantly at the $0.05$ level, and state the conclusion in context.",
+      "solution": {
+        "steps": [
+          "Form the empirical p-value: $p = \\frac{\\text{extreme trials}}{\\text{total trials}} = \\frac{115}{500}$.",
+          "Compute: $\\frac{115}{500} = 0.23$.",
+          "Compare to the threshold: $0.23 > 0.05$, so a difference as big as $4.2$ points happens fairly often just by chance shuffling.",
+          "Because $p$ is not below $0.05$, the difference is not statistically significant.",
+          "Conclusion in context: the $4.2$-point gap is consistent with chance variation in how students were assigned. This experiment does not provide convincing evidence that the two study methods differ. Note that 'not significant' means the data do not rule out chance, not that the methods are proven identical."
+        ],
+        "answer": "$p = \\frac{115}{500} = 0.23$. Since $0.23 > 0.05$, the difference is not statistically significant; the $4.2$-point gap is consistent with chance, so there is no convincing evidence the study methods differ."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "In a randomized experiment, plants given Fertilizer X grew a mean of $\\bar{x}_X = 18.5$ cm and plants given Fertilizer Y grew a mean of $\\bar{x}_Y = 15.2$ cm. Find the observed difference $\\bar{x}_X - \\bar{x}_Y$ in mean growth.",
+      "hint": "Subtract the two group means in the order written, $\\bar{x}_X - \\bar{x}_Y$. Do not add them.",
+      "solution": {
+        "steps": [
+          "Identify the means: $\\bar{x}_X = 18.5$ cm and $\\bar{x}_Y = 15.2$ cm.",
+          "Subtract in order: $\\bar{x}_X - \\bar{x}_Y = 18.5 - 15.2$.",
+          "$18.5 - 15.2 = 3.3$ cm, so Fertilizer X plants grew $3.3$ cm taller on average."
+        ],
+        "answer": "$\\bar{x}_X - \\bar{x}_Y = 3.3$ cm"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A randomized experiment compared two ad designs. Design A had a click rate of $\\hat{p}_A = 0.41$ and Design B had $\\hat{p}_B = 0.29$. Find the observed difference $\\hat{p}_A - \\hat{p}_B$ in click rates.",
+      "hint": "These are two proportions. Compute $\\hat{p}_A - \\hat{p}_B$, the difference of the two given rates.",
+      "solution": {
+        "steps": [
+          "Identify the proportions: $\\hat{p}_A = 0.41$ and $\\hat{p}_B = 0.29$.",
+          "Subtract in order: $\\hat{p}_A - \\hat{p}_B = 0.41 - 0.29$.",
+          "$0.41 - 0.29 = 0.12$, so Design A's click rate is $0.12$ (12 percentage points) higher in this experiment."
+        ],
+        "answer": "$\\hat{p}_A - \\hat{p}_B = 0.12$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A re-randomization simulation shuffled the pooled outcomes of an experiment $400$ times, each time recomputing (group 1 mean) $-$ (group 2 mean), and the resulting differences were centered at $0$. Explain why this simulated distribution is centered at $0$ rather than at the observed difference.",
+      "hint": "Think about what shuffling assumes about the treatment. Which scenario does re-randomization model?",
+      "solution": {
+        "steps": [
+          "Re-randomization ignores which treatment each subject actually received and reassigns the pooled outcomes to two groups purely at random.",
+          "This models the 'no treatment effect' scenario: if the treatment did nothing, the labels would not matter and reshuffled groups would behave the same.",
+          "When the two groups behave the same on average, their mean difference is sometimes slightly positive and sometimes slightly negative, scattering symmetrically around $0$.",
+          "So the center at $0$ reflects the chance-only baseline we are testing against, not a claim that the real treatments have no effect."
+        ],
+        "answer": "Because shuffling assumes no treatment effect, the two reshuffled groups behave the same on average, so their mean differences scatter symmetrically around $0$. The center represents the chance-only baseline, not the observed result."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A coach tested two warm-up routines on randomly assigned athletes and found a difference of means of $2.6$ seconds. A re-randomization simulation of $250$ trials produced $8$ differences at least as extreme as $2.6$ seconds. Estimate the empirical p-value and decide whether the difference is statistically significant at the $0.05$ level.",
+      "hint": "The empirical p-value is (extreme trials) divided by (total trials). Compare it to $0.05$.",
+      "solution": {
+        "steps": [
+          "Form the empirical p-value: $p = \\frac{\\text{extreme trials}}{\\text{total trials}} = \\frac{8}{250}$.",
+          "Compute: $\\frac{8}{250} = 0.032$.",
+          "Compare to the threshold: $0.032 < 0.05$, so a difference this large is rare under chance shuffling.",
+          "Because $p$ is below $0.05$, the difference is statistically significant; there is evidence the two routines differ."
+        ],
+        "answer": "$p = \\frac{8}{250} = 0.032$. Since $0.032 < 0.05$, the difference is statistically significant at the $0.05$ level."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "An experiment randomly assigned $90$ volunteers to a new diet or a standard diet and measured weight loss, finding a difference of means of $1.1$ pounds. A re-randomization simulation of $300$ trials produced $96$ differences at least as extreme as $1.1$ pounds. Compute the empirical p-value, decide significance at the $0.05$ level, and write the conclusion in context. Then evaluate the claim 'this proves the new diet always works better for everyone.'",
+      "hint": "First find $p = \\frac{96}{300}$ and compare to $0.05$. Then judge whether a non-significant result can support a sweeping 'always works' claim.",
+      "solution": {
+        "steps": [
+          "Form the empirical p-value: $p = \\frac{96}{300}$.",
+          "Compute: $\\frac{96}{300} = 0.32$.",
+          "Compare to the threshold: $0.32 > 0.05$, so a $1.1$-pound gap shows up often just by chance shuffling.",
+          "Because $p$ is not below $0.05$, the difference is not statistically significant; the observed gap is consistent with chance variation in the random assignment.",
+          "Conclusion in context: this experiment does not provide convincing evidence that the new diet produces more weight loss than the standard diet.",
+          "Evaluate the claim: it is wrong on two counts. The result is not even significant here, and even a significant result would never prove a diet 'always works better for everyone', since one randomized experiment shows an average effect for these subjects, not a universal guarantee."
+        ],
+        "answer": "$p = \\frac{96}{300} = 0.32$. Since $0.32 > 0.05$, the difference is not statistically significant; the data are consistent with chance, so there is no convincing evidence the new diet is better. The 'always works for everyone' claim is unjustified: the result is non-significant, and one experiment can never prove a universal effect."
+      }
+    }
+  ]
+}

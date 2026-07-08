@@ -1,0 +1,231 @@
+{
+  "id": "7.SP.C.8--worksheet",
+  "standard": "7.SP.C.8",
+  "clusterId": null,
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate chance processes and develop, use, and evaluate probability models",
+  "clusterCode": "C",
+  "skillName": "Compound Events",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "intro": "A compound event is built from two or more simple events. To find its probability, list the full sample space, count the favorable outcomes, and write $\\frac{\\text{favorable}}{\\text{total}}$ in lowest terms. These problems progress from short two-stage lists to two-way tables, tree diagrams, without-replacement draws, and simulation design.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A fair coin is flipped once and a fair coin is flipped a second time. List the sample space of the two flips, then find $P(\\text{both heads})$.",
+      "answer": "$\\frac{1}{4}$",
+      "solution": {
+        "steps": [
+          "List all ordered outcomes of the two flips: $HH,\\ HT,\\ TH,\\ TT$.",
+          "There are $4$ equally likely outcomes in the sample space.",
+          "Only $1$ outcome, $HH$, has both heads.",
+          "So $P(\\text{both heads}) = \\frac{1}{4}$."
+        ],
+        "answer": "$\\frac{1}{4}$"
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A spinner is split into three equal sections labeled red, blue, and green. You spin it once and flip a fair coin. List all the outcomes, then find $P(\\text{green and heads})$.",
+      "answer": "$\\frac{1}{6}$",
+      "solution": {
+        "steps": [
+          "Each spinner result pairs with each coin result. The outcomes are: red-H, red-T, blue-H, blue-T, green-H, green-T.",
+          "That is $3 \\times 2 = 6$ equally likely outcomes.",
+          "Exactly $1$ outcome is green and heads (green-H).",
+          "So $P(\\text{green and heads}) = \\frac{1}{6}$."
+        ],
+        "answer": "$\\frac{1}{6}$"
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "You roll a fair number cube (faces $1$ through $6$) and flip a fair coin. Find $P(\\text{rolling a } 4 \\text{ and getting tails})$.",
+      "answer": "$\\frac{1}{12}$",
+      "solution": {
+        "steps": [
+          "The cube has $6$ equally likely results and the coin has $2$, so there are $6 \\times 2 = 12$ outcomes.",
+          "Only one outcome is a $4$ paired with tails.",
+          "So $P(4 \\text{ and tails}) = \\frac{1}{12}$."
+        ],
+        "answer": "$\\frac{1}{12}$"
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A bag has $1$ red, $1$ yellow, and $1$ blue tile. You draw one tile, record its color, put it back, then draw again. Find $P(\\text{red on the first draw and blue on the second draw})$.",
+      "answer": "$\\frac{1}{9}$",
+      "solution": {
+        "steps": [
+          "Because the tile is replaced, each draw has $3$ equally likely colors.",
+          "The sample space has $3 \\times 3 = 9$ ordered outcomes.",
+          "Only one outcome is red first, then blue.",
+          "So $P(\\text{red then blue}) = \\frac{1}{9}$."
+        ],
+        "answer": "$\\frac{1}{9}$"
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Two fair coins are flipped. Using the sample space $\\{HH, HT, TH, TT\\}$, find $P(\\text{at least one head})$.",
+      "answer": "$\\frac{3}{4}$",
+      "solution": {
+        "steps": [
+          "The sample space has $4$ equally likely outcomes.",
+          "'At least one head' means $HH$, $HT$, or $TH$. That is $3$ favorable outcomes.",
+          "So $P(\\text{at least one head}) = \\frac{3}{4}$.",
+          "Check with the complement: $P(\\text{no heads}) = P(TT) = \\frac{1}{4}$, and $1 - \\frac{1}{4} = \\frac{3}{4}$."
+        ],
+        "answer": "$\\frac{3}{4}$"
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Two fair number cubes are rolled. Using a $6 \\times 6$ table of the $36$ equally likely outcomes, find $P(\\text{sum} = 7)$. Write your answer in lowest terms.",
+      "answer": "$\\frac{1}{6}$",
+      "solution": {
+        "steps": [
+          "There are $6 \\times 6 = 36$ outcomes in the table.",
+          "The ordered pairs that sum to $7$ are $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$, which is $6$ outcomes.",
+          "So $P(\\text{sum} = 7) = \\frac{6}{36}$.",
+          "Simplify: $\\frac{6}{36} = \\frac{1}{6}$."
+        ],
+        "answer": "$\\frac{1}{6}$"
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Two fair number cubes are rolled. Find $P(\\text{sum} = 5)$ in lowest terms.",
+      "answer": "$\\frac{1}{9}$",
+      "solution": {
+        "steps": [
+          "There are $36$ equally likely outcomes for the two cubes.",
+          "Pairs summing to $5$: $(1,4), (2,3), (3,2), (4,1)$, which is $4$ outcomes.",
+          "So $P(\\text{sum} = 5) = \\frac{4}{36}$.",
+          "Simplify by dividing by $4$: $\\frac{4}{36} = \\frac{1}{9}$."
+        ],
+        "answer": "$\\frac{1}{9}$"
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A fair coin is flipped $3$ times. Draw a tree diagram of the $8$ outcomes, then find $P(\\text{exactly two heads})$.",
+      "answer": "$\\frac{3}{8}$",
+      "solution": {
+        "steps": [
+          "The tree has $2 \\times 2 \\times 2 = 8$ equally likely outcomes: $HHH, HHT, HTH, HTT, THH, THT, TTH, TTT$.",
+          "The outcomes with exactly two heads are $HHT, HTH, THH$, which is $3$ outcomes.",
+          "So $P(\\text{exactly two heads}) = \\frac{3}{8}$."
+        ],
+        "answer": "$\\frac{3}{8}$"
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Two fair number cubes are rolled. Find $P(\\text{at least one cube shows a } 6)$. Write your answer in lowest terms.",
+      "answer": "$\\frac{11}{36}$",
+      "solution": {
+        "steps": [
+          "There are $36$ equally likely outcomes.",
+          "Use the complement. Outcomes with no $6$ at all: each cube can be $1$ through $5$, so $5 \\times 5 = 25$ outcomes.",
+          "So outcomes with at least one $6$: $36 - 25 = 11$.",
+          "Therefore $P(\\text{at least one } 6) = \\frac{11}{36}$, which is already in lowest terms."
+        ],
+        "answer": "$\\frac{11}{36}$"
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A spinner has $4$ equal sections numbered $1, 2, 3, 4$. You spin it twice. Find $P(\\text{the two numbers have a sum of } 5)$ in lowest terms.",
+      "answer": "$\\frac{1}{4}$",
+      "solution": {
+        "steps": [
+          "Each spin has $4$ equally likely results, so the sample space has $4 \\times 4 = 16$ ordered outcomes.",
+          "Ordered pairs summing to $5$: $(1,4), (2,3), (3,2), (4,1)$, which is $4$ outcomes.",
+          "So $P(\\text{sum} = 5) = \\frac{4}{16}$.",
+          "Simplify: $\\frac{4}{16} = \\frac{1}{4}$."
+        ],
+        "answer": "$\\frac{1}{4}$"
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A bag holds $3$ red marbles and $2$ blue marbles. Two marbles are drawn without replacement. Find $P(\\text{both red})$ in lowest terms.",
+      "answer": "$\\frac{3}{10}$",
+      "solution": {
+        "steps": [
+          "First draw: $3$ of the $5$ marbles are red, so $P(\\text{first red}) = \\frac{3}{5}$.",
+          "Since there is no replacement, after a red is removed $2$ red remain out of $4$ marbles, so $P(\\text{second red}) = \\frac{2}{4}$.",
+          "Multiply the stage probabilities: $\\frac{3}{5} \\times \\frac{2}{4} = \\frac{6}{20}$.",
+          "Simplify: $\\frac{6}{20} = \\frac{3}{10}$."
+        ],
+        "answer": "$\\frac{3}{10}$"
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A bag holds $4$ green and $3$ yellow chips. Two chips are drawn without replacement. Find $P(\\text{first green and second yellow})$ in lowest terms.",
+      "answer": "$\\frac{2}{7}$",
+      "solution": {
+        "steps": [
+          "There are $7$ chips total. $P(\\text{first green}) = \\frac{4}{7}$.",
+          "After removing a green, $6$ chips remain, $3$ of them yellow, so $P(\\text{second yellow}) = \\frac{3}{6}$.",
+          "Multiply: $\\frac{4}{7} \\times \\frac{3}{6} = \\frac{12}{42}$.",
+          "Simplify by dividing by $6$: $\\frac{12}{42} = \\frac{2}{7}$."
+        ],
+        "answer": "$\\frac{2}{7}$"
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A drawer holds $5$ black socks and $3$ white socks. Two socks are pulled out without replacement. Find $P(\\text{both socks are the same color})$ in lowest terms.",
+      "answer": "$\\frac{13}{28}$",
+      "solution": {
+        "steps": [
+          "There are $8$ socks total. $P(\\text{both black}) = \\frac{5}{8} \\times \\frac{4}{7} = \\frac{20}{56}$.",
+          "$P(\\text{both white}) = \\frac{3}{8} \\times \\frac{2}{7} = \\frac{6}{56}$.",
+          "'Same color' means both black or both white, so add: $\\frac{20}{56} + \\frac{6}{56} = \\frac{26}{56}$.",
+          "Simplify by dividing by $2$: $\\frac{26}{56} = \\frac{13}{28}$."
+        ],
+        "answer": "$\\frac{13}{28}$"
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A cereal box contains one of $4$ equally likely prizes. To estimate the probability of collecting all $4$ different prizes in $4$ boxes, you assign the digits $1, 2, 3, 4$ to the prizes and ignore $0$ and $5$ through $9$. Each trial reads digits until $4$ usable digits ($1$-$4$) appear, recording 'success' if all four are different. Using these $10$ trials, the usable digits per trial were: $1234, 1123, 4321, 2413, 3324, 1432, 2231, 3142, 4413, 1324$, estimate $P(\\text{all } 4 \\text{ prizes})$.",
+      "answer": "$\\frac{3}{5}$ (estimated from the trials)",
+      "solution": {
+        "steps": [
+          "A trial is a 'success' only if its $4$ usable digits are all different (one each of $1, 2, 3, 4$).",
+          "Check each trial: $1234$ all different (success); $1123$ repeats $1$ (no); $4321$ all different (success); $2413$ all different (success); $3324$ repeats $3$ (no); $1432$ all different (success); $2231$ repeats $2$ (no); $3142$ all different (success); $4413$ repeats $4$ (no); $1324$ all different (success).",
+          "Count the successes: $1234, 4321, 2413, 1432, 3142, 1324$, which is $6$ successes out of $10$ trials.",
+          "Estimate: $P(\\text{all } 4) \\approx \\frac{6}{10} = \\frac{3}{5}$."
+        ],
+        "answer": "$\\frac{3}{5}$ (estimated from the trials)"
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "In Item 14 the simulation estimated $P(\\text{all } 4 \\text{ prizes in } 4 \\text{ boxes}) \\approx \\frac{3}{5}$. Compute the theoretical probability of collecting all $4$ different prizes in $4$ boxes, then state which is larger.",
+      "answer": "Theoretical $P = \\frac{3}{32}$; the simulation estimate $\\frac{3}{5}$ is much larger.",
+      "solution": {
+        "steps": [
+          "The first box can be any prize, so $P = \\frac{4}{4} = 1$.",
+          "The second box must differ from the first: $\\frac{3}{4}$. The third must differ from the first two: $\\frac{2}{4}$. The fourth must be the last remaining prize: $\\frac{1}{4}$.",
+          "Multiply the stages: $1 \\times \\frac{3}{4} \\times \\frac{2}{4} \\times \\frac{1}{4} = \\frac{6}{64}$.",
+          "Simplify: $\\frac{6}{64} = \\frac{3}{32} \\approx 0.094$.",
+          "Compare: the simulation estimate $\\frac{3}{5} = 0.6$ is much larger than the theoretical $\\frac{3}{32} \\approx 0.094$, showing this small simulation overestimated the true probability."
+        ],
+        "answer": "Theoretical $P = \\frac{3}{32}$; the simulation estimate $\\frac{3}{5}$ is much larger."
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T10:03:02.558Z"
+}

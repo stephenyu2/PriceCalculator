@@ -1,0 +1,130 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent. One blueprint per standard.",
+
+  "standard": "GEO.G-SRT.C.8",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Similarity, Right Triangles, and Trigonometry",
+  "domainCode": "G-SRT",
+  "cluster": "Define trigonometric ratios and solve problems involving right triangles",
+  "clusterCode": "C",
+  "skillName": "Trig Ratios in Applied Problems",
+
+  "description": "Students model real-world situations as right triangles and solve for unknown sides or acute angles using the three trigonometric ratios ($\\sin$, $\\cos$, $\\tan$) and the Pythagorean Theorem ($a^2 + b^2 = c^2$). They must choose the correct ratio based on which sides are known relative to the reference angle (opposite, adjacent, hypotenuse), set up and solve the resulting equation (including inverse trig functions $\\sin^{-1}$, $\\cos^{-1}$, $\\tan^{-1}$ for angles), and interpret answers in context, recognizing angle of elevation and angle of depression. Final numeric answers in applied contexts are rounded sensibly; exact relationships are kept symbolic where appropriate.",
+
+  "subSkills": [
+    "Label a right triangle's sides as opposite, adjacent, and hypotenuse relative to a chosen acute reference angle",
+    "Select the correct ratio ($\\sin\\theta = \\frac{\\text{opp}}{\\text{hyp}}$, $\\cos\\theta = \\frac{\\text{adj}}{\\text{hyp}}$, $\\tan\\theta = \\frac{\\text{opp}}{\\text{adj}}$) from the SOH-CAH-TOA mnemonic given which two quantities appear",
+    "Solve for an unknown side: isolate the variable when it is in the numerator (multiply) or denominator (divide) of a trig equation",
+    "Solve for an unknown acute angle using inverse trig functions ($\\theta = \\tan^{-1}\\frac{\\text{opp}}{\\text{adj}}$, etc.)",
+    "Apply the Pythagorean Theorem to find a third side when two sides are known",
+    "Translate a verbal applied scenario (ladder, ramp, shadow, sightline) into a labeled right-triangle diagram",
+    "Interpret and distinguish angle of elevation versus angle of depression",
+    "Round to an appropriate degree of accuracy and attach correct units"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Find a missing side (variable in numerator)",
+      "example": "A $20$ ft ladder leans against a wall, making a $65^\\circ$ angle with the ground. How high up the wall does it reach? Solve $\\sin 65^\\circ = \\frac{h}{20}$, so $h = 20\\sin 65^\\circ \\approx 18.1$ ft."
+    },
+    {
+      "name": "Find a missing side (variable in denominator)",
+      "example": "From a point on the ground, the angle of elevation to the top of a tree is $40^\\circ$ and the horizontal distance to the base is unknown. The tree is $30$ ft tall. Find the distance $d$: $\\tan 40^\\circ = \\frac{30}{d}$, so $d = \\frac{30}{\\tan 40^\\circ} \\approx 35.8$ ft."
+    },
+    {
+      "name": "Find a missing acute angle (inverse trig)",
+      "example": "A ramp rises $4$ ft over a horizontal run of $24$ ft. Find the angle of incline $\\theta$: $\\theta = \\tan^{-1}\\frac{4}{24} \\approx 9.5^\\circ$."
+    },
+    {
+      "name": "Angle of elevation / depression",
+      "example": "From the top of a $50$ ft lighthouse, the angle of depression to a boat is $15^\\circ$. How far is the boat from the base? $\\tan 15^\\circ = \\frac{50}{d}$, so $d = \\frac{50}{\\tan 15^\\circ} \\approx 186.6$ ft."
+    },
+    {
+      "name": "Pythagorean Theorem to complete the triangle",
+      "example": "A guy wire is anchored $9$ ft from the base of a $12$ ft pole and runs to the top. Find the wire length $w$: $w = \\sqrt{9^2 + 12^2} = \\sqrt{225} = 15$ ft."
+    },
+    {
+      "name": "Multi-step combined (Pythagorean Theorem then trig, or two triangles)",
+      "example": "A $13$ ft ladder reaches $12$ ft up a wall. Find (a) the distance from the wall using $\\sqrt{13^2 - 12^2} = 5$ ft, then (b) the angle with the ground $\\theta = \\cos^{-1}\\frac{5}{13} \\approx 67.4^\\circ$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step problems with the diagram essentially given. The reference angle and the two relevant sides are stated directly, the unknown side sits in the numerator so isolating it is one multiplication, OR a clean Pythagorean triple is used. Right triangle clearly identified; no decoding of elevation/depression.",
+      "constraints": [
+        "Exactly one trig ratio or one Pythagorean step needed",
+        "Unknown is a side in the numerator: $x = c\\sin\\theta$ form, no dividing by a trig value",
+        "Angle given is a round value ($30^\\circ$, $45^\\circ$, $60^\\circ$) or any value with a calculator; sides are small integers",
+        "Pythagorean cases use a recognizable triple ($3,4,5$; $5,12,13$; $8,15,17$)",
+        "Context is concrete and familiar (ladder, flagpole height)"
+      ]
+    },
+    "Medium": {
+      "description": "Student must first choose the correct ratio and may need to isolate a variable in the denominator (divide by a trig value) or solve for an angle with an inverse trig function. Includes correctly identifying angle of elevation versus depression. One scenario, one triangle, but the setup is not handed to them.",
+      "constraints": [
+        "Student selects among $\\sin$, $\\cos$, $\\tan$ rather than being told which",
+        "Unknown may be in the denominator ($x = \\frac{c}{\\tan\\theta}$) or be the angle itself via $\\tan^{-1}$, $\\sin^{-1}$, $\\cos^{-1}$",
+        "Requires interpreting 'angle of elevation' or 'angle of depression' to place the angle correctly",
+        "Non-special angles and non-integer side lengths; answer rounded to a stated precision",
+        "Still a single right triangle"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems: combine the Pythagorean Theorem with a trig ratio, chain two triangles, or work backward through a scenario where the needed side must be found before the target. May require subtracting/adding lengths (observer eye height, two sightlines) or comparing results.",
+      "constraints": [
+        "Two or more steps: e.g. Pythagorean Theorem to get a side, then inverse trig for an angle, or two triangles sharing a side",
+        "Scenario includes a complicating offset (eye-level height, distance between two observation points, building plus its base distance)",
+        "Student must derive an intermediate quantity not directly asked for",
+        "Answer interpreted and rounded in context with correct units; may ask to compare two computed values"
+      ]
+    },
+    "_split": "If this standard were authored as two worksheets, tier1 spans Easy to Medium (label sides, pick the ratio, solve for a numerator side, simple inverse-trig angle, Pythagorean triples) and tier2 spans Medium to Hard (denominator-variable setups, elevation/depression decoding, and multi-step Pythagorean-plus-trig / two-triangle problems). Default is a single 15-item ramped worksheet from one-step Easy to multi-step Hard."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student picks the wrong ratio by confusing opposite and adjacent relative to the reference angle",
+      "distractor": "Uses $\\cos 65^\\circ = \\frac{h}{20}$ (gives $h \\approx 8.5$) when the height is opposite the angle and $\\sin$ was required ($h \\approx 18.1$)"
+    },
+    {
+      "misconception": "Student inverts the ratio, dividing the wrong way when the unknown is in the denominator",
+      "distractor": "Computes $d = 30\\tan 40^\\circ \\approx 25.2$ instead of $d = \\frac{30}{\\tan 40^\\circ} \\approx 35.8$"
+    },
+    {
+      "misconception": "Student takes a regular trig function instead of the inverse when solving for an angle",
+      "distractor": "Reports $\\tan\\frac{4}{24} \\approx 0.003$ (or similar) instead of $\\theta = \\tan^{-1}\\frac{4}{24} \\approx 9.5^\\circ$"
+    },
+    {
+      "misconception": "Student treats the angle of depression as if it were measured from the vertical, swapping the legs, or measures elevation/depression from the wrong line",
+      "distractor": "Uses $\\tan 15^\\circ = \\frac{d}{50}$ giving $d \\approx 13.4$ instead of $\\tan 15^\\circ = \\frac{50}{d}$ giving $d \\approx 186.6$"
+    },
+    {
+      "misconception": "Student misuses the Pythagorean Theorem, adding when a leg is unknown instead of subtracting (or solving $c^2 = a^2 + b^2$ for a leg incorrectly)",
+      "distractor": "Computes $\\sqrt{13^2 + 12^2} = \\sqrt{313} \\approx 17.7$ for the missing leg instead of $\\sqrt{13^2 - 12^2} = \\sqrt{25} = 5$"
+    },
+    {
+      "misconception": "Student has the calculator in radian mode (or forgets the degree symbol), producing a wildly wrong value",
+      "distractor": "Reports $20\\sin 65 \\approx 16.6$ (radians) instead of $20\\sin 65^\\circ \\approx 18.1$"
+    },
+    {
+      "misconception": "Student forgets to add a fixed offset such as the observer's eye height to the triangle result",
+      "distractor": "Gives the bare triangle height (e.g. $\\approx 47.3$ ft) and omits the $+5$ ft eye-level adjustment, missing the true total height $\\approx 52.3$ ft"
+    }
+  ],
+
+  "_comment_itemCounts": "worksheet.single = one ramped sheet (Easy->Hard across 15 items). tier1/tier2 are the two sheets only if authored as a complex standard. This standard defaults to a single ramped worksheet.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

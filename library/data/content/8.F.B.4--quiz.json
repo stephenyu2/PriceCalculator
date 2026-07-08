@@ -1,0 +1,132 @@
+{
+  "id": "8.F.B.4--quiz",
+  "standard": "8.F.B.4",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Functions",
+  "domainCode": "F",
+  "cluster": "Use functions to model relationships between quantities",
+  "clusterCode": "B",
+  "skillName": "Modeling Linear Relationships",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "Build and interpret linear functions $y = mx + b$ from descriptions, tables, points, and graphs. Choose the single best answer for each question.",
+  "items": [
+    {
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "A gym charges a $\\$40$ sign-up fee plus $\\$12$ per month. Which function gives the total cost $y$ after $x$ months?\nA) $y = 12x + 40$\nB) $y = 40x + 12$\nC) $y = 12x - 40$\nD) $y = 52x$",
+      "answer": "A) $y = 12x + 40$",
+      "solution": {
+        "steps": [
+          "The cost grows by $\\$12$ each month, so the rate of change (slope) is $m = 12$.",
+          "The $\\$40$ sign-up fee is paid once at the start, before any months pass, so it is the initial value $b = 40$.",
+          "Writing $y = mx + b$ gives $y = 12x + 40$, which is option A.",
+          "B swaps the slope and intercept ($y = 40x + 12$), treating the one-time fee as a monthly rate.",
+          "C uses the wrong sign on the fee, and D adds the two constants into a single rate of $52$, ignoring the fixed fee."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "A table of values shows $(0, 9), (1, 13), (2, 17), (3, 21)$. What is the function rule?\nA) $y = 9x + 4$\nB) $y = 4x + 9$\nC) $y = 4x$\nD) $y = 13x + 9$",
+      "answer": "B) $y = 4x + 9$",
+      "solution": {
+        "steps": [
+          "The initial value is the output when $x = 0$, which the table lists as $9$, so $b = 9$.",
+          "Each time $x$ increases by $1$, $y$ increases by $4$ ($9 \\to 13 \\to 17 \\to 21$), so the rate of change is $m = 4$.",
+          "The rule is $y = 4x + 9$, which is option B.",
+          "A swaps slope and intercept, C drops the initial value entirely, and D mistakes the $y$-value at $x = 1$ for the slope."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "A graph of a line passes through $(0, 5)$ and $(3, 11)$. What is the rate of change (slope)?\nA) $m = 5$\nB) $m = 6$\nC) $m = 2$\nD) $m = 3$",
+      "answer": "C) $m = 2$",
+      "solution": {
+        "steps": [
+          "Use $m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{11 - 5}{3 - 0} = \\frac{6}{3} = 2$.",
+          "So the rate of change is $m = 2$, option C.",
+          "A mistakes the $y$-intercept for the slope, B uses only the change in $y$ ($6$) without dividing by the change in $x$, and D reports the change in $x$ instead of the ratio."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "A line passes through the points $(2, 4)$ and $(5, 10)$. What is its rate of change?\nA) $m = 2$\nB) $m = \\frac{1}{2}$\nC) $m = 6$\nD) $m = 3$",
+      "answer": "A) $m = 2$",
+      "solution": {
+        "steps": [
+          "Apply $m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{10 - 4}{5 - 2} = \\frac{6}{3} = 2$.",
+          "The rate of change is $m = 2$, option A.",
+          "B inverts the ratio, computing $\\frac{x_2 - x_1}{y_2 - y_1} = \\frac{3}{6} = \\frac{1}{2}$.",
+          "C uses only the change in $y$ without dividing, and D uses only the change in $x$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "A candle burns at a steady rate. After $2$ hours it is $20$ cm tall, and after $5$ hours it is $11$ cm tall. What is the rate of change of the height?\nA) $m = 3$\nB) $m = -3$\nC) $m = 9$\nD) $m = -9$",
+      "answer": "B) $m = -3$",
+      "solution": {
+        "steps": [
+          "Use the two points $(2, 20)$ and $(5, 11)$: $m = \\frac{11 - 20}{5 - 2} = \\frac{-9}{3} = -3$.",
+          "The candle is getting shorter, so the rate of change is negative: $m = -3$ cm per hour, option B.",
+          "A drops the negative sign even though the height is decreasing.",
+          "C and D use the change in height ($-9$) without dividing by the $3$-hour change in time."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "A line passes through $(2, 7)$ with a rate of change of $m = 3$. What is the initial value $b$ (the value of $y$ when $x = 0$)?\nA) $b = 7$\nB) $b = 13$\nC) $b = 1$\nD) $b = 2$",
+      "answer": "C) $b = 1$",
+      "solution": {
+        "steps": [
+          "Since $x = 0$ is not given, solve for $b$ using $b = y - mx$ at the known point $(2, 7)$.",
+          "$b = 7 - 3(2) = 7 - 6 = 1$, so $b = 1$, option C.",
+          "A wrongly treats the listed $y$-value at $x = 2$ as the initial value.",
+          "B adds $mx$ instead of subtracting it ($7 + 6 = 13$), and D reports the $x$-coordinate of the point."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A phone plan costs $\\$0.08$ per minute plus a fixed monthly charge, modeled by $C = 0.08m + 25$, where $m$ is minutes used. Which statement correctly interprets BOTH numbers?\nA) The $0.08$ is a $\\$0.08$ total charge and the $25$ is $\\$25$ per minute.\nB) The $0.08$ is $\\$0.08$ per minute and the $25$ is the fixed monthly charge of $\\$25$.\nC) The $0.08$ is the fixed monthly charge and the $25$ is $\\$25$ per minute.\nD) The $0.08$ is $\\$0.08$ per minute and the $25$ is a one-time $\\$25$ charge per minute.",
+      "answer": "B) The $0.08$ is $\\$0.08$ per minute and the $25$ is the fixed monthly charge of $\\$25$.",
+      "solution": {
+        "steps": [
+          "In $C = 0.08m + 25$, the coefficient of $m$ is the rate of change (slope), so $0.08$ means the cost rises $\\$0.08$ for each additional minute, that is $\\$0.08$ per minute.",
+          "The constant $25$ is the initial value (the cost when $m = 0$), so it is the fixed $\\$25$ monthly charge. This is option B.",
+          "A and C swap the roles of slope and intercept, and A also treats the rate as a single total charge.",
+          "D incorrectly attaches a per-minute meaning to the fixed $\\$25$ charge."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A water tank drains at a constant rate. It holds $200$ liters at the start and $152$ liters after $6$ minutes. Using the function that models the volume $y$ after $x$ minutes, how much water remains after $20$ minutes?\nA) $40$ liters\nB) $160$ liters\nC) $48$ liters\nD) $0$ liters",
+      "answer": "A) $40$ liters",
+      "solution": {
+        "steps": [
+          "Find the rate of change from $(0, 200)$ and $(6, 152)$: $m = \\frac{152 - 200}{6 - 0} = \\frac{-48}{6} = -8$ liters per minute.",
+          "The initial value is $b = 200$ (the volume at $x = 0$), so the model is $y = -8x + 200$.",
+          "Predict at $x = 20$: $y = -8(20) + 200 = -160 + 200 = 40$ liters, option A.",
+          "B uses a positive slope and ignores the draining, C forgets the initial value and computes only $|{-8}|(6) = 48$, and D assumes the tank is empty rather than computing the value."
+        ]
+      }
+    }
+  ]
+}

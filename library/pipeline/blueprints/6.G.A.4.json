@@ -1,0 +1,130 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent. One blueprint per standard.",
+
+  "standard": "6.G.A.4",
+  "grade": "6",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Solve real-world and mathematical problems involving area, surface area, and volume",
+  "clusterCode": "A",
+  "skillName": "Surface Area Using Nets",
+
+  "description": "Students represent three-dimensional figures (rectangular prisms, triangular prisms, cubes, and square/triangular pyramids) as two-dimensional nets composed of rectangles and triangles, then use those nets to compute total surface area by finding the area of every face and summing them. They connect each face of the net to a face of the solid, apply $A = lw$ for rectangles and $A = \\frac{1}{2}bh$ for triangles, and solve real-world problems such as the amount of wrapping paper, cardboard, or paint needed to cover a solid.",
+
+  "subSkills": [
+    "Identify the solid that a given net folds into, and identify the net that matches a given solid",
+    "Match each face on a net to the corresponding face on the three-dimensional figure",
+    "Compute the area of a rectangular face using $A = lw$",
+    "Compute the area of a triangular face using $A = \\frac{1}{2}bh$",
+    "Sum the areas of all faces to find total surface area, with correct square units",
+    "Recognize and use congruent (equal) faces to shorten the computation (e.g. a prism has matching pairs)",
+    "Apply surface-area reasoning to real-world covering problems (paint, wrapping paper, cardboard, fabric)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Surface area of a rectangular prism from a net",
+      "example": "A net of a rectangular prism shows faces with dimensions $l = 6$ cm, $w = 4$ cm, and $h = 3$ cm. Find the total surface area. (Answer: $SA = 2(6\\cdot 4) + 2(6\\cdot 3) + 2(4\\cdot 3) = 48 + 36 + 24 = 108$ square cm.)"
+    },
+    {
+      "name": "Surface area of a cube",
+      "example": "A cube has edge length $5$ in. Its net is six congruent squares. Find the surface area. (Answer: $SA = 6 \\cdot 5^2 = 150$ square in.)"
+    },
+    {
+      "name": "Surface area of a triangular prism from a net",
+      "example": "A triangular prism has two triangular faces with base $8$ m and height $3$ m, and three rectangular faces each $10$ m long with widths $5$ m, $5$ m, and $8$ m. Find the surface area. (Answer: $SA = 2\\left(\\frac{1}{2}\\cdot 8 \\cdot 3\\right) + 10\\cdot 5 + 10\\cdot 5 + 10\\cdot 8 = 24 + 50 + 50 + 80 = 204$ square m.)"
+    },
+    {
+      "name": "Surface area of a square pyramid from a net",
+      "example": "A square pyramid has a base of side $6$ ft and four triangular faces each with base $6$ ft and slant height $5$ ft. Find the surface area. (Answer: $SA = 6^2 + 4\\left(\\frac{1}{2}\\cdot 6 \\cdot 5\\right) = 36 + 60 = 96$ square ft.)"
+    },
+    {
+      "name": "Identify the solid or matching net",
+      "example": "A net is made of one square and four congruent triangles meeting at a point. Which solid does it fold into? (Answer: a square pyramid.)"
+    },
+    {
+      "name": "Real-world covering / packaging",
+      "example": "A gift box shaped like a rectangular prism is $12$ in by $8$ in by $4$ in. How much wrapping paper is needed to cover it exactly once? (Answer: $SA = 2(12\\cdot 8) + 2(12\\cdot 4) + 2(8\\cdot 4) = 192 + 96 + 64 = 352$ square in.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-shape faces with small whole-number dimensions; the net is given or the solid is a cube or rectangular prism. The student reads dimensions directly off the net and applies one area formula per face, or uses a fully symmetric solid (cube). At most two distinct face sizes. No conversion, no extracting hidden dimensions.",
+      "constraints": [
+        "Solid is a cube or rectangular prism (only rectangular faces)",
+        "All dimensions are whole numbers $\\le 12$",
+        "Net or labeled face dimensions are provided directly; nothing must be inferred",
+        "Computation is a single sum of face areas with at most two distinct face areas",
+        "Uses only $A = lw$ for rectangles (or $6s^2$ for a cube)"
+      ]
+    },
+    "Medium": {
+      "description": "Mixed rectangular and triangular faces; triangular prisms and square pyramids appear, requiring both $A = lw$ and $A = \\frac{1}{2}bh$. The student must track several distinct faces and identify congruent pairs. Dimensions are whole numbers but larger, and the slant height may differ from a base edge. May require matching a net to its solid before computing.",
+      "constraints": [
+        "Solid is a triangular prism or square/triangular pyramid (rectangles and triangles)",
+        "Must apply both $A = lw$ and $A = \\frac{1}{2}bh$",
+        "Three or more distinct face areas; congruent pairs must be recognized",
+        "Whole-number dimensions up to $\\le 20$; slant height given separately from base",
+        "May begin by identifying which solid a given net forms"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step real-world problems: the student extracts dimensions from a verbal context, computes surface area, then answers a follow-up (units of material, cost at a per-square-unit rate, or whether a fixed amount of material suffices). May involve a decimal or simple-fraction dimension, an omitted face (open box / no lid), or unit reasoning. Requires planning the solution, not just summing given faces.",
+      "constraints": [
+        "Real-world framing; dimensions embedded in a sentence and must be extracted",
+        "A follow-up step: cost (area $\\times$ price), number of material units, or sufficiency comparison",
+        "May omit a face (open-top box) or include one decimal/fraction dimension such as $4.5$ or $\\frac{1}{2}$",
+        "Combines triangular and rectangular faces and may require recognizing a missing measurement",
+        "Answer must carry correct square units (or derived units like dollars)"
+      ]
+    },
+    "_split": "Single ramped worksheet (15 items, Easy early to Hard late). Tier1 would run Easy to Medium (cube and rectangular-prism nets, introducing triangular faces); tier2 would run Medium to Hard (triangular prisms, pyramids, and real-world multi-step covering/cost problems). Most uses keep the single sheet."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student forgets the $\\frac{1}{2}$ when finding the area of a triangular face",
+      "distractor": "Computes a triangular face as $b \\cdot h$ instead of $\\frac{1}{2}bh$, e.g. uses $8\\cdot 3 = 24$ for one triangle instead of $\\frac{1}{2}\\cdot 8\\cdot 3 = 12$, doubling each triangle's contribution"
+    },
+    {
+      "misconception": "Student counts only some faces, missing the back/bottom or the congruent pair",
+      "distractor": "Sums only the visible faces (e.g. uses $3$ faces of a rectangular prism instead of $6$), giving half the true surface area"
+    },
+    {
+      "misconception": "Student computes volume instead of surface area",
+      "distractor": "Multiplies $l \\cdot w \\cdot h$ (e.g. $6\\cdot 4\\cdot 3 = 72$) and labels it as surface area instead of summing face areas to get $108$"
+    },
+    {
+      "misconception": "Student uses cubic units instead of square units for area",
+      "distractor": "Reports the correct number but labels it 'cubic cm' instead of 'square cm'"
+    },
+    {
+      "misconception": "Student confuses the slant height of a pyramid face with the pyramid's vertical height or a base edge",
+      "distractor": "Uses the base edge length in place of the slant height in $\\frac{1}{2}bh$, e.g. computes a face as $\\frac{1}{2}\\cdot 6\\cdot 6 = 18$ instead of $\\frac{1}{2}\\cdot 6\\cdot 5 = 15$"
+    },
+    {
+      "misconception": "Student double-counts overlapping edges or adds perimeter/edge lengths instead of face areas",
+      "distractor": "Adds up edge lengths of the net (a perimeter-style sum) rather than the areas of the faces"
+    },
+    {
+      "misconception": "Student matches the wrong net to a solid (e.g. thinks five squares form a cube, or four triangles alone form a pyramid)",
+      "distractor": "Selects a net with the wrong face count or wrong face shapes for the named solid (e.g. a net of $5$ squares 'forms a cube')"
+    }
+  ],
+
+  "_comment_itemCounts": "lesson 5 worked + 5 practice; single ramped worksheet of 15 (tier1/tier2 of 15 each only if used); quiz 8 multiple choice.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

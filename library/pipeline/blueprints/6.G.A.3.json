@@ -1,0 +1,132 @@
+{
+  "standard": "6.G.A.3",
+  "grade": "6",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Solve real-world and mathematical problems involving area, surface area, and volume",
+  "clusterCode": "A",
+  "skillName": "Polygons in the Coordinate Plane",
+
+  "description": "Students draw polygons in the coordinate plane given the ordered pairs of their vertices, and they use coordinates to find side lengths of segments that are vertical (the two endpoints share the same first coordinate) or horizontal (the two endpoints share the same second coordinate). A vertical side has length $|y_2 - y_1|$; a horizontal side has length $|x_2 - x_1|$. Students apply these techniques to find the perimeter and area of axis-aligned polygons (rectangles, squares, and right-angled L-shaped figures) and to solve real-world and mathematical problems set on a coordinate grid, including finding a missing vertex so a figure has given properties.",
+
+  "subSkills": [
+    "Plot a set of vertices given as ordered pairs $(x, y)$ and connect them in order to draw a polygon",
+    "Recognize when a segment is vertical (same first coordinate) versus horizontal (same second coordinate)",
+    "Find the length of a vertical side using $|y_2 - y_1|$ and a horizontal side using $|x_2 - x_1|$",
+    "Compute the perimeter of an axis-aligned polygon by summing its side lengths",
+    "Compute the area of an axis-aligned rectangle or square as length $\\times$ width using coordinate-derived side lengths",
+    "Decompose an L-shaped or composite axis-aligned polygon into rectangles to find its area",
+    "Find a missing vertex so that a figure is a rectangle/square or has a stated side length, perimeter, or area",
+    "Solve real-world grid problems (maps, garden plots, floor plans) by extracting vertices and computing length, perimeter, or area"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Draw a polygon from vertices",
+      "example": "Plot the vertices $(2, 1)$, $(6, 1)$, $(6, 4)$, and $(2, 4)$ and connect them in order. What figure is formed? Answer: a rectangle."
+    },
+    {
+      "name": "Length of a vertical side",
+      "example": "Find the length of the side joining $(3, -2)$ and $(3, 5)$. The first coordinates match, so the side is vertical: length $= |5 - (-2)| = 7$ units."
+    },
+    {
+      "name": "Length of a horizontal side",
+      "example": "Find the length of the side joining $(-4, 1)$ and $(6, 1)$. The second coordinates match, so the side is horizontal: length $= |6 - (-4)| = 10$ units."
+    },
+    {
+      "name": "Perimeter of an axis-aligned rectangle",
+      "example": "A rectangle has vertices $(-2, 3)$, $(4, 3)$, $(4, -1)$, and $(-2, -1)$. Width $= |4 - (-2)| = 6$, height $= |3 - (-1)| = 4$, so perimeter $= 2(6) + 2(4) = 20$ units."
+    },
+    {
+      "name": "Area of an axis-aligned rectangle or square",
+      "example": "A square has vertices $(1, 2)$, $(5, 2)$, $(5, 6)$, and $(1, 6)$. Each side $= |5 - 1| = 4$, so area $= 4 \\times 4 = 16$ square units."
+    },
+    {
+      "name": "Area of a composite (L-shaped) polygon",
+      "example": "An L-shaped polygon has vertices $(0, 0)$, $(6, 0)$, $(6, 2)$, $(3, 2)$, $(3, 5)$, and $(0, 5)$. Decompose into a $6 \\times 2$ rectangle and a $3 \\times 3$ rectangle: area $= 12 + 9 = 21$ square units."
+    },
+    {
+      "name": "Find a missing vertex",
+      "example": "Three vertices of a rectangle are $(-3, 1)$, $(5, 1)$, and $(5, 4)$. Find the fourth vertex. Answer: $(-3, 4)$."
+    },
+    {
+      "name": "Real-world grid problem",
+      "example": "A rectangular garden has corners at $(2, 1)$, $(2, 7)$, $(9, 7)$, and $(9, 1)$, where each unit is $1$ meter. How many meters of fencing enclose it? Length $= |9 - 2| = 7$, width $= |7 - 1| = 6$, perimeter $= 2(7) + 2(6) = 26$ meters."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Plot vertices and name the polygon, or find a single side length where the two endpoints share an axis and the differing coordinates have the same sign or include $0$, so the subtraction does not cross zero (e.g. $|6 - 2|$). Figures sit in the first quadrant with small integer coordinates.",
+      "constraints": [
+        "Integer coordinates only, magnitudes $\\le 8$, usually first-quadrant",
+        "Tasks: plot and identify the polygon, or find one vertical or horizontal side length",
+        "Differing coordinates are same-sign or include $0$, so $|y_2 - y_1|$ needs no subtraction across zero"
+      ]
+    },
+    "Medium": {
+      "description": "Find a side length where the changing coordinate spans both signs (subtract across zero, e.g. $|4 - (-2)| = 6$), compute the perimeter of a rectangle or square from four vertices, or find the area of a rectangle/square. May include a missing fourth vertex of a rectangle or a one-step real-world context.",
+      "constraints": [
+        "Integer coordinates, magnitudes $\\le 10$, may span all four quadrants",
+        "Vertical or horizontal side where the changing coordinate crosses zero, requiring $|a - (-b)| = a + b$",
+        "Perimeter or area of an axis-aligned rectangle/square, find the missing fourth vertex, or a single-step grid context"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems: area of a composite L-shaped polygon by decomposition, combined perimeter-and-area, comparing two figures, finding a missing coordinate so a target side length, perimeter, or area is met, or rational (fraction/decimal) coordinates. Real-world setups that require the student to assign coordinates before computing.",
+      "constraints": [
+        "May use rational coordinates (e.g. $(2, 1.5)$ or $(-\\tfrac{1}{2}, 3)$)",
+        "Composite figures decomposed into two or more rectangles, or multiple combined computations (perimeter and area together)",
+        "Solve for an unknown coordinate given a target length, perimeter, or area, e.g. find $y$ so the side from $(3, -2)$ to $(3, y)$ has length $7$",
+        "Multi-sentence real-world setup requiring the student to extract or assign vertices"
+      ]
+    },
+    "tierSplit": "This standard is built as a single ramped worksheet of 15 items (Easy early, Hard late). If split, tier1 (Easy to Medium) covers plotting/identifying polygons, single vertical and horizontal side lengths, same-sign and cross-zero distances, perimeter and area of rectangles/squares, and the missing-fourth-vertex task; tier2 (Medium to Hard) covers cross-zero distances, composite L-shape area by decomposition, combined perimeter-and-area, missing-coordinate-for-target problems, and rational-coordinate real-world contexts."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student treats subtraction across zero as a difference of magnitudes, dropping a sign",
+      "distractor": "For the side from $(-4, 1)$ to $(6, 1)$, computes $|6 - 4| = 2$ instead of $|6 - (-4)| = 10$"
+    },
+    {
+      "misconception": "Student subtracts coordinates without absolute value and reports a negative length",
+      "distractor": "For the side from $(3, 5)$ to $(3, -2)$, computes $-2 - 5 = -7$ and answers $-7$ instead of $7$"
+    },
+    {
+      "misconception": "Student subtracts the coordinates that are the SAME instead of the ones that change",
+      "distractor": "For the vertical side from $(3, -2)$ to $(3, 5)$, computes $|3 - 3| = 0$ instead of $|5 - (-2)| = 7$"
+    },
+    {
+      "misconception": "Student confuses perimeter and area, or multiplies side lengths when summing is required",
+      "distractor": "Asked for the perimeter of a $6$ by $4$ rectangle, gives $6 \\times 4 = 24$ instead of $2(6) + 2(4) = 20$"
+    },
+    {
+      "misconception": "Student adds only two sides for perimeter, forgetting that a rectangle has each side length twice",
+      "distractor": "For a $7$ by $6$ rectangle, gives $7 + 6 = 13$ instead of $2(7) + 2(6) = 26$"
+    },
+    {
+      "misconception": "Student finds the area of a composite L-shape using the bounding box instead of decomposing",
+      "distractor": "For an L-shape inside a $6$ by $5$ region, gives $6 \\times 5 = 30$ instead of decomposing to $12 + 9 = 21$"
+    },
+    {
+      "misconception": "Student finds a missing vertex by reversing or mismatching the shared coordinates",
+      "distractor": "Given rectangle vertices $(-3, 1)$, $(5, 1)$, $(5, 4)$, gives $(4, -3)$ instead of $(-3, 4)$"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet (Easy->Hard across 15 items). tier1/tier2 supplied for schema completeness but this standard ships as one worksheet.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "standard": "GEO.G-CO.A.5",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Experiment with transformations in the plane",
+  "clusterCode": "A",
+  "skillName": "Drawing Transformed Figures",
+
+  "description": "Students take a given geometric figure and a specified rigid motion (translation, reflection, or rotation) and produce the image: they compute the coordinates of each transformed vertex, plot or describe the resulting figure, and verify it. Conversely, given a preimage and its image, students specify a sequence of transformations (a single motion or a composition such as reflect-then-translate) that carries the figure onto the other. All work uses exact coordinate rules, not measurement, and degenerate or approximate answers are not accepted.",
+
+  "subSkills": [
+    "Apply a translation rule $(x,y)\\mapsto(x+a,\\,y+b)$ to every vertex of a figure",
+    "Apply a reflection across the $x$-axis, $y$-axis, $y=x$, $y=-x$, or a vertical/horizontal line $x=h$ or $y=k$ using exact coordinate rules",
+    "Apply a rotation of $90^\\circ$, $180^\\circ$, or $270^\\circ$ about the origin using $(x,y)\\mapsto(-y,x)$, $(-x,-y)$, $(y,-x)$",
+    "Compose two transformations in the correct order and track the intermediate image",
+    "Read a preimage/image pair and identify the single transformation that maps one onto the other",
+    "Specify a sequence of transformations (composition) that carries a figure onto a non-congruent-by-single-motion image",
+    "Verify a transformation by checking that side lengths and angle measures are preserved (rigid motion / congruence)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Apply a translation",
+      "example": "Triangle $ABC$ has vertices $A(1,2)$, $B(4,2)$, $C(4,6)$. Draw the image under the translation $(x,y)\\mapsto(x-3,\\,y+1)$. Image: $A'(-2,3)$, $B'(1,3)$, $C'(1,7)$."
+    },
+    {
+      "name": "Apply a reflection across an axis or line",
+      "example": "Reflect quadrilateral with vertices $P(2,1)$, $Q(5,1)$, $R(5,4)$, $S(2,4)$ across the line $y=x$. Image: $P'(1,2)$, $Q'(1,5)$, $R'(4,5)$, $S'(4,2)$."
+    },
+    {
+      "name": "Apply a rotation about the origin",
+      "example": "Rotate $\\triangle DEF$ with $D(3,0)$, $E(3,4)$, $F(0,4)$ by $90^\\circ$ counterclockwise about the origin using $(x,y)\\mapsto(-y,x)$. Image: $D'(0,3)$, $E'(-4,3)$, $F'(-4,0)$."
+    },
+    {
+      "name": "Compose two transformations",
+      "example": "Apply to $A(1,1)$, $B(3,1)$, $C(3,2)$ a reflection across the $x$-axis followed by the translation $(x,y)\\mapsto(x+2,\\,y)$. After reflection: $(1,-1),(3,-1),(3,-2)$; after translation: $A''(3,-1)$, $B''(5,-1)$, $C''(5,-2)$."
+    },
+    {
+      "name": "Identify the single transformation from a preimage/image pair",
+      "example": "$\\triangle ABC$ with $A(2,3)$, $B(5,3)$, $C(5,7)$ maps to $A'(-2,3)$, $B'(-5,3)$, $C'(-5,7)$. Name the transformation. Answer: reflection across the $y$-axis."
+    },
+    {
+      "name": "Specify a sequence of transformations carrying one figure onto another",
+      "example": "$\\triangle ABC$ with $A(1,1)$, $B(4,1)$, $C(4,3)$ maps to $A'(-1,-1)$, $B'(-1,-4)$, $C'(-3,-4)$. Specify a sequence. Answer: rotation $90^\\circ$ counterclockwise about the origin, then reflection across the $x$-axis (one valid sequence)."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single rigid motion applied to a small figure (triangle or simple rectangle) in the first quadrant using one of the most familiar rules: a translation, a reflection across the $x$- or $y$-axis, or a rotation of $180^\\circ$ about the origin. Student plugs each vertex into one stated coordinate rule. No composition, no derivation of the rule.",
+      "constraints": [
+        "Figure has 3 or 4 vertices with small integer coordinates (absolute value $\\le 6$)",
+        "Exactly one transformation, and the rule is stated explicitly in the prompt",
+        "Reflections limited to the $x$-axis or $y$-axis; rotations limited to $180^\\circ$ about the origin; translations $(x,y)\\mapsto(x+a,y+b)$ with small $a,b$",
+        "Preimage lies entirely in the first quadrant so signs of the image are unambiguous"
+      ]
+    },
+    "Medium": {
+      "description": "A single transformation that requires a less-routine rule the student must apply correctly: reflection across $y=x$, $y=-x$, or a line $x=h$/$y=k$ off the axes, or a $90^\\circ$ or $270^\\circ$ rotation about the origin. Alternatively, given a preimage/image pair, identify and name the single transformation. Figures may span more than one quadrant.",
+      "constraints": [
+        "One transformation, but the rule swaps and/or sign-changes coordinates ($90^\\circ$/$270^\\circ$ rotation, reflection across $y=x$, $y=-x$, or $x=h$/$y=k$)",
+        "Figure may cross an axis (coordinates may be negative)",
+        "Some items give preimage and image and ask the student to name the single transformation that maps one onto the other",
+        "Student must state the exact image coordinates of every vertex"
+      ]
+    },
+    "Hard": {
+      "description": "A composition of two transformations applied in a specified order, OR specifying a sequence of transformations that carries a given figure onto a stated image (open-ended: more than one correct answer). Requires tracking an intermediate image and reasoning about how rigid motions combine.",
+      "constraints": [
+        "Two transformations composed in a stated order, with the intermediate image required, OR an open synthesis task naming a valid sequence",
+        "At least one transformation is a non-axis reflection or a $90^\\circ$/$270^\\circ$ rotation",
+        "Figure may occupy multiple quadrants",
+        "Synthesis items must yield a sequence that exactly maps every preimage vertex onto its image vertex; student must justify with at least one verified vertex"
+      ]
+    },
+    "_split": "Single ramped worksheet (15 items) is used. Items 1-6 sit in the Easy band, items 7-11 in the Medium band, items 12-15 in the Hard band. If this standard were split: tier1 would cover Easy to Medium (single motions with axis and non-axis rules, plus identify-the-transformation), tier2 would cover Medium to Hard (non-axis single motions through compositions and sequence-specification synthesis)."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student confuses the reflection-across-$y=x$ rule, negating coordinates instead of swapping them",
+      "distractor": "For reflection across $y=x$ of $(2,5)$, gives $(-2,-5)$ instead of the correct $(5,2)$"
+    },
+    {
+      "misconception": "Student uses the clockwise rule when a counterclockwise rotation is requested (or vice versa), swapping which coordinate gets negated",
+      "distractor": "For a $90^\\circ$ counterclockwise rotation of $(3,1)$, gives $(1,-3)$ (the clockwise image) instead of $(-1,3)$"
+    },
+    {
+      "misconception": "Student reflects across the wrong axis, negating the $y$-coordinate when reflecting across the $y$-axis (or negating $x$ for the $x$-axis)",
+      "distractor": "For reflection across the $y$-axis of $(4,3)$, gives $(4,-3)$ instead of $(-4,3)$"
+    },
+    {
+      "misconception": "Student translates in the wrong direction, subtracting where the rule adds or moving along the wrong axis",
+      "distractor": "For $(x,y)\\mapsto(x-3,y+1)$ applied to $(5,2)$, gives $(8,1)$ instead of $(2,3)$"
+    },
+    {
+      "misconception": "Student applies a composition in the reverse order, performing the second transformation first",
+      "distractor": "For 'reflect across the $x$-axis, then translate $(x,y)\\mapsto(x+2,y)$' on $(1,1)$, gives $(3,-1)$ computed as translate-then-reflect $\\to (1,-1)$... mis-ordered yields $(-3,1)$ type errors",
+      "distractorClean": "For reflect-then-translate on $(1,1)$, gives the translate-then-reflect image instead of the correct $(3,-1)$"
+    },
+    {
+      "misconception": "Student treats the rotation about the origin as if it only negated one coordinate, forgetting to swap $x$ and $y$",
+      "distractor": "For a $90^\\circ$ rotation of $(2,5)$, gives $(-2,5)$ or $(2,-5)$ instead of swapping-and-negating to $(-5,2)$"
+    },
+    {
+      "misconception": "Student names a non-rigid or wrong motion for a preimage/image pair, e.g. calling a reflection a translation because the figure 'moved'",
+      "distractor": "For $(2,3)\\to(-2,3)$ across the figure, answers 'translation left' instead of 'reflection across the $y$-axis'"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

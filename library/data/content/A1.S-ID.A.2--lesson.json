@@ -1,0 +1,167 @@
+{
+  "id": "A1.S-ID.A.2--lesson",
+  "standard": "A1.S-ID.A.2",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on a single count or measurement variable",
+  "clusterCode": "A",
+  "skillName": "Center and Spread of Data",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "Every data set has a center (a typical value) and a spread (how much the values vary). The two common measures of center are the mean $\\bar{x}=\\dfrac{\\sum x_i}{n}$ and the median (the middle value of the ordered data). The two common measures of spread are the interquartile range $\\text{IQR}=Q_3-Q_1$ and the population standard deviation $\\sigma=\\sqrt{\\dfrac{\\sum (x_i-\\bar{x})^2}{n}}$. The mean and standard deviation work best for roughly symmetric data, while the median and IQR are resistant to outliers and skew. This lesson shows how to compute each measure and how to choose the right one based on the shape of the distribution.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "For the data set $\\{4, 6, 8, 8, 14\\}$, find the mean and the population standard deviation.",
+      "solution": {
+        "steps": [
+          "Add the values: $4+6+8+8+14=40$.",
+          "There are $n=5$ values, so the mean is $\\bar{x}=\\dfrac{40}{5}=8$.",
+          "Find each deviation from the mean and square it: $(4-8)^2=16$, $(6-8)^2=4$, $(8-8)^2=0$, $(8-8)^2=0$, $(14-8)^2=36$.",
+          "Add the squared deviations: $16+4+0+0+36=56$.",
+          "Divide by $n=5$ to get the variance: $\\dfrac{56}{5}=11.2$.",
+          "Take the square root for the standard deviation: $\\sigma=\\sqrt{11.2}\\approx 3.35$."
+        ],
+        "answer": "Mean $=8$, standard deviation $\\sigma=\\sqrt{11.2}\\approx 3.35$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find the median and the interquartile range (IQR) of the ordered data set $\\{3, 5, 7, 9, 11, 13\\}$.",
+      "solution": {
+        "steps": [
+          "There are $n=6$ values (even), so the median is the average of the two middle values, the $3$rd and $4$th: $\\dfrac{7+9}{2}=8$.",
+          "The lower half is $\\{3, 5, 7\\}$; its median is $Q_1=5$.",
+          "The upper half is $\\{9, 11, 13\\}$; its median is $Q_3=11$.",
+          "Subtract to get the interquartile range: $\\text{IQR}=Q_3-Q_1=11-5=6$."
+        ],
+        "answer": "Median $=8$, $\\text{IQR}=6$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A box plot for the daily high temperatures shows $Q_1=12$ and $Q_3=27$, with a minimum of $5$ and a maximum of $48$. Find the IQR, and explain how it differs from the range.",
+      "solution": {
+        "steps": [
+          "The interquartile range uses only the quartiles: $\\text{IQR}=Q_3-Q_1=27-12=15$.",
+          "The range uses the extremes: $\\text{range}=\\text{max}-\\text{min}=48-5=43$.",
+          "The IQR ($15$) measures the spread of the middle $50\\%$ of the data, so it ignores the extreme values.",
+          "The range ($43$) is much larger because it is pulled out by the small minimum and large maximum, which may be outliers."
+        ],
+        "answer": "$\\text{IQR}=15$; the range is $43$. The IQR describes the middle half and is resistant to outliers, while the range is not."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A data set of home prices is strongly skewed right, with one very expensive home acting as an outlier. The mean price is $\\$340{,}000$ and the median price is $\\$215{,}000$. Which statistic better describes a typical home price, and why?",
+      "solution": {
+        "steps": [
+          "Identify the shape: the data is strongly skewed right with an outlier (the very expensive home).",
+          "The outlier and the long right tail pull the mean upward, so the mean $\\$340{,}000$ overstates a typical value.",
+          "The median is resistant to outliers and skew because it depends only on the middle position, not the size of extreme values.",
+          "Therefore the median $\\$215{,}000$ better represents a typical home price.",
+          "For the same reason, pair the median with the IQR (not the standard deviation) to describe the spread of this skewed data."
+        ],
+        "answer": "The median $\\$215{,}000$, because it is resistant to the outlier and skew while the mean is inflated by the expensive home."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Two classes take the same quiz. Class A has scores that are roughly symmetric with mean $80$ and standard deviation $\\sigma=2.1$. Class B is also roughly symmetric with mean $80$ and standard deviation $\\sigma=5.4$. Compare the centers and spreads, and state which class was more consistent.",
+      "solution": {
+        "steps": [
+          "Both distributions are roughly symmetric, so the mean and standard deviation are the appropriate statistics.",
+          "Compare centers: both means are $80$, so the classes had the same typical score.",
+          "Compare spreads using the standard deviations: Class A has $\\sigma=2.1$ and Class B has $\\sigma=5.4$.",
+          "A smaller standard deviation means the values cluster more tightly around the mean.",
+          "Since $2.1<5.4$, Class A's scores are less spread out, so Class A was more consistent."
+        ],
+        "answer": "Same center (mean $80$ each). Class A is more consistent because its smaller standard deviation $2.1<5.4$ shows less spread."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Find the mean of the data set $\\{5, 9, 10, 12, 14\\}$.",
+      "hint": "Add all the values, then divide by how many values there are.",
+      "solution": {
+        "steps": [
+          "Add the values: $5+9+10+12+14=50$.",
+          "There are $n=5$ values, so divide: $\\bar{x}=\\dfrac{50}{5}=10$."
+        ],
+        "answer": "Mean $=10$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Order the data set $\\{9, 7, 3, 11, 5\\}$ and find its median.",
+      "hint": "Always sort the values from least to greatest before locating the middle one.",
+      "solution": {
+        "steps": [
+          "Order the data from least to greatest: $\\{3, 5, 7, 9, 11\\}$.",
+          "There are $n=5$ values (odd), so the median is the single middle value, the $3$rd one.",
+          "The median is $7$."
+        ],
+        "answer": "Median $=7$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A five-number summary is minimum $=8$, $Q_1=14$, median $=20$, $Q_3=29$, maximum $=40$. Find the IQR.",
+      "hint": "The IQR uses only the quartiles, not the minimum and maximum.",
+      "solution": {
+        "steps": [
+          "The interquartile range is $\\text{IQR}=Q_3-Q_1$.",
+          "Substitute the quartiles: $\\text{IQR}=29-14=15$."
+        ],
+        "answer": "$\\text{IQR}=15$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Find the population standard deviation of the data set $\\{2, 4, 6, 8\\}$.",
+      "hint": "First find the mean, then average the squared deviations, then take the square root.",
+      "solution": {
+        "steps": [
+          "Find the mean: $\\bar{x}=\\dfrac{2+4+6+8}{4}=\\dfrac{20}{4}=5$.",
+          "Square each deviation from the mean: $(2-5)^2=9$, $(4-5)^2=1$, $(6-5)^2=1$, $(8-5)^2=9$.",
+          "Add the squared deviations: $9+1+1+9=20$.",
+          "Divide by $n=4$ to get the variance: $\\dfrac{20}{4}=5$.",
+          "Take the square root: $\\sigma=\\sqrt{5}\\approx 2.24$."
+        ],
+        "answer": "$\\sigma=\\sqrt{5}\\approx 2.24$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A data set of household incomes is strongly skewed right because of a few very high earners. Which pair of statistics best describes its center and spread, and why?",
+      "hint": "Think about which statistics are resistant to outliers and skew.",
+      "solution": {
+        "steps": [
+          "Identify the shape: the data is strongly skewed right with high outliers (the few very high earners).",
+          "The mean and standard deviation are pulled upward and inflated by the long right tail, so they overstate a typical value and the spread.",
+          "The median and IQR depend only on position, so they are resistant to the skew and outliers.",
+          "Therefore the median (center) and IQR (spread) best describe this distribution."
+        ],
+        "answer": "The median and IQR, because they are resistant to the skew and outliers while the mean and standard deviation are inflated by the high earners."
+      }
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "id": "PC.TRIG.B.5--worksheet",
+  "standard": "PC.TRIG.B.5",
+  "clusterId": null,
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Trigonometry and the Unit Circle",
+  "domainCode": "TRIG",
+  "cluster": "Graphs and identities",
+  "clusterCode": "B",
+  "skillName": "Inverse Trig Functions",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:27:56.866Z",
+  "intro": "This worksheet builds inverse trigonometric reasoning from single exact evaluations through calculator approximations and graph features to multi-step compositions. Throughout, remember the restricted ranges: $\\arcsin$ and $\\arctan$ return angles in $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$ (with $\\arctan$ open at the ends), while $\\arccos$ returns angles in $[0,\\pi]$.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Evaluate $\\arcsin\\left(\\frac{1}{2}\\right)$. Give the exact angle in radians.",
+      "answer": "$\\frac{\\pi}{6}$",
+      "solution": {
+        "steps": [
+          "We need the angle $\\theta$ in $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$ with $\\sin\\theta=\\frac{1}{2}$.",
+          "From the unit circle, $\\sin\\frac{\\pi}{6}=\\frac{1}{2}$, and $\\frac{\\pi}{6}$ lies in the range.",
+          "Therefore $\\arcsin\\left(\\frac{1}{2}\\right)=\\frac{\\pi}{6}$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Evaluate $\\arccos\\left(\\frac{\\sqrt{3}}{2}\\right)$. Give the exact angle in radians.",
+      "answer": "$\\frac{\\pi}{6}$",
+      "solution": {
+        "steps": [
+          "We need $\\theta$ in $[0,\\pi]$ with $\\cos\\theta=\\frac{\\sqrt{3}}{2}$.",
+          "From the unit circle, $\\cos\\frac{\\pi}{6}=\\frac{\\sqrt{3}}{2}$, and $\\frac{\\pi}{6}$ is in $[0,\\pi]$.",
+          "Therefore $\\arccos\\left(\\frac{\\sqrt{3}}{2}\\right)=\\frac{\\pi}{6}$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Evaluate $\\arctan(1)$. Give the exact angle in radians.",
+      "answer": "$\\frac{\\pi}{4}$",
+      "solution": {
+        "steps": [
+          "We need $\\theta$ in $\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$ with $\\tan\\theta=1$.",
+          "Since $\\tan\\frac{\\pi}{4}=\\frac{\\sin(\\pi/4)}{\\cos(\\pi/4)}=1$ and $\\frac{\\pi}{4}$ is in the range, the answer is $\\frac{\\pi}{4}$.",
+          "Therefore $\\arctan(1)=\\frac{\\pi}{4}$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "State the range of $y=\\arccos x$, and explain in one sentence why this range is used rather than $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$.",
+      "answer": "The range is $[0,\\pi]$.",
+      "solution": {
+        "steps": [
+          "To invert $\\cos x$ we restrict its domain to an interval on which it is one-to-one and covers all outputs in $[-1,1]$.",
+          "On $[0,\\pi]$ the cosine decreases steadily from $1$ to $-1$, hitting every value in $[-1,1]$ exactly once, so $\\cos$ is one-to-one there.",
+          "The interval $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$ would not work because $\\cos$ is not one-to-one there (for example $\\cos\\frac{\\pi}{4}=\\cos\\left(-\\frac{\\pi}{4}\\right)$).",
+          "Hence the range of $y=\\arccos x$ is $[0,\\pi]$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Simplify $\\sin\\left(\\arcsin\\left(\\frac{3}{5}\\right)\\right)$.",
+      "answer": "$\\frac{3}{5}$",
+      "solution": {
+        "steps": [
+          "The composition $\\sin(\\arcsin x)=x$ holds for every $x$ in the domain $[-1,1]$.",
+          "Since $\\frac{3}{5}$ lies in $[-1,1]$, the composition simplifies directly.",
+          "Therefore $\\sin\\left(\\arcsin\\left(\\frac{3}{5}\\right)\\right)=\\frac{3}{5}$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Evaluate $\\arcsin\\left(-\\frac{\\sqrt{2}}{2}\\right)$. Give the exact angle in radians.",
+      "answer": "$-\\frac{\\pi}{4}$",
+      "solution": {
+        "steps": [
+          "We need $\\theta$ in $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$ with $\\sin\\theta=-\\frac{\\sqrt{2}}{2}$.",
+          "Sine is negative for negative angles in this range, and $\\sin\\frac{\\pi}{4}=\\frac{\\sqrt{2}}{2}$, so $\\sin\\left(-\\frac{\\pi}{4}\\right)=-\\frac{\\sqrt{2}}{2}$.",
+          "Since $-\\frac{\\pi}{4}$ is in the range, $\\arcsin\\left(-\\frac{\\sqrt{2}}{2}\\right)=-\\frac{\\pi}{4}$ (not $\\frac{5\\pi}{4}$, which is out of range)."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Evaluate $\\arccos\\left(-\\frac{1}{2}\\right)$. Give the exact angle in radians.",
+      "answer": "$\\frac{2\\pi}{3}$",
+      "solution": {
+        "steps": [
+          "We need $\\theta$ in $[0,\\pi]$ with $\\cos\\theta=-\\frac{1}{2}$.",
+          "Cosine is negative in the second quadrant; the reference angle with cosine $\\frac{1}{2}$ is $\\frac{\\pi}{3}$, so $\\theta=\\pi-\\frac{\\pi}{3}=\\frac{2\\pi}{3}$.",
+          "Since $\\frac{2\\pi}{3}$ is in $[0,\\pi]$, $\\arccos\\left(-\\frac{1}{2}\\right)=\\frac{2\\pi}{3}$ (not $-\\frac{\\pi}{3}$, which uses the wrong range)."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Evaluate $\\arctan\\left(-\\sqrt{3}\\right)$. Give the exact angle in radians.",
+      "answer": "$-\\frac{\\pi}{3}$",
+      "solution": {
+        "steps": [
+          "We need $\\theta$ in $\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$ with $\\tan\\theta=-\\sqrt{3}$.",
+          "Since $\\tan\\frac{\\pi}{3}=\\sqrt{3}$ and tangent is odd, $\\tan\\left(-\\frac{\\pi}{3}\\right)=-\\sqrt{3}$.",
+          "Because $-\\frac{\\pi}{3}$ is in the range, $\\arctan\\left(-\\sqrt{3}\\right)=-\\frac{\\pi}{3}$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Use a calculator to approximate $\\arctan(2.5)$ in radians, rounded to three decimal places.",
+      "answer": "$\\approx 1.190$",
+      "solution": {
+        "steps": [
+          "Set the calculator to radian mode and compute $\\tan^{-1}(2.5)$.",
+          "This returns the angle in $\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$ whose tangent is $2.5$.",
+          "The result is $1.19029\\ldots$, which rounds to $1.190$ radians.",
+          "Therefore $\\arctan(2.5)\\approx 1.190$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "The graph of $y=\\arctan x$ has two horizontal asymptotes. State both asymptotes and give the coordinates of the graph's only intercept.",
+      "answer": "Asymptotes $y=\\frac{\\pi}{2}$ and $y=-\\frac{\\pi}{2}$; the intercept is $(0,0)$.",
+      "solution": {
+        "steps": [
+          "As $x\\to\\infty$, $\\arctan x$ approaches but never reaches $\\frac{\\pi}{2}$, giving the asymptote $y=\\frac{\\pi}{2}$.",
+          "As $x\\to-\\infty$, $\\arctan x$ approaches $-\\frac{\\pi}{2}$, giving the asymptote $y=-\\frac{\\pi}{2}$.",
+          "Since $\\arctan(0)=0$, the curve passes through the origin, so its single intercept is $(0,0)$.",
+          "Thus the horizontal asymptotes are $y=\\frac{\\pi}{2}$ and $y=-\\frac{\\pi}{2}$, with intercept $(0,0)$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Write $\\cos(\\arcsin x)$ as an algebraic expression in $x$ for $x\\in[-1,1]$.",
+      "answer": "$\\sqrt{1-x^2}$",
+      "solution": {
+        "steps": [
+          "Let $\\theta=\\arcsin x$, so $\\sin\\theta=x$ with $\\theta\\in\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$.",
+          "By the Pythagorean identity, $\\cos^2\\theta=1-\\sin^2\\theta=1-x^2$, so $\\cos\\theta=\\pm\\sqrt{1-x^2}$.",
+          "On $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$ cosine is nonnegative, so we take the positive root.",
+          "Therefore $\\cos(\\arcsin x)=\\sqrt{1-x^2}$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Simplify $\\arcsin\\left(\\sin\\left(\\frac{2\\pi}{3}\\right)\\right)$. Give the exact angle in radians.",
+      "answer": "$\\frac{\\pi}{3}$",
+      "solution": {
+        "steps": [
+          "First $\\sin\\frac{2\\pi}{3}=\\frac{\\sqrt{3}}{2}$ (second-quadrant reference angle $\\frac{\\pi}{3}$).",
+          "Now we need $\\arcsin\\left(\\frac{\\sqrt{3}}{2}\\right)$, the angle in $\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$ with sine $\\frac{\\sqrt{3}}{2}$.",
+          "That angle is $\\frac{\\pi}{3}$, not $\\frac{2\\pi}{3}$, because $\\frac{2\\pi}{3}$ lies outside the range of arcsine.",
+          "Therefore $\\arcsin\\left(\\sin\\left(\\frac{2\\pi}{3}\\right)\\right)=\\frac{\\pi}{3}$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Evaluate $\\sin\\left(\\arctan\\left(\\frac{3}{4}\\right)\\right)$ as an exact value.",
+      "answer": "$\\frac{3}{5}$",
+      "solution": {
+        "steps": [
+          "Let $\\theta=\\arctan\\frac{3}{4}$, so $\\tan\\theta=\\frac{3}{4}$ with $\\theta$ in the first quadrant (positive input gives $\\theta\\in\\left(0,\\frac{\\pi}{2}\\right)$).",
+          "Build a right triangle with opposite $=3$ and adjacent $=4$; the hypotenuse is $\\sqrt{3^2+4^2}=\\sqrt{25}=5$.",
+          "Then $\\sin\\theta=\\frac{\\text{opposite}}{\\text{hypotenuse}}=\\frac{3}{5}$.",
+          "Therefore $\\sin\\left(\\arctan\\left(\\frac{3}{4}\\right)\\right)=\\frac{3}{5}$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Simplify $\\arccos\\left(\\cos\\left(\\frac{4\\pi}{3}\\right)\\right)$. Give the exact angle in radians.",
+      "answer": "$\\frac{2\\pi}{3}$",
+      "solution": {
+        "steps": [
+          "First $\\cos\\frac{4\\pi}{3}=-\\frac{1}{2}$ (third-quadrant angle with reference angle $\\frac{\\pi}{3}$, cosine negative).",
+          "Now we need $\\arccos\\left(-\\frac{1}{2}\\right)$, the angle in $[0,\\pi]$ with cosine $-\\frac{1}{2}$.",
+          "That angle is $\\pi-\\frac{\\pi}{3}=\\frac{2\\pi}{3}$, not $\\frac{4\\pi}{3}$, since $\\frac{4\\pi}{3}$ lies outside $[0,\\pi]$.",
+          "Therefore $\\arccos\\left(\\cos\\left(\\frac{4\\pi}{3}\\right)\\right)=\\frac{2\\pi}{3}$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Write $\\tan(\\arccos x)$ as an algebraic expression in $x$ for $x\\in(0,1]$.",
+      "answer": "$\\frac{\\sqrt{1-x^2}}{x}$",
+      "solution": {
+        "steps": [
+          "Let $\\theta=\\arccos x$, so $\\cos\\theta=x$ with $\\theta\\in[0,\\pi]$; for $x\\in(0,1]$ we have $\\theta\\in\\left[0,\\frac{\\pi}{2}\\right)$.",
+          "By the Pythagorean identity, $\\sin\\theta=\\sqrt{1-\\cos^2\\theta}=\\sqrt{1-x^2}$ (nonnegative since $\\theta$ is in the first quadrant).",
+          "Then $\\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}=\\frac{\\sqrt{1-x^2}}{x}$.",
+          "Therefore $\\tan(\\arccos x)=\\frac{\\sqrt{1-x^2}}{x}$."
+        ]
+      }
+    }
+  ]
+}

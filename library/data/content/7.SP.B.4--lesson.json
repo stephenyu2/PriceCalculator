@@ -1,0 +1,165 @@
+{
+  "id": "7.SP.B.4--lesson",
+  "standard": "7.SP.B.4",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Draw informal comparative inferences about two populations",
+  "clusterCode": "B",
+  "skillName": "Measures of Center and Variability",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "Two numbers describe a data set: a measure of center tells you a typical value, and a measure of variability tells you how spread out the values are. Center includes the mean $\\bar{x} = \\dfrac{\\sum x_i}{n}$ and the median (the middle of the ordered list). Variability includes the range ($\\max - \\min$), the interquartile range $\\text{IQR} = Q_3 - Q_1$, and the mean absolute deviation $\\text{MAD} = \\dfrac{\\sum |x_i - \\bar{x}|}{n}$. To compare two random samples, look at both a center and a spread. A powerful comparison is the difference in means measured in MADs, $\\dfrac{|\\bar{x}_1 - \\bar{x}_2|}{\\text{MAD}}$, which tells you how separated the two groups really are.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Find the mean of the data set $\\{6, 9, 9, 12, 14\\}$.",
+      "solution": {
+        "steps": [
+          "Add the values: $6 + 9 + 9 + 12 + 14 = 50$.",
+          "Count the values: there are $n = 5$ values.",
+          "Divide the sum by the count: $\\bar{x} = \\dfrac{50}{5}$.",
+          "Compute: $\\bar{x} = 10$."
+        ],
+        "answer": "$\\bar{x} = 10$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find the median and the range of the data set $\\{14, 3, 9, 7, 11, 5, 8\\}$.",
+      "solution": {
+        "steps": [
+          "Order the data from least to greatest: $3, 5, 7, 8, 9, 11, 14$.",
+          "There are $n = 7$ values (odd), so the median is the middle one, the $4$th value.",
+          "The median is $8$.",
+          "The range is $\\max - \\min = 14 - 3 = 11$."
+        ],
+        "answer": "Median $= 8$, range $= 11$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Find the interquartile range (IQR) of the data set $\\{2, 5, 6, 8, 9, 12, 14\\}$.",
+      "solution": {
+        "steps": [
+          "The data is already ordered: $2, 5, 6, 8, 9, 12, 14$.",
+          "The median is the middle value $8$. It splits the data into a lower half $\\{2, 5, 6\\}$ and an upper half $\\{9, 12, 14\\}$.",
+          "$Q_1$ is the median of the lower half: $Q_1 = 5$.",
+          "$Q_3$ is the median of the upper half: $Q_3 = 12$.",
+          "Compute the IQR: $\\text{IQR} = Q_3 - Q_1 = 12 - 5 = 7$."
+        ],
+        "answer": "$\\text{IQR} = 7$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Find the mean absolute deviation (MAD) of the data set $\\{3, 5, 8, 8\\}$.",
+      "solution": {
+        "steps": [
+          "Find the mean: $\\bar{x} = \\dfrac{3 + 5 + 8 + 8}{4} = \\dfrac{24}{4} = 6$.",
+          "Find each absolute deviation from the mean: $|3 - 6| = 3$, $|5 - 6| = 1$, $|8 - 6| = 2$, $|8 - 6| = 2$.",
+          "Add the absolute deviations: $3 + 1 + 2 + 2 = 8$.",
+          "Divide by the count $n = 4$: $\\text{MAD} = \\dfrac{8}{4} = 2$."
+        ],
+        "answer": "$\\text{MAD} = 2$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A random sample of plants grown with Fertilizer A has mean height $\\bar{x}_A = 22$ cm with $\\text{MAD} = 3$ cm. A random sample grown with Fertilizer B has mean height $\\bar{x}_B = 16$ cm with $\\text{MAD} = 3$ cm. Which fertilizer typically produces taller plants, and how many MADs apart are the two means?",
+      "solution": {
+        "steps": [
+          "Compare the centers: $\\bar{x}_A = 22$ cm is greater than $\\bar{x}_B = 16$ cm, so Fertilizer A typically produces taller plants.",
+          "Both samples have the same $\\text{MAD} = 3$ cm, so the two groups are equally consistent.",
+          "Find the difference in means: $|\\bar{x}_A - \\bar{x}_B| = |22 - 16| = 6$ cm.",
+          "Express that difference as a multiple of the MAD: $\\dfrac{6}{3} = 2$.",
+          "The means are $2$ MADs apart. Because the random samples come from each population, this separation suggests Fertilizer A really does grow taller plants on average."
+        ],
+        "answer": "Fertilizer A is taller; the means are $2$ MADs apart."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Find the mean of the data set $\\{4, 7, 7, 10, 12\\}$.",
+      "hint": "Add all the values, then divide by how many values there are.",
+      "solution": {
+        "steps": [
+          "Add the values: $4 + 7 + 7 + 10 + 12 = 40$.",
+          "There are $n = 5$ values.",
+          "Divide: $\\bar{x} = \\dfrac{40}{5} = 8$."
+        ],
+        "answer": "$\\bar{x} = 8$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Find the median of the data set $\\{15, 4, 9, 2, 10, 6, 13\\}$.",
+      "hint": "Order the data first, then find the middle value.",
+      "solution": {
+        "steps": [
+          "Order the data: $2, 4, 6, 9, 10, 13, 15$.",
+          "There are $n = 7$ values (odd), so the median is the $4$th value.",
+          "The median is $9$."
+        ],
+        "answer": "Median $= 9$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Find the interquartile range (IQR) of the data set $\\{1, 4, 4, 7, 10, 13, 16, 19\\}$.",
+      "hint": "Split the ordered data into a lower half and an upper half, then find $Q_1$ and $Q_3$.",
+      "solution": {
+        "steps": [
+          "The data is ordered and has $n = 8$ values (even). Split into a lower half $\\{1, 4, 4, 7\\}$ and an upper half $\\{10, 13, 16, 19\\}$.",
+          "$Q_1$ is the median of the lower half: $Q_1 = \\dfrac{4 + 4}{2} = 4$.",
+          "$Q_3$ is the median of the upper half: $Q_3 = \\dfrac{13 + 16}{2} = 14.5$.",
+          "Compute the IQR: $\\text{IQR} = Q_3 - Q_1 = 14.5 - 4 = 10.5$."
+        ],
+        "answer": "$\\text{IQR} = 10.5$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Find the mean absolute deviation (MAD) of the data set $\\{2, 4, 9, 9\\}$.",
+      "hint": "First find the mean, then average the absolute distances from the mean.",
+      "solution": {
+        "steps": [
+          "Find the mean: $\\bar{x} = \\dfrac{2 + 4 + 9 + 9}{4} = \\dfrac{24}{4} = 6$.",
+          "Find each absolute deviation: $|2 - 6| = 4$, $|4 - 6| = 2$, $|9 - 6| = 3$, $|9 - 6| = 3$.",
+          "Add them: $4 + 2 + 3 + 3 = 12$.",
+          "Divide by $n = 4$: $\\text{MAD} = \\dfrac{12}{4} = 3$."
+        ],
+        "answer": "$\\text{MAD} = 3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A random sample of words from a children's book has mean length $\\bar{x}_1 = 4$ letters with $\\text{MAD} = 1$ letter. A random sample from a science magazine has mean length $\\bar{x}_2 = 7$ letters with $\\text{MAD} = 1$ letter. Which source typically uses longer words, and how many MADs apart are the means?",
+      "hint": "Compare the means to decide which is longer, then compute $\\dfrac{|\\bar{x}_1 - \\bar{x}_2|}{\\text{MAD}}$.",
+      "solution": {
+        "steps": [
+          "Compare the centers: $\\bar{x}_2 = 7 > \\bar{x}_1 = 4$, so the science magazine typically uses longer words.",
+          "Find the difference in means: $|\\bar{x}_1 - \\bar{x}_2| = |4 - 7| = 3$ letters.",
+          "Express as a multiple of the MAD: $\\dfrac{3}{1} = 3$, so the means are $3$ MADs apart.",
+          "Because both samples were chosen at random, this large separation supports the inference that the magazine's words are typically longer than the book's."
+        ],
+        "answer": "The science magazine; the means are $3$ MADs apart."
+      }
+    }
+  ]
+}

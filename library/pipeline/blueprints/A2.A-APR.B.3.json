@@ -1,0 +1,140 @@
+{
+  "standard": "A2.A-APR.B.3",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Arithmetic with Polynomials and Rational Expressions",
+  "domainCode": "A-APR",
+  "cluster": "Understand the relationship between zeros and factors of polynomials",
+  "clusterCode": "B",
+  "skillName": "Zeros and Polynomial Graphs",
+
+  "description": "Students identify the real zeros of a polynomial function when a suitable factorization is available (already factored, or obtainable by factoring out a GCF, factoring a quadratic, grouping, or recognizing a difference of squares), and they use those zeros together with multiplicity and end behavior to construct a rough graph of the function. They set each factor equal to zero to solve $f(x)=0$, determine the multiplicity of each zero from its exponent, decide whether the graph crosses the $x$-axis (odd multiplicity) or is tangent to it (even multiplicity) at each zero, find the $y$-intercept, read end behavior from the degree and leading coefficient, and assemble a sketch consistent with all of these features. They also reason in reverse, writing a factored polynomial whose graph has prescribed zeros and behavior.",
+
+  "subSkills": [
+    "Solve $f(x)=0$ by the Zero Product Property, setting each factor equal to zero",
+    "Factor a polynomial when not pre-factored (common factor, quadratic trinomial, grouping, difference of squares)",
+    "Determine the multiplicity of each zero from the exponent on its factor",
+    "Decide crossing vs. tangency at each zero (odd multiplicity crosses, even multiplicity is tangent / touches and turns)",
+    "Compute the degree and leading coefficient to state end behavior",
+    "Find the $y$-intercept by evaluating $f(0)$",
+    "Plot the zeros on a number line and place the curve above or below the axis on each interval using sign analysis",
+    "Sketch a rough graph consistent with the zeros, multiplicities, $y$-intercept, and end behavior",
+    "Reverse-engineer a factored polynomial from a described or pictured graph (given zeros and their crossing/tangent behavior)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Zeros from fully factored form",
+      "example": "Find the real zeros of $f(x)=(x-2)(x+5)(x-1)$. Answer: $x=2,\\ x=-5,\\ x=1$, each of multiplicity $1$."
+    },
+    {
+      "name": "Zeros requiring factoring first",
+      "example": "Find the zeros of $f(x)=x^3-4x$. Factor: $f(x)=x(x-2)(x+2)$, so $x=0,\\ x=2,\\ x=-2$."
+    },
+    {
+      "name": "Multiplicity and crossing vs. tangency",
+      "example": "For $f(x)=(x+1)^2(x-3)$, list each zero with its multiplicity and state whether the graph crosses or touches. Answer: tangent at $x=-1$ (multiplicity $2$), crosses at $x=3$ (multiplicity $1$)."
+    },
+    {
+      "name": "Interval sign analysis",
+      "example": "For $f(x)=(x-1)(x+2)$, determine where $f(x)>0$ and where $f(x)<0$. Answer: $f(x)>0$ on $x<-2$ and $x>1$; $f(x)<0$ on $-2<x<1$."
+    },
+    {
+      "name": "Build the rough graph",
+      "example": "Sketch $f(x)=(x-2)^2(x+1)$: zeros at $x=2$ (tangent) and $x=-1$ (crosses); $y$-intercept $f(0)=4$; leading term $x^3$ so $f(x)\\to+\\infty$ as $x\\to+\\infty$ and $f(x)\\to-\\infty$ as $x\\to-\\infty$."
+    },
+    {
+      "name": "y-intercept from factored form",
+      "example": "Find the $y$-intercept of $f(x)=2(x-3)(x+1)$. Answer: $f(0)=2(-3)(1)=-6$, so the $y$-intercept is $(0,-6)$."
+    },
+    {
+      "name": "Reverse: write a polynomial from its graph or zeros",
+      "example": "Write a polynomial of least degree with a zero at $x=4$ where the graph is tangent and a zero at $x=-2$ where it crosses. Answer: $f(x)=(x-4)^2(x+2)$ (or any nonzero multiple)."
+    },
+    {
+      "name": "Match a function to its graph",
+      "example": "Which factored polynomial has zeros only at $x=-3$ and $x=1$, is tangent at $x=1$, and falls on both ends? Answer: $f(x)=-(x+3)(x-1)^2$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step identification from an already-factored polynomial. The student reads the zeros directly by setting each linear factor to zero, or names a single feature (a zero, the $y$-intercept, or the multiplicity of one factor). No factoring, no graph assembly required. Anchors the start of the ramped worksheet and the bottom of tier1.",
+      "constraints": [
+        "Polynomial is given fully factored with linear factors, e.g. $(x-a)(x-b)$ or $(x-a)(x-b)(x-c)$",
+        "All zeros have multiplicity $1$, or a single squared factor whose multiplicity is the only thing asked",
+        "Integer zeros with small magnitude ($|a|\\le 6$)",
+        "Task is one step: list the zeros, give the $y$-intercept, or state one multiplicity",
+        "No graph construction beyond naming where the graph meets the axis"
+      ]
+    },
+    "Medium": {
+      "description": "Two to three linked steps. The student either factors a quadratic or cubic first (GCF, trinomial, difference of squares, grouping) and then lists zeros, or combines multiplicity with crossing/tangency and end behavior to choose or sketch a consistent graph. This is the upper half of the ramped worksheet, the top of tier1, and the body of tier2.",
+      "constraints": [
+        "Polynomial must be factored first (factor out a GCF, factor a trinomial $x^2+bx+c$, recognize $x^2-a^2$, or factor a cubic such as $x^3-4x$)",
+        "At least one zero has multiplicity $\\ge 2$, forcing a crossing-vs-tangent decision",
+        "Student combines zeros with end behavior (degree and leading-coefficient sign) to pick or sketch the graph",
+        "May require finding the $y$-intercept and doing sign analysis on one or two intervals",
+        "Degree is $3$ or $4$"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step synthesis or construction. The student factors a higher-degree polynomial (degree $4$+, possibly by grouping or removing a GCF then factoring further), produces a complete rough sketch from scratch consistent with all features, or builds a polynomial in reverse to satisfy several simultaneous conditions (specified zeros, multiplicities, end behavior, and possibly a given $y$-intercept). Closes the ramped worksheet and the top of tier2.",
+      "constraints": [
+        "Degree is $4$ or higher, or factoring requires grouping plus a difference of squares, e.g. $x^4-5x^2+4$",
+        "Student constructs a full rough graph (zeros, multiplicities, $y$-intercept, end behavior) with no graph given",
+        "Reverse-construction problems with multiple constraints (zeros, tangent vs. cross, end-behavior direction, sometimes a scaling factor fixed by a point)",
+        "Leading-coefficient sign may be negative or hidden inside the factored form, affecting both end behavior and the up/down placement of each arch",
+        "May ask the student to explain a contradiction, e.g. why a stated set of zeros cannot match a given even-degree, both-ends-down graph without adjusting a multiplicity"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student reads zeros with the wrong sign, taking the constant inside the factor as the zero",
+      "distractor": "For $(x-2)(x+5)$ reports zeros $x=-2$ and $x=5$ instead of $x=2$ and $x=-5$ (forgets to negate, solving $x-2=0$ as $x=-2$)"
+    },
+    {
+      "misconception": "Student confuses the multiplicity rule, thinking even multiplicity means crossing and odd multiplicity means tangency",
+      "distractor": "For $(x+1)^2(x-3)$ says the graph crosses at $x=-1$ (multiplicity $2$) and is tangent at $x=3$ (multiplicity $1$), reversing the touch-vs-cross rule"
+    },
+    {
+      "misconception": "Student multiplies the constant terms instead of evaluating $f(0)$ to find the $y$-intercept",
+      "distractor": "For $f(x)=2(x-3)(x+1)$ gives the $y$-intercept as $2\\cdot(-3)\\cdot(+1)$ but drops the sign or the leading $2$, e.g. reports $(0,3)$ or $(0,-3)$ instead of $(0,-6)$"
+    },
+    {
+      "misconception": "Student counts the number of distinct factors as the degree, ignoring exponents",
+      "distractor": "For $f(x)=(x-2)^2(x+1)$ calls the degree $2$ (two distinct factors) instead of $3$, then assigns even-degree (both ends same direction) end behavior"
+    },
+    {
+      "misconception": "Student ignores a leading negative sign or a negative leading coefficient when stating end behavior",
+      "distractor": "For $f(x)=-(x+3)(x-1)^2$ treats the leading term as $+x^3$ and reports the graph rising on the right, ignoring the front minus that flips both arches"
+    },
+    {
+      "misconception": "Student factors incompletely and misses zeros, especially the GCF factor",
+      "distractor": "For $f(x)=x^3-4x$ factors only to $x(x^2-4)$ and stops, reporting zeros $x=0$ and (from the unsimplified $x^2-4$) only $x=2$, missing $x=-2$, or reporting just $x=2,-2$ and dropping $x=0$"
+    },
+    {
+      "misconception": "Student assumes the number of $x$-intercepts must equal the degree and forces extra crossings",
+      "distractor": "For a degree-$3$ polynomial with a double root, such as $(x-2)^2(x+1)$, draws or selects a graph with three separate crossings instead of one crossing and one tangent point"
+    },
+    {
+      "misconception": "Student treats a tangent (even-multiplicity) zero as if the curve passes straight through, so the sign of $f$ flips across it",
+      "distractor": "In sign analysis for $(x+1)^2(x-3)$ changes the sign of $f$ at $x=-1$ as if it were a simple crossing, producing the wrong above/below-axis intervals"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

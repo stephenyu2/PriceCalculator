@@ -1,0 +1,179 @@
+{
+  "id": "A2.A-SSE.B.4--lesson",
+  "standard": "A2.A-SSE.B.4",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Seeing Structure in Expressions",
+  "domainCode": "A-SSE",
+  "cluster": "Write expressions in equivalent forms to solve problems",
+  "clusterCode": "B",
+  "skillName": "Geometric Series Formula",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "A finite geometric series adds up $n$ terms that each multiply the previous one by a fixed common ratio $r$: $a + ar + ar^2 + \\cdots + ar^{n-1}$. Adding these one at a time is slow, so we use a closed form. For $r \\neq 1$ the sum of the first $n$ terms is $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$ (equivalently $a\\,\\dfrac{r^n - 1}{r - 1}$). This formula comes from the multiply-by-$r$-and-subtract trick: writing $rS_n$ underneath $S_n$ makes all the middle terms cancel. Once you can read off $a$, $r$, and $n$, the same formula evaluates exact sums, models savings and loans, and lets you solve for a missing parameter. Remember the formula needs $r \\neq 1$, since $1 - r$ would be zero; when $r = 1$ every term equals $a$ and the sum is simply $a n$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "For the geometric series $5 + 15 + 45 + 135 + 405$, identify the first term $a$, the common ratio $r$, and the number of terms $n$. Then write the sum in the form $a\\,\\dfrac{1 - r^n}{1 - r}$ (do not evaluate).",
+      "solution": {
+        "steps": [
+          "The first term is the leftmost value, so $a = 5$.",
+          "Find $r$ by dividing any term by the one before it: $\\frac{15}{5} = 3$, and a check gives $\\frac{45}{15} = 3$, so $r = 3$.",
+          "Count the listed terms: $5, 15, 45, 135, 405$ is $5$ terms, so $n = 5$.",
+          "Substitute into the closed form: $S_5 = 5\\,\\dfrac{1 - 3^{5}}{1 - 3}$."
+        ],
+        "answer": "$a = 5$, $r = 3$, $n = 5$, and $S_5 = 5\\,\\dfrac{1 - 3^{5}}{1 - 3}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Evaluate the finite geometric sum $2 + 6 + 18 + 54 + 162$ using the formula $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$.",
+      "solution": {
+        "steps": [
+          "Read off the parameters: $a = 2$, $r = \\frac{6}{2} = 3$, and there are $n = 5$ terms.",
+          "Substitute into $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$ with the exponent $n = 5$ (not $n - 1$): $S_5 = 2\\,\\dfrac{1 - 3^{5}}{1 - 3}$.",
+          "Compute $3^{5} = 243$, so the numerator is $1 - 243 = -242$ and the denominator is $1 - 3 = -2$.",
+          "Divide: $\\dfrac{-242}{-2} = 121$.",
+          "Multiply by $a = 2$: $S_5 = 2 \\cdot 121 = 242$. (As a check, $162$ is just the last term, not the total.)"
+        ],
+        "answer": "$242$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Evaluate $\\displaystyle\\sum_{k=0}^{6} 4\\left(\\tfrac{1}{2}\\right)^{k}$ exactly using the geometric series formula.",
+      "solution": {
+        "steps": [
+          "Matching $\\sum a r^{k}$, the first term is $a = 4$ (the value when $k = 0$) and the common ratio is $r = \\frac{1}{2}$.",
+          "The index runs from $k = 0$ to $k = 6$, which is $6 - 0 + 1 = 7$ terms, so $n = 7$.",
+          "Substitute: $S_7 = 4\\,\\dfrac{1 - \\left(\\frac{1}{2}\\right)^{7}}{1 - \\frac{1}{2}}$.",
+          "Compute the pieces: $\\left(\\frac{1}{2}\\right)^{7} = \\frac{1}{128}$ and $1 - \\frac{1}{2} = \\frac{1}{2}$.",
+          "So $S_7 = 4 \\cdot \\dfrac{1 - \\frac{1}{128}}{\\frac{1}{2}} = 4 \\cdot 2\\left(1 - \\tfrac{1}{128}\\right) = 8\\left(\\tfrac{127}{128}\\right)$.",
+          "Simplify: $8 \\cdot \\dfrac{127}{128} = \\dfrac{127}{16}$."
+        ],
+        "answer": "$\\dfrac{127}{16}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Derive the closed form $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$ for a finite geometric series with $r \\neq 1$, using the multiply-by-$r$-and-subtract method. Explain where the condition $r \\neq 1$ is used.",
+      "solution": {
+        "steps": [
+          "Write the sum: $S_n = a + ar + ar^2 + \\cdots + ar^{n-1}$.",
+          "Multiply every term by $r$: $rS_n = ar + ar^2 + ar^3 + \\cdots + ar^{n}$.",
+          "Subtract the second line from the first. Every middle term cancels (each $ar^{k}$ appears once in each line for $1 \\le k \\le n-1$), leaving $S_n - rS_n = a - ar^{n}$.",
+          "Factor both sides: the left side is $S_n(1 - r)$ and the right side is $a(1 - r^n)$, so $S_n(1 - r) = a(1 - r^n)$.",
+          "Divide both sides by $1 - r$ to isolate $S_n$: $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$.",
+          "This last division is only valid when $1 - r \\neq 0$, i.e. $r \\neq 1$. If $r = 1$ every term equals $a$, so the sum is just $S_n = a n$."
+        ],
+        "answer": "$S_n = a\\,\\dfrac{1 - r^n}{1 - r}$ for $r \\neq 1$; the division by $1 - r$ requires $r \\neq 1$, and when $r = 1$ the sum is $a n$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "You deposit $\\$200$ at the end of each year into an account earning $5\\%$ annual interest, for $10$ years. Each deposit grows by a factor of $1.05$ for each remaining year, so the future value is the finite geometric series $200 + 200(1.05) + \\cdots + 200(1.05)^{9}$. Find the total future value, rounded to the nearest cent.",
+      "solution": {
+        "steps": [
+          "Identify the series: $a = 200$ (the most recent deposit, which earns no interest), common ratio $r = 1.05$, and $n = 10$ deposits.",
+          "Apply $S_n = a\\,\\dfrac{r^n - 1}{r - 1}$ (the $r > 1$ form): $S_{10} = 200\\,\\dfrac{1.05^{10} - 1}{1.05 - 1}$.",
+          "Compute $1.05^{10} \\approx 1.628894627$, so the numerator is $1.05^{10} - 1 \\approx 0.628894627$.",
+          "The denominator is $1.05 - 1 = 0.05$, so $\\dfrac{0.628894627}{0.05} \\approx 12.57789254$.",
+          "Multiply by $a = 200$: $200 \\cdot 12.57789254 \\approx 2515.578508$.",
+          "Round to the nearest cent: about $\\$2515.58$."
+        ],
+        "answer": "$\\approx \\$2515.58$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "For the geometric series $4 + 8 + 16 + 32 + 64$, identify $a$, $r$, and $n$, then find the sum using $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$.",
+      "hint": "Divide the second term by the first to get $r$. Use the exponent $n$ (the count of terms), not $n - 1$.",
+      "solution": {
+        "steps": [
+          "First term $a = 4$; ratio $r = \\frac{8}{4} = 2$; there are $n = 5$ terms.",
+          "Substitute: $S_5 = 4\\,\\dfrac{1 - 2^{5}}{1 - 2}$.",
+          "Compute $2^{5} = 32$, so $S_5 = 4 \\cdot \\dfrac{1 - 32}{-1} = 4 \\cdot \\dfrac{-31}{-1} = 4 \\cdot 31$.",
+          "Therefore $S_5 = 124$ (a quick check: $4 + 8 + 16 + 32 + 64 = 124$)."
+        ],
+        "answer": "$a = 4$, $r = 2$, $n = 5$, $S_5 = 124$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Evaluate $\\displaystyle\\sum_{k=1}^{5} 3\\left(\\tfrac{1}{3}\\right)^{k-1}$ exactly.",
+      "hint": "When the index starts at $k = 1$ with exponent $k - 1$, the first term ($k = 1$) is $a = 3$. Count the terms from $k = 1$ to $k = 5$.",
+      "solution": {
+        "steps": [
+          "The term at $k = 1$ is $3\\left(\\frac{1}{3}\\right)^{0} = 3$, so $a = 3$ and the common ratio is $r = \\frac{1}{3}$.",
+          "The index runs $k = 1$ to $k = 5$, giving $n = 5$ terms.",
+          "Substitute: $S_5 = 3\\,\\dfrac{1 - \\left(\\frac{1}{3}\\right)^{5}}{1 - \\frac{1}{3}}$.",
+          "Compute $\\left(\\frac{1}{3}\\right)^{5} = \\frac{1}{243}$ and $1 - \\frac{1}{3} = \\frac{2}{3}$.",
+          "So $S_5 = 3 \\cdot \\dfrac{1 - \\frac{1}{243}}{\\frac{2}{3}} = 3 \\cdot \\dfrac{3}{2}\\left(\\tfrac{242}{243}\\right) = \\dfrac{9}{2}\\cdot\\dfrac{242}{243}$.",
+          "Simplify: $\\dfrac{9 \\cdot 242}{2 \\cdot 243} = \\dfrac{2178}{486} = \\dfrac{121}{27}$."
+        ],
+        "answer": "$\\dfrac{121}{27}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Find the sum of the first $5$ terms of a geometric series with first term $a = 9$ and common ratio $r = -\\tfrac{1}{3}$. Give the exact value.",
+      "hint": "Be careful with the sign: $\\left(-\\frac{1}{3}\\right)^{5}$ is negative because $5$ is odd, so $1 - r^5$ becomes $1 + \\frac{1}{243}$.",
+      "solution": {
+        "steps": [
+          "Substitute into $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$: $S_5 = 9\\,\\dfrac{1 - \\left(-\\frac{1}{3}\\right)^{5}}{1 - \\left(-\\frac{1}{3}\\right)}$.",
+          "Since $5$ is odd, $\\left(-\\frac{1}{3}\\right)^{5} = -\\frac{1}{243}$, so the numerator is $1 - \\left(-\\frac{1}{243}\\right) = 1 + \\frac{1}{243} = \\frac{244}{243}$.",
+          "The denominator is $1 - \\left(-\\frac{1}{3}\\right) = 1 + \\frac{1}{3} = \\frac{4}{3}$.",
+          "So $S_5 = 9 \\cdot \\dfrac{\\frac{244}{243}}{\\frac{4}{3}} = 9 \\cdot \\dfrac{244}{243} \\cdot \\dfrac{3}{4} = 9 \\cdot \\dfrac{732}{972}$.",
+          "Simplify $\\dfrac{732}{972} = \\dfrac{61}{81}$, so $S_5 = 9 \\cdot \\dfrac{61}{81} = \\dfrac{549}{81} = \\dfrac{61}{9}$."
+        ],
+        "answer": "$\\dfrac{61}{9}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A geometric series has first term $a = 3$ and common ratio $r = 2$. Its sum is $S_n = 381$. How many terms $n$ does the series have?",
+      "hint": "Use the $r > 1$ form $S_n = a\\,\\dfrac{r^n - 1}{r - 1}$, isolate $r^n$, then recognize the resulting power of $2$.",
+      "solution": {
+        "steps": [
+          "Use $S_n = a\\,\\dfrac{r^n - 1}{r - 1}$: $3\\,\\dfrac{2^{n} - 1}{2 - 1} = 381$.",
+          "Since $2 - 1 = 1$, this is $3(2^{n} - 1) = 381$.",
+          "Divide both sides by $3$: $2^{n} - 1 = 127$.",
+          "Add $1$: $2^{n} = 128$.",
+          "Recognize $128 = 2^{7}$, so $n = 7$."
+        ],
+        "answer": "$n = 7$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A patient takes a $50$ mg dose of a drug at the start of each day. Each day the body retains $\\tfrac{1}{2}$ of whatever drug was present, then the next dose is added. Just after the $6$th dose, the amount in the body is the finite geometric series $50 + 50\\left(\\tfrac{1}{2}\\right) + 50\\left(\\tfrac{1}{2}\\right)^{2} + \\cdots + 50\\left(\\tfrac{1}{2}\\right)^{5}$. Find the total amount present, as an exact value in mg.",
+      "hint": "Identify $a = 50$, $r = \\frac{1}{2}$, and $n = 6$ (doses $0$ through $5$), then apply the sum formula.",
+      "solution": {
+        "steps": [
+          "Identify the series: $a = 50$, common ratio $r = \\frac{1}{2}$, and $n = 6$ terms (exponents $0$ through $5$).",
+          "Substitute: $S_6 = 50\\,\\dfrac{1 - \\left(\\frac{1}{2}\\right)^{6}}{1 - \\frac{1}{2}}$.",
+          "Compute $\\left(\\frac{1}{2}\\right)^{6} = \\frac{1}{64}$ and $1 - \\frac{1}{2} = \\frac{1}{2}$.",
+          "So $S_6 = 50 \\cdot \\dfrac{1 - \\frac{1}{64}}{\\frac{1}{2}} = 50 \\cdot 2\\left(\\tfrac{63}{64}\\right) = 100 \\cdot \\dfrac{63}{64}$.",
+          "Simplify: $\\dfrac{6300}{64} = \\dfrac{1575}{16}$ mg, which is $98.4375$ mg."
+        ],
+        "answer": "$\\dfrac{1575}{16}$ mg $= 98.4375$ mg"
+      }
+    }
+  ]
+}

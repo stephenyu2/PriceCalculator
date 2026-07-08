@@ -1,0 +1,121 @@
+{
+  "standard": "GEO.G-SRT.C.7",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Similarity, Right Triangles, and Trigonometry",
+  "domainCode": "G-SRT",
+  "cluster": "Define trigonometric ratios and solve problems involving right triangles",
+  "clusterCode": "C",
+  "skillName": "Sine and Cosine of Complementary Angles",
+
+  "description": "Students explain and use the co-function relationship for acute angles in a right triangle: the sine of an angle equals the cosine of its complement, and the cosine of an angle equals the sine of its complement. Concretely, if $A$ and $B$ are the two acute angles of a right triangle then $A + B = 90^\\circ$, and $\\sin A = \\cos B = \\cos(90^\\circ - A)$ while $\\cos A = \\sin B = \\sin(90^\\circ - A)$. Students justify this from the side-ratio definitions (the leg opposite one acute angle is the leg adjacent to the other), rewrite expressions between sine and cosine, evaluate co-function statements, and solve equations such as $\\sin(2x) = \\cos(x + 30^\\circ)$ by setting the angles complementary.",
+
+  "subSkills": [
+    "State and explain why $\\sin\\theta = \\cos(90^\\circ - \\theta)$ and $\\cos\\theta = \\sin(90^\\circ - \\theta)$ for acute $\\theta$ using the opposite/adjacent leg-swap in a right triangle",
+    "Given $\\sin A$ for one acute angle, state $\\cos B$ for the complementary angle (and vice versa) without recomputing ratios",
+    "Rewrite a sine as a cosine of the complement (or a cosine as a sine of the complement)",
+    "Evaluate whether a co-function equation is true and find a missing angle that makes two trig values equal",
+    "Solve $\\sin(\\text{expr}_1) = \\cos(\\text{expr}_2)$ by setting $\\text{expr}_1 + \\text{expr}_2 = 90^\\circ$ and solving the resulting linear equation",
+    "Apply the relationship in right-triangle contexts and with the radian co-function form $\\sin\\theta = \\cos\\!\\left(\\frac{\\pi}{2} - \\theta\\right)$"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "State the complement value",
+      "example": "In right triangle $ABC$ with $\\angle C = 90^\\circ$, $\\sin A = \\frac{5}{13}$. What is $\\cos B$? Answer: $\\frac{5}{13}$."
+    },
+    {
+      "name": "Rewrite sine as cosine of complement",
+      "example": "Rewrite $\\sin 37^\\circ$ as the cosine of an angle. Answer: $\\cos 53^\\circ$."
+    },
+    {
+      "name": "True/false co-function check",
+      "example": "Is $\\sin 40^\\circ = \\cos 50^\\circ$ true? Answer: Yes, because $40^\\circ + 50^\\circ = 90^\\circ$."
+    },
+    {
+      "name": "Find the missing angle that equates sine and cosine",
+      "example": "Find the acute angle $\\theta$ so that $\\sin 28^\\circ = \\cos\\theta$. Answer: $\\theta = 62^\\circ$."
+    },
+    {
+      "name": "Solve a linear co-function equation",
+      "example": "Solve for $x$: $\\sin(2x) = \\cos(x + 30^\\circ)$. Set $2x + (x + 30^\\circ) = 90^\\circ$, so $3x = 60^\\circ$ and $x = 20^\\circ$."
+    },
+    {
+      "name": "Radian / exact-value co-function",
+      "example": "Express $\\cos\\frac{\\pi}{5}$ as a sine. Answer: $\\sin\\frac{3\\pi}{10}$, since $\\frac{\\pi}{2} - \\frac{\\pi}{5} = \\frac{3\\pi}{10}$."
+    },
+    {
+      "name": "Explain / justify the relationship",
+      "example": "Using right triangle $ABC$ with $\\angle C = 90^\\circ$, explain why $\\sin A = \\cos B$. The leg opposite $A$ is the leg adjacent to $B$, and both ratios use the same hypotenuse, so $\\frac{\\text{opp } A}{\\text{hyp}} = \\frac{\\text{adj } B}{\\text{hyp}}$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Direct one-step recall of the co-function relationship with integer degree measures or a single given ratio. Student either reads off $\\cos B$ from a given $\\sin A$, rewrites $\\sin\\theta$ as $\\cos(90^\\circ - \\theta)$ for a numeric $\\theta$, or checks a true/false statement. No equation solving.",
+      "constraints": [
+        "Angles are whole-number degrees with an obvious complement (e.g. $30^\\circ$, $40^\\circ$, $65^\\circ$)",
+        "At most one application of $\\sin\\theta = \\cos(90^\\circ - \\theta)$",
+        "Given values are simple fractions or single named angles; no $x$ to solve for"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step problems: find the acute angle that makes $\\sin a = \\cos b$, or solve a single-variable linear co-function equation where each side is a simple expression in $x$. Includes mixing a given right-triangle ratio with the complement and one radian-form rewrite. Requires setting up $a + b = 90^\\circ$ (or $\\frac{\\pi}{2}$) and solving once.",
+      "constraints": [
+        "Solve one linear equation of the form $\\sin(\\alpha x + c) = \\cos(\\beta x + d)$ with small integer coefficients",
+        "May use radians with $\\frac{\\pi}{2}$ as the complement total",
+        "Single complement set-up; answer is an exact angle (degrees or a $\\pi$ fraction)"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step or justification-heavy: solve a co-function equation requiring distribution/combining like terms, then a follow-up (e.g. evaluate a triangle angle or verify); explain WHY the relationship holds from the leg-swap definition; or chain the identity with a Pythagorean/right-triangle computation to produce an exact value. May require recognizing that two distinct trig expressions are equal only when their angles are complementary and checking the acute-angle domain.",
+      "constraints": [
+        "Equation set-up needs distribution and simplification before isolating $x$, or yields a follow-up quantity",
+        "Includes at least one justification or explanation of the co-function identity from triangle definitions",
+        "May combine co-function rewriting with exact values ($\\frac{\\sqrt{3}}{2}$, $\\frac{1}{2}$) or radian measures"
+      ]
+    },
+    "tierSplit": "If split into two worksheets: tier1 covers Easy to Medium (state-the-complement, rewrite sine/cosine, true/false checks, find-the-missing-angle, and single-step linear co-function equations). tier2 covers Medium to Hard (multi-term linear co-function equations with distribution, radian-form problems, justification/explanation items, and identity-plus-exact-value chains). No item overlap between tiers."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Thinks sine and cosine of the SAME angle are equal, ignoring the complement",
+      "distractor": "For $\\sin A = \\frac{5}{13}$ answers $\\cos A = \\frac{5}{13}$ (claims $\\cos B$ uses the same angle) instead of recognizing $\\cos B = \\sin A$ because $B$ is the complement"
+    },
+    {
+      "misconception": "Sets the two angles EQUAL instead of complementary when solving $\\sin a = \\cos b$",
+      "distractor": "Solves $2x = x + 30^\\circ$ to get $x = 30^\\circ$ instead of $2x + (x+30^\\circ) = 90^\\circ$ giving $x = 20^\\circ$"
+    },
+    {
+      "misconception": "Uses supplementary ($180^\\circ$) instead of complementary ($90^\\circ$)",
+      "distractor": "Computes the complement as $180^\\circ - \\theta$, e.g. rewrites $\\sin 37^\\circ$ as $\\cos 143^\\circ$ instead of $\\cos 53^\\circ$"
+    },
+    {
+      "misconception": "Forgets the co-function swaps sine and cosine; keeps the same function name",
+      "distractor": "Rewrites $\\sin 37^\\circ$ as $\\sin 53^\\circ$ (keeps sine) instead of $\\cos 53^\\circ$"
+    },
+    {
+      "misconception": "Subtracts from $90^\\circ$ incorrectly or arithmetic slip on the complement",
+      "distractor": "Gives the complement of $28^\\circ$ as $72^\\circ$ instead of $62^\\circ$"
+    },
+    {
+      "misconception": "Uses $\\frac{\\pi}{2}$ wrong in radians (e.g. complements with $\\pi$)",
+      "distractor": "Rewrites $\\cos\\frac{\\pi}{5}$ as $\\sin\\frac{4\\pi}{5}$ (used $\\pi - \\frac{\\pi}{5}$) instead of $\\sin\\frac{3\\pi}{10}$ (used $\\frac{\\pi}{2} - \\frac{\\pi}{5}$)"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet (Easy->Hard across 15 items) suffices for most standards; tier1/tier2 fields provided per schema for the complex-standard option.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

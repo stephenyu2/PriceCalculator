@@ -1,0 +1,136 @@
+{
+  "standard": "A1.F-IF.C.8",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Functions",
+  "domainCode": "F-IF",
+  "cluster": "Analyze functions using different representations",
+  "clusterCode": "C",
+  "skillName": "Equivalent Function Forms",
+
+  "description": "Students rewrite a function, defined by an expression, into a different but equivalent form so that a specific property becomes visible, then read that property off the new form and explain it. For quadratics this means moving fluently among standard form $f(x)=ax^2+bx+c$ (reveals the $y$-intercept), vertex form $f(x)=a(x-h)^2+k$ (reveals the vertex, max/min, and axis of symmetry), and factored/intercept form $f(x)=a(x-r_1)(x-r_2)$ (reveals the $x$-intercepts/zeros). For exponential functions it means using properties of exponents to rewrite $f(t)=a\\cdot b^{t}$, for example writing $f(t)=a\\,(b^{1/12})^{12t}$ to expose a monthly growth rate or rewriting a percent rate as a multiplier. Students must choose the form that answers the question, perform the algebra correctly (completing the square, factoring, expanding, applying exponent laws), and interpret the revealed quantity in context.",
+
+  "subSkills": [
+    "Convert a quadratic from standard form to vertex form by completing the square",
+    "Convert a quadratic from standard form to factored form by factoring (and back by expanding)",
+    "Read the vertex, maximum or minimum value, and axis of symmetry from vertex form",
+    "Read the $x$-intercepts (zeros) from factored form and the $y$-intercept from standard form",
+    "Choose which equivalent form reveals a requested property (vertex vs zeros vs intercept)",
+    "Verify two forms are equivalent by expanding or by evaluating at sample points",
+    "Use exponent properties to rewrite exponential expressions to reveal a growth/decay rate or factor",
+    "Interpret the revealed quantity in a real-world context (max height, break-even, rate per period)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Standard to vertex (complete the square), read the vertex",
+      "example": "Write $f(x)=x^2-6x+5$ in vertex form and state the minimum value. Answer: $f(x)=(x-3)^2-4$, minimum value $-4$ at $x=3$."
+    },
+    {
+      "name": "Standard to factored, read the zeros",
+      "example": "Write $f(x)=x^2+2x-15$ in factored form and state the zeros. Answer: $f(x)=(x+5)(x-3)$, zeros $x=-5$ and $x=3$."
+    },
+    {
+      "name": "Choose the form that reveals a property",
+      "example": "Which equivalent form of $f(x)=2x^2-8x+6$ most directly shows the $x$-intercepts, and what are they? Answer: factored form $f(x)=2(x-1)(x-3)$, intercepts $x=1$ and $x=3$."
+    },
+    {
+      "name": "Equivalence check / matching forms",
+      "example": "Is $a(x)=(x-2)^2-9$ equivalent to $b(x)=x^2-4x-5$? Expand to verify. Answer: yes, $(x-2)^2-9=x^2-4x-5$."
+    },
+    {
+      "name": "Leading-coefficient case (factor out $a$ first)",
+      "example": "Write $f(x)=3x^2+12x+7$ in vertex form. Answer: $f(x)=3(x+2)^2-5$, vertex $(-2,-5)$."
+    },
+    {
+      "name": "Exponential rewrite to reveal a rate",
+      "example": "Rewrite $A(t)=500(1.12)^{t}$ to show the equivalent monthly growth factor. Answer: $A(t)=500\\left(1.12^{1/12}\\right)^{12t}$, monthly factor $1.12^{1/12}\\approx1.0095$."
+    },
+    {
+      "name": "Contextual interpretation from the revealed form",
+      "example": "A ball's height is $h(t)=-16t^2+32t+48$. Rewrite to find the maximum height. Answer: $h(t)=-16(t-1)^2+64$, maximum height $64$ feet at $t=1$ second."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-form conversion or single-property read where the leading coefficient is $1$ (or the factoring/perfect square is clean). One algebraic move, then read off one property. No context needed; equivalence is direct.",
+      "constraints": [
+        "Leading coefficient $a=1$",
+        "Complete the square where $b$ is even, so $\\left(\\frac{b}{2}\\right)^2$ is a whole number",
+        "Factorable over integers with small roots ($|r|\\le 6$)",
+        "Asks for exactly one property: vertex, a zero, or the $y$-intercept",
+        "No exponential rewrites in this band"
+      ]
+    },
+    "Medium": {
+      "description": "Conversion requires factoring out a leading coefficient $a\\ne 1$ before completing the square, or factoring a quadratic with $a\\ne 1$, or a fractional/odd $b$ producing fraction results. May ask the student to read two properties from the new form or to verify equivalence by expanding. Simple exponential rewrites (percent to multiplier) appear here.",
+      "constraints": [
+        "Leading coefficient $a\\in\\{2,3,-1,-2,\\tfrac{1}{2}\\}$, factored out first when completing the square",
+        "$b$ may be odd, giving a vertex with a fractional coordinate such as $\\left(\\tfrac{3}{2},-\\tfrac{1}{4}\\right)$",
+        "Read or report two properties (e.g. vertex and axis of symmetry, or both zeros)",
+        "Exponential: rewrite a percent rate as a growth/decay multiplier, e.g. $5\\%$ growth gives factor $1.05$"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step: student must decide which form to produce, perform the full conversion with a non-unit leading coefficient or harder factoring, then interpret the result in a real-world context or compare two functions presented in different forms. Includes exponential rewrites that change the time unit via exponent laws.",
+      "constraints": [
+        "Choose the appropriate target form from a worded question, then convert",
+        "Context interpretation required (projectile max height, profit/break-even, population)",
+        "May compare two functions given in different forms (e.g. one in vertex form, one in factored form)",
+        "Exponential: rewrite $a\\cdot b^{t}$ to $a\\left(b^{1/k}\\right)^{kt}$ to reveal a per-period rate and interpret it"
+      ]
+    },
+    "tier1": "Easy to Medium: conversions and single/double property reads, $a=1$ ramping to $a\\ne 1$ with factor-out and fractional vertices. No required context.",
+    "tier2": "Medium to Hard: $a\\ne 1$ conversions, equivalence verification, contextual interpretation, and exponential-form rewrites. No item overlap with tier1.",
+    "_note": "This standard is rich enough to justify a tier1/tier2 split, but the default single ramped worksheet (15 items, Easy early to Hard late) is also fully specified above and is the form most siblings use."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student halves $b$ but forgets to subtract the added square term when completing the square",
+      "distractor": "From $x^2-6x+5$ writes $(x-3)^2+5$ (keeps $+5$) instead of $(x-3)^2-4$, so reports minimum $5$"
+    },
+    {
+      "misconception": "Student takes the sign of $h$ directly from the binomial instead of reading the vertex as $(h,k)$",
+      "distractor": "From $f(x)=(x-3)^2-4$ reports the vertex as $(-3,-4)$ instead of $(3,-4)$"
+    },
+    {
+      "misconception": "Student reads zeros with the wrong sign from factored form",
+      "distractor": "From $f(x)=(x+5)(x-3)$ reports zeros $x=5$ and $x=-3$ instead of $x=-5$ and $x=3$"
+    },
+    {
+      "misconception": "Student forgets to factor out the leading coefficient before completing the square",
+      "distractor": "From $3x^2+12x+7$ writes $3(x+2)^2+7$ or $(x+2)^2-5$ instead of $3(x+2)^2-5$"
+    },
+    {
+      "misconception": "Student confuses the $y$-intercept with an $x$-intercept",
+      "distractor": "Reports the $y$-intercept of $f(x)=x^2+2x-15$ as $x=15$ or $x=-15$ instead of the point $(0,-15)$"
+    },
+    {
+      "misconception": "Student thinks expanding or rewriting changes the function (treats equivalent forms as different functions)",
+      "distractor": "Claims $(x-2)^2-9$ and $x^2-4x-5$ are not equivalent because 'the constants differ'"
+    },
+    {
+      "misconception": "Student adds the percent to 100 incorrectly or uses the rate itself as the multiplier",
+      "distractor": "For $12\\%$ growth uses multiplier $0.12$ or $12$ instead of $1.12$"
+    },
+    {
+      "misconception": "Student misapplies exponent laws when changing the time unit",
+      "distractor": "Rewrites $1.12^{t}$ as $\\left(1.12^{12}\\right)^{t/12}$ for a monthly rate instead of $\\left(1.12^{1/12}\\right)^{12t}$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

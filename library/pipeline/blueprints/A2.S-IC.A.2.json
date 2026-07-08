@@ -1,0 +1,136 @@
+{
+  "standard": "A2.S-IC.A.2",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+  "domainCode": "S-IC",
+  "cluster": "Understand and evaluate random processes underlying statistical experiments",
+  "clusterCode": "A",
+  "skillName": "Simulation and Model Consistency",
+
+  "description": "Students decide whether a specified probability model is consistent with the results observed from a data-generating process, using simulation as the central tool. Given a model (for example, a coin lands heads with probability $p = 0.5$, or a claimed proportion such as $\\frac{1}{6}$ for rolling a six), students predict what outcomes the model expects, generate or read a simulated reference distribution of a summary statistic (a count or a proportion), and compare the observed result to that distribution. They quantify how surprising the observed result would be if the model were true, often by computing the probability of an outcome at least as extreme (for instance, $P(5\\text{ tails in a row}) = \\left(\\tfrac{1}{2}\\right)^5 = \\frac{1}{32}$), and they use that probability and the simulated distribution to judge whether the result is plausible under the model or rare enough to cast doubt on it. A typical decision rule treats a result in roughly the most extreme $5\\%$ of the simulated distribution as evidence against the model. Students articulate that failing to reject a model is not proof it is true, and that an unusual result is evidence against, not disproof of, the model.",
+
+  "subSkills": [
+    "State what a probability model predicts for a process, including the expected count $np$ or expected proportion $p$ over $n$ trials",
+    "Compute the exact probability of a specific independent-trial sequence, e.g. $P(5\\text{ tails in a row}) = \\left(\\frac{1}{2}\\right)^{5} = \\frac{1}{32}$",
+    "Design a simulation that mimics the model (assign digits or random values to outcomes so each occurs with the model's probability) and define one trial",
+    "Read a dot plot or frequency table of a simulated sampling distribution of a count or proportion",
+    "Locate an observed statistic on the simulated distribution and estimate the proportion of simulated trials at least as extreme",
+    "Compare an observed result to the model's prediction and decide, with a stated threshold (e.g. the most extreme $5\\%$), whether the result is consistent with the model",
+    "Justify in words why a result does or does not cause you to question the model, distinguishing evidence against a model from proof that it is false",
+    "Distinguish a one-sided 'as low / as high as' comparison from a two-sided 'as far from expected' comparison when judging extremeness"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Exact probability of a streak or specific sequence",
+      "example": "A model says a spinning coin lands heads with probability $\\frac{1}{2}$. What is the probability of getting $5$ tails in a row, and is this result surprising enough to question the model? Answer: $\\left(\\frac{1}{2}\\right)^{5} = \\frac{1}{32} \\approx 0.031$, a result under $5\\%$, so it gives mild evidence against the model."
+    },
+    {
+      "name": "Expected count or proportion under a model",
+      "example": "A die is claimed to be fair, so $P(\\text{six}) = \\frac{1}{6}$. In $60$ rolls, how many sixes does the model predict, and what proportion? Answer: expected count $= 60 \\cdot \\frac{1}{6} = 10$, expected proportion $= \\frac{1}{6} \\approx 0.167$."
+    },
+    {
+      "name": "Read a simulated distribution and estimate a tail proportion",
+      "example": "A simulation flips a fair coin $20$ times, repeated $100$ times; the dot plot of the number of heads is given. In how many of the $100$ simulated trials were there $15$ or more heads? If $4$ trials had $15$ or more, the estimated probability is $\\frac{4}{100} = 0.04$."
+    },
+    {
+      "name": "Design a digit-based simulation of a model",
+      "example": "A free-throw shooter is claimed to make $70\\%$. Describe how to use random digits $0$-$9$ to simulate one shot and one set of $10$ shots. Answer: let digits $0$-$6$ represent a make and $7$-$9$ a miss; read $10$ digits for one simulated set, count makes."
+    },
+    {
+      "name": "Decide consistency from a simulated distribution and a threshold",
+      "example": "A model claims $40\\%$ of customers choose option A. A sample of $50$ found $14$ chose A (a proportion of $0.28$). The simulated distribution of sample proportions under the model places only $3$ of $200$ trials at $0.28$ or lower. Since $\\frac{3}{200} = 0.015 < 0.05$, the result is inconsistent with the model; question the $40\\%$ claim."
+    },
+    {
+      "name": "Interpret a not-surprising result correctly",
+      "example": "A model predicts a fair coin, and $12$ heads in $20$ flips is observed. The simulation shows about $25\\%$ of trials are at least this far from $10$. Because $0.25$ is large, the result is consistent with a fair coin; explain that this does not prove the coin is fair, only that the data give no reason to doubt it."
+    },
+    {
+      "name": "One-sided versus two-sided extremeness",
+      "example": "A model says a treatment works for half of patients. A trial of $16$ patients helped $13$. Decide whether to count only trials with $13$ or more successes (one-sided) or trials at least $3$ away from $8$ in either direction (two-sided), and estimate the corresponding probability from the simulated distribution."
+    },
+    {
+      "name": "Multi-step: build the model prediction, simulate, and conclude",
+      "example": "A spinner is claimed to land on red $\\frac{1}{4}$ of the time. In $40$ spins it landed red $4$ times. Find the expected count ($40 \\cdot \\frac{1}{4} = 10$), use the simulated distribution of red counts to find that $2$ of $150$ trials had $4$ or fewer reds ($\\frac{2}{150} \\approx 0.013$), and conclude the result is inconsistent with the $\\frac{1}{4}$ model."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step setup or a direct read. Student states what a simple model predicts (expected count $np$ or expected proportion $p$ with friendly numbers), computes the probability of a short independent sequence, or reads a single value directly off a given simulated dot plot or table. No threshold decision and no tail estimation are required. This is the bottom of a ramped sheet and the start of tier1.",
+      "constraints": [
+        "Model probability is a friendly value such as $\\frac{1}{2}$, $\\frac{1}{4}$, $\\frac{1}{6}$, or a round percent like $50\\%$ or $20\\%$",
+        "Tasks: compute expected count $np$ with $n \\le 60$, state the expected proportion, or find $P(\\text{streak}) = p^{k}$ for $k \\le 5$",
+        "Reading a simulated distribution means reading one labeled count or one dot column directly",
+        "No comparison to a threshold and no conclusion about consistency is asked"
+      ]
+    },
+    "Medium": {
+      "description": "Two linked ideas: the student must both extract a quantity from a simulated distribution and interpret it, or set up a simulation correctly. Student estimates a tail proportion by counting simulated trials at least as extreme, designs a digit-assignment simulation, or compares an observed result to the model's prediction qualitatively. A threshold may be applied once with a clearly one-sided comparison. This is the top of tier1 and the bottom of tier2.",
+      "constraints": [
+        "Estimate $P(\\text{as extreme})$ by counting dots in one tail of a given simulated distribution and dividing by the number of trials",
+        "Design a valid digit-based or random-number simulation, assigning outcomes in proportion to the model and defining one trial",
+        "Apply a stated threshold (commonly $5\\%$) once, with a one-sided 'as low as' or 'as high as' comparison",
+        "Model probability may be a non-unit fraction or percent such as $\\frac{1}{6}$, $0.4$, or $70\\%$, and $n$ may be up to about $100$"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning that chains a model prediction, a simulated distribution, an extremeness judgment, and a justified conclusion, or that requires choosing between one-sided and two-sided comparisons. Student builds the model's prediction from a context, locates the observed statistic, estimates the relevant tail (or two tails) of the simulated distribution, compares to a threshold, and writes a conclusion that correctly distinguishes evidence against a model from proof and that acknowledges a consistent result does not confirm the model. A single misstep in counting trials or choosing the tail propagates to the wrong conclusion. This is the top of tier2 and the end of a ramped sheet.",
+      "constraints": [
+        "Context requires the student to derive the expected count or proportion before judging consistency",
+        "Requires estimating a tail (or two-tailed) probability from a simulated distribution and comparing it to a stated threshold",
+        "Demands a written justification that names whether the result is consistent and that distinguishes 'evidence against' from 'disproof', and that a non-extreme result does not prove the model true",
+        "May require deciding between a one-sided and a two-sided comparison and defending the choice"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student treats any deviation from the expected value as proof the model is wrong, ignoring natural sampling variability",
+      "distractor": "Concludes the coin is unfair because $12$ heads in $20$ flips is not exactly $10$, even though the simulation shows this is common (about $25\\%$ of trials are this far or farther)"
+    },
+    {
+      "misconception": "Student treats a result consistent with the model as proof the model is true",
+      "distractor": "States that because $11$ heads in $20$ flips is not surprising, the coin 'is definitely fair', instead of 'there is no reason to doubt the model'"
+    },
+    {
+      "misconception": "Student multiplies the probabilities incorrectly for a streak, using $p \\cdot k$ or $p + p + \\cdots$ instead of $p^{k}$",
+      "distractor": "Computes $P(5\\text{ tails}) = 5 \\cdot \\frac{1}{2} = \\frac{5}{2}$ or $\\frac{1}{2}+\\frac{1}{2}+\\frac{1}{2}+\\frac{1}{2}+\\frac{1}{2}$ instead of $\\left(\\frac{1}{2}\\right)^{5} = \\frac{1}{32}$"
+    },
+    {
+      "misconception": "Student counts only the simulated trials exactly equal to the observed value instead of all trials at least as extreme",
+      "distractor": "Reports $P = \\frac{1}{200}$ (only the trials landing exactly on the observed count) instead of $\\frac{3}{200}$ (all trials at or beyond the observed value)"
+    },
+    {
+      "misconception": "Student counts the wrong tail, using the proportion of trials in the typical center or the opposite tail rather than the extreme matching the observation",
+      "distractor": "For an unusually low observed count, reports the proportion of trials above the mean (e.g. $0.97$) instead of the proportion at or below the observed value ($0.015$)"
+    },
+    {
+      "misconception": "Student inverts the decision rule, concluding a small tail probability means the result is consistent with the model",
+      "distractor": "Sees $P = 0.015 < 0.05$ and concludes the model is supported, instead of recognizing the result is too rare and is evidence against the model"
+    },
+    {
+      "misconception": "Student computes the expected count as $n + p$ or $\\frac{n}{p}$ instead of $np$",
+      "distractor": "For $60$ rolls with $P(\\text{six}) = \\frac{1}{6}$ reports $60 \\cdot 6 = 360$ or $60 + \\frac{1}{6}$ instead of $60 \\cdot \\frac{1}{6} = 10$"
+    },
+    {
+      "misconception": "Student assigns random digits to outcomes in the wrong proportion, so the simulation does not match the model",
+      "distractor": "To simulate a $70\\%$ make rate assigns digits $0$-$2$ as makes and $3$-$9$ as misses (a $30\\%$ make rate) instead of $0$-$6$ as makes"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

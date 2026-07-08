@@ -1,0 +1,119 @@
+{
+  "standard": "8.F.A.1",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Functions",
+  "domainCode": "F",
+  "cluster": "Define, evaluate, and compare functions",
+  "clusterCode": "A",
+  "skillName": "Understanding Functions",
+
+  "description": "Students understand a function as a rule that assigns to each input exactly one output. They determine whether a relation given as a set of ordered pairs, a table, a mapping diagram, a graph, or an equation is a function by checking that no input is paired with more than one output. They interpret the graph of a function as the set of ordered pairs $(x, y)$ where $y$ is the output for input $x$, and apply the vertical line test. They read inputs and outputs from each representation and use function notation in the basic sense of input-to-output assignment.",
+
+  "subSkills": [
+    "Define a function as a rule assigning each input exactly one output",
+    "Determine whether a set of ordered pairs represents a function (no repeated input with different outputs)",
+    "Determine whether a table or mapping diagram represents a function",
+    "Apply the vertical line test to decide whether a graph represents a function",
+    "Identify the input (domain value) and output (range value) for a given representation",
+    "Recognize the graph of a function as the set of ordered pairs $(\\text{input}, \\text{output})$",
+    "Decide whether an equation defines $y$ as a function of $x$"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Function or not from ordered pairs",
+      "example": "Does the relation $\\{(1, 4), (2, 5), (3, 6), (2, 7)\\}$ represent a function? Explain."
+    },
+    {
+      "name": "Function or not from a table",
+      "example": "A table lists inputs $x = 0, 1, 2, 3$ with outputs $y = 5, 8, 11, 14$. Is $y$ a function of $x$?"
+    },
+    {
+      "name": "Function or not from a mapping diagram",
+      "example": "A mapping diagram sends input $2 \\to 3$ and $2 \\to 9$. Is this relation a function?"
+    },
+    {
+      "name": "Vertical line test on a graph",
+      "example": "A circle described by $x^2 + y^2 = 25$ is graphed. Does the graph represent a function? Use the vertical line test."
+    },
+    {
+      "name": "Read input/output from a representation",
+      "example": "For the function given by $\\{(-1, 2), (0, 5), (3, 11)\\}$, what is the output when the input is $0$?"
+    },
+    {
+      "name": "Does an equation define a function",
+      "example": "Does the equation $y = 2x - 3$ define $y$ as a function of $x$? Does $y^2 = x$?"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single representation with a small number of clearly listed input-output pairs. The student makes a direct yes/no determination by inspecting for a repeated input, or reads a single output for a given input. No conversion between representations.",
+      "constraints": [
+        "At most 4 to 5 ordered pairs, or a short table/mapping diagram",
+        "Repeated-input violations (if present) are obvious and explicit",
+        "Inputs and outputs are small integers",
+        "Only one representation involved; no graph interpretation required beyond a clearly described one"
+      ]
+    },
+    "Medium": {
+      "description": "Requires applying the vertical line test to a described graph, or determining function status from an equation, or distinguishing that repeated outputs (not inputs) are still allowed. May require reading a specific output from a graph or table that is slightly larger.",
+      "constraints": [
+        "Includes graph-based items (vertical line test) or equation-based items ($y = $ form vs. $y^2 = x$ form)",
+        "Tests the subtle case where the same output appears for different inputs (still a function)",
+        "Tables or pair sets with 5 to 7 entries; values may include negatives",
+        "Student must justify the decision, not just answer yes/no"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step or cross-representation reasoning: the student must translate between representations, supply a value that makes a relation a function (or breaks it), or analyze a relation where the violation is hidden among many pairs. May combine domain/range identification with the function determination.",
+      "constraints": [
+        "Find a value of a parameter so that a relation is or is not a function (e.g., for what value of $a$ is $\\{(1,2),(a,5),(3,7)\\}$ not a function?)",
+        "Compare two representations of the same relation and determine consistency",
+        "Identify the full set of inputs and outputs in addition to deciding function status",
+        "Violation, if present, requires scanning 7 or more pairs or interpreting a non-obvious graph"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student thinks repeated outputs make a relation not a function",
+      "distractor": "Declares $\\{(1, 4), (2, 4), (3, 4)\\}$ NOT a function because the output $4$ repeats, when in fact it is a function (each input has exactly one output)"
+    },
+    {
+      "misconception": "Student allows one input to map to two different outputs",
+      "distractor": "Declares $\\{(2, 5), (2, 7), (3, 9)\\}$ a function, ignoring that input $2$ is assigned two outputs"
+    },
+    {
+      "misconception": "Student confuses the roles of input and output (checks for repeated outputs instead of repeated inputs)",
+      "distractor": "Applies a 'horizontal line test' or checks the $y$-values for repeats instead of the $x$-values"
+    },
+    {
+      "misconception": "Student believes any equation, including $y^2 = x$, defines $y$ as a function of $x$",
+      "distractor": "Claims $y^2 = x$ is a function, missing that $x = 4$ gives both $y = 2$ and $y = -2$"
+    },
+    {
+      "misconception": "Student misapplies the vertical line test as a horizontal line test",
+      "distractor": "Says the graph of $y = 3$ (a horizontal line) is not a function, or says a circle is a function because a horizontal line crosses it once"
+    },
+    {
+      "misconception": "Student reads the output for the wrong input (reverses ordered pair order)",
+      "distractor": "For $\\{(0, 5), (3, 11)\\}$ asked the output at input $3$, answers $3$ or reports $11$ as the input"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "standard": "8.G.B.6",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand and apply the Pythagorean Theorem",
+  "clusterCode": "B",
+  "skillName": "Pythagorean Theorem Proof",
+
+  "description": "Students explain a proof of the Pythagorean Theorem and its converse. They reason about why $a^2 + b^2 = c^2$ holds for a right triangle by manipulating areas (rearrangement, algebraic, or similar-triangle proofs), justify each step, and explain why the converse guarantees a right angle when $a^2 + b^2 = c^2$. They identify gaps or errors in a presented argument and apply the theorem and its converse to verify whether a triangle is right.",
+
+  "subSkills": [
+    "State the Pythagorean Theorem and identify the legs ($a$, $b$) and hypotenuse ($c$) of a right triangle",
+    "Explain the area-rearrangement proof: a tilted square of side $c$ inside a larger square of side $a+b$ leaves four congruent right triangles, giving $(a+b)^2 = c^2 + 4\\cdot\\tfrac{1}{2}ab$",
+    "Expand and simplify $(a+b)^2 = c^2 + 2ab$ to derive $a^2 + b^2 = c^2$",
+    "Explain the similar-triangles proof: the altitude to the hypotenuse creates two triangles similar to the original, yielding $a^2 = c\\cdot p$ and $b^2 = c\\cdot q$ with $p+q=c$",
+    "State and explain the converse: if $a^2 + b^2 = c^2$ for the longest side $c$, the triangle is right",
+    "Use the converse to test whether a triangle with given side lengths is right, acute, or obtuse",
+    "Identify the missing justification or the flawed step in a presented proof"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Area-rearrangement proof step",
+      "example": "In the proof, four congruent right triangles with legs $a$ and $b$ surround a tilted square of side $c$ to form a big square of side $a+b$. The area of the big square equals the inner square plus the four triangles. Write that area equation and simplify it to show $a^2 + b^2 = c^2$."
+    },
+    {
+      "name": "Algebraic identity within the proof",
+      "example": "Expand $(a+b)^2$ and explain why setting it equal to $c^2 + 4\\left(\\frac{1}{2}ab\\right)$ leads to $a^2 + b^2 = c^2$. What term cancels from both sides?"
+    },
+    {
+      "name": "Similar-triangles (altitude) proof",
+      "example": "An altitude drawn to the hypotenuse of a right triangle splits it into two smaller triangles. Explain why each is similar to the original, and use the proportions to show $a^2 = c\\cdot p$ and $b^2 = c\\cdot q$, then $a^2 + b^2 = c^2$."
+    },
+    {
+      "name": "Converse statement and reasoning",
+      "example": "State the converse of the Pythagorean Theorem and explain why showing $a^2 + b^2 = c^2$ is enough to conclude the angle opposite $c$ is a right angle."
+    },
+    {
+      "name": "Apply the converse to classify a triangle",
+      "example": "A triangle has sides $9$, $12$, and $15$. Use the converse to determine whether it is a right triangle. Show the computation."
+    },
+    {
+      "name": "Find the flaw in a proof",
+      "example": "A student claims the big square has area $a^2 + b^2$ directly and that the four triangles have total area $ab$. Identify which statement is wrong and give the correct value."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recall or one substitution: identify parts of the theorem, state the theorem/converse, or plug whole-number sides into $a^2+b^2$ vs $c^2$ and compare.",
+      "constraints": [
+        "Pythagorean triples or small whole-number sides ($\\le 20$)",
+        "One computation or one factual statement, no algebraic manipulation of variables",
+        "Converse check decided by a single equality test, e.g. is $3^2+4^2=5^2$?"
+      ]
+    },
+    "Medium": {
+      "description": "Two to three reasoning steps: carry out one stage of a proof, expand $(a+b)^2$ and cancel, or justify why a labeled step in a given proof is valid. Converse problems may also classify acute vs obtuse.",
+      "constraints": [
+        "Requires expanding and simplifying an algebraic expression in $a$, $b$, $c$",
+        "Names the property used (area addition, similarity, distributive expansion)",
+        "Converse items compare $a^2+b^2$ to $c^2$ to classify right, acute, or obtuse"
+      ]
+    },
+    "Hard": {
+      "description": "Full or multi-step justification: reconstruct a complete proof from a diagram, explain why two triangles are similar and chain the proportions, or locate and correct a subtle error in a multi-line argument.",
+      "constraints": [
+        "Combines several proof steps with explicit justifications",
+        "May require the similar-triangles proof and proportion chaining ($\\frac{a}{c}=\\frac{p}{a}$)",
+        "Error-analysis items embed a plausible but wrong line that the student must isolate and fix"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student thinks the theorem says $a + b = c$ rather than $a^2 + b^2 = c^2$",
+      "distractor": "Concludes a $3$-$4$-$5$ triangle works because $3+4 \\ne 5$ is misread, or sums sides instead of squares: $a+b=c$"
+    },
+    {
+      "misconception": "Student forgets the four triangle areas in the rearrangement proof",
+      "distractor": "Writes $(a+b)^2 = c^2$ and concludes $a^2 + 2ab + b^2 = c^2$, leaving the extra $2ab$ term in the final result"
+    },
+    {
+      "misconception": "Student computes each triangle's area as $ab$ instead of $\\frac{1}{2}ab$",
+      "distractor": "Uses total triangle area $4ab$ so the cancellation fails and the proof does not reduce to $a^2+b^2=c^2$"
+    },
+    {
+      "misconception": "Student applies the theorem with the hypotenuse as a leg",
+      "distractor": "Sets up $a^2 + c^2 = b^2$ or treats the longest side as a leg, mislabeling which side is $c$"
+    },
+    {
+      "misconception": "Student believes the converse is automatically true without justification, or reverses what it claims",
+      "distractor": "States 'every right triangle has $a^2+b^2=c^2$' when asked for the converse, confusing the theorem with its converse"
+    },
+    {
+      "misconception": "Student misclassifies with the converse by comparing in the wrong direction",
+      "distractor": "Says a triangle is acute when $a^2+b^2 < c^2$ (it is obtuse) or obtuse when $a^2+b^2 > c^2$ (it is acute)"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

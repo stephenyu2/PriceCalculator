@@ -1,0 +1,125 @@
+{
+  "standard": "GEO.G-GPE.B.4",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Expressing Geometric Properties with Equations",
+  "domainCode": "G-GPE",
+  "cluster": "Use coordinates to prove simple geometric theorems algebraically",
+  "clusterCode": "B",
+  "skillName": "Coordinate Proofs of Geometric Theorems",
+
+  "description": "Students use coordinates to prove simple geometric theorems algebraically. Given a figure placed in the coordinate plane (either with specific vertices or with general variable coordinates such as $(0,0)$, $(2a,0)$, $(2a,2b)$, $(0,2b)$), they apply the distance formula $d=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$, the midpoint formula $\\left(\\frac{x_1+x_2}{2},\\frac{y_1+y_2}{2}\\right)$, and the slope formula $m=\\frac{y_2-y_1}{x_2-x_1}$ to verify or disprove claims about a figure. They must connect each algebraic test to its geometric meaning: equal side lengths show a figure is equilateral, isosceles, a rhombus, or a square; equal diagonals or congruent segments establish a rectangle or isosceles triangle; equal slopes prove sides are parallel (so the figure is a parallelogram or trapezoid); slopes whose product is $-1$ prove sides are perpendicular (a right angle, a rectangle, or perpendicular diagonals); and a point that is equidistant from given points lies on a perpendicular bisector or a circle. They organize these computations into a logical argument that names the theorem being proven, the algebraic tool used, and the conclusion that follows. Choosing convenient general coordinates so that an algebraic proof holds for every case (not just one example) is the highest expectation.",
+
+  "subSkills": [
+    "Apply the distance formula $d=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$ to find and compare side lengths or diagonal lengths exactly",
+    "Apply the midpoint formula $\\left(\\frac{x_1+x_2}{2},\\frac{y_1+y_2}{2}\\right)$ to locate midpoints and test whether diagonals bisect each other",
+    "Apply the slope formula $m=\\frac{y_2-y_1}{x_2-x_1}$ and interpret equal slopes as parallel and slopes with product $-1$ as perpendicular",
+    "Classify a triangle (scalene, isosceles, equilateral, right) from coordinate computations of its three side lengths and the slopes of its sides",
+    "Classify a quadrilateral (parallelogram, rectangle, rhombus, square, trapezoid) using a correct minimal set of side-length, slope, and diagonal tests",
+    "Prove that a specific point is the midpoint, lies on a perpendicular bisector, or is equidistant from given points using distance and midpoint computations",
+    "Set up a general coordinate proof by assigning variable coordinates (e.g. using $2a$, $2b$ to keep midpoints integer) so the result holds for all cases, not one example",
+    "Write the argument as an organized proof: state the theorem, perform the algebraic test, and state the geometric conclusion that the computation establishes"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Classify a triangle from its vertices",
+      "example": "Triangle $ABC$ has vertices $A(1,2)$, $B(5,2)$, $C(3,6)$. Prove that $\\triangle ABC$ is isosceles. Answer: $AB=\\sqrt{(5-1)^2+(2-2)^2}=4$, $AC=\\sqrt{(3-1)^2+(6-2)^2}=\\sqrt{4+16}=\\sqrt{20}=2\\sqrt{5}$, $BC=\\sqrt{(3-5)^2+(6-2)^2}=\\sqrt{4+16}=2\\sqrt{5}$. Since $AC=BC=2\\sqrt{5}$, two sides are congruent, so $\\triangle ABC$ is isosceles."
+    },
+    {
+      "name": "Prove a quadrilateral is a specific type",
+      "example": "Quadrilateral $PQRS$ has vertices $P(0,0)$, $Q(4,0)$, $R(5,3)$, $S(1,3)$. Prove $PQRS$ is a parallelogram. Answer: slope of $PQ=\\frac{0-0}{4-0}=0$ and slope of $SR=\\frac{3-3}{5-1}=0$, so $PQ\\parallel SR$; slope of $PS=\\frac{3-0}{1-0}=3$ and slope of $QR=\\frac{3-0}{5-4}=3$, so $PS\\parallel QR$. Both pairs of opposite sides are parallel, so $PQRS$ is a parallelogram."
+    },
+    {
+      "name": "Use slope to prove parallel or perpendicular",
+      "example": "Show that the diagonals of square $WXYZ$ with $W(0,0)$, $X(4,0)$, $Y(4,4)$, $Z(0,4)$ are perpendicular. Answer: slope of $WY=\\frac{4-0}{4-0}=1$, slope of $XZ=\\frac{4-0}{0-4}=-1$; since $1\\cdot(-1)=-1$, $WY\\perp XZ$."
+    },
+    {
+      "name": "Prove diagonals bisect each other (midpoint)",
+      "example": "Parallelogram $ABCD$ has $A(-2,-1)$, $B(4,-1)$, $C(6,3)$, $D(0,3)$. Prove the diagonals bisect each other. Answer: midpoint of $AC=\\left(\\frac{-2+6}{2},\\frac{-1+3}{2}\\right)=(2,1)$; midpoint of $BD=\\left(\\frac{4+0}{2},\\frac{-1+3}{2}\\right)=(2,1)$. The diagonals share the same midpoint, so they bisect each other."
+    },
+    {
+      "name": "Equidistant point / perpendicular bisector",
+      "example": "Show that $M(3,3)$ is equidistant from $A(1,1)$ and $B(5,5)$, and lies on the perpendicular bisector of $\\overline{AB}$. Answer: $MA=\\sqrt{(3-1)^2+(3-1)^2}=\\sqrt{8}=2\\sqrt{2}=MB=\\sqrt{(3-5)^2+(3-5)^2}=\\sqrt{8}$. The midpoint of $\\overline{AB}$ is $(3,3)=M$, and slope of $AB=1$ while a perpendicular bisector has slope $-1$, so $M$ lies on it."
+    },
+    {
+      "name": "General (variable-coordinate) coordinate proof",
+      "example": "A rectangle is placed with vertices $A(0,0)$, $B(2a,0)$, $C(2a,2b)$, $D(0,2b)$. Prove its diagonals are congruent. Answer: $AC=\\sqrt{(2a-0)^2+(2b-0)^2}=\\sqrt{4a^2+4b^2}$ and $BD=\\sqrt{(0-2a)^2+(2b-0)^2}=\\sqrt{4a^2+4b^2}$. Since $AC=BD$ for all $a,b$, the diagonals of any rectangle are congruent."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single algebraic tool applied once or twice to specific integer coordinates, with the conclusion almost named for the student. The figure is given with concrete vertices and the task asks to verify one property (one pair of side lengths, one slope comparison, or one midpoint). This is where a tier1 worksheet starts and most of its items live.",
+      "constraints": [
+        "All coordinates are small integers, typically in $[-6,6]$, often non-negative",
+        "Exactly one formula is needed (distance, midpoint, OR slope), applied to one or two segments",
+        "Distances come out as integers or simple radicals such as $\\sqrt{8}=2\\sqrt{2}$; slopes are integers or simple fractions",
+        "The property to verify is stated explicitly (e.g. 'show $AB=CD$' or 'show $PQ\\parallel RS$'); no classification decision is required"
+      ]
+    },
+    "Medium": {
+      "description": "Two or three coordinate computations combined to reach a classification or a two-part conclusion. The student must decide which tests to run and interpret them (e.g. compute all four sides and both diagonals, or check two slope pairs). Exact radical arithmetic and the parallel/perpendicular slope criteria appear here. This band is the upper end of tier1 and the lower end of tier2.",
+      "constraints": [
+        "Requires two or more of the distance, midpoint, and slope tools used together",
+        "Student chooses the minimal correct set of tests to classify a triangle or quadrilateral and states the resulting type",
+        "Coordinates may be negative or produce radicals that must be left exact (e.g. $\\sqrt{20}=2\\sqrt{5}$); slopes may be fractions whose product must be checked against $-1$",
+        "May ask the student to disprove a claim by exhibiting one failing test (e.g. 'is it a square? justify')"
+      ]
+    },
+    "Hard": {
+      "description": "A full multi-step coordinate proof, including general (variable-coordinate) proofs that establish a theorem for every figure of a type, or chained arguments that combine several tests into one logical conclusion. The student must place the figure with convenient general coordinates, perform the algebra symbolically, and write the argument naming the theorem, the tool, and the conclusion. This is where a tier2 worksheet ends.",
+      "constraints": [
+        "Uses variable coordinates such as $(0,0)$, $(2a,0)$, $(2a,2b)$, $(0,2b)$ or $(a,b)$ chosen so midpoints stay clean, with a symbolic distance/slope/midpoint computation",
+        "Requires a stated logical structure: name the theorem, apply the algebraic test, conclude 'therefore the figure is ...' and note the result holds for all $a,b$",
+        "May chain multiple criteria (e.g. opposite sides parallel AND one right angle, or diagonals congruent AND bisecting) to pin down a single figure type",
+        "Distinguishes a proof valid for all cases from a single numerical example, and selects the minimal sufficient set of conditions"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student drops the square root or the squares in the distance formula, computing $d=(x_2-x_1)+(y_2-y_1)$ instead of $\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$",
+      "distractor": "For $A(1,2)$, $C(3,6)$ gives $AC=(3-1)+(6-2)=6$ instead of $\\sqrt{2^2+4^2}=2\\sqrt{5}$"
+    },
+    {
+      "misconception": "Student inverts the slope formula, computing $\\frac{x_2-x_1}{y_2-y_1}$ (run over rise) instead of $\\frac{y_2-y_1}{x_2-x_1}$",
+      "distractor": "For $P(0,0)$, $S(1,3)$ reports slope $=\\frac{1-0}{3-0}=\\frac{1}{3}$ instead of $\\frac{3-0}{1-0}=3$"
+    },
+    {
+      "misconception": "Student thinks perpendicular lines have equal or opposite (negated) slopes rather than slopes whose product is $-1$ (negative reciprocals)",
+      "distractor": "Claims a line of slope $2$ is perpendicular to a line of slope $-2$, instead of requiring slope $-\\frac{1}{2}$ so that $2\\cdot\\left(-\\frac{1}{2}\\right)=-1$"
+    },
+    {
+      "misconception": "Student averages or subtracts coordinates incorrectly in the midpoint formula, e.g. computing the difference rather than the average",
+      "distractor": "For $A(-2,-1)$, $C(6,3)$ gives midpoint $\\left(6-(-2),3-(-1)\\right)=(8,4)$ instead of $\\left(\\frac{-2+6}{2},\\frac{-1+3}{2}\\right)=(2,1)$"
+    },
+    {
+      "misconception": "Student over-concludes a figure type from too few tests, e.g. calling a parallelogram a square after only checking that opposite sides are parallel, without testing side lengths or perpendicularity",
+      "distractor": "Concludes a quadrilateral with two pairs of parallel sides is a square, ignoring that the sides are unequal in length ($PQ=4$ but $PS=\\sqrt{10}$) and the angles are not right"
+    },
+    {
+      "misconception": "Student mishandles signs when squaring negative differences, treating $(-2)^2$ as $-4$",
+      "distractor": "For $B(5,2)$, $C(3,6)$ gives $BC=\\sqrt{(3-5)^2+(6-2)^2}=\\sqrt{-4+16}=\\sqrt{12}=2\\sqrt{3}$ instead of $\\sqrt{4+16}=2\\sqrt{5}$"
+    },
+    {
+      "misconception": "Student treats one numerical example as a general proof, believing checking a single rectangle proves the theorem for all rectangles",
+      "distractor": "States that because the diagonals of the rectangle $A(0,0),B(4,0),C(4,2),D(0,2)$ are both $2\\sqrt{5}$, 'this proves all rectangles have congruent diagonals,' without a variable-coordinate argument"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet covers this standard well; tier1/tier2 counts are provided per default in case a two-sheet split is used. Lesson 5+5, worksheet single/tier1/tier2 = 15 each, quiz 8.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

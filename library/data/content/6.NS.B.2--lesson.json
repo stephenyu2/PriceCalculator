@@ -1,0 +1,178 @@
+{
+  "id": "6.NS.B.2--lesson",
+  "standard": "6.NS.B.2",
+  "clusterId": null,
+  "grade": "6",
+  "subject": "math",
+  "domain": "The Number System",
+  "domainCode": "NS",
+  "cluster": "Compute fluently with multi-digit numbers and find common factors and multiples",
+  "clusterCode": "B",
+  "skillName": "Multi-Digit Division",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:41:22.446Z",
+  "intro": "Long division breaks a big division problem into a repeating cycle: divide, multiply, subtract, bring down. You estimate how many times the divisor fits into the current part of the dividend, write that digit in the quotient, multiply it back, subtract, and bring down the next digit. Keep going until every digit of the dividend is used. Whatever is left at the end (smaller than the divisor) is the remainder. You can always check by computing $\\text{quotient} \\times \\text{divisor} + \\text{remainder}$, which should equal the dividend.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Divide using the standard algorithm: $1{,}512 \\div 6$.",
+      "solution": {
+        "steps": [
+          "Start at the left. $6$ does not fit into $1$, so look at $15$: $6$ fits $2$ times. Write $2$ in the quotient. $2 \\times 6 = 12$, and $15 - 12 = 3$.",
+          "Bring down the next digit, $1$, to make $31$. $6$ fits into $31$ exactly $5$ times: $5 \\times 6 = 30$, and $31 - 30 = 1$.",
+          "Bring down the last digit, $2$, to make $12$. $6$ fits into $12$ exactly $2$ times: $2 \\times 6 = 12$, and $12 - 12 = 0$.",
+          "The quotient digits are $2$, $5$, $2$, so the quotient is $252$ with remainder $0$.",
+          "Check: $252 \\times 6 = 1{,}512$, which matches the dividend."
+        ],
+        "answer": "$252$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Divide using the standard algorithm: $6{,}018 \\div 3$. Watch the place value of each quotient digit.",
+      "solution": {
+        "steps": [
+          "$3$ fits into $6$ exactly $2$ times. Write $2$. $2 \\times 3 = 6$, and $6 - 6 = 0$.",
+          "Bring down the next digit, $0$, to make $0$. $3$ does not fit into $0$, so write a $0$ in the quotient. This $0$ is needed to hold the place value.",
+          "Bring down the next digit, $1$, to make $1$. $3$ does not fit into $1$, so write another $0$ in the quotient.",
+          "Bring down the last digit, $8$, to make $18$. $3$ fits into $18$ exactly $6$ times: $6 \\times 3 = 18$, and $18 - 18 = 0$.",
+          "The quotient digits are $2$, $0$, $0$, $6$, so the quotient is $2{,}006$. Skipping either interior $0$ would wrongly give $26$ or $206$.",
+          "Check: $2{,}006 \\times 3 = 6{,}018$."
+        ],
+        "answer": "$2{,}006$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Divide using the standard algorithm: $4{,}827 \\div 23$. Express any remainder.",
+      "solution": {
+        "steps": [
+          "With a two-digit divisor, estimate each quotient digit. $23$ does not fit into $4$ or $48$... wait: $23$ fits into $48$ twice. Write $2$. $2 \\times 23 = 46$, and $48 - 46 = 2$.",
+          "Bring down the next digit, $2$, to make $22$. $23$ does not fit into $22$ ($23 > 22$), so write $0$ in the quotient.",
+          "Bring down the last digit, $7$, to make $227$. Estimate: $23 \\times 9 = 207$ and $23 \\times 10 = 230$, so $23$ fits $9$ times. Write $9$. $9 \\times 23 = 207$, and $227 - 207 = 20$.",
+          "No digits are left, and $20 < 23$, so $20$ is the remainder. The quotient digits are $2$, $0$, $9$, giving $209\\text{ R }20$.",
+          "Check: $209 \\times 23 + 20 = 4{,}807 + 20 = 4{,}827$."
+        ],
+        "answer": "$209\\text{ R }20$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A division was done quickly: a student claims $7{,}854 \\div 34 = 231$ with no remainder. Use multiplication to check whether the student is correct.",
+      "solution": {
+        "steps": [
+          "To check a division result, multiply the quotient by the divisor and add the remainder: $\\text{quotient} \\times \\text{divisor} + \\text{remainder}$ should equal the dividend.",
+          "Here the claimed remainder is $0$, so compute $231 \\times 34$.",
+          "$231 \\times 34 = 231 \\times 30 + 231 \\times 4 = 6{,}930 + 924 = 7{,}854$.",
+          "The product equals the dividend $7{,}854$ exactly, so the remainder really is $0$.",
+          "The student is correct: $7{,}854 \\div 34 = 231$."
+        ],
+        "answer": "Correct: $231 \\times 34 = 7{,}854$, so $7{,}854 \\div 34 = 231$ with remainder $0$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A school packs $3{,}458$ pencils into boxes that each hold $24$ pencils. How many full boxes can be filled, and how many pencils are left over?",
+      "solution": {
+        "steps": [
+          "Divide the total pencils by the box size: $3{,}458 \\div 24$.",
+          "$24$ fits into $34$ once. Write $1$. $1 \\times 24 = 24$, and $34 - 24 = 10$.",
+          "Bring down the $5$ to make $105$. Estimate: $24 \\times 4 = 96$ and $24 \\times 5 = 120$, so $24$ fits $4$ times. Write $4$. $105 - 96 = 9$.",
+          "Bring down the $8$ to make $98$. $24 \\times 4 = 96$, so $24$ fits $4$ times. Write $4$. $98 - 96 = 2$.",
+          "The quotient is $144$ with remainder $2$. Since $2 < 24$, no more full boxes can be made.",
+          "So $144$ full boxes are filled, with $2$ pencils left over. Check: $144 \\times 24 + 2 = 3{,}456 + 2 = 3{,}458$."
+        ],
+        "answer": "$144$ full boxes with $2$ pencils left over"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Divide using the standard algorithm: $2{,}376 \\div 8$.",
+      "hint": "$8$ does not fit into $2$, so start with $23$. Work through divide-multiply-subtract-bring-down for each digit.",
+      "solution": {
+        "steps": [
+          "$8$ fits into $23$ twice. $2 \\times 8 = 16$, and $23 - 16 = 7$.",
+          "Bring down $7$ to make $77$. $8$ fits $9$ times: $9 \\times 8 = 72$, and $77 - 72 = 5$.",
+          "Bring down $6$ to make $56$. $8$ fits $7$ times: $7 \\times 8 = 56$, and $56 - 56 = 0$.",
+          "The quotient is $297$ with remainder $0$. Check: $297 \\times 8 = 2{,}376$."
+        ],
+        "answer": "$297$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Divide using the standard algorithm: $9{,}045 \\div 9$. Be careful with place value.",
+      "hint": "After the first step you will divide $9$ into $0$. When the divisor does not fit, write a $0$ in the quotient and bring down the next digit.",
+      "solution": {
+        "steps": [
+          "$9$ fits into $9$ once. $1 \\times 9 = 9$, and $9 - 9 = 0$.",
+          "Bring down $0$ to make $0$. $9$ does not fit into $0$, so write $0$ in the quotient.",
+          "Bring down $4$ to make $4$. $9$ does not fit into $4$, so write another $0$ in the quotient.",
+          "Bring down $5$ to make $45$. $9$ fits $5$ times: $5 \\times 9 = 45$, and $45 - 45 = 0$.",
+          "The quotient is $1{,}005$. Check: $1{,}005 \\times 9 = 9{,}045$."
+        ],
+        "answer": "$1{,}005$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Divide using the standard algorithm: $5{,}632 \\div 16$. Express any remainder.",
+      "hint": "Estimate each quotient digit. For example, $16 \\times 3 = 48$ and $16 \\times 4 = 64$ help you place the first digit.",
+      "solution": {
+        "steps": [
+          "$16$ fits into $56$ three times: $3 \\times 16 = 48$, and $56 - 48 = 8$.",
+          "Bring down $3$ to make $83$. $16 \\times 5 = 80$, so $16$ fits $5$ times. $83 - 80 = 3$.",
+          "Bring down $2$ to make $32$. $16$ fits exactly $2$ times: $2 \\times 16 = 32$, and $32 - 32 = 0$.",
+          "The quotient is $352$ with remainder $0$. Check: $352 \\times 16 = 5{,}632$."
+        ],
+        "answer": "$352$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Divide using the standard algorithm: $8{,}391 \\div 27$. Express any remainder, then check your result.",
+      "hint": "Use $\\text{quotient} \\times \\text{divisor} + \\text{remainder} = \\text{dividend}$ to confirm your answer.",
+      "solution": {
+        "steps": [
+          "$27$ fits into $83$ three times: $3 \\times 27 = 81$, and $83 - 81 = 2$.",
+          "Bring down $9$ to make $29$. $27$ fits once: $1 \\times 27 = 27$, and $29 - 27 = 2$.",
+          "Bring down $1$ to make $21$. $27$ does not fit into $21$, so write $0$ in the quotient. The remainder so far is $21$.",
+          "No digits remain and $21 < 27$, so the quotient is $310\\text{ R }21$.",
+          "Check: $310 \\times 27 + 21 = 8{,}370 + 21 = 8{,}391$."
+        ],
+        "answer": "$310\\text{ R }21$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A factory ships $12{,}500$ light bulbs in cartons that each hold $48$ bulbs. How many full cartons can be packed, and how many bulbs are left over?",
+      "hint": "Divide $12{,}500 \\div 48$. The whole-number part of the quotient is the number of full cartons, and the remainder is the leftover bulbs.",
+      "solution": {
+        "steps": [
+          "Divide the total bulbs by the carton size: $12{,}500 \\div 48$.",
+          "$48$ fits into $125$ twice: $2 \\times 48 = 96$, and $125 - 96 = 29$.",
+          "Bring down $0$ to make $290$. $48 \\times 6 = 288$, so $48$ fits $6$ times. $290 - 288 = 2$.",
+          "Bring down $0$ to make $20$. $48$ does not fit into $20$, so write $0$ in the quotient. The remainder is $20$.",
+          "The quotient is $260$ with remainder $20$, and $20 < 48$, so $260$ full cartons are packed with $20$ bulbs left over.",
+          "Check: $260 \\times 48 + 20 = 12{,}480 + 20 = 12{,}500$."
+        ],
+        "answer": "$260$ full cartons with $20$ bulbs left over"
+      }
+    }
+  ]
+}

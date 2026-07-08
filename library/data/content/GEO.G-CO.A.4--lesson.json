@@ -1,0 +1,163 @@
+{
+  "id": "GEO.G-CO.A.4--lesson",
+  "standard": "GEO.G-CO.A.4",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Experiment with transformations in the plane",
+  "clusterCode": "A",
+  "skillName": "Defining Rigid Motions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "A rigid motion is a transformation that preserves distance and angle measure. There are three basic ones, and each is defined by a single geometric idea, not by a coordinate rule. A translation along a directed segment moves every point $P$ to $P'$ so that $\\overrightarrow{PP'}$ is parallel to, the same length as, and the same direction as the defining segment. A reflection across a line $m$ sends each point $P$ to $P'$ so that $m$ is the perpendicular bisector of $\\overline{PP'}$, and every point on $m$ stays fixed. A rotation about a center $C$ through an angle $\\theta$ sends $P$ to $P'$ so that $CP = CP'$ and $m\\angle PCP' = \\theta$. In this lesson you will use these definitions to name motions, locate images, recover parameters, and decide whether a description actually specifies a rigid motion.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Which rigid motion is defined by this condition: the line of the motion is the perpendicular bisector of the segment joining every point to its image, and points on that line do not move?",
+      "solution": {
+        "steps": [
+          "Recall the three definitions and the primitive each one uses. A translation uses a directed segment (parallel, congruent, same direction). A rotation uses a center with equal radii $CP = CP'$ and a central angle. A reflection uses a line of reflection.",
+          "The reflection across a line $m$ is exactly the motion for which $m$ is the perpendicular bisector of $\\overline{PP'}$ for every off-line point $P$.",
+          "Points on $m$ are equidistant from themselves, so they are fixed. This matches the stated condition.",
+          "Therefore the motion described is a reflection."
+        ],
+        "answer": "A reflection (across the given line $m$)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Complete the definition: a rotation about center $C$ through angle $\\theta$ maps point $P$ to $P'$ so that $CP = \\underline{\\quad}$ and $m\\angle PCP' = \\underline{\\quad}$.",
+      "solution": {
+        "steps": [
+          "A rotation keeps every point the same distance from the center, so the radius does not change: $CP = CP'$.",
+          "The rotation turns each point through the rotation angle measured at the center, so $m\\angle PCP' = \\theta$.",
+          "Both conditions together force $P'$ onto the circle of radius $CP$ centered at $C$, at the angle $\\theta$ from $P$.",
+          "So the blanks are $CP'$ and $\\theta$."
+        ],
+        "answer": "$CP = CP'$ and $m\\angle PCP' = \\theta$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Point $P$ is reflected across line $m$. The foot of the perpendicular from $P$ to $m$ is $F$, and $PF = 3$. Find $PP'$, the distance between $P$ and its image $P'$.",
+      "solution": {
+        "steps": [
+          "By the definition of a reflection, $m$ is the perpendicular bisector of $\\overline{PP'}$. The point where $\\overline{PP'}$ crosses $m$ is the foot $F$.",
+          "Since $F$ is the midpoint of $\\overline{PP'}$, the image lies on the opposite ray from $\\overrightarrow{FP}$ with $FP' = FP = 3$.",
+          "The whole segment is $PP' = PF + FP' = 3 + 3 = 6$.",
+          "So $PP' = 2 \\cdot PF = 6$."
+        ],
+        "answer": "$PP' = 6$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A point $P$ maps to $P'$ under a single rotation about a center $C$. You measure $CP = 4$, $CP' = 4$, and $m\\angle PCP' = 90^\\circ$. Identify the motion completely and explain how the center could be located from $P$ and $P'$ alone.",
+      "solution": {
+        "steps": [
+          "Check the rotation definition. The radii are equal, $CP = CP' = 4$, and the central angle is $m\\angle PCP' = 90^\\circ$.",
+          "Both conditions of a rotation are satisfied, so the motion is a $90^\\circ$ rotation about $C$.",
+          "To recover the center from $P$ and $P'$ only: since $CP = CP'$, the center $C$ is equidistant from $P$ and $P'$.",
+          "The set of points equidistant from $P$ and $P'$ is the perpendicular bisector of $\\overline{PP'}$, so $C$ lies on that perpendicular bisector.",
+          "Thus the motion is a $90^\\circ$ rotation about $C$, and $C$ is found on the perpendicular bisector of $\\overline{PP'}$ at distance $4$ from each point."
+        ],
+        "answer": "A $90^\\circ$ rotation about $C$; the center lies on the perpendicular bisector of $\\overline{PP'}$ because $CP = CP'$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A classmate says, \"To define a rigid motion, just say: rotate the figure about point $C$.\" Is this a fully specified rigid motion? If not, state what is missing. Also explain why a dilation about $C$ with scale factor $2$ is not a rigid motion at all.",
+      "solution": {
+        "steps": [
+          "A rotation is determined by two pieces of data: a center and a directed angle $\\theta$. The description gives the center $C$ but no angle.",
+          "Without $\\theta$, the image of a point is not determined, so \"rotate about $C$\" does not specify a single rotation. It is underspecified; the missing element is the angle $\\theta$.",
+          "Now consider a dilation about $C$ with scale factor $2$. It sends $P$ to $P'$ with $CP' = 2\\,CP$, so distances are doubled rather than preserved.",
+          "A rigid motion must preserve distance ($P'Q' = PQ$ for all points). Because the dilation multiplies every distance by $2$, it changes lengths and is therefore not a rigid motion.",
+          "So the first description is incomplete (no angle), and a dilation is excluded because it is not distance-preserving."
+        ],
+        "answer": "No, the angle $\\theta$ is missing (a rotation needs a center and an angle); a dilation by factor $2$ is not rigid because it doubles distances instead of preserving them."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Which rigid motion is defined by a directed segment so that the image $P'$ of each point $P$ satisfies $\\overrightarrow{PP'}$ parallel to, the same length as, and the same direction as that segment?",
+      "hint": "Match the primitive: a directed segment that is copied to every point names one specific motion.",
+      "solution": {
+        "steps": [
+          "A directed segment (vector) that is parallel, congruent, and same direction at every point is the defining feature of a translation.",
+          "So the motion is a translation."
+        ],
+        "answer": "A translation."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Fill in the blank in the definition of a translation along directed segment $\\overrightarrow{AB}$: the image $P'$ of $P$ satisfies $\\overrightarrow{PP'}$ parallel to $\\overrightarrow{AB}$, the same direction, and $PP' = \\underline{\\quad}$.",
+      "hint": "A translation copies the length of the defining segment exactly.",
+      "solution": {
+        "steps": [
+          "By definition, a translation moves every point the same distance as the defining segment, in the same direction.",
+          "So the displacement length equals the segment length: $PP' = AB$."
+        ],
+        "answer": "$PP' = AB$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A figure is translated along a directed segment of length $5$. A point $P$ is mapped to $P'$. What is $PP'$, and how does $\\overrightarrow{PP'}$ compare to the directed segment?",
+      "hint": "Use the translation definition: same length, same direction, parallel.",
+      "solution": {
+        "steps": [
+          "The translation moves $P$ the same length as the defining segment, so $PP' = 5$.",
+          "By definition $\\overrightarrow{PP'}$ is parallel to the directed segment, has the same direction, and the same length.",
+          "So $PP' = 5$ and $\\overrightarrow{PP'}$ matches the defining segment in length and direction."
+        ],
+        "answer": "$PP' = 5$, and $\\overrightarrow{PP'}$ is parallel to the defining segment, with the same length and direction."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Point $Q$ is reflected across line $m$. The distance from $Q$ to $m$, measured along the perpendicular, is $QF = 7$. Find $QQ'$, the distance from $Q$ to its image.",
+      "hint": "The line of reflection is the perpendicular bisector of $\\overline{QQ'}$, so the foot $F$ is the midpoint.",
+      "solution": {
+        "steps": [
+          "By the reflection definition, $m$ is the perpendicular bisector of $\\overline{QQ'}$, and the foot $F$ is the midpoint of $\\overline{QQ'}$.",
+          "Then $FQ' = FQ = 7$.",
+          "So $QQ' = QF + FQ' = 7 + 7 = 2 \\cdot 7 = 14$."
+        ],
+        "answer": "$QQ' = 14$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A point $P$ maps to $P'$ under a rotation about center $C$ with $m\\angle PCP' = 60^\\circ$ and $CP = 9$. State $CP'$ and explain why the center $C$ lies on the perpendicular bisector of $\\overline{PP'}$.",
+      "hint": "A rotation keeps the radius fixed, so compare $CP$ and $CP'$, then think about which points are equidistant from $P$ and $P'$.",
+      "solution": {
+        "steps": [
+          "A rotation preserves the distance from the center, so $CP' = CP = 9$.",
+          "Because $CP = CP'$, the center $C$ is equidistant from $P$ and $P'$.",
+          "Every point equidistant from $P$ and $P'$ lies on the perpendicular bisector of $\\overline{PP'}$, so $C$ lies on that perpendicular bisector.",
+          "(The rotation angle $60^\\circ$ is the central angle $m\\angle PCP'$, but it is not needed to conclude this.)"
+        ],
+        "answer": "$CP' = 9$; since $CP = CP'$, the center $C$ is equidistant from $P$ and $P'$, so it lies on the perpendicular bisector of $\\overline{PP'}$."
+      }
+    }
+  ]
+}

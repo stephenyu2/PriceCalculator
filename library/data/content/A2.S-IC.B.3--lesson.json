@@ -1,0 +1,171 @@
+{
+  "id": "A2.S-IC.B.3--lesson",
+  "standard": "A2.S-IC.B.3",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+  "domainCode": "S-IC",
+  "cluster": "Make inferences and justify conclusions from sample surveys, experiments, and observational studies",
+  "clusterCode": "B",
+  "skillName": "Surveys, Experiments, Observational Studies",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "There are three main ways to collect statistical data, and each answers a different kind of question. A sample survey measures a representative sample to estimate a population parameter, such as a proportion or a mean. An experiment deliberately imposes a treatment on subjects and compares outcomes against a control group to test whether the treatment causes an effect. An observational study records subjects as they are, without imposing any treatment, so it can reveal an association but cannot by itself prove causation. Two different uses of chance keep these methods honest: random sampling (selecting the sample at random from the population) reduces selection bias and lets a survey's results generalize to the population, while random assignment (allocating subjects to treatment and control groups at random) balances confounding variables across the groups so an experiment can support a cause-and-effect claim. Only a randomized comparative experiment justifies causation; an observational study, where lurking variables go uncontrolled, can justify only association.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A nutrition lab randomly assigns $200$ volunteers to take either a vitamin pill or a placebo for $12$ weeks, then compares the two groups' cholesterol levels. Classify this study as a sample survey, an experiment, or an observational study, and state what makes it that type.",
+      "solution": {
+        "steps": [
+          "Ask the key question: do the researchers impose a treatment on the subjects? Here they decide who takes the vitamin pill and who takes the placebo, so a treatment is imposed.",
+          "Because a treatment is actively assigned and the treatment group is compared against a control (placebo) group, the study is an experiment.",
+          "Note the role of randomization: the volunteers are randomly assigned to the two groups (random assignment), which is what makes the cholesterol comparison valid.",
+          "It is not a survey (no population parameter is being estimated by measuring a sample as it is) and not an observational study (the subjects are not merely observed; a treatment is given)."
+        ],
+        "answer": "It is an experiment, because the researchers impose a treatment (vitamin pill vs. placebo) and compare the outcomes of a treatment group and a control group."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A city council wants to know the proportion of all city residents who support adding a new bus route. They plan to randomly select $600$ residents and ask each one. State the purpose of this sample survey, and explain why random selection is used.",
+      "solution": {
+        "steps": [
+          "Identify what is being measured: the proportion of all residents who support the route. This is a population parameter, a single number that describes the whole population.",
+          "The purpose of a sample survey is to estimate that population parameter by measuring a representative sample, rather than surveying every resident.",
+          "Random selection (random sampling) gives every resident an equal chance of being chosen, which reduces selection bias and makes the sample representative.",
+          "Because the sample is representative, the estimate from the $600$ residents can be generalized back to the full population of residents."
+        ],
+        "answer": "The purpose is to estimate a population parameter, the true proportion of all residents who support the bus route, from a representative sample. Random selection reduces selection bias so the result generalizes to the population."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A researcher selects $500$ adults at random from a national health registry, then randomly assigns each selected adult to either a $12$-week exercise program or a no-exercise control group. Identify each use of randomization in this study and state what each one accomplishes.",
+      "solution": {
+        "steps": [
+          "There are two separate randomization steps; treat them one at a time.",
+          "Step one: choosing the $500$ adults at random from the national registry is random sampling. It selects subjects from the population at random.",
+          "What random sampling accomplishes: it reduces selection bias and lets the study's conclusions generalize to the population the registry represents.",
+          "Step two: splitting those $500$ adults at random into the exercise group and the control group is random assignment. It allocates subjects to treatment groups at random.",
+          "What random assignment accomplishes: it balances confounding variables (age, diet, baseline fitness) across the two groups on average, so any difference in outcomes can be attributed to the exercise program, supporting a causal conclusion."
+        ],
+        "answer": "Selecting the $500$ adults from the registry is random sampling (it makes results generalize to the population). Splitting them into exercise and control groups is random assignment (it balances confounding variables so the comparison supports a cause-and-effect claim)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Researchers record the daily coffee intake and nightly sleep of $1{,}000$ adults, assigning no one a coffee amount. They find that adults who drink more coffee tend to sleep fewer hours and conclude that coffee causes people to sleep less. Critique this conclusion and state what can legitimately be concluded.",
+      "solution": {
+        "steps": [
+          "Classify the study: the researchers only record coffee intake and sleep as they naturally occur and impose no treatment, so this is an observational study.",
+          "An observational study can reveal an association between coffee and sleep, but it cannot control confounding variables, so it cannot establish causation.",
+          "Name a plausible lurking (confounding) variable: a stressful job could cause a person both to drink more coffee and to sleep fewer hours. The job, not the coffee, would then drive both.",
+          "Because such a lurking variable is not ruled out, the causal claim 'coffee causes less sleep' is not justified.",
+          "The defensible conclusion is that more coffee is associated with less sleep in this group; to test causation you would need a randomized experiment that assigns coffee amounts."
+        ],
+        "answer": "The causal conclusion is not justified. This is an observational study, so it can only show that coffee intake and sleep are associated. A lurking variable such as a stressful job could cause both, so coffee cannot be claimed to cause less sleep."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "An experiment recruits volunteers who answered an online advertisement and randomly assigns them to one of two diets, then compares weight loss. The diet group loses more weight, and the researchers claim the diet works for the entire national population. Evaluate the two roles of randomization here and state how far the conclusion can legitimately extend.",
+      "solution": {
+        "steps": [
+          "Separate the two roles of chance: random assignment (used here) and random sampling (not used here).",
+          "Random assignment was used: the volunteers were split between the two diets at random, which balances confounding variables across the groups. This justifies a cause-and-effect conclusion for the subjects in the study.",
+          "Random sampling was not used: the subjects self-selected by responding to an online ad, so they are not a random sample of any larger population.",
+          "Because there was no random sampling, the result cannot be safely generalized to the whole national population; the subjects may differ from the general public.",
+          "Combine the two: random assignment supports causation, but only random sampling supports generalization. The missing piece (random sampling) limits the scope, not the causal claim."
+        ],
+        "answer": "Random assignment justifies a causal claim that the diet caused more weight loss for these volunteers. But because the volunteers were self-selected rather than a random sample, the conclusion does not generalize to the entire national population, only to people like the volunteers."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A pollster randomly telephones $800$ registered voters and asks which candidate they prefer in an upcoming election. Classify this study, and state its purpose.",
+      "hint": "Ask whether any treatment is imposed on the respondents. If they are only measured as they are, it is not an experiment.",
+      "solution": {
+        "steps": [
+          "Check for an imposed treatment: the pollster only asks the voters which candidate they prefer and changes nothing about them, so no treatment is imposed.",
+          "Because respondents are selected at random and simply measured, this is a sample survey, not an experiment or observational study of a treatment.",
+          "The purpose of a sample survey is to estimate a population parameter, here the proportion of all registered voters who prefer each candidate.",
+          "Random selection of the $800$ voters reduces selection bias so the estimate generalizes to all registered voters."
+        ],
+        "answer": "It is a sample survey. Its purpose is to estimate a population parameter, the proportion of all registered voters who prefer each candidate."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A medical team randomly divides $300$ patients into a group that receives a new drug and a group that receives a standard drug, then compares recovery times. Identify the type of randomization used, and explain what it allows the researchers to conclude.",
+      "hint": "Randomly dividing subjects into treatment groups is one specific kind of randomization. Tie it to what kind of conclusion it supports.",
+      "solution": {
+        "steps": [
+          "The patients are randomly split into the two treatment groups, so the randomization used is random assignment, not random sampling.",
+          "Random assignment balances confounding variables (age, severity of illness, overall health) across the two groups on average.",
+          "Because a treatment is imposed and the groups are comparable, this is a randomized comparative experiment.",
+          "Therefore any difference in recovery time can be attributed to the drug, so the researchers can draw a cause-and-effect conclusion about which drug works better for these patients."
+        ],
+        "answer": "Random assignment is used. It balances confounding variables across the two groups, so the researchers can conclude that any difference in recovery time is caused by the difference in drug (a cause-and-effect conclusion)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "An observational study finds that towns with more firefighters per fire also have more fire damage, and it concludes that firefighters cause more fire damage. Name a lurking variable and explain why the causal conclusion is wrong.",
+      "hint": "Look for a third variable that would naturally increase both the number of firefighters sent and the amount of damage.",
+      "solution": {
+        "steps": [
+          "Identify that this is an observational study: the towns are observed as they are, with no treatment imposed, so it can show association but not causation.",
+          "Look for a variable connected to both the number of firefighters and the amount of damage.",
+          "The size of the fire is the lurking variable: a bigger fire draws more firefighters and also causes more damage.",
+          "So the size of the fire drives both quantities, creating an association between firefighters and damage even though firefighters do not cause the damage.",
+          "The corrected conclusion is that more firefighters are associated with more damage because both rise with fire size, not because firefighters cause damage."
+        ],
+        "answer": "The lurking variable is the size of the fire. Larger fires draw more firefighters and also cause more damage, so the size of the fire (not the firefighters) drives both. The causal claim is therefore unjustified."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A school district wants to know whether a new after-school tutoring program raises math test scores. Recommend a study design and justify your choice in one sentence tied to randomization.",
+      "hint": "The question asks whether the program causes higher scores. Decide which method is the only one that supports a causal claim.",
+      "solution": {
+        "steps": [
+          "The research question is causal: does the tutoring program raise test scores? This calls for a design that can establish cause and effect.",
+          "Only a randomized comparative experiment can justify a causal claim, because random assignment is what controls confounding variables.",
+          "Design: randomly assign students to receive the tutoring program or not (a control group), run the program, then compare math test scores.",
+          "Justification: random assignment balances confounding variables (prior achievement, motivation, home support) across the two groups, so a score difference can be attributed to the tutoring."
+        ],
+        "answer": "Use a randomized comparative experiment: randomly assign students to receive tutoring or to a control group, because random assignment balances confounding variables across the groups so any difference in scores can be attributed to the tutoring program."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A researcher randomly samples $400$ employees from a large company's directory, then randomly assigns them to a standing-desk group or a sitting-desk group and compares reported back pain after six months. State which conclusion this design supports, name the role of each randomization, and state to what population the result can generalize.",
+      "hint": "There are two randomizations doing two different jobs. One controls confounding for causation; the other controls bias for generalization.",
+      "solution": {
+        "steps": [
+          "Identify the two randomizations: random sampling of $400$ employees from the directory, and random assignment of those employees to standing or sitting desks.",
+          "Random assignment balances confounding variables across the two desk groups, so the design supports a cause-and-effect conclusion about desk type and back pain.",
+          "Random sampling from the company directory reduces selection bias, so the result can generalize to that population.",
+          "Combine the roles: because both randomizations are present, the causal conclusion can be generalized to the population the sample came from, the company's employees, but not beyond that company."
+        ],
+        "answer": "The design supports a causal conclusion that desk type affects back pain. Random assignment provides the causation (balancing confounders); random sampling provides the generalization. The result generalizes to all employees of that company, not to people outside it."
+      }
+    }
+  ]
+}

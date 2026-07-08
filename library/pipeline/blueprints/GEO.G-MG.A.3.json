@@ -1,0 +1,141 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent. One blueprint per standard.",
+
+  "standard": "GEO.G-MG.A.3",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Modeling with Geometry",
+  "domainCode": "G-MG",
+  "cluster": "Apply geometric concepts in modeling situations",
+  "clusterCode": "A",
+  "skillName": "Geometric Methods in Design Problems",
+
+  "description": "Students apply geometric methods to solve design problems: they design or analyze an object, layout, or structure that must satisfy physical or quantitative constraints, or that minimizes (or maximizes) a quantity such as cost, material, or area. Given a real-world scenario, they translate the constraints into geometric relationships (perimeter, area, surface area, volume, ratios, similarity, the Pythagorean relationship), solve for the unknown dimensions, and check that the result meets every stated constraint. Tasks include sizing a container or enclosure to a target area or volume, fitting and tiling shapes within a bounded region, distributing a fixed amount of fencing or material, comparing competing designs by cost or efficiency, and laying out typographic grid systems whose column widths and gutters are governed by ratios. Students must justify which geometric quantity controls the design, set up the governing equation $A = \\ell w$, $V = \\ell w h$, $A = \\pi r^2$, or a ratio proportion as appropriate, solve it, and report exact values where the numbers permit and a clearly labeled rounded value where a measurement requires it.",
+
+  "subSkills": [
+    "Translate a verbal design constraint (a target area, volume, perimeter, or cost) into a geometric equation",
+    "Solve for an unknown dimension from an area equation such as $A = \\ell w$ or $A = \\pi r^2$, reporting exact radicals where appropriate (e.g. $r = \\sqrt{\\frac{A}{\\pi}}$)",
+    "Solve for an unknown dimension from a volume equation such as $V = \\ell w h$ or $V = \\pi r^2 h$",
+    "Compute total cost as a sum of area, length, or count times a unit rate, and compare two designs to choose the cheaper or more efficient one",
+    "Minimize or maximize a quantity over a fixed constraint by testing candidate designs (e.g. which rectangle of fixed perimeter encloses the most area, which package uses the least material)",
+    "Use area or volume per unit to find how many fixed-size pieces fit in or cover a region (tiling, packing, number of tiles or panels)",
+    "Apply ratios to lay out a typographic grid: split a total width into columns and gutters in a given ratio, or size elements to a fixed aspect ratio",
+    "Apply similarity and scale factors so that lengths scale by $k$, areas by $k^2$, and volumes by $k^3$ when a design is enlarged or reduced",
+    "Verify that a computed design satisfies every stated physical constraint, and report measurements with correct units and sensible rounding"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Size a region to a target area",
+      "example": "A rectangular garden must have an area of $48$ square meters and a length that is $3$ times its width. Find the dimensions. Answer: $3w \\cdot w = 48 \\Rightarrow w^2 = 16 \\Rightarrow w = 4$ m, $\\ell = 12$ m."
+    },
+    {
+      "name": "Size a container to a target volume",
+      "example": "A cylindrical tank must hold $V = 100\\pi$ cubic feet and stand $h = 4$ ft tall. Find the radius. Answer: $\\pi r^2 (4) = 100\\pi \\Rightarrow r^2 = 25 \\Rightarrow r = 5$ ft."
+    },
+    {
+      "name": "Minimize material or cost over a constraint",
+      "example": "A rectangular pen of area $36\\text{ m}^2$ is built against a wall so only three sides need fencing. Among integer dimensions, which uses the least fencing? Compare $6\\times 6$ (fence $6 + 2(6) = 18$), $9\\times 4$ ($9 + 2(4) = 17$ with the $9$ ft side against the wall), $4 \\times 9$ ($4 + 2(9) = 22$); choose the layout with the least total fencing."
+    },
+    {
+      "name": "Compare two designs by cost",
+      "example": "Box A is $4 \\times 4 \\times 4$ in and box B is $8 \\times 2 \\times 4$ in; both hold $64\\text{ in}^3$. Cardboard costs the same per square inch. Compute each surface area ($A = 96\\text{ in}^2$, $B = 112\\text{ in}^2$) and choose the cheaper box."
+    },
+    {
+      "name": "Tiling and packing within a region",
+      "example": "How many $2$ ft by $2$ ft tiles are needed to cover a $10$ ft by $14$ ft floor? Answer: $\\frac{10 \\times 14}{2 \\times 2} = \\frac{140}{4} = 35$ tiles."
+    },
+    {
+      "name": "Typographic grid from a ratio",
+      "example": "A $960$ px content width holds $4$ columns separated by $3$ gutters, with each column to each gutter in the ratio $5:1$. Find the column and gutter widths. Answer: total ratio units $= 4(5) + 3(1) = 23$, so one unit $= \\frac{960}{23}$ px; round to a column of about $208$ px and a gutter of about $42$ px, or state exact $\\frac{4800}{23}$ px and $\\frac{960}{23}$ px."
+    },
+    {
+      "name": "Aspect-ratio sizing",
+      "example": "A banner must keep a $16:9$ aspect ratio and fit a width of $640$ px. Find its height. Answer: $\\frac{9}{16} \\cdot 640 = 360$ px."
+    },
+    {
+      "name": "Scaling a design (similarity)",
+      "example": "A scale model uses $1$ in $= 4$ ft. If the model patio is $3$ in by $5$ in, find the real area. Answer: real dimensions $12$ ft by $20$ ft, area $240\\text{ ft}^2$; equivalently model area $15\\text{ in}^2$ scaled by $4^2 = 16$ gives $240\\text{ ft}^2$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single design constraint translates directly into one equation that is solved in one or two steps. Size a rectangle or circle to a given area, a box or cylinder to a given volume, count how many fixed tiles cover a region, or scale one length by a given factor. Numbers are chosen so the answer is a whole number or a clean fraction, and only one geometric quantity is involved.",
+      "constraints": [
+        "One constraint, one governing equation ($A = \\ell w$, $A = \\pi r^2$, $V = \\ell w h$, a single ratio, or a tile count)",
+        "Solving takes at most two steps and lands on an integer, a simple fraction, or a clean multiple of $\\pi$",
+        "No optimization and no comparison; the design is fully determined by the constraint",
+        "Units are given directly and the answer needs no rounding"
+      ]
+    },
+    "Medium": {
+      "description": "Two related quantities or a comparison is involved. The student sets up an equation that combines a constraint with a relationship between dimensions (length is a multiple of width, fixed aspect ratio, three sides of fencing), or computes a quantity such as surface area or cost for two designs and chooses between them. Three to five steps, possibly an exact radical, and attention to which dimension is constrained.",
+      "constraints": [
+        "Combines a constraint with a dimension relationship (e.g. $\\ell = 3w$, a $16:9$ ratio, or fencing on three sides only)",
+        "May require an exact radical, e.g. $r = \\sqrt{\\frac{A}{\\pi}}$ or a side of $\\sqrt{30}$",
+        "Comparison or cost problems require computing the same quantity (surface area, total length, cost) for two designs before choosing",
+        "Grid problems split a total into parts using a ratio with two or three part types"
+      ]
+    },
+    "Hard": {
+      "description": "A genuine optimization or multi-constraint design. The student must minimize or maximize a quantity (least material, least cost, greatest area) over several candidate designs subject to a fixed constraint, or satisfy two constraints at once and reconcile them, or carry a design through scaling where lengths, areas, and volumes scale by $k$, $k^2$, and $k^3$. Requires setting up, evaluating, and comparing multiple cases and justifying the choice.",
+      "constraints": [
+        "Optimization over a fixed constraint: evaluate several candidate designs and select the optimum with justification",
+        "Two simultaneous constraints (for example a target volume and a target footprint) that must both be satisfied",
+        "Scaling that mixes length, area, and volume so factors of $k$, $k^2$, and $k^3$ must be tracked separately",
+        "Cost models that sum more than one term (material cost plus a per-piece or per-length cost) before comparing designs"
+      ]
+    },
+    "tierSplit": "If split into two worksheets: tier1 covers Easy to Medium, single-constraint sizing of regions and containers, tile counts, aspect-ratio and simple ratio layouts, and a first pass at exact-radical dimensions. tier2 covers Medium to Hard, two-design cost and surface-area comparisons, optimization of material or area over a fixed constraint, multi-part typographic grids, and scaling problems that track $k$, $k^2$, and $k^3$. No item overlap between tiers."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Confuses perimeter with area, or surface area with volume, choosing the wrong governing equation for the constraint",
+      "distractor": "For a garden of area $48\\text{ m}^2$ with $\\ell = 3w$ sets $3w + w = 48$ (perimeter form) and gets $w = 12$ instead of solving $3w^2 = 48$ for $w = 4$"
+    },
+    {
+      "misconception": "Forgets to take the square root after isolating a squared dimension",
+      "distractor": "From $w^2 = 16$ reports $w = 16$ instead of $w = 4$, or from $r^2 = 25$ reports $r = 25$ instead of $r = 5$"
+    },
+    {
+      "misconception": "Scales area or volume by the linear scale factor instead of its square or cube",
+      "distractor": "When a design is enlarged by a factor of $4$, multiplies the area by $4$ instead of $4^2 = 16$, reporting $60\\text{ ft}^2$ instead of $240\\text{ ft}^2$"
+    },
+    {
+      "misconception": "Counts fencing or material on all sides when the design specifies that one side is omitted",
+      "distractor": "For a pen against a wall (three sides fenced) computes the full perimeter $2\\ell + 2w$ instead of $\\ell + 2w$, picking the wrong optimum"
+    },
+    {
+      "misconception": "Divides total length by piece length but ignores that area tiling needs the count in two dimensions or by area",
+      "distractor": "Covers a $10\\times 14$ floor with $2\\times 2$ tiles by computing $\\frac{10+14}{2+2} = 6$ tiles instead of $\\frac{10\\times 14}{2\\times 2} = 35$ tiles"
+    },
+    {
+      "misconception": "Inverts an aspect ratio or applies a typographic ratio to the wrong dimension",
+      "distractor": "For a $16:9$ banner of width $640$ computes $\\frac{16}{9}\\cdot 640 \\approx 1138$ instead of $\\frac{9}{16}\\cdot 640 = 360$ for the height"
+    },
+    {
+      "misconception": "When splitting a total width by a ratio, forgets the gutters between columns and divides only by the number of columns",
+      "distractor": "Splits a $960$ px width among $4$ columns as $\\frac{960}{4} = 240$ px each, ignoring the $3$ gutters and the $5:1$ ratio that make a column about $208$ px"
+    },
+    {
+      "misconception": "Compares two designs on the wrong quantity, judging cost or efficiency by volume when both volumes are equal and surface area is what differs",
+      "distractor": "Declares two boxes of equal volume equally cheap, ignoring that surface areas of $96\\text{ in}^2$ and $112\\text{ in}^2$ make the first box use less cardboard"
+    }
+  ],
+
+  "_comment_itemCounts": "worksheet.single = one ramped sheet (Easy->Hard across 15 items). tier1/tier2 only if the standard is split into two worksheets (15 each, no overlap).",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

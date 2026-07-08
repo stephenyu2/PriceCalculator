@@ -1,0 +1,140 @@
+{
+  "standard": "6.EE.B.5",
+  "grade": "6",
+  "subject": "math",
+  "domain": "Expressions and Equations",
+  "domainCode": "EE",
+  "cluster": "Reason about and solve one-variable equations and inequalities",
+  "clusterCode": "B",
+  "skillName": "Solving Equations by Substitution",
+
+  "description": "Students understand that solving an equation or inequality means answering the question, which values from a specified set make the statement true. Given an equation or inequality and a set of candidate values, they substitute each candidate for the variable, evaluate both sides, and decide whether the resulting numerical statement is true. They report which values from the set are solutions (possibly none, one, or several). The variable values are non-negative numbers (whole numbers, simple fractions, and decimals appropriate to grade 6); inequalities use $<$, $>$, $\\le$, and $\\ge$.",
+
+  "subSkills": [
+    "Substitute a given value for the variable in an equation or inequality",
+    "Evaluate each side of the statement using the order of operations after substituting",
+    "Decide whether the resulting numerical statement is true or false",
+    "Test every value in a specified set and report which values are solutions",
+    "Interpret the meaning of $<$, $>$, $\\le$, and $\\ge$ when checking an inequality",
+    "Recognize that some sets contain no solution, exactly one solution, or several solutions",
+    "Distinguish solving (search a set) from simply evaluating an expression for a value"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Check a single value in a one-step equation",
+      "example": "Is $x = 7$ a solution of $x + 5 = 12$? Substitute: $7 + 5 = 12$, which is true, so yes."
+    },
+    {
+      "name": "Find the solution from a small set (equation)",
+      "example": "Which value of $y$ from the set $\\{2, 3, 4\\}$ makes $3y = 9$ true? Testing gives $y = 3$ since $3 \\times 3 = 9$."
+    },
+    {
+      "name": "Check a single value in an inequality",
+      "example": "Is $n = 4$ a solution of $2n > 6$? Substitute: $2 \\times 4 = 8$ and $8 > 6$ is true, so yes."
+    },
+    {
+      "name": "Find all solutions from a set (inequality)",
+      "example": "Which values of $x$ from the set $\\{1, 2, 3, 4\\}$ make $x + 2 \\le 5$ true? Answer: $1, 2, 3$."
+    },
+    {
+      "name": "Two-step equation check",
+      "example": "Is $w = 5$ a solution of $2w - 3 = 7$? Substitute: $2 \\times 5 - 3 = 7$, which is true, so yes."
+    },
+    {
+      "name": "Fraction or decimal candidate value",
+      "example": "Is $x = \\frac{1}{2}$ a solution of $4x = 2$? Substitute: $4 \\times \\frac{1}{2} = 2$, which is true, so yes."
+    },
+    {
+      "name": "Set with no solution",
+      "example": "Which value of $m$ from $\\{0, 1, 2\\}$ makes $m + 4 = 9$ true? None, since none of $4$, $5$, $6$ equals $9$."
+    },
+    {
+      "name": "Inequality with boundary value",
+      "example": "Which values of $t$ from $\\{2, 3, 4\\}$ make $t \\ge 3$ true? Answer: $3$ and $4$ (the boundary $3$ is included)."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Substitute a single given whole-number value into a one-step equation or inequality and decide whether it is true, or test a set of two or three whole numbers in a one-step equation. The arithmetic after substitution is a single operation with small whole numbers.",
+      "constraints": [
+        "One-step statement of the form $x + a = b$, $x - a = b$, $ax = b$, or the matching one-step inequality",
+        "Candidate values are whole numbers from $0$ to $12$",
+        "Coefficients and constants are whole numbers $\\le 12$",
+        "At most one operation to evaluate after substituting",
+        "Inequalities use only $<$ or $>$ (strict), no boundary edge cases"
+      ]
+    },
+    "Medium": {
+      "description": "Test a set of values in a two-step equation or inequality, requiring order of operations after substitution, or check a single fraction or decimal candidate. Student may need to report more than one solution from the set, including inequalities where the boundary value matters.",
+      "constraints": [
+        "Two-step statement such as $2x + 1 = 9$ or $3x - 2 > 7$",
+        "Candidate set has three or four values that must each be tested",
+        "May use a unit fraction such as $\\frac{1}{2}$ or a one-place decimal such as $0.5$ as a candidate",
+        "Uses $\\le$ or $\\ge$ so the boundary value is itself a solution",
+        "Order of operations matters (multiply or divide before add or subtract)"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning: test a set against an equation or inequality that involves two operations plus grouping or a fraction coefficient, identify a set that yields no solution or several solutions, or interpret what the solution set means in a short context. Student must carefully manage order of operations and the meaning of the inequality symbol.",
+      "constraints": [
+        "Statement combines two operations with grouping or a fraction coefficient, for example $2(x - 1) = 8$ or $\\frac{x}{3} + 1 \\ge 4$",
+        "Candidate set may yield no solution, exactly one, or several, and the student must report all that apply",
+        "Includes at least one inequality where the boundary value is tested against $\\le$ or $\\ge$",
+        "May embed the equation or inequality in a brief real-world sentence the student must read",
+        "Candidate values may include a non-unit fraction such as $\\frac{2}{3}$ or a decimal such as $1.5$"
+      ]
+    },
+    "tierSplit": "This standard uses a single ramped worksheet (worksheet.single, 15 items): items 1 to 5 Easy (substitute one whole number into a one-step equation or inequality, or scan a two or three value set in a one-step equation), items 6 to 11 Medium (two-step statements, fraction or decimal candidates, boundary inequalities with $\\le$ or $\\ge$), items 12 to 15 Hard (grouped or fraction-coefficient statements, sets with no or several solutions, brief contexts). If split into two tiers, tier1 would cover Easy to Medium (checking single values and small sets in one- and two-step statements) and tier2 would cover Medium to Hard (multi-step statements, boundary inequalities, and reporting full solution sets in context)."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student tries to solve the equation algebraically and reports the solved value instead of testing only the values in the given set",
+      "distractor": "For $\\{2, 3, 4\\}$ making $x + 2 = 8$ true, answers $6$ (the algebraic solution) even though $6$ is not in the set"
+    },
+    {
+      "misconception": "Student ignores order of operations after substituting and works left to right",
+      "distractor": "Checks $w = 5$ in $2w - 3 = 7$ as $2 \\times (5 - 3) = 4$ and calls it false instead of $2 \\times 5 - 3 = 7$"
+    },
+    {
+      "misconception": "Student treats $\\le$ or $\\ge$ as strict and excludes the boundary value",
+      "distractor": "For $t \\ge 3$ on $\\{2, 3, 4\\}$, answers only $4$ instead of $3$ and $4$, dropping the boundary $3$"
+    },
+    {
+      "misconception": "Student reverses the direction of the inequality when deciding true or false",
+      "distractor": "Says $n = 2$ satisfies $2n > 6$ because it reads $4 > 6$ as true, or rejects $n = 4$ thinking $8 > 6$ is false"
+    },
+    {
+      "misconception": "Student substitutes the value but forgets to multiply by the coefficient",
+      "distractor": "Checks $y = 3$ in $3y = 9$ by reading $3y$ as $3 + 3 = 6$ (or just $3$), concluding it is not a solution"
+    },
+    {
+      "misconception": "Student stops at the first value that works and fails to report all solutions in the set",
+      "distractor": "For $x + 2 \\le 5$ on $\\{1, 2, 3, 4\\}$, answers only $1$ instead of $1, 2, 3$"
+    },
+    {
+      "misconception": "Student assumes every set must contain a solution and forces a wrong answer when none exists",
+      "distractor": "For $m + 4 = 9$ on $\\{0, 1, 2\\}$, picks $2$ as the answer instead of recognizing there is no solution in the set"
+    },
+    {
+      "misconception": "Student mishandles a fraction or decimal candidate, multiplying incorrectly",
+      "distractor": "Checks $x = \\frac{1}{2}$ in $4x = 2$ by computing $4 + \\frac{1}{2} = \\frac{9}{2}$ instead of $4 \\times \\frac{1}{2} = 2$"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet (single = 15, Easy->Hard). tier1/tier2 listed for schema completeness but not used for this standard.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "id": "A1.A-SSE.B.3--lesson",
+  "standard": "A1.A-SSE.B.3",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Seeing Structure in Expressions",
+  "domainCode": "A-SSE",
+  "cluster": "Write expressions in equivalent forms to solve problems",
+  "clusterCode": "B",
+  "skillName": "Equivalent Forms Reveal Properties",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "An expression can be written in many equivalent forms, and each form makes a different property easy to see. Factored form reveals the zeros (where the expression equals $0$). Vertex form $a(x-h)^2+k$ reveals the maximum or minimum value and where it happens. Rewriting an exponential base reveals a hidden growth or decay rate. The skill is to choose the form that exposes the property you want, produce it correctly, and then read off and interpret the feature.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Rewrite $x^2-5x+6$ in a form that shows its zeros, and state the zeros.",
+      "solution": {
+        "steps": [
+          "To reveal zeros, factor into the form $(x-r_1)(x-r_2)$.",
+          "Find two numbers that multiply to $6$ and add to $-5$: those are $-2$ and $-3$, since $(-2)(-3)=6$ and $-2+(-3)=-5$.",
+          "So $x^2-5x+6=(x-2)(x-3)$.",
+          "A product is $0$ when a factor is $0$: set $x-2=0$ giving $x=2$, and $x-3=0$ giving $x=3$.",
+          "The factored form $(x-2)(x-3)$ shows the zeros directly: $x=2$ and $x=3$."
+        ],
+        "answer": "$(x-2)(x-3)$; the zeros are $x=2$ and $x=3$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Rewrite $9x^2-16$ to reveal its zeros, and state the zeros.",
+      "solution": {
+        "steps": [
+          "Recognize a difference of squares: $9x^2=(3x)^2$ and $16=4^2$, so this is $a^2-b^2$ with $a=3x$ and $b=4$.",
+          "Apply $a^2-b^2=(a-b)(a+b)$: $9x^2-16=(3x-4)(3x+4)$.",
+          "Set each factor to $0$: $3x-4=0$ gives $x=\\frac{4}{3}$, and $3x+4=0$ gives $x=-\\frac{4}{3}$.",
+          "The factored form exposes the two zeros."
+        ],
+        "answer": "$(3x-4)(3x+4)$; the zeros are $x=\\frac{4}{3}$ and $x=-\\frac{4}{3}$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Rewrite $x^2-6x+11$ in vertex form $(x-h)^2+k$, and state the minimum value and where it occurs.",
+      "solution": {
+        "steps": [
+          "To complete the square, take half of the $x$-coefficient: half of $-6$ is $-3$, and $(-3)^2=9$.",
+          "Write $x^2-6x+11=(x^2-6x+9)+11-9$, adding $9$ inside and subtracting $9$ to keep the value the same.",
+          "The grouped part is a perfect square: $x^2-6x+9=(x-3)^2$.",
+          "So $x^2-6x+11=(x-3)^2+2$.",
+          "Since $(x-3)^2\\ge 0$ and equals $0$ only at $x=3$, the smallest value of the expression is $2$, occurring at $x=3$."
+        ],
+        "answer": "$(x-3)^2+2$; the minimum value is $2$, occurring at $x=3$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A ball's height in feet after $t$ seconds is $h=-16t^2+48t+4$. Rewrite this in vertex form to reveal the maximum height, and state that height.",
+      "solution": {
+        "steps": [
+          "Factor the leading coefficient out of the first two terms: $h=-16(t^2-3t)+4$.",
+          "Half of $-3$ is $-\\frac{3}{2}$, and $\\left(-\\frac{3}{2}\\right)^2=\\frac{9}{4}$. Add and subtract $\\frac{9}{4}$ inside the parentheses: $h=-16\\left(t^2-3t+\\frac{9}{4}-\\frac{9}{4}\\right)+4$.",
+          "Group the perfect square: $h=-16\\left(\\left(t-\\frac{3}{2}\\right)^2-\\frac{9}{4}\\right)+4$.",
+          "Distribute the $-16$ back over the subtracted term: $-16\\cdot\\left(-\\frac{9}{4}\\right)=36$, so $h=-16\\left(t-\\frac{3}{2}\\right)^2+36+4$.",
+          "Combine constants: $h=-16\\left(t-\\frac{3}{2}\\right)^2+40$.",
+          "Because the coefficient $-16$ is negative, the squared term lowers the height, so the maximum is the constant $40$, reached when $t-\\frac{3}{2}=0$, that is $t=1.5$ seconds."
+        ],
+        "answer": "$-16(t-1.5)^2+40$; the maximum height is $40$ feet at $t=1.5$ seconds."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "An investment grows by the annual factor in $P(1.18)^t$, where $t$ is in years. Rewrite the expression to reveal an approximate monthly growth factor, and state the approximate monthly percent rate.",
+      "solution": {
+        "steps": [
+          "There are $12$ months in a year, so write the annual factor as a monthly factor raised to the $12$th power: $1.18=\\left(1.18^{1/12}\\right)^{12}$.",
+          "Substitute into the expression: $P(1.18)^t=P\\left(\\left(1.18^{1/12}\\right)^{12}\\right)^t$.",
+          "Use the power-of-a-power law $(x^m)^n=x^{mn}$: $P\\left(1.18^{1/12}\\right)^{12t}$.",
+          "Evaluate the monthly factor: $1.18^{1/12}\\approx 1.014$.",
+          "A monthly factor of about $1.014$ means the amount grows about $1.4\\%$ each month: $P\\left(1.18^{1/12}\\right)^{12t}\\approx P(1.014)^{12t}$."
+        ],
+        "answer": "$P\\left(1.18^{1/12}\\right)^{12t}\\approx P(1.014)^{12t}$; the approximate monthly growth rate is about $1.4\\%$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Rewrite $x^2-2x-15$ in a form that shows its zeros, and state the zeros.",
+      "hint": "Find two numbers that multiply to $-15$ and add to $-2$.",
+      "solution": {
+        "steps": [
+          "Find two numbers with product $-15$ and sum $-2$: those are $-5$ and $3$, since $(-5)(3)=-15$ and $-5+3=-2$.",
+          "Factor: $x^2-2x-15=(x-5)(x+3)$.",
+          "Set each factor to $0$: $x-5=0$ gives $x=5$, and $x+3=0$ gives $x=-3$."
+        ],
+        "answer": "$(x-5)(x+3)$; the zeros are $x=5$ and $x=-3$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Rewrite $x^2-49$ to reveal its zeros, and state the zeros.",
+      "hint": "This is a difference of squares: $49=7^2$.",
+      "solution": {
+        "steps": [
+          "Recognize $x^2-49=x^2-7^2$, a difference of squares.",
+          "Apply $a^2-b^2=(a-b)(a+b)$: $x^2-49=(x-7)(x+7)$.",
+          "Set each factor to $0$: $x-7=0$ gives $x=7$, and $x+7=0$ gives $x=-7$."
+        ],
+        "answer": "$(x-7)(x+7)$; the zeros are $x=7$ and $x=-7$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Rewrite $x^2+8x+10$ in vertex form, and state the minimum value and where it occurs.",
+      "hint": "Half of $8$ is $4$; add and subtract $4^2=16$.",
+      "solution": {
+        "steps": [
+          "Half of $8$ is $4$, and $4^2=16$.",
+          "Write $x^2+8x+10=(x^2+8x+16)+10-16$.",
+          "The grouped part is a perfect square: $x^2+8x+16=(x+4)^2$.",
+          "So $x^2+8x+10=(x+4)^2-6$.",
+          "Since $(x+4)^2\\ge 0$ and is $0$ at $x=-4$, the minimum value is $-6$, occurring at $x=-4$."
+        ],
+        "answer": "$(x+4)^2-6$; the minimum value is $-6$, occurring at $x=-4$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Rewrite $2x^2+7x+3$ in factored form, and state the zeros.",
+      "hint": "Look for factors $(2x+\\,?)(x+\\,?)$ whose constants multiply to $3$ and give a middle term of $7x$.",
+      "solution": {
+        "steps": [
+          "Try the form $(2x+\\,?)(x+\\,?)$ since $2x\\cdot x=2x^2$. The constants must multiply to $3$.",
+          "Test $(2x+1)(x+3)$: the outer and inner terms give $6x+x=7x$, matching the middle term.",
+          "Check: $(2x+1)(x+3)=2x^2+6x+x+3=2x^2+7x+3$. Correct.",
+          "Set each factor to $0$: $2x+1=0$ gives $x=-\\frac{1}{2}$, and $x+3=0$ gives $x=-3$."
+        ],
+        "answer": "$(2x+1)(x+3)$; the zeros are $x=-\\frac{1}{2}$ and $x=-3$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "The expression $2^{3t}$ models a population, where $t$ is in days. Rewrite it as a single base raised to the power $t$ to reveal the daily growth factor, and state that factor.",
+      "hint": "Use the power-of-a-power law: $2^{3t}=(2^3)^t$.",
+      "solution": {
+        "steps": [
+          "Rewrite the exponent $3t$ as a power of a power: $2^{3t}=\\left(2^3\\right)^t$ using $x^{mn}=(x^m)^n$.",
+          "Evaluate the inner power: $2^3=8$.",
+          "So $2^{3t}=8^t$.",
+          "The single base $8$ is the daily growth factor: the population multiplies by $8$ each day."
+        ],
+        "answer": "$8^t$; the daily growth factor is $8$."
+      }
+    }
+  ]
+}

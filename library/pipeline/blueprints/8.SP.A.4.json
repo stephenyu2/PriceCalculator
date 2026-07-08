@@ -1,0 +1,119 @@
+{
+  "standard": "8.SP.A.4",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate patterns of association in bivariate data",
+  "clusterCode": "A",
+  "skillName": "Two-Way Tables",
+
+  "description": "Students summarize data on two categorical variables collected from the same subjects in a two-way frequency table. They read and complete the table (cells, row totals, column totals, grand total), compute relative frequencies by row or by column, and use those relative frequencies to describe whether there is a possible association between the two variables.",
+
+  "subSkills": [
+    "Read a two-way frequency table: locate joint, marginal, and total frequencies",
+    "Construct a two-way table from a verbal description, tally, or list of paired observations",
+    "Complete missing cells, row totals, column totals, and the grand total using addition and subtraction",
+    "Compute a relative frequency as a part-to-whole fraction (cell divided by grand total, by row total, or by column total)",
+    "Convert relative frequencies to decimals or percents when asked",
+    "Compare conditional relative frequencies across rows or columns to judge possible association between the two variables",
+    "State a conclusion about association in context based on the comparison"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Read a joint or marginal frequency",
+      "example": "A survey of $80$ students recorded whether each plays a sport and whether each plays an instrument. Given the completed two-way table, how many students play a sport but do not play an instrument?"
+    },
+    {
+      "name": "Complete the table",
+      "example": "A two-way table has the grand total $120$, the 'Yes' row total $70$, and the cell for 'Yes / Car' equal to $45$. Find the missing cell 'Yes / No car'."
+    },
+    {
+      "name": "Construct a table from data",
+      "example": "From a list of $50$ paired responses (Grade 7 or Grade 8) and (prefers Math or prefers Science), build the two-way frequency table including all totals."
+    },
+    {
+      "name": "Total relative frequency",
+      "example": "Of $200$ surveyed adults, $36$ both own a pet and rent their home. What relative frequency, as a fraction of all adults surveyed, both own a pet and rent? Answer $\\frac{36}{200}=\\frac{9}{50}$."
+    },
+    {
+      "name": "Row or column (conditional) relative frequency",
+      "example": "Among the $60$ students who play a sport, $48$ also play an instrument. What is the relative frequency of playing an instrument given the student plays a sport? Answer $\\frac{48}{60}=\\frac{4}{5}$."
+    },
+    {
+      "name": "Describe association from conditional relative frequencies",
+      "example": "Among smokers, the relative frequency of having asthma is $\\frac{30}{50}=0.60$; among non-smokers it is $\\frac{20}{100}=0.20$. Since $0.60$ is much greater than $0.20$, the table suggests an association between smoking and asthma."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Read or complete a two-way table that is already mostly filled in, or compute a single relative frequency as a part-to-whole fraction with a friendly grand total. One step, no comparison of conditions.",
+      "constraints": [
+        "Table is given; at most one or two cells/totals are missing and are found by a single addition or subtraction",
+        "Counts are whole numbers and totals are small or round (grand total $\\le 100$)",
+        "Relative frequency questions divide by the grand total, e.g. $\\frac{18}{60}=\\frac{3}{10}$, and simplify cleanly",
+        "No reasoning about association is required"
+      ]
+    },
+    "Medium": {
+      "description": "Compute conditional (row or column) relative frequencies, requiring the student to choose the correct total to divide by. May require completing several cells before computing, or expressing the result as a decimal or percent.",
+      "constraints": [
+        "Student must select the correct row total or column total as the denominator, not the grand total",
+        "May require finding one or two missing entries first",
+        "Answers expressed as a fraction in lowest terms and as a percent, e.g. $\\frac{45}{75}=\\frac{3}{5}=60\\%$",
+        "Single comparison or interpretation may be requested but the conditional frequencies are given or easy to read"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step: construct or substantially complete the table from a verbal description, compute two or more conditional relative frequencies for corresponding categories, compare them, and state a justified conclusion about possible association.",
+      "constraints": [
+        "Student builds or fills most of the table from words or a data list before any computation",
+        "Requires computing at least two conditional relative frequencies (e.g. across two rows) and comparing them",
+        "Conclusion about association must be stated in context and justified by the numerical comparison",
+        "Totals or counts may be larger or produce fractions that need careful simplification"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student divides a joint frequency by the grand total when a conditional (row or column) relative frequency was requested",
+      "distractor": "For 'instrument given sport' with $48$ of $60$ athletes and grand total $80$, gives $\\frac{48}{80}=\\frac{3}{5}$ instead of $\\frac{48}{60}=\\frac{4}{5}$"
+    },
+    {
+      "misconception": "Student uses the wrong margin as the denominator (row total instead of column total, or vice versa)",
+      "distractor": "Divides by the row total $70$ when the question conditioned on the column total $50$, giving $\\frac{30}{70}$ instead of $\\frac{30}{50}$"
+    },
+    {
+      "misconception": "Student treats the joint cell as if it were the marginal total and reads the wrong number from the table",
+      "distractor": "Reports the 'Yes / Yes' cell value when asked for the total number of 'Yes' responses (the row total)"
+    },
+    {
+      "misconception": "Student adds the marginal totals or adds a row and column total, double counting the cell, instead of using the grand total",
+      "distractor": "Computes the grand total as row total $+$ column total $=70+50=120$ instead of the true grand total $100$"
+    },
+    {
+      "misconception": "Student concludes 'no association' just because the joint counts are unequal, ignoring that the group sizes differ, instead of comparing relative frequencies",
+      "distractor": "Says 'more smokers ($30$) than non-smokers ($20$) have asthma, so smoking causes asthma' using raw counts instead of comparing $\\frac{30}{50}$ to $\\frac{20}{100}$"
+    },
+    {
+      "misconception": "Student leaves a relative frequency unsimplified or fails to convert to the requested form",
+      "distractor": "Gives $\\frac{36}{200}$ when the answer should be $\\frac{9}{50}$, or gives $\\frac{3}{5}$ when a percent $60\\%$ was requested"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

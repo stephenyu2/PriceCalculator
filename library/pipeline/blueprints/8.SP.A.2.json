@@ -1,0 +1,115 @@
+{
+  "standard": "8.SP.A.2",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate patterns of association in bivariate data",
+  "clusterCode": "A",
+  "skillName": "Fitting Lines to Scatter Plots",
+
+  "description": "Students recognize that straight lines model relationships between two quantitative variables. Given a scatter plot that suggests a linear association, they informally fit a line of best fit (a trend line that passes through the middle of the data with roughly equal points above and below), write or read its equation in slope-intercept form $y = mx + b$, and informally judge how well the line fits by assessing the closeness of the data points to the line. Students also distinguish good fits from poor fits and from data with no linear association.",
+
+  "subSkills": [
+    "Recognize when a scatter plot suggests a linear association versus no association",
+    "Sketch or select a reasonable line of fit that runs through the center of a linear cloud of points",
+    "Estimate the slope $m$ and $y$-intercept $b$ of a fitted line from two points on the line",
+    "Write the equation of a fitted line in the form $y = mx + b$",
+    "Use the closeness of points to the line to judge whether the model fits well",
+    "Compare two candidate lines and decide which fits the data better",
+    "Identify a fitted line as a good or poor model based on the spread of points around it"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Choose the better line of fit",
+      "example": "A scatter plot of 8 points is shown. Two candidate trend lines are drawn, line P with equation $y = 2x + 1$ and line Q with equation $y = \\frac{1}{2}x + 3$. Which line better fits the data, and why?"
+    },
+    {
+      "name": "Estimate the equation of a fitted line",
+      "example": "A line of best fit passes through the points $(0, 4)$ and $(5, 14)$. Write its equation in the form $y = mx + b$. Answer: $y = 2x + 4$."
+    },
+    {
+      "name": "Assess fit quality",
+      "example": "A trend line is drawn through a scatter plot. The data points are clustered tightly along the line with very little vertical spread. Is this a good fit or a poor fit? Justify your answer."
+    },
+    {
+      "name": "Identify linear vs. no association",
+      "example": "Three scatter plots are described. Plot A shows points rising steadily from lower-left to upper-right; Plot B shows points scattered randomly with no pattern. Which plot suggests a linear association suitable for fitting a straight line?"
+    },
+    {
+      "name": "Interpret slope and intercept of a fitted line",
+      "example": "A scatter plot relates hours studied $(x)$ to test score $(y)$, fitted by $y = 8x + 50$. What does the slope $8$ represent in context?"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recognition or reading tasks using a clearly linear point cloud or a line passing through lattice points. The student selects whether an association is linear, judges an obvious good-versus-poor fit, or reads slope and intercept directly from a line through clean integer coordinates.",
+      "constraints": [
+        "Association is strongly and obviously linear (or obviously none)",
+        "Fitted line passes through points with integer coordinates, including an integer $y$-intercept",
+        "Slope is a small integer such as $1$, $2$, or $-1$",
+        "No interpretation in context required; answer is a yes/no judgment or a direct read-off"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step tasks that require computing slope from two points and assembling the equation $y = mx + b$, or comparing two given candidate lines by reasoning about closeness of points. Slopes may be fractional.",
+      "constraints": [
+        "Student must compute slope $m = \\frac{y_2 - y_1}{x_2 - x_1}$ from two stated points on the line",
+        "Slope may be a simple fraction such as $\\frac{1}{2}$ or $\\frac{3}{4}$",
+        "$y$-intercept may need to be found by back-substitution rather than read directly",
+        "Comparison tasks require justifying which of two lines minimizes the spread of points"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems combining estimation of a line of fit, equation writing, and contextual interpretation or fit assessment. Student must extract data from a verbal or tabular description, reason about residual spread, and interpret slope or intercept in real-world terms.",
+      "constraints": [
+        "Requires reading a context or table to identify two representative points for the line",
+        "Slope and intercept must both be derived, then interpreted in context",
+        "Fit assessment must reference the closeness or spread of points, not just appearance",
+        "May ask a follow-up such as predicting a value or comparing fit quality of two models"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student fits a line that only touches the highest or lowest points instead of running through the middle of the cloud",
+      "distractor": "Chooses a line that connects the two extreme points rather than balancing points above and below, e.g. picks $y = 3x - 2$ because it hits the top corner point"
+    },
+    {
+      "misconception": "Student computes slope as $\\frac{x_2 - x_1}{y_2 - y_1}$ (inverts rise over run)",
+      "distractor": "Reports slope $\\frac{1}{2}$ when the correct slope is $2$ for points $(0,4)$ and $(5,14)$"
+    },
+    {
+      "misconception": "Student confuses the $y$-intercept with the $x$-intercept or with the first data point",
+      "distractor": "Writes $y = 2x + 5$ using a data point's $y$-value instead of the line's value at $x = 0$"
+    },
+    {
+      "misconception": "Student judges fit by how many points the line passes exactly through rather than overall closeness",
+      "distractor": "Calls a line a poor fit because it passes through only one point, ignoring that all points are very close to it"
+    },
+    {
+      "misconception": "Student believes any data can be fit with a line and ignores whether an association is actually linear",
+      "distractor": "States that a randomly scattered plot with no pattern still has a good line of fit"
+    },
+    {
+      "misconception": "Student reverses the sign of the slope for a downward (negative) trend",
+      "distractor": "Writes a positive slope such as $y = \\frac{3}{4}x + 10$ for data that clearly decreases from left to right"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

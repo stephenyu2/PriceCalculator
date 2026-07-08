@@ -1,0 +1,121 @@
+{
+  "standard": "6.NS.B.4",
+  "grade": "6",
+  "subject": "math",
+  "domain": "The Number System",
+  "domainCode": "NS",
+  "cluster": "Compute fluently with multi-digit numbers and find common factors and multiples",
+  "clusterCode": "B",
+  "skillName": "GCF, LCM, and Distributive Property",
+
+  "description": "Students find the greatest common factor (GCF) of two whole numbers $\\le 100$ and the least common multiple (LCM) of two whole numbers $\\le 12$. They then use the distributive property to rewrite a sum of two whole numbers from $1$ to $100$ that share a common factor as that factor times a sum of two numbers with no common factor, for example $36 + 8 = 4(9 + 2)$.",
+
+  "subSkills": [
+    "List all factors of a whole number and identify the greatest factor shared by two numbers (GCF)",
+    "Find the GCF using prime factorization (multiply the shared prime powers)",
+    "List multiples of a whole number and identify the least multiple shared by two numbers (LCM)",
+    "Find the LCM using prime factorization or the relationship $\\text{LCM}(a,b)=\\dfrac{a\\cdot b}{\\text{GCF}(a,b)}$",
+    "Factor the GCF out of a sum $a+b$ to write $\\text{GCF}\\cdot(\\frac{a}{\\text{GCF}}+\\frac{b}{\\text{GCF}})$ where the inner sum has no common factor",
+    "Verify a distributive-property rewrite by multiplying back to the original sum",
+    "Apply GCF and LCM to word problems (equal groups, repeating events, scheduling)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Find the GCF of two numbers",
+      "example": "Find the greatest common factor of $24$ and $36$. Answer: $12$."
+    },
+    {
+      "name": "Find the LCM of two numbers",
+      "example": "Find the least common multiple of $6$ and $8$. Answer: $24$."
+    },
+    {
+      "name": "Distributive-property rewrite",
+      "example": "Use the distributive property to rewrite $36 + 8$ as a product of the GCF and a sum. Answer: $4(9 + 2)$."
+    },
+    {
+      "name": "GCF word problem (equal groups)",
+      "example": "A florist has $18$ roses and $24$ tulips and wants to make identical bouquets using all the flowers. What is the greatest number of bouquets? Answer: $\\text{GCF}(18,24)=6$ bouquets."
+    },
+    {
+      "name": "LCM word problem (repeating events)",
+      "example": "One bell rings every $4$ minutes and another every $6$ minutes. If they ring together now, after how many minutes do they next ring together? Answer: $\\text{LCM}(4,6)=12$ minutes."
+    },
+    {
+      "name": "Verify or critique a distributive rewrite",
+      "example": "Is $40 + 16 = 4(10 + 4)$ a fully factored distributive form? Answer: No, because $10$ and $4$ still share factor $2$; the correct form is $8(5 + 2)$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recall and procedure with small, friendly numbers. Find the GCF or LCM directly by listing, or rewrite a sum where the GCF is obvious. The shared factor is small and the numbers have few factors.",
+      "constraints": [
+        "GCF problems use numbers $\\le 30$ with an obvious shared factor (e.g. $12$ and $18$)",
+        "LCM problems use numbers $\\le 8$ (e.g. $3$ and $4$, $4$ and $6$)",
+        "Distributive rewrites have GCF $2$, $3$, or $5$ and inner sums that are clearly coprime (e.g. $15 + 9 = 3(5 + 3)$)",
+        "No word problem, or a one-sentence word problem with the operation named"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step reasoning. Numbers are larger so listing is slow and prime factorization or systematic factoring is the efficient path. Distributive rewrites require actually computing the GCF first, and word problems require choosing between GCF and LCM.",
+      "constraints": [
+        "GCF problems use numbers up to $100$ (e.g. $48$ and $72$) where prime factorization helps",
+        "LCM problems use numbers up to $12$ where the two numbers share a factor (e.g. $8$ and $12$, $9$ and $12$)",
+        "Distributive rewrites use sums up to $100$ with GCF up to $12$ (e.g. $48 + 36 = 12(4 + 3)$)",
+        "Word problems state a context and require the student to decide GCF vs LCM"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step or multi-concept. Students combine GCF and LCM, fully factor a sum that has a non-obvious GCF, critique an incorrect or incomplete factoring, or solve a layered word problem with a follow-up question.",
+      "constraints": [
+        "Distributive rewrites where the GCF is non-obvious and a partial factoring is tempting (e.g. $42 + 70 = 14(3 + 5)$, not $7(6 + 10)$)",
+        "Problems that ask the student to verify, correct, or explain a given distributive rewrite",
+        "Word problems combining GCF and LCM, or with a two-part follow-up (e.g. find equal groups, then how many of each item per group)",
+        "Numbers near the $100$ ceiling with multiple shared prime factors (e.g. $\\text{GCF}(84,90)$)"
+      ]
+    },
+    "tierSplit": "This standard is built as a single ramped worksheet (15 items, Easy -> Hard). If split, tier1 (Easy -> Medium) would cover finding GCF and LCM directly plus basic distributive rewrites; tier2 (Medium -> Hard) would cover prime-factorization methods, full factoring of non-obvious sums, verifying/critiquing rewrites, and combined GCF/LCM word problems."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student confuses GCF and LCM, giving the least common multiple when asked for the greatest common factor (or vice versa)",
+      "distractor": "For GCF$(8,12)$ answers $24$ (the LCM) instead of $4$"
+    },
+    {
+      "misconception": "Student multiplies the two numbers to get the LCM instead of using their shared factor",
+      "distractor": "For LCM$(6,8)$ answers $48$ (the product $6\\times 8$) instead of $24$"
+    },
+    {
+      "misconception": "Student factors out only a common factor that is not the greatest, leaving an inner sum that still shares a factor",
+      "distractor": "Rewrites $36 + 8$ as $2(18 + 4)$ instead of the fully factored $4(9 + 2)$"
+    },
+    {
+      "misconception": "Student divides only one term by the GCF when factoring, breaking the equality",
+      "distractor": "Rewrites $36 + 8 = 4(9 + 8)$, dividing only the first term by $4$"
+    },
+    {
+      "misconception": "Student finds a common factor but not the greatest, reporting a smaller shared factor as the GCF",
+      "distractor": "For GCF$(24,36)$ answers $6$ instead of $12$"
+    },
+    {
+      "misconception": "Student lists a number that is a multiple of only one of the two numbers as the LCM",
+      "distractor": "For LCM$(4,6)$ answers $8$ (a multiple of $4$ only) instead of $12$"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet (15 items, Easy->Hard). lesson 5+5, quiz 8. tier1/tier2 listed for schema completeness but not used for this standard.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "standard": "GEO.S-CP.A.2",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Understand independence and conditional probability and use them to interpret data",
+  "clusterCode": "A",
+  "skillName": "Independence of Two Events",
+
+  "description": "Students determine whether two events $A$ and $B$ are independent by testing the multiplication characterization: $A$ and $B$ are independent exactly when $P(A \\text{ and } B) = P(A)\\cdot P(B)$. Given probabilities, a two-way frequency table, a sample space, or a chance setup, they compute $P(A)$, $P(B)$, and $P(A \\cap B)$, compare the product $P(A)\\cdot P(B)$ to the observed $P(A \\cap B)$, and decide independence. They also use the characterization in reverse: assuming independence to find a missing joint probability, and interpreting what independence means in context (one event occurring tells you nothing about the other).",
+
+  "subSkills": [
+    "Compute the probability of a single event from a sample space, table, or stated probabilities",
+    "Compute the joint probability $P(A \\cap B)$ of two events occurring together",
+    "Form the product $P(A)\\cdot P(B)$ and compare it to $P(A \\cap B)$ to test independence",
+    "State the conclusion: events are independent iff $P(A \\cap B) = P(A)\\cdot P(B)$",
+    "Read marginal and joint probabilities from a two-way frequency (contingency) table",
+    "Use independence as an assumption to compute a missing joint probability $P(A \\cap B) = P(A)\\cdot P(B)$",
+    "Interpret independence in context (knowing $A$ occurred does not change the chance of $B$)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Test independence from given probabilities",
+      "example": "Given $P(A)=\\frac{1}{2}$, $P(B)=\\frac{1}{3}$, and $P(A \\cap B)=\\frac{1}{6}$, are $A$ and $B$ independent? Since $P(A)\\cdot P(B)=\\frac{1}{2}\\cdot\\frac{1}{3}=\\frac{1}{6}=P(A \\cap B)$, yes, they are independent."
+    },
+    {
+      "name": "Test independence from a sample space",
+      "example": "A fair number cube is rolled. Let $A$ = 'the result is even' and $B$ = 'the result is greater than $4$'. Then $P(A)=\\frac{1}{2}$, $P(B)=\\frac{1}{3}$, and $P(A \\cap B)=P(\\{6\\})=\\frac{1}{6}$. Because $\\frac{1}{2}\\cdot\\frac{1}{3}=\\frac{1}{6}$, $A$ and $B$ are independent."
+    },
+    {
+      "name": "Test independence from a two-way table",
+      "example": "A survey of $200$ students records whether they play a sport and whether they play an instrument. Using $P(\\text{sport})$, $P(\\text{instrument})$, and $P(\\text{sport and instrument})$ read from the table, decide whether playing a sport and playing an instrument are independent by comparing $P(A)\\cdot P(B)$ to $P(A \\cap B)$."
+    },
+    {
+      "name": "Use independence to find a missing joint probability",
+      "example": "A coin is flipped and a number cube is rolled, and these are independent. Find $P(\\text{heads and a } 5)$. Answer: $\\frac{1}{2}\\cdot\\frac{1}{6}=\\frac{1}{12}$."
+    },
+    {
+      "name": "Show two events are NOT independent (dependent)",
+      "example": "Two cards are drawn without replacement from a standard deck. Let $A$ = 'first card is a heart' and $B$ = 'second card is a heart'. Show $P(A \\cap B)=\\frac{13}{52}\\cdot\\frac{12}{51}=\\frac{1}{17}$ but $P(A)\\cdot P(B)=\\frac{1}{4}\\cdot\\frac{1}{4}=\\frac{1}{16}$, so the events are not independent."
+    },
+    {
+      "name": "Interpret independence in context",
+      "example": "From a data table, $P(\\text{owns a car})=0.6$, $P(\\text{commutes by car})=0.5$, and $P(\\text{owns and commutes by car})=0.45$. Since $0.6\\cdot 0.5=0.30 \\neq 0.45$, the events are not independent; owning a car makes commuting by car more likely."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "All three of $P(A)$, $P(B)$, and $P(A \\cap B)$ are given directly or read from a tiny equally likely sample space. The student performs one multiplication and one comparison to decide independence. Numbers are friendly fractions or simple decimals. On a single ramped worksheet these are the early items; for a two-worksheet split they anchor tier1.",
+      "constraints": [
+        "$P(A)$, $P(B)$, $P(A \\cap B)$ are stated or come from a sample space with at most $6$ equally likely outcomes",
+        "Probabilities are simple fractions ($\\frac{1}{2}$, $\\frac{1}{3}$, $\\frac{1}{6}$) or one-place decimals",
+        "Exactly one product and one comparison required",
+        "Conclusion is a direct yes/no on independence"
+      ]
+    },
+    "Medium": {
+      "description": "Student must first extract or compute at least one of the needed probabilities before testing independence: counting outcomes in a larger sample space, reading marginals and a joint cell from a two-way table, or using independence to find a missing joint probability. Fractions may require reduction; comparison may involve a common denominator. These are the middle items of a ramped worksheet and the overlap zone of a tier1/tier2 split.",
+      "constraints": [
+        "At least one probability must be computed from counts, a table, or a sample space larger than $6$ outcomes",
+        "May require finding a common denominator or reducing fractions before comparing",
+        "Includes 'assume independence, find $P(A \\cap B)$' tasks",
+        "Two-way tables have at most a $2\\times 2$ structure with given totals"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step or interpretive items: without-replacement (dependent) setups where the student must show the product fails, larger or partially completed two-way tables requiring filled-in marginals, problems mixing a numeric independence test with a written interpretation, or working backward to find a value that would make two events independent. These are the late items of a ramped worksheet and anchor tier2.",
+      "constraints": [
+        "Without-replacement draws or other dependent contexts the student must analyze and explain",
+        "Two-way table may be incomplete, requiring the student to complete marginal totals first",
+        "Requires both a computation and a contextual interpretation of (in)dependence",
+        "May ask for the value of a frequency or probability that would make $A$ and $B$ independent"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student adds the probabilities instead of multiplying when testing independence",
+      "distractor": "Checks whether $P(A \\cap B) = P(A)+P(B)$, e.g. compares $P(A \\cap B)$ to $\\frac{1}{2}+\\frac{1}{3}=\\frac{5}{6}$ instead of $\\frac{1}{2}\\cdot\\frac{1}{3}=\\frac{1}{6}$"
+    },
+    {
+      "misconception": "Student assumes any two events that can both happen are automatically independent and never checks the product",
+      "distractor": "Concludes 'independent' for every problem without comparing $P(A)\\cdot P(B)$ to $P(A \\cap B)$, e.g. calls dependent without-replacement draws independent"
+    },
+    {
+      "misconception": "Student confuses mutually exclusive with independent, thinking disjoint events are independent",
+      "distractor": "Reasons that because $A$ and $B$ cannot occur together ($P(A \\cap B)=0$) they must be independent, instead of noting $P(A)\\cdot P(B)\\neq 0$"
+    },
+    {
+      "misconception": "Student multiplies the wrong pair or uses a conditional probability in place of a marginal",
+      "distractor": "Compares $P(A \\cap B)$ to $P(A)\\cdot P(A \\cap B)$ or to $P(B)$ alone instead of to $P(A)\\cdot P(B)$"
+    },
+    {
+      "misconception": "Student misreads a two-way table, using a joint cell where a marginal total is needed (or vice versa)",
+      "distractor": "Takes $P(A)$ to be the joint cell count over the total instead of the row total over the grand total, so the product comparison is wrong"
+    },
+    {
+      "misconception": "Student treats a without-replacement (dependent) draw as if the total stays the same, masking the dependence",
+      "distractor": "For two hearts drawn without replacement computes $\\frac{13}{52}\\cdot\\frac{13}{52}=\\frac{1}{16}$ and declares independence, instead of $\\frac{13}{52}\\cdot\\frac{12}{51}=\\frac{1}{17}\\neq\\frac{1}{16}$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

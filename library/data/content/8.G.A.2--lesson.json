@@ -1,0 +1,169 @@
+{
+  "id": "8.G.A.2--lesson",
+  "standard": "8.G.A.2",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand congruence and similarity using physical models, transparencies, or geometry software",
+  "clusterCode": "A",
+  "skillName": "Congruence and Rigid Motions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "A rigid motion is a transformation that slides, flips, or turns a figure without changing its size or shape. The three basic rigid motions are translations, reflections, and rotations. Because each one preserves every length and every angle measure, the image is always congruent to the original. Two figures are congruent exactly when some sequence of rigid motions maps one onto the other. On the coordinate plane we use a few standard rules: a translation $(x,y)\\to(x+a,\\,y+b)$ shifts a point; a reflection over the $x$-axis sends $(x,y)\\to(x,-y)$; over the $y$-axis sends $(x,y)\\to(-x,y)$; over the line $y=x$ sends $(x,y)\\to(y,x)$; a $90^\\circ$ counterclockwise rotation about the origin sends $(x,y)\\to(-y,x)$; a $180^\\circ$ rotation sends $(x,y)\\to(-x,-y)$; and a $270^\\circ$ counterclockwise rotation sends $(x,y)\\to(y,-x)$. When you compose two motions, order matters: apply the first motion to get the image, then apply the second motion to that image.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Triangle $ABC$ has vertices $A(1,2)$, $B(4,2)$, and $C(4,6)$. Find the coordinates of the image after the translation $(x,y)\\to(x-3,\\,y+1)$.",
+      "solution": {
+        "steps": [
+          "A translation moves every vertex by the same rule, so apply $(x,y)\\to(x-3,\\,y+1)$ to each point.",
+          "$A(1,2)\\to A'(1-3,\\,2+1)=A'(-2,3)$",
+          "$B(4,2)\\to B'(4-3,\\,2+1)=B'(1,3)$",
+          "$C(4,6)\\to C'(4-3,\\,6+1)=C'(1,7)$",
+          "A translation is a rigid motion, so $A'B'C'$ is congruent to $ABC$ with all side lengths and angles unchanged."
+        ],
+        "answer": "$A'(-2,3)$, $B'(1,3)$, $C'(1,7)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Point $P$ has coordinates $(2,5)$. Find the image $P'$ after a reflection over the $x$-axis, and the image $Q'$ of $Q(2,5)$ after a reflection over the $y$-axis.",
+      "solution": {
+        "steps": [
+          "Reflecting over the $x$-axis keeps $x$ the same and negates $y$: $(x,y)\\to(x,-y)$.",
+          "So $P(2,5)\\to P'(2,-5)$.",
+          "Reflecting over the $y$-axis keeps $y$ the same and negates $x$: $(x,y)\\to(-x,y)$.",
+          "So $Q(2,5)\\to Q'(-2,5)$.",
+          "Both reflections are rigid motions, so each image is the same distance from the axis as the original and is congruent to it."
+        ],
+        "answer": "$P'(2,-5)$ and $Q'(-2,5)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Point $P(2,5)$ is reflected over the $y$-axis and then the result is translated by $(x,y)\\to(x,\\,y-4)$. Find the coordinates of the final image $P''$.",
+      "solution": {
+        "steps": [
+          "Order matters, so apply the reflection first, then the translation.",
+          "Reflect $P(2,5)$ over the $y$-axis using $(x,y)\\to(-x,y)$: $P'(-2,5)$.",
+          "Now translate $P'(-2,5)$ by $(x,y)\\to(x,\\,y-4)$: $P''(-2,\\,5-4)=P''(-2,1)$.",
+          "If you reversed the order (translate then reflect) you would also get $(-2,1)$ here, but in general the order of a sequence changes the result, so always follow the stated order."
+        ],
+        "answer": "$P''(-2,1)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Triangle $DEF$ has vertices $D(1,1)$, $E(4,1)$, and $F(1,5)$. Triangle $D'E'F'$ has vertices $D'(-1,-1)$, $E'(-4,-1)$, and $F'(-1,-5)$. Describe a single rigid motion that maps $DEF$ onto $D'E'F'$, and explain why the two triangles are congruent.",
+      "solution": {
+        "steps": [
+          "Compare each vertex to its image: $D(1,1)\\to D'(-1,-1)$, $E(4,1)\\to E'(-4,-1)$, $F(1,5)\\to F'(-1,-5)$.",
+          "In every case both coordinates have been negated: $(x,y)\\to(-x,-y)$.",
+          "The rule $(x,y)\\to(-x,-y)$ is exactly a $180^\\circ$ rotation about the origin.",
+          "So a single $180^\\circ$ rotation about the origin maps $DEF$ onto $D'E'F'$.",
+          "A rotation is a rigid motion, so it preserves all lengths and angles. Because one figure maps onto the other by a rigid motion, $DEF$ and $D'E'F'$ are congruent."
+        ],
+        "answer": "A $180^\\circ$ rotation about the origin; the triangles are congruent because a rotation is a rigid motion that preserves length and angle measure."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Triangle $RST$ is the image of triangle $JKL$ under a sequence of a reflection and a translation. Given that $JK=7$ and $\\angle K=52^\\circ$, find $RS$ and the measure of the angle of $RST$ that corresponds to $\\angle K$.",
+      "solution": {
+        "steps": [
+          "A reflection followed by a translation is a sequence of rigid motions, so the image $RST$ is congruent to $JKL$.",
+          "Rigid motions preserve length, so the side corresponding to $JK$ has the same length. The vertices correspond in order $J\\to R$, $K\\to S$, $L\\to T$, so $JK$ corresponds to $RS$.",
+          "Therefore $RS=JK=7$.",
+          "Rigid motions also preserve angle measure. The angle at $K$ corresponds to the angle at $S$, so $\\angle S=\\angle K=52^\\circ$.",
+          "The size is unchanged because these are rigid motions, not dilations: nothing is stretched or shrunk."
+        ],
+        "answer": "$RS=7$ and the corresponding angle $\\angle S=52^\\circ$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Point $A(-3,4)$ is translated by $(x,y)\\to(x+5,\\,y-2)$. Find the coordinates of the image $A'$.",
+      "hint": "Add $5$ to the $x$-coordinate and subtract $2$ from the $y$-coordinate.",
+      "solution": {
+        "steps": [
+          "Apply the rule $(x,y)\\to(x+5,\\,y-2)$ to $A(-3,4)$.",
+          "$x$: $-3+5=2$.",
+          "$y$: $4-2=2$.",
+          "So $A'(2,2)$."
+        ],
+        "answer": "$A'(2,2)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Do rigid motions (translations, reflections, and rotations) change the side lengths or angle measures of a figure? Explain what this tells you about the original figure and its image.",
+      "hint": "Think about what the word \"rigid\" means and how it relates to congruence.",
+      "solution": {
+        "steps": [
+          "No. By definition, a rigid motion preserves distance, so every side length stays the same.",
+          "A rigid motion also preserves angle measure, so every angle stays the same.",
+          "Because all corresponding lengths and angles are equal, the original figure and its image are congruent."
+        ],
+        "answer": "No; rigid motions preserve all lengths and angles, so the image is always congruent to the original."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Point $B(3,1)$ is rotated $90^\\circ$ counterclockwise about the origin. Find the coordinates of the image $B'$.",
+      "hint": "A $90^\\circ$ counterclockwise rotation about the origin uses the rule $(x,y)\\to(-y,x)$.",
+      "solution": {
+        "steps": [
+          "Apply the rule $(x,y)\\to(-y,x)$ to $B(3,1)$.",
+          "The new $x$-coordinate is $-y=-1$.",
+          "The new $y$-coordinate is $x=3$.",
+          "So $B'(-1,3)$."
+        ],
+        "answer": "$B'(-1,3)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Point $C(4,-2)$ is reflected over the line $y=x$ and then translated by $(x,y)\\to(x-1,\\,y+3)$. Find the coordinates of the final image $C''$.",
+      "hint": "Reflect first using $(x,y)\\to(y,x)$, then apply the translation to that result.",
+      "solution": {
+        "steps": [
+          "Reflect $C(4,-2)$ over $y=x$ using $(x,y)\\to(y,x)$: $C'(-2,4)$.",
+          "Now translate $C'(-2,4)$ by $(x,y)\\to(x-1,\\,y+3)$.",
+          "$x$: $-2-1=-3$.",
+          "$y$: $4+3=7$.",
+          "So $C''(-3,7)$."
+        ],
+        "answer": "$C''(-3,7)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Figure $1$ has vertices $(0,0)$, $(2,0)$, and $(2,3)$. Figure $2$ has vertices $(0,0)$, $(-2,0)$, and $(-2,3)$. Are the two figures congruent? If so, describe a single rigid motion that maps Figure $1$ onto Figure $2$.",
+      "hint": "Compare the coordinates of matching vertices. Which single transformation changes only the sign of the $x$-coordinates?",
+      "solution": {
+        "steps": [
+          "Match the vertices: $(0,0)\\to(0,0)$, $(2,0)\\to(-2,0)$, $(2,3)\\to(-2,3)$.",
+          "In each case the $x$-coordinate is negated and the $y$-coordinate is unchanged: $(x,y)\\to(-x,y)$.",
+          "That rule is a reflection over the $y$-axis.",
+          "A reflection is a rigid motion, so it preserves all lengths and angles. Because a rigid motion maps Figure $1$ onto Figure $2$, the figures are congruent (a flip still produces a congruent figure)."
+        ],
+        "answer": "Yes; a reflection over the $y$-axis maps Figure $1$ onto Figure $2$, so they are congruent."
+      }
+    }
+  ]
+}

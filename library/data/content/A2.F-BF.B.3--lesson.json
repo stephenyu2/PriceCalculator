@@ -1,0 +1,171 @@
+{
+  "id": "A2.F-BF.B.3--lesson",
+  "standard": "A2.F-BF.B.3",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Functions — Building Functions",
+  "domainCode": "F-BF",
+  "cluster": "Build new functions from existing functions",
+  "clusterCode": "B",
+  "skillName": "Transformations of Functions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "Starting from a parent function $f(x)$, you can build a new function by changing the input or the output. Changes on the outside, $f(x)+k$ and $kf(x)$, act on the $y$-values and behave the way you expect: $+k$ shifts up, a multiplier of $|k|>1$ stretches taller, and a negative multiplier reflects across the $x$-axis. Changes on the inside, $f(x+k)$ and $f(kx)$, act on the $x$-values and run opposite to your intuition: $f(x+k)$ shifts left for $k>0$, and $f(kx)$ compresses horizontally for $|k|>1$. The general form $g(x)=a\\,f\\!\\left(b(x-h)\\right)+c$ packages every one of these together, and reading the parameters back out lets you describe or build any transformed graph.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Describe how the graph of $g(x)=f(x)-4$ compares to the graph of $f(x)$.",
+      "solution": {
+        "steps": [
+          "The change $-4$ is added to the output, on the outside of $f$, so it affects $y$-values.",
+          "Adding a constant $k$ outside, $f(x)+k$, shifts the graph up when $k>0$ and down when $k<0$.",
+          "Here $k=-4<0$, so every point moves down $4$ units.",
+          "There is no change to the input, so there is no horizontal movement, stretch, or reflection."
+        ],
+        "answer": "A vertical shift down $4$ units."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Describe how the graph of $g(x)=-3f(x)$ compares to the graph of $f(x)$.",
+      "solution": {
+        "steps": [
+          "The factor $-3$ multiplies the output, so this is a vertical (output) transformation.",
+          "Separate the sign from the size: $-3 = (-1)\\cdot 3$.",
+          "The factor $3$ (with $|{-3}|=3>1$) stretches the graph vertically by a factor of $3$: each $y$-coordinate is tripled.",
+          "The negative sign reflects the graph across the $x$-axis, flipping each $y$-coordinate's sign.",
+          "Together: a vertical stretch by $3$ and a reflection across the $x$-axis. For example, a point $(x,y)$ on $f$ maps to $(x,-3y)$ on $g$."
+        ],
+        "answer": "A vertical stretch by a factor of $3$ together with a reflection across the $x$-axis."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Describe how the graph of $g(x)=f(x+5)$ compares to the graph of $f(x)$.",
+      "solution": {
+        "steps": [
+          "The $+5$ is added to the input, on the inside of $f$, so this is a horizontal transformation.",
+          "Horizontal shifts run opposite to the sign: $f(x+k)$ shifts the graph left when $k>0$ and right when $k<0$.",
+          "Here $k=+5$, so the graph shifts left $5$ units.",
+          "Check with a point: if $(x_0,y_0)$ is on $f$, then $g$ reaches that same output when $x+5=x_0$, i.e. at $x=x_0-5$, which is $5$ units to the left."
+        ],
+        "answer": "A horizontal shift left $5$ units."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "The point $(4,9)$ lies on $y=f(x)$. Find the image of this point on $y=f(x)+5$ and on $y=2f(x)$.",
+      "solution": {
+        "steps": [
+          "Both transformations act on the output, so the $x$-coordinate $4$ stays the same in each case.",
+          "For $y=f(x)+5$: add $5$ to the output, so $y=9+5=14$. The image is $(4,14)$.",
+          "For $y=2f(x)$: multiply the output by $2$, so $y=2\\cdot 9=18$. The image is $(4,18)$.",
+          "Note we never change the input, so answers like $(9,9)$ or $(8,9)$ would incorrectly move the $x$-coordinate."
+        ],
+        "answer": "On $y=f(x)+5$ the image is $(4,14)$; on $y=2f(x)$ the image is $(4,18)$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Starting from $f(x)=x^{2}$, apply a vertical stretch by a factor of $3$, a reflection across the $x$-axis, and then a shift right $1$ unit and up $4$ units. Write the equation of the resulting function $g(x)$, and check the image of the vertex $(0,0)$.",
+      "solution": {
+        "steps": [
+          "Begin with the parent $f(x)=x^{2}$.",
+          "The vertical stretch by $3$ and the reflection across the $x$-axis combine into a leading factor of $-3$: $-3x^{2}$.",
+          "A shift right $1$ replaces $x$ with $(x-1)$ inside the squaring: $-3(x-1)^{2}$.",
+          "A shift up $4$ adds $4$ on the outside: $g(x)=-3(x-1)^{2}+4$.",
+          "Check the vertex $(0,0)$: the shifts move it to $(0+1,\\,0+4)=(1,4)$, and indeed $g(1)=-3(1-1)^{2}+4=4$, so $(1,4)$ is the new vertex."
+        ],
+        "answer": "$g(x)=-3(x-1)^{2}+4$, with vertex at $(1,4)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Describe how the graph of $g(x)=\\frac{1}{2}f(x)$ compares to the graph of $f(x)$.",
+      "hint": "A factor outside $f$ scales the output. Is $\\frac{1}{2}$ greater than $1$ or between $0$ and $1$?",
+      "solution": {
+        "steps": [
+          "The factor $\\frac{1}{2}$ multiplies the output, so this is a vertical transformation.",
+          "Since $0<\\frac{1}{2}<1$, the outputs are scaled toward the $x$-axis: this is a vertical compression.",
+          "The compression factor is $\\frac{1}{2}$, so each $y$-coordinate is halved.",
+          "The factor is positive, so there is no reflection."
+        ],
+        "answer": "A vertical compression by a factor of $\\frac{1}{2}$ (no reflection)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Describe how the graph of $g(x)=f(2x)$ compares to the graph of $f(x)$.",
+      "hint": "The $2$ is inside $f$, so it is a horizontal change, and horizontal scaling runs opposite to intuition.",
+      "solution": {
+        "steps": [
+          "The factor $2$ multiplies the input, so this is a horizontal transformation.",
+          "For $f(kx)$ with $|k|>1$, the graph is compressed horizontally toward the $y$-axis by a factor of $\\frac{1}{|k|}$.",
+          "Here $k=2$, so the compression factor is $\\frac{1}{2}$.",
+          "Check a point: if $(x_0,y_0)$ is on $f$, then $g$ hits that output when $2x=x_0$, i.e. at $x=\\frac{x_0}{2}$, half as far from the $y$-axis."
+        ],
+        "answer": "A horizontal compression by a factor of $\\frac{1}{2}$ (toward the $y$-axis)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "If $f(x)=\\sqrt{x}$, write the equation of the function whose graph is $f$ shifted left $2$ units and down $1$ unit.",
+      "hint": "Left shifts go inside as $x+2$; down shifts go outside as $-1$.",
+      "solution": {
+        "steps": [
+          "Start from the parent $f(x)=\\sqrt{x}$.",
+          "A shift left $2$ replaces $x$ with $x+2$ inside the radical: $\\sqrt{x+2}$.",
+          "A shift down $1$ subtracts $1$ on the outside: $g(x)=\\sqrt{x+2}-1$.",
+          "Check the starting point $(0,0)$ of $\\sqrt{x}$: it moves to $(-2,-1)$, and $g(-2)=\\sqrt{-2+2}-1=-1$, confirming the new endpoint."
+        ],
+        "answer": "$g(x)=\\sqrt{x+2}-1$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Describe how the graph of $g(x)=\\frac{1}{2}|x+3|-5$ compares to the graph of $f(x)=|x|$.",
+      "hint": "Identify each parameter: the outside multiplier, the inside shift, and the outside shift. Watch the direction of the inside shift.",
+      "solution": {
+        "steps": [
+          "Match $g$ to the form $a\\,f(x-h)+c$ with $f(x)=|x|$: here $a=\\frac{1}{2}$, the inside is $x+3$, and $c=-5$.",
+          "The outside factor $a=\\frac{1}{2}$ (with $0<\\frac{1}{2}<1$) is a vertical compression by a factor of $\\frac{1}{2}$.",
+          "The inside $x+3$ is a horizontal shift; since $+3$ shifts opposite the sign, the graph moves left $3$ units.",
+          "The outside $-5$ shifts the graph down $5$ units.",
+          "There is no negative multiplier, so there is no reflection."
+        ],
+        "answer": "A vertical compression by a factor of $\\frac{1}{2}$, a horizontal shift left $3$ units, and a vertical shift down $5$ units."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Describe the transformation $g(x)=f(2x-6)$ of $f(x)$, being careful about the horizontal scale and shift.",
+      "hint": "Factor the inside completely before reading the shift: $2x-6=2(x-3)$.",
+      "solution": {
+        "steps": [
+          "The change is on the inside, so it is horizontal. Factor out the coefficient of $x$: $2x-6=2(x-3)$.",
+          "So $g(x)=f\\!\\left(2(x-3)\\right)$, matching $f(b(x-h))$ with $b=2$ and $h=3$.",
+          "The factor $b=2$ (with $|b|>1$) gives a horizontal compression by a factor of $\\frac{1}{2}$.",
+          "The $(x-3)$ gives a horizontal shift right $3$ units, not right $6$: the shift must be read after factoring.",
+          "Apply the compression first, then the shift, since the shift is measured in the already-scaled input."
+        ],
+        "answer": "A horizontal compression by a factor of $\\frac{1}{2}$ followed by a horizontal shift right $3$ units."
+      }
+    }
+  ]
+}

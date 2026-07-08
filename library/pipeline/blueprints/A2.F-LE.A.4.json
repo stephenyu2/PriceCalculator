@@ -1,0 +1,144 @@
+{
+  "standard": "A2.F-LE.A.4",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Functions — Linear, Quadratic, and Exponential Models",
+  "domainCode": "F-LE",
+  "cluster": "Construct and compare linear, quadratic, and exponential models and solve problems",
+  "clusterCode": "A",
+  "skillName": "Logarithms and Exponential Models",
+
+  "description": "Students solve exponential equations of the form $ab^{ct}=d$ (where the base $b$ is $2$, $10$, or $e$) by isolating the power and rewriting the equation as a logarithm. They use the definition of a logarithm as the inverse of exponentiation ($b^{x}=y \\iff x=\\log_b y$), the special cases $\\log = \\log_{10}$ (common log) and $\\ln = \\log_e$ (natural log), and the power property $\\log b^{x}=x\\log b$ to express the solution exactly as a logarithm and then evaluate it with technology. They first divide by $a$ to isolate $b^{ct}=\\frac{d}{a}$, take the appropriate log of both sides, and solve the resulting linear equation for $t$, giving $t=\\dfrac{\\log_b\\!\\left(\\frac{d}{a}\\right)}{c}$ (equivalently $t=\\dfrac{\\ln\\!\\left(\\frac{d}{a}\\right)}{c\\,\\ln b}$ via the change-of-base formula). They apply this to real-world exponential models such as compound interest, continuous growth and decay $A=Pe^{rt}$, population and bacteria growth, radioactive decay and half-life, and doubling-time problems, expressing the answer first as an exact logarithm and then as a decimal approximation rounded as the problem requires.",
+
+  "subSkills": [
+    "Rewrite an exponential equation in logarithmic form using $b^{x}=y \\iff x=\\log_b y$ for $b=2,10,e$",
+    "Recognize and use the common logarithm $\\log = \\log_{10}$ and the natural logarithm $\\ln = \\log_e$",
+    "Isolate the exponential factor: divide both sides of $ab^{ct}=d$ by $a$ to get $b^{ct}=\\frac{d}{a}$ before taking a logarithm",
+    "Apply the power property of logarithms $\\log b^{x}=x\\log b$ (and $\\ln e^{x}=x$, $\\log 10^{x}=x$) to bring the exponent down",
+    "Solve the resulting linear equation for $t$: $t=\\dfrac{\\log_b\\!\\left(\\frac{d}{a}\\right)}{c}$",
+    "Apply the change-of-base formula $\\log_b x=\\dfrac{\\ln x}{\\ln b}=\\dfrac{\\log x}{\\log b}$ to evaluate a log of base $2$ with a calculator",
+    "Evaluate the logarithmic solution with technology and round appropriately, distinguishing the exact form from the approximation",
+    "Translate a verbal exponential model (compound interest, continuous growth/decay, half-life, doubling time) into $ab^{ct}=d$ and solve for the time $t$",
+    "Solve continuous models $A=Pe^{rt}$ for $t$ using the natural logarithm: $t=\\dfrac{\\ln(A/P)}{r}$"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Rewrite exponential as logarithm (definition)",
+      "example": "Express the solution of $10^{t}=350$ as a logarithm, then evaluate. Answer: $t=\\log 350=\\log_{10}350\\approx 2.544$."
+    },
+    {
+      "name": "Base e with natural log",
+      "example": "Solve $e^{t}=20$ for $t$ exactly, then approximate. Answer: $t=\\ln 20\\approx 2.996$."
+    },
+    {
+      "name": "Base 2 via change of base",
+      "example": "Express the solution of $2^{t}=50$ as a logarithm and evaluate. Answer: $t=\\log_2 50=\\dfrac{\\ln 50}{\\ln 2}\\approx 5.644$."
+    },
+    {
+      "name": "Isolate then solve (leading coefficient a)",
+      "example": "Solve $5\\cdot 10^{t}=2000$. Divide by $5$: $10^{t}=400$, so $t=\\log 400\\approx 2.602$."
+    },
+    {
+      "name": "Coefficient c inside the exponent",
+      "example": "Solve $3\\cdot e^{2t}=48$. Divide by $3$: $e^{2t}=16$, so $2t=\\ln 16$ and $t=\\dfrac{\\ln 16}{2}\\approx 1.386$."
+    },
+    {
+      "name": "Continuous growth model A = Pe^{rt}",
+      "example": "A population grows as $P=500e^{0.03t}$. Find $t$ when $P=1500$. Solve $500e^{0.03t}=1500 \\Rightarrow e^{0.03t}=3 \\Rightarrow t=\\dfrac{\\ln 3}{0.03}\\approx 36.6$ years."
+    },
+    {
+      "name": "Compound interest (solve for time)",
+      "example": "How long until $\\$1000$ grows to $\\$2500$ at $6\\%$ compounded continuously? Solve $1000e^{0.06t}=2500 \\Rightarrow t=\\dfrac{\\ln 2.5}{0.06}\\approx 15.3$ years."
+    },
+    {
+      "name": "Half-life / radioactive decay",
+      "example": "A sample decays as $A=80\\left(\\tfrac{1}{2}\\right)^{t/12}$, modeled with base $2$ as $A=80\\cdot 2^{-t/12}$. Find $t$ when $A=10$. Solve $2^{-t/12}=\\tfrac{1}{8} \\Rightarrow -\\tfrac{t}{12}=\\log_2\\tfrac{1}{8}=-3 \\Rightarrow t=36$ time units."
+    },
+    {
+      "name": "Doubling time",
+      "example": "An investment is modeled by $A=Pe^{0.045t}$. Find the doubling time. Solve $e^{0.045t}=2 \\Rightarrow t=\\dfrac{\\ln 2}{0.045}\\approx 15.4$ years."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step rewrite of a one-term exponential equation as a logarithm. The exponential factor is already isolated ($a=1$, $c=1$), so the student only applies the definition $b^{t}=d \\Rightarrow t=\\log_b d$ and (for base $2$) the change-of-base formula to evaluate. No model to build, no division, no coefficient inside the exponent. This is the bottom of a ramped sheet and the start of tier1.",
+      "constraints": [
+        "Equation is already in the form $b^{t}=d$ with $a=1$ and $c=1$",
+        "Base $b$ is $2$, $10$, or $e$; use $\\log$ for $10$, $\\ln$ for $e$, change of base for $2$",
+        "Target is to write the exact logarithmic solution and give a rounded decimal",
+        "$d$ is a positive number, often a clean value; no real-world context",
+        "No isolating step and no exponent coefficient to divide out"
+      ]
+    },
+    "Medium": {
+      "description": "Two or three steps. Student first isolates the exponential factor by dividing by a leading coefficient $a \\neq 1$, and/or divides by an exponent coefficient $c \\neq 1$ after taking the log. May be a direct continuous-growth model $A=Pe^{rt}$ with all constants given, where the student solves for $t$. The exact form is a logarithm divided by a constant. This is the top of tier1 and the bottom of tier2.",
+      "constraints": [
+        "Leading coefficient $a \\neq 1$ requires dividing both sides by $a$ first",
+        "Exponent coefficient $c \\neq 1$ requires dividing by $c$ after taking the log, giving $t=\\dfrac{\\log_b(d/a)}{c}$",
+        "May be a single continuous model $A=Pe^{rt}$ with given $P$, $r$, $A$ solved with $\\ln$",
+        "Answer is left as an exact logarithm and also approximated; rounding is specified",
+        "Base $2$ items require the change-of-base formula to evaluate"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step modeling. Student translates a verbal exponential scenario (compound interest, continuous growth/decay, half-life, doubling time, depreciation) into the form $ab^{ct}=d$, choosing the correct base, rate, and target, isolates the power, takes the appropriate logarithm, and solves for $t$ with proper interpretation and rounding. Several steps chain so a single sign, rate-conversion, or exponent error propagates to a wrong time. This is the top of tier2 and the end of a ramped sheet.",
+      "constraints": [
+        "Student must build the model from words (identify $a=P$, the base/rate, and the target $d$) before solving",
+        "Contexts include compound or continuous interest, population growth, radioactive decay/half-life, and doubling time",
+        "Requires choosing between base $e$ (continuous) and base $2$ (half-life/doubling) and using $\\ln$ or change of base accordingly",
+        "Answer reported as an exact logarithm and a decimal with units, rounded as stated, and interpreted in context",
+        "Multi-step chaining where rate conversion, the $\\frac{d}{a}$ quotient, and the exponent coefficient $c$ must all be handled correctly"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student takes the log of each term separately instead of isolating the power first, distributing the log over a sum or a product incorrectly",
+      "distractor": "For $5\\cdot 10^{t}=2000$ writes $t=\\log 2000-\\log 5$ applied to the exponent as $t=\\log 2000 / \\log 5$, or fails to divide by $5$ first and reports $t=\\log 2000\\approx 3.301$ instead of $t=\\log 400\\approx 2.602$"
+    },
+    {
+      "misconception": "Student forgets to divide by the leading coefficient $a$ before taking the logarithm",
+      "distractor": "For $3\\cdot e^{2t}=48$ writes $2t=\\ln 48$ giving $t=\\dfrac{\\ln 48}{2}\\approx 1.936$ instead of dividing by $3$ first to get $t=\\dfrac{\\ln 16}{2}\\approx 1.386$"
+    },
+    {
+      "misconception": "Student ignores the exponent coefficient $c$, treating $b^{ct}=k$ as if $t=\\log_b k$ rather than $ct=\\log_b k$",
+      "distractor": "For $e^{2t}=16$ reports $t=\\ln 16\\approx 2.773$ instead of $t=\\dfrac{\\ln 16}{2}\\approx 1.386$"
+    },
+    {
+      "misconception": "Student inverts the change-of-base formula, dividing by the wrong logarithm",
+      "distractor": "For $2^{t}=50$ computes $t=\\dfrac{\\ln 2}{\\ln 50}\\approx 0.177$ instead of $t=\\dfrac{\\ln 50}{\\ln 2}\\approx 5.644$"
+    },
+    {
+      "misconception": "Student confuses the common log and natural log, using $\\log$ where $\\ln$ is required for base $e$",
+      "distractor": "For $e^{t}=20$ computes $t=\\log 20\\approx 1.301$ instead of $t=\\ln 20\\approx 2.996$"
+    },
+    {
+      "misconception": "Student divides the result by the base instead of taking a logarithm, treating exponentiation like multiplication",
+      "distractor": "For $10^{t}=350$ answers $t=\\dfrac{350}{10}=35$ instead of $t=\\log 350\\approx 2.544$"
+    },
+    {
+      "misconception": "Student mishandles a percent rate or the sign of a decay rate when building a continuous model",
+      "distractor": "For $\\$1000$ at $6\\%$ continuous to reach $\\$2500$ uses $r=6$ giving $t=\\dfrac{\\ln 2.5}{6}\\approx 0.153$ instead of $r=0.06$ giving $t=\\dfrac{\\ln 2.5}{0.06}\\approx 15.3$ years"
+    },
+    {
+      "misconception": "Student rounds the intermediate logarithm before dividing, or reports the exact log form as the final numeric answer without evaluating",
+      "distractor": "For $t=\\dfrac{\\ln 3}{0.03}$ rounds $\\ln 3\\approx 1$ to get $t\\approx 33.3$, or leaves $t=\\ln 3$ as the final answer instead of $t\\approx 36.6$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

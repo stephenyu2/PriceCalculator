@@ -1,0 +1,140 @@
+{
+  "standard": "A2.A-APR.C.4",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Arithmetic with Polynomials and Rational Expressions",
+  "domainCode": "A-APR",
+  "cluster": "Use polynomial identities to solve problems",
+  "clusterCode": "C",
+  "skillName": "Polynomial Identities",
+
+  "description": "Students prove that two polynomial expressions are identically equal by expanding, collecting, and comparing terms, and they then use such identities to describe and generate numerical relationships. They verify identities like $(x+y)^2=x^2+2xy+y^2$, $(a-b)(a+b)=a^2-b^2$, $a^3-b^3=(a-b)(a^2+ab+b^2)$, and the Pythagorean-triple generator $(x^2+y^2)^2=(x^2-y^2)^2+(2xy)^2$. They distinguish an identity (true for all values) from a conditional equation (true for special values), substitute numbers into a proven identity to explain patterns or compute efficiently, and apply identities such as the difference of squares or sum/difference of cubes to factor, simplify, or generate Pythagorean triples.",
+
+  "subSkills": [
+    "Expand a binomial or product fully using the distributive property and combine like terms",
+    "Prove an identity by transforming one side until it matches the other, showing each step",
+    "Distinguish an identity (true for all values of the variables) from a conditional equation",
+    "Recognize and apply the difference-of-squares pattern $a^2-b^2=(a-b)(a+b)$",
+    "Recognize and apply the perfect-square trinomials $(a\\pm b)^2=a^2\\pm 2ab+b^2$",
+    "Recognize and apply sum/difference of cubes $a^3\\pm b^3=(a\\pm b)(a^2\\mp ab+b^2)$",
+    "Substitute specific numbers into a proven identity to compute a value or explain a numerical pattern",
+    "Use the identity $(x^2+y^2)^2=(x^2-y^2)^2+(2xy)^2$ to generate Pythagorean triples from chosen $x,y$",
+    "Verify a claimed identity by counterexample when it is in fact false"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Verify an identity by expansion",
+      "example": "Prove the identity $(x+3)^2=x^2+6x+9$. Expand the left side: $(x+3)^2=(x+3)(x+3)=x^2+3x+3x+9=x^2+6x+9$, which equals the right side, so the identity holds for all $x$."
+    },
+    {
+      "name": "Prove a general algebraic identity",
+      "example": "Prove $(a-b)(a^2+ab+b^2)=a^3-b^3$. Expanding: $a^3+a^2b+ab^2-a^2b-ab^2-b^3=a^3-b^3$, so the identity is established."
+    },
+    {
+      "name": "Identity vs conditional equation",
+      "example": "Is $x^2-9=(x-3)(x+3)$ an identity or a conditional equation? Answer: an identity, true for all $x$, since expanding $(x-3)(x+3)=x^2-9$. By contrast $x^2-9=0$ is conditional, true only at $x=\\pm 3$."
+    },
+    {
+      "name": "Factor using a known identity",
+      "example": "Use an identity to factor $25x^2-49$. Recognize the difference of squares $a^2-b^2$ with $a=5x$, $b=7$: $25x^2-49=(5x-7)(5x+7)$."
+    },
+    {
+      "name": "Use an identity for efficient numerical computation",
+      "example": "Use $a^2-b^2=(a-b)(a+b)$ to compute $103\\cdot 97$ mentally. Write it as $(100+3)(100-3)=100^2-3^2=10000-9=9991$."
+    },
+    {
+      "name": "Generate a Pythagorean triple",
+      "example": "Use $(x^2+y^2)^2=(x^2-y^2)^2+(2xy)^2$ with $x=3$, $y=2$ to generate a Pythagorean triple. Then $x^2-y^2=5$, $2xy=12$, $x^2+y^2=13$, giving the triple $(5,12,13)$, and $5^2+12^2=25+144=169=13^2$."
+    },
+    {
+      "name": "Apply sum/difference of cubes",
+      "example": "Factor $8x^3+27$ using a cube identity. With $a=2x$, $b=3$: $8x^3+27=(2x+3)(4x^2-6x+9)$."
+    },
+    {
+      "name": "Disprove a false identity by counterexample",
+      "example": "Is $(x+y)^2=x^2+y^2$ an identity? No. At $x=1$, $y=1$ the left side is $4$ but the right side is $2$, so the equation fails; the correct identity is $(x+y)^2=x^2+2xy+y^2$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recognition or direct expansion of one standard pattern. Student expands a small binomial square or a single difference-of-squares product, or substitutes one small pair of numbers into a stated identity. The identity to use is named or obvious, and no chained reasoning is required.",
+      "constraints": [
+        "One pattern only: $(a\\pm b)^2$ or $(a-b)(a+b)$ with small integer or single-variable terms",
+        "Coefficients are $1$ to $5$ and exponents do not exceed $2$",
+        "Task is one step: expand and confirm equality, or substitute one given pair $(x,y)$",
+        "No factoring of cubes and no multi-term collection beyond combining two like middle terms",
+        "If generating a triple, the values $x$ and $y$ are supplied"
+      ]
+    },
+    "Medium": {
+      "description": "Two to three linked steps. Student proves a general identity by expanding both products and collecting like terms, chooses the correct pattern to factor a non-obvious expression, distinguishes an identity from a conditional equation with justification, or generates a Pythagorean triple from chosen values and verifies it. This is the tier1/tier2 split point: tier1 spans Easy to Medium (verify and apply named identities); tier2 spans Medium to Hard (prove, construct, and disprove).",
+      "constraints": [
+        "Requires full expansion of a product with three or more resulting terms before collecting",
+        "Pattern is not stated; student selects difference of squares, perfect square, or sum/difference of cubes",
+        "Coefficients up to $12$ and one cube identity may appear",
+        "Includes identity-vs-conditional classification with a one-line justification",
+        "Pythagorean-triple tasks require choosing or verifying $x,y$ and confirming $a^2+b^2=c^2$"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step synthesis, construction, or generalization. Student proves a less familiar identity, chains two patterns (for example difference of squares followed by a cube factoring), constructs values to meet a target condition, explains why a numerical pattern holds for all integers using an identity, or disproves a plausible-looking false identity by counterexample and supplies the corrected form.",
+      "constraints": [
+        "Proof requires expanding and collecting six or more terms or applying two identities in sequence",
+        "Student must construct inputs to a generator identity to hit a specified triple, hypotenuse, or leg",
+        "Includes a general-argument task such as proving the product of two consecutive even numbers is one less than a perfect square via an identity",
+        "Includes at least one disprove-by-counterexample item with the corrected identity supplied",
+        "May mix variables and parameters, e.g. proving an identity in $a$, $b$, and $n$"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student distributes the exponent over a sum, treating $(a+b)^2$ as $a^2+b^2$",
+      "distractor": "Embodies the freshman's-dream error: writes $(x+5)^2=x^2+25$, dropping the $2ab=10x$ middle term"
+    },
+    {
+      "misconception": "Student drops or mis-signs the middle term when squaring a difference",
+      "distractor": "For $(x-4)^2$ writes $x^2-16$ or $x^2+8x+16$ instead of $x^2-8x+16$, losing or flipping the sign of the $-2ab$ term"
+    },
+    {
+      "misconception": "Student confuses the factorings of $a^2-b^2$ and $a^2+b^2$",
+      "distractor": "Factors $a^2+b^2$ as $(a+b)(a-b)$ or claims $a^2-b^2$ does not factor, reversing which expression is the difference of squares"
+    },
+    {
+      "misconception": "Student uses the wrong sign on the middle term of the cube factorization",
+      "distractor": "Factors $a^3-b^3$ as $(a-b)(a^2-ab+b^2)$, putting $-ab$ instead of $+ab$ (and vice versa for $a^3+b^3$)"
+    },
+    {
+      "misconception": "Student squares the linear factor in a cube identity, writing $(a\\pm b)^2$ in place of the quadratic trinomial",
+      "distractor": "Factors $x^3+8$ as $(x+2)(x+2)^2$ or $(x+2)(x^2+4x+4)$ instead of $(x+2)(x^2-2x+4)$"
+    },
+    {
+      "misconception": "Student treats an identity as a conditional equation and 'solves' it for specific values",
+      "distractor": "Claims $(x-3)(x+3)=x^2-9$ is only true at $x=3$ or sets it equal to zero, confusing an always-true identity with an equation to solve"
+    },
+    {
+      "misconception": "Student mislabels the legs and hypotenuse produced by the triple generator",
+      "distractor": "Reports the triple from $x=3$, $y=2$ as $(5,12)$ with hypotenuse $12$ (using $2xy$ as the hypotenuse) instead of taking $x^2+y^2=13$ as the hypotenuse"
+    },
+    {
+      "misconception": "Student accepts a false identity after checking only a single convenient value",
+      "distractor": "Concludes $(x+y)^2=x^2+y^2$ is an identity because it holds when $y=0$, failing to test a case like $x=y=1$ where it breaks"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

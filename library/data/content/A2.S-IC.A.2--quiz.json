@@ -1,0 +1,168 @@
+{
+  "id": "A2.S-IC.A.2--quiz",
+  "standard": "A2.S-IC.A.2",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+  "domainCode": "S-IC",
+  "cluster": "Understand and evaluate random processes underlying statistical experiments",
+  "clusterCode": "A",
+  "skillName": "Simulation and Model Consistency",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "Eight multiple-choice questions on deciding whether a probability model is consistent with observed data, using simulation. Each question has one best answer.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "A die is claimed to be fair, so $P(\\text{six}) = \\frac{1}{6}$. In $60$ rolls, how many sixes does this model predict?\nA) $360$\nB) $10$\nC) $6$\nD) $\\frac{1}{6}$",
+      "answer": "B) $10$",
+      "solution": {
+        "steps": [
+          "The expected count over $n$ trials is $np$, where $p$ is the model probability.",
+          "Here $n = 60$ and $p = \\frac{1}{6}$, so the expected count is $60 \\cdot \\frac{1}{6} = 10$.",
+          "A) $360$ comes from computing $60 \\cdot 6$ instead of $60 \\cdot \\frac{1}{6}$ (inverting the probability).",
+          "C) $6$ uses the $6$ on the die rather than the probability $\\frac{1}{6}$.",
+          "D) $\\frac{1}{6}$ is the expected proportion, not the expected count.",
+          "The correct expected count is $10$."
+        ],
+        "answer": "B) $10$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "A model says a spinning coin lands tails with probability $\\frac{1}{2}$ on each spin. What is the probability of getting $5$ tails in a row?\nA) $\\frac{5}{2}$\nB) $\\frac{1}{10}$\nC) $\\frac{1}{32}$\nD) $\\frac{1}{2}$",
+      "answer": "C) $\\frac{1}{32}$",
+      "solution": {
+        "steps": [
+          "The spins are independent, so multiply the probabilities: $P(5\\text{ tails}) = \\left(\\frac{1}{2}\\right)^{5}$.",
+          "Compute the power: $\\left(\\frac{1}{2}\\right)^{5} = \\frac{1}{32}$.",
+          "A) $\\frac{5}{2}$ comes from $5 \\cdot \\frac{1}{2}$, adding instead of multiplying powers, which is greater than $1$ and cannot be a probability.",
+          "B) $\\frac{1}{10}$ does not match any correct computation of $\\left(\\frac{1}{2}\\right)^5$.",
+          "D) $\\frac{1}{2}$ is the probability of just one tail, not five in a row.",
+          "The correct probability is $\\frac{1}{32}$."
+        ],
+        "answer": "C) $\\frac{1}{32}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "A model claims a free-throw shooter makes $40\\%$ of shots. Over $50$ shots, what proportion of makes does the model predict?\nA) $0.40$\nB) $20$\nC) $50$\nD) $0.02$",
+      "answer": "A) $0.40$",
+      "solution": {
+        "steps": [
+          "The expected proportion under the model is simply the model probability $p$, regardless of the number of trials.",
+          "Here $p = 40\\% = 0.40$, so the predicted proportion of makes is $0.40$.",
+          "B) $20$ is the expected count $np = 50 \\cdot 0.40 = 20$, a count and not a proportion.",
+          "C) $50$ is the number of shots, not a proportion.",
+          "D) $0.02$ comes from dividing $\\frac{0.40}{20}$ or similar, which does not represent the model's proportion.",
+          "The expected proportion is $0.40$."
+        ],
+        "answer": "A) $0.40$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "A simulation flips a fair coin $20$ times and records the number of heads, repeated $100$ times. In the dot plot, $4$ of the $100$ trials had $15$ or more heads. Estimated from this simulation, what is the probability of getting $15$ or more heads when the coin is fair?\nA) $0.15$\nB) $0.04$\nC) $0.96$\nD) $0.20$",
+      "answer": "B) $0.04$",
+      "solution": {
+        "steps": [
+          "To estimate a tail probability, divide the number of simulated trials at least as extreme by the total number of trials.",
+          "Here $4$ of $100$ trials had $15$ or more heads, so the estimate is $\\frac{4}{100} = 0.04$.",
+          "A) $0.15$ uses the cutoff value $15$ rather than counting trials.",
+          "C) $0.96$ is the proportion of trials with fewer than $15$ heads, the opposite (wrong) tail.",
+          "D) $0.20$ does not match the count of $4$ out of $100$.",
+          "The estimated probability is $0.04$."
+        ],
+        "answer": "B) $0.04$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "To simulate a free-throw shooter who is claimed to make $70\\%$ of shots, you assign each random digit $0$ through $9$ to an outcome. Which assignment correctly matches the model?\nA) Digits $0$-$2$ are makes, digits $3$-$9$ are misses\nB) Digits $0$-$6$ are makes, digits $7$-$9$ are misses\nC) Digits $0$-$7$ are makes, digits $8$-$9$ are misses\nD) Digits $0$-$3$ are makes, digits $4$-$9$ are misses",
+      "answer": "B) Digits $0$-$6$ are makes, digits $7$-$9$ are misses",
+      "solution": {
+        "steps": [
+          "A valid simulation assigns digits so each outcome occurs with the model's probability. A make should occur $70\\%$ of the time, so $7$ of the $10$ equally likely digits represent a make.",
+          "Digits $0$-$6$ are exactly $7$ digits, giving a $70\\%$ make rate, and digits $7$-$9$ are $3$ digits, giving a $30\\%$ miss rate. This matches the model.",
+          "A) Digits $0$-$2$ as makes is only $3$ digits, a $30\\%$ make rate, the reverse of the model.",
+          "C) Digits $0$-$7$ as makes is $8$ digits, an $80\\%$ make rate, too high.",
+          "D) Digits $0$-$3$ as makes is $4$ digits, a $40\\%$ make rate, far too low.",
+          "The correct assignment is digits $0$-$6$ as makes and $7$-$9$ as misses."
+        ],
+        "answer": "B) Digits $0$-$6$ are makes, digits $7$-$9$ are misses"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "A coin is claimed to be fair. In $20$ flips, $12$ heads are observed. A simulation of fair coins shows that about $25\\%$ of trials are at least this far from $10$ heads. What is the best conclusion?\nA) The coin is definitely fair, since $12$ heads is close to $10$\nB) The coin is unfair, because $12$ heads is not exactly $10$\nC) The result is consistent with a fair coin, and this does not prove the coin is fair\nD) The result is inconsistent with a fair coin, since any deviation from $10$ is evidence against the model",
+      "answer": "C) The result is consistent with a fair coin, and this does not prove the coin is fair",
+      "solution": {
+        "steps": [
+          "Compare the estimated probability of a result this extreme to a threshold (commonly $5\\%$). Here about $25\\%$ of trials are this far or farther from $10$.",
+          "Since $0.25$ is far above $0.05$, the result is not surprising under a fair coin, so it is consistent with the model.",
+          "A consistent result does not prove the model true; it only gives no reason to doubt it.",
+          "A) overstates the conclusion by saying 'definitely fair', treating a consistent result as proof the model is true.",
+          "B) treats any deviation from the expected $10$ as proof of unfairness, ignoring sampling variability.",
+          "D) wrongly claims any deviation is evidence against the model; only a rare result (small tail probability) is evidence against it.",
+          "The best conclusion is C."
+        ],
+        "answer": "C) The result is consistent with a fair coin, and this does not prove the coin is fair"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A spinner is claimed to land on red $\\frac{1}{4}$ of the time. In $40$ spins it landed red only $4$ times. A simulation of the $\\frac{1}{4}$ model gives the distribution of red counts over $150$ trials; $2$ of the $150$ trials had $4$ or fewer reds. Using a $5\\%$ threshold, what is the correct decision?\nA) The expected count is $10$, and since $\\frac{2}{150} \\approx 0.013 < 0.05$, the result is inconsistent with the model; question the $\\frac{1}{4}$ claim\nB) The expected count is $10$, and since $\\frac{2}{150} \\approx 0.013 < 0.05$, the small probability supports the model\nC) The expected count is $160$, so $4$ reds is far below expectation and the model must be true\nD) The result is consistent with the model, because only $\\frac{1}{150} \\approx 0.007$ of trials landed exactly on $4$ reds",
+      "answer": "A) The expected count is $10$, and since $\\frac{2}{150} \\approx 0.013 < 0.05$, the result is inconsistent with the model; question the $\\frac{1}{4}$ claim",
+      "solution": {
+        "steps": [
+          "First find the model's prediction: expected count $= np = 40 \\cdot \\frac{1}{4} = 10$ reds.",
+          "The observed $4$ reds is below expectation, so estimate the lower-tail probability: $2$ of $150$ trials had $4$ or fewer reds, giving $\\frac{2}{150} \\approx 0.013$.",
+          "Compare to the threshold: $0.013 < 0.05$, so a result this low is rare under the model. That is evidence against the $\\frac{1}{4}$ claim, so the result is inconsistent with the model.",
+          "B) makes the same correct computation but inverts the decision rule, treating a small tail probability as support for the model.",
+          "C) computes the expected count as $40 \\cdot 4 = 160$ instead of $40 \\cdot \\frac{1}{4}$, and treats the result as proof the model is true.",
+          "D) counts only the trials landing exactly on $4$ reds ($\\frac{1}{150}$) instead of all trials at $4$ or fewer, and reaches the wrong conclusion.",
+          "The correct decision is A."
+        ],
+        "answer": "A) The expected count is $10$, and since $\\frac{2}{150} \\approx 0.013 < 0.05$, the result is inconsistent with the model; question the $\\frac{1}{4}$ claim"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A treatment is claimed to help exactly half of patients. In a trial of $16$ patients it helped $13$. To judge how surprising '$13$ helped' is under the model, you ask whether the result is unusually far from the expected $8$ in either direction. Which comparison is the appropriate two-sided one?\nA) Count only simulated trials with $13$ or more helped\nB) Count only simulated trials with $3$ or fewer helped\nC) Count simulated trials with $13$ or more helped together with trials with $3$ or fewer helped\nD) Count simulated trials with exactly $13$ helped",
+      "answer": "C) Count simulated trials with $13$ or more helped together with trials with $3$ or fewer helped",
+      "solution": {
+        "steps": [
+          "Under the model, the expected number helped is $np = 16 \\cdot \\frac{1}{2} = 8$. The observed $13$ is $13 - 8 = 5$ above the expected value.",
+          "A two-sided comparison asks how often the simulation is at least as far from $8$ as the observation, in either direction. 'At least $5$ away from $8$' means $8 + 5 = 13$ or more, or $8 - 5 = 3$ or fewer.",
+          "So the correct two-sided count combines trials with $13$ or more helped and trials with $3$ or fewer helped, which is option C.",
+          "A) and B) are each only one tail, which is a one-sided comparison, not two-sided.",
+          "D) counts only trials exactly equal to the observed value, which underestimates the probability of a result at least as extreme.",
+          "The appropriate two-sided comparison is C."
+        ],
+        "answer": "C) Count simulated trials with $13$ or more helped together with trials with $3$ or fewer helped"
+      }
+    }
+  ]
+}

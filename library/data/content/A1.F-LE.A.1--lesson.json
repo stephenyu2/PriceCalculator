@@ -1,0 +1,163 @@
+{
+  "id": "A1.F-LE.A.1--lesson",
+  "standard": "A1.F-LE.A.1",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Linear, Quadratic, and Exponential Models",
+  "domainCode": "F-LE",
+  "cluster": "Construct and compare linear, quadratic, and exponential models and solve problems",
+  "clusterCode": "A",
+  "skillName": "Linear vs. Exponential Growth",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "intro": "Linear and exponential functions both describe quantities that change over time, but they change in fundamentally different ways. A linear function grows by equal differences over equal intervals: you add the same amount $m$ each step, so its rate of change (the slope) is constant. An exponential function grows by equal factors over equal intervals: you multiply by the same number $b$ each step, so its ratio is constant. To decide which model fits, test the data. If consecutive outputs share a constant difference, the model is linear, $y = mx + b$. If consecutive outputs share a constant ratio, the model is exponential, $f(x) = a \\cdot b^{x}$. When $b > 1$ the exponential grows; when $0 < b < 1$ it decays. A percent change of $r$ becomes a factor $b = 1 + r$ for growth or $b = 1 - r$ for decay.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A table gives $f(0) = 5$, $f(1) = 8$, $f(2) = 11$, $f(3) = 14$. Is this function linear or exponential? Identify the constant difference or constant ratio.",
+      "solution": {
+        "steps": [
+          "Check the first differences between consecutive outputs: $8 - 5 = 3$, $11 - 8 = 3$, $14 - 11 = 3$.",
+          "The difference is the same each step, $+3$, so the outputs grow by equal differences over equal intervals.",
+          "Equal differences over equal intervals is the signature of a linear function, $y = mx + b$.",
+          "The constant difference is the slope, $m = 3$. (As a check, the ratios $\\frac{8}{5} = 1.6$ and $\\frac{11}{8} = 1.375$ are not constant, ruling out exponential.)"
+        ],
+        "answer": "Linear, with constant difference (slope) $m = 3$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A table gives $f(0) = 4$, $f(1) = 12$, $f(2) = 36$, $f(3) = 108$. Is this function linear or exponential? Identify the constant difference or constant ratio.",
+      "solution": {
+        "steps": [
+          "Check the first differences: $12 - 4 = 8$, $36 - 12 = 24$, $108 - 36 = 72$. These are not equal, so the function is not linear.",
+          "Check the ratios of consecutive outputs: $\\frac{12}{4} = 3$, $\\frac{36}{12} = 3$, $\\frac{108}{36} = 3$.",
+          "The ratio is the same each step, $\\times 3$, so the outputs grow by equal factors over equal intervals.",
+          "Equal factors over equal intervals is the signature of an exponential function, $f(x) = a \\cdot b^{x}$. Here the growth factor is $b = 3$ (and $a = f(0) = 4$, giving $f(x) = 4 \\cdot 3^{x}$)."
+        ],
+        "answer": "Exponential, with constant ratio (growth factor) $b = 3$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A swimming pool is filled at a steady rate of $25$ gallons per minute. A separate sample of bacteria doubles in number every hour. For each situation, state whether a linear or an exponential model fits, and give the slope $m$ or growth factor $b$.",
+      "solution": {
+        "steps": [
+          "The pool gains the same amount, $25$ gallons, in every equal interval of one minute. Equal differences over equal intervals means a linear model.",
+          "For the pool, the constant rate of change is the slope, $m = 25$ gallons per minute, so the volume is $V = 25t + (\\text{starting amount})$.",
+          "The bacteria multiply by the same factor, $2$, in every equal interval of one hour. Equal factors over equal intervals means an exponential model.",
+          "For the bacteria, 'doubles' means the growth factor is $b = 2$, so the count is $N = a \\cdot 2^{t}$ where $a$ is the starting number."
+        ],
+        "answer": "The pool is linear with slope $m = 25$; the bacteria are exponential with growth factor $b = 2$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A savings account grows by $6\\%$ each year. A delivery van loses $18\\%$ of its value each year. For each, state the model type, whether it is growth or decay, and the factor $b$.",
+      "solution": {
+        "steps": [
+          "A fixed percent change per equal interval (per year) signals an exponential model, since the quantity is multiplied by the same factor each year.",
+          "For the savings account, a $6\\%$ increase means each year's amount is the previous amount plus $6\\%$ of it, a factor of $b = 1 + r = 1 + 0.06 = 1.06$.",
+          "Because $b = 1.06 > 1$, this is exponential growth.",
+          "For the van, an $18\\%$ loss means each year's value is the previous value minus $18\\%$ of it, a factor of $b = 1 - r = 1 - 0.18 = 0.82$.",
+          "Because $0 < b = 0.82 < 1$, this is exponential decay."
+        ],
+        "answer": "Account: exponential growth, $b = 1.06$. Van: exponential decay, $b = 0.82$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Job A pays a flat $\\$200$ to start plus $\\$80$ each week. Job B pays $\\$2$ the first week and doubles the weekly pay every week after. Identify each model type and explain which job eventually pays more per week.",
+      "solution": {
+        "steps": [
+          "Job A adds the same amount, $\\$80$, each week. Equal differences over equal intervals means Job A is linear: weekly-pay total $A = 200 + 80w$, with slope $m = 80$.",
+          "Job B multiplies the weekly pay by the same factor, $2$, each week. Equal factors over equal intervals means Job B is exponential: $B = 2 \\cdot 2^{\\,w-1} = 2^{\\,w}$ for week $w$, with growth factor $b = 2$.",
+          "Early on, Job A's larger starting value keeps it ahead: in week $5$, $A = 200 + 80(5) = 600$ while Job B's week-$5$ pay is $2^{5} = 32$.",
+          "But the exponential doubles without bound: by week $10$, Job B pays $2^{10} = 1024$ for the week, already past Job A's $200 + 80(10) = 1000$.",
+          "An exponential model with $b > 1$ eventually exceeds any linear model, no matter how large the linear slope or how big the head start, because repeated multiplying outpaces repeated adding."
+        ],
+        "answer": "Job A is linear (slope $80$); Job B is exponential (factor $2$). Job B eventually pays more, because exponential growth overtakes any linear growth in the long run."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A table gives $g(0) = 7$, $g(1) = 10$, $g(2) = 13$, $g(3) = 16$. Is $g$ linear or exponential? Give the constant difference or ratio.",
+      "hint": "Subtract consecutive outputs. If you get the same number every time, the model is linear and that number is the slope.",
+      "solution": {
+        "steps": [
+          "First differences: $10 - 7 = 3$, $13 - 10 = 3$, $16 - 13 = 3$. All equal $+3$.",
+          "Equal differences over equal intervals means the function is linear with slope $m = 3$."
+        ],
+        "answer": "Linear, constant difference (slope) $m = 3$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A table gives $h(0) = 2$, $h(1) = 10$, $h(2) = 50$, $h(3) = 250$. Is $h$ linear or exponential? Give the constant difference or ratio.",
+      "hint": "The differences are not equal, so test the ratios: divide each output by the one before it.",
+      "solution": {
+        "steps": [
+          "First differences: $10 - 2 = 8$, $50 - 10 = 40$, $250 - 50 = 200$. Not equal, so not linear.",
+          "Ratios: $\\frac{10}{2} = 5$, $\\frac{50}{10} = 5$, $\\frac{250}{50} = 5$. All equal $\\times 5$.",
+          "Equal factors over equal intervals means the function is exponential with growth factor $b = 5$."
+        ],
+        "answer": "Exponential, constant ratio (growth factor) $b = 5$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A population of fish grows by $9\\%$ each year. Write the model type (growth or decay) and the factor $b$.",
+      "hint": "A fixed percent per year is exponential. For growth, the factor is $b = 1 + r$ where $r$ is the percent written as a decimal.",
+      "solution": {
+        "steps": [
+          "A fixed percent change per equal interval signals an exponential model.",
+          "Growth of $9\\%$ gives the factor $b = 1 + r = 1 + 0.09 = 1.09$.",
+          "Since $b = 1.09 > 1$, this is exponential growth."
+        ],
+        "answer": "Exponential growth, $b = 1.09$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A medicine leaves the bloodstream so that $25\\%$ of it is gone each hour. Write the model type (growth or decay) and the factor $b$ for the amount remaining.",
+      "hint": "Losing $25\\%$ each hour means $75\\%$ remains. For decay, $b = 1 - r$.",
+      "solution": {
+        "steps": [
+          "A fixed percent change per hour signals an exponential model.",
+          "If $25\\%$ leaves each hour, the amount remaining is multiplied by $b = 1 - r = 1 - 0.25 = 0.75$ each hour.",
+          "Since $0 < b = 0.75 < 1$, this is exponential decay."
+        ],
+        "answer": "Exponential decay, $b = 0.75$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Two functions are given by $y = 6 + 4x$ and $y = 6 \\cdot (1.04)^{x}$. Identify which is linear and which is exponential, and state the slope or the growth factor for each.",
+      "hint": "Look at how $x$ appears. If $x$ is multiplied by a number and added, the function is linear; if $x$ is an exponent, the function is exponential.",
+      "solution": {
+        "steps": [
+          "In $y = 6 + 4x$, the variable $x$ is multiplied by a constant and added, the form $y = mx + b$. This is linear with slope $m = 4$.",
+          "In $y = 6 \\cdot (1.04)^{x}$, the variable $x$ is an exponent on a base, the form $f(x) = a \\cdot b^{x}$. This is exponential with growth factor $b = 1.04$.",
+          "Careful: the $1.04$ in the exponential is the base (growth factor), not a slope, because the function multiplies by $1.04$ each step rather than adding a fixed amount."
+        ],
+        "answer": "$y = 6 + 4x$ is linear with slope $m = 4$; $y = 6 \\cdot (1.04)^{x}$ is exponential with growth factor $b = 1.04$."
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T11:30:04.469Z"
+}

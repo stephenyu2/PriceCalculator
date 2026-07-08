@@ -1,0 +1,203 @@
+{
+  "id": "GEO.G-GMD.A.1--worksheet",
+  "standard": "GEO.G-GMD.A.1",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Geometric Measurement and Dimension",
+  "domainCode": "G-GMD",
+  "cluster": "Explain volume formulas and use them to solve problems",
+  "clusterCode": "A",
+  "skillName": "Deriving Circle and Volume Formulas",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "The number $\\pi$ is defined as the ratio $\\pi=\\frac{C}{d}$ of a circle's circumference $C$ to its diameter $d$. Multiply both sides of this equation by $d$ to write a formula for $C$ in terms of $d$.",
+      "answer": "$C=\\pi d$",
+      "solution": {
+        "steps": [
+          "Start from the definition $\\pi=\\frac{C}{d}$.",
+          "Multiply both sides by $d$: $\\pi\\cdot d=\\frac{C}{d}\\cdot d$.",
+          "The $d$ on the right cancels, leaving $\\pi d=C$, that is $C=\\pi d$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "In the sector-rearrangement argument for the area of a disk, the thin congruent sectors are interlocked into a shape that approaches a rectangle. The rectangle's height equals one dimension of the original disk. Which dimension of the disk is that height equal to?",
+      "answer": "The radius $r$",
+      "solution": {
+        "steps": [
+          "Each sector reaches from the center of the disk out to the circle.",
+          "When the sectors are laid alternately point-up and point-down, the slant side of each sector becomes the vertical side of the near-rectangle.",
+          "That slant side is just the radius of the disk, so the rectangle's height is $r$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Using the derived formula $C=2\\pi r$, find the exact circumference of a circle with radius $r=6$. Give the answer in terms of $\\pi$.",
+      "answer": "$12\\pi$",
+      "solution": {
+        "steps": [
+          "Substitute $r=6$ into $C=2\\pi r$.",
+          "$C=2\\pi(6)=12\\pi$.",
+          "The exact circumference is $12\\pi$ (not $6\\pi$, which would use $d=r$ by mistake)."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Using the justified formula $A=\\pi r^2$, find the exact area of a circle with radius $r=5$. Give the answer in terms of $\\pi$.",
+      "answer": "$25\\pi$",
+      "solution": {
+        "steps": [
+          "Substitute $r=5$ into $A=\\pi r^2$.",
+          "Square the radius first: $5^2=25$.",
+          "$A=\\pi(25)=25\\pi$. (It is $25\\pi$, not $5\\pi$, because the radius is squared.)"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A cylinder has a circular base of radius $r=4$ and height $h=10$. The volume of a cylinder is $V=\\pi r^2 h$. Compute the exact volume in terms of $\\pi$.",
+      "answer": "$160\\pi$",
+      "solution": {
+        "steps": [
+          "The base area is $\\pi r^2=\\pi(4)^2=16\\pi$.",
+          "Multiply the base area by the height: $V=16\\pi\\cdot 10$.",
+          "$V=160\\pi$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Starting from the definition $\\pi=\\frac{C}{d}$, derive the radius form $C=2\\pi r$ in two steps, stating clearly how you use the fact that $d=2r$.",
+      "answer": "$C=\\pi d=\\pi(2r)=2\\pi r$",
+      "solution": {
+        "steps": [
+          "From $\\pi=\\frac{C}{d}$, multiply both sides by $d$ to get $C=\\pi d$.",
+          "A diameter is twice the radius, so $d=2r$.",
+          "Substitute $d=2r$ into $C=\\pi d$: $C=\\pi(2r)=2\\pi r$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "In the sector-rearrangement argument, a disk of radius $r$ is cut into many thin congruent sectors and rearranged into a near-rectangle. Give the base AND the height of that rectangle, and use them to conclude the area formula for the disk.",
+      "answer": "Base $=\\pi r$, height $=r$, so $A=\\pi r\\cdot r=\\pi r^2$",
+      "solution": {
+        "steps": [
+          "Half of the sectors point up and half point down, so the top edge is made of half the arcs and the bottom edge of the other half. The base is therefore half the circumference: $\\frac{1}{2}C=\\frac{1}{2}(2\\pi r)=\\pi r$.",
+          "The slant side of each sector is a radius, so the height of the rectangle is $r$.",
+          "Area of a rectangle is base times height: $A=(\\pi r)(r)=\\pi r^2$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "State Cavalieri's principle for solids, then use it to explain why a right cylinder and an oblique (slanted) cylinder that have the same height and the same circular base of radius $r$ have equal volume.",
+      "answer": "Two solids of equal height whose cross-sections have equal area at every level have equal volume; both cylinders have cross-section area $\\pi r^2$ at every height, so their volumes are equal ($\\pi r^2 h$).",
+      "solution": {
+        "steps": [
+          "Cavalieri's principle: if two solids lie between the same pair of parallel planes and every plane parallel to those planes cuts both solids in cross-sections of equal area, then the two solids have equal volume.",
+          "At every height, each cylinder is cut in a circle of radius $r$, so every cross-section has area $\\pi r^2$ in both solids.",
+          "The solids have the same height $h$ and equal cross-sectional area at every level, so by Cavalieri's principle their volumes are equal, namely $\\pi r^2 h$. Congruence is not required, only equal heights and equal cross-sections."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Three identical cones, each with base radius $r$ and height $h$, exactly fill a cylinder of the same radius $r$ and height $h$. Using $V_{\\text{cyl}}=\\pi r^2 h$, explain what this says about the volume of one cone and write the cone volume formula.",
+      "answer": "$V_{\\text{cone}}=\\frac{1}{3}\\pi r^2 h$",
+      "solution": {
+        "steps": [
+          "If three congruent cones fill the cylinder, then $3\\,V_{\\text{cone}}=V_{\\text{cyl}}$.",
+          "So $V_{\\text{cone}}=\\frac{1}{3}V_{\\text{cyl}}=\\frac{1}{3}\\pi r^2 h$.",
+          "The factor $\\frac{1}{3}$ comes from the three-cones-fill-a-cylinder relationship, not from multiplying by $3$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Using the justified cone formula $V=\\frac{1}{3}\\pi r^2 h$, compute the exact volume of a cone with radius $r=3$ and height $h=7$. Give the answer in terms of $\\pi$.",
+      "answer": "$21\\pi$",
+      "solution": {
+        "steps": [
+          "Square the radius: $r^2=3^2=9$.",
+          "Substitute into the formula: $V=\\frac{1}{3}\\pi(9)(7)$.",
+          "Multiply: $\\frac{1}{3}\\cdot 9\\cdot 7=\\frac{63}{3}=21$, so $V=21\\pi$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Reconstruct the full sector-rearrangement argument that a disk of radius $r$ has area $\\pi r^2$. Explain (a) why the rectangle's base is $\\pi r$ rather than $2\\pi r$, (b) why its height is $r$, and (c) why the figure is only an exact rectangle in the limit.",
+      "answer": "Base $=\\frac{1}{2}C=\\pi r$ (only half the arcs lie along each long edge), height $=r$ (each sector's slant side is a radius), and the figure becomes an exact rectangle only as the number of sectors increases without bound; so $A=\\pi r\\cdot r=\\pi r^2$.",
+      "solution": {
+        "steps": [
+          "(a) When the sectors alternate point-up and point-down, the curved arcs split evenly between the top edge and the bottom edge. Each long edge gets half of the total arc length, so the base is $\\frac{1}{2}C=\\frac{1}{2}(2\\pi r)=\\pi r$, not the full circumference $2\\pi r$.",
+          "(b) Every sector stretches from the center to the circle, so its straight slant side is a radius. These slant sides form the short vertical sides of the figure, giving height $r$.",
+          "(c) For any finite number of sectors the top and bottom edges are slightly bumpy (made of little arcs) and the ends are slanted, so the figure is only approximately a rectangle. As the number of sectors increases without bound, the arcs flatten and the ends become vertical, so in the limit the figure is a true rectangle of base $\\pi r$ and height $r$.",
+          "Therefore $A=(\\pi r)(r)=\\pi r^2$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A student argues: \"Cut the disk of radius $r$ into sectors and rearrange them into a rectangle. The base is the whole circumference $2\\pi r$ and the height is $r$, so the area is $2\\pi r\\cdot r=2\\pi r^2$.\" Identify the error and give the corrected area.",
+      "answer": "The base should be $\\frac{1}{2}C=\\pi r$, not the full circumference $2\\pi r$, so the correct area is $\\pi r\\cdot r=\\pi r^2$.",
+      "solution": {
+        "steps": [
+          "The flaw is in the base. Because the sectors alternate point-up and point-down, the arcs are shared between the top and bottom edges of the figure; each long edge holds only half the circumference.",
+          "So the correct base is $\\frac{1}{2}C=\\frac{1}{2}(2\\pi r)=\\pi r$, not $2\\pi r$.",
+          "Keeping the correct height $r$, the area is $A=(\\pi r)(r)=\\pi r^2$, which is half of the student's incorrect $2\\pi r^2$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Explain how Cavalieri's principle bridges the known prism volume $V=Bh$ to the cylinder volume $V=\\pi r^2 h$. In your explanation, identify the base $B$ that makes the two volumes match.",
+      "answer": "Place a cylinder and a prism between the same parallel planes with equal height $h$ and equal base area $B=\\pi r^2$; every cross-section has area $B$ in both, so by Cavalieri's principle the volumes are equal: $V=Bh=\\pi r^2 h$.",
+      "solution": {
+        "steps": [
+          "Set a cylinder of radius $r$ and a prism side by side, both with height $h$, and choose the prism so its base area equals the cylinder's base area $B=\\pi r^2$.",
+          "At every height the cylinder's cross-section is a circle of area $\\pi r^2$ and the prism's cross-section is its base of area $B=\\pi r^2$, so the two cross-sections have equal area at every level.",
+          "Cavalieri's principle then guarantees the solids have equal volume.",
+          "The prism's volume is $V=Bh$, so the cylinder's volume is $V=Bh=\\pi r^2 h$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Both the cone and the pyramid have volume one-third of a matching prism-like solid: $V_{\\text{cone}}=\\frac{1}{3}\\pi r^2 h$ and $V_{\\text{pyramid}}=\\frac{1}{3}Bh$. Explain how these two formulas share the same structure, and describe the sense in which a cone is the circular analogue of a pyramid.",
+      "answer": "Both have the form $V=\\frac{1}{3}(\\text{base area})\\cdot h$; for the pyramid the base area is $B$ and for the cone it is $B=\\pi r^2$. A cone is a pyramid whose base has been replaced by a circle, so $\\frac{1}{3}Bh$ becomes $\\frac{1}{3}\\pi r^2 h$.",
+      "solution": {
+        "steps": [
+          "Write both formulas as one-third of base area times height: pyramid $V=\\frac{1}{3}Bh$, cone $V=\\frac{1}{3}Bh$ with $B=\\pi r^2$.",
+          "The only difference is the shape of the base: a polygon (area $B$) for the pyramid, a circle (area $\\pi r^2$) for the cone.",
+          "Imagine a pyramid whose polygonal base gains more and more sides; in the limit the base approaches a circle and the pyramid approaches a cone. The $\\frac{1}{3}$ factor and the height $h$ are unchanged throughout.",
+          "Hence the cone is the circular analogue of the pyramid, and substituting $B=\\pi r^2$ into $\\frac{1}{3}Bh$ yields $\\frac{1}{3}\\pi r^2 h$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Explain how the cylinder volume $V=\\pi r^2 h$ arises as a limit of stacked disks, then use this justified formula together with the cone relationship to find the exact volume of a cone with radius $r=6$ and height $h=10$ in terms of $\\pi$.",
+      "answer": "Stacking $n$ thin disks of area $\\pi r^2$ and total height $h$ gives volume approaching $\\pi r^2 h$ as $n\\to\\infty$; the cone is one-third of the matching cylinder, so $V=\\frac{1}{3}\\pi(6)^2(10)=120\\pi$.",
+      "solution": {
+        "steps": [
+          "Slice the cylinder into $n$ thin disks, each a circle of area $\\pi r^2$ and thickness $\\frac{h}{n}$. The disk volumes sum to $n\\cdot\\pi r^2\\cdot\\frac{h}{n}=\\pi r^2 h$, and as $n$ increases without bound the slabs fit the solid exactly, giving $V_{\\text{cyl}}=\\pi r^2 h$.",
+          "A cone of the same radius and height has one-third this volume: $V_{\\text{cone}}=\\frac{1}{3}\\pi r^2 h$.",
+          "Substitute $r=6$, $h=10$: $r^2=36$, so $V=\\frac{1}{3}\\pi(36)(10)=\\frac{360}{3}\\pi=120\\pi$."
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "generatedAt": "2026-06-24T21:01:54.123Z"
+}

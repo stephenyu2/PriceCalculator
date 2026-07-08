@@ -1,0 +1,231 @@
+{
+  "id": "GEO.G-GMD.A--cluster-worksheet",
+  "standard": null,
+  "clusterId": "GEO.G-GMD.A",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Geometric Measurement and Dimension",
+  "domainCode": "G-GMD",
+  "cluster": "Explain volume formulas and use them to solve problems",
+  "clusterCode": "A",
+  "skillName": "Explain volume formulas and use them to solve problems",
+  "materialType": "cluster-worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "intro": "This cluster worksheet spans both standards of cluster GEO.G-GMD.A. The first group (GEO.G-GMD.A.1) asks you to give informal arguments that justify the circle and volume formulas, using the definition of $\\pi$, the sector-rearrangement dissection, and Cavalieri's principle. The second group (GEO.G-GMD.A.3) asks you to apply those justified formulas to compute volumes of cylinders, cones, pyramids, and spheres. Items are grouped by standard and ramp from easier to harder within each group.",
+  "items": [
+    {
+      "id": 1,
+      "standard": "GEO.G-GMD.A.1",
+      "prompt": "By definition, $\\pi = \\frac{C}{d}$ for every circle, where $C$ is the circumference and $d$ is the diameter. Starting from this definition, show that $C = \\pi d$.",
+      "answer": "$C = \\pi d$",
+      "solution": {
+        "steps": [
+          "Begin with the definition of $\\pi$: $\\pi = \\frac{C}{d}$.",
+          "Multiply both sides of the equation by $d$ to isolate $C$.",
+          "$\\pi \\cdot d = \\frac{C}{d} \\cdot d = C$.",
+          "Therefore $C = \\pi d$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "standard": "GEO.G-GMD.A.1",
+      "prompt": "Using $C = \\pi d$ and the fact that the diameter is twice the radius ($d = 2r$), derive the radius form of the circumference formula.",
+      "answer": "$C = 2\\pi r$",
+      "solution": {
+        "steps": [
+          "Start from $C = \\pi d$.",
+          "Substitute $d = 2r$: $C = \\pi(2r)$.",
+          "Rearrange the factors: $C = 2\\pi r$.",
+          "So the circumference in terms of the radius is $C = 2\\pi r$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "standard": "GEO.G-GMD.A.1",
+      "prompt": "A disk of radius $r$ is cut into many thin congruent sectors and rearranged so the sectors interlock into a shape that approaches a rectangle. State the height of that rectangle in terms of $r$, and explain why it has that value.",
+      "answer": "The height is $r$, because each sector reaches from the center to the edge of the disk, a distance equal to the radius.",
+      "solution": {
+        "steps": [
+          "When the sectors are arranged tip-up and tip-down alternately, the straight edge of each sector (running from the center to the rim of the disk) becomes a side of the rectangle.",
+          "That edge is a radius of the original disk, so its length is $r$.",
+          "This radius forms the vertical side, so the height of the rectangle is $r$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "standard": "GEO.G-GMD.A.1",
+      "prompt": "In the same sector-rearrangement, the curved arcs of the sectors line up to form the top and bottom edges of the near-rectangle. Find the base (length) of the rectangle in terms of $r$, and use it with the height $r$ to conclude the area of the circle.",
+      "answer": "The base is $\\pi r$, so the area is $\\pi r^2$.",
+      "solution": {
+        "steps": [
+          "Half of the sectors point up and half point down, so the arcs along the top come from half of the circle and the arcs along the bottom come from the other half.",
+          "The total arc length of the whole circle is the circumference $C = 2\\pi r$, so the arcs along the base (one half of the circle) total $\\frac{1}{2}(2\\pi r) = \\pi r$.",
+          "Thus the base of the rectangle is $\\pi r$ and the height is $r$.",
+          "The area is base times height: $A = (\\pi r)(r) = \\pi r^2$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "standard": "GEO.G-GMD.A.1",
+      "prompt": "State Cavalieri's principle, and use it to explain why a cylinder with base radius $r$ and height $h$ has the same volume as a rectangular prism of height $h$ whose base has area $\\pi r^2$. Write the resulting volume formula for the cylinder.",
+      "answer": "$V = \\pi r^2 h$",
+      "solution": {
+        "steps": [
+          "Cavalieri's principle: if two solids have the same height and, at every level, equal cross-sectional areas, then they have equal volume.",
+          "The cylinder and the prism both have height $h$. At every level, the cylinder's cross-section is a circle of area $\\pi r^2$, and the prism's cross-section has area $\\pi r^2$ as well.",
+          "Since the cross-sectional areas match at every height, Cavalieri's principle gives the two solids equal volume.",
+          "The prism's volume is (base area)$\\times$(height) $= \\pi r^2 \\cdot h$, so the cylinder's volume is $V = \\pi r^2 h$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "standard": "GEO.G-GMD.A.1",
+      "prompt": "A cone and a cylinder share the same base radius $r$ and the same height $h$. It can be shown that exactly three such cones fill the cylinder. Use this fact to explain the $\\frac{1}{3}$ factor and write the cone's volume formula.",
+      "answer": "$V = \\frac{1}{3}\\pi r^2 h$",
+      "solution": {
+        "steps": [
+          "Three identical cones, each with base radius $r$ and height $h$, exactly fill the cylinder of the same radius and height.",
+          "So the volume of one cone is one third of the cylinder's volume.",
+          "The cylinder's volume is $\\pi r^2 h$.",
+          "Therefore the cone's volume is $\\frac{1}{3}(\\pi r^2 h) = \\frac{1}{3}\\pi r^2 h$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "standard": "GEO.G-GMD.A.1",
+      "prompt": "A student claims the sector-rearrangement argument shows the area of a circle is $2\\pi r^2$, reasoning that the rectangle's base is the full circumference $C = 2\\pi r$ and its height is $r$. Identify the error and give the corrected area.",
+      "answer": "The base should be $\\frac{1}{2}C = \\pi r$, not the full circumference, so the correct area is $\\pi r^2$.",
+      "solution": {
+        "steps": [
+          "In the rearranged figure, the sectors alternate pointing up and pointing down, so only half of the circle's arc lies along the bottom (base) of the rectangle and the other half lies along the top.",
+          "Therefore the base equals half the circumference: $\\frac{1}{2}C = \\frac{1}{2}(2\\pi r) = \\pi r$, not the full $2\\pi r$.",
+          "Using the correct base $\\pi r$ and height $r$, the area is $A = (\\pi r)(r) = \\pi r^2$.",
+          "The student's answer of $2\\pi r^2$ doubled the base, so the corrected area is $\\pi r^2$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "standard": "GEO.G-GMD.A.1",
+      "prompt": "Explain why the sector-rearrangement figure only becomes an exact rectangle in the limit, and describe the limiting process that makes the area formula $A = \\pi r^2$ exact rather than approximate.",
+      "answer": "As the number of congruent sectors increases without bound, the bumpy arc edges straighten and the slanted ends become vertical, so the figure approaches a true rectangle of base $\\pi r$ and height $r$, giving the exact area $\\pi r^2$.",
+      "solution": {
+        "steps": [
+          "With only a few sectors, the top and bottom edges are visibly bumpy (made of curved arcs) and the left and right ends are slanted, so the figure is only an approximate rectangle.",
+          "As the number of congruent sectors increases, each sector becomes thinner, the arcs along the top and bottom become flatter, and the slanted ends become closer to vertical.",
+          "In the limit, as the number of sectors increases without bound, the bumpy edges straighten to horizontal lines and the ends become vertical, so the shape approaches a true rectangle of base $\\pi r$ and height $r$.",
+          "Because the limiting figure is an exact rectangle, its area $(\\pi r)(r) = \\pi r^2$ is the exact area of the circle, not merely an approximation."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "standard": "GEO.G-GMD.A.3",
+      "prompt": "A cylinder has radius $4\\text{ cm}$ and height $9\\text{ cm}$. Find its exact volume in terms of $\\pi$.",
+      "answer": "$144\\pi\\text{ cm}^3$",
+      "solution": {
+        "steps": [
+          "Use the cylinder volume formula $V = \\pi r^2 h$.",
+          "Substitute $r = 4$ and $h = 9$: $V = \\pi (4)^2 (9)$.",
+          "Square the radius: $(4)^2 = 16$, so $V = \\pi (16)(9)$.",
+          "Multiply: $16 \\times 9 = 144$, so $V = 144\\pi\\text{ cm}^3$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "standard": "GEO.G-GMD.A.3",
+      "prompt": "A cone has radius $3\\text{ in}$ and height $7\\text{ in}$. Find its exact volume in terms of $\\pi$.",
+      "answer": "$21\\pi\\text{ in}^3$",
+      "solution": {
+        "steps": [
+          "Use the cone volume formula $V = \\frac{1}{3}\\pi r^2 h$.",
+          "Substitute $r = 3$ and $h = 7$: $V = \\frac{1}{3}\\pi (3)^2 (7)$.",
+          "Square the radius: $(3)^2 = 9$, so $V = \\frac{1}{3}\\pi (9)(7) = \\frac{1}{3}\\pi (63)$.",
+          "Multiply by $\\frac{1}{3}$: $\\frac{1}{3}(63) = 21$, so $V = 21\\pi\\text{ in}^3$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "standard": "GEO.G-GMD.A.3",
+      "prompt": "A pyramid has a square base with side $5\\text{ ft}$ and height $12\\text{ ft}$. Find its volume.",
+      "answer": "$100\\text{ ft}^3$",
+      "solution": {
+        "steps": [
+          "Use the pyramid volume formula $V = \\frac{1}{3}Bh$, where $B$ is the base area.",
+          "The base is a square of side $5$, so $B = 5^2 = 25\\text{ ft}^2$.",
+          "Substitute $B = 25$ and $h = 12$: $V = \\frac{1}{3}(25)(12)$.",
+          "Multiply: $25 \\times 12 = 300$, then $\\frac{1}{3}(300) = 100$, so $V = 100\\text{ ft}^3$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "standard": "GEO.G-GMD.A.3",
+      "prompt": "A sphere has diameter $10\\text{ cm}$. Find its exact volume in terms of $\\pi$.",
+      "answer": "$\\frac{500}{3}\\pi\\text{ cm}^3$",
+      "solution": {
+        "steps": [
+          "Use the sphere volume formula $V = \\frac{4}{3}\\pi r^3$. First convert the diameter to a radius.",
+          "The radius is half the diameter: $r = \\frac{10}{2} = 5\\text{ cm}$.",
+          "Substitute $r = 5$: $V = \\frac{4}{3}\\pi (5)^3 = \\frac{4}{3}\\pi (125)$.",
+          "Multiply: $\\frac{4}{3}(125) = \\frac{500}{3}$, so $V = \\frac{500}{3}\\pi\\text{ cm}^3$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "standard": "GEO.G-GMD.A.3",
+      "prompt": "A cylinder has volume $50\\pi\\text{ cm}^3$ and radius $5\\text{ cm}$. Find its height.",
+      "answer": "$2\\text{ cm}$",
+      "solution": {
+        "steps": [
+          "Use the cylinder volume formula $V = \\pi r^2 h$ and solve for $h$.",
+          "Substitute the known values: $50\\pi = \\pi (5)^2 h = 25\\pi h$.",
+          "Divide both sides by $25\\pi$: $h = \\frac{50\\pi}{25\\pi} = 2$.",
+          "The height is $2\\text{ cm}$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "standard": "GEO.G-GMD.A.3",
+      "prompt": "A cone has radius $6\\text{ m}$ and slant height $10\\text{ m}$. Find its exact volume in terms of $\\pi$.",
+      "answer": "$96\\pi\\text{ m}^3$",
+      "solution": {
+        "steps": [
+          "The slant height is not the vertical height. The radius, vertical height $h$, and slant height $\\ell$ form a right triangle with $\\ell$ as the hypotenuse: $\\ell^2 = r^2 + h^2$.",
+          "Solve for the vertical height: $h = \\sqrt{\\ell^2 - r^2} = \\sqrt{10^2 - 6^2} = \\sqrt{100 - 36} = \\sqrt{64} = 8\\text{ m}$.",
+          "Apply the cone volume formula $V = \\frac{1}{3}\\pi r^2 h$ with $r = 6$ and $h = 8$: $V = \\frac{1}{3}\\pi (6)^2 (8) = \\frac{1}{3}\\pi (36)(8)$.",
+          "Compute: $36 \\times 8 = 288$, then $\\frac{1}{3}(288) = 96$, so $V = 96\\pi\\text{ m}^3$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "standard": "GEO.G-GMD.A.3",
+      "prompt": "A grain silo is a cylinder of radius $3\\text{ m}$ and height $10\\text{ m}$ topped by a hemisphere of radius $3\\text{ m}$. Find the total exact volume of the silo in terms of $\\pi$.",
+      "answer": "$108\\pi\\text{ m}^3$",
+      "solution": {
+        "steps": [
+          "The silo is a composite solid: a cylinder plus a hemisphere. Find each volume and add them.",
+          "Cylinder: $V = \\pi r^2 h = \\pi (3)^2 (10) = \\pi (9)(10) = 90\\pi\\text{ m}^3$.",
+          "Hemisphere: a hemisphere is half a sphere, so $V = \\frac{1}{2} \\cdot \\frac{4}{3}\\pi r^3 = \\frac{2}{3}\\pi (3)^3 = \\frac{2}{3}\\pi (27) = 18\\pi\\text{ m}^3$.",
+          "Add the two volumes: $90\\pi + 18\\pi = 108\\pi\\text{ m}^3$."
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T21:16:48.217Z"
+}

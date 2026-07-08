@@ -1,0 +1,212 @@
+{
+  "id": "8.G.B.6--worksheet",
+  "standard": "8.G.B.6",
+  "clusterId": null,
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand and apply the Pythagorean Theorem",
+  "clusterCode": "B",
+  "skillName": "Pythagorean Theorem Proof",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T10:24:32.274Z",
+  "intro": "These problems build toward explaining a proof of the Pythagorean Theorem and its converse. You will state the theorem, follow the area-rearrangement and similar-triangles proofs step by step, use the converse to classify triangles, and find the flaw in a presented argument.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A right triangle has legs labeled $a$ and $b$ and hypotenuse labeled $c$. State the Pythagorean Theorem as an equation relating $a$, $b$, and $c$.",
+      "answer": "$a^2 + b^2 = c^2$",
+      "solution": {
+        "steps": [
+          "The Pythagorean Theorem relates the two legs and the hypotenuse of a right triangle.",
+          "It states that the sum of the squares of the legs equals the square of the hypotenuse.",
+          "With legs $a$ and $b$ and hypotenuse $c$, the equation is $a^2 + b^2 = c^2$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "In a right triangle, which side is always the longest: a leg or the hypotenuse? Which variable, $a$, $b$, or $c$, represents it in $a^2 + b^2 = c^2$?",
+      "answer": "The hypotenuse is the longest side, represented by $c$.",
+      "solution": {
+        "steps": [
+          "The hypotenuse is the side opposite the right angle.",
+          "Because the right angle is the largest angle in a right triangle, the side opposite it is the longest side.",
+          "In the equation $a^2 + b^2 = c^2$, the hypotenuse is $c$, so $c$ represents the longest side."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Test whether a triangle with sides $3$, $4$, and $5$ is a right triangle by checking the equality $a^2 + b^2 = c^2$ with $c$ as the longest side.",
+      "answer": "Yes, it is a right triangle because $3^2 + 4^2 = 5^2$.",
+      "solution": {
+        "steps": [
+          "The longest side is $5$, so let $c = 5$ and let the legs be $a = 3$ and $b = 4$.",
+          "Compute the left side: $3^2 + 4^2 = 9 + 16 = 25$.",
+          "Compute the right side: $5^2 = 25$.",
+          "Since $25 = 25$, the equation $a^2 + b^2 = c^2$ holds, so the triangle is a right triangle."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "In the area-rearrangement proof, four congruent right triangles each have legs $a$ and $b$. What is the area of one of these triangles? Write it using $a$ and $b$.",
+      "answer": "$\\frac{1}{2}ab$",
+      "solution": {
+        "steps": [
+          "The area of a right triangle is $\\frac{1}{2}(\\text{base})(\\text{height})$.",
+          "For one of these triangles the base and height are the two legs $a$ and $b$.",
+          "So the area of one triangle is $\\frac{1}{2}ab$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A triangle has sides $6$, $8$, and $9$. Use the converse of the Pythagorean Theorem to decide whether it is a right triangle. Show the comparison of $a^2 + b^2$ with $c^2$.",
+      "answer": "It is not a right triangle because $6^2 + 8^2 = 100$ but $9^2 = 81$, and $100 \\ne 81$.",
+      "solution": {
+        "steps": [
+          "Identify the longest side as $c = 9$, with legs $a = 6$ and $b = 8$.",
+          "Compute $a^2 + b^2 = 6^2 + 8^2 = 36 + 64 = 100$.",
+          "Compute $c^2 = 9^2 = 81$.",
+          "Since $100 \\ne 81$, the converse condition fails, so the triangle is not a right triangle."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "In the area-rearrangement proof, four congruent right triangles (legs $a$ and $b$) surround a tilted square of side $c$ to form a large square of side $a+b$. Write an equation that sets the area of the large square equal to the inner square plus the four triangles.",
+      "answer": "$(a+b)^2 = c^2 + 4\\cdot\\frac{1}{2}ab$",
+      "solution": {
+        "steps": [
+          "The large square has side length $a+b$, so its area is $(a+b)^2$.",
+          "The tilted inner square has side $c$, so its area is $c^2$.",
+          "Each of the four triangles has area $\\frac{1}{2}ab$, so together they cover $4\\cdot\\frac{1}{2}ab$.",
+          "The big square is exactly the inner square plus the four triangles: $(a+b)^2 = c^2 + 4\\cdot\\frac{1}{2}ab$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Expand $(a+b)^2$ completely. Show each term.",
+      "answer": "$(a+b)^2 = a^2 + 2ab + b^2$",
+      "solution": {
+        "steps": [
+          "Use the distributive property: $(a+b)^2 = (a+b)(a+b)$.",
+          "Multiply each term: $a\\cdot a + a\\cdot b + b\\cdot a + b\\cdot b$.",
+          "Combine the two middle terms: $a^2 + ab + ab + b^2 = a^2 + 2ab + b^2$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Starting from $(a+b)^2 = c^2 + 4\\cdot\\frac{1}{2}ab$, simplify the four-triangle term $4\\cdot\\frac{1}{2}ab$ and rewrite the equation.",
+      "answer": "$(a+b)^2 = c^2 + 2ab$",
+      "solution": {
+        "steps": [
+          "Simplify the triangle term: $4\\cdot\\frac{1}{2}ab = \\frac{4}{2}ab = 2ab$.",
+          "Substitute this back into the equation in place of $4\\cdot\\frac{1}{2}ab$.",
+          "The equation becomes $(a+b)^2 = c^2 + 2ab$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A triangle has sides $5$, $6$, and $9$. Use the converse to classify it as right, acute, or obtuse by comparing $a^2 + b^2$ to $c^2$.",
+      "answer": "Obtuse, because $5^2 + 6^2 = 61 < 81 = 9^2$.",
+      "solution": {
+        "steps": [
+          "Take the longest side as $c = 9$ and the other two as $a = 5$, $b = 6$.",
+          "Compute $a^2 + b^2 = 25 + 36 = 61$ and $c^2 = 81$.",
+          "Compare: $61 < 81$, so $a^2 + b^2 < c^2$.",
+          "When the sum of the squares of the two shorter sides is less than the square of the longest side, the triangle is obtuse."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A triangle has sides $7$, $8$, and $10$. Use the converse to classify it as right, acute, or obtuse by comparing $a^2 + b^2$ to $c^2$.",
+      "answer": "Acute, because $7^2 + 8^2 = 113 > 100 = 10^2$.",
+      "solution": {
+        "steps": [
+          "Take the longest side as $c = 10$ and the other two as $a = 7$, $b = 8$.",
+          "Compute $a^2 + b^2 = 49 + 64 = 113$ and $c^2 = 100$.",
+          "Compare: $113 > 100$, so $a^2 + b^2 > c^2$.",
+          "When the sum of the squares of the two shorter sides is greater than the square of the longest side, the triangle is acute."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Complete the area-rearrangement proof. Starting from $(a+b)^2 = c^2 + 2ab$, expand the left side and simplify to show that $a^2 + b^2 = c^2$. Name the term that cancels.",
+      "answer": "Expanding gives $a^2 + 2ab + b^2 = c^2 + 2ab$; subtracting $2ab$ from both sides leaves $a^2 + b^2 = c^2$. The term that cancels is $2ab$.",
+      "solution": {
+        "steps": [
+          "Expand the left side: $(a+b)^2 = a^2 + 2ab + b^2$.",
+          "So the equation becomes $a^2 + 2ab + b^2 = c^2 + 2ab$.",
+          "The term $2ab$ appears on both sides, so subtract $2ab$ from each side.",
+          "This leaves $a^2 + b^2 = c^2$, which is the Pythagorean Theorem. The canceled term is $2ab$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A student presents this proof: 'The big square of side $a+b$ has area $a^2 + b^2$. The four triangles together have area $ab$. So $a^2 + b^2 = c^2 + ab$.' Identify the two errors and give the correct values.",
+      "answer": "The big square's area is $(a+b)^2 = a^2 + 2ab + b^2$, not $a^2 + b^2$; and the four triangles have total area $4\\cdot\\frac{1}{2}ab = 2ab$, not $ab$. The correct equation is $a^2 + 2ab + b^2 = c^2 + 2ab$, which simplifies to $a^2 + b^2 = c^2$.",
+      "solution": {
+        "steps": [
+          "First error: the big square has side $a+b$, so its area is $(a+b)^2 = a^2 + 2ab + b^2$, not $a^2 + b^2$. The student forgot the $2ab$ cross term.",
+          "Second error: each triangle has area $\\frac{1}{2}ab$, so four of them total $4\\cdot\\frac{1}{2}ab = 2ab$, not $ab$.",
+          "With the corrections, the area equation is $a^2 + 2ab + b^2 = c^2 + 2ab$.",
+          "Subtracting $2ab$ from both sides gives the correct result $a^2 + b^2 = c^2$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "In the similar-triangles proof, an altitude is drawn from the right angle to the hypotenuse $c$, splitting $c$ into segments $p$ (adjacent to leg $a$) and $q$ (adjacent to leg $b$). Each small triangle is similar to the original right triangle. Using the proportion $\\frac{a}{c} = \\frac{p}{a}$, solve for $a^2$. Then state the matching result for $b^2$ from $\\frac{b}{c} = \\frac{q}{b}$.",
+      "answer": "$a^2 = c\\cdot p$ and $b^2 = c\\cdot q$.",
+      "solution": {
+        "steps": [
+          "Start with the proportion from the similar triangles: $\\frac{a}{c} = \\frac{p}{a}$.",
+          "Cross-multiply: $a\\cdot a = c\\cdot p$, so $a^2 = c\\cdot p$.",
+          "By the same reasoning with the other small triangle, $\\frac{b}{c} = \\frac{q}{b}$ gives $b\\cdot b = c\\cdot q$.",
+          "So $b^2 = c\\cdot q$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Continue the similar-triangles proof from $a^2 = c\\cdot p$ and $b^2 = c\\cdot q$, where $p$ and $q$ are the two segments of the hypotenuse so that $p + q = c$. Add the two equations and factor to show $a^2 + b^2 = c^2$.",
+      "answer": "$a^2 + b^2 = c\\cdot p + c\\cdot q = c(p+q) = c\\cdot c = c^2$.",
+      "solution": {
+        "steps": [
+          "Add the two results: $a^2 + b^2 = c\\cdot p + c\\cdot q$.",
+          "Factor out the common factor $c$ on the right: $c\\cdot p + c\\cdot q = c(p+q)$.",
+          "The altitude splits the hypotenuse into $p$ and $q$, so $p + q = c$.",
+          "Substitute: $c(p+q) = c\\cdot c = c^2$. Therefore $a^2 + b^2 = c^2$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "State the converse of the Pythagorean Theorem, and explain why showing $a^2 + b^2 = c^2$ for a triangle (with $c$ the longest side) is enough to conclude the angle opposite $c$ is a right angle. Then apply it: is a triangle with sides $9$, $12$, and $15$ a right triangle?",
+      "answer": "Converse: if $a^2 + b^2 = c^2$ where $c$ is the longest side, then the triangle is a right triangle with the right angle opposite $c$. The triangle with sides $9$, $12$, $15$ is right because $9^2 + 12^2 = 81 + 144 = 225 = 15^2$.",
+      "solution": {
+        "steps": [
+          "Converse statement: In a triangle with sides $a$, $b$, and longest side $c$, if $a^2 + b^2 = c^2$, then the triangle is a right triangle and the right angle is the one opposite side $c$.",
+          "Why it suffices: a triangle is determined up to congruence by its three side lengths (SSS). The right triangle with legs $a$ and $b$ has hypotenuse exactly $\\sqrt{a^2+b^2}$. If our triangle satisfies $a^2 + b^2 = c^2$, then $c = \\sqrt{a^2+b^2}$, so it has the same three sides as that right triangle and must be congruent to it, hence right, with the right angle opposite $c$.",
+          "Apply to $9$, $12$, $15$: longest side $c = 15$, legs $a = 9$, $b = 12$. Compute $a^2 + b^2 = 81 + 144 = 225$ and $c^2 = 225$.",
+          "Since $225 = 225$, the converse condition holds, so the triangle is a right triangle with its right angle opposite the side of length $15$."
+        ]
+      }
+    }
+  ]
+}

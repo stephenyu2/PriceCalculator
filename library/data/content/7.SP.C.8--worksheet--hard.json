@@ -1,0 +1,217 @@
+{
+  "id": "7.SP.C.8--worksheet--hard",
+  "standard": "7.SP.C.8",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate chance processes and develop, use, and evaluate probability models",
+  "clusterCode": "C",
+  "skillName": "Compound Events",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "These problems involve dependent (without-replacement) draws, compound conditions, and simulations. For without-replacement draws, remember that the total number of items shrinks after the first pick, so the second-stage probability changes. For simulations, define a trial carefully and estimate the probability as the fraction of trials in which the event occurs.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A bag holds $4$ red and $3$ blue marbles. Two marbles are drawn without replacement. Find $P(\\text{both red})$, written as a fraction in lowest terms.",
+      "answer": "$\\frac{2}{7}$",
+      "solution": {
+        "steps": [
+          "First draw: $7$ marbles, $4$ red, so $P(\\text{1st red})=\\frac{4}{7}$.",
+          "After removing one red, $6$ marbles remain with $3$ red, so $P(\\text{2nd red})=\\frac{3}{6}=\\frac{1}{2}$.",
+          "Multiply the stages: $\\frac{4}{7}\\cdot\\frac{1}{2}=\\frac{4}{14}$.",
+          "Simplify: $\\frac{4}{14}=\\frac{2}{7}$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A drawer contains $5$ black socks and $3$ white socks. Two socks are pulled out without replacement. Find $P(\\text{both white})$ as a fraction in lowest terms.",
+      "answer": "$\\frac{3}{28}$",
+      "solution": {
+        "steps": [
+          "First draw: $8$ socks, $3$ white, so $P(\\text{1st white})=\\frac{3}{8}$.",
+          "After removing one white, $7$ socks remain with $2$ white, so $P(\\text{2nd white})=\\frac{2}{7}$.",
+          "Multiply: $\\frac{3}{8}\\cdot\\frac{2}{7}=\\frac{6}{56}$.",
+          "Simplify: $\\frac{6}{56}=\\frac{3}{28}$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A box has $6$ green and $4$ yellow markers. Two markers are taken without replacement. Find $P(\\text{first green and second yellow})$ as a fraction in lowest terms.",
+      "answer": "$\\frac{4}{15}$",
+      "solution": {
+        "steps": [
+          "First draw green: $10$ markers, $6$ green, so $P=\\frac{6}{10}=\\frac{3}{5}$.",
+          "After removing one green, $9$ markers remain with $4$ yellow, so $P(\\text{2nd yellow})=\\frac{4}{9}$.",
+          "Multiply: $\\frac{3}{5}\\cdot\\frac{4}{9}=\\frac{12}{45}$.",
+          "Simplify: $\\frac{12}{45}=\\frac{4}{15}$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A bag has $3$ red and $2$ blue marbles. Two are drawn without replacement. Find $P(\\text{one red and one blue, in either order})$ as a fraction in lowest terms.",
+      "answer": "$\\frac{3}{5}$",
+      "solution": {
+        "steps": [
+          "Path red then blue: $\\frac{3}{5}\\cdot\\frac{2}{4}=\\frac{6}{20}=\\frac{3}{10}$.",
+          "Path blue then red: $\\frac{2}{5}\\cdot\\frac{3}{4}=\\frac{6}{20}=\\frac{3}{10}$.",
+          "These two outcomes are different, so add them: $\\frac{3}{10}+\\frac{3}{10}=\\frac{6}{10}$.",
+          "Simplify: $\\frac{6}{10}=\\frac{3}{5}$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A deck of $12$ cards has $4$ aces. Two cards are dealt without replacement. Find $P(\\text{no aces})$ (neither card is an ace) as a fraction in lowest terms.",
+      "answer": "$\\frac{14}{33}$",
+      "solution": {
+        "steps": [
+          "There are $12-4=8$ non-ace cards.",
+          "First draw non-ace: $P=\\frac{8}{12}=\\frac{2}{3}$.",
+          "After removing one non-ace, $11$ cards remain with $7$ non-aces, so $P=\\frac{7}{11}$.",
+          "Multiply: $\\frac{2}{3}\\cdot\\frac{7}{11}=\\frac{14}{33}$, which is already in lowest terms."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Using the bag from problem $5$ ($4$ aces, $8$ non-aces, two cards dealt without replacement), find $P(\\text{at least one ace})$ as a fraction in lowest terms.",
+      "answer": "$\\frac{19}{33}$",
+      "solution": {
+        "steps": [
+          "Use the complement: $P(\\text{at least one ace})=1-P(\\text{no aces})$.",
+          "From problem $5$, $P(\\text{no aces})=\\frac{14}{33}$.",
+          "So $P(\\text{at least one ace})=1-\\frac{14}{33}=\\frac{33}{33}-\\frac{14}{33}=\\frac{19}{33}$.",
+          "This fraction is already in lowest terms."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A committee of $2$ students is chosen at random from a group of $4$ girls and $2$ boys (without replacement). Find $P(\\text{the committee is both boys})$ as a fraction in lowest terms.",
+      "answer": "$\\frac{1}{15}$",
+      "solution": {
+        "steps": [
+          "There are $6$ students total, $2$ of them boys.",
+          "First pick a boy: $P=\\frac{2}{6}=\\frac{1}{3}$.",
+          "After one boy is chosen, $5$ students remain with $1$ boy, so $P=\\frac{1}{5}$.",
+          "Multiply: $\\frac{1}{3}\\cdot\\frac{1}{5}=\\frac{1}{15}$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A jar contains $5$ red, $3$ green, and $2$ blue candies. Two candies are eaten without replacement. Find $P(\\text{both the same color})$ as a fraction in lowest terms.",
+      "answer": "$\\frac{14}{45}$",
+      "solution": {
+        "steps": [
+          "There are $10$ candies total.",
+          "Both red: $\\frac{5}{10}\\cdot\\frac{4}{9}=\\frac{20}{90}$.",
+          "Both green: $\\frac{3}{10}\\cdot\\frac{2}{9}=\\frac{6}{90}$.",
+          "Both blue: $\\frac{2}{10}\\cdot\\frac{1}{9}=\\frac{2}{90}$.",
+          "Add the three disjoint cases: $\\frac{20}{90}+\\frac{6}{90}+\\frac{2}{90}=\\frac{28}{90}$.",
+          "Simplify: $\\frac{28}{90}=\\frac{14}{45}$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Three marbles are drawn without replacement from a bag of $4$ red and $2$ white marbles. Find $P(\\text{all three red})$ as a fraction in lowest terms.",
+      "answer": "$\\frac{1}{5}$",
+      "solution": {
+        "steps": [
+          "First red: $\\frac{4}{6}$. Second red: $\\frac{3}{5}$. Third red: $\\frac{2}{4}$.",
+          "Multiply the three stages: $\\frac{4}{6}\\cdot\\frac{3}{5}\\cdot\\frac{2}{4}=\\frac{24}{120}$.",
+          "Simplify: $\\frac{24}{120}=\\frac{1}{5}$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A spelling bee has $7$ finalists: $3$ from Lincoln School and $4$ from Park School. Two finalists are chosen at random (without replacement) to go first and second. Find $P(\\text{both chosen are from Park School})$ as a fraction in lowest terms.",
+      "answer": "$\\frac{2}{7}$",
+      "solution": {
+        "steps": [
+          "First Park student: $P=\\frac{4}{7}$.",
+          "After one Park student is chosen, $6$ remain with $3$ from Park, so $P=\\frac{3}{6}=\\frac{1}{2}$.",
+          "Multiply: $\\frac{4}{7}\\cdot\\frac{1}{2}=\\frac{4}{14}=\\frac{2}{7}$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A basketball player makes a free throw $70\\%$ of the time. To estimate the probability that she makes both of her next two free throws, a student assigns the digits $0$-$6$ to a make and $7$-$9$ to a miss, then reads pairs of digits as one trial (each digit is one shot). Here are $10$ trials: $43,\\ 81,\\ 25,\\ 60,\\ 97,\\ 12,\\ 58,\\ 34,\\ 76,\\ 09$. Estimate $P(\\text{both made})$ from this simulation, as a fraction in lowest terms.",
+      "answer": "$\\frac{1}{2}$",
+      "solution": {
+        "steps": [
+          "A 'make' is a digit $0$-$6$; a 'miss' is $7$-$9$. Both made means both digits in the pair are $0$-$6$.",
+          "Check each trial: $43$ both made; $81$ has $8$ (miss); $25$ both made; $60$ both made; $97$ both miss; $12$ both made; $58$ has $8$ (miss); $34$ both made; $76$ has $7$ (miss); $09$ has $9$ (miss).",
+          "Trials with both made: $43, 25, 60, 12, 34$, which is $5$ of the $10$ trials.",
+          "Estimate: $\\frac{5}{10}=\\frac{1}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A cereal company puts one of $3$ equally likely prizes (A, B, C) in each box. To estimate the probability of getting all $3$ different prizes in $3$ boxes, a student assigns $1\\to A$, $2\\to B$, $3\\to C$ and ignores the digits $0$ and $4$-$9$. Reading the random digits and grouping the kept digits into sets of three, the first $8$ valid trials are: $123,\\ 112,\\ 231,\\ 333,\\ 132,\\ 122,\\ 211,\\ 223$. Estimate $P(\\text{all three different prizes})$ as a fraction in lowest terms.",
+      "answer": "$\\frac{3}{8}$",
+      "solution": {
+        "steps": [
+          "All three different means the trial contains one each of $1, 2, 3$ in some order.",
+          "Check each trial: $123$ all different; $112$ repeats $1$; $231$ all different; $333$ all same; $132$ all different; $122$ repeats $2$; $211$ repeats $1$; $223$ repeats $2$.",
+          "Trials with all three different: $123, 231, 132$, which is $3$ of the $8$ trials.",
+          "Estimate: $\\frac{3}{8}$, which is already in lowest terms."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Using the same setup as problem $9$ ($4$ red and $2$ white marbles, three drawn without replacement), find $P(\\text{exactly two of the three are red})$ as a fraction in lowest terms.",
+      "answer": "$\\frac{3}{5}$",
+      "solution": {
+        "steps": [
+          "'Exactly two red' means two red and one white among the three draws. The white can come 1st, 2nd, or 3rd.",
+          "White first (W,R,R): $\\frac{2}{6}\\cdot\\frac{4}{5}\\cdot\\frac{3}{4}=\\frac{24}{120}$.",
+          "White second (R,W,R): $\\frac{4}{6}\\cdot\\frac{2}{5}\\cdot\\frac{3}{4}=\\frac{24}{120}$.",
+          "White third (R,R,W): $\\frac{4}{6}\\cdot\\frac{3}{5}\\cdot\\frac{2}{4}=\\frac{24}{120}$.",
+          "Add the three orders: $\\frac{24}{120}+\\frac{24}{120}+\\frac{24}{120}=\\frac{72}{120}$.",
+          "Simplify: $\\frac{72}{120}=\\frac{3}{5}$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A class has $10$ students: $6$ who walk to school and $4$ who ride the bus. The teacher picks $2$ students at random (without replacement) to lead an activity. The theoretical probability that both walk is $\\frac{1}{3}$. In a simulation, the experiment was repeated $50$ times and 'both walk' happened in $18$ of those trials. (a) Write the experimental probability as a fraction in lowest terms. (b) Is the experimental probability greater than or less than the theoretical probability?",
+      "answer": "(a) $\\frac{9}{25}$; (b) greater than the theoretical probability",
+      "solution": {
+        "steps": [
+          "(a) Experimental probability $=\\frac{\\text{successes}}{\\text{trials}}=\\frac{18}{50}$.",
+          "Simplify: $\\frac{18}{50}=\\frac{9}{25}$.",
+          "(b) Compare to theoretical $\\frac{1}{3}$. Write both with denominator $75$: $\\frac{9}{25}=\\frac{27}{75}$ and $\\frac{1}{3}=\\frac{25}{75}$.",
+          "Since $\\frac{27}{75}>\\frac{25}{75}$, the experimental probability is greater than the theoretical probability."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A bag contains $3$ red, $4$ blue, and $5$ green chips. Three chips are drawn without replacement. Find $P(\\text{one of each color})$ (one red, one blue, and one green, in any order) as a fraction in lowest terms.",
+      "answer": "$\\frac{3}{11}$",
+      "solution": {
+        "steps": [
+          "There are $12$ chips total. One specific order, say red then blue then green, has probability $\\frac{3}{12}\\cdot\\frac{4}{11}\\cdot\\frac{5}{10}=\\frac{60}{1320}$.",
+          "Every order of the three colors (R,B,G), (R,G,B), (B,R,G), (B,G,R), (G,R,B), (G,B,R) gives the same product $\\frac{60}{1320}$.",
+          "There are $6$ such orders, so multiply: $6\\cdot\\frac{60}{1320}=\\frac{360}{1320}$.",
+          "Simplify: $\\frac{360}{1320}=\\frac{3}{11}$."
+        ]
+      }
+    }
+  ]
+}

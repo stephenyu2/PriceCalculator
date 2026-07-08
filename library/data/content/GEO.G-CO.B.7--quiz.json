@@ -1,0 +1,148 @@
+{
+  "id": "GEO.G-CO.B.7--quiz",
+  "standard": "GEO.G-CO.B.7",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Understand congruence in terms of rigid motions",
+  "clusterCode": "B",
+  "skillName": "Congruent Triangles via Rigid Motions",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Eight multiple-choice questions on congruent triangles through rigid motions: reading correspondence from a congruence statement, applying CPCTC, justifying with the properties rigid motions preserve, deciding when a reflection is needed, and evaluating congruence claims with the full biconditional.",
+  "items": [
+    {
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Given $\\triangle ABC \\cong \\triangle DEF$, which side corresponds to side $AB$?\nA) $DE$\nB) $EF$\nC) $DF$\nD) $FE$",
+      "answer": "A) $DE$",
+      "solution": {
+        "steps": [
+          "Read corresponding parts in the matched order of the letters: $A \\leftrightarrow D$, $B \\leftrightarrow E$, $C \\leftrightarrow F$.",
+          "Side $AB$ is built from vertices $A$ and $B$, so it corresponds to the side built from $D$ and $E$, which is $DE$.",
+          "B) $EF$ matches $A$ with $E$ instead of $A$ with $D$, ignoring the statement's letter order.",
+          "C) $DF$ corresponds to side $AC$, not $AB$.",
+          "D) $FE$ is the same segment as $EF$ and still pairs the wrong vertices."
+        ],
+        "answer": "A) $DE$"
+      }
+    },
+    {
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Given $\\triangle ABC \\cong \\triangle DEF$, which angle corresponds to $\\angle B$?\nA) $\\angle D$\nB) $\\angle E$\nC) $\\angle F$\nD) $\\angle A$",
+      "answer": "B) $\\angle E$",
+      "solution": {
+        "steps": [
+          "Match by position in the congruence statement: $A \\leftrightarrow D$, $B \\leftrightarrow E$, $C \\leftrightarrow F$.",
+          "Therefore $\\angle B$ corresponds to $\\angle E$.",
+          "A) $\\angle D$ corresponds to $\\angle A$, not $\\angle B$.",
+          "C) $\\angle F$ corresponds to $\\angle C$.",
+          "D) $\\angle A$ is in the first triangle, not a corresponding part in the second."
+        ],
+        "answer": "B) $\\angle E$"
+      }
+    },
+    {
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Given $\\triangle ABC \\cong \\triangle DEF$ with $AB = 8$, find $DE$.\nA) $4$\nB) $16$\nC) $8$\nD) cannot be determined",
+      "answer": "C) $8$",
+      "solution": {
+        "steps": [
+          "Side $DE$ corresponds to side $AB$, and rigid motions preserve distance, so $DE = AB = 8$.",
+          "B) $16$ doubles the length, wrongly assuming a rigid motion can scale a side.",
+          "A) $4$ halves the length, the same scaling error in the other direction.",
+          "D) is wrong because corresponding congruent parts are determined exactly by the congruence statement."
+        ],
+        "answer": "C) $8$"
+      }
+    },
+    {
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "A sequence of rigid motions maps $\\triangle PQR$ onto $\\triangle STU$. Which property guarantees that $PQ = ST$?\nA) Rigid motions preserve area.\nB) Rigid motions preserve orientation.\nC) Rigid motions preserve distance (length).\nD) Rigid motions preserve the number of sides.",
+      "answer": "C) Rigid motions preserve distance (length).",
+      "solution": {
+        "steps": [
+          "Corresponding sides are congruent because rigid motions (translations, rotations, reflections) preserve distance, so the image $ST$ of segment $PQ$ has the same length.",
+          "A) Area preservation is true of rigid motions but does not directly force two specific segments to be equal in length.",
+          "B) Orientation is not even preserved by reflections, and it is not the property that fixes lengths.",
+          "D) Preserving the number of sides is trivially true for any motion and says nothing about length."
+        ],
+        "answer": "C) Rigid motions preserve distance (length)."
+      }
+    },
+    {
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "In $\\triangle ABC \\cong \\triangle DEF$, $m\\angle A = 47^\\circ$ and $m\\angle B = 63^\\circ$. What is $m\\angle F$?\nA) $70^\\circ$\nB) $133^\\circ$\nC) $117^\\circ$\nD) $63^\\circ$",
+      "answer": "A) $70^\\circ$",
+      "solution": {
+        "steps": [
+          "By the triangle angle sum, $m\\angle C = 180^\\circ - 47^\\circ - 63^\\circ = 70^\\circ$.",
+          "Angle $F$ corresponds to angle $C$, so $m\\angle F = m\\angle C = 70^\\circ$.",
+          "B) $133^\\circ$ comes from $180^\\circ - 47^\\circ$, using only one given angle instead of subtracting both.",
+          "C) $117^\\circ$ comes from $180^\\circ - 63^\\circ$, again dropping one of the given angles.",
+          "D) $63^\\circ$ mistakenly pairs $\\angle F$ with $\\angle B$ rather than with $\\angle C$."
+        ],
+        "answer": "A) $70^\\circ$"
+      }
+    },
+    {
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Triangle $ABC$ has vertices $A(0, 0)$, $B(4, 0)$, $C(4, 3)$. Triangle $DEF$ has vertices $D(0, 0)$, $E(4, 0)$, $F(4, -3)$. Which is true about any sequence of rigid motions that maps $\\triangle ABC$ onto $\\triangle DEF$?\nA) A translation alone suffices.\nB) A rotation alone suffices.\nC) The sequence must include a reflection.\nD) No rigid motion can map one onto the other.",
+      "answer": "C) The sequence must include a reflection.",
+      "solution": {
+        "steps": [
+          "Reading $A \\to B \\to C$ gives one orientation (counterclockwise), while $D \\to E \\to F$ traces the opposite orientation because $F$ lies below the $x$-axis where $C$ lay above it.",
+          "Translations and rotations preserve orientation, so they cannot reverse it; a reflection is required to flip orientation.",
+          "Here a reflection across the $x$-axis maps $A,B,C$ onto $D,E,F$, so the triangles are congruent, ruling out D).",
+          "A) and B) are wrong because a single orientation-preserving motion cannot match opposite orientations.",
+          "D) is wrong because a reflection does provide a valid mapping, so the triangles are congruent."
+        ],
+        "answer": "C) The sequence must include a reflection."
+      }
+    },
+    {
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Two triangles have all three pairs of corresponding sides congruent and all three pairs of corresponding angles congruent. Using the definition of congruence in terms of rigid motions, which statement is correct?\nA) The triangles are congruent, because those equalities guarantee a sequence of rigid motions maps one onto the other.\nB) The triangles need not be congruent, since matching all six parts does not force a mapping to exist.\nC) The triangles are congruent only if they also have the same orientation.\nD) Congruence cannot be decided without coordinates.",
+      "answer": "A) The triangles are congruent, because those equalities guarantee a sequence of rigid motions maps one onto the other.",
+      "solution": {
+        "steps": [
+          "The definition of congruence is biconditional: triangles are congruent exactly when a sequence of rigid motions maps one onto the other.",
+          "When all corresponding sides and angles are congruent, you can translate to align one vertex, rotate to align one side, and reflect if orientation differs; the matched lengths and angles force the remaining vertices to coincide, so a mapping exists.",
+          "B) denies the reverse direction of the biconditional; the six equalities do force a mapping sequence.",
+          "C) is wrong because a reflection handles opposite orientation, so same orientation is not required for congruence.",
+          "D) is wrong because congruence follows from the definition without needing any coordinate computation."
+        ],
+        "answer": "A) The triangles are congruent, because those equalities guarantee a sequence of rigid motions maps one onto the other."
+      }
+    },
+    {
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Triangle $ABC$ has vertices $A(0, 0)$, $B(4, 0)$, $C(4, 3)$. Triangle $DEF$ has vertices $D(1, 1)$, $E(5, 1)$, $F(5, 4)$. Which sequence of rigid motions maps $\\triangle ABC$ onto $\\triangle DEF$, proving the triangles congruent?\nA) Translate by $(+1, +1)$.\nB) Reflect across the $x$-axis, then translate by $(+1, +1)$.\nC) Rotate $90^\\circ$ about the origin, then translate by $(+1, +1)$.\nD) No rigid motion maps one onto the other.",
+      "answer": "A) Translate by $(+1, +1)$.",
+      "solution": {
+        "steps": [
+          "Compare vertices: $D - A = (1,1)$, $E - B = (1,1)$, and $F - C = (1,1)$, so every vertex shifts by the same vector $(+1, +1)$.",
+          "The single translation $(x, y) \\mapsto (x+1, y+1)$ sends $A \\to D$, $B \\to E$, and $C \\to F$, carrying all three vertices, so $\\triangle ABC \\cong \\triangle DEF$.",
+          "B) inserts an unnecessary reflection; both triangles already have the same orientation, so no flip is needed.",
+          "C) adds an unnecessary rotation that would misalign the sides, since the triangles are not turned relative to each other.",
+          "D) is wrong because the translation explicitly provides a valid mapping."
+        ],
+        "answer": "A) Translate by $(+1, +1)$."
+      }
+    }
+  ]
+}

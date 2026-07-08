@@ -1,0 +1,144 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent. One blueprint per standard.",
+
+  "standard": "GEO.G-CO.C.10",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Prove geometric theorems",
+  "clusterCode": "C",
+  "skillName": "Theorems about Triangles",
+
+  "description": "Students prove and apply the core triangle theorems: the measures of the interior angles of a triangle sum to $180^\\circ$ (and the exterior-angle theorem that follows from it); the base angles of an isosceles triangle are congruent (and its converse); the Triangle Midsegment Theorem, that the segment joining the midpoints of two sides is parallel to the third side and half its length; and the Concurrency of Medians Theorem, that the three medians meet at a single point (the centroid) which divides each median in a $2{:}1$ ratio. Students both build the deductive arguments (two-column, paragraph, or flow proofs that cite definitions, the Parallel Postulate, alternate-interior-angle and corresponding-angle relationships, the Isosceles Triangle Theorem, and properties of congruent triangles) and use the theorems numerically to find unknown angle measures, segment lengths, and coordinates.",
+
+  "subSkills": [
+    "Apply the Triangle Angle-Sum Theorem to find a missing interior angle, setting up and solving $m\\angle A + m\\angle B + m\\angle C = 180^\\circ$",
+    "Apply the Exterior Angle Theorem, that an exterior angle equals the sum of the two remote interior angles, to find unknown measures",
+    "Prove the Triangle Angle-Sum Theorem by constructing a line through one vertex parallel to the opposite side and using alternate-interior angles",
+    "Identify base angles and the vertex angle of an isosceles triangle and apply the Base Angles Theorem (and its converse) to find missing angles or to conclude sides are congruent",
+    "Set up and solve algebraic equations from isosceles-triangle angle or side relationships",
+    "Apply the Triangle Midsegment Theorem to find a midsegment length, a third-side length, or to justify that a midsegment is parallel to the third side",
+    "Apply the Median Concurrency (centroid) Theorem, using the $2{:}1$ ratio in which the centroid divides each median to find segment lengths along a median",
+    "Find the centroid of a triangle from vertex coordinates using $\\left(\\dfrac{x_1+x_2+x_3}{3}, \\dfrac{y_1+y_2+y_3}{3}\\right)$",
+    "Write a two-column, paragraph, or flow proof of a triangle theorem, citing the appropriate definitions, postulates, and prior theorems with valid reasons"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Angle-sum computation",
+      "example": "In triangle $ABC$, $m\\angle A = 53^\\circ$ and $m\\angle B = 78^\\circ$. Find $m\\angle C$."
+    },
+    {
+      "name": "Exterior angle theorem",
+      "example": "An exterior angle at vertex $C$ of triangle $ABC$ measures $130^\\circ$. If $m\\angle A = 55^\\circ$, find $m\\angle B$."
+    },
+    {
+      "name": "Isosceles base angles",
+      "example": "In isosceles triangle $PQR$, $PQ = PR$ and the vertex angle $m\\angle P = 46^\\circ$. Find the measure of each base angle."
+    },
+    {
+      "name": "Algebraic isosceles relationship",
+      "example": "In isosceles triangle $DEF$, $DE = DF$. If $m\\angle E = (3x + 8)^\\circ$ and $m\\angle F = (5x - 12)^\\circ$, solve for $x$ and find $m\\angle E$."
+    },
+    {
+      "name": "Midsegment length and parallelism",
+      "example": "In triangle $ABC$, $M$ and $N$ are the midpoints of $\\overline{AB}$ and $\\overline{AC}$. If $BC = 18$, find $MN$ and state its relationship to $\\overline{BC}$."
+    },
+    {
+      "name": "Centroid 2:1 ratio",
+      "example": "In triangle $ABC$, the medians meet at centroid $G$. Median $\\overline{AD}$ has $AG = 10$. Find $GD$ and the full length $AD$."
+    },
+    {
+      "name": "Centroid from coordinates",
+      "example": "Triangle $ABC$ has vertices $A(-2, 1)$, $B(4, 3)$, and $C(1, -7)$. Find the coordinates of the centroid."
+    },
+    {
+      "name": "Two-column or paragraph proof",
+      "example": "Given triangle $ABC$ with $\\overline{AB} \\cong \\overline{AC}$, prove that $\\angle B \\cong \\angle C$ (Base Angles Theorem), justifying each step with a definition, postulate, or theorem."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step application of one theorem with the relationship handed to the student and integer values. Substitute into the angle-sum equation and solve, read off congruent base angles, halve a side for a midsegment, or apply the $2{:}1$ centroid ratio in one move. One theorem, one computation, no algebra beyond a single subtraction or halving.",
+      "constraints": [
+        "Exactly one theorem applied, named or obvious from the figure",
+        "Angle measures are integers and only one angle is unknown",
+        "Isosceles problems give the vertex angle or one base angle directly",
+        "Midsegment problems give the third side (find the midsegment) or vice versa with even integers",
+        "Centroid problems give one of the two median pieces and ask for the other using the $2{:}1$ ratio",
+        "No proof writing; at most identifying a single reason"
+      ]
+    },
+    "Medium": {
+      "description": "Two coordinated steps or a one-variable equation. Use the exterior-angle theorem, set up and solve an isosceles relationship of the form $ax + b = cx + d$ or $2(\\text{base}) + \\text{vertex} = 180^\\circ$, combine the angle-sum with isosceles base-angle congruence, find a centroid from coordinates, or complete a short fill-in-the-reason proof. Requires choosing the correct theorem and doing genuine algebra.",
+      "constraints": [
+        "Two theorems combined, or a linear equation in one variable to solve",
+        "Isosceles items use algebraic expressions for angles or sides, or require the angle-sum to find the vertex from base angles",
+        "Centroid-from-coordinates and exterior-angle items belong here",
+        "May include a 2 to 3 step fill-in-the-blank (statements or reasons) proof",
+        "Answers may be fractions or non-integer coordinates, given as exact values"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step synthesis or a full self-authored proof. Chain several theorems (e.g. midsegment plus angle-sum, or centroid ratio combined with an algebraic equation across two medians), prove a theorem from scratch in two-column or paragraph form with fully justified reasons, or solve a multi-figure problem where the output of one theorem is the input to another.",
+      "constraints": [
+        "Three or more linked steps, or a complete original proof with every reason justified",
+        "Proof tasks must cite definitions, the Parallel Postulate, alternate-interior or corresponding angle relationships, the Isosceles Triangle Theorem, or congruent-triangle criteria correctly",
+        "May combine midsegment parallelism with angle relationships, or set two centroid segment expressions equal and solve",
+        "Algebra may involve solving for a variable then back-substituting into a second relationship"
+      ]
+    },
+    "tierSplit": "If split into two worksheets: tier1 covers Easy to Medium computational fluency with the four theorems, angle-sum and exterior-angle, isosceles base angles (numeric and simple algebraic), midsegment length and parallelism, and the centroid 2:1 ratio and centroid-from-coordinates. tier2 covers Medium to Hard, multi-theorem synthesis problems and the proof-writing tasks (Triangle Angle-Sum proof, Base Angles Theorem proof, Midsegment Theorem reasoning). No item overlap between tiers."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Thinks the interior angles of a triangle sum to $360^\\circ$ instead of $180^\\circ$, confusing it with a quadrilateral or full turn",
+      "distractor": "For $m\\angle A = 53^\\circ$, $m\\angle B = 78^\\circ$, gives $m\\angle C = 360 - 53 - 78 = 229^\\circ$ instead of $180 - 53 - 78 = 49^\\circ$"
+    },
+    {
+      "misconception": "Applies the exterior angle theorem by including all three interior angles, or treats the exterior angle as supplementary to the wrong angle",
+      "distractor": "Sets the $130^\\circ$ exterior angle equal to $m\\angle A$ alone, giving $m\\angle B = 130 - 55 - 55$, instead of $130^\\circ = m\\angle A + m\\angle B$ so $m\\angle B = 75^\\circ$"
+    },
+    {
+      "misconception": "Believes the vertex angle of an isosceles triangle is congruent to the base angles, or that all three angles are equal",
+      "distractor": "For vertex angle $46^\\circ$, reports each base angle as $46^\\circ$ instead of $\\dfrac{180 - 46}{2} = 67^\\circ$"
+    },
+    {
+      "misconception": "Forgets to divide the remaining angle measure between the two base angles, assigning the full remainder to one base angle",
+      "distractor": "For vertex angle $46^\\circ$, gives a base angle of $180 - 46 = 134^\\circ$ instead of $67^\\circ$"
+    },
+    {
+      "misconception": "Doubles the midsegment to get the third side but reverses it, or sets the midsegment equal to the third side, ignoring the half-length relationship",
+      "distractor": "For $BC = 18$, gives midsegment $MN = 36$ or $MN = 18$ instead of $MN = \\dfrac{1}{2}(18) = 9$"
+    },
+    {
+      "misconception": "Splits each median in half (1:1) or uses the wrong part of the $2{:}1$ ratio, mixing up the longer vertex-to-centroid segment with the shorter centroid-to-midpoint segment",
+      "distractor": "For $AG = 10$ on median $\\overline{AD}$, gives $GD = 10$ or $GD = 20$ instead of $GD = \\dfrac{1}{2}(10) = 5$"
+    },
+    {
+      "misconception": "Computes the centroid by averaging only two of the three vertices, or adds coordinates without dividing by 3",
+      "distractor": "For $A(-2,1)$, $B(4,3)$, $C(1,-7)$, gives $(3, -3)$ (sum without dividing) instead of $\\left(\\dfrac{-2+4+1}{3}, \\dfrac{1+3-7}{3}\\right) = (1, -1)$"
+    },
+    {
+      "misconception": "In a proof, cites the conclusion as a reason or skips the justifying postulate, treating 'it looks congruent' or an unstated assumption as a valid reason",
+      "distractor": "Justifies $\\angle B \\cong \\angle C$ by 'given' or 'they appear equal' instead of citing the Isosceles Triangle (Base Angles) Theorem or the congruent-triangle correspondence"
+    }
+  ],
+
+  "_comment_itemCounts": "worksheet.single = one ramped sheet (Easy->Hard across 15 items). tier1/tier2 only if the standard is split into two worksheets (15 each, no overlap).",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

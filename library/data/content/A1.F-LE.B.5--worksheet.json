@@ -1,0 +1,217 @@
+{
+  "id": "A1.F-LE.B.5--worksheet",
+  "standard": "A1.F-LE.B.5",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Linear, Quadratic, and Exponential Models",
+  "domainCode": "F-LE",
+  "cluster": "Interpret expressions for functions in terms of the situation they model",
+  "clusterCode": "B",
+  "skillName": "Parameters in Linear and Exponential Models",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "Every parameter in a model has a meaning in the situation it describes. In a linear model $f(x)=mx+b$, the number $b$ is the starting value (the output when $x=0$) and $m$ is the constant rate of change. In an exponential model $f(x)=a\\cdot b^{x}$, the number $a$ is the initial value and the base $b$ is the growth or decay factor, where a percent rate $r$ satisfies $b=1+r$ for growth and $b=1-r$ for decay. These problems ramp from reading a single parameter to building and justifying a full model.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A phone plan costs $C(t)=20t+50$ dollars after $t$ months, where the $\\$50$ is a one-time activation fee. What does the $\\$50$ represent in this situation?",
+      "answer": "The $\\$50$ is the initial cost at $t=0$, the one-time activation fee paid before any monthly charges.",
+      "solution": {
+        "steps": [
+          "In a linear model $f(x)=mx+b$, the constant term $b$ is the value of the function when the input is $0$.",
+          "Here $C(0)=20(0)+50=50$, so the $\\$50$ is the cost when $t=0$.",
+          "In context that is the one-time activation fee charged before any months pass.",
+          "So the $\\$50$ is the initial value (starting cost) of the plan."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A gym membership costs $C(t)=35t+60$ dollars after $t$ months. What does the number $35$ represent?",
+      "answer": "The $35$ is the monthly rate of change: the cost increases by $\\$35$ each month.",
+      "solution": {
+        "steps": [
+          "In $f(x)=mx+b$, the coefficient $m$ of the input is the constant rate of change.",
+          "Here $m=35$, and the input $t$ is measured in months.",
+          "Each time $t$ increases by $1$ month, the cost $C(t)$ increases by $35$.",
+          "So the $35$ means the cost goes up by $\\$35$ per month."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A population is modeled by $P(t)=800\\cdot(1.05)^{t}$, where $t$ is in years. What does the number $800$ represent?",
+      "answer": "The $800$ is the initial population at $t=0$.",
+      "solution": {
+        "steps": [
+          "In an exponential model $f(x)=a\\cdot b^{x}$, the coefficient $a$ is the value when $x=0$.",
+          "Here $P(0)=800\\cdot(1.05)^{0}=800\\cdot 1=800$.",
+          "So $800$ is the population at the start, when $t=0$.",
+          "That is the initial value of the model."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A savings account is modeled by $A(t)=1200\\cdot(1.04)^{t}$ dollars after $t$ years. The base $1.04$ tells you the account grows by what percent each year?",
+      "answer": "It grows by $4\\%$ each year.",
+      "solution": {
+        "steps": [
+          "For an exponential model $a\\cdot b^{x}$, write the base as $b=1+r$ for growth.",
+          "Here $b=1.04$, so $1.04=1+0.04$ and $r=0.04$.",
+          "Convert to a percent: $0.04=4\\%$.",
+          "So the account grows by $4\\%$ each year."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "The amount of medicine in a patient's body is modeled by $M(t)=300\\cdot(0.90)^{t}$ milligrams after $t$ hours. Because the base is less than $1$, is this growth or decay? By what percent does the amount change each hour?",
+      "answer": "It is decay; the amount decreases by $10\\%$ each hour.",
+      "solution": {
+        "steps": [
+          "When the base $b$ satisfies $0<b<1$, the quantity is decaying (decreasing).",
+          "Here $b=0.90<1$, so this is decay.",
+          "Write the base as $b=1-r$: $0.90=1-0.10$, so $r=0.10$.",
+          "Convert to a percent: $0.10=10\\%$, so the amount decreases by $10\\%$ each hour."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A car's value is modeled by $V(t)=24000\\cdot(0.85)^{t}$ dollars after $t$ years. Interpret both the $24000$ and the base $0.85$ in context.",
+      "answer": "The $\\$24000$ is the car's initial value at $t=0$, and the base $0.85$ means the value decreases (decays) by $15\\%$ each year.",
+      "solution": {
+        "steps": [
+          "The coefficient $a=24000$ is the value when $t=0$, so the car is worth $\\$24000$ at the start.",
+          "The base $0.85$ is less than $1$, so the value is decaying each year.",
+          "Write $0.85=1-r$, so $r=1-0.85=0.15$.",
+          "As a percent $0.15=15\\%$, so the value drops by $15\\%$ per year."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A tank is draining, modeled by $W(t)=500-12t$ gallons after $t$ minutes. Interpret the $500$ and the $-12$, being careful about the sign of the rate.",
+      "answer": "The $500$ is the starting amount of water (at $t=0$), and the $-12$ means the water decreases by $12$ gallons each minute.",
+      "solution": {
+        "steps": [
+          "Rewrite in slope-intercept form: $W(t)=-12t+500$, so $b=500$ and $m=-12$.",
+          "The constant term $500$ is the value at $t=0$, the initial amount of water in the tank.",
+          "The slope $m=-12$ is the rate of change; the negative sign means the amount is decreasing.",
+          "So each minute the tank loses $12$ gallons of water."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A table shows the number of pages read after $0,1,2,3$ hours as $40,80,120,160$. Is this situation linear or exponential, and what does the change tell you about the matching parameter?",
+      "answer": "It is linear; the pages increase by a constant amount of $40$ each hour, so the rate of change (slope) is $40$ pages per hour.",
+      "solution": {
+        "steps": [
+          "Check the differences between consecutive outputs: $80-40=40$, $120-80=40$, $160-120=40$.",
+          "The output changes by the same amount each hour, a constant difference of $40$.",
+          "A constant difference (not a constant ratio) means the situation is linear.",
+          "The constant difference $40$ is the slope, so the reader reads $40$ pages per hour."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A table shows a bacteria count after $0,1,2,3$ hours as $50,150,450,1350$. Is this situation linear or exponential, and what does the pattern tell you about the matching parameter?",
+      "answer": "It is exponential; each value is multiplied by $3$, so the growth factor (base) is $3$, meaning the count triples each hour.",
+      "solution": {
+        "steps": [
+          "Check the ratios between consecutive outputs: $\\frac{150}{50}=3$, $\\frac{450}{150}=3$, $\\frac{1350}{450}=3$.",
+          "The output is multiplied by the same factor each hour, a constant ratio of $3$.",
+          "A constant ratio (not a constant difference) means the situation is exponential.",
+          "The constant factor $3$ is the base, so the count triples (grows $200\\%$) each hour."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "An investment is modeled by $A(t)=2000\\cdot(1.125)^{t}$ dollars after $t$ years. Interpret the initial value and convert the base into a percent growth rate.",
+      "answer": "The $\\$2000$ is the initial investment at $t=0$, and the base $1.125$ means it grows by $12.5\\%$ each year.",
+      "solution": {
+        "steps": [
+          "The coefficient $a=2000$ is the value when $t=0$, so $\\$2000$ is the starting investment.",
+          "The base $1.125>1$ indicates growth.",
+          "Write $1.125=1+r$, so $r=1.125-1=0.125$.",
+          "Convert to a percent: $0.125=12.5\\%$, so the investment grows by $12.5\\%$ per year."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A pool starts with $300$ gallons of water and is filled at a steady rate of $25$ gallons per minute. Write a model for the amount of water $W(t)$ after $t$ minutes, and justify what each parameter represents.",
+      "answer": "$W(t)=25t+300$. The $300$ is the initial amount of water (at $t=0$) and the $25$ is the constant rate of change, the gallons added each minute.",
+      "solution": {
+        "steps": [
+          "The amount changes by a constant amount each minute (a fixed number of gallons added), so the model is linear: $W(t)=mt+b$.",
+          "The starting amount is $300$ gallons, so the initial value is $b=300$.",
+          "The pool gains $25$ gallons every minute, a constant rate of change, so the slope is $m=25$ (positive because the amount is increasing).",
+          "This gives $W(t)=25t+300$, where $300$ is the water at $t=0$ and $25$ is the gallons added per minute."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A town has $5000$ residents and its population decreases by $8\\%$ each year. Write an exponential model $P(t)$ for the population after $t$ years, and explain how you found the base.",
+      "answer": "$P(t)=5000\\cdot(0.92)^{t}$. The $5000$ is the initial population, and the base is $0.92$ because a $8\\%$ decrease means $b=1-0.08=0.92$.",
+      "solution": {
+        "steps": [
+          "The population changes by a constant percent each year, so the model is exponential: $P(t)=a\\cdot b^{t}$.",
+          "The initial population is $5000$, so $a=5000$.",
+          "A decrease of $8\\%$ means $r=0.08$ and $b=1-r$, so $b=1-0.08=0.92$.",
+          "This gives $P(t)=5000\\cdot(0.92)^{t}$, where the base $0.92$ encodes the $8\\%$ yearly decay."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A culture of cells triples in number every hour, starting from $20$ cells. Write an exponential model $N(t)$ for the number of cells after $t$ hours, and explain why the base is $3$ rather than $2$ or $0.3$.",
+      "answer": "$N(t)=20\\cdot 3^{t}$. The base is the multiplier that the quantity is multiplied by each hour, and tripling means multiplying by $3$, so $b=3$.",
+      "solution": {
+        "steps": [
+          "Tripling each hour means a constant multiplying factor, so the model is exponential: $N(t)=a\\cdot b^{t}$.",
+          "The starting count is $20$ cells, so $a=20$.",
+          "The base $b$ is the factor the quantity is multiplied by each hour. 'Triples' means multiply by $3$, so $b=3$.",
+          "It is not $2$ (that would be doubling) and not $0.3$ (that would be a decay to $30\\%$ each hour), so $N(t)=20\\cdot 3^{t}$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Two students model a population that grows by $6\\%$ each year starting at $400$. Student A writes $f(t)=400\\cdot(0.06)^{t}$ and Student B writes $g(t)=400\\cdot(1.06)^{t}$. Which model is correct, and what mistake did the other student make?",
+      "answer": "Student B is correct with $g(t)=400\\cdot(1.06)^{t}$. Student A used the rate $0.06$ directly as the base instead of $1+r=1.06$, which would model rapid decay to $6\\%$ of the previous value each year, not $6\\%$ growth.",
+      "solution": {
+        "steps": [
+          "For exponential growth, the base is $b=1+r$, where $r$ is the percent rate written as a decimal.",
+          "Here $r=6\\%=0.06$, so the correct base is $b=1+0.06=1.06$, giving $g(t)=400\\cdot(1.06)^{t}$.",
+          "Student A used $0.06$ as the base; since $0<0.06<1$ that models decay, with the population shrinking to $6\\%$ of its value each year.",
+          "So Student B's model is correct, and Student A's error was using $r$ as the base instead of $1+r$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A drone's altitude is modeled by a linear function. At $t=0$ seconds it is at $90$ meters, and at $t=3$ seconds it is at $60$ meters. Write the model $h(t)$ and interpret the initial value and the rate of change, including the sign.",
+      "answer": "$h(t)=-10t+90$. The $90$ is the initial altitude at $t=0$, and the rate of change is $-10$, meaning the drone descends $10$ meters per second.",
+      "solution": {
+        "steps": [
+          "Since the model is linear, $h(t)=mt+b$. The initial value is the altitude at $t=0$, so $b=90$.",
+          "Find the slope from the two points: $m=\\frac{60-90}{3-0}=\\frac{-30}{3}=-10$.",
+          "This gives $h(t)=-10t+90$.",
+          "The $90$ is the starting altitude (at $t=0$), and the slope $-10$ is the rate of change; the negative sign means the drone is descending $10$ meters each second."
+        ]
+      }
+    }
+  ]
+}

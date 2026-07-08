@@ -1,0 +1,233 @@
+{
+  "id": "8.G.B.6--worksheet--hard",
+  "standard": "8.G.B.6",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand and apply the Pythagorean Theorem",
+  "clusterCode": "B",
+  "skillName": "Pythagorean Theorem Proof",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "These problems ask you to reconstruct full proofs of the Pythagorean Theorem, justify each step, chain similar-triangle proportions, and locate subtle errors in presented arguments. Give complete reasoning, not just answers.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Reconstruct the area-rearrangement proof. Four congruent right triangles with legs $a$ and $b$ are arranged inside a square of side $a+b$ so that their hypotenuses form a tilted inner square of side $c$. Write the area of the large square two ways and simplify to derive $a^2 + b^2 = c^2$. Justify each step.",
+      "answer": "$a^2 + b^2 = c^2$",
+      "solution": {
+        "steps": [
+          "Way 1: the large square has side $a+b$, so its area is $(a+b)^2$.",
+          "Way 2: the large square is made of the inner tilted square (area $c^2$) plus the four congruent right triangles, each with area $\\frac{1}{2}ab$. So its area is $c^2 + 4\\cdot\\frac{1}{2}ab = c^2 + 2ab$.",
+          "Set the two expressions equal: $(a+b)^2 = c^2 + 2ab$.",
+          "Expand the left side using the distributive property: $a^2 + 2ab + b^2 = c^2 + 2ab$.",
+          "Subtract $2ab$ from both sides (the same quantity removed from each side keeps equality): $a^2 + b^2 = c^2$.",
+          "This proves the Pythagorean Theorem."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "In the similar-triangles proof, the altitude from the right angle to the hypotenuse $c$ of a right triangle splits it into two smaller right triangles and divides $c$ into segments $p$ and $q$ (with $p+q=c$), where leg $a$ is adjacent to $p$ and leg $b$ is adjacent to $q$. Explain why each small triangle is similar to the original, then chain the proportions to show $a^2 + b^2 = c^2$.",
+      "answer": "$a^2 = cp$ and $b^2 = cq$, so $a^2 + b^2 = c(p+q) = c^2$",
+      "solution": {
+        "steps": [
+          "Each small triangle shares an acute angle with the original triangle, and both have a right angle (the original right angle, and the right angle where the altitude meets the hypotenuse). By AA similarity, each small triangle is similar to the original.",
+          "From the triangle on segment $p$: corresponding sides give $\\frac{a}{c} = \\frac{p}{a}$, so cross-multiplying yields $a^2 = cp$.",
+          "From the triangle on segment $q$: corresponding sides give $\\frac{b}{c} = \\frac{q}{b}$, so cross-multiplying yields $b^2 = cq$.",
+          "Add the two results: $a^2 + b^2 = cp + cq = c(p+q)$.",
+          "Since $p + q = c$, substitute: $a^2 + b^2 = c\\cdot c = c^2$.",
+          "This proves the theorem."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A student presents this proof: 'The big square has side $a+b$, so its area is $a^2 + b^2$. It is also the inner square plus four triangles, area $c^2 + 4ab$. Setting them equal, $a^2 + b^2 = c^2 + 4ab$.' Identify every error and give the corrected derivation.",
+      "answer": "Two errors: $(a+b)^2 = a^2 + 2ab + b^2$ (not $a^2+b^2$), and each triangle has area $\\frac{1}{2}ab$ so four total $2ab$ (not $4ab$). Correct result: $a^2 + b^2 = c^2$.",
+      "solution": {
+        "steps": [
+          "Error 1: the big square has area $(a+b)^2 = a^2 + 2ab + b^2$, not $a^2 + b^2$. The middle term $2ab$ was dropped.",
+          "Error 2: each right triangle has area $\\frac{1}{2}ab$, so four of them total $4\\cdot\\frac{1}{2}ab = 2ab$, not $4ab$.",
+          "Corrected equation: $a^2 + 2ab + b^2 = c^2 + 2ab$.",
+          "Subtract $2ab$ from both sides: $a^2 + b^2 = c^2$.",
+          "With both errors fixed, the proof correctly yields the Pythagorean Theorem."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Starting from the area equation $(a+b)^2 = c^2 + 4\\left(\\frac{1}{2}ab\\right)$, show every algebraic step that leads to $a^2 + b^2 = c^2$, naming the property used at each step.",
+      "answer": "$a^2 + b^2 = c^2$",
+      "solution": {
+        "steps": [
+          "Simplify the triangle term: $4\\left(\\frac{1}{2}ab\\right) = 2ab$ (multiplication). The equation is $(a+b)^2 = c^2 + 2ab$.",
+          "Expand the left side with the distributive property (FOIL): $(a+b)^2 = a^2 + 2ab + b^2$.",
+          "Now $a^2 + 2ab + b^2 = c^2 + 2ab$.",
+          "Apply the subtraction property of equality, removing $2ab$ from both sides: $a^2 + b^2 = c^2$.",
+          "The $2ab$ terms cancel, leaving the Pythagorean relation."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A triangle has sides $\\sqrt{20}$, $\\sqrt{45}$, and $\\sqrt{65}$. Use the converse of the Pythagorean Theorem to determine whether it is a right triangle. Show the computation.",
+      "answer": "Yes, it is a right triangle.",
+      "solution": {
+        "steps": [
+          "The longest side is $\\sqrt{65}$, so let $c = \\sqrt{65}$ and the legs be $a = \\sqrt{20}$, $b = \\sqrt{45}$.",
+          "Compute $a^2 + b^2 = (\\sqrt{20})^2 + (\\sqrt{45})^2 = 20 + 45 = 65$.",
+          "Compute $c^2 = (\\sqrt{65})^2 = 65$.",
+          "Since $a^2 + b^2 = 65 = c^2$, the converse tells us the triangle is right.",
+          "The right angle is opposite the longest side $\\sqrt{65}$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A triangle has sides $13$, $14$, and $15$. Use the converse to classify it as right, acute, or obtuse. Show the comparison and state the rule you used.",
+      "answer": "Acute",
+      "solution": {
+        "steps": [
+          "The longest side is $c = 15$, with the other sides $13$ and $14$.",
+          "Compute the sum of squares of the two shorter sides: $13^2 + 14^2 = 169 + 196 = 365$.",
+          "Compute the square of the longest side: $15^2 = 225$.",
+          "Compare: $365 > 225$, so $a^2 + b^2 > c^2$.",
+          "Rule: if $a^2 + b^2 > c^2$ the triangle is acute, if $= c^2$ it is right, and if $< c^2$ it is obtuse.",
+          "Since $a^2 + b^2 > c^2$, the triangle is acute."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A triangle has sides $7$, $8$, and $12$. Classify it as right, acute, or obtuse using the converse, and explain why a student who concluded 'acute' because $7^2 + 8^2 > 12^2$ made an error.",
+      "answer": "Obtuse",
+      "solution": {
+        "steps": [
+          "The longest side is $c = 12$, with shorter sides $7$ and $8$.",
+          "Compute $7^2 + 8^2 = 49 + 64 = 113$.",
+          "Compute $12^2 = 144$.",
+          "Compare: $113 < 144$, so $a^2 + b^2 < c^2$, which means the triangle is obtuse.",
+          "The student's error: $7^2 + 8^2 = 113$ is actually less than $144$, not greater. They compared the wrong direction. When $a^2+b^2 < c^2$ the triangle is obtuse, not acute."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "In the similar-triangles proof, the altitude $h$ to the hypotenuse creates segments $p$ and $q$ on the hypotenuse with $p+q=c$. Prove the geometric-mean relationship $h^2 = pq$, and explain which similarity it comes from.",
+      "answer": "$h^2 = pq$",
+      "solution": {
+        "steps": [
+          "The altitude splits the triangle into two smaller right triangles. Each is similar to the original (AA: shared acute angle plus a right angle), so the two small triangles are similar to each other.",
+          "In the small triangle on segment $p$, the altitude $h$ is the side opposite the angle that, in the small triangle on segment $q$, is matched by $p$. Setting up corresponding sides between the two small triangles gives $\\frac{h}{p} = \\frac{q}{h}$.",
+          "Cross-multiply: $h\\cdot h = p\\cdot q$, so $h^2 = pq$.",
+          "This says the altitude is the geometric mean of the two hypotenuse segments, a direct consequence of the similar-triangles structure."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A presented proof reads: 'Drop the altitude to the hypotenuse. The two small triangles are congruent to the original, so $a^2 = cp$ and $b^2 = cq$, hence $a^2+b^2=c^2$.' One word makes a key claim false. Identify it, correct it, and explain why the corrected claim still gives the result.",
+      "answer": "The word 'congruent' is wrong; the small triangles are 'similar' (not congruent) to the original.",
+      "solution": {
+        "steps": [
+          "The small triangles are generally not the same size as the original, so they are not congruent. They are similar to the original by AA (a shared acute angle and a right angle).",
+          "Replace 'congruent' with 'similar'.",
+          "Similarity, not congruence, is what produces the proportions $\\frac{a}{c}=\\frac{p}{a}$ and $\\frac{b}{c}=\\frac{q}{b}$.",
+          "These give $a^2 = cp$ and $b^2 = cq$. Adding, $a^2+b^2 = c(p+q) = c\\cdot c = c^2$, since $p+q=c$.",
+          "So the conclusion holds once 'congruent' is corrected to 'similar'."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Use the converse to find all integer values of $x$ for which the triangle with sides $6$, $8$, and $x$ is a right triangle, where $x$ may be the hypotenuse or a leg. Show both cases.",
+      "answer": "$x = 10$ (hypotenuse) or $x = 2\\sqrt{7}$ (leg); only $x=10$ is an integer.",
+      "solution": {
+        "steps": [
+          "Case 1: $x$ is the hypotenuse (the longest side). Then $6^2 + 8^2 = x^2$, so $36 + 64 = x^2$, giving $x^2 = 100$ and $x = 10$. This is a valid integer.",
+          "Case 2: $8$ is the hypotenuse and $x$ is a leg. Then $6^2 + x^2 = 8^2$, so $x^2 = 64 - 36 = 28$, giving $x = \\sqrt{28} = 2\\sqrt{7} \\approx 5.29$. This is not an integer.",
+          "The only integer value making the triangle right is $x = 10$.",
+          "Note $6$ cannot be the hypotenuse since it is shorter than $8$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Explain the converse of the Pythagorean Theorem precisely, then explain why it is logically different from the theorem itself. Use the triangle with sides $5$, $12$, $13$ to illustrate both the theorem and its converse.",
+      "answer": "Converse: if $a^2+b^2=c^2$ for the longest side $c$, the triangle is right. The theorem assumes 'right' and concludes the equation; the converse assumes the equation and concludes 'right'.",
+      "solution": {
+        "steps": [
+          "Theorem: IF a triangle is right with legs $a$, $b$ and hypotenuse $c$, THEN $a^2 + b^2 = c^2$.",
+          "Converse: IF the three sides satisfy $a^2 + b^2 = c^2$ (with $c$ the longest), THEN the triangle is right, with the right angle opposite $c$.",
+          "They are different because they swap hypothesis and conclusion. A statement being true does not automatically make its converse true; the converse here needs its own justification.",
+          "Illustration with $5$, $12$, $13$ (theorem direction): a right triangle with legs $5$ and $12$ has hypotenuse satisfying $5^2 + 12^2 = 25 + 144 = 169 = 13^2$.",
+          "Converse direction: given only the sides $5$, $12$, $13$, we check $5^2 + 12^2 = 169 = 13^2$, so we conclude the triangle is right, with the right angle opposite the side of length $13$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A student writes the rearrangement proof but places the four triangles so the inner figure is claimed to be a square of side $c$. Explain why the inner quadrilateral is genuinely a square (all sides $c$ and all angles right), not merely a rhombus. This justification is the step most proofs skip.",
+      "answer": "Each side is a hypotenuse of length $c$ (so it is a rhombus), and each corner angle is $180^\\circ - (\\alpha+\\beta) = 90^\\circ$ since the triangle's acute angles satisfy $\\alpha+\\beta=90^\\circ$.",
+      "solution": {
+        "steps": [
+          "All four sides of the inner figure are hypotenuses of congruent right triangles, so each has length $c$. Four equal sides make it at least a rhombus.",
+          "At each corner of the inner figure, two acute angles of the triangles meet along the straight edge of the big square. Call the triangle's acute angles $\\alpha$ and $\\beta$.",
+          "In a right triangle the two acute angles sum to $90^\\circ$, so $\\alpha + \\beta = 90^\\circ$.",
+          "Along a straight edge the three angles sum to $180^\\circ$: $\\alpha + (\\text{inner angle}) + \\beta = 180^\\circ$, so the inner angle $= 180^\\circ - (\\alpha+\\beta) = 180^\\circ - 90^\\circ = 90^\\circ$.",
+          "Equal sides and right angles at every corner make the inner figure a true square of side $c$, which is exactly what the area argument requires."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "From the similar-triangles relations $a^2 = cp$ and $b^2 = cq$, derive a formula for the altitude $h$ to the hypotenuse in terms of $a$, $b$, and $c$, and verify it for the $3$-$4$-$5$ right triangle.",
+      "answer": "$h = \\frac{ab}{c}$; for $3$-$4$-$5$, $h = \\frac{12}{5} = 2.4$.",
+      "solution": {
+        "steps": [
+          "The area of the right triangle can be written using the legs as base and height: Area $= \\frac{1}{2}ab$.",
+          "It can also be written using the hypotenuse as base and the altitude $h$ as height: Area $= \\frac{1}{2}ch$.",
+          "Set the two area expressions equal: $\\frac{1}{2}ab = \\frac{1}{2}ch$.",
+          "Multiply both sides by $2$ and divide by $c$: $h = \\frac{ab}{c}$.",
+          "Verify for legs $a=3$, $b=4$, hypotenuse $c=5$: $h = \\frac{3\\cdot 4}{5} = \\frac{12}{5} = 2.4$.",
+          "Check with $h^2=pq$: here $p = \\frac{a^2}{c} = \\frac{9}{5}$ and $q = \\frac{b^2}{c} = \\frac{16}{5}$, so $pq = \\frac{144}{25}$ and $h^2 = (2.4)^2 = 5.76 = \\frac{144}{25}$. Consistent."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A triangle has sides $x$, $x+7$, and $x+8$, and it is a right triangle with hypotenuse $x+8$. Use the Pythagorean Theorem to find $x$, then verify the side lengths satisfy the converse.",
+      "answer": "$x = 5$, giving sides $5$, $12$, $13$.",
+      "solution": {
+        "steps": [
+          "The hypotenuse is the longest side $x+8$, so $x^2 + (x+7)^2 = (x+8)^2$.",
+          "Expand: $x^2 + x^2 + 14x + 49 = x^2 + 16x + 64$.",
+          "Combine the left side: $2x^2 + 14x + 49 = x^2 + 16x + 64$.",
+          "Move all terms to one side: $2x^2 + 14x + 49 - x^2 - 16x - 64 = 0$, which simplifies to $x^2 - 2x - 15 = 0$.",
+          "Factor: $(x-5)(x+3) = 0$, so $x = 5$ or $x = -3$. A length must be positive, so $x = 5$.",
+          "The sides are $5$, $12$, $13$. Verify the converse: $5^2 + 12^2 = 25 + 144 = 169 = 13^2$, confirming a right triangle."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Critique this argument: 'Sides $9$, $40$, $41$ form a right triangle because $9 + 40 = 49$ and $49$ is close to $41$ doubled.' Identify the misconception, state the correct test, and apply it.",
+      "answer": "Misconception: adding sides instead of squaring. Correct test: $9^2 + 40^2 = 41^2$. Since $81 + 1600 = 1681 = 41^2$, it IS a right triangle, but for the right reason.",
+      "solution": {
+        "steps": [
+          "Misconception: the argument uses $a + b$ compared to $c$ (sums of sides), but the Pythagorean relation uses squares: $a^2 + b^2 = c^2$.",
+          "The reasoning '$9+40=49$ is close to $41$ doubled' is meaningless; the theorem says nothing about doubling the hypotenuse or about $a+b$.",
+          "Correct test (converse): with the longest side $c = 41$, check whether $9^2 + 40^2 = 41^2$.",
+          "Compute: $9^2 + 40^2 = 81 + 1600 = 1681$, and $41^2 = 1681$.",
+          "Since $1681 = 1681$, the equation holds, so the triangle IS right. The conclusion happened to be correct, but the original justification was invalid."
+        ]
+      }
+    }
+  ]
+}

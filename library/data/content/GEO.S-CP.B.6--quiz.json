@@ -1,0 +1,157 @@
+{
+  "id": "GEO.S-CP.B.6--quiz",
+  "standard": "GEO.S-CP.B.6",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Use the rules of probability to compute probabilities of compound events in a uniform probability model",
+  "clusterCode": "B",
+  "skillName": "Computing Conditional Probability",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Eight multiple-choice questions on conditional probability. Find $P(A \\mid B)$ by treating $B$ as the restricted sample space and computing $\\dfrac{n(A \\cap B)}{n(B)} = \\dfrac{P(A \\cap B)}{P(B)}$.",
+  "items": [
+    {
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "A fair six-sided die is rolled. Given that the result is even, what is the probability the result is greater than $3$?\nA) $\\frac{2}{3}$\nB) $\\frac{1}{2}$\nC) $\\frac{2}{6}$\nD) $\\frac{1}{3}$",
+      "answer": "A) $\\frac{2}{3}$",
+      "solution": {
+        "steps": [
+          "The conditioning event is 'even', so the restricted sample space is $\\{2,4,6\\}$, giving $n(B)=3$.",
+          "Among those, the outcomes greater than $3$ are $4$ and $6$, so $n(A \\cap B)=2$.",
+          "$P(>3 \\mid \\text{even}) = \\dfrac{n(A \\cap B)}{n(B)} = \\dfrac{2}{3}$.",
+          "B) $\\frac{1}{2}$ wrongly counts $4,5,6$ as if every value above $3$ were available, ignoring that only even outcomes remain.",
+          "C) $\\frac{2}{6}$ keeps the full sample space of $6$ in the denominator instead of restricting to the $3$ even outcomes.",
+          "D) $\\frac{1}{3}$ counts only one favorable even outcome above $3$ instead of two."
+        ],
+        "answer": "A) $\\frac{2}{3}$"
+      }
+    },
+    {
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "In a survey of $50$ students, $20$ are freshmen, and $12$ of those freshmen ride the bus. What is the probability a student rides the bus, given that the student is a freshman?\nA) $\\frac{12}{50}$\nB) $\\frac{3}{5}$\nC) $\\frac{8}{20}$\nD) $\\frac{20}{50}$",
+      "answer": "B) $\\frac{3}{5}$",
+      "solution": {
+        "steps": [
+          "Restrict to freshmen: $n(B)=20$.",
+          "Of those, $12$ ride the bus, so $n(A \\cap B)=12$.",
+          "$P(\\text{bus} \\mid \\text{freshman}) = \\dfrac{12}{20} = \\dfrac{3}{5}$.",
+          "A) $\\frac{12}{50}$ uses the whole group of $50$ as the denominator instead of restricting to the $20$ freshmen; that is the joint probability, not the conditional.",
+          "C) $\\frac{8}{20}$ counts the freshmen who do NOT ride the bus ($20-12=8$) in the numerator.",
+          "D) $\\frac{20}{50}$ is just the probability of being a freshman and ignores the bus information entirely."
+        ],
+        "answer": "B) $\\frac{3}{5}$"
+      }
+    },
+    {
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "In a class of $30$ students, $18$ play a sport ($S$) and $6$ of those who play a sport are also in band ($B$). What is $P(B \\mid S)$?\nA) $\\frac{6}{30}$\nB) $\\frac{18}{30}$\nC) $\\frac{1}{3}$\nD) $\\frac{12}{18}$",
+      "answer": "C) $\\frac{1}{3}$",
+      "solution": {
+        "steps": [
+          "Condition on $S$: the restricted sample space is the $18$ sport players, so $n(S)=18$.",
+          "Of those, $6$ are also in band, so $n(S \\cap B)=6$.",
+          "$P(B \\mid S) = \\dfrac{n(S \\cap B)}{n(S)} = \\dfrac{6}{18} = \\dfrac{1}{3}$.",
+          "A) $\\frac{6}{30}$ uses the whole class of $30$ as the denominator instead of restricting to sport players.",
+          "B) $\\frac{18}{30}$ is $P(S)$, ignoring the band information.",
+          "D) $\\frac{12}{18}$ counts the sport players who are NOT in band ($18-6=12$) in the numerator."
+        ],
+        "answer": "C) $\\frac{1}{3}$"
+      }
+    },
+    {
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "For two events, $P(A \\cap B) = \\frac{1}{6}$ and $P(B) = \\frac{1}{2}$. What is $P(A \\mid B)$?\nA) $\\frac{1}{12}$\nB) $\\frac{1}{3}$\nC) $\\frac{1}{2}$\nD) $\\frac{2}{3}$",
+      "answer": "B) $\\frac{1}{3}$",
+      "solution": {
+        "steps": [
+          "Use the conditional formula $P(A \\mid B) = \\dfrac{P(A \\cap B)}{P(B)}$.",
+          "Substitute: $\\dfrac{1/6}{1/2} = \\dfrac{1}{6} \\times \\dfrac{2}{1} = \\dfrac{2}{6} = \\dfrac{1}{3}$.",
+          "A) $\\frac{1}{12}$ comes from multiplying $\\frac{1}{6} \\cdot \\frac{1}{2}$ instead of dividing, treating it like an 'and' problem.",
+          "C) $\\frac{1}{2}$ comes from dividing by $P(A)=\\frac{1}{3}$ instead of by $P(B)$.",
+          "D) $\\frac{2}{3}$ inverts the fraction, dividing $P(B)$ by $P(A \\cap B)$."
+        ],
+        "answer": "B) $\\frac{1}{3}$"
+      }
+    },
+    {
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "A two-way table records hair color and eye color for $40$ people. There are $24$ people with brown hair, of whom $9$ have brown eyes; the other $16$ people have blond hair, of whom $4$ have brown eyes. What is the probability a person has brown eyes, given that they have blond hair?\nA) $\\frac{4}{40}$\nB) $\\frac{13}{40}$\nC) $\\frac{1}{4}$\nD) $\\frac{9}{24}$",
+      "answer": "C) $\\frac{1}{4}$",
+      "solution": {
+        "steps": [
+          "Condition on blond hair: $n(B) = 16$.",
+          "Of the blond-haired people, $4$ have brown eyes, so $n(A \\cap B) = 4$.",
+          "$P(\\text{brown eyes} \\mid \\text{blond}) = \\dfrac{4}{16} = \\dfrac{1}{4}$.",
+          "A) $\\frac{4}{40}$ uses the full total of $40$ instead of restricting to the $16$ blond-haired people.",
+          "B) $\\frac{13}{40}$ uses the total brown-eyed count ($9+4=13$) over $40$, which is the marginal $P(\\text{brown eyes})$, ignoring the condition.",
+          "D) $\\frac{9}{24}$ conditions on brown hair by mistake instead of blond hair."
+        ],
+        "answer": "C) $\\frac{1}{4}$"
+      }
+    },
+    {
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "From a standard deck of $52$ cards, one card is drawn. Given that the card is a face card (Jack, Queen, or King), what is the probability it is a King? (There are $12$ face cards and $4$ Kings.)\nA) $\\frac{4}{52}$\nB) $\\frac{1}{3}$\nC) $\\frac{1}{13}$\nD) $\\frac{2}{3}$",
+      "answer": "B) $\\frac{1}{3}$",
+      "solution": {
+        "steps": [
+          "Condition on the card being a face card: the restricted sample space has $n(B)=12$ outcomes.",
+          "Among the face cards, $4$ are Kings, so $n(A \\cap B)=4$.",
+          "$P(\\text{King} \\mid \\text{face}) = \\dfrac{4}{12} = \\dfrac{1}{3}$.",
+          "A) $\\frac{4}{52}$ keeps the full deck of $52$ in the denominator instead of restricting to the $12$ face cards.",
+          "C) $\\frac{1}{13}$ is $P(\\text{King})$ over the whole deck ($\\frac{4}{52}$ reduced), ignoring the condition.",
+          "D) $\\frac{2}{3}$ counts the face cards that are NOT Kings ($12-4=8$) in the numerator, giving $\\frac{8}{12}$."
+        ],
+        "answer": "B) $\\frac{1}{3}$"
+      }
+    },
+    {
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A two-way table classifies $80$ commuters by transportation (car or train) and whether they were late. Of $50$ car commuters, $15$ were late; of $30$ train commuters, $6$ were late. Compare $P(\\text{late} \\mid \\text{train})$ with the overall probability of being late, $P(\\text{late})$. Which statement is correct?\nA) $P(\\text{late} \\mid \\text{train}) = \\frac{1}{5}$, which is less than $P(\\text{late}) = \\frac{21}{80}$, so train commuters are less likely to be late.\nB) $P(\\text{late} \\mid \\text{train}) = \\frac{6}{80}$, which is less than $P(\\text{late}) = \\frac{21}{80}$.\nC) $P(\\text{late} \\mid \\text{train}) = \\frac{1}{5}$, which equals $P(\\text{late})$, so being on the train has no effect.\nD) $P(\\text{late} \\mid \\text{train}) = \\frac{24}{30}$, which is greater than $P(\\text{late}) = \\frac{21}{80}$.",
+      "answer": "A) $P(\\text{late} \\mid \\text{train}) = \\frac{1}{5}$, which is less than $P(\\text{late}) = \\frac{21}{80}$, so train commuters are less likely to be late.",
+      "solution": {
+        "steps": [
+          "Condition on train: $n(\\text{train})=30$ and $6$ of them were late, so $P(\\text{late} \\mid \\text{train}) = \\dfrac{6}{30} = \\dfrac{1}{5}$.",
+          "The overall late count is $15+6=21$ out of $80$, so $P(\\text{late}) = \\dfrac{21}{80}$.",
+          "Compare: $\\dfrac{1}{5} = \\dfrac{16}{80} < \\dfrac{21}{80}$, so knowing a commuter took the train lowers the chance of being late. Choice A is correct.",
+          "B) $\\frac{6}{80}$ uses the full total of $80$ as the denominator instead of restricting to the $30$ train commuters; that is the joint probability, not the conditional.",
+          "C) is wrong because $\\frac{1}{5} = \\frac{16}{80}$ does NOT equal $\\frac{21}{80}$, so the events are not independent.",
+          "D) $\\frac{24}{30}$ counts the train commuters who were NOT late ($30-6=24$) in the numerator instead of those who were late."
+        ],
+        "answer": "A) $P(\\text{late} \\mid \\text{train}) = \\frac{1}{5}$, which is less than $P(\\text{late}) = \\frac{21}{80}$, so train commuters are less likely to be late."
+      }
+    },
+    {
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "At a school, $40\\%$ of students are seniors, and $25\\%$ of all students are seniors who have a parking permit. Using $P(\\text{permit} \\mid \\text{senior}) = \\dfrac{P(\\text{senior} \\cap \\text{permit})}{P(\\text{senior})}$, what fraction of seniors have a parking permit?\nA) $\\frac{1}{10}$\nB) $\\frac{2}{5}$\nC) $\\frac{5}{8}$\nD) $\\frac{8}{5}$",
+      "answer": "C) $\\frac{5}{8}$",
+      "solution": {
+        "steps": [
+          "Write the percentages as probabilities: $P(\\text{senior}) = 0.40 = \\dfrac{2}{5}$ and $P(\\text{senior} \\cap \\text{permit}) = 0.25 = \\dfrac{1}{4}$.",
+          "Apply the formula: $P(\\text{permit} \\mid \\text{senior}) = \\dfrac{1/4}{2/5} = \\dfrac{1}{4} \\times \\dfrac{5}{2} = \\dfrac{5}{8}$.",
+          "So $\\dfrac{5}{8} = 62.5\\%$ of seniors have a permit. Choice C is correct.",
+          "A) $\\frac{1}{10}$ comes from multiplying $\\frac{2}{5} \\cdot \\frac{1}{4}$ instead of dividing, treating it as an 'and' problem.",
+          "B) $\\frac{2}{5}$ just reports $P(\\text{senior})$ and ignores the conditioning step.",
+          "D) $\\frac{8}{5}$ inverts the division, computing $\\dfrac{P(\\text{senior})}{P(\\text{senior} \\cap \\text{permit})}$, which exceeds $1$ and cannot be a probability."
+        ],
+        "answer": "C) $\\frac{5}{8}$"
+      }
+    }
+  ]
+}

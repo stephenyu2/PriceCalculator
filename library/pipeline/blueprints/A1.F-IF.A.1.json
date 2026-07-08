@@ -1,0 +1,133 @@
+{
+  "standard": "A1.F-IF.A.1",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Functions",
+  "domainCode": "F-IF",
+  "cluster": "Understand the concept of a function and use function notation",
+  "clusterCode": "A",
+  "skillName": "Defining Functions and Their Graphs",
+
+  "description": "Students determine whether a relation between two sets is a function, where a function from a domain to a range assigns to each input exactly one output. They identify the domain and range of a relation given as a set of ordered pairs, a table, a mapping diagram, or a graph; apply the vertical line test to graphs; interpret function notation $f(x)$ as the output corresponding to input $x$ (and evaluate $f$ at given inputs); and recognize that the graph of $f$ is the graph of the equation $y = f(x)$.",
+
+  "subSkills": [
+    "Decide whether a relation (set of ordered pairs, table, or mapping diagram) is a function by checking that each input has exactly one output",
+    "Apply the vertical line test to decide whether a graph represents a function",
+    "State the domain and range of a relation given as ordered pairs, a table, a mapping, or a discrete graph",
+    "Interpret function notation: read $f(x)$ as the output of $f$ at input $x$, and distinguish input from output",
+    "Evaluate a function at a numeric or symbolic input from a rule, a table, or a graph",
+    "Connect a function to its graph: the graph of $f$ is the set of points $(x, f(x))$, i.e. the graph of $y = f(x)$, so $f(a)=b$ corresponds to the point $(a,b)$"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Function-or-not from ordered pairs",
+      "example": "Is the relation $\\{(1,3),(2,5),(3,7),(2,9)\\}$ a function? Explain. (No: the input $2$ is paired with both $5$ and $9$.)"
+    },
+    {
+      "name": "Vertical line test on a graph",
+      "example": "A graph shows a parabola opening to the right (a sideways parabola $x = y^2$). Does the graph represent a function? (No: a vertical line crosses it twice.)"
+    },
+    {
+      "name": "Domain and range of a relation",
+      "example": "State the domain and range of $\\{(-2,4),(0,1),(3,4),(5,0)\\}$. (Domain $\\{-2,0,3,5\\}$, range $\\{0,1,4\\}$.)"
+    },
+    {
+      "name": "Interpret function notation",
+      "example": "If $g(x)$ gives the cost in dollars of $x$ tickets, what does $g(4)=52$ mean? ($4$ tickets cost $\\$52$.)"
+    },
+    {
+      "name": "Evaluate from a rule",
+      "example": "Given $f(x)=2x-5$, find $f(3)$. ($f(3)=2(3)-5=1$.)"
+    },
+    {
+      "name": "Read a value from a table or graph",
+      "example": "From the graph of $y=f(x)$, the point $(2,7)$ lies on the curve. Find $f(2)$. ($f(2)=7$.)"
+    },
+    {
+      "name": "Mapping diagram classification",
+      "example": "A mapping diagram sends $1\\to a$, $2\\to a$, $3\\to b$. Is it a function? (Yes: each input maps to exactly one output; outputs may repeat.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step identification or evaluation from an explicitly given representation. Student checks the one-output-per-input rule on a short list of ordered pairs or a small mapping, reads domain/range off a finite set, or evaluates a linear rule at a positive integer. The correct representation is fully shown; no setup or interpretation of context is required.",
+      "constraints": [
+        "Relations given as 3 to 4 ordered pairs or a 3-element mapping diagram",
+        "Function-or-not cases are unambiguous (a repeated input is plainly visible, or all inputs are clearly distinct)",
+        "Evaluation uses a linear rule $f(x)=ax+b$ with small integer coefficients and a positive integer input",
+        "Domain/range asked only for finite, discrete sets",
+        "These items anchor the start of the single worksheet and form the lower half of tier1"
+      ]
+    },
+    "Medium": {
+      "description": "Requires reading a less direct representation or doing light computation. Includes the vertical line test on a continuous graph, evaluating at negative or fractional inputs, evaluating quadratic or absolute-value rules, or interpreting function-notation statements in a real-world context. One layer of reasoning beyond a direct lookup.",
+      "constraints": [
+        "Vertical line test applied to continuous graphs (line, parabola, circle, sideways parabola)",
+        "Evaluate rules such as $f(x)=x^2-3$ or $f(x)=|x|+2$ at negative or non-integer inputs (e.g. $f(-2)$, $f\\!\\left(\\tfrac{1}{2}\\right)$)",
+        "Translate between $f(a)=b$ and the point $(a,b)$ on the graph of $y=f(x)$",
+        "Interpret the meaning of a function-notation statement in context",
+        "These items occupy the middle of the single worksheet; they form the top of tier1 and the bottom of tier2"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step or abstract: determine for which value of a parameter a relation becomes (or fails to be) a function, evaluate at a symbolic or algebraic input, combine representations, or justify a conclusion with the domain/range/exactly-one-output definition. Requires extracting information and chaining two or more ideas.",
+      "constraints": [
+        "Solve for an unknown coordinate so that a relation is (or is not) a function, e.g. find all $a$ making $\\{(1,2),(a,5),(3,7)\\}$ not a function",
+        "Evaluate at a symbolic input, e.g. given $f(x)=3x-1$ find $f(2k)$ or solve $f(x)=11$ for $x$",
+        "Use a graph plus the definition to identify domain and range of a continuous function over an interval",
+        "Justify with the definition why a vertical line test failure means a relation is not a function",
+        "These items close the single worksheet and form the upper half of tier2"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student thinks a function may not repeat OUTPUTS, so a relation with a repeated $y$-value is judged not a function",
+      "distractor": "Calls $\\{(-2,4),(0,1),(3,4)\\}$ not a function because $4$ appears twice as an output, when in fact repeated outputs are allowed"
+    },
+    {
+      "misconception": "Student allows an input to map to two outputs, missing the exactly-one-output requirement",
+      "distractor": "Calls $\\{(1,3),(2,5),(2,9)\\}$ a function despite the input $2$ having two outputs"
+    },
+    {
+      "misconception": "Student confuses the vertical line test with the horizontal line test",
+      "distractor": "Concludes a parabola $y=x^2$ is not a function because a horizontal line meets it twice"
+    },
+    {
+      "misconception": "Student swaps domain and range, listing outputs as the domain",
+      "distractor": "Reports the domain of $\\{(-2,4),(0,1),(3,4)\\}$ as $\\{1,4\\}$ (the range) instead of $\\{-2,0,3\\}$"
+    },
+    {
+      "misconception": "Student reads $f(x)$ as multiplication, treating $f(3)$ as $f\\cdot 3$",
+      "distractor": "Given $f(x)=2x-5$, computes $f(3)$ as $f\\times 3$ or as $2-5\\cdot 3$ instead of $2(3)-5=1$"
+    },
+    {
+      "misconception": "Student confuses input and output, returning the input when asked for $f(a)$ from a graph",
+      "distractor": "From the point $(2,7)$ on $y=f(x)$ reports $f(2)=2$ instead of $f(2)=7$"
+    },
+    {
+      "misconception": "Student substitutes into the wrong variable or mishandles signs when evaluating",
+      "distractor": "Given $f(x)=x^2-3$, computes $f(-2)=-(2^2-3)=-1$ or $-2^2-3=-7$ instead of $(-2)^2-3=1$"
+    },
+    {
+      "misconception": "Student solves $f(x)=b$ by evaluating instead of solving for the input",
+      "distractor": "Asked to solve $2x-5=11$, reports $x=2(11)-5=17$ instead of $x=8$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

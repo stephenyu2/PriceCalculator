@@ -1,0 +1,124 @@
+{
+  "standard": "GEO.G-SRT.A.3",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Similarity, Right Triangles, and Trigonometry",
+  "domainCode": "G-SRT",
+  "cluster": "Understand similarity in terms of similarity transformations",
+  "clusterCode": "A",
+  "skillName": "AA Similarity Criterion",
+
+  "description": "Students use the properties of similarity transformations (dilations and rigid motions) to establish and apply the Angle-Angle (AA) criterion for triangle similarity: if two angles of one triangle are congruent to two angles of another, the triangles are similar. They explain why two pairs of congruent angles force the third pair (via the Triangle Angle Sum, so all three angles match), justify how a sequence of a dilation and rigid motions maps one triangle onto the other, identify whether a given pair of triangles is similar by AA, name the correct correspondence of vertices, write similarity statements, and use the resulting proportional sides to solve for unknown lengths and scale factors.",
+
+  "subSkills": [
+    "State the AA criterion and recognize that two pairs of congruent angles imply the triangles are similar",
+    "Use the Triangle Angle Sum ($180^\\circ$) to show that the third pair of angles must also be congruent",
+    "Explain why AA holds using similarity transformations: a dilation matches one pair of corresponding sides, and rigid motions then align the equal angles so the triangles coincide",
+    "Identify the correct vertex correspondence and write a valid similarity statement such as $\\triangle ABC \\sim \\triangle DEF$",
+    "Recognize angle relationships that produce congruent angles: shared/common angles, vertical angles, and parallel-line angle pairs (alternate interior or corresponding)",
+    "Apply the resulting proportionality of corresponding sides to solve for an unknown side length or scale factor",
+    "Determine when AA does NOT apply or when given information is insufficient to conclude similarity"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Direct AA recognition with given angle measures",
+      "example": "In $\\triangle ABC$, $m\\angle A = 50^\\circ$ and $m\\angle B = 60^\\circ$. In $\\triangle DEF$, $m\\angle D = 50^\\circ$ and $m\\angle F = 70^\\circ$. Are the triangles similar by AA? Justify using the third angle."
+    },
+    {
+      "name": "Find the third angle to confirm AA",
+      "example": "$\\triangle PQR$ has $m\\angle P = 35^\\circ$, $m\\angle Q = 95^\\circ$. $\\triangle XYZ$ has $m\\angle X = 35^\\circ$, $m\\angle Z = 50^\\circ$. Use the Triangle Angle Sum to find the missing angle in each and decide whether $\\triangle PQR \\sim \\triangle XYZ$."
+    },
+    {
+      "name": "Shared-angle configuration (line parallel to a side / overlapping triangles)",
+      "example": "In $\\triangle ABC$, segment $\\overline{DE}$ is drawn with $D$ on $\\overline{AB}$ and $E$ on $\\overline{AC}$ so that $\\overline{DE} \\parallel \\overline{BC}$. Explain why $\\triangle ADE \\sim \\triangle ABC$ by AA (common angle $A$, plus corresponding angles from the parallel lines)."
+    },
+    {
+      "name": "Vertical-angle configuration (bowtie / two triangles meeting at a point)",
+      "example": "Segments $\\overline{AB}$ and $\\overline{CD}$ intersect at $P$ with $\\overline{AC} \\parallel \\overline{BD}$. Show $\\triangle APC \\sim \\triangle BPD$ by AA using the vertical angles at $P$ and the alternate interior angles."
+    },
+    {
+      "name": "Transformation justification of AA",
+      "example": "$\\triangle ABC$ and $\\triangle DEF$ have $\\angle A \\cong \\angle D$ and $\\angle B \\cong \\angle E$. Describe a similarity transformation (a dilation of scale factor $k = \\frac{DE}{AB}$ followed by rigid motions) that maps $\\triangle ABC$ onto $\\triangle DEF$, and explain why the angle congruences guarantee the image coincides with $\\triangle DEF$."
+    },
+    {
+      "name": "Solve for an unknown side using AA-established similarity",
+      "example": "$\\triangle ABC \\sim \\triangle DEF$ by AA. If $AB = 6$, $BC = 8$, and the corresponding side $DE = 9$, find $EF$ using the proportion $\\frac{DE}{AB} = \\frac{EF}{BC}$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "_split": "tier1 = Easy through Medium (recognition, third-angle confirmation, simple shared/vertical-angle setups). tier2 = Medium through Hard (transformation reasoning, parallel-line angle chains, and solving for unknown lengths/scale factors). Most use a single ramped worksheet: Easy items 1-5, Medium 6-11, Hard 12-15.",
+    "Easy": {
+      "description": "Single-step AA recognition. Two angle measures are given for each triangle and at least one pair is explicitly equal; the student names whether AA applies and writes the similarity statement. No third-angle computation or side work.",
+      "constraints": [
+        "Both triangles have two angle measures stated directly",
+        "At least one congruent angle pair is visible without any computation",
+        "No Triangle Angle Sum step required; no side lengths involved",
+        "Answer is yes/no plus a correctly ordered similarity statement like $\\triangle ABC \\sim \\triangle DEF$"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step reasoning. The student must compute a missing angle with the Triangle Angle Sum, or identify congruent angles from a vertical-angle or single parallel-line relationship, before concluding similarity by AA. May include a one-step side proportion once similarity is established.",
+      "constraints": [
+        "Requires one Triangle Angle Sum computation ($\\text{third} = 180^\\circ - \\text{(sum of two given)}$) OR recognition of vertical/parallel angle pairs",
+        "Correct vertex correspondence must be determined from a figure, not handed to the student",
+        "May add a single proportion $\\frac{a}{b} = \\frac{c}{x}$ to solve for one unknown length",
+        "Angle values are clean integers"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step justification or multi-step computation. Includes transformation-based explanations (dilation scale factor plus rigid motions), parallel-line angle chains across overlapping triangles, or solving for an unknown length AND the scale factor where the correspondence must be reasoned out. May ask the student to decide that the given information is insufficient.",
+      "constraints": [
+        "Requires either a written similarity-transformation justification or a chain of two or more angle relationships (e.g., parallel lines plus shared/vertical angle)",
+        "Involves overlapping or rotated triangles where correspondence is non-obvious",
+        "Solving step needs the scale factor $k$ and at least one unknown side, possibly with a follow-up",
+        "May include an insufficient-information case where AA cannot be concluded"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student thinks two congruent angles guarantee congruent (not just similar) triangles",
+      "distractor": "Concludes $\\triangle ABC \\cong \\triangle DEF$ instead of $\\triangle ABC \\sim \\triangle DEF$, treating AA as a congruence criterion"
+    },
+    {
+      "misconception": "Student believes a single pair of congruent angles is enough for similarity",
+      "distractor": "Declares the triangles similar from only one matching angle (e.g., one $40^\\circ$ angle each), ignoring that AA needs two pairs"
+    },
+    {
+      "misconception": "Student computes the third angle incorrectly by subtracting from $90^\\circ$ instead of $180^\\circ$",
+      "distractor": "Finds the missing angle as $90^\\circ - (\\text{two given angles})$, giving a negative or wrong measure and a false non-similar conclusion"
+    },
+    {
+      "misconception": "Student matches vertices in the wrong order in the similarity statement",
+      "distractor": "Writes $\\triangle ABC \\sim \\triangle EDF$ when the correct correspondence is $\\triangle ABC \\sim \\triangle DEF$, pairing $\\angle A$ with $\\angle E$ rather than $\\angle D$"
+    },
+    {
+      "misconception": "Student inverts the proportion when solving for a side",
+      "distractor": "Sets up $\\frac{AB}{DE} = \\frac{EF}{BC}$ (mixing small-over-large with large-over-small), so the unknown side comes out as the reciprocal of the correct value"
+    },
+    {
+      "misconception": "Student confuses the dilation scale factor with its reciprocal",
+      "distractor": "Uses $k = \\frac{AB}{DE}$ when mapping $\\triangle ABC$ onto $\\triangle DEF$ (should be $k = \\frac{DE}{AB}$), reversing the scale factor"
+    },
+    {
+      "misconception": "Student assumes any two triangles with one equal angle and proportional-looking sides are AA-similar",
+      "distractor": "Claims similarity from one angle plus a side ratio, conflating AA with SAS similarity or asserting similarity when information is actually insufficient"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

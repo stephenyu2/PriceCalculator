@@ -1,0 +1,172 @@
+{
+  "id": "GEO.G-GMD.A.3--lesson",
+  "standard": "GEO.G-GMD.A.3",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Geometric Measurement and Dimension",
+  "domainCode": "G-GMD",
+  "cluster": "Explain volume formulas and use them to solve problems",
+  "clusterCode": "A",
+  "skillName": "Applying Volume Formulas",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "intro": "Every common solid has its own volume formula: a cylinder is $V=\\pi r^2 h$, a cone is $V=\\frac{1}{3}\\pi r^2 h$, a pyramid is $V=\\frac{1}{3}Bh$ where $B$ is the base area, and a sphere is $V=\\frac{4}{3}\\pi r^3$. The skill is choosing the right formula, preparing the inputs (halving a diameter to get the radius, or using the Pythagorean theorem to turn a slant height into a vertical height), and then substituting carefully. Notice that cones and pyramids carry a $\\frac{1}{3}$ and spheres carry a $\\frac{4}{3}$. Leave answers in exact form such as $k\\pi$ unless a decimal is requested.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A cylinder has radius $4$ cm and height $9$ cm. Find its volume in exact form.",
+      "solution": {
+        "steps": [
+          "Choose the cylinder formula: $V=\\pi r^2 h$.",
+          "Substitute $r=4$ and $h=9$: $V=\\pi(4)^2(9)$.",
+          "Square the radius: $(4)^2=16$, so $V=\\pi(16)(9)$.",
+          "Multiply: $16\\times 9=144$, so $V=144\\pi$.",
+          "The volume is $144\\pi$ cubic centimeters. (Do not stop at the base area $16\\pi$; the height must be included.)"
+        ],
+        "answer": "$144\\pi$ cubic centimeters"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A cone has radius $3$ in and height $7$ in. Find its volume in exact form.",
+      "solution": {
+        "steps": [
+          "Choose the cone formula: $V=\\frac{1}{3}\\pi r^2 h$. The $\\frac{1}{3}$ is essential for a cone.",
+          "Substitute $r=3$ and $h=7$: $V=\\frac{1}{3}\\pi(3)^2(7)$.",
+          "Square the radius: $(3)^2=9$, so $V=\\frac{1}{3}\\pi(9)(7)$.",
+          "Multiply inside: $9\\times 7=63$, so $V=\\frac{1}{3}\\pi(63)$.",
+          "Apply the $\\frac{1}{3}$: $\\frac{63}{3}=21$, so $V=21\\pi$ cubic inches."
+        ],
+        "answer": "$21\\pi$ cubic inches"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A sphere has diameter $10$ cm. Find its volume in exact form.",
+      "solution": {
+        "steps": [
+          "The sphere formula needs the radius, not the diameter: $V=\\frac{4}{3}\\pi r^3$.",
+          "Convert diameter to radius: $r=\\frac{d}{2}=\\frac{10}{2}=5$ cm.",
+          "Substitute $r=5$: $V=\\frac{4}{3}\\pi(5)^3$.",
+          "Cube the radius: $(5)^3=125$, so $V=\\frac{4}{3}\\pi(125)=\\frac{500}{3}\\pi$.",
+          "The volume is $\\frac{500}{3}\\pi$ cubic centimeters. (Halving the diameter first is what keeps this from becoming $\\frac{4000}{3}\\pi$.)"
+        ],
+        "answer": "$\\frac{500}{3}\\pi$ cubic centimeters"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A pyramid has a square base with side $5$ ft and a height of $12$ ft. Find its volume.",
+      "solution": {
+        "steps": [
+          "Use the pyramid formula $V=\\frac{1}{3}Bh$, where $B$ is the area of the base.",
+          "Compute the base area. The base is a square of side $5$, so $B=5^2=25$ square feet.",
+          "Substitute $B=25$ and $h=12$: $V=\\frac{1}{3}(25)(12)$.",
+          "Multiply: $25\\times 12=300$, so $V=\\frac{1}{3}(300)$.",
+          "Apply the $\\frac{1}{3}$: $\\frac{300}{3}=100$, so $V=100$ cubic feet."
+        ],
+        "answer": "$100$ cubic feet"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A cone has radius $6$ and slant height $10$. Find its volume in exact form.",
+      "solution": {
+        "steps": [
+          "The volume formula $V=\\frac{1}{3}\\pi r^2 h$ uses the vertical height $h$, not the slant height. Find $h$ first.",
+          "The radius, vertical height, and slant height form a right triangle: $r^2+h^2=\\ell^2$, so $h=\\sqrt{\\ell^2-r^2}$.",
+          "Substitute $\\ell=10$ and $r=6$: $h=\\sqrt{10^2-6^2}=\\sqrt{100-36}=\\sqrt{64}=8$.",
+          "Now substitute $r=6$ and $h=8$: $V=\\frac{1}{3}\\pi(6)^2(8)=\\frac{1}{3}\\pi(36)(8)$.",
+          "Multiply: $36\\times 8=288$, so $V=\\frac{1}{3}\\pi(288)=96\\pi$ cubic units."
+        ],
+        "answer": "$96\\pi$ cubic units"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A cylinder has radius $5$ m and height $6$ m. Find its volume in exact form.",
+      "hint": "Use $V=\\pi r^2 h$. Square the radius before multiplying by the height.",
+      "solution": {
+        "steps": [
+          "Apply the cylinder formula: $V=\\pi r^2 h=\\pi(5)^2(6)$.",
+          "Square the radius: $(5)^2=25$, so $V=\\pi(25)(6)$.",
+          "Multiply: $25\\times 6=150$, so $V=150\\pi$.",
+          "The volume is $150\\pi$ cubic meters."
+        ],
+        "answer": "$150\\pi$ cubic meters"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A sphere has radius $6$ m. Find its volume in exact form.",
+      "hint": "Use $V=\\frac{4}{3}\\pi r^3$. Remember to cube the radius, not square it.",
+      "solution": {
+        "steps": [
+          "Apply the sphere formula: $V=\\frac{4}{3}\\pi r^3=\\frac{4}{3}\\pi(6)^3$.",
+          "Cube the radius: $(6)^3=216$, so $V=\\frac{4}{3}\\pi(216)$.",
+          "Multiply: $\\frac{4}{3}\\times 216=\\frac{864}{3}=288$, so $V=288\\pi$.",
+          "The volume is $288\\pi$ cubic meters."
+        ],
+        "answer": "$288\\pi$ cubic meters"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A cone has radius $4$ in and height $9$ in. Find its volume both in exact form and as a decimal approximation using $\\pi\\approx 3.14$.",
+      "hint": "Use $V=\\frac{1}{3}\\pi r^2 h$ for the exact value, then replace $\\pi$ with $3.14$ for the approximation.",
+      "solution": {
+        "steps": [
+          "Apply the cone formula: $V=\\frac{1}{3}\\pi r^2 h=\\frac{1}{3}\\pi(4)^2(9)$.",
+          "Square the radius: $(4)^2=16$, so $V=\\frac{1}{3}\\pi(16)(9)=\\frac{1}{3}\\pi(144)$.",
+          "Apply the $\\frac{1}{3}$: $\\frac{144}{3}=48$, so the exact volume is $48\\pi$ cubic inches.",
+          "Approximate: $48\\pi\\approx 48(3.14)=150.72$ cubic inches."
+        ],
+        "answer": "$48\\pi$ cubic inches $\\approx 150.72$ cubic inches"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A cylinder has volume $50\\pi$ cubic cm and radius $5$ cm. Find its height.",
+      "hint": "Start from $V=\\pi r^2 h$, substitute the known volume and radius, then solve for $h$.",
+      "solution": {
+        "steps": [
+          "Write the cylinder formula: $V=\\pi r^2 h$.",
+          "Substitute $V=50\\pi$ and $r=5$: $50\\pi=\\pi(5)^2 h=25\\pi h$.",
+          "Divide both sides by $25\\pi$: $h=\\frac{50\\pi}{25\\pi}=2$.",
+          "The height is $2$ cm."
+        ],
+        "answer": "$2$ cm"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A silo is a cylinder of radius $3$ ft and height $10$ ft topped by a hemisphere of radius $3$ ft. Find the total volume in exact form.",
+      "hint": "Add the cylinder volume $\\pi r^2 h$ to a hemisphere, which is half of $\\frac{4}{3}\\pi r^3$.",
+      "solution": {
+        "steps": [
+          "Find the cylinder volume: $V_{\\text{cyl}}=\\pi r^2 h=\\pi(3)^2(10)=\\pi(9)(10)=90\\pi$.",
+          "A hemisphere is half a sphere: $V_{\\text{hemi}}=\\frac{1}{2}\\cdot\\frac{4}{3}\\pi r^3=\\frac{2}{3}\\pi(3)^3$.",
+          "Cube the radius: $(3)^3=27$, so $V_{\\text{hemi}}=\\frac{2}{3}\\pi(27)=18\\pi$.",
+          "Add the two parts: $V=90\\pi+18\\pi=108\\pi$ cubic feet."
+        ],
+        "answer": "$108\\pi$ cubic feet"
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "generatedAt": "2026-06-24T21:01:54.123Z"
+}

@@ -1,0 +1,170 @@
+{
+  "id": "8.SP.A.2--lesson",
+  "standard": "8.SP.A.2",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate patterns of association in bivariate data",
+  "clusterCode": "A",
+  "skillName": "Fitting Lines to Scatter Plots",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "When two quantities tend to grow or shrink together, a scatter plot of the data often clusters along a straight line. We can model that pattern by drawing a line of fit: a trend line that runs through the middle of the cloud of points, with roughly as many points above it as below it. Once we have the line, we estimate its slope $m$ and $y$-intercept $b$ and write its equation in slope-intercept form $y = mx + b$. A good fit hugs the data tightly with little vertical spread; a poor fit leaves many points far from the line. Some scatter plots show no linear pattern at all, and no straight line fits them well.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A line of best fit passes through the points $(0, 4)$ and $(5, 14)$. Write its equation in the form $y = mx + b$.",
+      "solution": {
+        "steps": [
+          "Find the slope using $m = \\frac{y_2 - y_1}{x_2 - x_1}$ with the points $(0, 4)$ and $(5, 14)$.",
+          "$m = \\frac{14 - 4}{5 - 0} = \\frac{10}{5} = 2$.",
+          "The $y$-intercept $b$ is the $y$-value when $x = 0$. The point $(0, 4)$ has $x = 0$, so $b = 4$.",
+          "Substitute $m = 2$ and $b = 4$ into $y = mx + b$.",
+          "The equation of the line of best fit is $y = 2x + 4$."
+        ],
+        "answer": "$y = 2x + 4$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A trend line drawn through a scatter plot passes through $(2, 10)$ and $(6, 2)$. Write the equation of the line in the form $y = mx + b$.",
+      "solution": {
+        "steps": [
+          "Compute the slope: $m = \\frac{2 - 10}{6 - 2} = \\frac{-8}{4} = -2$.",
+          "The slope is negative, which matches a line that falls from left to right.",
+          "Find $b$ by substituting one point, say $(2, 10)$, into $y = -2x + b$: $10 = -2(2) + b$.",
+          "$10 = -4 + b$, so $b = 14$.",
+          "The equation of the line is $y = -2x + 14$."
+        ],
+        "answer": "$y = -2x + 14$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Two candidate trend lines are drawn for the same scatter plot. Line P has equation $y = \\frac{1}{2}x + 1$ and passes near every point, leaving each point only about $1$ unit above or below it. Line Q has equation $y = 2x - 3$ and leaves most points more than $5$ units away from it. Which line is the better fit, and why?",
+      "solution": {
+        "steps": [
+          "A line fits better when the data points sit closer to it, meaning the vertical distances from the points to the line are small.",
+          "Line P leaves points only about $1$ unit away, so the spread around it is very small.",
+          "Line Q leaves points more than $5$ units away, so the spread around it is much larger.",
+          "Smaller vertical distances mean the line passes through the middle of the cloud and models the data well.",
+          "Line P is the better fit because the data points are much closer to it than to line Q."
+        ],
+        "answer": "Line P ($y = \\frac{1}{2}x + 1$), because the points are much closer to it (about $1$ unit away) than to line Q (more than $5$ units away)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A scatter plot relates the number of hours a student studies $(x)$ to their test score $(y)$. The line of best fit is $y = 8x + 50$. What does the slope $8$ represent in this context, and what does the $y$-intercept $50$ represent?",
+      "solution": {
+        "steps": [
+          "In $y = mx + b$, the slope $m$ tells how much $y$ changes for each $1$-unit increase in $x$.",
+          "Here $m = 8$, so the predicted test score rises by $8$ points for each additional hour of studying.",
+          "The $y$-intercept $b$ is the value of $y$ when $x = 0$.",
+          "Here $b = 50$, the predicted test score for a student who studies $0$ hours.",
+          "Slope $8$: each extra hour of study adds about $8$ points to the predicted score. Intercept $50$: a student who studies $0$ hours has a predicted score of $50$."
+        ],
+        "answer": "Slope $8$ means the predicted score increases by $8$ points per hour studied; the intercept $50$ is the predicted score for $0$ hours of study."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Two scatter plots are described. In Plot A the points climb steadily from the lower-left to the upper-right and lie close to a single straight path. In Plot B the points are scattered randomly with no upward or downward trend. Which plot suggests a linear association suitable for fitting a straight line, and why?",
+      "solution": {
+        "steps": [
+          "A linear association means that as $x$ increases, $y$ tends to change in a consistent direction, so the points line up along a straight path.",
+          "Plot A shows points rising steadily together and lying close to one straight path, which is a clear linear pattern.",
+          "Plot B shows points with no consistent direction, so no straight line would run through the middle of them.",
+          "Only data with a linear pattern should be modeled with a line of fit.",
+          "Plot A suggests a linear association suitable for fitting a straight line; Plot B shows no association, so a line would not model it."
+        ],
+        "answer": "Plot A, because its points rise steadily along a straight path (a linear pattern), while Plot B has no consistent trend."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A line of best fit passes through the points $(0, 3)$ and $(4, 11)$. Write its equation in the form $y = mx + b$.",
+      "hint": "Find the slope with $m = \\frac{y_2 - y_1}{x_2 - x_1}$. The $y$-intercept is the $y$-value at the point where $x = 0$.",
+      "solution": {
+        "steps": [
+          "Slope: $m = \\frac{11 - 3}{4 - 0} = \\frac{8}{4} = 2$.",
+          "The point $(0, 3)$ has $x = 0$, so $b = 3$.",
+          "Substitute into $y = mx + b$.",
+          "The equation is $y = 2x + 3$."
+        ],
+        "answer": "$y = 2x + 3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A trend line passes through the points $(2, 9)$ and $(8, 12)$. Write its equation in the form $y = mx + b$.",
+      "hint": "The slope may be a fraction. After finding $m$, substitute one point to solve for $b$.",
+      "solution": {
+        "steps": [
+          "Slope: $m = \\frac{12 - 9}{8 - 2} = \\frac{3}{6} = \\frac{1}{2}$.",
+          "Substitute $(2, 9)$ into $y = \\frac{1}{2}x + b$: $9 = \\frac{1}{2}(2) + b = 1 + b$.",
+          "So $b = 8$.",
+          "The equation is $y = \\frac{1}{2}x + 8$."
+        ],
+        "answer": "$y = \\frac{1}{2}x + 8$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A trend line is drawn through a scatter plot. The data points are clustered tightly along the line, each lying only a fraction of a unit above or below it. Is this a good fit or a poor fit? Justify your answer.",
+      "hint": "Judge the fit by how close the points are to the line, not by how many points the line touches exactly.",
+      "solution": {
+        "steps": [
+          "Fit quality depends on the closeness of the points to the line.",
+          "The points are clustered tightly along the line, each less than a unit away, so the vertical spread is very small.",
+          "Small spread means the line passes through the middle of the data and models the pattern well.",
+          "This is a good fit because the data points are very close to the line."
+        ],
+        "answer": "A good fit, because the points lie very close to the line with little vertical spread."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A scatter plot relates the age of a used car in years $(x)$ to its price in thousands of dollars $(y)$. The line of best fit is $y = -2x + 20$. What does the slope $-2$ represent in this context?",
+      "hint": "The slope tells how much $y$ changes for each $1$-year increase in $x$. A negative slope means $y$ decreases.",
+      "solution": {
+        "steps": [
+          "In $y = mx + b$, the slope is the change in $y$ for each $1$-unit increase in $x$.",
+          "Here $m = -2$ and $y$ is measured in thousands of dollars.",
+          "A slope of $-2$ means the price drops by $2$ thousand dollars for each additional year of age.",
+          "The slope $-2$ means the car's predicted price decreases by about $\\$2{,}000$ for each year older it is."
+        ],
+        "answer": "The price decreases by about $\\$2{,}000$ (2 thousand dollars) for each additional year of the car's age."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A scatter plot of data clearly decreases from left to right: as $x$ grows, $y$ gets smaller. A student writes the line of best fit as $y = \\frac{3}{4}x + 10$. Explain why this equation cannot be a good fit, and state what should change.",
+      "hint": "Look at the sign of the slope and compare it with the direction of the data.",
+      "solution": {
+        "steps": [
+          "The data decreases from left to right, so the trend line should fall, which requires a negative slope.",
+          "The student's slope $\\frac{3}{4}$ is positive, so the line rises from left to right.",
+          "A rising line cannot pass through the middle of data that falls, so it does not fit.",
+          "The slope should be negative, for example $y = -\\frac{3}{4}x + 10$, so the line falls with the data."
+        ],
+        "answer": "The slope $\\frac{3}{4}$ is positive, but the data decreases, so the line should have a negative slope (for example $y = -\\frac{3}{4}x + 10$)."
+      }
+    }
+  ]
+}

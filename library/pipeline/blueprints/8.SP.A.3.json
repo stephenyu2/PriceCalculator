@@ -1,0 +1,122 @@
+{
+  "standard": "8.SP.A.3",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate patterns of association in bivariate data",
+  "clusterCode": "A",
+  "skillName": "Linear Models in Context",
+
+  "description": "Students use the equation of a linear model $y = mx + b$ that fits bivariate measurement data to solve real-world problems and to interpret the slope and the $y$-intercept in context. They must read slope as a rate of change (the change in $y$ per one-unit increase in $x$, with units), read the intercept as the predicted value of $y$ when $x = 0$ (with units and a check of whether that value is meaningful), substitute given values to predict, and solve the linear equation for the input needed to reach a target output.",
+
+  "subSkills": [
+    "Interpret the slope $m$ of a linear model as a rate of change with correct units (change in $y$ per unit change in $x$)",
+    "Interpret the $y$-intercept $b$ as the predicted value of $y$ when $x = 0$, with units, and judge whether that value is meaningful in context",
+    "Substitute a value of $x$ into $y = mx + b$ to predict an output (interpolation or extrapolation)",
+    "Solve $y = mx + b$ for $x$ given a target output value",
+    "Write the equation of a linear model from a verbal description, a slope and intercept, or two points on a fitted line",
+    "Use the model to compare predictions or to compute a total change over an interval of $x$"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Interpret the slope",
+      "example": "A line fit to data relating weeks of practice $x$ to typing speed $y$ (words per minute) is $y = 4x + 25$. What does the slope $4$ mean in this context? Answer: typing speed increases by about $4$ words per minute for each additional week of practice."
+    },
+    {
+      "name": "Interpret the y-intercept",
+      "example": "For the model $y = 4x + 25$ above, interpret the intercept $25$. Answer: a student with $0$ weeks of practice is predicted to type about $25$ words per minute."
+    },
+    {
+      "name": "Predict an output (substitute x)",
+      "example": "A linear model for plant height $y$ in centimeters after $x$ days is $y = 1.5x + 6$. Predict the height after $10$ days. Answer: $y = 1.5(10) + 6 = 21$ centimeters."
+    },
+    {
+      "name": "Solve for the input (given target y)",
+      "example": "Using $y = 1.5x + 6$, after how many days is the plant predicted to be $30$ centimeters tall? Answer: $30 = 1.5x + 6 \\Rightarrow x = 16$ days."
+    },
+    {
+      "name": "Write the model then use it",
+      "example": "A tutoring program charges a $\\$20$ registration fee plus $\\$15$ per session. Write a linear model for total cost $y$ after $x$ sessions, then find the cost of $8$ sessions. Answer: $y = 15x + 20$, so $y = 15(8) + 20 = \\$140$."
+    },
+    {
+      "name": "Compare or compute total change over an interval",
+      "example": "A model relating distance driven $x$ (miles) to fuel remaining $y$ (gallons) is $y = -0.04x + 12$. How much fuel is used between mile $50$ and mile $200$? Answer: $\\Delta y = -0.04(200 - 50) = -6$, so $6$ gallons are used."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step interpretation or single substitution into a given model. The equation is provided with integer slope and intercept, and the context is familiar (cost, distance, growth).",
+      "constraints": [
+        "Equation $y = mx + b$ is given explicitly with integer $m$ and $b$",
+        "Task is either: interpret slope, interpret intercept, OR substitute a small whole-number $x$ to predict $y$",
+        "No solving for $x$ and no equation-writing required",
+        "Units are clearly stated in the prompt"
+      ]
+    },
+    "Medium": {
+      "description": "Two steps, or a model with non-integer (decimal or fractional) slope, or solving for the input. Includes writing the equation from a slope-and-intercept description before using it.",
+      "constraints": [
+        "Slope or intercept may be a decimal or fraction (for example $1.5$ or $\\frac{3}{4}$)",
+        "Task requires solving $y = mx + b$ for $x$ given a target $y$, OR writing the equation from a verbal description then substituting",
+        "May ask the student to interpret AND compute in the same item",
+        "Slope may be negative"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning: build the model from two points or from data, then interpret and predict, judge whether the intercept is meaningful, distinguish interpolation from extrapolation, or compute a total change and compare two models.",
+      "constraints": [
+        "Student must derive the equation from two points on the fitted line or from a described data pattern (compute slope as $m = \\frac{y_2 - y_1}{x_2 - x_1}$ then find $b$)",
+        "Requires combining interpretation with a prediction and a follow-up (for example solve for $x$ and judge reasonableness)",
+        "May ask whether the $y$-intercept is meaningful in context or whether a prediction is an extrapolation beyond the data",
+        "May compare two linear models by their slopes or intercepts"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student swaps slope and intercept, interpreting $b$ as the rate of change and $m$ as the starting value",
+      "distractor": "For $y = 4x + 25$, says the typing speed starts at $4$ wpm and rises $25$ wpm per week, reversing the roles of $m$ and $b$"
+    },
+    {
+      "misconception": "Student reads the slope as a total amount instead of a per-unit rate, dropping the 'per unit $x$' part of the units",
+      "distractor": "Says the slope $4$ means '$4$ words per minute total' rather than '$4$ words per minute for each additional week'"
+    },
+    {
+      "misconception": "Student solves for the input by dividing the target $y$ by the slope and forgetting to subtract the intercept first",
+      "distractor": "For $30 = 1.5x + 6$, computes $x = \\frac{30}{1.5} = 20$ instead of $x = \\frac{30 - 6}{1.5} = 16$"
+    },
+    {
+      "misconception": "Student ignores the intercept when predicting, computing $y = mx$ only",
+      "distractor": "For $y = 1.5x + 6$ at $x = 10$, gives $y = 1.5(10) = 15$ instead of $1.5(10) + 6 = 21$"
+    },
+    {
+      "misconception": "Student makes a sign error with a negative slope, treating a decrease as an increase",
+      "distractor": "For $y = -0.04x + 12$, says fuel increases by $0.04$ gallons per mile, or adds the change instead of subtracting it"
+    },
+    {
+      "misconception": "Student computes slope as $\\frac{x_2 - x_1}{y_2 - y_1}$ (run over rise) when building the model from two points",
+      "distractor": "Inverts the slope formula, producing the reciprocal of the correct slope and therefore a wrong equation"
+    },
+    {
+      "misconception": "Student interprets the $y$-intercept as the value of $x$ when $y = 0$ (confusing it with the $x$-intercept)",
+      "distractor": "For $y = 4x + 25$ says the intercept $25$ means $25$ weeks of practice are needed before any typing, rather than $25$ wpm at $0$ weeks"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

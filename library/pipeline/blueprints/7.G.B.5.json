@@ -1,0 +1,123 @@
+{
+  "standard": "7.G.B.5",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Solve real-life and mathematical problems involving angle measure, area, surface area, and volume",
+  "clusterCode": "B",
+  "skillName": "Angle Relationships",
+
+  "description": "Students use facts about supplementary, complementary, vertical, and adjacent angles to write and solve simple equations for an unknown angle in a figure. Given a figure or description in which an unknown angle is expressed numerically or as an algebraic expression (e.g. $2x + 10$), students identify the governing relationship (angles summing to $90^\\circ$, summing to $180^\\circ$, equal vertical angles, or adjacent angles forming a known total), set up a linear equation, solve it, and report the requested angle measure in degrees.",
+
+  "subSkills": [
+    "Identify complementary angles (two angles whose measures sum to $90^\\circ$)",
+    "Identify supplementary angles (two angles whose measures sum to $180^\\circ$), including a linear pair on a straight line",
+    "Identify vertical angles formed by two intersecting lines and recognize they are congruent",
+    "Identify adjacent angles that together compose a larger known angle (such as a right angle, straight angle, or full $360^\\circ$ around a point)",
+    "Translate an angle relationship into a linear equation, including cases where one or both angles are algebraic expressions in $x$",
+    "Solve the resulting one- or multi-step linear equation for the unknown",
+    "Substitute the solved value back to compute the specific angle measure(s) the problem requests"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Complementary angles",
+      "example": "Two angles are complementary. One measures $34^\\circ$. Write and solve an equation to find the other angle. ($x + 34 = 90$, so $x = 56^\\circ$.)"
+    },
+    {
+      "name": "Supplementary / linear pair",
+      "example": "Angles $\\angle ABD$ and $\\angle DBC$ form a straight line. If $\\angle ABD = 115^\\circ$, find $\\angle DBC$. ($x + 115 = 180$, so $x = 65^\\circ$.)"
+    },
+    {
+      "name": "Vertical angles",
+      "example": "Two lines intersect. One angle measures $(3x - 5)^\\circ$ and its vertical angle measures $70^\\circ$. Solve for $x$. ($3x - 5 = 70$, so $x = 25$.)"
+    },
+    {
+      "name": "Algebraic complementary or supplementary",
+      "example": "Two supplementary angles measure $(2x + 10)^\\circ$ and $(3x)^\\circ$. Find $x$ and both angles. ($2x + 10 + 3x = 180$, so $x = 34$; angles are $78^\\circ$ and $102^\\circ$.)"
+    },
+    {
+      "name": "Adjacent angles composing a known angle",
+      "example": "Ray $BD$ lies inside right angle $\\angle ABC$. If $\\angle ABD = (2x)^\\circ$ and $\\angle DBC = (x + 15)^\\circ$, find each angle. ($2x + x + 15 = 90$, so $x = 25$; angles are $50^\\circ$ and $40^\\circ$.)"
+    },
+    {
+      "name": "Angles around a point",
+      "example": "Three angles meet at a point and together make a full turn: $(x)^\\circ$, $(2x)^\\circ$, and $150^\\circ$. Find $x$. ($x + 2x + 150 = 360$, so $x = 70$.)"
+    },
+    {
+      "name": "Multi-step combined relationships",
+      "example": "Two lines intersect; one of the four angles is $(4x + 8)^\\circ$. Its supplement (the adjacent angle on the line) is $(6x - 28)^\\circ$. Find $x$ and the measure of the larger vertical-angle pair. ($4x + 8 + 6x - 28 = 180$, so $x = 20$; angles are $88^\\circ$ and $92^\\circ$.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single relationship with one unknown that is a bare number or $x$. One-step equation; the relationship is named or obvious from the figure. No algebraic expressions beyond $x$ itself.",
+      "constraints": [
+        "Exactly one relationship: complementary, supplementary, vertical, or one adjacent split",
+        "Unknown appears as $x$ or a single number, never as a multi-term expression",
+        "Solved in one step ($x + a = 90$, $x + a = 180$, or $x = a$ for vertical angles)",
+        "All given and resulting measures are positive integers in degrees"
+      ]
+    },
+    "Medium": {
+      "description": "One relationship but at least one angle is a linear expression such as $2x + 10$ or $3x$. Requires writing a two-step linear equation, solving for $x$, then substituting back to report the requested angle measure.",
+      "constraints": [
+        "At least one angle given as a linear expression in $x$ (e.g. $2x$, $x + 15$, $3x - 5$)",
+        "Equation requires two steps (combine like terms then isolate $x$)",
+        "Student must substitute $x$ back to produce the final angle measure",
+        "Integer solutions; angle measures remain valid (each strictly between $0^\\circ$ and $180^\\circ$)"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems combining two relationships or requiring a chain of reasoning: e.g. variables on both sides, vertical angles set equal then a supplement found, or angles around a point with multiple algebraic terms. Student must select the correct relationship before setting up the equation.",
+      "constraints": [
+        "Two or more relationships combined (e.g. vertical equality plus a linear pair), or angles around a point with multiple expressions",
+        "Equation has variable terms on both sides or three or more terms to combine",
+        "Final answer requires computing a second angle after solving for $x$",
+        "Relationship is not pre-named; student infers it from the figure description"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Confuses complementary with supplementary, using $180^\\circ$ when the angles are complementary (or $90^\\circ$ when supplementary)",
+      "distractor": "Solves $x + 34 = 180$ to get $146^\\circ$ for a complementary pair instead of $x + 34 = 90$ giving $56^\\circ$"
+    },
+    {
+      "misconception": "Thinks vertical angles are supplementary rather than equal, so subtracts from $180^\\circ$",
+      "distractor": "Reports $180 - 70 = 110^\\circ$ for an angle vertical to $70^\\circ$ instead of $70^\\circ$"
+    },
+    {
+      "misconception": "Treats adjacent angles that compose a right angle as if they summed to $180^\\circ$ (or those forming a straight line as if they summed to $90^\\circ$)",
+      "distractor": "Uses the wrong total, e.g. solves $2x + (x+15) = 180$ for a right-angle split, yielding $x = 55$ instead of $x = 25$"
+    },
+    {
+      "misconception": "Solves the equation for $x$ but forgets to substitute back, reporting the value of $x$ as the angle measure",
+      "distractor": "Gives the answer $34$ (the value of $x$) instead of the requested angle $78^\\circ$"
+    },
+    {
+      "misconception": "Sets up the relationship correctly but makes a sign or inverse-operation error when isolating $x$",
+      "distractor": "From $2x + 10 = 90$ computes $x = (90 + 10) \\div 2 = 50$ instead of $x = (90 - 10) \\div 2 = 40$"
+    },
+    {
+      "misconception": "Adds the two algebraic expressions but drops or mishandles the constant term when combining like terms",
+      "distractor": "From $2x + 10 + 3x = 180$ writes $5x = 180$ (ignoring the $+10$), getting $x = 36$ instead of $x = 34$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

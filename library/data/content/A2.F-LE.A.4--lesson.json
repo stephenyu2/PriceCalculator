@@ -1,0 +1,165 @@
+{
+  "id": "A2.F-LE.A.4--lesson",
+  "standard": "A2.F-LE.A.4",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Functions — Linear, Quadratic, and Exponential Models",
+  "domainCode": "F-LE",
+  "cluster": "Construct and compare linear, quadratic, and exponential models and solve problems",
+  "clusterCode": "A",
+  "skillName": "Logarithms and Exponential Models",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "An equation like $b^{t}=d$ asks \"to what power must I raise $b$ to get $d$?\" That power is a logarithm: $b^{x}=y \\iff x=\\log_b y$. Use $\\log = \\log_{10}$ for base $10$, $\\ln = \\log_e$ for base $e$, and the change-of-base formula $\\log_b x=\\dfrac{\\ln x}{\\ln b}$ for base $2$. To solve a model $ab^{ct}=d$ for the time $t$, first divide by $a$ to isolate the power, then take the matching logarithm of both sides, then divide by $c$. The result is exact as a logarithm and can be evaluated with technology: $t=\\dfrac{\\log_b\\!\\left(\\frac{d}{a}\\right)}{c}$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Express the solution of $10^{t}=350$ as a logarithm, then evaluate it rounded to three decimal places.",
+      "solution": {
+        "steps": [
+          "The exponential factor is already isolated, so rewrite the equation in logarithmic form using $b^{t}=d \\iff t=\\log_b d$.",
+          "Here the base is $10$, so the matching logarithm is the common log: $t=\\log_{10}350=\\log 350$.",
+          "Evaluate with technology: $\\log 350\\approx 2.544$.",
+          "Check: $10^{2.544}\\approx 350$, which matches the original equation."
+        ],
+        "answer": "$t=\\log 350\\approx 2.544$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Solve $e^{t}=20$ for $t$. Give the exact value and a decimal rounded to three places.",
+      "solution": {
+        "steps": [
+          "The base is $e$, so take the natural logarithm of both sides: $\\ln\\!\\left(e^{t}\\right)=\\ln 20$.",
+          "Because $\\ln$ and $e^{x}$ are inverses, $\\ln\\!\\left(e^{t}\\right)=t$, so $t=\\ln 20$.",
+          "Do not use the common log here: base $e$ requires $\\ln$, not $\\log$.",
+          "Evaluate: $\\ln 20\\approx 2.996$."
+        ],
+        "answer": "$t=\\ln 20\\approx 2.996$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Express the solution of $2^{t}=50$ as a logarithm, then evaluate it to three decimal places using the change-of-base formula.",
+      "solution": {
+        "steps": [
+          "Rewrite in logarithmic form: $2^{t}=50 \\iff t=\\log_2 50$.",
+          "A calculator usually has only $\\log$ and $\\ln$, so apply the change-of-base formula: $\\log_2 50=\\dfrac{\\ln 50}{\\ln 2}$.",
+          "Keep the base value in the denominator: it is $\\dfrac{\\ln 50}{\\ln 2}$, not $\\dfrac{\\ln 2}{\\ln 50}$.",
+          "Evaluate: $\\dfrac{\\ln 50}{\\ln 2}\\approx \\dfrac{3.912}{0.693}\\approx 5.644$."
+        ],
+        "answer": "$t=\\log_2 50=\\dfrac{\\ln 50}{\\ln 2}\\approx 5.644$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Solve $5\\cdot 10^{t}=2000$ for $t$. Give the exact logarithm and round to three decimal places.",
+      "solution": {
+        "steps": [
+          "Isolate the exponential factor first by dividing both sides by the leading coefficient $5$: $10^{t}=\\dfrac{2000}{5}=400$.",
+          "Now rewrite in logarithmic form: $10^{t}=400 \\iff t=\\log 400$.",
+          "Evaluate: $\\log 400\\approx 2.602$.",
+          "Note: dividing by $5$ first is essential. Taking $\\log$ before dividing would give the wrong value $\\log 2000\\approx 3.301$."
+        ],
+        "answer": "$t=\\log 400\\approx 2.602$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A population is modeled by $P=500e^{0.03t}$, where $t$ is in years. Find the time $t$ when the population reaches $1500$. Give the exact form and round to one decimal place.",
+      "solution": {
+        "steps": [
+          "Set the model equal to the target: $500e^{0.03t}=1500$.",
+          "Divide both sides by the leading coefficient $500$ to isolate the power: $e^{0.03t}=\\dfrac{1500}{500}=3$.",
+          "Take the natural logarithm of both sides (base $e$): $0.03t=\\ln 3$.",
+          "Divide by the exponent coefficient $0.03$: $t=\\dfrac{\\ln 3}{0.03}$.",
+          "Evaluate: $t=\\dfrac{\\ln 3}{0.03}\\approx \\dfrac{1.0986}{0.03}\\approx 36.6$ years."
+        ],
+        "answer": "$t=\\dfrac{\\ln 3}{0.03}\\approx 36.6$ years"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Express the solution of $10^{t}=85$ as a logarithm, then evaluate it rounded to three decimal places.",
+      "hint": "The base is $10$, so use the common log: $10^{t}=d \\iff t=\\log d$.",
+      "solution": {
+        "steps": [
+          "Rewrite in logarithmic form: $10^{t}=85 \\iff t=\\log 85$.",
+          "Evaluate with technology: $\\log 85\\approx 1.929$."
+        ],
+        "answer": "$t=\\log 85\\approx 1.929$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Solve $e^{t}=7$ for $t$. Give the exact value and a decimal rounded to three places.",
+      "hint": "Base $e$ calls for the natural logarithm $\\ln$, not the common log.",
+      "solution": {
+        "steps": [
+          "Take the natural logarithm of both sides: $\\ln\\!\\left(e^{t}\\right)=\\ln 7$.",
+          "Since $\\ln\\!\\left(e^{t}\\right)=t$, we get $t=\\ln 7$.",
+          "Evaluate: $\\ln 7\\approx 1.946$."
+        ],
+        "answer": "$t=\\ln 7\\approx 1.946$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Express the solution of $2^{t}=30$ as a logarithm and evaluate it to three decimal places using the change-of-base formula.",
+      "hint": "Rewrite as $t=\\log_2 30$, then use $\\log_2 30=\\dfrac{\\ln 30}{\\ln 2}$. Keep the base $2$ in the denominator.",
+      "solution": {
+        "steps": [
+          "Rewrite in logarithmic form: $2^{t}=30 \\iff t=\\log_2 30$.",
+          "Apply the change-of-base formula: $\\log_2 30=\\dfrac{\\ln 30}{\\ln 2}$.",
+          "Evaluate: $\\dfrac{\\ln 30}{\\ln 2}\\approx \\dfrac{3.401}{0.693}\\approx 4.907$."
+        ],
+        "answer": "$t=\\log_2 30=\\dfrac{\\ln 30}{\\ln 2}\\approx 4.907$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Solve $3\\cdot e^{2t}=48$ for $t$. Give the exact logarithm and round to three decimal places.",
+      "hint": "Divide by $3$ first to isolate $e^{2t}$, then take $\\ln$, then divide by the exponent coefficient $2$.",
+      "solution": {
+        "steps": [
+          "Divide both sides by the leading coefficient $3$: $e^{2t}=\\dfrac{48}{3}=16$.",
+          "Take the natural logarithm of both sides: $2t=\\ln 16$.",
+          "Divide by the exponent coefficient $2$: $t=\\dfrac{\\ln 16}{2}$.",
+          "Evaluate: $t=\\dfrac{\\ln 16}{2}\\approx \\dfrac{2.7726}{2}\\approx 1.386$."
+        ],
+        "answer": "$t=\\dfrac{\\ln 16}{2}\\approx 1.386$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "An investment of $\\$1000$ grows continuously at an annual rate of $6\\%$, modeled by $A=1000e^{0.06t}$, where $t$ is in years. How long until the investment is worth $\\$2500$? Give the exact form and round to one decimal place.",
+      "hint": "Convert the percent to a decimal rate $r=0.06$. Set $1000e^{0.06t}=2500$, divide by $1000$, take $\\ln$, then divide by $0.06$.",
+      "solution": {
+        "steps": [
+          "Set the model equal to the target: $1000e^{0.06t}=2500$.",
+          "Divide both sides by $1000$ to isolate the power: $e^{0.06t}=\\dfrac{2500}{1000}=2.5$.",
+          "Take the natural logarithm of both sides: $0.06t=\\ln 2.5$.",
+          "Divide by the rate $0.06$ (use the decimal, not $6$): $t=\\dfrac{\\ln 2.5}{0.06}$.",
+          "Evaluate: $t=\\dfrac{\\ln 2.5}{0.06}\\approx \\dfrac{0.9163}{0.06}\\approx 15.3$ years."
+        ],
+        "answer": "$t=\\dfrac{\\ln 2.5}{0.06}\\approx 15.3$ years"
+      }
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "id": "A1.F-IF.C.8--lesson",
+  "standard": "A1.F-IF.C.8",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Functions",
+  "domainCode": "F-IF",
+  "cluster": "Analyze functions using different representations",
+  "clusterCode": "C",
+  "skillName": "Equivalent Function Forms",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "The same quadratic can be written three ways, and each form puts a different feature in plain sight. Standard form $f(x)=ax^2+bx+c$ shows the $y$-intercept $(0,c)$. Vertex form $f(x)=a(x-h)^2+k$ shows the vertex $(h,k)$, which is the maximum or minimum. Factored form $f(x)=a(x-r_1)(x-r_2)$ shows the $x$-intercepts (zeros) $r_1$ and $r_2$. Rewriting a function does not change the function, it only changes which property you can read off directly. Exponential functions work the same way: exponent laws let you rewrite $a\\cdot b^{t}$ to expose a growth rate per period. The skill is to choose the form that answers the question, do the algebra correctly, and interpret the revealed quantity.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Write $f(x)=x^2-6x+5$ in vertex form by completing the square, then state the minimum value and where it occurs.",
+      "solution": {
+        "steps": [
+          "Group the $x$ terms: $f(x)=(x^2-6x)+5$.",
+          "Take half of the coefficient of $x$: $\\frac{-6}{2}=-3$, and square it: $(-3)^2=9$.",
+          "Add and subtract $9$ inside: $f(x)=(x^2-6x+9)-9+5$.",
+          "Write the perfect square and combine constants: $f(x)=(x-3)^2-4$.",
+          "In vertex form $a(x-h)^2+k$, the vertex is $(h,k)=(3,-4)$. Since $a=1>0$ the parabola opens up, so this is a minimum.",
+          "The minimum value is $-4$, occurring at $x=3$."
+        ],
+        "answer": "$f(x)=(x-3)^2-4$; minimum value $-4$ at $x=3$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Write $f(x)=x^2+2x-15$ in factored form, then state the zeros and the $y$-intercept.",
+      "solution": {
+        "steps": [
+          "Find two numbers that multiply to $-15$ and add to $2$: those are $5$ and $-3$.",
+          "Factor: $f(x)=(x+5)(x-3)$.",
+          "Set each factor equal to zero: $x+5=0$ gives $x=-5$, and $x-3=0$ gives $x=3$.",
+          "The zeros (the $x$-intercepts) are $x=-5$ and $x=3$.",
+          "The $y$-intercept comes from the standard form constant: $f(0)=0^2+2(0)-15=-15$, the point $(0,-15)$."
+        ],
+        "answer": "$f(x)=(x+5)(x-3)$; zeros $x=-5$ and $x=3$; $y$-intercept $(0,-15)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Write $f(x)=3x^2+12x+7$ in vertex form and state the vertex.",
+      "solution": {
+        "steps": [
+          "Factor the leading coefficient out of the $x$ terms only: $f(x)=3(x^2+4x)+7$.",
+          "Half of $4$ is $2$, and $2^2=4$, so complete the square inside the parentheses: $f(x)=3(x^2+4x+4-4)+7$.",
+          "Separate the added term, keeping it inside the parentheses for now: $f(x)=3\\big((x+2)^2-4\\big)+7$.",
+          "Distribute the $3$: $f(x)=3(x+2)^2-12+7$.",
+          "Combine constants: $f(x)=3(x+2)^2-5$.",
+          "In vertex form $a(x-h)^2+k$, here $h=-2$ and $k=-5$, so the vertex is $(-2,-5)$."
+        ],
+        "answer": "$f(x)=3(x+2)^2-5$; vertex $(-2,-5)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Is $a(x)=(x-2)^2-9$ equivalent to $b(x)=x^2-4x-5$? Expand to check, and state the zeros of the function.",
+      "solution": {
+        "steps": [
+          "Expand the square: $(x-2)^2=x^2-4x+4$.",
+          "Subtract $9$: $a(x)=x^2-4x+4-9=x^2-4x-5$.",
+          "This matches $b(x)=x^2-4x-5$ exactly, so the two forms are equivalent: they are the same function.",
+          "To find the zeros, use the vertex form: $(x-2)^2-9=0$ gives $(x-2)^2=9$, so $x-2=\\pm 3$.",
+          "Then $x=2+3=5$ or $x=2-3=-1$, so the zeros are $x=5$ and $x=-1$."
+        ],
+        "answer": "Yes, they are equivalent; both equal $x^2-4x-5$, with zeros $x=5$ and $x=-1$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A ball is thrown upward and its height in feet after $t$ seconds is $h(t)=-16t^2+32t+48$. Rewrite the function to find the maximum height and when it occurs.",
+      "solution": {
+        "steps": [
+          "The maximum is the vertex, so write the function in vertex form. Factor $-16$ from the $t$ terms: $h(t)=-16(t^2-2t)+48$.",
+          "Half of $-2$ is $-1$, and $(-1)^2=1$, so complete the square inside: $h(t)=-16(t^2-2t+1-1)+48$.",
+          "Group the perfect square: $h(t)=-16\\big((t-1)^2-1\\big)+48$.",
+          "Distribute the $-16$: $h(t)=-16(t-1)^2+16+48$.",
+          "Combine constants: $h(t)=-16(t-1)^2+64$.",
+          "The vertex is $(1,64)$, and since $a=-16<0$ the parabola opens down, so this is a maximum.",
+          "The maximum height is $64$ feet, reached at $t=1$ second."
+        ],
+        "answer": "$h(t)=-16(t-1)^2+64$; maximum height $64$ feet at $t=1$ second"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Write $f(x)=x^2+8x+10$ in vertex form by completing the square, then state the vertex and the minimum value.",
+      "hint": "Take half of $8$ to get $4$, then add and subtract $4^2=16$.",
+      "solution": {
+        "steps": [
+          "Group the $x$ terms: $f(x)=(x^2+8x)+10$.",
+          "Half of $8$ is $4$, and $4^2=16$. Add and subtract $16$: $f(x)=(x^2+8x+16)-16+10$.",
+          "Write the perfect square and combine constants: $f(x)=(x+4)^2-6$.",
+          "The vertex is $(-4,-6)$, and since $a=1>0$ this is a minimum.",
+          "The minimum value is $-6$ at $x=-4$."
+        ],
+        "answer": "$f(x)=(x+4)^2-6$; vertex $(-4,-6)$; minimum value $-6$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Write $f(x)=x^2-x-12$ in factored form and state the zeros.",
+      "hint": "Find two numbers that multiply to $-12$ and add to $-1$.",
+      "solution": {
+        "steps": [
+          "Look for two numbers with product $-12$ and sum $-1$: those are $-4$ and $3$.",
+          "Factor: $f(x)=(x-4)(x+3)$.",
+          "Set each factor to zero: $x-4=0$ gives $x=4$, and $x+3=0$ gives $x=-3$.",
+          "The zeros are $x=4$ and $x=-3$."
+        ],
+        "answer": "$f(x)=(x-4)(x+3)$; zeros $x=4$ and $x=-3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Which equivalent form of $f(x)=2x^2-8x+6$ most directly shows the $x$-intercepts? Produce that form and state the intercepts.",
+      "hint": "Factor out the leading coefficient first, then factor the remaining quadratic.",
+      "solution": {
+        "steps": [
+          "The $x$-intercepts are shown by factored form, so factor the expression.",
+          "Factor out the common factor $2$: $f(x)=2(x^2-4x+3)$.",
+          "Factor the quadratic inside: two numbers multiplying to $3$ and adding to $-4$ are $-1$ and $-3$, giving $x^2-4x+3=(x-1)(x-3)$.",
+          "So $f(x)=2(x-1)(x-3)$.",
+          "Set each variable factor to zero: $x-1=0$ gives $x=1$, and $x-3=0$ gives $x=3$.",
+          "The $x$-intercepts are $x=1$ and $x=3$."
+        ],
+        "answer": "Factored form $f(x)=2(x-1)(x-3)$; $x$-intercepts $x=1$ and $x=3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "An investment grows according to $A(t)=800(1.06)^{t}$, where $t$ is in years. Identify the annual growth rate as a percent, then rewrite $A(t)$ in the form $800\\left(b^{1/12}\\right)^{12t}$ to expose the monthly growth factor.",
+      "hint": "The multiplier $1.06$ means $100\\%+6\\%$. To split one year into $12$ months, use the exponent law $b^{t}=\\left(b^{1/12}\\right)^{12t}$.",
+      "solution": {
+        "steps": [
+          "Read the growth multiplier: $1.06=1+0.06$, so the annual growth rate is $6\\%$.",
+          "To reveal a monthly rate, rewrite the exponent $t$ as $\\frac{1}{12}\\cdot 12t$.",
+          "Apply the exponent law $b^{t}=b^{\\frac{1}{12}\\cdot 12t}=\\left(b^{1/12}\\right)^{12t}$ with $b=1.06$.",
+          "So $A(t)=800\\left(1.06^{1/12}\\right)^{12t}$.",
+          "The monthly growth factor is $1.06^{1/12}\\approx 1.00487$, about $0.487\\%$ growth per month."
+        ],
+        "answer": "Annual rate $6\\%$; $A(t)=800\\left(1.06^{1/12}\\right)^{12t}$, monthly factor $1.06^{1/12}\\approx 1.00487$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A company's monthly profit in thousands of dollars is $P(x)=-x^2+10x-16$, where $x$ is the price of the product in dollars. Rewrite $P(x)$ to find the price that maximizes profit, the maximum profit, and the break-even prices (where $P(x)=0$).",
+      "hint": "Vertex form gives the maximum; factored form gives the break-even prices.",
+      "solution": {
+        "steps": [
+          "For the maximum, complete the square. Factor $-1$ from the $x$ terms: $P(x)=-(x^2-10x)-16$.",
+          "Half of $-10$ is $-5$, and $(-5)^2=25$: $P(x)=-(x^2-10x+25-25)-16$.",
+          "Group the square: $P(x)=-\\big((x-5)^2-25\\big)-16=-(x-5)^2+25-16$.",
+          "Combine constants: $P(x)=-(x-5)^2+9$. The vertex is $(5,9)$, so profit is maximized at price $x=5$ dollars with maximum profit $9$ thousand dollars.",
+          "For break-even, factor: two numbers multiplying to $16$ and adding to $10$ are $2$ and $8$, so $x^2-10x+16=(x-2)(x-8)$ and $P(x)=-(x-2)(x-8)$.",
+          "Set $P(x)=0$: $x=2$ or $x=8$, so the company breaks even at prices $\\$2$ and $\\$8$."
+        ],
+        "answer": "$P(x)=-(x-5)^2+9$; max profit $\\$9{,}000$ at price $\\$5$; break-even at $x=2$ and $x=8$ (factored form $P(x)=-(x-2)(x-8)$)"
+      }
+    }
+  ]
+}

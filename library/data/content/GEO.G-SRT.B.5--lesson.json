@@ -1,0 +1,171 @@
+{
+  "id": "GEO.G-SRT.B.5--lesson",
+  "standard": "GEO.G-SRT.B.5",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Similarity, Right Triangles, and Trigonometry",
+  "domainCode": "G-SRT",
+  "cluster": "Prove theorems involving similarity",
+  "clusterCode": "B",
+  "skillName": "Congruence and Similarity Problem Solving",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Triangle congruence ($\\text{SSS}$, $\\text{SAS}$, $\\text{ASA}$, $\\text{AAS}$, $\\text{HL}$) and triangle similarity ($\\text{AA}$, $\\text{SAS}\\sim$, $\\text{SSS}\\sim$) are the tools you use to justify relationships in figures and to solve for missing lengths and angles. Congruent triangles have all corresponding parts equal, so once you prove congruence you may conclude any remaining pair is congruent by $\\text{CPCTC}$. Similar triangles have proportional corresponding sides, so you set up a proportion from matching sides and solve. Watch the correspondence carefully: match sides that are opposite equal angles, write the ratio in a consistent order, and remember that a scale factor $k$ multiplies lengths and perimeters by $k$ but multiplies areas by $k^2$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "In $\\triangle ABC$ and $\\triangle DEF$, $AB = DE$, $\\angle A = \\angle D$, and $AC = DF$. Which congruence criterion proves $\\triangle ABC \\cong \\triangle DEF$, and what can you then conclude about $BC$ and $EF$?",
+      "solution": {
+        "steps": [
+          "List the given congruent parts: two pairs of sides, $AB = DE$ and $AC = DF$, and the angle $\\angle A = \\angle D$ between them.",
+          "Because $\\angle A$ is the included angle between sides $AB$ and $AC$ (and likewise $\\angle D$ between $DE$ and $DF$), the matched parts are side-angle-side.",
+          "This is the $\\text{SAS}$ congruence criterion, so $\\triangle ABC \\cong \\triangle DEF$.",
+          "Corresponding parts of congruent triangles are congruent ($\\text{CPCTC}$), so the remaining sides match: $BC = EF$."
+        ],
+        "answer": "$\\text{SAS}$; and by $\\text{CPCTC}$, $BC = EF$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Two triangles satisfy $\\angle A = \\angle X = 52^\\circ$ and $\\angle B = \\angle Y = 71^\\circ$. Which criterion proves $\\triangle ABC \\sim \\triangle XYZ$, and what is $\\angle C$?",
+      "solution": {
+        "steps": [
+          "Two angles of one triangle are equal to two angles of the other: $\\angle A = \\angle X$ and $\\angle B = \\angle Y$.",
+          "When two pairs of angles match, the triangles are similar by the $\\text{AA}$ (Angle-Angle) criterion, so $\\triangle ABC \\sim \\triangle XYZ$.",
+          "The angles of a triangle sum to $180^\\circ$, so $\\angle C = 180^\\circ - 52^\\circ - 71^\\circ$.",
+          "Compute: $\\angle C = 180^\\circ - 123^\\circ = 57^\\circ$ (and $\\angle Z = 57^\\circ$ as well, confirming the correspondence)."
+        ],
+        "answer": "$\\text{AA}$ similarity; $\\angle C = 57^\\circ$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "$\\triangle ABC \\sim \\triangle DEF$ with $AB = 6$, $DE = 9$, and $BC = 8$. Find $EF$.",
+      "solution": {
+        "steps": [
+          "Because the triangles are similar in the order $\\triangle ABC \\sim \\triangle DEF$, side $AB$ corresponds to $DE$ and side $BC$ corresponds to $EF$.",
+          "Corresponding sides are proportional, so $\\frac{AB}{DE} = \\frac{BC}{EF}$, that is $\\frac{6}{9} = \\frac{8}{EF}$.",
+          "Cross multiply: $6 \\cdot EF = 9 \\cdot 8 = 72$.",
+          "Solve: $EF = \\frac{72}{6} = 12$.",
+          "Check: the scale factor from $\\triangle ABC$ to $\\triangle DEF$ is $\\frac{9}{6} = \\frac{3}{2}$, and $8 \\cdot \\frac{3}{2} = 12$. Consistent."
+        ],
+        "answer": "$EF = 12$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "In $\\triangle ABC$, point $D$ lies on $\\overline{AB}$ and point $E$ lies on $\\overline{AC}$ with $\\overline{DE} \\parallel \\overline{BC}$. If $AD = 4$, $DB = 6$, and $AE = 5$, find $EC$.",
+      "solution": {
+        "steps": [
+          "A line parallel to one side of a triangle divides the other two sides proportionally (the Side-Splitter Theorem), because $\\overline{DE} \\parallel \\overline{BC}$ makes $\\triangle ADE \\sim \\triangle ABC$ by $\\text{AA}$ (the parallel lines give equal corresponding angles and $\\angle A$ is shared).",
+          "Side-Splitter compares the two pieces of each cut side: $\\frac{AD}{DB} = \\frac{AE}{EC}$.",
+          "Substitute the known values: $\\frac{4}{6} = \\frac{5}{EC}$.",
+          "Cross multiply: $4 \\cdot EC = 6 \\cdot 5 = 30$.",
+          "Solve: $EC = \\frac{30}{4} = \\frac{15}{2}$."
+        ],
+        "answer": "$EC = \\frac{15}{2}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "$\\triangle PQR \\sim \\triangle STU$ with scale factor $\\frac{2}{3}$ (each side of $\\triangle PQR$ is $\\frac{2}{3}$ of the corresponding side of $\\triangle STU$). If the area of $\\triangle PQR$ is $12$ square units, find the area of $\\triangle STU$.",
+      "solution": {
+        "steps": [
+          "When triangles are similar with side ratio (scale factor) $k$, their areas are in the ratio $k^2$, not $k$.",
+          "Here the scale factor from $\\triangle PQR$ to $\\triangle STU$ is $\\frac{2}{3}$, so $\\frac{\\text{area of } \\triangle PQR}{\\text{area of } \\triangle STU} = \\left(\\frac{2}{3}\\right)^2 = \\frac{4}{9}$.",
+          "Set up the proportion with the known area: $\\frac{12}{\\text{area of } \\triangle STU} = \\frac{4}{9}$.",
+          "Cross multiply: $4 \\cdot (\\text{area of } \\triangle STU) = 12 \\cdot 9 = 108$.",
+          "Solve: area of $\\triangle STU = \\frac{108}{4} = 27$ square units. Equivalently, $12 \\cdot \\left(\\frac{3}{2}\\right)^2 = 12 \\cdot \\frac{9}{4} = 27$."
+        ],
+        "answer": "$27$ square units"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "In $\\triangle GHI$ and $\\triangle JKL$, $GH = JK$, $HI = KL$, and $GI = JL$. Which congruence criterion proves $\\triangle GHI \\cong \\triangle JKL$?",
+      "hint": "Count how many pairs of sides and angles are given. All three matched parts here are sides.",
+      "solution": {
+        "steps": [
+          "The three given equalities are all pairs of corresponding sides: $GH = JK$, $HI = KL$, and $GI = JL$.",
+          "Three pairs of congruent sides prove congruence by the $\\text{SSS}$ criterion.",
+          "Therefore $\\triangle GHI \\cong \\triangle JKL$ by $\\text{SSS}$."
+        ],
+        "answer": "$\\text{SSS}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "$\\triangle ABC \\sim \\triangle DEF$ with $AB = 10$, $DE = 15$, and $AC = 14$. Find $DF$.",
+      "hint": "Match $AB$ with $DE$ and $AC$ with $DF$. Write $\\frac{AB}{DE} = \\frac{AC}{DF}$ and solve.",
+      "solution": {
+        "steps": [
+          "In the similarity $\\triangle ABC \\sim \\triangle DEF$, side $AB$ corresponds to $DE$ and $AC$ corresponds to $DF$.",
+          "Set up the proportion of corresponding sides: $\\frac{AB}{DE} = \\frac{AC}{DF}$, so $\\frac{10}{15} = \\frac{14}{DF}$.",
+          "Cross multiply: $10 \\cdot DF = 15 \\cdot 14 = 210$.",
+          "Solve: $DF = \\frac{210}{10} = 21$."
+        ],
+        "answer": "$DF = 21$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A $6$ ft tall person casts a $4$ ft shadow at the same time a flagpole casts a $26$ ft shadow. Using similar triangles, find the height $h$ of the flagpole.",
+      "hint": "The person and the flagpole form similar right triangles with the sun's rays, so $\\frac{\\text{height}}{\\text{shadow}}$ is the same for both.",
+      "solution": {
+        "steps": [
+          "The sun's rays strike both objects at the same angle, so the two right triangles (object height and its shadow) are similar by $\\text{AA}$.",
+          "Corresponding sides are proportional: $\\frac{\\text{person height}}{\\text{person shadow}} = \\frac{\\text{flagpole height}}{\\text{flagpole shadow}}$, that is $\\frac{6}{4} = \\frac{h}{26}$.",
+          "Cross multiply: $4h = 6 \\cdot 26 = 156$.",
+          "Solve: $h = \\frac{156}{4} = 39$ ft."
+        ],
+        "answer": "$h = 39$ ft"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "$\\triangle ABC \\sim \\triangle DEF$ with $AB = 2x$, $DE = 10$, $BC = x + 3$, and $EF = 8$. Find $x$.",
+      "hint": "Write $\\frac{AB}{DE} = \\frac{BC}{EF}$, substitute the expressions, then cross multiply and solve the linear equation.",
+      "solution": {
+        "steps": [
+          "Corresponding sides give the proportion $\\frac{AB}{DE} = \\frac{BC}{EF}$, so $\\frac{2x}{10} = \\frac{x+3}{8}$.",
+          "Cross multiply: $8 \\cdot 2x = 10 \\cdot (x + 3)$, which is $16x = 10x + 30$.",
+          "Subtract $10x$ from both sides: $6x = 30$.",
+          "Solve: $x = 5$.",
+          "Check: $AB = 2(5) = 10$ and $BC = 5 + 3 = 8$, giving ratios $\\frac{10}{10} = 1$ and $\\frac{8}{8} = 1$. Consistent."
+        ],
+        "answer": "$x = 5$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "In the figure, $\\overline{AB} \\cong \\overline{CB}$ and $\\overline{BD}$ bisects $\\angle ABC$ (so $\\angle ABD \\cong \\angle CBD$), with $D$ on $\\overline{AC}$. Write a short justification proving $\\overline{AD} \\cong \\overline{CD}$.",
+      "hint": "Find the two triangles $\\triangle ABD$ and $\\triangle CBD$. They share side $\\overline{BD}$. Prove them congruent first, then use $\\text{CPCTC}$.",
+      "solution": {
+        "steps": [
+          "Statement: $\\overline{AB} \\cong \\overline{CB}$. Reason: Given.",
+          "Statement: $\\angle ABD \\cong \\angle CBD$. Reason: Given that $\\overline{BD}$ bisects $\\angle ABC$.",
+          "Statement: $\\overline{BD} \\cong \\overline{BD}$. Reason: Reflexive Property (shared side).",
+          "Statement: $\\triangle ABD \\cong \\triangle CBD$. Reason: $\\text{SAS}$ (two sides and the included angle).",
+          "Statement: $\\overline{AD} \\cong \\overline{CD}$. Reason: $\\text{CPCTC}$ (corresponding parts of congruent triangles are congruent)."
+        ],
+        "answer": "$\\triangle ABD \\cong \\triangle CBD$ by $\\text{SAS}$, so $\\overline{AD} \\cong \\overline{CD}$ by $\\text{CPCTC}$."
+      }
+    }
+  ]
+}

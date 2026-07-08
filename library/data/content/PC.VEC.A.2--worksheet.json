@@ -1,0 +1,224 @@
+{
+  "id": "PC.VEC.A.2--worksheet",
+  "standard": "PC.VEC.A.2",
+  "clusterId": null,
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Vectors and Parametric Equations",
+  "domainCode": "VEC",
+  "cluster": "Vectors in the plane",
+  "clusterCode": "A",
+  "skillName": "Dot Product and Applications",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:27:56.866Z",
+  "intro": "Dot product and its applications: computing $\\vec{u}\\cdot\\vec{v}$, testing orthogonality, finding angles between vectors, and computing scalar and vector projections. Items ramp from Easy (1-5) to Medium (6-10) to Hard (11-15). Give exact values with radicals, $\\pi$, and fractions unless an approximation is requested.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Given $\\vec{u}=\\langle 3,-4\\rangle$ and $\\vec{v}=\\langle 5,2\\rangle$, find $\\vec{u}\\cdot\\vec{v}$.",
+      "answer": "$\\vec{u}\\cdot\\vec{v}=7$",
+      "solution": {
+        "steps": [
+          "Use $\\vec{u}\\cdot\\vec{v}=u_1v_1+u_2v_2$.",
+          "Substitute: $\\vec{u}\\cdot\\vec{v}=(3)(5)+(-4)(2)$.",
+          "Compute: $15+(-8)=7$.",
+          "The dot product is the scalar $7$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Given $\\vec{u}=\\langle 2,6\\rangle$ and $\\vec{v}=\\langle -1,4\\rangle$, find $\\vec{u}\\cdot\\vec{v}$.",
+      "answer": "$\\vec{u}\\cdot\\vec{v}=22$",
+      "solution": {
+        "steps": [
+          "Use $\\vec{u}\\cdot\\vec{v}=u_1v_1+u_2v_2$.",
+          "Substitute: $\\vec{u}\\cdot\\vec{v}=(2)(-1)+(6)(4)$.",
+          "Compute: $-2+24=22$.",
+          "The dot product is $22$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Are $\\vec{u}=\\langle 4,6\\rangle$ and $\\vec{v}=\\langle 3,-2\\rangle$ orthogonal? Justify using the dot product.",
+      "answer": "Yes, they are orthogonal because $\\vec{u}\\cdot\\vec{v}=0$.",
+      "solution": {
+        "steps": [
+          "Two vectors are orthogonal exactly when their dot product is $0$.",
+          "Compute $\\vec{u}\\cdot\\vec{v}=(4)(3)+(6)(-2)$.",
+          "Simplify: $12+(-12)=0$.",
+          "Since $\\vec{u}\\cdot\\vec{v}=0$, the vectors are orthogonal."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Are $\\vec{u}=\\langle 1,5\\rangle$ and $\\vec{v}=\\langle 2,3\\rangle$ orthogonal? Justify using the dot product.",
+      "answer": "No, they are not orthogonal because $\\vec{u}\\cdot\\vec{v}=17\\neq 0$.",
+      "solution": {
+        "steps": [
+          "Orthogonal vectors have dot product $0$.",
+          "Compute $\\vec{u}\\cdot\\vec{v}=(1)(2)+(5)(3)$.",
+          "Simplify: $2+15=17$.",
+          "Since $\\vec{u}\\cdot\\vec{v}=17\\neq 0$, the vectors are not orthogonal."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Given $\\vec{u}=\\langle 1,-2,3\\rangle$ and $\\vec{v}=\\langle 4,0,-1\\rangle$, find $\\vec{u}\\cdot\\vec{v}$.",
+      "answer": "$\\vec{u}\\cdot\\vec{v}=1$",
+      "solution": {
+        "steps": [
+          "In $3$D, $\\vec{u}\\cdot\\vec{v}=u_1v_1+u_2v_2+u_3v_3$.",
+          "Substitute: $(1)(4)+(-2)(0)+(3)(-1)$.",
+          "Compute each term: $4+0-3$.",
+          "Add: $\\vec{u}\\cdot\\vec{v}=1$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Find the angle $\\theta$ between $\\vec{u}=\\langle 1,\\sqrt{3}\\rangle$ and $\\vec{v}=\\langle \\sqrt{3},1\\rangle$. Give an exact answer in radians.",
+      "answer": "$\\theta=\\frac{\\pi}{6}$",
+      "solution": {
+        "steps": [
+          "Use $\\cos\\theta=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{u}\\|\\,\\|\\vec{v}\\|}$.",
+          "Dot product: $\\vec{u}\\cdot\\vec{v}=(1)(\\sqrt{3})+(\\sqrt{3})(1)=2\\sqrt{3}$.",
+          "Magnitudes: $\\|\\vec{u}\\|=\\sqrt{1^2+(\\sqrt{3})^2}=\\sqrt{4}=2$ and $\\|\\vec{v}\\|=\\sqrt{(\\sqrt{3})^2+1^2}=2$.",
+          "So $\\cos\\theta=\\dfrac{2\\sqrt{3}}{(2)(2)}=\\dfrac{2\\sqrt{3}}{4}=\\dfrac{\\sqrt{3}}{2}$.",
+          "Therefore $\\theta=\\cos^{-1}\\!\\left(\\frac{\\sqrt{3}}{2}\\right)=\\frac{\\pi}{6}$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Find the value of $k$ so that $\\vec{u}=\\langle k,5\\rangle$ and $\\vec{v}=\\langle 2,-3\\rangle$ are orthogonal.",
+      "answer": "$k=\\frac{15}{2}$",
+      "solution": {
+        "steps": [
+          "Orthogonal means $\\vec{u}\\cdot\\vec{v}=0$.",
+          "Compute the dot product: $\\vec{u}\\cdot\\vec{v}=(k)(2)+(5)(-3)=2k-15$.",
+          "Set equal to zero: $2k-15=0$.",
+          "Solve: $2k=15$, so $k=\\dfrac{15}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Find the vector projection $\\operatorname{proj}_{\\vec{v}}\\vec{u}$ of $\\vec{u}=\\langle 3,4\\rangle$ onto $\\vec{v}=\\langle 2,1\\rangle$.",
+      "answer": "$\\operatorname{proj}_{\\vec{v}}\\vec{u}=\\langle 4,2\\rangle$",
+      "solution": {
+        "steps": [
+          "Use $\\operatorname{proj}_{\\vec{v}}\\vec{u}=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\vec{v}\\cdot\\vec{v}}\\,\\vec{v}$.",
+          "Dot product: $\\vec{u}\\cdot\\vec{v}=(3)(2)+(4)(1)=10$.",
+          "Denominator: $\\vec{v}\\cdot\\vec{v}=(2)^2+(1)^2=5$.",
+          "Scale $\\vec{v}$: $\\dfrac{10}{5}\\langle 2,1\\rangle=2\\langle 2,1\\rangle=\\langle 4,2\\rangle$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Find the scalar projection (component) of $\\vec{u}=\\langle 5,2\\rangle$ onto $\\vec{v}=\\langle 3,4\\rangle$. Give an exact value.",
+      "answer": "$\\operatorname{comp}_{\\vec{v}}\\vec{u}=\\frac{23}{5}$",
+      "solution": {
+        "steps": [
+          "Use $\\operatorname{comp}_{\\vec{v}}\\vec{u}=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{v}\\|}$.",
+          "Dot product: $\\vec{u}\\cdot\\vec{v}=(5)(3)+(2)(4)=15+8=23$.",
+          "Magnitude: $\\|\\vec{v}\\|=\\sqrt{3^2+4^2}=\\sqrt{25}=5$.",
+          "So $\\operatorname{comp}_{\\vec{v}}\\vec{u}=\\dfrac{23}{5}$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Find the angle $\\theta$ between $\\vec{u}=\\langle 2,2\\rangle$ and $\\vec{v}=\\langle 0,5\\rangle$. Give an exact answer in radians.",
+      "answer": "$\\theta=\\frac{\\pi}{4}$",
+      "solution": {
+        "steps": [
+          "Use $\\cos\\theta=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{u}\\|\\,\\|\\vec{v}\\|}$.",
+          "Dot product: $\\vec{u}\\cdot\\vec{v}=(2)(0)+(2)(5)=10$.",
+          "Magnitudes: $\\|\\vec{u}\\|=\\sqrt{2^2+2^2}=\\sqrt{8}=2\\sqrt{2}$ and $\\|\\vec{v}\\|=\\sqrt{0^2+5^2}=5$.",
+          "So $\\cos\\theta=\\dfrac{10}{(2\\sqrt{2})(5)}=\\dfrac{10}{10\\sqrt{2}}=\\dfrac{1}{\\sqrt{2}}=\\dfrac{\\sqrt{2}}{2}$.",
+          "Therefore $\\theta=\\cos^{-1}\\!\\left(\\frac{\\sqrt{2}}{2}\\right)=\\frac{\\pi}{4}$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Write $\\vec{u}=\\langle 5,2\\rangle$ as the sum of a vector $\\vec{w}_1$ parallel to $\\vec{v}=\\langle 1,1\\rangle$ and a vector $\\vec{w}_2$ orthogonal to $\\vec{v}$.",
+      "answer": "$\\vec{u}=\\left\\langle \\frac{7}{2},\\frac{7}{2}\\right\\rangle+\\left\\langle \\frac{3}{2},-\\frac{3}{2}\\right\\rangle$",
+      "solution": {
+        "steps": [
+          "The parallel part is $\\vec{w}_1=\\operatorname{proj}_{\\vec{v}}\\vec{u}=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\vec{v}\\cdot\\vec{v}}\\,\\vec{v}$.",
+          "Dot product: $\\vec{u}\\cdot\\vec{v}=(5)(1)+(2)(1)=7$; denominator $\\vec{v}\\cdot\\vec{v}=1^2+1^2=2$.",
+          "So $\\vec{w}_1=\\dfrac{7}{2}\\langle 1,1\\rangle=\\left\\langle \\frac{7}{2},\\frac{7}{2}\\right\\rangle$.",
+          "The orthogonal part is $\\vec{w}_2=\\vec{u}-\\vec{w}_1=\\left\\langle 5-\\frac{7}{2},\\,2-\\frac{7}{2}\\right\\rangle=\\left\\langle \\frac{3}{2},-\\frac{3}{2}\\right\\rangle$.",
+          "Check orthogonality: $\\vec{w}_2\\cdot\\vec{v}=\\frac{3}{2}-\\frac{3}{2}=0$, confirming $\\vec{w}_2\\perp\\vec{v}$.",
+          "Thus $\\vec{u}=\\left\\langle \\frac{7}{2},\\frac{7}{2}\\right\\rangle+\\left\\langle \\frac{3}{2},-\\frac{3}{2}\\right\\rangle$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Find the angle $\\theta$ between $\\vec{u}=\\langle 2,3\\rangle$ and $\\vec{v}=\\langle -1,4\\rangle$, to the nearest degree.",
+      "answer": "$\\theta\\approx 48^\\circ$",
+      "solution": {
+        "steps": [
+          "Use $\\cos\\theta=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{u}\\|\\,\\|\\vec{v}\\|}$.",
+          "Dot product: $\\vec{u}\\cdot\\vec{v}=(2)(-1)+(3)(4)=-2+12=10$.",
+          "Magnitudes: $\\|\\vec{u}\\|=\\sqrt{2^2+3^2}=\\sqrt{13}$ and $\\|\\vec{v}\\|=\\sqrt{(-1)^2+4^2}=\\sqrt{17}$.",
+          "So $\\cos\\theta=\\dfrac{10}{\\sqrt{13}\\,\\sqrt{17}}=\\dfrac{10}{\\sqrt{221}}$.",
+          "Then $\\theta=\\cos^{-1}\\!\\left(\\dfrac{10}{\\sqrt{221}}\\right)\\approx 47.7^\\circ$, which rounds to $48^\\circ$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A constant force $\\vec{F}=\\langle 6,2\\rangle$ (in newtons) moves an object along the displacement $\\vec{d}=\\langle 4,1\\rangle$ (in meters). Find the work done by the force.",
+      "answer": "$W=26$ joules",
+      "solution": {
+        "steps": [
+          "Work done by a constant force is $W=\\vec{F}\\cdot\\vec{d}$.",
+          "Compute the dot product: $\\vec{F}\\cdot\\vec{d}=(6)(4)+(2)(1)$.",
+          "Simplify: $24+2=26$.",
+          "The work done is $W=26$ joules (newton-meters)."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A triangle has vertices $A=(1,2)$, $B=(4,3)$, and $C=(0,5)$. Use the dot product to determine whether the angle at vertex $A$ is a right angle.",
+      "answer": "Yes, the angle at $A$ is a right angle because $\\vec{AB}\\cdot\\vec{AC}=0$.",
+      "solution": {
+        "steps": [
+          "Form the vectors emanating from $A$: $\\vec{AB}=B-A=\\langle 4-1,\\,3-2\\rangle=\\langle 3,1\\rangle$.",
+          "And $\\vec{AC}=C-A=\\langle 0-1,\\,5-2\\rangle=\\langle -1,3\\rangle$.",
+          "The angle at $A$ is a right angle exactly when $\\vec{AB}\\cdot\\vec{AC}=0$.",
+          "Compute: $\\vec{AB}\\cdot\\vec{AC}=(3)(-1)+(1)(3)=-3+3=0$.",
+          "Since $\\vec{AB}\\cdot\\vec{AC}=0$, the vectors are orthogonal, so the angle at $A$ is a right angle."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Find the angle $\\theta$ between the $3$D vectors $\\vec{u}=\\langle 1,2,2\\rangle$ and $\\vec{v}=\\langle 2,0,1\\rangle$, to the nearest degree.",
+      "answer": "$\\theta\\approx 53^\\circ$",
+      "solution": {
+        "steps": [
+          "Use $\\cos\\theta=\\dfrac{\\vec{u}\\cdot\\vec{v}}{\\|\\vec{u}\\|\\,\\|\\vec{v}\\|}$ in $3$D.",
+          "Dot product: $\\vec{u}\\cdot\\vec{v}=(1)(2)+(2)(0)+(2)(1)=2+0+2=4$.",
+          "Magnitudes: $\\|\\vec{u}\\|=\\sqrt{1^2+2^2+2^2}=\\sqrt{9}=3$ and $\\|\\vec{v}\\|=\\sqrt{2^2+0^2+1^2}=\\sqrt{5}$.",
+          "So $\\cos\\theta=\\dfrac{4}{3\\sqrt{5}}$.",
+          "Then $\\theta=\\cos^{-1}\\!\\left(\\dfrac{4}{3\\sqrt{5}}\\right)\\approx 53.4^\\circ$, which rounds to $53^\\circ$."
+        ]
+      }
+    }
+  ]
+}

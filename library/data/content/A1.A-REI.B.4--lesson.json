@@ -1,0 +1,174 @@
+{
+  "id": "A1.A-REI.B.4--lesson",
+  "standard": "A1.A-REI.B.4",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Reasoning with Equations and Inequalities",
+  "domainCode": "A-REI",
+  "cluster": "Solve equations and inequalities in one variable",
+  "clusterCode": "B",
+  "skillName": "Solving Quadratic Equations",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "A quadratic equation can be written in standard form $ax^2+bx+c=0$. There is no single way to solve one, so a big part of this skill is choosing an efficient method. Square roots work when the equation looks like $x^2=k$ or $(x-h)^2=k$. Factoring with the zero-product property works when the quadratic factors nicely over the integers. Completing the square always works and is the engine behind the quadratic formula $x=\\dfrac{-b\\pm\\sqrt{b^2-4ac}}{2a}$. The discriminant $b^2-4ac$ tells you in advance how many real solutions to expect: positive means two real, zero means one repeated, negative means two complex solutions of the form $a\\pm bi$. Always rewrite into standard form first, keep answers exact, and verify by substitution when you can.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Solve $3x^2-27=0$ by the square-root method.",
+      "solution": {
+        "steps": [
+          "Isolate the squared term. Add $27$ to both sides: $3x^2=27$.",
+          "Divide both sides by $3$: $x^2=9$.",
+          "Apply the square root to both sides, keeping both signs: $x=\\pm\\sqrt{9}$.",
+          "Simplify: $x=\\pm 3$.",
+          "Check: $3(3)^2-27=27-27=0$ and $3(-3)^2-27=27-27=0$. Both work."
+        ],
+        "answer": "$x=3$ or $x=-3$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Solve $x^2-5x+6=0$ by factoring.",
+      "solution": {
+        "steps": [
+          "The equation is already in standard form $ax^2+bx+c=0$ with $a=1$, $b=-5$, $c=6$.",
+          "Find two numbers that multiply to $c=6$ and add to $b=-5$. Those numbers are $-2$ and $-3$.",
+          "Factor: $(x-2)(x-3)=0$.",
+          "Apply the zero-product property: set each factor equal to zero, $x-2=0$ or $x-3=0$.",
+          "Solve each: $x=2$ or $x=3$. (The roots are the values that make a factor zero, not the values inside the parentheses with their original sign.)"
+        ],
+        "answer": "$x=2$ or $x=3$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Solve $(x-2)^2=18$ by square roots, giving exact answers.",
+      "solution": {
+        "steps": [
+          "The squared expression is already isolated, so apply the square root to both sides with both signs: $x-2=\\pm\\sqrt{18}$.",
+          "Simplify the radical: $\\sqrt{18}=\\sqrt{9\\cdot 2}=3\\sqrt{2}$, so $x-2=\\pm 3\\sqrt{2}$.",
+          "Add $2$ to both sides: $x=2\\pm 3\\sqrt{2}$.",
+          "Keep the answer exact rather than rounding the radical."
+        ],
+        "answer": "$x=2+3\\sqrt{2}$ or $x=2-3\\sqrt{2}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Solve $x^2-6x+2=0$ by completing the square.",
+      "solution": {
+        "steps": [
+          "Move the constant to the right side: $x^2-6x=-2$.",
+          "Take half of the coefficient of $x$, which is $\\frac{-6}{2}=-3$, then square it: $(-3)^2=9$.",
+          "Add $9$ to BOTH sides to keep the equation balanced: $x^2-6x+9=-2+9$, so $x^2-6x+9=7$.",
+          "Write the left side as a perfect square: $(x-3)^2=7$.",
+          "Apply the square root with both signs: $x-3=\\pm\\sqrt{7}$.",
+          "Add $3$: $x=3\\pm\\sqrt{7}$."
+        ],
+        "answer": "$x=3+\\sqrt{7}$ or $x=3-\\sqrt{7}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Solve $x^2+2x+5=0$ using the quadratic formula. Use the discriminant first to predict the type of solutions.",
+      "solution": {
+        "steps": [
+          "Identify the coefficients from standard form: $a=1$, $b=2$, $c=5$.",
+          "Compute the discriminant: $b^2-4ac=(2)^2-4(1)(5)=4-20=-16$.",
+          "Since the discriminant is negative, expect two complex solutions of the form $a\\pm bi$.",
+          "Apply the quadratic formula: $x=\\dfrac{-b\\pm\\sqrt{b^2-4ac}}{2a}=\\dfrac{-2\\pm\\sqrt{-16}}{2}$.",
+          "Rewrite the negative radical: $\\sqrt{-16}=\\sqrt{16}\\cdot\\sqrt{-1}=4i$, so $x=\\dfrac{-2\\pm 4i}{2}$.",
+          "Divide each term in the numerator by $2$: $x=-1\\pm 2i$."
+        ],
+        "answer": "$x=-1+2i$ or $x=-1-2i$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Solve $x^2-16=0$.",
+      "hint": "This is a difference of squares, or you can isolate $x^2$ and take square roots. Remember both signs.",
+      "solution": {
+        "steps": [
+          "Add $16$ to both sides: $x^2=16$.",
+          "Apply the square root with both signs: $x=\\pm\\sqrt{16}=\\pm 4$.",
+          "Check: $(4)^2-16=0$ and $(-4)^2-16=0$."
+        ],
+        "answer": "$x=4$ or $x=-4$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Solve $2x^2+7x+3=0$ by factoring.",
+      "hint": "With $a\\ne 1$, look for factors of the form $(2x+\\,?)(x+\\,?)$. The two constants multiply to $3$.",
+      "solution": {
+        "steps": [
+          "Standard form with $a=2$, $b=7$, $c=3$. Factor: $(2x+1)(x+3)=0$ (check the middle term: $6x+x=7x$).",
+          "Apply the zero-product property: $2x+1=0$ or $x+3=0$.",
+          "Solve each: $2x=-1$ gives $x=-\\frac{1}{2}$, and $x=-3$."
+        ],
+        "answer": "$x=-\\frac{1}{2}$ or $x=-3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Solve $x^2+10=7x$. Rewrite into standard form first.",
+      "hint": "Move every term to one side so the equation equals zero, then factor.",
+      "solution": {
+        "steps": [
+          "Subtract $7x$ from both sides to get standard form: $x^2-7x+10=0$.",
+          "Find two numbers that multiply to $10$ and add to $-7$: those are $-2$ and $-5$.",
+          "Factor: $(x-2)(x-5)=0$.",
+          "Apply the zero-product property: $x=2$ or $x=5$."
+        ],
+        "answer": "$x=2$ or $x=5$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Solve $2x^2+4x-1=0$ using the quadratic formula. Give exact answers.",
+      "hint": "Substitute $a=2$, $b=4$, $c=-1$ carefully. Watch the sign of $c$ inside $-4ac$, then simplify the radical and reduce the fraction.",
+      "solution": {
+        "steps": [
+          "Identify $a=2$, $b=4$, $c=-1$.",
+          "Discriminant: $b^2-4ac=(4)^2-4(2)(-1)=16+8=24$.",
+          "Apply the formula: $x=\\dfrac{-4\\pm\\sqrt{24}}{2(2)}=\\dfrac{-4\\pm\\sqrt{24}}{4}$.",
+          "Simplify the radical: $\\sqrt{24}=\\sqrt{4\\cdot 6}=2\\sqrt{6}$, so $x=\\dfrac{-4\\pm 2\\sqrt{6}}{4}$.",
+          "Reduce by dividing every term by $2$: $x=\\dfrac{-2\\pm\\sqrt{6}}{2}$."
+        ],
+        "answer": "$x=\\dfrac{-2+\\sqrt{6}}{2}$ or $x=\\dfrac{-2-\\sqrt{6}}{2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Solve $2x^2-8x+3=0$ by completing the square. Give exact answers.",
+      "hint": "Factor the leading coefficient out of the $x$ terms first, or divide the whole equation by $2$ before completing the square.",
+      "solution": {
+        "steps": [
+          "Divide every term by $2$ so the leading coefficient is $1$: $x^2-4x+\\frac{3}{2}=0$.",
+          "Move the constant: $x^2-4x=-\\frac{3}{2}$.",
+          "Half of $-4$ is $-2$, and $(-2)^2=4$. Add $4$ to both sides: $x^2-4x+4=-\\frac{3}{2}+4=\\frac{5}{2}$.",
+          "Write as a perfect square: $(x-2)^2=\\frac{5}{2}$.",
+          "Take the square root of both sides: $x-2=\\pm\\sqrt{\\frac{5}{2}}=\\pm\\dfrac{\\sqrt{5}}{\\sqrt{2}}=\\pm\\dfrac{\\sqrt{10}}{2}$.",
+          "Add $2$: $x=2\\pm\\dfrac{\\sqrt{10}}{2}$."
+        ],
+        "answer": "$x=2+\\dfrac{\\sqrt{10}}{2}$ or $x=2-\\dfrac{\\sqrt{10}}{2}$"
+      }
+    }
+  ]
+}

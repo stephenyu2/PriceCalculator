@@ -1,0 +1,232 @@
+{
+  "id": "7.G.A.2--worksheet",
+  "standard": "7.G.A.2",
+  "clusterId": null,
+  "grade": "7",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Draw, construct, and describe geometrical figures and describe the relationships between them",
+  "clusterCode": "A",
+  "skillName": "Drawing Geometric Shapes with Given Conditions",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T10:03:02.558Z",
+  "intro": "Test sets of conditions to decide whether they can build a triangle and, if so, whether the triangle is unique. Use the triangle inequality for sides, the $180^\\circ$ angle-sum rule for angles, and the congruence criteria SSS, SAS, ASA, and AAS for uniqueness. Remember that AAA fixes shape but not size, and that SSA can be ambiguous.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Can a triangle be drawn with side lengths $3\\text{ cm}$, $4\\text{ cm}$, and $5\\text{ cm}$? Answer yes or no and explain.",
+      "answer": "Yes",
+      "solution": {
+        "steps": [
+          "Check the triangle inequality: the sum of the two shorter sides must exceed the longest side.",
+          "The two shorter sides are $3$ and $4$, and the longest is $5$.",
+          "Compute $3 + 4 = 7$, and $7 > 5$.",
+          "Since the two shorter sides sum to more than the longest side, a triangle can be drawn."
+        ],
+        "answer": "Yes, because $3 + 4 = 7 > 5$."
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Can a triangle be drawn with side lengths $2\\text{ cm}$, $3\\text{ cm}$, and $9\\text{ cm}$? Answer yes or no and explain.",
+      "answer": "No",
+      "solution": {
+        "steps": [
+          "Apply the triangle inequality using the two shorter sides $2$ and $3$ against the longest side $9$.",
+          "Compute $2 + 3 = 5$.",
+          "Compare: $5 < 9$, so the two shorter sides do not reach across the longest side.",
+          "No triangle can be drawn."
+        ],
+        "answer": "No, because $2 + 3 = 5 < 9$."
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Can a triangle have interior angles measuring $60^\\circ$, $60^\\circ$, and $60^\\circ$? Answer yes or no and explain.",
+      "answer": "Yes",
+      "solution": {
+        "steps": [
+          "The three interior angles of a triangle must sum to exactly $180^\\circ$.",
+          "Add the angles: $60 + 60 + 60 = 180$.",
+          "The sum equals $180^\\circ$, so these angles can form a triangle (an equilateral triangle)."
+        ],
+        "answer": "Yes, because $60 + 60 + 60 = 180^\\circ$."
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Can a triangle have interior angles measuring $50^\\circ$, $60^\\circ$, and $90^\\circ$? Answer yes or no and explain.",
+      "answer": "No",
+      "solution": {
+        "steps": [
+          "Check whether the three angles sum to $180^\\circ$.",
+          "Add the angles: $50 + 60 + 90 = 200$.",
+          "Since $200^\\circ \\ne 180^\\circ$, these angles cannot form a triangle."
+        ],
+        "answer": "No, because $50 + 60 + 90 = 200^\\circ \\ne 180^\\circ$."
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Can a triangle be drawn with side lengths $6\\text{ cm}$, $6\\text{ cm}$, and $6\\text{ cm}$? Answer yes or no and name the type of triangle.",
+      "answer": "Yes, equilateral",
+      "solution": {
+        "steps": [
+          "Apply the triangle inequality: $6 + 6 = 12 > 6$, so a triangle can be drawn.",
+          "All three sides are equal in length.",
+          "A triangle with three equal sides is called an equilateral triangle."
+        ],
+        "answer": "Yes; it is an equilateral triangle because all three sides are $6\\text{ cm}$."
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A triangle is given by two sides of $6\\text{ cm}$ and $8\\text{ cm}$ with an included angle of $40^\\circ$ between them. Does this determine a unique triangle? Name the congruence criterion.",
+      "answer": "Unique; SAS",
+      "solution": {
+        "steps": [
+          "Two sides are given along with the angle located between them (the included angle).",
+          "This matches the Side-Angle-Side pattern.",
+          "SAS fixes the lengths of the two sides and the opening between them, so the third side and remaining angles are forced.",
+          "Therefore exactly one triangle (up to congruence) can be drawn."
+        ],
+        "answer": "Unique triangle, by SAS."
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A triangle has a base of $7\\text{ cm}$ with a $45^\\circ$ angle at one end of the base and a $60^\\circ$ angle at the other end. Does this determine a unique triangle? Name the congruence criterion.",
+      "answer": "Unique; ASA",
+      "solution": {
+        "steps": [
+          "A side (the $7\\text{ cm}$ base) is given with the two angles at its endpoints.",
+          "This is the Angle-Side-Angle pattern, with the side included between the two angles.",
+          "ASA fixes the base length and the two directions the other sides travel, so their intersection point is determined.",
+          "Exactly one triangle can be drawn."
+        ],
+        "answer": "Unique triangle, by ASA."
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "The conditions are three angles measuring $50^\\circ$, $60^\\circ$, and $70^\\circ$ with no side length given. Does this determine a unique triangle, more than one triangle, or no triangle? Explain.",
+      "answer": "More than one triangle",
+      "solution": {
+        "steps": [
+          "First check feasibility: $50 + 60 + 70 = 180$, so the angles are valid.",
+          "Only the three angles are fixed (AAA); no side length is specified.",
+          "Angles determine the shape of the triangle but not its size.",
+          "You can scale the triangle to any size and still keep these angles, so infinitely many similar triangles satisfy the conditions."
+        ],
+        "answer": "More than one triangle (infinitely many similar triangles), because AAA fixes the shape but not the size."
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Can a triangle be drawn with side lengths $3\\text{ cm}$, $4\\text{ cm}$, and $7\\text{ cm}$? Answer yes or no and explain what figure results.",
+      "answer": "No",
+      "solution": {
+        "steps": [
+          "Apply the triangle inequality to the two shorter sides $3$ and $4$ against the longest side $7$.",
+          "Compute $3 + 4 = 7$.",
+          "Since $3 + 4 = 7$ exactly equals the longest side, the two shorter sides lie flat along the longest side.",
+          "The figure collapses into a straight segment, so no triangle is formed (this is a degenerate case)."
+        ],
+        "answer": "No; since $3 + 4 = 7$, the sides form a straight segment, not a triangle."
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Using a ruler and protractor, you must construct a triangle with a $5\\text{ cm}$ side, a $5\\text{ cm}$ side, and a $40^\\circ$ angle included between those two sides. Describe the construction steps and state whether the triangle is unique.",
+      "answer": "Unique; SAS",
+      "solution": {
+        "steps": [
+          "Draw one $5\\text{ cm}$ segment with the ruler; label its endpoints $A$ and $B$.",
+          "At endpoint $A$, use the protractor to measure a $40^\\circ$ angle from segment $AB$.",
+          "Along that new ray, mark off $5\\text{ cm}$ with the ruler and label the point $C$.",
+          "Connect $B$ to $C$ to close the triangle.",
+          "Two sides and their included angle are fixed, which is the SAS condition, so the triangle is unique."
+        ],
+        "answer": "The construction gives a unique triangle, by SAS."
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A triangle has two known angles of $35^\\circ$ and $85^\\circ$ and one known side of $10\\text{ cm}$ that lies between them. Find the third angle, then state whether the triangle is unique and name the criterion.",
+      "answer": "Third angle $60^\\circ$; unique by ASA",
+      "solution": {
+        "steps": [
+          "Use the angle-sum rule: the three angles total $180^\\circ$.",
+          "Subtract the known angles: $180 - 35 - 85 = 60$, so the third angle is $60^\\circ$.",
+          "The given $10\\text{ cm}$ side lies between the $35^\\circ$ and $85^\\circ$ angles, which is the Angle-Side-Angle pattern.",
+          "ASA determines a unique triangle."
+        ],
+        "answer": "The third angle is $60^\\circ$, and the triangle is unique by ASA."
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Two sides of a triangle measure $5\\text{ cm}$ and $9\\text{ cm}$. Find the range of possible lengths $x$ for the third side so that a triangle can be formed.",
+      "answer": "$4 < x < 14$",
+      "solution": {
+        "steps": [
+          "For any triangle, the third side $x$ must satisfy $|a - b| < x < a + b$.",
+          "Here $a = 5$ and $b = 9$.",
+          "Compute the lower bound: $|5 - 9| = 4$.",
+          "Compute the upper bound: $5 + 9 = 14$.",
+          "So the third side must satisfy $4 < x < 14$."
+        ],
+        "answer": "$4 < x < 14$ (in centimeters)."
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Sides $a = 5\\text{ cm}$ and $b = 8\\text{ cm}$ are given, along with a non-included angle $A = 30^\\circ$ that lies opposite side $a$. The height from the given angle to the line of side $b$ is $h = b\\sin A = 8 \\cdot \\frac{1}{2} = 4\\text{ cm}$. Using the comparison of $a$ to $h$ and to $b$, determine how many triangles can be formed.",
+      "answer": "Two triangles",
+      "solution": {
+        "steps": [
+          "This is the ambiguous SSA case (two sides and a non-included angle), so count carefully.",
+          "Compute the reference height: $h = b\\sin A = 8 \\cdot \\sin 30^\\circ = 8 \\cdot \\frac{1}{2} = 4\\text{ cm}$.",
+          "Compare the side opposite the angle, $a = 5$, with $h = 4$ and with $b = 8$.",
+          "Since $h < a < b$, that is $4 < 5 < 8$, the side $a$ is long enough to reach the base in two distinct positions.",
+          "Therefore two non-congruent triangles satisfy these conditions."
+        ],
+        "answer": "Two triangles, because $h = 4 < a = 5 < b = 8$ is the two-solution SSA case."
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A student claims that knowing all three angles of a triangle is enough to draw exactly one triangle. Explain why this claim is false, and state one additional piece of information that would make the triangle unique.",
+      "answer": "False; AAA gives infinitely many similar triangles. Adding any one side length makes it unique.",
+      "solution": {
+        "steps": [
+          "Three angles (AAA) fix only the shape of the triangle, not its size.",
+          "Any triangle with the same three angles can be enlarged or shrunk and still match, giving infinitely many similar triangles.",
+          "So three angles alone do not determine a unique triangle; the claim is false.",
+          "Supplying any one side length pins down the size. For example, giving a side between two of the angles turns it into an ASA condition, which is unique."
+        ],
+        "answer": "False: AAA gives infinitely many similar triangles. Providing any one side length (for example via ASA or AAS) makes the triangle unique."
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A triangle is to be built with a fixed side of $6\\text{ cm}$, a $40^\\circ$ angle at one end of that side, and a second side of length $x$ drawn from that same $40^\\circ$ angle. Determine the relationship that side $x$ must have to the fixed side so the result is a single unique triangle, and name the criterion that applies once both side lengths and the included angle are set.",
+      "answer": "Any positive $x$ gives a unique triangle by SAS",
+      "solution": {
+        "steps": [
+          "The $40^\\circ$ angle sits between the fixed $6\\text{ cm}$ side and the side of length $x$, so it is the included angle.",
+          "Once you fix two side lengths and the angle between them, the third side and the other two angles are completely determined.",
+          "This is the Side-Angle-Side (SAS) condition, which always yields a unique triangle.",
+          "So any positive value of $x$ produces exactly one triangle; there is no ambiguity because the angle is included, not opposite a side."
+        ],
+        "answer": "For any positive $x$, the included $40^\\circ$ angle makes this an SAS condition, so the triangle is unique."
+      }
+    }
+  ]
+}

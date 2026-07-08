@@ -1,0 +1,151 @@
+{
+  "id": "GEO.S-CP.A.1--quiz",
+  "standard": "GEO.S-CP.A.1",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Understand independence and conditional probability and use them to interpret data",
+  "clusterCode": "A",
+  "skillName": "Events as Subsets of Sample Space",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "An 8-question check on sample spaces and events as subsets: writing $S$ in roster form, building events from characteristics, and applying union ($\\cup$, 'or'), intersection ($\\cap$, 'and'), and complement ($A^c$, 'not').",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "A fair six-sided die is rolled once. Which set is the sample space $S$ written in roster form?\nA) $S = \\{1, 2, 3, 4, 5\\}$\nB) $S = \\{1, 2, 3, 4, 5, 6\\}$\nC) $S = \\{2, 4, 6\\}$\nD) $S = \\{0, 1, 2, 3, 4, 5, 6\\}$",
+      "answer": "B) $S = \\{1, 2, 3, 4, 5, 6\\}$",
+      "solution": {
+        "steps": [
+          "The sample space is the set of every possible outcome of the experiment.",
+          "Rolling one die can land on $1, 2, 3, 4, 5,$ or $6$, so $S = \\{1, 2, 3, 4, 5, 6\\}$. The key is B.",
+          "A drops the outcome $6$, so it is incomplete.",
+          "C lists only the even results, which is an event, not the full sample space.",
+          "D wrongly includes $0$, which a standard die cannot show."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "For one roll of a die with $S = \\{1, 2, 3, 4, 5, 6\\}$, let $A = \\{2, 4, 6\\}$ (even). What is the complement $A^c$?\nA) $A^c = \\{1, 3, 5\\}$\nB) $A^c = \\{2, 4, 6\\}$\nC) $A^c = \\{1, 2, 3, 4, 5, 6\\}$\nD) $A^c = \\{1, 3\\}$",
+      "answer": "A) $A^c = \\{1, 3, 5\\}$",
+      "solution": {
+        "steps": [
+          "The complement $A^c$ is every outcome in $S$ that is NOT in $A$.",
+          "$S = \\{1,2,3,4,5,6\\}$ and $A = \\{2,4,6\\}$, so the leftover outcomes are $1, 3, 5$. The key is A.",
+          "B just repeats $A$ itself, taking the complement relative to nothing.",
+          "C returns the whole sample space, including the outcomes of $A$ that should be removed.",
+          "D drops the boundary outcome $5$, which is in $S$ but not in $A$ and so belongs to $A^c$."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "For a die roll, $A = \\{2, 4, 6\\}$ (even) and $B = \\{1, 2, 3\\}$ (less than $4$). List the intersection $A \\cap B$.\nA) $A \\cap B = \\{1, 2, 3, 4, 6\\}$\nB) $A \\cap B = \\{1, 3\\}$\nC) $A \\cap B = \\{2\\}$\nD) $A \\cap B = \\varnothing$",
+      "answer": "C) $A \\cap B = \\{2\\}$",
+      "solution": {
+        "steps": [
+          "The intersection $A \\cap B$ contains only outcomes in BOTH events.",
+          "Comparing $A = \\{2,4,6\\}$ and $B = \\{1,2,3\\}$, the only shared outcome is $2$, so $A \\cap B = \\{2\\}$. The key is C.",
+          "A is actually the union $A \\cup B$ ('or'), not the intersection.",
+          "B lists outcomes in $B$ but not in $A$, the opposite of an intersection.",
+          "D claims no overlap, but $2$ is in both events, so the sets are not disjoint."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "For a die roll, $A = \\{2, 4, 6\\}$ (even) and $B = \\{1, 2, 3\\}$ (less than $4$). List the union $A \\cup B$.\nA) $A \\cup B = \\{2\\}$\nB) $A \\cup B = \\{1, 2, 3, 4, 6\\}$\nC) $A \\cup B = \\{1, 3, 4, 6\\}$\nD) $A \\cup B = \\{1, 2, 3, 4, 5, 6\\}$",
+      "answer": "B) $A \\cup B = \\{1, 2, 3, 4, 6\\}$",
+      "solution": {
+        "steps": [
+          "The union $A \\cup B$ contains every outcome in $A$ OR $B$ (or both), each listed once.",
+          "Combining $\\{2,4,6\\}$ and $\\{1,2,3\\}$ gives $\\{1, 2, 3, 4, 6\\}$. The key is B.",
+          "A gives only the overlap, confusing 'or' (union) with 'and' (intersection).",
+          "C treats 'or' as exclusive and drops the shared outcome $2$, but union keeps it.",
+          "D adds $5$, which belongs to neither $A$ nor $B$ and so is not in the union."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Two fair coins are flipped and the result of each is recorded in order. Which set is the correct sample space $S$?\nA) $S = \\{HH, HT, TT\\}$\nB) $S = \\{HH, HT, TH, TT\\}$\nC) $S = \\{H, T\\}$\nD) $S = \\{HH, TT\\}$",
+      "answer": "B) $S = \\{HH, HT, TH, TT\\}$",
+      "solution": {
+        "steps": [
+          "Each coin independently shows $H$ or $T$, and order is recorded, so there are $2 \\times 2 = 4$ outcomes.",
+          "Listing them: $HH, HT, TH, TT$, so $S = \\{HH, HT, TH, TT\\}$. The key is B.",
+          "A treats $HT$ and $TH$ as the same outcome, dropping one ordered result.",
+          "C is the sample space for a single coin, not two.",
+          "D lists only the matching outcomes, omitting the mixed results $HT$ and $TH$."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "A single card is drawn from a standard $52$-card deck. Let $R$ be the event 'the card is red' and $K$ be the event 'the card is a king.' Which expression describes the event 'the card is red or a king'?\nA) $R \\cap K$\nB) $R \\cup K$\nC) $R^c$\nD) $R \\cap K^c$",
+      "answer": "B) $R \\cup K$",
+      "solution": {
+        "steps": [
+          "The word 'or' joins two events into their union, $R \\cup K$. The key is B.",
+          "A uses $\\cap$, which means 'and' (red AND a king), not 'or'.",
+          "C is the complement $R^c$, meaning 'not red,' which ignores the king condition entirely.",
+          "D, $R \\cap K^c$, means 'red and not a king,' a different and narrower event."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "For a die roll with $S = \\{1, 2, 3, 4, 5, 6\\}$, let $A = \\{2, 4, 6\\}$ and $B = \\{1, 2, 3\\}$. List the event $(A \\cup B)^c$.\nA) $(A \\cup B)^c = \\{5\\}$\nB) $(A \\cup B)^c = \\{1, 3, 5\\}$\nC) $(A \\cup B)^c = \\{5, 6\\}$\nD) $(A \\cup B)^c = \\varnothing$",
+      "answer": "A) $(A \\cup B)^c = \\{5\\}$",
+      "solution": {
+        "steps": [
+          "First find the union: $A \\cup B = \\{2,4,6\\} \\cup \\{1,2,3\\} = \\{1, 2, 3, 4, 6\\}$.",
+          "Now take the complement: the only outcome of $S$ missing from $\\{1,2,3,4,6\\}$ is $5$, so $(A \\cup B)^c = \\{5\\}$. The key is A.",
+          "This matches $A^c \\cap B^c = \\{1,3,5\\} \\cap \\{4,5,6\\} = \\{5\\}$, the correct De Morgan form.",
+          "B is $A^c$ alone, not the complement of the whole union.",
+          "C mistakenly applies De Morgan as $A^c \\cup B^c$, which is too large.",
+          "D claims the union covers all of $S$, but $5$ is left out, so the complement is not empty."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "In a class of $30$ students, $18$ play a sport and $12$ are seniors. Of the seniors, $7$ play a sport. Let $P$ be 'plays a sport' and $E$ be 'is a senior.' How many students are in the event $P \\cap E^c$ (plays a sport and is not a senior)?\nA) $11$\nB) $7$\nC) $18$\nD) $5$",
+      "answer": "A) $11$",
+      "solution": {
+        "steps": [
+          "$P \\cap E^c$ is the students who play a sport but are NOT seniors.",
+          "A total of $18$ students play a sport, and $7$ of those are seniors (in $P \\cap E$).",
+          "Subtract the senior athletes: $18 - 7 = 11$. The key is A.",
+          "B, $7$, is the count of $P \\cap E$ (senior athletes), the group we needed to remove, not keep.",
+          "C, $18$, ignores the complement and counts all athletes, including seniors.",
+          "D, $5$, is $12 - 7$, the non-athlete seniors, which answers a different question."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "id": "A2.A-SSE.B.4--worksheet",
+  "standard": "A2.A-SSE.B.4",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Seeing Structure in Expressions",
+  "domainCode": "A-SSE",
+  "cluster": "Write expressions in equivalent forms to solve problems",
+  "clusterCode": "B",
+  "skillName": "Geometric Series Formula",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "A finite geometric series with first term $a$, common ratio $r \\neq 1$, and $n$ terms is $a + ar + ar^2 + \\cdots + ar^{n-1}$, and its sum is $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$. These problems ramp from reading $a$, $r$, and $n$ off a short series to modeling real-world accumulation and solving for an unknown parameter.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "For the geometric series $5 + 15 + 45 + 135 + 405$, identify the first term $a$, the common ratio $r$, and the number of terms $n$.",
+      "answer": "$a = 5$, $r = 3$, $n = 5$",
+      "solution": {
+        "steps": [
+          "The first term is the leading value: $a = 5$.",
+          "Divide any term by the one before it to get the ratio: $\\frac{15}{5} = 3$, and $\\frac{45}{15} = 3$, so $r = 3$.",
+          "Count the listed terms: $5, 15, 45, 135, 405$ is $5$ terms, so $n = 5$.",
+          "Thus $a = 5$, $r = 3$, $n = 5$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "For the geometric series $4 + 8 + 16 + 32$, identify $a$, $r$, and $n$.",
+      "answer": "$a = 4$, $r = 2$, $n = 4$",
+      "solution": {
+        "steps": [
+          "The first term is $a = 4$.",
+          "The ratio is $\\frac{8}{4} = 2$, confirmed by $\\frac{16}{8} = 2$, so $r = 2$.",
+          "There are $4$ listed terms, so $n = 4$.",
+          "Thus $a = 4$, $r = 2$, $n = 4$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Use $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$ to find the sum $2 + 6 + 18 + 54 + 162$.",
+      "answer": "$242$",
+      "solution": {
+        "steps": [
+          "Identify $a = 2$, $r = 3$, $n = 5$.",
+          "Substitute: $S_5 = 2\\cdot\\dfrac{1 - 3^5}{1 - 3}$.",
+          "Compute $3^5 = 243$, so $S_5 = 2\\cdot\\dfrac{1 - 243}{-2} = 2\\cdot\\dfrac{-242}{-2}$.",
+          "Simplify: $\\dfrac{-242}{-2} = 121$, so $S_5 = 2\\cdot 121 = 242$.",
+          "The sum is $242$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Use $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$ to find the sum $3 + 6 + 12 + 24 + 48$.",
+      "answer": "$93$",
+      "solution": {
+        "steps": [
+          "Identify $a = 3$, $r = 2$, $n = 5$.",
+          "Substitute: $S_5 = 3\\cdot\\dfrac{1 - 2^5}{1 - 2}$.",
+          "Compute $2^5 = 32$, so $S_5 = 3\\cdot\\dfrac{1 - 32}{-1} = 3\\cdot\\dfrac{-31}{-1}$.",
+          "Simplify: $\\dfrac{-31}{-1} = 31$, so $S_5 = 3\\cdot 31 = 93$.",
+          "The sum is $93$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A geometric series has first term $a = 5$, common ratio $r = 3$, and $n = 4$ terms. Find the sum $S_4$ using $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$.",
+      "answer": "$200$",
+      "solution": {
+        "steps": [
+          "Substitute $a = 5$, $r = 3$, $n = 4$: $S_4 = 5\\cdot\\dfrac{1 - 3^4}{1 - 3}$.",
+          "Compute $3^4 = 81$, so $S_4 = 5\\cdot\\dfrac{1 - 81}{-2} = 5\\cdot\\dfrac{-80}{-2}$.",
+          "Simplify: $\\dfrac{-80}{-2} = 40$, so $S_4 = 5\\cdot 40 = 200$.",
+          "The sum is $200$ (check: $5 + 15 + 45 + 135 = 200$)."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Evaluate $\\displaystyle\\sum_{k=0}^{6} 4\\left(\\tfrac{1}{2}\\right)^{k}$. Give the exact value as a fraction.",
+      "answer": "$\\dfrac{127}{16}$",
+      "solution": {
+        "steps": [
+          "Read off $a = 4$ (the term at $k = 0$) and $r = \\tfrac{1}{2}$.",
+          "The index runs $k = 0$ to $6$, so there are $7$ terms: $n = 7$.",
+          "Substitute: $S_7 = 4\\cdot\\dfrac{1 - \\left(\\frac{1}{2}\\right)^{7}}{1 - \\frac{1}{2}}$.",
+          "Compute $\\left(\\frac{1}{2}\\right)^{7} = \\frac{1}{128}$ and $1 - \\frac{1}{2} = \\frac{1}{2}$, so $S_7 = 4\\cdot\\dfrac{1 - \\frac{1}{128}}{\\frac{1}{2}} = 8\\left(1 - \\tfrac{1}{128}\\right)$.",
+          "Then $8\\cdot\\dfrac{127}{128} = \\dfrac{127}{16}$.",
+          "The exact sum is $\\dfrac{127}{16}$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Evaluate $\\displaystyle\\sum_{k=1}^{5} 3\\cdot 2^{\\,k-1}$. Be careful to count the number of terms.",
+      "answer": "$93$",
+      "solution": {
+        "steps": [
+          "The general term is $3\\cdot 2^{k-1}$; at $k = 1$ this is $3$, so $a = 3$ and $r = 2$.",
+          "The index runs $k = 1$ to $5$, giving $n = 5$ terms.",
+          "Substitute: $S_5 = 3\\cdot\\dfrac{1 - 2^5}{1 - 2} = 3\\cdot\\dfrac{1 - 32}{-1}$.",
+          "Simplify: $3\\cdot\\dfrac{-31}{-1} = 3\\cdot 31 = 93$.",
+          "The exact sum is $93$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Find the sum of the first $5$ terms of a geometric series with $a = 9$ and $r = -\\tfrac{1}{3}$. Give the exact value.",
+      "answer": "$\\dfrac{61}{9}$",
+      "solution": {
+        "steps": [
+          "Substitute $a = 9$, $r = -\\tfrac{1}{3}$, $n = 5$: $S_5 = 9\\cdot\\dfrac{1 - \\left(-\\frac{1}{3}\\right)^{5}}{1 - \\left(-\\frac{1}{3}\\right)}$.",
+          "Since $5$ is odd, $\\left(-\\tfrac{1}{3}\\right)^{5} = -\\tfrac{1}{243}$, so the numerator is $1 - \\left(-\\tfrac{1}{243}\\right) = 1 + \\tfrac{1}{243} = \\tfrac{244}{243}$.",
+          "The denominator is $1 + \\tfrac{1}{3} = \\tfrac{4}{3}$.",
+          "So $S_5 = 9\\cdot\\dfrac{\\frac{244}{243}}{\\frac{4}{3}} = 9\\cdot\\dfrac{244}{243}\\cdot\\dfrac{3}{4} = 9\\cdot\\dfrac{244}{324}$.",
+          "Simplify: $9\\cdot\\dfrac{244}{324} = \\dfrac{244}{36} = \\dfrac{61}{9}$.",
+          "The exact sum is $\\dfrac{61}{9}$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A geometric sequence has $a = 2$ and $r = 3$. Find the $6$th term $a_6 = a r^{\\,n-1}$, then find the sum of the first $6$ terms $S_6$. Show that they are different.",
+      "answer": "$a_6 = 486$ and $S_6 = 728$",
+      "solution": {
+        "steps": [
+          "The $n$th term uses $a r^{n-1}$: $a_6 = 2\\cdot 3^{6-1} = 2\\cdot 3^5 = 2\\cdot 243 = 486$.",
+          "The sum uses the exponent $n$ inside the formula: $S_6 = 2\\cdot\\dfrac{1 - 3^6}{1 - 3}$.",
+          "Compute $3^6 = 729$, so $S_6 = 2\\cdot\\dfrac{1 - 729}{-2} = 2\\cdot\\dfrac{-728}{-2} = 2\\cdot 364 = 728$.",
+          "The $6$th term ($486$) is just the last term, while the sum ($728$) totals all six terms, so they are different.",
+          "Thus $a_6 = 486$ and $S_6 = 728$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Derive the closed form $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$ for $r \\neq 1$ using the multiply-by-$r$-and-subtract method, and state where the assumption $r \\neq 1$ is used.",
+      "answer": "$S_n(1 - r) = a(1 - r^n)$, so $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$; dividing by $1 - r$ requires $r \\neq 1$.",
+      "solution": {
+        "steps": [
+          "Write the sum: $S_n = a + ar + ar^2 + \\cdots + ar^{n-1}$.",
+          "Multiply both sides by $r$: $rS_n = ar + ar^2 + ar^3 + \\cdots + ar^{n}$.",
+          "Subtract the second equation from the first; every middle term cancels (telescopes): $S_n - rS_n = a - ar^{n}$.",
+          "Factor both sides: $S_n(1 - r) = a(1 - r^n)$.",
+          "Divide by $1 - r$ to isolate $S_n$: $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$.",
+          "This division is only valid when $1 - r \\neq 0$, i.e. $r \\neq 1$. If $r = 1$ every term equals $a$ and the sum is simply $S_n = a n$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A geometric series has $a = 3$, $r = 2$, and sum $S_n = 381$. Find the number of terms $n$.",
+      "answer": "$n = 7$",
+      "solution": {
+        "steps": [
+          "Use $S_n = a\\,\\dfrac{r^n - 1}{r - 1}$ (the $r > 1$ form): $3\\cdot\\dfrac{2^n - 1}{2 - 1} = 381$.",
+          "Since $2 - 1 = 1$, this is $3(2^n - 1) = 381$.",
+          "Divide by $3$: $2^n - 1 = 127$, so $2^n = 128$.",
+          "Since $128 = 2^7$, we get $n = 7$.",
+          "There are $7$ terms."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "You deposit $\\$200$ at the end of each year into an account earning $5\\%$ annual interest, compounded annually, for $10$ years. The future value is the geometric series $200\\cdot\\dfrac{1.05^{10} - 1}{1.05 - 1}$. Find the future value, rounded to the nearest cent. Use $1.05^{10} \\approx 1.628895$.",
+      "answer": "$\\approx \\$2515.58$",
+      "solution": {
+        "steps": [
+          "The deposits form a geometric series with annual factor $r = 1.05$ and $10$ deposits, giving future value $200\\cdot\\dfrac{1.05^{10} - 1}{1.05 - 1}$.",
+          "Substitute $1.05^{10} \\approx 1.628895$: the numerator is $1.628895 - 1 = 0.628895$.",
+          "The denominator is $1.05 - 1 = 0.05$.",
+          "Divide: $\\dfrac{0.628895}{0.05} = 12.5779$.",
+          "Multiply by $200$: $200 \\times 12.5779 = 2515.58$.",
+          "The future value is $\\approx \\$2515.58$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A new car worth $\\$24{,}000$ loses $20\\%$ of its value each year. The total of its values at the start of each of the first $4$ years is a geometric series with $a = 24000$ and $r = 0.8$. Find this $4$-year total.",
+      "answer": "$\\$70{,}848$",
+      "solution": {
+        "steps": [
+          "The values at the start of years $1$ through $4$ are $24000$, $24000(0.8)$, $24000(0.8)^2$, $24000(0.8)^3$, a geometric series with $a = 24000$, $r = 0.8$, $n = 4$.",
+          "Substitute: $S_4 = 24000\\cdot\\dfrac{1 - 0.8^4}{1 - 0.8}$.",
+          "Compute $0.8^4 = 0.4096$, so the numerator is $1 - 0.4096 = 0.5904$ and the denominator is $0.2$.",
+          "So $S_4 = 24000\\cdot\\dfrac{0.5904}{0.2} = 24000\\cdot 2.952 = 70848$.",
+          "The $4$-year total is $\\$70{,}848$ (check: $24000 + 19200 + 15360 + 12288 = 70848$)."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A geometric series has $a = 4$, $r = 3$, and sum $S_n = 4372$. Use logarithms to find the number of terms $n$.",
+      "answer": "$n = 7$",
+      "solution": {
+        "steps": [
+          "Use $S_n = a\\,\\dfrac{r^n - 1}{r - 1}$: $4\\cdot\\dfrac{3^n - 1}{3 - 1} = 4372$.",
+          "Since $3 - 1 = 2$, this is $\\dfrac{4(3^n - 1)}{2} = 2(3^n - 1) = 4372$.",
+          "Divide by $2$: $3^n - 1 = 2186$, so $3^n = 2187$.",
+          "Take $\\log$ of both sides: $n = \\dfrac{\\ln 2187}{\\ln 3} = \\log_3 2187$.",
+          "Since $3^7 = 2187$, we get $n = 7$.",
+          "There are $7$ terms."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "At the end of each month you deposit $\\$100$ into an account earning $0.5\\%$ interest per month, compounded monthly, for $24$ months. The future value is $100\\cdot\\dfrac{1.005^{24} - 1}{1.005 - 1}$. Find the future value to the nearest cent, using $1.005^{24} \\approx 1.127160$.",
+      "answer": "$\\approx \\$2543.20$",
+      "solution": {
+        "steps": [
+          "Model the deposits as a geometric series with monthly factor $r = 1.005$ and $24$ deposits: future value $= 100\\cdot\\dfrac{1.005^{24} - 1}{1.005 - 1}$.",
+          "Substitute $1.005^{24} \\approx 1.127160$: numerator $\\approx 1.127160 - 1 = 0.127160$.",
+          "Denominator: $1.005 - 1 = 0.005$.",
+          "So future value $\\approx 100\\cdot\\dfrac{0.127160}{0.005} = 100\\cdot 25.432 = 2543.20$.",
+          "The future value is $\\approx \\$2543.20$."
+        ]
+      }
+    }
+  ]
+}

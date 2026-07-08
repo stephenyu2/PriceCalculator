@@ -1,0 +1,139 @@
+{
+  "standard": "A1.F-IF.C.7",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Functions",
+  "domainCode": "F-IF",
+  "cluster": "Analyze functions using different representations",
+  "clusterCode": "C",
+  "skillName": "Graphing Functions with Key Features",
+
+  "description": "Students graph functions given symbolically and identify the key features of the graph. For Algebra 1 the relevant families are linear, quadratic, and the basic non-linear pieces this standard names: square root, cube root, piecewise-defined, step, and absolute-value functions. For each family students locate and label the defining key features: $x$- and $y$-intercepts, the slope or rate of change for lines, the vertex and axis of symmetry and direction of opening and minimum or maximum for parabolas, intervals where the function is increasing or decreasing, the starting point and direction of a square-root or cube-root graph, the corner of an absolute-value graph, and the breakpoints of a piecewise or step function. Students plot points by evaluating the rule, draw the curve through them, and read off these features; conversely they match a symbolic rule to its graph and use a feature to recover a parameter.",
+
+  "subSkills": [
+    "Graph a linear function $f(x)=mx+b$ and identify slope, $y$-intercept, and $x$-intercept",
+    "Graph a quadratic from standard form $f(x)=ax^2+bx+c$ or vertex form $f(x)=a(x-h)^2+k$ and label the vertex, axis of symmetry, intercepts, and direction of opening",
+    "Determine the maximum or minimum value of a quadratic and the intervals where it increases and decreases",
+    "Graph an absolute-value function $f(x)=a|x-h|+k$ and identify the vertex (corner), axis of symmetry, and direction of opening",
+    "Graph square-root and cube-root functions $f(x)=a\\sqrt{x-h}+k$ and $f(x)=\\sqrt[3]{x-h}+k$ and identify the starting point, domain, and end behavior direction",
+    "Graph a piecewise-defined function by graphing each piece on its stated interval, using open and closed endpoints correctly",
+    "Graph a step function and identify its breakpoints and constant output values",
+    "Read key features (intercepts, vertex, increasing/decreasing intervals) off a given graph and state them in coordinate form",
+    "Match a symbolic rule to the correct graph using key features, and recover a parameter such as $a$, $h$, or $k$ from a labeled feature"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Graph a line and name key features",
+      "example": "Graph $f(x)=\\tfrac{2}{3}x-2$. Identify the slope, $y$-intercept, and $x$-intercept. Slope $=\\frac{2}{3}$, $y$-intercept $(0,-2)$, $x$-intercept $(3,0)$."
+    },
+    {
+      "name": "Quadratic in vertex form",
+      "example": "Graph $f(x)=(x-1)^2-4$. Give the vertex, axis of symmetry, and intercepts. Vertex $(1,-4)$, axis $x=1$, $x$-intercepts $(-1,0)$ and $(3,0)$, $y$-intercept $(0,-3)$."
+    },
+    {
+      "name": "Quadratic in standard form (find vertex, min/max)",
+      "example": "For $f(x)=x^2-6x+5$, find the vertex and minimum, and the intervals of increase and decrease. Vertex $(3,-4)$, minimum $-4$, decreasing on $(-\\infty,3)$, increasing on $(3,\\infty)$."
+    },
+    {
+      "name": "Absolute-value function",
+      "example": "Graph $f(x)=-|x+2|+3$. Give the vertex, whether it opens up or down, and the maximum. Vertex $(-2,3)$, opens downward, maximum value $3$."
+    },
+    {
+      "name": "Square-root or cube-root function",
+      "example": "Graph $f(x)=\\sqrt{x-1}+2$. State the starting point and the domain. Starting point $(1,2)$, domain $x\\ge 1$, curve rises to the right."
+    },
+    {
+      "name": "Piecewise-defined function",
+      "example": "Graph $f(x)=\\begin{cases} x+1 & x<0 \\\\ 2 & x\\ge 0\\end{cases}$ and state $f(0)$ and where it is constant. $f(0)=2$; constant ($=2$) for $x\\ge 0$, with an open circle at $(0,1)$ on the left piece."
+    },
+    {
+      "name": "Read features off a given graph",
+      "example": "A parabola passes through $(-1,0)$ and $(5,0)$ with vertex below the axis. Give its axis of symmetry and the $x$-coordinate of its vertex. Axis $x=2$, vertex at $x=2$."
+    },
+    {
+      "name": "Match rule to graph / recover a parameter",
+      "example": "An absolute-value graph has its corner at $(3,-1)$ and opens up. Write its equation in the form $f(x)=|x-h|+k$. Answer: $f(x)=|x-3|-1$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single straightforward family with all key features readable directly. Graph a line and name slope and intercepts, plot a quadratic already in vertex form and read off the vertex, or read one obvious feature off a supplied graph. One representation, one or two features. tier1 begins here.",
+      "constraints": [
+        "Linear $f(x)=mx+b$ with small integer or simple fractional slope and integer intercepts",
+        "Quadratic given in vertex form $f(x)=a(x-h)^2+k$ with integer $h,k$ and $a=\\pm 1$",
+        "Asks for at most two features that are read directly (e.g. vertex and direction of opening, or slope and $y$-intercept)",
+        "Square-root/absolute-value items are the parent or a single integer shift, e.g. $f(x)=|x|+2$ or $f(x)=\\sqrt{x-1}$"
+      ]
+    },
+    "Medium": {
+      "description": "Requires a short computation before features appear, or a less familiar family. Convert a standard-form quadratic to find its vertex via $x=-\\frac{b}{2a}$, find intercepts of a parabola, graph an absolute-value or radical function with a vertical stretch or a reflection, or describe increasing/decreasing intervals. Two to three features per item. tier1 ends here; tier2 begins here.",
+      "constraints": [
+        "Quadratic in standard form $f(x)=ax^2+bx+c$ needing $x=-\\frac{b}{2a}$ then substitution for the vertex",
+        "Find both $x$-intercepts (factorable) and the $y$-intercept of a parabola",
+        "Absolute-value or radical with a stretch/reflection, e.g. $f(x)=-2|x-1|+3$ or $f(x)=2\\sqrt{x}+1$",
+        "Report increasing and decreasing intervals in interval notation",
+        "Match a symbolic rule to one of several graphs using two distinguishing features"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step or multi-family reasoning. Graph a piecewise or step function with correct open/closed endpoints, recover a parameter ($a$, $h$, or $k$) from a labeled feature, combine several features into a full description, or analyze a quadratic requiring the quadratic formula or completing the square for the vertex. Three or more linked features, or two pieces/families in one item. tier2 lives here.",
+      "constraints": [
+        "Piecewise-defined function with two or more pieces, requiring correct open and closed endpoints and a stated value at a breakpoint",
+        "Step function with multiple breakpoints and constant outputs",
+        "Recover a parameter from a feature, e.g. find $a$ so the parabola through a given point has a stated vertex, or write the equation from a labeled corner/vertex",
+        "Quadratic whose vertex requires completing the square or whose intercepts require the quadratic formula (irrational, exact-radical answers)",
+        "Full key-feature description: vertex, axis, both intercepts, direction, and increasing/decreasing intervals together"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student reverses the sign of $h$ when reading the vertex from $f(x)=a(x-h)^2+k$",
+      "distractor": "For $f(x)=(x-3)^2+2$ states the vertex as $(-3,2)$ instead of $(3,2)$, treating $x-3$ as a shift left"
+    },
+    {
+      "misconception": "Student forgets to substitute back to find the vertex's $y$-value, using only $x=-\\frac{b}{2a}$",
+      "distractor": "For $f(x)=x^2-6x+5$ gives the vertex as $(3,5)$ (using $c$) or $(3,0)$ instead of $(3,-4)$"
+    },
+    {
+      "misconception": "Student confuses slope and $y$-intercept, or swaps the intercept coordinates",
+      "distractor": "For $f(x)=\\frac{2}{3}x-2$ reports slope $-2$ and $y$-intercept $\\frac{2}{3}$, or gives the $x$-intercept as $(0,3)$ instead of $(3,0)$"
+    },
+    {
+      "misconception": "Student mistakes the sign of $a$ for the direction of opening or the location of the corner",
+      "distractor": "For $f(x)=-|x+2|+3$ says it opens upward with a minimum, instead of opening downward with maximum $3$ at $(-2,3)$"
+    },
+    {
+      "misconception": "Student gives the wrong domain or starting point for a square-root function",
+      "distractor": "For $f(x)=\\sqrt{x-1}+2$ states the domain as $x\\ge 0$ or the starting point as $(0,2)$ instead of $x\\ge 1$ and $(1,2)$"
+    },
+    {
+      "misconception": "Student uses the wrong endpoint type or evaluates the wrong piece at a breakpoint",
+      "distractor": "For $f(x)=\\begin{cases} x+1 & x<0 \\\\ 2 & x\\ge 0\\end{cases}$ reports $f(0)=1$ (using the $x<0$ piece) or draws a closed circle at $(0,1)$"
+    },
+    {
+      "misconception": "Student swaps the increasing and decreasing intervals of a parabola",
+      "distractor": "For $f(x)=x^2-6x+5$ (vertex at $x=3$) states increasing on $(-\\infty,3)$ and decreasing on $(3,\\infty)$, the reverse of the correct intervals"
+    },
+    {
+      "misconception": "Student reports only one $x$-intercept or none when both exist",
+      "distractor": "For $f(x)=(x-1)^2-4$ gives only $x=3$ as an intercept, omitting $x=-1$, or claims there is no $x$-intercept"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

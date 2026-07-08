@@ -1,0 +1,122 @@
+{
+  "standard": "7.G.A.1",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Draw, construct, and describe geometrical figures and describe the relationships between them",
+  "clusterCode": "A",
+  "skillName": "Scale Drawings",
+
+  "description": "Students solve problems involving scale drawings of geometric figures. They use a given scale (a ratio between drawing length and actual length, such as $1\\text{ cm} : 4\\text{ m}$ or a unitless scale factor $k$) to compute actual lengths from a drawing and drawing lengths from actual measurements. They find actual areas, recognizing that area scales by the square of the scale factor ($k^2$). They also reproduce a scale drawing at a different scale by computing a new scale factor and applying it to every length.",
+
+  "subSkills": [
+    "Interpret a scale written as a ratio (e.g., $1\\text{ in} : 6\\text{ ft}$) or as a fraction/scale factor",
+    "Convert a scale-drawing length to the corresponding actual length using a proportion",
+    "Convert an actual length to the corresponding scale-drawing length using a proportion",
+    "Compute the actual area of a figure from a scale drawing, applying the squared scale factor",
+    "Reproduce a scale drawing at a new scale by finding the ratio of the two scales and rescaling each length",
+    "Find an unknown scale or scale factor given a drawing length and its actual length",
+    "Manage and convert units consistently within a scale relationship (in/ft, cm/m, cm/km)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Drawing length to actual length",
+      "example": "A map uses the scale $1\\text{ cm} : 5\\text{ km}$. Two cities are $7\\text{ cm}$ apart on the map. What is the actual distance? Answer: $35\\text{ km}$."
+    },
+    {
+      "name": "Actual length to drawing length",
+      "example": "A blueprint uses the scale $1\\text{ in} : 4\\text{ ft}$. A wall is $18\\text{ ft}$ long. How long is the wall on the blueprint? Answer: $\\frac{18}{4}=4.5\\text{ in}$."
+    },
+    {
+      "name": "Find the scale or scale factor",
+      "example": "On a scale drawing a segment is $3\\text{ cm}$ long and represents an actual length of $12\\text{ m}$. Write the scale as $1\\text{ cm} : ?$. Answer: $1\\text{ cm} : 4\\text{ m}$, scale factor $\\frac{1}{400}$."
+    },
+    {
+      "name": "Actual area from a scale drawing",
+      "example": "A rectangular garden is drawn $4\\text{ cm}$ by $6\\text{ cm}$ using the scale $1\\text{ cm} : 3\\text{ m}$. Find the actual area. Actual dimensions $12\\text{ m}\\times 18\\text{ m}$, area $=216\\text{ m}^2$ (equivalently drawing area $24\\text{ cm}^2$ times $3^2=9$)."
+    },
+    {
+      "name": "Reproduce a drawing at a new scale",
+      "example": "A figure is drawn at scale $1\\text{ cm} : 2\\text{ m}$ with a side of $5\\text{ cm}$. Redraw it at scale $1\\text{ cm} : 5\\text{ m}$. The actual side is $10\\text{ m}$, so the new drawing side is $\\frac{10}{5}=2\\text{ cm}$."
+    },
+    {
+      "name": "Scale factor and unit conversion combined",
+      "example": "A model car is built to scale factor $\\frac{1}{18}$. The model is $24\\text{ cm}$ long. How long is the real car in meters? Actual $=24\\times 18=432\\text{ cm}=4.32\\text{ m}$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step conversion in one direction with a clean whole-number scale and no unit conversion. Multiplying or dividing by the scale gives an exact integer or simple decimal.",
+      "constraints": [
+        "Scale is given directly as $1 : n$ with $n$ a small whole number ($\\le 10$)",
+        "One length is given; find the matching length in the other system",
+        "Drawing and actual units are already compatible (no in-to-ft or cm-to-km conversion)",
+        "Answers are whole numbers or terminate after one decimal place",
+        "No area, no reproduction at a new scale"
+      ]
+    },
+    "Medium": {
+      "description": "Two to three steps: finding an unknown scale, converting an actual area from a drawing, or working with a scale that is not $1 : n$. May require one straightforward unit conversion or reducing a fraction.",
+      "constraints": [
+        "Find the scale/scale factor from a drawing length and actual length, OR",
+        "Compute actual area (apply the squared scale factor) from a rectangular or triangular figure, OR",
+        "Scale stated as a fraction/scale factor (e.g., $\\frac{1}{50}$) rather than a ratio with named units",
+        "At most one unit conversion (e.g., cm to m)",
+        "Numbers chosen so the area or scale comes out exact"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning: reproduce a drawing at a different scale, combine area scaling with unit conversion, or chain two relationships. Requires extracting the actual figure first, then rescaling, possibly with a comparison or follow-up.",
+      "constraints": [
+        "Reproduce a drawing at a new scale (compute actual size, then re-apply the new scale), OR",
+        "Find actual area then convert units (e.g., $\\text{cm}^2$ of drawing to $\\text{m}^2$ actual), OR",
+        "Compare two scales/drawings or solve for a length that feeds a second computation",
+        "Includes at least one unit conversion and at least two distinct operations",
+        "May use non-integer scale factors that require careful fraction or decimal work"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student multiplies when they should divide (or vice versa), confusing the direction of the conversion",
+      "distractor": "For scale $1\\text{ in} : 4\\text{ ft}$ with an $18\\text{ ft}$ wall, computes $18\\times 4=72\\text{ in}$ instead of $\\frac{18}{4}=4.5\\text{ in}$"
+    },
+    {
+      "misconception": "Student inverts the scale ratio, treating $1 : n$ as $n : 1$",
+      "distractor": "For $1\\text{ cm} : 5\\text{ km}$ and $7\\text{ cm}$, computes $\\frac{7}{5}=1.4\\text{ km}$ instead of $7\\times 5=35\\text{ km}$"
+    },
+    {
+      "misconception": "Student scales area by the linear scale factor instead of its square",
+      "distractor": "For drawing area $24\\text{ cm}^2$ at $1\\text{ cm} : 3\\text{ m}$, gives $24\\times 3=72\\text{ m}^2$ instead of $24\\times 3^2=216\\text{ m}^2$"
+    },
+    {
+      "misconception": "Student squares only one dimension or forgets to scale both dimensions when finding actual area",
+      "distractor": "For a $4\\text{ cm}\\times 6\\text{ cm}$ drawing at $1\\text{ cm} : 3\\text{ m}$, computes $12\\text{ m}\\times 6\\text{ m}=72\\text{ m}^2$ (scaled one side only) instead of $12\\text{ m}\\times 18\\text{ m}=216\\text{ m}^2$"
+    },
+    {
+      "misconception": "Student ignores the unit conversion built into the scale, leaving the answer in the wrong unit",
+      "distractor": "For scale factor $\\frac{1}{18}$ and a $24\\text{ cm}$ model, gives $432\\text{ cm}$ but reports it as $432\\text{ m}$ instead of converting to $4.32\\text{ m}$"
+    },
+    {
+      "misconception": "When reproducing at a new scale, student rescales the drawing length directly by the ratio of scales without going through the actual size, applying the ratio backwards",
+      "distractor": "Redrawing a $5\\text{ cm}$ side from $1\\text{ cm} : 2\\text{ m}$ to $1\\text{ cm} : 5\\text{ m}$, computes $5\\times\\frac{5}{2}=12.5\\text{ cm}$ instead of actual $10\\text{ m}$ giving $\\frac{10}{5}=2\\text{ cm}$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

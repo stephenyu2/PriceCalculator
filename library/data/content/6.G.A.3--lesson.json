@@ -1,0 +1,172 @@
+{
+  "id": "6.G.A.3--lesson",
+  "standard": "6.G.A.3",
+  "clusterId": null,
+  "grade": "6",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Solve real-world and mathematical problems involving area, surface area, and volume",
+  "clusterCode": "A",
+  "skillName": "Polygons in the Coordinate Plane",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:41:22.446Z",
+  "intro": "When a polygon is drawn on the coordinate plane with sides that run straight up-and-down or straight left-and-right, you can find its side lengths just from the coordinates of its vertices. A side is vertical when both endpoints share the same first coordinate (the $x$-value); its length is $|y_2 - y_1|$. A side is horizontal when both endpoints share the same second coordinate (the $y$-value); its length is $|x_2 - x_1|$. Once you know the side lengths, you can find perimeter (add up the sides), area (for a rectangle, length $\\times$ width), or a missing vertex. In this lesson you will plot and identify polygons, measure their sides, and use those measurements to solve perimeter, area, and real-world grid problems.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Plot the vertices $(1, 1)$, $(5, 1)$, $(5, 4)$, and $(1, 4)$ and connect them in order. What kind of polygon is formed, and what is the length of the bottom side from $(1, 1)$ to $(5, 1)$?",
+      "solution": {
+        "steps": [
+          "Plot each point: start at $(1, 1)$, move right to $(5, 1)$, up to $(5, 4)$, left to $(1, 4)$, then back down to $(1, 1)$.",
+          "The figure has four sides, with each pair of opposite sides equal and all corners square, so it is a rectangle.",
+          "The bottom side joins $(1, 1)$ and $(5, 1)$. The second coordinates match ($1 = 1$), so this side is horizontal.",
+          "A horizontal side has length $|x_2 - x_1| = |5 - 1| = 4$.",
+          "So the figure is a rectangle and the bottom side is $4$ units long."
+        ],
+        "answer": "A rectangle; the bottom side is $4$ units long."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find the length of the side that joins $(3, -2)$ and $(3, 5)$.",
+      "solution": {
+        "steps": [
+          "Compare the coordinates. The first coordinates match ($3 = 3$), so the side is vertical.",
+          "For a vertical side, use the second coordinates: length $= |y_2 - y_1|$.",
+          "Substitute: $|5 - (-2)| = |5 + 2| = |7| = 7$.",
+          "Notice the subtraction crosses zero, so the lengths add: $5 + 2 = 7$.",
+          "The side is $7$ units long."
+        ],
+        "answer": "$7$ units"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A rectangle has vertices $(-2, 3)$, $(4, 3)$, $(4, -1)$, and $(-2, -1)$. Find its perimeter and its area.",
+      "solution": {
+        "steps": [
+          "Find the width using a horizontal side from $(-2, 3)$ to $(4, 3)$ (second coordinates match): $|4 - (-2)| = |4 + 2| = 6$.",
+          "Find the height using a vertical side from $(4, 3)$ to $(4, -1)$ (first coordinates match): $|3 - (-1)| = |3 + 1| = 4$.",
+          "Perimeter sums all four sides. A rectangle has each length twice: $P = 2(6) + 2(4) = 12 + 8 = 20$.",
+          "Area of a rectangle is length $\\times$ width: $A = 6 \\times 4 = 24$.",
+          "The perimeter is $20$ units and the area is $24$ square units."
+        ],
+        "answer": "Perimeter $= 20$ units; area $= 24$ square units."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "An L-shaped polygon has vertices $(0, 0)$, $(6, 0)$, $(6, 2)$, $(3, 2)$, $(3, 5)$, and $(0, 5)$, connected in order. Find its area.",
+      "solution": {
+        "steps": [
+          "An L-shape cannot be measured as one rectangle, so decompose it into two rectangles with a horizontal cut at $y = 2$.",
+          "Bottom rectangle: from $(0, 0)$ to $(6, 0)$ the width is $|6 - 0| = 6$, and its height is from $y = 0$ to $y = 2$, which is $|2 - 0| = 2$. Area $= 6 \\times 2 = 12$.",
+          "Top rectangle: it runs from $x = 0$ to $x = 3$, so width $= |3 - 0| = 3$, and from $y = 2$ to $y = 5$, so height $= |5 - 2| = 3$. Area $= 3 \\times 3 = 9$.",
+          "Add the pieces: $12 + 9 = 21$.",
+          "The L-shaped polygon has area $21$ square units."
+        ],
+        "answer": "$21$ square units"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Three vertices of a rectangle are $(-3, 1)$, $(5, 1)$, and $(5, 4)$. Find the coordinates of the fourth vertex.",
+      "solution": {
+        "steps": [
+          "In a rectangle, the missing vertex lines up with two of the known vertices: it shares one coordinate with each neighbor.",
+          "The vertex $(-3, 1)$ is across the bottom from $(5, 1)$; the vertex $(5, 4)$ sits above $(5, 1)$.",
+          "The fourth vertex must be directly above $(-3, 1)$, so it keeps the same first coordinate: $x = -3$.",
+          "It must also be level with $(5, 4)$, so it keeps the same second coordinate: $y = 4$.",
+          "The fourth vertex is $(-3, 4)$."
+        ],
+        "answer": "$(-3, 4)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Find the length of the side that joins $(-4, 1)$ and $(6, 1)$.",
+      "hint": "The second coordinates match, so the side is horizontal. Use $|x_2 - x_1|$, and remember the subtraction crosses zero.",
+      "solution": {
+        "steps": [
+          "The second coordinates match ($1 = 1$), so the side is horizontal.",
+          "Length $= |x_2 - x_1| = |6 - (-4)| = |6 + 4| = 10$.",
+          "The side is $10$ units long."
+        ],
+        "answer": "$10$ units"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A square has vertices $(1, 2)$, $(5, 2)$, $(5, 6)$, and $(1, 6)$. What is its area?",
+      "hint": "Find one side length first using two vertices that share a coordinate, then use area $=$ side $\\times$ side.",
+      "solution": {
+        "steps": [
+          "Find a side from $(1, 2)$ to $(5, 2)$ (second coordinates match, horizontal): $|5 - 1| = 4$.",
+          "All sides of a square are equal, so each side is $4$ units.",
+          "Area $= 4 \\times 4 = 16$.",
+          "The area is $16$ square units."
+        ],
+        "answer": "$16$ square units"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A rectangular garden has corners at $(2, 1)$, $(2, 7)$, $(9, 7)$, and $(9, 1)$, where each unit is $1$ meter. How many meters of fencing are needed to enclose the garden?",
+      "hint": "Fencing is the perimeter. Find the length and width from the coordinates, then use $P = 2(\\text{length}) + 2(\\text{width})$.",
+      "solution": {
+        "steps": [
+          "Find the width using $(2, 1)$ to $(9, 1)$ (horizontal): $|9 - 2| = 7$ meters.",
+          "Find the height using $(2, 1)$ to $(2, 7)$ (vertical): $|7 - 1| = 6$ meters.",
+          "Perimeter $= 2(7) + 2(6) = 14 + 12 = 26$.",
+          "The garden needs $26$ meters of fencing."
+        ],
+        "answer": "$26$ meters"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Three vertices of a rectangle are $(2, -3)$, $(2, 4)$, and $(7, 4)$. Find the coordinates of the fourth vertex.",
+      "hint": "The missing vertex shares its first coordinate with one neighbor and its second coordinate with another. Match the $x$ of $(7, 4)$ with the $y$ of $(2, -3)$.",
+      "solution": {
+        "steps": [
+          "The vertex $(7, 4)$ is across from $(2, 4)$, and $(2, -3)$ is below $(2, 4)$.",
+          "The fourth vertex must line up below $(7, 4)$, so it keeps $x = 7$.",
+          "It must be level with $(2, -3)$, so it keeps $y = -3$.",
+          "The fourth vertex is $(7, -3)$."
+        ],
+        "answer": "$(7, -3)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A floor plan is an L-shaped room with vertices $(0, 0)$, $(8, 0)$, $(8, 3)$, $(5, 3)$, $(5, 6)$, and $(0, 6)$, connected in order, where each unit is $1$ foot. What is the area of the floor in square feet?",
+      "hint": "Decompose the L-shape into two rectangles with a horizontal cut at $y = 3$, find each area, and add them.",
+      "solution": {
+        "steps": [
+          "Cut the L-shape horizontally at $y = 3$ to make two rectangles.",
+          "Bottom rectangle: width from $x = 0$ to $x = 8$ is $|8 - 0| = 8$, height from $y = 0$ to $y = 3$ is $|3 - 0| = 3$. Area $= 8 \\times 3 = 24$.",
+          "Top rectangle: width from $x = 0$ to $x = 5$ is $|5 - 0| = 5$, height from $y = 3$ to $y = 6$ is $|6 - 3| = 3$. Area $= 5 \\times 3 = 15$.",
+          "Add: $24 + 15 = 39$.",
+          "The floor area is $39$ square feet."
+        ],
+        "answer": "$39$ square feet"
+      }
+    }
+  ]
+}

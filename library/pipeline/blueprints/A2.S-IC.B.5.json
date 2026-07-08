@@ -1,0 +1,124 @@
+{
+  "standard": "A2.S-IC.B.5",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+  "domainCode": "S-IC",
+  "cluster": "Make inferences and justify conclusions from sample surveys, experiments, and observational studies",
+  "clusterCode": "B",
+  "skillName": "Comparing Two Treatments",
+
+  "description": "Students use data from a randomized comparative experiment to compare two treatments and decide whether the observed difference between the two group results is real (caused by the treatment) or could plausibly be the result of chance assignment alone. Given the summary statistics of two treatment groups, they compute the observed difference of means or proportions ($\\bar{x}_1 - \\bar{x}_2$ or $\\hat{p}_1 - \\hat{p}_2$). They then use a simulation built by re-randomizing (shuffling) the pooled outcomes many times to generate a distribution of differences that could occur by chance, locate the observed difference in that simulated distribution, and judge significance: if the observed difference is far out in the tail (rare under random assignment), it is statistically significant evidence that the treatments differ; if it sits comfortably inside the bulk of the simulated differences, the data are consistent with no real treatment effect.",
+
+  "subSkills": [
+    "Identify the two treatments, the response variable, and the two group statistics in a randomized experiment",
+    "Compute the observed difference between treatment groups, $\\bar{x}_1 - \\bar{x}_2$ for means or $\\hat{p}_1 - \\hat{p}_2$ for proportions",
+    "Explain the logic of a re-randomization (shuffle) simulation: pool the outcomes, randomly reassign them to two groups, recompute the difference, repeat many times",
+    "Read a simulated re-randomization distribution (dot plot or histogram of differences) centered near $0$",
+    "Estimate how often a simulated difference is at least as extreme as the observed difference, i.e. an empirical p-value as a count over total trials",
+    "Decide whether a difference is statistically significant by comparing that proportion to a threshold such as $0.05$",
+    "State the conclusion in context: significant difference implies a treatment effect, non-significant difference is consistent with chance variation",
+    "Distinguish statistical significance (effect is real) from practical importance and from a guarantee of causation beyond this experiment"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Compute the observed difference",
+      "example": "In a randomized experiment, $30$ patients got Drug A and $30$ got a placebo. The Drug A group had a mean recovery time of $\\bar{x}_A = 5.4$ days and the placebo group $\\bar{x}_B = 7.1$ days. Find the observed difference $\\bar{x}_A - \\bar{x}_B$ in recovery times."
+    },
+    {
+      "name": "Difference of two proportions",
+      "example": "A study randomly assigned $200$ seedlings to two fertilizers. Fertilizer 1 produced $\\hat{p}_1 = 0.68$ surviving plants and Fertilizer 2 produced $\\hat{p}_2 = 0.52$. Find the observed difference $\\hat{p}_1 - \\hat{p}_2$ in survival rates."
+    },
+    {
+      "name": "Read the re-randomization distribution",
+      "example": "A simulation re-randomized the pooled recovery times $200$ times, each time computing (group 1 mean) $-$ (group 2 mean). The resulting differences are centered at $0$ and range from about $-2.0$ to $2.0$ days. Where does an observed difference of $1.7$ days fall, and what does its location suggest?"
+    },
+    {
+      "name": "Estimate an empirical p-value",
+      "example": "Out of $200$ re-randomization trials, only $6$ produced a difference of means at least as large as the observed $1.7$ days. Estimate the probability of seeing a difference this extreme by chance alone."
+    },
+    {
+      "name": "Decide significance and conclude in context",
+      "example": "If $6$ of $200$ simulated differences are as extreme as observed, giving an empirical p-value of $0.03$, is the difference between the two treatments statistically significant at the $0.05$ level? State the conclusion about the treatments in context."
+    },
+    {
+      "name": "Design and interpret the full comparison",
+      "example": "Researchers randomly split $80$ students into two study methods and measured test scores, finding a difference of means of $4.2$ points. A re-randomization simulation of $500$ trials produced $115$ differences at least as extreme as $4.2$. Compute the empirical p-value, decide whether the methods differ significantly at $0.05$, and explain what re-randomizing the scores is meant to model."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single computational or definitional step from an explicit randomized-experiment context. The student subtracts two given group statistics to get the observed difference, or names the parts of the experiment (treatments, response variable, the two groups). One arithmetic step; no simulation interpretation required.",
+      "constraints": [
+        "Both group statistics ($\\bar{x}_1$, $\\bar{x}_2$ or $\\hat{p}_1$, $\\hat{p}_2$) are given directly",
+        "Task is to compute $\\bar{x}_1 - \\bar{x}_2$ or $\\hat{p}_1 - \\hat{p}_2$, or to identify the two treatments and response variable",
+        "Random assignment is stated; no significance judgment needed",
+        "Tier1 worksheet opens here"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step reasoning that ties a computed difference to a simulated distribution. The student reads a re-randomization dot plot or histogram centered at $0$, counts how many simulated differences are at least as extreme as the observed value, and reports that count as an empirical p-value (a proportion of trials). Requires interpreting the simulation's purpose, not just arithmetic.",
+      "constraints": [
+        "Provides a re-randomization distribution (described or as counts) and the observed difference",
+        "Requires forming the empirical p-value as (extreme trials) / (total trials), e.g. $\\frac{6}{200} = 0.03$",
+        "Asks why the simulated differences are centered near $0$ (models the no-effect, chance-only case)",
+        "Boundary between tier1 (ends here) and tier2 (begins here)"
+      ]
+    },
+    "Hard": {
+      "description": "Full evaluation and judgment: the student computes the difference, forms the empirical p-value from the simulation, compares it to a significance threshold, decides whether the treatment difference is statistically significant, and justifies the conclusion in context, including correctly bounding what may and may not be concluded about causation.",
+      "constraints": [
+        "Requires combining computation, p-value estimation, and a significance decision in one problem",
+        "Student must state the in-context conclusion (treatment effect vs. consistent with chance) and justify it",
+        "May contrast two experiments, or critique an overclaim such as 'proves the drug always works'",
+        "Tier2 worksheet ends here"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student adds the two group statistics or subtracts in the wrong order, mishandling the observed difference",
+      "distractor": "Reports $\\bar{x}_A - \\bar{x}_B = 5.4 + 7.1 = 12.5$ days, or $7.1 - 5.4 = 1.7$ with a sign that contradicts the stated order, instead of $5.4 - 7.1 = -1.7$"
+    },
+    {
+      "misconception": "Student concludes any nonzero difference between the groups automatically means the treatments differ",
+      "distractor": "Says the treatments must differ simply because $\\bar{x}_1 \\neq \\bar{x}_2$, without checking whether the difference is rare under re-randomization"
+    },
+    {
+      "misconception": "Student thinks a difference that lands near the center of the simulated distribution is significant",
+      "distractor": "Calls an observed difference significant because it is nonzero, even though it sits in the dense middle of the chance distribution"
+    },
+    {
+      "misconception": "Student miscomputes the empirical p-value, e.g. dividing by the number of extreme trials or using the wrong total",
+      "distractor": "Reports the p-value as $\\frac{200}{6}$ or as $6$ instead of $\\frac{6}{200} = 0.03$"
+    },
+    {
+      "misconception": "Student reverses the significance decision rule, treating a small p-value as non-significant",
+      "distractor": "Concludes a p-value of $0.03$ is not significant at the $0.05$ level because $0.03 < 0.05$ is read as 'too small to matter'"
+    },
+    {
+      "misconception": "Student misreads the purpose of re-randomization, thinking the shuffled distribution models the real treatment effect rather than the no-effect chance baseline",
+      "distractor": "Claims the simulated differences are centered at $0$ because the treatments truly have no effect, instead of because shuffling assumes no effect to test against"
+    },
+    {
+      "misconception": "Student overstates the conclusion, treating statistical significance as proof of universal causation",
+      "distractor": "Asserts the experiment proves the drug will always cure faster for everyone, rather than that this randomized experiment shows a significant difference"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

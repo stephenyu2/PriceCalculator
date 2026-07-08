@@ -1,0 +1,164 @@
+{
+  "id": "GEO.G-SRT.C.6--lesson",
+  "standard": "GEO.G-SRT.C.6",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Similarity, Right Triangles, and Trigonometry",
+  "domainCode": "G-SRT",
+  "cluster": "Define trigonometric ratios and solve problems involving right triangles",
+  "clusterCode": "C",
+  "skillName": "Defining Trigonometric Ratios",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "intro": "Every right triangle that contains a given acute angle is similar to every other one with that angle, by AA similarity. Because similar triangles have proportional sides, the ratio of any two sides depends only on the angle, not on the size of the triangle. That invariance is what lets each acute angle $\\theta$ define three fixed numbers: $\\sin\\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}}$, $\\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}}$, and $\\tan\\theta = \\frac{\\text{opposite}}{\\text{adjacent}}$ (remember SOH-CAH-TOA). The first step is always to label the sides relative to the named angle: the hypotenuse is across from the right angle, the opposite side is across from $\\theta$, and the adjacent side is the remaining leg touching $\\theta$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "In right triangle $ABC$ the right angle is at $C$. Relative to the acute angle $A$, name the hypotenuse, the side opposite $A$, and the side adjacent to $A$.",
+      "solution": {
+        "steps": [
+          "The hypotenuse is always the side across from the right angle. The right angle is at $C$, so the hypotenuse is $\\overline{AB}$.",
+          "The side opposite $\\angle A$ is the side that does not touch vertex $A$. That is $\\overline{BC}$.",
+          "The adjacent side is the remaining leg, the one that touches $A$ but is not the hypotenuse. That is $\\overline{AC}$.",
+          "So opposite $= \\overline{BC}$, adjacent $= \\overline{AC}$, hypotenuse $= \\overline{AB}$."
+        ],
+        "answer": "Opposite $= \\overline{BC}$, adjacent $= \\overline{AC}$, hypotenuse $= \\overline{AB}$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A right triangle has legs of length $6$ and $8$ and hypotenuse $10$. Let $\\theta$ be the acute angle opposite the leg of length $6$. Find $\\sin\\theta$, $\\cos\\theta$, and $\\tan\\theta$.",
+      "solution": {
+        "steps": [
+          "Label the sides relative to $\\theta$: the opposite side is $6$, the adjacent side is the other leg $8$, and the hypotenuse is $10$.",
+          "Apply SOH: $\\sin\\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}} = \\frac{6}{10} = \\frac{3}{5}$.",
+          "Apply CAH: $\\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}} = \\frac{8}{10} = \\frac{4}{5}$.",
+          "Apply TOA: $\\tan\\theta = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{6}{8} = \\frac{3}{4}$."
+        ],
+        "answer": "$\\sin\\theta = \\frac{3}{5}$, $\\cos\\theta = \\frac{4}{5}$, $\\tan\\theta = \\frac{3}{4}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A right triangle has hypotenuse $13$ and one leg of length $5$. Let $\\theta$ be the acute angle opposite the unknown leg. Find $\\tan\\theta$.",
+      "solution": {
+        "steps": [
+          "First find the missing leg with the Pythagorean theorem: $\\text{leg}^2 = 13^2 - 5^2 = 169 - 25 = 144$.",
+          "Take the square root: $\\text{leg} = \\sqrt{144} = 12$.",
+          "Relative to $\\theta$, the opposite side is the leg we just found, $12$, and the adjacent side is the given leg $5$.",
+          "Apply TOA: $\\tan\\theta = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{12}{5}$."
+        ],
+        "answer": "$\\tan\\theta = \\frac{12}{5}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "An isosceles right triangle has two legs of length $1$ and hypotenuse $\\sqrt{2}$. The acute angles each measure $45^\\circ$. Find $\\sin 45^\\circ$, writing the answer with a rationalized denominator.",
+      "solution": {
+        "steps": [
+          "Pick one $45^\\circ$ angle. Its opposite side is a leg of length $1$, and the hypotenuse is $\\sqrt{2}$.",
+          "Apply SOH: $\\sin 45^\\circ = \\frac{\\text{opposite}}{\\text{hypotenuse}} = \\frac{1}{\\sqrt{2}}$.",
+          "Rationalize by multiplying numerator and denominator by $\\sqrt{2}$: $\\frac{1}{\\sqrt{2}} \\cdot \\frac{\\sqrt{2}}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$.",
+          "So $\\sin 45^\\circ = \\frac{\\sqrt{2}}{2}$."
+        ],
+        "answer": "$\\sin 45^\\circ = \\frac{\\sqrt{2}}{2}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Triangle $DEF$ is similar to triangle $ABC$ with $\\angle D = \\angle A$ and a scale factor of $3$. If $\\sin A = \\frac{3}{5}$, find $\\sin D$, and explain why scaling does not change the value.",
+      "solution": {
+        "steps": [
+          "By AA similarity, every right triangle containing a given acute angle is similar, so corresponding sides are proportional.",
+          "$\\sin A$ is a ratio of two sides of triangle $ABC$. In triangle $DEF$ each side is $3$ times the matching side of $ABC$.",
+          "When you form $\\sin D$, the opposite and hypotenuse are each multiplied by $3$, so the factor of $3$ cancels: $\\sin D = \\frac{3 \\cdot \\text{opp}}{3 \\cdot \\text{hyp}} = \\frac{\\text{opp}}{\\text{hyp}} = \\sin A$.",
+          "Therefore $\\sin D = \\frac{3}{5}$. The ratio depends only on the angle, not on the size of the triangle."
+        ],
+        "answer": "$\\sin D = \\frac{3}{5}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "In right triangle $PQR$ the right angle is at $Q$. Relative to the acute angle $P$, name the hypotenuse, the side opposite $P$, and the side adjacent to $P$.",
+      "hint": "The hypotenuse is across from the right angle. The opposite side is the one that does not touch the named angle.",
+      "solution": {
+        "steps": [
+          "The right angle is at $Q$, so the hypotenuse is the side across from it, $\\overline{PR}$.",
+          "The side opposite $\\angle P$ is the side not touching $P$, which is $\\overline{QR}$.",
+          "The adjacent side is the remaining leg touching $P$, which is $\\overline{PQ}$."
+        ],
+        "answer": "Opposite $= \\overline{QR}$, adjacent $= \\overline{PQ}$, hypotenuse $= \\overline{PR}$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A right triangle has legs $9$ and $12$ and hypotenuse $15$. Let $\\theta$ be the acute angle opposite the leg of length $9$. Find $\\sin\\theta$, $\\cos\\theta$, and $\\tan\\theta$.",
+      "hint": "Opposite is the side across from $\\theta$ (length $9$); adjacent is the other leg (length $12$); hypotenuse is $15$. Use SOH-CAH-TOA and reduce each fraction.",
+      "solution": {
+        "steps": [
+          "Relative to $\\theta$: opposite $= 9$, adjacent $= 12$, hypotenuse $= 15$.",
+          "$\\sin\\theta = \\frac{9}{15} = \\frac{3}{5}$.",
+          "$\\cos\\theta = \\frac{12}{15} = \\frac{4}{5}$.",
+          "$\\tan\\theta = \\frac{9}{12} = \\frac{3}{4}$."
+        ],
+        "answer": "$\\sin\\theta = \\frac{3}{5}$, $\\cos\\theta = \\frac{4}{5}$, $\\tan\\theta = \\frac{3}{4}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A right triangle has hypotenuse $25$ and one leg of length $7$. Let $\\theta$ be the acute angle opposite the unknown leg. Find $\\sin\\theta$.",
+      "hint": "Find the missing leg first: $\\text{leg} = \\sqrt{25^2 - 7^2}$. Then $\\sin\\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}}$.",
+      "solution": {
+        "steps": [
+          "Find the missing leg: $\\text{leg}^2 = 25^2 - 7^2 = 625 - 49 = 576$.",
+          "Take the square root: $\\text{leg} = \\sqrt{576} = 24$.",
+          "The side opposite $\\theta$ is this leg, $24$, and the hypotenuse is $25$.",
+          "$\\sin\\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}} = \\frac{24}{25}$."
+        ],
+        "answer": "$\\sin\\theta = \\frac{24}{25}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "In a right triangle, $\\cos\\theta = \\frac{4}{5}$ and the hypotenuse is $20$. Find the length of the side adjacent to $\\theta$.",
+      "hint": "Since $\\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}}$, multiply the ratio by the hypotenuse to recover the adjacent side.",
+      "solution": {
+        "steps": [
+          "By definition $\\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}}$, so $\\text{adjacent} = \\cos\\theta \\cdot \\text{hypotenuse}$.",
+          "Substitute: $\\text{adjacent} = \\frac{4}{5} \\cdot 20$.",
+          "Compute: $\\frac{4}{5} \\cdot 20 = \\frac{80}{5} = 16$."
+        ],
+        "answer": "The adjacent side has length $16$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "In right triangle $ABC$ the right angle is at $C$, so the acute angles $A$ and $B$ are complementary. Explain why $\\sin A = \\cos B$.",
+      "hint": "Write $\\sin A$ and $\\cos B$ as side ratios of the same triangle. Notice that $A + B = 90^\\circ$.",
+      "solution": {
+        "steps": [
+          "Relative to $\\angle A$, the opposite side is $\\overline{BC}$ and the hypotenuse is $\\overline{AB}$, so $\\sin A = \\frac{BC}{AB}$.",
+          "Relative to $\\angle B$, the adjacent side is $\\overline{BC}$ and the hypotenuse is $\\overline{AB}$, so $\\cos B = \\frac{BC}{AB}$.",
+          "Both ratios equal $\\frac{BC}{AB}$, so $\\sin A = \\cos B$.",
+          "This works because the side opposite $A$ is the same as the side adjacent to $B$, and since $A + B = 90^\\circ$ we have $\\sin A = \\cos(90^\\circ - A) = \\cos B$."
+        ],
+        "answer": "$\\sin A = \\cos B$ because both equal $\\frac{BC}{AB}$, the side opposite $A$ being the side adjacent to $B$, and $A + B = 90^\\circ$ so $\\sin A = \\cos(90^\\circ - A) = \\cos B$."
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "generatedAt": "2026-06-24T21:01:54.123Z"
+}

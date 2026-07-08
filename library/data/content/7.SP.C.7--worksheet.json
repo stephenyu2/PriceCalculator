@@ -1,0 +1,220 @@
+{
+  "id": "7.SP.C.7--worksheet",
+  "standard": "7.SP.C.7",
+  "clusterId": null,
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate chance processes and develop, use, and evaluate probability models",
+  "clusterCode": "C",
+  "skillName": "Probability Models",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T10:03:02.558Z",
+  "intro": "A probability model assigns a probability to each possible outcome. In a uniform model every outcome is equally likely, so each of $n$ outcomes gets probability $\\frac{1}{n}$. An empirical model assigns probabilities from observed data: $P(\\text{event})=\\frac{\\text{observed frequency}}{\\text{total trials}}$. A valid model has every probability between $0$ and $1$, and all probabilities sum to $1$. These problems ramp from reading a single probability to building, comparing, and judging full models.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A fair spinner has $4$ equal sections colored red, blue, green, and yellow. Assign a probability to each color, then find $P(\\text{blue})$.",
+      "answer": "$\\frac{1}{4}$",
+      "solution": {
+        "steps": [
+          "There are $4$ equally likely outcomes, so the model is uniform.",
+          "Each outcome gets probability $\\frac{1}{n}=\\frac{1}{4}$.",
+          "Therefore $P(\\text{blue})=\\frac{1}{4}$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A fair number cube has faces $1,2,3,4,5,6$. What is $P(\\text{rolling a } 5)$?",
+      "answer": "$\\frac{1}{6}$",
+      "solution": {
+        "steps": [
+          "All $6$ faces are equally likely, so each has probability $\\frac{1}{6}$.",
+          "Rolling a $5$ is one favorable outcome.",
+          "Therefore $P(5)=\\frac{1}{6}$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A fair spinner has $5$ equal sections numbered $1$ through $5$. Find $P(\\text{number greater than } 3)$.",
+      "answer": "$\\frac{2}{5}$",
+      "solution": {
+        "steps": [
+          "Each of the $5$ equally likely outcomes has probability $\\frac{1}{5}$.",
+          "The numbers greater than $3$ are $4$ and $5$, which is $2$ favorable outcomes.",
+          "Sum the favorable probabilities: $\\frac{1}{5}+\\frac{1}{5}=\\frac{2}{5}$.",
+          "Therefore $P(>3)=\\frac{2}{5}$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A bag holds $10$ tiles, each printed with a different letter. One tile is drawn at random. Out of the $10$ letters, $3$ are vowels. Find $P(\\text{vowel})$.",
+      "answer": "$\\frac{3}{10}$",
+      "solution": {
+        "steps": [
+          "Each of the $10$ tiles is equally likely, with probability $\\frac{1}{10}$.",
+          "There are $3$ favorable outcomes (the vowels).",
+          "Add their probabilities: $\\frac{3}{10}$.",
+          "Therefore $P(\\text{vowel})=\\frac{3}{10}$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A coin was flipped $40$ times and landed heads $24$ times. Using these data, estimate $P(\\text{heads})$ as a fraction in simplest form.",
+      "answer": "$\\frac{3}{5}$",
+      "solution": {
+        "steps": [
+          "An empirical probability is $\\frac{\\text{observed frequency}}{\\text{total trials}}$.",
+          "Here that is $\\frac{24}{40}$.",
+          "Simplify by dividing numerator and denominator by $8$: $\\frac{24\\div 8}{40\\div 8}=\\frac{3}{5}$.",
+          "Therefore the estimated $P(\\text{heads})=\\frac{3}{5}$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A bag of marbles is drawn $50$ times with replacement, giving red $20$, blue $18$, green $12$. Build the empirical model and find $P(\\text{blue})$ in simplest form.",
+      "answer": "$\\frac{9}{25}$",
+      "solution": {
+        "steps": [
+          "Total trials $=50$. The empirical probability of blue is $\\frac{18}{50}$.",
+          "Simplify by dividing by $2$: $\\frac{18\\div 2}{50\\div 2}=\\frac{9}{25}$.",
+          "As a check, the model is $P(\\text{red})=\\frac{20}{50}=\\frac{2}{5}$, $P(\\text{blue})=\\frac{9}{25}$, $P(\\text{green})=\\frac{12}{50}=\\frac{6}{25}$.",
+          "These sum to $\\frac{20}{50}+\\frac{18}{50}+\\frac{12}{50}=\\frac{50}{50}=1$, so the model is valid.",
+          "Therefore $P(\\text{blue})=\\frac{9}{25}$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A fair number cube is rolled $60$ times. About how many times do you expect to roll a $4$?",
+      "answer": "$10$ times",
+      "solution": {
+        "steps": [
+          "For a fair cube, $P(4)=\\frac{1}{6}$.",
+          "Expected count $=P(\\text{outcome})\\times(\\text{number of trials})$.",
+          "Compute $\\frac{1}{6}\\times 60 = \\frac{60}{6}=10$.",
+          "Therefore you expect to roll a $4$ about $10$ times."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A survey of a class found these lunch choices: pizza $P=\\frac{1}{2}$, tacos $P=\\frac{3}{10}$, salad $P=\\frac{1}{5}$. Find $P(\\text{not salad})$.",
+      "answer": "$\\frac{4}{5}$",
+      "solution": {
+        "steps": [
+          "Use the complement: $P(\\text{not salad})=1-P(\\text{salad})$.",
+          "Substitute: $1-\\frac{1}{5}$.",
+          "Write $1$ as $\\frac{5}{5}$: $\\frac{5}{5}-\\frac{1}{5}=\\frac{4}{5}$.",
+          "Therefore $P(\\text{not salad})=\\frac{4}{5}$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A spinner has $4$ colors and is modeled as fair, so $P(\\text{red})=\\frac{1}{4}$. In $200$ spins, red came up $52$ times. Compute the observed relative frequency of red as a decimal and compare it to the model probability.",
+      "answer": "Observed $=0.26$; the model gives $0.25$, so the agreement is good (very close).",
+      "solution": {
+        "steps": [
+          "Observed relative frequency $=\\frac{52}{200}$.",
+          "Convert to a decimal: $\\frac{52}{200}=0.26$.",
+          "The model probability is $\\frac{1}{4}=0.25$.",
+          "Compare: $0.26$ is only $0.01$ above $0.25$, a very small difference.",
+          "The observed frequency is close to the model, so the agreement is good."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A fair $4$-section spinner is spun $80$ times. How many times do you expect it to land on green, and what is $P(\\text{green or red})$?",
+      "answer": "$20$ times; $P(\\text{green or red})=\\frac{1}{2}$",
+      "solution": {
+        "steps": [
+          "For a fair $4$-section spinner, $P(\\text{green})=\\frac{1}{4}$.",
+          "Expected count for green $=\\frac{1}{4}\\times 80=20$ times.",
+          "Green and red are two of the four equally likely outcomes.",
+          "$P(\\text{green or red})=\\frac{1}{4}+\\frac{1}{4}=\\frac{2}{4}=\\frac{1}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A spinner has three colors. The model gives $P(\\text{red})=\\frac{2}{5}$ and $P(\\text{blue})=\\frac{1}{4}$. Find $P(\\text{green})$ so the model is valid, then state $P(\\text{not red})$.",
+      "answer": "$P(\\text{green})=\\frac{7}{20}$; $P(\\text{not red})=\\frac{3}{5}$",
+      "solution": {
+        "steps": [
+          "A valid model's probabilities sum to $1$, so $P(\\text{green})=1-P(\\text{red})-P(\\text{blue})$.",
+          "Use a common denominator of $20$: $P(\\text{red})=\\frac{2}{5}=\\frac{8}{20}$ and $P(\\text{blue})=\\frac{1}{4}=\\frac{5}{20}$.",
+          "So $P(\\text{green})=1-\\frac{8}{20}-\\frac{5}{20}=\\frac{20}{20}-\\frac{13}{20}=\\frac{7}{20}$.",
+          "For the complement, $P(\\text{not red})=1-\\frac{2}{5}=\\frac{3}{5}$.",
+          "Therefore $P(\\text{green})=\\frac{7}{20}$ and $P(\\text{not red})=\\frac{3}{5}$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A four-sided die is assumed fair, so each face has probability $\\frac{1}{4}$. It is rolled $100$ times with results: face 1 came up $24$ times, face 2 $26$ times, face 3 $25$ times, face 4 $25$ times. For each face, compare the expected count to the observed count and decide whether the data support the fair model.",
+      "answer": "Expected count is $25$ for each face; observed counts ($24, 26, 25, 25$) are all within $1$ of $25$, so the data support the fair model.",
+      "solution": {
+        "steps": [
+          "Expected count for each face $=\\frac{1}{4}\\times 100=25$.",
+          "Compare: face 1 observed $24$ vs expected $25$ (off by $1$); face 2 observed $26$ vs $25$ (off by $1$); faces 3 and 4 observed $25$ (exact).",
+          "Every observed count differs from $25$ by at most $1$, a tiny difference explained by ordinary chance variation.",
+          "The observed frequencies match the model closely, so the data support the assumption that the die is fair."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A spinner is assumed fair with $4$ equal colors, so each should have probability $\\frac{1}{4}$. In $200$ spins, red came up $90$ times. Find the observed relative frequency of red, compare it to the model, and explain the most likely source of any discrepancy.",
+      "answer": "Observed $=0.45$ vs model $0.25$; the gap is large, so the spinner is most likely not fair (biased toward red) and the equal-likelihood assumption is wrong.",
+      "solution": {
+        "steps": [
+          "Observed relative frequency of red $=\\frac{90}{200}=0.45$.",
+          "The model probability is $\\frac{1}{4}=0.25$.",
+          "Compare: $0.45$ is far above $0.25$, a difference of $0.20$, much larger than ordinary chance noise over $200$ spins.",
+          "With this many trials, such a large gap is not explained by small-sample variation.",
+          "The most likely source is that the spinner is biased toward red, so the assumption that all four colors are equally likely is wrong."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A bag of colored chips is drawn $40$ times with replacement: red $9$, blue $11$, green $8$, yellow $12$. Build the empirical model (each probability as a fraction over $40$), verify it is valid, and find $P(\\text{red or green})$.",
+      "answer": "Model: $P(\\text{red})=\\frac{9}{40}$, $P(\\text{blue})=\\frac{11}{40}$, $P(\\text{green})=\\frac{8}{40}=\\frac{1}{5}$, $P(\\text{yellow})=\\frac{12}{40}=\\frac{3}{10}$; valid (sum $=1$); $P(\\text{red or green})=\\frac{17}{40}$.",
+      "solution": {
+        "steps": [
+          "Empirical probability $=\\frac{\\text{frequency}}{40}$ for each color.",
+          "$P(\\text{red})=\\frac{9}{40}$, $P(\\text{blue})=\\frac{11}{40}$, $P(\\text{green})=\\frac{8}{40}$, $P(\\text{yellow})=\\frac{12}{40}$.",
+          "Verify validity: $\\frac{9}{40}+\\frac{11}{40}+\\frac{8}{40}+\\frac{12}{40}=\\frac{40}{40}=1$, and each value is between $0$ and $1$, so the model is valid.",
+          "Red and green do not overlap, so $P(\\text{red or green})=\\frac{9}{40}+\\frac{8}{40}=\\frac{17}{40}$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A school models the chance a randomly chosen student is left-handed as $P(\\text{left})=\\frac{1}{10}$. In a survey of $30$ students, $9$ were left-handed. Find the expected number of left-handers under the model and the observed count, then explain which is the more likely reason the model and data disagree: too few trials or a wrong probability. Justify your choice.",
+      "answer": "Expected $=3$ left-handers; observed $=9$. The gap is large, so the model probability $\\frac{1}{10}$ is most likely too low (a wrong probability), though a small sample of $30$ makes some variation expected.",
+      "solution": {
+        "steps": [
+          "Expected count $=P(\\text{left})\\times(\\text{trials})=\\frac{1}{10}\\times 30=3$ left-handers.",
+          "The observed count is $9$, three times the expected $3$.",
+          "Observed relative frequency $=\\frac{9}{30}=\\frac{3}{10}=0.3$, far above the model's $\\frac{1}{10}=0.1$.",
+          "The sample of $30$ is small, so some difference from the model is expected from chance alone.",
+          "But observing $9$ when only $3$ are expected is a very large gap, so the more likely explanation is that the model probability $\\frac{1}{10}$ is too low and should be revised upward using the data."
+        ]
+      }
+    }
+  ]
+}

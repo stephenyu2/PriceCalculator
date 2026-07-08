@@ -1,0 +1,171 @@
+{
+  "id": "GEO.S-CP.A.5--lesson",
+  "standard": "GEO.S-CP.A.5",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Understand independence and conditional probability and use them to interpret data",
+  "clusterCode": "A",
+  "skillName": "Everyday Conditional Probability",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "intro": "A conditional probability $P(A \\mid B)$ answers the question: if we already know that $B$ happened, how likely is $A$? Everyday phrases like 'among', 'given that', 'of those who', and 'if you know' all signal a condition that shrinks the group we look at. We compute $P(A \\mid B) = \\dfrac{\\text{count}(A \\text{ and } B)}{\\text{count}(B)}$ by restricting to the $B$ group, and we decide whether two events are independent by checking whether knowing $B$ changes the chance of $A$, that is, whether $P(A \\mid B) = P(A)$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A health report states: 'Among adults who exercise daily, $15\\%$ have high blood pressure.' Let $E$ be the event 'exercises daily' and $H$ be the event 'has high blood pressure.' Which conditional probability does the sentence describe, $P(H \\mid E)$ or $P(E \\mid H)$, and what is its value?",
+      "solution": {
+        "steps": [
+          "Find the condition: the phrase 'among adults who exercise daily' tells us we are already inside the group of daily exercisers, so the condition is $E$.",
+          "Find the target: within that group we are told the chance of high blood pressure, so the target event is $H$.",
+          "Write it in notation: target given condition is $P(H \\mid E)$.",
+          "Attach the value: $15\\% = 0.15$, so $P(H \\mid E) = 0.15$.",
+          "Note the order matters: $P(E \\mid H)$ would instead mean 'among people with high blood pressure, the fraction who exercise daily,' which the sentence does not state."
+        ],
+        "answer": "$P(H \\mid E) = 0.15$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "In a class of $30$ students, $18$ play a sport, and of those $18$ sport players, $12$ also play a musical instrument. Find the probability that a student plays an instrument given that the student plays a sport. Let $S$ be 'plays a sport' and $I$ be 'plays an instrument.'",
+      "solution": {
+        "steps": [
+          "Identify the condition $S$ (plays a sport): the group has $\\text{count}(S) = 18$ students.",
+          "Identify the overlap: students who play a sport and an instrument number $\\text{count}(S \\text{ and } I) = 12$.",
+          "Apply the conditional formula: $P(I \\mid S) = \\dfrac{\\text{count}(I \\text{ and } S)}{\\text{count}(S)} = \\dfrac{12}{18}$.",
+          "Reduce the fraction by dividing top and bottom by $6$: $\\dfrac{12}{18} = \\dfrac{2}{3}$.",
+          "Notice the denominator is $18$ (the sport players), not $30$ (the whole class), because we condition on $S$."
+        ],
+        "answer": "$P(I \\mid S) = \\dfrac{12}{18} = \\dfrac{2}{3}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A survey of $200$ people records whether they own a pet and whether they own or rent their home. The two-way table is: pet owners who own a home $= 60$, pet owners who rent $= 40$, non-pet-owners who own a home $= 50$, non-pet-owners who rent $= 50$. Find $P(\\text{owns home} \\mid \\text{owns a pet})$.",
+      "solution": {
+        "steps": [
+          "Restrict to the condition 'owns a pet': add the two pet-owner cells, $60 + 40 = 100$ pet owners.",
+          "Find the target within that group: pet owners who also own a home is the cell $60$.",
+          "Apply the conditional formula: $P(\\text{owns home} \\mid \\text{owns a pet}) = \\dfrac{60}{100}$.",
+          "Simplify: $\\dfrac{60}{100} = \\dfrac{3}{5} = 0.6$.",
+          "The denominator is the pet-owner row total $100$, not the grand total $200$, because we condition on owning a pet."
+        ],
+        "answer": "$P(\\text{owns home} \\mid \\text{owns a pet}) = \\dfrac{60}{100} = \\dfrac{3}{5} = 0.6$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A coffee shop survey finds that $P(\\text{likes coffee}) = 0.6$ and $P(\\text{likes coffee} \\mid \\text{works night shift}) = 0.6$. Are the events 'likes coffee' and 'works night shift' independent? Explain.",
+      "solution": {
+        "steps": [
+          "Recall the independence test: two events $A$ and $B$ are independent when $P(A \\mid B) = P(A)$, meaning knowing $B$ does not change the chance of $A$.",
+          "Let $A$ be 'likes coffee' and $B$ be 'works night shift.' We are given $P(A) = 0.6$.",
+          "We are also given the conditional $P(A \\mid B) = 0.6$.",
+          "Compare the two: $P(A \\mid B) = 0.6 = P(A)$, so they are equal.",
+          "Conclude: because knowing a person works the night shift does not change the chance they like coffee, the events are independent."
+        ],
+        "answer": "Yes, they are independent because $P(A \\mid B) = 0.6 = P(A)$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A medical screening gives $P(\\text{disease} \\mid \\text{positive test}) = 0.31$ while the overall rate is $P(\\text{disease}) = 0.05$. Are 'disease' and 'positive test' independent, and what does the comparison mean in everyday terms?",
+      "solution": {
+        "steps": [
+          "Let $D$ be 'has the disease' and $T$ be 'tests positive.' We are given $P(D \\mid T) = 0.31$ and $P(D) = 0.05$.",
+          "Apply the independence test by comparing $P(D \\mid T)$ with $P(D)$: $0.31 \\ne 0.05$.",
+          "Because the two values are not equal, knowing the test is positive changes the chance of disease, so the events are dependent.",
+          "Interpret the direction: $0.31 > 0.05$ means a positive test raises the chance of disease from $5\\%$ up to $31\\%$.",
+          "In everyday terms, a positive result is meaningful evidence of disease, though $31\\%$ still leaves most positive-testers disease-free, so follow-up testing is sensible."
+        ],
+        "answer": "Dependent: $P(D \\mid T) = 0.31 \\ne 0.05 = P(D)$, so a positive test raises the chance of disease from $5\\%$ to $31\\%$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A news article reports: 'Of the customers who clicked the ad, $8\\%$ made a purchase.' Let $C$ be 'clicked the ad' and $B$ be 'made a purchase.' Write this as a conditional probability and give its value.",
+      "hint": "The phrase 'of the customers who clicked the ad' names the condition. The target is whatever is measured inside that group.",
+      "solution": {
+        "steps": [
+          "The condition is the group we restrict to: 'clicked the ad,' so the condition is $C$.",
+          "The target measured inside that group is 'made a purchase,' so the target is $B$.",
+          "Write target given condition: $P(B \\mid C)$.",
+          "Attach the value $8\\% = 0.08$, giving $P(B \\mid C) = 0.08$."
+        ],
+        "answer": "$P(B \\mid C) = 0.08$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "At a gym, $40$ members took a fitness class. Of those, $25$ also use the pool. Find the probability that a member uses the pool given that the member took the fitness class. Let $F$ be 'took the fitness class' and $P$ be 'uses the pool.'",
+      "hint": "Condition on $F$, so the denominator is the number who took the class, not the gym total.",
+      "solution": {
+        "steps": [
+          "The condition $F$ has $\\text{count}(F) = 40$ members.",
+          "The overlap is members who took the class and use the pool: $\\text{count}(F \\text{ and } P) = 25$.",
+          "Apply the formula: $P(P \\mid F) = \\dfrac{25}{40}$.",
+          "Reduce by dividing top and bottom by $5$: $\\dfrac{25}{40} = \\dfrac{5}{8} = 0.625$."
+        ],
+        "answer": "$P(P \\mid F) = \\dfrac{25}{40} = \\dfrac{5}{8} = 0.625$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A two-way table of $150$ commuters records mode of travel and whether they arrived on time. Bus riders on time $= 36$, bus riders late $= 24$, car drivers on time $= 70$, car drivers late $= 20$. Find $P(\\text{on time} \\mid \\text{rides the bus})$.",
+      "hint": "First find the total number of bus riders by adding the two bus cells, then divide the matching cell.",
+      "solution": {
+        "steps": [
+          "Restrict to bus riders by adding the two bus cells: $36 + 24 = 60$ bus riders.",
+          "The target inside that group is bus riders who were on time: the cell $36$.",
+          "Apply the formula: $P(\\text{on time} \\mid \\text{rides the bus}) = \\dfrac{36}{60}$.",
+          "Simplify by dividing top and bottom by $12$: $\\dfrac{36}{60} = \\dfrac{3}{5} = 0.6$."
+        ],
+        "answer": "$P(\\text{on time} \\mid \\text{rides the bus}) = \\dfrac{36}{60} = \\dfrac{3}{5} = 0.6$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A study finds $P(\\text{wears glasses}) = 0.35$ and $P(\\text{wears glasses} \\mid \\text{reads daily}) = 0.35$. Are 'wears glasses' and 'reads daily' independent? Explain what your verdict means.",
+      "hint": "Compare the conditional probability with the unconditional one. Equal means independent.",
+      "solution": {
+        "steps": [
+          "Let $G$ be 'wears glasses' and $R$ be 'reads daily.' We are given $P(G) = 0.35$ and $P(G \\mid R) = 0.35$.",
+          "Apply the independence test: compare $P(G \\mid R)$ with $P(G)$.",
+          "Since $0.35 = 0.35$, the conditional equals the unconditional probability.",
+          "Conclude they are independent: knowing whether a person reads daily does not change the chance they wear glasses."
+        ],
+        "answer": "Independent, because $P(G \\mid R) = 0.35 = P(G)$, so daily reading does not change the chance of wearing glasses."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A weather log gives $P(\\text{rain} \\mid \\text{cloudy morning}) = 0.5$. A student concludes that $P(\\text{cloudy morning} \\mid \\text{rain}) = 0.5$ as well. Explain whether this reasoning is valid, and what the two conditionals actually describe.",
+      "hint": "Conditional probability is not symmetric in general. Think about which group each statement restricts to.",
+      "solution": {
+        "steps": [
+          "The given value $P(\\text{rain} \\mid \\text{cloudy morning}) = 0.5$ restricts to cloudy mornings and asks the fraction that turn rainy.",
+          "The claimed value $P(\\text{cloudy morning} \\mid \\text{rain}) = 0.5$ restricts to rainy days and asks the fraction that began cloudy, a different group entirely.",
+          "In general $P(A \\mid B) \\ne P(B \\mid A)$, because the two conditionals divide by different totals (cloudy mornings versus rainy days).",
+          "So the student's reasoning is not valid: equal conditionals would only happen by coincidence if the two groups were the same size, which is not given here. For instance, rain might almost always follow a cloudy sky while cloudy mornings are far more common than rain, making $P(\\text{cloudy} \\mid \\text{rain})$ much larger than $0.5$."
+        ],
+        "answer": "Not valid. The two conditionals describe different restricted groups, so $P(\\text{rain} \\mid \\text{cloudy}) \\ne P(\\text{cloudy} \\mid \\text{rain})$ in general."
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "generatedAt": "2026-06-24T21:01:54.123Z"
+}

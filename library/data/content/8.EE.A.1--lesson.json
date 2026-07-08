@@ -1,0 +1,157 @@
+{
+  "id": "8.EE.A.1--lesson",
+  "standard": "8.EE.A.1",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Expressions and Equations",
+  "domainCode": "EE",
+  "cluster": "Work with radicals and integer exponents",
+  "clusterCode": "A",
+  "skillName": "Integer Exponent Properties",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "An exponent is a shorthand for repeated multiplication: $a^n$ means the base $a$ multiplied by itself $n$ times. A small set of rules lets you combine and simplify powers without expanding them. The product of powers rule adds exponents ($a^m \\cdot a^n = a^{m+n}$), the quotient rule subtracts them ($\\frac{a^m}{a^n} = a^{m-n}$), and the power of a power rule multiplies them ($(a^m)^n = a^{mn}$). A zero exponent gives $a^0 = 1$ for any nonzero base, and a negative exponent means a reciprocal: $a^{-n} = \\frac{1}{a^n}$. In every case the base stays the same; only the exponents change.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Write $3^2 \\cdot 3^4$ as a single power, then evaluate.",
+      "solution": {
+        "steps": [
+          "The bases are the same, so use the product of powers rule: $a^m \\cdot a^n = a^{m+n}$. Keep the base and add the exponents.",
+          "$3^2 \\cdot 3^4 = 3^{2+4} = 3^6$",
+          "Evaluate: $3^6 = 729$.",
+          "Note the base stays $3$; do not multiply the bases or the exponents."
+        ],
+        "answer": "$3^6 = 729$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Write $\\frac{5^7}{5^4}$ as a single power, then evaluate.",
+      "solution": {
+        "steps": [
+          "The bases are the same, so use the quotient of powers rule: $\\frac{a^m}{a^n} = a^{m-n}$. Subtract the bottom exponent from the top exponent.",
+          "$\\frac{5^7}{5^4} = 5^{7-4} = 5^3$",
+          "Evaluate: $5^3 = 125$.",
+          "Subtract in the order top minus bottom; the base $5$ does not change."
+        ],
+        "answer": "$5^3 = 125$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Write $(2^3)^2$ as a single power, then evaluate.",
+      "solution": {
+        "steps": [
+          "A power raised to a power uses the power of a power rule: $(a^m)^n = a^{mn}$. Multiply the exponents.",
+          "$(2^3)^2 = 2^{3 \\cdot 2} = 2^6$",
+          "Evaluate: $2^6 = 64$.",
+          "Multiply the exponents here; do not add them, which would give the incorrect $2^5$."
+        ],
+        "answer": "$2^6 = 64$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Rewrite $4^{-2}$ with a positive exponent, then evaluate.",
+      "solution": {
+        "steps": [
+          "A negative exponent means take the reciprocal of the power: $a^{-n} = \\frac{1}{a^n}$.",
+          "$4^{-2} = \\frac{1}{4^2}$",
+          "Evaluate the denominator: $4^2 = 16$, so $4^{-2} = \\frac{1}{16}$.",
+          "A negative exponent does not make the value negative, and it applies to the whole power $4^2$, not to the exponent alone."
+        ],
+        "answer": "$\\frac{1}{16}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Simplify $\\frac{3^4 \\cdot 3^{-2}}{3^3}$ to a single power, then evaluate.",
+      "solution": {
+        "steps": [
+          "First combine the numerator with the product rule, adding exponents: $3^4 \\cdot 3^{-2} = 3^{4 + (-2)} = 3^2$.",
+          "Now apply the quotient rule, subtracting the bottom exponent: $\\frac{3^2}{3^3} = 3^{2-3} = 3^{-1}$.",
+          "Rewrite the negative exponent as a reciprocal: $3^{-1} = \\frac{1}{3^1} = \\frac{1}{3}$.",
+          "The final value is $\\frac{1}{3}$."
+        ],
+        "answer": "$3^{-1} = \\frac{1}{3}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Write $2^3 \\cdot 2^2$ as a single power, then evaluate.",
+      "hint": "Same base, so keep the base and add the exponents.",
+      "solution": {
+        "steps": [
+          "Product of powers rule: $2^3 \\cdot 2^2 = 2^{3+2} = 2^5$.",
+          "Evaluate: $2^5 = 32$."
+        ],
+        "answer": "$2^5 = 32$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Write $\\frac{6^5}{6^2}$ as a single power, then evaluate.",
+      "hint": "Use the quotient rule and subtract the exponents, top minus bottom.",
+      "solution": {
+        "steps": [
+          "Quotient of powers rule: $\\frac{6^5}{6^2} = 6^{5-2} = 6^3$.",
+          "Evaluate: $6^3 = 216$."
+        ],
+        "answer": "$6^3 = 216$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Evaluate $9^0$.",
+      "hint": "Any nonzero base raised to the zero power has the same value.",
+      "solution": {
+        "steps": [
+          "Zero exponent rule: $a^0 = 1$ for $a \\neq 0$.",
+          "So $9^0 = 1$, not $0$."
+        ],
+        "answer": "$1$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Simplify $\\frac{2^3}{2^5}$ using the quotient rule, then write the answer as a fraction.",
+      "hint": "Subtract the exponents first; a negative exponent becomes a reciprocal.",
+      "solution": {
+        "steps": [
+          "Quotient rule: $\\frac{2^3}{2^5} = 2^{3-5} = 2^{-2}$.",
+          "Rewrite the negative exponent: $2^{-2} = \\frac{1}{2^2} = \\frac{1}{4}$."
+        ],
+        "answer": "$2^{-2} = \\frac{1}{4}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Simplify $\\frac{(2^3)^2}{2^{-1} \\cdot 2^4}$ to a single power, then evaluate.",
+      "hint": "Use the power of a power rule on top and the product rule on the bottom, then apply the quotient rule.",
+      "solution": {
+        "steps": [
+          "Top: power of a power rule gives $(2^3)^2 = 2^{3 \\cdot 2} = 2^6$.",
+          "Bottom: product rule gives $2^{-1} \\cdot 2^4 = 2^{-1 + 4} = 2^3$.",
+          "Quotient rule: $\\frac{2^6}{2^3} = 2^{6-3} = 2^3$.",
+          "Evaluate: $2^3 = 8$."
+        ],
+        "answer": "$2^3 = 8$"
+      }
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "id": "A1.A-REI.C--cluster-test",
+  "standard": null,
+  "clusterId": "A1.A-REI.C",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Reasoning with Equations and Inequalities",
+  "domainCode": "A-REI",
+  "cluster": "Solve systems of equations",
+  "clusterCode": "C",
+  "skillName": "Solve systems of equations",
+  "materialType": "cluster-test",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T18:54:16.004Z",
+  "intro": "End-of-cluster mastery check for Solve systems of equations. The first six items assess generating and recognizing equivalent systems (the elimination/linear-combination principle); the last six assess solving linear systems by substitution, elimination, and graphing, including special cases and word problems. Each item is multiple choice.",
+  "items": [
+    {
+      "standard": "A1.A-REI.C.5",
+      "difficulty": "Easy",
+      "id": 1,
+      "prompt": "The system $\\begin{cases} x + y = 7 \\\\ x - y = 3 \\end{cases}$ has solution $(5, 2)$. The first equation is replaced by $E_1 + E_2$. Which new equation results, and does $(5, 2)$ still satisfy it?\nA) $2x = 10$, and $(5, 2)$ still works\nB) $2x = 10$, but $(5, 2)$ no longer works\nC) $2y = 4$, and $(5, 2)$ still works\nD) $x = 10$, and $(5, 2)$ still works",
+      "answer": "A) $2x = 10$, and $(5, 2)$ still works",
+      "solution": {
+        "steps": [
+          "Add the equations term by term: $(x + y) + (x - y) = 7 + 3$, which gives $2x = 10$.",
+          "Check $(5, 2)$: $2(5) = 10$. True, so the solution is preserved.",
+          "A is correct. C comes from adding the wrong way (it eliminates $x$ instead of $y$ and mis-tracks the result). D drops the coefficient $2$. B is wrong because the replacement principle guarantees any solution of the original system also solves $E_1 + E_2$ paired with $E_2$."
+        ],
+        "answer": "A) $2x = 10$, and $(5, 2)$ still works"
+      }
+    },
+    {
+      "standard": "A1.A-REI.C.5",
+      "difficulty": "Easy",
+      "id": 2,
+      "prompt": "Given $\\begin{cases} 3x + y = 11 \\\\ 2x - y = 4 \\end{cases}$, what single equation results from adding $E_1 + E_2$ to eliminate $y$?\nA) $5x = 15$\nB) $x = 7$\nC) $5x = 7$\nD) $5x + 2y = 15$",
+      "answer": "A) $5x = 15$",
+      "solution": {
+        "steps": [
+          "Add term by term: $(3x + 2x) + (y - y) = 11 + 4$.",
+          "The $y$ terms cancel: $5x = 15$.",
+          "A is correct. C adds the variable coefficients but mishandles the constants. B subtracts the equations instead of adding. D keeps a $y$ term, which should have been eliminated."
+        ],
+        "answer": "A) $5x = 15$"
+      }
+    },
+    {
+      "standard": "A1.A-REI.C.5",
+      "difficulty": "Medium",
+      "id": 3,
+      "prompt": "For $\\begin{cases} 3x + 4y = 10 \\\\ x - 2y = -4 \\end{cases}$, which multiplier $k$ of the second equation, added to the first, eliminates $y$?\nA) $k = 2$\nB) $k = 1$\nC) $k = -2$\nD) $k = \\frac{1}{2}$",
+      "answer": "A) $k = 2$",
+      "solution": {
+        "steps": [
+          "The $y$-coefficients are $4$ and $-2$. We need $2k$ added to make them opposites of the first, so $4 + k(-2) = 0$.",
+          "Solve: $4 - 2k = 0$, so $k = 2$.",
+          "Check: $E_1 + 2E_2 = (3x + 4y) + 2(x - 2y) = 5x + 0y = 10 + 2(-4) = 2$, giving $5x = 2$. The $y$ is gone.",
+          "A is correct. B ($k = 1$) leaves $4y - 2y = 2y$, so $y$ remains. C ($k = -2$) gives $4y + 4y = 8y$, doubling $y$. D scales the wrong variable away."
+        ],
+        "answer": "A) $k = 2$"
+      }
+    },
+    {
+      "standard": "A1.A-REI.C.5",
+      "difficulty": "Medium",
+      "id": 4,
+      "prompt": "The system $\\begin{cases} 2x + 3y = 12 \\\\ x - y = 1 \\end{cases}$ has solution $(3, 2)$. The first equation is replaced by $E_1 + 2E_2$. Which equation results?\nA) $4x + y = 14$\nB) $4x + y = 12$\nC) $4x + y = 13$\nD) $3x + 2y = 13$",
+      "answer": "A) $4x + y = 14$",
+      "solution": {
+        "steps": [
+          "Compute $2E_2 = 2(x - y) = 2x - 2y$ on the left and $2(1) = 2$ on the right.",
+          "Add to $E_1$: $(2x + 3y) + (2x - 2y) = 4x + y$ on the left, and $12 + 2 = 14$ on the right.",
+          "The result is $4x + y = 14$. Check: $4(3) + 2 = 14$. True.",
+          "A is correct. B forgets to multiply the constant of $E_2$ by $2$ (the classic 'distribute only the variables' error). C is an arithmetic slip on the constant. D is just $E_1$ with $E_2$ ignored."
+        ],
+        "answer": "A) $4x + y = 14$"
+      }
+    },
+    {
+      "standard": "A1.A-REI.C.5",
+      "difficulty": "Hard",
+      "id": 5,
+      "prompt": "Is the system $\\begin{cases} x + y = 5 \\\\ 2x + 5y = 16 \\end{cases}$ equivalent to $\\begin{cases} x + y = 5 \\\\ 3y = 6 \\end{cases}$?\nA) Yes, because the second row equals $E_2 - 2E_1$ of the original\nB) No, because the second rows are different equations\nC) Yes, because both systems contain $x + y = 5$\nD) No, because $3y = 6$ has only one variable",
+      "answer": "A) Yes, because the second row equals $E_2 - 2E_1$ of the original",
+      "solution": {
+        "steps": [
+          "Form $E_2 - 2E_1 = (2x + 5y) - 2(x + y) = 3y$ on the left and $16 - 2(5) = 6$ on the right, giving $3y = 6$.",
+          "Replacing one row by a nonzero linear combination of the rows (here $E_2 - 2E_1$) while keeping the other row preserves the solution set, so the systems are equivalent.",
+          "A is correct. B and D mistake a different-looking row for a different solution set; a valid linear combination keeps the same solutions. C is the wrong reason: sharing one equation is not enough, the second rows must also be related by a combination, which here they are."
+        ],
+        "answer": "A) Yes, because the second row equals $E_2 - 2E_1$ of the original"
+      }
+    },
+    {
+      "standard": "A1.A-REI.C.5",
+      "difficulty": "Hard",
+      "id": 6,
+      "prompt": "Why does replacing $E_1$ with $E_1 + 0 \\cdot E_2$ fail to give a useful equivalent system, while $E_1 + kE_2$ for $k \\neq 0$ succeeds in advancing a solution?\nA) $k = 0$ gives back $E_1$ unchanged, so no variable is eliminated; a nonzero $k$ is needed to cancel a coefficient\nB) $k = 0$ changes the solution set, so it is not allowed\nC) $k = 0$ makes the equation $0 = 0$, which is always true\nD) Any value of $k$, including $0$, eliminates a variable equally well",
+      "answer": "A) $k = 0$ gives back $E_1$ unchanged, so no variable is eliminated; a nonzero $k$ is needed to cancel a coefficient",
+      "solution": {
+        "steps": [
+          "$E_1 + 0 \\cdot E_2 = E_1$, so the system is unchanged and no progress toward eliminating a variable is made.",
+          "A nonzero $k$ lets you choose a value that makes one variable's coefficients opposite, so adding cancels that variable.",
+          "A is correct. B is false: $E_1 + 0 \\cdot E_2 = E_1$ keeps the same solution set, it just is not useful. C confuses this with scaling $E_1$ itself by $0$. D is false because $k = 0$ eliminates nothing."
+        ],
+        "answer": "A) $k = 0$ gives back $E_1$ unchanged, so no variable is eliminated; a nonzero $k$ is needed to cancel a coefficient"
+      }
+    },
+    {
+      "standard": "A1.A-REI.C.6",
+      "difficulty": "Easy",
+      "id": 7,
+      "prompt": "Is $(2, -1)$ a solution of the system $\\begin{cases} 3x + 2y = 4 \\\\ x - y = 3 \\end{cases}$?\nA) Yes, it satisfies both equations\nB) No, it satisfies only the first equation\nC) No, it satisfies only the second equation\nD) No, it satisfies neither equation",
+      "answer": "A) Yes, it satisfies both equations",
+      "solution": {
+        "steps": [
+          "Equation 1: $3(2) + 2(-1) = 6 - 2 = 4$. True.",
+          "Equation 2: $2 - (-1) = 2 + 1 = 3$. True.",
+          "Both hold, so $(2, -1)$ is a solution. A is correct.",
+          "B, C, and D are wrong because the pair satisfies both equations, not just one or neither."
+        ],
+        "answer": "A) Yes, it satisfies both equations"
+      }
+    },
+    {
+      "standard": "A1.A-REI.C.6",
+      "difficulty": "Easy",
+      "id": 8,
+      "prompt": "Solve $\\begin{cases} y = 2x - 1 \\\\ 3x + y = 9 \\end{cases}$ by substitution.\nA) $(2, 3)$\nB) $(3, 2)$\nC) $(2, -3)$\nD) $(1, 1)$",
+      "answer": "A) $(2, 3)$",
+      "solution": {
+        "steps": [
+          "Substitute $y = 2x - 1$ into the second equation: $3x + (2x - 1) = 9$.",
+          "Combine: $5x - 1 = 9$, so $5x = 10$ and $x = 2$.",
+          "Back-substitute: $y = 2(2) - 1 = 3$. Solution $(2, 3)$.",
+          "A is correct. B reverses the coordinates. C uses a sign error on $y$. D comes from mishandling the substitution."
+        ],
+        "answer": "A) $(2, 3)$"
+      }
+    },
+    {
+      "standard": "A1.A-REI.C.6",
+      "difficulty": "Medium",
+      "id": 9,
+      "prompt": "Solve $\\begin{cases} 2x + 3y = 12 \\\\ 5x - y = 13 \\end{cases}$ by elimination.\nA) $(3, 2)$\nB) $(2, 3)$\nC) $\\left(\\frac{25}{7}, \\frac{2}{7}\\right)$\nD) $(2, -3)$",
+      "answer": "A) $(3, 2)$",
+      "solution": {
+        "steps": [
+          "Multiply the second equation by $3$ to align the $y$-coefficients: $15x - 3y = 39$.",
+          "Add to the first equation: $(2x + 15x) + (3y - 3y) = 12 + 39$, giving $17x = 51$, so $x = 3$.",
+          "Back-substitute into $5x - y = 13$: $15 - y = 13$, so $y = 2$. Solution $(3, 2)$.",
+          "A is correct. B reverses the coordinates. C comes from adding the equations directly without scaling (failing to eliminate). D has a sign error in $y$."
+        ],
+        "answer": "A) $(3, 2)$"
+      }
+    },
+    {
+      "standard": "A1.A-REI.C.6",
+      "difficulty": "Medium",
+      "id": 10,
+      "prompt": "How many solutions does $\\begin{cases} y = 3x + 2 \\\\ -6x + 2y = 10 \\end{cases}$ have?\nA) No solution\nB) Exactly one solution\nC) Infinitely many solutions\nD) Exactly two solutions",
+      "answer": "A) No solution",
+      "solution": {
+        "steps": [
+          "Substitute $y = 3x + 2$ into the second equation: $-6x + 2(3x + 2) = 10$.",
+          "Simplify: $-6x + 6x + 4 = 10$, which gives $4 = 10$, a false statement.",
+          "A contradiction means the lines are parallel and there is no solution. A is correct.",
+          "C is the classic confusion of a false statement (no solution) with a true one (infinitely many). B is wrong because the variables cancelled. D is impossible for two distinct lines."
+        ],
+        "answer": "A) No solution"
+      }
+    },
+    {
+      "standard": "A1.A-REI.C.6",
+      "difficulty": "Hard",
+      "id": 11,
+      "prompt": "Solve $\\begin{cases} 3x + 2y = 7 \\\\ 4x + 5y = 13 \\end{cases}$ by elimination.\nA) $\\left(\\frac{9}{7}, \\frac{11}{7}\\right)$\nB) $(1, 2)$\nC) $(3, -1)$\nD) $(2, 1)$",
+      "answer": "A) $\\left(\\frac{9}{7}, \\frac{11}{7}\\right)$",
+      "solution": {
+        "steps": [
+          "Eliminate $y$. Multiply $E_1$ by $5$: $15x + 10y = 35$. Multiply $E_2$ by $2$: $8x + 10y = 26$.",
+          "Subtract the second from the first: $(15x - 8x) + (10y - 10y) = 35 - 26$, giving $7x = 9$, so $x = \\frac{9}{7}$.",
+          "Back-substitute into $3x + 2y = 7$: $\\frac{27}{7} + 2y = \\frac{49}{7}$, so $2y = \\frac{22}{7}$ and $y = \\frac{11}{7}$.",
+          "Check in $4x + 5y$: $\\frac{36}{7} + \\frac{55}{7} = \\frac{91}{7} = 13$. True. Solution $\\left(\\frac{9}{7}, \\frac{11}{7}\\right)$.",
+          "A is correct. B, C, and D are integer guesses that fail the check (for example $(1, 2)$ gives $3 + 4 = 7$ in $E_1$ but $4 + 10 = 14 \\neq 13$ in $E_2$)."
+        ],
+        "answer": "A) $\\left(\\frac{9}{7}, \\frac{11}{7}\\right)$"
+      }
+    },
+    {
+      "standard": "A1.A-REI.C.6",
+      "difficulty": "Hard",
+      "id": 12,
+      "prompt": "A coffee shop sells small drinks for $\\$3$ and large drinks for $\\$5$. One morning they sold $40$ drinks for a total of $\\$164$. How many small and large drinks were sold?\nA) $18$ small and $22$ large\nB) $22$ small and $18$ large\nC) $20$ small and $20$ large\nD) $24$ small and $16$ large",
+      "answer": "A) $18$ small and $22$ large",
+      "solution": {
+        "steps": [
+          "Let $s$ be small drinks and $l$ be large drinks: $s + l = 40$ and $3s + 5l = 164$.",
+          "From the first equation $s = 40 - l$. Substitute: $3(40 - l) + 5l = 164$.",
+          "Simplify: $120 - 3l + 5l = 164$, so $2l = 44$ and $l = 22$. Then $s = 40 - 22 = 18$.",
+          "Check: $3(18) + 5(22) = 54 + 110 = 164$. True. A is correct.",
+          "B swaps the two counts. C ignores the price difference. D miscounts the totals (it gives $3(24) + 5(16) = 72 + 80 = 152 \\neq 164$)."
+        ],
+        "answer": "A) $18$ small and $22$ large"
+      }
+    }
+  ]
+}

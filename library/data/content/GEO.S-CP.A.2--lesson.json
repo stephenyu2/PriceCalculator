@@ -1,0 +1,176 @@
+{
+  "id": "GEO.S-CP.A.2--lesson",
+  "standard": "GEO.S-CP.A.2",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Understand independence and conditional probability and use them to interpret data",
+  "clusterCode": "A",
+  "skillName": "Independence of Two Events",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Two events $A$ and $B$ are independent when knowing that one of them happened tells you nothing about the chance of the other. There is a clean test for this: $A$ and $B$ are independent exactly when $P(A \\cap B) = P(A) \\cdot P(B)$. To use it, compute $P(A)$, $P(B)$, and the joint probability $P(A \\cap B)$, then check whether the product of the two single-event probabilities equals the joint probability. If it does, the events are independent; if it does not, they are dependent. You can also run the test in reverse: if you are told two events are independent, you may multiply to find a missing joint probability.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Given $P(A) = \\frac{1}{2}$, $P(B) = \\frac{1}{3}$, and $P(A \\cap B) = \\frac{1}{6}$, are events $A$ and $B$ independent?",
+      "solution": {
+        "steps": [
+          "Use the independence test: $A$ and $B$ are independent exactly when $P(A \\cap B) = P(A) \\cdot P(B)$.",
+          "Form the product of the single-event probabilities: $P(A) \\cdot P(B) = \\frac{1}{2} \\cdot \\frac{1}{3} = \\frac{1}{6}$.",
+          "Compare to the given joint probability: $P(A \\cap B) = \\frac{1}{6}$.",
+          "Since $\\frac{1}{6} = \\frac{1}{6}$, the product equals the joint probability, so the test is satisfied.",
+          "Therefore $A$ and $B$ are independent."
+        ],
+        "answer": "Yes, $A$ and $B$ are independent because $P(A) \\cdot P(B) = \\frac{1}{6} = P(A \\cap B)$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A fair number cube (faces $1$ through $6$) is rolled once. Let $A$ be the event 'the result is even' and let $B$ be the event 'the result is greater than $4$'. Are $A$ and $B$ independent?",
+      "solution": {
+        "steps": [
+          "List the sample space: $\\{1, 2, 3, 4, 5, 6\\}$, with $6$ equally likely outcomes.",
+          "Event $A$ (even) is $\\{2, 4, 6\\}$, so $P(A) = \\frac{3}{6} = \\frac{1}{2}$.",
+          "Event $B$ (greater than $4$) is $\\{5, 6\\}$, so $P(B) = \\frac{2}{6} = \\frac{1}{3}$.",
+          "The intersection $A \\cap B$ (even and greater than $4$) is $\\{6\\}$, so $P(A \\cap B) = \\frac{1}{6}$.",
+          "Form the product: $P(A) \\cdot P(B) = \\frac{1}{2} \\cdot \\frac{1}{3} = \\frac{1}{6}$.",
+          "Since $P(A) \\cdot P(B) = \\frac{1}{6} = P(A \\cap B)$, the events are independent."
+        ],
+        "answer": "Yes, they are independent, since $P(A) \\cdot P(B) = \\frac{1}{6} = P(A \\cap B)$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A survey of $200$ students records whether each student plays a sport and whether each plays an instrument. Of the $200$ students, $80$ play a sport, $50$ play an instrument, and $20$ do both. Let $A$ be 'plays a sport' and $B$ be 'plays an instrument'. Are $A$ and $B$ independent?",
+      "solution": {
+        "steps": [
+          "Compute each probability from the counts out of $200$.",
+          "$P(A) = \\frac{80}{200} = \\frac{2}{5}$.",
+          "$P(B) = \\frac{50}{200} = \\frac{1}{4}$.",
+          "$P(A \\cap B) = \\frac{20}{200} = \\frac{1}{10}$ (the $20$ students who do both).",
+          "Form the product: $P(A) \\cdot P(B) = \\frac{2}{5} \\cdot \\frac{1}{4} = \\frac{2}{20} = \\frac{1}{10}$.",
+          "Compare: $P(A) \\cdot P(B) = \\frac{1}{10} = P(A \\cap B)$, so the test is satisfied."
+        ],
+        "answer": "Yes, playing a sport and playing an instrument are independent, since $P(A) \\cdot P(B) = \\frac{1}{10} = P(A \\cap B)$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A fair coin is flipped and a fair number cube is rolled, and the two actions are independent. Find $P(\\text{heads and a } 5)$.",
+      "solution": {
+        "steps": [
+          "Because the coin flip and the cube roll are independent, you may multiply the single-event probabilities: $P(A \\cap B) = P(A) \\cdot P(B)$.",
+          "Let $A$ be 'the coin shows heads', so $P(A) = \\frac{1}{2}$.",
+          "Let $B$ be 'the cube shows a $5$', so $P(B) = \\frac{1}{6}$.",
+          "Multiply: $P(\\text{heads and a } 5) = \\frac{1}{2} \\cdot \\frac{1}{6} = \\frac{1}{12}$."
+        ],
+        "answer": "$\\frac{1}{12}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Two cards are drawn one after the other from a standard $52$-card deck without replacement. Let $A$ be 'the first card is a heart' and $B$ be 'the second card is a heart'. Show whether $A$ and $B$ are independent.",
+      "solution": {
+        "steps": [
+          "First find each single-event probability. There are $13$ hearts in $52$ cards, so $P(A) = \\frac{13}{52} = \\frac{1}{4}$. By symmetry $P(B) = \\frac{1}{4}$ as well.",
+          "Now find the true joint probability $P(A \\cap B)$ for drawing two hearts without replacement. The first heart has probability $\\frac{13}{52}$; once it is removed, $12$ hearts remain among $51$ cards, so the second has probability $\\frac{12}{51}$.",
+          "Multiply along the draw: $P(A \\cap B) = \\frac{13}{52} \\cdot \\frac{12}{51} = \\frac{1}{4} \\cdot \\frac{12}{51} = \\frac{12}{204} = \\frac{1}{17}$.",
+          "Form the product of the marginals: $P(A) \\cdot P(B) = \\frac{1}{4} \\cdot \\frac{1}{4} = \\frac{1}{16}$.",
+          "Compare: $P(A \\cap B) = \\frac{1}{17}$ but $P(A) \\cdot P(B) = \\frac{1}{16}$, and $\\frac{1}{17} \\neq \\frac{1}{16}$.",
+          "Because the joint probability does not equal the product, the events are not independent. Removing the first heart changes the chance of a heart on the second draw."
+        ],
+        "answer": "They are not independent (dependent), since $P(A \\cap B) = \\frac{1}{17} \\neq \\frac{1}{16} = P(A) \\cdot P(B)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Given $P(A) = \\frac{1}{4}$, $P(B) = \\frac{1}{3}$, and $P(A \\cap B) = \\frac{1}{12}$, are $A$ and $B$ independent?",
+      "hint": "Multiply $P(A)$ by $P(B)$ and compare the result to $P(A \\cap B)$.",
+      "solution": {
+        "steps": [
+          "Form the product: $P(A) \\cdot P(B) = \\frac{1}{4} \\cdot \\frac{1}{3} = \\frac{1}{12}$.",
+          "Compare to the given joint probability: $P(A \\cap B) = \\frac{1}{12}$.",
+          "Since $\\frac{1}{12} = \\frac{1}{12}$, the test is satisfied, so the events are independent."
+        ],
+        "answer": "Yes, independent, since $P(A) \\cdot P(B) = \\frac{1}{12} = P(A \\cap B)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A fair number cube is rolled once. Let $A$ be 'the result is odd' and let $B$ be 'the result is less than $3$'. Are $A$ and $B$ independent?",
+      "hint": "List the outcomes in $A$, in $B$, and in $A \\cap B$, then compare $P(A) \\cdot P(B)$ to $P(A \\cap B)$.",
+      "solution": {
+        "steps": [
+          "Sample space: $\\{1, 2, 3, 4, 5, 6\\}$.",
+          "Event $A$ (odd) is $\\{1, 3, 5\\}$, so $P(A) = \\frac{3}{6} = \\frac{1}{2}$.",
+          "Event $B$ (less than $3$) is $\\{1, 2\\}$, so $P(B) = \\frac{2}{6} = \\frac{1}{3}$.",
+          "The intersection $A \\cap B$ (odd and less than $3$) is $\\{1\\}$, so $P(A \\cap B) = \\frac{1}{6}$.",
+          "Form the product: $P(A) \\cdot P(B) = \\frac{1}{2} \\cdot \\frac{1}{3} = \\frac{1}{6}$.",
+          "Since $\\frac{1}{6} = \\frac{1}{6}$, the events are independent."
+        ],
+        "answer": "Yes, independent, since $P(A) \\cdot P(B) = \\frac{1}{6} = P(A \\cap B)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A spinner and a coin are spun and flipped independently. The probability the spinner lands on red is $\\frac{2}{5}$, and the probability the coin lands heads is $\\frac{1}{2}$. Find $P(\\text{red and heads})$.",
+      "hint": "When two events are independent, the joint probability is the product of the single-event probabilities.",
+      "solution": {
+        "steps": [
+          "The spin and the flip are independent, so $P(\\text{red and heads}) = P(\\text{red}) \\cdot P(\\text{heads})$.",
+          "Substitute: $P(\\text{red and heads}) = \\frac{2}{5} \\cdot \\frac{1}{2}$.",
+          "Multiply: $\\frac{2}{5} \\cdot \\frac{1}{2} = \\frac{2}{10} = \\frac{1}{5}$."
+        ],
+        "answer": "$\\frac{1}{5}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A class of $40$ students is surveyed. $24$ have a part-time job, $10$ are on a varsity team, and $6$ both have a part-time job and are on a varsity team. Let $A$ be 'has a part-time job' and $B$ be 'is on a varsity team'. Are $A$ and $B$ independent?",
+      "hint": "Write each probability as a fraction out of $40$, reduce, then compare $P(A) \\cdot P(B)$ to $P(A \\cap B)$.",
+      "solution": {
+        "steps": [
+          "$P(A) = \\frac{24}{40} = \\frac{3}{5}$.",
+          "$P(B) = \\frac{10}{40} = \\frac{1}{4}$.",
+          "$P(A \\cap B) = \\frac{6}{40} = \\frac{3}{20}$.",
+          "Form the product: $P(A) \\cdot P(B) = \\frac{3}{5} \\cdot \\frac{1}{4} = \\frac{3}{20}$.",
+          "Compare: $P(A) \\cdot P(B) = \\frac{3}{20} = P(A \\cap B)$, so the test is satisfied."
+        ],
+        "answer": "Yes, independent, since $P(A) \\cdot P(B) = \\frac{3}{20} = P(A \\cap B)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "From a community data set, $P(\\text{owns a car}) = 0.6$, $P(\\text{commutes by car}) = 0.5$, and $P(\\text{owns a car and commutes by car}) = 0.45$. Are owning a car and commuting by car independent? Interpret your result in context.",
+      "hint": "Compare the product $0.6 \\cdot 0.5$ to the given joint probability $0.45$, then explain what the comparison means.",
+      "solution": {
+        "steps": [
+          "Let $A$ be 'owns a car' and $B$ be 'commutes by car'.",
+          "Form the product of the marginals: $P(A) \\cdot P(B) = 0.6 \\cdot 0.5 = 0.30$.",
+          "Compare to the given joint probability: $P(A \\cap B) = 0.45$.",
+          "Since $0.30 \\neq 0.45$, the product does not equal the joint probability, so the events are not independent.",
+          "Interpret: because $P(A \\cap B) = 0.45$ is larger than $P(A) \\cdot P(B) = 0.30$, knowing a person owns a car makes commuting by car more likely. The two events are linked, not independent."
+        ],
+        "answer": "Not independent, since $P(A) \\cdot P(B) = 0.30 \\neq 0.45 = P(A \\cap B)$. Owning a car makes commuting by car more likely."
+      }
+    }
+  ]
+}

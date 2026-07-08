@@ -1,0 +1,231 @@
+{
+  "id": "GEO.S-CP.A--cluster-worksheet",
+  "standard": null,
+  "clusterId": "GEO.S-CP.A",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Understand independence and conditional probability and use them to interpret data",
+  "clusterCode": "A",
+  "skillName": "Understand independence and conditional probability and use them to interpret data",
+  "materialType": "cluster-worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "intro": "This cluster worksheet covers all five standards of cluster S-CP.A: describing events as subsets of a sample space and combining them with union, intersection, and complement; testing independence with the multiplication rule $P(A \\cap B) = P(A)\\cdot P(B)$; defining and computing conditional probability $P(A \\mid B) = \\dfrac{P(A \\cap B)}{P(B)}$; reading two-way frequency tables to find marginal, joint, and conditional probabilities and test independence; and interpreting conditional probability and independence in everyday situations. Problems are grouped by standard and ramp from easier to harder within each group.",
+  "items": [
+    {
+      "id": 1,
+      "standard": "GEO.S-CP.A.1",
+      "prompt": "A fair six-sided die is rolled once. Let $A$ be the event 'the result is even.' Write the sample space $S$ in roster form and list the event $A$ as a subset of $S$.",
+      "answer": "$S = \\{1, 2, 3, 4, 5, 6\\}$ and $A = \\{2, 4, 6\\}$",
+      "solution": {
+        "steps": [
+          "The sample space is the set of all possible outcomes of one roll: $S = \\{1, 2, 3, 4, 5, 6\\}$.",
+          "The event $A$ collects the outcomes in $S$ that are even.",
+          "The even outcomes are $2$, $4$, and $6$, so $A = \\{2, 4, 6\\}$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "standard": "GEO.S-CP.A.1",
+      "prompt": "For one roll of a fair die with $S = \\{1, 2, 3, 4, 5, 6\\}$, let $A = \\{2, 4, 6\\}$ (even) and $B = \\{1, 2, 3\\}$ (less than $4$). List the outcomes of $A \\cup B$ and of $A \\cap B$.",
+      "answer": "$A \\cup B = \\{1, 2, 3, 4, 6\\}$ and $A \\cap B = \\{2\\}$",
+      "solution": {
+        "steps": [
+          "The union $A \\cup B$ ('or') contains every outcome that is in $A$, in $B$, or in both, listed once each.",
+          "Combining $\\{2, 4, 6\\}$ and $\\{1, 2, 3\\}$ gives $A \\cup B = \\{1, 2, 3, 4, 6\\}$ (the shared outcome $2$ is listed only once).",
+          "The intersection $A \\cap B$ ('and') contains only the outcomes in both sets.",
+          "The only outcome in both $\\{2, 4, 6\\}$ and $\\{1, 2, 3\\}$ is $2$, so $A \\cap B = \\{2\\}$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "standard": "GEO.S-CP.A.1",
+      "prompt": "Two fair coins are flipped, with sample space $S = \\{HH, HT, TH, TT\\}$. Let $A$ be 'at least one head' and $B$ be 'the two flips match.' List $A$ and $B$, then list $(A \\cup B)^c$, the complement of $A \\cup B$ relative to $S$.",
+      "answer": "$A = \\{HH, HT, TH\\}$, $B = \\{HH, TT\\}$, and $(A \\cup B)^c = \\varnothing$",
+      "solution": {
+        "steps": [
+          "'At least one head' includes every outcome with one or two heads: $A = \\{HH, HT, TH\\}$.",
+          "'The two flips match' means both heads or both tails: $B = \\{HH, TT\\}$.",
+          "Form the union: $A \\cup B = \\{HH, HT, TH, TT\\}$, which is all of $S$.",
+          "The complement removes the outcomes of $A \\cup B$ from $S$. Since $A \\cup B = S$, nothing remains: $(A \\cup B)^c = \\varnothing$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "standard": "GEO.S-CP.A.2",
+      "prompt": "For two events $A$ and $B$ it is given that $P(A) = \\frac{1}{2}$, $P(B) = \\frac{1}{3}$, and $P(A \\cap B) = \\frac{1}{6}$. Determine whether $A$ and $B$ are independent.",
+      "answer": "Yes, $A$ and $B$ are independent.",
+      "solution": {
+        "steps": [
+          "Events are independent exactly when $P(A \\cap B) = P(A)\\cdot P(B)$.",
+          "Compute the product: $P(A)\\cdot P(B) = \\frac{1}{2}\\cdot\\frac{1}{3} = \\frac{1}{6}$.",
+          "Compare with the given joint probability: $P(A \\cap B) = \\frac{1}{6}$.",
+          "Since $\\frac{1}{6} = \\frac{1}{6}$, the multiplication rule holds, so $A$ and $B$ are independent."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "standard": "GEO.S-CP.A.2",
+      "prompt": "A fair coin is flipped and a fair six-sided die is rolled, and the two are independent. Find $P(\\text{heads and a } 5)$.",
+      "answer": "$\\frac{1}{12}$",
+      "solution": {
+        "steps": [
+          "Because the coin flip and the die roll are independent, $P(A \\cap B) = P(A)\\cdot P(B)$.",
+          "The probability of heads is $P(\\text{heads}) = \\frac{1}{2}$.",
+          "The probability of rolling a $5$ is $P(5) = \\frac{1}{6}$.",
+          "Multiply: $P(\\text{heads and a } 5) = \\frac{1}{2}\\cdot\\frac{1}{6} = \\frac{1}{12}$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "standard": "GEO.S-CP.A.2",
+      "prompt": "Two cards are drawn one after another without replacement from a standard $52$-card deck. Let $A$ be 'the first card is a heart' and $B$ be 'the second card is a heart.' Show whether $A$ and $B$ are independent.",
+      "answer": "They are not independent (they are dependent), because $P(A \\cap B) = \\frac{1}{17} \\neq \\frac{1}{16} = P(A)\\cdot P(B)$.",
+      "solution": {
+        "steps": [
+          "There are $13$ hearts in the deck, so $P(A) = \\frac{13}{52} = \\frac{1}{4}$ and $P(B) = \\frac{1}{4}$ as well (by symmetry, before knowing the first card).",
+          "For the joint probability with no replacement, after a heart is drawn $12$ hearts remain among $51$ cards: $P(A \\cap B) = \\frac{13}{52}\\cdot\\frac{12}{51} = \\frac{1}{4}\\cdot\\frac{12}{51} = \\frac{12}{204} = \\frac{1}{17}$.",
+          "Compute the product of the marginals: $P(A)\\cdot P(B) = \\frac{1}{4}\\cdot\\frac{1}{4} = \\frac{1}{16}$.",
+          "Since $\\frac{1}{17} \\neq \\frac{1}{16}$, the multiplication rule fails, so $A$ and $B$ are dependent. Drawing a heart first lowers the chance of a heart on the second draw."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "standard": "GEO.S-CP.A.3",
+      "prompt": "For two events it is given that $P(A \\cap B) = \\frac{1}{5}$ and $P(B) = \\frac{1}{2}$. Find the conditional probability $P(A \\mid B)$.",
+      "answer": "$\\frac{2}{5}$",
+      "solution": {
+        "steps": [
+          "Apply the definition $P(A \\mid B) = \\dfrac{P(A \\cap B)}{P(B)}$, valid because $P(B) = \\frac{1}{2} > 0$.",
+          "Substitute the given values: $P(A \\mid B) = \\dfrac{\\frac{1}{5}}{\\frac{1}{2}}$.",
+          "Divide by multiplying by the reciprocal: $\\frac{1}{5}\\cdot\\frac{2}{1} = \\frac{2}{5}$.",
+          "So $P(A \\mid B) = \\frac{2}{5}$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "standard": "GEO.S-CP.A.3",
+      "prompt": "A fair die is rolled. Let $A = \\{\\text{prime}\\} = \\{2, 3, 5\\}$ and $B = \\{\\text{odd}\\} = \\{1, 3, 5\\}$. Find $P(A \\mid B)$.",
+      "answer": "$\\frac{2}{3}$",
+      "solution": {
+        "steps": [
+          "Find the intersection: $A \\cap B = \\{3, 5\\}$, so $P(A \\cap B) = \\frac{2}{6} = \\frac{1}{3}$.",
+          "Find $P(B)$: $B = \\{1, 3, 5\\}$ has $3$ outcomes, so $P(B) = \\frac{3}{6} = \\frac{1}{2}$.",
+          "Apply the definition: $P(A \\mid B) = \\dfrac{P(A \\cap B)}{P(B)} = \\dfrac{\\frac{1}{3}}{\\frac{1}{2}} = \\frac{1}{3}\\cdot\\frac{2}{1} = \\frac{2}{3}$.",
+          "Equivalently, restrict to the $3$ odd outcomes $\\{1, 3, 5\\}$; of these, $2$ are prime, giving $\\frac{2}{3}$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "standard": "GEO.S-CP.A.3",
+      "prompt": "For two events, $P(A) = \\frac{1}{3}$, $P(B) = \\frac{1}{2}$, and $P(A \\cap B) = \\frac{1}{6}$. Compute $P(A \\mid B)$ and use it to decide whether $A$ and $B$ are independent, explaining your reasoning.",
+      "answer": "$P(A \\mid B) = \\frac{1}{3}$, and since this equals $P(A)$, the events $A$ and $B$ are independent.",
+      "solution": {
+        "steps": [
+          "Compute the conditional probability: $P(A \\mid B) = \\dfrac{P(A \\cap B)}{P(B)} = \\dfrac{\\frac{1}{6}}{\\frac{1}{2}} = \\frac{1}{6}\\cdot\\frac{2}{1} = \\frac{1}{3}$.",
+          "Independence holds exactly when $P(A \\mid B) = P(A)$.",
+          "Compare: $P(A \\mid B) = \\frac{1}{3}$ and $P(A) = \\frac{1}{3}$, so they are equal.",
+          "Because knowing $B$ occurred does not change the probability of $A$, the events $A$ and $B$ are independent."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "standard": "GEO.S-CP.A.4",
+      "prompt": "A two-way table classifies $40$ students by class and sport. Of $22$ seniors, $15$ play a sport; of $18$ juniors, $9$ play a sport, so $24$ students play a sport and $16$ do not. Using the grand total, find $P(\\text{senior and plays a sport})$.",
+      "answer": "$\\frac{3}{8}$",
+      "solution": {
+        "steps": [
+          "A joint probability is the matching cell count divided by the grand total.",
+          "The 'senior and plays a sport' cell holds $15$ students, and the grand total is $40$.",
+          "So $P(\\text{senior and plays a sport}) = \\frac{15}{40}$.",
+          "Reduce the fraction: $\\frac{15}{40} = \\frac{3}{8}$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "standard": "GEO.S-CP.A.4",
+      "prompt": "Using the same table ($22$ seniors with $15$ playing a sport; $18$ juniors with $9$ playing a sport), find $P(\\text{plays a sport} \\mid \\text{senior})$ and $P(\\text{plays a sport} \\mid \\text{junior})$, then state which class is more likely to play a sport.",
+      "answer": "$P(\\text{sport} \\mid \\text{senior}) = \\frac{15}{22}$ and $P(\\text{sport} \\mid \\text{junior}) = \\frac{1}{2}$; seniors are more likely to play a sport.",
+      "solution": {
+        "steps": [
+          "A conditional probability uses the conditioning group's total as the denominator (the reduced sample space).",
+          "Among the $22$ seniors, $15$ play a sport: $P(\\text{sport} \\mid \\text{senior}) = \\frac{15}{22}$.",
+          "Among the $18$ juniors, $9$ play a sport: $P(\\text{sport} \\mid \\text{junior}) = \\frac{9}{18} = \\frac{1}{2}$.",
+          "Compare: $\\frac{15}{22} \\approx 0.68$ is greater than $\\frac{1}{2} = 0.5$, so seniors are more likely to play a sport."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "standard": "GEO.S-CP.A.4",
+      "prompt": "Using the same table ($P(\\text{senior}) = \\frac{22}{40}$, $P(\\text{sport}) = \\frac{24}{40}$, $P(\\text{senior and sport}) = \\frac{15}{40}$), test whether being a senior and playing a sport are independent, and interpret the result.",
+      "answer": "They are not independent (dependent), because $P(A)\\cdot P(B) = 0.33 \\neq 0.375 = P(A \\cap B)$; being a senior is associated with a higher chance of playing a sport.",
+      "solution": {
+        "steps": [
+          "Independence holds when $P(A \\cap B) = P(A)\\cdot P(B)$.",
+          "Compute the product of marginals: $P(\\text{senior})\\cdot P(\\text{sport}) = \\frac{22}{40}\\cdot\\frac{24}{40} = \\frac{528}{1600} = \\frac{33}{100} = 0.33$.",
+          "Compute the joint probability: $P(\\text{senior and sport}) = \\frac{15}{40} = \\frac{3}{8} = 0.375$.",
+          "Since $0.33 \\neq 0.375$, the multiplication rule fails, so the events are dependent. Knowing a student is a senior raises the probability of playing a sport above the overall rate."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "standard": "GEO.S-CP.A.5",
+      "prompt": "A health report states: 'Among adults who exercise daily, $15\\%$ have high blood pressure.' Let $E$ be 'exercises daily' and $H$ be 'has high blood pressure.' Which conditional probability does the sentence describe, $P(H \\mid E)$ or $P(E \\mid H)$, and what is its value?",
+      "answer": "$P(H \\mid E) = 0.15$",
+      "solution": {
+        "steps": [
+          "The phrase 'among adults who exercise daily' restricts attention to the group that exercises daily, so 'exercises daily' is the condition $E$.",
+          "The reported percentage describes how many in that group have high blood pressure, which is the target event $H$.",
+          "Therefore the sentence translates to $P(H \\mid E)$, the probability of $H$ given $E$.",
+          "Its value is the stated $15\\%$, so $P(H \\mid E) = 0.15$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "standard": "GEO.S-CP.A.5",
+      "prompt": "In a class of $30$ students, $18$ play a sport, and of those $18$ sport players, $12$ also play an instrument. Find the probability that a student plays an instrument given that they play a sport.",
+      "answer": "$\\frac{2}{3}$",
+      "solution": {
+        "steps": [
+          "Let $S$ be 'plays a sport' and $I$ be 'plays an instrument.' We want $P(I \\mid S)$.",
+          "Condition on the sport players, so the denominator is the number who play a sport: $18$.",
+          "Of those $18$, the number who also play an instrument is $12$.",
+          "Compute $P(I \\mid S) = \\frac{12}{18} = \\frac{2}{3}$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "standard": "GEO.S-CP.A.5",
+      "prompt": "A medical screening study reports $P(\\text{disease} \\mid \\text{positive test}) = 0.31$ while the overall rate is $P(\\text{disease}) = 0.05$. Explain what this comparison says about the association between testing positive and having the disease, and state whether the two events are independent.",
+      "answer": "The events are dependent: a positive test raises the chance of disease from $0.05$ to $0.31$, so $P(\\text{disease} \\mid \\text{positive}) \\neq P(\\text{disease})$.",
+      "solution": {
+        "steps": [
+          "Two events are independent exactly when the conditional probability equals the marginal: $P(A \\mid B) = P(A)$.",
+          "Here $P(\\text{disease} \\mid \\text{positive test}) = 0.31$ and $P(\\text{disease}) = 0.05$.",
+          "Since $0.31 \\neq 0.05$, knowing the test was positive changes the probability of disease, so the events are dependent.",
+          "In context, a positive test more than sixfold increases the chance of disease compared with the overall population, which is exactly what a useful screening test should do."
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T21:16:48.217Z"
+}

@@ -1,0 +1,171 @@
+{
+  "id": "A1.S-ID.C.8--lesson",
+  "standard": "A1.S-ID.C.8",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Interpret linear models",
+  "clusterCode": "C",
+  "skillName": "Correlation Coefficient",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "The correlation coefficient $r$ is a single number, always between $-1$ and $1$, that summarizes how well a straight line fits a set of paired data. Its sign tells you the direction of the trend: $r>0$ means the line of best fit slopes up, $r<0$ means it slopes down, and $r\\approx 0$ means there is no clear linear trend. Its size $|r|$ tells you the strength: values near $1$ mean the points hug the line tightly, values near $0$ mean the points scatter loosely. Be careful to keep $r$ separate from the slope (steepness is not strength) and from $r^2$ (which measures the fraction of variation the line explains). And remember the golden rule of data: a strong correlation never, by itself, proves causation.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A study of hours spent studying versus exam score finds a line of best fit with correlation coefficient $r=0.92$. Describe the direction and strength of the linear association, and explain what it means in context.",
+      "solution": {
+        "steps": [
+          "Look at the sign of $r$. Since $r=0.92$ is positive, the line of best fit slopes upward, so the association is positive.",
+          "Look at the magnitude $|r|=0.92$. Because this is very close to $1$, the points cluster tightly around the line, so the association is strong.",
+          "Put it in context: as study hours increase, exam scores tend to increase as well, and they do so in a tight, predictable linear pattern."
+        ],
+        "answer": "A strong positive linear association: more study hours are associated with higher exam scores, with the points clustering tightly around the line."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A scatter plot shows points falling almost exactly along a line that goes down from left to right. Which of these is the most plausible value of $r$: $-0.97$, $-0.30$, $0.10$, or $0.97$? Explain.",
+      "solution": {
+        "steps": [
+          "The points go down from left to right, so the trend is negative. This means $r$ must be negative, ruling out $0.10$ and $0.97$.",
+          "The points fall 'almost exactly' along the line, so the association is very strong, meaning $|r|$ is close to $1$.",
+          "Of the two negative choices, $-0.97$ has magnitude near $1$ (strong) while $-0.30$ has small magnitude (weak). The strong one fits.",
+          "Therefore the most plausible value is $r=-0.97$."
+        ],
+        "answer": "$r=-0.97$, because the trend is strongly negative (downward and tightly clustered)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A student reports that a data set has a correlation coefficient of $r=1.35$. Without seeing the data, explain why this value must be a mistake.",
+      "solution": {
+        "steps": [
+          "Recall the defining property of the correlation coefficient: it always satisfies $-1 \\le r \\le 1$.",
+          "The strongest possible positive correlation is $r=1$ (all points exactly on an upward line), and the strongest negative is $r=-1$.",
+          "Since $1.35 > 1$, it lies outside the allowed interval $[-1,1]$.",
+          "No real data set can produce such a value, so the student must have made a calculation or entry error."
+        ],
+        "answer": "Impossible: $r$ must lie in $[-1,1]$, and $1.35$ is greater than $1$, so the value is an error."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A linear fit to a data set has correlation coefficient $r=-0.8$. Find the coefficient of determination $r^2$ and interpret what it tells you. Then explain why $r^2$ alone does not tell you the direction of the association.",
+      "solution": {
+        "steps": [
+          "Compute $r^2$ by squaring: $r^2=(-0.8)^2=0.64$.",
+          "Interpret $r^2$ as a fraction of explained variation: $0.64$ means about $64\\%$ of the variation in $y$ is explained by the linear relationship with $x$.",
+          "Notice that squaring removes the sign: both $r=-0.8$ and $r=0.8$ give $r^2=0.64$.",
+          "So $r^2$ measures strength of fit only. To recover the direction you must know the sign of $r$ (here negative), which you read from the slope or scatter plot."
+        ],
+        "answer": "$r^2=0.64$, so about $64\\%$ of the variation in $y$ is explained by the linear model. Because squaring drops the sign, $r^2$ does not by itself reveal the negative direction."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Compute the correlation coefficient $r$ for the three points $(1,2)$, $(2,4)$, $(3,5)$ using $r=\\dfrac{\\sum (x_i-\\bar{x})(y_i-\\bar{y})}{\\sqrt{\\sum (x_i-\\bar{x})^2}\\,\\sqrt{\\sum (y_i-\\bar{y})^2}}$, then describe the association.",
+      "solution": {
+        "steps": [
+          "Find the means. $\\bar{x}=\\dfrac{1+2+3}{3}=2$ and $\\bar{y}=\\dfrac{2+4+5}{3}=\\dfrac{11}{3}$.",
+          "Compute the deviations. For $x$: $1-2=-1$, $2-2=0$, $3-2=1$. For $y$: $2-\\dfrac{11}{3}=-\\dfrac{5}{3}$, $4-\\dfrac{11}{3}=\\dfrac{1}{3}$, $5-\\dfrac{11}{3}=\\dfrac{4}{3}$.",
+          "Compute the products of deviations and sum them: $(-1)\\left(-\\dfrac{5}{3}\\right)+(0)\\left(\\dfrac{1}{3}\\right)+(1)\\left(\\dfrac{4}{3}\\right)=\\dfrac{5}{3}+0+\\dfrac{4}{3}=\\dfrac{9}{3}=3$.",
+          "Compute $\\sum (x_i-\\bar{x})^2=(-1)^2+0^2+1^2=2$.",
+          "Compute $\\sum (y_i-\\bar{y})^2=\\left(-\\dfrac{5}{3}\\right)^2+\\left(\\dfrac{1}{3}\\right)^2+\\left(\\dfrac{4}{3}\\right)^2=\\dfrac{25}{9}+\\dfrac{1}{9}+\\dfrac{16}{9}=\\dfrac{42}{9}=\\dfrac{14}{3}$.",
+          "Substitute: $r=\\dfrac{3}{\\sqrt{2}\\,\\sqrt{\\frac{14}{3}}}=\\dfrac{3}{\\sqrt{\\frac{28}{3}}}=\\dfrac{3}{\\frac{2\\sqrt{21}}{3}}=\\dfrac{9}{2\\sqrt{21}}=\\dfrac{9}{2\\sqrt{21}}\\approx 0.982$.",
+          "Since $r\\approx 0.98$ is positive and very close to $1$, the three points show a strong positive linear association."
+        ],
+        "answer": "$r=\\dfrac{9}{2\\sqrt{21}}\\approx 0.98$, a strong positive linear association."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A line of best fit for outdoor temperature versus hot-chocolate sales has $r=-0.88$. Describe the direction and strength of the association and interpret it in context.",
+      "hint": "Read the sign of $r$ for direction (negative means the line slopes down) and the magnitude $|r|$ for strength (near $1$ is strong).",
+      "solution": {
+        "steps": [
+          "The sign is negative, so the line of best fit slopes downward: the association is negative.",
+          "The magnitude is $|r|=0.88$, which is close to $1$, so the association is strong.",
+          "In context: as the temperature rises, hot-chocolate sales tend to fall, and they do so in a tight linear pattern."
+        ],
+        "answer": "A strong negative linear association: warmer temperatures are associated with lower hot-chocolate sales."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Two scatter plots both trend upward. Plot A has $r=0.45$ and Plot B has $r=0.95$. Which plot's points cluster more tightly around its line of best fit, and which association is stronger?",
+      "hint": "Both are positive, so compare magnitudes. The larger $|r|$ means tighter clustering and a stronger association.",
+      "solution": {
+        "steps": [
+          "Both correlation coefficients are positive, so both lines slope upward.",
+          "Compare magnitudes: $|0.95|=0.95$ is larger than $|0.45|=0.45$.",
+          "A larger magnitude means the points hug the line more tightly, so Plot B clusters more tightly.",
+          "Therefore Plot B has the stronger linear association; Plot A's is only weak-to-moderate."
+        ],
+        "answer": "Plot B clusters more tightly and has the stronger association ($r=0.95$ vs. $r=0.45$)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A linear model has coefficient of determination $r^2=0.49$, and the scatter plot trends downward. Find $r$ (including its sign) and interpret $r^2$ in context.",
+      "hint": "Take the square root of $r^2$ to get $|r|$, then attach the sign that matches the downward trend. The value $r^2$ is the fraction of variation explained.",
+      "solution": {
+        "steps": [
+          "Take the square root: $\\sqrt{0.49}=0.7$, so $|r|=0.7$.",
+          "The scatter plot trends downward, so the sign of $r$ is negative: $r=-0.7$.",
+          "Interpret $r^2=0.49$: about $49\\%$ of the variation in $y$ is explained by the linear relationship with $x$.",
+          "So this is a moderate negative linear association."
+        ],
+        "answer": "$r=-0.7$; about $49\\%$ of the variation in $y$ is explained by the linear model (a moderate negative association)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Across a year, a town finds that ice cream sales and the number of swimming-pool injuries have a correlation of $r=0.85$. A reporter claims that buying ice cream causes pool injuries. Evaluate this claim and name a plausible confounding variable.",
+      "hint": "A strong correlation shows the two move together, but it does not prove one causes the other. Look for a third variable that could drive both.",
+      "solution": {
+        "steps": [
+          "Note that $r=0.85$ is a strong positive correlation, so ice cream sales and pool injuries do rise and fall together.",
+          "Recall that correlation does not imply causation: moving together is not the same as one causing the other.",
+          "Look for a third variable that could raise both at once. Hot summer weather increases ice cream sales and also sends more people swimming, raising injuries.",
+          "So the reporter's causal claim is unjustified; the link is explained by the confounding variable of hot weather."
+        ],
+        "answer": "The causal claim is not justified. A strong correlation does not prove causation; hot weather is a plausible confounding variable that drives both."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Compute the correlation coefficient $r$ for the four points $(1,1)$, $(2,2)$, $(3,2)$, $(4,5)$ using the defining formula, then describe the association.",
+      "hint": "Find $\\bar{x}$ and $\\bar{y}$ first, then the deviations. Use $r=\\dfrac{\\sum (x_i-\\bar{x})(y_i-\\bar{y})}{\\sqrt{\\sum (x_i-\\bar{x})^2}\\,\\sqrt{\\sum (y_i-\\bar{y})^2}}$.",
+      "solution": {
+        "steps": [
+          "Find the means: $\\bar{x}=\\dfrac{1+2+3+4}{4}=\\dfrac{10}{4}=2.5$ and $\\bar{y}=\\dfrac{1+2+2+5}{4}=\\dfrac{10}{4}=2.5$.",
+          "Compute the $x$-deviations: $-1.5,\\,-0.5,\\,0.5,\\,1.5$. Compute the $y$-deviations: $-1.5,\\,-0.5,\\,-0.5,\\,2.5$.",
+          "Products of deviations: $(-1.5)(-1.5)+(-0.5)(-0.5)+(0.5)(-0.5)+(1.5)(2.5)=2.25+0.25-0.25+3.75=6$.",
+          "Compute $\\sum (x_i-\\bar{x})^2=2.25+0.25+0.25+2.25=5$.",
+          "Compute $\\sum (y_i-\\bar{y})^2=2.25+0.25+0.25+6.25=9$.",
+          "Substitute: $r=\\dfrac{6}{\\sqrt{5}\\,\\sqrt{9}}=\\dfrac{6}{3\\sqrt{5}}=\\dfrac{2}{\\sqrt{5}}\\approx 0.894$.",
+          "Since $r\\approx 0.89$ is positive and close to $1$, the points show a strong positive linear association."
+        ],
+        "answer": "$r=\\dfrac{2}{\\sqrt{5}}\\approx 0.89$, a strong positive linear association."
+      }
+    }
+  ]
+}

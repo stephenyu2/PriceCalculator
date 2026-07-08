@@ -1,0 +1,154 @@
+{
+  "standard": "6.G.A.1",
+  "grade": "6",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Solve real-world and mathematical problems involving area, surface area, and volume",
+  "clusterCode": "A",
+  "skillName": "Area of Polygons",
+
+  "description": "Students find the area of triangles, special quadrilaterals (parallelograms, trapezoids, rhombuses, kites), and other polygons by composing them into rectangles or decomposing them into triangles and simpler shapes. They apply the area formulas for rectangles ($A = bh$), triangles ($A = \\frac{1}{2}bh$), parallelograms ($A = bh$), and trapezoids ($A = \\frac{1}{2}(b_1 + b_2)h$), correctly identifying the base and the corresponding perpendicular height, and use these techniques to solve real-world and mathematical problems. Side lengths and dimensions are whole numbers, simple fractions, or one-place decimals; all answers carry square units.",
+
+  "subSkills": [
+    "Find the area of a right triangle and any triangle using $A = \\frac{1}{2}bh$, choosing a base and its perpendicular height",
+    "Find the area of a parallelogram using $A = bh$, using the perpendicular height (not the slant side)",
+    "Find the area of a trapezoid using $A = \\frac{1}{2}(b_1 + b_2)h$",
+    "Find the area of a rhombus or kite by decomposing into triangles or using $A = \\frac{1}{2}d_1 d_2$",
+    "Compose an irregular polygon into rectangles and triangles, find each area, and add them",
+    "Decompose a polygon into triangles and simpler shapes, find each area, and add them",
+    "Find the area of a region by subtracting the area of a removed piece (composite/shaded-region problems)",
+    "Work backward: given an area and one dimension of a triangle or quadrilateral, solve for the missing base or height",
+    "Apply area techniques to real-world contexts (flooring, paint, fabric, garden plots) with correct square units"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Area of a triangle",
+      "example": "A triangle has base $10\\text{ cm}$ and height $6\\text{ cm}$. Find its area. Answer: $A = \\frac{1}{2}(10)(6) = 30\\text{ cm}^2$."
+    },
+    {
+      "name": "Area of a parallelogram",
+      "example": "A parallelogram has base $8\\text{ in}$ and height $5\\text{ in}$ (the slant side is $6\\text{ in}$). Find its area. Answer: $A = (8)(5) = 40\\text{ in}^2$."
+    },
+    {
+      "name": "Area of a trapezoid",
+      "example": "A trapezoid has parallel bases $7\\text{ m}$ and $11\\text{ m}$ and height $4\\text{ m}$. Find its area. Answer: $A = \\frac{1}{2}(7 + 11)(4) = 36\\text{ m}^2$."
+    },
+    {
+      "name": "Area of a rhombus or kite from diagonals",
+      "example": "A rhombus has diagonals $6\\text{ cm}$ and $8\\text{ cm}$. Find its area. Answer: $A = \\frac{1}{2}(6)(8) = 24\\text{ cm}^2$."
+    },
+    {
+      "name": "Compose into rectangles and triangles",
+      "example": "An L-shaped figure splits into a $6 \\times 4$ rectangle and a $3 \\times 4$ rectangle. Find the total area. Answer: $24 + 12 = 36$ square units."
+    },
+    {
+      "name": "Decompose a polygon into triangles",
+      "example": "A regular pentagon is split into $5$ congruent triangles, each with base $4\\text{ cm}$ and height $2.75\\text{ cm}$. Find the area. Answer: $5 \\times \\frac{1}{2}(4)(2.75) = 27.5\\text{ cm}^2$."
+    },
+    {
+      "name": "Shaded region by subtraction",
+      "example": "A $10 \\times 8$ rectangle has a triangle of base $4$ and height $5$ cut out. Find the remaining area. Answer: $80 - \\frac{1}{2}(4)(5) = 70$ square units."
+    },
+    {
+      "name": "Work backward for a missing dimension",
+      "example": "A triangle has area $24\\text{ ft}^2$ and base $8\\text{ ft}$. Find its height. Answer: $24 = \\frac{1}{2}(8)h$, so $h = 6\\text{ ft}$."
+    },
+    {
+      "name": "Real-world area application",
+      "example": "A triangular garden has base $12\\text{ ft}$ and height $9\\text{ ft}$. Mulch covers $54\\text{ ft}^2$ per bag. How many bags are needed? Answer: $A = \\frac{1}{2}(12)(9) = 54\\text{ ft}^2$, so $1$ bag."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-shape, single-step: apply one area formula (triangle, rectangle, or parallelogram) when the base and the matching perpendicular height are given directly. No decomposition, no choosing among extra measurements beyond ignoring an obvious distractor dimension.",
+      "constraints": [
+        "One shape: rectangle, right triangle, general triangle, or parallelogram",
+        "Base and perpendicular height stated explicitly; whole-number dimensions $1$ to $12$",
+        "Direct substitution into a single formula, one multiplication (and a halving for triangles)",
+        "Whole-number area result; answer carries square units (for example $\\text{cm}^2$)",
+        "At most one extra (unused) measurement such as a slant side to test base/height identification"
+      ]
+    },
+    "Medium": {
+      "description": "Either a trapezoid, rhombus, or kite (a formula with more inputs) or a two-piece composite figure that the student must decompose into two rectangles or a rectangle plus a triangle. May involve a simple fraction or one-place decimal dimension, or a work-backward step to find a missing base or height.",
+      "constraints": [
+        "Trapezoid ($A = \\frac{1}{2}(b_1 + b_2)h$), rhombus/kite from diagonals, or a two-region composite figure",
+        "Dimensions may include a unit fraction such as $\\frac{1}{2}$ or a one-place decimal such as $3.5$",
+        "Two computation steps: two areas added, or a formula plus solving for one unknown dimension",
+        "Work-backward items: given area and one dimension, find the other",
+        "Result may be a fraction or decimal; units required"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step composite or real-world problems: decompose into three or more pieces, or use subtraction for a shaded region, or chain an area result into a follow-up (cost, number of units, comparison). Student must extract dimensions from a description or figure, choose a decomposition, and manage units throughout.",
+      "constraints": [
+        "Three or more sub-regions, a shaded-region subtraction, or a polygon split into multiple triangles",
+        "Mixed dimension types (whole numbers with fractions or decimals)",
+        "A follow-up step after finding the area: total cost, number of bags/tiles, or comparison of two regions",
+        "Requires reading comprehension to identify the relevant base and perpendicular height",
+        "Answer may require rounding up for a real-world count, with correct square units on intermediate areas"
+      ]
+    },
+    "tierSplit": "This standard uses a single ramped worksheet (worksheet.single, 15 items): items 1 to 5 Easy (one area formula for a triangle, rectangle, or parallelogram with base and height given), items 6 to 11 Medium (trapezoids, rhombus/kite diagonals, two-piece composites, fraction/decimal dimensions, and work-backward items), items 12 to 15 Hard (three-or-more-piece composites, shaded-region subtraction, and real-world multi-step applications). If split into two tiers, tier1 would cover Easy to Medium (single-formula areas through trapezoids and two-piece composites) and tier2 would cover Medium to Hard (trapezoids and work-backward problems through multi-region composites, shaded regions, and real-world applications)."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student forgets the factor of $\\frac{1}{2}$ in the triangle area formula and uses base times height",
+      "distractor": "Computes a triangle with base $10$ and height $6$ as $10 \\times 6 = 60\\text{ cm}^2$ instead of $\\frac{1}{2}(10)(6) = 30\\text{ cm}^2$"
+    },
+    {
+      "misconception": "Student uses the slant side of a parallelogram or triangle as the height instead of the perpendicular height",
+      "distractor": "For a parallelogram with base $8$, perpendicular height $5$, and slant side $6$, computes $8 \\times 6 = 48\\text{ in}^2$ instead of $8 \\times 5 = 40\\text{ in}^2$"
+    },
+    {
+      "misconception": "Student adds the two parallel bases of a trapezoid but forgets to multiply by $\\frac{1}{2}$",
+      "distractor": "For bases $7$ and $11$ and height $4$, computes $(7 + 11)(4) = 72\\text{ m}^2$ instead of $\\frac{1}{2}(7 + 11)(4) = 36\\text{ m}^2$"
+    },
+    {
+      "misconception": "Student averages the trapezoid bases but multiplies by the wrong dimension or only uses one base",
+      "distractor": "For bases $7$ and $11$ and height $4$, computes $\\frac{1}{2}(7)(4) = 14\\text{ m}^2$ (uses only one base) instead of $36\\text{ m}^2$"
+    },
+    {
+      "misconception": "Student multiplies the rhombus/kite diagonals without the $\\frac{1}{2}$ factor",
+      "distractor": "For diagonals $6$ and $8$, computes $6 \\times 8 = 48\\text{ cm}^2$ instead of $\\frac{1}{2}(6)(8) = 24\\text{ cm}^2$"
+    },
+    {
+      "misconception": "Student finds perimeter instead of area, adding side lengths",
+      "distractor": "For a $10 \\times 8$ rectangle, computes $10 + 8 + 10 + 8 = 36$ units instead of the area $80$ square units"
+    },
+    {
+      "misconception": "Student labels the answer with linear units instead of square units",
+      "distractor": "Reports an area of $30\\text{ cm}$ instead of $30\\text{ cm}^2$"
+    },
+    {
+      "misconception": "Student double-counts an overlapping region when composing a figure instead of using non-overlapping pieces",
+      "distractor": "For an L-shape that splits into a $6 \\times 4$ and a $3 \\times 4$ rectangle ($36$ square units), adds the full bounding rectangle and a piece to get $48$ square units instead of $36$"
+    },
+    {
+      "misconception": "Student adds the removed area instead of subtracting it in a shaded-region problem",
+      "distractor": "For a $10 \\times 8$ rectangle with a triangle of area $10$ cut out, computes $80 + 10 = 90$ square units instead of $80 - 10 = 70$ square units"
+    },
+    {
+      "misconception": "Student solves a work-backward triangle problem as if area equals base times height, dropping the $\\frac{1}{2}$",
+      "distractor": "Given area $24$ and base $8$, computes height $h = \\frac{24}{8} = 3$ instead of $h = \\frac{2(24)}{8} = 6$"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet (single = 15, Easy->Hard). tier1/tier2 listed for schema completeness but not used for this standard.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

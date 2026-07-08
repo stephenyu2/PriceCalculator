@@ -1,0 +1,176 @@
+{
+  "id": "A2.A-APR.B.3--lesson",
+  "standard": "A2.A-APR.B.3",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Arithmetic with Polynomials and Rational Expressions",
+  "domainCode": "A-APR",
+  "cluster": "Understand the relationship between zeros and factors of polynomials",
+  "clusterCode": "B",
+  "skillName": "Zeros and Polynomial Graphs",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "intro": "The real zeros of a polynomial function are the $x$-values where its graph meets the $x$-axis. When a polynomial is written as a product of factors, you find its zeros by setting each factor equal to $0$ (the Zero Product Property). The exponent on a factor is that zero's multiplicity: an odd multiplicity means the graph crosses the axis there, while an even multiplicity means the graph is tangent to the axis (it touches and turns back). Combine the zeros and their multiplicities with the $y$-intercept ($f(0)$) and the end behavior (read from the degree and the leading-coefficient sign) to sketch a rough graph, or run the reasoning in reverse to build a factored polynomial from a described graph.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Find all real zeros of $f(x)=(x-2)(x+5)(x-1)$ and state the multiplicity of each.",
+      "solution": {
+        "steps": [
+          "The polynomial is already a product of factors, so apply the Zero Product Property: set each factor equal to $0$.",
+          "$x-2=0$ gives $x=2$.",
+          "$x+5=0$ gives $x=-5$.",
+          "$x-1=0$ gives $x=1$.",
+          "Each factor appears to the first power, so every zero has multiplicity $1$ and the graph crosses the $x$-axis at all three."
+        ],
+        "answer": "Zeros: $x=2$, $x=-5$, $x=1$, each of multiplicity $1$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find all real zeros of $f(x)=x^3-4x$.",
+      "solution": {
+        "steps": [
+          "The polynomial is not factored yet, so factor it. First factor out the greatest common factor $x$: $f(x)=x(x^2-4)$.",
+          "Recognize $x^2-4$ as a difference of squares: $x^2-4=(x-2)(x+2)$.",
+          "So $f(x)=x(x-2)(x+2)$.",
+          "Set each factor to $0$: $x=0$, $x-2=0\\Rightarrow x=2$, and $x+2=0\\Rightarrow x=-2$.",
+          "Do not stop at $x(x^2-4)$; factoring the difference of squares is what reveals all three zeros."
+        ],
+        "answer": "Zeros: $x=0$, $x=2$, $x=-2$, each of multiplicity $1$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "For $f(x)=(x+1)^2(x-3)$, list each zero with its multiplicity and state whether the graph crosses or is tangent to the $x$-axis there. Also find the $y$-intercept.",
+      "solution": {
+        "steps": [
+          "Set each factor to $0$. From $(x+1)^2$: $x+1=0\\Rightarrow x=-1$. From $(x-3)$: $x-3=0\\Rightarrow x=3$.",
+          "The factor $(x+1)$ is squared, so $x=-1$ has multiplicity $2$. The factor $(x-3)$ appears once, so $x=3$ has multiplicity $1$.",
+          "Even multiplicity means tangent (touch and turn): at $x=-1$ the graph is tangent to the axis.",
+          "Odd multiplicity means crossing: at $x=3$ the graph crosses the axis.",
+          "Find the $y$-intercept by evaluating $f(0)$: $f(0)=(0+1)^2(0-3)=(1)(-3)=-3$."
+        ],
+        "answer": "Tangent at $x=-1$ (multiplicity $2$); crosses at $x=3$ (multiplicity $1$); $y$-intercept $(0,-3)$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Sketch a rough graph of $f(x)=(x-2)^2(x+1)$ by listing its zeros and multiplicities, finding the $y$-intercept, and stating the end behavior.",
+      "solution": {
+        "steps": [
+          "Zeros: $(x-2)^2=0\\Rightarrow x=2$ with multiplicity $2$ (tangent), and $(x+1)=0\\Rightarrow x=-1$ with multiplicity $1$ (crosses).",
+          "$y$-intercept: $f(0)=(0-2)^2(0+1)=(4)(1)=4$, so the graph passes through $(0,4)$.",
+          "Degree and leading coefficient: multiplying the highest-degree terms gives $x^2\\cdot x=x^3$, so the degree is $3$ (odd) and the leading coefficient is $+1$.",
+          "End behavior of an odd-degree polynomial with positive leading coefficient: $f(x)\\to-\\infty$ as $x\\to-\\infty$ and $f(x)\\to+\\infty$ as $x\\to+\\infty$ (falls on the left, rises on the right).",
+          "Assemble the sketch: coming up from $-\\infty$ on the left, the curve crosses the axis at $x=-1$, rises through $(0,4)$, comes back down to touch the axis at $x=2$ (tangent, turning back up since even multiplicity), then rises to $+\\infty$."
+        ],
+        "answer": "Crosses at $x=-1$, tangent at $x=2$; $y$-intercept $(0,4)$; degree $3$, leading coefficient $+1$, so the graph falls on the left and rises on the right."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Write a polynomial of least degree with a leading coefficient of $-1$ whose graph is tangent to the $x$-axis at $x=4$ and crosses the $x$-axis at $x=-2$. Then state its end behavior.",
+      "solution": {
+        "steps": [
+          "Tangent at $x=4$ means the factor $(x-4)$ appears with even multiplicity; the least even power is $2$, giving $(x-4)^2$.",
+          "Crossing at $x=-2$ means the factor $(x+2)$ appears with odd multiplicity; the least odd power is $1$, giving $(x+2)$.",
+          "A leading coefficient of $-1$ is supplied by the front sign: $f(x)=-(x-4)^2(x+2)$.",
+          "Check the degree: $2+1=3$, the least degree consistent with these conditions.",
+          "End behavior: the leading term is $-x^3$ (degree $3$, leading coefficient $-1$), so $f(x)\\to+\\infty$ as $x\\to-\\infty$ and $f(x)\\to-\\infty$ as $x\\to+\\infty$ (rises on the left, falls on the right)."
+        ],
+        "answer": "$f(x)=-(x-4)^2(x+2)$; degree $3$, leading coefficient $-1$, so the graph rises on the left and falls on the right."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Find all real zeros of $f(x)=(x-7)(x+3)(x-4)$ and state the multiplicity of each.",
+      "hint": "Set each factor equal to $0$. Remember that $x+3=0$ gives a negative zero.",
+      "solution": {
+        "steps": [
+          "Apply the Zero Product Property: set each factor to $0$.",
+          "$x-7=0\\Rightarrow x=7$.",
+          "$x+3=0\\Rightarrow x=-3$.",
+          "$x-4=0\\Rightarrow x=4$.",
+          "Each factor is to the first power, so every zero has multiplicity $1$."
+        ],
+        "answer": "Zeros: $x=7$, $x=-3$, $x=4$, each of multiplicity $1$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Find all real zeros of $f(x)=x^3-9x$.",
+      "hint": "Factor out the greatest common factor first, then look for a difference of squares.",
+      "solution": {
+        "steps": [
+          "Factor out the GCF $x$: $f(x)=x(x^2-9)$.",
+          "Factor the difference of squares $x^2-9=(x-3)(x+3)$, so $f(x)=x(x-3)(x+3)$.",
+          "Set each factor to $0$: $x=0$, $x-3=0\\Rightarrow x=3$, $x+3=0\\Rightarrow x=-3$.",
+          "All three zeros have multiplicity $1$."
+        ],
+        "answer": "Zeros: $x=0$, $x=3$, $x=-3$, each of multiplicity $1$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "For $f(x)=(x-5)^2(x+2)$, list each zero with its multiplicity, state whether the graph crosses or is tangent at each zero, and find the $y$-intercept.",
+      "hint": "An even multiplicity means tangent (touch and turn); an odd multiplicity means crossing. The $y$-intercept is $f(0)$.",
+      "solution": {
+        "steps": [
+          "From $(x-5)^2$: $x=5$ with multiplicity $2$. From $(x+2)$: $x=-2$ with multiplicity $1$.",
+          "Multiplicity $2$ is even, so the graph is tangent to the axis at $x=5$.",
+          "Multiplicity $1$ is odd, so the graph crosses the axis at $x=-2$.",
+          "$y$-intercept: $f(0)=(0-5)^2(0+2)=(25)(2)=50$, so the graph passes through $(0,50)$."
+        ],
+        "answer": "Tangent at $x=5$ (multiplicity $2$); crosses at $x=-2$ (multiplicity $1$); $y$-intercept $(0,50)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "For $f(x)=(x-1)(x+4)$, determine the intervals where $f(x)>0$ and where $f(x)<0$.",
+      "hint": "Find the zeros first, place them on a number line, then test the sign of $f$ in each interval. Both zeros have odd multiplicity, so the sign flips at each.",
+      "solution": {
+        "steps": [
+          "Find the zeros: $x-1=0\\Rightarrow x=1$ and $x+4=0\\Rightarrow x=-4$. These split the number line into three intervals.",
+          "Test $x=-5$ (left of $-4$): $f(-5)=(-5-1)(-5+4)=(-6)(-1)=6>0$.",
+          "Test $x=0$ (between $-4$ and $1$): $f(0)=(0-1)(0+4)=(-1)(4)=-4<0$.",
+          "Test $x=2$ (right of $1$): $f(2)=(2-1)(2+4)=(1)(6)=6>0$.",
+          "Both zeros have odd multiplicity, so the sign alternates, confirming the pattern $+,-,+$."
+        ],
+        "answer": "$f(x)>0$ on $x<-4$ and $x>1$; $f(x)<0$ on $-4<x<1$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Find all real zeros of $f(x)=x^4-5x^2+4$ and state the multiplicity of each.",
+      "hint": "Treat it as a quadratic in $x^2$: let $u=x^2$ and factor $u^2-5u+4$, then factor each resulting difference of squares.",
+      "solution": {
+        "steps": [
+          "Substitute $u=x^2$ to get $u^2-5u+4$. Factor: $u^2-5u+4=(u-1)(u-4)$.",
+          "Replace $u$ with $x^2$: $f(x)=(x^2-1)(x^2-4)$.",
+          "Each factor is a difference of squares: $x^2-1=(x-1)(x+1)$ and $x^2-4=(x-2)(x+2)$.",
+          "So $f(x)=(x-1)(x+1)(x-2)(x+2)$.",
+          "Set each factor to $0$: $x=1$, $x=-1$, $x=2$, $x=-2$.",
+          "Each factor appears once, so all four zeros have multiplicity $1$."
+        ],
+        "answer": "Zeros: $x=1$, $x=-1$, $x=2$, $x=-2$, each of multiplicity $1$."
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "generatedAt": "2026-06-24T19:38:44.935Z"
+}

@@ -1,0 +1,245 @@
+{
+  "id": "A2.A-SSE.B--cluster-test",
+  "standard": null,
+  "clusterId": "A2.A-SSE.B",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Seeing Structure in Expressions",
+  "domainCode": "A-SSE",
+  "cluster": "Write expressions in equivalent forms to solve problems",
+  "clusterCode": "B",
+  "skillName": "Write expressions in equivalent forms to solve problems",
+  "materialType": "cluster-test",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T20:02:33.154Z",
+  "intro": "End-of-cluster mastery check for writing expressions in equivalent forms to solve problems. All 12 items address the geometric series formula (A2.A-SSE.B.4): identifying $a$, $r$, and $n$, evaluating finite geometric sums in expanded and sigma form, deriving the closed form, and applying it to real-world accumulation problems.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "standard": "A2.A-SSE.B.4",
+      "difficulty": "Easy",
+      "prompt": "For the geometric series $5 + 15 + 45 + 135 + 405$, identify the first term $a$, the common ratio $r$, and the number of terms $n$.\nA) $a = 5$, $r = 3$, $n = 5$\nB) $a = 5$, $r = 10$, $n = 5$\nC) $a = 3$, $r = 5$, $n = 5$\nD) $a = 5$, $r = 3$, $n = 4$",
+      "answer": "A) $a = 5$, $r = 3$, $n = 5$",
+      "solution": {
+        "steps": [
+          "The first term is the first number written, so $a = 5$.",
+          "The common ratio is each term divided by the one before it: $\\frac{15}{5} = 3$, and $\\frac{45}{15} = 3$, so $r = 3$.",
+          "Count the terms: $5, 15, 45, 135, 405$ is $5$ terms, so $n = 5$. This is choice A.",
+          "B is wrong: $r$ is a ratio of consecutive terms ($3$), not the difference ($15 - 5 = 10$).",
+          "C is wrong: it swaps $a$ and $r$.",
+          "D is wrong: it miscounts the visible terms as $4$ instead of $5$."
+        ],
+        "answer": "A) $a = 5$, $r = 3$, $n = 5$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "standard": "A2.A-SSE.B.4",
+      "difficulty": "Easy",
+      "prompt": "Use $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$ to find the sum $2 + 6 + 18 + 54 + 162$.\nA) $162$\nB) $242$\nC) $121$\nD) $80$",
+      "answer": "B) $242$",
+      "solution": {
+        "steps": [
+          "Here $a = 2$, $r = 3$, and $n = 5$.",
+          "Substitute: $S_5 = 2\\cdot\\dfrac{1 - 3^5}{1 - 3} = 2\\cdot\\dfrac{1 - 243}{-2}$.",
+          "Simplify: $2\\cdot\\dfrac{-242}{-2} = 2\\cdot 121 = 242$. This is choice B.",
+          "A is wrong: $162 = 2\\cdot 3^4$ is the last (5th) term $a r^{n-1}$, not the sum.",
+          "C is wrong: $121 = \\dfrac{1 - 243}{1 - 3}$ forgets to multiply the quotient by $a = 2$.",
+          "D is wrong: $80 = 2\\cdot\\dfrac{1 - 3^4}{1 - 3}$ uses exponent $n - 1 = 4$ instead of $n = 5$."
+        ],
+        "answer": "B) $242$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "standard": "A2.A-SSE.B.4",
+      "difficulty": "Easy",
+      "prompt": "A geometric series has first term $a = 4$, common ratio $r = 2$, and $n = 6$ terms. What is $S_6 = 4 + 8 + 16 + 32 + 64 + 128$?\nA) $128$\nB) $252$\nC) $256$\nD) $24$",
+      "answer": "B) $252$",
+      "solution": {
+        "steps": [
+          "Apply $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$ with $a = 4$, $r = 2$, $n = 6$.",
+          "$S_6 = 4\\cdot\\dfrac{1 - 2^6}{1 - 2} = 4\\cdot\\dfrac{1 - 64}{-1} = 4\\cdot 63 = 252$. This is choice B.",
+          "A is wrong: $128 = 4\\cdot 2^5$ is the 6th term, not the sum.",
+          "C is wrong: $256$ comes from using $2^7$ or otherwise overcounting the exponent.",
+          "D is wrong: $24 = 4\\cdot 6$ treats the series as if every term were the first term (multiplying $a$ by $n$)."
+        ],
+        "answer": "B) $252$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "standard": "A2.A-SSE.B.4",
+      "difficulty": "Easy",
+      "prompt": "Find the sum of the geometric series $5 + 15 + 45 + 135 + 405$.\nA) $605$\nB) $405$\nC) $25$\nD) $1215$",
+      "answer": "A) $605$",
+      "solution": {
+        "steps": [
+          "Here $a = 5$, $r = 3$, $n = 5$.",
+          "$S_5 = 5\\cdot\\dfrac{1 - 3^5}{1 - 3} = 5\\cdot\\dfrac{1 - 243}{-2} = 5\\cdot 121 = 605$. This is choice A.",
+          "B is wrong: $405$ is the last term, not the sum.",
+          "C is wrong: $25 = 5\\cdot 5$ multiplies the first term by $n$ instead of summing the geometric series.",
+          "D is wrong: $1215 = 3\\cdot 405$ extends the pattern one extra term rather than summing the five given terms."
+        ],
+        "answer": "A) $605$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "standard": "A2.A-SSE.B.4",
+      "difficulty": "Medium",
+      "prompt": "Evaluate $\\displaystyle\\sum_{k=0}^{6} 4\\left(\\tfrac{1}{2}\\right)^{k}$.\nA) $\\dfrac{127}{16}$\nB) $\\dfrac{63}{8}$\nC) $8$\nD) $\\dfrac{1}{16}$",
+      "answer": "A) $\\dfrac{127}{16}$",
+      "solution": {
+        "steps": [
+          "The index runs $k = 0$ to $6$, which is $7$ terms, so $n = 7$. The first term ($k = 0$) is $a = 4$ and $r = \\frac{1}{2}$.",
+          "$S_7 = 4\\cdot\\dfrac{1 - \\left(\\frac{1}{2}\\right)^{7}}{1 - \\frac{1}{2}} = 4\\cdot\\dfrac{1 - \\frac{1}{128}}{\\frac{1}{2}} = 8\\left(1 - \\tfrac{1}{128}\\right) = 8\\cdot\\dfrac{127}{128} = \\dfrac{127}{16}$. This is choice A.",
+          "B is wrong: $\\frac{63}{8}$ uses $n = 6$ (exponent $6$), forgetting that an index starting at $0$ gives $7$ terms.",
+          "C is wrong: $8$ is the limit of the infinite series $\\frac{a}{1 - r}$, not the finite 7-term sum.",
+          "D is wrong: $\\frac{1}{16}$ is essentially the last term $4\\left(\\frac{1}{2}\\right)^{6}$, not the sum."
+        ],
+        "answer": "A) $\\dfrac{127}{16}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "standard": "A2.A-SSE.B.4",
+      "difficulty": "Medium",
+      "prompt": "How many terms are in the series $\\displaystyle\\sum_{k=1}^{9} 3\\cdot 2^{k-1}$, and what is its first term?\nA) $9$ terms, first term $3$\nB) $8$ terms, first term $3$\nC) $9$ terms, first term $6$\nD) $10$ terms, first term $3$",
+      "answer": "A) $9$ terms, first term $3$",
+      "solution": {
+        "steps": [
+          "The index runs from $k = 1$ to $k = 9$ inclusive, which is $9 - 1 + 1 = 9$ terms, so $n = 9$.",
+          "The first term occurs at $k = 1$: $3\\cdot 2^{1-1} = 3\\cdot 2^{0} = 3$. So $a = 3$. This is choice A.",
+          "B is wrong: it computes $9 - 1 = 8$ and forgets to add $1$ for an inclusive count.",
+          "C is wrong: $6 = 3\\cdot 2^{1}$ would be the term at $k = 2$, not the first term.",
+          "D is wrong: $10$ terms overcounts the inclusive range from $1$ to $9$."
+        ],
+        "answer": "A) $9$ terms, first term $3$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "standard": "A2.A-SSE.B.4",
+      "difficulty": "Medium",
+      "prompt": "Find the sum of the first $5$ terms of a geometric series with $a = 9$ and $r = -\\tfrac{1}{3}$.\nA) $\\dfrac{61}{9}$\nB) $\\dfrac{60}{9}$\nC) $\\dfrac{63}{9}$\nD) $\\dfrac{61}{12}$",
+      "answer": "A) $\\dfrac{61}{9}$",
+      "solution": {
+        "steps": [
+          "Use $S_5 = a\\,\\dfrac{1 - r^5}{1 - r}$ with $a = 9$ and $r = -\\frac{1}{3}$.",
+          "Since the exponent $5$ is odd, $\\left(-\\frac{1}{3}\\right)^{5} = -\\frac{1}{243}$, so $1 - r^5 = 1 + \\frac{1}{243} = \\frac{244}{243}$.",
+          "The denominator is $1 - \\left(-\\frac{1}{3}\\right) = 1 + \\frac{1}{3} = \\frac{4}{3}$.",
+          "$S_5 = 9\\cdot\\dfrac{\\frac{244}{243}}{\\frac{4}{3}} = 9\\cdot\\dfrac{244}{243}\\cdot\\dfrac{3}{4} = \\dfrac{9\\cdot 244\\cdot 3}{243\\cdot 4} = \\dfrac{6588}{972} = \\dfrac{61}{9}$. This is choice A.",
+          "B is wrong: $\\frac{60}{9}$ treats $\\left(-\\frac{1}{3}\\right)^5$ as $+\\frac{1}{243}$, mishandling the odd-power sign.",
+          "C is wrong: $\\frac{63}{9} = 7$ comes from sign errors in the denominator.",
+          "D is wrong: $\\frac{61}{12}$ uses the wrong denominator ($\\frac{4}{3}$ inverted incorrectly)."
+        ],
+        "answer": "A) $\\dfrac{61}{9}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "standard": "A2.A-SSE.B.4",
+      "difficulty": "Medium",
+      "prompt": "In deriving $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$ you write $S_n = a + ar + \\cdots + ar^{n-1}$ and $rS_n = ar + ar^2 + \\cdots + ar^{n}$, then subtract. What does $S_n - rS_n$ simplify to before solving for $S_n$?\nA) $a - ar^{n}$\nB) $a - ar^{n-1}$\nC) $ar^{n} - a$\nD) $a + ar^{n}$",
+      "answer": "A) $a - ar^{n}$",
+      "solution": {
+        "steps": [
+          "Line up the two sums. Every middle term $ar, ar^2, \\ldots, ar^{n-1}$ appears in both $S_n$ and $rS_n$, so it cancels in the subtraction.",
+          "What remains is the first term of $S_n$ minus the last term of $rS_n$: $a - ar^{n}$. This is choice A.",
+          "From there $S_n(1 - r) = a(1 - r^n)$, giving $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$.",
+          "B is wrong: the surviving last term is $ar^{n}$ (from $rS_n$), not $ar^{n-1}$.",
+          "C is wrong: it reverses the order; $S_n - rS_n = a - ar^n$, not $ar^n - a$.",
+          "D is wrong: the terms subtract, so the last term is $-ar^n$, not $+ar^n$."
+        ],
+        "answer": "A) $a - ar^{n}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 9,
+      "standard": "A2.A-SSE.B.4",
+      "difficulty": "Hard",
+      "prompt": "A geometric series has first term $a = 3$, common ratio $r = 2$, and sum $S_n = 381$. How many terms $n$ does it have?\nA) $n = 7$\nB) $n = 6$\nC) $n = 8$\nD) $n = 127$",
+      "answer": "A) $n = 7$",
+      "solution": {
+        "steps": [
+          "Use $S_n = a\\,\\dfrac{r^n - 1}{r - 1}$ with $a = 3$, $r = 2$: $3\\cdot\\dfrac{2^n - 1}{2 - 1} = 381$.",
+          "Then $3(2^n - 1) = 381$, so $2^n - 1 = 127$ and $2^n = 128$.",
+          "Since $128 = 2^7$, we get $n = 7$. This is choice A.",
+          "B is wrong: $2^6 = 64$ gives $3(64 - 1) = 189 \\neq 381$.",
+          "C is wrong: $2^8 = 256$ gives $3(256 - 1) = 765 \\neq 381$.",
+          "D is wrong: $127 = 2^n - 1$ is an intermediate value, not the number of terms."
+        ],
+        "answer": "A) $n = 7$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 10,
+      "standard": "A2.A-SSE.B.4",
+      "difficulty": "Hard",
+      "prompt": "You deposit $\\$200$ at the end of each year into an account earning $5\\%$ annual interest for $10$ years. The future value is the geometric series $200 + 200(1.05) + \\cdots + 200(1.05)^{9}$. Which expression gives the future value?\nA) $200\\cdot\\dfrac{1.05^{10} - 1}{1.05 - 1}$\nB) $200\\cdot\\dfrac{1.05^{9} - 1}{1.05 - 1}$\nC) $200\\cdot 1.05^{10}$\nD) $200\\cdot\\dfrac{1 - 1.05^{10}}{1.05 - 1}$",
+      "answer": "A) $200\\cdot\\dfrac{1.05^{10} - 1}{1.05 - 1}$",
+      "solution": {
+        "steps": [
+          "The series has first term $a = 200$, common ratio $r = 1.05$, and $n = 10$ terms (exponents $0$ through $9$).",
+          "Apply $S_n = a\\,\\dfrac{r^n - 1}{r - 1} = 200\\cdot\\dfrac{1.05^{10} - 1}{1.05 - 1}$. This is choice A (which evaluates to about $\\$2515.61$).",
+          "B is wrong: it uses exponent $9$ instead of $n = 10$, dropping a term.",
+          "C is wrong: $200\\cdot 1.05^{10}$ is one deposit compounded, not the sum of all ten.",
+          "D is wrong: $\\dfrac{1 - 1.05^{10}}{1.05 - 1}$ mismatches the numerator and denominator signs, giving a negative value."
+        ],
+        "answer": "A) $200\\cdot\\dfrac{1.05^{10} - 1}{1.05 - 1}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 11,
+      "standard": "A2.A-SSE.B.4",
+      "difficulty": "Hard",
+      "prompt": "A machine worth $\\$24000$ depreciates so that each year it is worth $\\tfrac{3}{4}$ of its value the year before. The total of its values at the start of years $1$ through $4$ is $24000 + 18000 + 13500 + 10125$. What is this total?\nA) $\\$65625$\nB) $\\$96000$\nC) $\\$55500$\nD) $\\$10125$",
+      "answer": "A) $\\$65625$",
+      "solution": {
+        "steps": [
+          "This is a geometric series with $a = 24000$, $r = \\frac{3}{4}$, $n = 4$.",
+          "$S_4 = 24000\\cdot\\dfrac{1 - \\left(\\frac{3}{4}\\right)^{4}}{1 - \\frac{3}{4}}$. Compute $\\left(\\frac{3}{4}\\right)^4 = \\frac{81}{256}$, so $1 - \\frac{81}{256} = \\frac{175}{256}$.",
+          "The denominator is $1 - \\frac{3}{4} = \\frac{1}{4}$, so $S_4 = 24000\\cdot\\dfrac{175/256}{1/4} = 24000\\cdot\\dfrac{175}{256}\\cdot 4 = 24000\\cdot\\dfrac{175}{64} = \\$65625$. This is choice A.",
+          "B is wrong: $96000 = 24000\\cdot 4$ multiplies the first value by $n$, ignoring depreciation.",
+          "C is wrong: $55500$ drops the final term (sums only the first three values).",
+          "D is wrong: $10125$ is the 4th value alone, not the running total."
+        ],
+        "answer": "A) $\\$65625$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 12,
+      "standard": "A2.A-SSE.B.4",
+      "difficulty": "Hard",
+      "prompt": "Why does the formula $S_n = a\\,\\dfrac{1 - r^n}{1 - r}$ require $r \\neq 1$, and what is the sum of $n$ terms when $r = 1$?\nA) Because $1 - r = 0$ when $r = 1$, making the formula divide by zero; when $r = 1$ every term equals $a$, so the sum is $a n$\nB) Because $r^n = 0$ when $r = 1$; when $r = 1$ the sum is $0$\nC) Because the series diverges when $r = 1$; the sum is undefined for every $n$\nD) Because $1 - r^n = 0$ when $r = 1$, making the formula give $0$; when $r = 1$ the sum is $a$",
+      "answer": "A) Because $1 - r = 0$ when $r = 1$, making the formula divide by zero; when $r = 1$ every term equals $a$, so the sum is $a n$",
+      "solution": {
+        "steps": [
+          "The derivation produces $S_n(1 - r) = a(1 - r^n)$. Dividing by $1 - r$ is only valid when $1 - r \\neq 0$, i.e. $r \\neq 1$.",
+          "When $r = 1$ the series is $a + a + \\cdots + a$ ($n$ copies), so its sum is simply $a n$. This is choice A.",
+          "B is wrong: $r^n = 1^n = 1$, not $0$, and the $r = 1$ sum is $an$, not $0$.",
+          "C is wrong: a finite sum of $n$ equal terms is well defined ($an$); divergence is an infinite-series idea.",
+          "D is wrong: although $1 - r^n = 0$ at $r = 1$, the denominator is also $0$, so the formula is indeterminate (not literally $0$), and the true sum is $an$, not $a$."
+        ],
+        "answer": "A) Because $1 - r = 0$ when $r = 1$, making the formula divide by zero; when $r = 1$ every term equals $a$, so the sum is $a n$"
+      }
+    }
+  ]
+}

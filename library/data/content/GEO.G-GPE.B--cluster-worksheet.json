@@ -1,0 +1,237 @@
+{
+  "id": "GEO.G-GPE.B--cluster-worksheet",
+  "standard": null,
+  "clusterId": "GEO.G-GPE.B",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Expressing Geometric Properties with Equations",
+  "domainCode": "G-GPE",
+  "cluster": "Use coordinates to prove simple geometric theorems algebraically",
+  "clusterCode": "B",
+  "skillName": "Use coordinates to prove simple geometric theorems algebraically",
+  "materialType": "cluster-worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "intro": "This cluster worksheet draws together the four standards of the G-GPE.B cluster: coordinate proofs of geometric theorems, the slope criteria for parallel and perpendicular lines, partitioning a directed line segment, and computing perimeter and area from coordinates. Work through each section in order; the items ramp from direct computations to full coordinate proofs.",
+  "items": [
+    {
+      "standard": "GEO.G-GPE.B.4",
+      "id": 1,
+      "prompt": "Triangle $ABC$ has vertices $A(1,2)$, $B(5,2)$, and $C(3,6)$. Find the lengths of $AC$ and $BC$, and state whether $\\triangle ABC$ is isosceles.",
+      "answer": "$AC=BC=2\\sqrt{5}$, so $\\triangle ABC$ is isosceles.",
+      "solution": {
+        "steps": [
+          "Apply the distance formula $d=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$ to $AC$: $AC=\\sqrt{(3-1)^2+(6-2)^2}=\\sqrt{4+16}=\\sqrt{20}$.",
+          "Simplify: $\\sqrt{20}=2\\sqrt{5}$.",
+          "Apply the distance formula to $BC$: $BC=\\sqrt{(3-5)^2+(6-2)^2}=\\sqrt{4+16}=\\sqrt{20}=2\\sqrt{5}$.",
+          "Since $AC=BC=2\\sqrt{5}$, two sides are congruent, so $\\triangle ABC$ is isosceles."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-GPE.B.4",
+      "id": 2,
+      "prompt": "Parallelogram $ABCD$ has vertices $A(-2,-1)$, $B(4,-1)$, $C(6,3)$, and $D(0,3)$. Show that the diagonals $\\overline{AC}$ and $\\overline{BD}$ bisect each other by finding the midpoint of each.",
+      "answer": "Both diagonals have midpoint $(2,1)$, so they bisect each other.",
+      "solution": {
+        "steps": [
+          "Use the midpoint formula $\\left(\\frac{x_1+x_2}{2},\\frac{y_1+y_2}{2}\\right)$ on $\\overline{AC}$: $\\left(\\frac{-2+6}{2},\\frac{-1+3}{2}\\right)=(2,1)$.",
+          "Apply it to $\\overline{BD}$: $\\left(\\frac{4+0}{2},\\frac{-1+3}{2}\\right)=(2,1)$.",
+          "The diagonals share the same midpoint $(2,1)$.",
+          "Since the diagonals meet at their common midpoint, each diagonal bisects the other."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-GPE.B.4",
+      "id": 3,
+      "prompt": "Quadrilateral $PQRS$ has vertices $P(0,0)$, $Q(4,0)$, $R(5,3)$, and $S(1,3)$. Classify $PQRS$ as precisely as possible using slope and distance tests, and justify your classification.",
+      "answer": "$PQRS$ is a parallelogram (but not a rhombus, rectangle, or square).",
+      "solution": {
+        "steps": [
+          "Slope of $PQ=\\frac{0-0}{4-0}=0$ and slope of $SR=\\frac{3-3}{5-1}=0$, so $PQ\\parallel SR$.",
+          "Slope of $PS=\\frac{3-0}{1-0}=3$ and slope of $QR=\\frac{3-0}{5-4}=3$, so $PS\\parallel QR$.",
+          "Both pairs of opposite sides are parallel, so $PQRS$ is a parallelogram.",
+          "Check side lengths: $PQ=\\sqrt{4^2+0^2}=4$ and $PS=\\sqrt{1^2+3^2}=\\sqrt{10}$. Since $PQ\\ne PS$, it is not a rhombus.",
+          "Check for a right angle: slopes $0$ and $3$ have product $0\\ne-1$, so adjacent sides are not perpendicular; it is not a rectangle or square. Therefore $PQRS$ is a parallelogram only."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-GPE.B.4",
+      "id": 4,
+      "prompt": "A rectangle is placed in the coordinate plane with vertices $A(0,0)$, $B(2a,0)$, $C(2a,2b)$, and $D(0,2b)$, where $a>0$ and $b>0$. Using variable coordinates, prove that the diagonals of any rectangle are congruent.",
+      "answer": "$AC=BD=\\sqrt{4a^2+4b^2}$ for all $a,b$, so the diagonals of every rectangle are congruent.",
+      "solution": {
+        "steps": [
+          "Diagonal $\\overline{AC}$ runs from $A(0,0)$ to $C(2a,2b)$: $AC=\\sqrt{(2a-0)^2+(2b-0)^2}=\\sqrt{4a^2+4b^2}$.",
+          "Diagonal $\\overline{BD}$ runs from $B(2a,0)$ to $D(0,2b)$: $BD=\\sqrt{(0-2a)^2+(2b-0)^2}=\\sqrt{4a^2+4b^2}$.",
+          "The two expressions are identical, so $AC=BD$ for every choice of $a$ and $b$.",
+          "Because the coordinates were left general, this proves the theorem for all rectangles: the diagonals of any rectangle are congruent."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-GPE.B.5",
+      "id": 5,
+      "prompt": "Find the slope of the line through $(-2,3)$ and $(4,-1)$.",
+      "answer": "$-\\dfrac{2}{3}$",
+      "solution": {
+        "steps": [
+          "Use the slope formula $m=\\frac{y_2-y_1}{x_2-x_1}$.",
+          "Substitute: $m=\\frac{-1-3}{4-(-2)}=\\frac{-4}{6}$.",
+          "Simplify: $m=-\\frac{2}{3}$."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-GPE.B.5",
+      "id": 6,
+      "prompt": "Are the lines $y=\\dfrac{3}{4}x+2$ and $4x+3y=9$ parallel, perpendicular, or neither? Justify your answer with their slopes.",
+      "answer": "Perpendicular, because the slopes $\\dfrac{3}{4}$ and $-\\dfrac{4}{3}$ have product $-1$.",
+      "solution": {
+        "steps": [
+          "The first line is already in slope-intercept form, so its slope is $m_1=\\frac{3}{4}$.",
+          "Rewrite $4x+3y=9$ as $3y=-4x+9$, then $y=-\\frac{4}{3}x+3$, so $m_2=-\\frac{4}{3}$.",
+          "Multiply the slopes: $m_1 m_2=\\frac{3}{4}\\cdot\\left(-\\frac{4}{3}\\right)=-1$.",
+          "Because the product of the slopes is $-1$, the lines are perpendicular."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-GPE.B.5",
+      "id": 7,
+      "prompt": "Write the equation, in slope-intercept form, of the line through $(6,2)$ that is perpendicular to $y=\\dfrac{2}{3}x+1$.",
+      "answer": "$y=-\\dfrac{3}{2}x+11$",
+      "solution": {
+        "steps": [
+          "The given line has slope $\\frac{2}{3}$.",
+          "A perpendicular line has the opposite-reciprocal slope: $m=-\\frac{3}{2}$.",
+          "Use point-slope form with $(6,2)$: $y-2=-\\frac{3}{2}(x-6)$.",
+          "Distribute: $y-2=-\\frac{3}{2}x+9$.",
+          "Add $2$ to both sides: $y=-\\frac{3}{2}x+11$."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-GPE.B.5",
+      "id": 8,
+      "prompt": "For what value of $k$ is the line through $(1,2)$ and $(k,8)$ perpendicular to the line $y=-\\dfrac{1}{2}x+5$?",
+      "answer": "$k=4$",
+      "solution": {
+        "steps": [
+          "The given line has slope $-\\frac{1}{2}$.",
+          "For perpendicularity, the line through the two points must have the opposite-reciprocal slope $m=2$.",
+          "Set up the slope of the line through the points: $\\frac{8-2}{k-1}=2$.",
+          "Simplify the numerator: $\\frac{6}{k-1}=2$.",
+          "Solve: $6=2(k-1)$, so $3=k-1$, giving $k=4$."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-GPE.B.6",
+      "id": 9,
+      "prompt": "Find the midpoint of the directed segment from $A(2,3)$ to $B(8,11)$.",
+      "answer": "$(5,7)$",
+      "solution": {
+        "steps": [
+          "The midpoint is the special case of partitioning in the ratio $1:1$.",
+          "Apply the midpoint formula $M=\\left(\\frac{x_1+x_2}{2},\\frac{y_1+y_2}{2}\\right)$.",
+          "Substitute: $M=\\left(\\frac{2+8}{2},\\frac{3+11}{2}\\right)=(5,7)$."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-GPE.B.6",
+      "id": 10,
+      "prompt": "Find the point $P$ that partitions the directed segment from $A(-2,1)$ to $B(6,9)$ in the ratio $AP:PB=1:3$.",
+      "answer": "$P=(0,3)$",
+      "solution": {
+        "steps": [
+          "Compute the partition fraction $k=\\frac{m}{m+n}=\\frac{1}{1+3}=\\frac{1}{4}$.",
+          "Find the run and rise: $\\Delta x=6-(-2)=8$ and $\\Delta y=9-1=8$.",
+          "Apply the section formula $P=\\left(x_1+k\\,\\Delta x,\\;y_1+k\\,\\Delta y\\right)$: $P=\\left(-2+\\frac{1}{4}(8),\\;1+\\frac{1}{4}(8)\\right)$.",
+          "Simplify: $P=\\left(-2+2,\\;1+2\\right)=(0,3)$."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-GPE.B.6",
+      "id": 11,
+      "prompt": "Find the point $P$ that partitions the directed segment from $A(1,2)$ to $B(7,5)$ in the ratio $AP:PB=2:3$. Leave the coordinates as exact fractions.",
+      "answer": "$P=\\left(\\dfrac{17}{5},\\dfrac{16}{5}\\right)$",
+      "solution": {
+        "steps": [
+          "Compute the partition fraction $k=\\frac{2}{2+3}=\\frac{2}{5}$.",
+          "Find the deltas: $\\Delta x=7-1=6$ and $\\Delta y=5-2=3$.",
+          "Apply the section formula: $P=\\left(1+\\frac{2}{5}(6),\\;2+\\frac{2}{5}(3)\\right)$.",
+          "Compute each coordinate: $1+\\frac{12}{5}=\\frac{5}{5}+\\frac{12}{5}=\\frac{17}{5}$ and $2+\\frac{6}{5}=\\frac{10}{5}+\\frac{6}{5}=\\frac{16}{5}$.",
+          "So $P=\\left(\\frac{17}{5},\\frac{16}{5}\\right)$."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-GPE.B.6",
+      "id": 12,
+      "prompt": "Point $P(4,1)$ partitions the directed segment from $A(-2,-5)$ to $B$ in the ratio $AP:PB=3:1$. Find the coordinates of endpoint $B$.",
+      "answer": "$B=(6,3)$",
+      "solution": {
+        "steps": [
+          "Compute the partition fraction $k=\\frac{3}{3+1}=\\frac{3}{4}$.",
+          "The section formula gives $4=-2+\\frac{3}{4}(x_2-(-2))$ for the $x$-coordinate.",
+          "Solve: $6=\\frac{3}{4}(x_2+2)$, so $x_2+2=8$, giving $x_2=6$.",
+          "For the $y$-coordinate: $1=-5+\\frac{3}{4}(y_2-(-5))$, so $6=\\frac{3}{4}(y_2+5)$, giving $y_2+5=8$ and $y_2=3$.",
+          "Therefore $B=(6,3)$."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-GPE.B.7",
+      "id": 13,
+      "prompt": "Find the perimeter of the rectangle with vertices $P(2,1)$, $Q(8,1)$, $R(8,5)$, and $S(2,5)$.",
+      "answer": "$20$ units",
+      "solution": {
+        "steps": [
+          "Side $PQ$ is horizontal, so its length is $|8-2|=6$.",
+          "Side $QR$ is vertical, so its length is $|5-1|=4$.",
+          "Opposite sides are equal, so the perimeter is $2(6)+2(4)$.",
+          "Compute: $12+8=20$ units."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-GPE.B.7",
+      "id": 14,
+      "prompt": "Triangle $ABC$ has vertices $A(0,0)$, $B(4,0)$, and $C(4,3)$. Find both the perimeter and the area of the triangle.",
+      "answer": "Perimeter $=12$ units; area $=6$ square units.",
+      "solution": {
+        "steps": [
+          "Side $AB$ is horizontal with length $|4-0|=4$.",
+          "Side $BC$ is vertical with length $|3-0|=3$.",
+          "Side $AC$ is the hypotenuse: $AC=\\sqrt{(4-0)^2+(3-0)^2}=\\sqrt{16+9}=\\sqrt{25}=5$.",
+          "Perimeter $=4+3+5=12$ units.",
+          "The legs $AB$ and $BC$ are perpendicular, so the area is $\\frac{1}{2}(4)(3)=6$ square units."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-GPE.B.7",
+      "id": 15,
+      "prompt": "Quadrilateral $ABCD$ has vertices $A(0,0)$, $B(4,2)$, $C(3,4)$, and $D(-1,2)$. First verify that $ABCD$ is a rectangle by checking that adjacent sides are perpendicular, then find its area.",
+      "answer": "$ABCD$ is a rectangle with area $10$ square units.",
+      "solution": {
+        "steps": [
+          "Slope of $AB=\\frac{2-0}{4-0}=\\frac{1}{2}$ and slope of $BC=\\frac{4-2}{3-4}=\\frac{2}{-1}=-2$.",
+          "Their product is $\\frac{1}{2}\\cdot(-2)=-1$, so $AB\\perp BC$; adjacent sides meet at a right angle.",
+          "Check that opposite sides are parallel: slope of $DC=\\frac{4-2}{3-(-1)}=\\frac{2}{4}=\\frac{1}{2}$ equals slope of $AB$, and slope of $AD=\\frac{2-0}{-1-0}=-2$ equals slope of $BC$. With all four right angles, $ABCD$ is a rectangle.",
+          "Find the side lengths: $AB=\\sqrt{4^2+2^2}=\\sqrt{20}=2\\sqrt{5}$ and $BC=\\sqrt{(-1)^2+2^2}=\\sqrt{5}$.",
+          "Area $=AB\\cdot BC=2\\sqrt{5}\\cdot\\sqrt{5}=2\\cdot 5=10$ square units."
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T21:16:48.217Z"
+}

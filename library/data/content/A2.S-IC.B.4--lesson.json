@@ -1,0 +1,171 @@
+{
+  "id": "A2.S-IC.B.4--lesson",
+  "standard": "A2.S-IC.B.4",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+  "domainCode": "S-IC",
+  "cluster": "Make inferences and justify conclusions from sample surveys, experiments, and observational studies",
+  "clusterCode": "B",
+  "skillName": "Estimating Population Parameters",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "When you cannot measure a whole population, you take a random sample and use a single sample value, a point estimate, to stand in for the unknown population value, the parameter. For a quantitative variable the sample mean $\\bar{x}$ estimates the population mean $\\mu$; for a categorical variable the sample proportion $\\hat{p}=\\dfrac{x}{n}$ estimates the population proportion $p$. Because a different random sample would give a slightly different estimate, you attach a margin of error. You can read it off a simulation as the half-width of the middle $95\\%$ of resampled estimates, or compute it by formula as $\\text{ME}\\approx 2\\cdot SE$, where $SE_{\\hat{p}}=\\sqrt{\\dfrac{\\hat{p}(1-\\hat{p})}{n}}$ and $SE_{\\bar{x}}=\\dfrac{s}{\\sqrt{n}}$. Reporting $\\text{estimate}\\pm\\text{ME}$ gives a $95\\%$ confidence interval, and the margin of error shrinks like $\\dfrac{1}{\\sqrt{n}}$ as the sample grows.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "In a random sample of $200$ registered voters, $116$ say they support a new transit measure. Use the sample to estimate the proportion of all voters in the city who support the measure.",
+      "solution": {
+        "steps": [
+          "The unknown population proportion $p$ is the parameter. The best point estimate from the sample is the sample proportion $\\hat{p}$.",
+          "Compute $\\hat{p}=\\dfrac{x}{n}=\\dfrac{116}{200}$.",
+          "Divide: $\\dfrac{116}{200}=0.58$.",
+          "So we estimate that about $58\\%$ of all city voters support the measure."
+        ],
+        "answer": "$\\hat{p}=0.58$, so about $58\\%$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A random sample of $5$ morning commute times (in minutes) is $22,\\ 18,\\ 25,\\ 30,\\ 20$. Estimate the mean commute time $\\mu$ for the whole population of commuters.",
+      "solution": {
+        "steps": [
+          "The population mean $\\mu$ is the parameter; the sample mean $\\bar{x}$ is the point estimate.",
+          "Add the values: $22+18+25+30+20=115$.",
+          "Divide by the sample size $n=5$: $\\bar{x}=\\dfrac{115}{5}$.",
+          "Simplify: $\\dfrac{115}{5}=23$.",
+          "So we estimate the population mean commute time is $\\bar{x}=23$ minutes."
+        ],
+        "answer": "$\\bar{x}=23$ minutes"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "To gauge the spread of the estimate in Example 1, a computer resamples $n=50$ voters many times. The middle $95\\%$ of the simulated sample proportions run from $0.46$ to $0.62$, centered at $0.54$. Find the margin of error and write the $95\\%$ interval estimate.",
+      "solution": {
+        "steps": [
+          "The margin of error is the half-width of the middle $95\\%$ of the simulated estimates, not the full width.",
+          "Width of the middle $95\\%$: $0.62-0.46=0.16$.",
+          "Half-width: $\\text{ME}=\\dfrac{0.16}{2}=0.08$.",
+          "Attach it to the center estimate: $0.54\\pm 0.08$.",
+          "The endpoints are $0.54-0.08=0.46$ and $0.54+0.08=0.62$, so the $95\\%$ interval runs from $0.46$ to $0.62$."
+        ],
+        "answer": "$\\text{ME}=0.08$, and the $95\\%$ interval is $0.54\\pm 0.08$, i.e. $0.46$ to $0.62$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Using the data from Example 1, where $\\hat{p}=0.58$ from a sample of $n=200$, compute the standard error, find the $95\\%$ margin of error with $\\text{ME}\\approx 2\\cdot SE$, and state the $95\\%$ confidence interval for the true proportion of supporters.",
+      "solution": {
+        "steps": [
+          "Standard error of a proportion: $SE_{\\hat{p}}=\\sqrt{\\dfrac{\\hat{p}(1-\\hat{p})}{n}}$.",
+          "Substitute $\\hat{p}=0.58$, $1-\\hat{p}=0.42$, $n=200$: $SE=\\sqrt{\\dfrac{(0.58)(0.42)}{200}}=\\sqrt{\\dfrac{0.2436}{200}}=\\sqrt{0.001218}$.",
+          "Take the square root: $SE\\approx 0.0349$.",
+          "Margin of error for $95\\%$ confidence: $\\text{ME}\\approx 2\\cdot SE=2(0.0349)\\approx 0.070$.",
+          "Build the interval: $\\hat{p}\\pm\\text{ME}=0.58\\pm 0.07$, giving endpoints $0.58-0.07=0.51$ and $0.58+0.07=0.65$.",
+          "Interpretation: we are $95\\%$ confident that the true proportion of all voters who support the measure lies between $0.51$ and $0.65$ (that is, between $51\\%$ and $65\\%$)."
+        ],
+        "answer": "$SE\\approx 0.035$, $\\text{ME}\\approx 0.07$, and the $95\\%$ interval is $0.58\\pm 0.07$, i.e. $0.51$ to $0.65$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A polling firm finds that a sample of $n=400$ voters gives a margin of error of $0.05$ for an estimated proportion. The firm wants to cut the margin of error in half to $0.025$ for the next poll. How large must the new sample size be, and why?",
+      "solution": {
+        "steps": [
+          "The margin of error is proportional to $\\dfrac{1}{\\sqrt{n}}$, so $\\text{ME}\\propto\\dfrac{1}{\\sqrt{n}}$.",
+          "Because $\\sqrt{n}$ is in the denominator, halving $\\text{ME}$ requires doubling $\\sqrt{n}$.",
+          "Doubling $\\sqrt{n}$ means multiplying $n$ itself by $2^2=4$, since $(2\\sqrt{n})^2=4n$.",
+          "Multiply the original sample size by $4$: $n=4\\times 400=1600$.",
+          "Check: $\\sqrt{1600}=40$ is twice $\\sqrt{400}=20$, so the margin of error is halved to $0.025$. Doubling $n$ alone would only shrink $\\text{ME}$ by a factor of $\\dfrac{1}{\\sqrt{2}}\\approx 0.71$, not in half."
+        ],
+        "answer": "$n=1600$; quadrupling the sample size halves the margin of error because $\\text{ME}\\propto\\dfrac{1}{\\sqrt{n}}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "In a random sample of $150$ smartphone owners, $54$ say they upgrade their phone every year. Estimate the proportion $p$ of all owners who upgrade every year.",
+      "hint": "The point estimate of a population proportion is $\\hat{p}=\\dfrac{x}{n}$, where $x$ is the count in the category and $n$ is the sample size.",
+      "solution": {
+        "steps": [
+          "Use $\\hat{p}=\\dfrac{x}{n}=\\dfrac{54}{150}$.",
+          "Divide: $\\dfrac{54}{150}=0.36$.",
+          "So we estimate that about $36\\%$ of all owners upgrade every year."
+        ],
+        "answer": "$\\hat{p}=0.36$, so about $36\\%$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A random sample of $6$ backpack weights (in pounds) is $14,\\ 11,\\ 9,\\ 16,\\ 12,\\ 10$. Estimate the population mean backpack weight $\\mu$.",
+      "hint": "The point estimate of $\\mu$ is the sample mean $\\bar{x}=\\dfrac{\\sum x_i}{n}$. Add the values, then divide by $n=6$.",
+      "solution": {
+        "steps": [
+          "Add the six values: $14+11+9+16+12+10=72$.",
+          "Divide by $n=6$: $\\bar{x}=\\dfrac{72}{6}=12$.",
+          "So we estimate the population mean backpack weight is $12$ pounds."
+        ],
+        "answer": "$\\bar{x}=12$ pounds"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A simulation resamples $n=80$ households many times to estimate the proportion who recycle. The middle $95\\%$ of the simulated proportions run from $0.61$ to $0.79$, centered at $0.70$. Find the margin of error and write the $95\\%$ interval estimate.",
+      "hint": "The margin of error is the half-width of the middle $95\\%$, so subtract the endpoints and divide by $2$. Then write $\\text{center}\\pm\\text{ME}$.",
+      "solution": {
+        "steps": [
+          "Find the width of the middle $95\\%$: $0.79-0.61=0.18$.",
+          "Halve it for the margin of error: $\\text{ME}=\\dfrac{0.18}{2}=0.09$.",
+          "Attach to the center: $0.70\\pm 0.09$.",
+          "The endpoints are $0.70-0.09=0.61$ and $0.70+0.09=0.79$, so the $95\\%$ interval runs from $0.61$ to $0.79$."
+        ],
+        "answer": "$\\text{ME}=0.09$, and the $95\\%$ interval is $0.70\\pm 0.09$, i.e. $0.61$ to $0.79$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A random sample of $n=64$ boxes has mean weight $\\bar{x}=23$ ounces and sample standard deviation $s=8$ ounces. Compute the standard error of the mean, find the $95\\%$ margin of error with $\\text{ME}\\approx 2\\cdot SE$, and state the $95\\%$ interval estimate for $\\mu$.",
+      "hint": "Use $SE_{\\bar{x}}=\\dfrac{s}{\\sqrt{n}}$ with $\\sqrt{n}$ in the denominator, not $n$. Then $\\text{ME}\\approx 2\\cdot SE$ and the interval is $\\bar{x}\\pm\\text{ME}$.",
+      "solution": {
+        "steps": [
+          "Standard error of a mean: $SE_{\\bar{x}}=\\dfrac{s}{\\sqrt{n}}=\\dfrac{8}{\\sqrt{64}}$.",
+          "Since $\\sqrt{64}=8$, $SE=\\dfrac{8}{8}=1$ ounce.",
+          "Margin of error: $\\text{ME}\\approx 2\\cdot SE=2(1)=2$ ounces.",
+          "Interval: $\\bar{x}\\pm\\text{ME}=23\\pm 2$, with endpoints $21$ and $25$.",
+          "We are $95\\%$ confident the true mean box weight $\\mu$ lies between $21$ and $25$ ounces."
+        ],
+        "answer": "$SE=1$, $\\text{ME}=2$, and the $95\\%$ interval is $23\\pm 2$ ounces, i.e. $21$ to $25$ ounces"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A survey of $n=900$ adults gives an estimated proportion with a margin of error of $0.04$. A researcher claims that to shrink the margin of error to $0.02$, it is enough to double the sample size to $1800$. Is the claim correct? If not, find the sample size actually needed.",
+      "hint": "Because $\\text{ME}\\propto\\dfrac{1}{\\sqrt{n}}$, halving the margin of error requires multiplying $n$ by $4$, not $2$. Compare what doubling $n$ actually does.",
+      "solution": {
+        "steps": [
+          "The margin of error is proportional to $\\dfrac{1}{\\sqrt{n}}$, so to halve $\\text{ME}$ you must double $\\sqrt{n}$, which means multiplying $n$ by $4$.",
+          "Needed sample size: $n=4\\times 900=3600$.",
+          "Check the claim: doubling $n$ to $1800$ multiplies $\\sqrt{n}$ by only $\\sqrt{2}$, so $\\text{ME}$ shrinks by a factor of $\\dfrac{1}{\\sqrt{2}}\\approx 0.71$, giving about $0.04\\times 0.71\\approx 0.028$, not $0.02$.",
+          "So the claim is wrong: doubling $n$ is not enough. The researcher needs $n=3600$ to reach a margin of error of $0.02$."
+        ],
+        "answer": "The claim is incorrect; a sample of $n=3600$ is needed because $\\text{ME}\\propto\\dfrac{1}{\\sqrt{n}}$ (quadrupling $n$ halves $\\text{ME}$)"
+      }
+    }
+  ]
+}

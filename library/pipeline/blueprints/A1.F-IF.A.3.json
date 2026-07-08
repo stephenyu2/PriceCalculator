@@ -1,0 +1,148 @@
+{
+  "standard": "A1.F-IF.A.3",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Functions",
+  "domainCode": "F-IF",
+  "cluster": "Understand the concept of a function and use function notation",
+  "clusterCode": "A",
+  "skillName": "Sequences as Functions",
+
+  "description": "Students recognize that a sequence is a function whose domain is a set of consecutive integers (most often the positive integers $n = 1, 2, 3, \\dots$ or the whole numbers $n = 0, 1, 2, \\dots$) and whose output is the term of the sequence. They read and use sequence notation, treating $a_n$ as the value of the function at input $n$, so that $a_n = f(n)$. They evaluate explicit formulas such as $a_n = 3n + 2$ to find any requested term, and they evaluate recursive definitions such as $a_1 = 4,\\ a_n = a_{n-1} + 5$ by building terms one at a time from a stated starting value. They translate between a list of terms, an explicit rule, and a recursive rule for arithmetic and simple geometric sequences, and they identify the domain of a sequence as a subset of the integers rather than all real numbers. They distinguish the term number (the input $n$) from the term value (the output $a_n$), and they recognize why a sequence graph is a set of discrete points, not a continuous curve.",
+
+  "subSkills": [
+    "Interpret sequence notation: read $a_n$ as the function value at the integer input $n$, and identify $n$ as the term number and $a_n$ as the term value",
+    "State the domain of a sequence as a subset of the integers (e.g. $n = 1, 2, 3, \\dots$) and explain why it is discrete, not continuous",
+    "Evaluate an explicit formula $a_n = f(n)$ at a given term number to find a specific term",
+    "Evaluate a recursively defined sequence by computing terms in order from the given initial term(s)",
+    "Write the first several terms of a sequence from either an explicit or a recursive definition",
+    "Translate a list of terms of an arithmetic or geometric sequence into an explicit formula",
+    "Translate an arithmetic or geometric sequence between explicit form and recursive form",
+    "Recognize that the graph of a sequence is a set of discrete points $(n, a_n)$, and match a sequence to its graph",
+    "Determine the term number $n$ that produces a given term value by solving $a_n = f(n)$ for $n$"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Read sequence notation",
+      "example": "For the sequence with terms $5, 8, 11, 14, \\dots$, what is $a_3$? Answer: $a_3 = 11$, the third term, since the input $n = 3$ gives the term value."
+    },
+    {
+      "name": "Evaluate an explicit formula at a term number",
+      "example": "A sequence is defined by $a_n = 4n - 1$ for $n = 1, 2, 3, \\dots$. Find $a_6$. Answer: $a_6 = 4(6) - 1 = 23$."
+    },
+    {
+      "name": "List terms from an explicit rule",
+      "example": "Write the first four terms of $a_n = 2^n$. Answer: $a_1 = 2,\\ a_2 = 4,\\ a_3 = 8,\\ a_4 = 16$."
+    },
+    {
+      "name": "Evaluate a recursive definition",
+      "example": "A sequence is defined by $a_1 = 7$ and $a_n = a_{n-1} + 3$. Find $a_4$. Answer: $a_2 = 10,\\ a_3 = 13,\\ a_4 = 16$."
+    },
+    {
+      "name": "Geometric recursion",
+      "example": "A sequence is defined by $a_1 = 5$ and $a_n = 2\\,a_{n-1}$. Find $a_4$. Answer: $a_2 = 10,\\ a_3 = 20,\\ a_4 = 40$."
+    },
+    {
+      "name": "Identify the domain of a sequence",
+      "example": "A sequence is defined by $a_n = 6n + 1$ with $n = 1, 2, 3, \\dots$. What is the domain of this function? Answer: the positive integers $\\{1, 2, 3, \\dots\\}$, a subset of the integers, so the graph is discrete points, not a continuous line."
+    },
+    {
+      "name": "Build an explicit rule from terms",
+      "example": "The terms of an arithmetic sequence are $3, 7, 11, 15, \\dots$. Write an explicit formula for $a_n$. Answer: $a_n = 4n - 1$ (first term $3$, common difference $4$)."
+    },
+    {
+      "name": "Translate between explicit and recursive form",
+      "example": "An arithmetic sequence has explicit rule $a_n = 2n + 5$. Write an equivalent recursive rule. Answer: $a_1 = 7,\\ a_n = a_{n-1} + 2$."
+    },
+    {
+      "name": "Match a sequence to its graph",
+      "example": "Which graph represents the sequence $a_n = n + 2$ for $n = 1, 2, 3, 4$? Answer: the graph showing the four discrete points $(1, 3), (2, 4), (3, 5), (4, 6)$, not a continuous line through them."
+    },
+    {
+      "name": "Solve for the term number",
+      "example": "For $a_n = 3n - 2$, which term equals $25$? Answer: solve $3n - 2 = 25$ to get $n = 9$, so $a_9 = 25$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Direct, single-step reading or evaluation. Read a term from a list given $n$, evaluate an explicit linear formula at a small term number, or list the first few terms of an explicit rule. The domain is given and the arithmetic is light. Tier1 worksheet items live here through early Medium.",
+      "constraints": [
+        "Explicit formula is linear with small positive integer coefficients, e.g. $a_n = 4n - 1$, evaluated at $n \\le 6$",
+        "Or read $a_k$ directly from a printed list of terms",
+        "Domain is stated explicitly as $n = 1, 2, 3, \\dots$; no need to determine it",
+        "At most one computation step; no recursion and no working backward",
+        "Vocabulary limited to term, term number $n$, term value $a_n$, and explicit formula"
+      ]
+    },
+    "Medium": {
+      "description": "Two or more coordinated steps, or a translation between representations. Evaluate a recursive definition by chaining terms, build an explicit rule from a list of arithmetic terms, or identify and reason about the domain as a subset of the integers. This band straddles the tier1/tier2 split: its upper edge belongs to tier2.",
+      "constraints": [
+        "Recursive definitions of the form $a_n = a_{n-1} + d$ or $a_n = r\\,a_{n-1}$ requiring three to five chained evaluations",
+        "Explicit-rule construction from arithmetic terms, finding first term and common difference",
+        "Reasoning about the domain being a subset of the integers and why the graph is discrete",
+        "May involve negative common differences, a fractional or negative ratio, or a domain starting at $n = 0$",
+        "At most two ideas coordinated per item (e.g. find the rule, then evaluate one term)"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step translation, working backward, or conceptual justification. Convert between explicit and recursive form, solve $a_n = f(n)$ for the term number, match a sequence to its discrete graph with reasoning, or explain why a sequence is a function with an integer domain. Tier2 worksheet items concentrate here.",
+      "constraints": [
+        "Translate an arithmetic or geometric sequence between explicit and recursive form in both directions",
+        "Work backward: given a term value, solve for the term number $n$, including rejecting non-integer $n$ as not in the domain",
+        "Distinguish a sequence (discrete domain, isolated points) from a continuous function, and justify the claim",
+        "May combine representations: from a graph or table, recover both the explicit and recursive rule",
+        "Requires coordinating the function concept (input $n$, output $a_n$, domain a subset of the integers) with computation"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student confuses the term number with the term value, returning $n$ instead of $a_n$ or vice versa",
+      "distractor": "For $a_n = 4n - 1$ asked to find $a_6$, answers $6$ (the term number) instead of evaluating to get $23$ (the term value)"
+    },
+    {
+      "misconception": "Student treats a recursive rule like an explicit rule and substitutes $n$ directly into $a_{n-1}$",
+      "distractor": "For $a_1 = 7,\\ a_n = a_{n-1} + 3$, computes $a_4 = 4 - 1 + 3 = 6$ or $a_4 = a_3 + 3$ with $a_3$ never built, instead of chaining $a_2 = 10, a_3 = 13, a_4 = 16$"
+    },
+    {
+      "misconception": "Student uses an off-by-one index, computing the term at $n-1$ or $n+1$ instead of $n$",
+      "distractor": "For $a_n = 4n - 1$ asked for $a_6$, computes $a_5 = 19$ or $a_7 = 27$ by miscounting which term the input names"
+    },
+    {
+      "misconception": "Student stops the recursion one step early or one step late",
+      "distractor": "For $a_1 = 7,\\ a_n = a_{n-1} + 3$ asked for $a_4$, stops at $a_3 = 13$ or runs to $a_5 = 19$ instead of $a_4 = 16$"
+    },
+    {
+      "misconception": "Student adds the common difference once to the first term instead of $(n-1)$ times when building an explicit rule",
+      "distractor": "For arithmetic terms $3, 7, 11, \\dots$ writes $a_n = 3 + 4 = 7$ or $a_n = 3 + 4n = 4n + 3$, instead of $a_n = 3 + 4(n-1) = 4n - 1$"
+    },
+    {
+      "misconception": "Student treats the domain of a sequence as all real numbers and the graph as a continuous curve",
+      "distractor": "States the domain of $a_n = 6n + 1$ is all real numbers and selects a continuous line graph, ignoring that the domain is the integers $\\{1, 2, 3, \\dots\\}$ and the graph is discrete points"
+    },
+    {
+      "misconception": "Student mixes up the arithmetic recursive form with the geometric one, adding when they should multiply or vice versa",
+      "distractor": "For geometric $a_1 = 5,\\ a_n = 2a_{n-1}$ asked for $a_4$, adds to get $a_4 = 5 + 2 + 2 + 2 = 11$ instead of multiplying to get $40$"
+    },
+    {
+      "misconception": "Student accepts a non-integer or out-of-range term number as a valid answer when solving $a_n = f(n)$ for $n$",
+      "distractor": "For $a_n = 3n - 2$ asked which term equals $20$, solves $3n - 2 = 20$ to get $n = \\frac{22}{3}$ and reports that as a term, instead of recognizing $20$ is not a term because $n$ must be a positive integer"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

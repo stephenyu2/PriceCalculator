@@ -1,0 +1,127 @@
+{
+  "standard": "A1.F-IF.B.5",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Functions",
+  "domainCode": "F-IF",
+  "cluster": "Interpret functions that arise in applications in terms of the context",
+  "clusterCode": "B",
+  "skillName": "Domain Relates to Context",
+
+  "description": "Students determine the domain of a function and connect it to the function's graph and to the real-world quantity it models. Given a graph, they read off the domain as the set of input values where the function is defined. Given a context (number of people, hours elapsed, items sold, length of a side), they decide which input values make sense and restrict the domain accordingly, ruling out negatives, requiring whole numbers for discrete quantities, and capping inputs at physical or stated limits. They write domains in interval notation, set-builder notation, or as a verbal restriction, and they explain why a value such as a negative time or a fractional person is excluded even though it would satisfy the bare algebraic rule.",
+
+  "subSkills": [
+    "Read the domain of a function directly from its graph, identifying the leftmost and rightmost input values and any gaps",
+    "Express a domain in interval notation, set-builder notation, and words, and convert among them",
+    "Restrict the domain of a contextual function to nonnegative inputs when the input is a physical quantity like time, length, or count",
+    "Restrict the domain to whole numbers (discrete domain) when the input counts indivisible objects such as people or tickets",
+    "Determine an upper bound on the domain from a stated limit or from where the modeled quantity stops making sense (e.g. height reaches the ground, money runs out)",
+    "Distinguish the mathematical domain of a bare rule from the practical domain of the same rule used as a model",
+    "Decide whether a graph of a real situation should be drawn as a continuous curve or as discrete points, based on the input quantity"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Read domain from a graph",
+      "example": "A graph of $f$ is drawn from the point $(-2,1)$ on the left to the point $(5,4)$ on the right, with no breaks. State the domain. Answer: $-2\\le x\\le 5$, or $[-2,5]$."
+    },
+    {
+      "name": "Nonnegative practical domain",
+      "example": "A candle burns so its height in centimeters after $t$ hours is $h(t)=20-2.5t$. Give the practical domain. Since time cannot be negative and the candle is gone when $h=0$, solve $20-2.5t=0$ to get $t=8$, so the domain is $0\\le t\\le 8$."
+    },
+    {
+      "name": "Discrete (whole-number) domain",
+      "example": "The cost to buy $n$ movie tickets is $C(n)=12n$. State the domain in context. Because you cannot buy a fraction of a ticket, the domain is the whole numbers $n=0,1,2,3,\\dots$"
+    },
+    {
+      "name": "Upper-bound from a stated limit",
+      "example": "A water tank holds at most $50$ gallons and is filled at $5$ gallons per minute starting empty, so $V(t)=5t$. Find the domain. The tank is full when $5t=50$, i.e. $t=10$, so the domain is $0\\le t\\le 10$."
+    },
+    {
+      "name": "Mathematical vs. practical domain",
+      "example": "The area of a square with side length $s$ is $A(s)=s^2$. The rule $A(s)=s^2$ is defined for all real $s$, but a side length must be positive, so the practical domain is $s>0$."
+    },
+    {
+      "name": "Continuous vs. discrete graph decision",
+      "example": "A car's distance after $t$ hours is $d(t)=60t$; the number of guests served after $n$ tables seated is $g(n)=4n$. Decide which should be graphed as a smooth line and which as separate points. Time is continuous so $d$ is a line; tables are counted so $g$ is discrete points."
+    },
+    {
+      "name": "Domain with a gap or excluded value",
+      "example": "A graph of $f$ runs from $x=0$ to $x=6$ but has an open hole at $x=3$ where the machine was off. State the domain. Answer: $0\\le x\\le 6,\\ x\\ne 3$, i.e. $[0,3)\\cup(3,6]$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step reads and one-rule restrictions. Read the domain off a clearly bounded graph whose endpoints land on gridlines, or name the obvious sign/whole-number restriction for a familiar context. Notation is given as a simple inequality or interval. tier1 lives here and ramps into Medium.",
+      "constraints": [
+        "Domain read from a graph with integer endpoints on gridlines, no gaps or holes",
+        "Context restriction is a single idea: input is a time/length so $x\\ge 0$, or a count so $x$ is a whole number",
+        "Answer expressed as one inequality or one interval such as $[0,6]$",
+        "No upper bound needs to be computed; if there is a cap it is stated directly in the problem"
+      ]
+    },
+    "Medium": {
+      "description": "Two-idea restrictions or a computed bound. Combine nonnegativity with an upper limit that must be found by solving a one-step equation, or translate between two domain notations, or read a graph whose endpoint requires light estimation. tier1 ends here and tier2 begins here.",
+      "constraints": [
+        "Upper bound found by solving a linear equation, e.g. set $h(t)=0$ or $V(t)=\\text{cap}$ and solve for the input",
+        "Domain combines a lower and an upper restriction such as $0\\le t\\le 8$",
+        "Requires converting between interval, set-builder, and verbal forms",
+        "May require deciding discrete vs. continuous and writing the domain to match (whole numbers vs. an interval)"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning and edge cases. Distinguish the mathematical domain of the bare rule from the practical domain, handle a domain with a gap or excluded value, or extract the context, build the model, and then justify every boundary in a full explanation. tier2 lives here.",
+      "constraints": [
+        "Contrast the algebraic domain of the rule with the restricted practical domain and explain the difference",
+        "Domain has a gap or excluded point requiring a union such as $[0,3)\\cup(3,6]$",
+        "Student must build the function from a verbal context before finding and justifying the domain",
+        "Endpoints depend on a piecewise or quadratic model, e.g. a projectile where $h(t)=0$ is found by factoring, and the negative root is rejected as outside the context"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student gives the mathematical domain of the bare rule and ignores the context, including negative or impossible inputs",
+      "distractor": "For the candle height $h(t)=20-2.5t$, answers 'all real numbers' instead of the practical domain $0\\le t\\le 8$"
+    },
+    {
+      "misconception": "Student reports the range (output values) instead of the domain (input values)",
+      "distractor": "For a graph running from $(-2,1)$ to $(5,4)$, states the domain as $1\\le y\\le 4$ instead of $-2\\le x\\le 5$"
+    },
+    {
+      "misconception": "Student restricts to nonnegative inputs but forgets the upper bound where the model stops making sense",
+      "distractor": "For the candle $h(t)=20-2.5t$, answers $t\\ge 0$ and omits the cap, missing that the candle is gone at $t=8$"
+    },
+    {
+      "misconception": "Student treats a discrete counting quantity as continuous and writes an interval instead of whole numbers",
+      "distractor": "For tickets $C(n)=12n$, gives the domain as $n\\ge 0$ (all reals) instead of the whole numbers $n=0,1,2,3,\\dots$"
+    },
+    {
+      "misconception": "Student keeps a negative root from a quadratic model as a valid input",
+      "distractor": "Solving $h(t)=0$ for a projectile and getting $t=-1$ or $t=4$, the student reports the domain as $-1\\le t\\le 4$ instead of rejecting the negative root to get $0\\le t\\le 4$"
+    },
+    {
+      "misconception": "Student includes an excluded value rather than removing it from the domain",
+      "distractor": "For a graph with a hole at $x=3$, writes $0\\le x\\le 6$ instead of $0\\le x\\le 6,\\ x\\ne 3$"
+    },
+    {
+      "misconception": "Student confuses open and closed endpoints, using the wrong bracket or inequality",
+      "distractor": "For a domain that excludes its right endpoint, writes $[0,6]$ instead of $[0,6)$, or uses $\\le$ where $<$ is required at an open hole"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

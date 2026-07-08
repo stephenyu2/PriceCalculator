@@ -1,0 +1,185 @@
+{
+  "id": "6.SP.B.4--lesson",
+  "standard": "6.SP.B.4",
+  "clusterId": null,
+  "grade": "6",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Summarize and describe distributions",
+  "clusterCode": "B",
+  "skillName": "Displaying Data in Plots",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:41:22.446Z",
+  "intro": "Numerical data can be shown on a number line in three main ways. A dot plot stacks one dot for each data value above the number line, so you can see every individual value. A histogram groups the data into equal-width intervals (bins) and draws a bar whose height is how many values fall in each bin, which is great for large data sets but hides the individual values. A box plot is built from the five-number summary $\\min$, lower quartile $Q_1$, median, upper quartile $Q_3$, and $\\max$, and shows the spread of the data, including the interquartile range $\\text{IQR} = Q_3 - Q_1$. Always order the data before finding the median and quartiles.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "The number of pets owned by $12$ students is $0, 1, 1, 2, 0, 3, 1, 2, 1, 0, 2, 4$. Describe the dot plot: how many dots sit above each value $0, 1, 2, 3, 4$ on the number line?",
+      "solution": {
+        "steps": [
+          "A dot plot puts one dot for each data value above its spot on the number line, so we just count how many times each value appears.",
+          "Count the $0$s: there are three of them ($0, 0, 0$), so $3$ dots above $0$.",
+          "Count the $1$s: $1, 1, 1, 1$, so $4$ dots above $1$.",
+          "Count the $2$s: $2, 2, 2$, so $3$ dots above $2$.",
+          "Count the $3$s: just one, so $1$ dot above $3$.",
+          "Count the $4$s: just one, so $1$ dot above $4$.",
+          "Check the total: $3 + 4 + 3 + 1 + 1 = 12$ dots, matching the $12$ students."
+        ],
+        "answer": "$0$: $3$ dots, $1$: $4$ dots, $2$: $3$ dots, $3$: $1$ dot, $4$: $1$ dot (total $12$ dots)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A dot plot of daily absences shows $4$ dots above $0$, $3$ dots above $1$, $2$ dots above $2$, and $1$ dot above $5$. How many days are recorded, and on how many days were there at least $2$ absences?",
+      "solution": {
+        "steps": [
+          "Each dot stands for one day, so the total number of days is the total number of dots.",
+          "Add the dots: $4 + 3 + 2 + 1 = 10$ days recorded.",
+          "\"At least $2$ absences\" means $2$ or more, so we count the dots above $2$ and above $5$.",
+          "Above $2$ there are $2$ dots and above $5$ there is $1$ dot: $2 + 1 = 3$ days.",
+          "Notice the value $5$ is plotted even though $3$ and $4$ have no dots; empty values still keep their place on the number line."
+        ],
+        "answer": "$10$ days recorded; $3$ days had at least $2$ absences."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Plant heights in cm are $4, 7, 9, 11, 12, 14, 18, 19, 21, 23$. Using equal-width intervals of width $5$ starting at $0$ (the bins $0\\text{--}4$, $5\\text{--}9$, $10\\text{--}14$, $15\\text{--}19$, $20\\text{--}24$), give the bar height (frequency) for each interval.",
+      "solution": {
+        "steps": [
+          "A histogram bar height is how many data values land in that interval, so sort each value into its bin.",
+          "Bin $0\\text{--}4$: only $4$ falls here, so height $1$.",
+          "Bin $5\\text{--}9$: $7$ and $9$ fall here, so height $2$.",
+          "Bin $10\\text{--}14$: $11, 12, 14$ fall here, so height $3$.",
+          "Bin $15\\text{--}19$: $18$ and $19$ fall here, so height $2$.",
+          "Bin $20\\text{--}24$: $21$ and $23$ fall here, so height $2$.",
+          "Check the total: $1 + 2 + 3 + 2 + 2 = 10$, matching the $10$ plants. The bars are equal width and touch, with no gaps."
+        ],
+        "answer": "$0\\text{--}4$: $1$, $5\\text{--}9$: $2$, $10\\text{--}14$: $3$, $15\\text{--}19$: $2$, $20\\text{--}24$: $2$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A histogram of test scores has intervals $50\\text{--}59$ (height $2$), $60\\text{--}69$ (height $5$), $70\\text{--}79$ (height $8$), $80\\text{--}89$ (height $4$), and $90\\text{--}99$ (height $1$). How many students scored at least $70$? Can you tell exactly how many students scored $73$?",
+      "solution": {
+        "steps": [
+          "\"At least $70$\" means a score of $70$ or higher, so we add the heights of the bins from $70\\text{--}79$ upward.",
+          "Add those heights: $8 + 4 + 1 = 13$ students scored at least $70$.",
+          "The $70\\text{--}79$ bin has height $8$, but that only tells us $8$ students scored somewhere in the $70$s.",
+          "A histogram groups values into intervals and does not record each individual value, so we cannot tell how many scored exactly $73$."
+        ],
+        "answer": "$13$ students scored at least $70$. We cannot tell exactly how many scored $73$, because a histogram hides individual values inside each interval."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Order the data $7, 3, 9, 5, 11, 8, 6, 10, 4$ and find the five-number summary $\\min$, $Q_1$, median, $Q_3$, $\\max$. Then compute the $\\text{IQR}$.",
+      "solution": {
+        "steps": [
+          "First order the data from least to greatest: $3, 4, 5, 6, 7, 8, 9, 10, 11$. There are $9$ values.",
+          "The $\\min$ is $3$ and the $\\max$ is $11$.",
+          "The median is the middle value. With $9$ values, the middle is the $5$th value, which is $7$.",
+          "The lower half (values below the median) is $3, 4, 5, 6$. The lower quartile $Q_1$ is the median of this half: $\\frac{4 + 5}{2} = 4.5$.",
+          "The upper half (values above the median) is $8, 9, 10, 11$. The upper quartile $Q_3$ is the median of this half: $\\frac{9 + 10}{2} = 9.5$.",
+          "The five-number summary is $\\min = 3$, $Q_1 = 4.5$, median $= 7$, $Q_3 = 9.5$, $\\max = 11$.",
+          "The interquartile range is $\\text{IQR} = Q_3 - Q_1 = 9.5 - 4.5 = 5$."
+        ],
+        "answer": "$\\min = 3$, $Q_1 = 4.5$, median $= 7$, $Q_3 = 9.5$, $\\max = 11$; $\\text{IQR} = 5$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "The number of books read last month by $10$ students is $2, 0, 1, 3, 2, 1, 0, 2, 4, 1$. For a dot plot, how many dots sit above each value $0, 1, 2, 3, 4$?",
+      "hint": "Count how many times each value appears in the list. The dot counts should add up to $10$.",
+      "solution": {
+        "steps": [
+          "Count each value in the list.",
+          "$0$ appears twice, so $2$ dots above $0$.",
+          "$1$ appears three times, so $3$ dots above $1$.",
+          "$2$ appears three times, so $3$ dots above $2$.",
+          "$3$ appears once, so $1$ dot above $3$.",
+          "$4$ appears once, so $1$ dot above $4$.",
+          "Check: $2 + 3 + 3 + 1 + 1 = 10$ dots, matching the $10$ students."
+        ],
+        "answer": "$0$: $2$ dots, $1$: $3$ dots, $2$: $3$ dots, $3$: $1$ dot, $4$: $1$ dot."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A box plot of quiz scores has $\\min = 4$, $Q_1 = 7$, median $= 10$, $Q_3 = 13$, and $\\max = 18$. What is the $\\text{IQR}$, and what fraction of the data lies between $7$ and $13$?",
+      "hint": "The $\\text{IQR}$ is $Q_3 - Q_1$, not $\\max - \\min$. The box of a box plot (from $Q_1$ to $Q_3$) always holds the middle half of the data.",
+      "solution": {
+        "steps": [
+          "The interquartile range is $\\text{IQR} = Q_3 - Q_1 = 13 - 7 = 6$. (Do not use $\\max - \\min = 14$; that is the range, not the IQR.)",
+          "The values $7$ and $13$ are exactly $Q_1$ and $Q_3$, the two ends of the box.",
+          "By definition, $Q_1$ marks off the bottom quarter and $Q_3$ marks off the top quarter, so the box between them holds the middle half of the data.",
+          "Therefore the fraction of the data between $7$ and $13$ is $\\frac{1}{2}$."
+        ],
+        "answer": "$\\text{IQR} = 6$; $\\frac{1}{2}$ of the data lies between $7$ and $13$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Daily high temperatures (in degrees) are $61, 64, 66, 67, 70, 72, 73, 75, 78, 81$. Using equal-width intervals of width $5$ starting at $60$ (the bins $60\\text{--}64$, $65\\text{--}69$, $70\\text{--}74$, $75\\text{--}79$, $80\\text{--}84$), give the bar height for each interval.",
+      "hint": "Sort each temperature into the one bin it belongs to, then count how many landed in each bin. The heights should add up to $10$.",
+      "solution": {
+        "steps": [
+          "Assign each value to its bin and count.",
+          "Bin $60\\text{--}64$: $61$ and $64$, so height $2$.",
+          "Bin $65\\text{--}69$: $66$ and $67$, so height $2$.",
+          "Bin $70\\text{--}74$: $70, 72, 73$, so height $3$.",
+          "Bin $75\\text{--}79$: $75$ and $78$, so height $2$.",
+          "Bin $80\\text{--}84$: $81$, so height $1$.",
+          "Check the total: $2 + 2 + 3 + 2 + 1 = 10$, matching the $10$ days."
+        ],
+        "answer": "$60\\text{--}64$: $2$, $65\\text{--}69$: $2$, $70\\text{--}74$: $3$, $75\\text{--}79$: $2$, $80\\text{--}84$: $1$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Order the data $12, 5, 8, 14, 6, 10, 9, 7$ and find the five-number summary $\\min$, $Q_1$, median, $Q_3$, $\\max$. Then compute the $\\text{IQR}$.",
+      "hint": "There are $8$ values (an even count), so the median is the average of the two middle values. Split the data into a lower half and an upper half of $4$ values each.",
+      "solution": {
+        "steps": [
+          "Order the data: $5, 6, 7, 8, 9, 10, 12, 14$. There are $8$ values.",
+          "The $\\min$ is $5$ and the $\\max$ is $14$.",
+          "With $8$ values, the median is the average of the $4$th and $5$th values: $\\frac{8 + 9}{2} = 8.5$.",
+          "The lower half is $5, 6, 7, 8$. $Q_1$ is its median: $\\frac{6 + 7}{2} = 6.5$.",
+          "The upper half is $9, 10, 12, 14$. $Q_3$ is its median: $\\frac{10 + 12}{2} = 11$.",
+          "The $\\text{IQR} = Q_3 - Q_1 = 11 - 6.5 = 4.5$."
+        ],
+        "answer": "$\\min = 5$, $Q_1 = 6.5$, median $= 8.5$, $Q_3 = 11$, $\\max = 14$; $\\text{IQR} = 4.5$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A city wants to display how $200$ commute times group into ranges (such as $0\\text{--}9$ minutes, $10\\text{--}19$ minutes, and so on) without listing every single value. Which display, a dot plot, a histogram, or a box plot, is most appropriate, and why?",
+      "hint": "Think about which display groups data into equal-width intervals and works well for a large number of values.",
+      "solution": {
+        "steps": [
+          "A dot plot draws one dot per value, so $200$ commute times would make $200$ dots, which is crowded and not grouped into ranges.",
+          "A box plot only shows the five-number summary, so it gives spread and center but does not show how many values fall in each range.",
+          "A histogram groups the data into equal-width intervals and draws a bar for the frequency of each range, which is exactly what is wanted here.",
+          "A histogram also handles a large number of values cleanly, so it is the best choice."
+        ],
+        "answer": "A histogram, because it groups the $200$ values into equal-width intervals and shows the frequency in each range, which a dot plot (too many dots) and a box plot (only the five-number summary) cannot do."
+      }
+    }
+  ]
+}

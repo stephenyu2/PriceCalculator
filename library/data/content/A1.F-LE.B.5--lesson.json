@@ -1,0 +1,170 @@
+{
+  "id": "A1.F-LE.B.5--lesson",
+  "standard": "A1.F-LE.B.5",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Linear, Quadratic, and Exponential Models",
+  "domainCode": "F-LE",
+  "cluster": "Interpret expressions for functions in terms of the situation they model",
+  "clusterCode": "B",
+  "skillName": "Parameters in Linear and Exponential Models",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "Real-world situations are often described by a linear model $f(x)=mx+b$ or an exponential model $f(x)=a\\cdot b^{x}$. The numbers in these models, called parameters, each carry a meaning in the situation. In a linear model, $b$ is the initial value (the amount when $x=0$) and $m$ is the constant rate of change, the amount added or removed for each unit of $x$ (its sign tells you increase or decrease). In an exponential model, $a$ is the initial value at $x=0$ and the base $b$ is the growth or decay factor: when $b>1$ the quantity grows, when $0<b<1$ it decays, and the percent change each step is $|b-1|\\cdot 100\\%$. A situation that changes by a constant amount is linear; one that changes by a constant factor is exponential.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A gym membership costs $C(t)=40t+75$ dollars after $t$ months. Interpret the numbers $75$ and $40$ in terms of the situation.",
+      "solution": {
+        "steps": [
+          "This is a linear model $f(t)=mt+b$ with $m=40$ and $b=75$.",
+          "The constant term $b$ is the value when $t=0$: $C(0)=40\\cdot 0+75=75$. So $\\$75$ is the cost before any months pass, the one-time sign-up fee.",
+          "The coefficient $m=40$ is the constant rate of change. Each time $t$ increases by $1$ month, the cost increases by $\\$40$.",
+          "Because $m$ is positive, the cost is increasing. So $\\$40$ is the monthly fee added each month."
+        ],
+        "answer": "The $\\$75$ is the initial cost at $t=0$, the one-time sign-up fee; the $\\$40$ is the rate of change, the amount the cost increases each month."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A population of deer is modeled by $P(t)=500\\cdot(1.08)^{t}$, where $t$ is the number of years. Interpret the values $500$ and $1.08$, and state the yearly percent change.",
+      "solution": {
+        "steps": [
+          "This is an exponential model $f(t)=a\\cdot b^{t}$ with $a=500$ and base $b=1.08$.",
+          "The initial value is $a$, the value at $t=0$: $P(0)=500\\cdot(1.08)^{0}=500\\cdot 1=500$. So there are $500$ deer at the start.",
+          "Since the base $b=1.08>1$, the population is growing. To find the percent change, use $r=|b-1|=|1.08-1|=0.08$.",
+          "Convert to a percent: $0.08\\cdot 100\\%=8\\%$. The population grows by $8\\%$ each year.",
+          "Caution: the base $1.08$ is not a $108\\%$ rate of change. The growth rate is the part above $1$, which is $8\\%$."
+        ],
+        "answer": "The $500$ is the initial population at $t=0$; the base $1.08$ means the population grows by $8\\%$ each year ($r=1.08-1=0.08$)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A car's value is modeled by $V(t)=24000\\cdot(0.85)^{t}$ dollars after $t$ years. Interpret $24000$ and $0.85$, including whether the value grows or decays and by what percent.",
+      "solution": {
+        "steps": [
+          "This is an exponential model $a\\cdot b^{t}$ with $a=24000$ and base $b=0.85$.",
+          "The initial value is $a$: $V(0)=24000\\cdot(0.85)^{0}=24000$. The car is worth $\\$24000$ when $t=0$.",
+          "The base $b=0.85$ is between $0$ and $1$, so this is decay: the value is decreasing each year.",
+          "Find the percent decrease with $r=|b-1|=|0.85-1|=0.15$, which is $15\\%$.",
+          "Check the link $b=1-r$: $1-0.15=0.85$, matching the base. The value drops by $15\\%$ per year, not by $85\\%$."
+        ],
+        "answer": "The $\\$24000$ is the initial value at $t=0$; the base $0.85=1-0.15$ means the value decays by $15\\%$ each year."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A water tank holds $200$ gallons and drains at a steady rate of $15$ gallons per minute. Write a model $W(t)$ for the gallons remaining after $t$ minutes, and justify what each parameter represents.",
+      "solution": {
+        "steps": [
+          "The water changes by a constant amount ($15$ gallons) each minute, so this is a linear model $W(t)=mt+b$.",
+          "The starting amount is $200$ gallons when $t=0$, so the initial value is $b=200$.",
+          "The tank loses $15$ gallons each minute, so the rate of change is negative: $m=-15$ gallons per minute.",
+          "Combine the parameters: $W(t)=200-15t$.",
+          "Justify: $200$ is the initial value (water at $t=0$) and $-15$ is the constant rate of change, negative because the water decreases by $15$ gallons each minute."
+        ],
+        "answer": "$W(t)=200-15t$, where $200$ is the initial value (starting gallons) and $-15$ is the rate of change, negative because the tank loses $15$ gallons per minute."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A table shows a bacteria count over time: at hours $t=0,1,2,3$ the counts are $300,600,1200,2400$. Decide whether the situation is linear or exponential, write a model, and interpret each parameter.",
+      "solution": {
+        "steps": [
+          "Check for a constant difference: $600-300=300$, but $1200-600=600$. The differences are not equal, so it is not linear.",
+          "Check for a constant ratio: $\\frac{600}{300}=2$, $\\frac{1200}{600}=2$, $\\frac{2400}{1200}=2$. The ratio is a constant $2$, so the situation is exponential.",
+          "The initial value is the count at $t=0$, which is $a=300$. The constant ratio is the base, $b=2$.",
+          "Write the model: $f(t)=300\\cdot 2^{t}$.",
+          "Interpret: $300$ is the initial count at $t=0$, and the base $2$ means the count is multiplied by $2$ each hour, a $|2-1|\\cdot 100\\%=100\\%$ increase (it doubles every hour)."
+        ],
+        "answer": "Exponential: $f(t)=300\\cdot 2^{t}$, where $300$ is the initial count at $t=0$ and the base $2$ means the count doubles (grows $100\\%$) each hour."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A phone plan costs $C(t)=25t+60$ dollars after $t$ months. Interpret the $60$ and the $25$ in terms of the situation.",
+      "hint": "This is linear, $f(t)=mt+b$. The constant term is the value at $t=0$; the coefficient of $t$ is the monthly rate of change.",
+      "solution": {
+        "steps": [
+          "The model is linear with $b=60$ and $m=25$.",
+          "The constant $60$ is the value at $t=0$: $C(0)=25\\cdot 0+60=60$, an initial or one-time charge of $\\$60$.",
+          "The coefficient $25$ is the constant rate of change: the cost increases by $\\$25$ for each additional month. It is positive, so the cost is rising."
+        ],
+        "answer": "The $\\$60$ is the initial cost at $t=0$; the $\\$25$ is the monthly rate of change, the amount the cost increases each month."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "An investment is modeled by $A(t)=2000\\cdot(1.05)^{t}$ dollars after $t$ years. Interpret the $2000$ and the base $1.05$, and state the yearly percent growth.",
+      "hint": "For $a\\cdot b^{t}$, the initial value is $a$. Convert the base to a percent with $r=|b-1|$.",
+      "solution": {
+        "steps": [
+          "The model is exponential with $a=2000$ and base $b=1.05$.",
+          "The initial value is $a$: $A(0)=2000\\cdot(1.05)^{0}=2000$, so $\\$2000$ is invested at $t=0$.",
+          "Since $b=1.05>1$, the amount grows. The rate is $r=|1.05-1|=0.05=5\\%$.",
+          "The investment grows by $5\\%$ each year (the base $1.05$ is not a $105\\%$ rate)."
+        ],
+        "answer": "The $\\$2000$ is the initial amount at $t=0$; the base $1.05$ means the investment grows by $5\\%$ each year."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A cup of coffee cools, and its temperature above room temperature is modeled by $T(t)=80\\cdot(0.90)^{t}$ degrees after $t$ minutes. Is this growth or decay? Interpret the $80$ and the base $0.90$, including the percent change per minute.",
+      "hint": "A base between $0$ and $1$ means decay. Find the percent with $r=|b-1|$, and remember it is $1-b$, not $b$ itself.",
+      "solution": {
+        "steps": [
+          "The model is exponential with $a=80$ and base $b=0.90$. Since $0<0.90<1$, this is decay (the temperature difference is decreasing).",
+          "The initial value is $a$: $T(0)=80\\cdot(0.90)^{0}=80$, so the coffee starts $80$ degrees above room temperature.",
+          "The percent change is $r=|0.90-1|=0.10=10\\%$. Note it is $1-0.90$, not $90\\%$.",
+          "So the temperature difference decreases by $10\\%$ each minute."
+        ],
+        "answer": "Decay: the $80$ is the initial temperature difference at $t=0$; the base $0.90=1-0.10$ means it decreases by $10\\%$ each minute."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A savings jar starts with $\\$120$ and a person adds $\\$8$ to it each week. Decide whether the situation is linear or exponential, write a model $S(w)$ for the dollars after $w$ weeks, and justify each parameter.",
+      "hint": "Adding the same amount each week is a constant amount, not a constant factor. Which model type fits a constant amount?",
+      "solution": {
+        "steps": [
+          "Each week the same amount, $\\$8$, is added, so the jar changes by a constant amount. A constant amount means the model is linear, $S(w)=mw+b$.",
+          "The starting amount is $\\$120$ at $w=0$, so the initial value is $b=120$.",
+          "The amount added each week is the rate of change, $m=8$ dollars per week (positive, since money is increasing).",
+          "So $S(w)=8w+120$. The $120$ is the initial value and $8$ is the constant rate of change."
+        ],
+        "answer": "Linear: $S(w)=8w+120$, where $120$ is the initial value (starting dollars) and $8$ is the rate of change, the amount added each week."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "The number of users of a new app triples each month and starts at $50$ users. Write an exponential model $U(t)=a\\cdot b^{t}$ for the users after $t$ months, and explain what $a$ and $b$ represent. By what percent does the user count increase each month?",
+      "hint": "Tripling means multiplying by a factor each month, so it is exponential. The base is the multiplier; the percent increase is $|b-1|\\cdot 100\\%$.",
+      "solution": {
+        "steps": [
+          "The count is multiplied by a constant factor (tripled) each month, so the model is exponential, $U(t)=a\\cdot b^{t}$.",
+          "The starting value at $t=0$ is $50$ users, so the initial value is $a=50$.",
+          "Tripling means the base (the multiplier) is $b=3$, so $U(t)=50\\cdot 3^{t}$.",
+          "The percent change is $r=|b-1|=|3-1|=2=200\\%$. The user count increases by $200\\%$ each month (it triples)."
+        ],
+        "answer": "$U(t)=50\\cdot 3^{t}$, where $a=50$ is the initial number of users at $t=0$ and the base $b=3$ is the monthly growth factor; the count grows by $200\\%$ each month."
+      }
+    }
+  ]
+}

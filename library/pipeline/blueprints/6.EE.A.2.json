@@ -1,0 +1,135 @@
+{
+  "standard": "6.EE.A.2",
+  "grade": "6",
+  "subject": "math",
+  "domain": "Expressions and Equations",
+  "domainCode": "EE",
+  "cluster": "Apply and extend previous understandings of arithmetic to algebraic expressions",
+  "clusterCode": "A",
+  "skillName": "Writing and Evaluating Algebraic Expressions",
+
+  "description": "Students write algebraic expressions in which letters stand for numbers, translating verbal phrases such as 'subtract $y$ from $5$' into symbols ($5 - y$), and read expressions using the vocabulary of structure: sum, term, product, factor, quotient, and coefficient (e.g. describing $2(8+7)$ as a product of two factors, where one factor, $8+7$, is a sum of two terms). They then evaluate expressions at specific values of the variables, including in real-world formulas, and apply the conventional order of operations even when no parentheses signal a particular order, for example evaluating $V = s^3$ at $s = \\tfrac{1}{2}$ or evaluating the formula $A = 6s^2$ for the surface area of a cube with edge length $s = 6$.",
+
+  "subSkills": [
+    "Translate a verbal phrase into an algebraic expression, respecting word order (e.g. '$8$ less than $x$' is $x - 8$, not $8 - x$)",
+    "Use a variable to represent an unknown or varying quantity in a context",
+    "Identify the parts of an expression by name: term, coefficient, factor, sum, product, quotient",
+    "View a multi-part expression as a single entity (e.g. read $2(8+7)$ as a product whose second factor is the sum $8+7$)",
+    "Evaluate an expression by substituting given values for the variables",
+    "Apply the order of operations, including exponents, to evaluate without explicit parentheses",
+    "Evaluate real-world and geometric formulas at given values, including with fractional and decimal inputs"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Translate words to an expression",
+      "example": "Write an expression for 'the product of $7$ and a number $n$, decreased by $4$'. ($7n - 4$.)"
+    },
+    {
+      "name": "Order-sensitive translation",
+      "example": "Write an expression for '$9$ less than twice $k$'. (Twice $k$ is $2k$; nine less than it is $2k - 9$, not $9 - 2k$.)"
+    },
+    {
+      "name": "Name the parts of an expression",
+      "example": "In the expression $3x + 8$, identify the coefficient, the variable term, and the constant term. (Coefficient $3$; variable term $3x$; constant term $8$.)"
+    },
+    {
+      "name": "Read structure as factors and terms",
+      "example": "Describe $5(a + b)$ in words. (A product of two factors: the factor $5$ and the factor $a + b$, which is itself a sum of two terms.)"
+    },
+    {
+      "name": "Evaluate by substitution (single variable)",
+      "example": "Evaluate $4x + 7$ when $x = 3$. ($4(3) + 7 = 12 + 7 = 19$.)"
+    },
+    {
+      "name": "Evaluate with exponents / order of operations",
+      "example": "Evaluate $2t^2 + 5$ when $t = 3$. (Exponent first: $3^2 = 9$, then $2(9) = 18$, then $18 + 5 = 23$.)"
+    },
+    {
+      "name": "Evaluate a real-world or geometric formula",
+      "example": "The surface area of a cube is $A = 6s^2$. Find $A$ when $s = 4$ inches. ($A = 6(4^2) = 6(16) = 96$ square inches.) Also evaluate $V = s^3$ at $s = \\frac{1}{2}$. ($V = \\left(\\frac{1}{2}\\right)^3 = \\frac{1}{8}$.)"
+    },
+    {
+      "name": "Evaluate a multi-variable expression",
+      "example": "Evaluate $\\frac{xy}{2}$ when $x = 6$ and $y = 5$. ($\\frac{(6)(5)}{2} = \\frac{30}{2} = 15$.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single, direct task: a one-operation translation, naming one part of a simple expression, or substituting one whole number into a one- or two-operation expression with no exponents.",
+      "constraints": [
+        "Translation uses one operation and natural word order (e.g. 'a number plus $6$' is $n + 6$)",
+        "Evaluation substitutes a single whole-number value into an expression with at most two operations and no exponents (e.g. $4x + 7$ at $x = 3$)",
+        "Vocabulary items ask for one named part (coefficient, term, or constant) of an expression like $3x + 8$",
+        "All inputs and answers are whole numbers $\\le 50$"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step reasoning or order-sensitive structure: order-sensitive translations, evaluation that requires the order of operations (including one exponent), or naming several parts and reading an expression as a product of factors.",
+      "constraints": [
+        "Order-sensitive translations such as '$8$ less than $x$' is $x - 8$ or '$9$ less than twice $k$' is $2k - 9$",
+        "Evaluation includes one exponent or requires applying order of operations across two or more steps (e.g. $2t^2 + 5$ at $t = 3$)",
+        "May substitute into a two-variable expression with whole numbers (e.g. $\\frac{xy}{2}$)",
+        "Reading tasks describe an expression like $5(a+b)$ as a product of a factor and a sum"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step evaluation, formula work with non-whole inputs, or layered translation and interpretation. Combines order of operations with exponents and several terms, or requires building an expression from a multi-clause description before evaluating.",
+      "constraints": [
+        "Evaluate a geometric or real-world formula such as $A = 6s^2$ or $V = s^3$, including fractional or decimal inputs (e.g. $s = \\frac{1}{2}$ giving $V = \\frac{1}{8}$)",
+        "Order of operations spans exponents, multiplication, and addition or subtraction in one expression (e.g. $3a^2 - 2a + 1$)",
+        "Translate a multi-clause phrase into an expression and then evaluate it at given values",
+        "Exact answers as fractions where inputs are fractional; no rounding"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student reverses the order of subtraction or division when translating phrases like 'less than' or 'subtracted from'",
+      "distractor": "Writes '$8$ less than $x$' as $8 - x$ instead of $x - 8$"
+    },
+    {
+      "misconception": "Student multiplies before applying the exponent, ignoring order of operations",
+      "distractor": "Evaluates $2t^2$ at $t = 3$ as $(2 \\cdot 3)^2 = 36$ instead of $2(3^2) = 18$"
+    },
+    {
+      "misconception": "Student treats an exponent as multiplication by the exponent",
+      "distractor": "Evaluates $s^3$ at $s = \\frac{1}{2}$ as $3 \\cdot \\frac{1}{2} = \\frac{3}{2}$ instead of $\\left(\\frac{1}{2}\\right)^3 = \\frac{1}{8}$"
+    },
+    {
+      "misconception": "Student adds or subtracts before multiplying, ignoring order of operations",
+      "distractor": "Evaluates $4x + 7$ at $x = 3$ as $4(3 + 7) = 40$ instead of $4(3) + 7 = 19$"
+    },
+    {
+      "misconception": "Student confuses the coefficient with the constant or names parts incorrectly",
+      "distractor": "Says the coefficient of $3x + 8$ is $8$, or calls $8$ a term's coefficient instead of the constant"
+    },
+    {
+      "misconception": "Student misreads $2x$ as $2 + x$, treating juxtaposition as addition",
+      "distractor": "Evaluates $2x$ at $x = 5$ as $2 + 5 = 7$ instead of $2 \\cdot 5 = 10$"
+    },
+    {
+      "misconception": "Student substitutes the value for the wrong variable or for the coefficient",
+      "distractor": "Evaluates $5n$ at $n = 4$ by replacing the $5$ to get $4n$ or computes $5 + 4$ instead of $5 \\cdot 4 = 20$"
+    },
+    {
+      "misconception": "Student ignores the exponent's effect on a fraction's denominator",
+      "distractor": "Evaluates $\\left(\\frac{1}{2}\\right)^3$ as $\\frac{1}{6}$ (cubing only the denominator's factor) instead of $\\frac{1}{8}$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

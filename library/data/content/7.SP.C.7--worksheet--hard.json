@@ -1,0 +1,230 @@
+{
+  "id": "7.SP.C.7--worksheet--hard",
+  "standard": "7.SP.C.7",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate chance processes and develop, use, and evaluate probability models",
+  "clusterCode": "C",
+  "skillName": "Probability Models",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "These problems ask you to build, complete, and evaluate probability models. You will solve for missing probabilities so a model sums to $1$, compare predicted counts with observed counts, and explain whether a disagreement is caused by a small sample, a biased process, or a wrong assumption that all outcomes are equally likely.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A spinner has four colors. A probability model assigns $P(\\text{red})=\\frac{3}{10}$, $P(\\text{blue})=\\frac{1}{4}$, $P(\\text{green})=\\frac{1}{5}$, and $P(\\text{yellow})=y$. Find $y$ so the model is valid, then find $P(\\text{not yellow})$.",
+      "answer": "$y=\\frac{1}{4}$ and $P(\\text{not yellow})=\\frac{3}{4}$",
+      "solution": {
+        "steps": [
+          "A valid model has probabilities that sum to $1$: $\\frac{3}{10}+\\frac{1}{4}+\\frac{1}{5}+y=1$.",
+          "Use a common denominator of $20$: $\\frac{6}{20}+\\frac{5}{20}+\\frac{4}{20}+y=1$.",
+          "The three known values sum to $\\frac{15}{20}=\\frac{3}{4}$, so $y=1-\\frac{3}{4}=\\frac{1}{4}$.",
+          "By the complement, $P(\\text{not yellow})=1-P(\\text{yellow})=1-\\frac{1}{4}=\\frac{3}{4}$."
+        ],
+        "answer": "$y=\\frac{1}{4}$ and $P(\\text{not yellow})=\\frac{3}{4}$"
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A six-sided number cube is weighted. The model is $P(1)=P(2)=P(3)=P(4)=\\frac{1}{8}$ and $P(5)=P(6)=p$, with both unknown probabilities equal. Find $p$, then find $P(\\text{rolling a } 5 \\text{ or a } 6)$.",
+      "answer": "$p=\\frac{1}{4}$ and $P(5\\text{ or }6)=\\frac{1}{2}$",
+      "solution": {
+        "steps": [
+          "All six probabilities must sum to $1$: $4\\times\\frac{1}{8}+2p=1$.",
+          "$\\frac{4}{8}=\\frac{1}{2}$, so $\\frac{1}{2}+2p=1$, which gives $2p=\\frac{1}{2}$.",
+          "Therefore $p=\\frac{1}{4}$.",
+          "$P(5\\text{ or }6)=p+p=\\frac{1}{4}+\\frac{1}{4}=\\frac{1}{2}$."
+        ],
+        "answer": "$p=\\frac{1}{4}$ and $P(5\\text{ or }6)=\\frac{1}{2}$"
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A four-sided spinner is assumed fair, so each section is modeled with probability $\\frac{1}{4}$. In $200$ spins, the results were: A $52$, B $48$, C $46$, D $54$. For each section, find the predicted count from the model, then state whether the observed counts support the fair-spinner model.",
+      "answer": "Predicted count is $50$ for each section; the observed counts ($52, 48, 46, 54$) are all very close to $50$, so the data support the fair-spinner model.",
+      "solution": {
+        "steps": [
+          "The model predicts each count as $P(\\text{outcome})\\times(\\text{trials})=\\frac{1}{4}\\times 200=50$.",
+          "Compare observed to predicted: A is $52$ vs $50$, B is $48$ vs $50$, C is $46$ vs $50$, D is $54$ vs $50$.",
+          "Every observed count differs from $50$ by only $2$ to $4$, a small amount for $200$ spins.",
+          "Because all four outcomes land close to the predicted $50$, the data support the fair-spinner model (the small gaps are ordinary chance variation, not bias)."
+        ],
+        "answer": "Predicted count is $50$ for each section; the observed counts ($52, 48, 46, 54$) are all very close to $50$, so the data support the fair-spinner model."
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A bag of colored chips is drawn $80$ times with replacement: red $40$, blue $24$, green $16$. Build an empirical probability model from the data, verify it is valid, then find $P(\\text{not red})$.",
+      "answer": "$P(\\text{red})=\\frac{1}{2}$, $P(\\text{blue})=\\frac{3}{10}$, $P(\\text{green})=\\frac{1}{5}$; they sum to $1$, so the model is valid, and $P(\\text{not red})=\\frac{1}{2}$.",
+      "solution": {
+        "steps": [
+          "Empirical probability is $\\frac{\\text{frequency}}{\\text{total}}$ with total $80$.",
+          "$P(\\text{red})=\\frac{40}{80}=\\frac{1}{2}$, $P(\\text{blue})=\\frac{24}{80}=\\frac{3}{10}$, $P(\\text{green})=\\frac{16}{80}=\\frac{1}{5}$.",
+          "Check validity: $\\frac{1}{2}+\\frac{3}{10}+\\frac{1}{5}=\\frac{5}{10}+\\frac{3}{10}+\\frac{2}{10}=\\frac{10}{10}=1$, and each is between $0$ and $1$, so the model is valid.",
+          "$P(\\text{not red})=1-P(\\text{red})=1-\\frac{1}{2}=\\frac{1}{2}$."
+        ],
+        "answer": "$P(\\text{red})=\\frac{1}{2}$, $P(\\text{blue})=\\frac{3}{10}$, $P(\\text{green})=\\frac{1}{5}$; they sum to $1$, so the model is valid, and $P(\\text{not red})=\\frac{1}{2}$."
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A spinner has three colors and is assumed fair, so each color is modeled at $\\frac{1}{3}$. In $300$ spins, red comes up $160$ times, while blue and green come up $80$ and $60$ times. Compare the predicted count to the observed count for red, and explain the most likely source of the discrepancy.",
+      "answer": "The model predicts $100$ reds but $160$ were observed; the spinner is most likely not fair (biased toward red), so the equal-likelihood assumption is wrong.",
+      "solution": {
+        "steps": [
+          "Predicted reds $=\\frac{1}{3}\\times 300=100$.",
+          "Observed reds $=160$, which is $60$ more than predicted.",
+          "A gap of $60$ out of $300$ spins is far too large to be ordinary chance variation in such a large sample.",
+          "The most likely source is that the spinner is not actually fair: it is biased toward red, so the assumption that all three colors are equally likely is wrong."
+        ],
+        "answer": "The model predicts $100$ reds but $160$ were observed; the spinner is most likely not fair (biased toward red), so the equal-likelihood assumption is wrong."
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Two students test the same coin, modeled as fair with $P(\\text{heads})=\\frac{1}{2}$. Student A flips it $10$ times and gets $7$ heads. Student B flips it $500$ times and gets $258$ heads. Whose results give stronger evidence that the coin is unfair, and why?",
+      "answer": "Student B's results give stronger evidence about the coin, but they actually support a fair coin; Student A's $7$ out of $10$ is too small a sample to draw a conclusion.",
+      "solution": {
+        "steps": [
+          "Student A: observed relative frequency $=\\frac{7}{10}=0.70$, far from $0.5$, but only $10$ flips is a very small sample where large swings happen by chance.",
+          "Student B: observed relative frequency $=\\frac{258}{500}=0.516$, very close to the model's $0.5$.",
+          "Larger samples give more reliable estimates, so Student B's result is the stronger evidence about the coin.",
+          "Student B's $0.516$ is essentially the model value, so the strong evidence actually supports a fair coin; Student A's $0.70$ is just small-sample noise and is not enough to conclude the coin is unfair."
+        ],
+        "answer": "Student B's results give stronger evidence about the coin, but they actually support a fair coin; Student A's $7$ out of $10$ is too small a sample to draw a conclusion."
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A survey of $120$ students recorded favorite lunch: pizza $54$, tacos $36$, salad $18$, and the rest chose sandwiches. Build the empirical probability model (all four categories), verify it sums to $1$, and find $P(\\text{pizza or tacos})$.",
+      "answer": "$P(\\text{pizza})=\\frac{9}{20}$, $P(\\text{tacos})=\\frac{3}{10}$, $P(\\text{salad})=\\frac{3}{20}$, $P(\\text{sandwich})=\\frac{1}{10}$; they sum to $1$, and $P(\\text{pizza or tacos})=\\frac{3}{4}$.",
+      "solution": {
+        "steps": [
+          "Find the sandwich count: $120-(54+36+18)=120-108=12$.",
+          "Empirical probabilities (total $120$): $P(\\text{pizza})=\\frac{54}{120}=\\frac{9}{20}$, $P(\\text{tacos})=\\frac{36}{120}=\\frac{3}{10}$, $P(\\text{salad})=\\frac{18}{120}=\\frac{3}{20}$, $P(\\text{sandwich})=\\frac{12}{120}=\\frac{1}{10}$.",
+          "Check the sum with denominator $20$: $\\frac{9}{20}+\\frac{6}{20}+\\frac{3}{20}+\\frac{2}{20}=\\frac{20}{20}=1$, so the model is valid.",
+          "$P(\\text{pizza or tacos})=\\frac{9}{20}+\\frac{6}{20}=\\frac{15}{20}=\\frac{3}{4}$."
+        ],
+        "answer": "$P(\\text{pizza})=\\frac{9}{20}$, $P(\\text{tacos})=\\frac{3}{10}$, $P(\\text{salad})=\\frac{3}{20}$, $P(\\text{sandwich})=\\frac{1}{10}$; they sum to $1$, and $P(\\text{pizza or tacos})=\\frac{3}{4}$."
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A model for a four-section spinner gives $P(\\text{A})=2k$, $P(\\text{B})=k$, $P(\\text{C})=k$, $P(\\text{D})=\\frac{1}{5}$. Find $k$ so the model is valid, then find $P(\\text{A or D})$.",
+      "answer": "$k=\\frac{1}{5}$ and $P(\\text{A or D})=\\frac{3}{5}$",
+      "solution": {
+        "steps": [
+          "The probabilities must sum to $1$: $2k+k+k+\\frac{1}{5}=1$.",
+          "Combine like terms: $4k+\\frac{1}{5}=1$, so $4k=\\frac{4}{5}$.",
+          "Divide by $4$: $k=\\frac{1}{5}$.",
+          "Then $P(\\text{A})=2k=\\frac{2}{5}$ and $P(\\text{D})=\\frac{1}{5}$, so $P(\\text{A or D})=\\frac{2}{5}+\\frac{1}{5}=\\frac{3}{5}$."
+        ],
+        "answer": "$k=\\frac{1}{5}$ and $P(\\text{A or D})=\\frac{3}{5}$"
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A factory claims that $\\frac{1}{20}$ of its light bulbs are defective. A store models a shipment with $P(\\text{defective})=\\frac{1}{20}$ and inspects $400$ bulbs, finding $36$ defective. Compute the predicted number of defective bulbs and the observed relative frequency, then state whether the data support the factory's claim.",
+      "answer": "Predicted $20$ defective; observed relative frequency $\\frac{9}{100}=0.09$ ($36$ defective), which is much higher than the model's $0.05$, so the data do not support the claim.",
+      "solution": {
+        "steps": [
+          "Predicted defective $=\\frac{1}{20}\\times 400=20$ bulbs.",
+          "Observed relative frequency $=\\frac{36}{400}=\\frac{9}{100}=0.09$.",
+          "The model's probability is $\\frac{1}{20}=0.05$, so the observed $0.09$ is nearly double the claimed rate.",
+          "Finding $36$ defective when only about $20$ were predicted, in a sample as large as $400$, is too big a gap to be chance; the data do not support the factory's claim and suggest the true defect rate is higher."
+        ],
+        "answer": "Predicted $20$ defective; observed relative frequency $\\frac{9}{100}=0.09$ ($36$ defective), which is much higher than the model's $0.05$, so the data do not support the claim."
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A game uses two fair coins; the model for the number of heads is $P(0)=\\frac{1}{4}$, $P(1)=\\frac{1}{2}$, $P(2)=\\frac{1}{4}$. The game is played $160$ times. Find the predicted count for each outcome, then find the predicted number of times a player gets at least one head.",
+      "answer": "Predicted counts: $40$ for $0$ heads, $80$ for $1$ head, $40$ for $2$ heads; predicted at least one head $=120$ times.",
+      "solution": {
+        "steps": [
+          "Predicted count $=P(\\text{outcome})\\times 160$.",
+          "$0$ heads: $\\frac{1}{4}\\times 160=40$; $1$ head: $\\frac{1}{2}\\times 160=80$; $2$ heads: $\\frac{1}{4}\\times 160=40$.",
+          "At least one head means $1$ head or $2$ heads: $P(\\ge 1)=\\frac{1}{2}+\\frac{1}{4}=\\frac{3}{4}$.",
+          "Predicted count of at least one head $=\\frac{3}{4}\\times 160=120$ (which also equals $80+40$)."
+        ],
+        "answer": "Predicted counts: $40$ for $0$ heads, $80$ for $1$ head, $40$ for $2$ heads; predicted at least one head $=120$ times."
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A spinner has sections red, blue, and green. The model gives $P(\\text{red})=\\frac{1}{2}$ and $P(\\text{blue})=2\\cdot P(\\text{green})$. Find $P(\\text{blue})$ and $P(\\text{green})$ so the model is valid.",
+      "answer": "$P(\\text{green})=\\frac{1}{6}$ and $P(\\text{blue})=\\frac{1}{3}$",
+      "solution": {
+        "steps": [
+          "Let $P(\\text{green})=g$. Then $P(\\text{blue})=2g$.",
+          "All probabilities sum to $1$: $\\frac{1}{2}+2g+g=1$.",
+          "So $\\frac{1}{2}+3g=1$, giving $3g=\\frac{1}{2}$ and $g=\\frac{1}{6}$.",
+          "Then $P(\\text{blue})=2g=\\frac{2}{6}=\\frac{1}{3}$. Check: $\\frac{1}{2}+\\frac{1}{3}+\\frac{1}{6}=\\frac{3}{6}+\\frac{2}{6}+\\frac{1}{6}=1$."
+        ],
+        "answer": "$P(\\text{green})=\\frac{1}{6}$ and $P(\\text{blue})=\\frac{1}{3}$"
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A six-sided number cube is assumed fair, so each face is modeled at $\\frac{1}{6}$. Rolled $60$ times, the results were: $1\\!:\\!9$, $2\\!:\\!11$, $3\\!:\\!10$, $4\\!:\\!8$, $5\\!:\\!12$, $6\\!:\\!10$. Find the predicted count per face, then decide whether these data support the fair-cube model and justify your answer.",
+      "answer": "Predicted count is $10$ per face; the observed counts range only from $8$ to $12$, all within $2$ of $10$, so the data support the fair-cube model.",
+      "solution": {
+        "steps": [
+          "Predicted count per face $=\\frac{1}{6}\\times 60=10$.",
+          "Compare each observed count to $10$: differences are $-1, +1, 0, -2, +2, 0$.",
+          "No face is off by more than $2$ in $60$ rolls, which is normal chance variation for a fair cube.",
+          "Because every face is close to its predicted $10$, the data support the fair-cube model; there is no sign of bias toward any face."
+        ],
+        "answer": "Predicted count is $10$ per face; the observed counts range only from $8$ to $12$, all within $2$ of $10$, so the data support the fair-cube model."
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A class assumes a $4$-color spinner is fair ($\\frac{1}{4}$ each). They spin it only $8$ times and get red $5$ times. A student concludes the spinner is biased toward red. Predict the count of reds from the model, give the observed relative frequency, and explain why the student's conclusion is not yet justified.",
+      "answer": "Predicted reds $=2$; observed relative frequency $=\\frac{5}{8}$; the conclusion is not justified because $8$ spins is far too small a sample to distinguish bias from chance.",
+      "solution": {
+        "steps": [
+          "Predicted reds $=\\frac{1}{4}\\times 8=2$.",
+          "Observed relative frequency of red $=\\frac{5}{8}=0.625$, which is well above the model's $0.25$.",
+          "Although $5$ reds is more than the predicted $2$, only $8$ spins were performed, and small samples often produce big swings purely by chance.",
+          "With so few trials you cannot tell genuine bias from ordinary chance variation; the student needs many more spins (a larger sample) before concluding the spinner is biased."
+        ],
+        "answer": "Predicted reds $=2$; observed relative frequency $=\\frac{5}{8}$; the conclusion is not justified because $8$ spins is far too small a sample to distinguish bias from chance."
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A bag is said to hold marbles in the ratio red : blue : green $= 3:2:1$. A model is built from this ratio. A student draws $90$ times with replacement and gets red $44$, blue $31$, green $15$. Write the model probabilities, find the predicted count for each color, and decide whether the data support the model.",
+      "answer": "Model: $P(\\text{red})=\\frac{1}{2}$, $P(\\text{blue})=\\frac{1}{3}$, $P(\\text{green})=\\frac{1}{6}$; predicted counts $45, 30, 15$; the observed counts ($44, 31, 15$) are all within $1$ of the predictions, so the data support the model.",
+      "solution": {
+        "steps": [
+          "The ratio $3:2:1$ has $3+2+1=6$ parts, so $P(\\text{red})=\\frac{3}{6}=\\frac{1}{2}$, $P(\\text{blue})=\\frac{2}{6}=\\frac{1}{3}$, $P(\\text{green})=\\frac{1}{6}$.",
+          "Predicted counts in $90$ draws: red $=\\frac{1}{2}\\times 90=45$, blue $=\\frac{1}{3}\\times 90=30$, green $=\\frac{1}{6}\\times 90=15$.",
+          "Compare to observed: red $44$ vs $45$, blue $31$ vs $30$, green $15$ vs $15$.",
+          "Each observed count is within $1$ of its prediction, so the data closely match the model and support it."
+        ],
+        "answer": "Model: $P(\\text{red})=\\frac{1}{2}$, $P(\\text{blue})=\\frac{1}{3}$, $P(\\text{green})=\\frac{1}{6}$; predicted counts $45, 30, 15$; the observed counts ($44, 31, 15$) are all within $1$ of the predictions, so the data support the model."
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A four-option survey model gives $P(\\text{A})=0.30$, $P(\\text{B})=0.25$, $P(\\text{C})=0.20$, $P(\\text{D})=0.25$. Out of $1000$ responses, option C is chosen $310$ times. Find the predicted count for C, compare it with the observed count, and explain the most likely source of the discrepancy.",
+      "answer": "Predicted C $=200$, but observed C $=310$; a gap of $110$ in $1000$ responses is far too large to be chance, so the model's probability for C is wrong (it underestimates how often C is chosen).",
+      "solution": {
+        "steps": [
+          "Predicted count for C $=P(\\text{C})\\times 1000=0.20\\times 1000=200$.",
+          "Observed count for C $=310$, which is $110$ more than predicted; the observed relative frequency is $\\frac{310}{1000}=0.31$ versus the model's $0.20$.",
+          "In a large sample of $1000$, ordinary chance variation would be small, so a gap this size is not just noise.",
+          "The most likely source is that the model is wrong for C: its assumed probability of $0.20$ is too low, and the model should be revised using the observed data."
+        ],
+        "answer": "Predicted C $=200$, but observed C $=310$; a gap of $110$ in $1000$ responses is far too large to be chance, so the model's probability for C is wrong (it underestimates how often C is chosen)."
+      }
+    }
+  ]
+}

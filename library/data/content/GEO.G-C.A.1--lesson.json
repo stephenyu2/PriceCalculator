@@ -1,0 +1,168 @@
+{
+  "id": "GEO.G-C.A.1--lesson",
+  "standard": "GEO.G-C.A.1",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Circles",
+  "domainCode": "G-C",
+  "cluster": "Understand and apply theorems about circles",
+  "clusterCode": "A",
+  "skillName": "All Circles Are Similar",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "A similarity transformation is a sequence of rigid motions (translations, rotations, reflections) followed by a dilation. Two figures are similar when such a transformation maps one exactly onto the other. Every circle has the same shape, so any two circles are similar: a translation slides one center onto the other, and a dilation centered there with scale factor $k=\\frac{r_2}{r_1}$ stretches the first circle to match the second. Because the scale factor is the ratio of the radii, it is also the ratio of the diameters and the ratio of the circumferences. The dilation multiplies every length by $k$, so radii, arc lengths, and circumferences scale by $k$, areas scale by $k^2$, while angle measures and degree arc measures stay unchanged.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Circle $A$ has radius $r_1=4$ and circle $B$ has radius $r_2=10$. Find the scale factor $k$ of the dilation centered at $B$'s center that maps circle $A$ onto circle $B$.",
+      "solution": {
+        "steps": [
+          "The dilation that carries circle $A$ onto circle $B$ has scale factor equal to the ratio of the image radius to the original radius: $k=\\frac{r_2}{r_1}$.",
+          "Substitute the given radii: $k=\\frac{10}{4}$.",
+          "Simplify the fraction by dividing numerator and denominator by $2$: $\\frac{10}{4}=\\frac{5}{2}$.",
+          "So the dilation has scale factor $\\frac{5}{2}$, which checks out: $\\frac{5}{2}\\cdot 4=10=r_2$."
+        ],
+        "answer": "$k=\\frac{5}{2}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A dilation with scale factor $k=3$ maps circle $P$ of radius $r$ onto circle $Q$ of radius $12$. Find $r$.",
+      "solution": {
+        "steps": [
+          "A dilation centered at a circle's center with factor $k$ sends a circle of radius $r$ to a circle of radius $kr$. Here the image radius is $12$, so $kr=12$.",
+          "Substitute $k=3$: $3r=12$.",
+          "Divide both sides by $3$: $r=\\frac{12}{3}=4$.",
+          "Check: $3\\cdot 4=12$, the radius of circle $Q$, as required."
+        ],
+        "answer": "$r=4$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Circle $C_1$ has center $(-2,1)$ and radius $3$; circle $C_2$ has center $(4,1)$ and radius $9$. Describe a similarity transformation that maps $C_1$ onto $C_2$.",
+      "solution": {
+        "steps": [
+          "First make the centers coincide with a rigid motion. The translation must send $(-2,1)$ to $(4,1)$.",
+          "Subtract coordinates to find the translation vector: $\\langle 4-(-2),\\,1-1\\rangle=\\langle 6,0\\rangle$. Translate $C_1$ by $\\langle 6,0\\rangle$.",
+          "After the translation, $C_1$ is centered at $(4,1)$ with radius still $3$ (a rigid motion preserves length).",
+          "Now dilate about the common center $(4,1)$ with scale factor $k=\\frac{r_2}{r_1}=\\frac{9}{3}=3$, which stretches the radius from $3$ to $9$.",
+          "A rigid motion followed by a dilation is a similarity transformation, so this sequence maps $C_1$ exactly onto $C_2$."
+        ],
+        "answer": "Translate by $\\langle 6,0\\rangle$, then dilate about $(4,1)$ with $k=3$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Given circle $O_1$ with center $O_1$ and radius $r_1$ and circle $O_2$ with center $O_2$ and radius $r_2$, write a paragraph proof that $O_1\\sim O_2$.",
+      "solution": {
+        "steps": [
+          "Let $T$ be the translation that maps the point $O_1$ onto the point $O_2$. A translation is a rigid motion, so it preserves distances; the image of circle $O_1$ is a circle centered at $O_2$ with the same radius $r_1$.",
+          "Let $D$ be the dilation centered at $O_2$ with scale factor $k=\\frac{r_2}{r_1}$. A dilation about a circle's center sends a circle of radius $r_1$ to a concentric circle of radius $k\\,r_1=\\frac{r_2}{r_1}\\cdot r_1=r_2$.",
+          "Therefore $D\\big(T(O_1)\\big)$ is the circle centered at $O_2$ with radius $r_2$, which is exactly circle $O_2$.",
+          "The composition $D\\circ T$ is a rigid motion followed by a dilation, which by definition is a similarity transformation, and it maps circle $O_1$ onto circle $O_2$.",
+          "Because a similarity transformation maps $O_1$ onto $O_2$, the two circles are similar: $O_1\\sim O_2$. (Since $r_1,r_2$ were arbitrary, any two circles are similar.)"
+        ],
+        "answer": "A translation carrying $O_1$ to $O_2$ followed by a dilation about $O_2$ with $k=\\frac{r_2}{r_1}$ maps $O_1$ onto $O_2$, and a rigid motion followed by a dilation is a similarity transformation, so $O_1\\sim O_2$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Circle $A$ (radius $6$) is similar to circle $B$ (radius $9$). A $90^\\circ$ arc of circle $A$ has length $3\\pi$. Find the length of the corresponding $90^\\circ$ arc of circle $B$.",
+      "solution": {
+        "steps": [
+          "Find the scale factor from circle $A$ to circle $B$: $k=\\frac{r_2}{r_1}=\\frac{9}{6}=\\frac{3}{2}$.",
+          "Arc length is a linear measure, so it scales by the linear factor $k$ (not $k^2$, which governs area). The corresponding arc subtends the same $90^\\circ$, so its measure is unchanged; only its length scales.",
+          "Multiply the original arc length by $k$: $\\frac{3}{2}\\cdot 3\\pi=\\frac{9\\pi}{2}$.",
+          "So the corresponding $90^\\circ$ arc of circle $B$ has length $\\frac{9\\pi}{2}$."
+        ],
+        "answer": "$\\frac{9\\pi}{2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Circle $M$ has radius $r_1=5$ and circle $N$ has radius $r_2=8$. Find the scale factor $k$ of the dilation that maps circle $M$ onto circle $N$.",
+      "hint": "The scale factor for the map from circle $M$ to circle $N$ is $\\frac{r_2}{r_1}$ (image over original), not $\\frac{r_1}{r_2}$.",
+      "solution": {
+        "steps": [
+          "Use $k=\\frac{r_2}{r_1}$ for the dilation from $M$ to $N$.",
+          "Substitute: $k=\\frac{8}{5}$.",
+          "The fraction $\\frac{8}{5}$ is already in lowest terms, so $k=\\frac{8}{5}$."
+        ],
+        "answer": "$k=\\frac{8}{5}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A dilation with scale factor $k=\\frac{7}{4}$ maps circle $S$ of radius $r$ onto a circle of radius $21$. Find $r$.",
+      "hint": "The image radius equals $k$ times the original radius, so solve $kr=21$ for $r$.",
+      "solution": {
+        "steps": [
+          "Set up $kr=21$ with $k=\\frac{7}{4}$: $\\frac{7}{4}r=21$.",
+          "Multiply both sides by the reciprocal $\\frac{4}{7}$: $r=21\\cdot\\frac{4}{7}$.",
+          "Compute: $\\frac{21\\cdot 4}{7}=\\frac{84}{7}=12$.",
+          "Check: $\\frac{7}{4}\\cdot 12=21$, as required, so $r=12$."
+        ],
+        "answer": "$r=12$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Circle $G$ has diameter $6$ and circle $H$ has radius $9$. Find the scale factor $k$ of the dilation that maps circle $G$ onto circle $H$.",
+      "hint": "Match measures before dividing: convert the diameter of $G$ to a radius, then use $k=\\frac{r_H}{r_G}$.",
+      "solution": {
+        "steps": [
+          "The given measure for circle $G$ is a diameter, but the scale factor uses radii (or two diameters). Convert: $r_G=\\frac{6}{2}=3$.",
+          "Circle $H$ already gives a radius: $r_H=9$.",
+          "Form the ratio of radii: $k=\\frac{r_H}{r_G}=\\frac{9}{3}=3$.",
+          "So the dilation has scale factor $k=3$."
+        ],
+        "answer": "$k=3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Circle $C_1$ has center $(1,-3)$ and radius $2$; circle $C_2$ has center $(1,5)$ and radius $6$. Describe a similarity transformation that maps $C_1$ onto $C_2$.",
+      "hint": "First translate so the centers coincide (subtract coordinates for the vector), then dilate about the shared center by $\\frac{r_2}{r_1}$.",
+      "solution": {
+        "steps": [
+          "Find the translation that sends $(1,-3)$ to $(1,5)$: the vector is $\\langle 1-1,\\,5-(-3)\\rangle=\\langle 0,8\\rangle$.",
+          "After translating $C_1$ by $\\langle 0,8\\rangle$, it is centered at $(1,5)$ with radius still $2$.",
+          "Dilate about $(1,5)$ with scale factor $k=\\frac{r_2}{r_1}=\\frac{6}{2}=3$, sending the radius from $2$ to $6$.",
+          "A rigid motion followed by a dilation is a similarity transformation, so this maps $C_1$ onto $C_2$."
+        ],
+        "answer": "Translate by $\\langle 0,8\\rangle$, then dilate about $(1,5)$ with $k=3$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Circle $A$ (radius $4$) is similar to circle $B$ (radius $10$). A central angle in circle $A$ cuts off an arc of length $2\\pi$. The corresponding central angle in circle $B$ has the same measure. Find the length of the corresponding arc in circle $B$, and state the measure of that central angle compared with the original.",
+      "hint": "Arc length is a length, so it scales by $k=\\frac{r_2}{r_1}$. Angle and degree arc measures are preserved by a similarity, so the central angle does not change.",
+      "solution": {
+        "steps": [
+          "Find the scale factor from $A$ to $B$: $k=\\frac{r_2}{r_1}=\\frac{10}{4}=\\frac{5}{2}$.",
+          "Arc length is a linear measure, so multiply by $k$ (not $k^2$): corresponding arc length $=\\frac{5}{2}\\cdot 2\\pi=5\\pi$.",
+          "A similarity transformation preserves angle measures, so the central angle in circle $B$ has the same measure as in circle $A$; it is unchanged.",
+          "Therefore the corresponding arc length is $5\\pi$ and the central angle measure is equal to the original."
+        ],
+        "answer": "Arc length $5\\pi$; the central angle has the same measure as the original (unchanged)."
+      }
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "standard": "A1.F-BF.A.1",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Building Functions",
+  "domainCode": "F-BF",
+  "cluster": "Build a function that models a relationship between two quantities",
+  "clusterCode": "A",
+  "skillName": "Writing Functions from Context",
+
+  "description": "Students translate a verbal, tabular, or real-world description of a relationship between two quantities into an explicit function rule, using function notation. They must identify the input (independent) and output (dependent) variables, detect whether the relationship is linear (constant rate of change, written $f(x)=mx+b$) or exponential (constant ratio, written $f(x)=ab^{x}$), determine the parameters (initial value, rate, common ratio) from the context, and write the function so that $f(x)$ gives the output for a given input. They also combine simpler functions arithmetically when a quantity is a sum of two modeled processes.",
+
+  "subSkills": [
+    "Identify the independent and dependent variables in a described relationship",
+    "Recognize a constant rate of change (linear) vs. a constant multiplicative factor (exponential)",
+    "Extract the initial value (y-intercept $b$ or starting amount $a$) from context",
+    "Extract the rate of change $m$ or common ratio $b$ from context",
+    "Write the rule in function notation, e.g. $f(x)=mx+b$ or $f(x)=ab^{x}$",
+    "Evaluate the written function at a specific input to check or answer a follow-up",
+    "Build a function as a sum or difference of two simpler context functions, e.g. $h(x)=f(x)+g(x)$"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Linear from rate plus start",
+      "example": "A pool holds $200$ gallons and is filled at $15$ gallons per minute. Write a function $V(t)$ for the volume after $t$ minutes. Answer: $V(t)=15t+200$."
+    },
+    {
+      "name": "Linear from a table",
+      "example": "A table shows $f(0)=7,\\ f(1)=11,\\ f(2)=15,\\ f(3)=19$. Write $f(x)$. Constant difference $4$, intercept $7$, so $f(x)=4x+7$."
+    },
+    {
+      "name": "Exponential growth/decay from a multiplier",
+      "example": "A bacteria culture starts at $500$ cells and triples each hour. Write $P(t)$ for the count after $t$ hours. Answer: $P(t)=500\\cdot 3^{t}$."
+    },
+    {
+      "name": "Exponential from a percent change",
+      "example": "A $\\$1200$ laptop loses $20\\%$ of its value each year. Write $V(t)$ for its value after $t$ years. Answer: $V(t)=1200(0.8)^{t}$."
+    },
+    {
+      "name": "Combine two functions",
+      "example": "A worker earns a $\\$40$ flat fee plus $\\$25$ per hour for labor $L(h)=25h+40$, and parts cost a flat $\\$90$, $P=90$. Write total cost $C(h)$. Answer: $C(h)=L(h)+90=25h+130$."
+    },
+    {
+      "name": "Choose and justify the model type",
+      "example": "Given a context, decide whether $f(x)=mx+b$ or $f(x)=ab^{x}$ fits, then write the rule. A savings account adding a fixed $\\$50$ per month is linear; one earning $3\\%$ interest per month is exponential."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step linear model. The starting value and the constant rate of change are stated directly in the words of the problem, in the order needed. Student plugs the two given numbers into $f(x)=mx+b$. No model-type decision and no follow-up evaluation.",
+      "constraints": [
+        "Relationship is linear with positive whole-number $m$ and $b$",
+        "Initial value and rate are both given explicitly and verbatim",
+        "Input and output variables are obvious from the context",
+        "Answer is a rule of the form $f(x)=mx+b$; no evaluation required"
+      ]
+    },
+    "Medium": {
+      "description": "Student must do one inference step before writing the rule: identify the rate from a table or two data points, recognize a percent or multiplier as an exponential base, or determine which variable is the input. Covers both basic linear (from a table) and basic exponential (from an explicit multiplier or simple percent) models, sometimes with a single evaluation follow-up.",
+      "constraints": [
+        "Rate or common ratio must be computed (e.g. constant difference from a table, or $b=1\\pm r$ from a percent)",
+        "Exponential models use a clean multiplier such as $2$, $3$, $1.5$, or $0.5$, or a percent giving a tidy base like $0.8$ or $1.1$",
+        "May ask the student to evaluate $f$ at one input after writing it",
+        "tier1 (Easy to Medium) lives here: linear contexts and the simplest exponential multipliers, ramping from verbatim-parameter problems up to one-inference problems"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step modeling: the student must decide the model type from context, extract parameters that are not stated directly (e.g. convert a percent decay to base $0.85$, or back out the initial value from a non-zero data point), and may need to combine two functions or write and then evaluate the rule to answer a real-world follow-up question.",
+      "constraints": [
+        "Requires choosing between $f(x)=mx+b$ and $f(x)=ab^{x}$ and justifying it",
+        "Parameters require a derivation (percent to multiplier, ratio from two table rows, or solving for $b$ from a known point)",
+        "May require combining two functions, $h(x)=f(x)+g(x)$ or $f(x)-g(x)$, before simplifying",
+        "Often closes with an evaluation or interpretation follow-up",
+        "tier2 (Medium to Hard) lives here: model-type decisions, derived exponential bases, and combined-function builds, with no item overlap with tier1"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student treats an exponential (constant-ratio) context as linear, subtracting a fixed amount of growth",
+      "distractor": "For a culture starting at $500$ and tripling, writes $P(t)=500+3t$ instead of $P(t)=500\\cdot 3^{t}$"
+    },
+    {
+      "misconception": "Student swaps the rate and the initial value, putting the start as the slope",
+      "distractor": "For a $200$-gallon pool filling at $15$ gal/min writes $V(t)=200t+15$ instead of $V(t)=15t+200$"
+    },
+    {
+      "misconception": "Student uses the percent itself as the base instead of $1\\pm r$",
+      "distractor": "For a $20\\%$ annual loss writes $V(t)=1200(0.2)^{t}$ instead of $V(t)=1200(0.8)^{t}$"
+    },
+    {
+      "misconception": "Student adds the percent decrease instead of subtracting it (decay treated as growth)",
+      "distractor": "For a $20\\%$ annual loss writes $V(t)=1200(1.2)^{t}$ instead of $V(t)=1200(0.8)^{t}$"
+    },
+    {
+      "misconception": "Student multiplies the base by $t$ rather than raising it to the power $t$",
+      "distractor": "For tripling hourly writes $P(t)=500\\cdot 3t$ instead of $P(t)=500\\cdot 3^{t}$"
+    },
+    {
+      "misconception": "Student misreads a table's constant difference, using the first output value as the slope",
+      "distractor": "For $f(0)=7,\\ f(1)=11,\\ f(2)=15$ writes $f(x)=7x+4$ instead of $f(x)=4x+7$"
+    },
+    {
+      "misconception": "Student combines two functions but only adds the variable terms, dropping or mishandling a constant",
+      "distractor": "For $L(h)=25h+40$ plus a flat $\\$90$ writes $C(h)=25h+90$ instead of $C(h)=25h+130$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

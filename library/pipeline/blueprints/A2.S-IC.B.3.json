@@ -1,0 +1,136 @@
+{
+  "standard": "A2.S-IC.B.3",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+  "domainCode": "S-IC",
+  "cluster": "Make inferences and justify conclusions from sample surveys, experiments, and observational studies",
+  "clusterCode": "B",
+  "skillName": "Surveys, Experiments, Observational Studies",
+
+  "description": "Students distinguish the three major methods of collecting statistical data and identify when each is appropriate. A sample survey estimates a population characteristic by measuring a representative sample (its purpose is to describe a population parameter, e.g. a proportion or mean). An experiment deliberately imposes a treatment on subjects and compares outcomes against a control to test whether the treatment causes an effect (its purpose is to establish cause and effect). An observational study records measurements of subjects without imposing any treatment, so it can reveal an association but cannot, by itself, establish causation. Students match a research question or scenario to the correct method, state each method's purpose, and explain the role of randomization in each: random sampling (choosing the sample at random from the population) makes a survey's results generalizable to the population by reducing selection bias, while random assignment (assigning subjects to treatment and control groups at random) makes an experiment's comparison valid by balancing confounding variables across groups so a causal conclusion is justified. Students also recognize that only a randomized comparative experiment supports a cause-and-effect claim, and that an observational study can only support a claim of association because lurking (confounding) variables are not controlled.",
+
+  "subSkills": [
+    "Classify a described study as a sample survey, an experiment, or an observational study",
+    "State the purpose of each method: a survey estimates a population parameter, an experiment tests for cause and effect, an observational study describes an association without intervention",
+    "Distinguish random sampling (random selection from the population) from random assignment (random allocation to treatment groups) and identify which method each belongs to",
+    "Explain how random sampling reduces selection bias and lets survey results generalize to the population",
+    "Explain how random assignment balances confounding variables across groups so an experiment supports a causal conclusion",
+    "Identify a confounding (lurking) variable in an observational study and explain why it blocks a cause-and-effect claim",
+    "Determine which conclusions a given study design can justify (association vs. causation, and to what population results generalize)",
+    "Recommend the appropriate study design for a stated research question and justify the choice"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Classify the method",
+      "example": "A nutrition lab randomly assigns $200$ volunteers to take either a vitamin pill or a placebo for $12$ weeks, then compares their cholesterol. Identify the study type. Because the researchers impose a treatment (pill vs. placebo) and compare outcomes, this is an experiment."
+    },
+    {
+      "name": "State the purpose of a method",
+      "example": "A city wants to estimate the proportion of all residents who support a new bus route. What is the purpose of conducting a sample survey here? To estimate a population parameter (the true proportion of supporters) by measuring a representative sample rather than the whole population."
+    },
+    {
+      "name": "Random sampling vs. random assignment",
+      "example": "A study selects $500$ adults at random from a national registry, then randomly assigns each to an exercise program or a control group. Identify each use of randomization. Selecting the $500$ adults is random sampling (it makes results generalize to the population); splitting them into program and control is random assignment (it makes the treatment comparison valid)."
+    },
+    {
+      "name": "Why randomization matters",
+      "example": "Explain how random assignment lets an experiment support a cause-and-effect claim. Random assignment balances confounding variables (age, diet, health) across the treatment and control groups on average, so any difference in outcomes can be attributed to the treatment rather than to a pre-existing difference between groups."
+    },
+    {
+      "name": "Causation vs. association",
+      "example": "Researchers observe that adults who drink more coffee tend to sleep fewer hours, without assigning anyone a coffee amount. Can they conclude that coffee causes less sleep? No. This is an observational study, so it shows an association; a lurking variable (such as a stressful job) could cause both, so causation is not justified."
+    },
+    {
+      "name": "Identify the confounding variable",
+      "example": "An observational study finds towns with more firefighters per fire also have more fire damage, concluding firefighters cause damage. Name the lurking variable. The size of the fire is confounded with both: bigger fires draw more firefighters and cause more damage, so firefighters do not cause the damage."
+    },
+    {
+      "name": "Recommend and justify a design",
+      "example": "A school wants to know whether a new tutoring program raises test scores. Which design should it use and why? A randomized comparative experiment: randomly assign students to receive tutoring or not, because only random assignment supports the causal claim that the program raises scores."
+    },
+    {
+      "name": "Scope of the conclusion",
+      "example": "An experiment randomly assigns volunteers who answered an online ad to two diets. To whom can the causal conclusion generalize? Random assignment justifies a causal conclusion for these volunteers, but because the subjects were not a random sample of any larger population, the result may not generalize beyond people like the volunteers."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step classification or recall from a short, explicit scenario. The scenario plainly states whether a treatment was imposed and whether subjects were selected or assigned at random, so the student names the method or its purpose directly. tier1 lives here and ramps into Medium.",
+      "constraints": [
+        "Scenario explicitly says whether researchers imposed a treatment or merely observed",
+        "Task is to name the study type, state its single purpose, or define random sampling vs. random assignment",
+        "Only one method or one term is in play per item; no comparison of conclusions required",
+        "No confounding-variable analysis; the answer is recall or one-step matching"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step reasoning that connects a design feature to a conclusion: deciding whether a study supports association or causation, distinguishing the two types of randomization within one scenario, or matching the appropriate design to a research question. tier1 ends here and tier2 begins here.",
+      "constraints": [
+        "Student must decide what conclusion (association vs. causation) the design can justify and state why",
+        "Item may require separating random sampling from random assignment in a scenario that uses one or both",
+        "Recommending a design for a stated question, with a one-sentence justification tied to randomization",
+        "Scenario is realistic but the key feature (treatment imposed? random selection?) must be inferred from one detail rather than stated outright"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step analysis that chains design, randomization, confounding, and scope. The student must identify a specific lurking variable, explain how randomization would or would not remove it, and bound how far a conclusion can generalize. tier2 lives here.",
+      "constraints": [
+        "Identify a plausible confounding variable by name and explain the mechanism by which it distorts the observed association",
+        "Distinguish the separate roles of random sampling (generalizability) and random assignment (causation) and state which is missing and what that costs the conclusion",
+        "Critique a flawed conclusion (e.g. a causal claim drawn from an observational study) and state the corrected, defensible conclusion",
+        "Reason about scope: to which population a causal or descriptive result can legitimately extend, given how subjects were obtained"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student believes a strong association found in an observational study proves causation",
+      "distractor": "Concludes that because coffee drinkers sleep less, coffee causes less sleep, ignoring that an observational study with a lurking variable can only establish association"
+    },
+    {
+      "misconception": "Student confuses random sampling with random assignment, treating them as the same thing",
+      "distractor": "Says that randomly assigning subjects to treatment and control groups is what makes an experiment's result generalize to the whole population, when generalizability comes from random sampling and the assignment instead enables the causal comparison"
+    },
+    {
+      "misconception": "Student labels any study that uses randomness an experiment",
+      "distractor": "Calls a poll that randomly selects respondents an experiment, instead of a sample survey, because no treatment is imposed on the respondents"
+    },
+    {
+      "misconception": "Student thinks an experiment is defined by having a large sample rather than by imposing a treatment",
+      "distractor": "Classifies a large observational survey as an experiment because of its size, instead of recognizing that an experiment requires the researcher to actively assign a treatment"
+    },
+    {
+      "misconception": "Student believes an observational study can be fixed into a causal study just by adding more subjects",
+      "distractor": "Claims that observing more people would let the coffee-and-sleep study prove causation, instead of recognizing that only random assignment of a treatment controls confounding variables"
+    },
+    {
+      "misconception": "Student thinks the purpose of a sample survey is to test a treatment rather than to estimate a population parameter",
+      "distractor": "States that the city poll about the bus route is meant to test whether the bus route changes opinions, instead of to estimate the proportion of residents who already support it"
+    },
+    {
+      "misconception": "Student assumes a causal result from a non-random sample generalizes to everyone",
+      "distractor": "Says an experiment on self-selected online volunteers proves the diet works for the entire national population, ignoring that the absence of random sampling limits the scope of the conclusion"
+    },
+    {
+      "misconception": "Student overlooks the lurking variable and reverses or invents a causal direction",
+      "distractor": "Concludes that more firefighters cause more fire damage, instead of recognizing the size of the fire as the lurking variable driving both"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent.",
+
+  "standard": "GEO.G-SRT.B.5",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Similarity, Right Triangles, and Trigonometry",
+  "domainCode": "G-SRT",
+  "cluster": "Prove theorems involving similarity",
+  "clusterCode": "B",
+  "skillName": "Congruence and Similarity Problem Solving",
+
+  "description": "Students use triangle congruence criteria ($\\text{SSS}$, $\\text{SAS}$, $\\text{ASA}$, $\\text{AAS}$, $\\text{HL}$) and triangle similarity criteria ($\\text{AA}$, $\\text{SAS}\\sim$, $\\text{SSS}\\sim$) to solve numerical and geometric problems and to justify relationships in figures. They identify when two triangles are congruent or similar, set up and solve proportions from corresponding sides of similar triangles, find missing side lengths and angle measures, apply the relationship that congruent triangles have corresponding parts congruent ($\\text{CPCTC}$) and similar triangles have proportional corresponding sides, and write short justifications for why a relationship (e.g. parallel segments, midsegments, equal ratios) must hold.",
+
+  "subSkills": [
+    "State the correct congruence criterion ($\\text{SSS}$, $\\text{SAS}$, $\\text{ASA}$, $\\text{AAS}$, $\\text{HL}$) that proves two triangles congruent from given marks",
+    "State the correct similarity criterion ($\\text{AA}$, $\\text{SAS}\\sim$, $\\text{SSS}\\sim$) that proves two triangles similar",
+    "Write a correct correspondence between vertices of two congruent or similar triangles",
+    "Set up a proportion from corresponding sides of similar triangles and solve for a missing length",
+    "Use the scale factor (ratio of similarity) to find a missing side, perimeter, or to relate areas by the square of the scale factor",
+    "Apply $\\text{CPCTC}$ to conclude that a remaining pair of sides or angles is congruent once triangles are proven congruent",
+    "Use shared sides, vertical angles, the Reflexive Property, and parallel-line angle relationships to supply the needed congruent/proportional parts",
+    "Solve overlapping-triangle and nested-triangle problems (e.g. a triangle cut by a line parallel to one side) using the Side-Splitter relationship",
+    "Write a short logical justification (statement + reason) for why a relationship holds"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Identify the congruence criterion",
+      "example": "In $\\triangle ABC$ and $\\triangle DEF$, $AB = DE$, $\\angle A = \\angle D$, and $AC = DF$. Which criterion proves $\\triangle ABC \\cong \\triangle DEF$? Answer: $\\text{SAS}$."
+    },
+    {
+      "name": "Identify the similarity criterion",
+      "example": "Two triangles have $\\angle A = \\angle X = 52^\\circ$ and $\\angle B = \\angle Y = 71^\\circ$. Which criterion proves $\\triangle ABC \\sim \\triangle XYZ$? Answer: $\\text{AA}$."
+    },
+    {
+      "name": "Solve a proportion for a missing side",
+      "example": "$\\triangle ABC \\sim \\triangle DEF$ with $AB = 6$, $DE = 9$, and $BC = 8$. Find $EF$. Set up $\\frac{6}{9} = \\frac{8}{EF}$ so $EF = 12$."
+    },
+    {
+      "name": "Scale factor with perimeter or area",
+      "example": "$\\triangle PQR \\sim \\triangle STU$ with scale factor $\\frac{2}{3}$. If the area of $\\triangle PQR$ is $12$, find the area of $\\triangle STU$. Answer: $12 \\cdot \\left(\\frac{3}{2}\\right)^2 = 27$."
+    },
+    {
+      "name": "Side-Splitter / parallel line within a triangle",
+      "example": "In $\\triangle ABC$, $D$ on $\\overline{AB}$ and $E$ on $\\overline{AC}$ with $\\overline{DE} \\parallel \\overline{BC}$. If $AD = 4$, $DB = 6$, and $AE = 5$, find $EC$. Set up $\\frac{4}{6} = \\frac{5}{EC}$ so $EC = \\frac{15}{2}$."
+    },
+    {
+      "name": "Overlapping or shared-side triangles with CPCTC",
+      "example": "Given $\\overline{AB} \\cong \\overline{CB}$ and $\\overline{BD}$ bisects $\\angle ABC$, prove $\\overline{AD} \\cong \\overline{CD}$. Triangles share $\\overline{BD}$, so $\\triangle ABD \\cong \\triangle CBD$ by $\\text{SAS}$, and $\\overline{AD} \\cong \\overline{CD}$ by $\\text{CPCTC}$."
+    },
+    {
+      "name": "Indirect measurement (real-world similar triangles)",
+      "example": "A $6$ ft person casts a $4$ ft shadow while a flagpole casts a $26$ ft shadow at the same time. Find the height of the flagpole. Set up $\\frac{6}{4} = \\frac{h}{26}$ so $h = 39$ ft."
+    },
+    {
+      "name": "Solve for a variable in side expressions",
+      "example": "$\\triangle ABC \\sim \\triangle DEF$ with $AB = 2x$, $DE = 10$, $BC = x + 3$, $EF = 8$. Find $x$. Set up $\\frac{2x}{10} = \\frac{x+3}{8}$, cross multiply $16x = 10x + 30$, so $x = 5$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recognition or one proportion. The criterion or correspondence is given or directly visible, and at most one proportion is solved with small whole-number answers. A diagram or all needed measures are stated.",
+      "constraints": [
+        "Name the congruence/similarity criterion from explicitly given congruent/proportional parts, OR solve one proportion $\\frac{a}{b} = \\frac{c}{x}$ for $x$",
+        "All four relevant measures are whole numbers $\\le 24$ and the answer is a whole number or a simple fraction",
+        "Correspondence between triangles is given in the similarity/congruence statement (e.g. $\\triangle ABC \\sim \\triangle DEF$)",
+        "No shared sides, overlapping triangles, or auxiliary reasoning required"
+      ]
+    },
+    "Medium": {
+      "description": "Two steps: establish the correspondence or criterion, then compute. Includes scale-factor reasoning, side-splitter (parallel line) setups, solving a linear equation that arises from a single proportion, or applying CPCTC after a one-line congruence argument.",
+      "constraints": [
+        "Student must determine the correct correspondence or select the right criterion before computing",
+        "May require a side-splitter proportion, a perimeter via scale factor, or solving $\\frac{a}{b} = \\frac{c}{x}$ where the answer is a non-integer fraction",
+        "May involve one variable in a single side expression solved by cross multiplication",
+        "Uses vertical angles, a shared side (Reflexive), or parallel-line angles to supply one missing congruent/proportional part"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems combining several relationships: prove similarity/congruence then use it to find a length, area ratio as the square of the scale factor, overlapping or nested triangles, or a short multi-statement justification. Requires reading a figure or context, choosing the criterion, and chaining two or more computations.",
+      "constraints": [
+        "Requires proving the triangles related (criterion + reason) AND then solving for a missing quantity",
+        "May use the area ratio $= (\\text{scale factor})^2$, nested/overlapping triangles, or two linked proportions",
+        "May require a 3-to-4 statement justification (statement and reason) for the relationship",
+        "Variable may appear in two expressions or the answer may be an exact radical or fraction"
+      ]
+    },
+    "_split": "If authored as two worksheets: tier1 covers Easy to Medium (recognizing criteria, single proportions, scale factor, basic side-splitter, simple CPCTC); tier2 covers Medium to Hard (variable-in-expression proportions, area ratios, overlapping/nested triangles, multi-statement justifications, indirect measurement). The single ramped worksheet runs Easy items 1 to 5, Medium items 6 to 11, Hard items 12 to 15."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student treats $\\text{AAA}$ or $\\text{SSA}$ as a congruence criterion",
+      "distractor": "Selects $\\text{AAA}$ to 'prove congruence' (it only proves similarity) or selects $\\text{SSA}$ as a valid congruence criterion"
+    },
+    {
+      "misconception": "Student matches corresponding sides incorrectly, pairing non-corresponding parts",
+      "distractor": "Sets up $\\frac{AB}{EF}$ instead of $\\frac{AB}{DE}$, e.g. computes $EF = \\frac{6 \\cdot 8}{9}$ from a mismatched pairing"
+    },
+    {
+      "misconception": "Student inverts the proportion, putting the ratio upside down",
+      "distractor": "Writes $\\frac{9}{6} = \\frac{8}{EF}$ giving $EF = \\frac{16}{3}$ instead of $\\frac{6}{9} = \\frac{8}{EF}$ giving $EF = 12$"
+    },
+    {
+      "misconception": "Student scales area by the scale factor instead of its square",
+      "distractor": "Multiplies the area by $\\frac{3}{2}$ to get $18$ instead of by $\\left(\\frac{3}{2}\\right)^2$ to get $27$"
+    },
+    {
+      "misconception": "Student adds the scale factor to each side instead of multiplying",
+      "distractor": "From a scale factor making sides $3$ longer additively, gets $EF = 8 + 3 = 11$ instead of $EF = 8 \\cdot \\frac{9}{6} = 12$"
+    },
+    {
+      "misconception": "Student misapplies the Side-Splitter ratio, comparing a part to the whole inconsistently",
+      "distractor": "Sets up $\\frac{AD}{AB} = \\frac{AE}{EC}$ (part-to-whole equals part-to-part) instead of $\\frac{AD}{DB} = \\frac{AE}{EC}$, e.g. getting $EC = \\frac{25}{2}$ instead of $\\frac{15}{2}$"
+    },
+    {
+      "misconception": "Student concludes congruence from similarity, treating similar triangles as having equal side lengths",
+      "distractor": "States the missing side equals its corresponding side ($EF = 8$) because the triangles are 'similar,' ignoring the scale factor"
+    },
+    {
+      "misconception": "Student cites $\\text{CPCTC}$ before the triangles are proven congruent (circular reasoning)",
+      "distractor": "Selects a justification that uses $\\text{CPCTC}$ as the reason for the very congruence it is meant to prove, rather than as a conclusion after congruence is established"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

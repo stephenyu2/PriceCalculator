@@ -1,0 +1,213 @@
+{
+  "id": "GEO.G-GPE.B.4--worksheet",
+  "standard": "GEO.G-GPE.B.4",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Expressing Geometric Properties with Equations",
+  "domainCode": "G-GPE",
+  "cluster": "Use coordinates to prove simple geometric theorems algebraically",
+  "clusterCode": "B",
+  "skillName": "Coordinate Proofs of Geometric Theorems",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Use the distance formula $d=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$, the midpoint formula $\\left(\\frac{x_1+x_2}{2},\\frac{y_1+y_2}{2}\\right)$, and the slope formula $m=\\frac{y_2-y_1}{x_2-x_1}$ to prove geometric facts from coordinates. Equal lengths show congruent segments; equal slopes show parallel sides; slopes with product $-1$ show perpendicular sides; equal diagonal lengths or shared midpoints classify special quadrilaterals. Items progress from single-tool verifications to full general (variable-coordinate) proofs. Give exact values and state the geometric conclusion each computation establishes.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Points $A(1,2)$ and $B(5,2)$ are two vertices of a figure. Use the distance formula to find the length $AB$.",
+      "answer": "$AB=4$",
+      "solution": {
+        "steps": [
+          "Apply the distance formula: $AB=\\sqrt{(5-1)^2+(2-2)^2}$.",
+          "Simplify inside the radical: $AB=\\sqrt{4^2+0^2}=\\sqrt{16}$.",
+          "Therefore $AB=4$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Find the length of the segment with endpoints $C(2,1)$ and $D(2,7)$, and state whether it is vertical.",
+      "answer": "$CD=6$, and the segment is vertical.",
+      "solution": {
+        "steps": [
+          "Apply the distance formula: $CD=\\sqrt{(2-2)^2+(7-1)^2}=\\sqrt{0+36}=6$.",
+          "Both endpoints share the $x$-coordinate $2$, so the segment is vertical.",
+          "Therefore $CD=6$ and $\\overline{CD}$ is a vertical segment."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Find the midpoint of the segment joining $P(2,3)$ and $Q(8,5)$.",
+      "answer": "$\\left(5,4\\right)$",
+      "solution": {
+        "steps": [
+          "Apply the midpoint formula: $\\left(\\frac{2+8}{2},\\frac{3+5}{2}\\right)$.",
+          "Simplify each coordinate: $\\left(\\frac{10}{2},\\frac{8}{2}\\right)$.",
+          "Therefore the midpoint is $(5,4)$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Find the slope of the line through $R(0,0)$ and $S(4,2)$, and the slope of the line through $T(1,5)$ and $U(5,7)$. Are the two lines parallel?",
+      "answer": "Both slopes equal $\\frac{1}{2}$, so the lines are parallel.",
+      "solution": {
+        "steps": [
+          "Slope of $RS=\\frac{2-0}{4-0}=\\frac{2}{4}=\\frac{1}{2}$.",
+          "Slope of $TU=\\frac{7-5}{5-1}=\\frac{2}{4}=\\frac{1}{2}$.",
+          "Equal slopes mean the lines are parallel, so $RS\\parallel TU$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Segment $\\overline{EF}$ has endpoints $E(1,1)$ and $F(4,5)$. Segment $\\overline{GH}$ has endpoints $G(0,0)$ and $H(3,4)$. Show that $EF=GH$.",
+      "answer": "$EF=GH=5$, so the segments are congruent.",
+      "solution": {
+        "steps": [
+          "$EF=\\sqrt{(4-1)^2+(5-1)^2}=\\sqrt{3^2+4^2}=\\sqrt{9+16}=\\sqrt{25}=5$.",
+          "$GH=\\sqrt{(3-0)^2+(4-0)^2}=\\sqrt{9+16}=\\sqrt{25}=5$.",
+          "Since $EF=GH=5$, the two segments are congruent."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Triangle $ABC$ has vertices $A(1,2)$, $B(5,2)$, and $C(3,6)$. Prove that $\\triangle ABC$ is isosceles by comparing its side lengths.",
+      "answer": "$AC=BC=2\\sqrt{5}$, so $\\triangle ABC$ is isosceles.",
+      "solution": {
+        "steps": [
+          "$AB=\\sqrt{(5-1)^2+(2-2)^2}=\\sqrt{16}=4$.",
+          "$AC=\\sqrt{(3-1)^2+(6-2)^2}=\\sqrt{4+16}=\\sqrt{20}=2\\sqrt{5}$.",
+          "$BC=\\sqrt{(3-5)^2+(6-2)^2}=\\sqrt{4+16}=\\sqrt{20}=2\\sqrt{5}$.",
+          "Since $AC=BC=2\\sqrt{5}$, two sides are congruent, so $\\triangle ABC$ is isosceles."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Triangle $JKL$ has vertices $J(0,0)$, $K(4,0)$, and $L(0,3)$. Use slopes to prove that $\\triangle JKL$ has a right angle at $J$.",
+      "answer": "Slope of $\\overline{JK}=0$ and slope of $\\overline{JL}$ is undefined (vertical), so $\\overline{JK}\\perp\\overline{JL}$ and the angle at $J$ is a right angle.",
+      "solution": {
+        "steps": [
+          "Slope of $\\overline{JK}=\\frac{0-0}{4-0}=0$, a horizontal segment.",
+          "Slope of $\\overline{JL}=\\frac{3-0}{0-0}$ is undefined, so $\\overline{JL}$ is vertical.",
+          "A horizontal segment and a vertical segment are perpendicular, so $\\overline{JK}\\perp\\overline{JL}$.",
+          "Therefore the angle at $J$ is a right angle and $\\triangle JKL$ is a right triangle."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Quadrilateral $PQRS$ has vertices $P(0,0)$, $Q(4,0)$, $R(5,3)$, and $S(1,3)$. Prove that $PQRS$ is a parallelogram using slopes.",
+      "answer": "$PQ\\parallel SR$ (both slope $0$) and $PS\\parallel QR$ (both slope $3$), so $PQRS$ is a parallelogram.",
+      "solution": {
+        "steps": [
+          "Slope of $\\overline{PQ}=\\frac{0-0}{4-0}=0$ and slope of $\\overline{SR}=\\frac{3-3}{5-1}=0$, so $\\overline{PQ}\\parallel\\overline{SR}$.",
+          "Slope of $\\overline{PS}=\\frac{3-0}{1-0}=3$ and slope of $\\overline{QR}=\\frac{3-0}{5-4}=3$, so $\\overline{PS}\\parallel\\overline{QR}$.",
+          "Both pairs of opposite sides are parallel, so $PQRS$ is a parallelogram."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Parallelogram $ABCD$ has vertices $A(-2,-1)$, $B(4,-1)$, $C(6,3)$, and $D(0,3)$. Prove that the diagonals $\\overline{AC}$ and $\\overline{BD}$ bisect each other.",
+      "answer": "Both diagonals have midpoint $(2,1)$, so they bisect each other.",
+      "solution": {
+        "steps": [
+          "Midpoint of $\\overline{AC}=\\left(\\frac{-2+6}{2},\\frac{-1+3}{2}\\right)=(2,1)$.",
+          "Midpoint of $\\overline{BD}=\\left(\\frac{4+0}{2},\\frac{-1+3}{2}\\right)=(2,1)$.",
+          "The diagonals share the same midpoint $(2,1)$, which means each diagonal cuts the other in half.",
+          "Therefore the diagonals of $ABCD$ bisect each other."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Show that $M(3,3)$ is equidistant from $A(1,1)$ and $B(5,5)$, and explain why $M$ lies on the perpendicular bisector of $\\overline{AB}$.",
+      "answer": "$MA=MB=2\\sqrt{2}$, and since $M$ is the midpoint of $\\overline{AB}$, $M$ lies on its perpendicular bisector.",
+      "solution": {
+        "steps": [
+          "$MA=\\sqrt{(3-1)^2+(3-1)^2}=\\sqrt{4+4}=\\sqrt{8}=2\\sqrt{2}$.",
+          "$MB=\\sqrt{(3-5)^2+(3-5)^2}=\\sqrt{4+4}=\\sqrt{8}=2\\sqrt{2}$.",
+          "Since $MA=MB$, point $M$ is equidistant from $A$ and $B$.",
+          "The midpoint of $\\overline{AB}$ is $\\left(\\frac{1+5}{2},\\frac{1+5}{2}\\right)=(3,3)=M$; every point equidistant from $A$ and $B$ lies on the perpendicular bisector of $\\overline{AB}$, so $M$ lies on it."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Quadrilateral $WXYZ$ has vertices $W(0,0)$, $X(4,0)$, $Y(4,4)$, and $Z(0,4)$. Prove that $WXYZ$ is a square by showing all four sides are congruent and one angle is a right angle.",
+      "answer": "All four sides equal $4$ and $\\overline{WX}\\perp\\overline{WZ}$, so $WXYZ$ is a square.",
+      "solution": {
+        "steps": [
+          "$WX=\\sqrt{(4-0)^2+(0-0)^2}=4$, $XY=\\sqrt{(4-4)^2+(4-0)^2}=4$, $YZ=\\sqrt{(0-4)^2+(4-4)^2}=4$, and $ZW=\\sqrt{(0-0)^2+(0-4)^2}=4$, so all four sides are congruent.",
+          "Slope of $\\overline{WX}=\\frac{0-0}{4-0}=0$ (horizontal) and slope of $\\overline{WZ}=\\frac{4-0}{0-0}$ is undefined (vertical), so $\\overline{WX}\\perp\\overline{WZ}$ and the angle at $W$ is a right angle.",
+          "A quadrilateral with four congruent sides and a right angle is a square, so $WXYZ$ is a square."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Quadrilateral $ABCD$ has vertices $A(0,0)$, $B(5,0)$, $C(8,4)$, and $D(3,4)$. Determine whether $ABCD$ is a rhombus, a square, both, or neither. Justify with side lengths and the slopes of two adjacent sides.",
+      "answer": "All four sides equal $5$, so $ABCD$ is a rhombus; it is not a square because adjacent sides $\\overline{AB}$ and $\\overline{BC}$ are not perpendicular.",
+      "solution": {
+        "steps": [
+          "$AB=\\sqrt{(5-0)^2+(0-0)^2}=5$, $BC=\\sqrt{(8-5)^2+(4-0)^2}=\\sqrt{9+16}=\\sqrt{25}=5$, $CD=\\sqrt{(3-8)^2+(4-4)^2}=\\sqrt{25}=5$, $DA=\\sqrt{(0-3)^2+(0-4)^2}=\\sqrt{9+16}=5$, so all four sides are congruent.",
+          "A quadrilateral with four congruent sides is a rhombus, so $ABCD$ is a rhombus.",
+          "Check whether it is a square by testing the angle at $B$: slope of $\\overline{AB}=\\frac{0-0}{5-0}=0$ and slope of $\\overline{BC}=\\frac{4-0}{8-5}=\\frac{4}{3}$. Their product is $0\\cdot\\frac{4}{3}=0\\neq-1$, so $\\overline{AB}$ and $\\overline{BC}$ are not perpendicular.",
+          "Because the sides are congruent but adjacent sides are not perpendicular, $ABCD$ is a rhombus and not a square."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A rectangle is placed with vertices $A(0,0)$, $B(2a,0)$, $C(2a,2b)$, and $D(0,2b)$, where $a>0$ and $b>0$. Prove that the diagonals $\\overline{AC}$ and $\\overline{BD}$ are congruent for every rectangle.",
+      "answer": "$AC=BD=\\sqrt{4a^2+4b^2}$ for all $a,b$, so the diagonals of any rectangle are congruent.",
+      "solution": {
+        "steps": [
+          "Compute diagonal $AC$: $AC=\\sqrt{(2a-0)^2+(2b-0)^2}=\\sqrt{4a^2+4b^2}$.",
+          "Compute diagonal $BD$: $BD=\\sqrt{(0-2a)^2+(2b-0)^2}=\\sqrt{4a^2+4b^2}$.",
+          "Since $AC=BD=\\sqrt{4a^2+4b^2}$ regardless of the values of $a$ and $b$, the equality holds for every rectangle of this form.",
+          "Therefore the diagonals of any rectangle are congruent. The variable coordinates make this a proof for all cases, not a single example."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Triangle $ABC$ has vertices $A(0,0)$, $B(2a,0)$, and $C(0,2b)$, a right triangle with the right angle at $A$. Let $M$ be the midpoint of the hypotenuse $\\overline{BC}$. Prove that $M$ is equidistant from all three vertices, that is $MA=MB=MC$.",
+      "answer": "$M=(a,b)$ and $MA=MB=MC=\\sqrt{a^2+b^2}$, so the midpoint of the hypotenuse is equidistant from all three vertices.",
+      "solution": {
+        "steps": [
+          "Find $M$, the midpoint of $\\overline{BC}$: $M=\\left(\\frac{2a+0}{2},\\frac{0+2b}{2}\\right)=(a,b)$.",
+          "$MA=\\sqrt{(a-0)^2+(b-0)^2}=\\sqrt{a^2+b^2}$.",
+          "$MB=\\sqrt{(a-2a)^2+(b-0)^2}=\\sqrt{a^2+b^2}$ and $MC=\\sqrt{(a-0)^2+(b-2b)^2}=\\sqrt{a^2+b^2}$.",
+          "Since $MA=MB=MC=\\sqrt{a^2+b^2}$ for all $a,b$, the midpoint of the hypotenuse is equidistant from the three vertices. This proves the result for every right triangle, not just one example."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Prove that the midpoints of the sides of any quadrilateral form a parallelogram. Place a quadrilateral with vertices $A(0,0)$, $B(2a,0)$, $C(2c,2d)$, and $D(2e,2f)$, let $P,Q,R,S$ be the midpoints of $\\overline{AB},\\overline{BC},\\overline{CD},\\overline{DA}$ in order, and show $PQRS$ is a parallelogram.",
+      "answer": "$\\overrightarrow{PQ}=\\overrightarrow{SR}=(c,d)$, so $\\overline{PQ}$ is parallel and congruent to $\\overline{SR}$; therefore $PQRS$ is a parallelogram for every quadrilateral.",
+      "solution": {
+        "steps": [
+          "Find the four midpoints. $P$ is the midpoint of $\\overline{AB}=\\left(\\frac{0+2a}{2},\\frac{0+0}{2}\\right)=(a,0)$.",
+          "$Q$ is the midpoint of $\\overline{BC}=\\left(\\frac{2a+2c}{2},\\frac{0+2d}{2}\\right)=(a+c,d)$.",
+          "$R$ is the midpoint of $\\overline{CD}=\\left(\\frac{2c+2e}{2},\\frac{2d+2f}{2}\\right)=(c+e,d+f)$.",
+          "$S$ is the midpoint of $\\overline{DA}=\\left(\\frac{2e+0}{2},\\frac{2f+0}{2}\\right)=(e,f)$.",
+          "Compute the displacement $\\overrightarrow{PQ}=Q-P=((a+c)-a,\\,d-0)=(c,d)$ and $\\overrightarrow{SR}=R-S=((c+e)-e,\\,(d+f)-f)=(c,d)$.",
+          "Since $\\overrightarrow{PQ}=\\overrightarrow{SR}=(c,d)$, side $\\overline{PQ}$ is parallel and congruent to side $\\overline{SR}$.",
+          "When one pair of opposite sides is both parallel and congruent, the quadrilateral is a parallelogram. Because $(c,d)$ holds for arbitrary $a,c,d,e,f$, this proves $PQRS$ is a parallelogram for every quadrilateral."
+        ]
+      }
+    }
+  ]
+}

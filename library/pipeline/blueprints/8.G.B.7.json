@@ -1,0 +1,123 @@
+{
+  "standard": "8.G.B.7",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand and apply the Pythagorean Theorem",
+  "clusterCode": "B",
+  "skillName": "Applying the Pythagorean Theorem",
+
+  "description": "Students use the Pythagorean Theorem, $a^2 + b^2 = c^2$, to find an unknown side length of a right triangle. They solve for the hypotenuse when given two legs and for a leg when given the hypotenuse and one leg, leaving answers as exact radicals in simplest form or as decimal approximations when asked. They extend the theorem to real-world contexts (ladders, distances, diagonals) and to three-dimensional figures by applying it twice to find a space diagonal or a slant edge.",
+
+  "subSkills": [
+    "Identify the hypotenuse (opposite the right angle) and the two legs of a right triangle",
+    "Solve $a^2 + b^2 = c^2$ for the hypotenuse $c$ given both legs",
+    "Solve $a^2 + b^2 = c^2$ for a leg given the hypotenuse and the other leg",
+    "Simplify a square root to simplest radical form (e.g. $\\sqrt{50} = 5\\sqrt{2}$)",
+    "Approximate an irrational side length as a decimal when the problem requests it",
+    "Translate a real-world situation into a right triangle and apply the theorem",
+    "Apply the theorem twice to find a diagonal in three dimensions (space diagonal of a box, slant of a pyramid)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Find the hypotenuse (two legs given)",
+      "example": "A right triangle has legs of length $6$ and $8$. Find the length of the hypotenuse. Answer: $\\sqrt{6^2 + 8^2} = \\sqrt{100} = 10$."
+    },
+    {
+      "name": "Find a leg (hypotenuse and one leg given)",
+      "example": "A right triangle has hypotenuse $13$ and one leg $5$. Find the other leg. Answer: $\\sqrt{13^2 - 5^2} = \\sqrt{144} = 12$."
+    },
+    {
+      "name": "Answer in simplest radical form",
+      "example": "A right triangle has legs $5$ and $5$. Find the hypotenuse. Answer: $\\sqrt{50} = 5\\sqrt{2}$."
+    },
+    {
+      "name": "Real-world two-dimensional application",
+      "example": "A $15$ ft ladder leans against a wall with its base $9$ ft from the wall. How high up the wall does it reach? Answer: $\\sqrt{15^2 - 9^2} = \\sqrt{144} = 12$ ft."
+    },
+    {
+      "name": "Distance between two points / diagonal of a rectangle",
+      "example": "A rectangular field is $40$ m by $30$ m. Find the length of the diagonal path across it. Answer: $\\sqrt{40^2 + 30^2} = \\sqrt{2500} = 50$ m."
+    },
+    {
+      "name": "Three-dimensional space diagonal",
+      "example": "A rectangular box measures $3$ by $4$ by $12$. Find the length of its space diagonal. Answer: $\\sqrt{3^2 + 4^2 + 12^2} = \\sqrt{169} = 13$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single direct application of $a^2 + b^2 = c^2$ in two dimensions with values forming a perfect-square result (often a Pythagorean triple), so the answer is a whole number requiring no radical simplification.",
+      "constraints": [
+        "All side lengths are positive integers and the unknown comes out to a whole number",
+        "Uses common triples ($3,4,5$; $5,12,13$; $6,8,10$; $8,15,17$; $9,12,15$) or their small multiples",
+        "Diagram or wording states clearly which sides are legs and which is the hypotenuse",
+        "Purely numeric or a one-line familiar context (ladder, ramp)"
+      ]
+    },
+    "Medium": {
+      "description": "Single application in two dimensions where the answer is irrational and must be written in simplest radical form, or where the student must first decide whether they are solving for the hypotenuse or a leg from a worded context.",
+      "constraints": [
+        "Answer is an irrational square root that simplifies (e.g. $\\sqrt{50} = 5\\sqrt{2}$, $\\sqrt{72} = 6\\sqrt{2}$)",
+        "May require setting up the triangle from a real-world description (distance between points, diagonal of a rectangle)",
+        "Student must correctly distinguish leg vs hypotenuse rather than being told",
+        "May ask for a decimal approximation to the nearest tenth in addition to the exact value"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems: apply the theorem in three dimensions (space diagonal or slant edge requiring two uses of the theorem), or chain the theorem with another step such as comparing two distances, finding a perimeter, or using the result in a follow-up calculation.",
+      "constraints": [
+        "Three-dimensional figure requiring the theorem applied twice (e.g. diagonal of the base, then the space diagonal)",
+        "Or a two-step plan: find an intermediate length, then use it in a second computation (perimeter, total distance, area)",
+        "Answer may be an exact radical that the student must simplify after combining intermediate results",
+        "Requires building the right triangle from a less obvious configuration (pyramid slant height, two waypoints on a grid)"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student adds the legs instead of squaring them, treating the relationship as $a + b = c$",
+      "distractor": "For legs $6$ and $8$ gives $6 + 8 = 14$ instead of $\\sqrt{6^2 + 8^2} = 10$"
+    },
+    {
+      "misconception": "Student forgets to take the square root and reports $c^2$ as the side length",
+      "distractor": "For legs $6$ and $8$ gives $100$ instead of $10$"
+    },
+    {
+      "misconception": "Student adds the squares when solving for a leg instead of subtracting",
+      "distractor": "For hypotenuse $13$ and leg $5$ gives $\\sqrt{13^2 + 5^2} = \\sqrt{194}$ instead of $\\sqrt{13^2 - 5^2} = 12$"
+    },
+    {
+      "misconception": "Student treats a given leg as the hypotenuse, mismatching which side is opposite the right angle",
+      "distractor": "Uses the longest given side as a leg, e.g. computes $\\sqrt{13^2 + 5^2}$ when $13$ is actually the hypotenuse"
+    },
+    {
+      "misconception": "Student computes $a^2 + b^2$ as $(a+b)^2$, mis-squaring the sum",
+      "distractor": "For legs $6$ and $8$ gives $\\sqrt{(6+8)^2} = 14$ instead of $\\sqrt{36 + 64} = 10$"
+    },
+    {
+      "misconception": "Student simplifies the radical incorrectly by halving the radicand instead of extracting a perfect-square factor",
+      "distractor": "Writes $\\sqrt{50} = 25\\sqrt{2}$ or $\\sqrt{50} = \\sqrt{25}$ instead of $5\\sqrt{2}$"
+    },
+    {
+      "misconception": "In three dimensions the student applies the theorem only once, ignoring the third dimension",
+      "distractor": "For a $3 \\times 4 \\times 12$ box gives the base diagonal $\\sqrt{3^2 + 4^2} = 5$ instead of the space diagonal $\\sqrt{3^2 + 4^2 + 12^2} = 13$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

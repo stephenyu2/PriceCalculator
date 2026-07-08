@@ -1,0 +1,226 @@
+{
+  "id": "A2.S-IC.A.2--worksheet",
+  "standard": "A2.S-IC.A.2",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+  "domainCode": "S-IC",
+  "cluster": "Understand and evaluate random processes underlying statistical experiments",
+  "clusterCode": "A",
+  "skillName": "Simulation and Model Consistency",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A model claims a coin is fair, so $P(\\text{heads}) = \\frac{1}{2}$. If the coin is flipped $40$ times, how many heads does the model predict (the expected count)?",
+      "answer": "$20$ heads",
+      "solution": {
+        "steps": [
+          "The expected count under a model is $np$, where $n$ is the number of trials and $p$ is the model probability.",
+          "Here $n = 40$ and $p = \\frac{1}{2}$.",
+          "Compute $np = 40 \\cdot \\frac{1}{2} = 20$.",
+          "The model predicts $20$ heads."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A die is claimed to be fair, so $P(\\text{six}) = \\frac{1}{6}$. State the expected proportion of sixes over many rolls.",
+      "answer": "$\\frac{1}{6} \\approx 0.167$",
+      "solution": {
+        "steps": [
+          "The expected proportion of an outcome over many trials is just the model probability $p$ itself.",
+          "Here $p = P(\\text{six}) = \\frac{1}{6}$.",
+          "As a decimal, $\\frac{1}{6} \\approx 0.167$.",
+          "So the model predicts a proportion of $\\frac{1}{6} \\approx 0.167$ sixes."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A fair coin is flipped repeatedly. Find the probability of getting $4$ tails in a row, $P(4\\text{ tails})$.",
+      "answer": "$\\left(\\frac{1}{2}\\right)^{4} = \\frac{1}{16}$",
+      "solution": {
+        "steps": [
+          "Each flip is independent and $P(\\text{tails}) = \\frac{1}{2}$.",
+          "For independent events, multiply the probabilities: $P(4\\text{ tails}) = \\frac{1}{2} \\cdot \\frac{1}{2} \\cdot \\frac{1}{2} \\cdot \\frac{1}{2}$.",
+          "This is $\\left(\\frac{1}{2}\\right)^{4}$.",
+          "Compute $\\left(\\frac{1}{2}\\right)^{4} = \\frac{1}{16}$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A spinner is claimed to land on red with probability $\\frac{1}{4}$. In $60$ spins, how many reds does the model predict (the expected count)?",
+      "answer": "$15$ reds",
+      "solution": {
+        "steps": [
+          "The expected count is $np$ with $n = 60$ and $p = \\frac{1}{4}$.",
+          "Compute $np = 60 \\cdot \\frac{1}{4} = 15$.",
+          "The model predicts $15$ reds."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A simulation flips a fair coin $20$ times and records the number of heads; this is repeated $100$ times. In the resulting dot plot, exactly $7$ of the $100$ trials produced $14$ heads. Reading directly, in how many of the $100$ simulated trials did exactly $14$ heads occur, and what proportion of trials is that?",
+      "answer": "$7$ trials, a proportion of $\\frac{7}{100} = 0.07$",
+      "solution": {
+        "steps": [
+          "Read the value directly off the dot plot: the column at $14$ heads contains $7$ trials.",
+          "To get the proportion, divide by the total number of trials: $\\frac{7}{100}$.",
+          "As a decimal, $\\frac{7}{100} = 0.07$.",
+          "So $7$ trials, a proportion of $0.07$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A simulation of a fair coin flipped $20$ times, repeated $200$ times, gives a dot plot of the number of heads. Suppose $6$ of the $200$ trials had $15$ or more heads. Estimate $P(15\\text{ or more heads})$ under the fair-coin model from this simulation.",
+      "answer": "$\\frac{6}{200} = 0.03$",
+      "solution": {
+        "steps": [
+          "To estimate a tail probability, count the simulated trials at least as extreme as the value of interest, here $15$ or more heads.",
+          "There are $6$ such trials out of $200$.",
+          "Divide: $\\frac{6}{200}$.",
+          "Simplify or convert: $\\frac{6}{200} = 0.03$.",
+          "The estimated probability is $0.03$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A basketball player is claimed to make free throws $70\\%$ of the time. Describe how to use single random digits $0$ through $9$ to simulate one free throw, and explain how to simulate one set of $10$ free throws.",
+      "answer": "Let digits $0$ through $6$ represent a make and $7$, $8$, $9$ represent a miss; read $10$ digits and count makes for one set of $10$ shots.",
+      "solution": {
+        "steps": [
+          "There are $10$ equally likely digits, so each digit has probability $\\frac{1}{10}$.",
+          "To match a $70\\%$ make rate, assign $7$ of the $10$ digits to a make: let $0,1,2,3,4,5,6$ represent a make.",
+          "Assign the remaining $3$ digits to a miss: let $7,8,9$ represent a miss; this gives a $30\\%$ miss rate.",
+          "One free throw = read one random digit and classify it as make or miss.",
+          "One set of $10$ free throws = read $10$ consecutive random digits and count how many are makes."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A fair die is rolled $30$ times. The model gives $P(\\text{six}) = \\frac{1}{6}$. Find the expected number of sixes, and find the exact probability of rolling a six on three specific independent rolls in a row, $P(3\\text{ sixes in a row})$.",
+      "answer": "Expected count $= 5$; $P(3\\text{ sixes in a row}) = \\left(\\frac{1}{6}\\right)^{3} = \\frac{1}{216}$",
+      "solution": {
+        "steps": [
+          "Expected count is $np = 30 \\cdot \\frac{1}{6} = 5$ sixes.",
+          "Each roll is independent with $P(\\text{six}) = \\frac{1}{6}$.",
+          "For three sixes in a row, multiply: $\\frac{1}{6} \\cdot \\frac{1}{6} \\cdot \\frac{1}{6} = \\left(\\frac{1}{6}\\right)^{3}$.",
+          "Compute $\\left(\\frac{1}{6}\\right)^{3} = \\frac{1}{216}$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A model claims $40\\%$ of customers choose option A. A simulation draws samples of size $50$ under this model and records the sample proportion choosing A, repeated $250$ times. In this simulation, $5$ of the $250$ trials had a sample proportion of $0.28$ or lower. Using a $5\\%$ threshold and a one-sided 'as low as' comparison, is an observed proportion of $0.28$ consistent with the model?",
+      "answer": "Estimated tail probability $= \\frac{5}{250} = 0.02$; since $0.02 < 0.05$, an observed proportion of $0.28$ is inconsistent with the model.",
+      "solution": {
+        "steps": [
+          "Count the simulated trials at least as extreme (here, as low) as the observed $0.28$: there are $5$.",
+          "Divide by the number of trials: $\\frac{5}{250} = 0.02$.",
+          "Compare to the threshold: $0.02 < 0.05$.",
+          "A result this far in the low tail occurs in only about $2\\%$ of simulations if the model were true, which is rare.",
+          "So the observed proportion of $0.28$ is inconsistent with the $40\\%$ model; the result is evidence against the model."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A simulation of a fair coin flipped $20$ times, repeated $100$ times, produces a dot plot of the number of heads. Suppose $11$ of the $100$ trials had $12$ or more heads. An observer flips the coin and gets $12$ heads. Using a one-sided 'as high as' comparison and a $5\\%$ threshold, estimate the probability of $12$ or more heads and decide whether the result is consistent with a fair coin.",
+      "answer": "Estimated probability $= \\frac{11}{100} = 0.11$; since $0.11 > 0.05$, $12$ heads is consistent with a fair coin.",
+      "solution": {
+        "steps": [
+          "Count the trials at least as extreme (as high) as $12$ heads: $11$ of the $100$ trials.",
+          "Estimate the probability: $\\frac{11}{100} = 0.11$.",
+          "Compare to the threshold: $0.11 > 0.05$.",
+          "A result this high or higher happens about $11\\%$ of the time under a fair coin, which is not rare.",
+          "So $12$ heads is consistent with the fair-coin model; there is no reason to doubt the model."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A spinner is claimed to land on red $\\frac{1}{4}$ of the time. In $40$ spins it landed red $4$ times. A simulation of $40$ spins under the model, repeated $150$ times, found that $2$ of the $150$ trials had $4$ or fewer reds. (a) Find the expected number of reds. (b) Estimate the probability of $4$ or fewer reds. (c) Using a $5\\%$ threshold, state a justified conclusion about the $\\frac{1}{4}$ model.",
+      "answer": "(a) $10$ reds; (b) $\\frac{2}{150} \\approx 0.013$; (c) since $0.013 < 0.05$, the result is inconsistent with the model, so this is evidence against the $\\frac{1}{4}$ claim.",
+      "solution": {
+        "steps": [
+          "(a) Expected count is $np = 40 \\cdot \\frac{1}{4} = 10$ reds.",
+          "(b) The observed $4$ reds is far below the expected $10$, so use the low tail: count trials with $4$ or fewer reds, which is $2$ of $150$.",
+          "Estimate the probability: $\\frac{2}{150} \\approx 0.013$.",
+          "(c) Compare to the threshold: $0.013 < 0.05$.",
+          "Getting $4$ or fewer reds happens only about $1.3\\%$ of the time if the model were true, which is rare.",
+          "Therefore the result is inconsistent with the $\\frac{1}{4}$ model. This is strong evidence against the model, though it does not prove the true probability with certainty."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A treatment is claimed to help exactly half of patients, so $P(\\text{helped}) = \\frac{1}{2}$. In a trial of $16$ patients, $13$ were helped. A simulation of $16$ patients under the model, repeated $400$ times, recorded the number helped. The simulation found $9$ trials with $13$ or more helped and $9$ trials with $3$ or fewer helped. Explain the difference between a one-sided and a two-sided comparison here, and estimate the probability under each.",
+      "answer": "One-sided ($13$ or more helped): $\\frac{9}{400} \\approx 0.0225$. Two-sided (at least $5$ away from $8$, i.e. $13$ or more OR $3$ or fewer): $\\frac{9 + 9}{400} = \\frac{18}{400} = 0.045$.",
+      "solution": {
+        "steps": [
+          "The expected number helped is $np = 16 \\cdot \\frac{1}{2} = 8$, and the observation $13$ is $5$ above $8$.",
+          "A one-sided comparison asks only how often the result is as high as observed: count trials with $13$ or more helped, $\\frac{9}{400} \\approx 0.0225$.",
+          "A two-sided comparison asks how often the result is at least as far from $8$ in either direction: $13$ or more (a gap of $5$ up) OR $3$ or fewer (a gap of $5$ down).",
+          "Two-sided count: $9 + 9 = 18$ trials, giving $\\frac{18}{400} = 0.045$.",
+          "Use one-sided if you only care about an unusually high success count; use two-sided if any unusually large deviation from $8$ counts as evidence."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A bag is claimed to contain marbles that are $20\\%$ green. A sample of $80$ marbles (drawn with replacement) contained $24$ green, a proportion of $0.30$. A simulation of $80$ draws under the $20\\%$ model, repeated $300$ times, recorded the count of green; $6$ of the $300$ trials had $24$ or more green. Build the model prediction, estimate the relevant tail probability, and write a conclusion using a $5\\%$ threshold.",
+      "answer": "Expected count $= 16$ green; the observed $24$ is high, so use the upper tail: $\\frac{6}{300} = 0.02$. Since $0.02 < 0.05$, the result is inconsistent with the $20\\%$ model, giving evidence the true green proportion is higher than $20\\%$.",
+      "solution": {
+        "steps": [
+          "Model prediction: expected count $= np = 80 \\cdot 0.20 = 16$ green; expected proportion $= 0.20$.",
+          "The observed $24$ green (proportion $0.30$) is above the expected $16$, so the relevant tail is the upper tail: $24$ or more green.",
+          "Estimate the probability: $\\frac{6}{300} = 0.02$.",
+          "Compare to the threshold: $0.02 < 0.05$, so a result this high or higher is rare under the model.",
+          "Conclusion: the result is inconsistent with the $20\\%$ green model. It is evidence that the true proportion of green is greater than $20\\%$, though a simulation gives evidence, not proof."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A coffee shop claims $60\\%$ of customers order a latte. A sample of $50$ customers found $33$ ordered a latte, a proportion of $0.66$. A simulation of $50$ customers under the $60\\%$ model, repeated $500$ times, found that $95$ of the $500$ trials had $33$ or more latte orders. Using a $5\\%$ threshold and a one-sided comparison, decide whether the result is consistent with the claim, and explain why a consistent result does not prove the $60\\%$ claim is exactly true.",
+      "answer": "Estimated probability $= \\frac{95}{500} = 0.19$; since $0.19 > 0.05$, the result is consistent with the $60\\%$ claim. A consistent result only means the data give no reason to doubt the model, not that the model is proven true.",
+      "solution": {
+        "steps": [
+          "Expected count is $np = 50 \\cdot 0.60 = 30$ latte orders; the observed $33$ is slightly above this.",
+          "Count trials at least as extreme (as high) as $33$: $95$ of $500$.",
+          "Estimate the probability: $\\frac{95}{500} = 0.19$.",
+          "Compare to the threshold: $0.19 > 0.05$, so a result this high happens often under the model and is not surprising.",
+          "Conclusion: the result is consistent with the $60\\%$ claim.",
+          "However, failing to find evidence against a model is not proof the model is correct. Many nearby proportions (for example $62\\%$) would also be consistent with this data, so we can only say there is no reason to doubt the $60\\%$ claim."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A new screening test is claimed to flag a condition in $50\\%$ of carriers. In a study of $18$ carriers, the test flagged $14$. A simulation of $18$ carriers under the $50\\%$ model, repeated $1000$ times, found $20$ trials with $14$ or more flagged and $19$ trials with $4$ or fewer flagged. (a) Decide whether a one-sided or two-sided comparison is more appropriate if the manufacturer's claim is simply that the flag rate is $50\\%$ (not specifically higher), and defend the choice. (b) Estimate the relevant probability and (c) conclude using a $5\\%$ threshold, distinguishing evidence against the model from disproof.",
+      "answer": "(a) Two-sided, because the claim is that the rate equals $50\\%$, so any large deviation from the expected $9$ counts. (b) $\\frac{20 + 19}{1000} = \\frac{39}{1000} = 0.039$. (c) Since $0.039 < 0.05$, the result is inconsistent with the $50\\%$ claim; this is evidence against the model, not proof it is false.",
+      "solution": {
+        "steps": [
+          "Expected count is $np = 18 \\cdot \\frac{1}{2} = 9$ flagged, and the observed $14$ is $5$ above $9$.",
+          "(a) Because the claim is only that the flag rate equals $50\\%$ (it does not predict a direction), a deviation in either direction is evidence against it, so a two-sided comparison is appropriate.",
+          "The two equally extreme tails are $14$ or more (a gap of $5$ up) and $4$ or fewer (a gap of $5$ down).",
+          "(b) Two-sided count: $20 + 19 = 39$ trials out of $1000$, giving $\\frac{39}{1000} = 0.039$.",
+          "(c) Compare to the threshold: $0.039 < 0.05$, so a deviation this large happens under the model less than $5\\%$ of the time and is rare.",
+          "Conclusion: the result is inconsistent with the $50\\%$ claim and is evidence against the model. It does not disprove the claim outright, since a rare result can still occur by chance under a true model, but it gives good reason to doubt the $50\\%$ flag rate."
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "generatedAt": "2026-06-24T19:38:44.935Z"
+}

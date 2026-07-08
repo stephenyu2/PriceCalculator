@@ -1,0 +1,209 @@
+{
+  "id": "A2.S-IC.B.6--worksheet",
+  "standard": "A2.S-IC.B.6",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+  "domainCode": "S-IC",
+  "cluster": "Make inferences and justify conclusions from sample surveys, experiments, and observational studies",
+  "clusterCode": "B",
+  "skillName": "Evaluating Data Reports",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "Each item gives a short data report. Read it critically: identify how the data were collected, judge whether the conclusion is justified, name any flaw (biased sample, loaded wording, confounding, overgeneralization, misleading graph, or a difference inside the margin of error), and where asked, state the corrected conclusion the data actually support. Items ramp from single-flaw identification (1-5) to flaw-plus-effect reasoning (6-10) to full multi-flaw evaluation (11-15).",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A radio station invites listeners to call in and vote on whether a new highway should be built. Of the callers, $73\\%$ say yes, and the host announces that most people in the city support the highway. What type of sample produced this result?",
+      "answer": "A voluntary-response sample.",
+      "solution": {
+        "steps": [
+          "The listeners chose themselves to call in; no one was randomly selected.",
+          "A sample made up of people who opt in on their own is a voluntary-response sample.",
+          "Such a sample is not random, so the $73\\%$ cannot be trusted to represent the whole city."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A pollster asks, 'Do you agree that hardworking families deserve a tax cut?' and reports that $88\\%$ said yes. Is the question worded neutrally, or is it loaded?",
+      "answer": "It is a loaded (leading) question.",
+      "solution": {
+        "steps": [
+          "The phrase 'hardworking families deserve' pushes respondents toward agreeing.",
+          "Wording that nudges respondents toward one answer is loaded or leading wording.",
+          "Because the question is loaded, the $88\\%$ is biased upward and does not measure true support."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A bar graph of monthly sales has a vertical axis that starts at $\\$90{,}000$ instead of $\\$0$. A bar for $\\$100{,}000$ therefore looks several times taller than a bar for $\\$95{,}000$. What feature of this graph is misleading?",
+      "answer": "The truncated (non-zero) baseline.",
+      "solution": {
+        "steps": [
+          "The axis begins at $\\$90{,}000$ rather than at $\\$0$.",
+          "An axis that does not start at zero is a truncated baseline.",
+          "A truncated baseline exaggerates small differences, making a small change in sales look large."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A study observes that students who eat breakfast tend to earn higher test scores, and the headline reads 'Eating breakfast raises test scores.' Was this study an experiment or an observational study?",
+      "answer": "An observational study.",
+      "solution": {
+        "steps": [
+          "Researchers watched who already ate breakfast; they did not randomly assign students to eat or skip breakfast.",
+          "When no treatment is imposed and groups are only observed, the study is observational.",
+          "Therefore it can show association but not, by itself, cause and effect."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A survey at a single luxury car dealership finds that $65\\%$ of customers there plan to buy a new car within a year, and the report concludes that $65\\%$ of all drivers in the country plan to buy a new car within a year. Is this conclusion justified?",
+      "answer": "No, it is not justified.",
+      "solution": {
+        "steps": [
+          "The people surveyed were customers at one luxury dealership, not a random sample of all drivers.",
+          "Customers at a luxury dealership are far more likely than average to plan a car purchase.",
+          "A biased, non-representative sample cannot be generalized to all drivers, so the conclusion is not justified."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A website posts an online poll on its home page; anyone who visits can vote. The result, '$80\\%$ favor later school start times,' is reported as the view of all parents in the district. Name the flaw and explain how it biases the conclusion.",
+      "answer": "Voluntary-response (self-selected) sample, which biases the result toward people with strong opinions, so it cannot represent all parents.",
+      "solution": {
+        "steps": [
+          "Visitors chose to vote, so the sample is a voluntary-response sample, not a random sample of district parents.",
+          "People who feel strongly about the issue are the most likely to seek out and answer the poll.",
+          "This over-represents strong opinions, so the $80\\%$ is biased and cannot be generalized to all parents in the district."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A health report finds that adults who drink coffee daily have lower rates of a certain disease and concludes 'Coffee prevents the disease.' The data come from observing people's existing habits. Explain why the causal conclusion is not justified and state what the data do support.",
+      "answer": "The study is observational, so it shows only association; a confounding variable could explain the link. The data support that daily coffee drinking is associated with lower disease rates, not that coffee prevents the disease.",
+      "solution": {
+        "steps": [
+          "The researchers observed existing habits rather than randomly assigning people to drink coffee, so this is an observational study.",
+          "Observational data show association, not causation, because a confounding variable (such as overall lifestyle or income) could cause both coffee drinking and lower disease rates.",
+          "The defensible conclusion is that daily coffee drinking is associated with lower rates of the disease, not that coffee prevents it."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A poll of randomly selected voters reports support for a ballot measure at $\\hat{p} = 0.52$ with a margin of error of $\\pm 0.04$. The campaign claims a majority (more than $50\\%$) supports the measure. Form the plausible interval for the true proportion and decide whether the 'majority' claim is statistically supported.",
+      "answer": "The interval is $0.48$ to $0.56$. Because it includes values below $0.50$, the claim of a majority is not statistically supported.",
+      "solution": {
+        "steps": [
+          "The plausible interval is $\\hat{p} \\pm m = 0.52 \\pm 0.04$.",
+          "Compute the endpoints: $0.52 - 0.04 = 0.48$ and $0.52 + 0.04 = 0.56$, so the interval is $0.48$ to $0.56$.",
+          "Since the interval contains values below $0.50$, the true proportion could be less than a majority.",
+          "Therefore the 'majority supports it' claim is not statistically supported by this poll."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A pictograph compares apple harvests for two farms. Farm A's apple icon is drawn twice as tall AND twice as wide as Farm B's to show that Farm A harvested twice as many apples. Identify the misleading feature and describe its effect on a reader.",
+      "answer": "Distorted area sizing: doubling both height and width makes the icon cover four times the area, so a 2-to-1 ratio looks like 4-to-1.",
+      "solution": {
+        "steps": [
+          "Farm A truly harvested twice as many apples, a ratio of $2:1$.",
+          "The icon was scaled to twice the height and twice the width, so its area is $2 \\times 2 = 4$ times larger.",
+          "Readers judge pictographs by area, so the picture suggests Farm A harvested four times as much, overstating the true $2:1$ difference."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A company funds a survey of $30$ of its own employees and reports that $90\\%$ would recommend the company as a great place to work, concluding that the company is one of the best employers in the country. Name the flaw and explain its effect; then state the corrected conclusion the data support.",
+      "answer": "Biased, non-random sample (the company's own employees, funded by the company), so the result cannot be generalized. The data support only that most of these $30$ surveyed employees would recommend the company.",
+      "solution": {
+        "steps": [
+          "The $30$ respondents are the company's own employees, chosen and funded by the company, so this is a biased convenience sample, not a random sample.",
+          "Current employees who stay are likely to view the company favorably, which inflates the $90\\%$.",
+          "A biased sample cannot be generalized to rank the company against all employers.",
+          "The corrected, defensible conclusion is that most of these $30$ surveyed employees would recommend the company."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A study randomly assigned $80$ volunteers from one company's gym to a new stretching routine or a control routine and found the new routine reduced injuries. The report concludes 'This stretching routine reduces injuries for everyone.' Diagnose the two issues (one about causation, one about scope) and write the corrected conclusion.",
+      "answer": "Random assignment supports a causal claim, but only for a population like these gym volunteers, so the scope is overstated. Corrected: the stretching routine causes fewer injuries among people similar to these volunteers, and the result should not be generalized to everyone.",
+      "solution": {
+        "steps": [
+          "Because subjects were randomly assigned to treatment or control, the study can support a cause-and-effect claim about the routine reducing injuries.",
+          "However, the subjects were volunteers from one company's gym, not a random sample of all people, so the result cannot be generalized to 'everyone.'",
+          "The two issues are: the causal claim is legitimate (do not dismiss it), but the scope is overstated.",
+          "Corrected conclusion: among people similar to these gym volunteers, the new routine causes fewer injuries; the finding should not be extended to the general population."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Two candidates are polled with the same random sample. Candidate X is at $47\\%$ with margin of error $\\pm 3\\%$; Candidate Y is at $44\\%$ with margin of error $\\pm 3\\%$. A headline declares 'X leads Y.' Form each plausible interval, determine whether they overlap, and state whether the lead is statistically meaningful.",
+      "answer": "X: $44\\%$ to $50\\%$; Y: $41\\%$ to $47\\%$. The intervals overlap, so the $3$-point lead is not statistically meaningful.",
+      "solution": {
+        "steps": [
+          "Candidate X interval: $47\\% \\pm 3\\%$ gives $44\\%$ to $50\\%$.",
+          "Candidate Y interval: $44\\% \\pm 3\\%$ gives $41\\%$ to $47\\%$.",
+          "The intervals share the range $44\\%$ to $47\\%$, so they overlap.",
+          "The $3$-point gap is no larger than the margin of error and the intervals overlap, so the lead is not statistically meaningful; the race is effectively a tie."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A weight-loss ad reports a study in which people who used its supplement lost more weight than people who did not, concluding 'Our supplement causes weight loss.' The supplement users had also joined a gym and changed their diets during the study, which the non-users did not. Name the confounding variable(s), explain why the causal claim fails, and give the defensible conclusion.",
+      "answer": "Confounding variables: gym membership and diet change. Because these differ between groups, weight loss cannot be attributed to the supplement. Defensible conclusion: the supplement use is associated with greater weight loss in this study, but the cause cannot be separated from exercise and diet.",
+      "solution": {
+        "steps": [
+          "The supplement group also started exercising and dieting, while the comparison group did not, so the groups differ in more than just the supplement.",
+          "Gym membership and diet change are confounding variables: each could cause weight loss on its own.",
+          "Because the supplement's effect is tangled with exercise and diet, the data cannot show that the supplement alone causes weight loss.",
+          "Defensible conclusion: using the supplement was associated with more weight loss here, but the effect cannot be separated from the exercise and diet changes."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A newspaper graphic claims air travel has 'skyrocketed.' It plots passenger counts only for the years $2020$ to $2022$, when travel was recovering from a sharp pandemic drop, on an axis truncated to start at $700$ million. Identify both misleading features and explain how each distorts the reader's impression. Then state a fairer way to present the data.",
+      "answer": "Two flaws: a cherry-picked time window (2020-2022, recovery from an unusual low) and a truncated (non-zero) baseline starting at $700$ million. Each exaggerates the apparent growth. A fairer display uses a baseline at $0$ and a longer time span that includes years before 2020.",
+      "solution": {
+        "steps": [
+          "First flaw: the chart shows only $2020$ to $2022$, a window that begins at a pandemic low, so any recovery looks like dramatic growth (a cherry-picked time window).",
+          "Second flaw: the vertical axis starts at $700$ million instead of $0$, a truncated baseline that magnifies the visual size of the increase.",
+          "Together these make ordinary recovery look like a surge, overstating the trend.",
+          "A fairer presentation starts the axis at $0$ and includes several years before $2020$ so the recent change is seen in proper context."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "An online magazine emails a survey to its subscribers and reports: '$78\\%$ of respondents favor stricter noise laws, so a clear majority of city residents want stricter noise laws.' Only subscribers who chose to respond are counted, and the survey asked, 'Should the city finally crack down on the disruptive noise ruining our neighborhoods?' Critique the report end to end (sampling, wording, and scope) and write the corrected, defensible conclusion.",
+      "answer": "The sample is a voluntary-response sample of one magazine's subscribers (biased and not representative of all residents), and the wording is loaded ('finally crack down,' 'disruptive noise ruining our neighborhoods'), pushing respondents toward yes; the scope is overstated. Corrected conclusion: among the subscribers who chose to respond, most favored stricter noise laws, but the result cannot be generalized to all city residents.",
+      "solution": {
+        "steps": [
+          "Sampling: only subscribers who chose to respond are counted, a voluntary-response sample of one magazine's readers, so it is biased and not representative of all city residents.",
+          "Wording: 'finally crack down on the disruptive noise ruining our neighborhoods' is loaded language that pushes respondents toward 'yes,' inflating the $78\\%$.",
+          "Scope: even at face value the figure describes responding subscribers, not all residents, so generalizing to the whole city overstates the scope.",
+          "Corrected conclusion: among the subscribers who chose to respond, a majority favored stricter noise laws; because of the biased sample and loaded wording, the result cannot be generalized to all city residents."
+        ]
+      }
+    }
+  ]
+}

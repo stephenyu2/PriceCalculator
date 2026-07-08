@@ -1,0 +1,136 @@
+{
+  "standard": "A1.A-REI.D.12",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Reasoning with Equations and Inequalities",
+  "domainCode": "A-REI",
+  "cluster": "Represent and solve equations and inequalities graphically",
+  "clusterCode": "D",
+  "skillName": "Graphing Linear Inequalities",
+
+  "description": "Students graph the solution set of a linear inequality in two variables as a half-plane: they graph the boundary line (solid for $\\le$ or $\\ge$, dashed for $<$ or $>$), decide which side to shade by testing a point, and recognize that every point in the shaded region satisfies the inequality. They extend this to a system of linear inequalities, graphing each half-plane and identifying the solution set as the overlapping intersection region. They also verify whether a given ordered pair is a solution by substitution.",
+
+  "subSkills": [
+    "Decide whether the boundary line is solid ($\\le$, $\\ge$) or dashed ($<$, $>$) from the inequality symbol",
+    "Graph the boundary line from slope-intercept or standard form",
+    "Choose a test point not on the line (usually the origin) and substitute to decide which half-plane to shade",
+    "Shade the correct half-plane for a single inequality",
+    "Verify whether an ordered pair is a solution of an inequality by substitution",
+    "Graph a system of two or more linear inequalities and identify the intersection of the half-planes as the solution region",
+    "Determine whether a point is a solution of a system (must satisfy every inequality)",
+    "Set up and graph a system of inequalities from a real-world constraint problem and interpret the feasible region"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Solid vs. dashed boundary",
+      "example": "For $y \\ge 2x - 3$, state whether the boundary line $y = 2x - 3$ is solid or dashed and why. (Solid, because $\\ge$ includes the boundary.)"
+    },
+    {
+      "name": "Test-point shading (slope-intercept form)",
+      "example": "Graph $y < \\frac{1}{2}x + 1$. Draw the boundary dashed, test the point $(0,\\,0)$: $0 < 1$ is true, so shade the side containing the origin."
+    },
+    {
+      "name": "Test-point shading (standard form)",
+      "example": "Graph $2x + 3y \\le 6$. Test $(0,\\,0)$: $0 \\le 6$ is true, so shade the origin side; the boundary $2x + 3y = 6$ is solid."
+    },
+    {
+      "name": "Verify an ordered pair in one inequality",
+      "example": "Is $(4,\\,1)$ a solution of $y > -x + 2$? Substitute: $1 > -4 + 2 = -2$ is true, so yes."
+    },
+    {
+      "name": "Boundary through the origin (origin cannot be the test point)",
+      "example": "Graph $y \\le 3x$. Because $(0,\\,0)$ is on the line, test another point such as $(1,\\,0)$: $0 \\le 3$ is true, so shade the side containing $(1,\\,0)$."
+    },
+    {
+      "name": "System of two inequalities",
+      "example": "Graph the system $\\begin{cases} y \\ge x - 1 \\\\ y < -2x + 4 \\end{cases}$ and shade the overlapping region that satisfies both."
+    },
+    {
+      "name": "Verify an ordered pair in a system",
+      "example": "Is $(1,\\,1)$ a solution of $\\begin{cases} y \\le 2x \\\\ y > -1 \\end{cases}$? Check both: $1 \\le 2$ true and $1 > -1$ true, so yes."
+    },
+    {
+      "name": "Real-world system of constraints",
+      "example": "A student has at most $\\$20$ to spend on apples at $\\$2$ each and bananas at $\\$1$ each, and wants at least $6$ pieces of fruit. Let $a$ and $b$ be the counts. Write and graph $\\begin{cases} 2a + b \\le 20 \\\\ a + b \\ge 6 \\\\ a \\ge 0 \\\\ b \\ge 0 \\end{cases}$ and describe the feasible region."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single inequality already in slope-intercept form $y \\,\\square\\, mx + b$ with small integer slope and intercept, where the origin $(0,\\,0)$ is a valid test point. The student need only choose solid vs. dashed, test the origin, and shade. Also includes verifying an ordered pair in a single inequality by substitution.",
+      "constraints": [
+        "Inequality given as $y < / \\le / > / \\ge \\; mx + b$ with integer $m$ and $b$, $|m|, |b| \\le 5$",
+        "Origin $(0,\\,0)$ is not on the boundary, so it can be used as the test point",
+        "Single inequality only (no system)",
+        "Boundary direction (solid/dashed) read directly from the symbol",
+        "Verification items substitute a single ordered pair into one inequality"
+      ]
+    },
+    "Medium": {
+      "description": "The student must do setup before shading: rewrite an inequality from standard form $ax + by \\,\\square\\, c$ into slope-intercept form (correctly FLIPPING the symbol when dividing by a negative), or handle a boundary through the origin where a non-origin test point is required. Also includes graphing a basic system of two inequalities in slope-intercept form and reading the overlap, plus checking a point against a system.",
+      "constraints": [
+        "Inequality given in standard form and must be solved for $y$, possibly flipping the symbol when dividing by a negative coefficient",
+        "Boundary may pass through the origin, forcing a non-origin test point",
+        "Fractional slopes such as $\\frac{2}{3}$ may appear",
+        "Systems of two inequalities both in slope-intercept form; identify the intersection region",
+        "Verify a point against a two-inequality system"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems: systems of three or more inequalities (often including $x \\ge 0$, $y \\ge 0$ bounds), mixed standard and slope-intercept forms requiring rewriting and symbol-flipping, identifying a corner/vertex of the feasible region, or modeling a real-world constraint scenario by defining variables, writing every inequality, graphing the system, and interpreting the feasible region in context.",
+      "constraints": [
+        "System of three or more inequalities, possibly with non-negativity constraints $x \\ge 0$, $y \\ge 0$",
+        "Mixed forms: some inequalities in standard form must be rewritten before graphing",
+        "May require finding a vertex of the feasible region by intersecting two boundary lines",
+        "Word problems require defining variables, writing each constraint as an inequality, and interpreting the feasible region",
+        "Must reason about strict vs. non-strict boundaries when deciding whether a vertex point is included"
+      ]
+    },
+    "tierSplit": "If split into two worksheets: tier1 covers Easy to Medium (solid vs. dashed, origin test-point shading from slope-intercept form, verifying ordered pairs, rewriting from standard form with symbol-flipping, and basic two-inequality systems). tier2 covers Medium to Hard (boundaries through the origin, three-or-more-inequality systems with non-negativity bounds, mixed forms, vertices of the feasible region, and full constraint word problems with interpretation). No item overlap between tiers."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Uses a solid line for a strict inequality or a dashed line for a non-strict one, mismatching the boundary style to the symbol",
+      "distractor": "Draws a solid boundary for $y > 2x - 3$ (should be dashed) or a dashed boundary for $y \\ge 2x - 3$ (should be solid)"
+    },
+    {
+      "misconception": "Shades the wrong half-plane because the test point was substituted incorrectly or the true/false result was misread",
+      "distractor": "For $y < \\frac{1}{2}x + 1$ tests $(0,\\,0)$, gets the true statement $0 < 1$, but shades the side NOT containing the origin"
+    },
+    {
+      "misconception": "Forgets to flip the inequality symbol when dividing both sides by a negative coefficient while solving for $y$",
+      "distractor": "Rewrites $-2x + y < 4$... actually $2x - y \\ge 4$ as $y \\ge 2x - 4$ instead of $y \\le 2x - 4$, shading the opposite half-plane"
+    },
+    {
+      "misconception": "Uses the origin as the test point when the boundary line passes through the origin, so the test gives an on-the-line result and no decision",
+      "distractor": "For $y \\le 3x$ tests $(0,\\,0)$, gets $0 \\le 0$ (a point on the line), and shades arbitrarily instead of testing a point off the line"
+    },
+    {
+      "misconception": "For a system, shades the union of the half-planes (everything either inequality allows) instead of the intersection (only what both allow)",
+      "distractor": "Reports the combined shaded area of both inequalities as the solution instead of just the overlapping region"
+    },
+    {
+      "misconception": "Confuses slope and intercept when graphing the boundary, plotting $b$ as the slope or vice versa",
+      "distractor": "Graphs $y \\ge \\frac{2}{3}x + 1$ with slope $1$ and intercept $\\frac{2}{3}$ instead of slope $\\frac{2}{3}$ and intercept $1$"
+    },
+    {
+      "misconception": "Declares an ordered pair a solution of a system after checking only one inequality rather than all of them",
+      "distractor": "Calls $(1,\\,1)$ a solution of $\\begin{cases} y \\le 2x \\\\ y > 3 \\end{cases}$ because $1 \\le 2$ holds, ignoring that $1 > 3$ is false"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "id": "8.SP.A.1--worksheet--hard",
+  "standard": "8.SP.A.1",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate patterns of association in bivariate data",
+  "clusterCode": "A",
+  "skillName": "Scatter Plots and Association",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "These problems ask for full, multi-feature analysis of scatter plots. For each data set, integrate direction, form, strength, clustering, and outliers, then explain what the pattern means for the two real-world quantities. Give exact reasoning, not just one-word labels.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A coach records each player's hours of weekly practice $x$ and free-throw success rate $y$ (percent) for $12$ players: $(1,40),(2,45),(3,48),(3,52),(4,55),(5,60),(6,63),(7,67),(8,70),(9,74),(10,78),(2,18)$. Describe the direction, form, and strength of the association, name any outlier, and explain what the outlier might mean in context.",
+      "answer": "Positive, linear, strong association; the point $(2,18)$ is an outlier (a player practicing $2$ hours but making only $18\\%$, far below the trend).",
+      "solution": {
+        "steps": [
+          "Order the points by $x$ and look at $y$: as $x$ rises from $1$ to $10$, $y$ rises steadily from $40$ to $78$, so the direction is positive.",
+          "The rise is roughly constant (about $4$ to $5$ percentage points per added hour), so the form is linear.",
+          "Aside from one point, the points hug the rising line tightly, so the association is strong.",
+          "Check each point against the trend: at $x=2$ the trend is near $45\\%$, but $(2,18)$ sits about $27$ points below it, far from the pattern. That is the outlier.",
+          "In context: more practice is associated with a higher free-throw rate. The outlier is a player who practiced $2$ hours yet shot only $18\\%$, perhaps a beginner or someone who was injured, so they do not fit the otherwise strong upward trend."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A scatter plot shows outdoor temperature $x$ (degrees) versus daily hot-chocolate sales $y$ (cups) at a ski lodge for $11$ days: $(10,90),(15,82),(20,75),(25,66),(30,58),(35,50),(40,42),(45,35),(50,28),(55,20),(32,95)$. Describe direction, form, and strength, identify any outlier, and state what the relationship means for the lodge.",
+      "answer": "Negative, linear, strong association; $(32,95)$ is an outlier (an unusually high-sales day for its temperature). Warmer days are associated with fewer cups sold.",
+      "solution": {
+        "steps": [
+          "As $x$ increases from $10$ to $55$, $y$ falls from $90$ down to $20$, so the direction is negative.",
+          "The drop is steady (about $7$ to $8$ cups per $5$ degrees), so the form is linear.",
+          "Apart from one point the points lie close to the falling line, so the association is strong.",
+          "At $x=32$ the trend predicts roughly $55$ cups, but $(32,95)$ sells $95$, far above the line, so it is the outlier (maybe a special event or holiday crowd).",
+          "In context: as temperature rises, hot-chocolate sales drop, so the lodge can expect to sell fewer cups on warm days and stock more on cold days."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Two classes take the same project. Class A's points (study hours $x$, score $y$) are $(1,60),(2,64),(3,69),(4,73),(5,78),(6,82)$. Class B's points are $(1,50),(2,58),(3,67),(4,75),(5,84),(6,92)$. Both show positive linear association. Compare the strength and the steepness of the two trends and explain what the difference means.",
+      "answer": "Both are positive, linear, and strong, but Class B's trend is steeper (rises faster per study hour) than Class A's. An added study hour is associated with a larger score gain in Class B.",
+      "solution": {
+        "steps": [
+          "Both data sets rise as $x$ increases, so both are positive associations.",
+          "Both rise at a near-constant rate and points lie close to a line, so both are linear and strong.",
+          "Find the rise per hour: Class A goes from $60$ to $82$ over $5$ hours, about $\\frac{82-60}{5}=\\frac{22}{5}=4.4$ points per hour.",
+          "Class B goes from $50$ to $92$ over $5$ hours, about $\\frac{92-50}{5}=\\frac{42}{5}=8.4$ points per hour.",
+          "Since $8.4 > 4.4$, Class B's trend is steeper: each extra study hour is associated with a bigger score increase in Class B than in Class A."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A scatter plot of a tossed ball's time since release $x$ (seconds) versus height $y$ (feet) shows $10$ points: $(0,5),(0.5,21),(1,29),(1.5,33),(2,33),(2.5,29),(3,21),(3.5,5),(1,30),(2,32)$. Describe the direction and form of the association and explain why describing it as simply 'positive' or 'negative' would be wrong.",
+      "answer": "The association is nonlinear (a curve that rises then falls). It has no single direction, so labeling it just 'positive' or 'negative' is wrong because $y$ increases for small $x$ and decreases for large $x$.",
+      "solution": {
+        "steps": [
+          "Track $y$ as $x$ grows: from $x=0$ to about $x=1.75$ the height rises (to a peak near $33$), then from there to $x=3.5$ it falls back to $5$.",
+          "Because $y$ goes up and then down, the points form a curve (a parabola-like arch), so the form is nonlinear.",
+          "A single label 'positive' fits only the first half and 'negative' fits only the second half, so neither describes the whole pattern.",
+          "The correct description is a nonlinear (curved) association with no single direction: the ball rises to a maximum height, then falls."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A car dealer plots car age $x$ (years) versus resale value $y$ (thousands of dollars) for $12$ cars: $(1,28),(2,25),(3,22),(4,20),(5,18),(6,16),(7,14),(8,12),(9,11),(10,10),(11,9),(3,2)$. Describe direction, form, strength, and any outlier, then state what the pattern means for a buyer and how the outlier might be explained.",
+      "answer": "Negative, roughly linear, strong association; $(3,2)$ is an outlier (a $3$-year-old car worth only $\\$2$ thousand, far below the trend). Older cars are generally worth less.",
+      "solution": {
+        "steps": [
+          "As age $x$ increases from $1$ to $11$, value $y$ falls from $28$ to $9$, so the direction is negative.",
+          "The decline is fairly steady, so the form is roughly linear, and the non-outlier points cluster close to that falling line, so the association is strong.",
+          "At $x=3$ the trend is about $\\$22$ thousand, but $(3,2)$ is only $\\$2$ thousand, far below, so it is the outlier.",
+          "In context: as a car ages its resale value drops, so a buyer should expect to pay less for an older car.",
+          "The outlier could be a $3$-year-old car that was in a major accident or has very high mileage, lowering its value well below typical cars of that age."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A scatter plot of daily ice-cream sales $x$ (dollars) versus number of library visitors $y$ for $10$ summer days is a shapeless cloud: $(60,290),(75,310),(80,265),(90,300),(110,275),(120,320),(140,285),(150,260),(170,305),(200,290)$. Describe the direction, form, and strength of the association and explain what it tells the town about the two quantities.",
+      "answer": "There is no association: the points form a patternless cloud with no upward or downward trend, so direction, form, and strength all reduce to 'none.' Ice-cream sales and library visits are not related here.",
+      "solution": {
+        "steps": [
+          "Look for a trend as $x$ increases: $y$ does not consistently rise or fall. For example, $y$ is near $290$ at both $x=60$ and $x=200$, while in between $x=120$ jumps up to $y=320$ and $x=150$ dips to $y=260$, so similar $y$ values appear at both small and large $x$ with no steady climb or drop.",
+          "The points scatter all over the plot with no line or curve they follow, so there is no clear direction and no form.",
+          "Because there is no pattern at all, there is no strength to describe; the correct label is 'no association.'",
+          "In context: knowing the day's ice-cream sales tells the town nothing useful about how many people visit the library; the two quantities are unrelated."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A survey of $11$ towns plots median household income $x$ (thousands of dollars) versus average commute time $y$ (minutes). Most points fall in two separate groups: a low-income group near $(30,45)$ with five points clustered there, and a high-income group near $(90,20)$ with five points clustered there, plus the lone point $(60,60)$ in the gap between them. Describe the clustering, name the outlier, and explain the overall pattern.",
+      "answer": "The data show two clusters (a low-income, long-commute group and a high-income, short-commute group); $(60,60)$ is an outlier in the gap. Overall, higher-income towns tend to have shorter commutes.",
+      "solution": {
+        "steps": [
+          "Five points sit close together near $(30,45)$ and five more near $(90,20)$, with empty space between, so the data form two distinct clusters.",
+          "Comparing the clusters, the low-income cluster has long commutes and the high-income cluster has short commutes, so across the groups higher income is associated with shorter commute time (a negative pattern between clusters).",
+          "The point $(60,60)$ does not belong to either cluster; it sits alone in the gap and has the longest commute of all, so it is the outlier.",
+          "In context: the towns split into two types, and a town with middle income but a very long commute (the outlier) does not fit either typical group."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A scientist plots the amount of fertilizer $x$ (grams) versus plant growth $y$ (cm) for $11$ plots: $(0,2),(5,9),(10,15),(15,20),(20,24),(25,27),(30,29),(35,30),(40,30),(45,29),(50,27)$. Describe the form and direction, explain why the relationship is not linear, and interpret what happens to growth as fertilizer keeps increasing.",
+      "answer": "The association is nonlinear: growth rises quickly at first, levels off near a peak around $30$ cm, then slightly decreases. It is not linear because the rise per gram shrinks and eventually turns into a fall.",
+      "solution": {
+        "steps": [
+          "From $x=0$ to about $x=35$, $y$ increases, so the early direction is positive.",
+          "Check the rate of rise: from $0$ to $5$ grams growth jumps $7$ cm, but from $30$ to $35$ grams it rises only $1$ cm, so the increase per gram is not constant, which rules out a linear form.",
+          "After about $x=40$ the values stop rising and begin to fall ($30 \\to 29 \\to 27$), confirming a curved (nonlinear) shape that bends over.",
+          "Because the rate changes and the curve turns downward, the form is nonlinear, not a straight line.",
+          "In context: adding fertilizer helps growth a lot at first, then helps less and less, and too much fertilizer ($45$ to $50$ grams) actually starts to reduce growth."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A scatter plot of weekly hours of TV watched $x$ versus reading-test score $y$ for $12$ students is a clearly falling but loosely scattered cloud: $(2,82),(4,68),(5,86),(7,60),(9,75),(10,52),(12,70),(14,46),(15,64),(17,44),(19,55),(20,58)$. A student claims there is 'no association because the points are not on a perfect line.' Explain why the student is wrong and correctly describe the association.",
+      "answer": "The student is wrong: there is a clear negative association even though the points are scattered. The association is negative, roughly linear, and moderately strong; more TV time is associated with lower reading scores.",
+      "solution": {
+        "steps": [
+          "Strong or real association does not require every point to lie exactly on a line; it only requires an overall trend.",
+          "Track $y$ as $x$ increases: from the low-$x$ students (around $82$ to $86$) to the high-$x$ students (around $44$ to $58$), scores generally fall, so there is a clear downward trend even though individual points bounce up and down.",
+          "The points follow that falling trend with noticeable scatter, so the form is roughly linear and the strength is moderate, not zero and not perfect.",
+          "Therefore the correct description is a negative, roughly linear, moderate association, not 'no association.'",
+          "In context: students who watch more TV tend to score lower on the reading test, even though the relationship is not exact."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "An online store plots product price $x$ (dollars) versus number of units sold per day $y$ for $13$ products: $(5,95),(8,88),(10,82),(12,78),(15,70),(18,64),(20,58),(25,50),(30,42),(35,35),(40,30),(45,24),(22,2)$. Describe direction, form, strength, and any outlier, and explain how removing the outlier would (or would not) change the overall trend.",
+      "answer": "Negative, linear, strong association; $(22,2)$ is an outlier (a $\\$22$ product selling only $2$ units). Removing it would not change the negative downward trend, which is already strong.",
+      "solution": {
+        "steps": [
+          "As price $x$ rises from $5$ to $45$, units sold $y$ falls from $95$ to $24$, so the direction is negative.",
+          "The decline is steady, so the form is linear, and apart from one point the points lie close to the falling line, so the association is strong.",
+          "At $x=22$ the trend predicts roughly $54$ units, but $(22,2)$ sells only $2$, far below, so it is the outlier (maybe an unpopular or out-of-stock item).",
+          "Because the other $12$ points already form a clear, strong negative trend on their own, removing the single low outlier leaves that same downward pattern essentially unchanged.",
+          "In context: higher prices are associated with fewer units sold, and that conclusion holds with or without the one unusual product."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A scatter plot of a person's age $x$ (years) versus daily hours of sleep $y$ for $12$ people forms two clusters: a 'children' cluster of six points near $(8,10)$ and an 'adults' cluster of six points near $(40,7)$, with a wide gap between the age groups. Describe the clustering and the between-cluster direction, and explain why a single straight-line trend may not tell the whole story.",
+      "answer": "The data form two clusters by age group (children sleeping about $10$ hours, adults about $7$ hours). Between clusters the direction is negative (older means less sleep), but a single line hides that the data are really two separate groups.",
+      "solution": {
+        "steps": [
+          "Six points group near $(8,10)$ and six near $(40,7)$, with a gap in the middle ages, so there are two distinct clusters.",
+          "Comparing the clusters: the older group ($x=40$) sleeps fewer hours ($7$) than the younger group ($x=8$, $10$ hours), so across the groups the direction is negative.",
+          "A single straight line drawn through all the points would suggest a smooth steady decline, but the actual data jump from one cluster to the other with no points between.",
+          "So a lone trend line can mislead: the real pattern is two groups, not a continuous relationship, and the gap means we have no data for middle-aged people.",
+          "In context: children and adults form separate sleep groups, and older age is associated with less sleep when the two groups are compared."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A trainer plots running speed $x$ (mph) versus heart rate $y$ (bpm) for $11$ runs: $(4,110),(5,120),(6,128),(7,138),(8,148),(9,156),(10,166),(11,176),(12,184),(13,194),(8,205)$. Describe direction, form, and strength, identify the outlier, and explain whether the outlier changes the conclusion about the relationship.",
+      "answer": "Positive, linear, strong association; $(8,205)$ is an outlier (a very high heart rate for $8$ mph). It does not change the conclusion that faster running is associated with a higher heart rate.",
+      "solution": {
+        "steps": [
+          "As speed $x$ rises from $4$ to $13$, heart rate $y$ rises from $110$ to $194$, so the direction is positive.",
+          "The rise is steady (about $9$ to $10$ bpm per added mph), so the form is linear and the non-outlier points cluster tightly, so the association is strong.",
+          "At $x=8$ the trend is near $148$ bpm, but $(8,205)$ is far above at $205$, so it is the outlier (perhaps a run while ill or after caffeine).",
+          "The other ten points alone show the same strong upward trend, so even with the outlier removed the conclusion is unchanged.",
+          "In context: running faster is associated with a higher heart rate, a strong positive relationship that one unusual reading does not overturn."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A scatter plot of a phone's battery age $x$ (months) versus screen-on time per charge $y$ (hours) for $12$ phones: $(2,11),(4,10),(6,10),(8,9),(10,9),(12,8),(14,8),(16,7),(18,7),(20,6),(22,6),(11,12)$. Describe direction, form, and strength, identify any outlier, and interpret the pattern for someone deciding whether to keep an older phone.",
+      "answer": "Negative, roughly linear, strong association; $(11,12)$ is an outlier (an $11$-month phone with unusually long screen time). Older batteries are associated with less screen-on time per charge.",
+      "solution": {
+        "steps": [
+          "As age $x$ increases from $2$ to $22$ months, screen-on time $y$ falls from $11$ down to $6$ hours, so the direction is negative.",
+          "The decline is gradual and steady, so the form is roughly linear, and most points lie close to that falling line, so the association is strong.",
+          "At $x=11$ the trend is near $8.5$ hours, but $(11,12)$ has $12$ hours, well above the rest, so it is the outlier (maybe a replaced battery or a lightly used phone).",
+          "In context: as a phone's battery ages it tends to give less screen time per charge, so someone with an older phone should expect shorter battery life and may want to replace the battery or the phone."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Two scatter plots compare the same students. Plot 1 graphs hours slept $x$ versus reaction time $y$ (ms) and shows a negative association. Plot 2 graphs hours slept $x$ versus quiz score $y$ and shows a positive association. The data are $(5,420,70),(6,400,75),(7,360,80),(8,330,86),(9,300,90),(10,280,92)$ written as (hours, reaction time, quiz score). Describe each association's direction and form, and explain why more sleep gives a falling reaction-time plot but a rising quiz-score plot.",
+      "answer": "Reaction time vs sleep is negative and linear (more sleep, faster reaction, lower ms); quiz score vs sleep is positive and linear (more sleep, higher score). The directions differ because lower reaction time is good while higher quiz score is good.",
+      "solution": {
+        "steps": [
+          "Plot 1 (sleep vs reaction time): as sleep rises from $5$ to $10$ hours, reaction time falls from $420$ to $280$ ms, so it is a negative, linear association.",
+          "Plot 2 (sleep vs quiz score): as sleep rises from $5$ to $10$ hours, quiz score rises from $70$ to $92$, so it is a positive, linear association.",
+          "Both plots actually say sleep helps performance; they only differ in direction because the two outcome variables are measured oppositely.",
+          "A smaller reaction time means faster (better) reactions, so 'better' shows as $y$ going down, giving a negative slope.",
+          "A larger quiz score means better performance, so 'better' shows as $y$ going up, giving a positive slope.",
+          "In context: more sleep is associated with both faster reactions and higher quiz scores, even though one plot falls and the other rises."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A city plots the distance of a home from downtown $x$ (miles) versus home price $y$ (thousands of dollars) for $13$ homes: $(1,500),(2,470),(3,450),(4,420),(5,400),(6,380),(7,360),(8,340),(9,320),(10,300),(11,290),(12,275),(6,640)$. Describe direction, form, strength, and any outlier, explain what the outlier might represent, and state what the overall pattern means for a homebuyer.",
+      "answer": "Negative, roughly linear, strong association; $(6,640)$ is an outlier (a home far more expensive than its distance predicts). Homes farther from downtown tend to cost less.",
+      "solution": {
+        "steps": [
+          "As distance $x$ increases from $1$ to $12$ miles, price $y$ falls from $500$ to $275$ thousand dollars, so the direction is negative.",
+          "The decline is steady (about $20$ thousand dollars per mile), so the form is roughly linear, and the non-outlier points lie close to that line, so the association is strong.",
+          "At $x=6$ the trend predicts about $\\$380$ thousand, but $(6,640)$ is $\\$640$ thousand, far above, so it is the outlier.",
+          "The outlier might be a much larger or newly renovated luxury home, whose features raise its price well above what its distance alone would suggest.",
+          "In context: homes farther from downtown generally cost less, so a buyer wanting a lower price might look farther out, while knowing some individual homes will not fit the trend."
+        ]
+      }
+    }
+  ]
+}

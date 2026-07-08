@@ -1,0 +1,119 @@
+{
+  "standard": "8.EE.B.5",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Expressions and Equations",
+  "domainCode": "EE",
+  "cluster": "Understand the connections between proportional relationships, lines, and linear equations",
+  "clusterCode": "B",
+  "skillName": "Slope and Proportional Relationships",
+
+  "description": "Students graph proportional relationships and interpret the constant of proportionality (unit rate) as the slope of the line through the origin. Given a proportional relationship expressed as a graph, a table, an equation $y = kx$, or a verbal description, they find its unit rate/slope, and they compare two proportional relationships represented in different forms to determine which has the greater rate.",
+
+  "subSkills": [
+    "Compute the unit rate (constant of proportionality) $k = \\frac{y}{x}$ from a point, a table, or a graph",
+    "Recognize that a proportional relationship graphs as a straight line through the origin $(0,0)$",
+    "Interpret the slope $\\frac{\\text{rise}}{\\text{run}}$ of the line as the unit rate of the relationship",
+    "Write the equation $y = kx$ for a proportional relationship",
+    "Plot a proportional relationship from an equation or table and read its slope from the graph",
+    "Compare two proportional relationships given in different representations (graph vs. table vs. equation vs. words) by comparing their unit rates",
+    "Interpret slope in context (cost per item, distance per hour, etc.)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Unit rate from a graph",
+      "example": "A line through the origin passes through $(4, 10)$. What is the slope, interpreted as the unit rate? Answer: $\\frac{10}{4} = \\frac{5}{2}$."
+    },
+    {
+      "name": "Unit rate from a table",
+      "example": "A table shows $(x,y)$ pairs $(3, 12)$, $(5, 20)$, $(8, 32)$. Find the constant of proportionality. Answer: $k = \\frac{12}{3} = 4$."
+    },
+    {
+      "name": "Slope from the equation",
+      "example": "For the proportional relationship $y = \\frac{3}{4}x$, state the slope of its graph. Answer: $\\frac{3}{4}$."
+    },
+    {
+      "name": "Write the equation and identify slope",
+      "example": "Maya earns $\\$15$ for $2$ hours of work, proportional to hours. Write the equation and give the hourly rate. Answer: $y = \\frac{15}{2}x$, slope $\\frac{15}{2}$ dollars per hour."
+    },
+    {
+      "name": "Compare two relationships in different forms",
+      "example": "Plan A is graphed through $(2, 9)$; Plan B is given by $y = 4x$. Which has the greater unit rate? Answer: Plan A, since $\\frac{9}{2} = 4.5 > 4$."
+    },
+    {
+      "name": "Interpret slope in context",
+      "example": "A car's distance is proportional to time, with graph passing through $(3, 165)$ (hours, miles). What does the slope represent and what is it? Answer: speed, $\\frac{165}{3} = 55$ miles per hour."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single representation. The unit rate is a whole number or simple fraction read directly from one given point, a table entry, or an equation already in $y = kx$ form. No comparison required.",
+      "constraints": [
+        "One representation only (graph, table, or equation)",
+        "Slope is a positive integer or a simple fraction with small denominator (denominator $\\le 5$)",
+        "Coordinates and table values are small positive integers (values $\\le 40$)",
+        "Includes the origin or a directly usable point; no setup from words"
+      ]
+    },
+    "Medium": {
+      "description": "Either the slope is a non-unit fraction requiring reduction, or the student must convert between two representations (e.g., write $y = kx$ from a table, then state the slope), or extract the rate from a short word problem.",
+      "constraints": [
+        "Slope is a non-unit fraction requiring simplification, or requires dividing two non-trivial values",
+        "Requires moving between representations (table to equation, words to equation)",
+        "May ask for interpretation of the slope in context with units",
+        "Values may be moderate ($\\le 200$)"
+      ]
+    },
+    "Hard": {
+      "description": "Compares two proportional relationships given in two different representations, or requires multi-step reasoning (compute both unit rates, then compare or combine). May embed a follow-up question about the difference between rates or a prediction using the equation.",
+      "constraints": [
+        "Two relationships in different forms (graph vs. table vs. equation vs. words) must both be reduced to unit rates and compared",
+        "At least one unit rate is a fraction or requires a division step before comparison",
+        "Follow-up may ask the numeric difference of the rates or to predict a $y$-value from the faster relationship",
+        "Context-rich wording requiring extraction of the correct quantities"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student inverts the slope ratio, computing $\\frac{x}{y}$ (run over rise) instead of $\\frac{y}{x}$ (rise over run)",
+      "distractor": "For the point $(4, 10)$ gives $\\frac{4}{10} = \\frac{2}{5}$ instead of $\\frac{10}{4} = \\frac{5}{2}$"
+    },
+    {
+      "misconception": "Student subtracts the coordinates instead of dividing, treating the relationship as additive",
+      "distractor": "For the point $(4, 10)$ gives $10 - 4 = 6$ instead of $\\frac{10}{4} = \\frac{5}{2}$"
+    },
+    {
+      "misconception": "Student assumes a larger $y$-value means a steeper line without dividing by $x$, ignoring the unit rate",
+      "distractor": "Chooses the relationship through $(5, 12)$ over $y = 3x$ because $12 > 3$, instead of comparing $\\frac{12}{5} = 2.4 < 3$"
+    },
+    {
+      "misconception": "Student reads the slope as the $y$-coordinate of a single point rather than the ratio",
+      "distractor": "For a line through $(2, 9)$ states the slope is $9$ instead of $\\frac{9}{2}$"
+    },
+    {
+      "misconception": "Student forgets a proportional relationship must pass through the origin and uses a nonzero intercept",
+      "distractor": "Writes $y = kx + b$ with $b \\ne 0$, or computes slope between two points one of which is misread, giving a value such as $\\frac{10-0}{4-1} = \\frac{10}{3}$ instead of $\\frac{10}{4}$"
+    },
+    {
+      "misconception": "Student drops or mislabels the units when interpreting slope in context",
+      "distractor": "Gives the speed as $55$ with no units, or as $\\frac{3}{165}$ hours per mile, instead of $55$ miles per hour"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

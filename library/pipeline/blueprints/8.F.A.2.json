@@ -1,0 +1,119 @@
+{
+  "standard": "8.F.A.2",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Functions",
+  "domainCode": "F",
+  "cluster": "Define, evaluate, and compare functions",
+  "clusterCode": "A",
+  "skillName": "Comparing Functions",
+
+  "description": "Students compare key properties of two linear functions when each is presented in a different representation: an equation in slope-intercept form, a graph, a table of values, or a verbal description. They extract the rate of change (slope) and the initial value (y-intercept) from each representation, then compare those properties to answer questions such as which function increases faster, which has a greater starting value, or when one function's output exceeds the other's.",
+
+  "subSkills": [
+    "Identify the rate of change (slope) from an equation $y=mx+b$",
+    "Compute the rate of change from a table using $\\frac{\\Delta y}{\\Delta x}$",
+    "Read the rate of change and initial value from a graph",
+    "Extract slope and starting value from a verbal description",
+    "Identify the initial value (y-intercept) from each representation",
+    "Compare rates of change across two different representations",
+    "Compare initial values across two different representations",
+    "Determine which function is greater at a given input or for which inputs one exceeds the other"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Equation vs. table",
+      "example": "Function A is $y = 3x + 2$. Function B is given by the table $(0,5),(1,7),(2,9)$. Which function has the greater rate of change?"
+    },
+    {
+      "name": "Equation vs. graph",
+      "example": "Function A is $y = -2x + 4$. Function B is a line through $(0,1)$ and $(2,5)$ shown on a graph. Which function has the greater initial value?"
+    },
+    {
+      "name": "Table vs. verbal description",
+      "example": "Function A is the table $(0,10),(2,16),(4,22)$. Function B is described: a plant is $4$ cm tall and grows $2$ cm per week. Which function grows faster?"
+    },
+    {
+      "name": "Graph vs. verbal description",
+      "example": "Function A is a line through $(0,3)$ with slope $1$ shown on a graph. Function B: a taxi charges a \\$5 base fee plus \\$2 per mile. Compare the rates of change."
+    },
+    {
+      "name": "Greater output / crossover comparison",
+      "example": "Function A is $y = 4x + 1$ and Function B is $y = 2x + 9$. For what values of $x$ is Function A greater than Function B?"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Compare a single property (either slope or initial value, named explicitly) of two functions given in two representations where both values are positive integers and read directly with no computation beyond one subtraction.",
+      "constraints": [
+        "Exactly one property compared, and the question names it (rate of change OR initial value)",
+        "Slopes and intercepts are small positive integers ($m,b$ between $1$ and $6$)",
+        "Table rows use consecutive integer $x$-values starting at $x=0$ so the intercept is read directly",
+        "Graphs pass through clearly marked lattice points including the y-intercept",
+        "Answer is which function has the greater (or smaller) named property"
+      ]
+    },
+    "Medium": {
+      "description": "Compare a property that requires computation in at least one representation, or compare and report both slope and intercept. Values may be negative or require simplifying $\\frac{\\Delta y}{\\Delta x}$ from a table whose x-values are not consecutive.",
+      "constraints": [
+        "At least one representation requires computing slope as $\\frac{\\Delta y}{\\Delta x}$ from non-consecutive points",
+        "Slopes or intercepts may be negative or non-integer (e.g. $\\frac{1}{2}$, $-3$)",
+        "Verbal descriptions require translating words into slope and initial value before comparing",
+        "Question may ask to compare both rate of change and initial value",
+        "Table x-values may not start at $0$, so the intercept must be reasoned out"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step comparison requiring the student to derive both properties of both functions from differing representations and then answer a synthesis question: when one function overtakes the other, the value of an input where outputs are equal, or interpreting the comparison in context.",
+      "constraints": [
+        "Both slope and intercept must be derived for each function before answering",
+        "Question asks for a crossover ($f(x)=g(x)$) or a range where one function exceeds the other",
+        "Requires setting up and solving a linear equation such as $4x+1 = 2x+9$",
+        "Mixes a contextual/verbal representation with an abstract one and asks for an in-context interpretation",
+        "May include functions with equal slopes (parallel, never cross) or equal intercepts as a reasoning trap"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student compares y-intercepts when asked about rate of change (confuses initial value with slope)",
+      "distractor": "Chooses the function with the larger intercept $b$ as having the greater rate of change, e.g. picks $y=2x+9$ over $y=4x+1$ because $9>1$"
+    },
+    {
+      "misconception": "Student computes slope from a table as $\\frac{\\Delta x}{\\Delta y}$ (inverts the ratio)",
+      "distractor": "Reports the rate of change as $\\frac{\\Delta x}{\\Delta y}$, e.g. $\\frac{1}{2}$ instead of $\\frac{2}{1}=2$"
+    },
+    {
+      "misconception": "Student reads the first listed y-value of a table as the initial value even when the first x-value is not $0$",
+      "distractor": "Uses $y$ at $x=2$ as the y-intercept instead of extrapolating back to $x=0$"
+    },
+    {
+      "misconception": "Student ignores the sign of the slope and compares only magnitudes",
+      "distractor": "Says $y=-5x+2$ has a greater rate of change than $y=3x+1$ because $5>3$, ignoring that $-5<3$"
+    },
+    {
+      "misconception": "Student translates a verbal 'per unit' rate as the initial value and the fixed fee as the slope",
+      "distractor": "From 'a \\$5 base fee plus \\$2 per mile' takes slope $=5$ and intercept $=2$ instead of slope $=2$, intercept $=5$"
+    },
+    {
+      "misconception": "Student answers the crossover question by comparing functions only at $x=0$ instead of solving $f(x)=g(x)$",
+      "distractor": "Concludes the function with the larger intercept is always greater, missing that the steeper function overtakes it after the crossover point"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

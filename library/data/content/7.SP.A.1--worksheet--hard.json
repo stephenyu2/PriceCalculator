@@ -1,0 +1,230 @@
+{
+  "id": "7.SP.A.1--worksheet--hard",
+  "standard": "7.SP.A.1",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Use random sampling to draw inferences about a population",
+  "clusterCode": "A",
+  "skillName": "Statistical Sampling",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "These problems combine the quality of a sampling method with the validity of the conclusion drawn from it. For each one, decide whether the inference about the whole population is justified. Where the data allow, scale the sample proportion up to estimate the population, then judge whether that estimate can be trusted. Remember that a large sample does not fix a biased one, and an estimate is only trustworthy when the sample was selected randomly from the whole population.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A middle school has $600$ students. The principal randomly selects $75$ students and finds that $30$ of them ride the bus to school. The principal concludes that about $240$ of all students ride the bus. First estimate the number of bus riders in the whole school, then decide whether the principal's conclusion is valid.",
+      "answer": "The estimate is $240$ bus riders, and the conclusion is valid because the sample was randomly selected from the whole population.",
+      "solution": {
+        "steps": [
+          "Find the sample proportion of bus riders: $\\frac{30}{75} = \\frac{2}{5}$.",
+          "Scale that proportion up to the full population of $600$: $\\frac{2}{5} \\times 600 = 240$.",
+          "The estimate of $240$ matches the principal's conclusion.",
+          "Now judge validity: the $75$ students were chosen randomly from all $600$, so every student had an equal chance of selection and the sample is representative.",
+          "Because the sample is random and representative, the inference is justified. The conclusion is valid."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A company wants to know what fraction of its $5{,}000$ customers are satisfied. It emails a survey to all customers, and only the $400$ who chose to reply send it back. Of those, $360$ say they are satisfied. A manager concludes that $90\\%$ of all customers are satisfied. Is this inference valid? Explain.",
+      "answer": "No. Although $\\frac{360}{400} = 90\\%$ of respondents are satisfied, the sample is a voluntary response sample, so the $90\\%$ cannot be generalized to all $5{,}000$ customers.",
+      "solution": {
+        "steps": [
+          "Check the arithmetic: $\\frac{360}{400} = \\frac{9}{10} = 90\\%$ of respondents are satisfied, so the percentage is computed correctly.",
+          "Identify the sampling method: only customers who chose to reply are counted, which is a voluntary response sample.",
+          "People with strong opinions, especially the very satisfied or very angry, are more likely to respond, so the responders do not mirror the whole customer base.",
+          "A correct percentage from a biased sample still cannot be generalized to the population.",
+          "The inference is not valid because the sample was self-selected, not random."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "To estimate how many of the $1{,}200$ trees in a forest are oaks, a researcher randomly tags and checks $80$ trees and finds $20$ oaks. Estimate the total number of oak trees in the forest and explain why this estimate can be trusted.",
+      "answer": "About $300$ oak trees. The estimate can be trusted because the $80$ trees were chosen randomly, making the sample representative of the forest.",
+      "solution": {
+        "steps": [
+          "Find the sample proportion of oaks: $\\frac{20}{80} = \\frac{1}{4}$.",
+          "Scale up to all $1{,}200$ trees: $\\frac{1}{4} \\times 1{,}200 = 300$.",
+          "The estimate is about $300$ oak trees.",
+          "The researcher used random selection, so every tree had an equal chance of being checked and the sample should mirror the forest.",
+          "Because the sample is random and representative, the proportional estimate is trustworthy."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A reporter wants to know whether residents of a city of $40{,}000$ people support a new park. She surveys $500$ people, all of whom she finds at an existing park on a Saturday. Of these, $475$ support the new park. She concludes that about $38{,}000$ city residents support it. Explain why this inference is not valid even though the sample is large.",
+      "answer": "Not valid. People found at a park are far more likely to favor parks, so this convenience sample is biased. A large sample does not fix bias, so the estimate of $38{,}000$ cannot be trusted.",
+      "solution": {
+        "steps": [
+          "Check the scaling: $\\frac{475}{500} = \\frac{19}{20} = 95\\%$, and $0.95 \\times 40{,}000 = 38{,}000$, so the math is correct.",
+          "Identify where the sample came from: everyone surveyed was at a park, which is a convenience (location-biased) sample.",
+          "Park visitors clearly like parks, so they are not representative of all $40{,}000$ residents, many of whom never use parks.",
+          "Surveying $500$ people is a large sample, but size does not remove the bias from how those people were chosen.",
+          "Because the sample is biased, the estimate of $38{,}000$ is not trustworthy and the inference is invalid."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A teacher wants to estimate the mean number of hours the $300$ seventh graders sleep. She compares two plans. Plan A: ask the $25$ students in her first-period class. Plan B: draw $25$ student ID numbers at random from all $300$ students. Which plan should she use, and why will it give a more trustworthy estimate?",
+      "answer": "Plan B. Drawing IDs at random from all $300$ students gives every student an equal chance of selection, producing a representative sample, while Plan A is a convenience sample limited to one class.",
+      "solution": {
+        "steps": [
+          "Both plans use the same sample size of $25$, so size is not the deciding factor.",
+          "Plan A surveys only one class, a convenience sample that may share a schedule or other traits and may not mirror all $300$ students.",
+          "Plan B draws IDs at random from the entire grade, so every student has an equal chance of being chosen.",
+          "Random selection makes Plan B's sample representative of the whole grade.",
+          "Plan B should be used because a representative random sample gives a more trustworthy estimate."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "From a random sample of $60$ of the $900$ books in a library, $15$ are checked out. A student claims that exactly $225$ books in the library are checked out right now. Estimate the number checked out, and explain why the word 'exactly' makes the student's claim too strong.",
+      "answer": "The best estimate is about $225$ books, but 'exactly' is too strong. A random sample supports an approximate estimate, not an exact count, because a different random sample would give a slightly different number.",
+      "solution": {
+        "steps": [
+          "Find the sample proportion checked out: $\\frac{15}{60} = \\frac{1}{4}$.",
+          "Scale up to all $900$ books: $\\frac{1}{4} \\times 900 = 225$.",
+          "So about $225$ books is a reasonable estimate.",
+          "A sample gives an estimate, not a guarantee. Another random sample of $60$ books would likely give a slightly different proportion and a different total.",
+          "The inference should say 'about $225$,' so claiming 'exactly $225$' overstates what a sample can prove."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A news station runs an online poll asking visitors to its website whether a curfew law should pass. Out of $2{,}000$ responses, $1{,}500$ say yes. The station reports that $75\\%$ of the town's $20{,}000$ adults support the curfew. Identify two reasons this inference is flawed.",
+      "answer": "Flawed. First, it is a voluntary response sample, so only people who chose to click are counted. Second, only website visitors could respond, so adults who do not use the site are excluded. The $75\\%$ cannot be generalized to all $20{,}000$ adults.",
+      "solution": {
+        "steps": [
+          "Confirm the figure: $\\frac{1{,}500}{2{,}000} = \\frac{3}{4} = 75\\%$ of respondents said yes, so the percentage is correct.",
+          "Reason one: respondents chose to participate, so this is a voluntary response sample biased toward people with strong opinions.",
+          "Reason two: only visitors to the station's website could respond, so adults who do not visit the site had no chance of being included.",
+          "Both flaws mean the responders do not represent all $20{,}000$ adults.",
+          "Because the sample is self-selected and non-random, the $75\\%$ figure cannot be generalized to the whole town."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A factory produces $8{,}000$ light bulbs a day. A quality inspector pulls a bulb from the line at random every $10$ minutes during the full production day and tests it. Out of $48$ bulbs tested, $3$ are defective. Estimate the number of defective bulbs produced that day and explain whether this systematic random sampling supports the estimate.",
+      "answer": "About $500$ defective bulbs. Because the bulbs were pulled at random points spread across the whole production day, the sample is representative, so the estimate is trustworthy.",
+      "solution": {
+        "steps": [
+          "Find the sample proportion defective: $\\frac{3}{48} = \\frac{1}{16}$.",
+          "Scale up to all $8{,}000$ bulbs: $\\frac{1}{16} \\times 8{,}000 = 500$.",
+          "The estimate is about $500$ defective bulbs.",
+          "Pulling a bulb at regular random intervals across the entire day spreads the sample over all production, so it is not limited to one batch or time.",
+          "This systematic, randomly timed sampling produces a representative sample, so the estimate of $500$ is trustworthy."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Two students each estimate what fraction of the $400$ students in their grade prefer pizza. Maria randomly surveys $20$ students and finds $12$ prefer pizza. Devon surveys $100$ students, but all from the lunch line at the pizza station, and finds $95$ prefer pizza. Whose estimate of the grade's preference is more trustworthy, and why is the larger sample not automatically better?",
+      "answer": "Maria's estimate is more trustworthy. Her sample is random, so it represents the grade, while Devon's larger sample is biased because it came from the pizza station. Sample size cannot fix biased selection.",
+      "solution": {
+        "steps": [
+          "Maria's sample is random, so it should mirror the grade. Her estimate is $\\frac{12}{20} = \\frac{3}{5} = 60\\%$ prefer pizza.",
+          "Devon surveyed only students already in the pizza line, a convenience sample of people who clearly like pizza.",
+          "Devon's result, $\\frac{95}{100} = 95\\%$, overstates the grade's preference because of where he sampled.",
+          "Devon's sample is five times larger, but a bigger biased sample is still biased.",
+          "Maria's smaller random sample is more trustworthy because representativeness, not size, determines whether an estimate generalizes."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A city wants to know how its $30{,}000$ residents commute. A planner randomly samples $200$ residents from the full resident list and finds $50$ commute by bicycle, concluding that about $7{,}500$ residents bike to work. A second planner argues the conclusion must be wrong because '$50$ people is too few to represent $30{,}000$.' Estimate the number of bike commuters and explain whether the second planner's objection is correct.",
+      "answer": "The estimate is about $7{,}500$ bike commuters, and the second planner is wrong. Because the $200$ residents were chosen randomly from the full list, the sample is representative, so the estimate is valid despite the population being large.",
+      "solution": {
+        "steps": [
+          "Find the sample proportion who bike: $\\frac{50}{200} = \\frac{1}{4}$.",
+          "Scale up to all $30{,}000$ residents: $\\frac{1}{4} \\times 30{,}000 = 7{,}500$.",
+          "The estimate is about $7{,}500$ bike commuters.",
+          "The objection focuses only on sample size compared to population size, but what matters most is how the sample was selected.",
+          "The $200$ residents were chosen randomly from the entire list, so the sample is representative and the estimate is valid. The second planner's objection is not correct."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A survey asks, 'Do you agree that our wonderful library should stay open later for hard-working students?' Of $300$ randomly chosen residents, $270$ say yes. The library board concludes that $90\\%$ of all residents want longer hours. Even though the sample was random, explain why the inference is still questionable.",
+      "answer": "Questionable. The question is a leading question whose flattering wording pushes people toward 'yes,' so even a random sample produces biased answers. The $90\\%$ may overstate true support.",
+      "solution": {
+        "steps": [
+          "Check the figure: $\\frac{270}{300} = \\frac{9}{10} = 90\\%$ said yes, so the percentage is calculated correctly.",
+          "The residents were chosen randomly, so the selection method is fine.",
+          "However, the wording, 'wonderful library' and 'hard-working students,' is a leading question that nudges people toward agreeing.",
+          "Bias can enter through the question itself, not only through how people are selected.",
+          "Because the wording inflates the 'yes' responses, the $90\\%$ likely overstates real support and the inference is questionable."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A scientist tags $40$ fish in a lake, releases them, and later catches a random sample of $50$ fish, of which $4$ are tagged. Assuming the tagged fish mixed evenly, estimate the total number of fish in the lake and explain why random recapture is essential to the estimate.",
+      "answer": "About $500$ fish. The estimate relies on the recaptured sample being random so that the fraction tagged in the sample matches the fraction tagged in the whole lake.",
+      "solution": {
+        "steps": [
+          "The fraction of the recaptured fish that are tagged is $\\frac{4}{50} = \\frac{2}{25}$.",
+          "If the sample is representative, this should equal the fraction of the whole lake that is tagged: $\\frac{40}{N}$, where $N$ is the total number of fish.",
+          "Set the proportions equal: $\\frac{4}{50} = \\frac{40}{N}$.",
+          "Solve: $N = \\frac{40 \\times 50}{4} = \\frac{2000}{4} = 500$.",
+          "The estimate is about $500$ fish. This works only because the recaptured fish were caught at random, so the sample's tagged fraction reflects the lake's tagged fraction. A non-random recapture would bias the estimate."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A principal samples $40$ of the $800$ students at random and finds $6$ play a musical instrument, estimating that $120$ students play. A teacher samples $200$ students, but only from the band and orchestra rooms, finds $190$ play, and estimates that $760$ students play. Which estimate should the principal trust, and explain the danger of the teacher's larger sample.",
+      "answer": "Trust the principal's estimate of about $120$ students. The teacher's larger sample was taken only from music rooms, so it is badly biased toward musicians and wildly overstates the true number.",
+      "solution": {
+        "steps": [
+          "Principal's estimate: $\\frac{6}{40} = \\frac{3}{20}$, and $\\frac{3}{20} \\times 800 = 120$ students, from a random sample of the whole school.",
+          "Teacher's estimate: $\\frac{190}{200} = \\frac{19}{20}$, and $\\frac{19}{20} \\times 800 = 760$ students, but only band and orchestra members were sampled.",
+          "The teacher sampled where instrument players gather, so nearly everyone plays, which does not represent the whole school.",
+          "The danger is that the large sample size makes the biased estimate of $760$ look authoritative when it is grossly inflated.",
+          "The principal's random sample is representative, so the estimate of about $120$ students should be trusted."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A health official wants to estimate how many of a town's $12{,}000$ residents exercise daily. She sets up a survey table inside a gym and asks the first $300$ people who walk in, finding $270$ exercise daily, and reports that $90\\%$ of residents exercise daily. Explain why the estimate is too high, and describe one change that would make the sampling method valid.",
+      "answer": "The estimate is too high because surveying people entering a gym is a convenience sample biased toward exercisers. A valid fix is to randomly select residents from a town-wide list instead of sampling at the gym.",
+      "solution": {
+        "steps": [
+          "Check the figure: $\\frac{270}{300} = \\frac{9}{10} = 90\\%$ of those surveyed exercise daily.",
+          "Identify the bias: people walking into a gym already exercise, so this is a convenience (location-biased) sample.",
+          "Because gym-goers are far more active than typical residents, the $90\\%$ overstates the true rate for all $12{,}000$ residents.",
+          "To fix it, the official should select residents at random from a town-wide list so every resident has an equal chance of being chosen, not just gym visitors.",
+          "A random town-wide sample would be representative and give a trustworthy estimate."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A random sample of $25$ of the $500$ apps on a phone store finds that $5$ cost money and the rest are free. A reviewer estimates that $100$ of the apps cost money and adds, 'Because my sample was random, this estimate is guaranteed to be exact.' Estimate the number of paid apps and explain what is correct and what is incorrect about the reviewer's statement.",
+      "answer": "The estimate of about $100$ paid apps is reasonable, and using a random sample is the right approach. However, 'guaranteed to be exact' is incorrect, because a random sample gives an approximate estimate, not an exact count.",
+      "solution": {
+        "steps": [
+          "Find the sample proportion of paid apps: $\\frac{5}{25} = \\frac{1}{5}$.",
+          "Scale up to all $500$ apps: $\\frac{1}{5} \\times 500 = 100$.",
+          "So about $100$ paid apps is a reasonable estimate, and the random sample makes this estimate trustworthy.",
+          "What is correct: random sampling produces a representative sample that supports a valid estimate.",
+          "What is incorrect: 'guaranteed to be exact' is wrong, since a different random sample of $25$ apps would likely give a slightly different proportion. A sample supports an approximate inference, never an exact guarantee."
+        ]
+      }
+    }
+  ]
+}

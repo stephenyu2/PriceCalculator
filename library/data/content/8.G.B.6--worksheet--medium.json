@@ -1,0 +1,228 @@
+{
+  "id": "8.G.B.6--worksheet--medium",
+  "standard": "8.G.B.6",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand and apply the Pythagorean Theorem",
+  "clusterCode": "B",
+  "skillName": "Pythagorean Theorem Proof",
+  "materialType": "worksheet",
+  "difficulty": "Medium",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "These problems take you through the reasoning behind the Pythagorean Theorem. You will expand and simplify algebraic expressions that appear in the area-rearrangement proof, name the property used in a step, and apply the converse to classify triangles as right, acute, or obtuse. Show each step and justify your reasoning.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "In the area-rearrangement proof, four congruent right triangles with legs $a$ and $b$ surround a tilted square of side $c$, forming a large square of side $a+b$. Expand the area of the large square, $(a+b)^2$, completely.",
+      "answer": "$(a+b)^2 = a^2 + 2ab + b^2$",
+      "solution": {
+        "steps": [
+          "Use the distributive property (FOIL): $(a+b)^2 = (a+b)(a+b)$.",
+          "Multiply: $a\\cdot a + a\\cdot b + b\\cdot a + b\\cdot b = a^2 + ab + ab + b^2$.",
+          "Combine like terms: $a^2 + 2ab + b^2$."
+        ],
+        "answer": "$(a+b)^2 = a^2 + 2ab + b^2$"
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Each of the four right triangles in the rearrangement proof has legs $a$ and $b$. Write the total area of all four triangles as a single simplified expression.",
+      "answer": "$2ab$",
+      "solution": {
+        "steps": [
+          "The area of one right triangle with legs $a$ and $b$ is $\\frac{1}{2}ab$.",
+          "There are four congruent triangles, so the total area is $4\\cdot\\frac{1}{2}ab$.",
+          "Simplify: $4\\cdot\\frac{1}{2}ab = 2ab$.",
+          "A common error is to use $ab$ for each triangle, giving $4ab$; the correct factor is $\\frac{1}{2}$."
+        ],
+        "answer": "$2ab$"
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "The large square's area equals the inner tilted square plus the four triangles: $(a+b)^2 = c^2 + 2ab$. Starting from this equation, show the algebra that reduces it to $a^2 + b^2 = c^2$. What term cancels from both sides?",
+      "answer": "The $2ab$ term cancels, leaving $a^2 + b^2 = c^2$.",
+      "solution": {
+        "steps": [
+          "Expand the left side: $(a+b)^2 = a^2 + 2ab + b^2$, so $a^2 + 2ab + b^2 = c^2 + 2ab$.",
+          "Subtract $2ab$ from both sides: $a^2 + b^2 = c^2$.",
+          "The $2ab$ term appears on both sides and cancels, leaving the Pythagorean relation $a^2 + b^2 = c^2$."
+        ],
+        "answer": "The $2ab$ term cancels, leaving $a^2 + b^2 = c^2$."
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A triangle has sides $9$, $12$, and $15$. Use the converse of the Pythagorean Theorem to determine whether it is a right triangle. Show the computation.",
+      "answer": "Yes, it is a right triangle because $9^2 + 12^2 = 15^2$.",
+      "solution": {
+        "steps": [
+          "Identify the longest side as $c = 15$; the legs are $a = 9$ and $b = 12$.",
+          "Compute $a^2 + b^2 = 9^2 + 12^2 = 81 + 144 = 225$.",
+          "Compute $c^2 = 15^2 = 225$.",
+          "Since $a^2 + b^2 = c^2$ ($225 = 225$), the converse guarantees a right angle opposite the side of length $15$, so the triangle is right."
+        ],
+        "answer": "Yes, it is a right triangle because $9^2 + 12^2 = 15^2$."
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A triangle has sides $5$, $6$, and $8$. Use the converse to classify the triangle as right, acute, or obtuse. Show your comparison.",
+      "answer": "Obtuse, because $5^2 + 6^2 < 8^2$.",
+      "solution": {
+        "steps": [
+          "The longest side is $c = 8$, so compare $5^2 + 6^2$ with $8^2$.",
+          "Compute $5^2 + 6^2 = 25 + 36 = 61$ and $8^2 = 64$.",
+          "Since $61 < 64$, we have $a^2 + b^2 < c^2$.",
+          "When the sum of the squares of the two shorter sides is less than the square of the longest side, the triangle is obtuse."
+        ],
+        "answer": "Obtuse, because $5^2 + 6^2 < 8^2$."
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A triangle has sides $7$, $8$, and $10$. Use the converse to classify the triangle as right, acute, or obtuse. Show your comparison.",
+      "answer": "Acute, because $7^2 + 8^2 > 10^2$.",
+      "solution": {
+        "steps": [
+          "The longest side is $c = 10$, so compare $7^2 + 8^2$ with $10^2$.",
+          "Compute $7^2 + 8^2 = 49 + 64 = 113$ and $10^2 = 100$.",
+          "Since $113 > 100$, we have $a^2 + b^2 > c^2$.",
+          "When the sum of the squares of the two shorter sides is greater than the square of the longest side, the triangle is acute."
+        ],
+        "answer": "Acute, because $7^2 + 8^2 > 10^2$."
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "State the converse of the Pythagorean Theorem, and explain in one sentence why it lets you conclude a triangle is right without measuring any angle.",
+      "answer": "Converse: if $a^2 + b^2 = c^2$ for the longest side $c$, then the triangle is a right triangle. The equality forces the angle opposite $c$ to be exactly $90^\\circ$, so no angle measurement is needed.",
+      "solution": {
+        "steps": [
+          "The theorem says: if a triangle is right, then $a^2 + b^2 = c^2$.",
+          "The converse reverses this: if $a^2 + b^2 = c^2$ (with $c$ the longest side), then the triangle is right.",
+          "Because only a right triangle produces that exact equality, finding $a^2 + b^2 = c^2$ guarantees the angle opposite $c$ is $90^\\circ$.",
+          "A common mistake is restating the theorem ('every right triangle has $a^2+b^2=c^2$') instead of its converse; the converse starts from the side equality and concludes the right angle."
+        ],
+        "answer": "Converse: if $a^2 + b^2 = c^2$ for the longest side $c$, then the triangle is a right triangle. The equality forces the angle opposite $c$ to be $90^\\circ$, so no angle measurement is needed."
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A student writes the area equation for the rearrangement proof as $(a+b)^2 = c^2 + 4ab$. Identify the error and write the corrected equation.",
+      "answer": "The four triangles total $2ab$, not $4ab$. The correct equation is $(a+b)^2 = c^2 + 2ab$.",
+      "solution": {
+        "steps": [
+          "Each right triangle has area $\\frac{1}{2}ab$, not $ab$.",
+          "Four triangles give $4\\cdot\\frac{1}{2}ab = 2ab$, so the student doubled the triangle area.",
+          "The corrected equation is $(a+b)^2 = c^2 + 2ab$, which simplifies to $a^2 + b^2 = c^2$.",
+          "With the wrong $4ab$, the algebra would not cancel to the Pythagorean relation."
+        ],
+        "answer": "The four triangles total $2ab$, not $4ab$. The correct equation is $(a+b)^2 = c^2 + 2ab$."
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "In the algebraic proof, a step claims $a^2 + 2ab + b^2 = c^2 + 2ab$. Name the property that justifies expanding $(a+b)^2$ into $a^2 + 2ab + b^2$, and state what you do next to finish the proof.",
+      "answer": "The distributive property (distributive expansion) justifies the expansion. Next, subtract $2ab$ from both sides to get $a^2 + b^2 = c^2$.",
+      "solution": {
+        "steps": [
+          "Expanding $(a+b)^2 = (a+b)(a+b)$ uses the distributive property to get $a^2 + 2ab + b^2$.",
+          "The equation is now $a^2 + 2ab + b^2 = c^2 + 2ab$.",
+          "Apply the subtraction property of equality: subtract $2ab$ from both sides.",
+          "This yields $a^2 + b^2 = c^2$, completing the proof."
+        ],
+        "answer": "The distributive property justifies the expansion. Next, subtract $2ab$ from both sides to get $a^2 + b^2 = c^2$."
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A triangle has sides $\\sqrt{5}$, $\\sqrt{12}$, and $\\sqrt{17}$. Use the converse to determine whether it is a right triangle. Show the computation.",
+      "answer": "Yes, it is a right triangle because $(\\sqrt{5})^2 + (\\sqrt{12})^2 = (\\sqrt{17})^2$.",
+      "solution": {
+        "steps": [
+          "The longest side is $c = \\sqrt{17}$, with legs $a = \\sqrt{5}$ and $b = \\sqrt{12}$.",
+          "Compute $a^2 + b^2 = (\\sqrt{5})^2 + (\\sqrt{12})^2 = 5 + 12 = 17$.",
+          "Compute $c^2 = (\\sqrt{17})^2 = 17$.",
+          "Since $a^2 + b^2 = c^2$ ($17 = 17$), the converse confirms the triangle is right."
+        ],
+        "answer": "Yes, it is a right triangle because $(\\sqrt{5})^2 + (\\sqrt{12})^2 = (\\sqrt{17})^2$."
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A triangle has sides $10$, $24$, and $25$. Use the converse to classify it as right, acute, or obtuse. Show your comparison.",
+      "answer": "Acute, because $10^2 + 24^2 > 25^2$ ($676 > 625$).",
+      "solution": {
+        "steps": [
+          "The longest side is $c = 25$, so compare $10^2 + 24^2$ with $25^2$.",
+          "Compute $10^2 + 24^2 = 100 + 576 = 676$ and $25^2 = 625$.",
+          "Since $676 > 625$, we have $a^2 + b^2 > c^2$.",
+          "When the sum of the squares of the two shorter sides exceeds the square of the longest side, the triangle is acute."
+        ],
+        "answer": "Acute, because $10^2 + 24^2 > 25^2$ ($676 > 625$)."
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Explain why, in the rearrangement proof, the four corner triangles must be congruent for the inner region to be a square of side $c$. Reference the side lengths in your reasoning.",
+      "answer": "Each triangle is a right triangle with the same legs $a$ and $b$, so each has the same hypotenuse $c$; the four congruent hypotenuses form the four equal sides of the inner tilted square.",
+      "solution": {
+        "steps": [
+          "All four triangles are right triangles with legs $a$ and $b$, so by SAS they are congruent.",
+          "Congruent triangles have equal hypotenuses, each of length $c = \\sqrt{a^2 + b^2}$.",
+          "The four hypotenuses form the four sides of the inner region, so all four sides equal $c$.",
+          "Because the corner angles of the triangles are complementary, each interior angle of the inner region is $90^\\circ$, making it a true square of side $c$ with area $c^2$."
+        ],
+        "answer": "Each triangle is a right triangle with the same legs $a$ and $b$, so each has the same hypotenuse $c$; the four congruent hypotenuses form the four equal sides of the inner square."
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A student tests whether a triangle with sides $8$, $15$, and $17$ is right by checking $8^2 + 17^2 = 15^2$. Explain the student's error and perform the correct test.",
+      "answer": "The student used the hypotenuse $17$ as a leg. The correct test is $8^2 + 15^2 = 17^2$, which holds ($289 = 289$), so the triangle is right.",
+      "solution": {
+        "steps": [
+          "The converse compares the two shorter sides' squares to the longest side's square; the longest side $17$ must be $c$.",
+          "The student wrongly placed $17$ as a leg, testing $8^2 + 17^2 = 64 + 289 = 353$ against $15^2 = 225$, which is false.",
+          "Set up the correct test: $a = 8$, $b = 15$, $c = 17$.",
+          "Compute $8^2 + 15^2 = 64 + 225 = 289$ and $17^2 = 289$. Since $289 = 289$, the triangle is right."
+        ],
+        "answer": "The student used the hypotenuse $17$ as a leg. The correct test is $8^2 + 15^2 = 17^2$ ($289 = 289$), so the triangle is right."
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Simplify the expression $c^2 + 4\\left(\\frac{1}{2}ab\\right)$ and explain how it relates to the area of the large square in the rearrangement proof.",
+      "answer": "$c^2 + 2ab$, which equals the area of the large square $(a+b)^2$.",
+      "solution": {
+        "steps": [
+          "Simplify the triangle term: $4\\left(\\frac{1}{2}ab\\right) = 2ab$.",
+          "So the expression becomes $c^2 + 2ab$.",
+          "This sum represents the inner square ($c^2$) plus the four triangles ($2ab$), which together fill the large square.",
+          "Therefore $c^2 + 2ab = (a+b)^2$, the area of the large square of side $a+b$."
+        ],
+        "answer": "$c^2 + 2ab$, which equals the area of the large square $(a+b)^2$."
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A triangle has sides $6$, $8$, and $11$. Use the converse to classify it as right, acute, or obtuse, and state the inequality you used.",
+      "answer": "Obtuse, because $6^2 + 8^2 < 11^2$ ($100 < 121$).",
+      "solution": {
+        "steps": [
+          "The longest side is $c = 11$, so compare $6^2 + 8^2$ with $11^2$.",
+          "Compute $6^2 + 8^2 = 36 + 64 = 100$ and $11^2 = 121$.",
+          "Since $100 < 121$, we have $a^2 + b^2 < c^2$.",
+          "When $a^2 + b^2 < c^2$, the angle opposite the longest side is greater than $90^\\circ$, so the triangle is obtuse."
+        ],
+        "answer": "Obtuse, because $6^2 + 8^2 < 11^2$ ($100 < 121$)."
+      }
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "standard": "A2.S-ID.B.6",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on two categorical and quantitative variables",
+  "clusterCode": "B",
+  "skillName": "Fitting Functions to Data",
+
+  "description": "Students represent paired data on two quantitative variables as a scatter plot and describe how the variables are related, then choose and fit an appropriate function model. At the Algebra 2 level this extends beyond lines to quadratic and exponential models: students decide which family fits by testing first and second differences (constant first difference signals linear $y=mx+b$, constant second difference signals quadratic $y=ax^2+bx+c$) against constant ratios (a constant ratio signals exponential $y=ab^{x}$). For linear data they find a line of fit, computing the slope $m=\\frac{y_2-y_1}{x_2-x_1}$ between representative points and the intercept $b=y-mx$ to write $y=mx+b$. For exponential data they find the base $b$ as the common ratio and the initial value $a$ at $x=0$ to write $y=ab^{x}$, and they linearize exponential data by taking $\\log y$ versus $x$. They use the fitted model to interpolate and extrapolate, interpret parameters (slope, intercept, growth factor) in context, and assess fit by computing residuals $y_{\\text{actual}}-y_{\\text{predicted}}$ and judging whether residuals scatter randomly (good fit) or show a pattern (wrong model family).",
+
+  "subSkills": [
+    "Plot ordered pairs $(x,y)$ from a table or context onto a scatter plot with correctly scaled axes",
+    "Classify the association by family: linear, quadratic, or exponential, using the shape and the data pattern",
+    "Test first differences, second differences, and ratios to decide which function family fits",
+    "Compute the slope $m=\\frac{y_2-y_1}{x_2-x_1}$ and intercept $b=y-mx$ to write a line of fit $y=mx+b$",
+    "Find the common ratio $b$ and initial value $a$ of an exponential model and write $y=ab^{x}$",
+    "Fit a quadratic $y=ax^2+bx+c$ to data showing a constant second difference",
+    "Linearize exponential data by computing $\\log y$ versus $x$ and recognizing the resulting line",
+    "Use a fitted model to interpolate within and extrapolate beyond the data",
+    "Interpret parameters in context: slope and intercept for lines, growth factor and initial value for exponentials",
+    "Compute a residual $y_{\\text{actual}}-y_{\\text{predicted}}$ and use the residual pattern to judge model fit and family"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Identify the function family from a table",
+      "example": "For $(0,3),(1,5),(2,7),(3,9)$ the first differences are a constant $2$, so the data is linear: $y=2x+3$. For $(0,2),(1,6),(2,18),(3,54)$ the ratios are a constant $3$, so the data is exponential: $y=2\\cdot 3^{x}$."
+    },
+    {
+      "name": "Distinguish quadratic from exponential",
+      "example": "For $(0,1),(1,4),(2,9),(3,16)$ the first differences $3,5,7$ are not constant but the second differences $2,2$ are, so the data is quadratic, here $y=(x+1)^2$, not exponential."
+    },
+    {
+      "name": "Fit a line to roughly linear data",
+      "example": "A trend passes through representative points $(2,7)$ and $(8,25)$: $m=\\frac{25-7}{8-2}=\\frac{18}{6}=3$, $b=7-3(2)=1$, so $y=3x+1$."
+    },
+    {
+      "name": "Fit an exponential model",
+      "example": "Data $(0,5),(1,15),(2,45),(3,135)$ has common ratio $\\frac{15}{5}=3$ and initial value $5$, so $y=5\\cdot 3^{x}$."
+    },
+    {
+      "name": "Linearize exponential data with logarithms",
+      "example": "For $y=2\\cdot 10^{x}$, taking $\\log y$ gives $\\log y=\\log 2+x$, a line of slope $1$ and intercept $\\log 2$ in the $(x,\\log y)$ plane, confirming an exponential fit."
+    },
+    {
+      "name": "Predict with the model (interpolate/extrapolate)",
+      "example": "Using $y=5\\cdot 3^{x}$ to model bacteria count after $x$ hours, predict $x=4$: $y=5\\cdot 3^{4}=5\\cdot 81=405$."
+    },
+    {
+      "name": "Interpret parameters in context",
+      "example": "For a balance $y=1000\\cdot 1.05^{x}$ after $x$ years, the initial value $1000$ is the starting deposit and the base $1.05$ means the balance grows by $5\\%$ per year."
+    },
+    {
+      "name": "Compute and interpret a residual",
+      "example": "A model predicts $\\hat{y}=4x+2$. At $x=5$ the actual value is $25$. The residual is $25-(4\\cdot 5+2)=25-22=3$, so the model underestimates by $3$."
+    },
+    {
+      "name": "Judge fit from a residual pattern",
+      "example": "A line is fit to curved data and its residuals run negative, then positive, then negative across $x$. The U-shaped residual pattern shows the line is the wrong family and a quadratic fits better."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step classification or one direct computation. Name the function family from an obvious pattern (constant difference vs. constant ratio), or compute one slope between two stated points, or read a common ratio directly from a short table. The data set is small and the pattern is unambiguous, with no full model to assemble.",
+      "constraints": [
+        "Task is to label the family (linear, quadratic, or exponential) from a clear pattern, or to find one common ratio, or to compute one slope $m=\\frac{y_2-y_1}{x_2-x_1}$ with integer result",
+        "Data set has at most $5$ points with a clean, exact pattern",
+        "No intercept back-solving, no full equation, and no prediction",
+        "Exponential bases and ratios are small integers ($2$ or $3$)"
+      ]
+    },
+    "Medium": {
+      "description": "Two connected steps. Assemble a complete model: find slope then back-solve $b=y-mx$ for a line, or find ratio and initial value to write $y=ab^{x}$, or use a given model to make one prediction, or compute a single residual. Interpreting one parameter (slope, intercept, or growth factor) in context appears here.",
+      "constraints": [
+        "Find $m$ and $b$ to write $y=mx+b$, OR find $a$ and $b$ to write $y=ab^{x}$",
+        "Or substitute one $x$ into a given model to interpolate or extrapolate a prediction",
+        "Or compute one residual $y_{\\text{actual}}-y_{\\text{predicted}}$ and state over/underestimate",
+        "Slopes may be simple fractions or terminating decimals; exponential bases are small integers or tidy decimals like $1.05$",
+        "tier1 (Easy to Medium) lives here: classifying families, single slopes or ratios, building one linear or exponential model, and one prediction"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step modeling and judgment. Choose the family by testing first differences, second differences, and ratios, then fit the correct model from a full table and use it to predict and interpret in context. Or linearize exponential data with logarithms. Or compare residuals across several points (or read a residual pattern) to decide a model is the wrong family and refit. May chain classification, construction, prediction, and interpretation in one item.",
+      "constraints": [
+        "Decide linear vs. quadratic vs. exponential by checking constant first difference, constant second difference, and constant ratio, then write $y=mx+b$, $y=ax^2+bx+c$, or $y=ab^{x}$",
+        "Construct the model from a full table, then predict and interpret a parameter in context",
+        "Linearize exponential data via $\\log y$ versus $x$ and identify the resulting line's slope and intercept",
+        "Compare residuals at several points or reason about a residual pattern to reject a model family and refit",
+        "Requires reading a context to extract the two variables and units",
+        "tier2 (Medium to Hard) lives here: full table-to-model builds across families, log linearization, residual-pattern judgment, and refitting, with no item overlap with tier1"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student fits a line to data that has a constant ratio, mistaking exponential growth for linear",
+      "distractor": "For $(0,5),(1,15),(2,45),(3,135)$ writes $y=10x+5$ instead of recognizing the exponential model $y=5\\cdot 3^{x}$"
+    },
+    {
+      "misconception": "Student confuses quadratic and exponential because both curve upward, checking only that the data is not linear",
+      "distractor": "For $(0,1),(1,4),(2,9),(3,16)$ (constant second difference) writes $y=4^{x}$ instead of the quadratic $y=(x+1)^2$"
+    },
+    {
+      "misconception": "Student adds the common difference of the values instead of finding the multiplicative ratio for an exponential",
+      "distractor": "For $(0,2),(1,6),(2,18),(3,54)$ reports a base from $6-2=4$ giving $y=2\\cdot 4^{x}$ instead of using the ratio $\\frac{6}{2}=3$ to get $y=2\\cdot 3^{x}$"
+    },
+    {
+      "misconception": "Student inverts the slope formula, dividing change in $x$ by change in $y$",
+      "distractor": "For $(2,7)$ and $(8,25)$ computes $m=\\frac{8-2}{25-7}=\\frac{1}{3}$ instead of $m=\\frac{25-7}{8-2}=3$"
+    },
+    {
+      "misconception": "Student sign-errors the intercept by computing $b=y+mx$ instead of $b=y-mx$",
+      "distractor": "For point $(2,7)$ and slope $3$ writes $b=7+3(2)=13$ giving $y=3x+13$ instead of $b=7-3(2)=1$ giving $y=3x+1$"
+    },
+    {
+      "misconception": "Student misreads the exponential growth factor, calling a $5\\%$ annual increase a base of $0.05$ instead of $1.05$",
+      "distractor": "For $5\\%$ yearly growth writes $y=1000\\cdot 0.05^{x}$ instead of $y=1000\\cdot 1.05^{x}$"
+    },
+    {
+      "misconception": "Student computes the residual as predicted minus actual, flipping its sign",
+      "distractor": "For actual $25$ and predicted $22$ reports a residual of $22-25=-3$ instead of $25-22=3$"
+    },
+    {
+      "misconception": "Student treats a patterned (U-shaped) residual plot as a good fit, judging fit by residual size alone rather than randomness",
+      "distractor": "For a line whose residuals go negative, positive, negative across $x$ answers 'the line fits well' instead of 'the residual pattern shows the wrong family; a quadratic fits better'"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "id": "A2.N-CN.C.7--quiz",
+  "standard": "A2.N-CN.C.7",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Number and Quantity — The Complex Number System",
+  "domainCode": "N-CN",
+  "cluster": "Use complex numbers in polynomial identities and equations",
+  "clusterCode": "C",
+  "skillName": "Complex Solutions of Quadratics",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "Eight multiple-choice questions on solving quadratics with non-real complex solutions: simplifying square roots of negatives, classifying roots by the discriminant, the quadratic formula and completing the square with a negative discriminant, verifying a complex root, and reconstructing a quadratic from a complex-conjugate pair.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Solve $x^2+25=0$.\nA) $x=\\pm5$\nB) $x=\\pm5i$\nC) $x=-5$\nD) $x=\\pm25i$",
+      "answer": "B) $x=\\pm5i$",
+      "solution": {
+        "steps": [
+          "Isolate the square term: $x^2=-25$.",
+          "Take the square root of both sides: $x=\\pm\\sqrt{-25}=\\pm\\sqrt{25}\\,\\sqrt{-1}=\\pm5i$.",
+          "B is correct.",
+          "A drops the imaginary unit, treating $\\sqrt{-25}$ as a real $5$.",
+          "C keeps only one real value and the wrong sign.",
+          "D fails to take the square root of $25$, leaving $25i$ instead of $5i$."
+        ],
+        "answer": "B) $x=\\pm5i$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Simplify $\\sqrt{-49}$.\nA) $7$\nB) $-7$\nC) $7i$\nD) $49i$",
+      "answer": "C) $7i$",
+      "solution": {
+        "steps": [
+          "Write $\\sqrt{-49}=\\sqrt{49}\\,\\sqrt{-1}$.",
+          "Since $\\sqrt{49}=7$ and $\\sqrt{-1}=i$, the result is $7i$.",
+          "C is correct.",
+          "A and B treat the radical as real and drop the imaginary unit (B also adds an incorrect sign).",
+          "D forgets to take $\\sqrt{49}$, leaving $49i$."
+        ],
+        "answer": "C) $7i$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Without solving, classify the roots of $2x^2-3x+5=0$ using the discriminant.\nA) Two real roots\nB) One repeated real root\nC) Two complex-conjugate roots\nD) No solutions of any kind",
+      "answer": "C) Two complex-conjugate roots",
+      "solution": {
+        "steps": [
+          "Compute the discriminant: $b^2-4ac=(-3)^2-4(2)(5)=9-40=-31$.",
+          "Since the discriminant is negative, the equation has two complex-conjugate roots.",
+          "C is correct.",
+          "A requires a positive discriminant and B requires a zero discriminant.",
+          "D is the misconception that a negative discriminant means no solutions; over the complex numbers there are always two solutions."
+        ],
+        "answer": "C) Two complex-conjugate roots"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Solve $x^2-4x+13=0$.\nA) $x=2\\pm3i$\nB) $x=4\\pm3i$\nC) $x=-2\\pm3i$\nD) No solution",
+      "answer": "A) $x=2\\pm3i$",
+      "solution": {
+        "steps": [
+          "Use the quadratic formula with $a=1$, $b=-4$, $c=13$: $x=\\dfrac{-(-4)\\pm\\sqrt{(-4)^2-4(1)(13)}}{2(1)}=\\dfrac{4\\pm\\sqrt{16-52}}{2}$.",
+          "Simplify the radical: $\\sqrt{-36}=6i$, so $x=\\dfrac{4\\pm6i}{2}$.",
+          "Divide the whole numerator by $2$: $x=2\\pm3i$.",
+          "A is correct.",
+          "B divides only the imaginary term by $2$, forgetting to divide the real part.",
+          "C mis-signs $-b$, using $-4$ instead of $+4$.",
+          "D wrongly reads the negative discriminant as no solution."
+        ],
+        "answer": "A) $x=2\\pm3i$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Solve $x^2+6x+34=0$ by completing the square.\nA) $x=-3\\pm5i$\nB) $x=3\\pm5i$\nC) $x=-3\\pm5$\nD) $x=-6\\pm5i$",
+      "answer": "A) $x=-3\\pm5i$",
+      "solution": {
+        "steps": [
+          "Move the constant: $x^2+6x=-34$.",
+          "Add $\\left(\\frac{6}{2}\\right)^2=9$ to both sides: $x^2+6x+9=-34+9$, so $(x+3)^2=-25$.",
+          "Take the square root: $x+3=\\pm\\sqrt{-25}=\\pm5i$.",
+          "Solve for $x$: $x=-3\\pm5i$.",
+          "A is correct.",
+          "B has the wrong sign on the real part.",
+          "C drops the imaginary unit from $\\sqrt{-25}$.",
+          "D mis-handles the completed-square real part, using $-6$ instead of $-3$."
+        ],
+        "answer": "A) $x=-3\\pm5i$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Solve $3x^2+48=0$.\nA) $x=\\pm16i$\nB) $x=\\pm4i$\nC) $x=\\pm4$\nD) $x=\\pm i\\sqrt{48}$",
+      "answer": "B) $x=\\pm4i$",
+      "solution": {
+        "steps": [
+          "Divide both sides by $3$: $x^2+16=0$, so $x^2=-16$.",
+          "Take the square root: $x=\\pm\\sqrt{-16}=\\pm4i$.",
+          "B is correct.",
+          "A forgets to divide by $3$ first and keeps $\\sqrt{-16}$ as $16i$ without taking the root.",
+          "C drops the imaginary unit, treating the root as real.",
+          "D fails to reduce: it skips dividing by $3$ and leaves $\\sqrt{48}$ unsimplified instead of getting $4i$."
+        ],
+        "answer": "B) $x=\\pm4i$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Solve $x^2-2x+4=0$, giving exact solutions in $a+bi$ form.\nA) $x=1\\pm i\\sqrt{3}$\nB) $x=1\\pm i\\sqrt{12}$\nC) $x=2\\pm i\\sqrt{3}$\nD) $x=1\\pm2\\sqrt{3}$",
+      "answer": "A) $x=1\\pm i\\sqrt{3}$",
+      "solution": {
+        "steps": [
+          "Apply the quadratic formula with $a=1$, $b=-2$, $c=4$: $x=\\dfrac{2\\pm\\sqrt{(-2)^2-4(1)(4)}}{2}=\\dfrac{2\\pm\\sqrt{-12}}{2}$.",
+          "Simplify the radical: $\\sqrt{-12}=\\sqrt{4}\\,\\sqrt{-1}\\,\\sqrt{3}=2i\\sqrt{3}$, so $x=\\dfrac{2\\pm2i\\sqrt{3}}{2}$.",
+          "Divide the whole numerator by $2$: $x=1\\pm i\\sqrt{3}$.",
+          "A is correct.",
+          "B leaves the radical unreduced as $\\sqrt{12}$ instead of $2\\sqrt{3}$ (and fails to divide by $2$).",
+          "C forgets to divide the real part by $2$, keeping $2$ instead of $1$.",
+          "D drops the imaginary unit, giving a real expression."
+        ],
+        "answer": "A) $x=1\\pm i\\sqrt{3}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Find a quadratic equation with real coefficients that has $3-2i$ as a root.\nA) $x^2-6x+13=0$\nB) $x^2-6x+5=0$\nC) $x^2+6x+13=0$\nD) $x^2-3x+13=0$",
+      "answer": "A) $x^2-6x+13=0$",
+      "solution": {
+        "steps": [
+          "A quadratic with real coefficients must have the conjugate $3+2i$ as its other root.",
+          "Sum of roots: $(3-2i)+(3+2i)=6$.",
+          "Product of roots: $(3-2i)(3+2i)=9-(2i)^2=9-(-4)=9+4=13$.",
+          "Form $x^2-(\\text{sum})x+(\\text{product})=0$: $x^2-6x+13=0$.",
+          "A is correct.",
+          "B sign-errors the product as $9-4=5$ instead of $9+4=13$.",
+          "C uses the wrong sign on the sum-of-roots term ($+6x$ instead of $-6x$).",
+          "D uses only one root for the linear coefficient, getting $-3x$ instead of $-6x$."
+        ],
+        "answer": "A) $x^2-6x+13=0$"
+      }
+    }
+  ]
+}

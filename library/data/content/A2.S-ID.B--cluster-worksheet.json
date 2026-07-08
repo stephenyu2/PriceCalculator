@@ -1,0 +1,226 @@
+{
+  "id": "A2.S-ID.B--cluster-worksheet",
+  "standard": null,
+  "clusterId": "A2.S-ID.B",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on two categorical and quantitative variables",
+  "clusterCode": "B",
+  "skillName": "Summarize, represent, and interpret data on two categorical and quantitative variables",
+  "materialType": "cluster-worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "intro": "This cluster worksheet covers fitting functions to bivariate data: classifying the function family with first differences, second differences, and ratios; building linear, quadratic, and exponential models; predicting with a model; interpreting parameters in context; and judging fit with residuals. Items are grouped under standard A2.S-ID.B.6 and ramp from Easy to Hard.",
+  "items": [
+    {
+      "standard": "A2.S-ID.B.6",
+      "id": 1,
+      "prompt": "The table $(0,4),(1,7),(2,10),(3,13)$ has a constant first difference. Name the function family that fits this data.",
+      "answer": "Linear",
+      "solution": {
+        "steps": [
+          "List the first differences: $7-4=3$, $10-7=3$, $13-10=3$.",
+          "The first differences are a constant $3$.",
+          "A constant first difference signals a linear function $y=mx+b$."
+        ]
+      }
+    },
+    {
+      "standard": "A2.S-ID.B.6",
+      "id": 2,
+      "prompt": "The table $(0,2),(1,6),(2,18),(3,54)$ has a constant ratio between successive $y$-values. Name the function family that fits this data.",
+      "answer": "Exponential",
+      "solution": {
+        "steps": [
+          "Compute the ratios: $\\frac{6}{2}=3$, $\\frac{18}{6}=3$, $\\frac{54}{18}=3$.",
+          "The ratio is a constant $3$.",
+          "A constant ratio signals an exponential function $y=ab^{x}$."
+        ]
+      }
+    },
+    {
+      "standard": "A2.S-ID.B.6",
+      "id": 3,
+      "prompt": "Find the common ratio of the exponential data $(0,5),(1,10),(2,20),(3,40)$.",
+      "answer": "$2$",
+      "solution": {
+        "steps": [
+          "Divide each $y$-value by the previous one: $\\frac{10}{5}=2$, $\\frac{20}{10}=2$, $\\frac{40}{20}=2$.",
+          "The ratio is the same each step, so the common ratio is $2$."
+        ]
+      }
+    },
+    {
+      "standard": "A2.S-ID.B.6",
+      "id": 4,
+      "prompt": "A trend line passes through the representative points $(1,5)$ and $(4,14)$. Compute the slope $m=\\frac{y_2-y_1}{x_2-x_1}$ of the line of fit.",
+      "answer": "$m=3$",
+      "solution": {
+        "steps": [
+          "Apply the slope formula: $m=\\frac{14-5}{4-1}$.",
+          "Subtract: $m=\\frac{9}{3}$.",
+          "Simplify: $m=3$."
+        ]
+      }
+    },
+    {
+      "standard": "A2.S-ID.B.6",
+      "id": 5,
+      "prompt": "The first differences of $(0,1),(1,4),(2,9),(3,16)$ are $3,5,7$, which are not constant. Find the second differences and name the function family that fits.",
+      "answer": "Second differences are a constant $2$; the data is quadratic.",
+      "solution": {
+        "steps": [
+          "The first differences are $4-1=3$, $9-4=5$, $16-9=7$.",
+          "Take the differences of those: $5-3=2$, $7-5=2$.",
+          "The second differences are a constant $2$.",
+          "A constant second difference signals a quadratic function $y=ax^2+bx+c$."
+        ]
+      }
+    },
+    {
+      "standard": "A2.S-ID.B.6",
+      "id": 6,
+      "prompt": "A set of roughly linear data has a trend passing through $(2,7)$ and $(8,25)$. Find the slope and intercept, then write the line of fit $y=mx+b$.",
+      "answer": "$y=3x+1$",
+      "solution": {
+        "steps": [
+          "Slope: $m=\\frac{25-7}{8-2}=\\frac{18}{6}=3$.",
+          "Back-solve the intercept using $b=y-mx$ at $(2,7)$: $b=7-3(2)=7-6=1$.",
+          "Write the model: $y=3x+1$."
+        ]
+      }
+    },
+    {
+      "standard": "A2.S-ID.B.6",
+      "id": 7,
+      "prompt": "The data $(0,5),(1,15),(2,45),(3,135)$ is exponential. Find the common ratio and the initial value, then write the model $y=ab^{x}$.",
+      "answer": "$y=5\\cdot 3^{x}$",
+      "solution": {
+        "steps": [
+          "Common ratio: $\\frac{15}{5}=3$, confirmed by $\\frac{45}{15}=3$ and $\\frac{135}{45}=3$, so $b=3$.",
+          "Initial value is the $y$-value at $x=0$: $a=5$.",
+          "Write the model: $y=5\\cdot 3^{x}$."
+        ]
+      }
+    },
+    {
+      "standard": "A2.S-ID.B.6",
+      "id": 8,
+      "prompt": "A bacteria population is modeled by $y=5\\cdot 3^{x}$, where $x$ is hours. Use the model to predict the population at $x=4$ hours.",
+      "answer": "$405$",
+      "solution": {
+        "steps": [
+          "Substitute $x=4$: $y=5\\cdot 3^{4}$.",
+          "Evaluate the power: $3^{4}=81$.",
+          "Multiply: $y=5\\cdot 81=405$.",
+          "The predicted population is $405$."
+        ]
+      }
+    },
+    {
+      "standard": "A2.S-ID.B.6",
+      "id": 9,
+      "prompt": "A savings balance after $x$ years is modeled by $y=1000\\cdot 1.05^{x}$. Interpret the initial value $1000$ and the base $1.05$ in context.",
+      "answer": "The initial value $1000$ is the starting deposit (balance at year $0$), and the base $1.05$ means the balance grows by $5\\%$ each year.",
+      "solution": {
+        "steps": [
+          "At $x=0$, $y=1000\\cdot 1.05^{0}=1000$, so $1000$ dollars is the starting deposit.",
+          "The base $1.05$ is the yearly growth factor: each year the balance is multiplied by $1.05$.",
+          "Since $1.05=1+0.05$, the increase is $5\\%$ per year."
+        ]
+      }
+    },
+    {
+      "standard": "A2.S-ID.B.6",
+      "id": 10,
+      "prompt": "A line of fit predicts $\\hat{y}=4x+2$. At $x=5$ the actual data value is $25$. Compute the residual $y_{\\text{actual}}-y_{\\text{predicted}}$ and state whether the model overestimates or underestimates.",
+      "answer": "Residual $=3$; the model underestimates.",
+      "solution": {
+        "steps": [
+          "Predicted value: $\\hat{y}=4(5)+2=22$.",
+          "Residual: $y_{\\text{actual}}-y_{\\text{predicted}}=25-22=3$.",
+          "Because the residual is positive, the actual value is above the prediction, so the model underestimates by $3$."
+        ]
+      }
+    },
+    {
+      "standard": "A2.S-ID.B.6",
+      "id": 11,
+      "prompt": "Decide whether $(0,3),(1,6),(2,12),(3,24)$ is linear, quadratic, or exponential by testing first differences, second differences, and ratios. Then write the model.",
+      "answer": "Exponential; $y=3\\cdot 2^{x}$",
+      "solution": {
+        "steps": [
+          "First differences: $6-3=3$, $12-6=6$, $24-12=12$, not constant, so not linear.",
+          "Second differences: $6-3=3$, $12-6=6$, not constant, so not quadratic.",
+          "Ratios: $\\frac{6}{3}=2$, $\\frac{12}{6}=2$, $\\frac{24}{12}=2$, a constant $2$, so the data is exponential.",
+          "Initial value at $x=0$ is $a=3$ and base $b=2$, so $y=3\\cdot 2^{x}$."
+        ]
+      }
+    },
+    {
+      "standard": "A2.S-ID.B.6",
+      "id": 12,
+      "prompt": "A car's value (in thousands of dollars) over $x$ years is $(0,20),(1,16),(2,12.8),(3,10.24)$. Identify the function family, write the model $y=ab^{x}$, and predict the value at $x=4$ years.",
+      "answer": "Exponential; $y=20\\cdot 0.8^{x}$; value at $x=4$ is $8.192$ thousand dollars.",
+      "solution": {
+        "steps": [
+          "Ratios: $\\frac{16}{20}=0.8$, $\\frac{12.8}{16}=0.8$, $\\frac{10.24}{12.8}=0.8$, a constant $0.8$, so the data is exponential (decay).",
+          "Initial value $a=20$ and base $b=0.8$, so $y=20\\cdot 0.8^{x}$.",
+          "Predict at $x=4$: $y=20\\cdot 0.8^{4}$.",
+          "$0.8^{4}=0.4096$, so $y=20\\cdot 0.4096=8.192$.",
+          "The predicted value is $8.192$ thousand dollars."
+        ]
+      }
+    },
+    {
+      "standard": "A2.S-ID.B.6",
+      "id": 13,
+      "prompt": "Exponential data follows $y=2\\cdot 10^{x}$. Linearize the data by taking $\\log y$ versus $x$, and state the slope and intercept of the resulting line.",
+      "answer": "$\\log y=x+\\log 2$, a line with slope $1$ and intercept $\\log 2$.",
+      "solution": {
+        "steps": [
+          "Take the common logarithm of both sides: $\\log y=\\log\\left(2\\cdot 10^{x}\\right)$.",
+          "Use the product rule: $\\log y=\\log 2+\\log 10^{x}$.",
+          "Use the power rule and $\\log 10=1$: $\\log 10^{x}=x\\log 10=x$.",
+          "So $\\log y=x+\\log 2$, a line in the $(x,\\log y)$ plane with slope $1$ and intercept $\\log 2$.",
+          "The straight-line plot of $\\log y$ versus $x$ confirms the exponential fit."
+        ]
+      }
+    },
+    {
+      "standard": "A2.S-ID.B.6",
+      "id": 14,
+      "prompt": "A line is fit to a data set and its residuals across increasing $x$ are $-4,+3,+5,+2,-4$. Describe the residual pattern, state whether the line is a good fit, and name a better function family.",
+      "answer": "The residuals go negative, then positive, then negative, a U-shaped (curved) pattern; the line is not a good fit, and a quadratic model fits better.",
+      "solution": {
+        "steps": [
+          "List the residuals in order of $x$: $-4,+3,+5,+2,-4$.",
+          "They start negative, rise to positive in the middle, then return to negative, forming a curved (U-shaped) pattern rather than random scatter.",
+          "A good fit shows residuals scattered randomly around $0$ with no pattern; this systematic pattern signals the wrong function family.",
+          "The curved residual pattern indicates the underlying data is curved, so a quadratic $y=ax^2+bx+c$ would fit better than a line."
+        ]
+      }
+    },
+    {
+      "standard": "A2.S-ID.B.6",
+      "id": 15,
+      "prompt": "A study records bacteria counts (in thousands) over time: $(0,4),(1,12),(2,36),(3,108)$. Determine the function family by testing first differences, second differences, and ratios; write the model $y=ab^{x}$; predict the count at $x=5$ hours; and interpret the base in context.",
+      "answer": "Exponential; $y=4\\cdot 3^{x}$; at $x=5$ the count is $972$ thousand; the base $3$ means the population triples each hour.",
+      "solution": {
+        "steps": [
+          "First differences: $12-4=8$, $36-12=24$, $108-36=72$, not constant, so not linear.",
+          "Second differences: $24-8=16$, $72-24=48$, not constant, so not quadratic.",
+          "Ratios: $\\frac{12}{4}=3$, $\\frac{36}{12}=3$, $\\frac{108}{36}=3$, a constant $3$, so the data is exponential.",
+          "Initial value $a=4$ (at $x=0$) and base $b=3$, so $y=4\\cdot 3^{x}$.",
+          "Predict at $x=5$: $y=4\\cdot 3^{5}=4\\cdot 243=972$ thousand bacteria.",
+          "The base $3$ is the growth factor: each hour the bacteria count is multiplied by $3$, so the population triples every hour."
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T19:56:47.282Z",
+  "generatedAt": "2026-06-24T19:56:47.282Z"
+}

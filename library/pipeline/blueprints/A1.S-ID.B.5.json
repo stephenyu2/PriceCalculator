@@ -1,0 +1,127 @@
+{
+  "standard": "A1.S-ID.B.5",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on two categorical and quantitative variables",
+  "clusterCode": "B",
+  "skillName": "Two-Way Frequency Tables",
+
+  "description": "Students organize categorical data on two variables into a two-way frequency table, complete missing cells and totals, and compute and interpret three kinds of relative frequencies: joint (a cell divided by the grand total), marginal (a row or column total divided by the grand total), and conditional (a cell divided by its row or column total, i.e., a percent within one category). They use these relative frequencies to describe the data, compare groups, and decide whether an association or trend exists between the two categorical variables.",
+
+  "subSkills": [
+    "Read a two-way frequency table: identify the two categorical variables, the cell (joint) counts, the row and column (marginal) totals, and the grand total",
+    "Complete a partially filled two-way table by using the fact that row entries sum to the row total, column entries sum to the column total, and all marginal totals sum to the grand total",
+    "Compute a joint relative frequency as a cell count divided by the grand total",
+    "Compute a marginal relative frequency as a row or column total divided by the grand total",
+    "Compute a conditional relative frequency as a cell count divided by a row total or a column total, choosing the correct denominator from the wording (\"of those who...\")",
+    "Express relative frequencies as fractions, decimals, or percents and convert between them",
+    "Compare two conditional relative frequencies to decide whether an association exists between the variables",
+    "Describe a trend or association in context and justify it numerically"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Complete the table",
+      "example": "In a survey of $80$ students, $35$ are boys. Of the boys, $20$ play a sport; $30$ girls play a sport. Fill in the two-way frequency table for gender vs. plays a sport, including all marginal totals and the grand total."
+    },
+    {
+      "name": "Joint relative frequency",
+      "example": "A table of $120$ people cross-classifies coffee vs. tea preference. The cell \"prefers coffee and is under 30\" contains $18$. What is the joint relative frequency of being under $30$ and preferring coffee? Answer: $\\frac{18}{120}=0.15=15\\%$."
+    },
+    {
+      "name": "Marginal relative frequency",
+      "example": "Using the same table of $120$ people, $54$ prefer tea overall. What is the marginal relative frequency of preferring tea? Answer: $\\frac{54}{120}=0.45=45\\%$."
+    },
+    {
+      "name": "Conditional relative frequency (choose denominator)",
+      "example": "Of the $50$ students who own a pet, $32$ also have a sibling. What is the conditional relative frequency that a student has a sibling, given that they own a pet? Answer: $\\frac{32}{50}=0.64=64\\%$."
+    },
+    {
+      "name": "Association / trend decision",
+      "example": "Among adults the conditional relative frequency of preferring online shopping is $\\frac{45}{60}=75\\%$; among teens it is $\\frac{30}{40}=75\\%$. Compare and state whether age and shopping preference are associated. Answer: equal conditionals ($75\\%$ vs. $75\\%$) suggest no association."
+    },
+    {
+      "name": "Two-step interpretation",
+      "example": "From a completed table, compute two conditional relative frequencies (e.g., the percent of left-handed people who are male vs. the percent of right-handed people who are male), compare them, and explain in context what the difference means."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A complete, small two-way table (counts $\\le 30$) is given. The student reads one value or computes a single joint or marginal relative frequency with the grand total as the denominator, where the wording names the denominator directly. One computation, one division, friendly numbers that give a terminating decimal or whole percent.",
+      "constraints": [
+        "Table is fully filled in (no missing cells to solve for)",
+        "Single division by the grand total (joint or marginal only)",
+        "Grand total is a friendly value ($20$, $25$, $50$, $100$) so the percent is exact",
+        "No choice of denominator required: the prompt states which total to divide by"
+      ]
+    },
+    "Medium": {
+      "description": "Either the student must first complete one or two missing cells/totals, or the student must compute a conditional relative frequency and therefore choose the correct row or column total as the denominator from the wording (\"of those who...\", \"given that...\"). One to two steps; answer may be a fraction or a percent that requires reducing or rounding to the nearest whole percent.",
+      "constraints": [
+        "Conditional relative frequency with a row or column total as denominator, OR one to two missing cells to fill before computing",
+        "Student must select the denominator from context, not from an explicit instruction",
+        "Totals are moderate (up to $200$); answer may need reducing or rounding to the nearest percent",
+        "May require converting between fraction, decimal, and percent forms"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning about association: complete a partially given table, compute two or more conditional relative frequencies with different denominators, compare them, and state and justify whether an association or trend exists. Includes interpreting what the comparison means in context and may require explaining why marginal frequencies alone cannot reveal association.",
+      "constraints": [
+        "Requires building or completing the table from a verbal description before any relative frequency is computed",
+        "Compute and compare at least two conditional relative frequencies with different denominators",
+        "Conclusion must be stated in context (association vs. no association) and justified numerically",
+        "May contrast a conditional with a marginal to expose the misconception that they are interchangeable"
+      ]
+    }
+  },
+
+  "_tierNote": "This standard is built as a single ramped worksheet (Easy reading/joint/marginal -> Medium conditional and table-completion -> Hard association reasoning). tier1/tier2 counts are provided for schema completeness but are not used.",
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student uses the grand total as the denominator for a conditional relative frequency instead of the relevant row or column total",
+      "distractor": "For \"of those who own a pet, what fraction have a sibling\" computes $\\frac{32}{80}=40\\%$ (cell over grand total) instead of $\\frac{32}{50}=64\\%$ (cell over the pet-owner column total)"
+    },
+    {
+      "misconception": "Student divides by a row total when the question's condition points to the column (or vice versa), picking the wrong margin",
+      "distractor": "Computes $\\frac{32}{45}$ using the wrong marginal total instead of the row/column total named by the condition"
+    },
+    {
+      "misconception": "Student confuses joint and marginal relative frequency, dividing a single cell by the grand total when the marginal (row/column total) was requested",
+      "distractor": "For the marginal relative frequency of preferring tea uses one tea cell $\\frac{30}{120}=25\\%$ instead of the tea column total $\\frac{54}{120}=45\\%$"
+    },
+    {
+      "misconception": "Student treats equal or unequal marginal relative frequencies as evidence of association, ignoring conditionals",
+      "distractor": "Concludes \"associated\" or \"not associated\" by comparing overall percents ($45\\%$ tea vs. $55\\%$ coffee) rather than comparing conditional relative frequencies across the groups"
+    },
+    {
+      "misconception": "Student inverts the conditional, swapping the condition and the outcome",
+      "distractor": "Reports P(owns pet | has sibling) $=\\frac{32}{60}$ when asked for P(has sibling | owns pet) $=\\frac{32}{50}$"
+    },
+    {
+      "misconception": "Student completes the table by making rows and columns sum incorrectly, e.g., subtracting from the wrong total",
+      "distractor": "Fills a missing cell as grand total minus one entry ($80-20=60$) instead of using the correct row or column total ($35-20=15$)"
+    },
+    {
+      "misconception": "Student misconverts a relative frequency between fraction, decimal, and percent",
+      "distractor": "Reports $\\frac{18}{120}$ as $1.5\\%$ or $0.0015$ instead of $0.15=15\\%$"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet model: 15 items Easy->Hard. tier1/tier2 unused for this standard.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

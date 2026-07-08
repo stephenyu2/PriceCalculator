@@ -1,0 +1,173 @@
+{
+  "id": "GEO.G-CO.D.13--lesson",
+  "standard": "GEO.G-CO.D.13",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Make geometric constructions",
+  "clusterCode": "D",
+  "skillName": "Inscribed Regular Polygons",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "With only a compass and straightedge you can inscribe three regular polygons in any circle of radius $r$: an equilateral triangle, a square, and a regular hexagon. The key fact is that a chord whose length equals the radius cuts off a $60^\\circ$ arc, because the two radii and that chord form an equilateral triangle. Stepping the radius around the circle therefore marks six equally spaced points (the hexagon); joining every other point gives the equilateral triangle, and two perpendicular diameters give the square. For each polygon you can also find its exact central angle $\\frac{360^\\circ}{n}$, interior angle $\\frac{(n-2)180^\\circ}{n}$, side length, perimeter, and area using $30$-$60$-$90$ and $45$-$45$-$90$ triangles.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "You are inscribing a regular hexagon in a circle of radius $r$. You have drawn the circle, marked its center $O$, and placed a starting point $A$ on the circle. What is the correct next compass-and-straightedge step, and why does it locate a vertex exactly $60^\\circ$ from $A$?",
+      "solution": {
+        "steps": [
+          "Set the compass width equal to the radius $r$ (the distance from $O$ to $A$).",
+          "Place the compass point on $A$ and strike a short arc that crosses the circle. Label that intersection $B$. This is the next vertex.",
+          "To justify it, look at triangle $OAB$. Both $OA$ and $OB$ are radii, so $OA=OB=r$.",
+          "The chord $AB$ was drawn with the compass set to $r$, so $AB=r$ as well.",
+          "Then $OA=OB=AB=r$, so triangle $OAB$ is equilateral and every angle is $60^\\circ$.",
+          "The central angle $\\angle AOB=60^\\circ$, so $B$ lies exactly $60^\\circ$ around the circle from $A$."
+        ],
+        "answer": "Next step: set the compass to the radius $r$ and strike an arc from $A$ to mark vertex $B$. It works because $OA=OB=AB=r$ makes triangle $OAB$ equilateral, so the central angle $\\angle AOB=60^\\circ$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A regular hexagon, a square, and an equilateral triangle are each inscribed in a circle. For each polygon, find the central angle that one side subtends at the center and the interior (vertex) angle of the polygon.",
+      "solution": {
+        "steps": [
+          "The central angle of a regular $n$-gon is $\\frac{360^\\circ}{n}$ and the interior angle is $\\frac{(n-2)180^\\circ}{n}$.",
+          "Hexagon ($n=6$): central angle $=\\frac{360^\\circ}{6}=60^\\circ$; interior angle $=\\frac{(6-2)180^\\circ}{6}=\\frac{720^\\circ}{6}=120^\\circ$.",
+          "Square ($n=4$): central angle $=\\frac{360^\\circ}{4}=90^\\circ$; interior angle $=\\frac{(4-2)180^\\circ}{4}=\\frac{360^\\circ}{4}=90^\\circ$.",
+          "Equilateral triangle ($n=3$): central angle $=\\frac{360^\\circ}{3}=120^\\circ$; interior angle $=\\frac{(3-2)180^\\circ}{3}=\\frac{180^\\circ}{3}=60^\\circ$.",
+          "Notice the central and interior angles are equal only for the square; for the other two they differ, so keep the two formulas separate."
+        ],
+        "answer": "Hexagon: central $60^\\circ$, interior $120^\\circ$. Square: central $90^\\circ$, interior $90^\\circ$. Equilateral triangle: central $120^\\circ$, interior $60^\\circ$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A square is inscribed in a circle of radius $r$ by drawing two perpendicular diameters and connecting their four endpoints with the circle. Find the exact side length of the square in terms of $r$.",
+      "solution": {
+        "steps": [
+          "The two perpendicular diameters meet at the center $O$, so each side of the square is the chord joining two adjacent endpoints, say $P$ and $Q$.",
+          "Triangle $OPQ$ has $OP=OQ=r$ (radii) and a right angle at $O$, since the diameters are perpendicular.",
+          "This is a $45$-$45$-$90$ right triangle with legs $OP=OQ=r$.",
+          "By the Pythagorean theorem, $PQ^2=OP^2+OQ^2=r^2+r^2=2r^2$.",
+          "Take the square root: $PQ=\\sqrt{2r^2}=r\\sqrt{2}$.",
+          "The diameter is $2r$, but the side is the chord $r\\sqrt{2}$, not the diameter."
+        ],
+        "answer": "The side length of the inscribed square is $r\\sqrt{2}$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A regular hexagon is inscribed in a circle of radius $r$. Find its exact perimeter and its exact area in terms of $r$.",
+      "solution": {
+        "steps": [
+          "Connect the center $O$ to all six vertices. This splits the hexagon into $6$ congruent triangles, one per side.",
+          "Each triangle has two sides equal to the radius $r$ and a central angle of $\\frac{360^\\circ}{6}=60^\\circ$.",
+          "Since the two equal sides meet at $60^\\circ$, the base angles are also $60^\\circ$, so each triangle is equilateral with side $r$. Therefore every hexagon side equals $r$.",
+          "Perimeter: $6$ sides of length $r$ give $P=6r$.",
+          "Area of one equilateral triangle of side $r$ is $\\frac{\\sqrt{3}}{4}r^2$.",
+          "Multiply by the $6$ triangles: area $=6\\cdot\\frac{\\sqrt{3}}{4}r^2=\\frac{6\\sqrt{3}}{4}r^2=\\frac{3\\sqrt{3}}{2}r^2$."
+        ],
+        "answer": "Perimeter $=6r$; area $=\\frac{3\\sqrt{3}}{2}r^2$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "An equilateral triangle is inscribed in a circle of radius $r$ (formed by joining alternate vertices of the inscribed hexagon). Find the exact side length of the triangle in terms of $r$.",
+      "solution": {
+        "steps": [
+          "Joining alternate hexagon vertices makes each side of the triangle subtend a central angle of $2\\cdot 60^\\circ=120^\\circ$.",
+          "Let one side be chord $AB$, with center $O$, so $OA=OB=r$ and $\\angle AOB=120^\\circ$.",
+          "Drop a perpendicular from $O$ to $AB$, meeting it at midpoint $M$. This bisects both $AB$ and the angle, giving $\\angle AOM=60^\\circ$ and a right angle at $M$.",
+          "In right triangle $OMA$, $\\sin(\\angle AOM)=\\frac{AM}{OA}$, so $AM=r\\sin 60^\\circ=r\\cdot\\frac{\\sqrt{3}}{2}=\\frac{r\\sqrt{3}}{2}$.",
+          "The full side is $AB=2\\,AM=2\\cdot\\frac{r\\sqrt{3}}{2}=r\\sqrt{3}$.",
+          "So the inscribed equilateral triangle has side $r\\sqrt{3}$, which is longer than the hexagon side $r$."
+        ],
+        "answer": "The side length of the inscribed equilateral triangle is $r\\sqrt{3}$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "You are inscribing a regular hexagon in a circle of radius $r$ and have just marked the first vertex $A$ on the circle. What compass setting do you use to step around the circle to the next vertex, and how many such arcs in total return you to the start?",
+      "hint": "A chord equal to the radius cuts a $60^\\circ$ arc. How many $60^\\circ$ arcs fit in a full circle?",
+      "solution": {
+        "steps": [
+          "Set the compass width equal to the radius $r$, because a chord of length $r$ forms an equilateral triangle with two radii and cuts a $60^\\circ$ arc.",
+          "Each step advances $60^\\circ$ around the circle.",
+          "A full circle is $360^\\circ$, so the number of steps is $\\frac{360^\\circ}{60^\\circ}=6$.",
+          "After $6$ equal arcs you land back on $A$, marking all $6$ hexagon vertices."
+        ],
+        "answer": "Set the compass to the radius $r$; it takes $6$ arcs to return to the start."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A regular hexagon is inscribed in a circle of radius $r$. What central angle does each side subtend at the center, and what is the measure of each interior angle of the hexagon?",
+      "hint": "Central angle $=\\frac{360^\\circ}{n}$; interior angle $=\\frac{(n-2)180^\\circ}{n}$ with $n=6$.",
+      "solution": {
+        "steps": [
+          "Central angle: $\\frac{360^\\circ}{6}=60^\\circ$.",
+          "Interior angle: $\\frac{(6-2)180^\\circ}{6}=\\frac{720^\\circ}{6}=120^\\circ$."
+        ],
+        "answer": "Central angle $60^\\circ$; interior angle $120^\\circ$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A square is inscribed in a circle of radius $r$. Find the exact perimeter and the exact area of the square in terms of $r$.",
+      "hint": "The side is $r\\sqrt{2}$ from the $45$-$45$-$90$ triangle of two radii. Perimeter is $4$ sides; area is side squared.",
+      "solution": {
+        "steps": [
+          "Each side is the chord of two adjacent endpoints of perpendicular diameters: $r\\sqrt{2}$.",
+          "Perimeter $=4\\cdot r\\sqrt{2}=4r\\sqrt{2}$.",
+          "Area $=(r\\sqrt{2})^2=r^2\\cdot 2=2r^2$."
+        ],
+        "answer": "Perimeter $=4r\\sqrt{2}$; area $=2r^2$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "An equilateral triangle is inscribed in a circle of radius $r$. Using the side length $r\\sqrt{3}$, find the exact area of the triangle in terms of $r$.",
+      "hint": "The area of an equilateral triangle of side $s$ is $\\frac{\\sqrt{3}}{4}s^2$. Substitute $s=r\\sqrt{3}$.",
+      "solution": {
+        "steps": [
+          "Use $\\text{area}=\\frac{\\sqrt{3}}{4}s^2$ with $s=r\\sqrt{3}$.",
+          "$s^2=(r\\sqrt{3})^2=3r^2$.",
+          "Area $=\\frac{\\sqrt{3}}{4}\\cdot 3r^2=\\frac{3\\sqrt{3}}{4}r^2$."
+        ],
+        "answer": "The area is $\\frac{3\\sqrt{3}}{4}r^2$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Place the steps for inscribing a square in a circle of radius $r$ in the correct order: (i) connect consecutive intersection points to form the square, (ii) construct the perpendicular bisector of the diameter through the center, (iii) draw a diameter of the circle, (iv) mark the four points where the two diameters meet the circle.",
+      "hint": "You must create four vertices before you can connect them. Connecting the endpoints of a single diameter only gives a line.",
+      "solution": {
+        "steps": [
+          "First draw a diameter of the circle: step (iii). This gives two of the four points.",
+          "Construct the perpendicular bisector of that diameter through the center: step (ii). Because it passes through the center it is a second diameter, perpendicular to the first.",
+          "Mark the four points where the two perpendicular diameters meet the circle: step (iv).",
+          "Connect consecutive intersection points to form the square: step (i).",
+          "Connecting before constructing the perpendicular would only join the two ends of one diameter, producing a line rather than four vertices, so the order matters."
+        ],
+        "answer": "The correct order is (iii), (ii), (iv), (i)."
+      }
+    }
+  ]
+}

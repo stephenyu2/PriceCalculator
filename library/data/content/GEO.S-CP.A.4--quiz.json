@@ -1,0 +1,160 @@
+{
+  "id": "GEO.S-CP.A.4--quiz",
+  "standard": "GEO.S-CP.A.4",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Understand independence and conditional probability and use them to interpret data",
+  "clusterCode": "A",
+  "skillName": "Two-Way Tables and Independence",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Eight multiple-choice questions on building and reading two-way frequency tables: marginal, joint, and conditional probabilities, and testing whether two events are independent.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "A survey of $50$ students is summarized in a two-way table. Row totals: $30$ own a bike, $20$ do not. There are $50$ students in all. What is $P(\\text{owns a bike})$?\nA) $\\frac{3}{5}$\nB) $\\frac{2}{5}$\nC) $\\frac{30}{20}$\nD) $30$",
+      "answer": "A) $\\frac{3}{5}$",
+      "solution": {
+        "steps": [
+          "A marginal probability is a row (or column) total over the grand total.",
+          "$P(\\text{owns a bike}) = \\frac{30}{50} = \\frac{3}{5}$, so the key is A.",
+          "B is $\\frac{20}{50} = \\frac{2}{5}$, the probability of NOT owning a bike.",
+          "C, $\\frac{30}{20}$, divides one category count by the other instead of by the grand total and is greater than $1$, which no probability can be.",
+          "D, $30$, leaves the raw cell count and forgets to divide by the total."
+        ],
+        "answer": "A) $\\frac{3}{5}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "In a two-way table of $40$ people, the cell for 'female and left-handed' holds $6$. The grand total is $40$. What is $P(\\text{female and left-handed})$?\nA) $\\frac{3}{20}$\nB) $\\frac{6}{1}$\nC) $\\frac{6}{20}$\nD) $\\frac{20}{3}$",
+      "answer": "A) $\\frac{3}{20}$",
+      "solution": {
+        "steps": [
+          "A joint probability is a single cell count over the grand total.",
+          "$P(\\text{female and left-handed}) = \\frac{6}{40} = \\frac{3}{20}$, so the key is A.",
+          "B, $\\frac{6}{1}$, leaves the count as a probability without dividing by the total.",
+          "C, $\\frac{6}{20}$, divides by half the total ($20$) rather than the grand total $40$.",
+          "D, $\\frac{20}{3}$, is the reciprocal of the correct answer and exceeds $1$."
+        ],
+        "answer": "A) $\\frac{3}{20}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "A two-way table classifies $80$ pets. The 'dog' row shows $35$ that are vaccinated and $5$ that are not. What is the row total for dogs?\nA) $40$\nB) $30$\nC) $80$\nD) $35$",
+      "answer": "A) $40$",
+      "solution": {
+        "steps": [
+          "A row total is the sum of the cells across that row.",
+          "Dogs: $35 + 5 = 40$, so the key is A.",
+          "B, $30$, subtracts the cells instead of adding them.",
+          "C, $80$, is the grand total of all pets, not the dog row total.",
+          "D, $35$, reports only the vaccinated cell and ignores the unvaccinated dogs."
+        ],
+        "answer": "A) $40$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Of $40$ students, $22$ are seniors. Among the $22$ seniors, $15$ play a sport. The grand total is $40$. What is $P(\\text{plays a sport} \\mid \\text{senior})$?\nA) $\\frac{15}{22}$\nB) $\\frac{15}{40}$\nC) $\\frac{22}{40}$\nD) $\\frac{15}{24}$",
+      "answer": "A) $\\frac{15}{22}$",
+      "solution": {
+        "steps": [
+          "A conditional probability uses the conditioning group as the denominator. Here we condition on 'senior', so the denominator is the senior total $22$.",
+          "$P(\\text{plays a sport} \\mid \\text{senior}) = \\frac{15}{22}$, so the key is A.",
+          "B, $\\frac{15}{40}$, uses the grand total $40$ as the denominator, which gives the joint probability, not the conditional.",
+          "C, $\\frac{22}{40}$, is the marginal $P(\\text{senior})$, not a conditional.",
+          "D, $\\frac{15}{24}$, conditions on the wrong total (the sport column total $24$) instead of the senior total."
+        ],
+        "answer": "A) $\\frac{15}{22}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "A two-way table of $40$ students has $24$ who play a sport; of those, $15$ are seniors. What is $P(\\text{senior} \\mid \\text{plays a sport})$?\nA) $\\frac{15}{24}$\nB) $\\frac{15}{22}$\nC) $\\frac{15}{40}$\nD) $\\frac{24}{40}$",
+      "answer": "A) $\\frac{15}{24}$",
+      "solution": {
+        "steps": [
+          "We condition on 'plays a sport', so the denominator is the sport total $24$.",
+          "$P(\\text{senior} \\mid \\text{plays a sport}) = \\frac{15}{24} = \\frac{5}{8}$, so the key is A.",
+          "B, $\\frac{15}{22}$, swaps the condition and the event: it is $P(\\text{plays a sport} \\mid \\text{senior})$, dividing by the senior total instead.",
+          "C, $\\frac{15}{40}$, uses the grand total and gives the joint probability.",
+          "D, $\\frac{24}{40}$, is the marginal $P(\\text{plays a sport})$."
+        ],
+        "answer": "A) $\\frac{15}{24}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "From a two-way table of $40$ students: $15$ are 'senior and play a sport'. The senior total is $22$. Which value is the JOINT probability $P(\\text{senior and plays a sport})$?\nA) $\\frac{3}{8}$\nB) $\\frac{15}{22}$\nC) $15$\nD) $\\frac{22}{40}$",
+      "answer": "A) $\\frac{3}{8}$",
+      "solution": {
+        "steps": [
+          "A joint probability is the cell count over the grand total: $\\frac{15}{40} = \\frac{3}{8}$, so the key is A.",
+          "B, $\\frac{15}{22}$, is the conditional $P(\\text{plays a sport} \\mid \\text{senior})$, not the joint probability.",
+          "C, $15$, leaves the raw count and never divides by a total.",
+          "D, $\\frac{22}{40}$, is the marginal $P(\\text{senior})$."
+        ],
+        "answer": "A) $\\frac{3}{8}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "In a two-way table of $40$ students, $P(\\text{senior}) = \\frac{22}{40}$, $P(\\text{plays a sport}) = \\frac{24}{40}$, and $P(\\text{senior and plays a sport}) = \\frac{15}{40}$. Are the events 'senior' and 'plays a sport' independent?\nA) No, because $P(A)\\cdot P(B) = 0.33 \\ne 0.375 = P(A \\cap B)$\nB) Yes, because the 'senior and sport' cell is nonzero\nC) Yes, because $P(A) + P(B) = \\frac{46}{40}$ is close to $1$\nD) Yes, because $P(A \\cap B) \\approx P(A)\\cdot P(B)$, so they are about the same",
+      "answer": "A) No, because $P(A)\\cdot P(B) = 0.33 \\ne 0.375 = P(A \\cap B)$",
+      "solution": {
+        "steps": [
+          "Independence requires $P(A \\cap B) = P(A)\\cdot P(B)$.",
+          "$P(A)\\cdot P(B) = \\frac{22}{40}\\cdot\\frac{24}{40} = \\frac{528}{1600} = 0.33$.",
+          "$P(A \\cap B) = \\frac{15}{40} = 0.375$.",
+          "Since $0.33 \\ne 0.375$, the events are NOT independent, so the key is A.",
+          "B tests the wrong condition: a nonzero joint cell shows the events are not mutually exclusive, not that they are independent.",
+          "C adds the marginals instead of multiplying them, which is not the independence test.",
+          "D calls $0.33$ and $0.375$ 'about the same', but independence requires exact equality, and these differ."
+        ],
+        "answer": "A) No, because $P(A)\\cdot P(B) = 0.33 \\ne 0.375 = P(A \\cap B)$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A two-way table has grand total $100$. The 'morning' row total is $40$ and the 'coffee' column total is $50$. You want to fill the 'morning and coffee' cell so that 'morning' and 'coffee' are independent. What cell count is required?\nA) $20$\nB) $40$\nC) $25$\nD) $90$",
+      "answer": "A) $20$",
+      "solution": {
+        "steps": [
+          "For independence, $P(A \\cap B) = P(A)\\cdot P(B)$.",
+          "$P(\\text{morning}) = \\frac{40}{100}$ and $P(\\text{coffee}) = \\frac{50}{100}$, so $P(\\text{morning and coffee}) = \\frac{40}{100}\\cdot\\frac{50}{100} = \\frac{2000}{10000} = 0.2$.",
+          "The required cell count is $0.2 \\times 100 = 20$, so the key is A.",
+          "B, $40$, just copies the morning row total and ignores the product rule.",
+          "C, $25$, averages or guesses rather than using $P(A)\\cdot P(B)\\cdot \\text{total}$.",
+          "D, $90$, exceeds both margins and is impossible for a cell whose row total is only $40$."
+        ],
+        "answer": "A) $20$"
+      }
+    }
+  ]
+}

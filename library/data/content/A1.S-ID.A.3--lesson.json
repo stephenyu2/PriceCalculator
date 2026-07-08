@@ -1,0 +1,173 @@
+{
+  "id": "A1.S-ID.A.3--lesson",
+  "standard": "A1.S-ID.A.3",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on a single count or measurement variable",
+  "clusterCode": "A",
+  "skillName": "Shape, Center, Spread, and Outliers",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "To describe a data set you report three things: its shape (symmetric, skewed left, or skewed right), its center (the mean $\\bar{x}=\\frac{\\sum x_i}{n}$ or the median), and its spread (the range, the interquartile range $\\text{IQR}=Q_3-Q_1$, or the standard deviation). An outlier is a value far from the rest; the $1.5\\times\\text{IQR}$ rule flags any point below $Q_1-1.5\\cdot\\text{IQR}$ or above $Q_3+1.5\\cdot\\text{IQR}$. The mean and range get pulled toward outliers, while the median and IQR resist them, so for skewed data we summarize with the median and IQR.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A dot plot of daily high temperatures piles up most of its dots at the warm (high) end, with a long tail trailing off toward the cold (low) values. Describe the shape of this distribution.",
+      "solution": {
+        "steps": [
+          "The shape of a distribution is named for the direction of its tail, not where the bulk of the data sits.",
+          "Here most dots cluster at the high end, and the tail stretches toward the low values.",
+          "A tail pointing toward the lower numbers means the distribution is skewed to the left.",
+          "So the distribution is skewed left (also called negatively skewed)."
+        ],
+        "answer": "Skewed left"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "For the data set $\\{4,\\ 6,\\ 6,\\ 7,\\ 9,\\ 12\\}$, find the mean, the median, and the range.",
+      "solution": {
+        "steps": [
+          "The data are already sorted and there are $n=6$ values.",
+          "Mean: add the values, $4+6+6+7+9+12=44$, then divide by $n$: $\\bar{x}=\\frac{44}{6}=\\frac{22}{3}\\approx 7.33$.",
+          "Median: with an even $n$, average the two middle values (the $3$rd and $4$th), which are $6$ and $7$: $\\frac{6+7}{2}=6.5$.",
+          "Range: largest minus smallest, $12-4=8$.",
+          "So the mean is $\\frac{22}{3}$, the median is $6.5$, and the range is $8$."
+        ],
+        "answer": "Mean $=\\frac{22}{3}\\approx 7.33$, median $=6.5$, range $=8$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A data set of test scores has $Q_1=12$ and $Q_3=20$. Use the $1.5\\times\\text{IQR}$ rule to decide whether the value $35$ is an outlier.",
+      "solution": {
+        "steps": [
+          "First find the interquartile range: $\\text{IQR}=Q_3-Q_1=20-12=8$.",
+          "Compute $1.5\\times\\text{IQR}=1.5\\cdot 8=12$.",
+          "Upper fence: $Q_3+1.5\\cdot\\text{IQR}=20+12=32$.",
+          "Lower fence: $Q_1-1.5\\cdot\\text{IQR}=12-12=0$.",
+          "A value is an outlier if it falls below the lower fence ($0$) or above the upper fence ($32$).",
+          "Since $35>32$, the value $35$ lies above the upper fence, so it is an outlier."
+        ],
+        "answer": "Yes; $35>32$ (the upper fence), so it is an outlier."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "The data set $\\{8,\\ 9,\\ 10,\\ 11,\\ 12\\}$ has mean $10$ and median $10$. The value $12$ is replaced by $42$, giving $\\{8,\\ 9,\\ 10,\\ 11,\\ 42\\}$. Find the new mean and the new median, and explain what happened.",
+      "solution": {
+        "steps": [
+          "New mean: $8+9+10+11+42=80$, then $\\bar{x}=\\frac{80}{5}=16$.",
+          "The mean jumped from $10$ to $16$ because the extreme value $42$ pulls the mean toward it.",
+          "New median: sort the new data, $8,\\ 9,\\ 10,\\ 11,\\ 42$; the middle (3rd) value is still $10$.",
+          "The median stayed at $10$ because it depends only on the position of the middle value, not on how far the largest value moved.",
+          "This shows the mean is sensitive to outliers while the median is resistant to them."
+        ],
+        "answer": "New mean $=16$; new median $=10$. The mean rose toward the outlier; the median did not change."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Home prices in a neighborhood are strongly skewed right because a few mansions sell for far more than the typical house. Which measure of center and which measure of spread best summarize these prices, and why?",
+      "solution": {
+        "steps": [
+          "When data are strongly skewed, a few extreme values distort the mean and the range.",
+          "The mean is pulled toward the high mansion prices, so it overstates a typical home price; the median is not affected by those extremes.",
+          "The range only depends on the maximum and minimum, so a single mansion inflates it; the IQR uses only the middle $50\\%$ of the data and resists extremes.",
+          "Therefore the resistant measures, the median (center) and the IQR (spread), describe the typical home and its variability more fairly.",
+          "Choose the median and the IQR because they are resistant to the right skew and the extreme high prices."
+        ],
+        "answer": "Median for center and IQR for spread, because they are resistant to the skew and the extreme high prices."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A histogram of household incomes has a tall cluster of bars at the low end and a long tail stretching toward the high incomes. Describe the shape of the distribution.",
+      "hint": "Name the shape for the side the tail points toward, not where most of the data sits.",
+      "solution": {
+        "steps": [
+          "Most of the data sit at the low end, and the tail extends toward the high values.",
+          "A tail pointing toward the larger numbers means the distribution is skewed to the right.",
+          "So the distribution is skewed right (positively skewed)."
+        ],
+        "answer": "Skewed right"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "For the data set $\\{3,\\ 5,\\ 8,\\ 8,\\ 11\\}$, find the mean, the median, and the range.",
+      "hint": "Sort first (already sorted here). With an odd number of values the median is the single middle value.",
+      "solution": {
+        "steps": [
+          "There are $n=5$ values and they are sorted.",
+          "Mean: $3+5+8+8+11=35$, so $\\bar{x}=\\frac{35}{5}=7$.",
+          "Median: the middle (3rd) value of the five sorted values is $8$.",
+          "Range: $11-3=8$.",
+          "So the mean is $7$, the median is $8$, and the range is $8$."
+        ],
+        "answer": "Mean $=7$, median $=8$, range $=8$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A data set has $Q_1=30$ and $Q_3=46$. Use the $1.5\\times\\text{IQR}$ rule to decide whether the value $5$ is an outlier.",
+      "hint": "Find the IQR, then the lower fence $Q_1-1.5\\cdot\\text{IQR}$. A value below the lower fence is an outlier.",
+      "solution": {
+        "steps": [
+          "$\\text{IQR}=Q_3-Q_1=46-30=16$.",
+          "$1.5\\times\\text{IQR}=1.5\\cdot 16=24$.",
+          "Lower fence: $Q_1-1.5\\cdot\\text{IQR}=30-24=6$.",
+          "A value is an outlier if it is below the lower fence ($6$).",
+          "Since $5<6$, the value $5$ falls below the lower fence, so it is an outlier."
+        ],
+        "answer": "Yes; $5<6$ (the lower fence), so it is an outlier."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "The data set $\\{20,\\ 21,\\ 22,\\ 23,\\ 24\\}$ has mean $22$ and median $22$. The value $24$ is replaced by $54$, giving $\\{20,\\ 21,\\ 22,\\ 23,\\ 54\\}$. Find the new mean and the new median.",
+      "hint": "Recompute the mean by adding all five values. For the median, keep the data sorted and take the middle value.",
+      "solution": {
+        "steps": [
+          "New mean: $20+21+22+23+54=140$, so $\\bar{x}=\\frac{140}{5}=28$.",
+          "The mean rose from $22$ to $28$ because the value $54$ pulls it upward.",
+          "New median: the sorted data are $20,\\ 21,\\ 22,\\ 23,\\ 54$; the middle (3rd) value is still $22$.",
+          "The median stays at $22$ because it does not depend on how large the top value is."
+        ],
+        "answer": "New mean $=28$; new median $=22$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Class A scores have median $78$ and $\\text{IQR}=6$. Class B scores have median $78$ and $\\text{IQR}=20$. Compare the two classes. Did they perform identically?",
+      "hint": "Equal centers do not mean equal distributions. Compare the spreads to judge consistency.",
+      "solution": {
+        "steps": [
+          "Both classes have the same median, $78$, so their centers (typical scores) match.",
+          "Spread differs: Class A has $\\text{IQR}=6$ while Class B has $\\text{IQR}=20$.",
+          "A larger IQR means the middle $50\\%$ of scores is spread over a wider range, so Class B's scores vary much more.",
+          "They did not perform identically; Class B is far more variable, so its scores are less consistent than Class A's even though the centers are equal."
+        ],
+        "answer": "No. The centers are equal (median $78$), but Class B has a much larger spread ($\\text{IQR}=20$ vs $6$), so its scores are far less consistent."
+      }
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "standard": "8.NS.A.1",
+  "grade": "8",
+  "subject": "math",
+  "domain": "The Number System",
+  "domainCode": "NS",
+  "cluster": "Know that there are numbers that are not rational, and approximate them by rational numbers",
+  "clusterCode": "A",
+  "skillName": "Rational vs. Irrational Numbers",
+
+  "description": "Students know that a rational number is any number that can be written as a fraction $\\frac{a}{b}$ of two integers (with $b \\neq 0$) and that numbers which cannot be so written are called irrational. They understand informally that every real number has a decimal expansion: rational numbers have decimal expansions that either terminate or eventually repeat, while irrational numbers have non-terminating, non-repeating expansions. Students classify given numbers as rational or irrational, justify a number's classification by its decimal behavior, and convert a repeating decimal into an exact fraction $\\frac{a}{b}$ in lowest terms.",
+
+  "subSkills": [
+    "Define rational and irrational numbers in terms of the fraction form $\\frac{a}{b}$",
+    "Classify a given number (fraction, integer, terminating decimal, repeating decimal, radical, $\\pi$) as rational or irrational",
+    "Recognize that a terminating or eventually repeating decimal represents a rational number",
+    "Recognize that a non-terminating, non-repeating decimal represents an irrational number",
+    "Write a repeating decimal using bar notation and identify its repeating block",
+    "Convert an eventually repeating decimal into a fraction using the $x = 0.\\overline{d}$, multiply, subtract algebra technique",
+    "Simplify the resulting fraction to lowest terms"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Classify a single number",
+      "example": "Is $\\sqrt{7}$ rational or irrational? Explain using its decimal expansion."
+    },
+    {
+      "name": "Classify from a decimal expansion",
+      "example": "A number begins $0.818118111811118\\ldots$ with the pattern continuing. Is it rational or irrational?"
+    },
+    {
+      "name": "Identify the decimal type of a fraction",
+      "example": "Without dividing past three places, will $\\frac{4}{11}$ produce a terminating or a repeating decimal? Write its decimal expansion."
+    },
+    {
+      "name": "Convert a single-digit repeating decimal to a fraction",
+      "example": "Write $0.\\overline{4}$ as a fraction in lowest terms."
+    },
+    {
+      "name": "Convert a multi-digit repeating block to a fraction",
+      "example": "Write $0.\\overline{36}$ as a fraction in lowest terms."
+    },
+    {
+      "name": "Convert an eventually repeating decimal to a fraction",
+      "example": "Write $0.41\\overline{6}$ as a fraction in lowest terms."
+    },
+    {
+      "name": "Compare or order rational and irrational numbers",
+      "example": "Order $\\sqrt{2}$, $\\frac{3}{2}$, and $1.\\overline{4}$ from least to greatest."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Direct classification or a single-digit repeating block conversion. The student applies one definition or one routine, with small numbers and no simplification beyond an obvious reduction.",
+      "constraints": [
+        "Classify common numbers: integers, simple fractions, $\\pi$, perfect-square roots like $\\sqrt{9}$, and clearly patterned decimals",
+        "Repeating-decimal conversions use a one-digit block such as $0.\\overline{3}$ or $0.\\overline{7}$ (multiply by $10$)",
+        "Resulting fraction is already simple or reduces in one step (denominator $9$)"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step reasoning: the student must determine the period length to choose the correct power of ten, then convert and simplify, or classify a number whose form is not obvious (non-perfect-square root, decimal pattern that must be inspected).",
+      "constraints": [
+        "Repeating block has two digits such as $0.\\overline{36}$ or $0.\\overline{12}$ (multiply by $100$)",
+        "Resulting fraction requires simplification using the GCF (for example $\\frac{36}{99} = \\frac{4}{11}$)",
+        "Classification includes non-perfect-square roots like $\\sqrt{20}$ and decimals that look patterned but are not (for example $0.123123\\ldots$ vs $0.1234567\\ldots$)"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step conversions where a non-repeating part precedes the repeating block, comparisons that require converting several forms to a common representation, or justification questions that demand a complete written argument.",
+      "constraints": [
+        "Eventually repeating decimals with a non-repeating prefix such as $0.41\\overline{6}$ or $0.58\\overline{3}$ (two powers of ten, subtract, simplify)",
+        "Order three or more numbers given in mixed forms (radical, fraction, repeating decimal)",
+        "Require a justification: explain why a decimal expansion proves rationality or irrationality"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student thinks any decimal that goes on forever is irrational, ignoring repetition",
+      "distractor": "Classifies $0.\\overline{3}$ or $0.272727\\ldots$ as irrational because 'the digits never stop'"
+    },
+    {
+      "misconception": "Student believes all square roots are irrational",
+      "distractor": "Classifies $\\sqrt{9}$ or $\\sqrt{16}$ as irrational instead of recognizing $\\sqrt{9}=3$"
+    },
+    {
+      "misconception": "Student uses the wrong power of ten for the repeating block length",
+      "distractor": "Converts $0.\\overline{36}$ by multiplying by $10$ and gets $\\frac{36}{9}$ instead of multiplying by $100$ to get $\\frac{36}{99}=\\frac{4}{11}$"
+    },
+    {
+      "misconception": "Student forgets to simplify the resulting fraction",
+      "distractor": "Leaves the answer as $\\frac{36}{99}$ instead of reducing to $\\frac{4}{11}$"
+    },
+    {
+      "misconception": "Student just writes the visible digits over a power of ten, treating it as terminating",
+      "distractor": "Converts $0.\\overline{4}$ to $\\frac{4}{10}=\\frac{2}{5}$ instead of $\\frac{4}{9}$"
+    },
+    {
+      "misconception": "Student mishandles the non-repeating prefix in an eventually repeating decimal",
+      "distractor": "Converts $0.41\\overline{6}$ as if it were $0.\\overline{416}$, getting $\\frac{416}{999}$ instead of $\\frac{5}{12}$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent. One blueprint per standard.",
+
+  "standard": "GEO.G-CO.B.6",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Understand congruence in terms of rigid motions",
+  "clusterCode": "B",
+  "skillName": "Rigid Motions and Congruence",
+
+  "description": "Students use precise geometric descriptions of rigid motions (translations, reflections, and rotations) to transform figures in the coordinate plane and to predict the effect of a given rigid motion on a figure's vertices, side lengths, and angle measures. Conversely, given two figures, students apply the definition of congruence in terms of rigid motions, two figures are congruent if and only if there exists a sequence of rigid motions mapping one exactly onto the other, to decide whether the figures are congruent and, when they are, to describe the mapping sequence.",
+
+  "subSkills": [
+    "Apply a translation by a given vector $(x, y) \\mapsto (x + a, y + b)$ to the coordinates of each vertex of a figure",
+    "Apply a reflection over the $x$-axis, $y$-axis, line $y = x$, or line $y = -x$ using the correct coordinate rule",
+    "Apply a rotation of $90^\\circ$, $180^\\circ$, or $270^\\circ$ about the origin using the correct coordinate rule",
+    "Predict the effect of a rigid motion on side lengths and angle measures (recognize they are preserved) and on orientation (preserved by translations/rotations, reversed by reflections)",
+    "Compose a sequence of two or more rigid motions and find the image of a figure",
+    "Given two figures (by coordinates or by marked congruent parts), decide whether a sequence of rigid motions maps one onto the other and conclude congruence",
+    "Describe an explicit sequence of rigid motions that proves two congruent figures congruent"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Single rigid motion image",
+      "example": "Triangle $ABC$ has vertices $A(1, 2)$, $B(4, 2)$, $C(4, 6)$. Find the coordinates of the image after a reflection over the $y$-axis."
+    },
+    {
+      "name": "Identify the rigid motion from pre-image and image",
+      "example": "Segment $PQ$ with $P(2, 3)$, $Q(5, 1)$ maps to $P'(-3, 2)$, $Q'(-1, 5)$. Which single rigid motion accomplishes this?"
+    },
+    {
+      "name": "Predict the effect on lengths and angles",
+      "example": "A rotation of $180^\\circ$ about the origin is applied to triangle $DEF$, where $DE = 7$ and $m\\angle D = 40^\\circ$. State the length of $D'E'$ and the measure of $\\angle D'$, and whether orientation is preserved."
+    },
+    {
+      "name": "Composition of rigid motions",
+      "example": "Point $A(3, -2)$ is first translated by $(x, y) \\mapsto (x - 1, y + 4)$, then reflected over the $x$-axis. Find the final image $A''$."
+    },
+    {
+      "name": "Decide congruence via rigid motions",
+      "example": "Triangle $ABC$ has vertices $A(0, 0)$, $B(3, 0)$, $C(3, 4)$; triangle $DEF$ has vertices $D(0, 0)$, $E(0, 3)$, $F(-4, 3)$. Determine whether the triangles are congruent, and if so, give a sequence of rigid motions mapping $ABC$ onto $DEF$."
+    },
+    {
+      "name": "Map-and-prove congruence with a sequence",
+      "example": "Quadrilateral $WXYZ$ is the image of quadrilateral $JKLM$ after a translation followed by a rotation. Explain why $JKLM \\cong WXYZ$ and identify which pairs of corresponding sides and angles are congruent."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Apply a SINGLE named rigid motion with a standard coordinate rule to one point or a small figure, or state a preserved measure. Coordinates are small integers and the rule is the canonical one (reflect over an axis, rotate $90^\\circ$/$180^\\circ$ about the origin, translate by a given vector). One step, one rule lookup.",
+      "constraints": [
+        "Exactly one rigid motion applied",
+        "Reflections only over the $x$-axis, $y$-axis (not yet $y = x$); rotations only $90^\\circ$, $180^\\circ$, $270^\\circ$ about the origin; translations by a small vector",
+        "Integer coordinates with absolute value $\\le 6$",
+        "May simply ask which measures (length, angle) are preserved by a stated motion"
+      ]
+    },
+    "Medium": {
+      "description": "Apply a single but less routine rigid motion (reflection over $y = x$ or $y = -x$), OR reverse-engineer which single rigid motion maps a given pre-image to a given image, OR predict the combined effect on length, angle, and orientation. Requires choosing the correct rule rather than being handed it.",
+      "constraints": [
+        "Reflections may include $y = x$ and $y = -x$; rotations include $270^\\circ$",
+        "Includes 'name the transformation' tasks given pre-image and image coordinates",
+        "May ask explicitly about orientation (direct vs. opposite) in addition to coordinates",
+        "Integer coordinates with absolute value $\\le 8$"
+      ]
+    },
+    "Hard": {
+      "description": "Compose TWO OR MORE rigid motions and find the final image, OR decide congruence of two figures and justify with an explicit mapping sequence (which may require trying a composition). Multi-step: each motion's output feeds the next, and a congruence decision must cite preserved lengths/angles or exhibit a sequence.",
+      "constraints": [
+        "Two or more chained rigid motions, or a congruence-decision task",
+        "Congruence tasks require either producing a valid sequence of rigid motions or proving non-congruence by an unmatched length or angle",
+        "Order of composition matters and must be respected",
+        "May mix translation, reflection, and rotation in one problem"
+      ]
+    },
+    "tierSplit": "If split into two worksheets: tier1 covers Easy to Medium, a single rigid motion applied or identified (every canonical reflection, rotation, and translation rule, plus naming a single motion and stating preserved measures). tier2 covers Medium to Hard, compositions of multiple rigid motions and congruence-decision/justification tasks. No item overlap between tiers."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Confuses the reflection-over-$x$-axis rule with the reflection-over-$y$-axis rule, negating the wrong coordinate",
+      "distractor": "For a reflection over the $x$-axis applied to $(a, b)$, gives $(-a, b)$ instead of the correct $(a, -b)$"
+    },
+    {
+      "misconception": "Uses the wrong rotation rule, swapping the sign pattern of $90^\\circ$ and $270^\\circ$ rotations",
+      "distractor": "For a $90^\\circ$ counterclockwise rotation of $(a, b)$, gives $(b, -a)$ instead of the correct $(-b, a)$"
+    },
+    {
+      "misconception": "Applies a composition in the wrong order, performing the second motion before the first",
+      "distractor": "Reflects first and then translates when the problem says translate first, then reflect, yielding a different final image"
+    },
+    {
+      "misconception": "Believes a rigid motion changes side lengths or angle measures (treats it like a dilation)",
+      "distractor": "States that the image side is a scaled length, e.g. doubling $DE = 7$ to $D'E' = 14$, instead of preserving $D'E' = 7$"
+    },
+    {
+      "misconception": "Thinks reflections preserve orientation, or that all rigid motions preserve orientation",
+      "distractor": "Claims a single reflection preserves orientation (direct), instead of recognizing a reflection reverses orientation"
+    },
+    {
+      "misconception": "Concludes two figures are congruent from a single matching measurement without a full mapping, or declares them not congruent despite a valid rigid-motion sequence existing",
+      "distractor": "Says the figures are not congruent because their coordinates differ, ignoring that a rotation or reflection maps one exactly onto the other"
+    },
+    {
+      "misconception": "For reflection over $y = x$, forgets to swap the coordinates and only negates",
+      "distractor": "For a reflection over $y = x$ applied to $(a, b)$, gives $(-a, -b)$ instead of the correct $(b, a)$"
+    }
+  ],
+
+  "_comment_itemCounts": "worksheet.single = one ramped sheet (Easy->Hard across 15 items). tier1/tier2 only if the standard is split into two worksheets (15 each, no overlap).",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

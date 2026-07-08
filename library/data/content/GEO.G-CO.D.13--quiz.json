@@ -1,0 +1,151 @@
+{
+  "id": "GEO.G-CO.D.13--quiz",
+  "standard": "GEO.G-CO.D.13",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Make geometric constructions",
+  "clusterCode": "D",
+  "skillName": "Inscribed Regular Polygons",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Eight multiple-choice questions on constructing an equilateral triangle, a square, and a regular hexagon inscribed in a circle, and on the central angles, side lengths, perimeters, and areas of those polygons in terms of the radius $r$.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Starting from a point $A$ on a circle of radius $r$, you set a compass to width $r$ and step that same width around the circle, marking each new intersection, until you return to $A$. Connecting the marked points in order produces which inscribed regular polygon?\nA) An equilateral triangle\nB) A square\nC) A regular hexagon\nD) A regular pentagon",
+      "answer": "C) A regular hexagon",
+      "solution": {
+        "steps": [
+          "A chord whose length equals the radius $r$ forms an equilateral triangle with the two radii to its endpoints, so the central angle it subtends is $60^\\circ$.",
+          "Stepping that radius-length chord around the full $360^\\circ$ gives $\\frac{360^\\circ}{60^\\circ}=6$ points.",
+          "Six equally spaced points connected in order form a regular hexagon, so C is correct.",
+          "A is wrong: connecting every marked point (not every other one) gives six vertices, not three. The radius-length chord is the hexagon side, not the triangle side.",
+          "B and D are wrong: a square needs $4$ vertices ($90^\\circ$ arcs) and a pentagon needs $5$ vertices ($72^\\circ$ arcs), neither of which the radius-step produces."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "An equilateral triangle is inscribed in a circle. What central angle does each side of the triangle subtend at the center of the circle?\nA) $60^\\circ$\nB) $90^\\circ$\nC) $120^\\circ$\nD) $360^\\circ$",
+      "answer": "C) $120^\\circ$",
+      "solution": {
+        "steps": [
+          "The central angle of a regular $n$-gon is $\\frac{360^\\circ}{n}$.",
+          "For an equilateral triangle $n=3$, so each side subtends $\\frac{360^\\circ}{3}=120^\\circ$, giving C.",
+          "A ($60^\\circ$) is the central angle of a hexagon ($n=6$), not the triangle.",
+          "B ($90^\\circ$) is the central angle of a square ($n=4$).",
+          "D ($360^\\circ$) is the total of all three central angles around the center, not a single one."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "A regular hexagon is inscribed in a circle of radius $r$. What is the perimeter of the hexagon?\nA) $6r$\nB) $3r$\nC) $2\\pi r$\nD) $r\\sqrt{3}$",
+      "answer": "A) $6r$",
+      "solution": {
+        "steps": [
+          "Each side of an inscribed regular hexagon equals the radius, so the side length is $r$.",
+          "A hexagon has $6$ sides, so the perimeter is $6\\cdot r=6r$, giving A.",
+          "B ($3r$) would be only three side lengths, not six.",
+          "C ($2\\pi r$) is the circumference of the circle, not the polygon's perimeter; the inscribed hexagon's perimeter is slightly less than the circumference.",
+          "D ($r\\sqrt{3}$) is a single side of an inscribed equilateral triangle, unrelated to the hexagon's perimeter."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "A square is inscribed in a circle of radius $r$. Using the $45$-$45$-$90$ triangle formed by two radii drawn to adjacent vertices, find the exact side length of the square.\nA) $2r$\nB) $r\\sqrt{2}$\nC) $r\\sqrt{3}$\nD) $r$",
+      "answer": "B) $r\\sqrt{2}$",
+      "solution": {
+        "steps": [
+          "Two radii drawn to adjacent vertices of the inscribed square meet at the center with a central angle of $\\frac{360^\\circ}{4}=90^\\circ$, forming a right isosceles ($45$-$45$-$90$) triangle with legs $r$ and hypotenuse equal to the square's side.",
+          "By the Pythagorean theorem the side is $\\sqrt{r^2+r^2}=\\sqrt{2r^2}=r\\sqrt{2}$, giving B.",
+          "A ($2r$) is the diameter of the circle (the square's diagonal), not its side.",
+          "C ($r\\sqrt{3}$) comes from a $30$-$60$-$90$ triangle and is the side of the inscribed equilateral triangle, not the square.",
+          "D ($r$) is the hexagon's side, where the central angle is $60^\\circ$, not $90^\\circ$."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "When inscribing a regular hexagon, why does setting the compass width equal to the radius $r$ locate the next vertex exactly $60^\\circ$ around the circle?\nA) Because the chord of length $r$ cuts a $120^\\circ$ arc, so the hexagon vertices are $60^\\circ$ apart after halving\nB) Because the two radii to the chord's endpoints and the chord itself form an equilateral triangle, whose angle at the center is $60^\\circ$\nC) Because any chord of a circle subtends a $60^\\circ$ central angle\nD) Because the perpendicular bisector of the chord meets the circle at a $60^\\circ$ point",
+      "answer": "B) Because the two radii to the chord's endpoints and the chord itself form an equilateral triangle, whose angle at the center is $60^\\circ$",
+      "solution": {
+        "steps": [
+          "The two radii drawn to the endpoints of the new chord each have length $r$, and the chord itself was set to length $r$, so all three sides equal $r$.",
+          "A triangle with three equal sides is equilateral, so all its angles are $60^\\circ$; the angle at the center is the central angle the chord subtends, $60^\\circ$. This is B.",
+          "A is wrong: a chord equal to the radius subtends a $60^\\circ$ arc, not $120^\\circ$ (the $120^\\circ$ misstatement is the triangle-vs-hexagon mistake).",
+          "C is wrong: chords of different lengths subtend different central angles; only a radius-length chord gives $60^\\circ$.",
+          "D is wrong: the perpendicular bisector of a chord passes through the center but does not by itself establish the $60^\\circ$ measure; the equilateral triangle does."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "An equilateral triangle is inscribed in a circle of radius $r$. What is the exact length of one side of the triangle?\nA) $r$\nB) $r\\sqrt{2}$\nC) $r\\sqrt{3}$\nD) $\\frac{r\\sqrt{3}}{2}$",
+      "answer": "C) $r\\sqrt{3}$",
+      "solution": {
+        "steps": [
+          "Two radii to adjacent vertices of the inscribed equilateral triangle meet at a central angle of $\\frac{360^\\circ}{3}=120^\\circ$, forming an isosceles triangle with legs $r$ and included angle $120^\\circ$.",
+          "Drop the perpendicular from the center to the side: it bisects the $120^\\circ$ angle into two $60^\\circ$ angles and bisects the side, creating two $30$-$60$-$90$ triangles with hypotenuse $r$.",
+          "Half the side is opposite the $60^\\circ$ angle: $r\\sin 60^\\circ=r\\cdot\\frac{\\sqrt{3}}{2}$, so the full side is $2\\cdot\\frac{r\\sqrt{3}}{2}=r\\sqrt{3}$, giving C.",
+          "A ($r$) is the hexagon's side; the triangle's side is longer because it spans a $120^\\circ$ arc.",
+          "B ($r\\sqrt{2}$) is the square's side. D ($\\frac{r\\sqrt{3}}{2}$) is only half the triangle's side."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A regular hexagon is inscribed in a circle of radius $r$. What is the exact area of the hexagon?\nA) $\\pi r^2$\nB) $6r^2$\nC) $\\frac{3\\sqrt{3}}{2}r^2$\nD) $\\frac{3\\sqrt{3}}{4}r^2$",
+      "answer": "C) $\\frac{3\\sqrt{3}}{2}r^2$",
+      "solution": {
+        "steps": [
+          "Split the inscribed hexagon into $6$ congruent triangles by drawing radii to all vertices; each has a central angle of $60^\\circ$ and two sides of length $r$, so each is equilateral with side $r$.",
+          "The area of one equilateral triangle of side $r$ is $\\frac{\\sqrt{3}}{4}r^2$.",
+          "Total area is $6\\cdot\\frac{\\sqrt{3}}{4}r^2=\\frac{6\\sqrt{3}}{4}r^2=\\frac{3\\sqrt{3}}{2}r^2$, giving C.",
+          "A ($\\pi r^2$) is the area of the circle, not the polygon, and uses the wrong formula.",
+          "B ($6r^2$) wrongly multiplies a side squared by $6$ without the equilateral-triangle area factor.",
+          "D ($\\frac{3\\sqrt{3}}{4}r^2$) is the area of the inscribed equilateral triangle, exactly half the hexagon's area."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Which list gives a correct order of steps for constructing a square inscribed in a given circle with center $O$ using only a compass and straightedge?\nA) Draw a diameter through $O$; connect the two endpoints of that diameter; then mark two more points.\nB) Draw a diameter through $O$; construct the perpendicular bisector of that diameter through $O$ to get a second diameter; mark the four points where the two diameters meet the circle; connect consecutive points.\nC) Mark any four points on the circle; connect them in order.\nD) Draw a chord of length $r$; step it around the circle; connect every vertex.",
+      "answer": "B) Draw a diameter through $O$; construct the perpendicular bisector of that diameter through $O$ to get a second diameter; mark the four points where the two diameters meet the circle; connect consecutive points.",
+      "solution": {
+        "steps": [
+          "A square inscribed in a circle has two perpendicular diameters as its diagonals, since its central angles are each $90^\\circ$.",
+          "So the valid construction is: draw a diameter, construct its perpendicular bisector through $O$ (a second diameter at $90^\\circ$), mark the four intersections with the circle, and connect them in order. This is B.",
+          "A is wrong: connecting the two endpoints of a single diameter just retraces that diameter (a line through $O$), giving only two vertices, not four, and it joins points before the perpendicular is even drawn.",
+          "C is wrong: four arbitrary points are not equally spaced, so the figure is not a regular square.",
+          "D is wrong: stepping a radius-length chord around the circle and connecting every vertex constructs a hexagon, not a square."
+        ]
+      }
+    }
+  ]
+}

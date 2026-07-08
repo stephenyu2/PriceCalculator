@@ -1,0 +1,118 @@
+{
+  "standard": "A1.A-REI.D.10",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Reasoning with Equations and Inequalities",
+  "domainCode": "A-REI",
+  "cluster": "Represent and solve equations and inequalities graphically",
+  "clusterCode": "D",
+  "skillName": "Graphs as Solution Sets",
+
+  "description": "Students understand that the graph of an equation in two variables is the complete set of ordered pairs $(x,y)$ that make the equation true, plotted in the coordinate plane. They test whether a given point is a solution by substitution, recognize that every point on the curve is a solution and every point off the curve is not, generate solution points from an equation to sketch its graph, and read solutions off a graph. They work with linear equations (graphs that are lines) and simple nonlinear equations such as $y=x^2$ (graphs that are curves), articulating that the graph is a picture of all solutions.",
+
+  "subSkills": [
+    "Verify whether an ordered pair $(x,y)$ is a solution of a two-variable equation by substitution",
+    "Recognize that a point lies on the graph if and only if its coordinates satisfy the equation",
+    "Generate a table of solution points from an equation and plot them",
+    "Determine which graphed points are solutions and which are not",
+    "Identify that a linear equation graphs as a line and a nonlinear equation (e.g. $y=x^2$) graphs as a curve",
+    "Read solution pairs off a given graph and confirm them in the equation"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Point-on-graph test (linear)",
+      "example": "Is the point $(3,5)$ a solution of $y=2x-1$? Substitute to check: $2(3)-1=5$, so yes, $(3,5)$ lies on the graph."
+    },
+    {
+      "name": "Point-on-graph test (nonlinear)",
+      "example": "Is $(-2,4)$ a solution of $y=x^2$? Since $(-2)^2=4$, the point satisfies the equation and lies on the curve."
+    },
+    {
+      "name": "Build solutions to graph",
+      "example": "Complete a table of values for $y=-\\frac{1}{2}x+3$ at $x=-2,0,2,4$ and plot the points to show the line is the set of all solutions."
+    },
+    {
+      "name": "Read a solution from a graph",
+      "example": "The line shown passes through $(0,1)$ and $(2,5)$. Name one ordered pair that is a solution of the equation graphed, and one ordered pair that is not."
+    },
+    {
+      "name": "Solution-set interpretation",
+      "example": "Explain why the point $(1,7)$ is not a solution of $y=3x+2$ even though it is near the line: substituting gives $3(1)+2=5\\neq 7$."
+    },
+    {
+      "name": "Match equation to its graph shape",
+      "example": "Which equation graphs as a curve rather than a line: $y=2x+1$, $y=x^2-3$, or $y=\\frac{1}{4}x$? The answer is $y=x^2-3$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step substitution check or single point read from a linear equation with integer coefficients and small whole-number coordinates. The student confirms one ordered pair or names one solution point. tier1 lives here and ramps into Medium.",
+      "constraints": [
+        "Linear equations in slope-intercept form $y=mx+b$ with integer $m$ and $b$",
+        "Integer coordinates with absolute value $\\le 6$",
+        "Exactly one substitution, no simplification of fractions",
+        "Equation already solved for $y$"
+      ]
+    },
+    "Medium": {
+      "description": "Substitution with fractions or negatives, generating two or three solution points to plot, or testing a point against a simple nonlinear equation like $y=x^2$. tier1 ends here and tier2 begins here.",
+      "constraints": [
+        "Fractional slope or fractional/negative coordinates requiring care with signs",
+        "May require building a short table of values before deciding",
+        "Includes one nonlinear equation type ($y=x^2$, $y=x^2+c$, or $y=|x|$)",
+        "Equation may be in form $Ax+By=C$ requiring substitution of both coordinates"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning: solve $Ax+By=C$ for $y$ before testing, compare several candidate points, reason about why a near-miss point is not a solution, or determine an unknown coordinate so that a point lies on the graph. tier2 lives here.",
+      "constraints": [
+        "Standard-form equation that must be rearranged or evaluated directly",
+        "Find the missing coordinate so a partial point $(a,\\,?)$ is a solution",
+        "Distinguish 'on the graph' from 'close to the graph' with justification",
+        "May span both a line and a curve in one comparison problem"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student swaps the roles of $x$ and $y$ when substituting",
+      "distractor": "For $y=2x-1$ tested at $(3,5)$, the student plugs $x=5,y=3$ and computes $2(5)-1=9$, then judges the point a non-solution (or matches a wrong pair like $(5,3)$)"
+    },
+    {
+      "misconception": "Student thinks any point visually near the line counts as a solution",
+      "distractor": "Accepts $(1,7)$ for $y=3x+2$ because it plots close to the line, ignoring that $3(1)+2=5\\neq 7$"
+    },
+    {
+      "misconception": "Student mishandles the sign on a negative coordinate or negative slope",
+      "distractor": "For $y=-2x+1$ at $(-3,7)$, computes $-2(-3)+1$ as $-6+1=-5$ instead of $6+1=7$, rejecting a true solution"
+    },
+    {
+      "misconception": "Student forgets to square a negative input on a nonlinear equation",
+      "distractor": "For $y=x^2$ at $(-2,4)$, computes $-2^2=-4$ and concludes the point is not on the curve"
+    },
+    {
+      "misconception": "Student only checks one coordinate or stops after a partial substitution",
+      "distractor": "For $2x+3y=12$ at $(3,2)$, checks $2(3)=6$ and matches to $6$ rather than evaluating $2(3)+3(2)=12$"
+    },
+    {
+      "misconception": "Student believes every two-variable equation graphs as a straight line",
+      "distractor": "Labels $y=x^2-3$ as a line, or selects a line when asked which equation produces a curve"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

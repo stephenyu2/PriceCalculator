@@ -1,0 +1,144 @@
+{
+  "standard": "A1.A-REI.B.4",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Reasoning with Equations and Inequalities",
+  "domainCode": "A-REI",
+  "cluster": "Solve equations and inequalities in one variable",
+  "clusterCode": "B",
+  "skillName": "Solving Quadratic Equations",
+
+  "description": "Students solve quadratic equations in one variable using the full range of standard methods and choose an efficient one for a given equation. The core methods are: (1) inspection and square roots for equations of the form $x^2=k$ or $(x-h)^2=k$, e.g. solving $x^2=49$ to get $x=\\pm 7$; (2) factoring and the zero-product property, e.g. solving $x^2-5x+6=0$ as $(x-2)(x-3)=0$ so $x=2$ or $x=3$; (3) completing the square to derive solutions, e.g. solving $x^2-6x+2=0$ by writing $(x-3)^2=7$ so $x=3\\pm\\sqrt{7}$; and (4) the quadratic formula $x=\\dfrac{-b\\pm\\sqrt{b^2-4ac}}{2a}$, including using the discriminant $b^2-4ac$ to predict the number and type of real solutions. Students recognize when the quadratic formula yields complex solutions (writing them as $a\\pm bi$ when $b^2-4ac<0$), simplify radical and rational answers exactly, and verify solutions by substitution. They must first rewrite an equation into standard form $ax^2+bx+c=0$ before applying any method.",
+
+  "subSkills": [
+    "Rewrite a quadratic equation into standard form $ax^2+bx+c=0$ by moving all terms to one side and combining like terms",
+    "Solve by square roots: isolate the squared term and apply $\\pm\\sqrt{\\ }$ to both sides, e.g. $(x-h)^2=k\\Rightarrow x=h\\pm\\sqrt{k}$",
+    "Solve by factoring and the zero-product property, including factoring out a GCF, monic trinomials, $a\\ne 1$ trinomials, and difference of squares",
+    "Solve by completing the square, including the case $a\\ne 1$ (divide through or factor out $a$ first), and keep exact radical answers",
+    "Solve by the quadratic formula, substituting $a$, $b$, $c$ correctly and simplifying the radical and fraction exactly",
+    "Compute and interpret the discriminant $b^2-4ac$ to determine whether there are two real, one real (repeated), or two complex solutions",
+    "Express complex solutions in the form $a\\pm bi$ when the discriminant is negative",
+    "Choose an efficient solution method for a given equation and justify the choice",
+    "Verify a solution by substituting it back into the original equation"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Solve by square roots",
+      "example": "Solve $3x^2-27=0$. Answer: $x^2=9$, so $x=\\pm 3$."
+    },
+    {
+      "name": "Solve $(x-h)^2=k$ by square roots",
+      "example": "Solve $(x-2)^2=18$. Answer: $x-2=\\pm 3\\sqrt{2}$, so $x=2\\pm 3\\sqrt{2}$."
+    },
+    {
+      "name": "Solve by factoring (monic, zero-product property)",
+      "example": "Solve $x^2-5x+6=0$. Answer: $(x-2)(x-3)=0$, so $x=2$ or $x=3$."
+    },
+    {
+      "name": "Solve by factoring with $a\\ne 1$ or a GCF",
+      "example": "Solve $2x^2+7x+3=0$. Answer: $(2x+1)(x+3)=0$, so $x=-\\frac{1}{2}$ or $x=-3$."
+    },
+    {
+      "name": "Solve by completing the square",
+      "example": "Solve $x^2-6x+2=0$. Answer: $(x-3)^2=7$, so $x=3\\pm\\sqrt{7}$."
+    },
+    {
+      "name": "Solve by the quadratic formula",
+      "example": "Solve $2x^2+4x-1=0$. Answer: $x=\\dfrac{-4\\pm\\sqrt{16+8}}{4}=\\dfrac{-4\\pm 2\\sqrt{6}}{4}=\\dfrac{-2\\pm\\sqrt{6}}{2}$."
+    },
+    {
+      "name": "Use the discriminant to count solutions",
+      "example": "How many real solutions does $x^2-4x+7=0$ have? Answer: $b^2-4ac=16-28=-12<0$, so there are no real solutions (two complex solutions)."
+    },
+    {
+      "name": "Complex solutions from a negative discriminant",
+      "example": "Solve $x^2+2x+5=0$. Answer: $x=\\dfrac{-2\\pm\\sqrt{4-20}}{2}=\\dfrac{-2\\pm\\sqrt{-16}}{2}=-1\\pm 2i$."
+    },
+    {
+      "name": "Rewrite into standard form, then solve",
+      "example": "Solve $x^2+10=7x$. Answer: $x^2-7x+10=0$, $(x-2)(x-5)=0$, so $x=2$ or $x=5$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "One clean method on an equation already near standard form, with small integers and rational or simple results. Solve $x^2=k$ for a perfect-square $k$, factor a monic trinomial with integer roots, or read a discriminant to count solutions. The method is often named for the student. This is the bottom of a ramped sheet and the start of tier1.",
+      "constraints": [
+        "Square-root equations $x^2=k$ with $k$ a perfect square, e.g. $x^2=49\\Rightarrow x=\\pm 7$",
+        "Monic trinomials $x^2+bx+c=0$ that factor over the integers, e.g. $x^2-5x+6=0$",
+        "Difference of squares with integer roots, e.g. $x^2-16=0\\Rightarrow x=\\pm 4$",
+        "Discriminant problems with a clearly positive, zero, or negative value, integers only",
+        "Solutions are integers or simple fractions; no radicals required"
+      ]
+    },
+    "Medium": {
+      "description": "Two ideas at once or a coefficient and a radical to manage. Rewrite into standard form first, factor with $a\\ne 1$, solve $(x-h)^2=k$ for non-perfect-square $k$, or apply the quadratic formula with a radical that simplifies. The student tracks signs and reduces a radical or fraction exactly. This is the top of tier1 and the bottom of tier2.",
+      "constraints": [
+        "Equations that must be rewritten into standard form before solving, e.g. $x^2+10=7x$",
+        "Trinomials with $a\\ne 1$, e.g. $2x^2+7x+3=0$, or a GCF to factor out first",
+        "Square-root method giving a simplified radical, e.g. $(x-2)^2=18\\Rightarrow x=2\\pm 3\\sqrt{2}$",
+        "Quadratic formula with a discriminant that is positive but not a perfect square, simplifying the radical and reducing the fraction",
+        "Solutions kept exact as radicals or fractions, e.g. $\\dfrac{-2\\pm\\sqrt{6}}{2}$"
+      ]
+    },
+    "Hard": {
+      "description": "A genuinely multi-step problem requiring method choice, careful algebra with a leading coefficient or fractions, and exact answers, including complex solutions. Complete the square when $a\\ne 1$, apply the quadratic formula yielding a negative discriminant, or choose and justify the most efficient method. A single sign or distribution error propagates to the wrong roots. This is the top of tier2 and the end of a ramped sheet.",
+      "constraints": [
+        "Complete the square with $a\\ne 1$, e.g. $2x^2-8x+3=0\\Rightarrow (x-2)^2=\\dfrac{5}{2}\\Rightarrow x=2\\pm\\dfrac{\\sqrt{10}}{2}$",
+        "Quadratic formula with a negative discriminant, giving complex solutions $a\\pm bi$, e.g. $x^2+2x+5=0\\Rightarrow x=-1\\pm 2i$",
+        "Equations requiring rewriting into standard form AND a non-obvious method choice the student must justify",
+        "Discriminant analysis used to decide solvability before solving, with exact radical or complex answers",
+        "Answers are exact radicals, reduced fractions, or complex numbers that must be kept exact, never rounded"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student takes only the positive square root when solving $x^2=k$, dropping the negative solution",
+      "distractor": "For $x^2=49$ gives only $x=7$ instead of $x=\\pm 7$"
+    },
+    {
+      "misconception": "Student reads the roots off the factored form with the wrong signs, taking the value inside the parentheses rather than the value that makes the factor zero",
+      "distractor": "For $(x-2)(x-3)=0$ states $x=-2$ and $x=-3$ instead of $x=2$ and $x=3$"
+    },
+    {
+      "misconception": "Student applies the zero-product property without first setting the equation equal to zero, splitting a non-zero product",
+      "distractor": "For $(x-1)(x-4)=6$ writes $x-1=6$ or $x-4=6$ instead of expanding to $x^2-5x-2=0$ and solving"
+    },
+    {
+      "misconception": "Student mis-substitutes into the quadratic formula, using $b$ instead of $-b$ or dropping the sign of a negative $b$ or $c$",
+      "distractor": "For $x^2-7x+10=0$ computes $x=\\dfrac{-7\\pm\\sqrt{49-40}}{2}$ (uses $-b=-7$) instead of $x=\\dfrac{7\\pm\\sqrt{9}}{2}$"
+    },
+    {
+      "misconception": "Student errs on the discriminant by computing $b^2-4ac$ with a sign slip, mishandling $-4ac$ when $a$ or $c$ is negative",
+      "distractor": "For $x^2-4x+7=0$ computes $16+28=44>0$ (treats $-4ac$ as $+28$) and concludes two real solutions instead of $16-28=-12<0$, no real solutions"
+    },
+    {
+      "misconception": "When completing the square the student adds $(b/2)^2$ to one side only, or forgets to factor out the leading coefficient first",
+      "distractor": "For $x^2-6x+2=0$ writes $(x-3)^2=2$ (forgets to add $9$ to the right side) instead of $(x-3)^2=7$"
+    },
+    {
+      "misconception": "Student fails to simplify or reduce the radical and fraction, leaving an unsimplified or incorrectly reduced answer",
+      "distractor": "For $\\dfrac{-4\\pm 2\\sqrt{6}}{4}$ reduces only the constant term to $\\dfrac{-1\\pm 2\\sqrt{6}}{1}$ instead of $\\dfrac{-2\\pm\\sqrt{6}}{2}$"
+    },
+    {
+      "misconception": "Student treats a negative discriminant as having no solution at all rather than two complex solutions, or mishandles $\\sqrt{-k}$",
+      "distractor": "For $x^2+2x+5=0$ writes $\\sqrt{-16}=-4$ giving $x=-1\\pm(-2)$ instead of $\\sqrt{-16}=4i$ giving $x=-1\\pm 2i$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

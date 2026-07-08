@@ -1,0 +1,240 @@
+{
+  "id": "GEO.G-CO.D--cluster-worksheet",
+  "standard": null,
+  "clusterId": "GEO.G-CO.D",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Make geometric constructions",
+  "clusterCode": "D",
+  "skillName": "Make geometric constructions",
+  "materialType": "cluster-worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:16:48.217Z",
+  "intro": "This cluster worksheet spans the two standards of \"Make geometric constructions.\" Items $1$ through $8$ cover formal compass-and-straightedge constructions and their justifications (GEO.G-CO.D.12); items $9$ through $15$ cover inscribing regular polygons (triangle, square, hexagon) in a circle and computing their exact measures (GEO.G-CO.D.13). Each item names the construction in words, since the renderer is text and KaTeX only.",
+  "items": [
+    {
+      "standard": "GEO.G-CO.D.12",
+      "id": 1,
+      "prompt": "A student keeps the compass fixed at exactly the width of $\\overline{AB}$, then strikes that same width starting at a point $A'$ on a new ray to mark $B'$. What construction is being performed, and what segment relationship results?",
+      "answer": "Copying a segment; the result is $\\overline{A'B'}\\cong\\overline{AB}$.",
+      "solution": {
+        "steps": [
+          "The compass width is set equal to the length of $\\overline{AB}$ and is not changed.",
+          "Striking that fixed width from $A'$ marks $B'$ so that $A'B'$ equals the original compass radius.",
+          "Since both segments equal the same compass radius, $A'B' = AB$, hence $\\overline{A'B'}\\cong\\overline{AB}$.",
+          "This is the standard construction for copying a segment."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.D.12",
+      "id": 2,
+      "prompt": "In the perpendicular-bisector construction of $\\overline{AB}$, equal-radius arcs are struck from $A$ and from $B$ and they meet at point $C$. Explain why $CA = CB$.",
+      "answer": "Both $CA$ and $CB$ equal the common compass radius, so $CA = CB$.",
+      "solution": {
+        "steps": [
+          "The arc from $A$ has every point at distance equal to the compass radius from $A$, so $CA$ equals that radius.",
+          "The arc from $B$ uses the same compass setting, so $CB$ equals the same radius.",
+          "Two quantities equal to the same radius are equal to each other: $CA = CB$.",
+          "Thus $C$ is equidistant from $A$ and $B$, which places it on the perpendicular bisector of $\\overline{AB}$."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.D.12",
+      "id": 3,
+      "prompt": "Put the steps for bisecting $\\angle ABC$ in the correct order: (i) draw ray $\\overrightarrow{BR}$; (ii) place the compass point at $B$ and draw an arc crossing both rays at $P$ and $Q$; (iii) from $P$ and $Q$ draw two equal-radius arcs meeting at $R$. Give the order.",
+      "answer": "(ii), (iii), (i)",
+      "solution": {
+        "steps": [
+          "First place the compass at the vertex $B$ and strike an arc crossing both rays, locating $P$ and $Q$. That is step (ii).",
+          "Next, from $P$ and $Q$ strike equal-radius arcs that intersect at $R$. That is step (iii).",
+          "Finally, draw ray $\\overrightarrow{BR}$, which is the angle bisector. That is step (i).",
+          "Correct order: (ii), (iii), (i)."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.D.12",
+      "id": 4,
+      "prompt": "When bisecting $\\angle ABC$, the construction produces triangles $\\triangle BPR$ and $\\triangle BQR$ with $BP = BQ$ (equal radii from $B$), $PR = QR$ (equal radii from $P$ and $Q$), and shared side $BR$. Which congruence postulate proves $\\triangle BPR\\cong\\triangle BQR$, and what does CPCTC then give about $\\angle PBR$ and $\\angle QBR$?",
+      "answer": "SSS proves the triangles congruent; by CPCTC, $\\angle PBR\\cong\\angle QBR$, so $\\overrightarrow{BR}$ bisects $\\angle ABC$.",
+      "solution": {
+        "steps": [
+          "The three given pairs of equal sides are $BP = BQ$, $PR = QR$, and $BR = BR$ (shared).",
+          "Three pairs of congruent sides means the triangles are congruent by SSS.",
+          "By CPCTC, corresponding angles $\\angle PBR$ and $\\angle QBR$ are congruent.",
+          "Since these two angles together make up $\\angle ABC$ and are equal, $\\overrightarrow{BR}$ bisects $\\angle ABC$.",
+          "Note SAS or ASA do not apply here because the given information is three sides, not a side-angle-side or angle-side-angle pattern."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.D.12",
+      "id": 5,
+      "prompt": "In the perpendicular-bisector construction of $\\overline{AB}$, why must the compass radius be set greater than $\\tfrac{1}{2}AB$? What goes wrong if the radius equals or is less than $\\tfrac{1}{2}AB$?",
+      "answer": "The radius must exceed $\\tfrac{1}{2}AB$ so the two arcs actually intersect; if the radius is $\\tfrac{1}{2}AB$ the arcs only touch at the midpoint, and if it is less they never meet, so no intersection points exist to determine the line.",
+      "solution": {
+        "steps": [
+          "The arcs from $A$ and $B$ meet only where a point is within the chosen radius of both endpoints.",
+          "If the radius equals $\\tfrac{1}{2}AB$, the only common point is the midpoint of $\\overline{AB}$, giving a single point, not two.",
+          "If the radius is less than $\\tfrac{1}{2}AB$, the two arcs do not overlap at all, so they never intersect.",
+          "Only when the radius is greater than $\\tfrac{1}{2}AB$ do the arcs cross at two distinct points $C$ and $D$, and $\\overleftrightarrow{CD}$ is the perpendicular bisector."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.D.12",
+      "id": 6,
+      "prompt": "A student marks point $P$ on line $\\ell$, swings equal arcs from $P$ to mark $A$ and $B$ on $\\ell$ so that $PA = PB$, then strikes equal-radius arcs from $A$ and $B$ that meet at $Q$, and finally draws $\\overleftrightarrow{PQ}$. What has been constructed, and why is $\\overleftrightarrow{PQ}\\perp\\ell$?",
+      "answer": "The line through $P$ perpendicular to $\\ell$; since $PA = PB$ and $QA = QB$, both $P$ and $Q$ are equidistant from $A$ and $B$, so $\\overleftrightarrow{PQ}$ is the perpendicular bisector of $\\overline{AB}$ and therefore perpendicular to $\\ell$.",
+      "solution": {
+        "steps": [
+          "The equal arcs from $P$ give $PA = PB$, so $P$ is equidistant from $A$ and $B$.",
+          "The equal-radius arcs from $A$ and $B$ meet at $Q$, so $QA = QB$, making $Q$ equidistant from $A$ and $B$ as well.",
+          "Two points each equidistant from $A$ and $B$ both lie on the perpendicular bisector of $\\overline{AB}$, which is the line $\\overleftrightarrow{PQ}$.",
+          "Because $A$ and $B$ lie on $\\ell$, the segment $\\overline{AB}$ lies along $\\ell$, so its perpendicular bisector $\\overleftrightarrow{PQ}$ is perpendicular to $\\ell$ and passes through $P$.",
+          "Thus the construction draws the line through $P$ perpendicular to $\\ell$."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.D.12",
+      "id": 7,
+      "prompt": "To construct a line through point $P$ parallel to line $\\ell$, you draw a transversal through $P$ that meets $\\ell$ at $A$, then copy the angle that $\\ell$ makes with the transversal at $A$ to the point $P$ (on the same side, in corresponding position), and draw the new line. Which angle relationship guarantees the new line is parallel to $\\ell$, and why is copying corresponding same-side angles such as co-interior angles the wrong choice?",
+      "answer": "Congruent corresponding angles guarantee the lines are parallel (Converse of the Corresponding Angles Postulate); copying co-interior (same-side interior) angles as congruent is wrong because parallel lines force co-interior angles to be supplementary, not congruent.",
+      "solution": {
+        "steps": [
+          "When a transversal cuts two lines, congruent corresponding angles imply the two lines are parallel, by the converse of the Corresponding Angles Postulate.",
+          "The construction copies the angle at $A$ to $P$ in the corresponding position, so the corresponding angles are congruent by construction.",
+          "Therefore the line through $P$ is parallel to $\\ell$.",
+          "Co-interior (same-side interior) angles between parallel lines are supplementary (sum to $180^\\circ$), not congruent, so reproducing them as congruent would not produce a parallel line.",
+          "Congruent alternate interior angles would also work, but congruent same-side interior angles would not."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.D.12",
+      "id": 8,
+      "prompt": "Two towns $A$ and $B$ are joined by a straight road. A cell tower must be built equidistant from $A$ and $B$ and must also lie on a given straight highway $h$ that crosses the region. Describe the compass-and-straightedge construction that locates the tower, and justify why the chosen point is equidistant from $A$ and $B$.",
+      "answer": "Construct the perpendicular bisector of $\\overline{AB}$ (equal-radius arcs from $A$ and $B$ meeting at two points, joined by a line); the tower sits where this perpendicular bisector intersects highway $h$. That point is equidistant from $A$ and $B$ because every point on the perpendicular bisector of $\\overline{AB}$ is equidistant from $A$ and $B$.",
+      "solution": {
+        "steps": [
+          "Set the compass to a radius greater than $\\tfrac{1}{2}AB$ and strike arcs from $A$ and from $B$; they meet at two points $C$ and $D$.",
+          "Draw line $\\overleftrightarrow{CD}$, the perpendicular bisector of $\\overline{AB}$.",
+          "Mark the point $T$ where $\\overleftrightarrow{CD}$ crosses highway $h$; this is the tower location.",
+          "By the locus property of the perpendicular bisector, every point on $\\overleftrightarrow{CD}$ is equidistant from $A$ and $B$, so $TA = TB$.",
+          "Since $T$ also lies on $h$, it satisfies both requirements, and it is the unique such point unless $h$ is parallel to $\\overleftrightarrow{CD}$."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.D.13",
+      "id": 9,
+      "prompt": "An equilateral triangle is inscribed in a circle. What central angle does each side of the triangle subtend at the center of the circle?",
+      "answer": "$120^\\circ$",
+      "solution": {
+        "steps": [
+          "A regular $n$-gon divides the full $360^\\circ$ around the center into $n$ equal central angles.",
+          "For an equilateral triangle, $n = 3$.",
+          "Each central angle is $\\frac{360^\\circ}{3} = 120^\\circ$.",
+          "So each side subtends a $120^\\circ$ central angle."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.D.13",
+      "id": 10,
+      "prompt": "You are inscribing a regular hexagon in a circle of radius $r$. After drawing the circle and marking a starting point $A$ on it, what compass setting and action locate the next vertex, and what is the side length of the finished hexagon in terms of $r$?",
+      "answer": "Set the compass to the radius $r$ and strike an arc from $A$ along the circle to locate the next vertex; the hexagon's side length is $r$.",
+      "solution": {
+        "steps": [
+          "Keep the compass open to the circle's radius $r$.",
+          "From $A$, strike an arc that crosses the circle; that intersection is the next vertex, a chord of length $r$ away.",
+          "A chord equal in length to the radius, together with the two radii to its endpoints, forms an equilateral triangle, so it cuts a $60^\\circ$ arc.",
+          "Repeating six times returns to $A$ ($6\\times 60^\\circ = 360^\\circ$), so each side equals $r$ and the hexagon has side length $r$."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.D.13",
+      "id": 11,
+      "prompt": "A square is inscribed in a circle of radius $r$ by drawing two perpendicular diameters and connecting their four endpoints. Find the exact side length of the square in terms of $r$.",
+      "answer": "$r\\sqrt{2}$",
+      "solution": {
+        "steps": [
+          "Two consecutive vertices of the square and the center form a right triangle whose two legs are radii of length $r$ along the perpendicular diameters.",
+          "The angle between the perpendicular diameters is $90^\\circ$, so this is a $45$-$45$-$90$ right triangle with legs $r$.",
+          "The side of the square is the hypotenuse: $\\sqrt{r^2 + r^2} = \\sqrt{2r^2} = r\\sqrt{2}$.",
+          "So the inscribed square has side length $r\\sqrt{2}$ (not the diameter $2r$)."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.D.13",
+      "id": 12,
+      "prompt": "Why does setting the compass width equal to the radius $r$ locate a hexagon vertex exactly $60^\\circ$ away from the previous one? Justify the step.",
+      "answer": "The two radii to the endpoints of the new chord and the chord itself all have length $r$, forming an equilateral triangle; an equilateral triangle has all angles $60^\\circ$, so the central angle is $60^\\circ$.",
+      "solution": {
+        "steps": [
+          "Both endpoints of the new chord lie on the circle, so each is a distance $r$ from the center: the two radii have length $r$.",
+          "The chord was struck with the compass set to $r$, so the chord also has length $r$.",
+          "Three sides of length $r$ make an equilateral triangle, whose angles are all $60^\\circ$.",
+          "The angle at the center of this triangle is the central angle of the chord, namely $60^\\circ$.",
+          "Hence stepping the radius around the circle advances $60^\\circ$ each time, giving $6$ vertices."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.D.13",
+      "id": 13,
+      "prompt": "Place the steps for inscribing a square in a circle of radius $r$ in the correct order: (i) connect consecutive intersection points to form the square; (ii) draw a diameter of the circle; (iii) mark the four points where the diameters cross the circle; (iv) construct the perpendicular bisector of that diameter through the center. Give the correct order.",
+      "answer": "(ii), (iv), (iii), (i)",
+      "solution": {
+        "steps": [
+          "Begin by drawing a diameter, step (ii).",
+          "Construct the perpendicular bisector of that diameter through the center, giving a second, perpendicular diameter, step (iv).",
+          "Mark the four points where these two perpendicular diameters meet the circle, step (iii).",
+          "Connect the four points in order around the circle to form the square, step (i).",
+          "Correct order: (ii), (iv), (iii), (i). Connecting the endpoints of a single diameter first would only give a line, not four vertices."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.D.13",
+      "id": 14,
+      "prompt": "A regular hexagon is inscribed in a circle of radius $r$. Find its exact perimeter and its exact area in terms of $r$.",
+      "answer": "Perimeter $= 6r$; area $= \\frac{3\\sqrt{3}}{2}r^2$.",
+      "solution": {
+        "steps": [
+          "The hexagon has six sides, each equal to the radius $r$, so the perimeter is $6r$.",
+          "The hexagon splits into $6$ congruent equilateral triangles, each with side length $r$.",
+          "The area of one equilateral triangle of side $r$ is $\\frac{\\sqrt{3}}{4}r^2$.",
+          "Multiply by $6$: total area $= 6\\cdot\\frac{\\sqrt{3}}{4}r^2 = \\frac{6\\sqrt{3}}{4}r^2 = \\frac{3\\sqrt{3}}{2}r^2$.",
+          "So perimeter $= 6r$ and area $= \\frac{3\\sqrt{3}}{2}r^2$ (not $\\pi r^2$, which is the circle's area)."
+        ]
+      }
+    },
+    {
+      "standard": "GEO.G-CO.D.13",
+      "id": 15,
+      "prompt": "A regular hexagon and an inscribed equilateral triangle are both drawn in the same circle of radius $r$. Find the exact area of each and the exact ratio of the hexagon's area to the triangle's area.",
+      "answer": "Hexagon area $= \\frac{3\\sqrt{3}}{2}r^2$; equilateral triangle area $= \\frac{3\\sqrt{3}}{4}r^2$; the ratio of hexagon area to triangle area is $2:1$.",
+      "solution": {
+        "steps": [
+          "The inscribed hexagon has area $\\frac{3\\sqrt{3}}{2}r^2$, as it is six equilateral triangles of side $r$.",
+          "The inscribed equilateral triangle has side length $r\\sqrt{3}$, since its side subtends a $120^\\circ$ arc; using the chord, the side is $2r\\sin 60^\\circ = 2r\\cdot\\frac{\\sqrt{3}}{2} = r\\sqrt{3}$.",
+          "Its area is $\\frac{\\sqrt{3}}{4}(r\\sqrt{3})^2 = \\frac{\\sqrt{3}}{4}\\cdot 3r^2 = \\frac{3\\sqrt{3}}{4}r^2$.",
+          "The ratio is $\\frac{\\frac{3\\sqrt{3}}{2}r^2}{\\frac{3\\sqrt{3}}{4}r^2} = \\frac{1/2}{1/4} = 2$.",
+          "So the hexagon's area is exactly twice the inscribed equilateral triangle's area, a ratio of $2:1$."
+        ]
+      }
+    }
+  ]
+}

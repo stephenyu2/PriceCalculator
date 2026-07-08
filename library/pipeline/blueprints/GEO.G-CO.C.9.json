@@ -1,0 +1,136 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent.",
+  "_comment2": "One blueprint per standard. Math notation is LaTeX in $...$ (KaTeX).",
+
+  "standard": "GEO.G-CO.C.9",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Prove geometric theorems",
+  "clusterCode": "C",
+  "skillName": "Theorems about Lines and Angles",
+
+  "description": "Students prove and apply foundational theorems about lines and angles: vertical angles are congruent; the angle pairs formed when a transversal crosses parallel lines (alternate interior angles congruent, corresponding angles congruent, co-interior/same-side interior angles supplementary); and the perpendicular bisector characterization (a point lies on the perpendicular bisector of a segment if and only if it is equidistant from the endpoints). They must justify each step of a proof with a precise reason (definition, postulate, or previously proven theorem), set up and solve algebraic equations from angle relationships, and use the perpendicular bisector property to find unknown lengths or locate equidistant points.",
+
+  "subSkills": [
+    "State and apply the Vertical Angles Theorem (vertical angles congruent; linear pairs supplementary)",
+    "Identify angle-pair relationships at a transversal: corresponding, alternate interior, alternate exterior, co-interior (same-side interior)",
+    "Apply the Parallel Lines + Transversal theorems to determine which angles are congruent vs. supplementary",
+    "Set up and solve linear equations in $x$ from angle relationships (congruent angles equal, supplementary angles sum to $180^\\circ$)",
+    "Write a logical two-column or paragraph proof, supplying the correct reason for each statement",
+    "State and apply the Perpendicular Bisector Theorem and its converse (equidistance characterization)",
+    "Use the perpendicular bisector / equidistance property to find unknown segment lengths and coordinates of equidistant points",
+    "Distinguish a definition from a postulate from a theorem when justifying steps"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Vertical angles algebra",
+      "example": "Two lines intersect. One angle measures $(3x + 10)^\\circ$ and the vertical angle measures $(5x - 24)^\\circ$. Find $x$ and the measure of each angle. Answer: $3x + 10 = 5x - 24$, so $x = 17$ and each angle is $61^\\circ$."
+    },
+    {
+      "name": "Transversal angle classification",
+      "example": "Lines $m$ and $n$ are cut by transversal $t$. Given $\\angle 1$ and $\\angle 5$ are on the same side of $t$ in matching positions, classify the pair and state their relationship when $m \\parallel n$. Answer: corresponding angles, congruent."
+    },
+    {
+      "name": "Parallel lines solve for x",
+      "example": "Lines $p \\parallel q$ are cut by a transversal. An alternate interior angle pair measures $(2x + 15)^\\circ$ and $(4x - 35)^\\circ$. Find $x$. Answer: alternate interior angles are congruent, so $2x + 15 = 4x - 35$ gives $x = 25$."
+    },
+    {
+      "name": "Co-interior (same-side interior) supplementary",
+      "example": "Lines $a \\parallel b$ with transversal $c$. Same-side interior angles measure $(3x)^\\circ$ and $(2x + 20)^\\circ$. Find $x$. Answer: same-side interior angles are supplementary, so $3x + 2x + 20 = 180$ gives $x = 32$."
+    },
+    {
+      "name": "Perpendicular bisector length",
+      "example": "Point $P$ lies on the perpendicular bisector of segment $\\overline{AB}$. If $PA = 4x - 7$ and $PB = 2x + 5$, find $PA$. Answer: by the Perpendicular Bisector Theorem $PA = PB$, so $4x - 7 = 2x + 5$, $x = 6$, and $PA = 17$."
+    },
+    {
+      "name": "Two-column proof completion",
+      "example": "Given two lines intersecting at a point, prove $\\angle 1 \\cong \\angle 3$ (vertical angles). Statements/Reasons: $\\angle 1$ and $\\angle 2$ form a linear pair (def. of linear pair); $m\\angle 1 + m\\angle 2 = 180^\\circ$ and $m\\angle 2 + m\\angle 3 = 180^\\circ$ (linear pair postulate); $m\\angle 1 = m\\angle 3$ (subtraction/transitive); $\\angle 1 \\cong \\angle 3$ (def. of congruent angles)."
+    },
+    {
+      "name": "Equidistant point / coordinate",
+      "example": "The endpoints of a segment are $A(-2, 1)$ and $B(6, 1)$. A point $P$ is equidistant from $A$ and $B$. What is the $x$-coordinate of $P$? Answer: $P$ lies on the perpendicular bisector $x = 2$, so the $x$-coordinate is $2$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-relationship recall and direct application. Student names a vertical/linear pair or a transversal angle pair from a given diagram and either states the relationship or finds a missing angle by one congruence-or-supplement step. Perpendicular bisector items give equidistance directly and ask for a single length with one-step algebra. Items 1 through 5 of a single worksheet; the bulk of tier1.",
+      "constraints": [
+        "One theorem applied; no chaining",
+        "Angle expressions are a single value or a one-step linear form like $(x + 20)^\\circ$",
+        "Perpendicular bisector: $PA = PB$ stated, solve $ax + b = cx + d$ for $x$ in one or two steps",
+        "Reasons, when asked, are a single definition or postulate"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step reasoning or a two-variable/two-equation setup. Student must first classify the angle pair (corresponding vs. alternate interior vs. same-side interior) and then decide congruent vs. supplementary before solving. Includes chaining two relationships (e.g., vertical then alternate interior) and completing a partially scaffolded proof by supplying missing reasons. Perpendicular bisector items may require computing a length after solving for $x$, or using the converse. Items 6 through 11 of a single worksheet; the overlap band where tier1 ends and tier2 begins.",
+      "constraints": [
+        "Two relationships chained, or classification required before solving",
+        "Linear equations of the form $ax + b = cx + d$ or $ax + b + cx + d = 180$",
+        "Proof items provide the statements and ask for the reasons (or vice versa)",
+        "Distinguish congruent (equal) from supplementary (sum $180^\\circ$) correctly"
+      ]
+    },
+    "Hard": {
+      "description": "Full proof construction or multi-step synthesis. Student writes a complete two-column or paragraph proof from a Given/Prove pair (vertical angles theorem, alternate interior implies corresponding, perpendicular bisector converse), or solves a problem requiring three or more linked angle relationships, or works a coordinate/equidistance problem combining the distance idea with solving an equation. Reasons must be precise and correctly ordered. Items 12 through 15 of a single worksheet; the top of tier2.",
+      "constraints": [
+        "Construct a complete proof, every statement justified",
+        "Three or more chained relationships, or algebra plus a follow-up question",
+        "May require the converse (e.g., prove lines parallel from a congruent alternate interior pair)",
+        "Coordinate items combine midpoint/equidistance with solving for an unknown"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student treats vertical angles as supplementary instead of congruent",
+      "distractor": "Sets $(3x + 10) + (5x - 24) = 180$ instead of $3x + 10 = 5x - 24$, getting $x = 24.25$ and answers $\\approx 82^\\circ$ rather than $61^\\circ$"
+    },
+    {
+      "misconception": "Student treats same-side (co-interior) angles as congruent instead of supplementary",
+      "distractor": "Sets $3x = 2x + 20$ to get $x = 20$ instead of $3x + (2x + 20) = 180$ to get $x = 32$"
+    },
+    {
+      "misconception": "Student treats alternate interior angles as supplementary instead of congruent",
+      "distractor": "Sets $(2x + 15) + (4x - 35) = 180$ instead of $2x + 15 = 4x - 35$, getting $x \\approx 33.3$ instead of $x = 25$"
+    },
+    {
+      "misconception": "Student confuses corresponding with alternate interior angles when classifying a pair",
+      "distractor": "Labels a same-side matching-position pair as 'alternate interior' (or vice versa), then applies the wrong congruent/supplementary rule"
+    },
+    {
+      "misconception": "Student applies parallel-line theorems when the lines are NOT marked parallel",
+      "distractor": "Concludes two angles are congruent from a transversal diagram with no parallel marks, when no relationship can be determined"
+    },
+    {
+      "misconception": "Student solves for $x$ but forgets to substitute back to find the requested angle or length",
+      "distractor": "Gives the answer as $x = 17$ when the question asks for the angle measure $61^\\circ$"
+    },
+    {
+      "misconception": "Student uses the perpendicular bisector theorem backwards or adds the segments",
+      "distractor": "Sets $PA + PB$ equal to a total or uses $PA = \\frac{1}{2}PB$ instead of $PA = PB$, e.g. $4x - 7 = \\frac{1}{2}(2x+5)$"
+    },
+    {
+      "misconception": "Student cites a definition where a postulate or theorem is required (or vice versa) in a proof",
+      "distractor": "Justifies $m\\angle 1 + m\\angle 2 = 180^\\circ$ with 'definition of vertical angles' instead of the Linear Pair Postulate"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet of 15 (Easy items 1-5, Medium 6-11, Hard 12-15). tier1/tier2 fields kept at 15 for schema parity but this standard uses the single sheet. Quiz options each carry their own LaTeX.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

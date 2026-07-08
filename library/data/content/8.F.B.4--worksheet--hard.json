@@ -1,0 +1,259 @@
+{
+  "id": "8.F.B.4--worksheet--hard",
+  "standard": "8.F.B.4",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Functions",
+  "domainCode": "F",
+  "cluster": "Use functions to model relationships between quantities",
+  "clusterCode": "B",
+  "skillName": "Modeling Linear Relationships",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "intro": "Each problem requires building a linear function $y = mx + b$ from a wordy description, a graph, or a table, then interpreting both the rate of change and the initial value in context and using the model to predict or compare. Watch for negative and fractional slopes, and remember the initial value is the output when $x = 0$, even when that point is not listed.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A scuba diver begins ascending toward the surface. After $3$ minutes she is at a depth of $54$ feet below the surface, and after $7$ minutes she is at a depth of $30$ feet below the surface. Treat depth below the surface as a positive quantity $y$ (in feet) and time as $x$ (in minutes). Write a function $y = mx + b$ for her depth, interpret the rate of change and the initial value in context, and predict her depth after $10$ minutes.",
+      "answer": "$y = -6x + 72$; she ascends $6$ feet per minute and started at $72$ feet deep; after $10$ minutes she is at $12$ feet.",
+      "solution": {
+        "steps": [
+          "Use the two points $(3, 54)$ and $(7, 30)$.",
+          "Rate of change: $m = \\frac{30 - 54}{7 - 3} = \\frac{-24}{4} = -6$ feet per minute.",
+          "Find $b$ using $b = y - mx$ with $(3, 54)$: $b = 54 - (-6)(3) = 54 + 18 = 72$.",
+          "Function: $y = -6x + 72$.",
+          "Interpretation: $m = -6$ means her depth decreases by $6$ feet each minute (she rises $6$ ft/min); $b = 72$ means at $x = 0$ she was $72$ feet below the surface.",
+          "Predict at $x = 10$: $y = -6(10) + 72 = -60 + 72 = 12$ feet below the surface."
+        ],
+        "answer": "$y = -6x + 72$; she ascends $6$ feet per minute and started at $72$ feet deep; after $10$ minutes she is at $12$ feet."
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A candle is burning at a constant rate. After $20$ minutes it is $18$ cm tall, and after $50$ minutes it is $12$ cm tall. Let $y$ be the height in cm and $x$ the time in minutes. Write the function $y = mx + b$, interpret $m$ and $b$ in context, and find how long until the candle burns out completely.",
+      "answer": "$y = -\\frac{1}{5}x + 22$; it shortens $\\frac{1}{5}$ cm per minute and started at $22$ cm; it burns out after $110$ minutes.",
+      "solution": {
+        "steps": [
+          "Use $(20, 18)$ and $(50, 12)$.",
+          "$m = \\frac{12 - 18}{50 - 20} = \\frac{-6}{30} = -\\frac{1}{5}$ cm per minute.",
+          "$b = y - mx$ with $(20, 18)$: $b = 18 - \\left(-\\frac{1}{5}\\right)(20) = 18 + 4 = 22$.",
+          "Function: $y = -\\frac{1}{5}x + 22$.",
+          "Interpretation: $m = -\\frac{1}{5}$ means the candle loses $\\frac{1}{5}$ cm of height per minute; $b = 22$ means it was $22$ cm tall when first lit ($x = 0$).",
+          "Burns out when $y = 0$: $0 = -\\frac{1}{5}x + 22 \\Rightarrow \\frac{1}{5}x = 22 \\Rightarrow x = 110$ minutes."
+        ],
+        "answer": "$y = -\\frac{1}{5}x + 22$; it shortens $\\frac{1}{5}$ cm per minute and started at $22$ cm; it burns out after $110$ minutes."
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A graph of a line passes through the points $(4, 9)$ and $(10, 24)$ but the $y$-axis is not shown, so the intercept is not labeled. Write the function $y = mx + b$ for the line, state the slope and the $y$-intercept, and find $y$ when $x = 0$.",
+      "answer": "$y = \\frac{5}{2}x - 1$; slope $\\frac{5}{2}$, $y$-intercept $-1$; at $x = 0$, $y = -1$.",
+      "solution": {
+        "steps": [
+          "$m = \\frac{24 - 9}{10 - 4} = \\frac{15}{6} = \\frac{5}{2}$.",
+          "$b = y - mx$ with $(4, 9)$: $b = 9 - \\frac{5}{2}(4) = 9 - 10 = -1$.",
+          "Function: $y = \\frac{5}{2}x - 1$.",
+          "The $y$-intercept is the point $(0, -1)$, so at $x = 0$, $y = -1$.",
+          "Check with $(10, 24)$: $\\frac{5}{2}(10) - 1 = 25 - 1 = 24$. Correct."
+        ],
+        "answer": "$y = \\frac{5}{2}x - 1$; slope $\\frac{5}{2}$, $y$-intercept $-1$; at $x = 0$, $y = -1$."
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Two gyms offer monthly plans. Gym A charges a $\\$60$ joining fee plus $\\$25$ per month. Gym B charges a $\\$20$ joining fee plus $\\$35$ per month. Write a function for the total cost $y$ after $x$ months for each gym, state which gym has the greater rate of change and which has the greater initial value, and find after how many months the two gyms cost the same.",
+      "answer": "Gym A: $y = 25x + 60$; Gym B: $y = 35x + 20$. Gym B has the greater rate of change ($35 > 25$); Gym A has the greater initial value ($60 > 20$). They cost the same after $4$ months.",
+      "solution": {
+        "steps": [
+          "Gym A: rate $\\$25$/month, initial $\\$60$, so $y = 25x + 60$.",
+          "Gym B: rate $\\$35$/month, initial $\\$20$, so $y = 35x + 20$.",
+          "Compare rates of change: $35 > 25$, so Gym B has the greater rate of change.",
+          "Compare initial values: $60 > 20$, so Gym A has the greater initial value.",
+          "Set equal: $25x + 60 = 35x + 20$.",
+          "Solve: $60 - 20 = 35x - 25x \\Rightarrow 40 = 10x \\Rightarrow x = 4$ months."
+        ],
+        "answer": "Gym A: $y = 25x + 60$; Gym B: $y = 35x + 20$. Gym B has the greater rate of change ($35 > 25$); Gym A has the greater initial value ($60 > 20$). They cost the same after $4$ months."
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A table shows the amount of water $y$ (in liters) in a tank at time $x$ (in minutes): $(6, 410), (9, 365), (12, 320)$. The tank is draining at a constant rate and $x = 0$ is not listed. Write the function $y = mx + b$, interpret both $m$ and $b$, and predict the amount of water after $20$ minutes.",
+      "answer": "$y = -15x + 500$; it drains $15$ liters per minute and started with $500$ liters; after $20$ minutes there are $200$ liters.",
+      "solution": {
+        "steps": [
+          "Use $(6, 410)$ and $(9, 365)$.",
+          "$m = \\frac{365 - 410}{9 - 6} = \\frac{-45}{3} = -15$ liters per minute.",
+          "$b = y - mx$ with $(6, 410)$: $b = 410 - (-15)(6) = 410 + 90 = 500$.",
+          "Function: $y = -15x + 500$.",
+          "Interpretation: $m = -15$ means the tank loses $15$ liters each minute; $b = 500$ means it held $500$ liters at $x = 0$.",
+          "Predict at $x = 20$: $y = -15(20) + 500 = -300 + 500 = 200$ liters."
+        ],
+        "answer": "$y = -15x + 500$; it drains $15$ liters per minute and started with $500$ liters; after $20$ minutes there are $200$ liters."
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A delivery service charges a flat pickup fee plus a fixed amount per mile. A $5$-mile delivery costs $\\$23$ and an $8$-mile delivery costs $\\$32$. Let $y$ be the cost in dollars and $x$ the distance in miles. Write the function $y = mx + b$, interpret $m$ and $b$ in context, and find the cost of a $14$-mile delivery.",
+      "answer": "$y = 3x + 8$; $\\$3$ per mile and an $\\$8$ flat pickup fee; a $14$-mile delivery costs $\\$50$.",
+      "solution": {
+        "steps": [
+          "Use $(5, 23)$ and $(8, 32)$.",
+          "$m = \\frac{32 - 23}{8 - 5} = \\frac{9}{3} = 3$ dollars per mile.",
+          "$b = y - mx$ with $(5, 23)$: $b = 23 - 3(5) = 23 - 15 = 8$.",
+          "Function: $y = 3x + 8$.",
+          "Interpretation: $m = 3$ means the cost rises $\\$3$ per mile; $b = 8$ is the $\\$8$ flat pickup fee charged at $x = 0$ miles.",
+          "Cost of $14$ miles: $y = 3(14) + 8 = 42 + 8 = \\$50$."
+        ],
+        "answer": "$y = 3x + 8$; $\\$3$ per mile and an $\\$8$ flat pickup fee; a $14$-mile delivery costs $\\$50$."
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A hot beverage cools at a constant rate. A graph shows it passing through $(2, 78)$ and $(8, 60)$, where $x$ is minutes and $y$ is temperature in degrees Fahrenheit, with no labeled intercept. Write the function $y = mx + b$, interpret the rate of change and the initial value, and predict the temperature after $15$ minutes.",
+      "answer": "$y = -3x + 84$; it cools $3$ degrees per minute and started at $84^\\circ$F; after $15$ minutes it is $39^\\circ$F.",
+      "solution": {
+        "steps": [
+          "Use $(2, 78)$ and $(8, 60)$.",
+          "$m = \\frac{60 - 78}{8 - 2} = \\frac{-18}{6} = -3$ degrees per minute.",
+          "$b = y - mx$ with $(2, 78)$: $b = 78 - (-3)(2) = 78 + 6 = 84$.",
+          "Function: $y = -3x + 84$.",
+          "Interpretation: $m = -3$ means the temperature drops $3^\\circ$F each minute; $b = 84$ means the drink was $84^\\circ$F at $x = 0$ (the $y$-intercept).",
+          "Predict at $x = 15$: $y = -3(15) + 84 = -45 + 84 = 39^\\circ$F."
+        ],
+        "answer": "$y = -3x + 84$; it cools $3$ degrees per minute and started at $84^\\circ$F; after $15$ minutes it is $39^\\circ$F."
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A savings account grows by the same amount each week. After $4$ weeks the balance is $\\$130$ and after $10$ weeks it is $\\$190$. Let $y$ be the balance in dollars and $x$ the number of weeks. Write the function $y = mx + b$, interpret $m$ and $b$, and find how many weeks until the balance reaches $\\$300$.",
+      "answer": "$y = 10x + 90$; the account grows $\\$10$ per week and started at $\\$90$; it reaches $\\$300$ after $21$ weeks.",
+      "solution": {
+        "steps": [
+          "Use $(4, 130)$ and $(10, 190)$.",
+          "$m = \\frac{190 - 130}{10 - 4} = \\frac{60}{6} = 10$ dollars per week.",
+          "$b = y - mx$ with $(4, 130)$: $b = 130 - 10(4) = 130 - 40 = 90$.",
+          "Function: $y = 10x + 90$.",
+          "Interpretation: $m = 10$ means $\\$10$ is added each week; $b = 90$ means the starting balance at $x = 0$ was $\\$90$.",
+          "Set $y = 300$: $300 = 10x + 90 \\Rightarrow 210 = 10x \\Rightarrow x = 21$ weeks."
+        ],
+        "answer": "$y = 10x + 90$; the account grows $\\$10$ per week and started at $\\$90$; it reaches $\\$300$ after $21$ weeks."
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A car's fuel gauge readings (in gallons) are recorded against distance driven (in miles): $(40, 11), (90, 8), (140, 5)$. The tank loses fuel at a constant rate and the reading at $x = 0$ is not listed. Write the function $y = mx + b$, interpret both $m$ and $b$, and predict how many gallons remain after $200$ miles.",
+      "answer": "$y = -\\frac{3}{50}x + \\frac{67}{5}$; fuel drops $\\frac{3}{50}$ gallon per mile and the tank started with $\\frac{67}{5}$ gallons; after $200$ miles there are $\\frac{7}{5}$ gallons left.",
+      "solution": {
+        "steps": [
+          "Use $(40, 11)$ and $(90, 8)$.",
+          "$m = \\frac{8 - 11}{90 - 40} = \\frac{-3}{50} = -\\frac{3}{50}$ gallon per mile.",
+          "$b = y - mx$ with $(40, 11)$: $b = 11 - \\left(-\\frac{3}{50}\\right)(40) = 11 + \\frac{120}{50} = 11 + \\frac{12}{5} = \\frac{55}{5} + \\frac{12}{5} = \\frac{67}{5}$.",
+          "Function: $y = -\\frac{3}{50}x + \\frac{67}{5}$ (the tank held $\\frac{67}{5} = 13.4$ gallons at $x = 0$).",
+          "Interpretation: $m = -\\frac{3}{50}$ means the car uses $\\frac{3}{50}$ gallon per mile; $b = \\frac{67}{5}$ is the full-tank amount at $0$ miles.",
+          "Predict at $x = 200$: $y = -\\frac{3}{50}(200) + \\frac{67}{5} = -12 + \\frac{67}{5} = -\\frac{60}{5} + \\frac{67}{5} = \\frac{7}{5}$ gallons."
+        ],
+        "answer": "$y = -\\frac{3}{50}x + \\frac{67}{5}$; fuel drops $\\frac{3}{50}$ gallon per mile and the tank started with $\\frac{67}{5}$ gallons; after $200$ miles there are $\\frac{7}{5}$ gallons left."
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Two snow piles are melting. Pile X is $48$ inches deep and melts $\\frac{3}{4}$ inch per hour. Pile Y starts deeper but melts faster: after $4$ hours it is $50$ inches deep and after $12$ hours it is $42$ inches deep. Write a function $y = mx + b$ for each pile, state which melts faster, and find after how many hours the two piles are the same depth.",
+      "answer": "Pile X: $y = -\\frac{3}{4}x + 48$; Pile Y: $y = -x + 54$. Pile Y melts faster ($1 > \\frac{3}{4}$ inch per hour). They are equal after $24$ hours.",
+      "solution": {
+        "steps": [
+          "Pile X: rate $-\\frac{3}{4}$ in/hr, initial $48$ in, so $y = -\\frac{3}{4}x + 48$.",
+          "Pile Y from $(4, 50)$ and $(12, 42)$: $m = \\frac{42 - 50}{12 - 4} = \\frac{-8}{8} = -1$ inch per hour.",
+          "Pile Y intercept: $b = 50 - (-1)(4) = 50 + 4 = 54$, so $y = -x + 54$.",
+          "Compare melting rates by magnitude: $|-1| = 1 > \\frac{3}{4}$, so Pile Y melts faster.",
+          "Set equal: $-\\frac{3}{4}x + 48 = -x + 54$.",
+          "Solve: $-\\frac{3}{4}x + x = 54 - 48 \\Rightarrow \\frac{1}{4}x = 6 \\Rightarrow x = 24$ hours."
+        ],
+        "answer": "Pile X: $y = -\\frac{3}{4}x + 48$; Pile Y: $y = -x + 54$. Pile Y melts faster ($1 > \\frac{3}{4}$ inch per hour). They are equal after $24$ hours."
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A printing shop's cost grows linearly with the number of posters. An order of $30$ posters costs $\\$95$ and an order of $50$ posters costs $\\$135$. Let $y$ be the cost in dollars and $x$ the number of posters. Write the function $y = mx + b$, interpret $m$ and $b$ in context, and find the cost of $80$ posters.",
+      "answer": "$y = 2x + 35$; $\\$2$ per poster plus a $\\$35$ setup fee; $80$ posters cost $\\$195$.",
+      "solution": {
+        "steps": [
+          "Use $(30, 95)$ and $(50, 135)$.",
+          "$m = \\frac{135 - 95}{50 - 30} = \\frac{40}{20} = 2$ dollars per poster.",
+          "$b = y - mx$ with $(30, 95)$: $b = 95 - 2(30) = 95 - 60 = 35$.",
+          "Function: $y = 2x + 35$.",
+          "Interpretation: $m = 2$ means each poster adds $\\$2$; $b = 35$ is the fixed $\\$35$ setup fee charged even for $0$ posters.",
+          "Cost of $80$ posters: $y = 2(80) + 35 = 160 + 35 = \\$195$."
+        ],
+        "answer": "$y = 2x + 35$; $\\$2$ per poster plus a $\\$35$ setup fee; $80$ posters cost $\\$195$."
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A reservoir is being filled. A graph passes through $(5, 220)$ and $(20, 400)$, where $x$ is hours and $y$ is the water level in thousands of gallons, but the $y$-intercept is off the visible grid. Write the function $y = mx + b$, interpret the rate of change and the initial value, and predict the level after $35$ hours.",
+      "answer": "$y = 12x + 160$; the level rises $12$ thousand gallons per hour and started at $160$ thousand gallons; after $35$ hours it is $580$ thousand gallons.",
+      "solution": {
+        "steps": [
+          "Use $(5, 220)$ and $(20, 400)$.",
+          "$m = \\frac{400 - 220}{20 - 5} = \\frac{180}{15} = 12$ thousand gallons per hour.",
+          "$b = y - mx$ with $(5, 220)$: $b = 220 - 12(5) = 220 - 60 = 160$.",
+          "Function: $y = 12x + 160$.",
+          "Interpretation: $m = 12$ means the level rises $12$ thousand gallons each hour; $b = 160$ means at $x = 0$ the reservoir already held $160$ thousand gallons.",
+          "Predict at $x = 35$: $y = 12(35) + 160 = 420 + 160 = 580$ thousand gallons."
+        ],
+        "answer": "$y = 12x + 160$; the level rises $12$ thousand gallons per hour and started at $160$ thousand gallons; after $35$ hours it is $580$ thousand gallons."
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A weather balloon descends at a constant rate. A table of its altitude $y$ (in meters) at time $x$ (in minutes) shows $(3, 1750), (8, 1500), (13, 1250)$. Write the function $y = mx + b$, interpret $m$ and $b$, and determine at what time it will reach an altitude of $400$ meters.",
+      "answer": "$y = -50x + 1900$; it descends $50$ meters per minute and started at $1900$ meters; it reaches $400$ meters at $x = 30$ minutes.",
+      "solution": {
+        "steps": [
+          "Use $(3, 1750)$ and $(8, 1500)$.",
+          "$m = \\frac{1500 - 1750}{8 - 3} = \\frac{-250}{5} = -50$ meters per minute.",
+          "$b = y - mx$ with $(3, 1750)$: $b = 1750 - (-50)(3) = 1750 + 150 = 1900$.",
+          "Function: $y = -50x + 1900$.",
+          "Interpretation: $m = -50$ means the balloon falls $50$ meters each minute; $b = 1900$ is its altitude at $x = 0$.",
+          "Set $y = 400$: $400 = -50x + 1900 \\Rightarrow -1500 = -50x \\Rightarrow x = 30$ minutes."
+        ],
+        "answer": "$y = -50x + 1900$; it descends $50$ meters per minute and started at $1900$ meters; it reaches $400$ meters at $x = 30$ minutes."
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Two phone plans charge a monthly base fee plus a per-gigabyte rate. Plan P costs $\\$38$ for $4$ GB and $\\$53$ for $7$ GB. Plan Q costs a flat $\\$20$ base plus $\\$7$ per GB. Write a function $y = mx + b$ for each plan, state which has the greater rate of change and which has the greater base fee, and find the data usage at which both plans cost the same.",
+      "answer": "Plan P: $y = 5x + 18$; Plan Q: $y = 7x + 20$. Plan Q has the greater rate of change ($7 > 5$) and the greater base fee ($20 > 18$). The costs are never equal for positive usage (they are equal only at $x = -1$ GB).",
+      "solution": {
+        "steps": [
+          "Plan P from $(4, 38)$ and $(7, 53)$: $m = \\frac{53 - 38}{7 - 4} = \\frac{15}{3} = 5$ dollars per GB.",
+          "Plan P intercept: $b = 38 - 5(4) = 38 - 20 = 18$, so $y = 5x + 18$.",
+          "Plan Q: rate $\\$7$/GB, base $\\$20$, so $y = 7x + 20$.",
+          "Compare: rate of change $7 > 5$ so Plan Q rises faster; base fee $20 > 18$ so Plan Q has the greater base fee.",
+          "Set equal: $5x + 18 = 7x + 20 \\Rightarrow -2 = 2x \\Rightarrow x = -1$.",
+          "Since $x = -1$ GB is not a valid amount of data, the plans are never equally priced for any real usage; Plan P is always cheaper for $x \\ge 0$."
+        ],
+        "answer": "Plan P: $y = 5x + 18$; Plan Q: $y = 7x + 20$. Plan Q has the greater rate of change ($7 > 5$) and the greater base fee ($20 > 18$). The costs are never equal for positive usage (they are equal only at $x = -1$ GB)."
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A submarine is changing depth at a constant rate. After $6$ minutes its depth is $245$ feet below sea level and after $14$ minutes its depth is $185$ feet below sea level. Treat depth below sea level as positive $y$ (in feet) and time as $x$ (in minutes). Write the function $y = mx + b$, interpret the rate of change and the initial value in context, and predict the depth after $30$ minutes.",
+      "answer": "$y = -\\frac{15}{2}x + 290$; it rises $\\frac{15}{2}$ feet per minute and started at $290$ feet below sea level; after $30$ minutes it is $65$ feet below sea level.",
+      "solution": {
+        "steps": [
+          "Use $(6, 245)$ and $(14, 185)$.",
+          "$m = \\frac{185 - 245}{14 - 6} = \\frac{-60}{8} = -\\frac{15}{2}$ feet per minute.",
+          "$b = y - mx$ with $(6, 245)$: $b = 245 - \\left(-\\frac{15}{2}\\right)(6) = 245 + 45 = 290$.",
+          "Function: $y = -\\frac{15}{2}x + 290$.",
+          "Interpretation: $m = -\\frac{15}{2}$ means the depth decreases by $\\frac{15}{2} = 7.5$ feet each minute (the sub is rising); $b = 290$ means at $x = 0$ it was $290$ feet below sea level.",
+          "Predict at $x = 30$: $y = -\\frac{15}{2}(30) + 290 = -225 + 290 = 65$ feet below sea level."
+        ],
+        "answer": "$y = -\\frac{15}{2}x + 290$; it rises $\\frac{15}{2}$ feet per minute and started at $290$ feet below sea level; after $30$ minutes it is $65$ feet below sea level."
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T09:01:39.750Z"
+}

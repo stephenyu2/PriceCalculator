@@ -1,0 +1,115 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent. One blueprint per standard.",
+
+  "standard": "6.NS.C.7",
+  "grade": "6",
+  "subject": "math",
+  "domain": "The Number System",
+  "domainCode": "NS",
+  "cluster": "Apply and extend previous understandings of numbers to the system of rational numbers",
+  "clusterCode": "C",
+  "skillName": "Ordering and Absolute Value",
+
+  "description": "Students order rational numbers (integers, fractions, and decimals, positive and negative) and reason about their relative position on the number line. They interpret inequality statements like $-3 > -7$ as statements about position, write inequalities to describe real-world situations, understand absolute value $|x|$ as a number's distance from $0$, interpret absolute value as magnitude in context (for example, account balance or temperature), and distinguish comparisons of order ($<,\\,>$) from comparisons of absolute value (magnitude).",
+
+  "subSkills": [
+    "Order a set of rational numbers from least to greatest (and greatest to least) on a number line",
+    "Write and interpret inequality statements such as $-8 < -5$ and explain them in terms of position on the number line",
+    "Translate a real-world description into an inequality (for example, a temperature warmer than $-3^{\\circ}$C is $t > -3$)",
+    "Compute the absolute value of a rational number as its distance from $0$: $|-\\tfrac{3}{4}| = \\tfrac{3}{4}$",
+    "Interpret absolute value as magnitude in a real-world context (debt size, elevation below sea level, distance from a reference point)",
+    "Distinguish an order comparison ($a < b$) from an absolute-value (magnitude) comparison ($|a|$ vs $|b|$), recognizing that for negatives the larger absolute value is the smaller number"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Order rational numbers",
+      "example": "Order from least to greatest: $-\\frac{1}{2},\\ 0.75,\\ -2,\\ \\frac{1}{4},\\ -1.5$."
+    },
+    {
+      "name": "Interpret an inequality on the number line",
+      "example": "Explain what $-6 < -1$ means about the positions of $-6$ and $-1$ on a number line."
+    },
+    {
+      "name": "Write an inequality from a context",
+      "example": "An account is overdrawn when the balance is less than $\\$0$. Write an inequality for a balance $b$ that is overdrawn."
+    },
+    {
+      "name": "Compute absolute value",
+      "example": "Find $\\left|-\\frac{7}{8}\\right|$ and $|3.2|$."
+    },
+    {
+      "name": "Interpret absolute value as magnitude in context",
+      "example": "Account A has a balance of $-\\$30$ and account B has a balance of $-\\$20$. Which account has the greater debt, and how does that relate to $|-30|$ and $|-20|$?"
+    },
+    {
+      "name": "Order vs. absolute value comparison",
+      "example": "Is the statement $-7 > -3$ true? Is $|-7| > |-3|$ true? Explain why the two answers differ."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recall and direct comparison with integers or simple values. Order two or three integers, read a true/false inequality, or compute the absolute value of an integer. No context interpretation required.",
+      "constraints": [
+        "Values are integers or simple terminating decimals/halves, magnitudes $\\le 10$",
+        "At most three numbers to order, or a single $|x|$ to compute",
+        "No real-world translation; symbols and numbers only"
+      ]
+    },
+    "Medium": {
+      "description": "Mixed forms (fractions, decimals, and integers together) must be put on a common scale before ordering, or a short context must be turned into an inequality, or absolute value of a fraction/decimal is computed. Two related steps.",
+      "constraints": [
+        "Mix at least two of: integers, fractions, decimals in one ordering task",
+        "Fractions/decimals with magnitudes that require conversion to compare",
+        "One context-to-inequality translation, or one $|x|$ with $x$ a fraction or decimal"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning that combines order and magnitude: compare numbers that look counterintuitive because of sign, justify why a larger absolute value can be the smaller number, or interpret absolute value as magnitude inside a real-world comparison and answer a follow-up.",
+      "constraints": [
+        "Requires distinguishing order ($<,>$) from absolute value in the same problem",
+        "Includes negatives where the larger magnitude is the smaller number",
+        "Real-world interpretation plus a justification or follow-up comparison"
+      ]
+    },
+    "tierSplit": "If split into two worksheets: tier1 covers ordering and basic absolute-value computation (Easy to Medium); tier2 covers context translation and the order-vs-magnitude distinction (Medium to Hard), with no item overlap."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student orders negatives by magnitude, treating the number with the larger digits as larger",
+      "distractor": "Claims $-7 > -3$ because $7 > 3$, instead of recognizing $-7 < -3$"
+    },
+    {
+      "misconception": "Student thinks absolute value just removes (or flips) the sign rather than giving distance from zero, applying it inconsistently",
+      "distractor": "Writes $|-5| = -5$ (keeps the negative) or $|3| = -3$ (adds a negative)"
+    },
+    {
+      "misconception": "Student confuses order with absolute value, asserting the smaller number always has the smaller absolute value",
+      "distractor": "Says that because $-30 < -20$, the debt of $\\$20$ is greater, instead of $|-30| > |-20|$ so $\\$30$ is the greater debt"
+    },
+    {
+      "misconception": "Student reverses the inequality symbol when translating a context with negatives",
+      "distractor": "Writes $b > 0$ for an overdrawn (below zero) balance instead of $b < 0$"
+    },
+    {
+      "misconception": "Student fails to convert to a common form, comparing fractions and decimals by raw digits",
+      "distractor": "Orders $\\frac{1}{4}$ as greater than $0.75$ because $4 > 0.75$ is read off the denominator"
+    }
+  ],
+
+  "_comment_itemCounts": "worksheet.single = one ramped sheet (Easy->Hard across 15 items). tier1/tier2 only used if the standard is split into two worksheets.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

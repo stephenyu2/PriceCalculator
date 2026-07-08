@@ -1,0 +1,174 @@
+{
+  "id": "A1.A-APR.A.1--lesson",
+  "standard": "A1.A-APR.A.1",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Arithmetic with Polynomials and Rational Expressions",
+  "domainCode": "A-APR",
+  "cluster": "Perform arithmetic operations on polynomials",
+  "clusterCode": "A",
+  "skillName": "Adding and Multiplying Polynomials",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "Polynomials behave like the integers: just as adding, subtracting, or multiplying two integers always gives you another integer, doing those same operations on two polynomials always gives you another polynomial. This property is called closure. To add or subtract, you combine like terms (terms with the exact same variable and exponent), being careful to distribute a subtraction sign to every term of the polynomial behind it. To multiply, you distribute each term of the first factor across every term of the second, use the product rule for exponents $x^m\\cdot x^n=x^{m+n}$, and then combine like terms. Special products like $(a+b)^2=a^2+2ab+b^2$ and $(a+b)(a-b)=a^2-b^2$ are shortcuts worth memorizing. In every case, write your final answer in standard form, with terms in descending order of degree and no like terms remaining.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Subtract $(3x^2-2x+5)-(x^2+4x-1)$ and write the result in standard form.",
+      "solution": {
+        "steps": [
+          "Distribute the subtraction sign to every term of the second polynomial: $3x^2-2x+5-x^2-4x+1$.",
+          "Be careful: the $-1$ becomes $+1$ because subtracting a negative is adding.",
+          "Group like terms: $(3x^2-x^2)+(-2x-4x)+(5+1)$.",
+          "Combine each group: $2x^2-6x+6$.",
+          "All like terms are combined and the terms are in descending degree, so this is standard form."
+        ],
+        "answer": "$2x^2-6x+6$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Multiply the monomial by the polynomial: $3x(2x^2-x+4)$.",
+      "solution": {
+        "steps": [
+          "Distribute $3x$ to each term inside the parentheses: $3x\\cdot 2x^2$, then $3x\\cdot(-x)$, then $3x\\cdot 4$.",
+          "Use the product rule for exponents, $x^m\\cdot x^n=x^{m+n}$: $3x\\cdot 2x^2=6x^{1+2}=6x^3$.",
+          "Next term: $3x\\cdot(-x)=-3x^{1+1}=-3x^2$.",
+          "Last term: $3x\\cdot 4=12x$.",
+          "Combine the results: $6x^3-3x^2+12x$. There are no like terms to combine, so this is the final answer."
+        ],
+        "answer": "$6x^3-3x^2+12x$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Multiply the two binomials using FOIL: $(x+3)(x-5)$.",
+      "solution": {
+        "steps": [
+          "FOIL means multiply the First, Outer, Inner, and Last pairs of terms.",
+          "First: $x\\cdot x=x^2$.",
+          "Outer: $x\\cdot(-5)=-5x$. Inner: $3\\cdot x=3x$.",
+          "Last: $3\\cdot(-5)=-15$.",
+          "Add all four products: $x^2-5x+3x-15$.",
+          "Combine the like middle terms $-5x+3x=-2x$ to get $x^2-2x-15$."
+        ],
+        "answer": "$x^2-2x-15$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Expand the square of the binomial: $(2x-3)^2$.",
+      "solution": {
+        "steps": [
+          "A square means the factor times itself: $(2x-3)^2=(2x-3)(2x-3)$. Do not just square each term.",
+          "Use the pattern $(a-b)^2=a^2-2ab+b^2$ with $a=2x$ and $b=3$.",
+          "Square the first term: $a^2=(2x)^2=4x^2$.",
+          "Middle term: $-2ab=-2(2x)(3)=-12x$.",
+          "Square the last term: $b^2=3^2=9$.",
+          "Combine: $4x^2-12x+9$. The middle term $-12x$ is the part students most often forget."
+        ],
+        "answer": "$4x^2-12x+9$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Multiply the binomial by the trinomial: $(x+2)(x^2-3x+4)$.",
+      "solution": {
+        "steps": [
+          "Distribute each term of $(x+2)$ across every term of the trinomial.",
+          "Multiply by $x$: $x\\cdot x^2=x^3$, $x\\cdot(-3x)=-3x^2$, $x\\cdot 4=4x$, giving $x^3-3x^2+4x$.",
+          "Multiply by $2$: $2\\cdot x^2=2x^2$, $2\\cdot(-3x)=-6x$, $2\\cdot 4=8$, giving $2x^2-6x+8$.",
+          "Add the two results: $x^3-3x^2+4x+2x^2-6x+8$.",
+          "Combine like terms: $-3x^2+2x^2=-x^2$ and $4x-6x=-2x$.",
+          "Write in standard form: $x^3-x^2-2x+8$."
+        ],
+        "answer": "$x^3-x^2-2x+8$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Add $(4x^2+x-7)+(2x^2-5x+3)$ and write the result in standard form.",
+      "hint": "Adding does not change any signs. Group like terms by matching the same variable and exponent, then combine.",
+      "solution": {
+        "steps": [
+          "Group like terms: $(4x^2+2x^2)+(x-5x)+(-7+3)$.",
+          "Combine each group: $6x^2-4x-4$.",
+          "The terms are in descending degree with no like terms remaining."
+        ],
+        "answer": "$6x^2-4x-4$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Subtract $(5x-3)-(2x+4)$ and write the result in standard form.",
+      "hint": "Distribute the minus sign to BOTH terms of the second binomial before combining.",
+      "solution": {
+        "steps": [
+          "Distribute the subtraction: $5x-3-2x-4$.",
+          "Group like terms: $(5x-2x)+(-3-4)$.",
+          "Combine: $3x-7$."
+        ],
+        "answer": "$3x-7$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Multiply $-2x^2(x^2-3x+5)$.",
+      "hint": "Distribute $-2x^2$ to each term. Use $x^m\\cdot x^n=x^{m+n}$, and watch the sign on each product.",
+      "solution": {
+        "steps": [
+          "Multiply term by term: $-2x^2\\cdot x^2=-2x^{2+2}=-2x^4$.",
+          "$-2x^2\\cdot(-3x)=6x^{2+1}=6x^3$.",
+          "$-2x^2\\cdot 5=-10x^2$.",
+          "Combine: $-2x^4+6x^3-10x^2$."
+        ],
+        "answer": "$-2x^4+6x^3-10x^2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Multiply the difference of squares: $(3x+5)(3x-5)$.",
+      "hint": "This matches the pattern $(a+b)(a-b)=a^2-b^2$ with $a=3x$ and $b=5$. The middle terms cancel.",
+      "solution": {
+        "steps": [
+          "Identify $a=3x$ and $b=5$, so the product is $a^2-b^2$.",
+          "Square the first term: $a^2=(3x)^2=9x^2$.",
+          "Square the second term: $b^2=5^2=25$.",
+          "Subtract: $9x^2-25$. The $-15x$ and $+15x$ middle terms cancel, which is why there is no middle term."
+        ],
+        "answer": "$9x^2-25$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Simplify $2(x+3)(x-1)-(x-4)^2$ by expanding and then combining like terms.",
+      "hint": "Expand $(x+3)(x-1)$ first and multiply by $2$, then expand $(x-4)^2$ using the square pattern, and subtract that whole result. Distribute the minus sign to every term.",
+      "solution": {
+        "steps": [
+          "Expand $(x+3)(x-1)=x^2-x+3x-3=x^2+2x-3$.",
+          "Multiply by $2$: $2(x^2+2x-3)=2x^2+4x-6$.",
+          "Expand $(x-4)^2=x^2-8x+16$.",
+          "Subtract the whole square, distributing the minus sign: $2x^2+4x-6-(x^2-8x+16)=2x^2+4x-6-x^2+8x-16$.",
+          "Combine like terms: $(2x^2-x^2)+(4x+8x)+(-6-16)=x^2+12x-22$."
+        ],
+        "answer": "$x^2+12x-22$"
+      }
+    }
+  ]
+}

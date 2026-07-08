@@ -1,0 +1,135 @@
+{
+  "standard": "A2.F-BF.B.4",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Functions — Building Functions",
+  "domainCode": "F-BF",
+  "cluster": "Build new functions from existing functions",
+  "clusterCode": "B",
+  "skillName": "Inverse Functions",
+
+  "description": "Students find the inverse of a one-to-one function and reason about what an inverse means. Given $f(x)$ they solve $y=f(x)$ for $x$ and swap the variables to write $f^{-1}(x)$, then verify the result by checking that $f(f^{-1}(x))=x$ and $f^{-1}(f(x))=x$. They evaluate inverses numerically from equations, tables, and points (if $f(a)=b$ then $f^{-1}(b)=a$), recognize that the graph of $f^{-1}$ is the reflection of the graph of $f$ across the line $y=x$, and determine whether a function is one-to-one (passes the horizontal line test) so that an inverse exists, restricting the domain when necessary. They handle linear, rational, radical, simple quadratic (with a stated domain restriction), cubic, and basic exponential or logarithmic relationships, and state the domain and range of the inverse as the swapped range and domain of the original.",
+
+  "subSkills": [
+    "Find the inverse algebraically: set $y=f(x)$, solve for $x$, then swap $x$ and $y$ to write $f^{-1}(x)$",
+    "Verify an inverse by composition, confirming $f(f^{-1}(x))=x$ and $f^{-1}(f(x))=x$",
+    "Evaluate an inverse at a point using $f(a)=b \\Rightarrow f^{-1}(b)=a$, including from a table or a list of points",
+    "Determine whether a function is one-to-one using the horizontal line test, and restrict the domain when it is not (for example $f(x)=x^2$ on $x\\ge 0$)",
+    "State the domain and range of $f^{-1}$ as the range and domain of $f$",
+    "Relate the graph of $f^{-1}$ to the graph of $f$ as a reflection across the line $y=x$, mapping points $(a,b)\\mapsto(b,a)$",
+    "Find inverses of rational functions of the form $\\frac{ax+b}{cx+d}$ and of radical and cubic functions"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Inverse of a linear function",
+      "example": "Find the inverse of $f(x)=3x-7$. Answer: $f^{-1}(x)=\\frac{x+7}{3}$."
+    },
+    {
+      "name": "Evaluate an inverse at a point",
+      "example": "Given $f(x)=2x+5$, find $f^{-1}(11)$. Answer: $f^{-1}(11)=3$."
+    },
+    {
+      "name": "Inverse from a table or set of points",
+      "example": "A function has $f(1)=4$, $f(2)=9$, $f(3)=16$. Find $f^{-1}(9)$. Answer: $f^{-1}(9)=2$."
+    },
+    {
+      "name": "Inverse of a radical function",
+      "example": "Find the inverse of $f(x)=\\sqrt{x-2}$ for $x\\ge 2$. Answer: $f^{-1}(x)=x^2+2$ for $x\\ge 0$."
+    },
+    {
+      "name": "Inverse of a quadratic with a restricted domain",
+      "example": "Find the inverse of $f(x)=x^2+1$ for $x\\ge 0$. Answer: $f^{-1}(x)=\\sqrt{x-1}$."
+    },
+    {
+      "name": "Inverse of a rational function",
+      "example": "Find the inverse of $f(x)=\\frac{x+3}{x-2}$. Answer: $f^{-1}(x)=\\frac{2x+3}{x-1}$."
+    },
+    {
+      "name": "Verify two functions are inverses by composition",
+      "example": "Show that $f(x)=\\frac{x}{4}-1$ and $g(x)=4x+4$ are inverses. Answer: $f(g(x))=\\frac{4x+4}{4}-1=x$ and $g(f(x))=4\\left(\\frac{x}{4}-1\\right)+4=x$, so they are inverses."
+    },
+    {
+      "name": "One-to-one test and existence of an inverse",
+      "example": "Does $f(x)=x^2$ on all real numbers have an inverse function? Answer: No, it fails the horizontal line test; an inverse exists only if the domain is restricted, for example to $x\\ge 0$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single straightforward inverse or evaluation with a linear function, or reading an inverse value directly from a point, table, or the rule $f(a)=b\\Rightarrow f^{-1}(b)=a$. One clean algebraic step (one inverse operation undone) and no domain restrictions.",
+      "constraints": [
+        "Function is linear, $f(x)=ax+b$ with small integer $a,b$, or given as a table or list of points",
+        "Task is find $f^{-1}(x)$ for a linear rule, or evaluate $f^{-1}$ at a value from a point or table",
+        "Solving for $x$ takes at most two inverse operations (for example subtract then divide) with no factoring or radicals",
+        "No domain restriction needed and no one-to-one judgment required"
+      ]
+    },
+    "Medium": {
+      "description": "A single inverse that requires undoing more than one operation or a non-linear but invertible form: radical, cubic, or a simple quadratic with a stated domain restriction, or verifying a given pair are inverses by one composition. The student must track the domain or range swap in at least one case.",
+      "constraints": [
+        "Function is radical $f(x)=\\sqrt{x+c}$, cubic $f(x)=ax^3+b$, or quadratic with a stated restriction such as $x\\ge 0$",
+        "Finding the inverse requires squaring, cubing, or a cube root, or solving a two-step equation",
+        "May ask the student to verify a pair are inverses with $f(g(x))=x$, or to state the domain and range of $f^{-1}$",
+        "tier1 (Easy to Medium) lives here: linear and single-operation inverses through radical, cubic, and restricted-quadratic inverses and one-composition verification"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step: rational functions where the variable appears in numerator and denominator and must be collected and factored, full two-direction composition verification, finding the correct domain restriction so an inverse exists, or chaining an evaluation through an inverse expression. Requires algebraic manipulation across several steps and careful domain or range reasoning.",
+      "constraints": [
+        "Function is rational $f(x)=\\frac{ax+b}{cx+d}$ requiring the variable to be collected and factored out, or a composite/multi-step expression",
+        "Verify $f(f^{-1}(x))=x$ and $f^{-1}(f(x))=x$ in both directions, or determine and justify a domain restriction that makes $f$ one-to-one",
+        "May require stating the domain and range of $f^{-1}$ including excluded values, or evaluating $f^{-1}$ at a point after first finding the rule",
+        "tier2 (Medium to Hard) lives here: rational inverses, two-direction verification, and domain-restriction problems, with no item overlap with tier1"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student confuses the inverse function with the reciprocal, reading $f^{-1}(x)$ as $\\frac{1}{f(x)}$",
+      "distractor": "For $f(x)=3x-7$ gives $f^{-1}(x)=\\frac{1}{3x-7}$ instead of $\\frac{x+7}{3}$"
+    },
+    {
+      "misconception": "Student swaps $x$ and $y$ but never solves for the new $y$, leaving the variables interchanged in place",
+      "distractor": "For $f(x)=3x-7$ writes $f^{-1}(x)=3y-7$ or $x=3y-7$ instead of $\\frac{x+7}{3}$"
+    },
+    {
+      "misconception": "Student undoes the operations in the wrong order, dividing before subtracting (failing to reverse the order of operations)",
+      "distractor": "For $f(x)=3x-7$ gives $f^{-1}(x)=\\frac{x}{3}+7$ instead of $\\frac{x+7}{3}$"
+    },
+    {
+      "misconception": "Student negates or reflects each term instead of inverting the operations, treating an inverse like an opposite",
+      "distractor": "For $f(x)=3x-7$ gives $f^{-1}(x)=-3x+7$ instead of $\\frac{x+7}{3}$"
+    },
+    {
+      "misconception": "Student forgets to apply the inverse operation to the entire expression when a radical or square is involved, only squaring one piece",
+      "distractor": "For $f(x)=\\sqrt{x-2}$ gives $f^{-1}(x)=x^2-2$ instead of $x^2+2$"
+    },
+    {
+      "misconception": "Student ignores the domain restriction on a quadratic and reports both branches of the square root",
+      "distractor": "For $f(x)=x^2+1$ on $x\\ge 0$ gives $f^{-1}(x)=\\pm\\sqrt{x-1}$ instead of $\\sqrt{x-1}$"
+    },
+    {
+      "misconception": "Student evaluates the original function instead of its inverse when asked for $f^{-1}(b)$",
+      "distractor": "For $f(x)=2x+5$ computes $f^{-1}(11)=2(11)+5=27$ instead of $3$"
+    },
+    {
+      "misconception": "Student concludes any function has an inverse function, ignoring the horizontal line test for one-to-one functions",
+      "distractor": "Says $f(x)=x^2$ on all real numbers has an inverse function, instead of recognizing it must be domain-restricted"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "standard": "A1.F-LE.B.5",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Linear, Quadratic, and Exponential Models",
+  "domainCode": "F-LE",
+  "cluster": "Interpret expressions for functions in terms of the situation they model",
+  "clusterCode": "B",
+  "skillName": "Parameters in Linear and Exponential Models",
+
+  "description": "For a linear model $f(x)=mx+b$ or an exponential model $f(x)=a\\cdot b^{x}$ that describes a real-world situation, students interpret each parameter in terms of the context. In a linear model they identify $b$ (or $f(0)$) as the starting value or initial amount and $m$ as the constant rate of change (amount added or removed per unit of the input), including its sign and units. In an exponential model they identify $a$ as the initial value at $x=0$ and $b$ as the growth or decay factor, translating $b$ into a percent rate of change (growth when $b>1$, decay when $0<b<1$, with percent $=|b-1|\\cdot 100\\%$). Students read these parameters from an equation, a table, a graph, or a verbal description, decide whether a situation is linear or exponential by whether it changes by a constant amount or a constant factor, and write a model from a described context with each parameter justified by the situation.",
+
+  "subSkills": [
+    "Identify the initial value (the $b$ in $f(x)=mx+b$ or the $a$ in $f(x)=a\\cdot b^{x}$) as $f(0)$ and interpret it in context",
+    "Interpret the slope $m$ of a linear model as a constant rate of change with correct sign and units (amount per unit input)",
+    "Interpret the base $b$ of an exponential model as a growth factor ($b>1$) or decay factor ($0<b<1$)",
+    "Convert an exponential base into a percent rate of change ($b=1+r$ for growth, $b=1-r$ for decay, $r=|b-1|$)",
+    "Distinguish a linear situation (changes by a constant amount) from an exponential situation (changes by a constant factor) from a table, graph, or description",
+    "Write a linear or exponential model from a verbal context and justify what each parameter represents",
+    "Read parameters from a table or graph (initial value at $x=0$, rate of change, or growth/decay factor) and state their contextual meaning"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Interpret the slope and intercept of a linear model",
+      "example": "A gym membership costs $C(t)=40t+75$ dollars after $t$ months. Interpret each number. The $\\$75$ is the one-time sign-up fee (the cost at $t=0$) and the $\\$40$ is the monthly rate, the amount the total cost increases each month."
+    },
+    {
+      "name": "Interpret the initial value and base of an exponential model",
+      "example": "A population is modeled by $P(t)=500\\cdot(1.08)^{t}$ where $t$ is in years. Interpret $500$ and $1.08$. The $500$ is the initial population at $t=0$ and the base $1.08$ means the population grows by $8\\%$ each year."
+    },
+    {
+      "name": "Convert a base to a percent growth or decay rate",
+      "example": "A car's value is $V(t)=24000\\cdot(0.85)^{t}$ dollars after $t$ years. Since the base $0.85=1-0.15$, the value decreases by $15\\%$ per year, and the initial value is $\\$24000$."
+    },
+    {
+      "name": "Decide linear vs. exponential from a context, table, or graph",
+      "example": "A savings plan adds $\\$50$ each week, while an investment grows by $3\\%$ each week. The first is linear (constant amount added) so $f(x)=50x+b$; the second is exponential (constant factor) so $g(x)=a\\cdot(1.03)^{x}$."
+    },
+    {
+      "name": "Write a model from a verbal context and justify the parameters",
+      "example": "A tank holds $200$ gallons and drains at $15$ gallons per minute. Write a model. $W(t)=200-15t$, where $200$ is the starting amount (initial value) and $-15$ is the rate of change because the water decreases by $15$ gallons each minute."
+    },
+    {
+      "name": "Read parameters from a table",
+      "example": "A table shows a bacteria count of $300,600,1200,2400$ at hours $0,1,2,3$. Because each value is multiplied by $2$, the model is exponential: $f(t)=300\\cdot 2^{t}$, where $300$ is the initial count and the base $2$ means the count doubles (grows $100\\%$) each hour."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A model is already given in standard form ($f(x)=mx+b$ or $f(x)=a\\cdot b^{x}$) and the student identifies or interprets ONE parameter whose meaning is direct: the initial value, the slope, or a base that is already $1\\pm r$ with a 'clean' percent (such as $1.05$ or $0.90$). No conversion or decision about model type is required. tier1 lives here and ramps into Medium.",
+      "constraints": [
+        "Model is supplied explicitly in $mx+b$ or $a\\cdot b^{x}$ form with positive integer or simple decimal parameters",
+        "Exactly one parameter is asked about and its meaning maps directly (initial value $=$ value at $x=0$, slope $=$ rate, base $1.05\\Rightarrow$ grows $5\\%$)",
+        "Bases are of the form $1+r$ or $1-r$ where $r$ is a whole-number percent ($1.05,1.10,0.90,0.80$)",
+        "Context is familiar (cost over time, savings, population) and units are stated"
+      ]
+    },
+    "Medium": {
+      "description": "Interpret the base as a percent growth or decay rate that requires the conversion $r=|b-1|$, interpret a negative or fractional linear rate, decide whether a situation is linear or exponential from a table or description, or interpret two parameters together. tier1 ends here and tier2 begins here.",
+      "constraints": [
+        "Convert a base such as $1.08$, $0.85$, or $1.125$ into a percent rate and state growth vs. decay",
+        "Interpret a linear model with a negative or fractional slope (e.g. draining, cooling) with correct sign and units",
+        "Classify a situation as linear or exponential from a table (constant difference vs. constant ratio) or a worded description and state the matching parameter",
+        "Interpret at least two parameters together, or read the initial value and rate from a table or graph"
+      ]
+    },
+    "Hard": {
+      "description": "Write a complete model from a multi-clause verbal description and justify every parameter, reverse a percent statement into a base and explain it, distinguish look-alike interpretations (constant amount vs. constant percent, or the meaning of $b$ vs. $a$), or critique a flawed interpretation. Requires synthesizing model type, initial value, and rate into one coherent, justified answer. tier2 lives here.",
+      "constraints": [
+        "Build a model from a story containing a starting amount and a per-unit change, choosing linear vs. exponential and justifying each parameter",
+        "Translate a percent statement ('decreases by $12\\%$ each year', 'triples each hour') into the correct base and explain the link $b=1\\pm r$ or $b=$ multiplier",
+        "Compare two models or two interpretations and decide which correctly describes the situation, identifying the parameter error in the wrong one",
+        "Reason about a parameter when the input units change or the model is partially specified (e.g. given $f(0)$ and one other point, identify the rate or factor)"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student treats the exponential base $b$ itself as the percent rate of change instead of converting with $r=|b-1|$",
+      "distractor": "For $P(t)=500\\cdot(1.08)^{t}$, says the population grows by $108\\%$ per year (reading $1.08$ as $108\\%$) instead of $8\\%$"
+    },
+    {
+      "misconception": "Student confuses the initial value with the rate parameter, swapping the roles of $a$/$b$ in linear or $a$/$b$ in exponential models",
+      "distractor": "For $C(t)=40t+75$, calls $\\$40$ the starting fee and $\\$75$ the monthly rate, or for $a\\cdot b^{x}$ calls the base the initial amount"
+    },
+    {
+      "misconception": "Student interprets a decay factor $0<b<1$ as growth, ignoring that $b<1$ means the quantity is decreasing",
+      "distractor": "For $V(t)=24000\\cdot(0.85)^{t}$, says the value grows by $85\\%$ (or by $15\\%$) per year instead of decaying by $15\\%$"
+    },
+    {
+      "misconception": "Student labels a situation that changes by a constant amount as exponential, or one that changes by a constant percent as linear",
+      "distractor": "Models 'adds $\\$50$ each week' with an exponential $a\\cdot(1.50)^{x}$, or models 'grows $3\\%$ each week' with a linear $3x+b$"
+    },
+    {
+      "misconception": "Student computes the decay percent as the base value rather than $1-b$ (forgets to subtract from $1$)",
+      "distractor": "For a base of $0.85$, reports the yearly decrease as $85\\%$ instead of $15\\%$"
+    },
+    {
+      "misconception": "Student drops the sign of a negative linear rate, treating a decreasing quantity as increasing",
+      "distractor": "For $W(t)=200-15t$, says the water increases by $15$ gallons per minute instead of decreasing by $15$ gallons per minute"
+    },
+    {
+      "misconception": "Student misreads which value is $f(0)$, taking a later table or graph value as the initial amount",
+      "distractor": "For a table starting at $300$ when $t=0$, reports the initial value as $600$ (the $t=1$ entry) instead of $300$"
+    },
+    {
+      "misconception": "Student reverses a percent statement into the wrong base, using $r$ directly as the base instead of $1\\pm r$",
+      "distractor": "For 'increases by $7\\%$ each year', writes the base as $0.07$ (or $7$) giving $a\\cdot(0.07)^{x}$ instead of $a\\cdot(1.07)^{x}$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "id": "6.SP.A.3--lesson",
+  "standard": "6.SP.A.3",
+  "clusterId": null,
+  "grade": "6",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Develop understanding of statistical variability",
+  "clusterCode": "A",
+  "skillName": "Measures of Center and Variation",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:41:22.446Z",
+  "intro": "Every numerical data set can be summarized two ways. A measure of center (the mean or the median) gives one typical value that stands in for the whole set. A measure of variation (the range, the interquartile range, or the mean absolute deviation) gives one number describing how spread out the values are. The mean is the sum of the values divided by how many there are, $\\bar{x}=\\frac{\\sum x}{n}$. The median is the middle value of an ordered list. The range is $\\text{max}-\\text{min}$, the IQR is $Q_3-Q_1$, and the MAD is the mean of how far each value sits from the mean. Knowing which kind of number a question wants, a typical value or a spread, is half the work.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Is each statistic a measure of center or a measure of variation: the median, the range, the mean, and the interquartile range?",
+      "solution": {
+        "steps": [
+          "A measure of center reports one typical value for the whole set. A measure of variation reports how spread out the values are.",
+          "The median is the middle value of the ordered data, so it describes a typical value: it is a measure of center.",
+          "The mean, $\\bar{x}=\\frac{\\sum x}{n}$, is the balancing point of the data, so it is also a measure of center.",
+          "The range, $\\text{max}-\\text{min}$, tells how far apart the extreme values are, so it is a measure of variation.",
+          "The interquartile range, $\\text{IQR}=Q_3-Q_1$, tells how spread out the middle half of the data is, so it is a measure of variation."
+        ],
+        "answer": "Center: median and mean. Variation: range and interquartile range."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find the mean of the data set $4, 7, 7, 10, 12$.",
+      "solution": {
+        "steps": [
+          "The mean is the sum of the values divided by the count: $\\bar{x}=\\frac{\\sum x}{n}$.",
+          "Add the values: $4+7+7+10+12=40$.",
+          "Count the values: there are $n=5$ of them.",
+          "Divide: $\\bar{x}=\\frac{40}{5}=8$.",
+          "So the typical value, the mean, is $8$."
+        ],
+        "answer": "$\\bar{x}=8$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Find the median of the data set $3, 9, 5, 12, 7, 7$.",
+      "solution": {
+        "steps": [
+          "The median is the middle of the ordered list, so first put the values in increasing order: $3, 5, 7, 7, 9, 12$.",
+          "Count the values: there are $n=6$, an even count, so there is no single middle value.",
+          "The two middle values are the $3$rd and $4$th: $7$ and $7$.",
+          "Average the two middle values: $\\frac{7+7}{2}=\\frac{14}{2}=7$.",
+          "So the median is $7$. Note that ordering first matters: the physically middle value of the unordered list ($5$) is not the median."
+        ],
+        "answer": "median $=7$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "For the data set $2, 4, 5, 8, 9, 11, 14$, find the range and the interquartile range (IQR).",
+      "solution": {
+        "steps": [
+          "The data is already in increasing order, so the smallest value is $2$ and the largest is $14$.",
+          "Range is $\\text{max}-\\text{min}=14-2=12$.",
+          "For the IQR, find the median first. With $n=7$ values, the median is the $4$th value, $8$.",
+          "$Q_1$ is the median of the lower half $2, 4, 5$, which is $4$. $Q_3$ is the median of the upper half $9, 11, 14$, which is $11$.",
+          "$\\text{IQR}=Q_3-Q_1=11-4=7$. The IQR ($7$) is smaller than the range ($12$) because it ignores the extreme low and high values."
+        ],
+        "answer": "range $=12$, IQR $=7$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Find the mean absolute deviation (MAD) of the data set $5, 7, 9$.",
+      "solution": {
+        "steps": [
+          "The MAD measures spread: it is the average distance of the values from their mean.",
+          "First find the mean: $\\bar{x}=\\frac{5+7+9}{3}=\\frac{21}{3}=7$.",
+          "Find each value's absolute distance from the mean: $|5-7|=2$, $|7-7|=0$, $|9-7|=2$. Use absolute value so the distances do not cancel.",
+          "Average those distances: $\\text{MAD}=\\frac{2+0+2}{3}=\\frac{4}{3}$.",
+          "So on average each value sits about $\\frac{4}{3}$ away from the mean of $7$."
+        ],
+        "answer": "$\\text{MAD}=\\frac{4}{3}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Which of these describes the spread of a data set rather than a typical value: the mean, the median, or the range? Explain.",
+      "hint": "A measure of center gives one typical value; a measure of variation tells how far apart the values are.",
+      "solution": {
+        "steps": [
+          "The mean and the median both report a single typical value, so they are measures of center.",
+          "The range, $\\text{max}-\\text{min}$, tells how far the largest and smallest values are apart, which describes spread.",
+          "So the range is the measure of variation here."
+        ],
+        "answer": "The range, because it measures how spread out the values are rather than giving a typical value."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Find the mean of the data set $6, 9, 10, 15$.",
+      "hint": "Add all the values, then divide by how many there are.",
+      "solution": {
+        "steps": [
+          "Add the values: $6+9+10+15=40$.",
+          "There are $n=4$ values.",
+          "Divide: $\\bar{x}=\\frac{40}{4}=10$."
+        ],
+        "answer": "$\\bar{x}=10$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Find the median of the data set $11, 4, 8, 4, 13, 9$.",
+      "hint": "Order the values first. With an even count, average the two middle values.",
+      "solution": {
+        "steps": [
+          "Order the values: $4, 4, 8, 9, 11, 13$.",
+          "There are $n=6$ values, an even count, so the median is the average of the $3$rd and $4$th values, $8$ and $9$.",
+          "$\\frac{8+9}{2}=\\frac{17}{2}=8.5$."
+        ],
+        "answer": "median $=8.5$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Find the mean absolute deviation (MAD) of the data set $3, 6, 6, 9$.",
+      "hint": "Find the mean first, then average the absolute distances of each value from that mean.",
+      "solution": {
+        "steps": [
+          "Find the mean: $\\bar{x}=\\frac{3+6+6+9}{4}=\\frac{24}{4}=6$.",
+          "Absolute distances from the mean: $|3-6|=3$, $|6-6|=0$, $|6-6|=0$, $|9-6|=3$.",
+          "Average them: $\\text{MAD}=\\frac{3+0+0+3}{4}=\\frac{6}{4}=\\frac{3}{2}$."
+        ],
+        "answer": "$\\text{MAD}=\\frac{3}{2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Two classes each have a mean quiz score of $80$. Class A has a range of $6$ points, and class B has a range of $40$ points. What does the difference in range tell you about the two classes?",
+      "hint": "The mean is a measure of center; the range is a measure of variation. Equal means do not force equal spreads.",
+      "solution": {
+        "steps": [
+          "Both classes share the same center: a mean score of $80$, so the typical score is the same in each.",
+          "The range is a measure of variation, telling how far apart the highest and lowest scores are.",
+          "Class A's range of $6$ means its scores are bunched close to $80$. Class B's range of $40$ means its scores are spread much more widely, even though the typical score matches.",
+          "So equal centers do not mean identical data: class B's scores vary far more than class A's."
+        ],
+        "answer": "Both classes have the same typical score ($80$), but class B's scores are much more spread out, while class A's scores are clustered tightly around $80$."
+      }
+    }
+  ]
+}

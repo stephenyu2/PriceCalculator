@@ -1,0 +1,142 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent. One blueprint per standard.",
+
+  "standard": "GEO.G-C.B.5",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Circles",
+  "domainCode": "G-C",
+  "cluster": "Find arc lengths and areas of sectors of circles",
+  "clusterCode": "B",
+  "skillName": "Arc Length and Sector Area",
+
+  "description": "Students derive and apply the relationships for arc length and sector area in a circle of radius $r$. The central idea, justified by similarity, is that all circles are similar, so a central angle $\\theta$ cuts off an arc whose length is a fixed fraction of the circumference and a sector whose area is the same fixed fraction of the whole circle's area. Students express that fraction as $\\frac{\\theta}{360^\\circ}$ when $\\theta$ is in degrees, or recognize $\\theta = \\frac{s}{r}$ (the radian measure) as the constant of proportionality between arc length and radius. They compute arc length with $s = \\frac{\\theta}{360^\\circ}\\cdot 2\\pi r$ or $s = r\\theta$ (radians), and sector area with $A = \\frac{\\theta}{360^\\circ}\\cdot \\pi r^2$ or $A = \\frac{1}{2}r^2\\theta$ (radians). They also reverse these to solve for the radius or the central angle, give exact answers in terms of $\\pi$, and apply the formulas in real-world contexts.",
+
+  "subSkills": [
+    "Justify by similarity that arc length is proportional to radius and that the radian measure $\\theta = \\frac{s}{r}$ is the constant of proportionality",
+    "Compute arc length in degrees using $s = \\frac{\\theta}{360^\\circ}\\cdot 2\\pi r$",
+    "Compute arc length in radians using $s = r\\theta$",
+    "Compute sector area in degrees using $A = \\frac{\\theta}{360^\\circ}\\cdot \\pi r^2$",
+    "Compute sector area in radians using $A = \\frac{1}{2}r^2\\theta$",
+    "Solve for the central angle $\\theta$ given arc length or sector area and radius",
+    "Solve for the radius $r$ given arc length or sector area and central angle",
+    "Apply arc length and sector area to real-world problems (pizza slices, clock hands, pulleys, irrigation, fan blades)",
+    "Express answers exactly in terms of $\\pi$ (and as a decimal approximation only when requested)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Arc length from central angle (degrees)",
+      "example": "A circle has radius $r = 9$. Find the length of the arc intercepted by a central angle of $40^\\circ$. Answer: $s = \\frac{40^\\circ}{360^\\circ}\\cdot 2\\pi(9) = \\frac{1}{9}\\cdot 18\\pi = 2\\pi$."
+    },
+    {
+      "name": "Arc length from central angle (radians)",
+      "example": "A circle has radius $r = 6$ and a central angle of $\\frac{\\pi}{3}$ radians. Find the arc length. Answer: $s = r\\theta = 6\\cdot\\frac{\\pi}{3} = 2\\pi$."
+    },
+    {
+      "name": "Sector area from central angle (degrees)",
+      "example": "Find the area of a sector with radius $r = 10$ and central angle $72^\\circ$. Answer: $A = \\frac{72^\\circ}{360^\\circ}\\cdot \\pi(10)^2 = \\frac{1}{5}\\cdot 100\\pi = 20\\pi$."
+    },
+    {
+      "name": "Sector area from central angle (radians)",
+      "example": "Find the area of a sector with radius $r = 4$ and central angle $\\frac{3\\pi}{4}$ radians. Answer: $A = \\frac{1}{2}r^2\\theta = \\frac{1}{2}(16)\\cdot\\frac{3\\pi}{4} = 6\\pi$."
+    },
+    {
+      "name": "Solve for the central angle",
+      "example": "An arc of length $5\\pi$ lies on a circle of radius $r = 15$. Find the central angle in degrees. Answer: from $5\\pi = \\frac{\\theta}{360^\\circ}\\cdot 2\\pi(15)$, $\\frac{\\theta}{360^\\circ} = \\frac{5\\pi}{30\\pi} = \\frac{1}{6}$, so $\\theta = 60^\\circ$."
+    },
+    {
+      "name": "Solve for the radius",
+      "example": "A sector with central angle $90^\\circ$ has area $9\\pi$. Find the radius. Answer: $9\\pi = \\frac{90^\\circ}{360^\\circ}\\cdot\\pi r^2 = \\frac{1}{4}\\pi r^2$, so $r^2 = 36$ and $r = 6$."
+    },
+    {
+      "name": "Proportionality / radian definition",
+      "example": "On two circles, a $60^\\circ$ central angle cuts an arc of length $2\\pi$ on the smaller circle (radius $6$) and an arc of length $4\\pi$ on the larger circle (radius $12$). Show the radian measure $\\theta = \\frac{s}{r}$ is the same. Answer: $\\frac{2\\pi}{6} = \\frac{\\pi}{3}$ and $\\frac{4\\pi}{12} = \\frac{\\pi}{3}$, equal because the angle is fixed and arc length is proportional to radius."
+    },
+    {
+      "name": "Real-world application",
+      "example": "A pizza of radius $14$ in is cut into $8$ equal slices. Find the area of one slice and the length of its curved crust. Answer: each slice is a $45^\\circ$ sector; $A = \\frac{1}{8}\\pi(14)^2 = \\frac{196\\pi}{8} = \\frac{49\\pi}{2}$ in$^2$, crust $s = \\frac{1}{8}\\cdot 2\\pi(14) = \\frac{7\\pi}{2}$ in."
+    }
+  ],
+
+  "difficultyRubric": {
+    "_comment": "A single ramped worksheet of 15 items moves Easy (items 1-5) to Medium (6-11) to Hard (12-15). If split, tier1 = Easy to Medium (direct forward computation of arc length and sector area in degrees and radians), tier2 = Medium to Hard (solving for angle or radius, multi-step and real-world). This standard is conceptually contained, so the default single ramped worksheet is used.",
+    "Easy": {
+      "description": "One-step forward computation using a single formula with clean, whole-number inputs whose fraction reduces neatly. Find arc length or sector area given radius and central angle, where the angle is a common fraction of the circle (such as $30^\\circ$, $45^\\circ$, $60^\\circ$, $90^\\circ$, $120^\\circ$, $180^\\circ$, or a benchmark radian like $\\frac{\\pi}{2}$).",
+      "constraints": [
+        "Exactly one formula applied, no rearranging",
+        "Central angle divides $360^\\circ$ evenly so $\\frac{\\theta}{360^\\circ}$ reduces to a simple unit fraction",
+        "Radius is a small whole number; radius squared stays manageable for sector area",
+        "Answer is an exact multiple of $\\pi$ with no further simplification beyond reducing one fraction"
+      ]
+    },
+    "Medium": {
+      "description": "A direct computation that requires fraction simplification or a single algebraic rearrangement. Either the angle does not divide $360^\\circ$ evenly (so $\\frac{\\theta}{360^\\circ}$ must be reduced), or the student must solve $s = \\frac{\\theta}{360^\\circ}\\cdot 2\\pi r$ / $A = \\frac{\\theta}{360^\\circ}\\cdot\\pi r^2$ for the angle or radius from clean given values. Radian-form items use $s = r\\theta$ or $A = \\frac{1}{2}r^2\\theta$ with non-benchmark fractions of $\\pi$.",
+      "constraints": [
+        "Fraction $\\frac{\\theta}{360^\\circ}$ requires GCF reduction (e.g. $\\frac{75^\\circ}{360^\\circ} = \\frac{5}{24}$)",
+        "One algebraic step to solve for $\\theta$ or $r$ (for radius, includes taking a square root)",
+        "Mixes degree and radian forms; answers may be exact radicals such as $r = 2\\sqrt{5}$",
+        "Radius may be a non-trivial value and sector area requires squaring it"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems that chain two relationships, require setup from a verbal or figure description, or compare two configurations. Includes finding both arc length and sector area for the same figure, combining a degree-to-radian conversion with a formula, deriving or justifying the proportionality by similarity, computing the perimeter of a sector (two radii plus arc), or finding the area of a segment (sector minus triangle).",
+      "constraints": [
+        "Two or more chained steps, or extract the radius/angle from a word problem before computing",
+        "May require converting between degrees and radians before applying a formula",
+        "Perimeter of a sector ($2r + s$) or area of a circular segment (sector area minus triangle area)",
+        "Justification or comparison items, e.g. proving by similarity that $\\frac{s}{r}$ is constant across circles for a fixed central angle",
+        "Exact answers in terms of $\\pi$ and radicals; decimal approximation only when explicitly requested"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student uses the circumference formula for sector area, or the area formula for arc length, swapping $2\\pi r$ and $\\pi r^2$",
+      "distractor": "For radius $10$ and $72^\\circ$ computes arc-length-style $\\frac{72^\\circ}{360^\\circ}\\cdot 2\\pi(10) = 4\\pi$ when the sector AREA $20\\pi$ was asked (or reports $20\\pi$ as a length)"
+    },
+    {
+      "misconception": "Student multiplies by the whole angle instead of the fraction $\\frac{\\theta}{360^\\circ}$, treating the central angle as a full multiplier",
+      "distractor": "For radius $9$ and $40^\\circ$ computes $40\\cdot 2\\pi(9) = 720\\pi$ instead of $\\frac{40^\\circ}{360^\\circ}\\cdot 18\\pi = 2\\pi$"
+    },
+    {
+      "misconception": "Student uses the diameter in place of the radius (or the radius in place of the diameter)",
+      "distractor": "For radius $9$, $40^\\circ$ uses $r = 18$ and gets $4\\pi$ instead of $2\\pi$ for arc length"
+    },
+    {
+      "misconception": "Student plugs a degree angle directly into a radian formula ($s = r\\theta$ or $A = \\frac{1}{2}r^2\\theta$) without converting",
+      "distractor": "For radius $6$ and $60^\\circ$ computes $s = 6\\cdot 60 = 360$ instead of converting to $\\frac{\\pi}{3}$ to get $s = 2\\pi$"
+    },
+    {
+      "misconception": "Student forgets to square the radius in the sector area formula, using $\\pi r$ instead of $\\pi r^2$",
+      "distractor": "For radius $10$ and $72^\\circ$ computes $\\frac{1}{5}\\cdot\\pi(10) = 2\\pi$ instead of $\\frac{1}{5}\\cdot\\pi(100) = 20\\pi$"
+    },
+    {
+      "misconception": "Student forgets the factor of $\\frac{1}{2}$ in the radian sector-area formula $A = \\frac{1}{2}r^2\\theta$",
+      "distractor": "For radius $4$ and $\\frac{3\\pi}{4}$ computes $A = (16)\\cdot\\frac{3\\pi}{4} = 12\\pi$ instead of $6\\pi$"
+    },
+    {
+      "misconception": "When solving for the radius from sector area, student forgets to take the square root after isolating $r^2$",
+      "distractor": "From $9\\pi = \\frac{1}{4}\\pi r^2$ gets $r^2 = 36$ and reports $r = 36$ instead of $r = 6$"
+    },
+    {
+      "misconception": "Student confuses arc length with the straight chord length, or sector area with triangle area, ignoring the curvature",
+      "distractor": "Reports the chord or the triangle $\\frac{1}{2}r^2\\sin\\theta$ instead of the curved arc length or the full sector area"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet (Easy->Hard across 15 items). lesson 5 worked examples + 5 practice, quiz 8 multiple choice.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

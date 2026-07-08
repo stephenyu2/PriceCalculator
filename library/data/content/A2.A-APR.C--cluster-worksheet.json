@@ -1,0 +1,231 @@
+{
+  "id": "A2.A-APR.C--cluster-worksheet",
+  "standard": null,
+  "clusterId": "A2.A-APR.C",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Arithmetic with Polynomials and Rational Expressions",
+  "domainCode": "A-APR",
+  "cluster": "Use polynomial identities to solve problems",
+  "clusterCode": "C",
+  "skillName": "Use polynomial identities to solve problems",
+  "materialType": "cluster-worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "intro": "This worksheet covers the cluster Use polynomial identities to solve problems. Every item targets standard A2.A-APR.C.4 (Polynomial Identities). The problems ramp from direct expansion and pattern recognition through proving identities and generating Pythagorean triples, up to multi-step synthesis, disproof by counterexample, and general arguments. Key identities: $(a\\pm b)^2=a^2\\pm 2ab+b^2$, $a^2-b^2=(a-b)(a+b)$, $a^3\\pm b^3=(a\\pm b)(a^2\\mp ab+b^2)$, and the triple generator $(x^2+y^2)^2=(x^2-y^2)^2+(2xy)^2$.",
+  "items": [
+    {
+      "id": 1,
+      "standard": "A2.A-APR.C.4",
+      "prompt": "Expand $(x+2)^2$ and write the result as a trinomial.",
+      "answer": "$x^2+4x+4$",
+      "solution": {
+        "steps": [
+          "Rewrite the square as a product: $(x+2)^2=(x+2)(x+2)$.",
+          "Distribute every pair: $x\\cdot x+x\\cdot 2+2\\cdot x+2\\cdot 2=x^2+2x+2x+4$.",
+          "Combine the like middle terms $2x+2x=4x$: $x^2+4x+4$.",
+          "Note the middle term $4x=2\\cdot x\\cdot 2$ is the $2ab$ term and must not be dropped."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "standard": "A2.A-APR.C.4",
+      "prompt": "Expand $(x-5)^2$ and write the result as a trinomial.",
+      "answer": "$x^2-10x+25$",
+      "solution": {
+        "steps": [
+          "Rewrite as a product: $(x-5)^2=(x-5)(x-5)$.",
+          "Distribute: $x\\cdot x+x\\cdot(-5)+(-5)\\cdot x+(-5)(-5)=x^2-5x-5x+25$.",
+          "Combine the like middle terms $-5x-5x=-10x$: $x^2-10x+25$.",
+          "The middle term is $2ab=2\\cdot x\\cdot(-5)=-10x$, so its sign is negative."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "standard": "A2.A-APR.C.4",
+      "prompt": "Use the difference-of-squares identity $a^2-b^2=(a-b)(a+b)$ to expand $(x-4)(x+4)$.",
+      "answer": "$x^2-16$",
+      "solution": {
+        "steps": [
+          "Match the form $(a-b)(a+b)$ with $a=x$ and $b=4$.",
+          "The identity gives $(a-b)(a+b)=a^2-b^2$, so the product is $x^2-4^2$.",
+          "Evaluate $4^2=16$, giving $x^2-16$.",
+          "The cross terms $-4x$ and $+4x$ cancel, which is why the result has no middle term."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "standard": "A2.A-APR.C.4",
+      "prompt": "Factor $x^2-49$ using a polynomial identity.",
+      "answer": "$(x-7)(x+7)$",
+      "solution": {
+        "steps": [
+          "Both terms are perfect squares and the expression is a difference: $x^2=(x)^2$ and $49=7^2$.",
+          "This fits $a^2-b^2$ with $a=x$ and $b=7$.",
+          "Apply $a^2-b^2=(a-b)(a+b)$: $x^2-49=(x-7)(x+7)$.",
+          "Check by expanding: $(x-7)(x+7)=x^2+7x-7x-49=x^2-49$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "standard": "A2.A-APR.C.4",
+      "prompt": "Substitute $x=2$ into the identity $(x+1)^2=x^2+2x+1$ to confirm both sides are equal.",
+      "answer": "Both sides equal $9$, confirming the identity at $x=2$.",
+      "solution": {
+        "steps": [
+          "Left side: $(x+1)^2=(2+1)^2=3^2=9$.",
+          "Right side: $x^2+2x+1=2^2+2(2)+1=4+4+1=9$.",
+          "Since $9=9$, the two sides agree at $x=2$.",
+          "An identity holds for every value, so this single check is consistent with the identity but does not by itself prove it for all $x$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "standard": "A2.A-APR.C.4",
+      "prompt": "Prove the identity $(x-3)^2=x^2-6x+9$ by expanding the left side and showing it equals the right side.",
+      "answer": "$(x-3)^2=x^2-6x+9$, proven by expansion.",
+      "solution": {
+        "steps": [
+          "Rewrite as a product: $(x-3)^2=(x-3)(x-3)$.",
+          "Distribute every pair: $x\\cdot x+x\\cdot(-3)+(-3)\\cdot x+(-3)(-3)=x^2-3x-3x+9$.",
+          "Combine the like middle terms $-3x-3x=-6x$: $x^2-6x+9$.",
+          "This matches the right side exactly, so the equation is true for all $x$ and is an identity."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "standard": "A2.A-APR.C.4",
+      "prompt": "Factor $16x^2-81$ completely using a polynomial identity.",
+      "answer": "$(4x-9)(4x+9)$",
+      "solution": {
+        "steps": [
+          "Write each term as a square: $16x^2=(4x)^2$ and $81=9^2$, a difference of squares.",
+          "Set $a=4x$ and $b=9$.",
+          "Apply $a^2-b^2=(a-b)(a+b)$: $16x^2-81=(4x-9)(4x+9)$.",
+          "Neither factor shares a common numerical factor that can be pulled out, so this is the complete factorization. Check: $(4x-9)(4x+9)=16x^2-81$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "standard": "A2.A-APR.C.4",
+      "prompt": "Use the identity $a^2-b^2=(a-b)(a+b)$ to compute $52\\cdot 48$ without a calculator.",
+      "answer": "$2496$",
+      "solution": {
+        "steps": [
+          "Notice $52$ and $48$ are equally spaced around $50$: $52=50+2$ and $48=50-2$.",
+          "So the product matches $(a+b)(a-b)$ with $a=50$ and $b=2$.",
+          "The identity gives $52\\cdot 48=50^2-2^2$.",
+          "Evaluate: $50^2=2500$ and $2^2=4$, so $2500-4=2496$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "standard": "A2.A-APR.C.4",
+      "prompt": "Is $x^2-25=(x-5)(x+5)$ an identity or a conditional equation? Justify your answer.",
+      "answer": "An identity, true for all $x$.",
+      "solution": {
+        "steps": [
+          "Expand the right side: $(x-5)(x+5)=x^2+5x-5x-25=x^2-25$.",
+          "The right side simplifies to exactly the left side, so the equation holds for every value of $x$.",
+          "An equation true for all values of its variable is an identity, not a conditional equation.",
+          "By contrast, $x^2-25=0$ would be conditional, true only at $x=\\pm 5$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "standard": "A2.A-APR.C.4",
+      "prompt": "Prove the identity $(a-b)(a^2+ab+b^2)=a^3-b^3$ by expanding the left side.",
+      "answer": "$(a-b)(a^2+ab+b^2)=a^3-b^3$, proven by expansion.",
+      "solution": {
+        "steps": [
+          "Distribute $a$ across the trinomial: $a(a^2+ab+b^2)=a^3+a^2b+ab^2$.",
+          "Distribute $-b$ across the trinomial: $-b(a^2+ab+b^2)=-a^2b-ab^2-b^3$.",
+          "Add the two results: $a^3+a^2b+ab^2-a^2b-ab^2-b^3$.",
+          "The $a^2b$ terms cancel and the $ab^2$ terms cancel, leaving $a^3-b^3$, which matches the right side. The identity is established."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "standard": "A2.A-APR.C.4",
+      "prompt": "Factor $27x^3+8$ using a sum-of-cubes identity.",
+      "answer": "$(3x+2)(9x^2-6x+4)$",
+      "solution": {
+        "steps": [
+          "Recognize a sum of cubes: $27x^3=(3x)^3$ and $8=2^3$, so $a=3x$ and $b=2$.",
+          "Apply $a^3+b^3=(a+b)(a^2-ab+b^2)$; the middle term of the trinomial is $-ab$.",
+          "Compute the pieces: $a^2=(3x)^2=9x^2$, $ab=(3x)(2)=6x$, $b^2=4$.",
+          "Assemble: $27x^3+8=(3x+2)(9x^2-6x+4)$. The trinomial has discriminant $(-6)^2-4(9)(4)=36-144=-108<0$, so it does not factor further over the reals."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "standard": "A2.A-APR.C.4",
+      "prompt": "Use the identity $(x^2+y^2)^2=(x^2-y^2)^2+(2xy)^2$ with $x=5$ and $y=2$ to generate a Pythagorean triple, and verify it satisfies $a^2+b^2=c^2$.",
+      "answer": "The triple $(20,21,29)$, and $20^2+21^2=29^2$.",
+      "solution": {
+        "steps": [
+          "Compute the pieces with $x=5$, $y=2$: $x^2-y^2=25-4=21$, $2xy=2(5)(2)=20$, and $x^2+y^2=25+4=29$.",
+          "The two legs are $21$ and $20$, and the hypotenuse is the largest value $x^2+y^2=29$, giving the triple $(20,21,29)$.",
+          "Verify: $20^2+21^2=400+441=841$.",
+          "And $29^2=841$, so $20^2+21^2=29^2$ confirms a valid Pythagorean triple."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "standard": "A2.A-APR.C.4",
+      "prompt": "Is $(x-y)^2=x^2-y^2$ an identity? If not, give a counterexample and state the correct identity.",
+      "answer": "Not an identity. Counterexample $x=3$, $y=1$ gives $4\\neq 8$. The correct identity is $(x-y)^2=x^2-2xy+y^2$.",
+      "solution": {
+        "steps": [
+          "Test $x=3$, $y=1$. Left side: $(3-1)^2=2^2=4$. Right side: $3^2-1^2=9-1=8$.",
+          "Since $4\\neq 8$, the equation fails for this pair, so it is not true for all values and is not an identity.",
+          "Expanding correctly gives $(x-y)^2=x^2-2xy+y^2$.",
+          "The error is distributing the exponent and dropping the middle term; the correct identity keeps the $-2xy$ term."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "standard": "A2.A-APR.C.4",
+      "prompt": "Factor $x^4-16$ completely by applying the difference-of-squares identity twice.",
+      "answer": "$(x-2)(x+2)(x^2+4)$",
+      "solution": {
+        "steps": [
+          "Write $x^4-16$ as a difference of squares: $x^4=(x^2)^2$ and $16=4^2$, so with $a=x^2$, $b=4$ it is $(x^2-4)(x^2+4)$.",
+          "The first factor $x^2-4$ is itself a difference of squares with $a=x$, $b=2$: $x^2-4=(x-2)(x+2)$.",
+          "The factor $x^2+4$ is a sum of squares and does not factor over the reals.",
+          "Combine: $x^4-16=(x-2)(x+2)(x^2+4)$. Check by re-expanding: $(x-2)(x+2)=x^2-4$, then $(x^2-4)(x^2+4)=x^4-16$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "standard": "A2.A-APR.C.4",
+      "prompt": "Prove that the product of two consecutive odd integers is always one less than a perfect square. Use a polynomial identity to justify your argument.",
+      "answer": "If the integers are $2n-1$ and $2n+1$, their product is $4n^2-1=(2n)^2-1$, one less than the perfect square $(2n)^2$.",
+      "solution": {
+        "steps": [
+          "Represent two consecutive odd integers as $2n-1$ and $2n+1$ for an integer $n$; they differ by $2$ and are centered on the even number $2n$.",
+          "Their product fits the difference-of-squares form $(a-b)(a+b)$ with $a=2n$ and $b=1$.",
+          "Apply $a^2-b^2=(a-b)(a+b)$ in reverse: $(2n-1)(2n+1)=(2n)^2-1^2=4n^2-1$.",
+          "Since $(2n)^2=4n^2$ is a perfect square, the product $4n^2-1$ is exactly one less than that perfect square. This holds for every integer $n$, proving the claim. For example $n=3$ gives $5\\cdot 7=35=36-1=6^2-1$."
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T19:56:47.282Z",
+  "generatedAt": "2026-06-24T19:56:47.282Z"
+}

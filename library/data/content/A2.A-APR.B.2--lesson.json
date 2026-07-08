@@ -1,0 +1,180 @@
+{
+  "id": "A2.A-APR.B.2--lesson",
+  "standard": "A2.A-APR.B.2",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Arithmetic with Polynomials and Rational Expressions",
+  "domainCode": "A-APR",
+  "cluster": "Understand the relationship between zeros and factors of polynomials",
+  "clusterCode": "B",
+  "skillName": "Remainder Theorem",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "The Remainder Theorem says that when you divide a polynomial $p(x)$ by $x-a$, the remainder is simply $p(a)$. So instead of doing long or synthetic division, you can find a remainder by plugging $a$ into the polynomial. The Factor Theorem is the special case where the remainder is $0$: $(x-a)$ is a factor of $p(x)$ exactly when $p(a)=0$. The key habit is reading $a$ correctly from the divisor: for $x-a$ you use the value that makes the divisor zero, so $x+3$ gives $a=-3$ and $2x-1$ gives $a=\\frac{1}{2}$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Find the remainder when $p(x)=x^3-4x^2+2x-5$ is divided by $x-3$.",
+      "solution": {
+        "steps": [
+          "The divisor is $x-3$, so $a=3$. By the Remainder Theorem, the remainder equals $p(3)$.",
+          "Substitute $x=3$: $p(3)=(3)^3-4(3)^2+2(3)-5$.",
+          "Evaluate each power: $(3)^3=27$ and $(3)^2=9$, so $p(3)=27-4(9)+6-5$.",
+          "Multiply and combine: $p(3)=27-36+6-5=-8$.",
+          "The remainder is $p(3)=-8$, with no division needed."
+        ],
+        "answer": "$-8$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find the remainder when $p(x)=2x^3+5x^2-3$ is divided by $x+2$.",
+      "solution": {
+        "steps": [
+          "Write the divisor as $x-a$: $x+2=x-(-2)$, so $a=-2$.",
+          "By the Remainder Theorem, the remainder is $p(-2)$. Notice $p(x)$ has no $x^1$ term, so its coefficient is $0$.",
+          "Substitute $x=-2$: $p(-2)=2(-2)^3+5(-2)^2-3$.",
+          "Track the signs of the powers: $(-2)^3=-8$ and $(-2)^2=4$, so $p(-2)=2(-8)+5(4)-3$.",
+          "Combine: $p(-2)=-16+20-3=1$.",
+          "The remainder is $p(-2)=1$."
+        ],
+        "answer": "$1$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Use synthetic division to find the remainder when $p(x)=x^3-2x^2-5x+6$ is divided by $x-3$, and confirm it equals $p(3)$.",
+      "solution": {
+        "steps": [
+          "The divisor is $x-3$, so the synthetic-division number is $a=3$. List the coefficients of $p(x)$ in order: $1,\\ -2,\\ -5,\\ 6$.",
+          "Bring down the leading $1$. Multiply $1\\cdot 3=3$ and add to $-2$: $-2+3=1$.",
+          "Multiply $1\\cdot 3=3$ and add to $-5$: $-5+3=-2$.",
+          "Multiply $-2\\cdot 3=-6$ and add to $6$: $6+(-6)=0$.",
+          "The bottom row is $1,\\ 1,\\ -2,\\ 0$. The last entry $0$ is the remainder, and the others give the quotient $x^2+x-2$.",
+          "Confirm by direct evaluation: $p(3)=27-2(9)-15+6=27-18-15+6=0$, matching the synthetic remainder."
+        ],
+        "answer": "Remainder $0$ (quotient $x^2+x-2$)"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Is $x-2$ a factor of $p(x)=x^3-x^2-4x+4$? Use the Factor Theorem to decide.",
+      "solution": {
+        "steps": [
+          "The Factor Theorem says $(x-a)$ is a factor of $p(x)$ if and only if $p(a)=0$. Here the divisor $x-2$ gives $a=2$.",
+          "Evaluate $p(2)=(2)^3-(2)^2-4(2)+4$.",
+          "Compute the powers: $(2)^3=8$ and $(2)^2=4$, so $p(2)=8-4-8+4$.",
+          "Combine: $p(2)=8-4-8+4=0$.",
+          "Because $p(2)=0$, the binomial $(x-2)$ is a factor of $p(x)$."
+        ],
+        "answer": "Yes, $(x-2)$ is a factor because $p(2)=0$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Find the value of $k$ so that $x-2$ is a factor of $p(x)=x^3+kx-6$.",
+      "solution": {
+        "steps": [
+          "By the Factor Theorem, $(x-2)$ is a factor exactly when $p(2)=0$. Set up that equation.",
+          "Evaluate $p(2)=(2)^3+k(2)-6=8+2k-6$.",
+          "Simplify: $p(2)=2k+2$.",
+          "Set the remainder to $0$ for a factor: $2k+2=0$.",
+          "Solve: $2k=-2$, so $k=-1$.",
+          "Check: with $k=-1$, $p(x)=x^3-x-6$ and $p(2)=8-2-6=0$, confirming $(x-2)$ is a factor."
+        ],
+        "answer": "$k=-1$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Find the remainder when $p(x)=x^3-4x+1$ is divided by $x-2$.",
+      "hint": "The divisor $x-2$ gives $a=2$, so the remainder is $p(2)$. Remember $p(x)$ has no $x^2$ term.",
+      "solution": {
+        "steps": [
+          "By the Remainder Theorem, the remainder is $p(2)$.",
+          "Substitute: $p(2)=(2)^3-4(2)+1=8-8+1$.",
+          "Combine: $p(2)=1$.",
+          "The remainder is $1$."
+        ],
+        "answer": "$1$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Find the remainder when $p(x)=x^3+x^2-7$ is divided by $x+2$.",
+      "hint": "Rewrite $x+2$ as $x-(-2)$, so $a=-2$. Watch the signs of $(-2)^3$ and $(-2)^2$.",
+      "solution": {
+        "steps": [
+          "The divisor $x+2$ gives $a=-2$, so the remainder is $p(-2)$.",
+          "Substitute: $p(-2)=(-2)^3+(-2)^2-7$.",
+          "Evaluate the powers carefully: $(-2)^3=-8$ and $(-2)^2=4$, so $p(-2)=-8+4-7$.",
+          "Combine: $p(-2)=-11$.",
+          "The remainder is $-11$."
+        ],
+        "answer": "$-11$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Is $x+1$ a factor of $p(x)=x^3+2x^2-x-2$? Justify your answer with the Factor Theorem.",
+      "hint": "$x+1$ means $a=-1$. The binomial is a factor only if $p(-1)=0$.",
+      "solution": {
+        "steps": [
+          "The divisor $x+1$ gives $a=-1$. Apply the Factor Theorem by computing $p(-1)$.",
+          "Substitute: $p(-1)=(-1)^3+2(-1)^2-(-1)-2$.",
+          "Evaluate: $(-1)^3=-1$ and $(-1)^2=1$, so $p(-1)=-1+2(1)+1-2$.",
+          "Combine: $p(-1)=-1+2+1-2=0$.",
+          "Since $p(-1)=0$, $(x+1)$ is a factor of $p(x)$."
+        ],
+        "answer": "Yes, $(x+1)$ is a factor because $p(-1)=0$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Is $2x-1$ a factor of $p(x)=2x^3+x^2-1$? Use the Remainder Theorem with the correct value of $a$.",
+      "hint": "Set the divisor to zero: $2x-1=0$ gives $x=\\frac{1}{2}$. Test whether $p\\!\\left(\\frac{1}{2}\\right)=0$.",
+      "solution": {
+        "steps": [
+          "Find the value that makes the divisor zero: $2x-1=0$ gives $x=\\frac{1}{2}$, so evaluate $p\\!\\left(\\frac{1}{2}\\right)$.",
+          "Substitute: $p\\!\\left(\\frac{1}{2}\\right)=2\\left(\\frac{1}{2}\\right)^3+\\left(\\frac{1}{2}\\right)^2-1$.",
+          "Evaluate the powers: $\\left(\\frac{1}{2}\\right)^3=\\frac{1}{8}$ and $\\left(\\frac{1}{2}\\right)^2=\\frac{1}{4}$, so $p\\!\\left(\\frac{1}{2}\\right)=2\\cdot\\frac{1}{8}+\\frac{1}{4}-1$.",
+          "Simplify: $p\\!\\left(\\frac{1}{2}\\right)=\\frac{1}{4}+\\frac{1}{4}-1=\\frac{1}{2}-1=-\\frac{1}{2}$.",
+          "Because $p\\!\\left(\\frac{1}{2}\\right)=-\\frac{1}{2}\\ne 0$, $(2x-1)$ is not a factor of $p(x)$."
+        ],
+        "answer": "No, $(2x-1)$ is not a factor because $p\\!\\left(\\frac{1}{2}\\right)=-\\frac{1}{2}\\ne 0$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Find the value of $c$ so that the remainder when $p(x)=x^3+cx^2-4$ is divided by $x+1$ is $3$.",
+      "hint": "The divisor $x+1$ gives $a=-1$. Set $p(-1)$ equal to the required remainder $3$ and solve for $c$.",
+      "solution": {
+        "steps": [
+          "By the Remainder Theorem, the remainder of division by $x+1$ is $p(-1)$. Set $p(-1)=3$.",
+          "Evaluate $p(-1)=(-1)^3+c(-1)^2-4=-1+c-4$.",
+          "Simplify: $p(-1)=c-5$.",
+          "Set equal to the given remainder: $c-5=3$.",
+          "Solve: $c=8$.",
+          "Check: with $c=8$, $p(-1)=-1+8-4=3$, as required."
+        ],
+        "answer": "$c=8$"
+      }
+    }
+  ]
+}

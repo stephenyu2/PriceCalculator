@@ -1,0 +1,128 @@
+{
+  "standard": "8.G.A.1",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand congruence and similarity using physical models, transparencies, or geometry software",
+  "clusterCode": "A",
+  "skillName": "Properties of Rigid Transformations",
+
+  "description": "Students verify experimentally that rotations, reflections, and translations preserve the structure of figures. Specifically, they confirm that each rigid motion (1) maps line segments to line segments of the same length, (2) maps angles to angles of the same measure, and (3) maps parallel lines to parallel lines. Students apply each transformation to points and figures on the coordinate plane using its rule, compare pre-image and image measurements, and articulate why length, angle measure, and parallelism are invariant under rigid motion while orientation may or may not change.",
+
+  "subSkills": [
+    "Apply a translation rule $(x,y)\\to(x+a,\\;y+b)$ to the coordinates of a point or figure",
+    "Apply a reflection over the $x$-axis $(x,y)\\to(x,\\,-y)$, the $y$-axis $(x,y)\\to(-x,\\,y)$, or the line $y=x$ $(x,y)\\to(y,\\,x)$",
+    "Apply a rotation about the origin of $90^\\circ$, $180^\\circ$, or $270^\\circ$ using the coordinate rules",
+    "Compute segment lengths with the distance formula and verify a transformation preserves length",
+    "Verify that corresponding angle measures are unchanged after a rigid motion",
+    "Verify that parallel lines (equal slopes) remain parallel after a rigid motion",
+    "Distinguish rigid motions (length and angle preserving) from non-rigid transformations such as dilations",
+    "Describe the effect of each transformation on orientation (reflections reverse orientation; rotations and translations preserve it)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Apply a transformation rule to a point",
+      "example": "Point $A(3,-2)$ is rotated $90^\\circ$ counterclockwise about the origin. What are the coordinates of its image $A'$?"
+    },
+    {
+      "name": "Length preservation by distance formula",
+      "example": "Segment $\\overline{PQ}$ has endpoints $P(1,2)$ and $Q(5,5)$. After a translation by $(x,y)\\to(x-3,\\;y+1)$, show that the image segment $\\overline{P'Q'}$ has the same length as $\\overline{PQ}$."
+    },
+    {
+      "name": "Angle measure preservation",
+      "example": "In triangle $ABC$, angle $B$ measures $58^\\circ$. The triangle is reflected over the $y$-axis. What is the measure of the corresponding angle $B'$ in the image, and why?"
+    },
+    {
+      "name": "Parallel lines stay parallel",
+      "example": "Lines $\\ell$ and $m$ are parallel, each with slope $\\frac{2}{3}$. After a $180^\\circ$ rotation about the origin, what are the slopes of their images, and are the images still parallel?"
+    },
+    {
+      "name": "Identify the transformation from pre-image and image",
+      "example": "Triangle with vertices $(2,1),(4,1),(2,5)$ maps to $(2,-1),(4,-1),(2,-5)$. Which rigid motion was applied?"
+    },
+    {
+      "name": "Compare rigid vs. non-rigid",
+      "example": "A square is transformed so that each side doubles in length. Is this transformation a rigid motion? Justify using the length-preservation property."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step application of one transformation rule to one point or to a figure with vertices in the first quadrant, or a direct true/false recall of an invariance property. No distance formula required; coordinates are small integers.",
+      "constraints": [
+        "One transformation: a translation, a reflection over an axis, or a $90^\\circ$/$180^\\circ$/$270^\\circ$ rotation about the origin",
+        "Integer coordinates with absolute value $\\le 6$",
+        "At most one point or one short segment to transform, or a stated property to confirm",
+        "No multi-step verification; answer is coordinates or a single yes/no with the named property"
+      ]
+    },
+    "Medium": {
+      "description": "Verify a specific property after a transformation, requiring either a distance-formula length check on one segment or applying a transformation to all vertices of a triangle and comparing one measurement. Reflection over $y=x$ and rotation rules are in play.",
+      "constraints": [
+        "Includes reflection over $y=x$ or a $270^\\circ$ rotation",
+        "One distance-formula computation, leaving the answer as an exact radical such as $\\sqrt{13}$",
+        "Coordinates may be in any quadrant; integers with absolute value $\\le 10$",
+        "Requires comparing a pre-image measurement to its image and stating the invariance reason"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step verification or identification: determine which transformation maps a figure to its image, verify two properties (e.g., length and parallelism) at once, or reason about a composition or about orientation. May require comparing slopes of two lines and two distance computations.",
+      "constraints": [
+        "Requires identifying the transformation, or composing two rigid motions",
+        "Verifies two invariants in one item (length and angle, or parallelism and length)",
+        "Two distance-formula or two slope computations, exact radical answers",
+        "Includes reasoning about orientation reversal or about why a dilation is excluded"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student swaps the rotation rule, confusing $90^\\circ$ counterclockwise with $90^\\circ$ clockwise",
+      "distractor": "Rotates $A(3,-2)$ to $(2,3)$ using $(x,y)\\to(y,-x)$ instead of the correct $90^\\circ$ counterclockwise image $(-y,x)=(2,3)$ reversed, giving $(-2,-3)$ or $(2,3)$ for the wrong direction"
+    },
+    {
+      "misconception": "Student reflects over the wrong axis, negating the wrong coordinate",
+      "distractor": "Reflecting $(x,y)$ over the $x$-axis but writing $(-x,y)$ instead of $(x,-y)$"
+    },
+    {
+      "misconception": "Student believes length changes under a rigid motion",
+      "distractor": "Claims the image segment is longer or shorter, reporting a different distance than the pre-image when it must be equal"
+    },
+    {
+      "misconception": "Student thinks rigid motions can change angle measure",
+      "distractor": "Reports the image angle as a supplement or as a different value, e.g., giving $122^\\circ$ for the image of a $58^\\circ$ angle"
+    },
+    {
+      "misconception": "Student treats a dilation (scaling) as a rigid motion",
+      "distractor": "Calls a transformation that doubles every side length a rigid motion, ignoring that length is not preserved"
+    },
+    {
+      "misconception": "Student confuses the translation direction, adding where they should subtract",
+      "distractor": "For $(x,y)\\to(x-3,y+1)$ applied to $(1,2)$, gives $(4,1)$ or $(-2,3)$ by mishandling the signs"
+    },
+    {
+      "misconception": "Student thinks parallel lines may become non-parallel after a rigid motion",
+      "distractor": "Asserts the image lines have different slopes and are no longer parallel"
+    },
+    {
+      "misconception": "Student uses the wrong formula, applying the midpoint formula or simple coordinate subtraction instead of the distance formula",
+      "distractor": "Reports a length such as $7$ (sum of coordinate differences) instead of $\\sqrt{4^2+3^2}=5$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

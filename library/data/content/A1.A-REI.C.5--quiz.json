@@ -1,0 +1,150 @@
+{
+  "id": "A1.A-REI.C.5--quiz",
+  "standard": "A1.A-REI.C.5",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Reasoning with Equations and Inequalities",
+  "domainCode": "A-REI",
+  "cluster": "Solve systems of equations",
+  "clusterCode": "C",
+  "skillName": "Equivalent Systems of Equations",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "Eight multiple-choice questions on equivalent systems and the linear-combination (elimination) replacement principle: replacing one equation of a system with the sum of that equation and a nonzero multiple of the other yields a system with the same solution set.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "The system $\\begin{cases} 2x + 3y = 12 \\\\ x - y = 1 \\end{cases}$ has solution $(3, 2)$. The first equation is replaced by $E_1 + 2E_2$, giving $4x + y = 14$. Which statement is true about the new system $\\begin{cases} 4x + y = 14 \\\\ x - y = 1 \\end{cases}$?\nA) It has no solution.\nB) Its solution is $(1, 0)$.\nC) Its solution is still $(3, 2)$.\nD) It has infinitely many solutions.",
+      "solution": {
+        "steps": [
+          "Replacing $E_1$ with $E_1 + kE_2$ for $k \\neq 0$ does not change the solution set, so the new system must still be solved by $(3,2)$.",
+          "Check: $4(3) + 2 = 14$ is true, and $3 - 2 = 1$ is true. So $(3,2)$ satisfies both equations.",
+          "A is wrong: the two lines still intersect, so a solution exists. B is wrong: $(1,0)$ gives $4(1)+0 = 4 \\neq 14$. D is wrong: the lines have different slopes, so the solution is unique.",
+          "The correct answer is C."
+        ],
+        "answer": "C) Its solution is still $(3, 2)$."
+      },
+      "answer": "C) Its solution is still $(3, 2)$."
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "For the system $\\begin{cases} x + 2y = 7 \\\\ x - 2y = 1 \\end{cases}$, what equation results from adding the two equations, $E_1 + E_2$?\nA) $2x + 4y = 8$\nB) $2x = 8$\nC) $2x = 6$\nD) $4y = 8$",
+      "solution": {
+        "steps": [
+          "Add the equations term by term: $(x + x) + (2y + (-2y)) = 7 + 1$.",
+          "This gives $2x + 0 = 8$, so $2x = 8$. The $y$ terms cancel because their coefficients are opposites.",
+          "A is wrong: it keeps the $y$ terms instead of cancelling them. C is wrong: $7 + 1 = 8$, not $6$. D is wrong: the $y$ coefficients $+2$ and $-2$ sum to $0$, they do not add to $4y$.",
+          "The correct answer is B."
+        ],
+        "answer": "B) $2x = 8$"
+      },
+      "answer": "B) $2x = 8$"
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "The ordered pair $(4, 1)$ solves $\\begin{cases} x + y = 5 \\\\ x - y = 3 \\end{cases}$. The second equation is replaced by $E_1 + E_2$, producing $2x = 8$. Does $(4, 1)$ satisfy the new equation $2x = 8$?\nA) No, because $2(1) \\neq 8$.\nB) Yes, but only because $y = 1$.\nC) No, because the replacement changes the solution.\nD) Yes, because $2(4) = 8$.",
+      "solution": {
+        "steps": [
+          "Substitute $x = 4$ into $2x = 8$: $2(4) = 8$, which is true, so $(4,1)$ satisfies it.",
+          "Adding a true equation to a true equation keeps the result true, so any solution of the original system also solves $E_1 + E_2$.",
+          "A is wrong: $2x = 8$ uses $x$, not $y$. B is wrong: the value of $y$ is irrelevant to checking $2x = 8$. C is wrong: a nonzero linear combination preserves the solution set.",
+          "The correct answer is D."
+        ],
+        "answer": "D) Yes, because $2(4) = 8$."
+      },
+      "answer": "D) Yes, because $2(4) = 8$."
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "For $\\begin{cases} 3x + 4y = 10 \\\\ x - 2y = -4 \\end{cases}$, what multiple $k$ of the second equation should be added to the first so that $y$ is eliminated?\nA) $k = 1$\nB) $k = -2$\nC) $k = 2$\nD) $k = \\frac{1}{2}$",
+      "solution": {
+        "steps": [
+          "The $y$-coefficients are $4$ (in $E_1$) and $-2$ (in $E_2$). Adding $k E_2$ gives a $y$-coefficient of $4 + k(-2) = 4 - 2k$.",
+          "Set $4 - 2k = 0$, so $k = 2$. Then $E_1 + 2E_2$ gives $(3x + 4y) + 2(x - 2y) = 10 + 2(-4)$, i.e. $5x = 2$, with $y$ gone.",
+          "A is wrong: $k = 1$ leaves $4 - 2 = 2$, so $y$ remains. B is wrong: $k = -2$ gives $4 + 4 = 8y$, doubling $y$ instead of cancelling. D is wrong: $k = \\frac{1}{2}$ leaves $4 - 1 = 3y$.",
+          "The correct answer is C."
+        ],
+        "answer": "C) $k = 2$"
+      },
+      "answer": "C) $k = 2$"
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Given $\\begin{cases} 5x - 2y = 7 \\\\ 3x + y = 9 \\end{cases}$, what equation results from replacing the first equation with $E_1 + 2E_2$?\nA) $5x - 2y = 9$\nB) $8x = 16$\nC) $11x = 23$\nD) $11x = 25$",
+      "solution": {
+        "steps": [
+          "Multiply $E_2$ by $2$, distributing over every term: $2(3x + y) = 2(9)$ gives $6x + 2y = 18$.",
+          "Add to $E_1$: $(5x - 2y) + (6x + 2y) = 7 + 18$, so $11x + 0 = 25$, i.e. $11x = 25$.",
+          "A is wrong: it treats $E_1 + 2E_2$ as adding $2$ to the constant only ($7 + 2 = 9$), a 'add the multiplier' error. B is wrong: it drops the constant from $E_1$. C is wrong: it uses $7 + 16$ instead of $7 + 18$, forgetting to multiply the constant $9$ by $2$.",
+          "The correct answer is D."
+        ],
+        "answer": "D) $11x = 25$"
+      },
+      "answer": "D) $11x = 25$"
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Is $\\begin{cases} x + y = 5 \\\\ 2x + 5y = 16 \\end{cases}$ equivalent to $\\begin{cases} x + y = 5 \\\\ 3y = 6 \\end{cases}$?\nA) No, because the second system has only one variable in its second equation.\nB) Yes, because the second row is $E_2 - 2E_1$ and the first row is unchanged.\nC) No, because $3y = 6$ is not one of the original equations.\nD) Yes, but only because both systems have solution $(3, 2)$ by coincidence.",
+      "solution": {
+        "steps": [
+          "Compute $E_2 - 2E_1$ of the original: $(2x + 5y) - 2(x + y) = 16 - 2(5)$, giving $3y = 6$. The first row $x + y = 5$ is kept unchanged.",
+          "Replacing one row with a nonzero linear combination of the rows (while keeping the other row) produces an equivalent system, so the solution sets match. Both solve to $(3,2)$ because they are equivalent, not by coincidence.",
+          "A is wrong: having one variable does not break equivalence. C is wrong: an equivalent system need not reuse the original equations literally. D is wrong: the matching solution is a consequence of the valid combination, not coincidence.",
+          "The correct answer is B."
+        ],
+        "answer": "B) Yes, because the second row is $E_2 - 2E_1$ and the first row is unchanged."
+      },
+      "answer": "B) Yes, because the second row is $E_2 - 2E_1$ and the first row is unchanged."
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A student claims that replacing $E_1$ in $\\begin{cases} E_1 \\\\ E_2 \\end{cases}$ with $0 \\cdot E_1 + 0 \\cdot E_2$ (the equation $0 = 0$) still gives an equivalent system. Why is this claim false?\nA) The claim is actually true, since $0 = 0$ is a valid equation.\nB) It is false because you may never multiply an equation by a constant.\nC) The replacement uses a zero multiplier, so the new first equation $0 = 0$ is always true and stops constraining the solution, allowing extra solutions.\nD) It is false because the second equation $E_2$ was also changed.",
+      "solution": {
+        "steps": [
+          "The replacement principle requires a NONZERO multiplier of the other equation (and keeps $E_1$'s own contribution). The equation $0 = 0$ carries no information.",
+          "Because $0 = 0$ is satisfied by every $(x, y)$, the new system is constrained only by $E_2$, so it can have solutions the original system did not. The solution set is enlarged, hence not equivalent.",
+          "A is wrong: although $0 = 0$ is true, a system needs its constraints; losing one changes the solution set. B is wrong: multiplying by a NONZERO constant is allowed and is exactly how the method works. D is wrong: $E_2$ was not changed here; the problem is the destroyed first equation.",
+          "The correct answer is C."
+        ],
+        "answer": "C) The replacement uses a zero multiplier, so the new first equation $0 = 0$ is always true and stops constraining the solution, allowing extra solutions."
+      },
+      "answer": "C) The replacement uses a zero multiplier, so the new first equation $0 = 0$ is always true and stops constraining the solution, allowing extra solutions."
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "To eliminate $x$ from $\\begin{cases} 2x + 3y = 4 \\\\ 3x - y = 5 \\end{cases}$ using a combination $aE_1 + bE_2$ with $a = 3$, what value of $b$ makes the $x$ terms cancel, and what equation results?\nA) $b = 2$, giving $11y = 22$.\nB) $b = -2$, giving $11y = 22$.\nC) $b = \\frac{2}{3}$, giving $\\frac{11}{3}y = 2$.\nD) $b = -2$, giving $11y = 2$.",
+      "solution": {
+        "steps": [
+          "The $x$-coefficient of $3E_1 + bE_2$ is $3(2) + b(3) = 6 + 3b$. Set $6 + 3b = 0$, so $b = -2$.",
+          "Form $3E_1 - 2E_2$: $3(2x + 3y) - 2(3x - y) = 3(4) - 2(5)$, which is $(6x + 9y) - (6x - 2y) = 12 - 10$, giving $11y = 2$.",
+          "A and B are wrong on the constant: $b = 2$ would not cancel $x$, and $3(4) - 2(5) = 2$, not $22$ (a sign or arithmetic slip on the right side). C is wrong: $a = 3$ is fixed, so $b$ must be the integer $-2$, not $\\frac{2}{3}$.",
+          "The correct answer is D."
+        ],
+        "answer": "D) $b = -2$, giving $11y = 2$."
+      },
+      "answer": "D) $b = -2$, giving $11y = 2$."
+    }
+  ]
+}

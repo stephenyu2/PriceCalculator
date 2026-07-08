@@ -1,0 +1,132 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent. One blueprint per standard.",
+
+  "standard": "GEO.G-CO.B.8",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Understand congruence in terms of rigid motions",
+  "clusterCode": "B",
+  "skillName": "Triangle Congruence Criteria",
+
+  "description": "Students explain how the ASA, SAS, and SSS triangle congruence criteria follow from the definition of congruence in terms of rigid motions: two triangles are congruent if and only if a sequence of rigid motions maps one exactly onto the other. Given enough corresponding parts (two angles and the included side; two sides and the included angle; or all three sides), students construct or describe the sequence of translations, rotations, and reflections that carries one triangle onto the other, justify each step by the rigid-motion property it uses, name the criterion that applies, and write a correct correspondence statement. They also recognize that side-side-angle (SSA) and angle-angle-angle (AAA) are not congruence criteria.",
+
+  "subSkills": [
+    "State the rigid-motion definition of congruence: two figures are congruent exactly when a sequence of rigid motions maps one onto the other",
+    "Identify which criterion (ASA, SAS, SSS) is established by a given set of marked corresponding parts, and recognize SSA and AAA as non-criteria",
+    "Order the sequence of rigid motions that maps one triangle onto another: translate a vertex onto its image, rotate a side onto its image, then reflect if orientation is opposite",
+    "Justify each step of the mapping by the rigid-motion property it relies on (a translation/rotation/reflection preserves lengths and angle measures; the third vertex is forced into place)",
+    "Explain why SAS works: after a rigid motion places the included angle's vertex and one side, the second given side has fixed length and the included angle is fixed, so the second endpoint coincides",
+    "Explain why ASA works: after placing the included side, the two given angles determine two rays whose intersection is the forced third vertex",
+    "Explain why SSS works: three fixed side lengths force the third vertex to one of two reflection-symmetric positions, and a reflection (if needed) completes the map",
+    "Write a correct congruence correspondence statement (for example $\\triangle ABC \\cong \\triangle DEF$) from matched parts and use CPCTC to name a corresponding side or angle"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Identify the criterion from marked parts",
+      "example": "In triangles $ABC$ and $DEF$ you are given $AB = DE$, $m\\angle A = m\\angle D$, and $AC = DF$. Which congruence criterion (ASA, SAS, or SSS) proves $\\triangle ABC \\cong \\triangle DEF$?"
+    },
+    {
+      "name": "Name the missing part needed for a criterion",
+      "example": "You know $\\angle B \\cong \\angle E$ and $\\angle C \\cong \\angle F$ in triangles $ABC$ and $DEF$. Which additional pair of corresponding parts would let you apply ASA?"
+    },
+    {
+      "name": "Order the rigid-motion mapping sequence",
+      "example": "Triangle $ABC$ has vertices $A(0, 0)$, $B(4, 0)$, $C(1, 3)$ and triangle $DEF$ has vertices $D(5, 1)$, $E(9, 1)$, $F(6, 4)$. Describe a sequence of rigid motions that maps $\\triangle ABC$ onto $\\triangle DEF$, then state the criterion the matched parts illustrate."
+    },
+    {
+      "name": "Decide whether a criterion applies (including SSA / AAA)",
+      "example": "In triangles $ABC$ and $DEF$, $AB = DE$, $BC = EF$, and $m\\angle A = m\\angle D$ (a non-included angle). Does this guarantee $\\triangle ABC \\cong \\triangle DEF$? Justify which criterion does or does not apply."
+    },
+    {
+      "name": "Justify a single step by its rigid-motion property",
+      "example": "After translating $A$ onto $D$ and rotating so ray $AB$ lies along ray $DE$, explain why $B$ now coincides with $E$, citing the rigid-motion property used and the given $AB = DE$."
+    },
+    {
+      "name": "Full rigid-motion justification of a criterion",
+      "example": "Explain, using the definition of congruence in terms of rigid motions, why two triangles with $SAS$ matched (two pairs of corresponding sides and the included angle congruent) must be congruent. Describe the translate, rotate, and (if needed) reflect steps and why the third vertex is forced into place."
+    },
+    {
+      "name": "Correspondence statement and CPCTC",
+      "example": "Given $\\triangle ABC \\cong \\triangle DEF$ established by SSS with $AB = DE = 6$, $BC = EF = 5$, $CA = FD = 7$, write the correspondence and state $m\\angle B$ if $m\\angle E = 80^\\circ$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Recall and recognition in one step: name which criterion (ASA, SAS, SSS) is shown by a given set of marked corresponding parts, state the rigid-motion definition of congruence, or read a correspondence statement to match a side or angle. No mapping is constructed; the criterion is identifiable directly from the given marks.",
+      "constraints": [
+        "One step: classify the given parts as ASA, SAS, or SSS, or recall a definition",
+        "All needed corresponding parts are explicitly given and correctly positioned (included side/included angle as required)",
+        "May ask which measures a rigid motion preserves, or to read a single corresponding part from a congruence statement",
+        "Any coordinates are small integers with absolute value $\\le 6$ and used only for a single translation or reflection lookup"
+      ]
+    },
+    "Medium": {
+      "description": "Apply a criterion with one layer of reasoning: determine the additional part needed to invoke a named criterion, distinguish included from non-included parts, or carry out and order a short rigid-motion sequence (translate then rotate, with a possible reflection) that maps one triangle onto another. The student must select the correct criterion and check that the parts are correctly positioned.",
+      "constraints": [
+        "Requires identifying a missing part or checking included vs. non-included position",
+        "May require ordering two or three rigid motions (translate, rotate, reflect) and stating the criterion the result illustrates",
+        "May require writing the correct correspondence statement before applying CPCTC",
+        "Integer coordinates with absolute value $\\le 8$ when a coordinate mapping is involved"
+      ]
+    },
+    "Hard": {
+      "description": "Full justification or non-criterion analysis: explain step by step why ASA, SAS, or SSS forces the triangles to coincide using the definition of congruence in terms of rigid motions (translate a vertex, rotate a side onto a ray, reflect to fix orientation, third vertex forced), OR analyze why SSA and AAA fail to guarantee congruence with a reason or counterexample. Multi-step reasoning chaining preserved lengths/angles to a forced coincidence.",
+      "constraints": [
+        "Requires an ordered, justified sequence of rigid motions with each step tied to a preserved measure or a given congruent part",
+        "Includes recognizing SSA (ambiguous case) and AAA (similar but not necessarily congruent) as non-criteria, with a reason or counterexample",
+        "Must explain why the third vertex is forced (intersection of forced rays for ASA, fixed-length endpoint for SAS, two-position reflection for SSS)",
+        "May combine a coordinate mapping with a verbal justification of the criterion"
+      ]
+    },
+    "tierSplit": "If split into two worksheets: tier1 covers Easy to Medium, recognizing and applying the criteria, classify given marks as ASA/SAS/SSS, identify included vs. non-included parts, name a missing part, state the definition, and order a short translate-rotate(-reflect) mapping. tier2 covers Medium to Hard, full rigid-motion justifications of why each criterion follows from the definition of congruence, plus SSA/AAA non-criterion analysis with reasons or counterexamples. No item overlap between tiers."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Treats SSA (two sides and a non-included angle) as a valid congruence criterion",
+      "distractor": "Concludes $\\triangle ABC \\cong \\triangle DEF$ from $AB = DE$, $BC = EF$, and a non-included $\\angle A \\cong \\angle D$, ignoring the ambiguous case where two non-congruent triangles satisfy these conditions"
+    },
+    {
+      "misconception": "Treats AAA (all three angles equal) as a congruence criterion rather than only a similarity criterion",
+      "distractor": "Claims two triangles with all three pairs of angles congruent must be congruent, ignoring that AAA only guarantees similarity (same shape, possibly different size)"
+    },
+    {
+      "misconception": "Confuses the included part: calls SAS what is actually SSA, or ASA what is actually AAS",
+      "distractor": "Labels a set of two sides and a non-included angle as SAS, instead of recognizing the given angle is not between the two given sides"
+    },
+    {
+      "misconception": "Believes a rigid motion can change a side length or angle measure, so the criterion need not force coincidence",
+      "distractor": "States that after the mapping the third vertex could land in a different spot because the translated side might be a different length, instead of recognizing rigid motions preserve length and angle"
+    },
+    {
+      "misconception": "Omits the reflection step when the two triangles have opposite orientation, claiming no sequence of rigid motions exists",
+      "distractor": "Concludes the triangles are not congruent because a translation and rotation alone do not align them, forgetting that a reflection (still a rigid motion) completes the mapping"
+    },
+    {
+      "misconception": "Writes the correspondence statement with mismatched vertex order, breaking CPCTC",
+      "distractor": "From $\\triangle ABC \\cong \\triangle DEF$ pairs $\\angle B$ with $\\angle F$ instead of with $\\angle E$, so reads off the wrong corresponding measure"
+    },
+    {
+      "misconception": "Thinks each criterion requires a different definition of congruence rather than all following from the single rigid-motion definition",
+      "distractor": "Asserts that ASA, SAS, and SSS are independent axioms that cannot be derived, instead of recognizing each follows from the definition that a sequence of rigid motions maps one triangle onto the other"
+    }
+  ],
+
+  "_comment_itemCounts": "worksheet.single = one ramped sheet (Easy->Hard across 15 items). tier1/tier2 only if the standard is split into two worksheets (15 each, no overlap).",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

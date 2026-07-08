@@ -1,0 +1,217 @@
+{
+  "id": "8.F.A.1--worksheet--hard",
+  "standard": "8.F.A.1",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Functions",
+  "domainCode": "F",
+  "cluster": "Define, evaluate, and compare functions",
+  "clusterCode": "A",
+  "skillName": "Understanding Functions",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "These problems push beyond a single yes-or-no check. You will translate between representations, hunt for hidden violations among many pairs, find parameter values that make or break a function, and identify the full sets of inputs and outputs. Remember: a relation is a function exactly when no input is paired with more than one different output. Repeated outputs are perfectly allowed.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "For what value of $a$ is the relation $\\{(1, 2), (a, 5), (3, 7), (4, 9)\\}$ NOT a function? List every value of $a$ that breaks it.",
+      "answer": "$a = 1$, $a = 3$, or $a = 4$ (any input that already appears, paired with a different output)",
+      "solution": {
+        "steps": [
+          "A relation fails to be a function only when one input is paired with two different outputs.",
+          "The existing inputs are $1$, $3$, and $4$. The new pair is $(a, 5)$.",
+          "If $a = 1$, then input $1$ would map to both $2$ and $5$ - a conflict.",
+          "If $a = 3$, then input $3$ would map to both $7$ and $5$ - a conflict.",
+          "If $a = 4$, then input $4$ would map to both $9$ and $5$ - a conflict.",
+          "Any other value of $a$ keeps the relation a function. So $a \\in \\{1, 3, 4\\}$ breaks it."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "For what value(s) of $a$ does $\\{(0, 6), (2, 6), (a, 6), (5, 6)\\}$ FAIL to be a function?",
+      "answer": "There is no such value; the relation is a function for every value of $a$.",
+      "solution": {
+        "steps": [
+          "Every listed output is $6$. Repeated outputs never break a function.",
+          "A function fails only when one input has two different outputs.",
+          "Even if $a$ equals an existing input such as $0$, $2$, or $5$, that input still maps only to $6$, so there is no conflict.",
+          "Therefore the relation is a function for all real values of $a$. No value makes it fail."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Scan the relation $\\{(-3, 1), (-1, 4), (2, 7), (5, 9), (-1, 4), (6, 2), (8, 0)\\}$. Does it represent a function? Justify by examining the inputs.",
+      "answer": "Yes, it is a function. The repeated pair $(-1, 4)$ is identical, so input $-1$ still maps to only the single output $4$.",
+      "solution": {
+        "steps": [
+          "List the inputs: $-3, -1, 2, 5, -1, 6, 8$. The input $-1$ appears twice.",
+          "Check the outputs for input $-1$: both pairs are $(-1, 4)$, giving the same output $4$.",
+          "A duplicate identical pair does not assign a new output, so there is no conflict.",
+          "Every input maps to exactly one output, so the relation is a function."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Scan the relation $\\{(2, 5), (4, 1), (7, 8), (9, 3), (4, 6), (10, 0), (1, 5)\\}$. Is it a function? If not, name the input that causes the failure.",
+      "answer": "No, it is not a function. Input $4$ is paired with two different outputs, $1$ and $6$.",
+      "solution": {
+        "steps": [
+          "List the inputs: $2, 4, 7, 9, 4, 10, 1$. The input $4$ appears twice.",
+          "The two pairs with input $4$ are $(4, 1)$ and $(4, 6)$, giving different outputs.",
+          "An input with two different outputs violates the definition of a function.",
+          "Note that the repeated output $5$ in $(2, 5)$ and $(1, 5)$ is allowed - those inputs differ. The failure is at input $4$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A relation is given two ways. As a set of pairs: $\\{(1, 3), (2, 6), (3, 9), (4, 12)\\}$. As a rule: $y = 3x$ for $x = 1, 2, 3, 4$. Are the two representations consistent, and does the relation define $y$ as a function of $x$?",
+      "answer": "Yes. The pairs all satisfy $y = 3x$, so the representations are consistent, and since each input gives exactly one output, it is a function.",
+      "solution": {
+        "steps": [
+          "Check each pair against $y = 3x$: $3(1)=3$, $3(2)=6$, $3(3)=9$, $3(4)=12$. All match.",
+          "The two representations describe the same relation, so they are consistent.",
+          "The equation $y = 3x$ assigns exactly one $y$ to each $x$, so it defines a function.",
+          "The pair set has no repeated input, confirming it is a function."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "The equation $y^2 = x + 1$ is graphed. Identify whether it defines $y$ as a function of $x$, and give a specific input that proves your answer.",
+      "answer": "No, it does not define $y$ as a function of $x$. For example, input $x = 3$ gives both $y = 2$ and $y = -2$.",
+      "solution": {
+        "steps": [
+          "Solve for $y$: $y^2 = x + 1$ means $y = \\pm\\sqrt{x + 1}$.",
+          "Pick $x = 3$: then $y^2 = 4$, so $y = 2$ or $y = -2$.",
+          "One input ($x = 3$) produces two different outputs, which violates the definition of a function.",
+          "The graph is a sideways parabola, and a vertical line at $x = 3$ crosses it twice, confirming it is not a function."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "For the function $\\{(-4, 7), (-2, 7), (0, 1), (3, 5), (6, 1)\\}$, list the full set of inputs (the domain) and the full set of distinct outputs (the range), then state whether it is a function.",
+      "answer": "Domain: $\\{-4, -2, 0, 3, 6\\}$. Range: $\\{1, 5, 7\\}$. Yes, it is a function.",
+      "solution": {
+        "steps": [
+          "The inputs are the first coordinates: $-4, -2, 0, 3, 6$. None repeats, so this set is the domain.",
+          "The outputs are the second coordinates: $7, 7, 1, 5, 1$. The distinct values are $1, 5, 7$, which form the range.",
+          "Repeated outputs ($7$ and $1$ each appear twice) do not break the function rule.",
+          "Each input has exactly one output, so the relation is a function."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A relation is described two ways. Table: inputs $x = 1, 2, 3, 2$ with outputs $y = 4, 8, 12, 8$. Mapping diagram: $1 \\to 4$, $2 \\to 8$, $3 \\to 12$. Are the two representations consistent, and is the relation a function?",
+      "answer": "Yes, consistent and a function. The table's repeat $(2, 8)$ matches the mapping's $2 \\to 8$, so input $2$ has the single output $8$.",
+      "solution": {
+        "steps": [
+          "In the table, input $2$ appears twice, both with output $8$, so input $2$ maps only to $8$.",
+          "The mapping diagram also sends $2 \\to 8$, with $1 \\to 4$ and $3 \\to 12$ matching the table.",
+          "Both representations describe the same input-output pairs, so they are consistent.",
+          "Every input has exactly one output, so the relation is a function."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "For what value of $k$ is the relation $\\{(k, 3), (k+2, 5), (k+4, 7)\\}$ NOT a function? Explain.",
+      "answer": "No value of $k$ makes it fail. The three inputs $k$, $k+2$, $k+4$ are always distinct, so it is always a function.",
+      "solution": {
+        "steps": [
+          "The inputs are $k$, $k+2$, and $k+4$.",
+          "Compare them: $k$ and $k+2$ differ by $2$, $k$ and $k+4$ differ by $4$, $k+2$ and $k+4$ differ by $2$.",
+          "Since these differences are never zero, the three inputs are different for every value of $k$.",
+          "With all inputs distinct, no input gets two outputs, so the relation is a function for every $k$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Two students graph the relation $x = y^2 - 4$. Maya applies the vertical line test; Leo applies a horizontal line test. Maya says it is not a function; Leo says it is. Who is correct, and why?",
+      "answer": "Maya is correct. The correct test is the vertical line test, and a vertical line (such as $x = 0$, giving $y = 2$ and $y = -2$) crosses the curve twice, so it is not a function.",
+      "solution": {
+        "steps": [
+          "To decide if $y$ is a function of $x$, use the vertical line test, not a horizontal one.",
+          "Solve for $y$: $y^2 = x + 4$, so $y = \\pm\\sqrt{x + 4}$.",
+          "At $x = 0$, $y = 2$ and $y = -2$: a vertical line at $x = 0$ hits the curve twice.",
+          "Two outputs for one input means it is not a function, so Maya is right. Leo's horizontal test answers the wrong question."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Find a value of $b$ so that $\\{(0, 5), (1, b), (2, 9), (1, 6)\\}$ IS a function. Then state what happens for all other values of $b$.",
+      "answer": "$b = 6$ makes it a function (input $1$ then maps only to $6$). For every $b \\neq 6$, input $1$ has two different outputs, so it is not a function.",
+      "solution": {
+        "steps": [
+          "Input $1$ appears in two pairs: $(1, b)$ and $(1, 6)$.",
+          "For a function, both must give the same output, so $b$ must equal $6$.",
+          "If $b = 6$, the pairs $(1, 6)$ and $(1, 6)$ are identical, and input $1$ maps only to $6$ - it is a function.",
+          "If $b \\neq 6$, input $1$ maps to two different outputs, so the relation is not a function."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "The graph of $y = |x|$ and the graph of $x = |y|$ are both drawn. Using the vertical line test, decide which one (or both, or neither) defines $y$ as a function of $x$.",
+      "answer": "Only $y = |x|$ is a function of $x$. The graph $x = |y|$ fails because, for example, $x = 3$ gives $y = 3$ and $y = -3$.",
+      "solution": {
+        "steps": [
+          "For $y = |x|$, each input $x$ gives exactly one output (a V opening upward). A vertical line crosses it once, so it is a function.",
+          "For $x = |y|$, solve: $|y| = x$ means $y = x$ or $y = -x$ (for $x \\ge 0$), a sideways V.",
+          "At $x = 3$, $y = 3$ and $y = -3$: a vertical line crosses twice, so $x = |y|$ is not a function of $x$.",
+          "Therefore only $y = |x|$ defines $y$ as a function of $x$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A relation is given as a set of pairs $\\{(-2, 4), (-1, 1), (0, 0), (1, 1), (2, 4)\\}$ and also as the equation $y = x^2$ for these inputs. The pairs $(-1, 1)$ and $(1, 1)$ share the output $1$. Does this repeated output stop the relation from being a function? Explain and confirm consistency with the equation.",
+      "answer": "No. The repeated output is allowed because the inputs $-1$ and $1$ are different. It is a function, and all pairs satisfy $y = x^2$, so the representations are consistent.",
+      "solution": {
+        "steps": [
+          "A function requires that each input have one output; it places no restriction on outputs repeating across different inputs.",
+          "Inputs $-1$ and $1$ are different, so both mapping to output $1$ is fine.",
+          "Check the equation: $(-2)^2=4$, $(-1)^2=1$, $0^2=0$, $1^2=1$, $2^2=4$. Every pair matches $y = x^2$.",
+          "Each input appears once with one output, so the relation is a function and the two representations agree."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A relation maps each input to its output as follows: $3 \\to 12$, $5 \\to 20$, $8 \\to 32$, $5 \\to 20$, $11 \\to 44$, $3 \\to 13$. Identify the full domain, determine whether it is a function, and name any conflict.",
+      "answer": "Domain: $\\{3, 5, 8, 11\\}$. It is NOT a function: input $3$ maps to both $12$ and $13$.",
+      "solution": {
+        "steps": [
+          "The inputs are $3, 5, 8, 5, 11, 3$. The distinct inputs (the domain) are $3, 5, 8, 11$.",
+          "Input $5$ appears twice but maps to $20$ both times, so that is consistent.",
+          "Input $3$ appears twice: once to $12$ and once to $13$, two different outputs.",
+          "An input with two different outputs makes the relation not a function. The conflict is at input $3$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A relation is defined by the rule: each input $x$ is paired with any number $y$ such that $y \\le x$. For the single input $x = 4$, list two outputs this rule allows, and state whether the rule defines a function.",
+      "answer": "For $x = 4$, allowed outputs include $4$ and $0$ (any $y \\le 4$). The rule does NOT define a function because one input is paired with many different outputs.",
+      "solution": {
+        "steps": [
+          "The rule says $y$ can be any number with $y \\le x$, so it does not pick a single output.",
+          "For $x = 4$, both $y = 4$ and $y = 0$ satisfy $y \\le 4$ (and so does $y = -1$, and infinitely many others).",
+          "Because input $4$ is paired with more than one output, the assignment is not exactly one output per input.",
+          "Therefore the rule does not define a function."
+        ]
+      }
+    }
+  ]
+}

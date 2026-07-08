@@ -1,0 +1,241 @@
+{
+  "id": "8.G.B--cluster-worksheet",
+  "standard": null,
+  "clusterId": "8.G.B",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand and apply the Pythagorean Theorem",
+  "clusterCode": "B",
+  "skillName": "Understand and apply the Pythagorean Theorem",
+  "materialType": "cluster-worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T10:32:40.073Z",
+  "intro": "This cluster worksheet covers the whole Pythagorean Theorem cluster. The first group proves and reasons about the theorem and its converse (8.G.B.6), the second applies it to find unknown side lengths in two and three dimensions (8.G.B.7), and the third uses it to find the distance between points in the coordinate plane (8.G.B.8). Problems ramp from easy to hard within each group.",
+  "items": [
+    {
+      "id": 1,
+      "standard": "8.G.B.6",
+      "prompt": "In a right triangle, the two sides that form the right angle are called the legs and are labeled $a$ and $b$. State the Pythagorean Theorem as an equation relating the legs to the hypotenuse $c$.",
+      "answer": "$a^2 + b^2 = c^2$",
+      "solution": {
+        "steps": [
+          "The Pythagorean Theorem relates the squares of the two legs to the square of the hypotenuse.",
+          "The legs are $a$ and $b$, and $c$ is the hypotenuse (the side opposite the right angle).",
+          "The relationship is $a^2 + b^2 = c^2$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "standard": "8.G.B.6",
+      "prompt": "Use the converse of the Pythagorean Theorem to decide whether a triangle with sides $3$, $4$, and $5$ is a right triangle. Show the single equality test.",
+      "answer": "Yes, it is a right triangle because $3^2 + 4^2 = 5^2$.",
+      "solution": {
+        "steps": [
+          "The longest side is $5$, so test it as the hypotenuse: compare $3^2 + 4^2$ to $5^2$.",
+          "Compute the legs' squares: $3^2 + 4^2 = 9 + 16 = 25$.",
+          "Compute the hypotenuse square: $5^2 = 25$.",
+          "Since $25 = 25$, the converse confirms the triangle is right."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "standard": "8.G.B.6",
+      "prompt": "In the area-rearrangement proof, four congruent right triangles with legs $a$ and $b$ surround a tilted square of side $c$ to form a large square of side $a+b$. Write the equation that sets the large square's area equal to the inner square plus the four triangles, then simplify it to show $a^2 + b^2 = c^2$.",
+      "answer": "$(a+b)^2 = c^2 + 4\\left(\\frac{1}{2}ab\\right)$, which simplifies to $a^2 + b^2 = c^2$.",
+      "solution": {
+        "steps": [
+          "The large square has side $a+b$, so its area is $(a+b)^2$.",
+          "Inside, the tilted square has area $c^2$ and each of the four right triangles has area $\\frac{1}{2}ab$.",
+          "Set the area of the large square equal to the parts: $(a+b)^2 = c^2 + 4\\left(\\frac{1}{2}ab\\right)$.",
+          "Expand the left side: $a^2 + 2ab + b^2 = c^2 + 2ab$.",
+          "Subtract $2ab$ from both sides: $a^2 + b^2 = c^2$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "standard": "8.G.B.6",
+      "prompt": "A triangle has sides $6$, $8$, and $11$. Use the converse of the Pythagorean Theorem to classify it as right, acute, or obtuse. Show your comparison.",
+      "answer": "Obtuse, because $6^2 + 8^2 = 100 < 121 = 11^2$.",
+      "solution": {
+        "steps": [
+          "Identify the longest side, $11$, and compare $6^2 + 8^2$ to $11^2$.",
+          "Compute the sum of the squares of the two shorter sides: $6^2 + 8^2 = 36 + 64 = 100$.",
+          "Compute the square of the longest side: $11^2 = 121$.",
+          "Since $100 < 121$, we have $a^2 + b^2 < c^2$, which means the angle opposite the longest side is greater than a right angle.",
+          "Therefore the triangle is obtuse."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "standard": "8.G.B.6",
+      "prompt": "A student writes this proof: 'The large square has side $a+b$, so its area is $a^2 + b^2$. It is made of the tilted square of area $c^2$ plus four right triangles each of area $ab$. So $a^2 + b^2 = c^2 + 4ab$.' Identify the two errors in this argument and give the corrected equation that leads to $a^2 + b^2 = c^2$.",
+      "answer": "Error 1: $(a+b)^2 = a^2 + 2ab + b^2$, not $a^2 + b^2$. Error 2: each triangle has area $\\frac{1}{2}ab$, not $ab$. The correct equation is $a^2 + 2ab + b^2 = c^2 + 2ab$, which simplifies to $a^2 + b^2 = c^2$.",
+      "solution": {
+        "steps": [
+          "First error: the area of a square of side $a+b$ is $(a+b)^2 = a^2 + 2ab + b^2$, so the student dropped the $2ab$ term.",
+          "Second error: each right triangle has legs $a$ and $b$, so its area is $\\frac{1}{2}ab$, not $ab$; the four triangles total $4 \\cdot \\frac{1}{2}ab = 2ab$, not $4ab$.",
+          "Write the corrected area equation: $a^2 + 2ab + b^2 = c^2 + 2ab$.",
+          "Subtract $2ab$ from both sides: $a^2 + b^2 = c^2$.",
+          "Both corrections are needed for the proof to reduce correctly."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "standard": "8.G.B.7",
+      "prompt": "A right triangle has legs of length $6$ and $8$. Find the length of the hypotenuse.",
+      "answer": "$10$",
+      "solution": {
+        "steps": [
+          "Use $a^2 + b^2 = c^2$ with legs $a = 6$ and $b = 8$.",
+          "Substitute: $6^2 + 8^2 = c^2$.",
+          "Compute: $36 + 64 = 100 = c^2$.",
+          "Take the positive square root: $c = \\sqrt{100} = 10$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "standard": "8.G.B.7",
+      "prompt": "A right triangle has hypotenuse $13$ and one leg $5$. Find the length of the other leg.",
+      "answer": "$12$",
+      "solution": {
+        "steps": [
+          "The hypotenuse is $c = 13$ and one leg is $a = 5$; solve for leg $b$.",
+          "Rearrange $a^2 + b^2 = c^2$ to $b^2 = c^2 - a^2$.",
+          "Substitute: $b^2 = 13^2 - 5^2 = 169 - 25 = 144$.",
+          "Take the positive square root: $b = \\sqrt{144} = 12$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "standard": "8.G.B.7",
+      "prompt": "A right triangle has two legs each of length $5$. Find the exact length of the hypotenuse in simplest radical form.",
+      "answer": "$5\\sqrt{2}$",
+      "solution": {
+        "steps": [
+          "Use $a^2 + b^2 = c^2$ with $a = b = 5$.",
+          "Substitute: $5^2 + 5^2 = c^2$, so $25 + 25 = 50 = c^2$.",
+          "Take the square root: $c = \\sqrt{50}$.",
+          "Simplify by factoring out the perfect square $25$: $\\sqrt{50} = \\sqrt{25 \\cdot 2} = 5\\sqrt{2}$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "standard": "8.G.B.7",
+      "prompt": "A $15$ ft ladder leans against a wall with its base $9$ ft from the wall. How high up the wall does the top of the ladder reach?",
+      "answer": "$12$ ft",
+      "solution": {
+        "steps": [
+          "The ladder is the hypotenuse $c = 15$, the distance from the wall is one leg $a = 9$, and the height up the wall is the other leg $b$.",
+          "Rearrange $a^2 + b^2 = c^2$ to $b^2 = c^2 - a^2$.",
+          "Substitute: $b^2 = 15^2 - 9^2 = 225 - 81 = 144$.",
+          "Take the positive square root: $b = \\sqrt{144} = 12$.",
+          "The ladder reaches $12$ ft up the wall."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "standard": "8.G.B.7",
+      "prompt": "A rectangular box measures $3$ by $4$ by $12$. Find the length of its space diagonal (the longest straight line from one corner to the opposite corner).",
+      "answer": "$13$",
+      "solution": {
+        "steps": [
+          "First find the diagonal of the base, a rectangle that is $3$ by $4$.",
+          "Base diagonal: $d^2 = 3^2 + 4^2 = 9 + 16 = 25$, so $d = \\sqrt{25} = 5$.",
+          "The space diagonal is the hypotenuse of a right triangle whose legs are the base diagonal $5$ and the height $12$.",
+          "Apply the theorem again: $D^2 = 5^2 + 12^2 = 25 + 144 = 169$.",
+          "Take the square root: $D = \\sqrt{169} = 13$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "standard": "8.G.B.8",
+      "prompt": "Find the distance between the points $(1, 2)$ and $(4, 6)$ in the coordinate plane.",
+      "answer": "$5$",
+      "solution": {
+        "steps": [
+          "Use the distance formula $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.",
+          "Compute the horizontal leg: $x_2 - x_1 = 4 - 1 = 3$.",
+          "Compute the vertical leg: $y_2 - y_1 = 6 - 2 = 4$.",
+          "Substitute: $d = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25}$.",
+          "Simplify: $d = 5$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "standard": "8.G.B.8",
+      "prompt": "Find the exact distance between $(-3, 1)$ and $(2, 6)$ in simplest radical form.",
+      "answer": "$5\\sqrt{2}$",
+      "solution": {
+        "steps": [
+          "Use $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.",
+          "Horizontal difference: $x_2 - x_1 = 2 - (-3) = 5$.",
+          "Vertical difference: $y_2 - y_1 = 6 - 1 = 5$.",
+          "Substitute: $d = \\sqrt{5^2 + 5^2} = \\sqrt{25 + 25} = \\sqrt{50}$.",
+          "Simplify the radical: $\\sqrt{50} = \\sqrt{25 \\cdot 2} = 5\\sqrt{2}$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "standard": "8.G.B.8",
+      "prompt": "Find the distance between $(-4, -2)$ and $(3, -5)$. Leave your answer as an exact radical.",
+      "answer": "$\\sqrt{58}$",
+      "solution": {
+        "steps": [
+          "Use $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.",
+          "Horizontal difference: $x_2 - x_1 = 3 - (-4) = 7$.",
+          "Vertical difference: $y_2 - y_1 = -5 - (-2) = -3$.",
+          "Substitute and square (the negative difference squares to a positive): $d = \\sqrt{7^2 + (-3)^2} = \\sqrt{49 + 9} = \\sqrt{58}$.",
+          "Since $58 = 2 \\cdot 29$ has no perfect-square factor, $\\sqrt{58}$ is already in simplest form."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "standard": "8.G.B.8",
+      "prompt": "Find the distance between $(0, 0)$ and $(5, 7)$, rounded to the nearest hundredth.",
+      "answer": "$\\sqrt{74} \\approx 8.60$",
+      "solution": {
+        "steps": [
+          "Use $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.",
+          "Horizontal difference: $5 - 0 = 5$; vertical difference: $7 - 0 = 7$.",
+          "Substitute: $d = \\sqrt{5^2 + 7^2} = \\sqrt{25 + 49} = \\sqrt{74}$.",
+          "Since $74$ has no perfect-square factor, leave it as $\\sqrt{74}$ for the exact value.",
+          "Approximate: $\\sqrt{74} \\approx 8.60$ to the nearest hundredth."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "standard": "8.G.B.8",
+      "prompt": "A triangle has vertices $A(-2, 1)$, $B(4, 1)$, and $C(4, 9)$. Find the perimeter of triangle $ABC$, giving an exact value.",
+      "answer": "$24$",
+      "solution": {
+        "steps": [
+          "Find each side length with the distance formula $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.",
+          "Side $AB$: from $(-2, 1)$ to $(4, 1)$, $AB = \\sqrt{(4-(-2))^2 + (1-1)^2} = \\sqrt{6^2 + 0} = 6$.",
+          "Side $BC$: from $(4, 1)$ to $(4, 9)$, $BC = \\sqrt{(4-4)^2 + (9-1)^2} = \\sqrt{0 + 8^2} = 8$.",
+          "Side $CA$: from $(4, 9)$ to $(-2, 1)$, $CA = \\sqrt{(-2-4)^2 + (1-9)^2} = \\sqrt{(-6)^2 + (-8)^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$.",
+          "Add the sides for the perimeter: $6 + 8 + 10 = 24$."
+        ]
+      }
+    }
+  ]
+}

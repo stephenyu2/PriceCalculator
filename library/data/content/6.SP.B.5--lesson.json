@@ -1,0 +1,169 @@
+{
+  "id": "6.SP.B.5--lesson",
+  "standard": "6.SP.B.5",
+  "clusterId": null,
+  "grade": "6",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Summarize and describe distributions",
+  "clusterCode": "B",
+  "skillName": "Summarizing Numerical Data Sets",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:41:22.446Z",
+  "intro": "To summarize a numerical data set, first describe what you measured: how many observations $n$ there are, the attribute being measured, and its units. Then report measures of center (mean and median) and measures of spread (range, interquartile range, and mean absolute deviation). Finally, describe the overall shape (clusters, peaks, gaps, outliers) and choose the measure of center that best fits that shape. A symmetric set is summarized well by the mean; a skewed set or one with an outlier is summarized better by the median, because the outlier pulls the mean away from a typical value.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A list gives the number of pages Maya read each day for one week: $12, 15, 9, 14, 11, 13, 10$. State how many observations there are, what attribute is measured, and the units.",
+      "solution": {
+        "steps": [
+          "Count the values in the list: $12, 15, 9, 14, 11, 13, 10$ has $7$ numbers, so $n=7$.",
+          "Identify what each number describes: the number of pages read on a single day.",
+          "Identify the units: pages (per day).",
+          "Summarize the context: there are $7$ daily observations of how many pages were read, measured in pages."
+        ],
+        "answer": "$n=7$ observations of the number of pages read each day, measured in pages."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find the mean and the median of the data set $4, 7, 7, 9, 13$.",
+      "solution": {
+        "steps": [
+          "The data is already in order: $4, 7, 7, 9, 13$, and $n=5$.",
+          "Add the values: $4+7+7+9+13=40$.",
+          "Mean $=\\dfrac{\\sum x_i}{n}=\\dfrac{40}{5}=8$.",
+          "For the median, find the middle value of the $5$ ordered numbers. The $3$rd value is $7$.",
+          "So the mean is $8$ and the median is $7$. They differ because the value $13$ pulls the mean up above the middle."
+        ],
+        "answer": "Mean $=8$; median $=7$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "For the ordered data $3, 5, 6, 8, 9, 12, 15, 18$, find the range and the interquartile range (IQR).",
+      "solution": {
+        "steps": [
+          "Range $=\\text{max}-\\text{min}=18-3=15$.",
+          "There are $n=8$ values. Split them into a lower half $3, 5, 6, 8$ and an upper half $9, 12, 15, 18$.",
+          "$Q_1$ is the median of the lower half: $\\dfrac{5+6}{2}=\\dfrac{11}{2}$.",
+          "$Q_3$ is the median of the upper half: $\\dfrac{12+15}{2}=\\dfrac{27}{2}$.",
+          "$\\text{IQR}=Q_3-Q_1=\\dfrac{27}{2}-\\dfrac{11}{2}=\\dfrac{16}{2}=8$."
+        ],
+        "answer": "Range $=15$; $\\text{IQR}=8$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Compute the mean absolute deviation (MAD) of the data set $2, 4, 6, 8$.",
+      "solution": {
+        "steps": [
+          "Find the mean first: $\\dfrac{2+4+6+8}{4}=\\dfrac{20}{4}=5$.",
+          "Find each absolute deviation from the mean: $|2-5|=3$, $|4-5|=1$, $|6-5|=1$, $|8-5|=3$.",
+          "Add the absolute deviations: $3+1+1+3=8$.",
+          "Divide by $n=4$: $\\text{MAD}=\\dfrac{8}{4}=2$.",
+          "On average, the values sit $2$ units away from the mean of $5$."
+        ],
+        "answer": "$\\text{MAD}=2$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "House prices on a short street are $\\$210{,}000$, $\\$220{,}000$, $\\$230{,}000$, $\\$240{,}000$, and $\\$900{,}000$. Which measure of center better summarizes a typical price, the mean or the median, and why?",
+      "solution": {
+        "steps": [
+          "Order the prices: $\\$210{,}000, \\$220{,}000, \\$230{,}000, \\$240{,}000, \\$900{,}000$. There are $n=5$ values.",
+          "Median: the middle (3rd) value is $\\$230{,}000$.",
+          "Mean: $\\dfrac{210{,}000+220{,}000+230{,}000+240{,}000+900{,}000}{5}=\\dfrac{1{,}800{,}000}{5}=\\$360{,}000$.",
+          "The value $\\$900{,}000$ is a high outlier that pulls the mean up to $\\$360{,}000$, which is higher than every home except one.",
+          "The median $\\$230{,}000$ stays near the cluster of prices, so it represents a typical home better."
+        ],
+        "answer": "The median ($\\$230{,}000$) is better, because the single very large price inflates the mean ($\\$360{,}000$) so the mean is not typical of most homes."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A coach records the height, in centimeters, of each player on a relay team: $150, 162, 158, 161, 149, 155$. State how many observations there are, what attribute is measured, and the units.",
+      "hint": "Count the values for $n$, then describe what one number stands for and what it is measured in.",
+      "solution": {
+        "steps": [
+          "Count the values: there are $6$ numbers, so $n=6$.",
+          "Each number is the height of one player.",
+          "The units are centimeters."
+        ],
+        "answer": "$n=6$ observations of player height, measured in centimeters."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Find the mean and the median of the data set $6, 10, 8, 5, 11$.",
+      "hint": "Order the values first. The mean is the sum divided by $n$; the median is the middle value of the ordered list.",
+      "solution": {
+        "steps": [
+          "Order the data: $5, 6, 8, 10, 11$, with $n=5$.",
+          "Sum $=5+6+8+10+11=40$, so mean $=\\dfrac{40}{5}=8$.",
+          "The middle (3rd) ordered value is $8$, so the median $=8$."
+        ],
+        "answer": "Mean $=8$; median $=8$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "For the ordered data $2, 4, 7, 8, 10, 13$, find the range and the interquartile range (IQR).",
+      "hint": "Range is $\\text{max}-\\text{min}$. With $n=6$, the lower half is the first three values and the upper half is the last three; $Q_1$ and $Q_3$ are the medians of those halves.",
+      "solution": {
+        "steps": [
+          "Range $=13-2=11$.",
+          "Lower half: $2, 4, 7$, so $Q_1=4$ (the middle value).",
+          "Upper half: $8, 10, 13$, so $Q_3=10$ (the middle value).",
+          "$\\text{IQR}=Q_3-Q_1=10-4=6$."
+        ],
+        "answer": "Range $=11$; $\\text{IQR}=6$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Compute the mean absolute deviation (MAD) of the data set $3, 5, 9, 11$.",
+      "hint": "Find the mean, then the absolute value of each value minus the mean, then average those distances over $n=4$.",
+      "solution": {
+        "steps": [
+          "Mean $=\\dfrac{3+5+9+11}{4}=\\dfrac{28}{4}=7$.",
+          "Absolute deviations: $|3-7|=4$, $|5-7|=2$, $|9-7|=2$, $|11-7|=4$.",
+          "Sum of deviations $=4+2+2+4=12$.",
+          "$\\text{MAD}=\\dfrac{12}{4}=3$."
+        ],
+        "answer": "$\\text{MAD}=3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A dot plot of quiz scores shows most dots between $7$ and $9$ with a single dot at $1$. Describe the distribution, and state whether the mean or the median better summarizes a typical score.",
+      "hint": "Look for where the data clusters, where the peak is, and any value far from the rest. An outlier pulls the mean toward it.",
+      "solution": {
+        "steps": [
+          "Most of the scores cluster between $7$ and $9$, with a peak around $8$.",
+          "The lone score of $1$ sits far below the cluster, so it is an outlier and it leaves a gap between $1$ and the group near $7$ to $9$.",
+          "The outlier at $1$ pulls the mean down below the cluster, so the mean would not be typical of most students.",
+          "The median stays inside the cluster of $7$ to $9$, so it better summarizes a typical score."
+        ],
+        "answer": "The scores cluster from $7$ to $9$ with a peak near $8$; $1$ is an outlier that creates a gap. The median better summarizes a typical score because the outlier pulls the mean down."
+      }
+    }
+  ]
+}

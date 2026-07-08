@@ -1,0 +1,156 @@
+{
+  "id": "A1.S-ID.C.9--quiz",
+  "standard": "A1.S-ID.C.9",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Interpret linear models",
+  "clusterCode": "C",
+  "skillName": "Correlation vs. Causation",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "Multiple choice. Choose the single best answer. These questions check whether you can distinguish correlation from causation, identify lurking variables, recognize reverse causation and coincidence, and tell an observational study from a randomized experiment.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "A scatterplot of daily ice cream sales versus the number of swimmers at a beach shows a correlation coefficient of $r = 0.91$. Which statement best describes what this value tells you?\nA) There is a strong positive association between ice cream sales and the number of swimmers.\nB) Buying ice cream causes more people to go swimming.\nC) There is no relationship between the two variables.\nD) The number of swimmers causes ice cream sales to drop.",
+      "answer": "A) There is a strong positive association between ice cream sales and the number of swimmers.",
+      "solution": {
+        "steps": [
+          "The correlation coefficient $r$ measures the direction and strength of a linear association. Since $-1 \\le r \\le 1$, a value of $r = 0.91$ is close to $1$, indicating a strong positive linear association.",
+          "Key: A correctly reports a strong positive association without claiming cause.",
+          "B is wrong because a strong $r$ measures association, not causation; it does not show ice cream causes swimming.",
+          "C is wrong because $r = 0.91$ is far from $0$, so there clearly is a relationship.",
+          "D is wrong because $r$ is positive, meaning the variables increase together, not that one drops as the other rises."
+        ],
+        "answer": "A) There is a strong positive association between ice cream sales and the number of swimmers."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Researchers find that students who sleep more hours per night tend to have higher test scores, with $r = 0.62$. A blog claims this proves that sleeping more causes higher test scores. What is the best response to this claim?\nA) The claim is justified because $r$ is positive.\nB) The claim is not justified, because a correlation alone does not establish causation.\nC) The claim is not justified, because $r$ is too small to mean anything.\nD) The claim is justified because $r$ is greater than $0.5$.",
+      "answer": "B) The claim is not justified, because a correlation alone does not establish causation.",
+      "solution": {
+        "steps": [
+          "A correlation, even a moderately strong positive one ($r = 0.62$), shows that two variables tend to move together. It does not by itself prove that one variable causes the other.",
+          "Key: B states the core principle that correlation does not imply causation.",
+          "A is wrong because a positive sign indicates direction of association, not the presence of causation.",
+          "D is wrong because the size of $r$ being above some threshold still only measures association, never cause.",
+          "C is wrong because $r = 0.62$ is a real, moderate association; the problem with the claim is the leap to causation, not that the correlation is meaningless."
+        ],
+        "answer": "B) The claim is not justified, because a correlation alone does not establish causation."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Across many cities, the number of churches and the number of bars are strongly positively correlated. Which is the most reasonable explanation?\nA) Building more churches causes more bars to open.\nB) Building more bars causes more churches to open.\nC) A lurking variable, the population size of the city, drives both counts up together.\nD) Since $r$ is positive, churches must cause bars.",
+      "answer": "C) A lurking variable, the population size of the city, drives both counts up together.",
+      "solution": {
+        "steps": [
+          "A lurking (confounding) variable is a third variable that influences both measured variables and can create a correlation between them even when neither causes the other.",
+          "Key: C identifies population size as the lurking variable; bigger cities have more of everything, including both churches and bars.",
+          "A and B are wrong because there is no plausible direct mechanism by which one type of building causes the other.",
+          "D is wrong because a positive $r$ only tells you the counts rise together; it does not establish that churches cause bars."
+        ],
+        "answer": "C) A lurking variable, the population size of the city, drives both counts up together."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "A town reports that months with more firefighters sent to fires also have more total fire damage, with $r = 0.86$. A reporter concludes that firefighters cause fire damage. Which choice best explains the flaw in this reasoning?\nA) Coincidence: with so many months of data, a high $r$ can happen by chance with no mechanism.\nB) Reverse causation: fire damage causes firefighters to exist.\nC) Confounding: larger fires both draw more firefighters and cause more damage, so fire size explains both.\nD) The claim is fine, because $r = 0.86$ is strong enough to prove causation.",
+      "answer": "C) Confounding: larger fires both draw more firefighters and cause more damage, so fire size explains both.",
+      "solution": {
+        "steps": [
+          "Name the specific flaw type. Here a third variable, the size of the fire, influences both the number of firefighters dispatched and the amount of damage.",
+          "Key: C correctly classifies this as confounding and names fire size as the lurking variable that produces the correlation.",
+          "B mislabels it: the firefighters do not cause the fire, and the issue is a third variable, not a reversed arrow between these two.",
+          "A is wrong because there is a clear mechanism (fire size), so this is not mere coincidence.",
+          "D is wrong because no value of $r$, however strong, can by itself prove causation from observational data."
+        ],
+        "answer": "C) Confounding: larger fires both draw more firefighters and cause more damage, so fire size explains both."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Among adults, weekly hours of exercise and resting heart rate have a negative correlation, $r = -0.58$. Someone claims that having a low resting heart rate causes people to exercise more. Why might the direction of causation actually be reversed?\nA) Because $r$ is negative, there can be no causation at all.\nB) Exercising regularly tends to lower resting heart rate, so exercise likely causes the lower heart rate, not the other way around.\nC) Because $r$ is negative, exercise must cause heart rate to rise.\nD) The variables are unrelated, so neither causes the other.",
+      "answer": "B) Exercising regularly tends to lower resting heart rate, so exercise likely causes the lower heart rate, not the other way around.",
+      "solution": {
+        "steps": [
+          "Reverse causation means the causal arrow could plausibly run the opposite way from what was claimed.",
+          "Key: B notes the well-known physiological effect that regular exercise lowers resting heart rate, so exercise causes the lower heart rate rather than a low heart rate causing exercise.",
+          "A is wrong because a negative $r$ indicates a real inverse association, not the absence of any causal possibility.",
+          "C misreads the sign: a negative $r$ means that as exercise rises, heart rate falls, not rises.",
+          "D is wrong because $r = -0.58$ is a moderate association, so the variables are clearly related."
+        ],
+        "answer": "B) Exercising regularly tends to lower resting heart rate, so exercise likely causes the lower heart rate, not the other way around."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Over a ten-year span, the number of films a certain actor appeared in is correlated with annual national cheese consumption at $r = 0.94$. What is the best conclusion?\nA) The high $r$ proves the actor's films drive cheese consumption.\nB) The correlation is almost certainly coincidental, since there is no plausible mechanism linking the two.\nC) Cheese consumption causes the actor to make more films.\nD) Because $r$ is so high, there must be a lurking variable connecting them.",
+      "answer": "B) The correlation is almost certainly coincidental, since there is no plausible mechanism linking the two.",
+      "solution": {
+        "steps": [
+          "Some strong correlations arise by chance among many possible variable pairings and have no real mechanism connecting them. These are coincidental.",
+          "Key: B recognizes that despite $r = 0.94$, there is no plausible mechanism or shared cause linking an actor's film count to national cheese consumption, so the association is coincidental.",
+          "A and C are wrong because a high $r$ does not establish causation in either direction, and no sensible mechanism exists.",
+          "D is wrong because a high $r$ alone does not guarantee a meaningful lurking variable; here the most reasonable explanation is coincidence."
+        ],
+        "answer": "B) The correlation is almost certainly coincidental, since there is no plausible mechanism linking the two."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A school wants to know whether a new tutoring program raises test scores. Design A compares students who chose to enroll in tutoring with students who chose not to. Design B randomly assigns students to tutoring or to no tutoring, then compares scores. Which design can support a causal conclusion, and why?\nA) Design A, because comparing the two existing groups directly shows the effect of tutoring.\nB) Design B, because random assignment balances confounding variables across the groups, so a score difference can be attributed to the tutoring.\nC) Neither, because no study can ever establish causation.\nD) Both equally, since both compare tutored and untutored students.",
+      "answer": "B) Design B, because random assignment balances confounding variables across the groups, so a score difference can be attributed to the tutoring.",
+      "solution": {
+        "steps": [
+          "Only a randomized controlled experiment can justify a causal conclusion, because random assignment tends to balance lurking variables across the treatment and control groups.",
+          "Key: B is the randomized experiment; random assignment makes the groups similar on average for confounders such as motivation and prior achievement, so a difference in scores can be attributed to the tutoring.",
+          "A is wrong because students who choose to enroll may differ systematically (more motivated, more support at home); these confounders are not controlled, so it is an observational study and cannot establish cause.",
+          "C is wrong because a well-designed randomized experiment can establish causation.",
+          "D is wrong because the two designs are not equivalent: only random assignment controls confounding."
+        ],
+        "answer": "B) Design B, because random assignment balances confounding variables across the groups, so a score difference can be attributed to the tutoring."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A health study reports a negative correlation between a region's average vitamin D level and its rate of a certain illness, $r = -0.40$. A headline concludes that vitamin D supplements prevent the illness. Which response best evaluates this claim?\nA) The claim is proven, because a negative $r$ shows vitamin D lowers illness.\nB) The claim cannot be trusted, because $r \\approx -0.40$ means there is definitely no relationship.\nC) The claim is unproven from this observational data, because confounders such as time spent outdoors or general health could drive both, and only a randomized experiment could establish that supplements cause lower illness.\nD) The claim is unproven because correlation is always meaningless coincidence.",
+      "answer": "C) The claim is unproven from this observational data, because confounders such as time spent outdoors or general health could drive both, and only a randomized experiment could establish that supplements cause lower illness.",
+      "solution": {
+        "steps": [
+          "This is observational data, so even a real association cannot by itself establish that the supplement causes lower illness; confounders may explain the link, and a randomized experiment would be needed to test causation.",
+          "Key: C correctly identifies plausible confounders (such as time outdoors, which raises vitamin D and may reflect overall healthier living) and notes that only a randomized controlled experiment could establish causation.",
+          "A is wrong because a negative correlation shows an inverse association, not a proven causal effect.",
+          "B is wrong because $r = -0.40$ is a moderate inverse association, not the absence of any relationship.",
+          "D is wrong because correlations are not always meaningless coincidence; here there is a plausible mechanism, and a controlled experiment could test it."
+        ],
+        "answer": "C) The claim is unproven from this observational data, because confounders such as time spent outdoors or general health could drive both, and only a randomized experiment could establish that supplements cause lower illness."
+      }
+    }
+  ]
+}

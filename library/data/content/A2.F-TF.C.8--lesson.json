@@ -1,0 +1,164 @@
+{
+  "id": "A2.F-TF.C.8--lesson",
+  "standard": "A2.F-TF.C.8",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Functions — Trigonometric Functions",
+  "domainCode": "F-TF",
+  "cluster": "Prove and apply trigonometric identities",
+  "clusterCode": "C",
+  "skillName": "Pythagorean Trig Identity",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "Every point on the unit circle at angle $\\theta$ has coordinates $(\\cos\\theta, \\sin\\theta)$, and the unit circle is $x^2 + y^2 = 1$. Substituting gives the Pythagorean identity $\\sin^2\\theta + \\cos^2\\theta = 1$ (here $\\sin^2\\theta$ means $(\\sin\\theta)^2$). Rearranged, $\\sin^2\\theta = 1 - \\cos^2\\theta$ and $\\cos^2\\theta = 1 - \\sin^2\\theta$. Dividing the identity by $\\cos^2\\theta$ or $\\sin^2\\theta$ gives the companions $1 + \\tan^2\\theta = \\sec^2\\theta$ and $1 + \\cot^2\\theta = \\csc^2\\theta$. If you know one trigonometric value plus the quadrant (which fixes the signs by ASTC: all positive in QI, only sine in QII, only tangent in QIII, only cosine in QIV), you can find all six.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Given $\\sin\\theta = \\frac{3}{5}$ and $\\theta$ in Quadrant II, find $\\cos\\theta$.",
+      "solution": {
+        "steps": [
+          "Start from the Pythagorean identity and isolate cosine: $\\cos^2\\theta = 1 - \\sin^2\\theta$.",
+          "Substitute $\\sin\\theta = \\frac{3}{5}$: $\\cos^2\\theta = 1 - \\left(\\frac{3}{5}\\right)^2 = 1 - \\frac{9}{25} = \\frac{16}{25}$.",
+          "Take the square root: $\\cos\\theta = \\pm\\sqrt{\\frac{16}{25}} = \\pm\\frac{4}{5}$.",
+          "Choose the sign from the quadrant. In Quadrant II cosine is negative (only sine is positive there).",
+          "Therefore $\\cos\\theta = -\\frac{4}{5}$."
+        ],
+        "answer": "$\\cos\\theta = -\\frac{4}{5}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Given $\\cos\\theta = -\\frac{5}{13}$ and $\\theta$ in Quadrant III, find $\\sin\\theta$ and $\\tan\\theta$.",
+      "solution": {
+        "steps": [
+          "Isolate sine: $\\sin^2\\theta = 1 - \\cos^2\\theta$.",
+          "Substitute $\\cos\\theta = -\\frac{5}{13}$: $\\sin^2\\theta = 1 - \\frac{25}{169} = \\frac{144}{169}$.",
+          "Take the square root: $\\sin\\theta = \\pm\\frac{12}{13}$.",
+          "In Quadrant III sine is negative (only tangent is positive), so $\\sin\\theta = -\\frac{12}{13}$.",
+          "Form the tangent: $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta} = \\frac{-\\frac{12}{13}}{-\\frac{5}{13}} = \\frac{12}{5}$.",
+          "The negatives cancel, giving a positive tangent, consistent with Quadrant III."
+        ],
+        "answer": "$\\sin\\theta = -\\frac{12}{13}$, $\\tan\\theta = \\frac{12}{5}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Given $\\cos\\theta = \\frac{2}{3}$ and $\\theta$ in Quadrant IV, find $\\sin\\theta$.",
+      "solution": {
+        "steps": [
+          "Isolate sine: $\\sin^2\\theta = 1 - \\cos^2\\theta = 1 - \\left(\\frac{2}{3}\\right)^2 = 1 - \\frac{4}{9} = \\frac{5}{9}$.",
+          "Take the square root: $\\sin\\theta = \\pm\\sqrt{\\frac{5}{9}} = \\pm\\frac{\\sqrt{5}}{3}$.",
+          "Do not distribute the root over the subtraction; $\\sqrt{1 - \\frac{4}{9}}$ is not $1 - \\frac{2}{3}$.",
+          "In Quadrant IV sine is negative (only cosine is positive), so $\\sin\\theta = -\\frac{\\sqrt{5}}{3}$."
+        ],
+        "answer": "$\\sin\\theta = -\\frac{\\sqrt{5}}{3}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Given $\\tan\\theta = -\\frac{7}{24}$ and $\\theta$ in Quadrant II, find $\\sec\\theta$ and $\\cos\\theta$.",
+      "solution": {
+        "steps": [
+          "Use the companion identity $1 + \\tan^2\\theta = \\sec^2\\theta$.",
+          "Substitute $\\tan\\theta = -\\frac{7}{24}$: $\\sec^2\\theta = 1 + \\frac{49}{576} = \\frac{576}{576} + \\frac{49}{576} = \\frac{625}{576}$.",
+          "Take the square root: $\\sec\\theta = \\pm\\frac{25}{24}$.",
+          "In Quadrant II cosine is negative, so its reciprocal secant is also negative: $\\sec\\theta = -\\frac{25}{24}$.",
+          "Since $\\cos\\theta = \\frac{1}{\\sec\\theta}$, we get $\\cos\\theta = -\\frac{24}{25}$."
+        ],
+        "answer": "$\\sec\\theta = -\\frac{25}{24}$, $\\cos\\theta = -\\frac{24}{25}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Simplify $\\dfrac{1 - \\cos^2\\theta}{\\sin\\theta}$ for $\\sin\\theta \\neq 0$.",
+      "solution": {
+        "steps": [
+          "Rearrange the Pythagorean identity: $\\sin^2\\theta + \\cos^2\\theta = 1$ gives $1 - \\cos^2\\theta = \\sin^2\\theta$.",
+          "Replace the numerator: $\\dfrac{1 - \\cos^2\\theta}{\\sin\\theta} = \\dfrac{\\sin^2\\theta}{\\sin\\theta}$.",
+          "Cancel one factor of $\\sin\\theta$ (allowed because $\\sin\\theta \\neq 0$): $\\dfrac{\\sin^2\\theta}{\\sin\\theta} = \\sin\\theta$."
+        ],
+        "answer": "$\\sin\\theta$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Given $\\sin\\theta = -\\frac{8}{17}$ and $\\theta$ in Quadrant IV, find $\\cos\\theta$.",
+      "hint": "Use $\\cos^2\\theta = 1 - \\sin^2\\theta$, then choose the sign of cosine from the quadrant.",
+      "solution": {
+        "steps": [
+          "$\\cos^2\\theta = 1 - \\sin^2\\theta = 1 - \\frac{64}{289} = \\frac{225}{289}$.",
+          "$\\cos\\theta = \\pm\\frac{15}{17}$.",
+          "In Quadrant IV cosine is positive, so $\\cos\\theta = \\frac{15}{17}$."
+        ],
+        "answer": "$\\cos\\theta = \\frac{15}{17}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Given $\\sin\\theta = -\\frac{8}{17}$ and $\\theta$ in Quadrant IV, find $\\tan\\theta$.",
+      "hint": "First find $\\cos\\theta$ from the identity, then divide $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$ (sine over cosine).",
+      "solution": {
+        "steps": [
+          "From the identity, $\\cos^2\\theta = 1 - \\frac{64}{289} = \\frac{225}{289}$, so $\\cos\\theta = \\pm\\frac{15}{17}$.",
+          "In Quadrant IV cosine is positive: $\\cos\\theta = \\frac{15}{17}$.",
+          "$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta} = \\frac{-\\frac{8}{17}}{\\frac{15}{17}} = -\\frac{8}{15}$."
+        ],
+        "answer": "$\\tan\\theta = -\\frac{8}{15}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Given $\\cos\\theta = -\\frac{1}{4}$ and $\\theta$ in Quadrant III, find $\\sin\\theta$.",
+      "hint": "The given value is not from a Pythagorean triple, so expect a radical answer. Keep the root exact.",
+      "solution": {
+        "steps": [
+          "$\\sin^2\\theta = 1 - \\cos^2\\theta = 1 - \\frac{1}{16} = \\frac{15}{16}$.",
+          "$\\sin\\theta = \\pm\\sqrt{\\frac{15}{16}} = \\pm\\frac{\\sqrt{15}}{4}$.",
+          "In Quadrant III sine is negative, so $\\sin\\theta = -\\frac{\\sqrt{15}}{4}$."
+        ],
+        "answer": "$\\sin\\theta = -\\frac{\\sqrt{15}}{4}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Given $\\cos\\theta = \\frac{3}{5}$ with $\\tan\\theta < 0$, find $\\sin\\theta$.",
+      "hint": "First decide the quadrant: cosine is positive and tangent is negative. Which quadrant is that?",
+      "solution": {
+        "steps": [
+          "Cosine positive holds in Quadrants I and IV; tangent negative holds in Quadrants II and IV. The overlap is Quadrant IV.",
+          "$\\sin^2\\theta = 1 - \\cos^2\\theta = 1 - \\frac{9}{25} = \\frac{16}{25}$, so $\\sin\\theta = \\pm\\frac{4}{5}$.",
+          "In Quadrant IV sine is negative, so $\\sin\\theta = -\\frac{4}{5}$."
+        ],
+        "answer": "$\\sin\\theta = -\\frac{4}{5}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Simplify $\\sec^2\\theta - \\tan^2\\theta$ using a Pythagorean identity.",
+      "hint": "Recall the companion identity $1 + \\tan^2\\theta = \\sec^2\\theta$ and rearrange it.",
+      "solution": {
+        "steps": [
+          "Start from the companion identity $1 + \\tan^2\\theta = \\sec^2\\theta$.",
+          "Subtract $\\tan^2\\theta$ from both sides: $\\sec^2\\theta - \\tan^2\\theta = 1$."
+        ],
+        "answer": "$1$"
+      }
+    }
+  ]
+}

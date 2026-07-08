@@ -1,0 +1,152 @@
+{
+  "id": "GEO.G-CO.A.2--quiz",
+  "standard": "GEO.G-CO.A.2",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Experiment with transformations in the plane",
+  "clusterCode": "A",
+  "skillName": "Transformations as Functions",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Eight multiple-choice questions on treating transformations as functions: evaluating coordinate rules, applying reflections, rotations, translations, dilations, and stretches, recovering rules, and classifying transformations as rigid or non-rigid.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Let $T(x,y)=(x-4,\\,y+1)$. Find $T(6,-2)$.\nA) $(2,-1)$\nB) $(10,-1)$\nC) $(2,-3)$\nD) $(10,-3)$",
+      "answer": "A) $(2,-1)$",
+      "solution": {
+        "steps": [
+          "Substitute $x=6$ and $y=-2$ into the rule $T(x,y)=(x-4,\\,y+1)$.",
+          "The new $x$-coordinate is $6-4=2$.",
+          "The new $y$-coordinate is $-2+1=-1$, so $T(6,-2)=(2,-1)$.",
+          "B is wrong: it adds $4$ instead of subtracting (a translation must follow the sign exactly).",
+          "C and D mishandle the $y$-step, subtracting $1$ or both errors at once."
+        ],
+        "answer": "A) $(2,-1)$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Reflect the point $P(3,-5)$ across the $x$-axis. What is the image?\nA) $(-3,-5)$\nB) $(3,5)$\nC) $(-3,5)$\nD) $(-5,3)$",
+      "answer": "B) $(3,5)$",
+      "solution": {
+        "steps": [
+          "A reflection across the $x$-axis uses the rule $(x,y)\\to(x,-y)$: keep $x$, negate $y$.",
+          "So $(3,-5)\\to(3,-(-5))=(3,5)$.",
+          "A is wrong: it negates $x$ instead, which is a reflection across the $y$-axis, $(x,y)\\to(-x,y)$.",
+          "C negates both coordinates (a $180^\\circ$ rotation), and D swaps the coordinates (a reflection across $y=x$)."
+        ],
+        "answer": "B) $(3,5)$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Apply the $180^\\circ$ rotation about the origin, $(x,y)\\to(-x,-y)$, to the point $A(-2,7)$. What is the image?\nA) $(2,7)$\nB) $(-2,-7)$\nC) $(2,-7)$\nD) $(7,-2)$",
+      "answer": "C) $(2,-7)$",
+      "solution": {
+        "steps": [
+          "The rule $(x,y)\\to(-x,-y)$ negates both coordinates.",
+          "So $(-2,7)\\to(-(-2),\\,-(7))=(2,-7)$.",
+          "A negates only $x$ (a $y$-axis reflection), and B negates only $y$ (an $x$-axis reflection).",
+          "D swaps and negates, which belongs to a rotation rule, not the $180^\\circ$ rule."
+        ],
+        "answer": "C) $(2,-7)$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Rotate the point $A(2,7)$ by $90^\\circ$ counterclockwise about the origin. What is the image?\nA) $(7,-2)$\nB) $(-7,2)$\nC) $(-2,-7)$\nD) $(-7,-2)$",
+      "answer": "B) $(-7,2)$",
+      "solution": {
+        "steps": [
+          "A $90^\\circ$ counterclockwise rotation about the origin uses $(x,y)\\to(-y,x)$.",
+          "So $(2,7)\\to(-7,\\,2)=(-7,2)$.",
+          "A is wrong: it uses $(x,y)\\to(y,-x)$, which is the $270^\\circ$ (or $90^\\circ$ clockwise) rule, a common sign/order swap.",
+          "C is the $180^\\circ$ image, and D negates both new coordinates by mistake."
+        ],
+        "answer": "B) $(-7,2)$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Reflect the point $P(3,-5)$ across the line $y=x$. What is the image?\nA) $(-3,5)$\nB) $(-5,3)$\nC) $(5,-3)$\nD) $(3,5)$",
+      "answer": "B) $(-5,3)$",
+      "solution": {
+        "steps": [
+          "A reflection across $y=x$ uses the rule $(x,y)\\to(y,x)$: swap the coordinates.",
+          "So $(3,-5)\\to(-5,3)$.",
+          "A is wrong: it negates both coordinates as if $y=x$ acted like a point reflection, instead of swapping.",
+          "C swaps but also wrongly negates, and D negates $y$ only (an $x$-axis reflection)."
+        ],
+        "answer": "B) $(-5,3)$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "A transformation sends $(2,3)\\to(2,-3)$ and $(-1,5)\\to(-1,-5)$. Which function rule describes it?\nA) $(x,y)\\to(-x,y)$\nB) $(x,y)\\to(y,x)$\nC) $(x,y)\\to(x,-y)$\nD) $(x,y)\\to(-x,-y)$",
+      "answer": "C) $(x,y)\\to(x,-y)$",
+      "solution": {
+        "steps": [
+          "Compare each input to its output: the $x$-coordinate stays the same ($2\\to2$, $-1\\to-1$) while the $y$-coordinate changes sign ($3\\to-3$, $5\\to-5$).",
+          "Keeping $x$ and negating $y$ is the rule $(x,y)\\to(x,-y)$, a reflection across the $x$-axis.",
+          "A negates $x$ (a $y$-axis reflection), which would change $2\\to-2$, contradicting the data.",
+          "B swaps the coordinates and D negates both, neither of which fixes $x$ as the data require."
+        ],
+        "answer": "C) $(x,y)\\to(x,-y)$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Which statement about the transformation $(x,y)\\to(3x,\\,y)$ is correct?\nA) It is a rigid motion, so the image is congruent to the preimage.\nB) It preserves distance because it only changes the $x$-coordinate.\nC) It is non-rigid: it is a horizontal stretch that changes side lengths, so the image is not congruent.\nD) It preserves distance because angles are unchanged.",
+      "answer": "C) It is non-rigid: it is a horizontal stretch that changes side lengths, so the image is not congruent.",
+      "solution": {
+        "steps": [
+          "Test the rule on a segment. The segment from $(0,0)$ to $(2,0)$ has length $2$; after the rule the endpoints are $(0,0)$ and $(6,0)$, length $6$, so distance is not preserved.",
+          "Because lengths change, $(x,y)\\to(3x,\\,y)$ is a horizontal stretch, a non-rigid transformation, and the image is not congruent.",
+          "A is wrong: a transformation that changes lengths cannot be a rigid motion.",
+          "B and D both falsely claim distance is preserved; a horizontal stretch changes horizontal lengths and also distorts angles of non-horizontal segments, so neither justification holds."
+        ],
+        "answer": "C) It is non-rigid: it is a horizontal stretch that changes side lengths, so the image is not congruent."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "The segment with endpoints $A(1,2)$ and $B(4,4)$ is transformed by the dilation $(x,y)\\to(2x,\\,2y)$. Compare the length of $\\overline{AB}$ to the length of its image $\\overline{A'B'}$ and classify the transformation.\nA) Both lengths are $\\sqrt{13}$, so the dilation preserves distance and is rigid.\nB) $\\overline{AB}=\\sqrt{13}$ and $\\overline{A'B'}=2\\sqrt{13}$, so the dilation does not preserve distance and is non-rigid.\nC) $\\overline{AB}=\\sqrt{13}$ and $\\overline{A'B'}=4\\sqrt{13}$, so the dilation does not preserve distance.\nD) The dilation preserves distance because angles are unchanged.",
+      "answer": "B) $\\overline{AB}=\\sqrt{13}$ and $\\overline{A'B'}=2\\sqrt{13}$, so the dilation does not preserve distance and is non-rigid.",
+      "solution": {
+        "steps": [
+          "Length of $\\overline{AB}$: $\\sqrt{(4-1)^2+(4-2)^2}=\\sqrt{9+4}=\\sqrt{13}$.",
+          "Apply the dilation: $A'=(2,4)$ and $B'=(8,8)$.",
+          "Length of $\\overline{A'B'}$: $\\sqrt{(8-2)^2+(8-4)^2}=\\sqrt{36+16}=\\sqrt{52}=2\\sqrt{13}$.",
+          "The image length is twice the preimage length, so distance is not preserved and the dilation is non-rigid (similar but not congruent).",
+          "A is wrong because the lengths are not equal. C miscomputes the image length (the scale factor is $2$, not $4$). D conflates similarity with congruence: equal angles do not imply equal distances, since every length here is doubled."
+        ],
+        "answer": "B) $\\overline{AB}=\\sqrt{13}$ and $\\overline{A'B'}=2\\sqrt{13}$, so the dilation does not preserve distance and is non-rigid."
+      }
+    }
+  ]
+}

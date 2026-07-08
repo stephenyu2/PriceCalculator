@@ -1,0 +1,166 @@
+{
+  "id": "GEO.G-GPE.A.1--quiz",
+  "standard": "GEO.G-GPE.A.1",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Expressing Geometric Properties with Equations",
+  "domainCode": "G-GPE",
+  "cluster": "Translate between the geometric description and the equation for a conic section",
+  "clusterCode": "A",
+  "skillName": "Equation of a Circle",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Eight multiple-choice questions on the equation of a circle: writing the equation from a center and radius, reading the center and radius from standard form, finding the radius through a given point, and completing the square. Choose the single best answer for each.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "What is the equation of the circle with center $(3,-2)$ and radius $5$?\nA) $(x-3)^2+(y+2)^2=25$\nB) $(x+3)^2+(y-2)^2=25$\nC) $(x-3)^2+(y+2)^2=5$\nD) $(x-3)^2+(y-2)^2=25$",
+      "answer": "A) $(x-3)^2+(y+2)^2=25$",
+      "solution": {
+        "steps": [
+          "Use the standard form $(x-h)^2+(y-k)^2=r^2$ with center $(h,k)=(3,-2)$ and radius $r=5$.",
+          "Substitute: $h=3$ gives $(x-3)$, and $k=-2$ gives $(y-(-2))=(y+2)$.",
+          "Square the radius: $r^2=5^2=25$, so the equation is $(x-3)^2+(y+2)^2=25$, which is choice A.",
+          "B reverses both signs of the center, treating $(x-h)$ as if $h=-3$ and $k=2$.",
+          "C uses $5$ on the right side instead of $r^2=25$, treating the right side as the radius rather than the radius squared.",
+          "D mishandles the sign of $k=-2$, writing $(y-2)$ instead of $(y+2)$."
+        ],
+        "answer": "A) $(x-3)^2+(y+2)^2=25$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "What is the center of the circle $(x+4)^2+(y-1)^2=49$?\nA) $(4,-1)$\nB) $(-4,1)$\nC) $(-4,-1)$\nD) $(4,1)$",
+      "answer": "B) $(-4,1)$",
+      "solution": {
+        "steps": [
+          "In standard form $(x-h)^2+(y-k)^2=r^2$, the center is $(h,k)$.",
+          "Rewrite $(x+4)$ as $(x-(-4))$, so $h=-4$. Rewrite $(y-1)$ as $(y-(1))$, so $k=1$.",
+          "The center is $(-4,1)$, which is choice B.",
+          "A reverses the sign of the center, reading $(x+4)$ as center $+4$ and $(y-1)$ as $-1$.",
+          "C keeps $h$ correct but reverses the sign of $k$.",
+          "D reverses the sign of $h$ while keeping $k$ correct."
+        ],
+        "answer": "B) $(-4,1)$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "What is the radius of the circle $(x-3)^2+(y+2)^2=25$?\nA) $625$\nB) $\\sqrt{5}$\nC) $5$\nD) $25$",
+      "answer": "C) $5$",
+      "solution": {
+        "steps": [
+          "In standard form the right side equals $r^2$, so $r^2=25$.",
+          "Take the positive square root: $r=\\sqrt{25}=5$, which is choice C.",
+          "D gives $25$, treating the right side as the radius rather than the radius squared.",
+          "A squares $25$ to get $625$, the reverse error of squaring instead of taking the root.",
+          "B takes the square root of the wrong value, $\\sqrt{5}$, instead of $\\sqrt{25}$."
+        ],
+        "answer": "C) $5$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "What is the equation of the circle with center $(1,2)$ that passes through the point $(4,6)$?\nA) $(x-1)^2+(y-2)^2=49$\nB) $(x-1)^2+(y-2)^2=5$\nC) $(x-1)^2+(y-2)^2=25$\nD) $(x+1)^2+(y+2)^2=25$",
+      "answer": "C) $(x-1)^2+(y-2)^2=25$",
+      "solution": {
+        "steps": [
+          "First find the radius as the distance from the center $(1,2)$ to the point $(4,6)$.",
+          "$r=\\sqrt{(4-1)^2+(6-2)^2}=\\sqrt{3^2+4^2}=\\sqrt{9+16}=\\sqrt{25}=5$.",
+          "Then $r^2=25$, so with center $(1,2)$ the equation is $(x-1)^2+(y-2)^2=25$, which is choice C.",
+          "A comes from adding the legs before squaring: $r=(4-1)+(6-2)=7$, then $r^2=49$, which is wrong.",
+          "B leaves the right side as $5$ (the radius) instead of $r^2=25$.",
+          "D reverses the signs of the center, writing $(x+1)$ and $(y+2)$."
+        ],
+        "answer": "C) $(x-1)^2+(y-2)^2=25$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "After completing the square, what is the center of the circle $x^2+y^2-6x+8y-11=0$?\nA) $(-3,4)$\nB) $(3,-4)$\nC) $(6,-8)$\nD) $(-6,8)$",
+      "answer": "B) $(3,-4)$",
+      "solution": {
+        "steps": [
+          "Group: $(x^2-6x)+(y^2+8y)=11$.",
+          "Complete the square in $x$: half of $-6$ is $-3$, squared is $9$. Complete the square in $y$: half of $8$ is $4$, squared is $16$.",
+          "Add $9$ and $16$ to both sides: $(x-3)^2+(y+4)^2=11+9+16=36$.",
+          "The center is $(h,k)=(3,-4)$, which is choice B.",
+          "A uses the signs of the linear coefficients directly ($-6,+8$) for the center instead of negating after halving.",
+          "C and D use the full linear coefficients $-6$ and $8$ (or their negatives) instead of halving them first."
+        ],
+        "answer": "B) $(3,-4)$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "After completing the square, what is the radius of the circle $x^2+y^2-6x+8y-11=0$?\nA) $\\sqrt{11}$\nB) $\\sqrt{18}$\nC) $6$\nD) $36$",
+      "answer": "C) $6$",
+      "solution": {
+        "steps": [
+          "Group and complete the square: $(x^2-6x+9)+(y^2+8y+16)=11+9+16$.",
+          "This gives $(x-3)^2+(y+4)^2=36$, so $r^2=36$.",
+          "Take the square root: $r=\\sqrt{36}=6$, which is choice C.",
+          "D leaves the answer as $36$, mistaking $r^2$ for the radius.",
+          "A comes from adding the constants only to the left side and not the right, leaving $r^2=11$ and $r=\\sqrt{11}$.",
+          "B comes from halving the linear coefficients but forgetting to square them, adding $3+4$ to $11$ to get $18$."
+        ],
+        "answer": "C) $6$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "After dividing out the leading coefficient and completing the square, what is the radius of the circle $2x^2+2y^2-4x+12y-6=0$?\nA) $\\sqrt{26}$\nB) $\\sqrt{13}$\nC) $13$\nD) $\\sqrt{10}$",
+      "answer": "B) $\\sqrt{13}$",
+      "solution": {
+        "steps": [
+          "Divide every term by $2$ first: $x^2+y^2-2x+6y-3=0$.",
+          "Group: $(x^2-2x)+(y^2+6y)=3$.",
+          "Complete the square: half of $-2$ is $-1$ (squared $1$); half of $6$ is $3$ (squared $9$). Add $1+9$ to both sides: $(x-1)^2+(y+3)^2=3+1+9=13$.",
+          "So $r^2=13$ and $r=\\sqrt{13}$, which is choice B.",
+          "A comes from completing the square without first dividing by $2$, inflating the right side to $26$.",
+          "C leaves the answer as $r^2=13$ instead of taking the square root.",
+          "D comes from forgetting to add the completed-square constants to the right side, leaving $r^2=10$."
+        ],
+        "answer": "B) $\\sqrt{13}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Which statement best describes the graph of $x^2+y^2-4x+6y+13=0$?\nA) A circle with center $(2,-3)$ and radius $\\sqrt{13}$\nB) A circle with center $(-2,3)$ and radius $0$\nC) A single point at $(2,-3)$\nD) A circle with center $(2,-3)$ and radius $1$",
+      "answer": "C) A single point at $(2,-3)$",
+      "solution": {
+        "steps": [
+          "Group: $(x^2-4x)+(y^2+6y)=-13$.",
+          "Complete the square: half of $-4$ is $-2$ (squared $4$); half of $6$ is $3$ (squared $9$). Add $4+9$ to both sides: $(x-2)^2+(y+3)^2=-13+13=0$.",
+          "Since $r^2=0$, the radius is $0$, so the graph is the single point at the center $(2,-3)$. This degenerate case is choice C.",
+          "A treats the constant $13$ as if it gives $r^2=13$, ignoring that it must move to the right side as $-13$.",
+          "B has the right idea about radius $0$ but reverses the sign of the center.",
+          "D incorrectly gets $r^2=1$, a nonzero radius, instead of the true value $r^2=0$."
+        ],
+        "answer": "C) A single point at $(2,-3)$"
+      }
+    }
+  ]
+}

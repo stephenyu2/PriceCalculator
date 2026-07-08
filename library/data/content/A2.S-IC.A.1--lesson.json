@@ -1,0 +1,164 @@
+{
+  "id": "A2.S-IC.A.1--lesson",
+  "standard": "A2.S-IC.A.1",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+  "domainCode": "S-IC",
+  "cluster": "Understand and evaluate random processes underlying statistical experiments",
+  "clusterCode": "A",
+  "skillName": "Statistics and Inference",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "Statistics is the process of using a random sample to make an inference about a larger population. The whole group you want to learn about is the population; the smaller part you actually measure is the sample. A fixed number that describes the population is a parameter (for example, the population mean $\\mu$ or population proportion $p$), and a number computed from the sample is a statistic (the sample mean $\\bar{x}$ or sample proportion $\\hat{p}$). A statistic varies from sample to sample, while the parameter stays fixed. For an inference to be trustworthy, the sample must be selected randomly so it represents the population; a biased sampling method, no matter how large, can make the conclusion invalid.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A polling firm surveys $1{,}200$ of the $480{,}000$ registered voters in a county about an upcoming ballot measure. Identify the population and the sample in this study.",
+      "solution": {
+        "steps": [
+          "The population is the entire group the study wants to draw a conclusion about. Here that is all $480{,}000$ registered voters in the county.",
+          "The sample is the smaller group that is actually surveyed. Here that is the $1{,}200$ voters who were contacted.",
+          "Check the direction of the inference: the firm wants to learn about all voters using the few it asked, so the big group is the population and the small group is the sample."
+        ],
+        "answer": "Population: all $480{,}000$ registered voters in the county. Sample: the $1{,}200$ voters who were surveyed."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Across all $480{,}000$ registered voters, exactly $52\\%$ support the ballot measure; in the firm's random sample of $1{,}200$ voters, $49\\%$ said they support it. Which value is the parameter and which is the statistic, and what symbol ($p$ or $\\hat{p}$) represents each?",
+      "solution": {
+        "steps": [
+          "A parameter is a fixed number describing the whole population. The $52\\%$ comes from all $480{,}000$ voters, so it is the parameter, written $p = 0.52$.",
+          "A statistic is a number computed from the sample. The $49\\%$ comes from the $1{,}200$ sampled voters, so it is the statistic, written $\\hat{p} = 0.49$.",
+          "Remember the symbol rule: the plain letter $p$ goes with the population, and the 'hat' symbol $\\hat{p}$ goes with the sample estimate of $p$.",
+          "So $\\hat{p} = 0.49$ is the sample's estimate of the unknown-in-practice population value $p$; here we happen to know $p = 0.52$."
+        ],
+        "answer": "Parameter: $p = 0.52$ ($52\\%$, the population value). Statistic: $\\hat{p} = 0.49$ ($49\\%$, the sample value)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Explain why surveying only voters leaving a single downtown coffee shop would not give a trustworthy estimate of the proportion of all county voters who support the ballot measure.",
+      "solution": {
+        "steps": [
+          "For a sample to support a valid inference, every member of the population should have a known, nonzero chance of being chosen, so the sample resembles the whole population. This is what random selection guarantees.",
+          "Voters at one downtown coffee shop are not chosen at random from all county voters. Rural voters, voters who do not visit that area, and voters who do not drink coffee have essentially no chance of being included.",
+          "This is a convenience sample: it is easy to collect but systematically over-represents one type of voter, so it is biased.",
+          "Because the sample is not representative, the sample proportion can be systematically too high or too low, and an estimate built from it cannot be trusted for all county voters."
+        ],
+        "answer": "It is a non-random convenience sample that over-represents downtown coffee-shop visitors and excludes many other voters, so it is not representative of all county voters and any inference from it is untrustworthy."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A radio host asks listeners to call in and vote on a tax proposal; $73\\%$ of the $900$ callers oppose it. Name the type of bias present and explain why the host cannot conclude that $73\\%$ of all residents oppose the proposal.",
+      "solution": {
+        "steps": [
+          "The respondents chose themselves by deciding to call in, rather than being randomly selected by the host. This is voluntary-response bias.",
+          "People who feel strongly, especially those who are upset, are far more likely to take the time to call, so the callers are not representative of all residents.",
+          "A large count does not fix this. Having $900$ callers makes the biased sample bigger, but it does not make it representative; bias is about how respondents are selected, not how many there are.",
+          "Because the sample is self-selected and not random, the $73\\%$ describes only the callers, so it cannot be used to infer the opinion of all residents."
+        ],
+        "answer": "Voluntary-response bias. The callers selected themselves and tend to be those with strong opinions, so they are not representative; a larger number of callers does not remove the bias, and the $73\\%$ cannot be generalized to all residents."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Three different random samples of $50$ students each give mean weekly study times of $\\bar{x}_1 = 6.2$, $\\bar{x}_2 = 5.9$, and $\\bar{x}_3 = 6.5$ hours. Explain why the three means differ even though the population mean $\\mu$ is a single fixed number, and give the best single estimate of $\\mu$ from sample 1.",
+      "solution": {
+        "steps": [
+          "The population mean $\\mu$ is a fixed parameter: it is one unchanging number for all students, even though we may not know its exact value.",
+          "Each sample contains a different set of $50$ students, so each produces a different sample mean $\\bar{x}$. This change from sample to sample is called sampling variability.",
+          "The three values differing does not mean any of them is 'wrong'; they are natural variation around the fixed $\\mu$, all serving as estimates of the same parameter.",
+          "A sample mean is a point estimate of $\\mu$, so the best single estimate of $\\mu$ from sample 1 is its sample mean, $\\bar{x}_1 = 6.2$ hours."
+        ],
+        "answer": "The means differ because of sampling variability (each sample has different students), while $\\mu$ stays fixed. The best single estimate of $\\mu$ from sample 1 is $\\bar{x}_1 = 6.2$ hours."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A quality inspector checks $40$ light bulbs from a daily production run of $25{,}000$ bulbs. Identify the population and the sample.",
+      "hint": "The population is the whole group you want a conclusion about; the sample is the part you actually inspect.",
+      "solution": {
+        "steps": [
+          "The population is the entire group of interest: all $25{,}000$ bulbs in the day's production run.",
+          "The sample is the part that is actually measured: the $40$ bulbs the inspector checks.",
+          "The inspector uses the $40$ checked bulbs to draw a conclusion about all $25{,}000$, confirming which group is the sample and which is the population."
+        ],
+        "answer": "Population: all $25{,}000$ bulbs in the day's production run. Sample: the $40$ bulbs inspected."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "In a shipment of $8{,}000$ batteries, $3\\%$ are defective. A random sample of $150$ batteries from the shipment contains $4\\%$ defective. Classify each percentage as a parameter or a statistic and give the correct symbol ($p$ or $\\hat{p}$).",
+      "hint": "The value from the whole shipment is the parameter; the value from the sample is the statistic. The 'hat' goes with the sample.",
+      "solution": {
+        "steps": [
+          "The $3\\%$ describes the entire shipment of $8{,}000$ batteries, so it is the parameter: $p = 0.03$.",
+          "The $4\\%$ is computed from the random sample of $150$ batteries, so it is the statistic: $\\hat{p} = 0.04$.",
+          "The statistic $\\hat{p} = 0.04$ is the sample's estimate of the population parameter $p = 0.03$."
+        ],
+        "answer": "Parameter: $p = 0.03$ (the $3\\%$ from the whole shipment). Statistic: $\\hat{p} = 0.04$ (the $4\\%$ from the sample)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A researcher randomly selects $200$ households from a complete city directory and finds $\\hat{p} = 0.34$ own a pet. Is it reasonable to infer that about $34\\%$ of all households in the city own a pet? Justify your answer in terms of the sampling method.",
+      "hint": "Ask whether the sample was selected randomly from the full population. If so, the sample statistic is a valid point estimate of the parameter.",
+      "solution": {
+        "steps": [
+          "Check the sampling method: the $200$ households were selected randomly from a complete city directory, so every household had a chance to be chosen and the sample should be representative.",
+          "A random sample lets the sample statistic serve as a valid point estimate of the population parameter.",
+          "Therefore $\\hat{p} = 0.34$ is a reasonable estimate of the population proportion $p$, so inferring that about $34\\%$ of all city households own a pet is justified.",
+          "There will still be some sampling variability, so $34\\%$ is an estimate rather than an exact value, but the random method makes the inference trustworthy."
+        ],
+        "answer": "Yes. Because the $200$ households were selected randomly from the full city directory, the sample is representative and $\\hat{p} = 0.34$ is a valid point estimate of $p$, so inferring about $34\\%$ is justified."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A website posts an online poll asking visitors, 'Should the city build a new stadium?' Of the $5{,}000$ visitors who chose to respond, $68\\%$ said yes. Name the type of bias and explain whether the city can conclude that $68\\%$ of all residents support the stadium.",
+      "hint": "Did the respondents get selected at random, or did they decide on their own to participate? Does a large number of responses fix that problem?",
+      "solution": {
+        "steps": [
+          "The respondents decided on their own whether to answer the online poll, so they selected themselves rather than being randomly chosen. This is voluntary-response bias.",
+          "People who feel strongly about the stadium are more likely to respond, so the $5{,}000$ respondents are not representative of all residents.",
+          "The large number of responses does not fix the bias; a bigger self-selected sample is still self-selected and unrepresentative.",
+          "So the $68\\%$ describes only the visitors who chose to respond, and the city cannot conclude that $68\\%$ of all residents support the stadium."
+        ],
+        "answer": "Voluntary-response bias. The respondents self-selected and are not representative, and the large count does not remove the bias, so the city cannot generalize the $68\\%$ to all residents."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Two analysts each take a separate random sample of $60$ customers and compute the mean amount spent: analyst A gets $\\bar{x}_A = \\$42.10$ and analyst B gets $\\bar{x}_B = \\$44.30$. A manager says one of them must have made an error because the means are different. Explain why the manager is mistaken and give the best single estimate of the population mean $\\mu$ from analyst A's sample.",
+      "hint": "Different random samples almost always give different sample means even when the population mean is fixed. This is expected, not an error.",
+      "solution": {
+        "steps": [
+          "The population mean $\\mu$ is a single fixed parameter, the same for all customers, even though its exact value is unknown.",
+          "Each analyst sampled a different set of $60$ customers, so each sample mean comes out a little different. This expected difference is sampling variability, not a mistake.",
+          "Two unequal sample means are perfectly normal: both are point estimates of the same fixed $\\mu$, varying around it.",
+          "A sample mean is a point estimate of $\\mu$, so the best single estimate from analyst A's sample is $\\bar{x}_A = \\$42.10$."
+        ],
+        "answer": "The manager is mistaken: the means differ because of normal sampling variability, not error, since $\\mu$ is fixed while each sample mean varies. The best single estimate of $\\mu$ from analyst A's sample is $\\$42.10$."
+      }
+    }
+  ]
+}

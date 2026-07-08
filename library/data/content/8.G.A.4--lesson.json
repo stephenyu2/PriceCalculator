@@ -1,0 +1,169 @@
+{
+  "id": "8.G.A.4--lesson",
+  "standard": "8.G.A.4",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand congruence and similarity using physical models, transparencies, or geometry software",
+  "clusterCode": "A",
+  "skillName": "Similarity and Dilations",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "Two figures are similar when one can be mapped onto the other by a sequence of rigid motions (translations, reflections, rotations) together with at least one dilation. A dilation resizes a figure by a scale factor $k$ measured from a fixed center. About the origin the rule is $(x,y)\\mapsto(kx,ky)$; about a center $C(c_x,c_y)$ it is $(x,y)\\mapsto\\big(c_x+k(x-c_x),\\,c_y+k(y-c_y)\\big)$. A dilation with $k>1$ enlarges, $0<k<1$ reduces, and $k=1$ leaves the figure unchanged. Similarity preserves angle measures and ratios of side lengths but may change size, so every congruence is a similarity but not every similarity is a congruence.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Triangle $ABC$ has vertices $A(2,4)$, $B(6,2)$, and $C(-2,-2)$. Find the coordinates of the image after a dilation centered at the origin with scale factor $k=\\frac{1}{2}$.",
+      "solution": {
+        "steps": [
+          "A dilation about the origin uses the rule $(x,y)\\mapsto(kx,ky)$, so multiply each coordinate by $k=\\frac{1}{2}$.",
+          "$A(2,4)\\mapsto A'\\left(\\frac{1}{2}\\cdot 2,\\ \\frac{1}{2}\\cdot 4\\right)=A'(1,2)$.",
+          "$B(6,2)\\mapsto B'\\left(\\frac{1}{2}\\cdot 6,\\ \\frac{1}{2}\\cdot 2\\right)=B'(3,1)$.",
+          "$C(-2,-2)\\mapsto C'\\left(\\frac{1}{2}\\cdot(-2),\\ \\frac{1}{2}\\cdot(-2)\\right)=C'(-1,-1)$.",
+          "Because $0<k<1$, the image is a reduction of the original triangle."
+        ],
+        "answer": "$A'(1,2)$, $B'(3,1)$, $C'(-1,-1)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Point $P(5,3)$ is dilated about the center $C(1,1)$ with scale factor $k=3$. Find the image $P'$.",
+      "solution": {
+        "steps": [
+          "When the center is not the origin, use $(x,y)\\mapsto\\big(c_x+k(x-c_x),\\,c_y+k(y-c_y)\\big)$ with $C(1,1)$ and $k=3$.",
+          "Find the $x$-coordinate: $1+3(5-1)=1+3\\cdot 4=1+12=13$.",
+          "Find the $y$-coordinate: $1+3(3-1)=1+3\\cdot 2=1+6=7$.",
+          "So $P'(13,7)$. As a check, the center, $P$, and $P'$ all lie on the same line, and $P'$ is $3$ times as far from $C$ as $P$ is."
+        ],
+        "answer": "$P'(13,7)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A figure is dilated about the origin so that the point $(4,8)$ maps to $(6,12)$. What is the scale factor $k$?",
+      "solution": {
+        "steps": [
+          "For a dilation about the origin, each image coordinate equals $k$ times the original coordinate, so $k=\\frac{\\text{image length}}{\\text{original length}}$.",
+          "Compare the $x$-coordinates: $k=\\frac{6}{4}=\\frac{3}{2}$.",
+          "Check with the $y$-coordinates: $\\frac{12}{8}=\\frac{3}{2}$, which matches.",
+          "The scale factor is image over original, $\\frac{3}{2}$, not original over image. Since $k>1$, this dilation is an enlargement."
+        ],
+        "answer": "$k=\\frac{3}{2}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Rectangle $R$ measures $3$ by $5$ and rectangle $S$ measures $6$ by $10$. Are $R$ and $S$ similar? Justify your answer using corresponding side ratios.",
+      "solution": {
+        "steps": [
+          "Similar figures have corresponding side lengths in the same ratio, so compare ratios (multiply), do not subtract.",
+          "Compare the shorter sides: $\\frac{6}{3}=2$.",
+          "Compare the longer sides: $\\frac{10}{5}=2$.",
+          "Both ratios equal $2$, and rectangles already have all right angles, so $S$ is the image of $R$ under a dilation with scale factor $k=2$.",
+          "The rectangles are similar even though they are different sizes; a size change does not break similarity, as long as the ratios match."
+        ],
+        "answer": "Yes, $R$ and $S$ are similar; each pair of corresponding sides has ratio $2$, so $S$ is a dilation of $R$ with $k=2$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "$\\triangle ABC\\sim\\triangle DEF$ with $AB=8$, $DE=12$, and $BC=10$. Find $EF$.",
+      "solution": {
+        "steps": [
+          "In similar triangles, corresponding sides are proportional. $AB$ corresponds to $DE$ and $BC$ corresponds to $EF$.",
+          "Find the scale factor from the known corresponding pair: $k=\\frac{DE}{AB}=\\frac{12}{8}=\\frac{3}{2}$.",
+          "Apply the same factor to $BC$: $EF=k\\cdot BC=\\frac{3}{2}\\cdot 10=\\frac{30}{2}=15$.",
+          "Equivalently, set up the proportion $\\frac{EF}{BC}=\\frac{DE}{AB}$, that is $\\frac{EF}{10}=\\frac{12}{8}$, and solve to get $EF=15$."
+        ],
+        "answer": "$EF=15$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Triangle $PQR$ has vertices $P(1,3)$, $Q(4,0)$, and $R(-2,1)$. Find the coordinates of the image after a dilation centered at the origin with scale factor $k=2$.",
+      "hint": "About the origin, multiply each coordinate by $k$: $(x,y)\\mapsto(2x,2y)$.",
+      "solution": {
+        "steps": [
+          "Multiply each coordinate by $k=2$.",
+          "$P(1,3)\\mapsto P'(2,6)$.",
+          "$Q(4,0)\\mapsto Q'(8,0)$.",
+          "$R(-2,1)\\mapsto R'(-4,2)$.",
+          "Because $k>1$, the image is an enlargement."
+        ],
+        "answer": "$P'(2,6)$, $Q'(8,0)$, $R'(-4,2)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Point $A(7,5)$ is dilated about the center $C(3,2)$ with scale factor $k=2$. Find the image $A'$.",
+      "hint": "Use $(x,y)\\mapsto\\big(c_x+k(x-c_x),\\,c_y+k(y-c_y)\\big)$ with $C(3,2)$ and $k=2$.",
+      "solution": {
+        "steps": [
+          "Apply the non-origin rule with $C(3,2)$ and $k=2$.",
+          "$x$-coordinate: $3+2(7-3)=3+2\\cdot 4=3+8=11$.",
+          "$y$-coordinate: $2+2(5-2)=2+2\\cdot 3=2+6=8$.",
+          "So $A'(11,8)$."
+        ],
+        "answer": "$A'(11,8)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A figure is dilated about the origin so that the point $(10,15)$ maps to $(4,6)$. What is the scale factor $k$?",
+      "hint": "The scale factor is image length divided by original length.",
+      "solution": {
+        "steps": [
+          "Use $k=\\frac{\\text{image}}{\\text{original}}$ for a dilation about the origin.",
+          "From the $x$-coordinates: $k=\\frac{4}{10}=\\frac{2}{5}$.",
+          "Check with the $y$-coordinates: $\\frac{6}{15}=\\frac{2}{5}$, which matches.",
+          "Since $0<k<1$, the dilation is a reduction."
+        ],
+        "answer": "$k=\\frac{2}{5}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Rectangle $R$ measures $4$ by $6$ and rectangle $S$ measures $6$ by $9$. Are $R$ and $S$ similar? Justify your answer using corresponding side ratios.",
+      "hint": "Compare the ratios of corresponding sides by dividing, not by subtracting.",
+      "solution": {
+        "steps": [
+          "Compare corresponding sides by ratio.",
+          "Shorter sides: $\\frac{6}{4}=\\frac{3}{2}$.",
+          "Longer sides: $\\frac{9}{6}=\\frac{3}{2}$.",
+          "Both ratios equal $\\frac{3}{2}$, and rectangles have congruent right angles, so $S$ is a dilation of $R$ with $k=\\frac{3}{2}$.",
+          "The figures are similar even though their sizes differ."
+        ],
+        "answer": "Yes; both pairs of corresponding sides have ratio $\\frac{3}{2}$, so the rectangles are similar."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A triangle with area $5$ square units is dilated by a scale factor of $k=3$. What is the area of the image, and is the image congruent to, similar to but not congruent to, or neither, the original?",
+      "hint": "Lengths scale by $k$, but area scales by $k^2$. Congruence requires $k=1$.",
+      "solution": {
+        "steps": [
+          "Under a dilation, every length is multiplied by $k$, so the area is multiplied by $k^2$.",
+          "With $k=3$, the area is multiplied by $3^2=9$.",
+          "New area $=9\\cdot 5=45$ square units.",
+          "Since $k=3\\neq 1$, the size changes, so the image is similar to the original but not congruent. A dilation preserves angle measures, so the figures still have the same shape."
+        ],
+        "answer": "The image has area $45$ square units and is similar to but not congruent to the original."
+      }
+    }
+  ]
+}

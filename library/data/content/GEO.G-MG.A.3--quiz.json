@@ -1,0 +1,164 @@
+{
+  "id": "GEO.G-MG.A.3--quiz",
+  "standard": "GEO.G-MG.A.3",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Modeling with Geometry",
+  "domainCode": "G-MG",
+  "cluster": "Apply geometric concepts in modeling situations",
+  "clusterCode": "A",
+  "skillName": "Geometric Methods in Design Problems",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Apply geometric methods to design problems: size regions and containers to a target area or volume, count tiles, apply aspect ratios and scale factors, and compare competing designs by cost or material. Choose the single best answer for each item.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "A rectangular patio must have an area of $54$ square feet. Its length is fixed at $9$ ft. What is the required width?\nA) $6$ ft\nB) $18$ ft\nC) $45$ ft\nD) $486$ ft",
+      "answer": "A) $6$ ft",
+      "solution": {
+        "steps": [
+          "The governing equation is $A = \\ell w$, so $54 = 9w$.",
+          "Divide both sides by $9$: $w = \\frac{54}{9} = 6$ ft, which is choice A.",
+          "B is wrong: it comes from confusing area with perimeter and using $2\\ell + 2w = 54$ thinking, not the area equation.",
+          "C is wrong: it subtracts ($54 - 9 = 45$) instead of dividing.",
+          "D is wrong: it multiplies ($54 \\times 9$) instead of dividing by the known length."
+        ],
+        "answer": "A) $6$ ft"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "How many $2$ ft by $2$ ft square tiles are needed to cover a rectangular floor that is $10$ ft by $14$ ft?\nA) $35$ tiles\nB) $6$ tiles\nC) $70$ tiles\nD) $140$ tiles",
+      "answer": "A) $35$ tiles",
+      "solution": {
+        "steps": [
+          "Tiling by area: divide the floor area by the area of one tile.",
+          "Floor area $= 10 \\times 14 = 140$ ft$^2$; one tile $= 2 \\times 2 = 4$ ft$^2$.",
+          "Number of tiles $= \\frac{140}{4} = 35$, which is choice A.",
+          "B is wrong: it adds dimensions, $\\frac{10+14}{2+2} = \\frac{24}{4} = 6$, ignoring that tiling is a two-dimensional (area) count.",
+          "C is wrong: it divides the floor area by only one side length of the tile ($\\frac{140}{2}$).",
+          "D is wrong: it uses the floor area as the tile count, forgetting to divide by the tile area at all."
+        ],
+        "answer": "A) $35$ tiles"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "A cylindrical tank must hold a volume of $100\\pi$ cubic feet and stand $4$ ft tall. What radius does it need? (Use $V = \\pi r^2 h$.)\nA) $5$ ft\nB) $25$ ft\nC) $\\frac{25}{2}$ ft\nD) $\\sqrt{5}$ ft",
+      "answer": "A) $5$ ft",
+      "solution": {
+        "steps": [
+          "Set up $V = \\pi r^2 h$: $100\\pi = \\pi r^2 (4)$.",
+          "Divide both sides by $\\pi$: $100 = 4r^2$, so $r^2 = 25$.",
+          "Take the square root: $r = 5$ ft, which is choice A.",
+          "B is wrong: it reports $r^2 = 25$ as $r$, forgetting to take the square root.",
+          "C is wrong: it divides $\\frac{100}{2 \\cdot 4}$ by mishandling the formula instead of solving for $r^2$.",
+          "D is wrong: it square-roots the $5$ from a wrong setup rather than $r^2 = 25$."
+        ],
+        "answer": "A) $5$ ft"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "A rectangular garden must have an area of $48$ square meters, and its length must be $3$ times its width. What is the width?\nA) $4$ m\nB) $12$ m\nC) $16$ m\nD) $\\sqrt{48}$ m",
+      "answer": "A) $4$ m",
+      "solution": {
+        "steps": [
+          "Let the width be $w$; then the length is $3w$ and the area equation is $3w \\cdot w = 48$.",
+          "So $3w^2 = 48$, giving $w^2 = 16$ and $w = 4$ m, which is choice A.",
+          "B is wrong: it confuses area with perimeter, setting $3w + w = 48$ to get $4w = 48$, $w = 12$.",
+          "C is wrong: it stops at $w^2 = 16$ and reports $16$, forgetting to take the square root.",
+          "D is wrong: it square-roots the area directly, ignoring the factor of $3$ from $\\ell = 3w$."
+        ],
+        "answer": "A) $4$ m"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "A video banner must keep a $16:9$ aspect ratio (width to height) and fit a width of $640$ px. What height should it have?\nA) $360$ px\nB) $1138$ px\nC) $90$ px\nD) $576$ px",
+      "answer": "A) $360$ px",
+      "solution": {
+        "steps": [
+          "The ratio is width : height $= 16 : 9$, so height $= \\frac{9}{16} \\cdot \\text{width}$.",
+          "Height $= \\frac{9}{16} \\cdot 640 = 9 \\cdot 40 = 360$ px, which is choice A.",
+          "B is wrong: it inverts the ratio, computing $\\frac{16}{9} \\cdot 640 \\approx 1138$ px, which would make the banner taller than it is wide.",
+          "C is wrong: it multiplies $\\frac{9}{64}\\cdot 640$ by misreading the ratio denominator.",
+          "D is wrong: it applies $\\frac{9}{10}\\cdot 640$ using the wrong ratio entirely."
+        ],
+        "answer": "A) $360$ px"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "A circular fountain must have an area of $36\\pi$ square meters. What is its radius? (Use $A = \\pi r^2$.)\nA) $6$ m\nB) $36$ m\nC) $18$ m\nD) $\\sqrt{36\\pi}$ m",
+      "answer": "A) $6$ m",
+      "solution": {
+        "steps": [
+          "Set up $A = \\pi r^2$: $36\\pi = \\pi r^2$.",
+          "Divide both sides by $\\pi$: $r^2 = 36$.",
+          "Take the square root: $r = 6$ m, which is choice A.",
+          "B is wrong: it reports $r^2 = 36$ as $r$, forgetting the square root.",
+          "C is wrong: it divides the area by $2$ as if $A = 2\\pi r$, confusing area with circumference.",
+          "D is wrong: it square-roots the full $36\\pi$ without first dividing by $\\pi$."
+        ],
+        "answer": "A) $6$ m"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A rectangular dog pen is built against a straight wall, so fencing is needed on only three sides. The pen must enclose an area of $36$ m$^2$, and only whole-number dimensions are allowed. Which design uses the LEAST fencing? (For each, the side parallel to the wall is left unfenced.)\nA) $9$ m by $4$ m, with the $9$ m side against the wall, using $17$ m of fence\nB) $6$ m by $6$ m, using $18$ m of fence\nC) $4$ m by $9$ m, with the $4$ m side against the wall, using $22$ m of fence\nD) $12$ m by $3$ m, with the $3$ m side against the wall, using $27$ m of fence",
+      "answer": "A) $9$ m by $4$ m, with the $9$ m side against the wall, using $17$ m of fence",
+      "solution": {
+        "steps": [
+          "With one side against the wall, fence length $= (\\text{side along wall}) + 2 \\times (\\text{depth})$, not the full perimeter.",
+          "A: wall side $9$, depth $4$: fence $= 9 + 2(4) = 17$ m. Area $= 9 \\times 4 = 36$. Valid.",
+          "B: square $6 \\times 6$: fence $= 6 + 2(6) = 18$ m. Area $= 36$. Valid but more than A.",
+          "C: wall side $4$, depth $9$: fence $= 4 + 2(9) = 22$ m. Area $= 36$. More fencing.",
+          "D: wall side $3$, depth $12$: fence $= 3 + 2(12) = 27$ m. More fencing still.",
+          "The minimum is A at $17$ m. Putting the longer side along the wall (so only the shorter depth is doubled) reduces fencing, unlike the all-sides intuition that would favor the square.",
+          "The common error is computing the full perimeter $2\\ell + 2w$ for every design (which makes the $6 \\times 6$ square look best at $24$ m), but only three sides are fenced here, so A wins."
+        ],
+        "answer": "A) $9$ m by $4$ m, with the $9$ m side against the wall, using $17$ m of fence"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A landscape designer makes a scale model using $1$ in $= 4$ ft. On the model, a patio measures $3$ in by $5$ in. What is the AREA of the real patio?\nA) $240$ ft$^2$\nB) $60$ ft$^2$\nC) $15$ ft$^2$\nD) $960$ ft$^2$",
+      "answer": "A) $240$ ft$^2$",
+      "solution": {
+        "steps": [
+          "Lengths scale by the factor $k = 4$, so the real patio is $3(4) = 12$ ft by $5(4) = 20$ ft.",
+          "Real area $= 12 \\times 20 = 240$ ft$^2$, which is choice A.",
+          "Equivalently, model area $= 3 \\times 5 = 15$ in$^2$ scales by $k^2 = 4^2 = 16$: $15 \\times 16 = 240$ ft$^2$.",
+          "B is wrong: it scales the area by the linear factor $k = 4$ instead of $k^2 = 16$, giving $15 \\times 4 = 60$.",
+          "C is wrong: it reports the model area $15$ in$^2$ without scaling at all.",
+          "D is wrong: it scales by $k^3 = 64$ as if computing a volume, giving $15 \\times 64 = 960$."
+        ],
+        "answer": "A) $240$ ft$^2$"
+      }
+    }
+  ]
+}

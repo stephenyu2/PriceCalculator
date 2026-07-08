@@ -1,0 +1,234 @@
+{
+  "id": "A1.F-LE.A--cluster-worksheet",
+  "standard": null,
+  "clusterId": "A1.F-LE.A",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Linear, Quadratic, and Exponential Models",
+  "domainCode": "F-LE",
+  "cluster": "Construct and compare linear, quadratic, and exponential models and solve problems",
+  "clusterCode": "A",
+  "skillName": "Construct and compare linear, quadratic, and exponential models and solve problems",
+  "materialType": "cluster-worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "intro": "This worksheet spans the whole cluster. The first group asks you to classify situations as linear (constant difference, $+m$ per step) or exponential (constant factor, $\\times b$ per step). The second group asks you to construct a linear rule $f(x)=mx+b$ or an exponential rule $f(x)=a\\cdot b^{x}$ from points, tables, descriptions, or sequences. The third group asks you to compare an exponential function with a linear or polynomial rival and see that exponential growth eventually wins. Each group ramps from easier to harder.",
+  "items": [
+    {
+      "standard": "A1.F-LE.A.1",
+      "id": 1,
+      "prompt": "A table gives $f(0)=5,\\ f(1)=8,\\ f(2)=11,\\ f(3)=14$. Is this function linear or exponential? State the constant difference or constant ratio.",
+      "answer": "Linear, with a constant difference of $+3$.",
+      "solution": {
+        "steps": [
+          "Check the first differences: $8-5=3$, $11-8=3$, $14-11=3$.",
+          "The difference is the same ($+3$) over each equal step, so the function is linear.",
+          "A linear function grows by equal differences, so the constant rate of change (slope) is $m=3$."
+        ]
+      }
+    },
+    {
+      "standard": "A1.F-LE.A.1",
+      "id": 2,
+      "prompt": "A table gives $g(0)=4,\\ g(1)=12,\\ g(2)=36,\\ g(3)=108$. Is this function linear or exponential? State the constant difference or constant ratio.",
+      "answer": "Exponential, with a constant ratio of $\\times 3$.",
+      "solution": {
+        "steps": [
+          "Check the ratios of consecutive outputs: $\\frac{12}{4}=3$, $\\frac{36}{12}=3$, $\\frac{108}{36}=3$.",
+          "The ratio is the same ($\\times 3$) over each equal step, so the function is exponential.",
+          "The differences ($8, 24, 72$) are not constant, which confirms it is not linear.",
+          "So the growth factor is $b=3$."
+        ]
+      }
+    },
+    {
+      "standard": "A1.F-LE.A.1",
+      "id": 3,
+      "prompt": "For the equations $y=6+4x$ and $y=6\\cdot(1.04)^{x}$, identify which is linear and which is exponential, and state the slope or the growth factor of each.",
+      "answer": "$y=6+4x$ is linear with slope $4$; $y=6\\cdot(1.04)^{x}$ is exponential with growth factor $1.04$.",
+      "solution": {
+        "steps": [
+          "An equation of the form $y=mx+b$ is linear. Here $y=6+4x=4x+6$, so it is linear with slope $m=4$ and intercept $b=6$.",
+          "An equation of the form $y=a\\cdot b^{x}$ is exponential. Here $y=6\\cdot(1.04)^{x}$, so it is exponential with starting value $a=6$ and growth factor $b=1.04$.",
+          "The base $1.04$ is the growth factor, not a slope, because the variable $x$ is in the exponent."
+        ]
+      }
+    },
+    {
+      "standard": "A1.F-LE.A.1",
+      "id": 4,
+      "prompt": "A car worth $\\$24{,}000$ loses $20\\%$ of its value each year. Is the value modeled by a linear or an exponential function, and what is the factor $b$ in $f(x)=a\\cdot b^{x}$?",
+      "answer": "Exponential decay, with factor $b=0.8$.",
+      "solution": {
+        "steps": [
+          "Losing a fixed percent of the current value each year means multiplying by the same factor each year, which is exponential.",
+          "A $20\\%$ loss means each year the value keeps $100\\%-20\\%=80\\%$ of the previous value.",
+          "Convert the percent to a factor: $b=1-r=1-0.20=0.80$.",
+          "Since $0<b<1$, this is exponential decay, with $f(x)=24000\\cdot(0.8)^{x}$."
+        ]
+      }
+    },
+    {
+      "standard": "A1.F-LE.A.1",
+      "id": 5,
+      "prompt": "Plan A pays $\\$200$ now plus $\\$60$ each week. Plan B pays $\\$2$ in week $1$ and doubles every week after that. Identify each plan as linear or exponential, and explain which plan's pay grows faster in the long run.",
+      "answer": "Plan A is linear; Plan B is exponential. Plan B grows faster in the long run because exponential growth eventually exceeds any linear growth.",
+      "solution": {
+        "steps": [
+          "Plan A adds a fixed amount ($\\$60$) each week, an equal difference each step, so it is linear: $A(t)=200+60t$.",
+          "Plan B multiplies by a fixed factor ($\\times 2$) each week, an equal ratio each step, so it is exponential: $B(t)=2\\cdot 2^{\\,t-1}$.",
+          "For small weeks Plan A is far ahead (week $1$: $\\$260$ vs $\\$2$), but Plan B's amounts double repeatedly: $2, 4, 8, 16, 32, 64, 128, 256, \\dots$",
+          "Because an exponential function grows by a constant factor while a linear function only adds a constant, the exponential eventually and permanently overtakes the linear one.",
+          "So Plan B grows faster in the long run."
+        ]
+      }
+    },
+    {
+      "standard": "A1.F-LE.A.2",
+      "id": 6,
+      "prompt": "A linear function has a $y$-intercept of $(0,7)$ and a slope of $3$. Write the rule $f(x)$.",
+      "answer": "$f(x)=3x+7$",
+      "solution": {
+        "steps": [
+          "A linear rule has the form $f(x)=mx+b$, where $m$ is the slope and $b$ is the initial value (the $y$-intercept).",
+          "The slope is given: $m=3$.",
+          "The $y$-intercept is $(0,7)$, so $b=7$.",
+          "Substitute: $f(x)=3x+7$."
+        ]
+      }
+    },
+    {
+      "standard": "A1.F-LE.A.2",
+      "id": 7,
+      "prompt": "An arithmetic sequence begins $6,10,14,18,\\dots$. Write the explicit rule $a_n$ for the $n$th term.",
+      "answer": "$a_n=4n+2$ (equivalently $a_n=6+(n-1)4$)",
+      "solution": {
+        "steps": [
+          "Find the common difference: $10-6=4$, $14-10=4$, $18-14=4$, so $d=4$.",
+          "The first term is $a_1=6$.",
+          "Use the explicit arithmetic rule $a_n=a_1+(n-1)d=6+(n-1)4$.",
+          "Simplify: $a_n=6+4n-4=4n+2$.",
+          "Check $a_1=4(1)+2=6$, which matches."
+        ]
+      }
+    },
+    {
+      "standard": "A1.F-LE.A.2",
+      "id": 8,
+      "prompt": "A line passes through the points $(2,9)$ and $(5,21)$. Write the linear rule $f(x)$.",
+      "answer": "$f(x)=4x+1$",
+      "solution": {
+        "steps": [
+          "Compute the slope: $m=\\frac{y_2-y_1}{x_2-x_1}=\\frac{21-9}{5-2}=\\frac{12}{3}=4$.",
+          "Find the initial value $b$ by back-solving from a point: using $(2,9)$, $9=4(2)+b$, so $b=9-8=1$.",
+          "Write the rule: $f(x)=4x+1$.",
+          "Check with $(5,21)$: $4(5)+1=21$, which matches."
+        ]
+      }
+    },
+    {
+      "standard": "A1.F-LE.A.2",
+      "id": 9,
+      "prompt": "A population of $3000$ bacteria grows by $6\\%$ every hour. Write an exponential model $P(t)$ for the population after $t$ hours.",
+      "answer": "$P(t)=3000\\cdot(1.06)^{t}$",
+      "solution": {
+        "steps": [
+          "Growth by a fixed percent each hour is exponential: $P(t)=a\\cdot b^{t}$.",
+          "The starting amount is $a=3000$ (the value at $t=0$).",
+          "Convert the percent rate to a factor: $b=1+r=1+0.06=1.06$.",
+          "Substitute: $P(t)=3000\\cdot(1.06)^{t}$."
+        ]
+      }
+    },
+    {
+      "standard": "A1.F-LE.A.2",
+      "id": 10,
+      "prompt": "An exponential function satisfies $f(0)=5$ and $f(2)=45$. Write the rule $f(x)=a\\cdot b^{x}$ with $b>0$.",
+      "answer": "$f(x)=5\\cdot 3^{x}$",
+      "solution": {
+        "steps": [
+          "The starting amount is the value at $x=0$: $a=f(0)=5$.",
+          "Use $f(2)=45$: $5\\cdot b^{2}=45$, so $b^{2}=\\frac{45}{5}=9$.",
+          "Take the positive square root (since $b>0$): $b=\\sqrt{9}=3$.",
+          "Write the rule: $f(x)=5\\cdot 3^{x}$.",
+          "Check: $f(2)=5\\cdot 3^{2}=5\\cdot 9=45$, which matches."
+        ]
+      }
+    },
+    {
+      "standard": "A1.F-LE.A.3",
+      "id": 11,
+      "prompt": "Let $f(x)=2^{x}$ and $g(x)=5x+3$. Which function is larger at $x=2$?",
+      "answer": "$g(x)=5x+3$ is larger at $x=2$ (since $g(2)=13$ and $f(2)=4$).",
+      "solution": {
+        "steps": [
+          "Evaluate the exponential: $f(2)=2^{2}=4$.",
+          "Evaluate the linear function: $g(2)=5(2)+3=13$.",
+          "Compare: $13>4$, so $g$ is larger at $x=2$.",
+          "Note the exponential starts behind here, but it will overtake the line for larger inputs."
+        ]
+      }
+    },
+    {
+      "standard": "A1.F-LE.A.3",
+      "id": 12,
+      "prompt": "Compare $f(x)=2^{x}$ and $g(x)=4x$ for $x=0,1,2,3,4,5$. At what whole-number input does $f$ first exceed $g$?",
+      "answer": "$f$ first exceeds $g$ at $x=5$.",
+      "solution": {
+        "steps": [
+          "Tabulate $f(x)=2^{x}$: $f(0)=1,\\ f(1)=2,\\ f(2)=4,\\ f(3)=8,\\ f(4)=16,\\ f(5)=32$.",
+          "Tabulate $g(x)=4x$: $g(0)=0,\\ g(1)=4,\\ g(2)=8,\\ g(3)=12,\\ g(4)=16,\\ g(5)=20$.",
+          "Scan row by row: $g$ leads at $x=1,2,3$; at $x=4$ they tie ($16=16$).",
+          "At $x=5$, $f=32>g=20$, so $f$ first strictly exceeds $g$ at $x=5$ (not at the tie row $x=4$)."
+        ]
+      }
+    },
+    {
+      "standard": "A1.F-LE.A.3",
+      "id": 13,
+      "prompt": "Compare $f(x)=2^{x}$ and $g(x)=x^{2}$ for $x=0,1,2,3,4,5$. State the input where the quadratic last leads and the smallest input where the exponential first strictly exceeds the quadratic.",
+      "answer": "The quadratic last leads at $x=3$ ($9>8$); the exponential first strictly exceeds it at $x=5$ ($32>25$).",
+      "solution": {
+        "steps": [
+          "Tabulate $f(x)=2^{x}$: $1,2,4,8,16,32$ for $x=0,1,2,3,4,5$.",
+          "Tabulate $g(x)=x^{2}$: $0,1,4,9,16,25$ for $x=0,1,2,3,4,5$.",
+          "Compare: at $x=2$ they tie ($4=4$); at $x=3$, $g=9>f=8$, so the quadratic leads there.",
+          "At $x=4$ they tie again ($16=16$); at $x=5$, $f=32>g=25$.",
+          "So the quadratic last leads at $x=3$, and the exponential first strictly exceeds it at $x=5$, then stays ahead."
+        ]
+      }
+    },
+    {
+      "standard": "A1.F-LE.A.3",
+      "id": 14,
+      "prompt": "A graph shows the curve $y=3^{x}$ and the line $y=8x+5$. The curve starts below the line and eventually rises above it. Compare the two functions at $x=3$ and at $x=4$ to locate the crossover, and state which function dominates for large $x$.",
+      "answer": "At $x=3$ the line is larger ($29>27$); at $x=4$ the curve is larger ($81>37$), so the crossover is between $x=3$ and $x=4$. The exponential $y=3^{x}$ dominates for large $x$.",
+      "solution": {
+        "steps": [
+          "Evaluate at $x=3$: curve $3^{3}=27$, line $8(3)+5=29$. The line is still slightly larger ($29>27$).",
+          "Evaluate at $x=4$: curve $3^{4}=81$, line $8(4)+5=37$. Now the curve is far larger ($81>37$).",
+          "Since the curve goes from below the line at $x=3$ to above it at $x=4$, the crossover happens between $x=3$ and $x=4$.",
+          "The exponential multiplies by $3$ each step while the line only adds $8$, so $y=3^{x}$ dominates for large $x$."
+        ]
+      }
+    },
+    {
+      "standard": "A1.F-LE.A.3",
+      "id": 15,
+      "prompt": "For small inputs the cubic $g(x)=x^{3}$ is far above the exponential $f(x)=1.5^{x}$. Will $f$ ever permanently exceed $g$? Justify your answer using how each function grows.",
+      "answer": "Yes. The exponential $f(x)=1.5^{x}$ will eventually and permanently exceed the cubic $g(x)=x^{3}$, because exponential growth (a constant multiplicative factor each step) always overtakes any polynomial growth for large enough $x$.",
+      "solution": {
+        "steps": [
+          "An exponential function multiplies its output by a fixed factor each step. Here $f$ multiplies by $1.5$ every time $x$ increases by $1$.",
+          "A cubic function's growth from step to step slows relative to a fixed multiplier: the ratio $\\frac{(x+1)^3}{x^3}$ approaches $1$ as $x$ grows, while the exponential's ratio stays fixed at $1.5$.",
+          "Because the exponential keeps multiplying by $1.5>1$ while the cubic's relative growth fades toward $1$, the exponential must catch up and pass the cubic for some large $x$.",
+          "Once it passes, it stays ahead, since multiplying by $1.5$ repeatedly outpaces cubing. So yes, $f(x)=1.5^{x}$ eventually and permanently exceeds $g(x)=x^{3}$."
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T19:01:15.547Z",
+  "generatedAt": "2026-06-24T19:01:15.547Z"
+}

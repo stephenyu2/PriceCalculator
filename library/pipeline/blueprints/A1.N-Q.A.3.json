@@ -1,0 +1,133 @@
+{
+  "standard": "A1.N-Q.A.3",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Quantities",
+  "domainCode": "N-Q",
+  "cluster": "Reason quantitatively and use units to solve problems",
+  "clusterCode": "A",
+  "skillName": "Accuracy and Measurement Limitations",
+
+  "description": "Students choose a level of accuracy that is appropriate to the limitations of a measurement when reporting a quantity. They reason about significant figures, decimal places, and rounding so that a reported answer is no more precise than the data it came from. They distinguish precision (fineness of the measuring scale) from accuracy (closeness to the true value), use the precision of a measuring tool to decide how many digits are justified, propagate that precision through computations (do not report more significant figures than the least-precise input), and report results to a reasonable level given context such as rounding off in a real-world setting.",
+
+  "subSkills": [
+    "Read the precision of a measuring instrument from its smallest scale division (e.g. a ruler marked in $0.1\\text{ cm}$ measures to $\\pm 0.05\\text{ cm}$)",
+    "Count significant figures in a measured quantity, including the rules for leading, trailing, and embedded zeros",
+    "Round a computed quantity to a specified number of significant figures or decimal places",
+    "Apply the multiplication/division rule: a product or quotient carries the number of significant figures of the least-precise factor",
+    "Apply the addition/subtraction rule: a sum or difference is reported to the least precise decimal place of the addends",
+    "Distinguish accuracy (closeness to the true value) from precision (fineness/repeatability of the measurement)",
+    "Choose an appropriate level of accuracy for a reported quantity given the context and the limitations of the data"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Read instrument precision",
+      "example": "A graduated cylinder is marked in increments of $1\\text{ mL}$. To what precision can a volume be reported, and what is the uncertainty of a reading of $24\\text{ mL}$? Answer: $\\pm 0.5\\text{ mL}$, so $24.0 \\pm 0.5\\text{ mL}$."
+    },
+    {
+      "name": "Count significant figures",
+      "example": "How many significant figures are in the measurement $0.04060\\text{ kg}$? Answer: $4$ (the leading zeros are not significant; the embedded and trailing zeros are)."
+    },
+    {
+      "name": "Round to a stated accuracy",
+      "example": "Round the length $12.847\\text{ cm}$ to $3$ significant figures. Answer: $12.8\\text{ cm}$."
+    },
+    {
+      "name": "Multiplication/division precision rule",
+      "example": "A rectangle measures $4.7\\text{ cm}$ by $2.31\\text{ cm}$. Report the area to the appropriate number of significant figures. Answer: $4.7 \\times 2.31 = 10.857$, reported as $11\\text{ cm}^2$ ($2$ significant figures, limited by $4.7$)."
+    },
+    {
+      "name": "Addition/subtraction precision rule",
+      "example": "Add the measured lengths $13.2\\text{ cm}$ and $0.057\\text{ cm}$ and report to the correct decimal place. Answer: $13.257$ rounds to $13.3\\text{ cm}$ (least precise addend has one decimal place)."
+    },
+    {
+      "name": "Accuracy vs. precision reasoning",
+      "example": "Two scales each report a true $50.0\\text{ g}$ mass. Scale A reads $50.43, 50.41, 50.42\\text{ g}$; Scale B reads $49.8, 50.2, 50.0\\text{ g}$. Which is more precise, and which is more accurate? Answer: A is more precise (tightly clustered) but less accurate (centered near $50.42$); B is more accurate (centered on $50.0$) but less precise."
+    },
+    {
+      "name": "Context-appropriate accuracy",
+      "example": "A car's odometer reads to the nearest mile and a stopwatch to the nearest second over a $26\\text{ mile}$ trip taking $1872\\text{ s}$. To how many significant figures should the average speed $\\dfrac{26\\text{ mi}}{1872\\text{ s}}$ be reported? Answer: $2$ significant figures, limited by the $2$-significant-figure distance $26\\text{ mi}$, giving $0.014\\text{ mi/s}$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recall or one rounding step. Read precision off a simple scale, count significant figures in a clean measurement, or round one value to a stated number of significant figures or decimal places. No computation between measurements.",
+      "constraints": [
+        "One measurement, one rule applied",
+        "Significant-figure counts avoid the trickiest leading/trailing-zero cases or use at most one such zero",
+        "Rounding target is stated explicitly (e.g. 'round to $2$ significant figures')",
+        "No propagation through arithmetic"
+      ]
+    },
+    "Medium": {
+      "description": "Apply a precision rule through one arithmetic operation. Multiply or divide two measurements and report to the correct significant figures, or add/subtract and report to the correct decimal place. Or count significant figures in a value with several tricky zeros.",
+      "constraints": [
+        "Exactly one operation ($\\times$, $\\div$, $+$, or $-$) on two measured quantities",
+        "Student must first determine the limiting input (fewest significant figures, or least precise decimal place) before rounding",
+        "Mixes the multiplication rule (significant figures) with the addition rule (decimal places) across the sheet so the student must choose the correct rule",
+        "Significant-figure counting includes embedded and leading zeros"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step or conceptual. Chain two operations and track precision through both, reason about accuracy vs. precision from data, or justify a context-appropriate level of accuracy and explain why extra digits are unwarranted.",
+      "constraints": [
+        "Two or more chained operations, carrying full precision internally and rounding only the final reported value",
+        "Accuracy-vs-precision discrimination from a small data set, or identifying the limiting measurement in a multi-quantity formula",
+        "Requires extracting the measurements from a verbal/real-world description before computing",
+        "Answer includes both a correctly rounded value and a units label, and may require a one-line justification of the chosen accuracy"
+      ]
+    },
+    "tierSplit": "This standard uses a SINGLE ramped worksheet. If split, tier1 (Easy to Medium) would cover reading instrument precision, counting significant figures, single-value rounding, and one-operation propagation; tier2 (Medium to Hard) would cover chained-operation propagation, accuracy-vs-precision reasoning, and context-driven choice of accuracy."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student reports every digit the calculator displays, ignoring measurement limitations",
+      "distractor": "Gives $4.7 \\times 2.31 = 10.857\\text{ cm}^2$ unrounded instead of $11\\text{ cm}^2$"
+    },
+    {
+      "misconception": "Student counts leading zeros as significant",
+      "distractor": "Says $0.04060$ has $6$ significant figures (or $5$) instead of $4$"
+    },
+    {
+      "misconception": "Student treats trailing zeros after a decimal point as not significant",
+      "distractor": "Says $24.0\\text{ mL}$ has $2$ significant figures instead of $3$"
+    },
+    {
+      "misconception": "Student applies the significant-figure (multiplication) rule to addition/subtraction",
+      "distractor": "Reports $13.2 + 0.057 = 13.257$ as $13\\text{ cm}$ (matching $13.2$'s $3$ sig figs) instead of $13.3\\text{ cm}$ (least precise decimal place)"
+    },
+    {
+      "misconception": "Student rounds to the MOST precise input instead of the least precise",
+      "distractor": "Reports the area to $3$ significant figures (from $2.31$) as $10.9\\text{ cm}^2$ instead of $2$ (from $4.7$) as $11\\text{ cm}^2$"
+    },
+    {
+      "misconception": "Student confuses accuracy with precision",
+      "distractor": "Calls the tightly clustered but off-center scale 'more accurate' because its readings agree, instead of recognizing it is more precise but less accurate"
+    },
+    {
+      "misconception": "Student takes the instrument's reading uncertainty as the full smallest division instead of half of it",
+      "distractor": "Reports a cylinder marked every $1\\text{ mL}$ as $\\pm 1\\text{ mL}$ instead of $\\pm 0.5\\text{ mL}$"
+    },
+    {
+      "misconception": "Student rounds at each intermediate step, accumulating error, instead of carrying precision and rounding once at the end",
+      "distractor": "Chains operations with premature rounding and arrives at a final value off in the last reported digit"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet of 15 items (Easy to Hard). tier1/tier2 listed for schema completeness but not used for this standard.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

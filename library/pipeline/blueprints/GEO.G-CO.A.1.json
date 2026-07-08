@@ -1,0 +1,134 @@
+{
+  "standard": "GEO.G-CO.A.1",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Experiment with transformations in the plane",
+  "clusterCode": "A",
+  "skillName": "Precise Geometric Definitions",
+
+  "description": "Students build precise definitions of angle, circle, perpendicular line, parallel line, and line segment from the undefined notions of point, line, distance along a line, and distance around a circular arc. They distinguish undefined terms from defined terms, recognize why each undefined notion cannot itself be defined without circularity, and state each defined term in terms of those primitives (for example, a circle as the set of all points in a plane at a fixed distance $r$ from a center point, or a line segment as the set of points on a line between and including two endpoints). They identify and repair imprecise definitions, choose the correct defined term for a description, evaluate whether a proposed definition is complete and non-circular, and apply the precise distance-based definitions to short reasoning tasks (for example, using the circle definition to find a radius, or using perpendicularity to assign a $90^\\circ$ angle measure).",
+
+  "subSkills": [
+    "List the four undefined notions (point, line, distance along a line, distance around a circular arc) and explain why an undefined term is taken as a starting primitive rather than defined",
+    "State the precise definition of a line segment as the set of points on a line between two endpoints $A$ and $B$, together with $A$ and $B$",
+    "State the precise definition of an angle as the union of two rays (or two distinct rays) sharing a common endpoint called the vertex",
+    "State the precise definition of a circle as the set of all points in a plane at a fixed distance (the radius) from a fixed center point",
+    "State the precise definition of perpendicular lines as two lines that intersect to form a right angle ($90^\\circ$)",
+    "State the precise definition of parallel lines as two distinct coplanar lines that never intersect (have no point in common)",
+    "Identify which primitive notions each defined term depends on (e.g. circle depends on point, plane, and distance along a line)",
+    "Critique a proposed definition for completeness, precision, and non-circularity, then correct it",
+    "Match a geometric description or figure to the correct defined term and reject near-miss terms",
+    "Apply a precise definition to a short computation (use the circle definition to find a radius or distance; use perpendicularity to assign $90^\\circ$)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Undefined vs. defined term identification",
+      "example": "Which of the following is an undefined term in geometry: point, angle, circle, line segment? Answer: point (line, distance along a line, and distance around a circular arc are the others; angle, circle, and segment are defined from them)."
+    },
+    {
+      "name": "Select the correct definition",
+      "example": "Which statement precisely defines a circle? Answer: 'the set of all points in a plane that are a fixed distance $r$ from a given center point,' not 'a round shape' or 'a curve that closes on itself.'"
+    },
+    {
+      "name": "Name the term from its definition",
+      "example": "Two coplanar lines that never meet, no matter how far they are extended, are called what? Answer: parallel lines."
+    },
+    {
+      "name": "Find and fix the flaw in a definition",
+      "example": "A student writes 'an angle is two lines that meet at a point.' Identify the error and correct it. Answer: it should be two rays (not lines) sharing a common endpoint (the vertex); lines extend in both directions and would describe intersecting lines, not an angle."
+    },
+    {
+      "name": "Trace a definition back to undefined notions",
+      "example": "Which undefined notions does the definition of a circle rely on? Answer: point (center and the points of the circle), plane, and distance along a line (the fixed radius)."
+    },
+    {
+      "name": "Apply the circle definition to a distance",
+      "example": "A circle is defined as all points $5$ units from center $O$. Point $P$ lies on the circle. What is $OP$? Answer: $OP = 5$ units, directly from the definition."
+    },
+    {
+      "name": "Apply perpendicular / parallel definitions in reasoning",
+      "example": "Lines $m$ and $n$ are perpendicular and meet at $X$. One of the four angles formed measures $(3x)^\\circ$. Find $x$. Answer: perpendicular lines form right angles, so $3x = 90$ and $x = 30$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recall or recognition. The student names a term from its definition, picks the precise definition from choices, or labels a term as undefined vs. defined, with no critique or computation required. Items appear early in the ramped worksheet.",
+      "constraints": [
+        "One term in play per item, drawn directly from the five defined terms or four undefined notions",
+        "Answer is a single term, a true/false, or a single best-definition choice",
+        "No flawed-definition repair and no multi-term comparison",
+        "Any computation is a one-step lookup (e.g. read a radius straight from the circle definition, $OP = r$)"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step or comparative reasoning. The student distinguishes between near-miss terms, traces a defined term back to the primitives it depends on, evaluates whether a given definition is precise, or applies a definition in a one-equation computation. These items occupy the middle of the ramped worksheet and form the upper end of tier1 and the lower end of tier2 if the standard is split.",
+      "constraints": [
+        "Requires comparing two terms or rejecting a plausible near-miss (e.g. ray vs. line, segment vs. line)",
+        "May ask which undefined notions a definition depends on",
+        "Definition-precision judgments require citing the specific missing condition (coplanar, fixed distance, common endpoint)",
+        "Applied items use one equation such as $3x = 90$ or $OP = r$ with $r$ given indirectly"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step synthesis or correction. The student locates the flaw in a faulty definition and rewrites it precisely and non-circularly, constructs a full definition from the undefined notions, or chains a definition into a short multi-step computation or proof-style justification. These items close the ramped worksheet and the top of tier2.",
+      "constraints": [
+        "Repair or author a complete, precise, non-circular definition and justify each added condition",
+        "Explain why an undefined notion cannot be defined without circularity, or why a proposed 'definition' is actually circular",
+        "Chain a definition into two or more steps (e.g. use perpendicularity to get $90^\\circ$, then solve $(2x + 10)^\\circ = 90^\\circ$ for $x$)",
+        "Synthesize multiple terms in one item (e.g. relate a radius, a segment, and a right angle in a single figure)"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Confuses undefined notions with defined terms, treating angle or circle as a primitive",
+      "distractor": "Selects 'angle' or 'circle' as an undefined term, or claims a line segment is undefined, instead of recognizing point, line, distance along a line, and distance around a circular arc as the only undefined notions"
+    },
+    {
+      "misconception": "Defines an angle from lines instead of rays",
+      "distractor": "States 'an angle is two lines that share a point,' ignoring that rays have a single endpoint and direction, so the figure described is intersecting lines, not one angle"
+    },
+    {
+      "misconception": "Defines a circle without the fixed-distance condition",
+      "distractor": "Picks 'a circle is a round closed curve' or 'a curve with no corners,' omitting the set-of-points-at-a-fixed-distance-from-a-center requirement that the precise definition needs"
+    },
+    {
+      "misconception": "Omits the coplanar requirement for parallel lines and confuses parallel with skew",
+      "distractor": "States 'parallel lines are any two lines that never meet,' which would wrongly include skew lines in space; the precise definition requires the lines to be coplanar (and distinct)"
+    },
+    {
+      "misconception": "Defines perpendicular as merely intersecting rather than forming a right angle",
+      "distractor": "States 'perpendicular lines are two lines that cross,' dropping the defining $90^\\circ$ (right angle) condition that separates perpendicular from any intersecting pair"
+    },
+    {
+      "misconception": "Confuses a line segment with a line or a ray",
+      "distractor": "Defines a segment as 'a line between two points' (a line has no endpoints) or 'a ray with two arrows,' rather than the set of points between and including two endpoints"
+    },
+    {
+      "misconception": "Accepts a circular definition that uses the term it is defining",
+      "distractor": "Approves 'a circle is a circular shape' or 'perpendicular lines are lines that are perpendicular to each other' as valid, missing that a definition may not rely on the word being defined"
+    },
+    {
+      "misconception": "Misapplies the perpendicular definition to the angle measure when computing",
+      "distractor": "Sets the angle from perpendicular lines equal to $180^\\circ$ or $45^\\circ$ instead of $90^\\circ$, so for $(3x)^\\circ$ they solve $3x = 180$ giving $x = 60$ rather than $3x = 90$ giving $x = 30$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "id": "A1.S-ID.A.1--quiz",
+  "standard": "A1.S-ID.A.1",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on a single count or measurement variable",
+  "clusterCode": "A",
+  "skillName": "Data Plots on the Number Line",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "Eight multiple-choice questions on representing single-variable data with dot plots, histograms, and box plots: reading displays, building the five-number summary, and computing the IQR and range.",
+  "items": [
+    {
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "A dot plot of quiz scores has stacks of heights $1,3,4,2$ over the values $6,7,8,9$. How many students scored at least $8$?\nA) $6$\nB) $4$\nC) $8$\nD) $10$",
+      "answer": "A) $6$",
+      "solution": {
+        "steps": [
+          "\"At least $8$\" means a score of $8$ or $9$, so add the heights of the stacks over $8$ and $9$.",
+          "The stack over $8$ has height $4$ and the stack over $9$ has height $2$, so $4+2=6$ students.",
+          "B) $4$ is the height of only the stack over $8$ and ignores the $2$ students who scored $9$.",
+          "C) $8$ mistakes the data value $8$ for a frequency; the stack height, not the value, gives the count.",
+          "D) $10$ adds every stack ($1+3+4+2$), which is all students, not just those scoring at least $8$."
+        ],
+        "answer": "A) $6$"
+      }
+    },
+    {
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "A data set has $Q_1=23$ and $Q_3=41$. What is the interquartile range (IQR)?\nA) $64$\nB) $32$\nC) $18$\nD) $23$",
+      "answer": "C) $18$",
+      "solution": {
+        "steps": [
+          "The interquartile range is $\\text{IQR}=Q_3-Q_1$.",
+          "Substitute: $\\text{IQR}=41-23=18$.",
+          "A) $64$ adds the quartiles instead of subtracting them.",
+          "B) $32$ is the average of $23$ and $41$, which is the wrong operation.",
+          "D) $23$ just restates $Q_1$ without computing the difference."
+        ],
+        "answer": "C) $18$"
+      }
+    },
+    {
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "A histogram of ages has bars of heights $4,7,5,2$ over the bins $[10,20),[20,30),[30,40),[40,50)$. How many people are younger than $30$?\nA) $7$\nB) $11$\nC) $16$\nD) $4$",
+      "answer": "B) $11$",
+      "solution": {
+        "steps": [
+          "\"Younger than $30$\" covers the bins $[10,20)$ and $[20,30)$.",
+          "Add those two bar heights: $4+7=11$ people.",
+          "A) $7$ uses only the $[20,30)$ bar and forgets the $[10,20)$ bar.",
+          "C) $16$ adds the first three bars ($4+7+5$), wrongly including the $[30,40)$ bin.",
+          "D) $4$ uses only the $[10,20)$ bar and forgets the $[20,30)$ bar."
+        ],
+        "answer": "B) $11$"
+      }
+    },
+    {
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "For the data set $4,7,8,8,10,12,15$, what is the median and $Q_1$?\nA) median $8$, $Q_1=7$\nB) median $15$, $Q_1=8$\nC) median $8$, $Q_1=7.5$\nD) median $8$, $Q_1=4$",
+      "answer": "A) median $8$, $Q_1=7$",
+      "solution": {
+        "steps": [
+          "The data is already ordered with $n=7$, so the median is the $4$th value: $8$.",
+          "Exclude the median and take the lower half $4,7,8$; its median is $Q_1=7$.",
+          "B) median $15$ takes the largest value or an unordered \"middle\"; the ordered middle is $8$.",
+          "C) $Q_1=7.5$ comes from wrongly including the median $8$ in the lower half ($4,7,8,8$) and averaging $7$ and $8$.",
+          "D) $Q_1=4$ uses the minimum instead of the median of the lower half."
+        ],
+        "answer": "A) median $8$, $Q_1=7$"
+      }
+    },
+    {
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "What is the median of the data set $5,6,8,9,11,12,14,18$?\nA) $9$\nB) $11$\nC) $10$\nD) $9.5$",
+      "answer": "C) $10$",
+      "solution": {
+        "steps": [
+          "The data is ordered with $n=8$ (even), so the median is the average of the $4$th and $5$th values.",
+          "Those values are $9$ and $11$, so the median is $\\frac{9+11}{2}=10$.",
+          "A) $9$ takes the lower of the two middle values instead of averaging.",
+          "B) $11$ takes the upper of the two middle values instead of averaging.",
+          "D) $9.5$ averages the wrong pair (the $3$rd and $4$th values, $8$ and $9$)."
+        ],
+        "answer": "C) $10$"
+      }
+    },
+    {
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Group the data $5,5,10$ into bins $[0,5),[5,10),[10,15)$, where a value on a left boundary belongs to that bin. What are the frequencies?\nA) $1,3,1$\nB) $0,2,1$\nC) $2,0,1$\nD) $0,3,0$",
+      "answer": "B) $0,2,1$",
+      "solution": {
+        "steps": [
+          "Bin $[0,5)$ holds values from $0$ up to but not including $5$, so it contains none of the values: frequency $0$.",
+          "Bin $[5,10)$ holds values from $5$ up to but not including $10$, so both $5$s land here: frequency $2$.",
+          "Bin $[10,15)$ holds $10$: frequency $1$. The frequencies are $0,2,1$ and they total $3$, matching the data count.",
+          "A) $1,3,1$ double-counts each $5$ in both the first and second bins and miscounts; the totals exceed $3$.",
+          "C) $2,0,1$ wrongly puts the $5$s in $[0,5)$, but $5$ is excluded from that bin by the right boundary rule.",
+          "D) $0,3,0$ throws $10$ into $[5,10)$, but $10$ is excluded there and belongs to $[10,15)$."
+        ],
+        "answer": "B) $0,2,1$"
+      }
+    },
+    {
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A box plot has minimum $12$, $Q_1=18$, median $25$, $Q_3=30$, and maximum $40$. Approximately what fraction of the data lies between $18$ and $30$?\nA) About $\\frac{1}{4}$\nB) About $\\frac{1}{2}$\nC) About $\\frac{1}{3}$\nD) About $\\frac{3}{4}$",
+      "answer": "B) About $\\frac{1}{2}$",
+      "solution": {
+        "steps": [
+          "The values $18$ and $30$ are $Q_1$ and $Q_3$, so the region between them is the box of the box plot.",
+          "Each quarter of a box plot (the two whiskers and the two halves of the box) holds about $25\\%$ of the data.",
+          "The box spans from $Q_1$ to $Q_3$, which is two quarters, so it holds about $25\\%+25\\%=50\\%$, or $\\frac{1}{2}$ of the data.",
+          "A) $\\frac{1}{4}$ counts only one quarter; the box covers two.",
+          "C) $\\frac{1}{3}$ wrongly assumes equal data per labeled value rather than the quartile rule.",
+          "D) $\\frac{3}{4}$ confuses the spread of values with the share of data; the long whisker length does not mean more data."
+        ],
+        "answer": "B) About $\\frac{1}{2}$"
+      }
+    },
+    {
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A teacher has the test scores of $120$ students and wants a single display that shows the overall shape and spread of the scores. Which display is most appropriate?\nA) A dot plot, placing one dot per student\nB) A histogram or box plot\nC) A dot plot, because it shows every individual score\nD) No display can show $120$ values",
+      "answer": "B) A histogram or box plot",
+      "solution": {
+        "steps": [
+          "With $120$ values, the goal is to summarize overall shape and spread, not to label every individual point.",
+          "A histogram groups the scores into bins to reveal shape, and a box plot summarizes spread with the five-number summary; both handle large data well.",
+          "A) and C) recommend a dot plot, but stacking $120$ dots becomes unreadable and is suited to small data sets.",
+          "D) is false; histograms and box plots are designed exactly for large data sets like this one."
+        ],
+        "answer": "B) A histogram or box plot"
+      }
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "standard": "7.SP.B.4",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Draw informal comparative inferences about two populations",
+  "clusterCode": "B",
+  "skillName": "Measures of Center and Variability",
+
+  "description": "Students compute and interpret measures of center (mean, median) and measures of variability (range, interquartile range, and mean absolute deviation) for numerical data drawn from random samples. They use these measures to compare two data sets or populations and draw informal comparative inferences, for example deciding which group is typically larger or more consistent. A key understanding is expressing the difference between two centers as a multiple of a measure of variability (the 'overlap' idea).",
+
+  "subSkills": [
+    "Compute the mean of a numerical data set: $\\bar{x} = \\dfrac{\\sum x_i}{n}$",
+    "Find the median (and quartiles $Q_1$, $Q_3$) of an ordered data set",
+    "Compute the range as $\\max - \\min$",
+    "Compute the interquartile range $\\text{IQR} = Q_3 - Q_1$",
+    "Compute the mean absolute deviation $\\text{MAD} = \\dfrac{\\sum |x_i - \\bar{x}|}{n}$",
+    "Compare two data sets using a measure of center together with a measure of variability",
+    "Express the difference between two means as a multiple of the MAD (the visual-overlap measure)",
+    "Draw an informal comparative inference and justify it with the computed statistics"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Compute a single measure of center",
+      "example": "Find the mean of the data set $\\{4, 7, 7, 10, 12\\}$. Answer: $\\bar{x} = \\dfrac{40}{5} = 8$."
+    },
+    {
+      "name": "Compute a single measure of variability",
+      "example": "Find the interquartile range of $\\{2, 5, 6, 8, 9, 12, 14\\}$. With $Q_1 = 5$ and $Q_3 = 12$, $\\text{IQR} = 12 - 5 = 7$."
+    },
+    {
+      "name": "Compute mean absolute deviation",
+      "example": "Find the MAD of $\\{3, 5, 8, 8\\}$. Mean $= 6$; deviations $|{-3}|,|{-1}|,|2|,|2| = 3,1,2,2$; $\\text{MAD} = \\dfrac{8}{4} = 2$."
+    },
+    {
+      "name": "Compare two data sets with center and spread",
+      "example": "Class A scores have mean $80$ and MAD $4$; Class B scores have mean $72$ and MAD $4$. Which class typically scored higher, and how do the spreads compare? Class A is higher on average; both are equally consistent."
+    },
+    {
+      "name": "Difference of means as a multiple of variability (overlap)",
+      "example": "Sample 1 has mean $10$ with MAD $2$; Sample 2 has mean $16$ with MAD $2$. Express the difference in means as a multiple of the MAD: $\\dfrac{16 - 10}{2} = 3$, so the means differ by about $3$ MADs, a large separation."
+    },
+    {
+      "name": "Informal inference from random samples",
+      "example": "A random sample of word lengths from a 7th-grade book has mean $4.5$ letters; a random sample from a college textbook has mean $7.2$ letters. Infer which book typically uses longer words and explain why the random sampling supports the inference."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "One statistic from a single small data set. Numbers chosen so the computation is clean (mean divides evenly, odd count so the median is a listed value).",
+      "constraints": [
+        "Data set has $5$ to $7$ values, all small positive integers ($\\le 20$)",
+        "Compute exactly one measure: mean, median, or range",
+        "Mean comes out to an integer; median is a single middle value (odd $n$)",
+        "No comparison between data sets"
+      ]
+    },
+    "Medium": {
+      "description": "A multi-step single-set computation (IQR or MAD), or a comparison of two data sets using one measure of center and one measure of variability that are already given or quickly computed.",
+      "constraints": [
+        "Compute IQR (requires ordering and finding $Q_1$, $Q_3$) or MAD (requires mean, absolute deviations, then averaging)",
+        "Even $n$ may require averaging two middle values for the median",
+        "Comparison items give or require one center and one spread for each of two sets",
+        "MAD may be a non-integer expressed as an exact fraction or decimal"
+      ]
+    },
+    "Hard": {
+      "description": "Full comparative inference: compute or read centers and spreads for two random samples, then express the difference in means as a multiple of the MAD and justify a conclusion about the populations.",
+      "constraints": [
+        "Two data sets, each requiring computation of a center and a spread",
+        "Express the difference of means as a multiple of the MAD: $\\dfrac{|\\bar{x}_1 - \\bar{x}_2|}{\\text{MAD}}$",
+        "Requires interpreting random sampling to generalize from samples to populations",
+        "Multi-part reasoning: which is typically larger AND which is more variable AND a justified inference"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student confuses the mean with the median",
+      "distractor": "Reports the middle value of the ordered list when the mean was asked, or sums and divides when the median was asked"
+    },
+    {
+      "misconception": "Student forgets to order the data before finding the median or quartiles",
+      "distractor": "Takes the middle of the unordered list, giving the wrong median or wrong $Q_1$/$Q_3$"
+    },
+    {
+      "misconception": "Student divides by the wrong count when finding the mean",
+      "distractor": "Divides the sum by $n-1$ or by the number of distinct values instead of by $n$"
+    },
+    {
+      "misconception": "Student does not take absolute values when computing MAD",
+      "distractor": "Sums signed deviations, which total $0$, giving $\\text{MAD} = 0$"
+    },
+    {
+      "misconception": "Student computes range as $Q_3 - Q_1$ or IQR as $\\max - \\min$",
+      "distractor": "Swaps the two spread measures, e.g. reports $\\max - \\min$ when the IQR was requested"
+    },
+    {
+      "misconception": "Student compares only centers and ignores variability (or only spread and ignores center)",
+      "distractor": "Concludes the sets are 'the same' because the means match while ignoring very different MADs, or vice versa"
+    },
+    {
+      "misconception": "Student divides the wrong way when finding the difference of means as a multiple of MAD",
+      "distractor": "Computes $\\dfrac{\\text{MAD}}{|\\bar{x}_1 - \\bar{x}_2|}$ instead of $\\dfrac{|\\bar{x}_1 - \\bar{x}_2|}{\\text{MAD}}$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

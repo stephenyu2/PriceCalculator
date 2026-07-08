@@ -1,0 +1,118 @@
+{
+  "standard": "6.EE.B.8",
+  "grade": "6",
+  "subject": "math",
+  "domain": "Expressions and Equations",
+  "domainCode": "EE",
+  "cluster": "Reason about and solve one-variable equations and inequalities",
+  "clusterCode": "B",
+  "skillName": "Writing and Graphing Inequalities",
+
+  "description": "Students write a one-variable inequality of the form $x > c$, $x < c$, $x \\ge c$, or $x \\le c$ to represent a constraint or condition from a real-world or mathematical situation, and they recognize that such inequalities have infinitely many solutions. They represent the solution set on a number line, using an open circle for strict inequalities ($>$, $<$) and a closed circle for inclusive inequalities ($\\ge$, $\\le$), with the shaded ray pointing toward all values that satisfy the condition.",
+
+  "subSkills": [
+    "Translate a verbal constraint or condition into an inequality of the form $x > c$, $x < c$, $x \\ge c$, or $x \\le c$",
+    "Choose the correct inequality symbol from key phrases ('more than' $\\to$ $>$, 'at least' $\\to$ $\\ge$, 'fewer than' $\\to$ $<$, 'at most' $\\to$ $\\le$)",
+    "Recognize that an inequality like $x > c$ has infinitely many solutions rather than a single value",
+    "Graph the solution set on a number line: open circle for $>$ or $<$, closed circle for $\\ge$ or $\\le$",
+    "Determine the correct direction of the shaded ray (greater than shades right, less than shades left)",
+    "Read a number-line graph and write the matching inequality",
+    "Test whether a given value is a solution by substituting into the inequality"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Verbal constraint to inequality",
+      "example": "A ride requires that a passenger be at least $48$ inches tall. Writing $h$ for height in inches, the constraint is $h \\ge 48$."
+    },
+    {
+      "name": "Graph a given inequality",
+      "example": "Graph $x < 3$ on a number line: place an open circle at $3$ and shade the ray to the left."
+    },
+    {
+      "name": "Number line to inequality",
+      "example": "A number line shows a closed circle at $-2$ with shading to the right. The inequality is $x \\ge -2$."
+    },
+    {
+      "name": "Recognize infinitely many solutions",
+      "example": "For $x > 5$, which describes the solutions? Answer: there are infinitely many values, every number greater than $5$."
+    },
+    {
+      "name": "Test a value / identify a solution",
+      "example": "Is $x = 7$ a solution of $x \\le 7$? Yes, because $7 \\le 7$ is true (the closed circle includes $7$)."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Direct one-step translation or graphing with small non-negative whole numbers and an unambiguous key phrase. Either write a strict inequality ($>$ or $<$) from clear wording, or graph a given strict inequality, or read a simple graph. No inclusive ($\\ge$, $\\le$) reasoning and no negatives.",
+      "constraints": [
+        "Constant $c$ is a small whole number ($0$ to $20$)",
+        "Only $>$ or $<$ (strict, open-circle) cases",
+        "Key phrase is explicit: 'greater than', 'less than', 'more than', 'fewer than'",
+        "Single step: words to symbols, symbols to graph, or graph to symbols"
+      ]
+    },
+    "Medium": {
+      "description": "Requires distinguishing inclusive from strict inequalities ($\\ge$ vs $>$, $\\le$ vs $<$) from boundary phrases ('at least', 'at most', 'no more than', 'no fewer than'), or graphing with the correct open vs closed circle. May use negative constants or simple fractions/decimals for $c$, and may ask the student to identify that the solution set is infinite.",
+      "constraints": [
+        "Includes $\\ge$ and $\\le$ cases requiring closed circles",
+        "Boundary phrases ('at least', 'at most', 'no more than') must be interpreted",
+        "Constant $c$ may be negative or a simple fraction/decimal (e.g. $-3$, $\\frac{1}{2}$, $2.5$)",
+        "May require recognizing infinitely many solutions or testing a candidate value"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step or context-rich: extract the variable and the boundary from a longer real-world scenario, decide both the symbol AND the open/closed convention AND the shading direction, or reconcile a real-world constraint with what the graph can represent (e.g. a quantity that cannot be negative). May combine writing, graphing, and reasoning about the solution set in one item.",
+      "constraints": [
+        "Two-sentence real-world scenario; student isolates variable and boundary",
+        "Requires correct symbol, correct circle type, AND correct shading direction together",
+        "May involve a constraint where context limits meaningful solutions (e.g. $w \\ge 0$ alongside the written inequality)",
+        "May ask the student to both write the inequality and describe/graph its infinite solution set"
+      ]
+    }
+  },
+
+  "_difficultyRamp": "The single ramped worksheet runs Easy (items 1 to 5) into Medium (items 6 to 11) into Hard (items 12 to 15). If split: tier1 covers Easy to Medium (strict and inclusive translation plus basic graphing), tier2 covers Medium to Hard (negatives/fractions, contextual extraction, combined write-and-graph reasoning).",
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student treats the inequality as having one solution like an equation",
+      "distractor": "Answers that $x > 5$ means $x = 6$ (a single value) instead of infinitely many values greater than $5$"
+    },
+    {
+      "misconception": "Student reverses the inequality symbol direction",
+      "distractor": "Writes $x < 48$ for 'at least $48$' instead of $x \\ge 48$, confusing which way the symbol points"
+    },
+    {
+      "misconception": "Student confuses strict and inclusive symbols on boundary phrases",
+      "distractor": "Writes $x > 48$ for 'at least $48$' (which excludes $48$) instead of $x \\ge 48$"
+    },
+    {
+      "misconception": "Student uses the wrong circle type when graphing",
+      "distractor": "Draws a closed circle for $x > 3$ or an open circle for $x \\ge 3$, mismatching the boundary inclusion"
+    },
+    {
+      "misconception": "Student shades the number line in the wrong direction",
+      "distractor": "Shades to the right for $x < 3$ instead of to the left, ignoring which values satisfy the inequality"
+    },
+    {
+      "misconception": "Student includes the boundary value as a solution for a strict inequality",
+      "distractor": "Says $x = 3$ is a solution of $x < 3$ because the number $3$ appears in the inequality"
+    }
+  ],
+
+  "_comment_itemCounts": "lesson 5+5, single ramped worksheet of 15 (tier1/tier2 available if split), quiz 8. Quiz items are multiple choice with LaTeX options and solution.steps.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

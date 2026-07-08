@@ -1,0 +1,130 @@
+{
+  "standard": "A1.A-REI.B.3",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Reasoning with Equations and Inequalities",
+  "domainCode": "A-REI",
+  "cluster": "Solve equations and inequalities in one variable",
+  "clusterCode": "B",
+  "skillName": "Linear Equations and Inequalities",
+
+  "description": "Students solve linear equations and linear inequalities in one variable using inverse operations, the distributive property, combining like terms, and clearing fractions or decimals. They isolate the variable when it appears on one or both sides, recognize special cases (no solution and infinitely many solutions), and correctly flip the inequality sign when multiplying or dividing by a negative number. They also solve literal equations and formulas in which coefficients are represented by letters (e.g., solving $ax + b = c$ for $x$, or $A = \\frac{1}{2}bh$ for $h$). For inequalities they express the solution set in inequality form and describe it on a number line, including strict versus inclusive endpoints.",
+
+  "subSkills": [
+    "Solve a one- or two-step linear equation by inverse operations (e.g., $3x + 7 = 25 \\Rightarrow x = 6$)",
+    "Solve multi-step equations requiring the distributive property and combining like terms (e.g., $2(x - 3) + 4x = 18$)",
+    "Solve equations with the variable on both sides by collecting variable terms on one side (e.g., $5x - 4 = 2x + 11$)",
+    "Clear fractions or decimals by multiplying both sides by the LCD or a power of ten before solving",
+    "Identify special cases: no solution (a false statement like $0 = 5$) versus infinitely many solutions (an identity like $0 = 0$)",
+    "Solve a linear inequality and flip the inequality sign when multiplying or dividing both sides by a negative number",
+    "Solve a literal equation for a specified variable when coefficients are letters (e.g., solve $ax + b = c$ for $x$, giving $x = \\frac{c - b}{a}$)",
+    "Express an inequality solution set in inequality notation and represent it on a number line with the correct open or closed endpoint"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Two-step numeric equation",
+      "example": "Solve $4x - 9 = 11$. Add $9$: $4x = 20$; divide by $4$: $x = 5$."
+    },
+    {
+      "name": "Multi-step with distribution and like terms",
+      "example": "Solve $3(2x - 1) + 4 = 2x + 17$. Distribute: $6x - 3 + 4 = 2x + 17$; simplify: $6x + 1 = 2x + 17$; subtract $2x$ and $1$: $4x = 16$; $x = 4$."
+    },
+    {
+      "name": "Variable on both sides, possibly a special case",
+      "example": "Solve $7x + 2 = 7x - 5$. Subtract $7x$: $2 = -5$, a false statement, so there is no solution."
+    },
+    {
+      "name": "Equation with fractions cleared by the LCD",
+      "example": "Solve $\\frac{x}{3} + \\frac{1}{2} = \\frac{5}{6}$. Multiply by $6$: $2x + 3 = 5$; $2x = 2$; $x = 1$."
+    },
+    {
+      "name": "Linear inequality with a sign flip",
+      "example": "Solve $-3x + 4 \\ge 19$. Subtract $4$: $-3x \\ge 15$; divide by $-3$ and flip: $x \\le -5$."
+    },
+    {
+      "name": "Literal equation solved for a variable",
+      "example": "Solve $ax + b = c$ for $x$. Subtract $b$: $ax = c - b$; divide by $a$: $x = \\frac{c - b}{a}$ (for $a \\ne 0$)."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "One- or two-step linear equation or inequality with integer coefficients and an integer solution. The variable appears on only one side. Inequalities require only positive multiplication or division, so no sign flip. No distribution, no fractions, no literal coefficients, no special cases.",
+      "constraints": [
+        "Form $ax + b = c$ or $ax + b \\le c$ (or $<, >, \\ge$) with small positive integer coefficients",
+        "Variable on one side only",
+        "Solution is an integer",
+        "Inequalities never require flipping the sign (no division or multiplication by a negative)"
+      ]
+    },
+    "Medium": {
+      "description": "Multi-step linear work that requires at least one of: applying the distributive property, combining like terms, collecting the variable from both sides, clearing a single set of fractions or decimals, or flipping an inequality sign when dividing by a negative. Solutions may be fractions. Includes a basic literal equation solved in two steps such as $ax + b = c$ for $x$.",
+      "constraints": [
+        "Requires distribution, combining like terms, or variables on both sides",
+        "Inequalities may require a single sign flip (division or multiplication by a negative)",
+        "May clear one layer of fractions or decimals via the LCD",
+        "Literal equations are at most two steps, e.g. solve $px - q = r$ for $x$",
+        "Solution may be a fraction such as $x = \\frac{7}{3}$"
+      ]
+    },
+    "Hard": {
+      "description": "Several combined steps before the variable is isolated: distribution on both sides, clearing fractions and then collecting variables, or an inequality that needs a sign flip plus interpretation. Includes special-case recognition (no solution versus infinitely many solutions) and multi-step literal equations where the target variable appears inside a product, sum, or fraction and must be factored out or cleared.",
+      "constraints": [
+        "Two or more transformations stacked: distribute, clear fractions, and collect variables before isolating",
+        "Includes special cases that must be named: identity ($0 = 0$, infinitely many) or contradiction (e.g. $0 = 5$, no solution)",
+        "Inequality solutions must use the correct strict or inclusive endpoint and may be stated for a number line",
+        "Literal equations require factoring the target variable out of two terms, e.g. solve $ax + b = cx + d$ for $x$ giving $x = \\frac{d - b}{a - c}$, or solve $\\frac{1}{2}bh = A$ for $h$"
+      ]
+    },
+    "tierSplit": "This standard is a single coherent skill (isolate one variable in a linear statement), so the default single ramped worksheet (15 items, Easy to Hard) is preferred. If split into a tier1/tier2 pair, tier1 (15 items, Easy to Medium) covers one- and two-step numeric equations, distribution, combining like terms, variable-on-both-sides, and basic inequalities with at most one sign flip. tier2 (15 items, Medium to Hard) covers clearing fractions and decimals, special cases (no solution and infinitely many), inequalities requiring a sign flip with endpoint interpretation, and multi-step literal equations including factoring out the target variable. No item overlap between tiers."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student does not flip the inequality sign when dividing or multiplying both sides by a negative number",
+      "distractor": "From $-3x \\ge 15$ writes $x \\ge -5$ instead of the correct $x \\le -5$"
+    },
+    {
+      "misconception": "Student distributes only to the first term inside the parentheses",
+      "distractor": "Expands $3(x + 4) = 27$ as $3x + 4 = 27$ giving $x = \\frac{23}{3}$ instead of $3x + 12 = 27$ giving $x = 5$"
+    },
+    {
+      "misconception": "Student adds when they should subtract (mishandles the sign of a term moved across the equals sign)",
+      "distractor": "From $4x - 9 = 11$ writes $4x = 11 - 9 = 2$ so $x = \\frac{1}{2}$ instead of $4x = 20$, $x = 5$"
+    },
+    {
+      "misconception": "Student multiplies only one term by the LCD when clearing fractions",
+      "distractor": "From $\\frac{x}{3} + \\frac{1}{2} = \\frac{5}{6}$ multiplies only the first term to get $2x + \\frac{1}{2} = \\frac{5}{6}$ instead of $2x + 3 = 5$"
+    },
+    {
+      "misconception": "Student confuses a contradiction with infinitely many solutions (or with $x = 0$)",
+      "distractor": "From $7x + 2 = 7x - 5$ concludes 'infinitely many solutions' or 'x = 0' instead of 'no solution' because $2 = -5$ is false"
+    },
+    {
+      "misconception": "Student treats an identity as having no solution",
+      "distractor": "From $2(x + 3) = 2x + 6$ reaches $0 = 0$ and writes 'no solution' instead of 'infinitely many solutions'"
+    },
+    {
+      "misconception": "Student divides by the wrong quantity or in the wrong order when solving a literal equation",
+      "distractor": "Solving $ax + b = c$ for $x$ writes $x = \\frac{a}{c - b}$ instead of $x = \\frac{c - b}{a}$"
+    },
+    {
+      "misconception": "Student uses an open endpoint where an inclusive one is required (or the reverse)",
+      "distractor": "Reports the solution of $x \\le -5$ as $x < -5$ (open circle instead of closed) or graphs 'at least $-5$' with an open circle"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

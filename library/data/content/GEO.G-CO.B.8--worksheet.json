@@ -1,0 +1,219 @@
+{
+  "id": "GEO.G-CO.B.8--worksheet",
+  "standard": "GEO.G-CO.B.8",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Understand congruence in terms of rigid motions",
+  "clusterCode": "B",
+  "skillName": "Triangle Congruence Criteria",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "These problems build from recognizing the ASA, SAS, and SSS congruence criteria toward explaining why each one follows from the definition of congruence in terms of rigid motions. Two triangles are congruent exactly when a sequence of translations, rotations, and reflections maps one onto the other.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "In $\\triangle ABC$ and $\\triangle DEF$ you are given $AB = DE$, $m\\angle A = m\\angle D$, and $AC = DF$. Angle $A$ is the included angle between sides $AB$ and $AC$. Which congruence criterion (ASA, SAS, or SSS) proves $\\triangle ABC \\cong \\triangle DEF$?",
+      "answer": "SAS",
+      "solution": {
+        "steps": [
+          "List the given parts: two sides $AB$ and $AC$, and the angle $\\angle A$.",
+          "Check the position of the angle: $\\angle A$ is formed by sides $AB$ and $AC$, so it is the included angle between the two given sides.",
+          "Two sides and the angle between them matches the Side-Angle-Side pattern.",
+          "The criterion is SAS."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "In $\\triangle ABC$ and $\\triangle DEF$, $AB = DE$, $BC = EF$, and $CA = FD$. Which congruence criterion proves $\\triangle ABC \\cong \\triangle DEF$?",
+      "answer": "SSS",
+      "solution": {
+        "steps": [
+          "List the given parts: all three pairs of corresponding sides are equal.",
+          "$AB = DE$, $BC = EF$, and $CA = FD$ give three sides with no angles.",
+          "Three pairs of congruent sides matches the Side-Side-Side pattern.",
+          "The criterion is SSS."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "State the definition of congruence in terms of rigid motions. That is, complete the sentence: Two figures are congruent if and only if ____.",
+      "answer": "if and only if there is a sequence of rigid motions (translations, rotations, and reflections) that maps one figure exactly onto the other",
+      "solution": {
+        "steps": [
+          "Recall that rigid motions are translations, rotations, and reflections.",
+          "Each rigid motion preserves distances and angle measures, so it does not change a figure's size or shape.",
+          "Two figures are congruent exactly when some sequence of these motions carries one figure precisely onto the other.",
+          "So: two figures are congruent if and only if a sequence of rigid motions maps one onto the other."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Which of the following measures does a rigid motion (translation, rotation, or reflection) preserve: side lengths, angle measures, both, or neither?",
+      "answer": "Both side lengths and angle measures",
+      "solution": {
+        "steps": [
+          "A rigid motion is a transformation that keeps the distance between any two points unchanged.",
+          "Because distances are preserved, every side length is preserved.",
+          "Because the relative positions of points are preserved, every angle measure is preserved.",
+          "Therefore a rigid motion preserves both side lengths and angle measures."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Given $\\triangle ABC \\cong \\triangle DEF$, name the side in $\\triangle DEF$ that corresponds to side $\\overline{BC}$.",
+      "answer": "$\\overline{EF}$",
+      "solution": {
+        "steps": [
+          "In a congruence statement, corresponding vertices appear in the same position: $A \\leftrightarrow D$, $B \\leftrightarrow E$, $C \\leftrightarrow F$.",
+          "Side $\\overline{BC}$ joins vertices $B$ and $C$.",
+          "The vertices corresponding to $B$ and $C$ are $E$ and $F$.",
+          "So the corresponding side is $\\overline{EF}$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "In $\\triangle ABC$ and $\\triangle DEF$ you know $\\angle B \\cong \\angle E$ and $\\angle C \\cong \\angle F$. Which additional pair of corresponding parts would let you apply ASA, and why must it be that pair?",
+      "answer": "$BC \\cong EF$ (the side included between the two given angles)",
+      "solution": {
+        "steps": [
+          "ASA requires two angles and the side that lies between them.",
+          "The two given angles are $\\angle B$ and $\\angle C$ (matched to $\\angle E$ and $\\angle F$).",
+          "The side included between $\\angle B$ and $\\angle C$ is $\\overline{BC}$; in the other triangle it is $\\overline{EF}$.",
+          "So the additional needed pair is $BC \\cong EF$ to apply ASA."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "In $\\triangle ABC$ and $\\triangle DEF$, $AB = DE$, $BC = EF$, and $m\\angle A = m\\angle D$. The angle $A$ is NOT between sides $AB$ and $BC$. Classify the given arrangement (SAS, SSA, or ASA), and state whether it is a valid congruence criterion.",
+      "answer": "SSA; it is not a valid congruence criterion",
+      "solution": {
+        "steps": [
+          "The given parts are two sides $AB$ and $BC$ and the angle $\\angle A$.",
+          "Side $AB$ touches $\\angle A$, but side $BC$ does not; $\\angle A$ is not between the two given sides.",
+          "Two sides and a non-included angle is the Side-Side-Angle (SSA) arrangement.",
+          "SSA is the ambiguous case and does not guarantee congruence, so it is not a valid criterion."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Triangle $ABC$ has vertices $A(0,0)$, $B(4,0)$, $C(1,3)$, and triangle $DEF$ has vertices $D(5,1)$, $E(9,1)$, $F(6,4)$. Find a single translation that maps $\\triangle ABC$ onto $\\triangle DEF$, and write the translation rule.",
+      "answer": "Translate by $(x,y) \\to (x+5,\\ y+1)$",
+      "solution": {
+        "steps": [
+          "Compare a vertex with its image: $A(0,0)$ should map to $D(5,1)$.",
+          "The horizontal shift is $5-0 = 5$ and the vertical shift is $1-0 = 1$.",
+          "Check $B$: $(4,0) \\to (4+5,\\ 0+1) = (9,1) = E$. Check $C$: $(1,3) \\to (6,4) = F$.",
+          "All three vertices match, so the translation rule is $(x,y) \\to (x+5,\\ y+1)$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "$\\triangle ABC \\cong \\triangle DEF$ is established by SSS with $AB = DE = 6$, $BC = EF = 5$, and $CA = FD = 7$. If $m\\angle E = 80^\\circ$, find $m\\angle B$. Justify using the correspondence.",
+      "answer": "$m\\angle B = 80^\\circ$",
+      "solution": {
+        "steps": [
+          "From $\\triangle ABC \\cong \\triangle DEF$ the corresponding vertices are $A \\leftrightarrow D$, $B \\leftrightarrow E$, $C \\leftrightarrow F$.",
+          "So $\\angle B$ corresponds to $\\angle E$.",
+          "By CPCTC, corresponding angles of congruent triangles are equal, so $m\\angle B = m\\angle E$.",
+          "Since $m\\angle E = 80^\\circ$, we get $m\\angle B = 80^\\circ$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A classmate writes $\\triangle ABC \\cong \\triangle DEF$ and then claims $\\angle B$ corresponds to $\\angle F$, reading off $m\\angle B = m\\angle F$. Identify the error and state the correct corresponding angle for $\\angle B$.",
+      "answer": "The vertex order is mismatched; $\\angle B$ corresponds to $\\angle E$, not $\\angle F$",
+      "solution": {
+        "steps": [
+          "In the statement $\\triangle ABC \\cong \\triangle DEF$, vertices are matched by position: first to first, second to second, third to third.",
+          "$A \\leftrightarrow D$, $B \\leftrightarrow E$, $C \\leftrightarrow F$.",
+          "Vertex $B$ is in the second position, so it corresponds to the second vertex of $\\triangle DEF$, which is $E$.",
+          "The classmate paired $B$ with the third vertex $F$, breaking the correspondence. The correct statement is $\\angle B \\cong \\angle E$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Triangle $ABC$ has vertices $A(0,0)$, $B(4,0)$, $C(1,3)$ and triangle $DEF$ has vertices $D(5,1)$, $E(9,1)$, $F(6,4)$. Describe a sequence of rigid motions that maps $\\triangle ABC$ onto $\\triangle DEF$, justify why each matched part is preserved, and state which criterion the matched parts illustrate.",
+      "answer": "Translate by $(x,y)\\to(x+5,\\,y+1)$ (a single translation maps all three vertices); the matched parts illustrate SSS (and also SAS or ASA)",
+      "solution": {
+        "steps": [
+          "Translate so $A$ lands on $D$: use $(x,y)\\to(x+5,\\ y+1)$, since $D-A = (5,1)$.",
+          "Apply it to the other vertices: $B(4,0)\\to(9,1)=E$ and $C(1,3)\\to(6,4)=F$, so all three vertices coincide with their images after this one translation; no rotation or reflection is needed.",
+          "Because a translation is a rigid motion, it preserves every length and angle, so $AB=DE$, $BC=EF$, $CA=FD$ and all corresponding angles are equal.",
+          "All three sides are matched as congruent, so the parts illustrate SSS (the equal included angles also make SAS and ASA available)."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Explain, using the definition of congruence in terms of rigid motions, why the SAS criterion forces two triangles to be congruent. Use $\\triangle ABC$ and $\\triangle DEF$ with $AB = DE$, $m\\angle A = m\\angle D$, and $AC = DF$. Describe the translate, rotate, and possible reflect steps and explain why the third vertex is forced into place.",
+      "answer": "After translating $A$ to $D$, rotating ray $AB$ onto ray $DE$ (and reflecting across line $DE$ if orientation differs), $B$ lands on $E$ and $C$ lands on $F$ because the rigid motions preserve $AB=DE$, $m\\angle A=m\\angle D$, and $AC=DF$, so the triangles coincide and are congruent.",
+      "solution": {
+        "steps": [
+          "Translate $\\triangle ABC$ so that $A$ maps onto $D$. A translation is a rigid motion, so all lengths and angles are unchanged.",
+          "Rotate about $D$ so that ray $AB$ lands along ray $DE$. Since rotations preserve length and $AB = DE$, the point $B$ now coincides with $E$.",
+          "If $C$ is now on the opposite side of line $DE$ from $F$, reflect across line $DE$. Reflection is a rigid motion and fixes both $D$ and $E$, so it leaves $B$ on $E$ while moving $C$ to the same side as $F$.",
+          "Because $m\\angle A = m\\angle D$, ray $AC$ now lies along ray $DF$; because $AC = DF$ and length is preserved, $C$ lands exactly on $F$.",
+          "All three vertices coincide, so a sequence of rigid motions maps $\\triangle ABC$ onto $\\triangle DEF$. By the definition of congruence, the triangles are congruent, which is why SAS works."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "In $\\triangle ABC$ and $\\triangle DEF$, $AB = DE = 8$, $BC = EF = 5$, and $m\\angle A = m\\angle D = 30^\\circ$, where $\\angle A$ is a non-included angle (it is not between sides $AB$ and $BC$). Does this guarantee $\\triangle ABC \\cong \\triangle DEF$? Identify the arrangement and explain why it does or does not work.",
+      "answer": "No; this is SSA (the ambiguous case), which is not a valid congruence criterion",
+      "solution": {
+        "steps": [
+          "Identify the parts: two sides ($AB$ and $BC$) and the angle $\\angle A$. Side $AB$ touches $\\angle A$ but side $BC$ does not, so $\\angle A$ is non-included. This is the Side-Side-Angle (SSA) arrangement.",
+          "Build the triangle: fix $\\angle A = 30^\\circ$ and side $AB = 8$. From $B$, side $BC = 5$ must reach the far ray of the angle.",
+          "The distance from $B$ to that ray is $AB \\cdot \\sin(30^\\circ) = 8 \\cdot \\tfrac{1}{2} = 4$. Since $4 < BC = 5 < AB = 8$, the circle of radius $5$ about $B$ crosses the ray in two distinct points, giving two non-congruent triangles that both satisfy the given data.",
+          "Because the same SSA data produces two different triangles, SSA is not a valid congruence criterion, so the given information does not guarantee $\\triangle ABC \\cong \\triangle DEF$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A student claims that because all three pairs of corresponding angles of $\\triangle ABC$ and $\\triangle DEF$ are equal (AAA), the triangles must be congruent. Explain why AAA does not guarantee congruence, and give a specific counterexample.",
+      "answer": "AAA guarantees only similarity, not congruence; for example an equilateral triangle with side $1$ and an equilateral triangle with side $2$ have all angles $60^\\circ$ but are not congruent",
+      "solution": {
+        "steps": [
+          "Equal corresponding angles mean the triangles have the same shape, which is similarity, not necessarily the same size.",
+          "Congruence additionally requires equal corresponding side lengths, which AAA says nothing about.",
+          "Counterexample: an equilateral triangle with side length $1$ and an equilateral triangle with side length $2$ each have three $60^\\circ$ angles, so AAA holds.",
+          "But their sides are $1$ and $2$, so they are not congruent. Hence AAA establishes only similarity, not congruence."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Explain, using the definition of congruence in terms of rigid motions, why the ASA criterion forces two triangles to be congruent. Use $\\triangle ABC$ and $\\triangle DEF$ with $m\\angle B = m\\angle E$, $BC = EF$, and $m\\angle C = m\\angle F$. Describe the translate, rotate, and possible reflect steps, and explain why the third vertex $A$ is forced onto $D$.",
+      "answer": "After translating $B$ to $E$, rotating side $BC$ onto $EF$ (and reflecting across line $EF$ if needed), the included side $BC$ coincides with $EF$; the two given angles produce two rays from $E$ and $F$ whose single intersection forces $A$ onto $D$, so the triangles coincide and are congruent.",
+      "solution": {
+        "steps": [
+          "Translate $\\triangle ABC$ so that $B$ maps onto $E$. The translation is a rigid motion and changes no lengths or angles.",
+          "Rotate about $E$ so that ray $BC$ lies along ray $EF$. Because $BC = EF$ and length is preserved, $C$ lands exactly on $F$; now the included side $BC$ coincides with $EF$.",
+          "If $A$ is on the opposite side of line $EF$ from $D$, reflect across line $EF$. This reflection fixes $E$ and $F$ and moves $A$ to the same side as $D$ while preserving all angles.",
+          "Since $m\\angle B = m\\angle E$, ray $BA$ now lies along ray $ED$; since $m\\angle C = m\\angle F$, ray $CA$ now lies along ray $FD$.",
+          "Two distinct lines meet in exactly one point, so the intersection of ray $ED$ and ray $FD$ is the single point $D$. Therefore $A$ is forced onto $D$, all three vertices coincide, and by the rigid-motion definition the triangles are congruent, which is why ASA works."
+        ]
+      }
+    }
+  ]
+}

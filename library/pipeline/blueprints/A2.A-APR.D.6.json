@@ -1,0 +1,140 @@
+{
+  "standard": "A2.A-APR.D.6",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Arithmetic with Polynomials and Rational Expressions",
+  "domainCode": "A-APR",
+  "cluster": "Rewrite rational expressions",
+  "clusterCode": "D",
+  "skillName": "Rewriting Rational Expressions",
+
+  "description": "Students rewrite a rational expression $\\frac{a(x)}{b(x)}$ as $q(x)+\\frac{r(x)}{b(x)}$, where $q(x)$ is the quotient polynomial and $r(x)$ is the remainder with degree strictly less than the degree of the divisor $b(x)$. They produce this form by inspection for simple cases (a constant or linear divisor, or a numerator that obviously splits), by polynomial long division for general divisors, and by synthetic division when the divisor is linear of the form $x-c$. They handle missing terms by inserting zero placeholders, stop dividing when the remainder degree drops below the divisor degree, and verify a result with the relationship $a(x)=b(x)\\,q(x)+r(x)$. They also connect the remainder to the Remainder Theorem, recognizing that dividing by $x-c$ leaves the remainder $a(c)$, and that a zero remainder means $b(x)$ is a factor of $a(x)$.",
+
+  "subSkills": [
+    "Split a numerator over a monomial or constant divisor term by term to rewrite by inspection",
+    "Set up polynomial long division with both polynomials in descending order and zero placeholders for missing powers",
+    "Carry out polynomial long division, subtracting partial products and bringing down terms until the remainder degree is less than the divisor degree",
+    "Use synthetic division to divide by a linear factor $x-c$ and read off the quotient and remainder",
+    "Identify the quotient $q(x)$ and remainder $r(x)$ and assemble the final form $q(x)+\\frac{r(x)}{b(x)}$",
+    "Confirm the degree of $r(x)$ is strictly less than the degree of $b(x)$ and know when to stop dividing",
+    "Verify a division by checking $a(x)=b(x)\\,q(x)+r(x)$ (multiply back and add the remainder)",
+    "Apply the Remainder Theorem: the remainder of $\\frac{a(x)}{x-c}$ equals $a(c)$",
+    "Interpret a zero remainder as $b(x)$ being a factor of $a(x)$ and use it to factor"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Divide by inspection over a monomial",
+      "example": "Rewrite $\\frac{6x^3-9x^2+3x}{3x}$. Split term by term: $\\frac{6x^3}{3x}-\\frac{9x^2}{3x}+\\frac{3x}{3x}=2x^2-3x+1$ (remainder $0$)."
+    },
+    {
+      "name": "Linear divisor, nonzero remainder",
+      "example": "Write $\\frac{x^2+3x+5}{x+1}$ in the form $q(x)+\\frac{r(x)}{b(x)}$. Long division gives $q(x)=x+2$, $r(x)=3$, so $\\frac{x^2+3x+5}{x+1}=x+2+\\frac{3}{x+1}$."
+    },
+    {
+      "name": "Synthetic division by $x-c$",
+      "example": "Use synthetic division to rewrite $\\frac{2x^3-3x^2+4}{x-2}$. The numerator has a missing $x$ term, so use coefficients $2,\\,-3,\\,0,\\,4$ with $c=2$: quotient $2x^2+x+2$, remainder $8$, giving $2x^2+x+2+\\frac{8}{x-2}$."
+    },
+    {
+      "name": "Quadratic divisor by long division",
+      "example": "Rewrite $\\frac{x^3+2x^2-x+5}{x^2+1}$. Long division gives $q(x)=x+2$ and $r(x)=-2x+3$, so the result is $x+2+\\frac{-2x+3}{x^2+1}$ (note $\\deg r=1<\\deg b=2$)."
+    },
+    {
+      "name": "Missing terms requiring placeholders",
+      "example": "Rewrite $\\frac{x^3-8}{x-2}$. Insert zeros for the missing $x^2$ and $x$ terms ($1,\\,0,\\,0,\\,-8$); the division gives $x^2+2x+4$ with remainder $0$, so $\\frac{x^3-8}{x-2}=x^2+2x+4$."
+    },
+    {
+      "name": "Exact division (factor recognition)",
+      "example": "Rewrite $\\frac{2x^2+7x+3}{x+3}$. The remainder is $0$, so $q(x)=2x+1$ and $\\frac{2x^2+7x+3}{x+3}=2x+1$, confirming $x+3$ is a factor."
+    },
+    {
+      "name": "Remainder Theorem connection",
+      "example": "Find the remainder when $a(x)=x^3-4x+1$ is divided by $x-3$ without full division. By the Remainder Theorem the remainder is $a(3)=27-12+1=16$."
+    },
+    {
+      "name": "Verify or build $a(x)=b(x)q(x)+r(x)$",
+      "example": "Given $\\frac{a(x)}{x+4}=x-1+\\frac{6}{x+4}$, reconstruct $a(x)$. Multiply back: $a(x)=(x+4)(x-1)+6=x^2+3x-4+6=x^2+3x+2$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step rewriting by inspection or one clean division with a small, friendly result. The student divides a polynomial by a monomial or constant by splitting term by term, or divides by a linear $x-c$ that goes in evenly (remainder $0$) so no leftover fraction appears. No missing terms, all coefficients small integers. Anchors the start of the ramped worksheet and the bottom of tier1.",
+      "constraints": [
+        "Divisor is a monomial ($ax$ or a constant) or a linear factor $x-c$ with $|c|\\le 4$",
+        "Numerator has no missing powers (every descending term is present)",
+        "Division is exact (remainder $0$) or the term-by-term split produces a polynomial with no fraction left",
+        "All coefficients are small integers, quotient coefficients stay integer",
+        "Task is one step: split and simplify, or run one short division"
+      ]
+    },
+    "Medium": {
+      "description": "Two to three linked steps producing a genuine quotient-plus-remainder form. The student runs full polynomial long division or synthetic division by a linear divisor, gets a nonzero remainder, and writes $q(x)+\\frac{r(x)}{b(x)}$. Missing-term placeholders appear here, as does the Remainder Theorem shortcut. This is the upper half of the ramped worksheet, the top of tier1, and the body of tier2.",
+      "constraints": [
+        "Divisor is linear $x-c$ (synthetic division allowed) or a clean quadratic, with a nonzero remainder in most items",
+        "Numerator may have one missing power requiring a zero placeholder",
+        "Degree of the numerator is $3$ (cubic over linear) or $3$ over quadratic",
+        "Student must state the final mixed form $q(x)+\\frac{r(x)}{b(x)}$ and check that $\\deg r<\\deg b$",
+        "Some items use the Remainder Theorem to find a remainder without completing the full division"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step synthesis. The student divides by a quadratic (or higher) divisor with a nonzero polynomial remainder of degree up to one less than the divisor, manages several missing terms, verifies via $a(x)=b(x)q(x)+r(x)$, or reverses the process to reconstruct the dividend from a given quotient and remainder. May combine the Remainder/Factor Theorem with a follow-up such as factoring once an exact division is found. Closes the ramped worksheet and the top of tier2.",
+      "constraints": [
+        "Divisor is quadratic or has a leading coefficient other than $1$ (e.g. $2x-3$ or $x^2+x+1$), so the remainder $r(x)$ may itself be linear",
+        "Numerator degree is $4$ or higher, often with two missing powers needing placeholders",
+        "Student must verify the result by multiplying $b(x)q(x)+r(x)$ back to $a(x)$, or reconstruct $a(x)$ from given $q(x)$ and $r(x)$",
+        "May chain steps: divide, recognize a zero remainder, then factor the original numerator fully",
+        "Mixes representations: an item may require choosing between synthetic and long division and justifying why synthetic does not apply to a nonlinear divisor"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student stops dividing too early or keeps dividing past the stopping point, mismanaging when the remainder degree is less than the divisor degree",
+      "distractor": "For $\\frac{x^3+2x^2-x+5}{x^2+1}$ reports a remainder of degree $2$ (e.g. keeps an $x^2$ term in the remainder) instead of stopping once the remainder is the degree-$1$ expression $-2x+3$"
+    },
+    {
+      "misconception": "Student forgets to insert zero placeholders for missing powers, shifting every coefficient and corrupting the quotient",
+      "distractor": "For $\\frac{2x^3-3x^2+4}{x-2}$ uses coefficients $2,\\,-3,\\,4$ (omitting the missing $x$ term) and gets a wrong quotient such as $2x^2+x$ with the wrong remainder, instead of using $2,\\,-3,\\,0,\\,4$"
+    },
+    {
+      "misconception": "Student adds instead of subtracts when bringing down each partial product in long division (sign error in the subtraction step)",
+      "distractor": "For $\\frac{x^2+3x+5}{x+1}$ adds the partial product $x^2+x$ rather than subtracting it, producing a quotient like $x+4$ and remainder like $9$ instead of $q(x)=x+2$, $r(x)=3$"
+    },
+    {
+      "misconception": "Student uses the wrong sign for $c$ in synthetic division, plugging in the value from $x+c$ as if it were $x-c$",
+      "distractor": "To divide by $x+1$ uses $c=1$ instead of $c=-1$ in the synthetic-division row, giving an incorrect quotient and remainder (treats $x+1$ as if the zero were $x=1$)"
+    },
+    {
+      "misconception": "Student drops the remainder or writes the answer as a bare polynomial, omitting the $\\frac{r(x)}{b(x)}$ piece",
+      "distractor": "For $\\frac{x^2+3x+5}{x+1}$ answers $x+2$ and discards the remainder, instead of $x+2+\\frac{3}{x+1}$"
+    },
+    {
+      "misconception": "Student places the remainder over the wrong divisor or over the quotient instead of over $b(x)$",
+      "distractor": "Writes the result as $x+2+\\frac{3}{x+2}$ or $x+2+\\frac{3}{x}$, attaching the remainder to the quotient or to a partial term rather than to the original divisor $x+1$"
+    },
+    {
+      "misconception": "Student misapplies the Remainder Theorem, substituting $-c$ or evaluating the divisor instead of the dividend at $c$",
+      "distractor": "To find the remainder of $\\frac{x^3-4x+1}{x-3}$ computes $a(-3)$ or evaluates $x-3$ at $x=3$, reporting $0$ or $a(-3)$ instead of the correct $a(3)=16$"
+    },
+    {
+      "misconception": "Student divides a polynomial by a monomial by splitting only the first term, attaching the divisor to a single term rather than to every term of the numerator",
+      "distractor": "For $\\frac{6x^3-9x^2+3x}{3x}$ writes $2x^2-9x^2+3x$ or $2x^2-3x^2+3x$, dividing only the leading term and leaving the rest undivided, instead of $2x^2-3x+1$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

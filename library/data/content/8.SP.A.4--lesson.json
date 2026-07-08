@@ -1,0 +1,165 @@
+{
+  "id": "8.SP.A.4--lesson",
+  "standard": "8.SP.A.4",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate patterns of association in bivariate data",
+  "clusterCode": "A",
+  "skillName": "Two-Way Tables",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "A two-way frequency table organizes data collected on two categorical questions from the same group of people. The numbers inside the table are joint frequencies (how many fit both categories), the row and column totals are marginal frequencies, and the bottom-right corner is the grand total. A relative frequency is a count written as a fraction of a total. When you divide by the grand total you get a relative frequency for the whole group; when you divide by a row total or a column total you get a conditional relative frequency for just that row or column. Comparing conditional relative frequencies across rows or columns is how you decide whether the two variables show a possible association.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A survey of $80$ students asked whether each plays a sport and whether each plays an instrument. The completed two-way table is below. How many students play a sport but do NOT play an instrument?\n\n| | Instrument | No instrument | Total |\n|---|---|---|---|\n| Sport | $24$ | $36$ | $60$ |\n| No sport | $8$ | $12$ | $20$ |\n| Total | $32$ | $48$ | $80$ |",
+      "solution": {
+        "steps": [
+          "The question asks for students in the 'Sport' row AND the 'No instrument' column.",
+          "Find where the 'Sport' row meets the 'No instrument' column. This is a joint frequency, a single cell, not a total.",
+          "Read that cell: it equals $36$.",
+          "So $36$ students play a sport but do not play an instrument."
+        ],
+        "answer": "$36$ students"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A two-way table about commuting has a grand total of $120$ people. The 'Drives' row total is $70$, and the cell for 'Drives and Parks at work' is $45$. The 'Drives' row has only two columns: 'Parks at work' and 'No parking'. Find the missing cell 'Drives and No parking'.",
+      "solution": {
+        "steps": [
+          "The two cells in the 'Drives' row must add up to the 'Drives' row total of $70$.",
+          "One cell is known: 'Drives and Parks at work' $= 45$.",
+          "Subtract to find the other cell: $70 - 45 = 25$.",
+          "So $25$ people drive but have no parking at work. (The grand total $120$ is not needed here because we are completing a single row.)"
+        ],
+        "answer": "$25$ people"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Of $200$ surveyed adults, $36$ both own a pet and rent their home. What is the relative frequency, as a fraction of all adults surveyed, of adults who own a pet and rent? Give the answer in lowest terms.",
+      "solution": {
+        "steps": [
+          "A relative frequency for the whole group divides the count by the grand total.",
+          "The count is $36$ and the grand total is $200$, so the relative frequency is $\\frac{36}{200}$.",
+          "Simplify by dividing numerator and denominator by their GCF, which is $4$: $\\frac{36 \\div 4}{200 \\div 4} = \\frac{9}{50}$.",
+          "So $\\frac{9}{50}$ of all surveyed adults both own a pet and rent."
+        ],
+        "answer": "$\\frac{9}{50}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Among the $60$ students who play a sport, $48$ also play an instrument. What is the relative frequency of playing an instrument GIVEN that the student plays a sport? Give the answer as a fraction in lowest terms and as a percent.",
+      "solution": {
+        "steps": [
+          "The phrase 'given that the student plays a sport' tells you to condition on the sport group, so divide by the sport total, not the grand total.",
+          "The sport total is $60$ and the number who also play an instrument is $48$, so the conditional relative frequency is $\\frac{48}{60}$.",
+          "Simplify by dividing top and bottom by the GCF $12$: $\\frac{48 \\div 12}{60 \\div 12} = \\frac{4}{5}$.",
+          "Convert to a percent: $\\frac{4}{5} = 0.8 = 80\\%$.",
+          "So $\\frac{4}{5}$, or $80\\%$, of the athletes also play an instrument."
+        ],
+        "answer": "$\\frac{4}{5} = 80\\%$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A clinic studied smoking and asthma. Among $50$ smokers, $30$ have asthma. Among $100$ non-smokers, $20$ have asthma. Compute the relative frequency of asthma for each group and state whether the table suggests an association between smoking and asthma.",
+      "solution": {
+        "steps": [
+          "To compare fairly, condition on each group separately by dividing by that group's total, because the groups have different sizes.",
+          "Smokers with asthma: $\\frac{30}{50} = 0.60 = 60\\%$.",
+          "Non-smokers with asthma: $\\frac{20}{100} = 0.20 = 20\\%$.",
+          "Compare the conditional relative frequencies: $0.60$ is much greater than $0.20$.",
+          "Because the rate of asthma is far higher among smokers than non-smokers, the table suggests a possible association between smoking and having asthma. (Comparing the raw counts $30$ and $20$ would be misleading since the two groups are not the same size.)"
+        ],
+        "answer": "Smokers $\\frac{30}{50}=60\\%$ vs non-smokers $\\frac{20}{100}=20\\%$; since $60\\%$ is much greater than $20\\%$, there is a possible association between smoking and asthma."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A two-way table of $90$ shoppers records whether each used a coupon and whether each is a member.\n\n| | Member | Not a member | Total |\n|---|---|---|---|\n| Coupon | $30$ | $15$ | $45$ |\n| No coupon | $25$ | $20$ | $45$ |\n| Total | $55$ | $35$ | $90$ |\n\nHow many members did NOT use a coupon?",
+      "hint": "Find the cell where the 'No coupon' row meets the 'Member' column. It is a single cell, not a total.",
+      "solution": {
+        "steps": [
+          "Locate the 'No coupon' row and the 'Member' column.",
+          "Read the joint frequency where they cross: $25$.",
+          "So $25$ members did not use a coupon."
+        ],
+        "answer": "$25$ members"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A two-way table has a grand total of $150$. The 'Yes' row total is $90$, and the cell 'Yes and Bus' is $58$. The 'Yes' row has only two columns, 'Bus' and 'Walk'. Find the cell 'Yes and Walk'.",
+      "hint": "The two cells in the 'Yes' row add up to the 'Yes' row total. Subtract.",
+      "solution": {
+        "steps": [
+          "The two cells in the 'Yes' row sum to the row total $90$.",
+          "Subtract the known cell: $90 - 58 = 32$.",
+          "So the 'Yes and Walk' cell is $32$."
+        ],
+        "answer": "$32$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Of $250$ people surveyed, $40$ both ride a bike to work and live downtown. What is the relative frequency, as a fraction of everyone surveyed, of people who ride a bike and live downtown? Give the answer in lowest terms.",
+      "hint": "A relative frequency for the whole group divides the count by the grand total, then simplify.",
+      "solution": {
+        "steps": [
+          "Divide the count by the grand total: $\\frac{40}{250}$.",
+          "The GCF of $40$ and $250$ is $10$: $\\frac{40 \\div 10}{250 \\div 10} = \\frac{4}{25}$.",
+          "So $\\frac{4}{25}$ of those surveyed ride a bike and live downtown."
+        ],
+        "answer": "$\\frac{4}{25}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Among the $75$ students who eat in the cafeteria, $45$ buy a drink. What is the relative frequency of buying a drink GIVEN that a student eats in the cafeteria? Give the answer as a fraction in lowest terms and as a percent.",
+      "hint": "The word 'given' means condition on the cafeteria group: divide by $75$, not by any larger total.",
+      "solution": {
+        "steps": [
+          "Condition on the cafeteria group, so divide by its total $75$: $\\frac{45}{75}$.",
+          "Simplify using the GCF $15$: $\\frac{45 \\div 15}{75 \\div 15} = \\frac{3}{5}$.",
+          "Convert to a percent: $\\frac{3}{5} = 0.6 = 60\\%$.",
+          "So $\\frac{3}{5}$, or $60\\%$, of cafeteria students buy a drink."
+        ],
+        "answer": "$\\frac{3}{5} = 60\\%$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A study of exercise and good sleep gathered data. Among $40$ people who exercise daily, $28$ report good sleep. Among $60$ people who do not exercise daily, $18$ report good sleep. Find the relative frequency of good sleep for each group and decide whether the data suggest an association between daily exercise and good sleep.",
+      "hint": "The two groups are different sizes, so compare conditional relative frequencies (divide each count by its own group total), not the raw counts.",
+      "solution": {
+        "steps": [
+          "Condition on each group by dividing by its own total.",
+          "Exercise group: $\\frac{28}{40} = 0.70 = 70\\%$.",
+          "No-exercise group: $\\frac{18}{60} = 0.30 = 30\\%$.",
+          "Compare: $0.70$ is much greater than $0.30$.",
+          "Because good sleep is far more common among people who exercise daily than among those who do not, the data suggest a possible association between daily exercise and good sleep."
+        ],
+        "answer": "Exercise $\\frac{28}{40}=70\\%$ vs no exercise $\\frac{18}{60}=30\\%$; since $70\\%$ is much greater than $30\\%$, the data suggest a possible association between daily exercise and good sleep."
+      }
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "id": "A2.S-IC.B.6--lesson",
+  "standard": "A2.S-IC.B.6",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+  "domainCode": "S-IC",
+  "cluster": "Make inferences and justify conclusions from sample surveys, experiments, and observational studies",
+  "clusterCode": "B",
+  "skillName": "Evaluating Data Reports",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "Reports, ads, and headlines constantly turn data into claims. To evaluate one, ask three questions: How were the data collected (sample survey, experiment, or observational study)? Does that method actually support the stated conclusion? And is the conclusion the data justify the one the report makes? Watch for biased samples (voluntary-response or convenience), loaded question wording, confounding variables behind a causal claim, conclusions stretched beyond the population studied, and misleading graphs (truncated axes, distorted scales). When a margin of error is reported, a statistic $\\hat{p}$ with margin $\\pm m$ gives a plausible interval $\\hat{p} - m$ to $\\hat{p} + m$ for the true value, and a claimed difference smaller than the margin is not meaningful. The goal is not just to spot a flaw but to state the corrected, defensible conclusion the data really support.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A talk-radio host invites listeners to call in and vote, and reports that $73\\%$ of the $4{,}200$ callers oppose a new city tax. The host concludes that most residents of the city oppose the tax. Is the conclusion justified?",
+      "solution": {
+        "steps": [
+          "Identify the data-collection method. People chose whether to call in, so this is a voluntary-response sample, not a random sample of city residents.",
+          "Voluntary-response samples over-represent people with strong opinions and people who happen to listen to that station, so they are biased toward the host's audience.",
+          "A large sample size does not fix bias. Getting $4{,}200$ self-selected callers measures the $4{,}200$ callers more precisely, but it does not make them representative of the whole city.",
+          "Because the sample is biased, the $73\\%$ cannot be generalized to all residents.",
+          "Defensible conclusion: among these self-selected callers, most opposed the tax, but the report tells us nothing reliable about the opinion of all city residents."
+        ],
+        "answer": "Not justified. The call-in vote is a voluntary-response sample, so the $73\\%$ is biased and cannot be generalized to all residents; at most we can say most of these self-selected callers opposed the tax."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A survey asks, \"Should hardworking families be forced to pay even higher taxes to fund yet another government program?\" It reports that only $14\\%$ answered yes, and concludes that the public opposes the program. Explain why the reported figure is biased and state what the data can support.",
+      "solution": {
+        "steps": [
+          "Read the wording carefully. Phrases like \"hardworking families,\" \"forced,\" \"even higher,\" and \"yet another\" are emotionally loaded and steer respondents toward answering no.",
+          "Leading or loaded wording biases the reported proportion. Here it pushes the figure downward, so the true level of support is almost certainly higher than $14\\%$.",
+          "The flaw is in the instrument (the question), not the sample size, so collecting more responses to the same question would not fix it.",
+          "A neutral question such as \"Do you support funding the new program?\" would be needed to measure genuine opinion.",
+          "Defensible conclusion: the $14\\%$ understates true support because of loaded wording, so the report cannot validly claim the public opposes the program."
+        ],
+        "answer": "The loaded wording (\"hardworking families,\" \"forced,\" \"even higher,\" \"yet another\") pushes respondents toward no, biasing the $14\\%$ downward. The data do not support the claim that the public opposes the program; a neutrally worded survey would be needed to measure real support."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A study follows thousands of adults and finds that those who drink coffee daily have lower rates of depression than those who do not. The headline reads, \"Coffee prevents depression.\" The researchers did not assign who drank coffee; they simply recorded each person's habits. Evaluate the causal claim.",
+      "solution": {
+        "steps": [
+          "Identify the design. The researchers observed existing habits rather than randomly assigning people to drink coffee or not, so this is an observational study.",
+          "Observational studies can establish association but not causation, because groups may differ in other ways.",
+          "Name a possible confounding variable: people who are more socially active or more physically active may both drink more coffee (out with friends, at work) and have lower depression rates. That lurking variable, not coffee itself, could explain the link.",
+          "Without random assignment, we cannot separate the effect of coffee from such confounders, so \"prevents\" is an overstatement.",
+          "Defensible conclusion: daily coffee drinking is associated with lower depression rates in this group; a randomized experiment would be needed to claim coffee causes the reduction."
+        ],
+        "answer": "The claim is overstated. This is an observational study, so it shows association, not causation; a confounder such as social or physical activity could cause both. The data support only that daily coffee drinking is associated with lower depression rates, not that it prevents depression."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A pre-election poll reports candidate A at $51\\%$ and candidate B at $49\\%$ with a margin of error of $\\pm 4\\%$. The headline declares, \"A pulls ahead of B.\" Use the margin of error to judge whether A's lead is statistically meaningful.",
+      "solution": {
+        "steps": [
+          "Build a plausible interval for each estimate using $\\hat{p} \\pm m$.",
+          "For A: $51\\% \\pm 4\\%$ gives the interval $47\\%$ to $55\\%$.",
+          "For B: $49\\% \\pm 4\\%$ gives the interval $45\\%$ to $53\\%$.",
+          "The two intervals overlap from $47\\%$ to $53\\%$, so the true support for A and B could easily be equal or even reversed.",
+          "Equivalently, the $2$-point gap ($51\\% - 49\\%$) is smaller than the $\\pm 4\\%$ margin of error, so the difference is within sampling noise.",
+          "Defensible conclusion: the lead is not statistically meaningful; the race is effectively a tie."
+        ],
+        "answer": "Not meaningful. A's interval ($47\\%$ to $55\\%$) overlaps B's ($45\\%$ to $53\\%$), and the $2$-point gap is smaller than the $\\pm 4\\%$ margin, so the data do not support a real lead; the race is a statistical tie."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "An online ad shows a bar graph of two phone plans' average monthly cost: Plan X at $\\$59$ and Plan Y at $\\$61$. The vertical axis starts at $\\$58$ instead of $\\$0$, so Plan Y's bar appears about three times as tall as Plan X's. The caption reads, \"Plan Y costs far more than Plan X.\" Identify the misleading feature, its effect, and the honest conclusion.",
+      "solution": {
+        "steps": [
+          "Examine the axis. It begins at $\\$58$ rather than $\\$0$, so only the top sliver of each bar is shown. This is a truncated (non-zero) baseline.",
+          "With the baseline at $\\$58$, Plan X rises $\\$1$ above it and Plan Y rises $\\$3$ above it, making Plan Y's visible bar three times as tall even though the costs differ by only $\\$2$.",
+          "Compute the true relative difference: $\\frac{61 - 59}{59} \\approx 0.034$, about a $3.4\\%$ difference, not the threefold difference the heights suggest.",
+          "Redraw with the axis starting at $\\$0$: bars of height $59$ and $61$ look nearly identical.",
+          "Defensible conclusion: the truncated axis exaggerates a tiny gap; the two plans cost about the same, with Plan Y only roughly $3\\%$ more."
+        ],
+        "answer": "The misleading feature is the truncated axis starting at $\\$58$ instead of $\\$0$, which makes a $\\$2$ (about $3\\%$) difference look like a threefold one. Drawn from $\\$0$, the bars are nearly equal, so the honest conclusion is that the plans cost about the same."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A fitness magazine posts a survey on its website and reports that $88\\%$ of respondents exercise at least five times a week. It concludes that most adults in the country exercise that often. Is the conclusion justified? Explain.",
+      "hint": "Who chose to take this survey, and are they like all adults? Think about voluntary-response bias.",
+      "solution": {
+        "steps": [
+          "The survey is posted on a fitness magazine's website, and visitors choose whether to respond, so this is a voluntary-response sample of people already interested in fitness.",
+          "Such respondents are far more likely to exercise frequently than the general public, so the $88\\%$ is biased upward.",
+          "The sample does not represent all adults, so the figure cannot be generalized to the country."
+        ],
+        "answer": "Not justified. The website survey is a voluntary-response sample of fitness-minded readers, so the $88\\%$ is biased upward and cannot be generalized to most adults in the country."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "An observational study finds that towns with more firefighters tend to have more fire damage per year, and a blogger concludes that firefighters cause fire damage. Identify the confounding variable and state the defensible conclusion.",
+      "hint": "What third factor would make a town hire more firefighters AND experience more fire damage?",
+      "solution": {
+        "steps": [
+          "This is observational data, so it can show association but not causation.",
+          "Town size (population) is a confounding variable: larger towns have more fires and more total fire damage, and they also hire more firefighters.",
+          "So the lurking variable, town size, drives both quantities; firefighters do not cause the damage.",
+          "The defensible statement is about association, not cause."
+        ],
+        "answer": "The confounder is town size: bigger towns have both more firefighters and more fire damage. The data support only that number of firefighters is associated with fire damage (through town size), not that firefighters cause it."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A poll reports that $46\\%$ of voters approve of a measure and $54\\%$ disapprove, with a margin of error of $\\pm 3\\%$. A commentator says approval and disapproval are \"basically tied.\" Use the margin of error to decide whether the gap is statistically meaningful.",
+      "hint": "Form the interval $\\hat{p} \\pm m$ for each figure and compare the gap to the margin.",
+      "solution": {
+        "steps": [
+          "Approval interval: $46\\% \\pm 3\\%$ gives $43\\%$ to $49\\%$.",
+          "Disapproval interval: $54\\% \\pm 3\\%$ gives $51\\%$ to $57\\%$.",
+          "The intervals ($43\\%$ to $49\\%$ and $51\\%$ to $57\\%$) do not overlap.",
+          "The gap is $54\\% - 46\\% = 8$ points, which is larger than the $\\pm 3\\%$ margin, so it is not just sampling noise."
+        ],
+        "answer": "The gap is statistically meaningful, so the commentator is wrong. The intervals ($43\\%$ to $49\\%$ vs. $51\\%$ to $57\\%$) do not overlap and the $8$-point gap exceeds the $\\pm 3\\%$ margin, so disapproval is genuinely higher; the race is not a tie."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Researchers randomly assigned $80$ volunteers who suffer from migraines to either a new drug or a placebo and found the drug group had significantly fewer migraines. A press release claims, \"This drug reduces migraines for everyone.\" The volunteers all came from one clinic and answered a recruitment ad. Critique the scope of the conclusion and state what is defensible.",
+      "hint": "Random assignment supports a causal claim, but who can the result be generalized to? Were the volunteers a random sample of all people?",
+      "solution": {
+        "steps": [
+          "Because subjects were randomly assigned to drug or placebo, the experiment can support a causal claim that the drug reduced migraines for these subjects.",
+          "However, the volunteers were not a random sample of all people; they were migraine sufferers from one clinic who responded to an ad.",
+          "A causal result can be generalized only to a population like the subjects studied, so \"for everyone\" overstates the scope.",
+          "The defensible conclusion limits the population to people similar to these volunteers."
+        ],
+        "answer": "The causal claim is supported by random assignment, but \"for everyone\" overgeneralizes. The volunteers were not a random sample of all people, so the defensible conclusion is that the drug reduces migraines for people like these clinic volunteers (migraine sufferers similar to the subjects), not for everyone."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A toothpaste ad states, \"In a company-funded test of $20$ dentists who already use BrightWhite, $4$ out of $5$ recommend it,\" and concludes that most dentists nationwide recommend BrightWhite. Evaluate the report end to end, naming each flaw, and write the corrected, defensible conclusion.",
+      "hint": "Look at sample size, how the dentists were chosen, who paid for the study, and how far the conclusion stretches.",
+      "solution": {
+        "steps": [
+          "Sample size: only $20$ dentists is a small sample, so even an unbiased estimate would be imprecise.",
+          "Selection bias: the dentists already use BrightWhite, a convenience sample chosen to favor the product, not a random sample of dentists.",
+          "Source bias: the study is company-funded, giving the seller an incentive to report a flattering result.",
+          "Overgeneralization: a biased sample of $20$ product users cannot be generalized to all dentists nationwide.",
+          "Combine these: the $4$ out of $5$ figure describes only the selected, pre-disposed group, so the corrected conclusion must be bounded to them."
+        ],
+        "answer": "Flaws: small sample ($20$), convenience sample of dentists who already use the product, company-funded source, and overgeneralization to all dentists. The data do not show most dentists nationwide recommend BrightWhite; the only defensible conclusion is that most of these $20$ selected, current-user dentists recommended it."
+      }
+    }
+  ]
+}

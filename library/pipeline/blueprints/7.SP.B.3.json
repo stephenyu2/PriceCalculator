@@ -1,0 +1,124 @@
+{
+  "standard": "7.SP.B.3",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Draw informal comparative inferences about two populations",
+  "clusterCode": "B",
+  "skillName": "Comparing Data Distributions",
+
+  "description": "Students compare two numerical data distributions that have similar variabilities by assessing the degree of visual overlap and by quantifying the difference between the centers. They compute a measure of center (mean or median) and a measure of variability (mean absolute deviation or interquartile range) for each distribution, then express the difference between the two centers as a multiple of a single measure of variability. They interpret what this multiple says about how separated or overlapping the two distributions are.",
+
+  "subSkills": [
+    "Read center and spread from dot plots, box plots, and small data sets",
+    "Compute the mean of a data set",
+    "Compute the median of a data set",
+    "Compute the mean absolute deviation (MAD) as a measure of variability",
+    "Compute the interquartile range (IQR) from a five-number summary or box plot",
+    "Find the difference between the two centers, $|\\bar{x}_1 - \\bar{x}_2|$",
+    "Express the difference between centers as a multiple of a measure of variability, $\\dfrac{|\\bar{x}_1 - \\bar{x}_2|}{\\text{MAD}}$",
+    "Interpret the multiple: small multiple means high overlap, large multiple means clear separation",
+    "Judge the degree of visual overlap of two plotted distributions"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Compute the separation multiple from two means and a MAD",
+      "example": "Team A has mean $\\bar{x}_A = 12$ points and Team B has mean $\\bar{x}_B = 18$ points. Both distributions have a mean absolute deviation of about $3$ points. The difference between the means is how many times the MAD? Answer: $\\frac{|18 - 12|}{3} = 2$ times the MAD."
+    },
+    {
+      "name": "Compute mean and MAD for one data set",
+      "example": "For the data set $4, 6, 6, 8, 11$ the mean is $\\frac{4+6+6+8+11}{5} = 7$. The MAD is $\\frac{|4-7|+|6-7|+|6-7|+|8-7|+|11-7|}{5} = \\frac{3+1+1+1+4}{5} = 2$."
+    },
+    {
+      "name": "Compare two dot plots and quantify the overlap",
+      "example": "Two seventh-grade classes each timed how long they could hold a plank. Class 1 has median $40$ s and Class 2 has median $55$ s, and both box plots have an IQR of about $10$ s. The medians differ by $\\frac{|55-40|}{10} = 1.5$ times the IQR, so the distributions overlap but are noticeably separated."
+    },
+    {
+      "name": "Interpret what the multiple means",
+      "example": "The difference between the centers of two distributions is $0.5$ times the MAD. Because this multiple is less than $1$, the centers are close relative to the spread and the two distributions overlap a great deal."
+    },
+    {
+      "name": "Two-population inference from samples",
+      "example": "A sample of plants given Fertilizer X has mean height $24$ cm and a sample given Fertilizer Y has mean height $30$ cm; both samples have MAD $\\approx 2$ cm. Since $\\frac{|30-24|}{2} = 3$, the centers differ by $3$ MADs, strong evidence that Fertilizer Y plants are typically taller."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "The two centers and a single shared measure of variability are given directly. Student performs one subtraction and one division to express the difference between centers as a multiple of the variability, or reads/interprets a clearly separated pair of plots.",
+      "constraints": [
+        "Mean (or median) of each distribution is given as a small whole number",
+        "MAD or IQR is given as a small whole number that divides the difference evenly",
+        "Resulting multiple is a whole number such as $1$, $2$, or $3$",
+        "At most two steps: one subtraction and one division",
+        "Interpretation, if asked, is qualitative (more overlap vs. less overlap)"
+      ]
+    },
+    "Medium": {
+      "description": "Student must first compute at least one statistic (mean, median, MAD, or IQR) from a short raw data set or a five-number summary before finding and expressing the multiple. Values may produce a non-whole multiple.",
+      "constraints": [
+        "Student computes a mean and/or MAD from a data set of $5$ to $8$ values",
+        "Or extracts IQR from a five-number summary or box plot",
+        "Difference between centers may be a multiple such as $1.5$ or $2.5$ MADs",
+        "Three or more steps required",
+        "Includes a one-sentence interpretation of the multiple"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step real-world comparison where the student computes the center and variability for both distributions from raw data, confirms the variabilities are similar, computes the separation multiple, and draws and justifies an inference about the two populations.",
+      "constraints": [
+        "Student computes mean and MAD (or median and IQR) for both data sets from raw values",
+        "Must verify that the two distributions have similar variability before comparing centers",
+        "Difference between centers expressed as a multiple that may be fractional, e.g. $\\frac{|31-22|}{4} = 2.25$",
+        "Requires a written inference about the two populations justified by the multiple",
+        "May ask the student to judge whether overlap is large or small and explain why"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student reports the raw difference between centers and never divides by the measure of variability",
+      "distractor": "Gives the answer as $|18 - 12| = 6$ instead of $\\frac{|18-12|}{3} = 2$ times the MAD"
+    },
+    {
+      "misconception": "Student divides the variability by the difference instead of the difference by the variability",
+      "distractor": "Computes $\\frac{3}{6} = 0.5$ instead of $\\frac{6}{3} = 2$"
+    },
+    {
+      "misconception": "Student adds the two centers instead of subtracting them",
+      "distractor": "Uses $\\frac{18 + 12}{3} = 10$ instead of $\\frac{18 - 12}{3} = 2$"
+    },
+    {
+      "misconception": "When computing MAD, student averages the signed deviations (which sum to zero) instead of the absolute deviations",
+      "distractor": "Reports a MAD of $0$ because $(4-7)+(6-7)+(6-7)+(8-7)+(11-7) = 0$, instead of using absolute values to get $2$"
+    },
+    {
+      "misconception": "Student confuses range with MAD or IQR and uses max minus min as the measure of variability",
+      "distractor": "Uses range $11 - 4 = 7$ as the spread, giving $\\frac{6}{7} \\approx 0.86$ instead of using MAD $= 2$ to get $\\frac{6}{2} = 3$"
+    },
+    {
+      "misconception": "Student interprets a large multiple as meaning the distributions overlap a lot",
+      "distractor": "Concludes that a difference of $3$ MADs means heavy overlap, when a large multiple actually means the distributions are clearly separated"
+    },
+    {
+      "misconception": "Student divides by the sum of the two variabilities instead of using the single shared measure of variability",
+      "distractor": "Computes $\\frac{6}{3 + 3} = 1$ instead of $\\frac{6}{3} = 2$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "standard": "A1.N-Q.A.1",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Quantities",
+  "domainCode": "N-Q",
+  "cluster": "Reason quantitatively and use units to solve problems",
+  "clusterCode": "A",
+  "skillName": "Units in Multi-Step Problems",
+
+  "description": "Students use units as a tool to understand and solve multi-step problems. They convert between measurement units using conversion factors (dimensional analysis), track units through a chain of multiplications and divisions to verify that a setup is correct, choose and interpret units consistently when substituting into formulas, and choose and interpret an appropriate scale and origin for the axes of a graph or data display. The unit reasoning, not the arithmetic, is the focus: a correct setup is one whose units cancel to leave exactly the units requested.",
+
+  "subSkills": [
+    "Build a conversion factor as a fraction equal to $1$ (e.g. $\\frac{1\\text{ ft}}{12\\text{ in}}$) and orient it so the unwanted unit cancels",
+    "Chain two or more conversion factors so all intermediate units cancel, leaving the target unit (dimensional analysis)",
+    "Convert a rate, including a compound rate such as $\\frac{\\text{mi}}{\\text{hr}}$ to $\\frac{\\text{ft}}{\\text{s}}$, by applying conversion factors to both the numerator and the denominator",
+    "Choose units consistently before substituting into a formula and report the answer in the units that formula produces",
+    "Use unit analysis to check whether a proposed solution setup is reasonable and to identify the units of an unknown quantity",
+    "Choose an appropriate scale (interval per gridline) and origin for an axis given the range of the data",
+    "Interpret the scale and origin of a given graph or data display to read off or estimate a value"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Single-factor unit conversion",
+      "example": "Convert $5$ feet to inches. Setup: $5\\text{ ft}\\times\\frac{12\\text{ in}}{1\\text{ ft}}=60\\text{ in}$."
+    },
+    {
+      "name": "Multi-step (chained) conversion",
+      "example": "Convert $2.5$ miles to feet using $1\\text{ mi}=5280\\text{ ft}$, then to inches using $1\\text{ ft}=12\\text{ in}$. Setup: $2.5\\text{ mi}\\times\\frac{5280\\text{ ft}}{1\\text{ mi}}\\times\\frac{12\\text{ in}}{1\\text{ ft}}=158400\\text{ in}$."
+    },
+    {
+      "name": "Rate conversion (compound units)",
+      "example": "A car travels at $60\\ \\frac{\\text{mi}}{\\text{hr}}$. Convert to $\\frac{\\text{ft}}{\\text{s}}$. Setup: $60\\ \\frac{\\text{mi}}{\\text{hr}}\\times\\frac{5280\\text{ ft}}{1\\text{ mi}}\\times\\frac{1\\text{ hr}}{3600\\text{ s}}=88\\ \\frac{\\text{ft}}{\\text{s}}$."
+    },
+    {
+      "name": "Choose consistent units for a formula",
+      "example": "Using distance $=$ rate $\\times$ time, a runner moves at $8\\ \\frac{\\text{ft}}{\\text{s}}$ for $5$ minutes. Convert $5$ min to $300$ s first, then $d=8\\ \\frac{\\text{ft}}{\\text{s}}\\times 300\\text{ s}=2400\\text{ ft}$. Answer: $2400$ ft."
+    },
+    {
+      "name": "Interpret units of an unknown (unit reasoning check)",
+      "example": "In the formula $W=Fd$ with force $F$ in newtons (N) and distance $d$ in meters (m), what are the units of $W$? Answer: $\\text{N}\\cdot\\text{m}$ (joules)."
+    },
+    {
+      "name": "Choose scale and origin for a graph",
+      "example": "Daily temperatures range from $52^{\\circ}\\text{F}$ to $89^{\\circ}\\text{F}$. Choose a reasonable scale and starting value for the vertical axis. Answer: start the axis near $50^{\\circ}\\text{F}$ (not $0$) and use a scale of $5^{\\circ}\\text{F}$ per gridline."
+    },
+    {
+      "name": "Interpret a given scale/origin to read a value",
+      "example": "A bar graph axis starts at $0$ and each gridline is $250$ units. A bar reaches halfway between the $3$rd and $4$th gridline. What value does it show? Answer: $875$."
+    },
+    {
+      "name": "Multi-step word problem combining conversion and a formula",
+      "example": "A water tank fills at $3\\ \\frac{\\text{gal}}{\\text{min}}$. How many gallons does it hold if it fills completely in $2$ hours? Convert $2$ hr to $120$ min, then $3\\ \\frac{\\text{gal}}{\\text{min}}\\times 120\\text{ min}=360\\text{ gal}$. Answer: $360$ gal."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recognition or one conversion factor. Student converts between two directly related units, identifies the correct conversion factor or its orientation, or reads a value off a graph whose scale and origin are stated. One unit conversion, no compound units, no formula.",
+      "constraints": [
+        "Exactly one conversion factor, or a direct read from a labeled axis",
+        "Common, familiar conversions (ft/in, ft/yd, min/s, hr/min, m/cm, kg/g, \\$ to cents)",
+        "Simple (non-compound) units; numbers are small whole numbers or terminate cleanly",
+        "Graph items: scale and origin are given; student only reads or names the interval"
+      ]
+    },
+    "Medium": {
+      "description": "Two to three steps. Student chains two conversion factors, converts one part of a compound rate, substitutes into a familiar formula after a single conversion, or chooses a reasonable scale/origin for a one-variable data set. Unit cancellation across two factors must be tracked.",
+      "constraints": [
+        "Two chained conversion factors, OR one conversion plus a one-step formula substitution",
+        "May involve a compound unit where only the numerator or only the denominator is converted",
+        "Numbers may be decimals or require one intermediate rounding stated in the prompt",
+        "Graph items: student selects a sensible scale and a nonzero origin from a given data range"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step modeling and reasoning. Student converts a full compound rate (both numerator and denominator), or combines unit conversion with a formula and reports the result in requested units, or reasons about the units of an unknown, or justifies a choice of scale/origin in context. Three or more dependent steps where a wrong unit orientation propagates.",
+      "constraints": [
+        "Compound-rate conversions touching both numerator and denominator (e.g. $\\frac{\\text{mi}}{\\text{hr}}\\to\\frac{\\text{ft}}{\\text{s}}$)",
+        "Combine a multi-factor conversion with substitution into a formula and a final unit check",
+        "Require interpreting or deriving the units of an unknown quantity in a formula",
+        "Graph items: justify why a chosen origin or scale best displays the data, or interpret a value from a nontrivial scale (e.g. $250$ per gridline, half-gridline reads)"
+      ]
+    },
+    "tierSplit": {
+      "note": "This standard uses a single ramped worksheet (Easy early, Hard late). If split into two sheets: tier1 covers Easy to Medium (single and double conversions, reading given graphs); tier2 covers Medium to Hard (compound-rate conversions, conversion-plus-formula problems, unit-of-unknown reasoning, and choosing/justifying scale and origin). No item overlap between tiers."
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student inverts the conversion factor, putting the unwanted unit where it cannot cancel",
+      "distractor": "Converts $5$ ft to inches as $5\\times\\frac{1}{12}=\\frac{5}{12}$ in instead of $5\\times 12=60$ in"
+    },
+    {
+      "misconception": "Student multiplies when they should divide (or vice versa) because they ignore which unit must cancel",
+      "distractor": "Converts $60$ inches to feet as $60\\times 12=720$ ft instead of $60\\div 12=5$ ft"
+    },
+    {
+      "misconception": "Student converts only the numerator of a compound rate and leaves the denominator unconverted",
+      "distractor": "Converts $60\\ \\frac{\\text{mi}}{\\text{hr}}$ to $\\frac{\\text{ft}}{\\text{s}}$ as $60\\times 5280=316800\\ \\frac{\\text{ft}}{\\text{hr}}$ but reports it as $\\frac{\\text{ft}}{\\text{s}}$, never dividing by $3600$"
+    },
+    {
+      "misconception": "Student substitutes into a formula without first making the units consistent",
+      "distractor": "Computes distance as $8\\ \\frac{\\text{ft}}{\\text{s}}\\times 5\\text{ min}=40$ ft, using $5$ min directly instead of converting to $300$ s"
+    },
+    {
+      "misconception": "Student treats units as if they cannot combine, dropping or mislabeling the units of a product or quotient",
+      "distractor": "For $W=Fd$ with $F$ in N and $d$ in m, reports the units of $W$ as $\\frac{\\text{N}}{\\text{m}}$ or just N instead of $\\text{N}\\cdot\\text{m}$"
+    },
+    {
+      "misconception": "Student insists every graph axis must start at the origin $0$, even when the data is clustered far from zero",
+      "distractor": "Chooses an origin of $0$ with scale $10$ for temperatures from $52^{\\circ}$ to $89^{\\circ}$, wasting most of the axis, instead of starting near $50^{\\circ}$"
+    },
+    {
+      "misconception": "Student misreads a graph scale, counting gridlines as single units instead of using the stated interval",
+      "distractor": "On an axis where each gridline is $250$, reads a bar at the $3$rd gridline as $3$ instead of $750$"
+    },
+    {
+      "misconception": "Student uses the wrong numeric value for a conversion (e.g. confuses feet-per-mile or seconds-per-hour)",
+      "distractor": "Uses $1\\text{ mi}=1000\\text{ ft}$ or $1\\text{ hr}=100\\text{ s}$, e.g. converting $60\\ \\frac{\\text{mi}}{\\text{hr}}$ with $\\frac{1\\text{ hr}}{60\\text{ s}}$ instead of $\\frac{1\\text{ hr}}{3600\\text{ s}}$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

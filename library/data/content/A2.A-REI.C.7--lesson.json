@@ -1,0 +1,182 @@
+{
+  "id": "A2.A-REI.C.7--lesson",
+  "standard": "A2.A-REI.C.7",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Reasoning with Equations and Inequalities",
+  "domainCode": "A-REI",
+  "cluster": "Solve systems of equations",
+  "clusterCode": "C",
+  "skillName": "Linear-Quadratic Systems",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "A linear-quadratic system pairs one line with one quadratic curve, such as a parabola $y = ax^2 + bx + c$ or a circle $x^2 + y^2 = r^2$. The solutions are the points where the two graphs intersect. To solve algebraically, isolate one variable in the linear equation, substitute that expression into the quadratic, and reduce the system to a single quadratic equation in one variable. Solve that quadratic by factoring, by taking square roots, or with the quadratic formula, then back-substitute each root into the linear equation to recover its partner coordinate. Report every solution as an ordered pair $(x, y)$ and check it in both original equations. Because a line can meet a parabola or circle in two points, one point (tangent), or none, the discriminant $b^2 - 4ac$ of the reduced quadratic tells you how many real intersections exist.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Solve the system $\\begin{cases} y = x^2 - 2x - 3 \\\\ y = x - 3 \\end{cases}$ and state the points of intersection.",
+      "solution": {
+        "steps": [
+          "Both equations are already solved for $y$, so set the right-hand sides equal: $x^2 - 2x - 3 = x - 3$.",
+          "Move every term to one side. Subtract $x$ and add $3$ to both sides: $x^2 - 2x - 3 - x + 3 = 0$, which simplifies to $x^2 - 3x = 0$.",
+          "Factor out $x$: $x(x - 3) = 0$, so $x = 0$ or $x = 3$.",
+          "Back-substitute each $x$ into the linear equation $y = x - 3$. For $x = 0$: $y = 0 - 3 = -3$. For $x = 3$: $y = 3 - 3 = 0$.",
+          "Check $(0, -3)$ in $y = x^2 - 2x - 3$: $0^2 - 2(0) - 3 = -3$. Check $(3, 0)$: $3^2 - 2(3) - 3 = 9 - 6 - 3 = 0$. Both verify.",
+          "The line crosses the parabola at two points."
+        ],
+        "answer": "The intersection points are $(0, -3)$ and $(3, 0)$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Solve the system $\\begin{cases} y = x^2 + 4 \\\\ 2x + y = 7 \\end{cases}$.",
+      "solution": {
+        "steps": [
+          "The linear equation is in standard form, so isolate a variable first. Solve $2x + y = 7$ for $y$: $y = 7 - 2x$.",
+          "Substitute $y = 7 - 2x$ into $y = x^2 + 4$: $7 - 2x = x^2 + 4$.",
+          "Move all terms to one side: $0 = x^2 + 4 - 7 + 2x$, which gives $x^2 + 2x - 3 = 0$.",
+          "Factor: $(x + 3)(x - 1) = 0$, so $x = -3$ or $x = 1$.",
+          "Back-substitute into $y = 7 - 2x$. For $x = -3$: $y = 7 - 2(-3) = 7 + 6 = 13$. For $x = 1$: $y = 7 - 2(1) = 5$.",
+          "Check $(-3, 13)$ in $y = x^2 + 4$: $(-3)^2 + 4 = 13$. Check $(1, 5)$: $1^2 + 4 = 5$. Both verify."
+        ],
+        "answer": "The solutions are $(-3, 13)$ and $(1, 5)$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Find the points where the line $y = -3x$ intersects the circle $x^2 + y^2 = 30$.",
+      "solution": {
+        "steps": [
+          "The linear equation is already solved for $y$, so substitute $y = -3x$ into the circle equation: $x^2 + (-3x)^2 = 30$.",
+          "Square carefully: $(-3x)^2 = 9x^2$, so the equation becomes $x^2 + 9x^2 = 30$, that is $10x^2 = 30$.",
+          "Divide by $10$: $x^2 = 3$, then take the square root of both sides, keeping both signs: $x = \\pm\\sqrt{3}$.",
+          "Back-substitute into $y = -3x$. For $x = \\sqrt{3}$: $y = -3\\sqrt{3}$. For $x = -\\sqrt{3}$: $y = 3\\sqrt{3}$.",
+          "Check $(\\sqrt{3}, -3\\sqrt{3})$ in $x^2 + y^2 = 30$: $(\\sqrt{3})^2 + (-3\\sqrt{3})^2 = 3 + 9 \\cdot 3 = 3 + 27 = 30$. The other point checks the same way.",
+          "Keeping the $\\pm$ gives both intersection points; dropping it would lose one."
+        ],
+        "answer": "The intersection points are $(\\sqrt{3},\\, -3\\sqrt{3})$ and $(-\\sqrt{3},\\, 3\\sqrt{3})$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Solve the system $\\begin{cases} y = x^2 \\\\ y = 2x - 1 \\end{cases}$ and describe the geometric relationship between the line and the parabola.",
+      "solution": {
+        "steps": [
+          "Set the right-hand sides equal: $x^2 = 2x - 1$.",
+          "Move all terms to one side: $x^2 - 2x + 1 = 0$.",
+          "This is a perfect square: $(x - 1)^2 = 0$, so $x = 1$ is a double (repeated) root.",
+          "Because there is only one $x$-value, the system has a single solution. Back-substitute into $y = 2x - 1$: $y = 2(1) - 1 = 1$.",
+          "Check $(1, 1)$ in $y = x^2$: $1^2 = 1$. It verifies.",
+          "The discriminant of $x^2 - 2x + 1$ is $(-2)^2 - 4(1)(1) = 0$, which signals exactly one intersection: the line is tangent to the parabola."
+        ],
+        "answer": "There is one solution, $(1, 1)$. The line is tangent to the parabola at that point."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Solve the system $\\begin{cases} y = x^2 - x \\\\ y = 2x + 1 \\end{cases}$, giving exact values.",
+      "solution": {
+        "steps": [
+          "Set the right-hand sides equal: $x^2 - x = 2x + 1$.",
+          "Move all terms to one side: $x^2 - x - 2x - 1 = 0$, which simplifies to $x^2 - 3x - 1 = 0$.",
+          "This does not factor over the integers, so use the quadratic formula with $a = 1$, $b = -3$, $c = -1$: $x = \\frac{-(-3) \\pm \\sqrt{(-3)^2 - 4(1)(-1)}}{2(1)}$.",
+          "Simplify under the radical: $(-3)^2 - 4(1)(-1) = 9 + 4 = 13$, so $x = \\frac{3 \\pm \\sqrt{13}}{2}$.",
+          "Back-substitute into $y = 2x + 1$. Then $y = 2\\left(\\frac{3 \\pm \\sqrt{13}}{2}\\right) + 1 = (3 \\pm \\sqrt{13}) + 1 = 4 \\pm \\sqrt{13}$.",
+          "The discriminant $13$ is positive but not a perfect square, so the two intersection points have irrational coordinates."
+        ],
+        "answer": "The solutions are $\\left(\\frac{3 + \\sqrt{13}}{2},\\, 4 + \\sqrt{13}\\right)$ and $\\left(\\frac{3 - \\sqrt{13}}{2},\\, 4 - \\sqrt{13}\\right)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Solve the system $\\begin{cases} y = x^2 - 4 \\\\ y = 3x \\end{cases}$ and state the points of intersection.",
+      "hint": "Set the two right-hand sides equal, move everything to one side, and factor the resulting quadratic. Then back-substitute each $x$ into $y = 3x$.",
+      "solution": {
+        "steps": [
+          "Set the right-hand sides equal: $x^2 - 4 = 3x$.",
+          "Move all terms to one side: $x^2 - 3x - 4 = 0$.",
+          "Factor: $(x - 4)(x + 1) = 0$, so $x = 4$ or $x = -1$.",
+          "Back-substitute into $y = 3x$. For $x = 4$: $y = 12$. For $x = -1$: $y = -3$.",
+          "Check $(4, 12)$ in $y = x^2 - 4$: $4^2 - 4 = 12$. Check $(-1, -3)$: $(-1)^2 - 4 = -3$. Both verify."
+        ],
+        "answer": "The intersection points are $(4, 12)$ and $(-1, -3)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Solve the system $\\begin{cases} y = x^2 + 1 \\\\ x + y = 3 \\end{cases}$.",
+      "hint": "The linear equation is in standard form. Isolate $y$ first, then substitute into the quadratic.",
+      "solution": {
+        "steps": [
+          "Solve $x + y = 3$ for $y$: $y = 3 - x$.",
+          "Substitute into $y = x^2 + 1$: $3 - x = x^2 + 1$.",
+          "Move all terms to one side: $0 = x^2 + 1 - 3 + x$, which gives $x^2 + x - 2 = 0$.",
+          "Factor: $(x + 2)(x - 1) = 0$, so $x = -2$ or $x = 1$.",
+          "Back-substitute into $y = 3 - x$. For $x = -2$: $y = 5$. For $x = 1$: $y = 2$.",
+          "Check $(-2, 5)$ in $y = x^2 + 1$: $(-2)^2 + 1 = 5$. Check $(1, 2)$: $1^2 + 1 = 2$. Both verify."
+        ],
+        "answer": "The solutions are $(-2, 5)$ and $(1, 2)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Find the points where the line $y = x$ meets the circle $x^2 + y^2 = 8$.",
+      "hint": "Substitute $y = x$ into the circle equation. When you take the square root, keep both the positive and negative roots.",
+      "solution": {
+        "steps": [
+          "Substitute $y = x$ into $x^2 + y^2 = 8$: $x^2 + x^2 = 8$, so $2x^2 = 8$.",
+          "Divide by $2$: $x^2 = 4$, then $x = \\pm 2$.",
+          "Back-substitute into $y = x$. For $x = 2$: $y = 2$. For $x = -2$: $y = -2$.",
+          "Check $(2, 2)$ in $x^2 + y^2 = 8$: $2^2 + 2^2 = 8$. Check $(-2, -2)$: $(-2)^2 + (-2)^2 = 8$. Both verify."
+        ],
+        "answer": "The intersection points are $(2, 2)$ and $(-2, -2)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Solve the system $\\begin{cases} y = x^2 + 3 \\\\ y = x + 1 \\end{cases}$. If there are no real solutions, explain how you know.",
+      "hint": "Reduce to a single quadratic, then compute the discriminant $b^2 - 4ac$ before trying to factor.",
+      "solution": {
+        "steps": [
+          "Set the right-hand sides equal: $x^2 + 3 = x + 1$.",
+          "Move all terms to one side: $x^2 - x + 2 = 0$.",
+          "Compute the discriminant with $a = 1$, $b = -1$, $c = 2$: $(-1)^2 - 4(1)(2) = 1 - 8 = -7$.",
+          "The discriminant is negative, so the reduced quadratic has no real roots.",
+          "Geometrically, the line never meets the parabola, so the system has no real solution."
+        ],
+        "answer": "There are no real solutions. The discriminant $-7$ is negative, so the line and parabola do not intersect."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A ball follows the path $y = -x^2 + 6x$ and a straight sightline is given by $y = 2x$. Find every point where the sightline meets the path.",
+      "hint": "Set the two expressions for $y$ equal, move all terms to one side, and factor. Each $x$ gives a point on the sightline $y = 2x$.",
+      "solution": {
+        "steps": [
+          "Set the right-hand sides equal: $-x^2 + 6x = 2x$.",
+          "Move all terms to one side: $-x^2 + 6x - 2x = 0$, which simplifies to $-x^2 + 4x = 0$. Multiply by $-1$: $x^2 - 4x = 0$.",
+          "Factor out $x$: $x(x - 4) = 0$, so $x = 0$ or $x = 4$.",
+          "Back-substitute into $y = 2x$. For $x = 0$: $y = 0$. For $x = 4$: $y = 8$.",
+          "Check $(0, 0)$ in $y = -x^2 + 6x$: $-(0)^2 + 6(0) = 0$. Check $(4, 8)$: $-(4)^2 + 6(4) = -16 + 24 = 8$. Both verify."
+        ],
+        "answer": "The sightline meets the path at $(0, 0)$ and $(4, 8)$."
+      }
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "id": "A2.S-IC.B.5--quiz",
+  "standard": "A2.S-IC.B.5",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+  "domainCode": "S-IC",
+  "cluster": "Make inferences and justify conclusions from sample surveys, experiments, and observational studies",
+  "clusterCode": "B",
+  "skillName": "Comparing Two Treatments",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "In a randomized experiment, $25$ patients took Drug A and $25$ took a placebo. The Drug A group had a mean recovery time of $\\bar{x}_A = 6.2$ days and the placebo group had $\\bar{x}_B = 8.0$ days. Find the observed difference $\\bar{x}_A - \\bar{x}_B$ in recovery times.\nA) $14.2$ days\nB) $1.8$ days\nC) $-1.8$ days\nD) $-14.2$ days",
+      "answer": "C) $-1.8$ days",
+      "solution": {
+        "steps": [
+          "The observed difference is computed in the stated order: $\\bar{x}_A - \\bar{x}_B$.",
+          "Substitute: $6.2 - 8.0 = -1.8$ days, so the answer is C.",
+          "A ($14.2$) wrongly adds the two means instead of subtracting them.",
+          "B ($1.8$) subtracts in the wrong order ($8.0 - 6.2$), giving the wrong sign for $\\bar{x}_A - \\bar{x}_B$.",
+          "D ($-14.2$) negates the incorrect sum."
+        ],
+        "answer": "C) $-1.8$ days"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "A study randomly assigned seedlings to two fertilizers. Fertilizer 1 had a survival proportion of $\\hat{p}_1 = 0.71$ and Fertilizer 2 had $\\hat{p}_2 = 0.58$. Find the observed difference $\\hat{p}_1 - \\hat{p}_2$ in survival rates.\nA) $0.13$\nB) $-0.13$\nC) $1.29$\nD) $0.58$",
+      "answer": "A) $0.13$",
+      "solution": {
+        "steps": [
+          "The observed difference of proportions is $\\hat{p}_1 - \\hat{p}_2$.",
+          "Substitute: $0.71 - 0.58 = 0.13$, so the answer is A.",
+          "B ($-0.13$) reverses the order of subtraction.",
+          "C ($1.29$) adds the two proportions instead of subtracting them.",
+          "D ($0.58$) just restates one group's proportion."
+        ],
+        "answer": "A) $0.13$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "A re-randomization simulation pooled the recovery times of two treatment groups, randomly reassigned them to two groups, and recomputed the difference of means $2{,}000$ times. The resulting distribution of differences is centered near $0$. Why is this simulated distribution centered at $0$?\nA) Because the shuffle assumes no treatment effect, so on average the two reshuffled groups should differ by about $0$\nB) Because the two treatments truly have no effect on the response\nC) Because the observed difference happened to equal $0$\nD) Because the sample sizes of the two groups are equal",
+      "answer": "A) Because the shuffle assumes no treatment effect, so on average the two reshuffled groups should differ by about $0$",
+      "solution": {
+        "steps": [
+          "Re-randomization shuffles the pooled outcomes assuming the group label does not matter, i.e. assuming no treatment effect.",
+          "Under that assumption, reshuffled groups should differ only by chance, so the differences average to about $0$. The answer is A.",
+          "B confuses the simulation's assumption with reality: the shuffle imposes the no-effect case to test against; it does not prove the treatments have no effect.",
+          "C is false: the observed difference is not built into the simulated center; the simulation is what we compare the observed value against.",
+          "D is irrelevant: equal sample sizes do not cause the centering at $0$; the no-effect shuffle does."
+        ],
+        "answer": "A) Because the shuffle assumes no treatment effect, so on average the two reshuffled groups should differ by about $0$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Out of $200$ re-randomization trials, $6$ produced a difference of means at least as extreme as the observed value. Estimate the empirical p-value, the probability of seeing a difference this extreme by chance alone.\nA) $\\frac{200}{6} \\approx 33.3$\nB) $6$\nC) $\\frac{6}{200} = 0.03$\nD) $\\frac{194}{200} = 0.97$",
+      "answer": "C) $\\frac{6}{200} = 0.03$",
+      "solution": {
+        "steps": [
+          "The empirical p-value is (number of trials at least as extreme) divided by (total trials).",
+          "That is $\\frac{6}{200} = 0.03$, so the answer is C.",
+          "A inverts the fraction, dividing total by extreme trials.",
+          "B reports the raw count of extreme trials instead of a proportion.",
+          "D uses the non-extreme trials ($200 - 6 = 194$) in the numerator, which is the complement, not the p-value."
+        ],
+        "answer": "C) $\\frac{6}{200} = 0.03$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "A re-randomization simulation of $500$ trials produced differences of means centered at $0$, ranging from about $-5$ to $5$ points. The observed difference between the two study methods was $0.4$ points, which sits in the dense middle of the simulated distribution. What does this location suggest?\nA) The difference is statistically significant because it is not exactly $0$\nB) The observed difference is the kind of result that occurs easily by chance, so it is not strong evidence of a treatment effect\nC) The treatments definitely have no effect of any kind\nD) The simulation was run incorrectly because the observed value should be in the tail",
+      "answer": "B) The observed difference is the kind of result that occurs easily by chance, so it is not strong evidence of a treatment effect",
+      "solution": {
+        "steps": [
+          "A value sitting in the dense middle of the chance distribution is a common outcome under random assignment alone.",
+          "So the data are consistent with no real treatment effect; the difference is not strong evidence the methods differ. The answer is B.",
+          "A is the misconception that any nonzero difference is significant; significance depends on how rare the value is, not on whether it is exactly $0$.",
+          "C overstates: failing to find a significant difference does not prove the treatments have no effect; it only fails to provide evidence of one.",
+          "D is wrong: a central observed value is exactly what we expect when there is little or no effect, not a sign of simulation error."
+        ],
+        "answer": "B) The observed difference is the kind of result that occurs easily by chance, so it is not strong evidence of a treatment effect"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "In a randomized experiment, $400$ re-randomization trials gave differences of means centered at $0$. The observed difference of $3.1$ days was at least as extreme as the simulated value in $52$ of the $400$ trials. What is the empirical p-value?\nA) $0.13$\nB) $0.87$\nC) $52$\nD) $7.69$",
+      "answer": "A) $0.13$",
+      "solution": {
+        "steps": [
+          "The empirical p-value is $\\frac{\\text{extreme trials}}{\\text{total trials}} = \\frac{52}{400}$.",
+          "Compute: $\\frac{52}{400} = 0.13$, so the answer is A.",
+          "B ($0.87$) is the complement $\\frac{348}{400}$, using the non-extreme trials by mistake.",
+          "C ($52$) is the raw count, not a proportion.",
+          "D ($7.69$) inverts the fraction ($\\frac{400}{52}$)."
+        ],
+        "answer": "A) $0.13$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Researchers randomly split students into two study methods and found a difference of means of $4.2$ points. A re-randomization simulation of $500$ trials produced $9$ differences at least as extreme as $4.2$. Using a $0.05$ significance level, what is the correct conclusion?\nA) The p-value is $\\frac{9}{500} = 0.018$, which is less than $0.05$, so the difference is statistically significant: this experiment provides evidence that the two study methods differ\nB) The p-value is $\\frac{9}{500} = 0.018$, which is less than $0.05$, so the difference is too small to be significant\nC) The p-value is $0.018$, which is greater than $0.05$, so the difference is not significant\nD) The difference is significant because $4.2 \\neq 0$, regardless of the simulation",
+      "answer": "A) The p-value is $\\frac{9}{500} = 0.018$, which is less than $0.05$, so the difference is statistically significant: this experiment provides evidence that the two study methods differ",
+      "solution": {
+        "steps": [
+          "Compute the empirical p-value: $\\frac{9}{500} = 0.018$.",
+          "Compare to the threshold: $0.018 < 0.05$, so the result is rare under random assignment and is statistically significant. We conclude this experiment provides evidence that the methods differ. The answer is A.",
+          "B reverses the decision rule, treating a small p-value as non-significant; a smaller p-value is stronger evidence, not weaker.",
+          "C states the comparison incorrectly: $0.018$ is less than $0.05$, not greater.",
+          "D ignores the simulation entirely; significance depends on how rare $4.2$ is under re-randomization, not merely on it being nonzero."
+        ],
+        "answer": "A) The p-value is $\\frac{9}{500} = 0.018$, which is less than $0.05$, so the difference is statistically significant: this experiment provides evidence that the two study methods differ"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A randomized experiment found that a new drug significantly lowered mean recovery time compared with a placebo, with an empirical p-value of $0.01$. Which statement is the most appropriate conclusion?\nA) The experiment proves the drug will always cure every patient faster than the placebo\nB) Because $0.01 > 0.05$, there is no evidence of a difference\nC) This experiment provides significant evidence that the drug reduced recovery time for these patients, but it does not prove the effect holds universally for everyone\nD) The significant result guarantees the drug has a large, practically important effect",
+      "answer": "C) This experiment provides significant evidence that the drug reduced recovery time for these patients, but it does not prove the effect holds universally for everyone",
+      "solution": {
+        "steps": [
+          "A p-value of $0.01$ is below $0.05$, so the difference is statistically significant: strong evidence of a treatment effect in this randomized experiment.",
+          "The correct conclusion is bounded: significance supports a real difference here without claiming a universal guarantee. The answer is C.",
+          "A overstates causation, treating significance as proof the drug always works for everyone.",
+          "B misreads the comparison: $0.01$ is less than $0.05$, so the result is significant, not non-significant.",
+          "D confuses statistical significance with practical importance; a significant difference can still be small in size, so significance alone does not guarantee a large or practically important effect."
+        ],
+        "answer": "C) This experiment provides significant evidence that the drug reduced recovery time for these patients, but it does not prove the effect holds universally for everyone"
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "generatedAt": "2026-06-24T19:38:44.935Z"
+}

@@ -1,0 +1,173 @@
+{
+  "id": "A1.F-IF.B.5--lesson",
+  "standard": "A1.F-IF.B.5",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Functions",
+  "domainCode": "F-IF",
+  "cluster": "Interpret functions that arise in applications in terms of the context",
+  "clusterCode": "B",
+  "skillName": "Domain Relates to Context",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "The domain of a function is the set of input values for which the function is defined. When a function models a real situation, not every number that fits the bare rule makes sense. You restrict the domain to the inputs the context actually allows, ruling out negative times, fractional people, or values past a physical limit. In this lesson you will read domains from graphs, write them in interval, set-builder, and verbal form, and restrict the domain of a model so it matches its context.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "The graph of a function $f$ is an unbroken curve that starts at the point $(-3, 2)$ on the left and ends at the point $(4, 5)$ on the right. State the domain of $f$ in inequality form and in interval notation.",
+      "solution": {
+        "steps": [
+          "The domain is the set of input ($x$) values the graph covers, read from left to right.",
+          "The leftmost point is $(-3, 2)$, so the smallest input is $x = -3$.",
+          "The rightmost point is $(4, 5)$, so the largest input is $x = 4$.",
+          "The curve has no breaks, so every $x$ between $-3$ and $4$ is included, and both endpoints are solid (closed).",
+          "In inequality form the domain is $-3 \\le x \\le 4$. In interval notation it is $[-3, 4]$.",
+          "Note: the $y$-values $2$ and $5$ describe the range, not the domain, so we do not use them here."
+        ],
+        "answer": "$-3 \\le x \\le 4$, or $[-3, 4]$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A movie theater charges $\\$9$ per ticket, so the cost of buying $n$ tickets is $C(n) = 9n$. State the domain of $C$ in context and explain whether the graph should be a continuous line or separate points.",
+      "solution": {
+        "steps": [
+          "The input $n$ is the number of tickets bought, which is a count of indivisible items.",
+          "You cannot buy a negative number of tickets, so $n \\ge 0$.",
+          "You also cannot buy a fraction of a ticket, so $n$ must be a whole number.",
+          "Therefore the domain is the whole numbers: $n = 0, 1, 2, 3, \\dots$",
+          "Because the inputs are separate whole numbers, the graph should be drawn as separate (discrete) points, not a continuous line."
+        ],
+        "answer": "The domain is the whole numbers $n = 0, 1, 2, 3, \\dots$, and the graph is discrete points."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A candle is $24$ centimeters tall and burns down at a steady rate of $3$ centimeters per hour, so its height after $t$ hours is $h(t) = 24 - 3t$. Find the practical domain of $h$ and write it in interval notation.",
+      "solution": {
+        "steps": [
+          "The input $t$ is time in hours, which cannot be negative, so $t \\ge 0$.",
+          "The candle stops existing once its height reaches $0$, so find when $h(t) = 0$.",
+          "Solve $24 - 3t = 0$: add $3t$ to both sides to get $24 = 3t$, then divide by $3$ to get $t = 8$.",
+          "So the candle burns out at $t = 8$ hours; values of $t$ larger than $8$ have no meaning here.",
+          "Combining both restrictions, the practical domain is $0 \\le t \\le 8$, or $[0, 8]$."
+        ],
+        "answer": "$0 \\le t \\le 8$, or $[0, 8]$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "The area of a square with side length $s$ is given by $A(s) = s^2$. State the mathematical domain of the bare rule $A(s) = s^2$, then state the practical domain when $A$ models the area of a real square, and explain the difference.",
+      "solution": {
+        "steps": [
+          "As a bare algebraic rule, $s^2$ can be computed for any real number, so the mathematical domain is all real numbers, $(-\\infty, \\infty)$.",
+          "As a model of a real square, $s$ represents a side length, which must be a positive distance.",
+          "A side length of $0$ or a negative side length does not describe a real square, so we require $s > 0$.",
+          "Therefore the practical domain is $s > 0$, or $(0, \\infty)$.",
+          "The difference: the rule itself accepts every real number, but the context throws out the values ($s \\le 0$) that cannot represent an actual side length."
+        ],
+        "answer": "Mathematical domain: all real numbers, $(-\\infty, \\infty)$. Practical domain: $s > 0$, or $(0, \\infty)$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A ball is thrown upward and its height in feet after $t$ seconds is $h(t) = -16t^2 + 32t$. The ball is in the air from the moment it is thrown until it lands. Find the practical domain of $h$ and justify why any algebraic solution is kept or rejected.",
+      "solution": {
+        "steps": [
+          "Time starts at the throw, so $t \\ge 0$; the ball is in the air until its height returns to $0$.",
+          "Find when $h(t) = 0$: solve $-16t^2 + 32t = 0$.",
+          "Factor out $-16t$: $-16t(t - 2) = 0$.",
+          "Set each factor equal to $0$: $-16t = 0$ gives $t = 0$, and $t - 2 = 0$ gives $t = 2$.",
+          "Both roots are nonnegative here, so $t = 0$ is the launch and $t = 2$ is the landing; both make sense.",
+          "The ball is in the air for $0 \\le t \\le 2$, so the practical domain is $[0, 2]$. (If a model gives a negative root, reject it because time cannot be negative.)"
+        ],
+        "answer": "$0 \\le t \\le 2$, or $[0, 2]$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "The graph of a function $g$ is an unbroken curve that runs from the point $(0, 1)$ on the left to the point $(6, 4)$ on the right. State the domain of $g$ in inequality form and in interval notation.",
+      "hint": "The domain comes from the $x$-values (inputs), read from the leftmost point to the rightmost point. Ignore the $y$-values.",
+      "solution": {
+        "steps": [
+          "The leftmost input is $x = 0$ and the rightmost input is $x = 6$.",
+          "The curve is unbroken with solid endpoints, so every $x$ from $0$ to $6$ is included.",
+          "In inequality form the domain is $0 \\le x \\le 6$, and in interval notation it is $[0, 6]$."
+        ],
+        "answer": "$0 \\le x \\le 6$, or $[0, 6]$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A vending machine charges $\\$2$ per bottle, so the cost of buying $b$ bottles is $C(b) = 2b$. State the domain of $C$ in context.",
+      "hint": "Can you buy a negative number of bottles? Can you buy half a bottle?",
+      "solution": {
+        "steps": [
+          "The input $b$ counts bottles, which are indivisible, so $b$ must be a whole number.",
+          "You cannot buy a negative number of bottles, so $b \\ge 0$.",
+          "Therefore the domain is the whole numbers $b = 0, 1, 2, 3, \\dots$"
+        ],
+        "answer": "The whole numbers $b = 0, 1, 2, 3, \\dots$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "An empty water tank holds at most $40$ gallons and is filled at a steady $5$ gallons per minute, so the volume after $t$ minutes is $V(t) = 5t$. Find the practical domain of $V$ and write it in interval notation.",
+      "hint": "Time cannot be negative, so $t \\ge 0$. Find the upper bound by setting $V(t)$ equal to the tank's capacity and solving for $t$.",
+      "solution": {
+        "steps": [
+          "Time cannot be negative, so $t \\ge 0$.",
+          "The tank is full when $V(t) = 40$. Solve $5t = 40$ by dividing both sides by $5$ to get $t = 8$.",
+          "Filling stops once the tank is full, so $t$ cannot exceed $8$ minutes.",
+          "Combining both restrictions, the practical domain is $0 \\le t \\le 8$, or $[0, 8]$."
+        ],
+        "answer": "$0 \\le t \\le 8$, or $[0, 8]$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "The graph of a function $f$ runs without breaks from $x = 1$ to $x = 7$, except there is an open hole at $x = 4$ where the function is undefined. State the domain of $f$ using an inequality with an excluded value, and using interval notation with a union.",
+      "hint": "Start with the full interval, then remove the single point $x = 4$. A removed point splits one interval into two pieces joined by a union, and the gap creates open endpoints.",
+      "solution": {
+        "steps": [
+          "Without the hole, the domain would be $1 \\le x \\le 7$, or $[1, 7]$.",
+          "The open hole at $x = 4$ means $x = 4$ is not in the domain, so we exclude it: $1 \\le x \\le 7,\\ x \\ne 4$.",
+          "Removing $x = 4$ splits the interval into two pieces: from $1$ up to (but not including) $4$, and from just past $4$ to $7$.",
+          "The endpoints at the hole are open, so in interval notation the domain is $[1, 4) \\cup (4, 7]$."
+        ],
+        "answer": "$1 \\le x \\le 7,\\ x \\ne 4$, or $[1, 4) \\cup (4, 7]$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A diver jumps from a platform and her height in feet after $t$ seconds is $h(t) = -16t^2 + 16t + 32$. She is in the air from the jump until she hits the water. Find the practical domain of $h$, rejecting any input that does not fit the context.",
+      "hint": "Time starts at $t \\ge 0$ and ends when she hits the water, where $h(t) = 0$. Factor the quadratic, then reject the root that is negative.",
+      "solution": {
+        "steps": [
+          "Time starts at the jump, so $t \\ge 0$; she lands when her height is $0$, so solve $h(t) = 0$.",
+          "Solve $-16t^2 + 16t + 32 = 0$. Divide every term by $-16$: $t^2 - t - 2 = 0$.",
+          "Factor: $(t - 2)(t + 1) = 0$, giving $t = 2$ or $t = -1$.",
+          "Reject $t = -1$ because time cannot be negative; it lies outside the context.",
+          "So she is in the air from $t = 0$ to $t = 2$, and the practical domain is $0 \\le t \\le 2$, or $[0, 2]$."
+        ],
+        "answer": "$0 \\le t \\le 2$, or $[0, 2]$"
+      }
+    }
+  ]
+}

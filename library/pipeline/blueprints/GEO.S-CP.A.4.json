@@ -1,0 +1,140 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent. One blueprint per standard.",
+
+  "standard": "GEO.S-CP.A.4",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Understand independence and conditional probability and use them to interpret data",
+  "clusterCode": "A",
+  "skillName": "Two-Way Tables and Independence",
+
+  "description": "Students construct two-way frequency tables that classify each object by two categories at once, fill in row totals, column totals, and the grand total, and read the table as a sample space. From the table they compute marginal probabilities (a single category, e.g. $P(\\text{senior})$), joint probabilities (the intersection of two categories, e.g. $P(\\text{senior and plays a sport})$), and conditional probabilities ($P(B \\mid A) = \\dfrac{P(A \\cap B)}{P(A)}$, computed directly from the table as the count in a cell divided by the row or column total). They use these to test whether two events are independent by checking $P(A \\cap B) = P(A)\\cdot P(B)$ or, equivalently, $P(B \\mid A) = P(B)$, and they interpret what dependence means in the data context. Counts come from raw frequencies; probabilities are written as exact fractions or their reduced/decimal equivalents.",
+
+  "subSkills": [
+    "Construct a two-way frequency table from a verbal description or list, placing each object in the cell matching its two categories",
+    "Complete the margins of a table: compute each row total, each column total, and the grand total, and check that row totals and column totals both sum to the grand total",
+    "Read a marginal probability from the table as a row or column total over the grand total, e.g. $P(A) = \\dfrac{\\text{row total}}{\\text{grand total}}$",
+    "Read a joint probability as a single cell count over the grand total, e.g. $P(A \\cap B) = \\dfrac{\\text{cell}}{\\text{grand total}}$",
+    "Compute a conditional probability $P(B \\mid A)$ as the cell count over the conditioning row or column total (the reduced sample space)",
+    "Distinguish $P(B \\mid A)$ from $P(A \\mid B)$ by identifying which total is the denominator",
+    "Test independence of two events by checking whether $P(A \\cap B) = P(A)\\cdot P(B)$, or equivalently whether $P(B \\mid A) = P(B)$",
+    "Interpret independence or dependence in context (whether knowing one category changes the likelihood of the other)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Construct the table and fill margins",
+      "example": "Of $40$ students, $22$ are seniors and the rest juniors; $15$ of the seniors play a sport and $9$ of the juniors play a sport. Build the two-way table of class (senior/junior) versus sport (yes/no) and find all row totals, column totals, and the grand total. Answer: seniors $15$ yes / $7$ no $=22$; juniors $9$ yes / $9$ no $=18$; columns $24$ yes, $16$ no; grand total $40$."
+    },
+    {
+      "name": "Marginal probability",
+      "example": "From a table with grand total $40$ and $24$ students who play a sport, find $P(\\text{plays a sport})$. Answer: $\\dfrac{24}{40} = \\dfrac{3}{5}$."
+    },
+    {
+      "name": "Joint probability",
+      "example": "From the same table, find $P(\\text{senior and plays a sport})$ where that cell holds $15$. Answer: $\\dfrac{15}{40} = \\dfrac{3}{8}$."
+    },
+    {
+      "name": "Conditional probability from a row or column",
+      "example": "Given $15$ of $22$ seniors play a sport, find $P(\\text{plays a sport} \\mid \\text{senior})$. Answer: $\\dfrac{15}{22}$."
+    },
+    {
+      "name": "Compare two conditionals",
+      "example": "Find $P(\\text{plays a sport} \\mid \\text{senior}) = \\dfrac{15}{22}$ and $P(\\text{plays a sport} \\mid \\text{junior}) = \\dfrac{9}{18} = \\dfrac{1}{2}$, and state which group is more likely to play a sport."
+    },
+    {
+      "name": "Test independence with the product rule",
+      "example": "With $P(\\text{senior}) = \\dfrac{22}{40}$, $P(\\text{sport}) = \\dfrac{24}{40}$, and $P(\\text{senior and sport}) = \\dfrac{15}{40}$, decide whether class and sport are independent. Check $P(A)\\cdot P(B) = \\dfrac{22}{40}\\cdot\\dfrac{24}{40} = \\dfrac{33}{100} = 0.33$ versus $P(A \\cap B) = \\dfrac{15}{40} = 0.375$. They are not equal, so the events are not independent."
+    },
+    {
+      "name": "Test independence via conditional equals marginal",
+      "example": "Decide independence by comparing $P(\\text{sport} \\mid \\text{senior}) = \\dfrac{15}{22} \\approx 0.682$ with $P(\\text{sport}) = \\dfrac{24}{40} = 0.6$. Since they differ, knowing a student is a senior changes the probability of playing a sport, so the events are dependent."
+    },
+    {
+      "name": "Design a table that forces independence",
+      "example": "Fill in the missing cells of a partly completed two-way table so that the two categories are independent, using $P(A \\cap B) = P(A)\\cdot P(B)$ to back out each required cell count."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A complete two-way table is given (or a one-cell gap to fill via a margin). The student reads off or completes margins and computes a single marginal or joint probability as a count over the grand total, or fills a missing row/column total. One step, friendly numbers, and probabilities reduce cleanly.",
+      "constraints": [
+        "Table is fully or almost fully provided; at most one missing margin cell to complete by addition",
+        "Grand total is small and round (e.g. $20$, $40$, $50$, $100$) so fractions reduce to simple values",
+        "Task is a single marginal $\\dfrac{\\text{row or column total}}{\\text{grand total}}$ or joint $\\dfrac{\\text{cell}}{\\text{grand total}}$ probability",
+        "No independence test and no conditioning; answer is one reduced fraction or its decimal"
+      ]
+    },
+    "Medium": {
+      "description": "The student computes a conditional probability $P(B \\mid A)$ using the correct conditioning total, distinguishes it from $P(A \\mid B)$, and may build the table from a short verbal description first. Two to three steps: extract counts, identify the right denominator, and reduce.",
+      "constraints": [
+        "Requires conditioning: denominator is a row or column total, not the grand total",
+        "May require constructing or completing the table from a verbal description before reading values",
+        "Includes at least one comparison of two conditionals (e.g. $P(B \\mid A)$ versus $P(B \\mid A^c)$) or of a conditional versus a marginal",
+        "Numbers may not reduce to unit fractions; exact fraction answers expected"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step independence reasoning over a constructed or partly missing table. The student tests independence by the product rule or by comparing a conditional to a marginal, interprets the result in context, or reverse-engineers cell counts that would make two events independent. Several computations plus a justified conclusion are required.",
+      "constraints": [
+        "Build or complete the table, then formally test independence via $P(A \\cap B) = P(A)\\cdot P(B)$ or $P(B \\mid A) = P(B)$",
+        "Requires a stated conclusion in context (independent vs. dependent and what that means about the data)",
+        "May ask the student to fill missing cells so that two events are independent, solving $P(A \\cap B) = P(A)\\cdot P(B)$ for an unknown count",
+        "Multiple probabilities computed and compared; answers are exact fractions or decimals and a verdict"
+      ]
+    },
+    "tierSplit": "If this standard were built as two worksheets: tier1 covers Easy to Medium, constructing and completing two-way tables, computing marginal and joint probabilities from the grand total, and a first pass at conditional probability with the correct conditioning total. tier2 covers Medium to Hard, comparing conditionals, the full independence test by both the product rule and the conditional-equals-marginal rule, contextual interpretation, and back-solving cells that force independence. No item overlap between tiers. The default build is a single 15-item worksheet ramping Easy to Hard."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Uses the grand total as the denominator for a conditional probability instead of the conditioning row or column total",
+      "distractor": "For $P(\\text{sport} \\mid \\text{senior})$ with $15$ sport-playing seniors out of $22$ seniors and grand total $40$, reports $\\dfrac{15}{40} = \\dfrac{3}{8}$ (the joint probability) instead of $\\dfrac{15}{22}$"
+    },
+    {
+      "misconception": "Swaps the condition and the event, computing $P(A \\mid B)$ when $P(B \\mid A)$ is asked",
+      "distractor": "Asked for $P(\\text{senior} \\mid \\text{plays sport})$ but gives $P(\\text{plays sport} \\mid \\text{senior}) = \\dfrac{15}{22}$ instead of $\\dfrac{15}{24}$, dividing by the wrong total"
+    },
+    {
+      "misconception": "Confuses a joint probability with a conditional probability",
+      "distractor": "Asked for $P(\\text{senior and sport})$ gives the conditional $\\dfrac{15}{22}$ instead of $\\dfrac{15}{40} = \\dfrac{3}{8}$"
+    },
+    {
+      "misconception": "Tests independence by checking whether events are mutually exclusive rather than whether $P(A \\cap B) = P(A)\\cdot P(B)$",
+      "distractor": "Concludes class and sport are independent only because the 'senior and sport' cell is nonzero, or calls them independent because some students are both, instead of comparing $P(A \\cap B)$ with $P(A)\\cdot P(B)$"
+    },
+    {
+      "misconception": "Adds the marginal probabilities instead of multiplying them when applying the independence product rule",
+      "distractor": "Tests independence with $P(A) + P(B) = \\dfrac{22}{40} + \\dfrac{24}{40} = \\dfrac{46}{40}$ instead of $P(A)\\cdot P(B) = \\dfrac{22}{40}\\cdot\\dfrac{24}{40} = \\dfrac{33}{100}$"
+    },
+    {
+      "misconception": "Mis-completes the table by summing across the wrong dimension, mixing up row and column totals",
+      "distractor": "Reports a row total by adding down a column (or vice versa), so the margins no longer sum to the grand total, e.g. listing the senior total as $24$ (a column count) instead of $22$"
+    },
+    {
+      "misconception": "Forgets to reduce or leaves the probability as a raw count rather than a fraction over a total",
+      "distractor": "Gives the answer as $15$ (the cell count) or $\\dfrac{15}{1}$ instead of the probability $\\dfrac{15}{40} = \\dfrac{3}{8}$"
+    },
+    {
+      "misconception": "Declares dependence whenever the conditional and marginal are merely close, without checking exact equality, or declares independence when they differ slightly",
+      "distractor": "Sees $P(\\text{sport} \\mid \\text{senior}) = \\dfrac{15}{22} \\approx 0.68$ and $P(\\text{sport}) = 0.6$ and calls them independent ('about the same') instead of recognizing $0.68 \\ne 0.6$ means dependent"
+    }
+  ],
+
+  "_comment_itemCounts": "worksheet.single = one ramped sheet (Easy->Hard across 15 items). tier1/tier2 only if the standard is split into two worksheets (15 each, no overlap).",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

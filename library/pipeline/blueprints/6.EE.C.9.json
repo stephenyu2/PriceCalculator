@@ -1,0 +1,129 @@
+{
+  "standard": "6.EE.C.9",
+  "grade": "6",
+  "subject": "math",
+  "domain": "Expressions and Equations",
+  "domainCode": "EE",
+  "cluster": "Represent and analyze quantitative relationships between dependent and independent variables",
+  "clusterCode": "C",
+  "skillName": "Dependent and Independent Variables",
+
+  "description": "Students model a real-world situation in which two quantities change together. They identify which quantity is independent (the input, chosen freely) and which is dependent (the output, determined by the input), write a two-variable equation of the form $y = kx$ or $y = kx + b$ that expresses the dependent variable in terms of the independent variable, build a table of matching value pairs, plot those pairs on the coordinate plane, and explain how the equation, the table, and the graph all represent the same relationship.",
+
+  "subSkills": [
+    "Identify the independent variable (input) and the dependent variable (output) in a described situation",
+    "Write an equation that expresses the dependent variable in terms of the independent variable (e.g. $d = 50t$)",
+    "Build a table of $(x, y)$ value pairs by substituting input values into the equation",
+    "Plot ordered pairs $(x, y)$ from a table on the coordinate plane and read values off a graph",
+    "Translate among equation, table, and graph: given any one representation, produce the others",
+    "Use the equation to find the dependent value for a given independent value, or solve for the independent value given a dependent value"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Identify the variables",
+      "example": "A car travels at a steady speed. The distance it covers depends on how long it has been driving. Which is the independent variable and which is the dependent variable?"
+    },
+    {
+      "name": "Write the equation from a rate",
+      "example": "A printer prints $15$ pages each minute. Write an equation for the number of pages $p$ in terms of the number of minutes $m$. Answer: $p = 15m$."
+    },
+    {
+      "name": "Equation with a starting value",
+      "example": "A pool already holds $8$ gallons and fills at $3$ gallons per minute. Write an equation for the total gallons $g$ after $t$ minutes. Answer: $g = 3t + 8$."
+    },
+    {
+      "name": "Complete a table from an equation",
+      "example": "For $y = 4x$, complete the table of $(x, y)$ pairs for $x = 0, 1, 2, 3$. Answer: $(0,0), (1,4), (2,8), (3,12)$."
+    },
+    {
+      "name": "Plot or read a graph",
+      "example": "The points $(0,0), (1,4), (2,8), (3,12)$ from $y = 4x$ are plotted. Use the graph to find $y$ when $x = 2$. Answer: $y = 8$."
+    },
+    {
+      "name": "Match representations / find equation from a table or graph",
+      "example": "A table shows $(1,5), (2,10), (3,15)$. Write the equation relating $y$ to $x$. Answer: $y = 5x$."
+    },
+    {
+      "name": "Use the relationship to answer a question",
+      "example": "A taxi charges $\\$2$ to start plus $\\$3$ per mile, so $c = 3m + 2$. What is the cost for a $6$ mile ride? Answer: $\\$20$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recognition or a direct-proportion equation $y = kx$ with small whole-number rate. Student names the independent/dependent variable, writes $y = kx$ from a simple per-unit rate, or completes a one- or two-row table by direct substitution. No starting value, no graph reading beyond reading one labeled point.",
+      "constraints": [
+        "Equation form is $y = kx$ only (no constant term)",
+        "Rate $k$ is a small whole number ($2$ to $12$)",
+        "Inputs are whole numbers $0$ to $5$; outputs stay $\\le 60$",
+        "Tasks: identify which variable is independent/dependent, write $y = kx$, fill one or two table entries, or read a single plotted point",
+        "Context is highly familiar (speed, price per item, pages per minute)"
+      ]
+    },
+    "Medium": {
+      "description": "Equation includes a starting value, $y = kx + b$, OR the student must move between two representations (table to equation, equation to full table, equation to plotted points). Requires correctly placing the rate and the constant and substituting several values.",
+      "constraints": [
+        "Equation form is $y = kx + b$ with $b > 0$, or a full table/graph build from $y = kx$",
+        "Rate and constant are whole numbers; rate may be a simple unit fraction like $\\frac{1}{2}$",
+        "Student completes a 3 to 4 row table, or writes the equation from a given table/graph",
+        "May require reading a value off a graph that is not the origin",
+        "Context may be less familiar (tank filling, savings plan, taxi fare)"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step: extract both quantities and any starting value from a wordy description, write $y = kx + b$, then use it (e.g. solve for the independent value given the dependent value, or compare two relationships). May ask the student to verify that a table, graph, and equation all agree, or to choose the equation that matches a given graph.",
+      "constraints": [
+        "Requires reading comprehension to identify variables, rate, and starting value",
+        "Form is $y = kx + b$; may need to solve for $x$ given $y$ (inverse use of the equation)",
+        "May compare two different relationships or check consistency across equation, table, and graph",
+        "Rate may be a fraction or decimal; values larger but still grade-appropriate (outputs $\\le 200$)"
+      ]
+    },
+    "tierSplit": "Single ramped worksheet is the default. If split: tier1 covers Easy to Medium (identify variables, write and use $y = kx$, complete tables, read simple graphs); tier2 covers Medium to Hard ($y = kx + b$ with starting values, matching all three representations, inverse use, and comparison problems)."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student swaps the independent and dependent variables",
+      "distractor": "Labels the output (the quantity that is determined) as independent and the input as dependent, e.g. calls distance the independent variable and time the dependent one"
+    },
+    {
+      "misconception": "Student writes the equation with the variables reversed",
+      "distractor": "Writes $x = ky$ (independent in terms of dependent) instead of $y = kx$, e.g. $t = 50d$ instead of $d = 50t$"
+    },
+    {
+      "misconception": "Student uses the rate as a constant term and the starting value as the rate",
+      "distractor": "For a pool with $8$ gallons filling at $3$ gal/min writes $g = 8t + 3$ instead of $g = 3t + 8$"
+    },
+    {
+      "misconception": "Student ignores the starting value and writes a pure proportion",
+      "distractor": "Writes $g = 3t$ (or $c = 3m$) and drops the $+8$ (or $+2$) constant entirely"
+    },
+    {
+      "misconception": "Student adds the rate and the input instead of multiplying",
+      "distractor": "For $y = 4x$ at $x = 3$ computes $4 + 3 = 7$ instead of $4 \\times 3 = 12$"
+    },
+    {
+      "misconception": "Student reverses the coordinates when plotting or reading a point",
+      "distractor": "Reads the point $(2, 8)$ as $x = 8, y = 2$, plotting the dependent value on the horizontal axis"
+    },
+    {
+      "misconception": "Student solves the equation incorrectly when given the dependent value",
+      "distractor": "Given $y = 3x + 2$ and $y = 20$, subtracts wrongly or forgets the constant, e.g. gets $x = 20 \\div 3$ instead of $x = (20 - 2) \\div 3 = 6$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

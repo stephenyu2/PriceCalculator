@@ -1,0 +1,121 @@
+{
+  "standard": "A2.N-CN.A.1",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Number and Quantity — The Complex Number System",
+  "domainCode": "N-CN",
+  "cluster": "Perform arithmetic operations with complex numbers",
+  "clusterCode": "A",
+  "skillName": "Intro to Complex Numbers",
+
+  "description": "Students learn that the imaginary unit $i$ is defined by $i^2 = -1$, so $\\sqrt{-1} = i$. They rewrite square roots of negative numbers as pure imaginary numbers (e.g. $\\sqrt{-9} = 3i$), recognize that every complex number can be written in standard form $a + bi$ where $a$ and $b$ are real, identify the real part $a$ and the imaginary part $b$, simplify integer powers of $i$ using the cycle $i, -1, -i, 1$, and classify numbers as real, pure imaginary, or non-real complex.",
+
+  "subSkills": [
+    "State the definition $i^2 = -1$ and equivalently $i = \\sqrt{-1}$",
+    "Rewrite $\\sqrt{-n}$ for positive $n$ as $i\\sqrt{n}$, simplifying any perfect-square factor (e.g. $\\sqrt{-50} = 5i\\sqrt{2}$)",
+    "Write a complex number in standard form $a + bi$ and identify its real part $a$ and imaginary part $b$",
+    "Recognize real numbers ($b = 0$) and pure imaginary numbers ($a = 0$, $b \\neq 0$) as special cases of $a + bi$",
+    "Simplify powers of $i$ using the period-4 cycle $i^1 = i,\\ i^2 = -1,\\ i^3 = -i,\\ i^4 = 1$",
+    "Use equality of complex numbers (match real parts and imaginary parts) to solve for unknown reals"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Simplify a square root of a negative number",
+      "example": "Write $\\sqrt{-49}$ in terms of $i$. Answer: $7i$."
+    },
+    {
+      "name": "Simplify a non-perfect-square negative radical",
+      "example": "Write $\\sqrt{-72}$ in simplest form. Answer: $6i\\sqrt{2}$."
+    },
+    {
+      "name": "Identify real and imaginary parts",
+      "example": "For the complex number $-3 + 5i$, state the real part and the imaginary part. Answer: real part $-3$, imaginary part $5$."
+    },
+    {
+      "name": "Classify a number",
+      "example": "Classify $-4i$ as real, pure imaginary, or non-real complex. Answer: pure imaginary."
+    },
+    {
+      "name": "Simplify a power of $i$",
+      "example": "Simplify $i^{23}$. Answer: $-i$ (since $23 = 4\\cdot 5 + 3$ and $i^3 = -i$)."
+    },
+    {
+      "name": "Equality of complex numbers",
+      "example": "Find real numbers $x$ and $y$ so that $x + yi = 6 - 2i$. Answer: $x = 6,\\ y = -2$."
+    },
+    {
+      "name": "Express a value in standard form $a+bi$",
+      "example": "Write $\\sqrt{-16} - 5$ in the form $a + bi$. Answer: $-5 + 4i$ ($a = -5,\\ b = 4$)."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recognition and direct application of the definition. Square roots of perfect-square negatives, naming real/imaginary parts of a number already in $a+bi$ form, low powers of $i$ ($i^2, i^3, i^4$), and basic classification. No simplification of radicals beyond a perfect square.",
+      "constraints": [
+        "$\\sqrt{-n}$ where $n$ is a perfect square $\\leq 100$ (answer is an integer times $i$)",
+        "Real/imaginary part read directly from a number already written as $a + bi$",
+        "Powers of $i$ with exponent $\\leq 4$",
+        "Classification of a clearly real, pure imaginary, or $a+bi$ number"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step problems requiring radical simplification or use of the period-4 cycle for a larger exponent. Includes $\\sqrt{-n}$ with a non-perfect-square $n$ that has a perfect-square factor, powers of $i$ up to exponent about 30 (reduce mod 4), and rewriting a not-yet-standard expression into $a+bi$ form to identify parts.",
+      "constraints": [
+        "$\\sqrt{-n}$ where $n$ is not a perfect square but has a perfect-square factor (e.g. $-18, -50, -72$), giving $bi\\sqrt{k}$",
+        "Powers of $i$ with exponent between 5 and 30, reduced via remainder mod 4",
+        "Rewrite expressions like $4 + \\sqrt{-9}$ or $\\sqrt{-16} - 2$ into $a + bi$ then state $a$ and $b$"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning chaining several ideas: equality of complex numbers to solve for unknown reals, large powers of $i$ requiring careful mod-4 work (including negative or expression exponents), and combining a simplified radical with a real term into standard form with a follow-up classification or part identification.",
+      "constraints": [
+        "Solve $x + yi = $ (given complex number) or match parts across an equation for $x, y$",
+        "Powers of $i$ with exponent $> 30$, exponent $0$, or sums like $i^{15} + i^{20}$",
+        "Combine a simplified non-perfect-square radical with a real number, write in $a+bi$ form, and answer a follow-up (part or classification)"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student thinks $i^2 = 1$ instead of $-1$",
+      "distractor": "Treats $i^2$ as $+1$, so $\\sqrt{-49}$ becomes $7$ or a power of $i$ collapses to the wrong sign (e.g. $i^{23} = i$ instead of $-i$)"
+    },
+    {
+      "misconception": "Student leaves the negative inside the radical and just takes the root of the absolute value, dropping $i$",
+      "distractor": "Writes $\\sqrt{-49} = 7$ (a real number) instead of $7i$, ignoring the imaginary unit"
+    },
+    {
+      "misconception": "Student fails to simplify the perfect-square factor of a negative radical",
+      "distractor": "Writes $\\sqrt{-72} = i\\sqrt{72}$ and stops, instead of $6i\\sqrt{2}$"
+    },
+    {
+      "misconception": "Student calls the imaginary part $bi$ (including the $i$) rather than the real coefficient $b$",
+      "distractor": "For $-3 + 5i$ states the imaginary part is $5i$ instead of $5$"
+    },
+    {
+      "misconception": "Student reduces a power of $i$ using the wrong remainder or an off-by-one cycle position",
+      "distractor": "For $i^{23}$ uses remainder $4$ (or $i^4 = 1$) and answers $1$, or shifts the cycle to get $i$ instead of $-i$"
+    },
+    {
+      "misconception": "Student misclassifies a pure imaginary number as real (or a real as complex) by ignoring whether $a$ or $b$ is zero",
+      "distractor": "Classifies $-4i$ as 'real' (focusing on the $4$) or classifies $7$ as 'non-real complex'"
+    }
+  ],
+
+  "_comment_itemCounts": "Standard (single ramped worksheet) standard. lesson 5 worked + 5 practice; worksheet single = 15 ramped Easy->Hard; quiz 8 multiple choice with the misconception-based distractors above.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

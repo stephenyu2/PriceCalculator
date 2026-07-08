@@ -1,0 +1,170 @@
+{
+  "id": "8.SP.A.3--lesson",
+  "standard": "8.SP.A.3",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate patterns of association in bivariate data",
+  "clusterCode": "A",
+  "skillName": "Linear Models in Context",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "When data points relating two quantities cluster around a line, we summarize the pattern with a linear model $y = mx + b$. The slope $m$ is a rate of change: it tells how much $y$ changes for each one-unit increase in $x$, and it carries units (units of $y$ per unit of $x$). The intercept $b$ is the predicted value of $y$ when $x = 0$. To predict an output, substitute a value for $x$ and evaluate. To find the input that gives a target output, set $y$ equal to that target and solve for $x$ by undoing the operations: subtract $b$ first, then divide by $m$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A line fit to data relating weeks of practice $x$ to typing speed $y$ (in words per minute) is $y = 4x + 25$. Interpret the slope $4$ in this context.",
+      "solution": {
+        "steps": [
+          "In $y = mx + b$, the slope is $m = 4$. The slope is the change in $y$ for each one-unit increase in $x$.",
+          "Here $y$ is typing speed in words per minute and $x$ is weeks of practice.",
+          "So $m = 4$ means $y$ goes up by $4$ words per minute for each additional $1$ week of practice.",
+          "Keep the full units: it is $4$ words per minute per week, a rate, not a one-time total."
+        ],
+        "answer": "The typing speed is predicted to increase by about $4$ words per minute for each additional week of practice."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "For the same typing model $y = 4x + 25$, interpret the $y$-intercept $25$ in context.",
+      "solution": {
+        "steps": [
+          "In $y = mx + b$, the intercept is $b = 25$. The intercept is the predicted value of $y$ when $x = 0$.",
+          "Substitute $x = 0$: $y = 4(0) + 25 = 25$.",
+          "Since $x$ is weeks of practice, $x = 0$ means a student with no practice yet.",
+          "So the model predicts a student with $0$ weeks of practice types about $25$ words per minute. Because $0$ weeks is a real, sensible starting point, this intercept is meaningful in context."
+        ],
+        "answer": "A student with $0$ weeks of practice is predicted to type about $25$ words per minute."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A linear model for a plant's height $y$ (in centimeters) after $x$ days is $y = 1.5x + 6$. Predict the plant's height after $10$ days.",
+      "solution": {
+        "steps": [
+          "Predicting an output means substituting the given $x$ into the model.",
+          "Substitute $x = 10$: $y = 1.5(10) + 6$.",
+          "Multiply first: $1.5(10) = 15$.",
+          "Then add the intercept: $y = 15 + 6 = 21$. Do not drop the $+6$.",
+          "The model predicts a height of $21$ centimeters after $10$ days."
+        ],
+        "answer": "$21$ centimeters"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Using the plant model $y = 1.5x + 6$, after how many days is the plant predicted to be $30$ centimeters tall?",
+      "solution": {
+        "steps": [
+          "We are given the output $y = 30$ and must solve for the input $x$.",
+          "Set up the equation: $30 = 1.5x + 6$.",
+          "Subtract the intercept from both sides first: $30 - 6 = 1.5x$, so $24 = 1.5x$.",
+          "Now divide by the slope: $x = \\frac{24}{1.5} = 16$.",
+          "Do not divide $30$ by $1.5$ directly; the $+6$ must be removed before dividing.",
+          "The plant is predicted to reach $30$ centimeters after $16$ days."
+        ],
+        "answer": "$16$ days"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A model relating distance driven $x$ (in miles) to fuel remaining $y$ (in gallons) is $y = -0.04x + 12$. How many gallons of fuel are used between mile $50$ and mile $200$?",
+      "solution": {
+        "steps": [
+          "Fuel used is the change in $y$, which is $\\Delta y = m \\cdot \\Delta x$ where $\\Delta x$ is the change in distance.",
+          "The change in distance is $\\Delta x = 200 - 50 = 150$ miles.",
+          "With slope $m = -0.04$ gallons per mile: $\\Delta y = -0.04(150) = -6$ gallons.",
+          "The negative sign means the fuel level drops, so $6$ gallons are used. The slope being negative means fuel decreases as distance increases, not increases.",
+          "Check by substitution: at $x = 50$, $y = -0.04(50) + 12 = 10$; at $x = 200$, $y = -0.04(200) + 12 = 4$. The drop is $10 - 4 = 6$ gallons."
+        ],
+        "answer": "$6$ gallons of fuel are used"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A line fit to data relating months of membership $x$ to a gym's monthly attendance $y$ (in visits) is $y = 3x + 8$. Interpret the slope $3$ in context.",
+      "hint": "The slope is the change in $y$ for each one-unit increase in $x$. Include the units of both quantities.",
+      "solution": {
+        "steps": [
+          "The slope is $m = 3$, the change in $y$ per one-unit increase in $x$.",
+          "Here $y$ is monthly visits and $x$ is months of membership.",
+          "So attendance is predicted to rise by $3$ visits for each additional month of membership."
+        ],
+        "answer": "Monthly attendance is predicted to increase by about $3$ visits for each additional month of membership."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A linear model for the temperature $y$ (in degrees Fahrenheit) of an oven $x$ minutes after it is turned on is $y = 20x + 70$. Predict the oven temperature after $8$ minutes.",
+      "hint": "Substitute $x = 8$ into the model. Multiply by the slope first, then add the intercept.",
+      "solution": {
+        "steps": [
+          "Substitute $x = 8$: $y = 20(8) + 70$.",
+          "Multiply: $20(8) = 160$.",
+          "Add the intercept: $y = 160 + 70 = 230$.",
+          "The oven is predicted to be $230$ degrees Fahrenheit after $8$ minutes."
+        ],
+        "answer": "$230$ degrees Fahrenheit"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A model for the amount of water $y$ (in liters) left in a tank after $x$ hours is $y = -5x + 80$. After how many hours is the tank predicted to be empty ($y = 0$)?",
+      "hint": "Set $y = 0$ and solve for $x$. Subtract the intercept first, then divide by the slope.",
+      "solution": {
+        "steps": [
+          "Set the output to zero: $0 = -5x + 80$.",
+          "Subtract the intercept from both sides: $-80 = -5x$.",
+          "Divide both sides by $-5$: $x = \\frac{-80}{-5} = 16$.",
+          "The tank is predicted to be empty after $16$ hours."
+        ],
+        "answer": "$16$ hours"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A tutoring program charges a $\\$20$ registration fee plus $\\$15$ per session. Write a linear model for the total cost $y$ (in dollars) after $x$ sessions, then find the cost of $8$ sessions.",
+      "hint": "The per-session charge is the slope and the one-time fee is the intercept. Then substitute $x = 8$.",
+      "solution": {
+        "steps": [
+          "The cost changes by $\\$15$ for each session, so the slope is $m = 15$.",
+          "The $\\$20$ fee is charged once, even at $0$ sessions, so it is the intercept $b = 20$.",
+          "The model is $y = 15x + 20$.",
+          "Substitute $x = 8$: $y = 15(8) + 20 = 120 + 20 = 140$.",
+          "The cost of $8$ sessions is $\\$140$."
+        ],
+        "answer": "$y = 15x + 20$; the cost of $8$ sessions is $\\$140$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A line fit to data passes through the points $(2, 11)$ and $(6, 23)$, where $x$ is hours studied and $y$ is a test score. Find the equation of the linear model $y = mx + b$.",
+      "hint": "Find the slope with $m = \\frac{y_2 - y_1}{x_2 - x_1}$ (rise over run), then substitute one point to solve for $b$.",
+      "solution": {
+        "steps": [
+          "Find the slope: $m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{23 - 11}{6 - 2} = \\frac{12}{4} = 3$. Use change in $y$ over change in $x$, not the reciprocal.",
+          "Substitute the slope and one point, say $(2, 11)$, into $y = mx + b$: $11 = 3(2) + b$.",
+          "Simplify: $11 = 6 + b$, so $b = 5$.",
+          "The model is $y = 3x + 5$.",
+          "Check with the other point $(6, 23)$: $3(6) + 5 = 18 + 5 = 23$. It matches."
+        ],
+        "answer": "$y = 3x + 5$"
+      }
+    }
+  ]
+}

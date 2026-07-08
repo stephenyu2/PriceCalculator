@@ -1,0 +1,225 @@
+{
+  "id": "A2.A-APR.D--cluster-test",
+  "standard": null,
+  "clusterId": "A2.A-APR.D",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Arithmetic with Polynomials and Rational Expressions",
+  "domainCode": "A-APR",
+  "cluster": "Rewrite rational expressions",
+  "clusterCode": "D",
+  "skillName": "Rewrite rational expressions",
+  "materialType": "cluster-test",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:56:47.282Z",
+  "intro": "End-of-cluster mastery check for rewriting rational expressions. Twelve multiple-choice questions covering division by inspection, polynomial long division, synthetic division, the Remainder Theorem, and reconstruction via $a(x)=b(x)\\,q(x)+r(x)$.",
+  "items": [
+    {
+      "id": 1,
+      "standard": "A2.A-APR.D.6",
+      "difficulty": "Easy",
+      "type": "multiple-choice",
+      "prompt": "Rewrite $\\dfrac{8x^3-12x^2+4x}{4x}$ by dividing each term by the monomial.\nA) $2x^2-3x+1$\nB) $2x^2-12x^2+4x$\nC) $2x^2-3x$\nD) $8x^2-12x+4$",
+      "answer": "A) $2x^2-3x+1$",
+      "solution": {
+        "steps": [
+          "Split the numerator term by term over $4x$: $\\frac{8x^3}{4x}-\\frac{12x^2}{4x}+\\frac{4x}{4x}$.",
+          "Divide each term: $\\frac{8x^3}{4x}=2x^2$, $\\frac{12x^2}{4x}=3x$, $\\frac{4x}{4x}=1$.",
+          "Combine: $2x^2-3x+1$, so A is correct.",
+          "B divides only the first term and leaves the rest undivided. C drops the final $+1$ from $\\frac{4x}{4x}$. D fails to reduce the powers of $x$ (forgets to subtract exponents)."
+        ],
+        "answer": "A) $2x^2-3x+1$"
+      }
+    },
+    {
+      "id": 2,
+      "standard": "A2.A-APR.D.6",
+      "difficulty": "Easy",
+      "type": "multiple-choice",
+      "prompt": "Divide $\\dfrac{x^2+5x+6}{x+2}$. The division is exact (remainder $0$). What is the quotient?\nA) $x+3$\nB) $x+4$\nC) $x-3$\nD) $x+2$",
+      "answer": "A) $x+3$",
+      "solution": {
+        "steps": [
+          "Factor the numerator: $x^2+5x+6=(x+2)(x+3)$.",
+          "Cancel the common factor $x+2$: $\\frac{(x+2)(x+3)}{x+2}=x+3$.",
+          "The remainder is $0$, confirming $x+2$ is a factor, so A is correct.",
+          "B comes from a subtraction sign error. C has the wrong sign. D repeats the divisor instead of giving the quotient."
+        ],
+        "answer": "A) $x+3$"
+      }
+    },
+    {
+      "id": 3,
+      "standard": "A2.A-APR.D.6",
+      "difficulty": "Easy",
+      "type": "multiple-choice",
+      "prompt": "Use synthetic or long division to rewrite $\\dfrac{x^3-8}{x-2}$. Remember to insert placeholders for the missing $x^2$ and $x$ terms.\nA) $x^2+2x+4$\nB) $x^2-2x+4$\nC) $x^2+4$\nD) $x^2+2x-4$",
+      "answer": "A) $x^2+2x+4$",
+      "solution": {
+        "steps": [
+          "Write the coefficients with zero placeholders: $1,\\,0,\\,0,\\,-8$, and use $c=2$.",
+          "Bring down $1$; $1\\cdot 2=2$, $0+2=2$; $2\\cdot 2=4$, $0+4=4$; $4\\cdot 2=8$, $-8+8=0$.",
+          "The bottom row $1,\\,2,\\,4$ with remainder $0$ gives $x^2+2x+4$, so A is correct.",
+          "B uses the wrong sign for $c$. C omits the missing-term placeholders, dropping the $2x$. D has a sign error on the constant. This matches the factoring $x^3-8=(x-2)(x^2+2x+4)$."
+        ],
+        "answer": "A) $x^2+2x+4$"
+      }
+    },
+    {
+      "id": 4,
+      "standard": "A2.A-APR.D.6",
+      "difficulty": "Medium",
+      "type": "multiple-choice",
+      "prompt": "Write $\\dfrac{x^2+3x+5}{x+1}$ in the form $q(x)+\\dfrac{r(x)}{b(x)}$.\nA) $x+2+\\dfrac{3}{x+1}$\nB) $x+2$\nC) $x+4+\\dfrac{9}{x+1}$\nD) $x+2+\\dfrac{3}{x+2}$",
+      "answer": "A) $x+2+\\dfrac{3}{x+1}$",
+      "solution": {
+        "steps": [
+          "Divide: $x^2+3x+5$ by $x+1$. First term $x$ gives $x(x+1)=x^2+x$; subtract to get $2x+5$.",
+          "Next term $2$ gives $2(x+1)=2x+2$; subtract to get remainder $3$.",
+          "So $q(x)=x+2$, $r(x)=3$, and the result is $x+2+\\frac{3}{x+1}$, so A is correct.",
+          "B drops the remainder. C results from adding instead of subtracting the partial product. D places the remainder over the quotient term $x+2$ rather than over the divisor $x+1$."
+        ],
+        "answer": "A) $x+2+\\dfrac{3}{x+1}$"
+      }
+    },
+    {
+      "id": 5,
+      "standard": "A2.A-APR.D.6",
+      "difficulty": "Medium",
+      "type": "multiple-choice",
+      "prompt": "Use synthetic division to rewrite $\\dfrac{2x^3-3x^2+4}{x-2}$. Note the missing $x$ term.\nA) $2x^2+x+2+\\dfrac{8}{x-2}$\nB) $2x^2-3x+4$\nC) $2x^2+x+\\dfrac{8}{x-2}$\nD) $2x^2-7x+14+\\dfrac{-24}{x-2}$",
+      "answer": "A) $2x^2+x+2+\\dfrac{8}{x-2}$",
+      "solution": {
+        "steps": [
+          "Use coefficients $2,\\,-3,\\,0,\\,4$ (zero placeholder for the missing $x$ term) with $c=2$.",
+          "Bring down $2$; $2\\cdot 2=4$, $-3+4=1$; $1\\cdot 2=2$, $0+2=2$; $2\\cdot 2=4$, $4+4=8$.",
+          "Bottom row $2,\\,1,\\,2$ with remainder $8$ gives $2x^2+x+2+\\frac{8}{x-2}$, so A is correct.",
+          "B copies the coefficients without dividing. C omits the constant term of the quotient. D uses $c=-2$ (the wrong sign for $x-2$)."
+        ],
+        "answer": "A) $2x^2+x+2+\\dfrac{8}{x-2}$"
+      }
+    },
+    {
+      "id": 6,
+      "standard": "A2.A-APR.D.6",
+      "difficulty": "Medium",
+      "type": "multiple-choice",
+      "prompt": "Find the remainder when $a(x)=x^3-4x+1$ is divided by $x-3$ using the Remainder Theorem.\nA) $16$\nB) $0$\nC) $-14$\nD) $14$",
+      "answer": "A) $16$",
+      "solution": {
+        "steps": [
+          "By the Remainder Theorem, the remainder of $\\frac{a(x)}{x-c}$ equals $a(c)$ with $c=3$.",
+          "Evaluate $a(3)=3^3-4(3)+1=27-12+1=16$.",
+          "So the remainder is $16$, and A is correct.",
+          "B would mean $x-3$ is a factor, which it is not. C is $a(-3)=-27+12+1=-14$, using the wrong sign for $c$. D drops the $+1$ constant."
+        ],
+        "answer": "A) $16$"
+      }
+    },
+    {
+      "id": 7,
+      "standard": "A2.A-APR.D.6",
+      "difficulty": "Medium",
+      "type": "multiple-choice",
+      "prompt": "Which statement is true about the remainder $r(x)$ when a polynomial is divided by $b(x)=x^2+1$?\nA) $\\deg r(x)<2$, so $r(x)$ is at most linear\nB) $\\deg r(x)$ must equal $2$\nC) $r(x)$ must be a constant\nD) $r(x)$ can have any degree as long as it is positive",
+      "answer": "A) $\\deg r(x)<2$, so $r(x)$ is at most linear",
+      "solution": {
+        "steps": [
+          "Division stops once the remainder's degree is strictly less than the divisor's degree.",
+          "Here $\\deg b=2$, so $\\deg r<2$, meaning $r(x)$ is linear or constant. A is correct.",
+          "B keeps dividing too long (or stops too early), leaving a degree-$2$ remainder. C is too restrictive: a quadratic divisor can leave a linear remainder. D ignores the stopping rule entirely."
+        ],
+        "answer": "A) $\\deg r(x)<2$, so $r(x)$ is at most linear"
+      }
+    },
+    {
+      "id": 8,
+      "standard": "A2.A-APR.D.6",
+      "difficulty": "Medium",
+      "type": "multiple-choice",
+      "prompt": "Given $\\dfrac{a(x)}{x+4}=x-1+\\dfrac{6}{x+4}$, reconstruct $a(x)$ using $a(x)=b(x)\\,q(x)+r(x)$.\nA) $x^2+3x+2$\nB) $x^2-3x+2$\nC) $x^2+3x-4$\nD) $x^2+3x+6$",
+      "answer": "A) $x^2+3x+2$",
+      "solution": {
+        "steps": [
+          "Identify $b(x)=x+4$, $q(x)=x-1$, $r(x)=6$.",
+          "Multiply back: $(x+4)(x-1)=x^2+3x-4$.",
+          "Add the remainder: $x^2+3x-4+6=x^2+3x+2$, so A is correct.",
+          "B has a sign error in the product. C forgets to add the remainder $6$. D adds the remainder but drops the $-4$ from the product."
+        ],
+        "answer": "A) $x^2+3x+2$"
+      }
+    },
+    {
+      "id": 9,
+      "standard": "A2.A-APR.D.6",
+      "difficulty": "Hard",
+      "type": "multiple-choice",
+      "prompt": "Rewrite $\\dfrac{x^3+2x^2-x+5}{x^2+1}$ in the form $q(x)+\\dfrac{r(x)}{b(x)}$.\nA) $x+2+\\dfrac{-2x+3}{x^2+1}$\nB) $x+2+\\dfrac{-2x+3}{x^2}$\nC) $x^2+2+\\dfrac{-2x+3}{x^2+1}$\nD) $x+2+\\dfrac{3}{x^2+1}$",
+      "answer": "A) $x+2+\\dfrac{-2x+3}{x^2+1}$",
+      "solution": {
+        "steps": [
+          "Divide by $x^2+1$. First term $x$: $x(x^2+1)=x^3+x$; subtract from $x^3+2x^2-x+5$ to get $2x^2-2x+5$.",
+          "Next term $2$: $2(x^2+1)=2x^2+2$; subtract to get $-2x+3$.",
+          "Since $\\deg(-2x+3)=1<2=\\deg b$, stop. So $q(x)=x+2$, $r(x)=-2x+3$, giving A.",
+          "B drops the $+1$ in the divisor. C wrongly keeps an $x^2$ in the quotient. D discards the $-2x$ part of the remainder (stops the division too early)."
+        ],
+        "answer": "A) $x+2+\\dfrac{-2x+3}{x^2+1}$"
+      }
+    },
+    {
+      "id": 10,
+      "standard": "A2.A-APR.D.6",
+      "difficulty": "Hard",
+      "type": "multiple-choice",
+      "prompt": "Divide $\\dfrac{6x^2+x-2}{2x-1}$ and write the result.\nA) $3x+2$\nB) $3x+2+\\dfrac{1}{2x-1}$\nC) $3x-2$\nD) $3x+\\dfrac{1}{2x-1}$",
+      "answer": "A) $3x+2$",
+      "solution": {
+        "steps": [
+          "Long division: $\\frac{6x^2}{2x}=3x$; $3x(2x-1)=6x^2-3x$; subtract from $6x^2+x-2$ to get $4x-2$.",
+          "Next: $\\frac{4x}{2x}=2$; $2(2x-1)=4x-2$; subtract to get remainder $0$.",
+          "So $q(x)=3x+2$ with remainder $0$, and A is correct (matches $6x^2+x-2=(2x-1)(3x+2)$).",
+          "B and D invent a nonzero remainder where none exists. C has a sign error from adding instead of subtracting the partial product."
+        ],
+        "answer": "A) $3x+2$"
+      }
+    },
+    {
+      "id": 11,
+      "standard": "A2.A-APR.D.6",
+      "difficulty": "Hard",
+      "type": "multiple-choice",
+      "prompt": "Rewrite $\\dfrac{x^4+1}{x^2-1}$ in the form $q(x)+\\dfrac{r(x)}{b(x)}$. Insert placeholders for the missing terms.\nA) $x^2+1+\\dfrac{2}{x^2-1}$\nB) $x^2-1+\\dfrac{2}{x^2-1}$\nC) $x^2+1$\nD) $x^2+1+\\dfrac{2}{x^2+1}$",
+      "answer": "A) $x^2+1+\\dfrac{2}{x^2-1}$",
+      "solution": {
+        "steps": [
+          "Write the dividend with placeholders: $x^4+0x^3+0x^2+0x+1$, divisor $x^2-1$.",
+          "First term $x^2$: $x^2(x^2-1)=x^4-x^2$; subtract to get $x^2+0x+1$.",
+          "Next term $1$: $1(x^2-1)=x^2-1$; subtract to get remainder $2$.",
+          "So $q(x)=x^2+1$, $r(x)=2$, giving $x^2+1+\\frac{2}{x^2-1}$, so A is correct. B has a sign error in the quotient. C drops the remainder. D attaches the remainder to the wrong divisor."
+        ],
+        "answer": "A) $x^2+1+\\dfrac{2}{x^2-1}$"
+      }
+    },
+    {
+      "id": 12,
+      "standard": "A2.A-APR.D.6",
+      "difficulty": "Hard",
+      "type": "multiple-choice",
+      "prompt": "The division $\\dfrac{x^3-7x+6}{x-1}$ has remainder $0$. Using the quotient, fully factor $x^3-7x+6$.\nA) $(x-1)(x-2)(x+3)$\nB) $(x-1)(x+2)(x-3)$\nC) $(x-1)(x^2+x-6)$ only\nD) $(x-1)(x-2)(x-3)$",
+      "answer": "A) $(x-1)(x-2)(x+3)$",
+      "solution": {
+        "steps": [
+          "Synthetic division with $c=1$ on $1,\\,0,\\,-7,\\,6$: bring down $1$; $1$, $0+1=1$; $1$, $-7+1=-6$; $-6$, $6-6=0$.",
+          "The quotient is $x^2+x-6$ with remainder $0$, so $x-1$ is a factor.",
+          "Factor the quotient: $x^2+x-6=(x-2)(x+3)$, giving $(x-1)(x-2)(x+3)$, so A is correct.",
+          "B has a sign error in factoring the quadratic. C stops before factoring the quadratic quotient. D mis-factors $x^2+x-6$ as $(x-2)(x-3)$, which would give $x^2-5x+6$, not the quotient."
+        ],
+        "answer": "A) $(x-1)(x-2)(x+3)$"
+      }
+    }
+  ]
+}

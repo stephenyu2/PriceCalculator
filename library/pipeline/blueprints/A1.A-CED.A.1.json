@@ -1,0 +1,122 @@
+{
+  "standard": "A1.A-CED.A.1",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Creating Equations",
+  "domainCode": "A-CED",
+  "cluster": "Create equations that describe numbers or relationships",
+  "clusterCode": "A",
+  "skillName": "Equations and Inequalities in One Variable",
+
+  "description": "Students translate verbal, tabular, or contextual situations into a single equation or inequality in one variable, then solve it and interpret the result in context. The relationships span linear, quadratic, simple rational, and exponential models. Students must choose the correct relational operator (equality vs. one of $<, \\le, >, \\ge$), build the algebraic statement, solve it using grade-appropriate methods (inverse operations, factoring, the quadratic formula, clearing denominators, equal-base exponent comparison), and state the solution with units and contextual meaning.",
+
+  "subSkills": [
+    "Translate a word problem into a one-variable linear equation and solve it (e.g., $3x + 7 = 25$)",
+    "Translate a constraint into a one-variable linear inequality, solve it, and flip the inequality sign when multiplying or dividing by a negative",
+    "Model a situation with a quadratic equation in one variable and solve by factoring or the quadratic formula $x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$",
+    "Model a simple rational situation (e.g., shared-work or average rate), write an equation such as $\\frac{120}{x} = 8$, clear the denominator, and solve",
+    "Model exponential growth or decay with an equation such as $200(1.05)^t = 243.1$ and solve for the exponent or base using equal bases",
+    "Interpret the solution in context: discard extraneous or non-physical roots, attach units, and answer the question asked",
+    "Choose the correct relational operator from a phrase (at least $\\Rightarrow \\ge$, more than $\\Rightarrow >$, no more than $\\Rightarrow \\le$, fewer than $\\Rightarrow <$)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Linear equation from context",
+      "example": "A taxi charges a $\\$3$ base fee plus $\\$2$ per mile. Write and solve an equation to find the distance for a $\\$17$ fare. Equation: $3 + 2m = 17$, so $m = 7$ miles."
+    },
+    {
+      "name": "Linear inequality from a constraint",
+      "example": "A student has $\\$50$ and spends $\\$8$ per ticket. Write and solve an inequality for the number of tickets $t$ they can buy. Inequality: $8t \\le 50$, so $t \\le \\frac{25}{4} = 6.25$, meaning at most $6$ tickets."
+    },
+    {
+      "name": "Quadratic equation from area or projectile context",
+      "example": "A rectangle is $3$ ft longer than it is wide and has area $40$ ft$^2$. Write and solve an equation for the width $w$. Equation: $w(w+3) = 40$, so $w^2 + 3w - 40 = 0$, $(w+8)(w-5) = 0$, $w = 5$ ft (reject $w = -8$)."
+    },
+    {
+      "name": "Simple rational equation (rate or average)",
+      "example": "A car travels $150$ miles. Write and solve an equation for the speed $r$ that makes the trip take $3$ hours. Equation: $\\frac{150}{r} = 3$, so $r = 50$ mph."
+    },
+    {
+      "name": "Exponential equation (growth or decay)",
+      "example": "A population of $400$ doubles each year, modeled by $400 \\cdot 2^t = 6400$. Solve for $t$: $2^t = 16 = 2^4$, so $t = 4$ years."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "One-step or two-step LINEAR equation or inequality built from a short, explicit verbal description where the quantities are directly stated. Integer coefficients and integer solutions. Inequalities do not require sign flips. No root rejection or unit subtleties.",
+      "constraints": [
+        "Linear only; equation of the form $ax + b = c$ or inequality $ax + b \\le c$ with small positive integers",
+        "Solution is a non-negative integer",
+        "Translation is direct (one phrase maps to one operation)",
+        "Inequalities use only positive multiplication/division (no sign flip)"
+      ]
+    },
+    "Medium": {
+      "description": "Multi-step LINEAR work that may require distributing, combining like terms, or flipping an inequality sign when dividing by a negative; OR a straightforward QUADRATIC solvable by factoring with integer roots; OR a simple RATIONAL equation solved by clearing a single denominator; OR an EXPONENTIAL equation solvable by writing both sides with equal bases. Solutions may be fractions. Context interpretation is required (units, rounding to a sensible quantity).",
+      "constraints": [
+        "Linear: requires distribution or variables on both sides, possibly a sign flip for inequalities",
+        "Quadratic: factorable over the integers, e.g. $x^2 + 5x + 6 = 0$",
+        "Rational: single denominator cleared in one step, e.g. $\\frac{120}{x} = 8$",
+        "Exponential: equal-base form, e.g. $3^x = 81$ gives $x = 4$",
+        "Answer may be a fraction or require interpreting a real-world bound"
+      ]
+    },
+    "Hard": {
+      "description": "Student must FIRST construct the model from a richer multi-clause context, then solve. Quadratics may require the quadratic formula and yield irrational roots in exact form, with one root rejected as non-physical. Rational equations may involve a variable in two places or an extraneous solution to discard. Exponential equations may require recognizing a non-obvious common base. Inequalities embed multiple constraints or a sign-flip plus contextual rounding.",
+      "constraints": [
+        "Modeling step is non-trivial: two or more quantities related before the equation forms",
+        "Quadratic: needs the quadratic formula; exact radical roots such as $x = \\frac{-3 + \\sqrt{17}}{2}$; reject the non-physical root",
+        "Rational: variable appears in numerator and denominator or an extraneous root must be checked and discarded",
+        "Exponential: rewrite both sides to a shared base, e.g. $8^x = 16$ as $2^{3x} = 2^4$, $x = \\frac{4}{3}$",
+        "Context demands rejecting a root, attaching units, and answering the exact question"
+      ]
+    },
+    "tierSplit": "This standard spans four function families (linear, quadratic, rational, exponential), so it uses a tier1/tier2 pair. tier1 (15 items, Easy to Medium) covers linear equations and inequalities plus the simplest quadratic-by-factoring and equal-base exponential cases. tier2 (15 items, Medium to Hard) covers quadratics by formula with root rejection, rational equations with denominator clearing and extraneous-root checks, exponential equations needing a common base, and multi-clause modeling. The single ramped worksheet (15 items) is the default for tutors who want one mixed sheet that progresses Easy to Hard across all four families."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student does not flip the inequality sign when dividing or multiplying by a negative number",
+      "distractor": "From $-2x > 6$ writes $x > -3$ instead of the correct $x < -3$"
+    },
+    {
+      "misconception": "Student picks the wrong relational operator from the wording",
+      "distractor": "Reads 'at least $5$' as $x > 5$ instead of $x \\ge 5$, or 'no more than $5$' as $x < 5$ instead of $x \\le 5$"
+    },
+    {
+      "misconception": "Student keeps a negative or otherwise non-physical root of a quadratic in a real-world context",
+      "distractor": "For $w^2 + 3w - 40 = 0$ gives the width as $w = -8$ (or reports both $5$ and $-8$) instead of rejecting $-8$"
+    },
+    {
+      "misconception": "Student multiplies straight across or mishandles the reciprocal when clearing a rational equation",
+      "distractor": "From $\\frac{150}{r} = 3$ gets $r = 450$ (multiplying $150 \\cdot 3$) instead of $r = \\frac{150}{3} = 50$"
+    },
+    {
+      "misconception": "Student treats the exponential base as a coefficient and solves linearly",
+      "distractor": "From $400 \\cdot 2^t = 6400$ writes $2t = 16$ so $t = 8$ instead of $2^t = 16 = 2^4$ giving $t = 4$"
+    },
+    {
+      "misconception": "Student distributes only to the first term inside parentheses",
+      "distractor": "Expands $3(x + 4) = 27$ as $3x + 4 = 27$ giving $x = \\frac{23}{3}$ instead of $3x + 12 = 27$ giving $x = 5$"
+    },
+    {
+      "misconception": "Student fails to check for and discard an extraneous solution",
+      "distractor": "Reports a root that makes a denominator zero (e.g. $x = 2$ for an equation with $\\frac{1}{x-2}$) as a valid answer"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

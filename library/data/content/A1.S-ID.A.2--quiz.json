@@ -1,0 +1,154 @@
+{
+  "id": "A1.S-ID.A.2--quiz",
+  "standard": "A1.S-ID.A.2",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on a single count or measurement variable",
+  "clusterCode": "A",
+  "skillName": "Center and Spread of Data",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "Eight multiple-choice questions on computing and comparing measures of center (mean, median) and spread (IQR, standard deviation), and choosing the appropriate statistic from a distribution's shape.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Find the mean of the data set $\\{6, 9, 11, 14\\}$.\nA) $10$\nB) $11$\nC) $9.5$\nD) $40$",
+      "answer": "A) $10$",
+      "solution": {
+        "steps": [
+          "Add the values: $6+9+11+14=40$.",
+          "Divide by the number of values, $n=4$: $\\bar{x}=\\dfrac{40}{4}=10$.",
+          "A) $10$ is correct.",
+          "B) $11$ and C) $9.5$ are nearby values but not the true mean. D) $40$ is the sum of the data, not the mean (the sum was never divided by $n$)."
+        ],
+        "answer": "A) $10$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "A box plot has a first quartile $Q_1=12$ and a third quartile $Q_3=27$. What is the interquartile range (IQR)?\nA) $39$\nB) $15$\nC) $19.5$\nD) $27$",
+      "answer": "B) $15$",
+      "solution": {
+        "steps": [
+          "The IQR is the difference between the third and first quartiles: $\\text{IQR}=Q_3-Q_1$.",
+          "$\\text{IQR}=27-12=15$.",
+          "B) $15$ is correct.",
+          "A) $39$ adds the quartiles instead of subtracting. C) $19.5$ is the average of the two quartiles, not the IQR. D) $27$ just reports $Q_3$."
+        ],
+        "answer": "B) $15$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Find the median of the already-ordered data set $\\{3, 5, 7, 9, 11, 13\\}$.\nA) $7$\nB) $9$\nC) $8$\nD) $48$",
+      "answer": "C) $8$",
+      "solution": {
+        "steps": [
+          "With $n=6$ (even), the median is the average of the two middle values, the 3rd and 4th: $7$ and $9$.",
+          "$\\text{median}=\\dfrac{7+9}{2}=8$.",
+          "C) $8$ is correct.",
+          "A) $7$ and B) $9$ each pick only one of the two middle values instead of averaging them. D) $48$ is the sum of all the data, not the median."
+        ],
+        "answer": "C) $8$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Find the median of the unordered data set $\\{9, 7, 3, 11, 5\\}$.\nA) $3$\nB) $7$\nC) $9$\nD) $11$",
+      "answer": "B) $7$",
+      "solution": {
+        "steps": [
+          "Order the data first: $\\{3, 5, 7, 9, 11\\}$.",
+          "With $n=5$ (odd), the median is the single middle value, the 3rd: $7$.",
+          "B) $7$ is correct.",
+          "C) $9$ and the min/max A) $3$ and D) $11$ are not the center; a common error is forgetting to order the list before locating the middle value (the unordered list $\\{9,7,3,11,5\\}$ has $3$, not the median, in its middle position)."
+        ],
+        "answer": "B) $7$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "For the data set $\\{4, 6, 8, 8, 14\\}$ the mean is $8$. Find the population standard deviation $\\sigma=\\sqrt{\\dfrac{\\sum(x_i-\\bar{x})^2}{n}}$.\nA) $\\sqrt{11.2}\\approx 3.35$\nB) $11.2$\nC) $56$\nD) $\\sqrt{14}\\approx 3.74$",
+      "answer": "A) $\\sqrt{11.2}\\approx 3.35$",
+      "solution": {
+        "steps": [
+          "Find each deviation from the mean $8$: $-4, -2, 0, 0, 6$.",
+          "Square them: $16, 4, 0, 0, 36$, and sum: $16+4+0+0+36=56$.",
+          "Divide by $n=5$: $\\dfrac{56}{5}=11.2$ (this is the variance).",
+          "Take the square root: $\\sigma=\\sqrt{11.2}\\approx 3.35$.",
+          "A) $\\sqrt{11.2}\\approx 3.35$ is correct.",
+          "B) $11.2$ stops at the variance and skips the square root. C) $56$ is the sum of squared deviations, not yet divided by $n$ or rooted. D) $\\sqrt{14}$ comes from dividing by $n-1=4$ instead of the population $n=5$."
+        ],
+        "answer": "A) $\\sqrt{11.2}\\approx 3.35$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "A dot plot of home prices is strongly skewed right, with one very expensive house forming a long right tail. Which pair of statistics best describes the center and spread of this data, and why?\nA) Mean and standard deviation, because they use every value\nB) Median and IQR, because they resist the outlier\nC) Mean and IQR, because the mean is always the best center\nD) Median and standard deviation, because the data is skewed left",
+      "answer": "B) Median and IQR, because they resist the outlier",
+      "solution": {
+        "steps": [
+          "Right-skew with a high outlier pulls the mean upward and inflates the standard deviation, so those are not resistant.",
+          "The median and IQR are resistant to outliers and skew, so they better describe a skewed distribution.",
+          "B) Median and IQR, because they resist the outlier, is correct.",
+          "A) and C) rely on the mean, which is distorted by the outlier here. D) mislabels the shape as skewed left (the long tail is on the right) and pairs the median with the non-resistant standard deviation."
+        ],
+        "answer": "B) Median and IQR, because they resist the outlier"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "The data set $\\{10, 12, 12, 13, 60\\}$ has mean $21.4$ and median $12$. Which statement best describes the center of this data?\nA) The mean $21.4$ is the better center because it uses the value $60$\nB) The median $12$ is the better center because the outlier $60$ inflates the mean\nC) The mean $21.4$ is the better center because it is larger\nD) The mean and median are equally good here",
+      "answer": "B) The median $12$ is the better center because the outlier $60$ inflates the mean",
+      "solution": {
+        "steps": [
+          "The value $60$ is far above the rest of the data, so it is an outlier.",
+          "An outlier pulls the mean toward it: the mean $21.4$ is larger than four of the five data values, so it does not represent a typical value.",
+          "The median $12$ barely moves with the outlier and sits among the bulk of the data, so it is the better center.",
+          "B) The median $12$ is the better center because the outlier $60$ inflates the mean, is correct.",
+          "A) and C) trust the inflated mean, the common error of using the mean for outlier-laden data. D) is false because the outlier makes the two statistics differ a lot ($21.4$ vs $12$)."
+        ],
+        "answer": "B) The median $12$ is the better center because the outlier $60$ inflates the mean"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Two roughly symmetric data sets are compared. Set A is $\\{2, 4, 4, 6, 9\\}$ with mean $5$ and $\\sigma=\\sqrt{5.6}\\approx 2.37$. Set B is $\\{4, 6, 8, 8, 14\\}$ with mean $8$ and $\\sigma=\\sqrt{11.2}\\approx 3.35$. Which statement correctly compares the two sets?\nA) Set B has the greater center and the greater spread\nB) Set A has the greater center and the greater spread\nC) Set A has the greater center, and the two sets have equal spread\nD) Set B has the greater center but Set A has the greater spread",
+      "answer": "A) Set B has the greater center and the greater spread",
+      "solution": {
+        "steps": [
+          "Both sets are roughly symmetric, so the mean (center) and standard deviation (spread) are the appropriate statistics.",
+          "Compare centers: Set A mean $=5$, Set B mean $=8$, so Set B has the greater center.",
+          "Compare spread: Set A $\\sigma\\approx 2.37$, Set B $\\sigma\\approx 3.35$, so Set B is more spread out.",
+          "A) Set B has the greater center and the greater spread, is correct.",
+          "B) reverses both comparisons. C) wrongly claims equal spread, ignoring that $3.35>2.37$. D) confuses the direction of spread, the error of thinking a larger center cannot also have a larger spread."
+        ],
+        "answer": "A) Set B has the greater center and the greater spread"
+      }
+    }
+  ]
+}

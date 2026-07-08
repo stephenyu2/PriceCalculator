@@ -1,0 +1,241 @@
+{
+  "id": "A2.F-TF.B--cluster-worksheet",
+  "standard": null,
+  "clusterId": "A2.F-TF.B",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Functions — Trigonometric Functions",
+  "domainCode": "F-TF",
+  "cluster": "Model periodic phenomena with trigonometric functions",
+  "clusterCode": "B",
+  "skillName": "Model periodic phenomena with trigonometric functions",
+  "materialType": "cluster-worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "intro": "Model periodic real-world phenomena with sinusoidal functions of the form $f(x)=a\\sin(b(x-h))+k$ or $f(x)=a\\cos(b(x-h))+k$. Translate amplitude $|a|=\\frac{\\text{max}-\\text{min}}{2}$, midline $y=k=\\frac{\\text{max}+\\text{min}}{2}$, period $T=\\frac{2\\pi}{|b|}$ (so $b=\\frac{2\\pi}{T}$), frequency $f=\\frac{1}{T}$, and a phase shift $h$ into the model, then evaluate, interpret, and solve. These items ramp from reading off and assembling parameters to extracting every feature from context, fixing a phase shift, and solving.",
+  "items": [
+    {
+      "id": 1,
+      "standard": "A2.F-TF.B.5",
+      "prompt": "Write a sine function with amplitude $4$, midline $y=3$, and period $2\\pi$ that passes through its midline going upward at $x=0$.",
+      "answer": "$f(x)=4\\sin(x)+3$",
+      "solution": {
+        "steps": [
+          "Read the stated parameters: amplitude $a=4$ and midline $k=3$.",
+          "Find $b$ from the period using $b=\\frac{2\\pi}{T}=\\frac{2\\pi}{2\\pi}=1$.",
+          "A midline-up crossing at $x=0$ means a plain sine with no phase shift, so $h=0$.",
+          "Assemble: $f(x)=4\\sin(x)+3$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "standard": "A2.F-TF.B.5",
+      "prompt": "Write a sine function with amplitude $2$, midline $y=-1$, and period $4\\pi$ that passes through its midline going upward at $x=0$.",
+      "answer": "$f(x)=2\\sin\\!\\left(\\tfrac{1}{2}x\\right)-1$",
+      "solution": {
+        "steps": [
+          "Amplitude $a=2$ and midline $k=-1$ are given directly.",
+          "Compute $b=\\frac{2\\pi}{T}=\\frac{2\\pi}{4\\pi}=\\frac{1}{2}$.",
+          "The midline-up crossing at $x=0$ gives $h=0$, so a plain sine fits.",
+          "Assemble: $f(x)=2\\sin\\!\\left(\\tfrac{1}{2}x\\right)-1$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "standard": "A2.F-TF.B.5",
+      "prompt": "For the model $g(x)=5\\sin\\!\\left(\\tfrac{\\pi}{3}x\\right)+8$, state its amplitude, its midline, and its period.",
+      "answer": "Amplitude $5$, midline $y=8$, period $6$",
+      "solution": {
+        "steps": [
+          "The coefficient in front of the sine gives the amplitude: $|a|=5$.",
+          "The constant added at the end gives the midline: $y=k=8$.",
+          "The period is $T=\\frac{2\\pi}{|b|}=\\frac{2\\pi}{\\pi/3}=2\\pi\\cdot\\frac{3}{\\pi}=6$.",
+          "So the amplitude is $5$, the midline is $y=8$, and the period is $6$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "standard": "A2.F-TF.B.5",
+      "prompt": "Write a cosine function with amplitude $7$, midline $y=0$, and period $\\pi$ that starts at its maximum at $x=0$.",
+      "answer": "$f(x)=7\\cos(2x)$",
+      "solution": {
+        "steps": [
+          "Amplitude $a=7$ and midline $k=0$ are given directly.",
+          "Compute $b=\\frac{2\\pi}{T}=\\frac{2\\pi}{\\pi}=2$.",
+          "Starting at a maximum at $x=0$ fits a plain positive cosine, so $h=0$ and $a=+7$.",
+          "Assemble: $f(x)=7\\cos(2x)$. Check: $f(0)=7\\cos(0)=7$, the maximum."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "standard": "A2.F-TF.B.5",
+      "prompt": "A spring oscillates with amplitude $3$ cm about its rest position $y=0$, completing one full cycle every $\\frac{\\pi}{2}$ seconds. Write a sine model $y(t)$ (with $t$ in seconds) assuming it starts at rest position moving upward.",
+      "answer": "$y(t)=3\\sin(4t)$",
+      "solution": {
+        "steps": [
+          "Amplitude $a=3$ and midline $k=0$ are given.",
+          "Find $b$ from the period $T=\\frac{\\pi}{2}$: $b=\\frac{2\\pi}{T}=\\frac{2\\pi}{\\pi/2}=2\\pi\\cdot\\frac{2}{\\pi}=4$.",
+          "Starting at rest position moving upward means a plain sine with $h=0$.",
+          "Assemble: $y(t)=3\\sin(4t)$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "standard": "A2.F-TF.B.5",
+      "prompt": "A buoy rises and falls with the waves. Its highest point is $5$ feet above sea level and its lowest is $1$ foot above sea level. Find the amplitude and midline of a sinusoidal model of its height.",
+      "answer": "Amplitude $2$, midline $y=3$",
+      "solution": {
+        "steps": [
+          "Amplitude is half the peak-to-trough distance: $a=\\frac{\\text{max}-\\text{min}}{2}=\\frac{5-1}{2}=\\frac{4}{2}=2$.",
+          "Midline is the average of max and min: $k=\\frac{\\text{max}+\\text{min}}{2}=\\frac{5+1}{2}=\\frac{6}{2}=3$.",
+          "So the amplitude is $2$ feet and the midline is $y=3$ feet."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "standard": "A2.F-TF.B.5",
+      "prompt": "A sound wave completes $5$ cycles per second with amplitude $6$, oscillating about $y=0$. Write a sine model $h(t)$ (with $t$ in seconds), assuming it starts at the midline going up.",
+      "answer": "$h(t)=6\\sin(10\\pi t)$",
+      "solution": {
+        "steps": [
+          "Amplitude $a=6$ and midline $k=0$.",
+          "The frequency is $f=5$ cycles per second, so convert to $b$ with $b=2\\pi f=2\\pi\\cdot 5=10\\pi$.",
+          "Starting at the midline going up means a plain sine with $h=0$.",
+          "Assemble: $h(t)=6\\sin(10\\pi t)$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "standard": "A2.F-TF.B.5",
+      "prompt": "A piston's height oscillates between a maximum of $12$ cm and a minimum of $4$ cm, returning to the top every $6$ seconds, starting at its highest point. Write a cosine model $p(t)$ for its height in centimeters, with $t$ in seconds.",
+      "answer": "$p(t)=4\\cos\\!\\left(\\tfrac{\\pi}{3}t\\right)+8$",
+      "solution": {
+        "steps": [
+          "Amplitude: $a=\\frac{\\text{max}-\\text{min}}{2}=\\frac{12-4}{2}=4$.",
+          "Midline: $k=\\frac{\\text{max}+\\text{min}}{2}=\\frac{12+4}{2}=8$.",
+          "Period $T=6$ s gives $b=\\frac{2\\pi}{6}=\\frac{\\pi}{3}$.",
+          "Starting at the maximum fits a plain positive cosine, so $h=0$ and $a=+4$.",
+          "Assemble: $p(t)=4\\cos\\!\\left(\\tfrac{\\pi}{3}t\\right)+8$. Check: $p(0)=4\\cos(0)+8=12$ cm (the top)."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "standard": "A2.F-TF.B.5",
+      "prompt": "A Ferris wheel rider boards at the lowest point, $1$ meter above the ground. The wheel reaches a high point of $25$ meters and returns to the bottom every $40$ seconds. Write a model $H(t)$ for the rider's height in meters, with $t$ in seconds after boarding.",
+      "answer": "$H(t)=-12\\cos\\!\\left(\\tfrac{\\pi}{20}t\\right)+13$",
+      "solution": {
+        "steps": [
+          "Amplitude: $a=\\frac{25-1}{2}=\\frac{24}{2}=12$.",
+          "Midline: $k=\\frac{25+1}{2}=\\frac{26}{2}=13$.",
+          "Period $T=40$ s gives $b=\\frac{2\\pi}{40}=\\frac{\\pi}{20}$.",
+          "The motion starts at a minimum, so use a reflected cosine: take the cosine form with $a=-12$ and $h=0$.",
+          "Assemble: $H(t)=-12\\cos\\!\\left(\\tfrac{\\pi}{20}t\\right)+13$. Check: $H(0)=-12\\cos(0)+13=-12+13=1$ m (the bottom)."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "standard": "A2.F-TF.B.5",
+      "prompt": "The temperature in a city is modeled by $T(t)=18\\cos\\!\\left(\\tfrac{\\pi}{12}(t-16)\\right)+62$, where $T$ is in degrees Fahrenheit and $t$ is hours after midnight. Find $T(16)$ and explain what is special about that time.",
+      "answer": "$T(16)=80^{\\circ}$F, the daily maximum, reached at $4$ p.m.",
+      "solution": {
+        "steps": [
+          "Substitute $t=16$: $T(16)=18\\cos\\!\\left(\\tfrac{\\pi}{12}(16-16)\\right)+62$.",
+          "The argument is $\\frac{\\pi}{12}\\cdot 0=0$, and $\\cos(0)=1$.",
+          "So $T(16)=18\\cdot 1+62=80$ degrees Fahrenheit.",
+          "Since the cosine is at its maximum here, $80^{\\circ}$F is the daily high temperature, and $t=16$ is $16$ hours after midnight, which is $4$ p.m."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "standard": "A2.F-TF.B.5",
+      "prompt": "The depth of water at a pier is modeled by $h(t)=3\\sin\\!\\left(\\tfrac{\\pi}{6}t\\right)+8$, where $h$ is in feet and $t$ is hours after midnight. Find the first two times $t\\ge 0$ when the depth is $9.5$ feet, and state the period of the tide.",
+      "answer": "$t=1$ hour and $t=5$ hours; period $T=12$ hours",
+      "solution": {
+        "steps": [
+          "Set the model equal to the target: $3\\sin\\!\\left(\\tfrac{\\pi}{6}t\\right)+8=9.5$.",
+          "Isolate the sine: $3\\sin\\!\\left(\\tfrac{\\pi}{6}t\\right)=1.5$, so $\\sin\\!\\left(\\tfrac{\\pi}{6}t\\right)=\\frac{1}{2}$.",
+          "The first two solutions of $\\sin\\theta=\\frac{1}{2}$ in $[0,2\\pi)$ are $\\theta=\\frac{\\pi}{6}$ and $\\theta=\\frac{5\\pi}{6}$.",
+          "Solve $\\frac{\\pi}{6}t=\\frac{\\pi}{6}\\Rightarrow t=1$ and $\\frac{\\pi}{6}t=\\frac{5\\pi}{6}\\Rightarrow t=5$.",
+          "Period: $T=\\frac{2\\pi}{\\pi/6}=12$ hours. So the depth reaches $9.5$ ft at $t=1$ and $t=5$ hours."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "standard": "A2.F-TF.B.5",
+      "prompt": "In a northern town the number of daylight hours peaks at $15.5$ hours on day $172$ of the year and dips to a minimum of $8.5$ hours. The pattern has period $365$ days. Write a sine model $D(t)=a\\sin\\!\\left(\\tfrac{2\\pi}{365}(t-h)\\right)+k$, finding $a$, $k$, and the phase shift $h$ so the maximum lands on day $172$.",
+      "answer": "$a=3.5$, $k=12$, $h=80.75$, so $D(t)=3.5\\sin\\!\\left(\\tfrac{2\\pi}{365}(t-80.75)\\right)+12$",
+      "solution": {
+        "steps": [
+          "Amplitude: $a=\\frac{\\text{max}-\\text{min}}{2}=\\frac{15.5-8.5}{2}=\\frac{7}{2}=3.5$.",
+          "Midline: $k=\\frac{\\text{max}+\\text{min}}{2}=\\frac{15.5+8.5}{2}=\\frac{24}{2}=12$.",
+          "The value $b=\\frac{2\\pi}{365}$ is given by the period $365$.",
+          "A sine reaches its maximum a quarter period after its upward midline crossing. A quarter of $365$ is $\\frac{365}{4}=91.25$ days.",
+          "We want the maximum at $t=172$, so the upward crossing (where the argument is $0$) is at $172-91.25=80.75$, giving $h=80.75$.",
+          "Assemble: $D(t)=3.5\\sin\\!\\left(\\tfrac{2\\pi}{365}(t-80.75)\\right)+12$. Check: at $t=172$ the argument is $\\frac{2\\pi}{365}\\cdot 91.25=\\frac{\\pi}{2}$, and $\\sin\\frac{\\pi}{2}=1$ gives the peak $15.5$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "standard": "A2.F-TF.B.5",
+      "prompt": "A wind turbine blade tip traces a circle. Its height above the ground reaches a maximum of $80$ m and a minimum of $20$ m, and it completes one rotation every $4$ seconds. A marked point on the blade starts at the midline height moving downward at $t=0$. Write a model $H(t)$ for the marked point's height in meters, with $t$ in seconds.",
+      "answer": "$H(t)=-30\\sin\\!\\left(\\tfrac{\\pi}{2}t\\right)+50$",
+      "solution": {
+        "steps": [
+          "Amplitude: $a=\\frac{80-20}{2}=\\frac{60}{2}=30$.",
+          "Midline: $k=\\frac{80+20}{2}=\\frac{100}{2}=50$.",
+          "Period $T=4$ s gives $b=\\frac{2\\pi}{4}=\\frac{\\pi}{2}$.",
+          "The point starts at the midline moving downward. A plain sine starts at the midline moving up, so a reflected sine ($-\\sin$) starts at the midline moving down; take $a=-30$ with $h=0$.",
+          "Assemble: $H(t)=-30\\sin\\!\\left(\\tfrac{\\pi}{2}t\\right)+50$. Check: $H(0)=-30\\sin(0)+50=50$ (midline) and just after $t=0$ the value decreases, as required."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "standard": "A2.F-TF.B.5",
+      "prompt": "A small town's population of foxes oscillates seasonally. It peaks at $620$ foxes in month $4$ (counting from the start of the year) and bottoms out at $380$ foxes, with the cycle repeating every $12$ months. Write a cosine model $P(t)=a\\cos\\!\\left(\\tfrac{\\pi}{6}(t-h)\\right)+k$, then use it to find the fox population at $t=10$ months.",
+      "answer": "$P(t)=120\\cos\\!\\left(\\tfrac{\\pi}{6}(t-4)\\right)+500$, and $P(10)=380$ foxes",
+      "solution": {
+        "steps": [
+          "Amplitude: $a=\\frac{620-380}{2}=\\frac{240}{2}=120$.",
+          "Midline: $k=\\frac{620+380}{2}=\\frac{1000}{2}=500$.",
+          "Period $12$ months gives $b=\\frac{2\\pi}{12}=\\frac{\\pi}{6}$, matching the given form.",
+          "A cosine peaks where its argument is $0$. The peak is at $t=4$, so set $h=4$: $P(t)=120\\cos\\!\\left(\\tfrac{\\pi}{6}(t-4)\\right)+500$.",
+          "Evaluate at $t=10$: the argument is $\\frac{\\pi}{6}(10-4)=\\frac{\\pi}{6}\\cdot 6=\\pi$, and $\\cos\\pi=-1$.",
+          "So $P(10)=120\\cdot(-1)+500=-120+500=380$ foxes."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "standard": "A2.F-TF.B.5",
+      "prompt": "A tidal model gives the water depth as $h(t)=6\\cos\\!\\left(\\tfrac{\\pi}{6}(t-3)\\right)+10$, where $h$ is in feet and $t$ is hours after midnight. A boat needs at least $13$ feet of depth to clear the harbor. Find the first two times $t\\ge 0$ when the depth is exactly $13$ feet, and state during which interval between them the boat can safely pass.",
+      "answer": "$t=1$ hour and $t=5$ hours; the boat can pass for $1\\le t\\le 5$ (1 a.m. to 5 a.m.)",
+      "solution": {
+        "steps": [
+          "Set the depth equal to the threshold: $6\\cos\\!\\left(\\tfrac{\\pi}{6}(t-3)\\right)+10=13$.",
+          "Isolate the cosine: $6\\cos\\!\\left(\\tfrac{\\pi}{6}(t-3)\\right)=3$, so $\\cos\\!\\left(\\tfrac{\\pi}{6}(t-3)\\right)=\\frac{1}{2}$.",
+          "Solve $\\cos\\theta=\\frac{1}{2}$: the solutions nearest $0$ are $\\theta=-\\frac{\\pi}{3}$ and $\\theta=\\frac{\\pi}{3}$.",
+          "Set $\\frac{\\pi}{6}(t-3)=-\\frac{\\pi}{3}\\Rightarrow t-3=-2\\Rightarrow t=1$, and $\\frac{\\pi}{6}(t-3)=\\frac{\\pi}{3}\\Rightarrow t-3=2\\Rightarrow t=5$.",
+          "Between $t=1$ and $t=5$ the cosine argument runs from $-\\frac{\\pi}{3}$ through $0$ to $\\frac{\\pi}{3}$, where $\\cos\\ge\\frac{1}{2}$, so the depth is at least $13$ ft there (peaking at $16$ ft at $t=3$).",
+          "So the depth equals $13$ ft at $t=1$ and $t=5$ hours, and the boat can safely pass for $1\\le t\\le 5$ (1 a.m. to 5 a.m.)."
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T19:56:47.282Z"
+}

@@ -1,0 +1,127 @@
+{
+  "_comment": "SKILL BLUEPRINT — Spec agent output, Generator input. One blueprint per standard.",
+
+  "standard": "GEO.G-CO.C.11",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Prove geometric theorems",
+  "clusterCode": "C",
+  "skillName": "Theorems about Parallelograms",
+
+  "description": "Students prove and apply the central theorems of parallelograms: opposite sides are congruent, opposite angles are congruent, consecutive (same-side) angles are supplementary, and the diagonals bisect each other. They also prove the converses that establish when a quadrilateral is a parallelogram, and the special-case results for rectangles (a parallelogram is a rectangle if and only if its diagonals are congruent). Students build two-column and paragraph proofs that cite triangle congruence postulates (SSS, SAS, ASA, AAS), CPCTC, the alternate interior angles theorem, and the definition of a parallelogram, and they use these properties to solve for unknown side lengths, angle measures, and segment lengths in coordinate and synthetic settings.",
+
+  "subSkills": [
+    "State the definition of a parallelogram (both pairs of opposite sides parallel) and list its four core properties",
+    "Prove 'opposite sides are congruent' by drawing a diagonal, proving the two triangles congruent (ASA via alternate interior angles), and applying CPCTC",
+    "Prove 'opposite angles are congruent' using triangle congruence and CPCTC or using same-side interior angle supplementarity",
+    "Prove 'the diagonals bisect each other' by proving the two triangles formed by the diagonals congruent (ASA) and applying CPCTC",
+    "Prove a converse: a quadrilateral with both pairs of opposite sides congruent (or both pairs of opposite angles congruent, or diagonals that bisect each other, or one pair of sides both parallel and congruent) is a parallelogram",
+    "Prove the rectangle theorem: a parallelogram is a rectangle if and only if its diagonals are congruent",
+    "Apply parallelogram properties to solve for unknown side lengths, angle measures, and diagonal segment lengths algebraically",
+    "Use coordinates to verify or prove a quadrilateral is a parallelogram (slopes for parallel sides, distance for congruent sides, midpoint for bisecting diagonals)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Solve for a side or angle using a property",
+      "example": "In parallelogram $ABCD$, $AB = 3x + 5$ and $CD = 5x - 9$. Find $x$ and the length of $AB$. (Opposite sides congruent: $3x + 5 = 5x - 9$, so $x = 7$ and $AB = 26$.)"
+    },
+    {
+      "name": "Angle relationships (opposite congruent, consecutive supplementary)",
+      "example": "In parallelogram $PQRS$, $m\\angle P = (2x + 10)^\\circ$ and $m\\angle Q = (3x - 30)^\\circ$. Find $m\\angle P$. (Consecutive angles are supplementary: $(2x+10) + (3x-30) = 180$, so $x = 40$ and $m\\angle P = 90^\\circ$.)"
+    },
+    {
+      "name": "Diagonals bisect each other (segment algebra)",
+      "example": "The diagonals of parallelogram $ABCD$ meet at $E$. If $AE = 2y - 1$ and $EC = y + 4$, find $AC$. (Diagonals bisect: $2y - 1 = y + 4$, so $y = 5$, $AE = 9$, and $AC = 18$.)"
+    },
+    {
+      "name": "Two-column proof of a core theorem",
+      "example": "Given parallelogram $ABCD$ with diagonal $\\overline{AC}$, prove $\\overline{AB} \\cong \\overline{CD}$. (Statements: $\\overline{AB} \\parallel \\overline{CD}$ and $\\overline{AD} \\parallel \\overline{BC}$ by definition; alternate interior angles $\\angle BAC \\cong \\angle DCA$ and $\\angle BCA \\cong \\angle DAC$; $\\overline{AC} \\cong \\overline{AC}$ reflexive; $\\triangle ABC \\cong \\triangle CDA$ by ASA; $\\overline{AB} \\cong \\overline{CD}$ by CPCTC.)"
+    },
+    {
+      "name": "Prove a converse (when is it a parallelogram)",
+      "example": "Given quadrilateral $ABCD$ with $\\overline{AB} \\cong \\overline{CD}$ and $\\overline{AB} \\parallel \\overline{CD}$, prove $ABCD$ is a parallelogram. (Draw diagonal $\\overline{AC}$; alternate interior angles give $\\angle BAC \\cong \\angle DCA$; $\\overline{AC} \\cong \\overline{AC}$; $\\triangle ABC \\cong \\triangle CDA$ by SAS; CPCTC gives $\\overline{BC} \\cong \\overline{AD}$; both pairs of opposite sides congruent, so it is a parallelogram.)"
+    },
+    {
+      "name": "Coordinate proof / rectangle diagonals",
+      "example": "Quadrilateral $WXYZ$ has vertices $W(0,0)$, $X(4,0)$, $Y(4,3)$, $Z(0,3)$. Show $WXYZ$ is a rectangle by proving it is a parallelogram with congruent diagonals. (Diagonal $WY = \\sqrt{4^2 + 3^2} = 5$ and $XZ = \\sqrt{(0-4)^2 + (3-0)^2} = 5$; equal diagonals on a parallelogram give a rectangle.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-property application. Student identifies the relevant property (opposite sides congruent, opposite angles congruent, or one given angle) and reads off or sets up a one-step equation. No proof, no diagonals, no supplementary reasoning.",
+      "constraints": [
+        "One property applied directly: opposite sides congruent OR opposite angles congruent",
+        "At most a one-step linear equation (e.g. $3x = 21$) or a direct numeric read-off",
+        "No diagonals, no consecutive-angle supplementarity, no CPCTC",
+        "Tier1 worksheet draws its early items from this band"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step reasoning or a property that requires a choice. Includes consecutive (same-side) angles being supplementary, diagonals bisecting each other with segment algebra, or a fill-in-the-reason proof where the statements are given and the student supplies the justification. Solving needs a two-step or distributive equation.",
+      "constraints": [
+        "Consecutive-angle supplementarity (sum to $180^\\circ$) OR diagonal-bisection segment algebra",
+        "Two-step or distributive linear equations (e.g. $(2x+10)+(3x-30)=180$)",
+        "Fill-in-the-blank proofs: statements given, student supplies reasons (SSS/SAS/ASA/AAS, CPCTC, alternate interior angles)",
+        "Tier1 worksheet ends here; Tier2 worksheet begins here"
+      ]
+    },
+    "Hard": {
+      "description": "Full proof construction or multi-property synthesis. Student writes a complete two-column or paragraph proof of a core theorem or its converse, applies the rectangle iff-congruent-diagonals theorem, or runs a coordinate proof combining slope, distance, and midpoint. Requires selecting the correct triangle pair and congruence postulate and chaining CPCTC.",
+      "constraints": [
+        "Student constructs a complete proof (theorem or converse) selecting the congruence postulate themselves",
+        "Rectangle theorem (parallelogram with congruent diagonals) or a converse criterion",
+        "Coordinate proofs requiring slope (parallel), distance (congruent), and midpoint (bisection)",
+        "Multi-property problems: e.g. find an angle, then a side, then a diagonal length in one figure"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student treats consecutive (adjacent) angles as congruent instead of supplementary",
+      "distractor": "Sets $m\\angle P = m\\angle Q$ giving e.g. $2x + 10 = 3x - 30$ instead of summing to $180$, producing the equal-angles answer"
+    },
+    {
+      "misconception": "Student treats opposite angles as supplementary instead of congruent",
+      "distractor": "Sets opposite angles to sum to $180^\\circ$ (e.g. $m\\angle A + m\\angle C = 180$) instead of $m\\angle A = m\\angle C$"
+    },
+    {
+      "misconception": "Student thinks a diagonal bisects the opposite side, so the half-segments equal the full side",
+      "distractor": "Sets $AE = AC$ or $AE = EC = AC$ instead of $AC = 2\\cdot AE$ when diagonals bisect each other"
+    },
+    {
+      "misconception": "Student thinks the diagonals of a parallelogram are congruent (true only for rectangles)",
+      "distractor": "Concludes a general parallelogram is a rectangle, or sets the two full diagonals equal ($AC = BD$) without justification"
+    },
+    {
+      "misconception": "Student assumes the diagonals are perpendicular or bisect the angles (rhombus properties)",
+      "distractor": "Claims diagonals meet at $90^\\circ$ or that a diagonal bisects a vertex angle, applying rhombus-only facts to a generic parallelogram"
+    },
+    {
+      "misconception": "Student names the wrong triangle-congruence postulate or assumes SSA/AAA",
+      "distractor": "Justifies $\\triangle ABC \\cong \\triangle CDA$ by 'SSA' or 'AAA' instead of ASA/SAS, breaking the proof"
+    },
+    {
+      "misconception": "Student confuses a property with its converse, assuming any quadrilateral with one parallelogram-like feature is a parallelogram",
+      "distractor": "Concludes a quadrilateral with only one pair of opposite sides congruent (parallel not given) is a parallelogram"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet (Easy to Hard across 15) plus tier1/tier2 available for the proof-heavy split. lesson 5+5, quiz 8.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

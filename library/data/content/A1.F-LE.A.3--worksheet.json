@@ -1,0 +1,218 @@
+{
+  "id": "A1.F-LE.A.3--worksheet",
+  "standard": "A1.F-LE.A.3",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Linear, Quadratic, and Exponential Models",
+  "domainCode": "F-LE",
+  "cluster": "Construct and compare linear, quadratic, and exponential models and solve problems",
+  "clusterCode": "A",
+  "skillName": "Exponential Exceeds Polynomial Growth",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Let $f(x)=2^{x}$ and $g(x)=5x$. Using the table below, which function is larger at $x=2$?\n\n| $x$ | $0$ | $1$ | $2$ | $3$ |\n| $f(x)=2^{x}$ | $1$ | $2$ | $4$ | $8$ |\n| $g(x)=5x$ | $0$ | $5$ | $10$ | $15$ |",
+      "answer": "$g(x)=5x$ is larger at $x=2$ (since $g(2)=10>f(2)=4$).",
+      "solution": {
+        "steps": [
+          "Read the column for $x=2$ from the table.",
+          "$f(2)=2^{2}=4$ and $g(2)=5\\cdot 2=10$.",
+          "Compare: $10>4$, so $g$ is larger at $x=2$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Let $f(x)=2^{x}$ and $g(x)=4x$. Which function is larger at $x=1$?",
+      "answer": "$g(x)=4x$ is larger at $x=1$ (since $g(1)=4>f(1)=2$).",
+      "solution": {
+        "steps": [
+          "Evaluate each function at $x=1$.",
+          "$f(1)=2^{1}=2$.",
+          "$g(1)=4\\cdot 1=4$.",
+          "Compare: $4>2$, so $g$ is larger at $x=1$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Let $f(x)=3^{x}$ and $g(x)=10x+5$. Which function is larger at $x=4$?",
+      "answer": "$f(x)=3^{x}$ is larger at $x=4$ (since $f(4)=81>g(4)=45$).",
+      "solution": {
+        "steps": [
+          "Evaluate each function at $x=4$.",
+          "$f(4)=3^{4}=81$.",
+          "$g(4)=10\\cdot 4+5=45$.",
+          "Compare: $81>45$, so $f$ is larger at $x=4$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "The table compares $f(x)=2^{x}$ and $g(x)=4x$. At what whole-number input does $f$ first exceed $g$?\n\n| $x$ | $0$ | $1$ | $2$ | $3$ | $4$ | $5$ |\n| $f(x)=2^{x}$ | $1$ | $2$ | $4$ | $8$ | $16$ | $32$ |\n| $g(x)=4x$ | $0$ | $4$ | $8$ | $12$ | $16$ | $20$ |",
+      "answer": "$x=5$",
+      "solution": {
+        "steps": [
+          "Scan each column and compare $f(x)$ with $g(x)$.",
+          "At $x=0,1,2,3$ the linear function $g$ is larger or tied below ($1>0$ at $x=0$, but $2<4$, $4<8$, $8<12$).",
+          "At $x=4$ they tie: $f(4)=16$ and $g(4)=16$.",
+          "At $x=5$: $f(5)=32$ and $g(5)=20$, so $f>g$.",
+          "The first input where $f$ is strictly greater than $g$ is $x=5$. (The tie at $x=4$ is not a crossover.)"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "The table compares $f(x)=2^{x}$ and $g(x)=6x$. At what whole-number input does $f$ first exceed $g$?\n\n| $x$ | $0$ | $1$ | $2$ | $3$ | $4$ | $5$ |\n| $f(x)=2^{x}$ | $1$ | $2$ | $4$ | $8$ | $16$ | $32$ |\n| $g(x)=6x$ | $0$ | $6$ | $12$ | $18$ | $24$ | $30$ |",
+      "answer": "$x=5$",
+      "solution": {
+        "steps": [
+          "Compare the two outputs in each column.",
+          "At $x=1,2,3,4$: $2<6$, $4<12$, $8<18$, $16<24$, so $g$ stays larger.",
+          "At $x=5$: $f(5)=32$ and $g(5)=30$, so $f>g$ for the first time.",
+          "The first input where $f$ exceeds $g$ is $x=5$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Build a table of $f(x)=2^{x}$ and $g(x)=x^{2}$ for $x=0,1,2,3,4,5$, then state the smallest whole-number input at which $f$ first exceeds $g$.",
+      "answer": "$x=5$ (with the tie at $x=2$ and $x=4$, and $g$ ahead at $x=3$).",
+      "solution": {
+        "steps": [
+          "Evaluate $f(x)=2^{x}$: $f(0)=1,\\ f(1)=2,\\ f(2)=4,\\ f(3)=8,\\ f(4)=16,\\ f(5)=32$.",
+          "Evaluate $g(x)=x^{2}$: $g(0)=0,\\ g(1)=1,\\ g(2)=4,\\ g(3)=9,\\ g(4)=16,\\ g(5)=25$.",
+          "Compare row by row: $f>g$ at $x=0,1$; tie at $x=2$ ($4=4$); $g>f$ at $x=3$ ($9>8$); tie at $x=4$ ($16=16$).",
+          "At $x=5$: $f(5)=32$ and $g(5)=25$, so $f>g$ and stays ahead after this point.",
+          "The smallest input where the exponential first exceeds the quadratic (after the quadratic catches up) is $x=5$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Build a table of $f(x)=2^{x}$ and $g(x)=2x^{2}$ for $x=0,1,2,3,4,5,6,7$, then state the smallest whole-number input at which $f$ first exceeds $g$ and stays ahead.",
+      "answer": "$x=7$",
+      "solution": {
+        "steps": [
+          "Evaluate $f(x)=2^{x}$: $f(0)=1,\\ f(1)=2,\\ f(2)=4,\\ f(3)=8,\\ f(4)=16,\\ f(5)=32,\\ f(6)=64,\\ f(7)=128$.",
+          "Evaluate $g(x)=2x^{2}$: $g(0)=0,\\ g(1)=2,\\ g(2)=8,\\ g(3)=18,\\ g(4)=32,\\ g(5)=50,\\ g(6)=72,\\ g(7)=98$.",
+          "Compare row by row: $g$ leads (or ties) for $x=2$ through $x=6$ ($8=8$, $18>8$, $32>16$, $50>32$, $72>64$).",
+          "At $x=7$: $f(7)=128$ and $g(7)=98$, so $f>g$ for the first time and the doubling exponential stays ahead afterward.",
+          "The smallest input where the exponential first exceeds the quadratic is $x=7$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A graph shows the curve $y=2^{x}$ and the line $y=3x+1$. The curve starts below the line for small $x$, crosses it once near $x=4$, and stays above it afterward. (a) Approximately what input is the crossover? (b) Which function dominates for large $x$?",
+      "answer": "(a) Near $x=4$. (b) The exponential $y=2^{x}$ dominates for large $x$.",
+      "solution": {
+        "steps": [
+          "Check the description against values: $f(x)=2^{x}$ gives $f(4)=16$ and the line gives $3(4)+1=13$, so the curve is just above the line near $x=4$.",
+          "At $x=3$: $f(3)=8$ and $3(3)+1=10$, so the curve is still below. The single crossing therefore sits between $x=3$ and $x=4$, near $x=4$.",
+          "(a) The crossover is near $x=4$.",
+          "(b) Once the exponential crosses above, it keeps multiplying by $2$ each step while the line only adds $3$, so the exponential dominates for large $x$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Compare $f(x)=2^{x}$ and $g(x)=x^{2}+1$ by building a table for $x=0,1,2,3,4,5$. At which whole-number input does $f$ first become and stay strictly greater than $g$?",
+      "answer": "$x=5$",
+      "solution": {
+        "steps": [
+          "Evaluate $f(x)=2^{x}$: $1,2,4,8,16,32$ for $x=0,1,2,3,4,5$.",
+          "Evaluate $g(x)=x^{2}+1$: $g(0)=1,\\ g(1)=2,\\ g(2)=5,\\ g(3)=10,\\ g(4)=17,\\ g(5)=26$.",
+          "Compare: tie at $x=0$ ($1=1$) and $x=1$ ($2=2$); $g$ leads at $x=2,3,4$ ($5>4$, $10>8$, $17>16$).",
+          "At $x=5$: $f(5)=32$ and $g(5)=26$, so $f>g$, and the exponential stays ahead afterward.",
+          "The first input where $f$ becomes and stays strictly greater is $x=5$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A graph shows the parabola $y=x^{2}$ and the curve $y=2^{x}$. The parabola is at or above the curve for $2\\le x\\le 4$, and the curve rises above the parabola starting at $x=5$. (a) Between which two whole numbers is the final crossover? (b) Explain which function will be larger when $x=20$.",
+      "answer": "(a) Between $x=4$ and $x=5$. (b) The exponential $y=2^{x}$ is larger at $x=20$.",
+      "solution": {
+        "steps": [
+          "Check the boundary values: at $x=4$, $x^{2}=16$ and $2^{4}=16$ (tie); at $x=5$, $x^{2}=25$ and $2^{5}=32$ (curve above).",
+          "(a) The curve overtakes the parabola for good between $x=4$ and $x=5$.",
+          "At $x=20$: $2^{20}=1{,}048{,}576$ while $20^{2}=400$.",
+          "(b) The exponential is far larger at $x=20$, because once $2^{x}$ passes the parabola it keeps doubling while the parabola only grows by a bounded amount each step."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Let $f(x)=2\\cdot 2^{x}$ and $g(x)=x^{2}$. (a) Evaluate both at $x=3$. (b) State which is larger and explain in one sentence why $f$ will keep beating $g$ for all larger inputs.",
+      "answer": "(a) $f(3)=16$ and $g(3)=9$. (b) $f$ is larger; the exponential doubles each step while the quadratic's growth slows relative to doubling, so $f$ stays ahead.",
+      "solution": {
+        "steps": [
+          "(a) $f(3)=2\\cdot 2^{3}=2\\cdot 8=16$ (note the coefficient multiplies the power, it is not added).",
+          "$g(3)=3^{2}=9$.",
+          "(b) Compare: $16>9$, so $f$ is larger at $x=3$.",
+          "Each time $x$ increases by $1$, $f$ multiplies by $2$ (so it doubles), while $g=x^{2}$ grows by a smaller and smaller relative amount, so the exponential stays permanently ahead once it leads."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Compare $f(x)=2^{x}$ and $g(x)=x^{3}$. (a) Show that $g$ leads at $x=5$. (b) Find the smallest whole-number input at which $f$ first exceeds $g$ and stays ahead.",
+      "answer": "(a) At $x=5$, $g(5)=125>f(5)=32$. (b) $x=10$ (since $f(10)=1024>g(10)=1000$, while $f(9)=512<g(9)=729$).",
+      "solution": {
+        "steps": [
+          "(a) $f(5)=2^{5}=32$ and $g(5)=5^{3}=125$, so $g$ leads at $x=5$.",
+          "Continue the table: $f(8)=256$ vs $g(8)=512$; $f(9)=512$ vs $g(9)=729$; the cubic is still ahead.",
+          "At $x=10$: $f(10)=2^{10}=1024$ and $g(10)=10^{3}=1000$, so $f>g$ for the first time.",
+          "(b) The crossover input is $x=10$; beyond it the doubling exponential stays permanently above the cubic."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "$f(x)=1.5^{x}$ is far below $g(x)=x^{3}$ for $x\\le 10$. Will $f$ ever exceed $g$? Explain your reasoning in a sentence or two.",
+      "answer": "Yes. An exponential multiplies by a fixed factor ($1.5$) every step, so it eventually and permanently exceeds any polynomial, including $x^{3}$, for large enough $x$.",
+      "solution": {
+        "steps": [
+          "An exponential function multiplies its output by the same factor ($1.5$ here) each time $x$ increases by $1$, so its growth compounds.",
+          "A polynomial like $x^{3}$ grows by a percentage that shrinks toward $0$ as $x$ gets large, so its relative growth eventually falls behind a fixed-factor multiplier.",
+          "Therefore $f(x)=1.5^{x}$ will eventually overtake $g(x)=x^{3}$ and stay above it for all sufficiently large $x$, even though it starts far behind.",
+          "Answer: Yes, the exponential eventually exceeds the cubic permanently."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Two savings plans grow each year. Plan A adds a fixed amount: $A(x)=50x$ dollars after $x$ years. Plan B grows exponentially: $B(x)=2^{x}$ dollars after $x$ years. (a) Which plan is worth more after $5$ years? (b) Which plan is worth more after $10$ years? (c) Explain why Plan B wins in the long run.",
+      "answer": "(a) Plan A ($A(5)=250>B(5)=32$). (b) Plan B ($B(10)=1024>A(10)=500$). (c) Plan B doubles each year, while Plan A only adds $50$, so the exponential eventually and permanently exceeds the linear plan.",
+      "solution": {
+        "steps": [
+          "(a) $A(5)=50\\cdot 5=250$ and $B(5)=2^{5}=32$, so Plan A is worth more after $5$ years.",
+          "(b) $A(10)=50\\cdot 10=500$ and $B(10)=2^{10}=1024$, so Plan B is worth more after $10$ years.",
+          "(c) Plan A adds a constant $\\$50$ each year (linear), while Plan B multiplies by $2$ each year (exponential).",
+          "A constant multiplicative factor eventually outpaces any constant addition, so once Plan B overtakes Plan A (between years $8$ and $9$, since $A(8)=400$, $B(8)=256$ and $A(9)=450$, $B(9)=512$) it stays permanently ahead."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Compare the long-run behavior of $f(x)=3^{x}$ and $g(x)=100x^{2}$. (a) Which is larger at $x=4$? (b) Find the smallest whole-number input at which $f$ first exceeds $g$ and stays ahead. (c) Explain why no quadratic, no matter how large its leading coefficient, can keep an exponential like $3^{x}$ below it forever.",
+      "answer": "(a) $g$ is larger at $x=4$ ($g(4)=1600>f(4)=81$). (b) $x=8$ (since $f(8)=6561>g(8)=6400$, while $f(7)=2187<g(7)=4900$). (c) The exponential multiplies by $3$ each step, a fixed factor that eventually beats any quadratic regardless of its leading coefficient.",
+      "solution": {
+        "steps": [
+          "(a) $f(4)=3^{4}=81$ and $g(4)=100\\cdot 4^{2}=1600$, so $g$ is larger at $x=4$.",
+          "Build the table: $f(7)=3^{7}=2187$ vs $g(7)=100\\cdot 49=4900$ (g leads); $f(8)=3^{8}=6561$ vs $g(8)=100\\cdot 64=6400$ (f leads).",
+          "(b) The crossover is at $x=8$; beyond it the exponential stays permanently above the quadratic.",
+          "(c) Each step multiplies $f$ by $3$, so its growth compounds, while a quadratic's relative growth rate shrinks toward $0$; a one-time large coefficient like $100$ only delays the crossover and cannot prevent the exponential from eventually and permanently exceeding it."
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "generatedAt": "2026-06-24T11:30:04.469Z"
+}

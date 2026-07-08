@@ -1,0 +1,121 @@
+{
+  "standard": "GEO.G-MG.A.1",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Modeling with Geometry",
+  "domainCode": "G-MG",
+  "cluster": "Apply geometric concepts in modeling situations",
+  "clusterCode": "A",
+  "skillName": "Geometric Shapes to Describe Objects",
+
+  "description": "Students model real-world objects with simple geometric shapes (circle, rectangle, triangle) and solids (cylinder, cone, sphere, rectangular prism, pyramid), then use the measures and properties of those shapes to describe and compute features of the object. They choose a reasonable shape for a given object (e.g., a tree trunk or a soup can as a cylinder, an ice-cream cone or a pile of sand as a cone, a planet or a ball as a sphere, a human torso as a cylinder, a grain silo as a cylinder topped by a hemisphere), justify the choice, and then apply the relevant formulas: cylinder volume $V=\\pi r^2 h$ and lateral/surface area $S=2\\pi r h$ or $2\\pi r h+2\\pi r^2$; cone volume $V=\\tfrac{1}{3}\\pi r^2 h$; sphere volume $V=\\tfrac{4}{3}\\pi r^3$ and surface area $S=4\\pi r^2$; prism volume $V=\\text{(base area)}\\times h$. They report answers with correct units, give exact values in terms of $\\pi$ unless an approximation is requested, and recognize when a composite of two solids best fits the object.",
+
+  "subSkills": [
+    "Choose a reasonable geometric shape or solid to model a given real-world object and justify the choice from the object's form",
+    "Extract the needed dimensions (radius, diameter, height, side length) from a verbal or pictured description, converting diameter to radius when required",
+    "Select and apply the correct formula: cylinder volume $V=\\pi r^2 h$, cone volume $V=\\tfrac{1}{3}\\pi r^2 h$, sphere volume $V=\\tfrac{4}{3}\\pi r^3$, prism volume $V=\\text{(base area)}\\,h$",
+    "Apply surface-area or lateral-area formulas to model coverings such as paint, wrapping, or labels: cylinder lateral area $2\\pi r h$, sphere surface area $4\\pi r^2$",
+    "Attach correct units to every measure, distinguishing linear units, square units (area), and cubic units (volume)",
+    "Give exact answers in terms of $\\pi$ and radicals, and produce a decimal approximation only when the problem asks for one",
+    "Model a composite object as a sum (or difference) of two solids and combine their measures (e.g., a silo as a cylinder plus a hemisphere)",
+    "Use a computed measure descriptively, for example to estimate capacity, weight via density, or amount of material needed"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Choose the modeling shape and justify",
+      "example": "Which geometric solid best models a wooden pencil before sharpening, and why? Answer: a cylinder, because the pencil has a constant circular cross-section along its length, with the diameter as the circle's diameter and the pencil length as the cylinder height."
+    },
+    {
+      "name": "Single-solid volume from a real object",
+      "example": "A cylindrical soup can has radius $4$ cm and height $11$ cm. Find the volume of soup it holds. Answer: $V=\\pi r^2 h=\\pi(4)^2(11)=176\\pi$ cubic centimeters."
+    },
+    {
+      "name": "Cone or sphere volume from a real object",
+      "example": "A conical pile of sand has base radius $3$ m and height $2$ m. Find its volume. Answer: $V=\\tfrac{1}{3}\\pi r^2 h=\\tfrac{1}{3}\\pi(3)^2(2)=6\\pi$ cubic meters."
+    },
+    {
+      "name": "Surface area or covering material",
+      "example": "A spherical balloon has radius $7$ cm. How much rubber forms its surface? Answer: $S=4\\pi r^2=4\\pi(7)^2=196\\pi$ square centimeters."
+    },
+    {
+      "name": "Composite-solid model",
+      "example": "A grain silo is a cylinder of radius $3$ m and height $10$ m topped by a hemisphere of the same radius. Find its total volume. Answer: $V=\\pi r^2 h+\\tfrac{1}{2}\\cdot\\tfrac{4}{3}\\pi r^3=\\pi(3)^2(10)+\\tfrac{2}{3}\\pi(3)^3=90\\pi+18\\pi=108\\pi$ cubic meters."
+    },
+    {
+      "name": "Apply the measure descriptively (capacity, density, approximation)",
+      "example": "A cylindrical tank models a tree trunk of radius $0.5$ m and height $8$ m. Using density $700\\,\\text{kg/m}^3$, estimate the trunk's mass. Use $\\pi\\approx 3.14$. Answer: $V=\\pi(0.5)^2(8)=2\\pi\\approx 6.28\\,\\text{m}^3$, so mass $\\approx 700\\cdot 6.28\\approx 4396$ kg."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step application: the modeling shape is already named, the dimensions are given directly in matching units (radius, not diameter), and the student substitutes into one formula and simplifies, leaving the answer in terms of $\\pi$ with correct units. This is where a single ramped worksheet starts and where a tier1 sheet lives.",
+      "constraints": [
+        "The solid is stated (cylinder, cone, sphere, prism); no shape choice required",
+        "Dimensions are small positive integers given as radius and height directly, no diameter-to-radius conversion",
+        "Exactly one formula and one substitution; answer left exact in terms of $\\pi$",
+        "Volume vs. surface-area is signaled by the wording (holds/fills means volume, covers/paints means area)"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step reasoning: the student either converts a diameter to a radius (or otherwise preps a dimension) before substituting, or must first choose and justify the modeling shape, or must decide between a volume and a surface-area formula from a real-world cue. Values may yield a non-integer coefficient that stays exact. This band is the upper end of tier1 and the lower end of tier2.",
+      "constraints": [
+        "Requires one preparatory step: diameter to radius, unit alignment, or selecting the correct formula from context",
+        "Student may have to name the appropriate solid for a described object and justify it",
+        "Coefficients may be fractions kept exact (e.g. $\\tfrac{9}{2}\\pi$); no rounding unless requested",
+        "Distinguishes square-unit (area) answers from cubic-unit (volume) answers"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step modeling: build a composite solid (sum or difference of two solids), or chain a computed measure to a second quantity such as mass via density, capacity in liters, cost of material, or a requested decimal approximation. Requires choosing shapes, combining formulas, and tracking units across steps. This is where a single ramped worksheet ends and where a tier2 sheet ends.",
+      "constraints": [
+        "Models a real object as a composite (e.g. cylinder plus hemisphere, or a solid with a cylindrical hole) and combines the two measures",
+        "Or applies the computed volume/area to a follow-up: mass from density, capacity conversion, or material cost",
+        "May require a decimal approximation with a stated value of $\\pi$, otherwise the answer stays exact",
+        "Requires correct unit bookkeeping through every step, including cubic-to-capacity or volume-times-density conversions"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student uses the given diameter directly as the radius in the formula",
+      "distractor": "For a can of diameter $8$ and height $11$, computes $V=\\pi(8)^2(11)=704\\pi$ instead of using $r=4$ to get $\\pi(4)^2(11)=176\\pi$"
+    },
+    {
+      "misconception": "Student forgets the $\\tfrac{1}{3}$ factor for a cone and applies the cylinder formula instead",
+      "distractor": "For a cone with $r=3$, $h=2$, computes $V=\\pi r^2 h=\\pi(3)^2(2)=18\\pi$ instead of $\\tfrac{1}{3}\\pi(3)^2(2)=6\\pi$"
+    },
+    {
+      "misconception": "Student confuses sphere volume $\\tfrac{4}{3}\\pi r^3$ with surface area $4\\pi r^2$ (wrong power of $r$ and wrong coefficient)",
+      "distractor": "For a ball of radius $7$, gives the volume as $4\\pi(7)^2=196\\pi$ instead of $\\tfrac{4}{3}\\pi(7)^3=\\tfrac{1372}{3}\\pi$"
+    },
+    {
+      "misconception": "Student mislabels units, reporting a volume in square units or an area in cubic units",
+      "distractor": "Reports the cylinder volume $176\\pi$ as $176\\pi$ square centimeters instead of cubic centimeters"
+    },
+    {
+      "misconception": "Student squares or otherwise mishandles the radius, using $r^2$ where $r^3$ is required (or vice versa)",
+      "distractor": "For a sphere of radius $3$, computes $\\tfrac{4}{3}\\pi(3)^2=12\\pi$ instead of $\\tfrac{4}{3}\\pi(3)^3=36\\pi$"
+    },
+    {
+      "misconception": "Student adds full solids when modeling a composite, ignoring that a topping cap is a hemisphere (half a sphere)",
+      "distractor": "For a silo, adds a full sphere $\\tfrac{4}{3}\\pi(3)^3=36\\pi$ to the cylinder $90\\pi$ to get $126\\pi$ instead of a hemisphere $18\\pi$ giving $108\\pi$"
+    }
+  ],
+
+  "_comment_itemCounts": "A single ramped worksheet covers this standard well; tier1/tier2 counts are provided per default in case a two-sheet split is used. Lesson 5+5, worksheet single/tier1/tier2 = 15 each, quiz 8.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

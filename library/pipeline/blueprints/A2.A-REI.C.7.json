@@ -1,0 +1,136 @@
+{
+  "standard": "A2.A-REI.C.7",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Reasoning with Equations and Inequalities",
+  "domainCode": "A-REI",
+  "cluster": "Solve systems of equations",
+  "clusterCode": "C",
+  "skillName": "Linear-Quadratic Systems",
+
+  "description": "Students solve a system consisting of one linear equation and one quadratic equation in two variables, both algebraically and graphically. The quadratic may be a parabola ($y = ax^2 + bx + c$ or $x = ay^2 + by + c$) or a conic such as a circle ($x^2 + y^2 = r^2$). Algebraically they isolate one variable in the linear equation, substitute into the quadratic to reduce the system to a single quadratic in one variable, solve it (factoring, square roots, or the quadratic formula), and back-substitute to recover the partner coordinate for each solution. They interpret the result as the points of intersection of a line with a parabola or circle and recognize that such a system can have two, one (the line is tangent), or zero real solutions, using the discriminant to decide which case occurs. They verify each solution in both original equations.",
+
+  "subSkills": [
+    "Isolate one variable in the linear equation (solve for $y$ or for $x$)",
+    "Substitute the linear expression into the quadratic to obtain a single quadratic equation in one variable",
+    "Solve the resulting quadratic by factoring, by extracting square roots, or by the quadratic formula",
+    "Back-substitute each root into the linear equation to find the matching coordinate, giving full ordered-pair solutions $(x, y)$",
+    "Recognize the system geometrically as the intersection of a line with a parabola or a circle",
+    "Use the discriminant $b^2 - 4ac$ of the reduced quadratic to determine the number of real intersection points (two, one tangent, or none)",
+    "Solve a linear-circle system $x^2 + y^2 = r^2$ together with a line, including vertical or horizontal lines",
+    "Verify each candidate ordered pair by substituting into both original equations"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Line and parabola, substitution with two integer solutions",
+      "example": "Solve $\\begin{cases} y = x^2 - 2x - 3 \\\\ y = x - 3 \\end{cases}$. Substitute: $x^2 - 2x - 3 = x - 3$, so $x^2 - 3x = 0$, $x(x - 3) = 0$, giving $x = 0$ or $x = 3$. The intersection points are $(0, -3)$ and $(3, 0)$."
+    },
+    {
+      "name": "Line and circle",
+      "example": "Find the points of intersection of $y = -3x$ and $x^2 + y^2 = 3$. Substitute: $x^2 + 9x^2 = 3$, so $10x^2 = 3$, $x = \\pm\\sqrt{\\tfrac{3}{10}}$, and $y = -3x$. Solutions: $\\left(\\sqrt{\\tfrac{3}{10}},\\, -3\\sqrt{\\tfrac{3}{10}}\\right)$ and $\\left(-\\sqrt{\\tfrac{3}{10}},\\, 3\\sqrt{\\tfrac{3}{10}}\\right)$."
+    },
+    {
+      "name": "Linear equation in standard form (isolate first)",
+      "example": "Solve $\\begin{cases} y = x^2 + 4 \\\\ 2x + y = 7 \\end{cases}$. Isolate $y = 7 - 2x$, substitute: $7 - 2x = x^2 + 4$, so $x^2 + 2x - 3 = 0$, $(x + 3)(x - 1) = 0$, giving $x = -3$ or $x = 1$. Points: $(-3, 13)$ and $(1, 5)$."
+    },
+    {
+      "name": "Tangent line (one solution, repeated root)",
+      "example": "Solve $\\begin{cases} y = x^2 \\\\ y = 2x - 1 \\end{cases}$. Then $x^2 - 2x + 1 = 0$, $(x - 1)^2 = 0$, so $x = 1$ is a double root. The line is tangent to the parabola at the single point $(1, 1)$."
+    },
+    {
+      "name": "No real intersection",
+      "example": "Solve $\\begin{cases} y = x^2 + 2 \\\\ y = x - 1 \\end{cases}$. Then $x^2 - x + 3 = 0$ has discriminant $(-1)^2 - 4(1)(3) = -11 < 0$, so there are no real solutions: the line and parabola do not intersect."
+    },
+    {
+      "name": "Quadratic-formula / irrational solutions",
+      "example": "Solve $\\begin{cases} y = x^2 - x \\\\ y = 2x + 1 \\end{cases}$. Then $x^2 - 3x - 1 = 0$, so $x = \\frac{3 \\pm \\sqrt{13}}{2}$, and each $x$ gives $y = 2x + 1$."
+    },
+    {
+      "name": "Determine the number of intersection points via the discriminant",
+      "example": "How many times does the line $y = mx$ meet $x^2 + y^2 = 4$, and for what $m$? Every line through the origin crosses the circle twice, so there are always two intersection points."
+    },
+    {
+      "name": "Real-world or geometric application",
+      "example": "A ball follows the path $y = -x^2 + 6x$ and a sightline is $y = 2x$. Where does the sightline meet the path? Solve $-x^2 + 6x = 2x$, so $x^2 - 4x = 0$, $x = 0$ or $x = 4$, giving $(0, 0)$ and $(4, 8)$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "The linear equation is already solved for a variable (typically $y = mx + b$), so substitution is direct. The resulting quadratic factors cleanly over the integers or reduces to $x^2 = k$ with a perfect or simple value, yielding small integer or simple solutions. The system has two clear intersection points and the geometry (line and upward parabola) is familiar. Tier1 begins here.",
+      "constraints": [
+        "Linear equation given in the form $y = mx + b$ (no isolating step needed)",
+        "Quadratic is $y = ax^2 + bx + c$ with $a = 1$ and small coefficients",
+        "Reduced quadratic factors over the integers; solutions are integers with $|x| \\le 6$",
+        "System has exactly two real solutions"
+      ]
+    },
+    "Medium": {
+      "description": "Requires isolating a variable from a linear equation in standard form $ax + by = c$ before substituting, or solving a line-circle system $x^2 + y^2 = r^2$. The reduced quadratic still factors or has rational roots, but back-substitution and bookkeeping of two ordered pairs is required, and some solutions may be simple fractions or clean radicals from a circle. This band is the overlap region: it ends tier1 and begins tier2.",
+      "constraints": [
+        "Linear equation in standard form $ax + by = c$ requiring an isolating step first",
+        "Includes line-and-circle systems $x^2 + y^2 = r^2$",
+        "Reduced quadratic factors or has rational/simple-radical roots; solutions may be fractions with denominator $\\le 4$",
+        "Student must report both ordered pairs and may use the quadratic formula with a perfect-square discriminant"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems: the reduced quadratic needs the quadratic formula with an irrational (non-perfect-square) discriminant, OR the task is to classify the number of intersections using the discriminant, OR a tangent or no-solution case must be identified, OR the student must translate a word/geometry context into a linear-quadratic system and then find a derived quantity. Tier2 ramps to here.",
+      "constraints": [
+        "Reduced quadratic requires the quadratic formula with an irrational discriminant; answers are exact radicals such as $\\frac{3 \\pm \\sqrt{13}}{2}$",
+        "Tangent case (double root, discriminant $= 0$, one intersection point) or no-real-solution case (discriminant $< 0$)",
+        "Discriminant-based reasoning to count intersections or to find a parameter making the line tangent",
+        "Word or geometry context that must be modeled as a linear-quadratic system before solving"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student finds the $x$-values but stops there, forgetting to back-substitute for the matching $y$-values, so a system solution is reported as numbers instead of ordered pairs",
+      "distractor": "Reports $x = 0$ and $x = 3$ instead of the points $(0, -3)$ and $(3, 0)$"
+    },
+    {
+      "misconception": "Student finds only one of the two intersection points, treating the quadratic as if it had a single solution",
+      "distractor": "Gives only $(3, 0)$ and omits $(0, -3)$ for a system with two intersections"
+    },
+    {
+      "misconception": "Student substitutes only one root back into the linear equation and pairs both roots with the same $y$-value",
+      "distractor": "Reports $(0, -3)$ and $(3, -3)$, reusing one $y$-value for both $x$-values"
+    },
+    {
+      "misconception": "Sign error when moving all terms to one side: student fails to negate every term, producing the wrong reduced quadratic",
+      "distractor": "From $x^2 - 2x - 3 = x - 3$ writes $x^2 - 2x - 3 + x - 3 = 0$ (adding instead of subtracting) and solves a wrong quadratic"
+    },
+    {
+      "misconception": "On a line-circle system, student drops the $\\pm$ when taking the square root, losing the second solution",
+      "distractor": "From $10x^2 = 3$ reports only $x = \\sqrt{\\tfrac{3}{10}}$ and gives just one intersection point"
+    },
+    {
+      "misconception": "Student misreads the discriminant: thinks a negative discriminant means one solution or thinks a zero discriminant means no solution, confusing the tangent and no-intersection cases",
+      "distractor": "Claims $x^2 - x + 3 = 0$ (discriminant $-11$) has one solution, or claims a perfect-square reduced quadratic has no solution"
+    },
+    {
+      "misconception": "Student sets the two right-hand sides equal incorrectly or squares a sum termwise, e.g. treats $(x + y)^2$ as $x^2 + y^2$ when handling a circle substitution",
+      "distractor": "Expands $(-3x)^2$ as $-9x^2$ or $-3x^2$ instead of $9x^2$, producing a wrong reduced equation"
+    },
+    {
+      "misconception": "Student reverses the coordinates, writing $(y, x)$ instead of $(x, y)$ for the intersection points",
+      "distractor": "Writes $(-3, 0)$ and $(0, 3)$ instead of $(0, -3)$ and $(3, 0)$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

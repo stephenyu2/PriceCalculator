@@ -1,0 +1,117 @@
+{
+  "standard": "8.NS.A.2",
+  "grade": "8",
+  "subject": "math",
+  "domain": "The Number System",
+  "domainCode": "NS",
+  "cluster": "Know that there are numbers that are not rational, and approximate them by rational numbers",
+  "clusterCode": "A",
+  "skillName": "Approximating Irrational Numbers",
+
+  "description": "Students use rational approximations of irrational numbers to compare their sizes, locate them approximately on a number line, and estimate the value of expressions that contain them. They bracket an irrational number such as $\\sqrt{5}$ between consecutive integers and then between tenths by testing perfect squares (or by squaring candidate decimals), use those approximations to order numbers like $\\sqrt{2}$, $\\pi$, and $\\frac{7}{4}$, plot them on a number line, and estimate values of expressions such as $\\pi^2$ or $2\\sqrt{3}$.",
+
+  "subSkills": [
+    "Bracket an irrational number between two consecutive integers by comparing it to perfect squares (e.g. $2 < \\sqrt{5} < 3$ because $4 < 5 < 9$)",
+    "Refine an approximation to the nearest tenth (and hundredth) by squaring trial decimals (e.g. $2.2^2 = 4.84$ and $2.3^2 = 5.29$ so $\\sqrt{5} \\approx 2.2$)",
+    "Compare and order a mixed set of rational and irrational numbers using rational approximations",
+    "Locate irrational numbers approximately on a number line diagram",
+    "Estimate the value of expressions involving irrational numbers, such as $\\pi^2$, $\\sqrt{2}+\\sqrt{3}$, or $2\\sqrt{7}$, by substituting decimal approximations"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Bracket between consecutive integers",
+      "example": "Between which two consecutive integers does $\\sqrt{20}$ lie? Answer: between $4$ and $5$, since $4^2=16 < 20 < 25=5^2$."
+    },
+    {
+      "name": "Approximate to the nearest tenth",
+      "example": "Approximate $\\sqrt{30}$ to the nearest tenth. Since $5.4^2=29.16$ and $5.5^2=30.25$, $\\sqrt{30}\\approx 5.5$."
+    },
+    {
+      "name": "Compare two irrational (or irrational vs. rational) numbers",
+      "example": "Which is greater, $\\sqrt{8}$ or $\\frac{17}{6}$? Compare $\\sqrt{8}\\approx 2.83$ with $\\frac{17}{6}\\approx 2.83$; squaring, $8$ vs. $\\left(\\frac{17}{6}\\right)^2=\\frac{289}{36}\\approx 8.03$, so $\\frac{17}{6} > \\sqrt{8}$."
+    },
+    {
+      "name": "Order a set on a number line",
+      "example": "Order $\\pi$, $\\sqrt{8}$, $\\frac{11}{4}$, and $3.2$ from least to greatest and locate each approximately on a number line. Using $\\pi\\approx 3.14$, $\\sqrt{8}\\approx 2.83$, $\\frac{11}{4}=2.75$, the order is $\\frac{11}{4} < \\sqrt{8} < \\pi < 3.2$."
+    },
+    {
+      "name": "Estimate an expression's value",
+      "example": "Estimate $\\pi^2$ to the nearest whole number. Since $\\pi\\approx 3.14$, $\\pi^2\\approx 9.86 \\approx 10$."
+    },
+    {
+      "name": "Multi-step estimate / comparison of expressions",
+      "example": "Without a calculator, decide whether $2\\sqrt{5}$ or $\\pi + 1$ is larger. $2\\sqrt{5}\\approx 2(2.24)=4.47$ and $\\pi+1\\approx 4.14$, so $2\\sqrt{5}$ is larger."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step bracketing of one irrational square root between consecutive integers, or a direct comparison of one irrational number to one nearby integer. Perfect squares used are small and familiar.",
+      "constraints": [
+        "Radicands are non-perfect-square integers under $50$ (e.g. $\\sqrt{5}$, $\\sqrt{11}$, $\\sqrt{20}$)",
+        "Only one irrational number is involved per item",
+        "Answer is a pair of consecutive integers or a single nearest integer; no tenths refinement required",
+        "No expression to evaluate beyond the radical itself"
+      ]
+    },
+    "Medium": {
+      "description": "Refine an approximation to the nearest tenth by squaring trial decimals, OR compare two numbers (irrational vs. rational, or two irrationals) where decimals are close enough that careful approximation is needed. May include $\\pi$.",
+      "constraints": [
+        "Requires approximating to the nearest tenth or hundredth via squaring trial values",
+        "Comparison involves two numbers whose approximations differ by less than $0.5$",
+        "May mix a radical with a fraction or with $\\pi$",
+        "Radicands may exceed $50$ (e.g. $\\sqrt{60}$, $\\sqrt{83}$)"
+      ]
+    },
+    "Hard": {
+      "description": "Order three or more mixed rational/irrational numbers and place them on a number line, OR estimate the value of an expression containing one or more irrational numbers (squares, sums, scalar multiples) to a required precision, often without a calculator.",
+      "constraints": [
+        "Item involves at least three numbers to order, or an expression such as $\\pi^2$, $\\sqrt{2}+\\sqrt{3}$, $2\\sqrt{7}$, or $\\sqrt{50}-\\sqrt{18}$",
+        "Requires combining approximation with arithmetic (squaring, adding, scaling)",
+        "May require justifying placement on a number line to the nearest tenth",
+        "Distinguishing the answer requires multi-step reasoning, not a single bracketing"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student treats the square root as half of the radicand instead of a number whose square is the radicand",
+      "distractor": "Estimates $\\sqrt{20}\\approx 10$ (computing $\\frac{20}{2}$) instead of $\\sqrt{20}\\approx 4.47$"
+    },
+    {
+      "misconception": "Student rounds to the wrong consecutive integer by using the nearest perfect square instead of bracketing below and above",
+      "distractor": "Says $\\sqrt{20}$ lies between $5$ and $6$ because $20$ is 'closer to $25$', ignoring that $20 > 16=4^2$"
+    },
+    {
+      "misconception": "Student picks the larger radicand or larger numerator as the larger number without converting to a common form",
+      "distractor": "Claims $\\frac{17}{6} < \\sqrt{8}$ because $8 > 17/6$ as a number, comparing the radicand to the fraction directly instead of $\\sqrt{8}\\approx 2.83$ to $\\frac{17}{6}\\approx 2.83$"
+    },
+    {
+      "misconception": "Student uses an over-rounded value of $\\pi$ (such as $3$ or $3.1$) and loses the distinction in a close comparison",
+      "distractor": "Concludes $\\pi^2 \\approx 9$ by using $\\pi\\approx 3$ instead of $\\pi\\approx 3.14$, missing $\\pi^2\\approx 9.86\\approx 10$"
+    },
+    {
+      "misconception": "Student distributes the square root or exponent across a sum or product incorrectly",
+      "distractor": "Computes $\\sqrt{2}+\\sqrt{3}\\approx \\sqrt{5}\\approx 2.24$ instead of $1.41+1.73\\approx 3.14$"
+    },
+    {
+      "misconception": "Student multiplies the scalar into the radicand instead of the value of the root",
+      "distractor": "Estimates $2\\sqrt{5}\\approx \\sqrt{10}\\approx 3.16$ instead of $2(2.24)\\approx 4.47$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

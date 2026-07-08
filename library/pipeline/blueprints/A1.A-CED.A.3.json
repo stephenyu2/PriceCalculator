@@ -1,0 +1,119 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent.",
+  "_comment2": "One blueprint per standard. This is the contract the generator builds against.",
+
+  "standard": "A1.A-CED.A.3",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Creating Equations",
+  "domainCode": "A-CED",
+  "cluster": "Create equations that describe numbers or relationships",
+  "clusterCode": "A",
+  "skillName": "Constraints via Equations and Inequalities",
+
+  "description": "Students translate the restrictions in a real-world modeling situation into equations, inequalities, or systems of equations and/or inequalities. They define variables, write each constraint (budget caps, resource limits, minimum requirements, non-negativity), assemble systems when several constraints act at once, and then test candidate solutions against every constraint to judge whether an option is viable (satisfies all constraints in context) or non-viable (violates a constraint or breaks a real-world rule such as a negative or non-integer count). The emphasis is on building the constraint model and interpreting solutions back in context, not on fully solving the system.",
+
+  "subSkills": [
+    "Define variables with explicit units and meaning before writing any constraint",
+    "Translate a single verbal restriction into an equation or the correct inequality direction ($\\le$, $\\ge$, $<$, $>$)",
+    "Recognize and add implicit constraints (non-negativity $x\\ge 0$, integer/whole-number requirements) from context",
+    "Assemble multiple simultaneous restrictions into a system of equations and/or inequalities",
+    "Test a candidate ordered pair against every constraint to classify it as viable or non-viable",
+    "Interpret a solution in context, rejecting mathematically valid answers that are non-viable in the real world (negative, fractional where whole units are required, out of domain)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Single budget or resource constraint",
+      "example": "Notebooks cost $\\$3$ each and pens cost $\\$2$ each. You have at most $\\$30$ to spend. Let $x$ be the number of notebooks and $y$ the number of pens. Write an inequality that represents the spending constraint. Answer: $3x + 2y \\le 30$."
+    },
+    {
+      "name": "Minimum-requirement inequality",
+      "example": "A booth must sell at least $50$ tickets. Adult tickets are $a$ and child tickets are $c$. Write an inequality for the requirement that total tickets meet the minimum. Answer: $a + c \\ge 50$."
+    },
+    {
+      "name": "System of constraints from a scenario",
+      "example": "A farmer plants $x$ acres of corn and $y$ acres of wheat on a $40$-acre field, with at most $\\$2400$ for seed at $\\$50$ per acre of corn and $\\$80$ per acre of wheat. Write the full system, including non-negativity. Answer: $x + y \\le 40,\\ 50x + 80y \\le 2400,\\ x \\ge 0,\\ y \\ge 0$."
+    },
+    {
+      "name": "Viability test of a candidate solution",
+      "example": "For the system $3x + 2y \\le 30,\\ x \\ge 0,\\ y \\ge 0$ with $x,y$ whole numbers, decide whether $(x,y) = (8,4)$ is viable. Answer: $3(8) + 2(4) = 32 > 30$, so it is non-viable; it violates the budget constraint."
+    },
+    {
+      "name": "Interpret a solution as viable or non-viable in context",
+      "example": "Solving a model gives $x = -2$ buses, $y = 5$ buses. Explain whether this is viable. Answer: non-viable, because the number of buses cannot be negative ($x \\ge 0$ is required), so this option must be rejected even though it satisfies the algebra."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Write or check a single constraint with the variables and cost/amount per unit handed directly to the student. One equation or one inequality. The main decision is the correct inequality direction. Worksheet items 1 to 5; this is the start of tier1.",
+      "constraints": [
+        "Exactly one constraint to produce or verify ($ax + by \\le c$ or $ax + by \\ge c$ or $ax + by = c$)",
+        "Variables and per-unit values are stated explicitly; no implicit non-negativity required",
+        "Small whole-number coefficients (single or low double digits)",
+        "Viability checks, when present, plug one given ordered pair into one constraint"
+      ]
+    },
+    "Medium": {
+      "description": "Build a small system (two constraints) or add the implicit non-negativity constraint, and test a candidate ordered pair against all stated constraints. Student must choose inequality directions and may need to define a variable. Worksheet items 6 to 10; this is the overlap zone where tier1 ends and tier2 begins.",
+      "constraints": [
+        "Two simultaneous constraints, or one constraint plus required non-negativity $x\\ge 0,\\ y\\ge 0$",
+        "Student defines at least one variable or extracts a per-unit value from the wording",
+        "Viability tests check a point against every constraint and state which one is violated",
+        "Coefficients may be larger but remain integers"
+      ]
+    },
+    "Hard": {
+      "description": "Assemble a full system of three or more constraints (budget plus capacity plus non-negativity, or two limits plus a minimum), then interpret a given solution as viable or non-viable using a real-world rule beyond the listed inequalities (integer-only counts, a value outside the feasible context). Multi-sentence scenario; student supplies the complete model and the justification. Worksheet items 11 to 15; this is the end of tier2.",
+      "constraints": [
+        "Three or more constraints including non-negativity and at least one mixed direction ($\\le$ with $\\ge$)",
+        "At least one implicit constraint (non-negativity or whole-number/integer requirement) must be supplied by the student",
+        "Interpretation requires rejecting a mathematically valid solution because it is non-viable in context (negative, fractional units, exceeds an unstated practical limit)",
+        "Multi-step reading: variables, per-unit values, and limits are spread across the scenario"
+      ]
+    },
+    "tierSplit": "tier1 = Easy to Medium (items ramp from single-constraint writing up to two-constraint systems and basic viability checks). tier2 = Medium to Hard (items ramp from two-constraint systems with non-negativity up to full multi-constraint models with context-based viability interpretation). No item overlap between tiers. The default single ramped worksheet covers Easy at items 1 to 5, Medium at 6 to 10, Hard at 11 to 15."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student reverses the inequality direction, reading 'at most' as $\\ge$ or 'at least' as $\\le$",
+      "distractor": "For a $\\$30$ spending cap writes $3x + 2y \\ge 30$ instead of $3x + 2y \\le 30$"
+    },
+    {
+      "misconception": "Student uses an equation where an inequality is required, treating a cap or minimum as an exact amount",
+      "distractor": "Writes $3x + 2y = 30$ for 'no more than $\\$30$' instead of $3x + 2y \\le 30$"
+    },
+    {
+      "misconception": "Student omits the implicit non-negativity (or integer) constraint",
+      "distractor": "Gives only $x + y \\le 40$ and $50x + 80y \\le 2400$, leaving out $x \\ge 0,\\ y \\ge 0$"
+    },
+    {
+      "misconception": "Student attaches each coefficient to the wrong variable when translating",
+      "distractor": "Writes $2x + 3y \\le 30$ when notebooks ($x$) cost $\\$3$ and pens ($y$) cost $\\$2$, giving $3x + 2y \\le 30$"
+    },
+    {
+      "misconception": "Student accepts a mathematically valid solution that is non-viable in context (negative or fractional count)",
+      "distractor": "Calls $(x,y) = (-2,5)$ viable because it satisfies the inequalities, ignoring that $x \\ge 0$ is required"
+    },
+    {
+      "misconception": "Student tests a candidate point against only one constraint and declares it viable",
+      "distractor": "Says $(8,4)$ is viable because $x \\ge 0$ and $y \\ge 0$ hold, without checking $3x + 2y \\le 30$ where $3(8)+2(4)=32>30$"
+    }
+  ],
+
+  "_comment_itemCounts": "Default counts. worksheet.single = one ramped sheet (Easy->Hard across 15 items). tier1/tier2 are the two sheets if the standard is built as a complex pair (15 each; tier1 Easy->Medium, tier2 Medium->Hard, no overlap).",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

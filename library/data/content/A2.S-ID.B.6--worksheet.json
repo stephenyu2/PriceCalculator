@@ -1,0 +1,224 @@
+{
+  "id": "A2.S-ID.B.6--worksheet",
+  "standard": "A2.S-ID.B.6",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on two categorical and quantitative variables",
+  "clusterCode": "B",
+  "skillName": "Fitting Functions to Data",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "Fit functions to data: classify a data set as linear, quadratic, or exponential by testing first differences, second differences, and ratios, build the matching model, use it to predict, interpret parameters in context, and judge fit with residuals. Items ramp from Easy to Hard.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "The data $(0,4),(1,7),(2,10),(3,13)$ has a constant first difference. Classify the function family as linear, quadratic, or exponential.",
+      "answer": "Linear",
+      "solution": {
+        "steps": [
+          "List the first differences of the $y$-values: $7-4=3$, $10-7=3$, $13-10=3$.",
+          "The first difference is a constant $3$.",
+          "A constant first difference signals a linear relationship $y=mx+b$.",
+          "The data is linear."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "The data $(0,3),(1,6),(2,12),(3,24)$ has a constant ratio between consecutive $y$-values. Classify the function family as linear, quadratic, or exponential.",
+      "answer": "Exponential",
+      "solution": {
+        "steps": [
+          "Divide consecutive $y$-values: $\\frac{6}{3}=2$, $\\frac{12}{6}=2$, $\\frac{24}{12}=2$.",
+          "The ratio is a constant $2$.",
+          "A constant ratio (not a constant difference) signals an exponential relationship $y=ab^{x}$.",
+          "The data is exponential."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Find the common ratio of the exponential data $(0,7),(1,21),(2,63),(3,189)$.",
+      "answer": "$3$",
+      "solution": {
+        "steps": [
+          "Divide each $y$-value by the previous one: $\\frac{21}{7}=3$.",
+          "Check the next ratios: $\\frac{63}{21}=3$ and $\\frac{189}{63}=3$.",
+          "Every ratio equals $3$, so the common ratio is $3$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Compute the slope $m=\\frac{y_2-y_1}{x_2-x_1}$ of the line through the points $(2,5)$ and $(6,17)$.",
+      "answer": "$3$",
+      "solution": {
+        "steps": [
+          "Apply the slope formula: $m=\\frac{y_2-y_1}{x_2-x_1}=\\frac{17-5}{6-2}$.",
+          "Subtract: $m=\\frac{12}{4}$.",
+          "Divide: $m=3$.",
+          "The slope is $3$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "The data $(0,2),(1,3),(2,6),(3,11)$ has first differences $1,3,5$ and second differences $2,2$. Classify the function family as linear, quadratic, or exponential.",
+      "answer": "Quadratic",
+      "solution": {
+        "steps": [
+          "The first differences $1,3,5$ are not constant, so the data is not linear.",
+          "The second differences are $3-1=2$ and $5-3=2$, a constant $2$.",
+          "A constant second difference signals a quadratic relationship $y=ax^2+bx+c$.",
+          "The data is quadratic."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A trend line passes through the representative points $(1,4)$ and $(5,16)$. Find the slope $m$ and intercept $b$, then write the line of fit $y=mx+b$.",
+      "answer": "$y=3x+1$",
+      "solution": {
+        "steps": [
+          "Slope: $m=\\frac{16-4}{5-1}=\\frac{12}{4}=3$.",
+          "Intercept using $b=y-mx$ with the point $(1,4)$: $b=4-3(1)=1$.",
+          "Write the equation: $y=3x+1$.",
+          "Check with $(5,16)$: $3(5)+1=16$. It fits."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Exponential data $(0,6),(1,18),(2,54),(3,162)$ has common ratio $b$ and initial value $a$ (the $y$-value at $x=0$). Write the model $y=ab^{x}$.",
+      "answer": "$y=6\\cdot 3^{x}$",
+      "solution": {
+        "steps": [
+          "Common ratio: $\\frac{18}{6}=3$, $\\frac{54}{18}=3$, $\\frac{162}{54}=3$, so $b=3$.",
+          "Initial value is the $y$-value at $x=0$: $a=6$.",
+          "Write the model: $y=ab^{x}=6\\cdot 3^{x}$.",
+          "Check $x=2$: $6\\cdot 3^{2}=6\\cdot 9=54$. It fits."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A bacteria count is modeled by $y=4\\cdot 3^{x}$, where $x$ is the number of hours. Predict the count at $x=4$ hours.",
+      "answer": "$324$",
+      "solution": {
+        "steps": [
+          "Substitute $x=4$: $y=4\\cdot 3^{4}$.",
+          "Evaluate the power: $3^{4}=81$.",
+          "Multiply: $y=4\\cdot 81=324$.",
+          "The predicted count is $324$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A model predicts $\\hat{y}=5x+3$. At $x=4$ the actual observed value is $26$. Compute the residual $y_{\\text{actual}}-y_{\\text{predicted}}$ and state whether the model over- or underestimates.",
+      "answer": "$3$; the model underestimates",
+      "solution": {
+        "steps": [
+          "Find the predicted value at $x=4$: $\\hat{y}=5(4)+3=23$.",
+          "Residual $=y_{\\text{actual}}-y_{\\text{predicted}}=26-23=3$.",
+          "The residual is positive, so the actual value is above the prediction.",
+          "The model underestimates by $3$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A savings balance is modeled by $y=2000\\cdot 1.04^{x}$, where $x$ is the number of years. Interpret the initial value $2000$ and the base $1.04$ in context.",
+      "answer": "$2000$ is the starting balance in dollars; the base $1.04$ means the balance grows by $4\\%$ each year.",
+      "solution": {
+        "steps": [
+          "At $x=0$, $y=2000\\cdot 1.04^{0}=2000$, so $2000$ is the initial deposit (starting balance).",
+          "The base of an exponential model is $1+r$, where $r$ is the growth rate.",
+          "Here $1.04=1+0.04$, so $r=0.04=4\\%$.",
+          "The balance grows by $4\\%$ per year, starting from $\\$2000$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A table of paired data is $(0,5),(1,8),(2,17),(3,32),(4,53)$. Decide whether the data is linear, quadratic, or exponential by testing first and second differences, then write the model in the form $y=ax^2+bx+c$.",
+      "answer": "Quadratic; $y=3x^2+5$",
+      "solution": {
+        "steps": [
+          "First differences: $8-5=3$, $17-8=9$, $32-17=15$, $53-32=21$. Not constant, so not linear.",
+          "Second differences: $9-3=6$, $15-9=6$, $21-15=6$. Constant $6$, so the data is quadratic.",
+          "For a quadratic, the second difference equals $2a$, so $2a=6$ giving $a=3$.",
+          "At $x=0$, $y=5$, so $c=5$.",
+          "Use $x=1$: $a+b+c=8$, i.e. $3+b+5=8$, so $b=0$.",
+          "The model is $y=3x^2+5$. Check $x=3$: $3(9)+5=32$. It fits."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Two data sets both curve upward. Set P is $(0,2),(1,8),(2,32),(3,128)$ and Set Q is $(0,2),(1,8),(2,18),(3,32)$. Identify the function family of each set and write its model.",
+      "answer": "Set P is exponential, $y=2\\cdot 4^{x}$; Set Q is quadratic, $y=2x^2+4x+2$",
+      "solution": {
+        "steps": [
+          "Set P ratios: $\\frac{8}{2}=4$, $\\frac{32}{8}=4$, $\\frac{128}{32}=4$. Constant ratio $4$, so Set P is exponential with $a=2$ and $b=4$: $y=2\\cdot 4^{x}$.",
+          "Set Q first differences: $8-2=6$, $18-8=10$, $32-18=14$ (not constant); second differences: $10-6=4$, $14-10=4$ (constant), so Set Q is quadratic.",
+          "For a quadratic the second difference equals $2a$, so $2a=4$ gives $a=2$.",
+          "At $x=0$, $y=2$, so $c=2$. Use $x=1$: $a+b+c=8$, i.e. $2+b+2=8$, so $b=4$.",
+          "The model is $y=2x^2+4x+2$. Check $x=3$: $2(9)+4(3)+2=18+12+2=32$. It fits.",
+          "Final: Set P is exponential $y=2\\cdot 4^{x}$; Set Q is quadratic $y=2x^2+4x+2$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Population data is modeled by $y=3\\cdot 10^{x}$. Linearize the data by computing $\\log y$ as a function of $x$, and state the slope and $y$-intercept of the resulting line in the $(x,\\log y)$ plane.",
+      "answer": "$\\log y = x + \\log 3$; slope $1$, intercept $\\log 3$",
+      "solution": {
+        "steps": [
+          "Start from $y=3\\cdot 10^{x}$ and take $\\log$ (base $10$) of both sides: $\\log y=\\log\\left(3\\cdot 10^{x}\\right)$.",
+          "Use the product rule: $\\log y=\\log 3+\\log 10^{x}$.",
+          "Use the power rule and $\\log 10=1$: $\\log 10^{x}=x\\log 10=x$.",
+          "So $\\log y=x+\\log 3$, a line in $(x,\\log y)$ with slope $1$ and intercept $\\log 3$.",
+          "The constant slope confirms the data is exponential."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A line $\\hat{y}=2x+1$ is fit to the data $(1,2),(2,7),(3,8),(4,11),(5,16)$. Compute the residual $y_{\\text{actual}}-y_{\\text{predicted}}$ at each point and decide, from the pattern of signs, whether a line is the right model family.",
+      "answer": "Residuals $-1,+2,+1,+2,+5$; they trend upward (mostly positive and growing), so the line is not the right family and a curved (e.g. quadratic or exponential) model fits better.",
+      "solution": {
+        "steps": [
+          "At $x=1$: $\\hat{y}=2(1)+1=3$, residual $=2-3=-1$.",
+          "At $x=2$: $\\hat{y}=5$, residual $=7-5=+2$.",
+          "At $x=3$: $\\hat{y}=7$, residual $=8-7=+1$.",
+          "At $x=4$: $\\hat{y}=9$, residual $=11-9=+2$.",
+          "At $x=5$: $\\hat{y}=11$, residual $=16-11=+5$.",
+          "The residuals $-1,+2,+1,+2,+5$ do not scatter randomly about $0$; they start negative then stay positive and grow, a systematic pattern.",
+          "A patterned (non-random) residual plot means the line is the wrong family; a curved model fits the data better."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "The number of users of an app (in thousands) over $x$ months is $(0,4),(1,8),(2,16),(3,32),(4,64)$. Determine the function family, write the model, use it to predict the number of users at $x=6$ months, and interpret the base in context.",
+      "answer": "Exponential; $y=4\\cdot 2^{x}$; at $x=6$, $y=256$ thousand users; the base $2$ means the user count doubles each month.",
+      "solution": {
+        "steps": [
+          "Ratios: $\\frac{8}{4}=2$, $\\frac{16}{8}=2$, $\\frac{32}{16}=2$, $\\frac{64}{32}=2$. Constant ratio, so the data is exponential.",
+          "Initial value at $x=0$ is $a=4$; common ratio is $b=2$, so $y=4\\cdot 2^{x}$.",
+          "Predict at $x=6$: $y=4\\cdot 2^{6}=4\\cdot 64=256$, i.e. $256$ thousand users.",
+          "The base $2$ is the growth factor: each month the user count is multiplied by $2$, so it doubles every month."
+        ]
+      }
+    }
+  ]
+}

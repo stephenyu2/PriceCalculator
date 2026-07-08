@@ -1,0 +1,130 @@
+{
+  "standard": "6.SP.A.2",
+  "grade": "6",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Develop understanding of statistical variability",
+  "clusterCode": "A",
+  "skillName": "Data Distributions",
+
+  "description": "Students understand that a set of data answering a statistical question forms a distribution, and that a distribution is described by three things: its center (a typical value, such as the mean or median), its spread (how much the values vary, such as the range or interquartile range), and its overall shape (symmetric, skewed left, skewed right, uniform, or with clusters, gaps, peaks, and outliers). Given a small data set or a display such as a dot plot or histogram, they describe center, spread, and shape in words and with simple numbers, and they choose which features matter for answering a question. Computation here is light: students read and reason about distributions rather than running heavy calculations.",
+
+  "subSkills": [
+    "Recognize that the answers to a statistical question vary and together form a distribution",
+    "Identify the center of a distribution and describe a typical value (mean or median)",
+    "Describe the spread of a distribution informally (range) and recognize how tightly or widely data are clustered",
+    "Describe the overall shape of a distribution: symmetric, skewed left, skewed right, uniform, or bimodal",
+    "Identify features of a distribution such as clusters, gaps, peaks, and outliers from a dot plot or histogram",
+    "Read a dot plot or small histogram and report center, spread, and shape together",
+    "Connect a verbal description of center/spread/shape back to the matching data display"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Identify center from a small data set",
+      "example": "A statistical question produced the data $4, 5, 5, 6, 6, 6, 7, 8$ hours of sleep. Describe a typical value (the center). (Answer: the median is $6$ hours and the mean is $\\frac{47}{8}=5.875$ hours, so a typical value is about $6$ hours.)"
+    },
+    {
+      "name": "Describe spread informally (range / clustering)",
+      "example": "The daily high temperatures for a week were $68, 70, 71, 72, 73, 90, 95$ degrees. Describe the spread. (Answer: the range is $95-68=27$ degrees; most values cluster between $68$ and $73$, with two warmer days spreading the data out.)"
+    },
+    {
+      "name": "Describe the overall shape",
+      "example": "On a dot plot of quiz scores, the dots pile up on the right near the high scores and trail off toward the left with a few low scores. Describe the shape. (Answer: the distribution is skewed left, because the tail extends toward the lower values.)"
+    },
+    {
+      "name": "Identify clusters, gaps, peaks, and outliers",
+      "example": "A dot plot of the number of pets per family shows a tall stack at $0$ and $1$, a gap, and a single dot at $9$. Name the features. (Answer: a peak (cluster) at $0$ to $1$, a gap between $2$ and $8$, and an outlier at $9$.)"
+    },
+    {
+      "name": "Read center, spread, and shape together from a display",
+      "example": "A dot plot shows ages clustered symmetrically around $11$, ranging from $9$ to $13$. Give the center, spread, and shape. (Answer: center about $11$ years; spread (range) is $13-9=4$ years; shape is roughly symmetric.)"
+    },
+    {
+      "name": "Match a description to a distribution",
+      "example": "Which data set is skewed right: $\\{2,2,3,3,3,4,4\\}$ or $\\{1,1,1,2,2,3,9\\}$? (Answer: $\\{1,1,1,2,2,3,9\\}$, because the values pile up at the low end and a long tail reaches toward the high value $9$.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single feature is asked about from a short data set (5 to 8 values) or a clean, clearly shaped display. The student names one of center, spread, or shape with an obvious answer and little computation.",
+      "constraints": [
+        "Data set has 5 to 8 values, or a dot plot with an unmistakable shape (clearly symmetric or one obvious outlier)",
+        "Only one feature is requested (just the center, just the range, or just the shape)",
+        "Center is the median or an easy mean with a small whole-number or simple result; spread is the range $\\max-\\min$",
+        "Shape choices are clear-cut: symmetric, skewed, uniform, or one visible outlier",
+        "Familiar contexts (hours of sleep, pets, test scores, temperatures)"
+      ]
+    },
+    "Medium": {
+      "description": "Two features are combined, or the display must be read more carefully. The student reports center and spread together, or names a shape and justifies it using clusters/gaps/peaks. Some light computation (a mean of 6 to 10 values, a range, or counting dots) is required.",
+      "constraints": [
+        "Data set has 8 to 12 values, or a histogram with several bars to read",
+        "Two features requested together (e.g. center and spread, or shape and outlier)",
+        "Shape is named and justified by referring to a tail, a gap, or a peak",
+        "May ask which measure of center is more typical when an outlier is present",
+        "Mean requires summing 6 to 10 values; range requires identifying max and min from a display"
+      ]
+    },
+    "Hard": {
+      "description": "All three features (center, spread, shape) are described together, or the student must reason about how an outlier or a change in the data affects the distribution, or match/critique a description against a display. Requires interpretation and justification, not just reading off a value.",
+      "constraints": [
+        "Student reports center, spread, AND shape for one distribution, or compares two distributions",
+        "Reasoning about effect of an outlier on the mean vs. median, or how shape explains which center is more typical",
+        "Match a verbal description to the correct display, or explain why a given description is wrong",
+        "May involve a bimodal distribution, a clear cluster-and-gap structure, or deciding whether a value is an outlier and what it does to the spread",
+        "Histogram or dot plot with 10 or more data values and multiple notable features"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student confuses center with spread, reporting how varied the data are when asked for a typical value (or vice versa)",
+      "distractor": "Answers the range ($95-68=27$) when asked for the center, or names the median when asked how spread out the data are"
+    },
+    {
+      "misconception": "Student reverses skew direction, naming the side where the data pile up instead of the side the tail points toward",
+      "distractor": "Calls a long-left-tail distribution 'skewed right' because most dots sit on the right"
+    },
+    {
+      "misconception": "Student treats every high or low value as an outlier, or ignores a true outlier",
+      "distractor": "Labels the largest ordinary value an outlier, or reports no outlier when a single far-away point clearly separates from a gap"
+    },
+    {
+      "misconception": "Student computes the mean by dividing by the wrong count or by adding the values without dividing",
+      "distractor": "Reports the sum $47$ as the center instead of $\\frac{47}{8}$, or divides by the largest value rather than the number of data points"
+    },
+    {
+      "misconception": "Student believes the mean is always the best typical value even when a strong outlier pulls it away from the bulk of the data",
+      "distractor": "Uses a mean inflated by an outlier (e.g. $\\frac{1+1+1+2+2+3+9}{7}\\approx 2.7$) as the typical value instead of recognizing the median $2$ better represents the cluster"
+    },
+    {
+      "misconception": "Student calls a clearly skewed or clustered distribution 'symmetric', not noticing the tail, gap, or off-center peak",
+      "distractor": "Describes $\\{1,1,1,2,2,3,9\\}$ as symmetric, overlooking the long tail toward $9$"
+    },
+    {
+      "misconception": "Student thinks a statistical question has one single answer and so denies the data form a distribution",
+      "distractor": "Claims 'the number of pets is $1$' (a single value) instead of recognizing the answers vary and spread across a distribution"
+    },
+    {
+      "misconception": "Student reports range as a list of the smallest and largest values rather than their difference",
+      "distractor": "Gives the range as '$68$ to $95$' or '$68, 95$' instead of $95-68=27$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "standard": "A2.F-TF.A.2",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Functions — Trigonometric Functions",
+  "domainCode": "F-TF",
+  "cluster": "Extend the domain of trigonometric functions using the unit circle",
+  "clusterCode": "A",
+  "skillName": "Unit Circle and Trig Functions",
+
+  "description": "Students use the unit circle in the coordinate plane to extend $\\sin$, $\\cos$, and $\\tan$ to any real-number input, understanding that a real number $t$ is the radian measure of an angle traversed counterclockwise from the positive $x$-axis, that the terminal point on the unit circle has coordinates $(\\cos t, \\sin t)$, and that $\\tan t = \\frac{\\sin t}{\\cos t}$. They locate terminal points for benchmark angles, evaluate the trig functions of any real number using reference angles and quadrant signs, handle angles outside $[0, 2\\pi)$ by using coterminal angles, and explain why the functions are periodic and defined for all reals. Exact values are expressed with radicals, $\\pi$, and fractions; decimals appear only when an approximation is explicitly requested.",
+
+  "subSkills": [
+    "Interpret a real number $t$ as the radian measure of an angle traversed counterclockwise around the unit circle from the positive $x$-axis",
+    "Identify the terminal point $(\\cos t, \\sin t)$ on the unit circle for a benchmark angle",
+    "Determine the quadrant (or axis) of a terminal point and the signs of $\\cos t$, $\\sin t$, and $\\tan t$ there",
+    "Find the reference angle for any angle and use it to evaluate trig functions of non-first-quadrant angles",
+    "Evaluate $\\sin t$, $\\cos t$, and $\\tan t$ exactly for benchmark angles, including negative inputs and inputs outside $[0, 2\\pi)$ via coterminal angles",
+    "Use the relationship $\\tan t = \\frac{\\sin t}{\\cos t}$ and recognize where $\\tan t$ is undefined",
+    "Explain how the unit circle extends the domain of the trig functions to all real numbers and why the functions are periodic"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Terminal point coordinates",
+      "example": "Give the coordinates of the terminal point on the unit circle for $t = \\frac{2\\pi}{3}$. Answer: $\\left(-\\frac{1}{2}, \\frac{\\sqrt{3}}{2}\\right)$."
+    },
+    {
+      "name": "Sign / quadrant of trig values",
+      "example": "If the terminal side of $t$ lies in Quadrant III, what are the signs of $\\cos t$, $\\sin t$, and $\\tan t$? Answer: $\\cos t < 0$, $\\sin t < 0$, $\\tan t > 0$."
+    },
+    {
+      "name": "Reference angle",
+      "example": "Find the reference angle for $t = \\frac{7\\pi}{6}$. Answer: $\\frac{\\pi}{6}$."
+    },
+    {
+      "name": "Exact value of sine or cosine",
+      "example": "Evaluate $\\cos\\frac{5\\pi}{4}$ exactly. Answer: $-\\frac{\\sqrt{2}}{2}$."
+    },
+    {
+      "name": "Exact value of tangent (including undefined)",
+      "example": "Evaluate $\\tan\\frac{\\pi}{2}$. Answer: undefined (since $\\cos\\frac{\\pi}{2} = 0$)."
+    },
+    {
+      "name": "Negative or coterminal input",
+      "example": "Evaluate $\\sin\\left(-\\frac{\\pi}{3}\\right)$ exactly. Answer: $-\\frac{\\sqrt{3}}{2}$."
+    },
+    {
+      "name": "Input outside one revolution",
+      "example": "Evaluate $\\cos\\frac{13\\pi}{6}$ by first finding a coterminal angle in $[0, 2\\pi)$. Answer: $\\cos\\frac{\\pi}{6} = \\frac{\\sqrt{3}}{2}$."
+    },
+    {
+      "name": "Conceptual: domain extension and periodicity",
+      "example": "Explain why $\\sin t$ is defined for every real number $t$ and why $\\sin(t + 2\\pi) = \\sin t$. Answer: any real $t$ names one counterclockwise (or clockwise, if negative) trip around the unit circle, landing on a unique terminal point whose $y$-coordinate is $\\sin t$; adding $2\\pi$ returns to the same point."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recall or direct reading of a benchmark value. The input is a first-quadrant or axis benchmark angle ($0$, $\\frac{\\pi}{6}$, $\\frac{\\pi}{4}$, $\\frac{\\pi}{3}$, $\\frac{\\pi}{2}$, $\\pi$, $\\frac{3\\pi}{2}$, $2\\pi$) given in $[0, 2\\pi)$, requiring no reference-angle or sign reasoning beyond the obvious. These items open a ramped worksheet and form the lower half of tier1.",
+      "constraints": [
+        "Input is a first-quadrant benchmark or a quadrantal angle ($0$, $\\frac{\\pi}{2}$, $\\pi$, $\\frac{3\\pi}{2}$)",
+        "Evaluate one of $\\sin t$, $\\cos t$, or read the terminal point directly",
+        "No negative inputs and no inputs outside $[0, 2\\pi)$",
+        "Sign is positive (Quadrant I) or trivially determined on an axis",
+        "Answer is a clean benchmark value such as $\\frac{1}{2}$, $\\frac{\\sqrt{2}}{2}$, $\\frac{\\sqrt{3}}{2}$, $0$, or $1$"
+      ]
+    },
+    "Medium": {
+      "description": "Two steps: identify the quadrant, find the reference angle, and apply the correct sign to a benchmark value. Inputs are second-, third-, or fourth-quadrant benchmark angles in $[0, 2\\pi)$, including tangent evaluations. This band spans the upper half of tier1 and the lower half of tier2.",
+      "constraints": [
+        "Input is a benchmark angle in Quadrant II, III, or IV (such as $\\frac{2\\pi}{3}$, $\\frac{5\\pi}{4}$, $\\frac{11\\pi}{6}$)",
+        "Requires finding the reference angle and applying the quadrant sign",
+        "May ask for $\\tan t$, including recognizing where it is positive or negative",
+        "May ask for the full terminal point $(\\cos t, \\sin t)$ in a non-first quadrant",
+        "Answer is a signed benchmark value with the sign justified by quadrant"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step: reduce a negative input or an input outside $[0, 2\\pi)$ to a coterminal benchmark angle, then evaluate; recognize undefined tangents; or give a conceptual explanation of domain extension or periodicity. These items close a ramped worksheet and form the upper half of tier2.",
+      "constraints": [
+        "Negative input or input outside $[0, 2\\pi)$ requiring a coterminal reduction first",
+        "Tangent evaluations including undefined cases ($\\cos t = 0$)",
+        "Conceptual: explain why the domain extends to all reals, or why $\\sin(t + 2\\pi) = \\sin t$ and $\\cos(-t) = \\cos t$",
+        "Multi-part: reduce, identify quadrant, then evaluate sine, cosine, and tangent of the same angle",
+        "Use a given trig value plus a quadrant condition to find a second trig value via the unit-circle relation $\\cos^2 t + \\sin^2 t = 1$"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student swaps sine and cosine, reading the $x$-coordinate as $\\sin t$ and the $y$-coordinate as $\\cos t$",
+      "distractor": "For $t = \\frac{2\\pi}{3}$ reports the terminal point as $\\left(\\frac{\\sqrt{3}}{2}, -\\frac{1}{2}\\right)$, or gives $\\sin\\frac{\\pi}{6} = \\frac{\\sqrt{3}}{2}$ instead of $\\frac{1}{2}$"
+    },
+    {
+      "misconception": "Student applies the wrong quadrant sign, using the first-quadrant (positive) value without negating",
+      "distractor": "Evaluates $\\cos\\frac{5\\pi}{4}$ as $\\frac{\\sqrt{2}}{2}$ instead of $-\\frac{\\sqrt{2}}{2}$, ignoring that the terminal point is in Quadrant III"
+    },
+    {
+      "misconception": "Student computes the reference angle incorrectly, measuring from the wrong axis or subtracting from the wrong benchmark",
+      "distractor": "Gives the reference angle of $\\frac{7\\pi}{6}$ as $\\frac{5\\pi}{6}$ (measuring from $\\pi$ the wrong way) instead of $\\frac{\\pi}{6}$"
+    },
+    {
+      "misconception": "Student inverts the tangent ratio, computing $\\frac{\\cos t}{\\sin t}$ instead of $\\frac{\\sin t}{\\cos t}$",
+      "distractor": "Reports $\\tan\\frac{\\pi}{3} = \\frac{1}{\\sqrt{3}} = \\frac{\\sqrt{3}}{3}$ instead of $\\sqrt{3}$"
+    },
+    {
+      "misconception": "Student treats the period as $\\pi$ instead of $2\\pi$ when reducing a large or coterminal angle for sine or cosine",
+      "distractor": "Reduces $\\frac{13\\pi}{6}$ by subtracting $\\pi$ to get $\\frac{7\\pi}{6}$ and reports $\\cos\\frac{13\\pi}{6} = -\\frac{\\sqrt{3}}{2}$ instead of subtracting $2\\pi$ to get $\\frac{\\sqrt{3}}{2}$"
+    },
+    {
+      "misconception": "Student mishandles negative inputs, treating clockwise rotation as counterclockwise and using the wrong sign",
+      "distractor": "Evaluates $\\sin\\left(-\\frac{\\pi}{3}\\right)$ as $\\frac{\\sqrt{3}}{2}$ instead of $-\\frac{\\sqrt{3}}{2}$, forgetting that a negative angle rotates clockwise into Quadrant IV"
+    },
+    {
+      "misconception": "Student calls a defined tangent undefined (or a undefined tangent zero) by confusing where $\\sin t = 0$ with where $\\cos t = 0$",
+      "distractor": "Claims $\\tan\\pi$ is undefined (it is $0$) or claims $\\tan\\frac{\\pi}{2} = 0$ instead of recognizing it is undefined because $\\cos\\frac{\\pi}{2} = 0$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

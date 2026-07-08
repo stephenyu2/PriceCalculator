@@ -1,0 +1,148 @@
+{
+  "id": "7.SP.C.8--quiz",
+  "standard": "7.SP.C.8",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate chance processes and develop, use, and evaluate probability models",
+  "clusterCode": "C",
+  "skillName": "Compound Events",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "Eight multiple-choice questions on the probability of compound events: listing the sample space with organized lists, tables, and tree diagrams, working with independent and dependent events, and interpreting a simulation.",
+  "items": [
+    {
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "A spinner is split into three equal sections: red, blue, and green. You spin the spinner once and flip a fair coin. What is the probability of getting green and heads?\nA) $\\frac{1}{6}$\nB) $\\frac{5}{6}$\nC) $\\frac{1}{5}$\nD) $\\frac{1}{2}$",
+      "answer": "A) $\\frac{1}{6}$",
+      "solution": {
+        "steps": [
+          "List the sample space of the two stages: $\\{$red-H, red-T, blue-H, blue-T, green-H, green-T$\\}$, which is $6$ equally likely outcomes.",
+          "Exactly one outcome, green-H, is green and heads, so $P(\\text{green and heads})=\\frac{1}{6}$.",
+          "A) $\\frac{1}{6}$ is correct.",
+          "B) $\\frac{5}{6}$ comes from adding the stage probabilities, $\\frac{1}{3}+\\frac{1}{2}$, instead of using the joint sample space.",
+          "C) $\\frac{1}{5}$ wrongly counts $5$ total outcomes. D) $\\frac{1}{2}$ uses only the coin and ignores the spinner."
+        ],
+        "answer": "A) $\\frac{1}{6}$"
+      }
+    },
+    {
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "A fair coin is flipped twice. Using the sample space $\\{HH, HT, TH, TT\\}$, what is the probability of getting exactly one head?\nA) $\\frac{1}{3}$\nB) $\\frac{1}{2}$\nC) $\\frac{1}{4}$\nD) $\\frac{3}{4}$",
+      "answer": "B) $\\frac{1}{2}$",
+      "solution": {
+        "steps": [
+          "The sample space has $4$ equally likely ordered outcomes: $HH, HT, TH, TT$.",
+          "Exactly one head occurs in $HT$ and $TH$, which is $2$ outcomes, so $P=\\frac{2}{4}=\\frac{1}{2}$.",
+          "B) $\\frac{1}{2}$ is correct.",
+          "A) $\\frac{1}{3}$ comes from merging $HT$ and $TH$ into one outcome and using only $3$ outcomes.",
+          "C) $\\frac{1}{4}$ counts only one favorable outcome. D) $\\frac{3}{4}$ counts 'at least one head' instead of exactly one."
+        ],
+        "answer": "B) $\\frac{1}{2}$"
+      }
+    },
+    {
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "A bag has cards numbered $1, 2, 3, 4$. You draw one card, replace it, then draw a second card. What is the probability that both cards show the number $2$?\nA) $\\frac{1}{8}$\nB) $\\frac{1}{4}$\nC) $\\frac{1}{16}$\nD) $\\frac{2}{4}$",
+      "answer": "C) $\\frac{1}{16}$",
+      "solution": {
+        "steps": [
+          "Because the card is replaced, the two draws are independent and each has $4$ equally likely outcomes, giving $4\\times 4=16$ outcomes in the sample space.",
+          "Only one outcome, $(2,2)$, is favorable, so $P=\\frac{1}{16}$.",
+          "C) $\\frac{1}{16}$ is correct.",
+          "A) $\\frac{1}{8}$ adds the chances $\\frac{1}{4}+\\frac{1}{4}$ instead of using the joint space.",
+          "B) $\\frac{1}{4}$ accounts for only one draw. D) $\\frac{2}{4}$ misreads the question as drawing a $2$ at all."
+        ],
+        "answer": "C) $\\frac{1}{16}$"
+      }
+    },
+    {
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Two fair number cubes are rolled and a $6\\times 6$ table of the $36$ equally likely outcomes is made. What is the probability that the sum of the two cubes is $7$?\nA) $\\frac{1}{12}$\nB) $\\frac{1}{6}$\nC) $\\frac{1}{36}$\nD) $\\frac{5}{36}$",
+      "answer": "B) $\\frac{1}{6}$",
+      "solution": {
+        "steps": [
+          "The full sample space has $6\\times 6=36$ equally likely ordered outcomes.",
+          "The ordered pairs with sum $7$ are $(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)$, which is $6$ favorable outcomes.",
+          "So $P(\\text{sum}=7)=\\frac{6}{36}=\\frac{1}{6}$. B) is correct.",
+          "A) $\\frac{1}{12}$ counts only $3$ outcomes by ignoring the symmetric reversed pairs.",
+          "C) $\\frac{1}{36}$ counts one outcome. D) $\\frac{5}{36}$ is the count for a sum of $6$ or $8$, not $7$."
+        ],
+        "answer": "B) $\\frac{1}{6}$"
+      }
+    },
+    {
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "A fair coin is flipped three times. Using a tree diagram of the $8$ equally likely outcomes, what is the probability of getting exactly two heads?\nA) $\\frac{3}{8}$\nB) $\\frac{1}{8}$\nC) $\\frac{1}{2}$\nD) $\\frac{2}{8}$",
+      "answer": "A) $\\frac{3}{8}$",
+      "solution": {
+        "steps": [
+          "The tree diagram gives $2\\times 2\\times 2=8$ equally likely outcomes: $HHH, HHT, HTH, HTT, THH, THT, TTH, TTT$.",
+          "Exactly two heads occurs in $HHT, HTH, THH$, which is $3$ outcomes, so $P=\\frac{3}{8}$.",
+          "A) $\\frac{3}{8}$ is correct.",
+          "B) $\\frac{1}{8}$ counts only $HHH$ (all heads). D) $\\frac{2}{8}$ undercounts the favorable outcomes.",
+          "C) $\\frac{1}{2}$ wrongly assumes two heads and one tail is equally likely as a single event with the others."
+        ],
+        "answer": "A) $\\frac{3}{8}$"
+      }
+    },
+    {
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Two fair coins are flipped. What is the probability of getting at least one head?\nA) $\\frac{1}{4}$\nB) $\\frac{1}{2}$\nC) $\\frac{3}{4}$\nD) $\\frac{1}{3}$",
+      "answer": "C) $\\frac{3}{4}$",
+      "solution": {
+        "steps": [
+          "The sample space is $\\{HH, HT, TH, TT\\}$, which is $4$ equally likely outcomes.",
+          "At least one head occurs in $HH, HT, TH$, which is $3$ outcomes, so $P=\\frac{3}{4}$.",
+          "C) $\\frac{3}{4}$ is correct.",
+          "A) $\\frac{1}{4}$ is $P(\\text{no heads})$, the complement, not 'at least one head'.",
+          "B) $\\frac{1}{2}$ counts only exactly one head. D) $\\frac{1}{3}$ comes from merging $HT$ and $TH$ into one outcome."
+        ],
+        "answer": "C) $\\frac{3}{4}$"
+      }
+    },
+    {
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A bag holds $3$ red marbles and $2$ blue marbles. Two marbles are drawn without replacement. What is the probability that both are red?\nA) $\\frac{9}{25}$\nB) $\\frac{3}{10}$\nC) $\\frac{6}{10}$\nD) $\\frac{1}{2}$",
+      "answer": "B) $\\frac{3}{10}$",
+      "solution": {
+        "steps": [
+          "On the first draw there are $3$ red out of $5$ marbles, so $P(\\text{first red})=\\frac{3}{5}$.",
+          "Because the first marble is not replaced, the second draw has $2$ red out of $4$ remaining marbles, so $P(\\text{second red}\\mid\\text{first red})=\\frac{2}{4}$.",
+          "Multiply for the compound event: $\\frac{3}{5}\\cdot\\frac{2}{4}=\\frac{6}{20}=\\frac{3}{10}$. B) is correct.",
+          "A) $\\frac{9}{25}$ treats the draw as with replacement, using $\\frac{3}{5}\\cdot\\frac{3}{5}$.",
+          "C) $\\frac{6}{10}$ forgets to reduce and miscounts the denominator. D) $\\frac{1}{2}$ ignores the changing totals entirely."
+        ],
+        "answer": "B) $\\frac{3}{10}$"
+      }
+    },
+    {
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A cereal box contains one of $4$ equally likely prizes. To estimate the probability of collecting all $4$ different prizes in $4$ boxes, a student assigns digits $1, 2, 3, 4$ to the prizes (ignoring $0$ and $5$ through $9$) and reads digits from a random table in groups of $4$, where each group of four usable digits is one trial. Which choice describes how a single trial should be set up and counted as a success?\nA) Read $1$ digit per trial; success if the digit is $4$.\nB) Read $4$ digits per trial; success if all four digits are different.\nC) Read $4$ digits per trial; success if any digit repeats.\nD) Read $2$ digits per trial; success if the two digits are different.",
+      "answer": "B) Read $4$ digits per trial; success if all four digits are different.",
+      "solution": {
+        "steps": [
+          "Each box is one prize, so opening $4$ boxes means reading $4$ usable digits, one per box. A trial is therefore a group of $4$ digits.",
+          "Collecting all $4$ different prizes means the four digits in the trial are all different, so that is the definition of a success.",
+          "B) correctly uses $4$ digits per trial and counts all-different as success.",
+          "A) reads only $1$ digit, modeling a single box, not $4$, so it cannot estimate getting all four prizes.",
+          "C) reverses the success condition (a repeat means a prize was missed), and D) uses only $2$ digits, modeling just $2$ boxes."
+        ],
+        "answer": "B) Read $4$ digits per trial; success if all four digits are different."
+      }
+    }
+  ]
+}

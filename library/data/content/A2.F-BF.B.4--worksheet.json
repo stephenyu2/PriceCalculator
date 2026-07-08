@@ -1,0 +1,233 @@
+{
+  "id": "A2.F-BF.B.4--worksheet",
+  "standard": "A2.F-BF.B.4",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Functions — Building Functions",
+  "domainCode": "F-BF",
+  "cluster": "Build new functions from existing functions",
+  "clusterCode": "B",
+  "skillName": "Inverse Functions",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "Find inverses, evaluate them, verify them by composition, and reason about when an inverse function exists. This worksheet ramps from straightforward linear inverses through radical, cubic, and restricted-quadratic forms, up to rational inverses, two-direction verification, and domain-restriction problems.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Find the inverse of $f(x)=x+8$.",
+      "answer": "$f^{-1}(x)=x-8$",
+      "solution": {
+        "steps": [
+          "Write $y=x+8$.",
+          "Solve for $x$: $x=y-8$.",
+          "Swap $x$ and $y$: $y=x-8$.",
+          "So $f^{-1}(x)=x-8$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Find the inverse of $f(x)=4x$.",
+      "answer": "$f^{-1}(x)=\\frac{x}{4}$",
+      "solution": {
+        "steps": [
+          "Write $y=4x$.",
+          "Solve for $x$: $x=\\frac{y}{4}$.",
+          "Swap $x$ and $y$: $y=\\frac{x}{4}$.",
+          "So $f^{-1}(x)=\\frac{x}{4}$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Find the inverse of $f(x)=3x-7$.",
+      "answer": "$f^{-1}(x)=\\frac{x+7}{3}$",
+      "solution": {
+        "steps": [
+          "Write $y=3x-7$.",
+          "Add $7$ to both sides: $y+7=3x$.",
+          "Divide by $3$: $x=\\frac{y+7}{3}$.",
+          "Swap $x$ and $y$: $y=\\frac{x+7}{3}$.",
+          "So $f^{-1}(x)=\\frac{x+7}{3}$. The operations are undone in reverse order: first the $-7$, then the $\\times 3$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Given $f(x)=2x+5$, find $f^{-1}(11)$.",
+      "answer": "$f^{-1}(11)=3$",
+      "solution": {
+        "steps": [
+          "We need the input that produces output $11$, so solve $2x+5=11$.",
+          "Subtract $5$: $2x=6$.",
+          "Divide by $2$: $x=3$.",
+          "Since $f(3)=11$, by the rule $f(a)=b\\Rightarrow f^{-1}(b)=a$ we get $f^{-1}(11)=3$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A function has $f(1)=4$, $f(2)=9$, and $f(3)=16$. Find $f^{-1}(9)$.",
+      "answer": "$f^{-1}(9)=2$",
+      "solution": {
+        "steps": [
+          "The inverse reverses inputs and outputs: if $f(a)=b$ then $f^{-1}(b)=a$.",
+          "Here $f(2)=9$, so the input that gives output $9$ is $2$.",
+          "Therefore $f^{-1}(9)=2$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Find the inverse of $f(x)=\\sqrt{x-2}$ for $x\\ge 2$, and state its domain.",
+      "answer": "$f^{-1}(x)=x^2+2$ for $x\\ge 0$",
+      "solution": {
+        "steps": [
+          "Write $y=\\sqrt{x-2}$.",
+          "Square both sides to undo the radical: $y^2=x-2$.",
+          "Add $2$: $x=y^2+2$.",
+          "Swap $x$ and $y$: $y=x^2+2$, so $f^{-1}(x)=x^2+2$.",
+          "The range of $f$ is $y\\ge 0$, which becomes the domain of $f^{-1}$, so $f^{-1}(x)=x^2+2$ for $x\\ge 0$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Find the inverse of $f(x)=x^3+5$.",
+      "answer": "$f^{-1}(x)=\\sqrt[3]{x-5}$",
+      "solution": {
+        "steps": [
+          "Write $y=x^3+5$.",
+          "Subtract $5$: $y-5=x^3$.",
+          "Take the cube root of both sides: $x=\\sqrt[3]{y-5}$.",
+          "Swap $x$ and $y$: $y=\\sqrt[3]{x-5}$.",
+          "So $f^{-1}(x)=\\sqrt[3]{x-5}$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Find the inverse of $f(x)=x^2+1$ for $x\\ge 0$.",
+      "answer": "$f^{-1}(x)=\\sqrt{x-1}$",
+      "solution": {
+        "steps": [
+          "Write $y=x^2+1$.",
+          "Subtract $1$: $y-1=x^2$.",
+          "Take the square root: $x=\\pm\\sqrt{y-1}$.",
+          "Because the domain is restricted to $x\\ge 0$, keep only the nonnegative branch: $x=\\sqrt{y-1}$.",
+          "Swap $x$ and $y$: $y=\\sqrt{x-1}$, so $f^{-1}(x)=\\sqrt{x-1}$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Verify by composition that $f(x)=\\frac{x}{4}-1$ and $g(x)=4x+4$ are inverses by computing $f(g(x))$.",
+      "answer": "$f(g(x))=x$, so $g$ is the inverse of $f$",
+      "solution": {
+        "steps": [
+          "Substitute $g(x)=4x+4$ into $f$: $f(g(x))=\\frac{4x+4}{4}-1$.",
+          "Simplify the fraction: $\\frac{4x+4}{4}=x+1$.",
+          "So $f(g(x))=(x+1)-1=x$.",
+          "Since $f(g(x))=x$, the functions undo each other, confirming they are inverses."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Find the inverse of $f(x)=2\\sqrt{x}+3$ for $x\\ge 0$, and state its domain.",
+      "answer": "$f^{-1}(x)=\\left(\\frac{x-3}{2}\\right)^2$ for $x\\ge 3$",
+      "solution": {
+        "steps": [
+          "Write $y=2\\sqrt{x}+3$.",
+          "Subtract $3$: $y-3=2\\sqrt{x}$.",
+          "Divide by $2$: $\\frac{y-3}{2}=\\sqrt{x}$.",
+          "Square both sides: $x=\\left(\\frac{y-3}{2}\\right)^2$.",
+          "Swap $x$ and $y$: $f^{-1}(x)=\\left(\\frac{x-3}{2}\\right)^2$.",
+          "The range of $f$ is $y\\ge 3$ (since $\\sqrt{x}\\ge 0$), so the domain of $f^{-1}$ is $x\\ge 3$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Find the inverse of $f(x)=\\frac{x+3}{x-2}$.",
+      "answer": "$f^{-1}(x)=\\frac{2x+3}{x-1}$",
+      "solution": {
+        "steps": [
+          "Write $y=\\frac{x+3}{x-2}$.",
+          "Multiply both sides by $x-2$: $y(x-2)=x+3$.",
+          "Distribute: $xy-2y=x+3$.",
+          "Collect the $x$ terms on one side: $xy-x=2y+3$.",
+          "Factor out $x$: $x(y-1)=2y+3$.",
+          "Divide by $y-1$: $x=\\frac{2y+3}{y-1}$.",
+          "Swap $x$ and $y$: $f^{-1}(x)=\\frac{2x+3}{x-1}$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Find the inverse of $f(x)=\\frac{3x-1}{x+4}$.",
+      "answer": "$f^{-1}(x)=\\frac{4x+1}{3-x}$",
+      "solution": {
+        "steps": [
+          "Write $y=\\frac{3x-1}{x+4}$.",
+          "Multiply both sides by $x+4$: $y(x+4)=3x-1$.",
+          "Distribute: $xy+4y=3x-1$.",
+          "Collect the $x$ terms: $xy-3x=-1-4y$.",
+          "Factor out $x$: $x(y-3)=-1-4y$.",
+          "Divide by $y-3$: $x=\\frac{-1-4y}{y-3}=\\frac{4y+1}{3-y}$ (multiplying numerator and denominator by $-1$).",
+          "Swap $x$ and $y$: $f^{-1}(x)=\\frac{4x+1}{3-x}$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Let $f(x)=5x-2$. Verify that $f^{-1}(x)=\\frac{x+2}{5}$ by showing both $f(f^{-1}(x))=x$ and $f^{-1}(f(x))=x$.",
+      "answer": "Both compositions equal $x$, so $f^{-1}(x)=\\frac{x+2}{5}$ is confirmed",
+      "solution": {
+        "steps": [
+          "Compute $f(f^{-1}(x))$: substitute $\\frac{x+2}{5}$ into $f$, giving $5\\cdot\\frac{x+2}{5}-2$.",
+          "The $5$ and the $\\frac{1}{5}$ cancel: $(x+2)-2=x$. So $f(f^{-1}(x))=x$.",
+          "Compute $f^{-1}(f(x))$: substitute $5x-2$ into $f^{-1}$, giving $\\frac{(5x-2)+2}{5}$.",
+          "Simplify the numerator: $\\frac{5x}{5}=x$. So $f^{-1}(f(x))=x$.",
+          "Both compositions return $x$, which confirms the two functions are inverses."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "The function $f(x)=x^2-4$ is defined on all real numbers. Explain why it does not have an inverse function, then give a domain restriction that makes an inverse exist and state the resulting inverse.",
+      "answer": "It fails the horizontal line test, so it is not one-to-one; restricting to $x\\ge 0$ gives $f^{-1}(x)=\\sqrt{x+4}$",
+      "solution": {
+        "steps": [
+          "Check one-to-one: $f(2)=0$ and $f(-2)=0$, so two different inputs share the output $0$.",
+          "Because a horizontal line such as $y=0$ meets the graph twice, $f$ fails the horizontal line test and is not one-to-one, so no inverse function exists over all real numbers.",
+          "Restrict the domain to $x\\ge 0$, where $f$ is one-to-one.",
+          "On that domain solve $y=x^2-4$: add $4$ to get $x^2=y+4$, then take the nonnegative root $x=\\sqrt{y+4}$.",
+          "Swap $x$ and $y$: $f^{-1}(x)=\\sqrt{x+4}$, valid for $x\\ge -4$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Let $f(x)=\\frac{2x+1}{x-3}$. Find $f^{-1}(x)$, then use it to evaluate $f^{-1}(5)$.",
+      "answer": "$f^{-1}(x)=\\frac{3x+1}{x-2}$ and $f^{-1}(5)=\\frac{16}{3}$",
+      "solution": {
+        "steps": [
+          "Write $y=\\frac{2x+1}{x-3}$.",
+          "Multiply both sides by $x-3$: $y(x-3)=2x+1$.",
+          "Distribute: $xy-3y=2x+1$.",
+          "Collect the $x$ terms: $xy-2x=3y+1$.",
+          "Factor out $x$: $x(y-2)=3y+1$.",
+          "Divide by $y-2$: $x=\\frac{3y+1}{y-2}$, so after swapping, $f^{-1}(x)=\\frac{3x+1}{x-2}$.",
+          "Evaluate at $5$: $f^{-1}(5)=\\frac{3(5)+1}{5-2}=\\frac{16}{3}$."
+        ]
+      }
+    }
+  ]
+}

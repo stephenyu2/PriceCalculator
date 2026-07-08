@@ -1,0 +1,229 @@
+{
+  "id": "8.SP.A.3--worksheet--hard",
+  "standard": "8.SP.A.3",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate patterns of association in bivariate data",
+  "clusterCode": "A",
+  "skillName": "Linear Models in Context",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "These problems ask you to build a linear model $y = mx + b$ from two points or a described pattern, then interpret the slope and intercept in context, predict outputs, solve for inputs, judge whether predictions are extrapolations, and compare models. Show each step.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A line fit to data relating the number of hours studied $x$ to a test score $y$ (points) passes through the points $(2, 58)$ and $(6, 82)$. Write the equation of the linear model, then interpret the slope in context.",
+      "answer": "$y = 6x + 46$; the score increases by about $6$ points for each additional hour studied.",
+      "solution": {
+        "steps": [
+          "Find the slope: $m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{82 - 58}{6 - 2} = \\frac{24}{4} = 6$.",
+          "Find $b$ using the point $(2, 58)$: $58 = 6(2) + b$, so $58 = 12 + b$ and $b = 46$.",
+          "The model is $y = 6x + 46$.",
+          "The slope $6$ means the predicted test score rises by about $6$ points for each additional hour of study."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A line fit to data relating water temperature $x$ (degrees Celsius) to the amount of dissolved oxygen $y$ (milligrams per liter) passes through $(5, 12.8)$ and $(25, 8.0)$. Write the equation of the model and interpret the slope.",
+      "answer": "$y = -0.24x + 14$; the dissolved oxygen decreases by $0.24$ milligrams per liter for each $1^\\circ$C increase in temperature.",
+      "solution": {
+        "steps": [
+          "Slope: $m = \\frac{8.0 - 12.8}{25 - 5} = \\frac{-4.8}{20} = -0.24$.",
+          "Find $b$ with $(5, 12.8)$: $12.8 = -0.24(5) + b = -1.2 + b$, so $b = 14$.",
+          "The model is $y = -0.24x + 14$.",
+          "The slope $-0.24$ means dissolved oxygen drops by $0.24$ mg/L for each additional degree Celsius of temperature."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "A linear model relating the number of months $x$ a phone has been owned to its resale value $y$ (dollars) is built from the points $(3, 540)$ and $(9, 360)$. Write the model, then interpret the $y$-intercept in context and state whether it is meaningful.",
+      "answer": "$y = -30x + 630$; the intercept $630$ means a brand-new phone ($0$ months owned) is predicted to be worth $\\$630$. This is meaningful because $x = 0$ is a sensible value (a new phone).",
+      "solution": {
+        "steps": [
+          "Slope: $m = \\frac{360 - 540}{9 - 3} = \\frac{-180}{6} = -30$.",
+          "Find $b$ with $(3, 540)$: $540 = -30(3) + b = -90 + b$, so $b = 630$.",
+          "The model is $y = -30x + 630$.",
+          "The intercept $630$ is the predicted value when $x = 0$ months: a new phone is worth about $\\$630$.",
+          "Since $x = 0$ (a brand-new phone) is a realistic input, the intercept is meaningful in context."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A line fit to data relating a person's age $x$ (years) to their resting heart rate $y$ (beats per minute) passes through $(20, 72)$ and $(50, 66)$. Write the model, then interpret its $y$-intercept and judge whether the intercept is meaningful in context.",
+      "answer": "$y = -0.2x + 76$; the intercept $76$ would mean a newborn ($0$ years old) has a resting heart rate of $76$ bpm, but this is not meaningful because newborns are far outside the data range and actually have much higher heart rates.",
+      "solution": {
+        "steps": [
+          "Slope: $m = \\frac{66 - 72}{50 - 20} = \\frac{-6}{30} = -0.2$.",
+          "Find $b$ with $(20, 72)$: $72 = -0.2(20) + b = -4 + b$, so $b = 76$.",
+          "The model is $y = -0.2x + 76$.",
+          "The intercept $76$ is the predicted heart rate at age $x = 0$.",
+          "Age $0$ lies far below the data (ages $20$ to $50$), so this is an extrapolation; the intercept is not meaningful because the linear pattern does not extend to newborns."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A line fit to data relating the number of pages $x$ in a book to the time $y$ (hours) a reader takes to finish it passes through $(120, 4)$ and $(300, 10)$. Write the model, then predict the reading time for a $450$-page book and state whether this prediction is an interpolation or an extrapolation.",
+      "answer": "$y = \\frac{1}{30}x + 0$, i.e. $y = \\frac{1}{30}x$; a $450$-page book takes $15$ hours. Because $450$ is beyond the largest data value ($300$ pages), this is an extrapolation.",
+      "solution": {
+        "steps": [
+          "Slope: $m = \\frac{10 - 4}{300 - 120} = \\frac{6}{180} = \\frac{1}{30}$.",
+          "Find $b$ with $(120, 4)$: $4 = \\frac{1}{30}(120) + b = 4 + b$, so $b = 0$.",
+          "The model is $y = \\frac{1}{30}x$.",
+          "Predict at $x = 450$: $y = \\frac{1}{30}(450) = 15$ hours.",
+          "Since $450$ pages is larger than the greatest observed value ($300$ pages), this prediction is an extrapolation beyond the data."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A line fit to data relating the amount of fertilizer $x$ (kilograms per hectare) to crop yield $y$ (tonnes per hectare) passes through $(10, 3.2)$ and $(40, 5.0)$. Write the model, then find the fertilizer amount predicted to give a yield of $4.4$ tonnes per hectare.",
+      "answer": "$y = 0.06x + 2.6$; a yield of $4.4$ tonnes per hectare is predicted at $x = 30$ kilograms per hectare.",
+      "solution": {
+        "steps": [
+          "Slope: $m = \\frac{5.0 - 3.2}{40 - 10} = \\frac{1.8}{30} = 0.06$.",
+          "Find $b$ with $(10, 3.2)$: $3.2 = 0.06(10) + b = 0.6 + b$, so $b = 2.6$.",
+          "The model is $y = 0.06x + 2.6$.",
+          "Set $y = 4.4$: $4.4 = 0.06x + 2.6$, so $0.06x = 1.8$ and $x = \\frac{1.8}{0.06} = 30$.",
+          "About $30$ kilograms per hectare of fertilizer is predicted to give a yield of $4.4$ tonnes per hectare."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A line fit to data relating the number of years $x$ since a tree was planted to its height $y$ (meters) passes through $(2, 3.5)$ and $(8, 9.5)$. Write the model, then determine after how many years the tree is predicted to reach a height of $15$ meters.",
+      "answer": "$y = x + 1.5$; the tree is predicted to reach $15$ meters after $13.5$ years.",
+      "solution": {
+        "steps": [
+          "Slope: $m = \\frac{9.5 - 3.5}{8 - 2} = \\frac{6}{6} = 1$.",
+          "Find $b$ with $(2, 3.5)$: $3.5 = 1(2) + b = 2 + b$, so $b = 1.5$.",
+          "The model is $y = x + 1.5$.",
+          "Set $y = 15$: $15 = x + 1.5$, so $x = 13.5$.",
+          "The tree is predicted to reach $15$ meters after $13.5$ years."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "A line fit to data relating the distance driven $x$ (miles) to the fuel remaining $y$ (gallons) in a tank passes through $(40, 11.2)$ and $(160, 5.2)$. Write the model, then compute how much fuel is used between mile $60$ and mile $260$.",
+      "answer": "$y = -0.05x + 13.2$; $10$ gallons of fuel are used between mile $60$ and mile $260$.",
+      "solution": {
+        "steps": [
+          "Slope: $m = \\frac{5.2 - 11.2}{160 - 40} = \\frac{-6}{120} = -0.05$.",
+          "Find $b$ with $(40, 11.2)$: $11.2 = -0.05(40) + b = -2 + b$, so $b = 13.2$.",
+          "The model is $y = -0.05x + 13.2$.",
+          "Fuel used over an interval equals the magnitude of the change in $y$: $\\Delta y = -0.05(260 - 60) = -0.05(200) = -10$.",
+          "So $10$ gallons of fuel are used between mile $60$ and mile $260$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Two gyms model membership cost $y$ (dollars) over $x$ months. Gym A: $y = 25x + 50$. Gym B passes through the points $(2, 96)$ and $(5, 174)$. Write Gym B's model, then determine which gym is cheaper for a $12$-month membership.",
+      "answer": "Gym B: $y = 26x + 44$. At $12$ months Gym A costs $\\$350$ and Gym B costs $\\$356$, so Gym A is cheaper.",
+      "solution": {
+        "steps": [
+          "Gym B slope: $m = \\frac{174 - 96}{5 - 2} = \\frac{78}{3} = 26$.",
+          "Find $b$ with $(2, 96)$: $96 = 26(2) + b = 52 + b$, so $b = 44$. Gym B: $y = 26x + 44$.",
+          "Gym A at $x = 12$: $y = 25(12) + 50 = 300 + 50 = 350$.",
+          "Gym B at $x = 12$: $y = 26(12) + 44 = 312 + 44 = 356$.",
+          "Since $\\$350 < \\$356$, Gym A is cheaper for a $12$-month membership."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A line fit to data relating the number of weeks $x$ of a fitness program to a participant's mile time $y$ (minutes) passes through $(1, 11.6)$ and $(6, 9.1)$. Write the model, interpret the slope, and predict the mile time after $10$ weeks.",
+      "answer": "$y = -0.5x + 12.1$; the mile time decreases by $0.5$ minute per week, and after $10$ weeks the predicted time is $7.1$ minutes.",
+      "solution": {
+        "steps": [
+          "Slope: $m = \\frac{9.1 - 11.6}{6 - 1} = \\frac{-2.5}{5} = -0.5$.",
+          "Find $b$ with $(1, 11.6)$: $11.6 = -0.5(1) + b = -0.5 + b$, so $b = 12.1$.",
+          "The model is $y = -0.5x + 12.1$.",
+          "The slope $-0.5$ means the mile time improves (decreases) by about $0.5$ minute for each additional week in the program.",
+          "Predict at $x = 10$: $y = -0.5(10) + 12.1 = -5 + 12.1 = 7.1$ minutes."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A scientist records that a colony's population grows along a line passing through $(0, 150)$ and $(4, 470)$, where $x$ is the number of days and $y$ is the population. Write the model, interpret both the slope and the $y$-intercept, then predict the population on day $10$.",
+      "answer": "$y = 80x + 150$; the slope $80$ means the population grows by $80$ each day, the intercept $150$ means the colony started with $150$ on day $0$, and on day $10$ the predicted population is $950$.",
+      "solution": {
+        "steps": [
+          "Slope: $m = \\frac{470 - 150}{4 - 0} = \\frac{320}{4} = 80$.",
+          "The line passes through $(0, 150)$, so $b = 150$. The model is $y = 80x + 150$.",
+          "Slope interpretation: the population increases by about $80$ individuals per day.",
+          "Intercept interpretation: at $x = 0$ days the colony has $150$ individuals (the starting population).",
+          "Predict at $x = 10$: $y = 80(10) + 150 = 800 + 150 = 950$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A line fit to data relating the outdoor temperature $x$ (degrees Fahrenheit) to daily ice cream sales $y$ (dollars) passes through $(60, 220)$ and $(90, 580)$. Write the model, then explain why the $y$-intercept is not a meaningful prediction in this context.",
+      "answer": "$y = 12x - 500$; the intercept $-500$ would mean sales of $-\\$500$ at $0^\\circ$F, which is impossible (sales cannot be negative) and lies far outside the data, so it is not meaningful.",
+      "solution": {
+        "steps": [
+          "Slope: $m = \\frac{580 - 220}{90 - 60} = \\frac{360}{30} = 12$.",
+          "Find $b$ with $(60, 220)$: $220 = 12(60) + b = 720 + b$, so $b = 220 - 720 = -500$.",
+          "The model is $y = 12x - 500$.",
+          "The intercept $-500$ is the predicted sales at $x = 0^\\circ$F.",
+          "Sales of $-\\$500$ are impossible, and $0^\\circ$F is far below the observed temperatures ($60^\\circ$F to $90^\\circ$F), so the intercept is an extrapolation that is not meaningful."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A line fit to data relating the number of items produced $x$ (hundreds) to total production cost $y$ (dollars) passes through $(5, 4250)$ and $(20, 9500)$. Write the model, interpret the slope as a rate, and find how many items can be produced for a budget of $\\$7400$.",
+      "answer": "$y = 350x + 2500$; the cost rises by $\\$350$ for each additional $100$ items produced, and a budget of $\\$7400$ allows $14$ hundred (that is, $1400$) items.",
+      "solution": {
+        "steps": [
+          "Slope: $m = \\frac{9500 - 4250}{20 - 5} = \\frac{5250}{15} = 350$.",
+          "Find $b$ with $(5, 4250)$: $4250 = 350(5) + b = 1750 + b$, so $b = 2500$.",
+          "The model is $y = 350x + 2500$.",
+          "Slope interpretation: total cost increases by about $\\$350$ for each additional hundred items.",
+          "Set $y = 7400$: $7400 = 350x + 2500$, so $350x = 4900$ and $x = \\frac{4900}{350} = 14$.",
+          "A budget of $\\$7400$ covers $14$ hundred items, which is $1400$ items."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Two snow-melt models give the depth of snow $y$ (centimeters) after $x$ hours of sun. Model P passes through $(0, 60)$ and $(5, 35)$. Model Q is $y = -4x + 50$. Write Model P's equation, then determine after how many hours the two models predict the same snow depth, and what that depth is.",
+      "answer": "Model P: $y = -5x + 60$. The two models agree at $x = 10$ hours, where both predict a depth of $10$ centimeters.",
+      "solution": {
+        "steps": [
+          "Model P slope: $m = \\frac{35 - 60}{5 - 0} = \\frac{-25}{5} = -5$.",
+          "Model P passes through $(0, 60)$, so $b = 60$. Model P: $y = -5x + 60$.",
+          "Set the two models equal: $-5x + 60 = -4x + 50$.",
+          "Solve: $60 - 50 = -4x + 5x$, so $10 = x$, giving $x = 10$ hours.",
+          "Find the depth at $x = 10$: $y = -4(10) + 50 = -40 + 50 = 10$ centimeters (and $-5(10) + 60 = 10$, which checks)."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A line fit to data relating the volume of a gas $x$ (liters) to its pressure $y$ (kilopascals) at fixed temperature passes through $(2, 240)$ and $(8, 60)$. Write the model, then use it to predict the pressure when the volume is $5$ liters and state whether this is an interpolation or an extrapolation given that the data spans volumes from $2$ to $8$ liters.",
+      "answer": "$y = -30x + 300$; at $5$ liters the predicted pressure is $150$ kilopascals, and since $5$ lies between $2$ and $8$ liters this is an interpolation.",
+      "solution": {
+        "steps": [
+          "Slope: $m = \\frac{60 - 240}{8 - 2} = \\frac{-180}{6} = -30$.",
+          "Find $b$ with $(2, 240)$: $240 = -30(2) + b = -60 + b$, so $b = 300$.",
+          "The model is $y = -30x + 300$.",
+          "Predict at $x = 5$: $y = -30(5) + 300 = -150 + 300 = 150$ kilopascals.",
+          "Because $5$ liters lies between the smallest ($2$) and largest ($8$) observed volumes, this prediction is an interpolation within the data range."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "id": "GEO.G-SRT.A.1--lesson",
+  "standard": "GEO.G-SRT.A.1",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Similarity, Right Triangles, and Trigonometry",
+  "domainCode": "G-SRT",
+  "cluster": "Understand similarity in terms of similarity transformations",
+  "clusterCode": "A",
+  "skillName": "Properties of Dilations",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "A dilation is a transformation defined by a center $C$ and a scale factor $k$. It sends each point $P$ to the point $P'$ on ray $\\overrightarrow{CP}$ so that $CP' = |k| \\cdot CP$. When the center is the origin, the rule is simply $(x, y) \\mapsto (kx, ky)$. For any other center $C = (a, b)$, the rule is $(x, y) \\mapsto (a + k(x - a),\\, b + k(y - b))$. Dilations preserve angle measure and multiply every length by $|k|$, so a line through the center maps to itself while a line not through the center maps to a parallel line.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A dilation centered at the origin has scale factor $k = 3$. Find the image of the point $A = (-2, 5)$.",
+      "solution": {
+        "steps": [
+          "When the center is the origin, the rule is $(x, y) \\mapsto (kx, ky)$.",
+          "Multiply each coordinate of $A = (-2, 5)$ by $k = 3$.",
+          "$x' = 3 \\cdot (-2) = -6$.",
+          "$y' = 3 \\cdot 5 = 15$.",
+          "So the image is $A' = (-6, 15)$. Note we multiply by $3$; we do not add $3$ to each coordinate."
+        ],
+        "answer": "$A' = (-6, 15)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A dilation centered at $C = (1, 2)$ has scale factor $k = 2$. Find the image of $P = (5, 8)$.",
+      "solution": {
+        "steps": [
+          "For a center other than the origin, use $(x, y) \\mapsto \\bigl(a + k(x - a),\\, b + k(y - b)\\bigr)$ with $C = (a, b) = (1, 2)$.",
+          "Find the differences from the center: $x - a = 5 - 1 = 4$ and $y - b = 8 - 2 = 6$.",
+          "Scale those differences by $k = 2$: $2 \\cdot 4 = 8$ and $2 \\cdot 6 = 12$.",
+          "Add them back to the center: $x' = 1 + 8 = 9$ and $y' = 2 + 12 = 14$.",
+          "So the image is $P' = (9, 14)$. (Treating the center as the origin would wrongly give $(10, 16)$.)"
+        ],
+        "answer": "$P' = (9, 14)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Segment $AB$ has length $12$. After a dilation with scale factor $k = \\frac{2}{3}$, what is the length of the image segment $A'B'$?",
+      "solution": {
+        "steps": [
+          "A dilation multiplies every length by $|k|$, so $A'B' = |k| \\cdot AB$. Lengths scale by $k$, not by $k^2$ (that would be the area factor).",
+          "Substitute $k = \\frac{2}{3}$ and $AB = 12$: $A'B' = \\frac{2}{3} \\cdot 12$.",
+          "Compute: $\\frac{2}{3} \\cdot 12 = \\frac{24}{3} = 8$.",
+          "Since $0 < k < 1$, this is a reduction, and indeed $8 < 12$."
+        ],
+        "answer": "$A'B' = 8$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A dilation centered at $C$ maps $P$ to $P'$ with $CP = 4$ and $CP' = 10$. Find the scale factor $k$.",
+      "solution": {
+        "steps": [
+          "By definition $CP' = |k| \\cdot CP$, so the scale factor is the ratio of image distance to pre-image distance: $k = \\frac{CP'}{CP}$.",
+          "Be careful with the order: it is $\\frac{CP'}{CP}$, the new length over the old length, not $\\frac{CP}{CP'}$.",
+          "Substitute: $k = \\frac{10}{4}$.",
+          "Simplify: $\\frac{10}{4} = \\frac{5}{2}$.",
+          "Since $k = \\frac{5}{2} > 1$, the dilation is an enlargement."
+        ],
+        "answer": "$k = \\frac{5}{2}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A dilation is centered at the origin with scale factor $k = 2$. State the image of the line $y = 2x$ and the image of the line $y = 2x + 3$, and explain the difference.",
+      "solution": {
+        "steps": [
+          "A dilation takes a line through the center to itself, and a line not through the center to a parallel line.",
+          "Check $y = 2x$: when $x = 0$, $y = 0$, so this line passes through the origin (the center). A line through the center maps to itself.",
+          "Therefore the image of $y = 2x$ is the same line, $y = 2x$.",
+          "Check $y = 2x + 3$: when $x = 0$, $y = 3 \\neq 0$, so this line does not pass through the center. Its image is a parallel line (same slope $2$).",
+          "Scaling a point such as $(0, 3)$ on the line by $k = 2$ gives $(0, 6)$, so the image line is $y = 2x + 6$, which is parallel to $y = 2x + 3$."
+        ],
+        "answer": "The line $y = 2x$ maps to itself ($y = 2x$); the line $y = 2x + 3$ maps to the parallel line $y = 2x + 6$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A dilation centered at the origin has scale factor $k = 4$. Find the image of the point $B = (3, -2)$.",
+      "hint": "With the center at the origin, multiply each coordinate by $k$: $(x, y) \\mapsto (kx, ky)$.",
+      "solution": {
+        "steps": [
+          "Use $(x, y) \\mapsto (4x, 4y)$.",
+          "$x' = 4 \\cdot 3 = 12$.",
+          "$y' = 4 \\cdot (-2) = -8$.",
+          "The image is $B' = (12, -8)$."
+        ],
+        "answer": "$B' = (12, -8)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Under a dilation centered at the origin with scale factor $k = \\frac{1}{4}$, the image of a point is $(3, -5)$. Find the original point (the pre-image).",
+      "hint": "If the image is $k$ times the pre-image, then the pre-image is the image divided by $k$. Dividing by $\\frac{1}{4}$ is the same as multiplying by $4$.",
+      "solution": {
+        "steps": [
+          "The image satisfies $(x', y') = (kx, ky)$, so the pre-image is $(x, y) = \\left(\\frac{x'}{k}, \\frac{y'}{k}\\right)$.",
+          "Dividing by $k = \\frac{1}{4}$ is the same as multiplying by $4$.",
+          "$x = 4 \\cdot 3 = 12$ and $y = 4 \\cdot (-5) = -20$.",
+          "The original point is $(12, -20)$."
+        ],
+        "answer": "$(12, -20)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A dilation centered at $C = (2, 1)$ has scale factor $k = \\frac{1}{2}$. Find the image of $Q = (8, 7)$.",
+      "hint": "Use $(x, y) \\mapsto \\bigl(a + k(x - a),\\, b + k(y - b)\\bigr)$ with $C = (a, b) = (2, 1)$.",
+      "solution": {
+        "steps": [
+          "Find the differences from the center: $x - a = 8 - 2 = 6$ and $y - b = 7 - 1 = 6$.",
+          "Scale by $k = \\frac{1}{2}$: $\\frac{1}{2} \\cdot 6 = 3$ and $\\frac{1}{2} \\cdot 6 = 3$.",
+          "Add back to the center: $x' = 2 + 3 = 5$ and $y' = 1 + 3 = 4$.",
+          "The image is $Q' = (5, 4)$."
+        ],
+        "answer": "$Q' = (5, 4)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A dilation centered at $C$ maps $P$ to $P'$ with $CP = 15$ and $CP' = 6$. Find the scale factor $k$, and state whether the dilation is an enlargement or a reduction.",
+      "hint": "Use $k = \\dfrac{CP'}{CP}$, the new distance over the old distance.",
+      "solution": {
+        "steps": [
+          "Apply $k = \\frac{CP'}{CP} = \\frac{6}{15}$.",
+          "Simplify by dividing top and bottom by $3$: $\\frac{6}{15} = \\frac{2}{5}$.",
+          "Since $0 < k < 1$, the dilation is a reduction."
+        ],
+        "answer": "$k = \\frac{2}{5}$, a reduction"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Triangle $ABC$ has $A = (0, 0)$, $B = (4, 0)$, and $C = (0, 3)$. It is dilated about the origin with scale factor $k = 2$. Find the images $A'$, $B'$, $C'$, then verify that $A'B' = 2 \\cdot AB$.",
+      "hint": "Multiply each vertex's coordinates by $k = 2$, then compare the lengths $A'B'$ and $AB$ (both are horizontal segments here).",
+      "solution": {
+        "steps": [
+          "Apply $(x, y) \\mapsto (2x, 2y)$ to each vertex.",
+          "$A' = (2 \\cdot 0,\\, 2 \\cdot 0) = (0, 0)$, $B' = (2 \\cdot 4,\\, 2 \\cdot 0) = (8, 0)$, $C' = (2 \\cdot 0,\\, 2 \\cdot 3) = (0, 6)$.",
+          "Original length: $AB = 4 - 0 = 4$.",
+          "Image length: $A'B' = 8 - 0 = 8$.",
+          "Check: $A'B' = 8 = 2 \\cdot 4 = 2 \\cdot AB$, confirming the length scales by $|k| = 2$ as required."
+        ],
+        "answer": "$A' = (0, 0)$, $B' = (8, 0)$, $C' = (0, 6)$, and $A'B' = 8 = 2 \\cdot AB$."
+      }
+    }
+  ]
+}

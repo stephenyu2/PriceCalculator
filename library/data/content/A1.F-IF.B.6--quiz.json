@@ -1,0 +1,144 @@
+{
+  "id": "A1.F-IF.B.6--quiz",
+  "standard": "A1.F-IF.B.6",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Functions",
+  "domainCode": "F-IF",
+  "cluster": "Interpret functions that arise in applications in terms of the context",
+  "clusterCode": "B",
+  "skillName": "Average Rate of Change",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "Eight multiple-choice questions on the average rate of change of a function over an interval $[a,b]$, computed as $\\dfrac{f(b)-f(a)}{b-a}$.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Find the average rate of change of $f(x)=3x-4$ over the interval $[1,5]$.\nA) $12$\nB) $3$\nC) $-1$\nD) $11$",
+      "answer": "B) $3$",
+      "solution": {
+        "steps": [
+          "Use $\\dfrac{f(b)-f(a)}{b-a}$ with $a=1$ and $b=5$.",
+          "Evaluate the endpoints: $f(5)=3(5)-4=11$ and $f(1)=3(1)-4=-1$.",
+          "Compute $\\dfrac{11-(-1)}{5-1}=\\dfrac{12}{4}=3$, which equals the slope of the linear function.",
+          "B is correct. A ($12$) is the change in output $f(5)-f(1)$ without dividing by the change in input. C ($-1$) is just $f(1)$, evaluating only one endpoint. D ($11$) is just $f(5)$."
+        ],
+        "answer": "B) $3$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "The table gives values of a function $f$. Find the average rate of change of $f$ over $[0,4]$. The table: $f(0)=5$, $f(2)=9$, $f(4)=17$.\nA) $3$\nB) $12$\nC) $\\frac{1}{3}$\nD) $8$",
+      "answer": "A) $3$",
+      "solution": {
+        "steps": [
+          "The interval $[0,4]$ is bounded by the rows $f(0)=5$ and $f(4)=17$.",
+          "Compute $\\dfrac{f(4)-f(0)}{4-0}=\\dfrac{17-5}{4}=\\dfrac{12}{4}=3$.",
+          "A is correct. B ($12$) forgets to divide by the change in input. C ($\\frac{1}{3}$) inverts the difference quotient as $\\frac{4-0}{17-5}$. D ($8$) wrongly uses the middle row $f(2)=9$ as if $\\frac{17-9}{4-3}$ or otherwise mishandles which rows bound the interval."
+        ],
+        "answer": "A) $3$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "A population is modeled by $P(t)=200+50t$, where $t$ is measured in years. What is the average rate of change of $P$ over $[0,4]$, with units?\nA) $50$ years per person\nB) $200$ people per year\nC) $50$ people per year\nD) $400$ people per year",
+      "answer": "C) $50$ people per year",
+      "solution": {
+        "steps": [
+          "Compute $\\dfrac{P(4)-P(0)}{4-0}=\\dfrac{400-200}{4}=\\dfrac{200}{4}=50$.",
+          "The output is people and the input is years, so the units are people per year.",
+          "C is correct: the population grows by $50$ people per year on average. A inverts the units (years per person). B ($200$) is the value $P(0)$, not a rate. D ($400$) is the value $P(4)$, not a rate."
+        ],
+        "answer": "C) $50$ people per year"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Find the average rate of change of $f(x)=x^2$ over the interval $[2,5]$.\nA) $\\frac{1}{7}$\nB) $9$\nC) $7$\nD) $21$",
+      "answer": "C) $7$",
+      "solution": {
+        "steps": [
+          "Evaluate the endpoints: $f(5)=25$ and $f(2)=4$.",
+          "Compute $\\dfrac{f(5)-f(2)}{5-2}=\\dfrac{25-4}{3}=\\dfrac{21}{3}=7$.",
+          "C is correct. A ($\\frac{1}{7}$) inverts the difference quotient as $\\frac{5-2}{25-4}=\\frac{3}{21}$. B ($9$) uses $f(5-2)=f(3)=9$ instead of $f(5)-f(2)$. D ($21$) is the change in output without dividing by the change in input."
+        ],
+        "answer": "C) $7$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Find the average rate of change of $f(x)=-2x+10$ over the interval $[1,4]$.\nA) $-2$\nB) $2$\nC) $-6$\nD) $6$",
+      "answer": "A) $-2$",
+      "solution": {
+        "steps": [
+          "Evaluate the endpoints: $f(4)=-2(4)+10=2$ and $f(1)=-2(1)+10=8$.",
+          "Compute $\\dfrac{f(4)-f(1)}{4-1}=\\dfrac{2-8}{3}=\\dfrac{-6}{3}=-2$, which equals the slope.",
+          "A is correct. B ($2$) reverses the endpoints, computing $\\frac{f(1)-f(4)}{4-1}=\\frac{8-2}{3}$, which gives the wrong sign. C ($-6$) is the change in output $f(4)-f(1)$ without dividing by $3$. D ($6$) is $f(1)-f(4)$ without dividing."
+        ],
+        "answer": "A) $-2$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "A graph of a function passes through the point $(1,2)$ at the left end of the interval $[1,4]$ and through $(4,11)$ at the right end. Estimate the average rate of change over $[1,4]$.\nA) $\\frac{1}{3}$\nB) $9$\nC) $3$\nD) $13$",
+      "answer": "C) $3$",
+      "solution": {
+        "steps": [
+          "The average rate of change is the slope of the secant line through the two endpoint points.",
+          "Compute $\\dfrac{11-2}{4-1}=\\dfrac{9}{3}=3$.",
+          "C is correct. A ($\\frac{1}{3}$) reverses the coordinates, using $\\frac{4-1}{11-2}=\\frac{3}{9}$. B ($9$) is the change in $y$ without dividing by the change in $x$. D ($13$) adds the outputs instead of forming the secant slope."
+        ],
+        "answer": "C) $3$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "For $f(x)=2^x$, find the average rate of change over the interval $[0,3]$.\nA) $\\frac{3}{7}$\nB) $\\frac{8}{3}$\nC) $\\frac{7}{3}$\nD) $7$",
+      "answer": "C) $\\frac{7}{3}$",
+      "solution": {
+        "steps": [
+          "Evaluate the endpoints: $f(3)=2^3=8$ and $f(0)=2^0=1$.",
+          "Compute $\\dfrac{f(3)-f(0)}{3-0}=\\dfrac{8-1}{3}=\\dfrac{7}{3}$.",
+          "C is correct. A ($\\frac{3}{7}$) inverts the difference quotient. B ($\\frac{8}{3}$) uses $f(3)=8$ but forgets to subtract $f(0)=1$. D ($7$) is the change in output without dividing by the change in input."
+        ],
+        "answer": "C) $\\frac{7}{3}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "For $f(x)=x^2$, compare the average rate of change over $[0,2]$ with the average rate of change over $[2,4]$. Which statement is correct?\nA) Both rates equal $2$, since the average rate of change is constant.\nB) The rate over $[0,2]$ is $2$ and the rate over $[2,4]$ is $6$, so the function increases faster on $[2,4]$.\nC) The rate over $[0,2]$ is $6$ and the rate over $[2,4]$ is $2$, so the function increases faster on $[0,2]$.\nD) Both rates equal $6$, since both intervals have the same width.",
+      "answer": "B) The rate over $[0,2]$ is $2$ and the rate over $[2,4]$ is $6$, so the function increases faster on $[2,4]$.",
+      "solution": {
+        "steps": [
+          "Over $[0,2]$: $\\dfrac{f(2)-f(0)}{2-0}=\\dfrac{4-0}{2}=2$.",
+          "Over $[2,4]$: $\\dfrac{f(4)-f(2)}{4-2}=\\dfrac{16-4}{2}=\\dfrac{12}{2}=6$.",
+          "Since $6>2$, the function increases faster on the later interval $[2,4]$.",
+          "B is correct. A wrongly assumes a nonlinear function has a constant average rate of change. C swaps the two computed values. D wrongly concludes equal rates from equal interval widths, but for a nonlinear function the rate depends on where the interval sits."
+        ],
+        "answer": "B) The rate over $[0,2]$ is $2$ and the rate over $[2,4]$ is $6$, so the function increases faster on $[2,4]$."
+      }
+    }
+  ]
+}

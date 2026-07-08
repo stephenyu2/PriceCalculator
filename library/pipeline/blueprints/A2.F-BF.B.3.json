@@ -1,0 +1,156 @@
+{
+  "standard": "A2.F-BF.B.3",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Functions — Building Functions",
+  "domainCode": "F-BF",
+  "cluster": "Build new functions from existing functions",
+  "clusterCode": "B",
+  "skillName": "Transformations of Functions",
+
+  "description": "Students identify and describe how the graph of a parent function $f(x)$ changes when it is replaced by $f(x)+k$, $kf(x)$, $f(kx)$, or $f(x+k)$ for specific positive and negative values of $k$. Building on Algebra 1, they apply these transformations to a wide range of parent functions (including $f(x)=x^{2}$, $f(x)=|x|$, $f(x)=\\sqrt{x}$, $f(x)=x^{3}$, $f(x)=\\frac{1}{x}$, and $f(x)=2^{x}$), compose two or more transformations and write the combined equation in the form $g(x)=a\\,f\\!\\left(b(x-h)\\right)+c$, predict image points and key features, and work backward to find the value of $k$ (or the full set of parameters) from a graph or a parent-and-image graph pair. They reason carefully about the counterintuitive direction of horizontal transformations, where $f(x+k)$ shifts left for positive $k$ and $f(kx)$ compresses horizontally for $|k|>1$, and about the order in which composed transformations are applied.",
+
+  "subSkills": [
+    "Identify a vertical shift: $f(x)+k$ moves the graph up for $k>0$ and down for $k<0$ by $|k|$ units",
+    "Identify a vertical stretch or compression: $kf(x)$ scales outputs by $|k|$, stretching for $|k|>1$ and compressing for $0<|k|<1$",
+    "Recognize reflection across the $x$-axis when $k<0$ in $kf(x)$, and across the $y$-axis when $k<0$ in $f(kx)$",
+    "Identify a horizontal shift: $f(x+k)$ moves the graph left for $k>0$ and right for $k<0$ by $|k|$ units",
+    "Identify a horizontal stretch or compression: $f(kx)$ compresses toward the $y$-axis for $|k|>1$ and stretches for $0<|k|<1$ by a factor of $\\frac{1}{|k|}$",
+    "Apply a transformation to a specific point on the parent graph to predict the image point",
+    "Apply transformations to a named parent function (such as $x^{2}$, $|x|$, $\\sqrt{x}$, $x^{3}$, $\\frac{1}{x}$, $2^{x}$) and write the resulting equation",
+    "Compose two or more transformations into a single equation $g(x)=a\\,f\\!\\left(b(x-h)\\right)+c$ and read the parameters back out of such an equation",
+    "Determine the correct order in which composed transformations act (horizontal shift inside vs. vertical shift outside, scale before shift)",
+    "Find the value of $k$, or recover all transformation parameters, from a graph or a parent-and-image graph pair"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Name the single transformation from the equation",
+      "example": "Describe how the graph of $g(x)=f(x)-4$ compares to $f(x)$. Answer: a vertical shift down $4$ units."
+    },
+    {
+      "name": "Vertical stretch, compression, or reflection",
+      "example": "Describe $g(x)=-3f(x)$ relative to $f(x)$. Answer: a reflection across the $x$-axis and a vertical stretch by a factor of $3$."
+    },
+    {
+      "name": "Horizontal shift (direction reversal)",
+      "example": "Describe $g(x)=f(x+5)$ relative to $f(x)$. Answer: a horizontal shift left $5$ units."
+    },
+    {
+      "name": "Horizontal stretch or compression",
+      "example": "Describe $g(x)=f(2x)$ relative to $f(x)$. Answer: a horizontal compression by a factor of $\\frac{1}{2}$ (toward the $y$-axis)."
+    },
+    {
+      "name": "Transform a point on the graph",
+      "example": "The point $(4,9)$ is on $y=f(x)$. Find its image on $y=f(x)+5$ and on $y=2f(x)$. Answers: $(4,14)$ and $(4,18)$."
+    },
+    {
+      "name": "Apply to a concrete parent function",
+      "example": "If $f(x)=\\sqrt{x}$, write the equation for the graph shifted left $2$ and down $1$. Answer: $g(x)=\\sqrt{x+2}-1$."
+    },
+    {
+      "name": "Compose multiple transformations into one equation",
+      "example": "Starting from $f(x)=x^{2}$, apply a vertical stretch by $3$, a reflection across the $x$-axis, and a shift right $1$ and up $4$. Answer: $g(x)=-3(x-1)^{2}+4$."
+    },
+    {
+      "name": "Read parameters back out of a composed equation",
+      "example": "Describe $g(x)=\\frac{1}{2}|x+3|-5$ relative to $f(x)=|x|$. Answer: a vertical compression by a factor of $\\frac{1}{2}$, a horizontal shift left $3$, and a vertical shift down $5$."
+    },
+    {
+      "name": "Find k from a graph or graph pair",
+      "example": "The graph of $g$ is the graph of $f(x)=x^{2}$ moved so its vertex is at $(0,-6)$. Find $k$ in $g(x)=f(x)+k$. Answer: $k=-6$."
+    },
+    {
+      "name": "Recover all parameters from a transformed graph",
+      "example": "The graph of $f(x)=\\sqrt{x}$ is reflected across the $x$-axis and shifted to start at the point $(2,3)$. Write $g(x)$. Answer: $g(x)=-\\sqrt{x-2}+3$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single transformation of the most intuitive types: a vertical shift $f(x)+k$ or a vertical stretch/compression/reflection $kf(x)$, with $k$ an integer or a simple fraction. The student names the transformation from the equation or writes the equation from a stated single transformation. No horizontal direction reversal and no working backward from a graph.",
+      "constraints": [
+        "Exactly one transformation, drawn from $f(x)+k$ or $kf(x)$",
+        "$k$ is a small integer (or $\\frac{1}{2}$, $\\frac{1}{3}$ for a simple compression)",
+        "Task is name-the-transformation or write-the-equation, never find $k$ from a picture",
+        "Direction is intuitive: up/down for $+k$, taller/shorter for the multiplier",
+        "Abstract $f(x)$ or a simple named parent such as $f(x)=x^{2}$ or $f(x)=|x|$"
+      ]
+    },
+    "Medium": {
+      "description": "A single transformation that includes the counterintuitive horizontal cases $f(x+k)$ and $f(kx)$, where the student must reverse the expected direction, or a vertical case applied to a specific point or to a richer named parent function ($\\sqrt{x}$, $x^{3}$, $\\frac{1}{x}$, $2^{x}$). May ask the student to find $k$ from a clearly described single shift.",
+      "constraints": [
+        "Still one transformation, but now may be horizontal ($f(x+k)$ shifts opposite the sign of $k$; $f(kx)$ compresses for $|k|>1$, stretches by $\\frac{1}{|k|}$ for $0<|k|<1$)",
+        "May apply the transformation to a given point $(a,b)$ or to a richer named parent such as $f(x)=\\sqrt{x}$, $f(x)=x^{3}$, $f(x)=\\frac{1}{x}$, or $f(x)=2^{x}$",
+        "May ask the student to find $k$ from a single described or graphed shift",
+        "tier1 (Easy to Medium) lives here: single transformations of all four types, from intuitive vertical shifts up through the horizontal direction reversals"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step: a composition of two or more transformations (for example a stretch, a reflection, and a shift), determining the order of operations, writing or interpreting the combined equation $g(x)=a\\,f\\!\\left(b(x-h)\\right)+c$, or backing out the full parameter set from a parent-and-image graph pair when the transformation types must first be inferred.",
+      "constraints": [
+        "Combines two or more transformations, e.g. $g(x)=-2f(x-3)+1$ or $g(x)=\\frac{1}{2}f(2x)$, requiring each to be named or applied in correct order",
+        "Recover all parameters from a graph pair where the student must first decide which forms produced the image",
+        "May mix horizontal and vertical changes with a reflection and a scaling on a named parent function",
+        "Requires attention to order: horizontal scale and shift interact, so $f(2x-6)=f(2(x-3))$ shifts right $3$, not $6$",
+        "tier2 (Medium to Hard) lives here: compositions and recover-parameters-from-a-graph tasks, with no item overlap with tier1"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student reverses the direction of a horizontal shift, treating $f(x+k)$ like the more intuitive vertical rule",
+      "distractor": "For $g(x)=f(x+5)$ says the graph shifts right $5$ units instead of left $5$ units"
+    },
+    {
+      "misconception": "Student confuses horizontal shifts with vertical shifts, moving up/down for a change inside the function",
+      "distractor": "For $g(x)=f(x-3)$ says the graph shifts down $3$ units instead of right $3$ units"
+    },
+    {
+      "misconception": "Student treats $f(kx)$ as a vertical change or reverses stretch and compression",
+      "distractor": "For $g(x)=f(2x)$ says a horizontal stretch by a factor of $2$ instead of a horizontal compression by a factor of $\\frac{1}{2}$"
+    },
+    {
+      "misconception": "Student reads $kf(x)$ with $|k|>1$ as a compression instead of a stretch",
+      "distractor": "For $g(x)=3f(x)$ says a vertical compression by a factor of $\\frac{1}{3}$ instead of a vertical stretch by a factor of $3$"
+    },
+    {
+      "misconception": "Student ignores the reflection caused by a negative coefficient, keeping only the magnitude",
+      "distractor": "For $g(x)=-2f(x)$ says a vertical stretch by a factor of $2$ with no reflection across the $x$-axis"
+    },
+    {
+      "misconception": "Student applies a vertical shift to the $x$-coordinate of a transformed point instead of the $y$-coordinate",
+      "distractor": "For the point $(4,9)$ on $y=f(x)+5$ gives $(9,9)$ instead of $(4,14)$"
+    },
+    {
+      "misconception": "Student forgets that a multiplier scales the output, scaling the input instead when transforming a point",
+      "distractor": "For $(4,9)$ on $y=2f(x)$ gives $(8,9)$ instead of $(4,18)$"
+    },
+    {
+      "misconception": "Student gets the sign of $k$ wrong when reading a vertical shift from a graph",
+      "distractor": "For a graph of $f(x)=x^{2}$ lowered to vertex $(0,-6)$ writes $k=6$ in $g(x)=f(x)+k$ instead of $k=-6$"
+    },
+    {
+      "misconception": "Student fails to factor the horizontal coefficient before reading the shift, so the shift amount is wrong in a composed transformation",
+      "distractor": "For $g(x)=f(2x-6)$ says a horizontal shift right $6$ instead of factoring to $f(2(x-3))$ for a compression by $\\frac{1}{2}$ and a shift right $3$"
+    },
+    {
+      "misconception": "Student applies composed transformations in the wrong order, adding the outside shift before the vertical stretch",
+      "distractor": "For $g(x)=2f(x)+3$ applied to point $(1,5)$ gives $(1,16)$ from $2(5+3)$ instead of $(1,13)$ from $2\\cdot 5+3$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

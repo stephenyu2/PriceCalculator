@@ -1,0 +1,123 @@
+{
+  "standard": "GEO.G-GMD.A.1",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Geometric Measurement and Dimension",
+  "domainCode": "G-GMD",
+  "cluster": "Explain volume formulas and use them to solve problems",
+  "clusterCode": "A",
+  "skillName": "Deriving Circle and Volume Formulas",
+
+  "description": "Students give informal arguments that justify why the standard measurement formulas are true rather than merely applying them. For the circumference $C=2\\pi r$ they explain that $\\pi$ is defined as the constant ratio $\\frac{C}{d}$ of circumference to diameter for every circle. For the area of a circle $A=\\pi r^2$ they reconstruct the dissection argument: cut the disk into many thin congruent sectors and rearrange them into a near-rectangle of base $\\frac{1}{2}C=\\pi r$ and height $r$, so $A=\\pi r\\cdot r=\\pi r^2$. For the volume of a cylinder $V=\\pi r^2 h$ they argue by stacking thin congruent disks (or by Cavalieri's principle against a prism of equal cross-sectional area). For the cone $V=\\frac{1}{3}\\pi r^2 h$ and the pyramid $V=\\frac{1}{3}Bh$ they explain the $\\frac{1}{3}$ factor through dissection or limiting arguments and through Cavalieri's principle, and recognize that a cone is the circular analogue of a pyramid. Students connect each formula to the geometric idea that produces it, identify the role of the limit or slicing process, and apply the justified formulas to compute exact values.",
+
+  "subSkills": [
+    "Explain that $\\pi$ is the ratio $\\frac{C}{d}$ and derive $C=2\\pi r$ from $C=\\pi d$",
+    "Reconstruct the sector-rearrangement argument that a circle of radius $r$ has area $\\pi r^2$, identifying the rectangle's base as $\\pi r$ and height as $r$",
+    "State Cavalieri's principle and use it to argue that two solids with equal heights and equal cross-sectional areas at every level have equal volume",
+    "Argue that a cylinder's volume is $\\pi r^2 h$ by stacking disks or by Cavalieri's principle against a prism of equal base area",
+    "Explain the factor of $\\frac{1}{3}$ in the pyramid volume $V=\\frac{1}{3}Bh$ and the cone volume $V=\\frac{1}{3}\\pi r^2 h$ via dissection or limiting/slicing arguments",
+    "Identify the limiting process (number of sectors or slices increasing without bound) that turns an approximation into an exact formula",
+    "Apply the justified formulas to compute exact circumference, area, and volume values in terms of $\\pi$"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Justify circumference from the definition of pi",
+      "example": "Explain why $C=2\\pi r$ follows from the fact that $\\pi=\\frac{C}{d}$ for every circle. Since $\\pi=\\frac{C}{d}$, multiplying both sides by $d$ gives $C=\\pi d$, and because $d=2r$ we get $C=\\pi(2r)=2\\pi r$."
+    },
+    {
+      "name": "Sector-rearrangement argument for circle area",
+      "example": "A disk of radius $r$ is cut into many thin congruent sectors and rearranged so the sectors interlock into a shape that approaches a rectangle. What are the base and height of that rectangle, and what area formula results? The height is $r$ and the base is half the circumference, $\\frac{1}{2}(2\\pi r)=\\pi r$, so the area is $\\pi r\\cdot r=\\pi r^2$."
+    },
+    {
+      "name": "Identify the limiting step in a dissection",
+      "example": "In the sector argument for circle area, why does the rearranged figure only become an exact rectangle in the limit? As the number of sectors increases without bound, the bumpy top and bottom edges straighten and the slanted ends become vertical, so the figure approaches a true rectangle of base $\\pi r$ and height $r$."
+    },
+    {
+      "name": "Cylinder volume by stacking or Cavalieri",
+      "example": "A cylinder has the same height and the same cross-sectional area at every level as a rectangular prism. Using Cavalieri's principle, explain why they have equal volume, and write the cylinder's volume. Equal cross-sections at every height force equal volume; since each cross-section of the cylinder has area $\\pi r^2$, the volume is $\\pi r^2 h$."
+    },
+    {
+      "name": "Explain the one-third factor for cone and pyramid",
+      "example": "A cone and a cylinder share the same base radius $r$ and height $h$. Three such cones fill the cylinder. What does this say about the cone's volume? The cone's volume is $\\frac{1}{3}$ of the cylinder's, so $V=\\frac{1}{3}\\pi r^2 h$; the same dissection idea gives a pyramid volume of $\\frac{1}{3}Bh$."
+    },
+    {
+      "name": "Apply a justified formula to compute an exact value",
+      "example": "Using the derived formula, find the exact area of a circle of radius $5$ and the exact volume of a cone of radius $3$ and height $7$. The area is $\\pi(5)^2=25\\pi$ and the cone volume is $\\frac{1}{3}\\pi(3)^2(7)=21\\pi$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Recall and state one step of a single argument, or apply one justified formula in a one-step computation. The relationship is given directly (for example $\\pi=\\frac{C}{d}$ is stated) and the student completes one inference or substitution. tier1 lives here and ramps into Medium.",
+      "constraints": [
+        "Single-step justification, such as deriving $C=\\pi d$ from $\\pi=\\frac{C}{d}$ or stating which dimension of the rearranged rectangle equals $r$",
+        "One-step substitution into a given formula with integer radius or dimensions of absolute value $\\le 10$",
+        "Answers are exact in terms of $\\pi$ (e.g. $36\\pi$), no rounding",
+        "Only one formula or one argument step is involved and the needed relationship is supplied in the prompt"
+      ]
+    },
+    "Medium": {
+      "description": "Chain two or three steps of a single derivation, identify both dimensions of the sector-rectangle and conclude the area formula, or invoke Cavalieri's principle to compare two named solids. May require choosing the correct argument for a given formula. tier1 ends here and tier2 begins here.",
+      "constraints": [
+        "Combine at least two steps, such as showing base $=\\pi r$ AND height $=r$ to conclude $A=\\pi r^2$",
+        "State Cavalieri's principle correctly and apply it to a cylinder-vs-prism or cone-vs-pyramid comparison",
+        "Explain the $\\frac{1}{3}$ factor for cone or pyramid by referencing a dissection or the three-cones-fill-a-cylinder relationship",
+        "Compute an exact value that requires two operations (e.g. $\\frac{1}{3}\\pi r^2 h$ with a squaring and a multiplication)"
+      ]
+    },
+    "Hard": {
+      "description": "Reconstruct a full informal argument end to end, identify and justify the role of the limiting/slicing process, critique or repair a flawed argument, or connect two formulas through a shared geometric idea (cone as circular pyramid, cylinder as solid of stacked disks). Requires synthesizing the dissection, the limit, and the resulting algebra into one coherent explanation. tier2 lives here.",
+      "constraints": [
+        "Produce the complete sector-rearrangement argument including why base $=\\pi r$, height $=r$, and why the limit makes the rectangle exact",
+        "Justify Cavalieri's principle as the bridge between a known prism/pyramid volume and the analogous cylinder/cone volume",
+        "Identify a flaw in a given argument (e.g. forgetting that $\\frac{1}{2}C$, not $C$, is the rectangle base) and correct it",
+        "Connect the cone and pyramid formulas through their shared $\\frac{1}{3}Bh$ structure, or explain how the limit of stacked disks yields $\\pi r^2 h$"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student uses the full circumference as the base of the rearranged rectangle instead of half of it",
+      "distractor": "Takes the rectangle base as $C=2\\pi r$ rather than $\\frac{1}{2}C=\\pi r$, concluding the area is $2\\pi r\\cdot r=2\\pi r^2$ instead of $\\pi r^2$"
+    },
+    {
+      "misconception": "Student confuses the radius and the diameter when converting $C=\\pi d$ to a radius form",
+      "distractor": "Writes $C=2\\pi r$ but uses $d=r$ (or $C=\\pi r$), so a circle of radius $6$ gets circumference $6\\pi$ instead of $12\\pi$"
+    },
+    {
+      "misconception": "Student confuses the circumference formula with the area formula (linear vs. squared)",
+      "distractor": "Reports the area of a circle as $2\\pi r$ or the circumference as $\\pi r^2$, mixing the first-degree and second-degree formulas"
+    },
+    {
+      "misconception": "Student multiplies by $3$ instead of by $\\frac{1}{3}$ for the cone or pyramid",
+      "distractor": "Computes a cone volume as $3\\pi r^2 h$ or as $\\pi r^2 h$ (the cylinder value), omitting or inverting the $\\frac{1}{3}$ factor"
+    },
+    {
+      "misconception": "Student forgets to square the radius in an area or volume formula",
+      "distractor": "Evaluates $\\pi r^2$ as $\\pi r$ (e.g. gives $5\\pi$ instead of $25\\pi$ for radius $5$), treating the radius as first-degree"
+    },
+    {
+      "misconception": "Student believes Cavalieri's principle requires the solids to be congruent rather than only equal in height and cross-sectional area",
+      "distractor": "Claims a slanted (oblique) cylinder and a right cylinder have different volumes, denying equal volume even though every cross-section matches"
+    },
+    {
+      "misconception": "Student treats the finite dissection as exact and ignores the limiting process",
+      "distractor": "Argues the rearranged sectors form an exact rectangle for a small finite number of pieces, without recognizing that the formula is exact only as the number of sectors increases without bound"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

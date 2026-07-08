@@ -1,0 +1,173 @@
+{
+  "id": "A1.F-IF.C.7--lesson",
+  "standard": "A1.F-IF.C.7",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Functions",
+  "domainCode": "F-IF",
+  "cluster": "Analyze functions using different representations",
+  "clusterCode": "C",
+  "skillName": "Graphing Functions with Key Features",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "Every function graph has a small set of key features that tell its whole story: where it crosses the axes (the intercepts), its steepest or turning points (slope for a line, the vertex for a parabola or absolute-value graph), the direction it opens or heads, and the intervals where it rises or falls. In this lesson you graph functions given by a rule and read off these features, and you reverse the process to recover a parameter such as $h$, $k$, or $a$ from a labeled feature. Work in exact values: keep fractions and radicals rather than rounding.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Graph $f(x)=\\frac{2}{3}x-2$. Identify the slope, the $y$-intercept, and the $x$-intercept.",
+      "solution": {
+        "steps": [
+          "The function is in slope-intercept form $f(x)=mx+b$, so the slope is $m=\\frac{2}{3}$ and the $y$-intercept is $b=-2$, the point $(0,-2)$.",
+          "From $(0,-2)$, the slope $\\frac{2}{3}$ means rise $2$ and run $3$: move to $(3,0)$, then $(6,2)$, and draw the line through these points.",
+          "Find the $x$-intercept by setting $f(x)=0$: $\\frac{2}{3}x-2=0$, so $\\frac{2}{3}x=2$.",
+          "Multiply both sides by $\\frac{3}{2}$: $x=2\\cdot\\frac{3}{2}=3$, giving the $x$-intercept $(3,0)$.",
+          "Key features: slope $\\frac{2}{3}$, $y$-intercept $(0,-2)$, $x$-intercept $(3,0)$."
+        ],
+        "answer": "Slope $\\frac{2}{3}$, $y$-intercept $(0,-2)$, $x$-intercept $(3,0)$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Graph $f(x)=(x-1)^2-4$. Give the vertex, the axis of symmetry, the direction of opening, and all intercepts.",
+      "solution": {
+        "steps": [
+          "The function is in vertex form $f(x)=a(x-h)^2+k$ with $a=1$, $h=1$, $k=-4$, so the vertex is $(h,k)=(1,-4)$.",
+          "Because $a=1>0$, the parabola opens upward, and its axis of symmetry is the vertical line $x=h$, that is $x=1$.",
+          "Find the $y$-intercept by evaluating $f(0)=(0-1)^2-4=1-4=-3$, giving $(0,-3)$.",
+          "Find the $x$-intercepts by setting $f(x)=0$: $(x-1)^2-4=0$, so $(x-1)^2=4$ and $x-1=\\pm 2$.",
+          "Then $x=1+2=3$ or $x=1-2=-1$, giving $x$-intercepts $(3,0)$ and $(-1,0)$.",
+          "Plot the vertex $(1,-4)$, the intercepts $(-1,0)$, $(3,0)$, $(0,-3)$, and draw the upward parabola symmetric about $x=1$."
+        ],
+        "answer": "Vertex $(1,-4)$, axis $x=1$, opens upward; $x$-intercepts $(-1,0)$ and $(3,0)$, $y$-intercept $(0,-3)$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "For $f(x)=x^2-6x+5$, find the vertex and the minimum value, and state the intervals where the function is increasing and decreasing.",
+      "solution": {
+        "steps": [
+          "The quadratic is in standard form $f(x)=ax^2+bx+c$ with $a=1$, $b=-6$, $c=5$. Find the vertex's $x$-coordinate from $x=-\\frac{b}{2a}=-\\frac{-6}{2(1)}=\\frac{6}{2}=3$.",
+          "Substitute $x=3$ back into the rule to get the $y$-coordinate: $f(3)=3^2-6(3)+5=9-18+5=-4$.",
+          "So the vertex is $(3,-4)$. Since $a=1>0$ the parabola opens upward, so the vertex is a minimum and the minimum value is $-4$.",
+          "An upward parabola falls to the left of the vertex and rises to the right of it.",
+          "Therefore $f$ is decreasing on $(-\\infty,3)$ and increasing on $(3,\\infty)$."
+        ],
+        "answer": "Vertex $(3,-4)$, minimum value $-4$; decreasing on $(-\\infty,3)$, increasing on $(3,\\infty)$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Graph $f(x)=-|x+2|+3$. Give the vertex (corner), the axis of symmetry, the direction of opening, and the maximum or minimum value.",
+      "solution": {
+        "steps": [
+          "Write the rule in the form $f(x)=a|x-h|+k$. Here $|x+2|=|x-(-2)|$, so $h=-2$, $k=3$, and $a=-1$.",
+          "The corner (vertex) of an absolute-value graph is at $(h,k)=(-2,3)$, and its axis of symmetry is $x=h$, that is $x=-2$.",
+          "Because $a=-1<0$, the graph opens downward, so the vertex is the highest point.",
+          "Check a point on each side: $f(-3)=-|-3+2|+3=-|-1|+3=-1+3=2$, and by symmetry $f(-1)=2$ as well, so $(-3,2)$ and $(-1,2)$ lie on the graph.",
+          "Since it opens downward from $(-2,3)$, the maximum value is $3$, attained at $x=-2$."
+        ],
+        "answer": "Vertex $(-2,3)$, axis $x=-2$, opens downward, maximum value $3$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Graph $f(x)=\\sqrt{x-1}+2$. State the starting point, the domain, and the direction the curve heads.",
+      "solution": {
+        "steps": [
+          "A square-root function $f(x)=a\\sqrt{x-h}+k$ starts at its endpoint $(h,k)$. Here $h=1$ and $k=2$, so the starting point is $(1,2)$.",
+          "The expression under the radical must be nonnegative: $x-1\\ge 0$, so $x\\ge 1$. The domain is $x\\ge 1$.",
+          "Since $a=1>0$, outputs increase as $x$ increases, so the curve rises to the right from the starting point.",
+          "Plot extra points: $f(2)=\\sqrt{1}+2=3$ gives $(2,3)$, and $f(5)=\\sqrt{4}+2=4$ gives $(5,4)$.",
+          "Draw the curve beginning at $(1,2)$ and rising to the right through $(2,3)$ and $(5,4)$."
+        ],
+        "answer": "Starting point $(1,2)$, domain $x\\ge 1$, curve rises to the right."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Graph $f(x)=-3x+6$. Identify the slope, the $y$-intercept, and the $x$-intercept.",
+      "hint": "The function is already in $y=mx+b$ form, so $m$ is the slope and $b$ is the $y$-intercept. For the $x$-intercept, set $f(x)=0$ and solve.",
+      "solution": {
+        "steps": [
+          "In $f(x)=mx+b$ the slope is $m=-3$ and the $y$-intercept is $b=6$, the point $(0,6)$.",
+          "Set $f(x)=0$ for the $x$-intercept: $-3x+6=0$, so $-3x=-6$ and $x=2$.",
+          "The $x$-intercept is $(2,0)$."
+        ],
+        "answer": "Slope $-3$, $y$-intercept $(0,6)$, $x$-intercept $(2,0)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Graph $f(x)=(x+2)^2-9$. Give the vertex, the axis of symmetry, and both $x$-intercepts.",
+      "hint": "The rule is in vertex form $a(x-h)^2+k$; note that $x+2$ means $h=-2$. For the $x$-intercepts, set $f(x)=0$ and use $\\pm\\sqrt{\\;}$.",
+      "solution": {
+        "steps": [
+          "Vertex form gives $h=-2$, $k=-9$, so the vertex is $(-2,-9)$ and the axis of symmetry is $x=-2$.",
+          "Set $f(x)=0$: $(x+2)^2-9=0$, so $(x+2)^2=9$ and $x+2=\\pm 3$.",
+          "Then $x=-2+3=1$ or $x=-2-3=-5$.",
+          "The $x$-intercepts are $(1,0)$ and $(-5,0)$."
+        ],
+        "answer": "Vertex $(-2,-9)$, axis $x=-2$, $x$-intercepts $(1,0)$ and $(-5,0)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "For $f(x)=x^2+4x-5$, find the vertex and state the intervals where the function is increasing and decreasing.",
+      "hint": "Use $x=-\\frac{b}{2a}$ to find the vertex's $x$-coordinate, then substitute back for the $y$-coordinate. An upward parabola decreases before the vertex and increases after it.",
+      "solution": {
+        "steps": [
+          "Here $a=1$, $b=4$, $c=-5$. The vertex's $x$-coordinate is $x=-\\frac{b}{2a}=-\\frac{4}{2(1)}=-2$.",
+          "Substitute back: $f(-2)=(-2)^2+4(-2)-5=4-8-5=-9$, so the vertex is $(-2,-9)$.",
+          "Since $a=1>0$ the parabola opens upward, falling before the vertex and rising after it.",
+          "So $f$ is decreasing on $(-\\infty,-2)$ and increasing on $(-2,\\infty)$."
+        ],
+        "answer": "Vertex $(-2,-9)$; decreasing on $(-\\infty,-2)$, increasing on $(-2,\\infty)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "An absolute-value graph has its corner at $(3,-1)$ and opens upward, passing through $(4,0)$. Write its equation in the form $f(x)=a|x-h|+k$.",
+      "hint": "The corner gives $h$ and $k$ directly. Substitute the extra point to solve for $a$.",
+      "solution": {
+        "steps": [
+          "The corner is the vertex $(h,k)$, so $h=3$ and $k=-1$, giving $f(x)=a|x-3|-1$.",
+          "Use the point $(4,0)$: $0=a|4-3|-1=a\\cdot 1-1=a-1$.",
+          "Solve $a-1=0$, so $a=1$. (A positive $a$ matches that the graph opens upward.)",
+          "The equation is $f(x)=|x-3|-1$."
+        ],
+        "answer": "$f(x)=|x-3|-1$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Graph the piecewise function $f(x)=\\begin{cases} x+1 & x<0 \\\\ 2 & x\\ge 0\\end{cases}$. State $f(0)$ and the interval on which the function is constant, and describe the endpoint at $x=0$ on each piece.",
+      "hint": "Use the piece whose condition includes the input. The condition $x\\ge 0$ includes $x=0$, so use the rule $f(x)=2$ there. A strict inequality gives an open circle.",
+      "solution": {
+        "steps": [
+          "To find $f(0)$, choose the piece whose condition holds at $x=0$. Since $x\\ge 0$ includes $0$, use $f(x)=2$, so $f(0)=2$.",
+          "The piece $f(x)=2$ applies for all $x\\ge 0$, so the function is constant (equal to $2$) on $[0,\\infty)$.",
+          "On the left piece $f(x)=x+1$ for $x<0$: as $x$ approaches $0$ the value approaches $0+1=1$, but $x=0$ is not included, so there is an open circle at $(0,1)$.",
+          "On the right piece $f(x)=2$ the point $x=0$ is included, so there is a closed (filled) circle at $(0,2)$.",
+          "Graph the line $y=x+1$ for $x<0$ ending in an open circle at $(0,1)$, and the horizontal ray $y=2$ for $x\\ge 0$ starting with a closed circle at $(0,2)$."
+        ],
+        "answer": "$f(0)=2$; constant value $2$ on $[0,\\infty)$; open circle at $(0,1)$ on the left piece, closed circle at $(0,2)$ on the right piece."
+      }
+    }
+  ]
+}

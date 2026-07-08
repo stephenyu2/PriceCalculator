@@ -1,0 +1,142 @@
+{
+  "standard": "A1.F-LE.A.2",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Linear, Quadratic, and Exponential Models",
+  "domainCode": "F-LE",
+  "cluster": "Construct and compare linear, quadratic, and exponential models and solve problems",
+  "clusterCode": "A",
+  "skillName": "Constructing Linear and Exponential Functions",
+
+  "description": "Students construct an explicit linear function $f(x)=mx+b$ or an explicit exponential function $f(x)=ab^{x}$ from one of four representations: a graph, a verbal description of a relationship, two input-output pairs, or a table of values. They must decide which model fits (constant first difference signals linear; constant ratio signals exponential), find the rate of change $m$ or common ratio $b$, find the initial value $b$ or starting amount $a$, and write the rule in function notation. The same reasoning applies to sequences: an arithmetic sequence is a linear function of the term number $n$ written $a_n=a_1+(n-1)d$, and a geometric sequence is an exponential function written $a_n=a_1\\cdot r^{\\,n-1}$.",
+
+  "subSkills": [
+    "Decide whether a relationship is linear or exponential by testing for a constant difference vs. a constant ratio",
+    "Compute the slope $m=\\frac{y_2-y_1}{x_2-x_1}$ from two input-output pairs or from a graph",
+    "Find the initial value $b$ by reading the $y$-intercept from a graph or back-solving $b=y-mx$ from a point",
+    "Compute the common ratio $r$ (or base $b$) by dividing consecutive outputs, $r=\\frac{f(x+1)}{f(x)}$",
+    "Find the starting amount $a$ in $f(x)=ab^{x}$ from the value at $x=0$ or by back-solving",
+    "Write a linear rule $f(x)=mx+b$ from a graph, description, two points, or a table",
+    "Write an exponential rule $f(x)=ab^{x}$ from a graph, description, two points, or a table",
+    "Write the explicit rule for an arithmetic sequence, $a_n=a_1+(n-1)d$",
+    "Write the explicit rule for a geometric sequence, $a_n=a_1\\cdot r^{\\,n-1}$"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Linear from two points",
+      "example": "A line passes through $(2,7)$ and $(5,16)$. Write $f(x)$. Slope $m=\\frac{16-7}{5-2}=3$, then $b=7-3(2)=1$, so $f(x)=3x+1$."
+    },
+    {
+      "name": "Linear from a graph",
+      "example": "A line crosses the $y$-axis at $(0,4)$ and rises $2$ for every $1$ unit right. Write the function. Answer: $f(x)=2x+4$."
+    },
+    {
+      "name": "Linear from a table",
+      "example": "A table gives $f(1)=5,\\ f(2)=8,\\ f(3)=11,\\ f(4)=14$. Constant difference $3$, and $f(0)=2$, so $f(x)=3x+2$."
+    },
+    {
+      "name": "Exponential from two points",
+      "example": "An exponential function has $f(0)=6$ and $f(2)=54$. Then $b^{2}=\\frac{54}{6}=9$ so $b=3$, giving $f(x)=6\\cdot 3^{x}$."
+    },
+    {
+      "name": "Exponential from a table",
+      "example": "A table gives $g(0)=80,\\ g(1)=40,\\ g(2)=20,\\ g(3)=10$. Constant ratio $\\frac{1}{2}$, so $g(x)=80\\left(\\frac{1}{2}\\right)^{x}$."
+    },
+    {
+      "name": "Exponential from a description (percent change)",
+      "example": "A population of $2000$ grows $5\\%$ per year. Write $P(t)$. Base $1+0.05=1.05$, so $P(t)=2000(1.05)^{t}$."
+    },
+    {
+      "name": "Arithmetic sequence rule",
+      "example": "A sequence begins $4,7,10,13,\\dots$. Common difference $d=3$, first term $a_1=4$, so $a_n=4+(n-1)3=3n+1$."
+    },
+    {
+      "name": "Geometric sequence rule",
+      "example": "A sequence begins $5,10,20,40,\\dots$. Common ratio $r=2$, first term $a_1=5$, so $a_n=5\\cdot 2^{\\,n-1}$."
+    },
+    {
+      "name": "Choose the model, then construct",
+      "example": "Given a table, decide linear vs. exponential. For $h(0)=3,\\ h(1)=6,\\ h(2)=12,\\ h(3)=24$ the ratio is constant ($2$), not the difference, so $h(x)=3\\cdot 2^{x}$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step construction where the model type is already given and the two needed parameters can be read almost directly. Linear from a $y$-intercept and a stated slope, an arithmetic sequence from a visible first term and common difference, or a geometric sequence with a small whole-number ratio read off the list. No model-type decision; no back-solving.",
+      "constraints": [
+        "Model type (linear, exponential, arithmetic, or geometric) is stated or obvious",
+        "Initial value is the value at $x=0$ or the first term, read directly",
+        "Slope, common difference, or ratio is a small positive whole number stated or one step from the data",
+        "Answer is a single rule; no follow-up evaluation"
+      ]
+    },
+    "Medium": {
+      "description": "One genuine inference step before writing the rule: compute slope from two points where neither is the intercept, find a common ratio by dividing consecutive table outputs, convert a clean percent to an exponential base, or back-solve the initial value from a non-intercept point. Both linear and exponential appear. May include a single evaluation follow-up.",
+      "constraints": [
+        "Slope computed from two arbitrary points via $m=\\frac{y_2-y_1}{x_2-x_1}$, or ratio found by dividing outputs",
+        "Initial value found by back-solving $b=y-mx$ or by using $f(0)$ when not the first row",
+        "Exponential bases are clean: $2$, $3$, $\\frac{1}{2}$, $1.05$, or $0.8$",
+        "tier1 (Easy to Medium) lives here: read-off and single-inference linear, arithmetic, and simplest geometric/exponential builds"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step construction: decide the model type by testing both difference and ratio, find a base from two non-adjacent points (e.g. $b^{2}=\\frac{f(x_2)}{f(x_1)}$), back out the starting amount $a$ from a point that is not $x=0$, or write a sequence rule and use it to find a far term or solve for $n$. May require simplifying $a_n=a_1+(n-1)d$ to slope-intercept form.",
+      "constraints": [
+        "Requires choosing linear vs. exponential by comparing first differences and ratios",
+        "Base or ratio derived from non-adjacent points, e.g. solving $b^{2}=9$ to get $b=3$",
+        "Initial value $a$ or $b$ obtained by back-solving from a non-zero input",
+        "Often closes with finding a specific term, evaluating the rule, or solving for the input",
+        "tier2 (Medium to Hard) lives here: model-type decisions, derived bases, and sequence rules applied to far terms, with no item overlap with tier1"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student assumes a relationship is linear without checking, and fits a line to exponential data",
+      "distractor": "For $h(0)=3,\\ h(1)=6,\\ h(2)=12$ writes $h(x)=3x+3$ instead of $h(x)=3\\cdot 2^{x}$"
+    },
+    {
+      "misconception": "Student inverts the slope formula, dividing change in $x$ by change in $y$",
+      "distractor": "For $(2,7)$ and $(5,16)$ computes $m=\\frac{5-2}{16-7}=\\frac{1}{3}$ instead of $m=\\frac{16-7}{5-2}=3$"
+    },
+    {
+      "misconception": "Student reports the slope as the function but forgets to find and add the intercept",
+      "distractor": "For $(2,7)$ and $(5,16)$ writes $f(x)=3x$ instead of $f(x)=3x+1$"
+    },
+    {
+      "misconception": "Student uses the percent rate itself as the exponential base instead of $1\\pm r$",
+      "distractor": "For $5\\%$ growth on $2000$ writes $P(t)=2000(0.05)^{t}$ instead of $P(t)=2000(1.05)^{t}$"
+    },
+    {
+      "misconception": "Student treats the common ratio as a difference, subtracting consecutive terms of a geometric sequence",
+      "distractor": "For $5,10,20,40$ writes $a_n=5+(n-1)5$ instead of $a_n=5\\cdot 2^{\\,n-1}$"
+    },
+    {
+      "misconception": "Student uses $n$ instead of $n-1$ as the exponent or multiplier in a sequence rule",
+      "distractor": "For $5,10,20,40$ writes $a_n=5\\cdot 2^{\\,n}$ instead of $a_n=5\\cdot 2^{\\,n-1}$, giving $a_1=10$"
+    },
+    {
+      "misconception": "Student takes the base from a two-step ratio without taking the square root, ignoring the gap in inputs",
+      "distractor": "For $f(0)=6,\\ f(2)=54$ writes $f(x)=6\\cdot 9^{x}$ instead of $f(x)=6\\cdot 3^{x}$"
+    },
+    {
+      "misconception": "Student swaps the rate and the starting value when writing the rule from a description",
+      "distractor": "For a start of $4$ growing by $3$ each step writes $a_n=3+(n-1)4$ instead of $a_n=4+(n-1)3$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

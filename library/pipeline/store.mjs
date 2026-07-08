@@ -54,18 +54,24 @@ function blueprintFor(standard) {
   return existsSync(bp) ? loadJson(bp) : null;
 }
 
+const CLUSTER_TYPES = ['cluster-worksheet', 'cluster-test'];
+
 // Build the catalog entry from a content file's own tags (single source of truth).
 function catalogEntry(data) {
+  const isCluster = CLUSTER_TYPES.includes(data.materialType);
   return {
     id: data.id,
-    standard: data.standard,
+    scope: isCluster ? 'cluster' : 'standard',
+    standard: data.standard ?? null,
+    clusterId: data.clusterId ?? null,
     domain: data.domain,
     domainCode: data.domainCode,
     cluster: data.cluster,
     clusterCode: data.clusterCode,
-    skillName: data.skillName,
+    skillName: data.skillName ?? data.cluster ?? null,
     materialType: data.materialType,
     difficulty: data.difficulty ?? null,
+    tier: data.tier ?? null,
     itemCount: Array.isArray(data.items) ? data.items.length : 0,
     verificationStatus: 'verified',
     generatedAt: data.generatedAt || now,

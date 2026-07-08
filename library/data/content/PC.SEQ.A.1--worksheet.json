@@ -1,0 +1,217 @@
+{
+  "id": "PC.SEQ.A.1--worksheet",
+  "standard": "PC.SEQ.A.1",
+  "clusterId": null,
+  "grade": "precalculus",
+  "subject": "math",
+  "domain": "Sequences, Series, and Limits",
+  "domainCode": "SEQ",
+  "cluster": "Sequences and series",
+  "clusterCode": "A",
+  "skillName": "Arithmetic Sequences and Series",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "intro": "Arithmetic sequences and series. Items 1 to 5 are Easy, items 6 to 10 are Medium, and items 11 to 15 are Hard. Use $a_n = a_1 + (n-1)d$ for the $n$th term and $S_n = \\frac{n}{2}(a_1 + a_n) = \\frac{n}{2}\\left(2a_1 + (n-1)d\\right)$ for a partial sum.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Determine whether the sequence $4,\\ 9,\\ 14,\\ 19,\\ \\dots$ is arithmetic. If it is, state the common difference $d$.",
+      "answer": "Yes, it is arithmetic with $d = 5$.",
+      "solution": {
+        "steps": [
+          "Test successive differences: $9 - 4 = 5$, $14 - 9 = 5$, $19 - 14 = 5$.",
+          "Every successive difference equals $5$, so the difference is constant.",
+          "A constant difference means the sequence is arithmetic with $d = 5$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "An arithmetic sequence has first term $a_1 = 6$ and common difference $d = 4$. Find the $5$th term $a_5$.",
+      "answer": "$a_5 = 22$",
+      "solution": {
+        "steps": [
+          "Use the explicit formula $a_n = a_1 + (n-1)d$.",
+          "Substitute $a_1 = 6$, $d = 4$, $n = 5$: $a_5 = 6 + (5-1)\\cdot 4$.",
+          "Compute: $a_5 = 6 + 4\\cdot 4 = 6 + 16 = 22$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Find the common difference $d$ of the arithmetic sequence $20,\\ 17,\\ 14,\\ 11,\\ \\dots$.",
+      "answer": "$d = -3$",
+      "solution": {
+        "steps": [
+          "The common difference is $d = a_{n+1} - a_n$ for any consecutive pair.",
+          "Compute: $17 - 20 = -3$ and $14 - 17 = -3$.",
+          "The common difference is $d = -3$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "An arithmetic sequence has $a_1 = 3$ and $d = 7$. Find the $10$th term $a_{10}$.",
+      "answer": "$a_{10} = 66$",
+      "solution": {
+        "steps": [
+          "Use $a_n = a_1 + (n-1)d$ with $a_1 = 3$, $d = 7$, $n = 10$.",
+          "Then $a_{10} = 3 + (10-1)\\cdot 7 = 3 + 9\\cdot 7$.",
+          "Compute: $a_{10} = 3 + 63 = 66$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Determine whether the sequence $2,\\ 6,\\ 18,\\ 54,\\ \\dots$ is arithmetic. Explain.",
+      "answer": "No, it is not arithmetic.",
+      "solution": {
+        "steps": [
+          "Test successive differences: $6 - 2 = 4$, but $18 - 6 = 12$.",
+          "The differences $4$ and $12$ are not equal, so there is no constant common difference.",
+          "Therefore the sequence is not arithmetic. (It is geometric, since each term is multiplied by $3$, but that is a different structure.)"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Write an explicit formula for the $n$th term of the arithmetic sequence $5,\\ 12,\\ 19,\\ 26,\\ \\dots$, simplified to the form $a_n = An + B$.",
+      "answer": "$a_n = 7n - 2$",
+      "solution": {
+        "steps": [
+          "Identify $a_1 = 5$ and $d = 12 - 5 = 7$.",
+          "Substitute into $a_n = a_1 + (n-1)d$: $a_n = 5 + (n-1)\\cdot 7$.",
+          "Distribute: $a_n = 5 + 7n - 7 = 7n - 2$.",
+          "Check: $a_1 = 7(1) - 2 = 5$ and $a_2 = 7(2) - 2 = 12$, as required."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Find the sum of the first $30$ terms of the arithmetic sequence $4,\\ 7,\\ 10,\\ \\dots$.",
+      "answer": "$S_{30} = 1425$",
+      "solution": {
+        "steps": [
+          "Here $a_1 = 4$ and $d = 3$.",
+          "First find $a_{30} = a_1 + (30-1)d = 4 + 29\\cdot 3 = 4 + 87 = 91$.",
+          "Apply $S_n = \\frac{n}{2}(a_1 + a_n)$: $S_{30} = \\frac{30}{2}(4 + 91)$.",
+          "Compute: $S_{30} = 15\\cdot 95 = 1425$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "In an arithmetic sequence, $a_4 = 14$ and $a_9 = 34$. Find the common difference $d$ and the first term $a_1$.",
+      "answer": "$d = 4$ and $a_1 = 2$",
+      "solution": {
+        "steps": [
+          "Between $a_4$ and $a_9$ there are $9 - 4 = 5$ steps of size $d$.",
+          "So $d = \\frac{a_9 - a_4}{9 - 4} = \\frac{34 - 14}{5} = \\frac{20}{5} = 4$.",
+          "Back-solve for $a_1$ using $a_4 = a_1 + 3d$: $14 = a_1 + 3\\cdot 4 = a_1 + 12$.",
+          "Therefore $a_1 = 14 - 12 = 2$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Evaluate the finite arithmetic series $\\sum_{k=1}^{12}(3k + 2)$.",
+      "answer": "$258$",
+      "solution": {
+        "steps": [
+          "The terms form an arithmetic sequence: at $k=1$ the term is $3(1)+2 = 5$ and at $k=12$ it is $3(12)+2 = 38$, with common difference $3$.",
+          "There are $12$ terms, so apply $S_n = \\frac{n}{2}(\\text{first} + \\text{last})$.",
+          "$S_{12} = \\frac{12}{2}(5 + 38) = 6\\cdot 43$.",
+          "Compute: $S_{12} = 258$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "An arithmetic sequence has first term $a_1 = 40$ and common difference $d = -\\frac{3}{2}$. Find the sum of the first $20$ terms.",
+      "answer": "$S_{20} = 515$",
+      "solution": {
+        "steps": [
+          "Use $S_n = \\frac{n}{2}\\left(2a_1 + (n-1)d\\right)$ with $a_1 = 40$, $d = -\\frac{3}{2}$, $n = 20$.",
+          "Compute the inner part: $2a_1 = 80$ and $(n-1)d = 19\\cdot\\left(-\\frac{3}{2}\\right) = -\\frac{57}{2}$.",
+          "So $2a_1 + (n-1)d = 80 - \\frac{57}{2} = \\frac{160}{2} - \\frac{57}{2} = \\frac{103}{2}$.",
+          "Then $S_{20} = \\frac{20}{2}\\cdot\\frac{103}{2} = 10\\cdot\\frac{103}{2} = \\frac{1030}{2} = 515$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A theater has $18$ seats in the first row, and each row after the first has $2$ more seats than the row before it. How many seats are in the $15$th row, and how many seats are there in the first $15$ rows combined?",
+      "answer": "The $15$th row has $46$ seats; the first $15$ rows have $480$ seats total.",
+      "solution": {
+        "steps": [
+          "Model the rows as arithmetic with $a_1 = 18$ and $d = 2$.",
+          "Find the $15$th row: $a_{15} = a_1 + (15-1)d = 18 + 14\\cdot 2 = 18 + 28 = 46$ seats.",
+          "Find the total of $15$ rows with $S_n = \\frac{n}{2}(a_1 + a_n)$: $S_{15} = \\frac{15}{2}(18 + 46)$.",
+          "Compute: $S_{15} = \\frac{15}{2}\\cdot 64 = 15\\cdot 32 = 480$ seats."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "The sum of the first $n$ terms of the arithmetic sequence $3,\\ 7,\\ 11,\\ 15,\\ \\dots$ is $465$. Find $n$.",
+      "answer": "$n = 15$",
+      "solution": {
+        "steps": [
+          "Here $a_1 = 3$ and $d = 4$. Use $S_n = \\frac{n}{2}\\left(2a_1 + (n-1)d\\right) = 465$.",
+          "Substitute: $\\frac{n}{2}\\left(6 + 4(n-1)\\right) = 465$, which simplifies to $\\frac{n}{2}(4n + 2) = 465$.",
+          "Multiply out: $n(2n + 1) = 465$, so $2n^2 + n - 465 = 0$.",
+          "Solve the quadratic: $n = \\frac{-1 \\pm \\sqrt{1 + 4\\cdot 2\\cdot 465}}{2\\cdot 2} = \\frac{-1 \\pm \\sqrt{3721}}{4} = \\frac{-1 \\pm 61}{4}$.",
+          "The roots are $n = 15$ and $n = -\\frac{62}{4} = -15.5$. Reject the negative, non-integer root.",
+          "Therefore $n = 15$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "In an arithmetic sequence, the $6$th term is $a_6 = 31$ and the sum of the first $6$ terms is $S_6 = 96$. Find the first term $a_1$ and the common difference $d$.",
+      "answer": "$a_1 = 1$ and $d = 6$",
+      "solution": {
+        "steps": [
+          "Use the sum formula $S_n = \\frac{n}{2}(a_1 + a_n)$ with the known $a_6$: $S_6 = \\frac{6}{2}(a_1 + a_6) = 3(a_1 + 31) = 96$.",
+          "Solve: $a_1 + 31 = 32$, so $a_1 = 1$.",
+          "Now use $a_6 = a_1 + 5d$: $31 = 1 + 5d$, so $5d = 30$ and $d = 6$.",
+          "Check: $a_6 = 1 + 5\\cdot 6 = 31$ and $S_6 = 3(1 + 31) = 96$, both correct."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A runner trains over several days. On day $1$ she runs $2$ miles, and each day she runs $\\frac{1}{2}$ mile more than the previous day. On what day does her single-day run first reach $10$ miles, and what is her total mileage through that day?",
+      "answer": "Day $17$; total mileage is $102$ miles.",
+      "solution": {
+        "steps": [
+          "Model daily mileage as arithmetic with $a_1 = 2$ and $d = \\frac{1}{2}$.",
+          "Set $a_n = 10$: $2 + (n-1)\\cdot\\frac{1}{2} = 10$, so $(n-1)\\cdot\\frac{1}{2} = 8$ and $n - 1 = 16$.",
+          "Thus $n = 17$; her run first reaches $10$ miles on day $17$.",
+          "Total through day $17$: $S_{17} = \\frac{17}{2}(a_1 + a_{17}) = \\frac{17}{2}(2 + 10)$.",
+          "Compute: $S_{17} = \\frac{17}{2}\\cdot 12 = 17\\cdot 6 = 102$ miles."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A worker saves money each month in an arithmetic pattern. In month $3$ she saves $\\$70$, and in month $8$ she saves $\\$120$. What is the total amount she saves over the first $12$ months?",
+      "answer": "$\\$1260$",
+      "solution": {
+        "steps": [
+          "Let monthly savings be arithmetic with first month $a_1$ and common difference $d$.",
+          "From $a_3 = 70$ and $a_8 = 120$, the gap is $8 - 3 = 5$ steps: $d = \\frac{120 - 70}{5} = \\frac{50}{5} = 10$.",
+          "Find $a_1$ from $a_3 = a_1 + 2d$: $70 = a_1 + 20$, so $a_1 = 50$.",
+          "Find month $12$: $a_{12} = a_1 + 11d = 50 + 11\\cdot 10 = 160$.",
+          "Total over $12$ months: $S_{12} = \\frac{12}{2}(a_1 + a_{12}) = 6(50 + 160) = 6\\cdot 210$.",
+          "Compute: $S_{12} = 1260$, so she saves $\\$1260$ over the first $12$ months."
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T21:27:56.866Z"
+}

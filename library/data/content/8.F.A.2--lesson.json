@@ -1,0 +1,174 @@
+{
+  "id": "8.F.A.2--lesson",
+  "standard": "8.F.A.2",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Functions",
+  "domainCode": "F",
+  "cluster": "Define, evaluate, and compare functions",
+  "clusterCode": "A",
+  "skillName": "Comparing Functions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "A linear function can be described by an equation, a graph, a table, or words. No matter the form, every linear function has two key numbers: the rate of change (slope $m$, how fast the output grows per unit of input) and the initial value (y-intercept $b$, the output when $x=0$). To compare two functions, pull out their $m$ and $b$ from whatever representation each one uses, then compare those numbers. From an equation $y=mx+b$ you read $m$ and $b$ directly. From a table you compute $m=\\frac{\\Delta y}{\\Delta x}$ and find $b$ by tracing back to $x=0$. From a graph you read the y-intercept and count rise over run. From words, the 'per unit' amount is the slope and the fixed starting amount is the intercept.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Function A is $y = 3x + 2$. Function B is given by the table $(0,5),(1,7),(2,9)$. Which function has the greater rate of change?",
+      "solution": {
+        "steps": [
+          "Read the rate of change of Function A directly from $y=mx+b$: the slope is $m=3$.",
+          "Find the rate of change of Function B from the table. As $x$ goes from $0$ to $1$, $y$ goes from $5$ to $7$: $\\frac{\\Delta y}{\\Delta x} = \\frac{7-5}{1-0} = \\frac{2}{1} = 2$.",
+          "Check with another pair: from $(1,7)$ to $(2,9)$, $\\frac{9-7}{2-1} = 2$. The rate is constant, so Function B is linear with slope $2$.",
+          "Compare the rates of change: $3 > 2$.",
+          "Function A has the greater rate of change."
+        ],
+        "answer": "Function A, because its rate of change is $3$ while Function B's is $2$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Function A is $y = -2x + 4$. Function B is a line that passes through the points $(0,1)$ and $(2,5)$ shown on a graph. Which function has the greater initial value?",
+      "solution": {
+        "steps": [
+          "The initial value is the output when $x=0$, which is the y-intercept $b$.",
+          "Read Function A from $y=mx+b$: its initial value is $b=4$.",
+          "Find Function B's initial value from the graph. The line passes through $(0,1)$, and $x=0$ there, so the y-intercept is $1$.",
+          "Compare the initial values: $4 > 1$.",
+          "Function A has the greater initial value."
+        ],
+        "answer": "Function A, because its initial value is $4$ while Function B's is $1$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Function A is the table $(0,10),(2,16),(4,22)$. Function B is described: a plant is $4$ cm tall and grows $2$ cm per week, where $x$ is the number of weeks. Which function grows faster?",
+      "solution": {
+        "steps": [
+          "\"Grows faster\" means the greater rate of change (slope).",
+          "Find Function A's slope from the table. From $(0,10)$ to $(2,16)$: $\\frac{\\Delta y}{\\Delta x} = \\frac{16-10}{2-0} = \\frac{6}{2} = 3$.",
+          "Translate Function B's description: it grows $2$ cm per week, so the rate of change is $2$ (the starting height $4$ is the initial value, not the slope).",
+          "Compare the rates of change: $3 > 2$.",
+          "Function A grows faster."
+        ],
+        "answer": "Function A, because it grows at $3$ cm per unit while Function B grows at $2$ cm per week."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Function A is the table $(2,7),(4,11),(6,15)$. Function B is $y = 2x + 1$. Compare the rate of change and the initial value of the two functions.",
+      "solution": {
+        "steps": [
+          "Find Function A's rate of change. From $(2,7)$ to $(4,11)$: $\\frac{\\Delta y}{\\Delta x} = \\frac{11-7}{4-2} = \\frac{4}{2} = 2$.",
+          "Find Function A's initial value. The table starts at $x=2$, not $x=0$, so trace back: at $x=2$, $y=7$; each step of $-1$ in $x$ lowers $y$ by $2$. Going from $x=2$ to $x=0$ subtracts $2$ twice from $y$: $7 - 2 - 2 = 3$. So the initial value is $3$.",
+          "Read Function B from $y=mx+b$: rate of change $m=2$, initial value $b=1$.",
+          "Compare rates of change: both are $2$, so they increase at the same rate (the lines are parallel).",
+          "Compare initial values: $3 > 1$, so Function A starts higher."
+        ],
+        "answer": "Equal rates of change ($2$ each); Function A has the greater initial value ($3$ versus $1$)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Function A is $y = 4x + 1$ and Function B is $y = 2x + 9$. For what values of $x$ is Function A greater than Function B?",
+      "solution": {
+        "steps": [
+          "First find where the functions are equal by setting them equal: $4x + 1 = 2x + 9$.",
+          "Subtract $2x$ from both sides: $2x + 1 = 9$.",
+          "Subtract $1$ from both sides: $2x = 8$, so $x = 4$. The functions are equal at $x=4$.",
+          "Decide which is greater after the crossover. Function A has the larger slope ($4 > 2$), so it rises faster and overtakes Function B once $x$ passes $4$.",
+          "Confirm with a test value $x=5$: Function A gives $4(5)+1 = 21$, Function B gives $2(5)+9 = 19$, and $21 > 19$.",
+          "So Function A is greater than Function B for $x > 4$."
+        ],
+        "answer": "$x > 4$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Function A is $y = 5x + 1$. Function B is given by the table $(0,3),(1,5),(2,7)$. Which function has the greater rate of change?",
+      "hint": "Read the slope of Function A from $y=mx+b$, and compute Function B's slope as $\\frac{\\Delta y}{\\Delta x}$ from the table.",
+      "solution": {
+        "steps": [
+          "Function A's rate of change is the slope $m=5$.",
+          "Function B's rate of change from the table: $\\frac{5-3}{1-0} = \\frac{2}{1} = 2$.",
+          "Compare: $5 > 2$.",
+          "Function A has the greater rate of change."
+        ],
+        "answer": "Function A, with a rate of change of $5$ versus $2$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Function A is $y = x + 6$. Function B is a line that passes through $(0,2)$ with slope $4$ shown on a graph. Which function has the greater initial value?",
+      "hint": "The initial value is the y-intercept, the output when $x=0$.",
+      "solution": {
+        "steps": [
+          "Function A's initial value is $b = 6$.",
+          "Function B passes through $(0,2)$, so its initial value (y-intercept) is $2$.",
+          "Compare: $6 > 2$.",
+          "Function A has the greater initial value, even though Function B has the steeper slope."
+        ],
+        "answer": "Function A, with an initial value of $6$ versus $2$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Function A is the table $(0,12),(3,18),(6,24)$. Function B is described: a candle is $20$ cm tall and burns down $2$ cm per hour, so $y$ is its height after $x$ hours. Which function has the greater rate of change, and what is the sign of each rate?",
+      "hint": "Burning down means the height decreases, so Function B's rate of change is negative. Compute Function A's slope from the table.",
+      "solution": {
+        "steps": [
+          "Function A's rate of change from the table: $\\frac{18-12}{3-0} = \\frac{6}{3} = 2$. This is positive (increasing).",
+          "Function B burns down $2$ cm per hour, so its height decreases: the rate of change is $-2$ (negative).",
+          "Compare the actual rates: $2 > -2$.",
+          "Function A has the greater rate of change. A common error is to compare only sizes and call them equal; the sign matters, and $2 > -2$."
+        ],
+        "answer": "Function A has the greater rate of change. Function A's rate is $+2$ (increasing); Function B's is $-2$ (decreasing)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Function A is the table $(1,8),(3,14),(5,20)$. Function B is $y = 4x - 1$. Compare both the rate of change and the initial value of the two functions.",
+      "hint": "Compute Function A's slope from two table points, then trace back to $x=0$ for its initial value. Read Function B's $m$ and $b$ from its equation.",
+      "solution": {
+        "steps": [
+          "Function A's rate of change: $\\frac{14-8}{3-1} = \\frac{6}{2} = 3$.",
+          "Function A's initial value: at $x=1$, $y=8$; going back to $x=0$ subtracts one slope step, $8 - 3 = 5$. So $b = 5$.",
+          "Function B from the equation: rate of change $m = 4$, initial value $b = -1$.",
+          "Compare rates of change: $4 > 3$, so Function B increases faster.",
+          "Compare initial values: $5 > -1$, so Function A starts higher."
+        ],
+        "answer": "Function B has the greater rate of change ($4$ versus $3$); Function A has the greater initial value ($5$ versus $-1$)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Function A is $y = 6x + 2$ and Function B is $y = 3x + 11$. At what value of $x$ are the two functions equal, and for what values of $x$ is Function A greater?",
+      "hint": "Set the two expressions equal and solve for $x$. The function with the larger slope is greater after the crossover point.",
+      "solution": {
+        "steps": [
+          "Set them equal: $6x + 2 = 3x + 11$.",
+          "Subtract $3x$ from both sides: $3x + 2 = 11$.",
+          "Subtract $2$ from both sides: $3x = 9$, so $x = 3$. The functions are equal at $x = 3$.",
+          "Function A has the larger slope ($6 > 3$), so it is greater once $x$ passes the crossover.",
+          "Check $x=4$: Function A gives $6(4)+2 = 26$, Function B gives $3(4)+11 = 23$, and $26 > 23$.",
+          "So Function A is greater for $x > 3$."
+        ],
+        "answer": "They are equal at $x = 3$; Function A is greater for $x > 3$."
+      }
+    }
+  ]
+}

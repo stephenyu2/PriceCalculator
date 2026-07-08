@@ -1,0 +1,150 @@
+{
+  "id": "GEO.G-CO.D.12--quiz",
+  "standard": "GEO.G-CO.D.12",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Make geometric constructions",
+  "clusterCode": "D",
+  "skillName": "Formal Geometric Constructions",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Eight multiple-choice questions on formal compass-and-straightedge constructions: copying segments and angles, perpendicular and angle bisectors, perpendicular and parallel lines, and the congruence and locus reasoning that justifies each one.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "A student copies $\\overline{AB}$ onto a new ray by opening the compass to the width $AB$ and striking an arc. To be sure the new segment $\\overline{A'B'}$ is congruent to $\\overline{AB}$, what must stay the same throughout the construction?\nA) The compass width (radius) must remain fixed\nB) The straightedge must stay in the same position\nC) The pencil pressure on the paper\nD) The angle at which the ray is drawn",
+      "answer": "A) The compass width (radius) must remain fixed",
+      "solution": {
+        "steps": [
+          "Copying a segment relies on transferring one fixed compass radius: the opening equal to $AB$ is set once and used to mark $A'B'$.",
+          "Because both segments equal that single radius, $\\overline{A'B'}\\cong\\overline{AB}$. So A is correct.",
+          "B is wrong: the straightedge only draws the ray; sliding it does not change the length you mark with the compass.",
+          "C is wrong: pencil pressure has nothing to do with congruence; this is the 'compass width can be readjusted freely' misconception in disguise.",
+          "D is wrong: the direction of the new ray does not affect the length copied onto it."
+        ]
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "To bisect $\\angle ABC$, which ordering of steps produces the bisector? (1) From $P$ and $Q$ draw two arcs of equal radius meeting at $R$. (2) Place the compass point at $B$ and draw an arc crossing both rays at $P$ and $Q$. (3) Draw ray $\\overrightarrow{BR}$.\nA) $3,2,1$\nB) $2,1,3$\nC) $1,2,3$\nD) $2,3,1$",
+      "answer": "B) $2,1,3$",
+      "solution": {
+        "steps": [
+          "You must first locate $P$ and $Q$ on the two rays, so step (2) comes first.",
+          "Then you swing equal arcs from $P$ and $Q$ to find their intersection $R$, which is step (1).",
+          "Finally you draw $\\overrightarrow{BR}$, the bisector, which is step (3). The order is $2,1,3$, so B is correct.",
+          "A starts by drawing the ray before $R$ exists, which is impossible.",
+          "C tries to make arcs from $P$ and $Q$ before $P$ and $Q$ have been marked.",
+          "D draws the ray before finding $R$, so it also fails."
+        ]
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "In the perpendicular-bisector construction of $\\overline{AB}$, equal-radius arcs from $A$ and from $B$ meet at point $C$. Why is $CA=CB$?\nA) Because $C$ is the midpoint of $\\overline{AB}$\nB) Because $\\triangle ACB$ is equilateral\nC) Because both $CA$ and $CB$ equal the single compass radius used\nD) Because $C$ lies on line $\\overline{AB}$",
+      "answer": "C) Because both $CA$ and $CB$ equal the single compass radius used",
+      "solution": {
+        "steps": [
+          "The arcs from $A$ and from $B$ are struck with the same compass opening, so $CA$ and $CB$ are both that one radius.",
+          "Equal radii give $CA=CB$, making C correct, and they show $C$ is equidistant from $A$ and $B$.",
+          "A is wrong: $C$ is not the midpoint; the midpoint lies on $\\overline{AB}$, while $C$ is above or below it.",
+          "B is wrong: nothing forces $AB$ to equal the radius, so the triangle need not be equilateral.",
+          "D is wrong: $C$ is off the line $\\overline{AB}$, not on it."
+        ]
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "When you bisect $\\angle ABC$, the two triangles $\\triangle BPR$ and $\\triangle BQR$ are congruent because $BP=BQ$ (equal arcs from $B$), $PR=QR$ (equal arcs from $P$ and $Q$), and $BR=BR$ (shared side). Which postulate proves the congruence, and what then gives $\\angle PBR\\cong\\angle QBR$?\nA) SAS, then the Triangle Sum Theorem\nB) SSS, then CPCTC\nC) ASA, then CPCTC\nD) AAS, then the definition of a bisector",
+      "answer": "B) SSS, then CPCTC",
+      "solution": {
+        "steps": [
+          "The three given facts are all pairs of equal sides: $BP=BQ$, $PR=QR$, and $BR=BR$. Three side pairs means SSS.",
+          "Once the triangles are congruent, the corresponding angles $\\angle PBR$ and $\\angle QBR$ are congruent by CPCTC, which is exactly what makes $\\overrightarrow{BR}$ the bisector. So B is correct.",
+          "A is wrong: only sides are given, not a side-angle-side pattern, so SAS does not apply, and the Triangle Sum Theorem is irrelevant here.",
+          "C and D name SAS-style or angle-based postulates (ASA, AAS) that require given angles; here only sides are given, so the right postulate is SSS, not ASA or AAS."
+        ]
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "A student marks point $P$ on line $\\ell$, swings equal arcs from $P$ to mark $A$ and $B$ on $\\ell$ so that $PA=PB$, then draws equal-radius arcs from $A$ and from $B$ that meet at $Q$, and finally draws $\\overleftrightarrow{PQ}$. What has been constructed?\nA) The line through $P$ parallel to $\\ell$\nB) The bisector of an angle at $P$\nC) The line through $P$ perpendicular to $\\ell$\nD) A segment congruent to $\\overline{AB}$",
+      "answer": "C) The line through $P$ perpendicular to $\\ell$",
+      "solution": {
+        "steps": [
+          "Since $PA=PB$, point $P$ is the midpoint of $\\overline{AB}$, and $Q$ is equidistant from $A$ and $B$ (equal radii).",
+          "Both $P$ and $Q$ are equidistant from $A$ and $B$, so $\\overleftrightarrow{PQ}$ is the perpendicular bisector of $\\overline{AB}$, which passes through $P$ perpendicular to $\\ell$. C is correct.",
+          "A is wrong: a line through a point on $\\ell$ cannot be parallel to $\\ell$.",
+          "B reflects confusing this with an angle bisector; here a perpendicular to a line is built, not an angle split.",
+          "D is wrong: the goal is a perpendicular line, not copying segment $\\overline{AB}$."
+        ]
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "In the perpendicular-bisector construction of $\\overline{AB}$, why must the compass radius be set greater than $\\tfrac{1}{2}AB$ before striking the arcs from $A$ and $B$?\nA) Any radius works, so the size does not matter\nB) Otherwise the arcs from $A$ and $B$ will not intersect\nC) So the radius equals the full length $AB$\nD) So the two arcs are tangent at the midpoint",
+      "answer": "B) Otherwise the arcs from $A$ and $B$ will not intersect",
+      "solution": {
+        "steps": [
+          "The arcs from $A$ and from $B$ both have the chosen radius. They can only meet if that radius reaches past the midpoint, that is, if it exceeds $\\tfrac{1}{2}AB$.",
+          "If the radius is too small the arcs fall short and never cross, so no intersection points $C$ and $D$ exist. B is correct.",
+          "A is the 'any radius works' misconception; a radius $\\le \\tfrac{1}{2}AB$ produces no intersection.",
+          "C is wrong: the radius need not equal $AB$, only exceed half of it.",
+          "D is wrong: tangent arcs would touch at one point and still not give the two distinct crossings the construction needs."
+        ]
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "To construct a line through $P$ parallel to line $\\ell$, you draw a transversal through $P$ that meets $\\ell$ at $A$, then copy the angle that $\\ell$ makes with the transversal at $A$ to the point $P$ on the same side. Which fact guarantees the new line is parallel to $\\ell$?\nA) Congruent corresponding angles imply the lines are parallel\nB) Congruent same-side (co-interior) angles imply the lines are parallel\nC) The two lines look parallel when drawn carefully\nD) Supplementary corresponding angles imply the lines are parallel",
+      "answer": "A) Congruent corresponding angles imply the lines are parallel",
+      "solution": {
+        "steps": [
+          "Copying the angle at $P$ equal to the angle at $A$ creates a pair of congruent corresponding angles along the transversal.",
+          "By the Converse of the Corresponding Angles Postulate, congruent corresponding angles force the two lines to be parallel. A is correct (copied alternate interior angles work the same way).",
+          "B is wrong: same-side (co-interior) angles are supplementary, not congruent, between parallel lines, so equal co-interior angles would not generally give parallelism. This is the mislabeled-angle-pair misconception.",
+          "C is wrong: 'looks parallel' is eyeballing, not a formal compass-and-straightedge justification.",
+          "D is wrong: corresponding angles between parallel lines are congruent, not supplementary."
+        ]
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Two towns $A$ and $B$ lie on a flat map, and a straight road crosses the region. A company wants a warehouse on the road that is the same distance from $A$ as from $B$. Which construction locates the warehouse, and on what locus property does it rely?\nA) Bisect $\\angle$ between $A$ and $B$; the angle bisector is equidistant from the two towns\nB) Construct the perpendicular bisector of $\\overline{AB}$ and mark where it meets the road; every point on it is equidistant from $A$ and $B$\nC) Construct the perpendicular bisector of $\\overline{AB}$ and mark where it meets the road; every point on it is equidistant from the two arc intersection points\nD) Draw the midpoint of $\\overline{AB}$ and connect it to the road; the midpoint is the only equidistant point",
+      "answer": "B) Construct the perpendicular bisector of $\\overline{AB}$ and mark where it meets the road; every point on it is equidistant from $A$ and $B$",
+      "solution": {
+        "steps": [
+          "The set of all points equidistant from $A$ and $B$ is exactly the perpendicular bisector of $\\overline{AB}$.",
+          "The warehouse must also be on the road, so it sits where the perpendicular bisector meets the road. The defining locus property is that every point on the perpendicular bisector is equidistant from the two endpoints $A$ and $B$. B is correct.",
+          "A is wrong: there is no relevant angle to bisect here, and an angle bisector is the locus equidistant from two sides of an angle, not from two points.",
+          "C states the construction correctly but reverses the locus property: points are equidistant from the endpoints $A$ and $B$, not from the arc intersection points used to draw the bisector.",
+          "D is wrong: infinitely many points are equidistant from $A$ and $B$ (the whole perpendicular bisector), not just the midpoint, so restricting to the midpoint would usually miss the road."
+        ]
+      }
+    }
+  ]
+}

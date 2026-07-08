@@ -1,0 +1,116 @@
+{
+  "standard": "GEO.G-C.A.1",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Circles",
+  "domainCode": "G-C",
+  "cluster": "Understand and apply theorems about circles",
+  "clusterCode": "A",
+  "skillName": "All Circles Are Similar",
+
+  "description": "Students prove and apply the fact that any two circles are similar. They must understand that a similarity transformation is a sequence of rigid motions (translation, rotation, reflection) and a dilation, and that for any circle $C_1$ with center $O_1$ and radius $r_1$ and any circle $C_2$ with center $O_2$ and radius $r_2$, a translation mapping $O_1$ to $O_2$ followed by a dilation centered at $O_2$ with scale factor $k=\\frac{r_2}{r_1}$ maps $C_1$ exactly onto $C_2$. From this they recognize that all circles share one shape (differing only in size), that the dilation scale factor between two circles equals the ratio of their radii (or diameters, or circumferences), and that ratios of corresponding lengths and arc measures are preserved.",
+
+  "subSkills": [
+    "State that a similarity transformation is one or more rigid motions followed by a dilation, and that two figures are similar when such a transformation maps one onto the other",
+    "Identify the translation that carries the center of one circle onto the center of another",
+    "Compute the dilation scale factor between two circles as the ratio of radii $k=\\frac{r_2}{r_1}$ (equivalently the ratio of diameters or circumferences)",
+    "Verify that a dilation centered at a circle's center with factor $k$ sends a circle of radius $r$ to a concentric circle of radius $kr$",
+    "Assemble the translation-then-dilation argument into a complete proof that two given circles are similar",
+    "Use the radius (or diameter or circumference) ratio to solve for an unknown radius, scale factor, or corresponding length",
+    "Recognize that arc-measure and central-angle relationships are preserved under the similarity, so corresponding arc lengths scale by $k$ while angle measures are unchanged"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Find the scale factor between two circles",
+      "example": "Circle $A$ has radius $r_1=4$ and circle $B$ has radius $r_2=10$. Find the scale factor $k$ of the dilation centered at $B$'s center that maps circle $A$ onto circle $B$. Answer: $k=\\frac{r_2}{r_1}=\\frac{10}{4}=\\frac{5}{2}$."
+    },
+    {
+      "name": "Solve for an unknown radius or length from the ratio",
+      "example": "A dilation with scale factor $k=3$ maps circle $P$ (radius $r$) onto circle $Q$ of radius $12$. Find $r$. Answer: $r=\\frac{12}{3}=4$."
+    },
+    {
+      "name": "Identify the transformation sequence that maps one circle to another",
+      "example": "Circle $C_1$ has center $(-2,1)$ and radius $3$; circle $C_2$ has center $(4,1)$ and radius $9$. Describe a similarity transformation that maps $C_1$ onto $C_2$. Answer: translate by $\\langle 6,0\\rangle$ to send $(-2,1)$ to $(4,1)$, then dilate about $(4,1)$ by $k=\\frac{9}{3}=3$."
+    },
+    {
+      "name": "Two-column or paragraph proof that two circles are similar",
+      "example": "Given circle $O_1$ with radius $r_1$ and circle $O_2$ with radius $r_2$, prove $O_1\\sim O_2$. Answer: a translation maps $O_1$ to $O_2$ (rigid motion); then a dilation about $O_2$ with $k=\\frac{r_2}{r_1}$ maps the image of $O_1$ (radius $r_1$) onto $O_2$ (radius $r_2$); a rigid motion followed by a dilation is a similarity transformation, so $O_1\\sim O_2$."
+    },
+    {
+      "name": "Apply preserved ratios to arc length and circumference",
+      "example": "Circle $A$ (radius $6$) is similar to circle $B$ (radius $9$). A $90^\\circ$ arc of circle $A$ has length $3\\pi$. Find the length of the corresponding $90^\\circ$ arc of circle $B$. Answer: scale factor $k=\\frac{9}{6}=\\frac{3}{2}$, so arc length $=\\frac{3}{2}\\cdot 3\\pi=\\frac{9\\pi}{2}$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step computation of a scale factor or a missing radius directly from given radii or diameters. The two needed quantities are stated explicitly; the student just forms and simplifies the ratio $k=\\frac{r_2}{r_1}$. This is where a tier1 worksheet starts and most of its items live.",
+      "constraints": [
+        "Both radii (or both diameters) are given as small positive integers, $\\le 12$",
+        "Scale factor reduces to a small integer or simple fraction such as $\\frac{3}{2}$ or $\\frac{5}{2}$",
+        "No coordinates and no proof; one division step only",
+        "Vocabulary cues are explicit (radius given, dilation factor asked)"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step reasoning: either solve for an unknown radius/length by working backward from a given scale factor, or read coordinates of two centers to state the translation and then compute the dilation factor. Mixing of radius, diameter, and circumference as the given measure begins here. This band is the upper end of tier1 and the lower end of tier2.",
+      "constraints": [
+        "Student must convert between radius, diameter, or circumference before forming the ratio, OR extract centers from coordinates",
+        "Requires describing a translation vector plus a dilation factor, or solving $kr_1=r_2$ for one unknown",
+        "Values may produce a non-integer scale factor that must be left exact (e.g. $\\frac{7}{4}$)",
+        "May ask for the transformation sequence in words rather than a single number"
+      ]
+    },
+    "Hard": {
+      "description": "Full justification or multi-step application: write a complete proof (paragraph or two-column) that two circles are similar, or chain the similarity to a preserved quantity such as a corresponding arc length, sector area, or a length on the circle. Requires naming the rigid motion AND the dilation AND citing why their composition is a similarity. This is where a tier2 worksheet ends.",
+      "constraints": [
+        "Requires a stated logical structure: rigid motion (translation) followed by dilation with $k=\\frac{r_2}{r_1}$, concluded with 'a rigid motion followed by a dilation is a similarity transformation'",
+        "Or applies the scale factor to arc length / sector area, where the linear ratio $k$ governs lengths and $k^2$ governs areas",
+        "May involve coordinates for the centers and an exact non-integer scale factor",
+        "Distinguishes preserved quantities (angle and arc measures in degrees) from scaled quantities (radius, arc length, circumference)"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student thinks circles can fail to be similar (treats 'similar' like 'congruent' and concludes only equal-radius circles are similar)",
+      "distractor": "Answers that the circles are not similar because their radii differ, e.g. 'not similar, since $r_1=4\\ne 10=r_2$'"
+    },
+    {
+      "misconception": "Student inverts the scale-factor ratio, using $\\frac{r_1}{r_2}$ instead of $\\frac{r_2}{r_1}$ for the map from circle 1 to circle 2",
+      "distractor": "Gives $k=\\frac{r_1}{r_2}=\\frac{4}{10}=\\frac{2}{5}$ instead of $\\frac{r_2}{r_1}=\\frac{5}{2}$"
+    },
+    {
+      "misconception": "Student scales linear measures by $k^2$ (confusing the length ratio with the area ratio)",
+      "distractor": "Computes the corresponding arc length as $k^2$ times the original, e.g. $\\left(\\frac{3}{2}\\right)^2\\cdot 3\\pi=\\frac{27\\pi}{4}$ instead of $\\frac{3}{2}\\cdot 3\\pi=\\frac{9\\pi}{2}$"
+    },
+    {
+      "misconception": "Student uses the diameter where the radius is required (or vice versa), so the ratio is formed from mismatched measures",
+      "distractor": "Mixes a diameter and a radius, e.g. $k=\\frac{r_2}{d_1}=\\frac{10}{8}=\\frac{5}{4}$ instead of $\\frac{r_2}{r_1}=\\frac{10}{4}=\\frac{5}{2}$"
+    },
+    {
+      "misconception": "Student believes a dilation changes angle and arc measures, so central angles or degree arc measures are scaled by $k$",
+      "distractor": "Multiplies the $90^\\circ$ central angle by the scale factor, e.g. $\\frac{3}{2}\\cdot 90^\\circ=135^\\circ$, claiming the corresponding arc measure changes"
+    },
+    {
+      "misconception": "Student omits the dilation and asserts a rigid motion (translation/rotation/reflection) alone maps one circle onto a larger one, calling them congruent",
+      "distractor": "Claims a translation by $\\langle 6,0\\rangle$ alone maps circle $C_1$ onto $C_2$, with no dilation, concluding the circles are congruent rather than similar"
+    }
+  ],
+
+  "_comment_itemCounts": "Single ramped worksheet covers this standard well; tier1/tier2 counts are provided per default in case a two-sheet split is used. Lesson 5+5, worksheet single/tier1/tier2 = 15 each, quiz 8.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

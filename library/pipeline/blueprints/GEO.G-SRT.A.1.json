@@ -1,0 +1,128 @@
+{
+  "standard": "GEO.G-SRT.A.1",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Similarity, Right Triangles, and Trigonometry",
+  "domainCode": "G-SRT",
+  "cluster": "Understand similarity in terms of similarity transformations",
+  "clusterCode": "A",
+  "skillName": "Properties of Dilations",
+
+  "description": "Students verify and apply the defining properties of a dilation given by a center $C$ and a scale factor $k$. They must understand that a dilation maps a point $P$ to the point $P'$ on ray $\\overrightarrow{CP}$ with $CP' = |k| \\cdot CP$; that a line through the center is taken to itself, while a line not through the center is taken to a parallel line; and that the dilation of a segment is a segment whose length is the original length multiplied by the scale factor $|k|$. Given coordinates with center at the origin, a point $(x, y)$ maps to $(kx, ky)$.",
+
+  "subSkills": [
+    "Compute the image of a point under a dilation with center at the origin: $(x, y) \\mapsto (kx, ky)$",
+    "Compute the image of a point under a dilation centered at an arbitrary point $C=(a,b)$: $(x,y) \\mapsto (a + k(x-a),\\, b + k(y-b))$",
+    "Find an image or pre-image length given a segment length and scale factor using $A'B' = |k| \\cdot AB$",
+    "Determine the scale factor $k$ from a length ratio $\\frac{CP'}{CP}$ or a coordinate mapping",
+    "Identify whether a line is taken to itself (passes through center) or to a parallel line (does not pass through center)",
+    "Verify experimentally that a dilation preserves angle measure and multiplies all distances by $|k|$",
+    "Classify a dilation as an enlargement ($|k|>1$), reduction ($0<|k|<1$), congruence ($|k|=1$), or reflection-through-center ($k<0$)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Image of a point, center at origin",
+      "example": "A dilation centered at the origin has scale factor $k = 3$. Find the image of the point $A = (-2, 5)$. Answer: $(-6, 15)$."
+    },
+    {
+      "name": "Image of a point, arbitrary center",
+      "example": "A dilation centered at $C = (1, 2)$ has scale factor $k = \\frac{1}{2}$. Find the image of $P = (5, 8)$. Answer: $(3, 5)$ since $\\left(1 + \\tfrac{1}{2}(5-1),\\, 2 + \\tfrac{1}{2}(8-2)\\right)$."
+    },
+    {
+      "name": "Length under dilation",
+      "example": "Segment $AB$ has length $12$. After a dilation with scale factor $k = \\frac{2}{3}$, what is the length of $A'B'$? Answer: $A'B' = \\frac{2}{3}\\cdot 12 = 8$."
+    },
+    {
+      "name": "Find the scale factor",
+      "example": "A dilation centered at $C$ maps $P$ to $P'$ with $CP = 4$ and $CP' = 10$. Find the scale factor. Answer: $k = \\frac{10}{4} = \\frac{5}{2}$."
+    },
+    {
+      "name": "Line-to-line behavior",
+      "example": "A dilation is centered at the origin. The line $y = 2x + 3$ does not pass through the origin, so its image is a parallel line. State the image of the line $y = 2x$. Answer: $y = 2x$ (the line through the center maps to itself)."
+    },
+    {
+      "name": "Verify the dilation properties",
+      "example": "Triangle $ABC$ with $A=(0,0)$, $B=(4,0)$, $C=(0,2)$ is dilated about the origin by $k=2$. Show that $A'B' = 2\\cdot AB$ and that $\\angle A' = \\angle A$. Answer: $A'B' = 8 = 2\\cdot 4$ and both angles measure $90^\\circ$."
+    },
+    {
+      "name": "Find the pre-image",
+      "example": "Under a dilation centered at the origin with $k = \\frac{1}{4}$, the image of a point is $(3, -5)$. Find the original point. Answer: $(12, -20)$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step application of a dilation centered at the origin with a positive integer or simple unit-fraction scale factor. The student multiplies coordinates by $k$ or multiplies one segment length by $k$. No arbitrary center, no negative factor, no derivation.",
+      "constraints": [
+        "Center is the origin",
+        "Scale factor $k$ is a positive integer ($2, 3, 4$) or simple unit fraction ($\\frac{1}{2}, \\frac{1}{3}$)",
+        "Coordinates are small integers; one operation per coordinate",
+        "Length problems use whole-number lengths that stay whole after scaling"
+      ]
+    },
+    "Medium": {
+      "description": "Two or three steps: a dilation about an arbitrary center, a fractional or non-unit scale factor, finding a scale factor from a ratio, or reasoning about line-to-line behavior. Requires applying $(a + k(x-a),\\, b + k(y-b))$ or solving $A'B' = |k|\\cdot AB$ for an unknown.",
+      "constraints": [
+        "Center may be a point other than the origin",
+        "Scale factor may be a non-unit fraction ($\\frac{2}{3}, \\frac{3}{4}, \\frac{5}{2}$) or require solving for $k$",
+        "Includes finding a pre-image (dividing by $k$) or determining whether a line maps to itself",
+        "Lengths or coordinates may be non-integer after scaling"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step synthesis or justification: negative scale factors, composing the properties to verify experimentally that a figure's image is similar, extracting the center and scale factor from a coordinate mapping, or proving why a non-center line maps to a parallel line. Requires combining the point rule, length rule, and line rule, and stating exact values.",
+      "constraints": [
+        "May involve a negative scale factor (image on the opposite ray through the center)",
+        "Requires recovering both center and scale factor, or a full property verification across a polygon",
+        "Demands justification of the parallel-line or self-mapping property, not just computation",
+        "Answers given as exact fractions or coordinates, possibly with a written reason"
+      ]
+    },
+    "tierSplit": "This standard uses a single ramped worksheet. If split, tier1 (Easy to Medium) covers origin-centered and arbitrary-center point dilations, length scaling, and finding $k$ from a ratio; tier2 (Medium to Hard) covers pre-images, negative scale factors, line-to-line behavior, recovering the center, and full property verification."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student adds the scale factor to the coordinates instead of multiplying",
+      "distractor": "For $(x,y)$ with $k=3$ produces $(x+3, y+3)$ instead of $(3x, 3y)$"
+    },
+    {
+      "misconception": "Student dilates about an arbitrary center as if it were the origin, ignoring the translation back",
+      "distractor": "For center $C=(1,2)$, $k=2$, $P=(5,8)$ gives $(10,16)$ instead of $(1+2\\cdot4,\\,2+2\\cdot6)=(9,14)$"
+    },
+    {
+      "misconception": "Student multiplies area or the figure by $k$ but believes lengths scale by $k^2$, confusing length and area ratios",
+      "distractor": "States $A'B' = k^2 \\cdot AB$ (e.g. $9\\cdot 12$ for $k=3$) instead of $k \\cdot AB$"
+    },
+    {
+      "misconception": "Student inverts the scale factor when finding an image (uses $\\frac{1}{k}$ instead of $k$, or vice versa for a pre-image)",
+      "distractor": "For an image with $k=\\frac{1}{4}$ multiplies by $4$, or for a pre-image divides incorrectly, swapping image and pre-image"
+    },
+    {
+      "misconception": "Student thinks every line through the dilation maps to a parallel line, forgetting that a line through the center maps to itself",
+      "distractor": "Claims the line $y=2x$ dilated about the origin becomes a different parallel line instead of mapping to itself"
+    },
+    {
+      "misconception": "Student treats the scale factor from a ratio as $\\frac{CP}{CP'}$ instead of $\\frac{CP'}{CP}$",
+      "distractor": "With $CP=4$, $CP'=10$ reports $k=\\frac{4}{10}=\\frac{2}{5}$ instead of $\\frac{5}{2}$"
+    },
+    {
+      "misconception": "Student believes a dilation changes angle measures (does not preserve angles)",
+      "distractor": "Claims $\\angle A' \\neq \\angle A$ after dilation, e.g. scaling a $90^\\circ$ angle to $180^\\circ$ when $k=2$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

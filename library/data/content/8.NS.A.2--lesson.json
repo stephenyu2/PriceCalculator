@@ -1,0 +1,169 @@
+{
+  "id": "8.NS.A.2--lesson",
+  "standard": "8.NS.A.2",
+  "grade": "8",
+  "subject": "math",
+  "domain": "The Number System",
+  "domainCode": "NS",
+  "cluster": "Know that there are numbers that are not rational, and approximate them by rational numbers",
+  "clusterCode": "A",
+  "skillName": "Approximating Irrational Numbers",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "An irrational number, such as $\\sqrt{5}$ or $\\pi$, has a decimal that never ends and never repeats, so you cannot write it as an exact fraction. You can still pin down its value as closely as you like with a rational approximation. To do this, bracket the number between two values whose squares you know: if $\\sqrt{n}$ lies between integers $a$ and $a+1$, then $a^2 < n < (a+1)^2$. Squaring trial decimals lets you refine the estimate to the nearest tenth or hundredth. Once you have decimal approximations, you can compare and order a mix of rational and irrational numbers, place them on a number line, and estimate the value of expressions like $\\pi^2$ or $2\\sqrt{7}$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Between which two consecutive integers does $\\sqrt{20}$ lie?",
+      "solution": {
+        "steps": [
+          "Find perfect squares just below and just above $20$. The perfect squares near $20$ are $16$ and $25$.",
+          "Since $16 < 20 < 25$, take the square root of each part: $\\sqrt{16} < \\sqrt{20} < \\sqrt{25}$.",
+          "Because $\\sqrt{16} = 4$ and $\\sqrt{25} = 5$, this gives $4 < \\sqrt{20} < 5$.",
+          "So $\\sqrt{20}$ lies between the consecutive integers $4$ and $5$. (As a check, $4.5^2 = 20.25$, confirming $\\sqrt{20}$ is just under $4.5$.)"
+        ],
+        "answer": "$\\sqrt{20}$ lies between $4$ and $5$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Approximate $\\sqrt{30}$ to the nearest tenth.",
+      "solution": {
+        "steps": [
+          "First bracket between integers: $25 < 30 < 36$, so $5 < \\sqrt{30} < 6$.",
+          "Since $30$ is close to $36$, try decimals in the high $5$s. Square $5.4$: $5.4^2 = 29.16$, which is less than $30$.",
+          "Square $5.5$: $5.5^2 = 30.25$, which is greater than $30$. So $5.4 < \\sqrt{30} < 5.5$.",
+          "Decide which tenth is closer. The target $30$ is much nearer to $30.25$ than to $29.16$, and $\\sqrt{30} \\approx 5.477$.",
+          "Rounded to the nearest tenth, $\\sqrt{30} \\approx 5.5$."
+        ],
+        "answer": "$\\sqrt{30} \\approx 5.5$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Which is greater, $\\sqrt{8}$ or $\\frac{17}{6}$?",
+      "solution": {
+        "steps": [
+          "Estimate each as a decimal. Since $4 < 8 < 9$, $\\sqrt{8}$ is between $2$ and $3$; testing $2.8^2 = 7.84$ and $2.9^2 = 8.41$ gives $\\sqrt{8} \\approx 2.83$.",
+          "Convert the fraction: $\\frac{17}{6} = 2.8\\overline{3} \\approx 2.83$. The two values are very close, so compare more carefully.",
+          "Square both numbers (both are positive, so squaring preserves the order). We have $\\left(\\sqrt{8}\\right)^2 = 8$.",
+          "And $\\left(\\frac{17}{6}\\right)^2 = \\frac{289}{36} \\approx 8.03$, which is greater than $8$.",
+          "Since the square of $\\frac{17}{6}$ is larger, $\\frac{17}{6} > \\sqrt{8}$."
+        ],
+        "answer": "$\\frac{17}{6}$ is greater than $\\sqrt{8}$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Order $\\pi$, $\\sqrt{8}$, $\\frac{11}{4}$, and $3.2$ from least to greatest.",
+      "solution": {
+        "steps": [
+          "Write each as a decimal approximation. Use $\\pi \\approx 3.14$.",
+          "Estimate $\\sqrt{8}$: since $2.8^2 = 7.84$ and $2.9^2 = 8.41$, $\\sqrt{8} \\approx 2.83$.",
+          "Convert the fraction: $\\frac{11}{4} = 2.75$.",
+          "The last value is already a decimal: $3.2$.",
+          "Compare the four decimals $2.83$, $2.75$, $3.14$, and $3.2$. In increasing order: $2.75 < 2.83 < 3.14 < 3.2$.",
+          "Replace each decimal with its original number: $\\frac{11}{4} < \\sqrt{8} < \\pi < 3.2$."
+        ],
+        "answer": "$\\frac{11}{4} < \\sqrt{8} < \\pi < 3.2$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Estimate $\\pi^2$ to the nearest whole number.",
+      "solution": {
+        "steps": [
+          "Use a good decimal approximation of $\\pi$. Rounding to $3$ is too coarse for a close estimate, so use $\\pi \\approx 3.14$.",
+          "Square the approximation: $3.14^2 = 9.8596$.",
+          "This value is between $9$ and $10$, and is closer to $10$.",
+          "Rounded to the nearest whole number, $\\pi^2 \\approx 10$. (Using $\\pi \\approx 3$ would wrongly give $9$.)"
+        ],
+        "answer": "$\\pi^2 \\approx 10$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Between which two consecutive integers does $\\sqrt{52}$ lie?",
+      "hint": "Find the perfect squares just below and just above $52$. Remember $7^2 = 49$ and $8^2 = 64$.",
+      "solution": {
+        "steps": [
+          "The perfect squares around $52$ are $49 = 7^2$ and $64 = 8^2$.",
+          "Since $49 < 52 < 64$, taking square roots gives $7 < \\sqrt{52} < 8$.",
+          "So $\\sqrt{52}$ lies between the consecutive integers $7$ and $8$."
+        ],
+        "answer": "$\\sqrt{52}$ lies between $7$ and $8$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Approximate $\\sqrt{45}$ to the nearest tenth.",
+      "hint": "First bracket between integers ($6^2 = 36$, $7^2 = 49$), then square trial decimals like $6.7$ and $6.8$.",
+      "solution": {
+        "steps": [
+          "Bracket between integers: $36 < 45 < 49$, so $6 < \\sqrt{45} < 7$.",
+          "Try $6.7$: $6.7^2 = 44.89$, which is just under $45$.",
+          "Try $6.8$: $6.8^2 = 46.24$, which is over $45$. So $6.7 < \\sqrt{45} < 6.8$.",
+          "Since $45$ is much closer to $44.89$ than to $46.24$, $\\sqrt{45} \\approx 6.7$."
+        ],
+        "answer": "$\\sqrt{45} \\approx 6.7$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Which is greater, $\\sqrt{10}$ or $\\frac{16}{5}$?",
+      "hint": "Both are close to $3.2$. Square each value to compare them precisely, since both numbers are positive.",
+      "solution": {
+        "steps": [
+          "Estimate: $\\frac{16}{5} = 3.2$, and $\\sqrt{10}$ is a little more than $3$ since $3.1^2 = 9.61$ and $3.2^2 = 10.24$. So $\\sqrt{10} \\approx 3.16$.",
+          "Square both to be sure: $\\left(\\sqrt{10}\\right)^2 = 10$.",
+          "And $\\left(\\frac{16}{5}\\right)^2 = \\frac{256}{25} = 10.24$, which is greater than $10$.",
+          "Since the square of $\\frac{16}{5}$ is larger, $\\frac{16}{5} > \\sqrt{10}$."
+        ],
+        "answer": "$\\frac{16}{5}$ is greater than $\\sqrt{10}$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Order $\\sqrt{5}$, $\\frac{9}{4}$, $2.1$, and $\\sqrt{7}$ from least to greatest.",
+      "hint": "Find a decimal for each. Use $2.2^2 = 4.84$ and $2.3^2 = 5.29$ for $\\sqrt{5}$, and $2.6^2 = 6.76$ for $\\sqrt{7}$.",
+      "solution": {
+        "steps": [
+          "Estimate $\\sqrt{5}$: since $2.2^2 = 4.84$ and $2.3^2 = 5.29$, $\\sqrt{5} \\approx 2.24$.",
+          "Convert the fraction: $\\frac{9}{4} = 2.25$.",
+          "The decimal $2.1$ stays as $2.1$.",
+          "Estimate $\\sqrt{7}$: since $2.6^2 = 6.76$ and $2.7^2 = 7.29$, $\\sqrt{7} \\approx 2.65$.",
+          "Compare $2.24$, $2.25$, $2.1$, $2.65$. In increasing order: $2.1 < 2.24 < 2.25 < 2.65$.",
+          "Replace with the original numbers: $2.1 < \\sqrt{5} < \\frac{9}{4} < \\sqrt{7}$."
+        ],
+        "answer": "$2.1 < \\sqrt{5} < \\frac{9}{4} < \\sqrt{7}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Estimate $2\\sqrt{5}$ to the nearest tenth.",
+      "hint": "Approximate $\\sqrt{5}$ first, then multiply the scalar $2$ by that value. Do not multiply $2$ into the radicand.",
+      "solution": {
+        "steps": [
+          "Approximate the root: since $2.2^2 = 4.84$ and $2.3^2 = 5.29$, $\\sqrt{5} \\approx 2.24$.",
+          "Multiply by the scalar $2$: $2 \\times 2.24 = 4.48$.",
+          "Rounded to the nearest tenth, $2\\sqrt{5} \\approx 4.5$. (Note: multiply $2$ by the value of the root, not by the $5$ inside.)"
+        ],
+        "answer": "$2\\sqrt{5} \\approx 4.5$"
+      }
+    }
+  ]
+}

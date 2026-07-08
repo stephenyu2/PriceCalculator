@@ -1,0 +1,148 @@
+{
+  "id": "8.G.A.4--quiz",
+  "standard": "8.G.A.4",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand congruence and similarity using physical models, transparencies, or geometry software",
+  "clusterCode": "A",
+  "skillName": "Similarity and Dilations",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "Eight multiple-choice questions on dilations and similarity: dilating points about the origin and other centers, finding the scale factor and center, judging whether figures are similar, finding missing side lengths, and distinguishing similarity from congruence.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Point $A(3,5)$ is dilated about the origin with scale factor $k=2$. What are the coordinates of the image $A'$?\nA) $(5,7)$\nB) $(6,10)$\nC) $(\\frac{3}{2},\\frac{5}{2})$\nD) $(1,3)$",
+      "answer": "B) $(6,10)$",
+      "solution": {
+        "steps": [
+          "A dilation about the origin uses the rule $(x,y)\\mapsto(kx,ky)$.",
+          "Multiply each coordinate by $k=2$: $(2\\cdot 3,\\,2\\cdot 5)=(6,10)$.",
+          "So $A'=(6,10)$, choice B.",
+          "Choice A adds $2$ to each coordinate instead of multiplying. Choice C divides by $2$ (uses $k=\\frac{1}{2}$). Choice D subtracts $2$ from each coordinate."
+        ],
+        "answer": "B) $(6,10)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "A figure is dilated about the origin so that the point $(4,8)$ maps to $(6,12)$. What is the scale factor $k$?\nA) $\\frac{2}{3}$\nB) $2$\nC) $\\frac{3}{2}$\nD) $\\frac{1}{2}$",
+      "answer": "C) $\\frac{3}{2}$",
+      "solution": {
+        "steps": [
+          "The scale factor is the ratio of an image length to the corresponding original length: $k=\\frac{\\text{image}}{\\text{original}}$.",
+          "Using the $x$-coordinates: $k=\\frac{6}{4}=\\frac{3}{2}$.",
+          "Check with the $y$-coordinates: $\\frac{12}{8}=\\frac{3}{2}$, which agrees.",
+          "So $k=\\frac{3}{2}$, choice C. Choice A inverts the ratio ($\\frac{4}{6}=\\frac{2}{3}$). Choices B and D do not match the corresponding lengths."
+        ],
+        "answer": "C) $\\frac{3}{2}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Rectangle $R$ measures $3$ by $5$ and rectangle $S$ measures $6$ by $10$. Are $R$ and $S$ similar?\nA) Yes, because both pairs of corresponding sides have the ratio $2$\nB) No, because they are different sizes\nC) No, because $6-3$ does not equal $10-5$\nD) Yes, because all rectangles are similar",
+      "answer": "A) Yes, because both pairs of corresponding sides have the ratio $2$",
+      "solution": {
+        "steps": [
+          "Similar figures have all pairs of corresponding sides in the same ratio (a constant scale factor).",
+          "Compare ratios: $\\frac{6}{3}=2$ and $\\frac{10}{5}=2$.",
+          "Both ratios equal $2$, so $S$ is a dilation of $R$ with $k=2$; the rectangles are similar. This is choice A.",
+          "Choice B wrongly assumes different sizes means not similar. Choice C compares by subtraction instead of ratio. Choice D is false because not all rectangles share the same side ratio."
+        ],
+        "answer": "A) Yes, because both pairs of corresponding sides have the ratio $2$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Point $P(5,3)$ is dilated about center $C(1,1)$ with scale factor $k=3$. What are the coordinates of $P'$?\nA) $(15,9)$\nB) $(13,7)$\nC) $(8,6)$\nD) $(16,10)$",
+      "answer": "B) $(13,7)$",
+      "solution": {
+        "steps": [
+          "For a center $C(c_x,c_y)$ use $(x,y)\\mapsto\\big(c_x+k(x-c_x),\\,c_y+k(y-c_y)\\big)$.",
+          "$x'=1+3(5-1)=1+3\\cdot 4=1+12=13$.",
+          "$y'=1+3(3-1)=1+3\\cdot 2=1+6=7$.",
+          "So $P'=(13,7)$, choice B.",
+          "Choice A multiplies straight from the origin ($3\\cdot 5,\\,3\\cdot 3$), ignoring the center. The other choices use incorrect arithmetic on the offsets."
+        ],
+        "answer": "B) $(13,7)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "$\\triangle ABC\\sim\\triangle DEF$ with $AB=8$, $DE=12$, and $BC=10$. What is the length of $EF$?\nA) $14$\nB) $\\frac{20}{3}$\nC) $15$\nD) $6$",
+      "answer": "C) $15$",
+      "solution": {
+        "steps": [
+          "Corresponding sides of similar triangles are proportional. The scale factor from $\\triangle ABC$ to $\\triangle DEF$ is $\\frac{DE}{AB}=\\frac{12}{8}=\\frac{3}{2}$.",
+          "$EF$ corresponds to $BC$, so $EF=\\frac{3}{2}\\cdot BC=\\frac{3}{2}\\cdot 10$.",
+          "$EF=15$, choice C.",
+          "Choice A adds the difference $12-8=4$ to $10$ (additive thinking). Choice B uses the inverted scale factor $\\frac{8}{12}=\\frac{2}{3}$. Choice D is unrelated to the proportion."
+        ],
+        "answer": "C) $15$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "A triangle is dilated about the origin with scale factor $k=2$. One angle of the original triangle measures $60^\\circ$. What is the measure of the corresponding angle in the image?\nA) $120^\\circ$\nB) $30^\\circ$\nC) $60^\\circ$\nD) $62^\\circ$",
+      "answer": "C) $60^\\circ$",
+      "solution": {
+        "steps": [
+          "A dilation is a similarity transformation: it changes side lengths by the factor $k$ but preserves angle measures.",
+          "The corresponding angle keeps the same measure, $60^\\circ$, so the answer is choice C.",
+          "Choice A wrongly doubles the angle with $k$. Choice B wrongly halves it. Choice D wrongly adds $k$ to the angle. Angles are unchanged by dilation."
+        ],
+        "answer": "C) $60^\\circ$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Segment $\\overline{AB}$ with $A(2,2)$ and $B(4,2)$ is dilated with scale factor $k=3$ to its image $A'(2,2)$, $B'(8,2)$. What is the center of dilation?\nA) The origin $(0,0)$\nB) $(2,2)$\nC) $(3,2)$\nD) $(4,2)$",
+      "answer": "B) $(2,2)$",
+      "solution": {
+        "steps": [
+          "Under a dilation, a point maps to itself only if it is the center, because $C+k(C-C)=C$.",
+          "Here $A(2,2)$ maps to $A'(2,2)$, so $A$ is a fixed point and must be the center.",
+          "Verify with $B$: $x'=2+3(4-2)=2+6=8$ and $y'=2+3(2-2)=2$, giving $B'(8,2)$, which matches.",
+          "So the center is $(2,2)$, choice B. The origin (A) and the other points are not fixed by this dilation."
+        ],
+        "answer": "B) $(2,2)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A polygon with area $12$ square units is dilated about the origin with scale factor $k=3$, then reflected over the $x$-axis. Which best describes the image and its area?\nA) Similar but not congruent to the original, with area $36$ square units\nB) Congruent to the original, with area $12$ square units\nC) Similar but not congruent to the original, with area $108$ square units\nD) Neither similar nor congruent to the original\n",
+      "answer": "C) Similar but not congruent to the original, with area $108$ square units",
+      "solution": {
+        "steps": [
+          "A reflection is a rigid motion (preserves size), and a dilation with $k\\neq 1$ changes size. Together they produce a figure that is similar to the original but not congruent, since $k=3\\neq 1$.",
+          "Dilation scales area by $k^2$, not by $k$: the area becomes $12\\cdot 3^2=12\\cdot 9=108$ square units. The reflection does not change area.",
+          "So the image is similar but not congruent with area $108$, choice C.",
+          "Choice A scales the area by $k$ instead of $k^2$ ($12\\cdot 3=36$). Choice B wrongly calls it congruent. Choice D ignores that a dilation plus rigid motion always gives a similar figure."
+        ],
+        "answer": "C) Similar but not congruent to the original, with area $108$ square units"
+      }
+    }
+  ]
+}

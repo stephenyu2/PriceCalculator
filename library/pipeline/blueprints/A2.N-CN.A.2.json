@@ -1,0 +1,139 @@
+{
+  "standard": "A2.N-CN.A.2",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Number and Quantity — The Complex Number System",
+  "domainCode": "N-CN",
+  "cluster": "Perform arithmetic operations with complex numbers",
+  "clusterCode": "A",
+  "skillName": "Arithmetic with Complex Numbers",
+
+  "description": "Students add, subtract, and multiply complex numbers written in standard form $a+bi$, using the relation $i^2=-1$ together with the commutative, associative, and distributive properties. They combine like terms (real with real, imaginary with imaginary) for sums and differences, distribute and FOIL for products, and always reduce $i^2$ to $-1$ so that every result is written in the form $a+bi$ with $a$ and $b$ real. They also recognize and use the special product $(a+bi)(a-bi)=a^2+b^2$ for conjugates, and simplify higher powers of $i$ by reducing the exponent modulo $4$.",
+
+  "subSkills": [
+    "Add two complex numbers by combining real parts and imaginary parts: $(a+bi)+(c+di)=(a+c)+(b+d)i$",
+    "Subtract two complex numbers by distributing the negative sign before combining like terms",
+    "Multiply a real scalar or a pure imaginary number by a complex number using the distributive property",
+    "Multiply two binomial complex numbers using FOIL or distribution, then replace $i^2$ with $-1$",
+    "Reduce $i^2=-1$ (and use $i^3=-i$, $i^4=1$) so the final answer is written as $a+bi$",
+    "Simplify a power of $i$ such as $i^{n}$ by reducing the exponent modulo $4$",
+    "Multiply a complex number by its conjugate to obtain the real value $a^2+b^2$",
+    "Express every result in standard form $a+bi$ with real $a$ and $b$, including pure-real ($b=0$) and pure-imaginary ($a=0$) cases"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Add complex numbers",
+      "example": "Simplify $(3+4i)+(5-2i)$. Combine like terms: $(3+5)+(4-2)i=8+2i$."
+    },
+    {
+      "name": "Subtract complex numbers",
+      "example": "Simplify $(7-3i)-(2+6i)$. Distribute the negative: $7-3i-2-6i=(7-2)+(-3-6)i=5-9i$."
+    },
+    {
+      "name": "Scalar or pure-imaginary multiplication",
+      "example": "Simplify $4i(2-5i)$. Distribute: $8i-20i^2=8i-20(-1)=20+8i$."
+    },
+    {
+      "name": "Product of two binomials (FOIL)",
+      "example": "Simplify $(2+3i)(4-i)$. FOIL: $8-2i+12i-3i^2=8+10i-3(-1)=11+10i$."
+    },
+    {
+      "name": "Square of a complex number",
+      "example": "Simplify $(3-2i)^2$. Expand: $9-12i+4i^2=9-12i+4(-1)=5-12i$."
+    },
+    {
+      "name": "Conjugate product",
+      "example": "Simplify $(5+2i)(5-2i)$. Use $(a+bi)(a-bi)=a^2+b^2$: $25-4i^2=25+4=29$."
+    },
+    {
+      "name": "Powers of i",
+      "example": "Simplify $i^{23}$. Reduce the exponent mod $4$: $23=4\\cdot5+3$, so $i^{23}=i^3=-i$."
+    },
+    {
+      "name": "Multi-term or chained operations",
+      "example": "Simplify $(1+2i)(3-i)-(4+i)$. First multiply: $3-i+6i-2i^2=3+5i+2=5+5i$; then subtract: $(5-4)+(5-1)i=1+4i$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-operation, one-step problems. Addition or subtraction of two complex numbers in standard form, or a simple scalar/pure-imaginary product with at most one $i^2\\to-1$ substitution. No nested operations and small integer coefficients.",
+      "constraints": [
+        "Exactly one operation: a single addition, a single subtraction, or a single product with one factor real or pure imaginary",
+        "Coefficients are small integers with absolute value $\\leq 6$",
+        "At most one $i^2$ appears and reduces directly to $-1$",
+        "No exponents on binomials and no powers of $i$ beyond $i^2$",
+        "Answer is a clean $a+bi$ with integer $a$ and $b$"
+      ]
+    },
+    "Medium": {
+      "description": "Two linked steps. Full binomial-times-binomial products requiring FOIL and an $i^2$ reduction, squares of a complex number, conjugate products, or simplifying a moderate power of $i$. Each problem is still a single archetype but requires the distributive property plus combining like terms.",
+      "constraints": [
+        "Product of two binomials, a square $(a+bi)^2$, or a conjugate product",
+        "Requires applying the distributive property (FOIL) and then replacing $i^2$ with $-1$",
+        "May ask to simplify $i^n$ for a moderate exponent ($n\\leq 30$) using exponent mod $4$",
+        "Coefficients are integers with absolute value $\\leq 10$",
+        "Answer must be collected into standard form $a+bi$ with integer parts"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step synthesis. Chained operations combining a product with an additional sum or difference, expressions that mix higher powers of $i$ with multiplication, products of three factors, or problems that require recognizing when a result is purely real or purely imaginary. Student must sequence operations correctly and reduce all powers of $i$.",
+      "constraints": [
+        "At least two distinct operations chained, e.g. multiply then subtract, or two products combined",
+        "May include a higher power of $i$ (such as $i^3$ or $i^{n}$, $n>4$) inside a larger expression that must be reduced before combining",
+        "May involve a product of three factors or a squared binomial embedded in a larger expression",
+        "Coefficients may be larger integers or require careful sign tracking across several terms",
+        "May ask the student to justify or state whether the simplified result is real, imaginary, or general, or to identify which property (commutative/associative/distributive) was used at a given step"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student treats $i^2$ as $+1$ (or leaves $i^2$ unsimplified) instead of $-1$",
+      "distractor": "For $(2+3i)(4-i)$ keeps $-3i^2$ as $-3$ or uses $i^2=+1$ and reports $8+10i-3=5+10i$ instead of $11+10i$"
+    },
+    {
+      "misconception": "Student forgets to distribute the subtraction sign across both terms of the second complex number",
+      "distractor": "For $(7-3i)-(2+6i)$ subtracts only the real part and writes $5+3i$ (or $5-3i+6i$), failing to negate the $+6i$"
+    },
+    {
+      "misconception": "Student adds or combines the real part with the imaginary part as if they were like terms",
+      "distractor": "For $(3+4i)+(5-2i)$ merges everything into a single number such as $10i$ or $10+0i$, treating $a$ and $b$ as combinable"
+    },
+    {
+      "misconception": "Student multiplies complex numbers component-wise, multiplying reals together and imaginaries together",
+      "distractor": "For $(2+3i)(4-i)$ computes $(2\\cdot4)+(3\\cdot(-1))i=8-3i$ instead of using FOIL to get $11+10i$"
+    },
+    {
+      "misconception": "Student mishandles the square of a binomial, dropping the middle cross term",
+      "distractor": "For $(3-2i)^2$ writes $9+4i^2=9-4=5$ (or $9+4=13$), omitting the $-12i$ cross term"
+    },
+    {
+      "misconception": "Student gives a sign error on the conjugate product, treating it like a difference of squares with $i^2$ left as $-$ incorrectly",
+      "distractor": "For $(5+2i)(5-2i)$ reports $25-4=21$ instead of $25-4i^2=25+4=29$"
+    },
+    {
+      "misconception": "Student reduces powers of $i$ with the wrong cycle or wrong residue",
+      "distractor": "For $i^{23}$ reports $i$ or $1$ (using $23\\bmod 4$ incorrectly or assuming a cycle length other than $4$) instead of $i^3=-i$"
+    },
+    {
+      "misconception": "Student performs chained operations in the wrong order or forgets to apply a later operation to every term",
+      "distractor": "For $(1+2i)(3-i)-(4+i)$ stops after the product at $5+5i$ and forgets to subtract $(4+i)$, or subtracts only the real part, giving $1+5i$ instead of $1+4i$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

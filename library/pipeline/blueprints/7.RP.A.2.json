@@ -1,0 +1,117 @@
+{
+  "standard": "7.RP.A.2",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Ratios and Proportional Relationships",
+  "domainCode": "RP",
+  "cluster": "Analyze proportional relationships and use them to solve real-world and mathematical problems",
+  "clusterCode": "A",
+  "skillName": "Proportional Relationships",
+
+  "description": "Students recognize and represent proportional relationships between two quantities. They decide whether two quantities are in a proportional relationship by testing for equivalent ratios (in a table) or for a straight line through the origin (on a graph). They identify the constant of proportionality (unit rate) $k$ from tables, graphs, equations, diagrams, and verbal descriptions; represent the relationship with the equation $y = kx$; and interpret what a point $(x, y)$ means in context, with special attention to $(1, k)$ as the unit rate and $(0, 0)$ as the origin.",
+
+  "subSkills": [
+    "Decide whether a relationship is proportional by testing whether all ratios $\\frac{y}{x}$ are equal in a table",
+    "Decide whether a graph shows a proportional relationship (straight line through the origin)",
+    "Find the constant of proportionality $k$ from a table, graph, equation, or verbal description",
+    "Write the equation $y = kx$ that models a proportional relationship",
+    "Interpret a point $(x, y)$ on the graph of a proportional relationship in context, including $(1, k)$ and $(0, 0)$"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Proportional table test",
+      "example": "A table shows $x = 2, 4, 6$ and $y = 5, 10, 15$. Is $y$ proportional to $x$? Justify by comparing $\\frac{y}{x}$ for each row."
+    },
+    {
+      "name": "Find the constant of proportionality from a table",
+      "example": "A table lists hours $x = 3, 6, 9$ and dollars earned $y = 36, 72, 108$. Find the constant of proportionality $k$ in dollars per hour."
+    },
+    {
+      "name": "Graph recognition",
+      "example": "A line passes through $(0, 0)$ and $(4, 6)$. Does the graph represent a proportional relationship, and if so what is $k$?"
+    },
+    {
+      "name": "Write the equation $y = kx$",
+      "example": "A recipe uses $3$ cups of flour for every $2$ batches. Write an equation relating flour $y$ to batches $x$."
+    },
+    {
+      "name": "Interpret a point in context",
+      "example": "On a graph of distance versus time for a runner, the point $(1, 8)$ lies on the line through the origin. What does the point $(1, 8)$ mean?"
+    },
+    {
+      "name": "Non-proportional counterexample",
+      "example": "A taxi charges a $\\$3$ base fare plus $\\$2$ per mile, giving $y = 2x + 3$. Explain why this is NOT a proportional relationship."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single representation, small whole-number values. Student reads $k$ directly or tests a short table where ratios are obviously equal or unequal. One step.",
+      "constraints": [
+        "Values are small whole numbers ($x, y \\le 20$) and the constant $k$ is a whole number",
+        "Only one representation is involved (one table OR one graph OR one verbal rate)",
+        "Tables have at most 3 rows; ratios $\\frac{y}{x}$ reduce cleanly to a whole number",
+        "Question asks for a direct read: find $k$, write $y = kx$, or answer yes/no for proportionality"
+      ]
+    },
+    "Medium": {
+      "description": "Constant of proportionality is a fraction or decimal, or the task requires two steps such as finding $k$ then writing the equation, or testing a table whose unequal ratios are not obvious. May translate between two representations.",
+      "constraints": [
+        "$k$ is a fraction or terminating decimal (for example $\\frac{3}{4}$ or $0.25$)",
+        "Two steps: for example find $k$ from a table, then write $y = kx$ or predict a missing value",
+        "Table test where ratios are close but unequal, so each row must actually be computed",
+        "Requires moving between representations (table to equation, graph to equation)"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning, possibly involving a non-proportional distractor, interpretation of $(1, k)$ or $(0, 0)$ in context, or extracting the relationship from a wordy real-world scenario before deciding proportionality and using it.",
+      "constraints": [
+        "Scenario must be parsed to extract quantities before testing proportionality",
+        "Includes or contrasts a non-proportional case (constant term, $y = kx + b$ with $b \\neq 0$) the student must reject",
+        "Asks the student to interpret the meaning of $(1, k)$ or the origin in context",
+        "Combines steps: determine proportionality, find $k$, write $y = kx$, and use it to answer a follow-up such as a missing value or a comparison of two relationships"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student thinks any straight line is proportional, ignoring the through-the-origin requirement",
+      "distractor": "Calls $y = 2x + 3$ proportional and reports $k = 2$, treating a line with a nonzero $y$-intercept as proportional"
+    },
+    {
+      "misconception": "Student computes the constant of proportionality as $\\frac{x}{y}$ instead of $\\frac{y}{x}$",
+      "distractor": "For the table $x = 4, y = 6$ reports $k = \\frac{4}{6} = \\frac{2}{3}$ instead of $k = \\frac{6}{4} = \\frac{3}{2}$"
+    },
+    {
+      "misconception": "Student checks only one row of a table and concludes it is proportional without verifying every ratio is equal",
+      "distractor": "Declares a table proportional after matching a single pair, so a table like $(2,4),(3,6),(4,7)$ is wrongly called proportional"
+    },
+    {
+      "misconception": "Student uses the difference between consecutive values (additive thinking) instead of the ratio (multiplicative)",
+      "distractor": "Sees $y$ increase by $5$ each time $x$ increases by $2$ and reports $k = 5$ or $k = \\frac{5}{2}$ from differences rather than from $\\frac{y}{x}$"
+    },
+    {
+      "misconception": "Student writes the equation with the constant in the wrong place, such as $y = x + k$ or $x = ky$",
+      "distractor": "For $k = 3$ writes $y = x + 3$ or $x = 3y$ instead of $y = 3x$"
+    },
+    {
+      "misconception": "Student misinterprets the point $(1, k)$, reading it as the total instead of the unit rate, or confusing it with $(0,0)$",
+      "distractor": "Says the point $(1, 8)$ means the runner ran a total of $1$ mile, instead of $8$ units per $1$ unit (the unit rate)"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "id": "GEO.S-CP.B.6--lesson",
+  "standard": "GEO.S-CP.B.6",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Use the rules of probability to compute probabilities of compound events in a uniform probability model",
+  "clusterCode": "B",
+  "skillName": "Computing Conditional Probability",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "intro": "A conditional probability $P(A \\mid B)$ answers the question: given that event $B$ has happened, how likely is event $A$? The key idea is that $B$ becomes the new sample space. You restrict your attention to just the outcomes in $B$, then ask what fraction of those also belong to $A$. For equally likely outcomes this is $P(A \\mid B) = \\dfrac{n(A \\cap B)}{n(B)}$, and in general $P(A \\mid B) = \\dfrac{P(A \\cap B)}{P(B)}$. Order matters: $P(A \\mid B)$ and $P(B \\mid A)$ usually differ because they divide by different denominators.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A fair six-sided die is rolled. Given that the result is even, find the probability that the result is greater than $3$.",
+      "solution": {
+        "steps": [
+          "Identify the conditioning event $B$: the result is even, so $B = \\{2, 4, 6\\}$. This becomes the new sample space.",
+          "Restrict to outcomes in $B$ that also satisfy 'greater than $3$': from $\\{2, 4, 6\\}$, the values greater than $3$ are $4$ and $6$, so $n(A \\cap B) = 2$.",
+          "Count the size of the new sample space: $n(B) = 3$.",
+          "Apply $P(A \\mid B) = \\dfrac{n(A \\cap B)}{n(B)} = \\dfrac{2}{3}$.",
+          "Interpretation: among the even rolls, two of the three are greater than $3$, so the probability is $\\dfrac{2}{3}$."
+        ],
+        "answer": "$\\dfrac{2}{3}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A survey of $50$ students records grade level and whether they ride the bus. Of the $20$ freshmen, $12$ ride the bus. Find the probability that a student rides the bus, given that the student is a freshman.",
+      "solution": {
+        "steps": [
+          "The conditioning event $B$ is 'is a freshman', so restrict the sample space to the $20$ freshmen: $n(B) = 20$.",
+          "Within that group, count those who also ride the bus: $n(A \\cap B) = 12$.",
+          "Do NOT divide by the full $50$; the condition restricts us to freshmen only.",
+          "Apply $P(\\text{bus} \\mid \\text{freshman}) = \\dfrac{n(A \\cap B)}{n(B)} = \\dfrac{12}{20}$.",
+          "Reduce: $\\dfrac{12}{20} = \\dfrac{3}{5}$.",
+          "Interpretation: among freshmen, $\\dfrac{3}{5}$ ride the bus."
+        ],
+        "answer": "$\\dfrac{3}{5}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "In a class of $30$ students, $18$ play a sport ($S$) and $10$ are in band ($B$), with $6$ students in both. Find $P(B \\mid S)$, the probability a student is in band given that they play a sport.",
+      "solution": {
+        "steps": [
+          "The conditioning event is $S$ (plays a sport), so the new sample space is the $18$ athletes: $n(S) = 18$.",
+          "Count athletes who are also in band, which is the overlap: $n(S \\cap B) = 6$.",
+          "Apply $P(B \\mid S) = \\dfrac{n(S \\cap B)}{n(S)} = \\dfrac{6}{18}$.",
+          "Reduce: $\\dfrac{6}{18} = \\dfrac{1}{3}$.",
+          "Interpretation: among the sport players, one third are also in band."
+        ],
+        "answer": "$\\dfrac{1}{3}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Two events satisfy $P(A \\cap B) = \\dfrac{1}{6}$ and $P(B) = \\dfrac{1}{2}$. Find $P(A \\mid B)$.",
+      "solution": {
+        "steps": [
+          "Use the general formula $P(A \\mid B) = \\dfrac{P(A \\cap B)}{P(B)}$.",
+          "Substitute the given probabilities: $P(A \\mid B) = \\dfrac{\\frac{1}{6}}{\\frac{1}{2}}$.",
+          "Divide fractions by multiplying by the reciprocal: $\\dfrac{1}{6} \\times \\dfrac{2}{1} = \\dfrac{2}{6}$.",
+          "Reduce: $\\dfrac{2}{6} = \\dfrac{1}{3}$.",
+          "Note we divided by $P(B)$, not $P(A)$, because the conditioning event is $B$."
+        ],
+        "answer": "$\\dfrac{1}{3}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A two-way table classifies $40$ people by whether they own a pet and whether they have a yard. $24$ people have a yard; of those, $18$ own a pet. Compute $P(\\text{pet} \\mid \\text{yard})$ and $P(\\text{yard} \\mid \\text{pet})$ if $30$ people own a pet overall, and explain why the two conditionals differ.",
+      "solution": {
+        "steps": [
+          "For $P(\\text{pet} \\mid \\text{yard})$, the conditioning event is 'has a yard', so restrict to those $24$ people: $n(\\text{yard}) = 24$.",
+          "Of those, $18$ own a pet, so $n(\\text{pet} \\cap \\text{yard}) = 18$, giving $P(\\text{pet} \\mid \\text{yard}) = \\dfrac{18}{24} = \\dfrac{3}{4}$.",
+          "For $P(\\text{yard} \\mid \\text{pet})$, the conditioning event switches to 'owns a pet', so the new sample space is the $30$ pet owners: $n(\\text{pet}) = 30$.",
+          "The overlap $n(\\text{pet} \\cap \\text{yard}) = 18$ is the same count, but the denominator changes: $P(\\text{yard} \\mid \\text{pet}) = \\dfrac{18}{30} = \\dfrac{3}{5}$.",
+          "The two conditionals differ because they share the numerator $18$ but divide by different totals ($24$ vs $30$): $\\dfrac{3}{4} \\neq \\dfrac{3}{5}$.",
+          "Interpretation: a yard owner is more likely to own a pet ($\\dfrac{3}{4}$) than a pet owner is to have a yard ($\\dfrac{3}{5}$)."
+        ],
+        "answer": "$P(\\text{pet} \\mid \\text{yard}) = \\dfrac{3}{4}$ and $P(\\text{yard} \\mid \\text{pet}) = \\dfrac{3}{5}$; they differ because the conditioning event changes the denominator."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A fair six-sided die is rolled. Given that the result is greater than $2$, find the probability that the result is odd.",
+      "hint": "The conditioning event 'greater than $2$' is $\\{3, 4, 5, 6\\}$. Treat this as the whole sample space, then count the odd outcomes in it.",
+      "solution": {
+        "steps": [
+          "Conditioning event $B$: greater than $2$, so $B = \\{3, 4, 5, 6\\}$ and $n(B) = 4$.",
+          "Odd outcomes within $B$: $3$ and $5$, so $n(A \\cap B) = 2$.",
+          "Apply $P(A \\mid B) = \\dfrac{n(A \\cap B)}{n(B)} = \\dfrac{2}{4}$.",
+          "Reduce: $\\dfrac{2}{4} = \\dfrac{1}{2}$."
+        ],
+        "answer": "$\\dfrac{1}{2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "At a clinic, $80$ patients are tested. $32$ patients are children; of those children, $20$ have the flu. Find the probability that a patient has the flu, given that the patient is a child.",
+      "hint": "Restrict to children only. The denominator is the number of children, not $80$.",
+      "solution": {
+        "steps": [
+          "Conditioning event: 'is a child', so $n(\\text{child}) = 32$ is the new sample space.",
+          "Children who also have the flu: $n(\\text{flu} \\cap \\text{child}) = 20$.",
+          "Apply $P(\\text{flu} \\mid \\text{child}) = \\dfrac{20}{32}$.",
+          "Reduce by dividing numerator and denominator by $4$: $\\dfrac{20}{32} = \\dfrac{5}{8}$."
+        ],
+        "answer": "$\\dfrac{5}{8}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "In a group of $25$ people, $15$ like coffee ($C$) and $12$ like tea ($T$), with $8$ liking both. Find $P(C \\mid T)$, the probability a person likes coffee given that they like tea.",
+      "hint": "The conditioning event is liking tea, so the denominator is $n(T)$. The numerator is the number who like both.",
+      "solution": {
+        "steps": [
+          "Conditioning event is $T$ (likes tea), so restrict to the $12$ tea drinkers: $n(T) = 12$.",
+          "Of those, the ones who also like coffee are the overlap: $n(C \\cap T) = 8$.",
+          "Apply $P(C \\mid T) = \\dfrac{n(C \\cap T)}{n(T)} = \\dfrac{8}{12}$.",
+          "Reduce: $\\dfrac{8}{12} = \\dfrac{2}{3}$."
+        ],
+        "answer": "$\\dfrac{2}{3}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Two events satisfy $P(A \\cap B) = \\dfrac{3}{10}$ and $P(B) = \\dfrac{3}{5}$. Find $P(A \\mid B)$.",
+      "hint": "Use $P(A \\mid B) = \\dfrac{P(A \\cap B)}{P(B)}$ and divide by multiplying by the reciprocal of $P(B)$.",
+      "solution": {
+        "steps": [
+          "Apply the formula $P(A \\mid B) = \\dfrac{P(A \\cap B)}{P(B)} = \\dfrac{\\frac{3}{10}}{\\frac{3}{5}}$.",
+          "Multiply by the reciprocal: $\\dfrac{3}{10} \\times \\dfrac{5}{3} = \\dfrac{15}{30}$.",
+          "Reduce: $\\dfrac{15}{30} = \\dfrac{1}{2}$."
+        ],
+        "answer": "$\\dfrac{1}{2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A two-way table classifies $60$ commuters by whether they drive and whether they are late. $36$ commuters drive; of those, $9$ are late. Among all $60$ commuters, $15$ are late. Compute $P(\\text{late} \\mid \\text{drive})$ and the overall $P(\\text{late})$, and state whether driving appears to change the chance of being late.",
+      "hint": "For the conditional, restrict to the $36$ drivers. For the marginal $P(\\text{late})$, use the full group of $60$. Compare the two values.",
+      "solution": {
+        "steps": [
+          "Conditional: restrict to the $36$ drivers, of whom $9$ are late, so $P(\\text{late} \\mid \\text{drive}) = \\dfrac{9}{36} = \\dfrac{1}{4}$.",
+          "Marginal: across all $60$ commuters, $15$ are late, so $P(\\text{late}) = \\dfrac{15}{60} = \\dfrac{1}{4}$.",
+          "Compare the two values: $P(\\text{late} \\mid \\text{drive}) = \\dfrac{1}{4} = P(\\text{late})$.",
+          "Interpretation: since the conditional equals the marginal, knowing a commuter drives does not change the chance of being late, so the two events appear to be independent."
+        ],
+        "answer": "$P(\\text{late} \\mid \\text{drive}) = \\dfrac{1}{4}$ and $P(\\text{late}) = \\dfrac{1}{4}$; they are equal, so driving does not appear to change the chance of being late (the events appear independent)."
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "generatedAt": "2026-06-24T21:01:54.123Z"
+}

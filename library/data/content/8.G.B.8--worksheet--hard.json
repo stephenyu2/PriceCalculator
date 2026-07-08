@@ -1,0 +1,217 @@
+{
+  "id": "8.G.B.8--worksheet--hard",
+  "standard": "8.G.B.8",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand and apply the Pythagorean Theorem",
+  "clusterCode": "B",
+  "skillName": "Distance Between Two Points",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "These problems combine the distance formula with extra reasoning: building right triangles from three points, finding perimeters, comparing two distances, verifying shapes, and pulling coordinates out of a context. Report every distance as an exact, simplified radical unless a decimal approximation is requested.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Triangle $ABC$ has vertices $A(-4, -1)$, $B(2, -1)$, and $C(2, 7)$. Find the perimeter of the triangle, giving an exact value.",
+      "answer": "$24$ units",
+      "solution": {
+        "steps": [
+          "Side $AB$ is horizontal: $AB = |2 - (-4)| = 6$.",
+          "Side $BC$ is vertical: $BC = |7 - (-1)| = 8$.",
+          "Side $AC = \\sqrt{(2 - (-4))^2 + (7 - (-1))^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$.",
+          "Perimeter $= 6 + 8 + 10 = 24$ units."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A triangle has vertices $P(1, 1)$, $Q(5, 1)$, and $R(3, 5)$. Find the exact perimeter, simplifying all radicals.",
+      "answer": "$4 + 4\\sqrt{5}$ units",
+      "solution": {
+        "steps": [
+          "Side $PQ$ is horizontal: $PQ = |5 - 1| = 4$.",
+          "Side $QR = \\sqrt{(3 - 5)^2 + (5 - 1)^2} = \\sqrt{(-2)^2 + 4^2} = \\sqrt{4 + 16} = \\sqrt{20} = 2\\sqrt{5}$.",
+          "Side $PR = \\sqrt{(3 - 1)^2 + (5 - 1)^2} = \\sqrt{2^2 + 4^2} = \\sqrt{4 + 16} = \\sqrt{20} = 2\\sqrt{5}$.",
+          "Perimeter $= 4 + 2\\sqrt{5} + 2\\sqrt{5} = 4 + 4\\sqrt{5}$ units."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Points $A(-6, 2)$ and $B(4, 2)$ are two vertices of a triangle, and the third vertex is $C(-1, 9)$. Which side of the triangle is the longest? Justify with exact lengths.",
+      "answer": "Side $AB$ is the longest at $10$ units (since $AC = BC = \\sqrt{74} \\approx 8.6 < 10$).",
+      "solution": {
+        "steps": [
+          "$AB = |4 - (-6)| = 10$ (horizontal segment).",
+          "$AC = \\sqrt{(-1 - (-6))^2 + (9 - 2)^2} = \\sqrt{5^2 + 7^2} = \\sqrt{25 + 49} = \\sqrt{74}$.",
+          "$BC = \\sqrt{(-1 - 4)^2 + (9 - 2)^2} = \\sqrt{(-5)^2 + 7^2} = \\sqrt{25 + 49} = \\sqrt{74}$.",
+          "Compare: $\\sqrt{74} \\approx 8.6$, which is less than $10$.",
+          "Therefore side $AB$ is the longest at $10$ units."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Verify whether the points $D(-2, -3)$, $E(1, 1)$, and $F(5, -2)$ form an isosceles triangle (a triangle with at least two equal sides). Show the exact length of each side.",
+      "answer": "Yes, it is isosceles: $DE = EF = 5$ and $DF = \\sqrt{50} = 5\\sqrt{2}$.",
+      "solution": {
+        "steps": [
+          "$DE = \\sqrt{(1 - (-2))^2 + (1 - (-3))^2} = \\sqrt{3^2 + 4^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$.",
+          "$EF = \\sqrt{(5 - 1)^2 + (-2 - 1)^2} = \\sqrt{4^2 + (-3)^2} = \\sqrt{16 + 9} = \\sqrt{25} = 5$.",
+          "$DF = \\sqrt{(5 - (-2))^2 + (-2 - (-3))^2} = \\sqrt{7^2 + 1^2} = \\sqrt{49 + 1} = \\sqrt{50} = 5\\sqrt{2}$.",
+          "Since $DE = EF = 5$, two sides are equal, so the triangle is isosceles."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "On a city grid (units in blocks), a hospital is at $(-7, 4)$, a fire station is at $(5, -1)$, and a school is at $(5, 4)$. A delivery van must drive straight from the hospital to the fire station, then straight from the fire station to the school. What is the total straight-line distance traveled, exactly?",
+      "answer": "$18$ blocks",
+      "solution": {
+        "steps": [
+          "Hospital to fire station: $\\sqrt{(5 - (-7))^2 + (-1 - 4)^2} = \\sqrt{12^2 + (-5)^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13$ blocks.",
+          "Fire station to school: $\\sqrt{(5 - 5)^2 + (4 - (-1))^2} = \\sqrt{0 + 5^2} = 5$ blocks.",
+          "Total distance $= 13 + 5 = 18$ blocks."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Two drones start at the origin $(0, 0)$. Drone A flies to $(9, 12)$ and Drone B flies to $(-8, -15)$. Which drone ends up farther from the origin, and by how much?",
+      "answer": "Drone B is farther by $2$ units ($17$ vs. $15$).",
+      "solution": {
+        "steps": [
+          "Drone A distance: $\\sqrt{9^2 + 12^2} = \\sqrt{81 + 144} = \\sqrt{225} = 15$.",
+          "Drone B distance: $\\sqrt{(-8)^2 + (-15)^2} = \\sqrt{64 + 225} = \\sqrt{289} = 17$.",
+          "Compare: $17 > 15$, so Drone B is farther.",
+          "Difference $= 17 - 15 = 2$ units."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "A rectangle has vertices $W(-3, -2)$, $X(5, -2)$, $Y(5, 4)$, and $Z(-3, 4)$. Find the length of a diagonal of the rectangle, and confirm both diagonals have the same length by computing the other one.",
+      "answer": "Both diagonals equal $10$ units.",
+      "solution": {
+        "steps": [
+          "Diagonal $WY = \\sqrt{(5 - (-3))^2 + (4 - (-2))^2} = \\sqrt{8^2 + 6^2} = \\sqrt{64 + 36} = \\sqrt{100} = 10$.",
+          "Diagonal $XZ = \\sqrt{(-3 - 5)^2 + (4 - (-2))^2} = \\sqrt{(-8)^2 + 6^2} = \\sqrt{64 + 36} = \\sqrt{100} = 10$.",
+          "Both diagonals equal $10$ units, as expected for a rectangle."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Triangle $JKL$ has vertices $J(-5, 3)$, $K(1, -5)$, and $L(7, 3)$. Find the exact perimeter, simplifying all radicals.",
+      "answer": "$32$ units",
+      "solution": {
+        "steps": [
+          "$JL$ is horizontal: $JL = |7 - (-5)| = 12$.",
+          "$JK = \\sqrt{(1 - (-5))^2 + (-5 - 3)^2} = \\sqrt{6^2 + (-8)^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$.",
+          "$KL = \\sqrt{(7 - 1)^2 + (3 - (-5))^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$.",
+          "Perimeter $= 12 + 10 + 10 = 32$ units."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A quadrilateral has vertices $A(0, 0)$, $B(4, 2)$, $C(2, 6)$, and $D(-2, 4)$, listed in order. Find its exact perimeter, simplifying all radicals.",
+      "answer": "$8\\sqrt{5}$ units",
+      "solution": {
+        "steps": [
+          "$AB = \\sqrt{(4 - 0)^2 + (2 - 0)^2} = \\sqrt{16 + 4} = \\sqrt{20} = 2\\sqrt{5}$.",
+          "$BC = \\sqrt{(2 - 4)^2 + (6 - 2)^2} = \\sqrt{4 + 16} = \\sqrt{20} = 2\\sqrt{5}$.",
+          "$CD = \\sqrt{(-2 - 2)^2 + (4 - 6)^2} = \\sqrt{16 + 4} = \\sqrt{20} = 2\\sqrt{5}$.",
+          "$DA = \\sqrt{(0 - (-2))^2 + (0 - 4)^2} = \\sqrt{4 + 16} = \\sqrt{20} = 2\\sqrt{5}$.",
+          "Perimeter $= 2\\sqrt{5} + 2\\sqrt{5} + 2\\sqrt{5} + 2\\sqrt{5} = 8\\sqrt{5}$ units."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A hiking trail on a coordinate map (units in kilometers) goes from a trailhead at $(-6, -4)$ to a lookout at $(2, 11)$. A second, longer trail goes from the same trailhead to a waterfall at $(10, 5)$. Find the exact length of each trail and determine how much longer the waterfall trail is.",
+      "answer": "Both trails are $17$ km, so neither is longer (they are equal).",
+      "solution": {
+        "steps": [
+          "Trailhead to lookout: $\\sqrt{(2 - (-6))^2 + (11 - (-4))^2} = \\sqrt{8^2 + 15^2} = \\sqrt{64 + 225} = \\sqrt{289} = 17$ km.",
+          "Trailhead to waterfall: $\\sqrt{(10 - (-6))^2 + (5 - (-4))^2} = \\sqrt{16^2 + 9^2} = \\sqrt{256 + 81} = \\sqrt{337}$ km, which is approximately $18.36$ km.",
+          "Compare: $\\sqrt{337} \\approx 18.36$ km versus $17$ km.",
+          "The waterfall trail is longer by $\\sqrt{337} - 17 \\approx 1.36$ km."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Triangle $MNP$ has vertices $M(-4, 6)$, $N(2, -2)$, and $P(8, 6)$. Show that this triangle is isosceles, then find its perimeter exactly.",
+      "answer": "Isosceles with $MN = NP = 10$; perimeter $= 32$ units.",
+      "solution": {
+        "steps": [
+          "$MN = \\sqrt{(2 - (-4))^2 + (-2 - 6)^2} = \\sqrt{6^2 + (-8)^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$.",
+          "$NP = \\sqrt{(8 - 2)^2 + (6 - (-2))^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$.",
+          "$MP$ is horizontal: $MP = |8 - (-4)| = 12$.",
+          "Since $MN = NP = 10$, the triangle is isosceles.",
+          "Perimeter $= 10 + 10 + 12 = 32$ units."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Two points are $G(-3, -7)$ and $H(9, 2)$. Point $K$ is the midpoint of segment $GH$, located at $(3, -\\tfrac{5}{2})$. Find the exact distance from $G$ to $K$, and confirm it is half the length of $GH$.",
+      "answer": "$GK = \\frac{15}{2}$ units, which is half of $GH = 15$ units.",
+      "solution": {
+        "steps": [
+          "Full length: $GH = \\sqrt{(9 - (-3))^2 + (2 - (-7))^2} = \\sqrt{12^2 + 9^2} = \\sqrt{144 + 81} = \\sqrt{225} = 15$.",
+          "$GK = \\sqrt{(3 - (-3))^2 + (-\\tfrac{5}{2} - (-7))^2} = \\sqrt{6^2 + (\\tfrac{9}{2})^2} = \\sqrt{36 + \\tfrac{81}{4}}$.",
+          "Write $36 = \\tfrac{144}{4}$, so $GK = \\sqrt{\\tfrac{144}{4} + \\tfrac{81}{4}} = \\sqrt{\\tfrac{225}{4}} = \\tfrac{15}{2}$.",
+          "Confirm: $\\tfrac{15}{2} = 7.5$, which is exactly half of $15$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "A right triangle has its right angle at vertex $B(6, -3)$. The other two vertices are $A(-2, -3)$ and $C(6, 9)$. Find the exact length of the hypotenuse $AC$ and the area of the triangle.",
+      "answer": "Hypotenuse $AC = \\sqrt{208} = 4\\sqrt{13}$ units; area $= 48$ square units.",
+      "solution": {
+        "steps": [
+          "Leg $AB$ is horizontal: $AB = |6 - (-2)| = 8$.",
+          "Leg $BC$ is vertical: $BC = |9 - (-3)| = 12$.",
+          "Hypotenuse $AC = \\sqrt{(6 - (-2))^2 + (9 - (-3))^2} = \\sqrt{8^2 + 12^2} = \\sqrt{64 + 144} = \\sqrt{208} = 4\\sqrt{13}$.",
+          "Area $= \\frac{1}{2} \\cdot AB \\cdot BC = \\frac{1}{2} \\cdot 8 \\cdot 12 = 48$ square units."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "On a treasure map, the start is at $(-10, -6)$, the cave is at $(-2, 0)$, and the chest is at $(13, 8)$. A path goes from the start to the cave, then from the cave to the chest. Is this path shorter or longer than going straight from the start to the chest? By how much, exactly?",
+      "answer": "The two-leg path ($27$ units) is longer than the direct path ($5\\sqrt{29} \\approx 26.93$ units), by $27 - 5\\sqrt{29} \\approx 0.07$ units.",
+      "solution": {
+        "steps": [
+          "Start to cave: $\\sqrt{(-2 - (-10))^2 + (0 - (-6))^2} = \\sqrt{8^2 + 6^2} = \\sqrt{64 + 36} = \\sqrt{100} = 10$.",
+          "Cave to chest: $\\sqrt{(13 - (-2))^2 + (8 - 0)^2} = \\sqrt{15^2 + 8^2} = \\sqrt{225 + 64} = \\sqrt{289} = 17$.",
+          "Two-leg path total $= 10 + 17 = 27$ units.",
+          "Direct path, start to chest: $\\sqrt{(13 - (-10))^2 + (8 - (-6))^2} = \\sqrt{23^2 + 14^2} = \\sqrt{529 + 196} = \\sqrt{725} = 5\\sqrt{29}$.",
+          "Since $5\\sqrt{29} \\approx 26.93$, the direct path is shorter. The two-leg path is longer by $27 - 5\\sqrt{29} \\approx 0.07$ units."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Triangle $RST$ has vertices $R(-5, -2)$, $S(3, 4)$, and $T(0, -6)$. Find the exact perimeter, simplifying all radicals.",
+      "answer": "$10 + \\sqrt{109} + \\sqrt{41}$ units",
+      "solution": {
+        "steps": [
+          "$RS = \\sqrt{(3 - (-5))^2 + (4 - (-2))^2} = \\sqrt{8^2 + 6^2} = \\sqrt{64 + 36} = \\sqrt{100} = 10$.",
+          "$ST = \\sqrt{(0 - 3)^2 + (-6 - 4)^2} = \\sqrt{(-3)^2 + (-10)^2} = \\sqrt{9 + 100} = \\sqrt{109}$.",
+          "$RT = \\sqrt{(0 - (-5))^2 + (-6 - (-2))^2} = \\sqrt{5^2 + (-4)^2} = \\sqrt{25 + 16} = \\sqrt{41}$.",
+          "Perimeter $= 10 + \\sqrt{109} + \\sqrt{41}$ units (both radicals are already in simplest form)."
+        ]
+      }
+    }
+  ]
+}

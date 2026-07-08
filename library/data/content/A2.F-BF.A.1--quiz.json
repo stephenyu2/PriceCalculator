@@ -1,0 +1,160 @@
+{
+  "id": "A2.F-BF.A.1--quiz",
+  "standard": "A2.F-BF.A.1",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Functions — Building Functions",
+  "domainCode": "F-BF",
+  "cluster": "Build a function that models a relationship between two quantities",
+  "clusterCode": "A",
+  "skillName": "Building Functions from Operations",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Given $f(x) = 3x + 1$ and $g(x) = x - 4$, find $(f + g)(x)$.\nA) $4x - 3$\nB) $4x + 5$\nC) $3x^2 - 11x - 4$\nD) $2x + 5$",
+      "answer": "A) $4x - 3$",
+      "solution": {
+        "steps": [
+          "Add the two functions: $(f+g)(x) = (3x+1) + (x-4)$.",
+          "Combine like terms: $3x + x = 4x$ and $1 - 4 = -3$, so $(f+g)(x) = 4x - 3$. This is the key, A.",
+          "B comes from adding the constants incorrectly as $1 + 4 = 5$ instead of $1 - 4 = -3$.",
+          "C is the product $(3x+1)(x-4)$, not the sum.",
+          "D comes from subtracting the $x$-terms ($3x - x$) instead of adding them."
+        ],
+        "answer": "A) $4x - 3$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Given $f(x) = x^2 - 3x$ and $g(x) = 2x + 5$, find $(f - g)(x)$.\nA) $x^2 - 5x + 5$\nB) $x^2 - x + 5$\nC) $x^2 - 5x - 5$\nD) $x^2 - 3x - 2x + 5$",
+      "answer": "C) $x^2 - 5x - 5$",
+      "solution": {
+        "steps": [
+          "Subtract every term of $g$: $(f-g)(x) = (x^2 - 3x) - (2x + 5)$.",
+          "Distribute the minus sign across both terms of $g$: $x^2 - 3x - 2x - 5$.",
+          "Combine like terms: $-3x - 2x = -5x$, giving $x^2 - 5x - 5$. This is the key, C.",
+          "A and D drop the sign on the $+5$, subtracting only the first term of $g$ and keeping $+5$.",
+          "B fails to combine $-3x$ and $-2x$ correctly."
+        ],
+        "answer": "C) $x^2 - 5x - 5$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Given $f(x) = 2x - 1$ and $g(x) = x + 3$, evaluate $(f + g)(4)$.\nA) $20$\nB) $14$\nC) $7$\nD) $12$",
+      "answer": "B) $14$",
+      "solution": {
+        "steps": [
+          "Evaluate each function at $x = 4$: $f(4) = 2(4) - 1 = 7$ and $g(4) = 4 + 3 = 7$.",
+          "Add the results: $(f+g)(4) = 7 + 7 = 14$. This is the key, B.",
+          "A is the product $f(4) \\cdot g(4) = 7 \\cdot 7 = 49$ done wrong, or a multiplication mistake; it does not match the sum.",
+          "C is only $f(4)$ (or $g(4)$), forgetting to add both.",
+          "D comes from a sign slip computing $f(4) = 2(4) + 1 = 9$ then $9 + 3$, mishandling the constants."
+        ],
+        "answer": "B) $14$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Given $f(x) = x + 4$ and $g(x) = x - 2$, write $\\left(\\frac{f}{g}\\right)(x)$ and state its domain.\nA) $\\frac{x+4}{x-2}$, all real numbers\nB) $\\frac{x+4}{x-2}$, $x \\neq 2$\nC) $\\frac{x-2}{x+4}$, $x \\neq -4$\nD) $\\frac{x+4}{x-2}$, $x \\neq -2$",
+      "answer": "B) $\\frac{x+4}{x-2}$, $x \\neq 2$",
+      "solution": {
+        "steps": [
+          "Form the quotient: $\\left(\\frac{f}{g}\\right)(x) = \\frac{f(x)}{g(x)} = \\frac{x+4}{x-2}$.",
+          "The denominator cannot be zero, so set $x - 2 \\neq 0$, giving $x \\neq 2$. This is the key, B.",
+          "A forgets to exclude the value that makes the denominator zero, stating 'all real numbers'.",
+          "C inverts the quotient, putting $g$ over $f$.",
+          "D excludes the wrong value, $x \\neq -2$, instead of solving $x - 2 = 0$."
+        ],
+        "answer": "B) $\\frac{x+4}{x-2}$, $x \\neq 2$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Given $f(x) = 3x - 1$ and $g(x) = x^2 + 2$, find $(f \\circ g)(x)$.\nA) $3x^2 + 5$\nB) $9x^2 - 6x + 3$\nC) $3x^3 - x^2 + 6x - 2$\nD) $x^2 + 1$",
+      "answer": "A) $3x^2 + 5$",
+      "solution": {
+        "steps": [
+          "Composition means substitute $g(x)$ into $f$: $(f \\circ g)(x) = f(g(x)) = 3(x^2 + 2) - 1$.",
+          "Distribute the $3$ across both terms: $3x^2 + 6 - 1$.",
+          "Combine constants: $3x^2 + 5$. This is the key, A.",
+          "B is $g(f(x))$, composing in the wrong order: $(3x-1)^2 + 2 = 9x^2 - 6x + 3$.",
+          "C is the product $f(x) \\cdot g(x)$, confusing composition with multiplication.",
+          "D fails to distribute the $3$ over both terms, writing $3x^2 + 2 - 1$."
+        ],
+        "answer": "A) $3x^2 + 5$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "A taxi charges a $\\$3$ flat fee plus $\\$2$ per mile. Which function $C(m)$ gives the cost of an $m$-mile ride?\nA) $C(m) = 3m + 2$\nB) $C(m) = 2m + 3$\nC) $C(m) = 5m$\nD) $C(m) = 2m - 3$",
+      "answer": "B) $C(m) = 2m + 3$",
+      "solution": {
+        "steps": [
+          "The cost per mile multiplies the number of miles: $2m$.",
+          "The flat fee is added once, regardless of distance: $+3$, giving $C(m) = 2m + 3$. This is the key, B.",
+          "A swaps the rate and the fee, charging $\\$3$ per mile plus $\\$2$.",
+          "C wrongly adds the fee and rate into a single $\\$5$ per mile charge.",
+          "D subtracts the flat fee instead of adding it."
+        ],
+        "answer": "B) $C(m) = 2m + 3$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A store first takes $20\\%$ off the price $p$, then adds $8\\%$ tax to the discounted price. Which expression gives the final cost?\nA) $0.864p$\nB) $0.88p$\nC) $1.88p$\nD) $0.72p$",
+      "answer": "A) $0.864p$",
+      "solution": {
+        "steps": [
+          "Discount first: taking $20\\%$ off multiplies by $0.8$, so $d(p) = 0.8p$.",
+          "Tax next, applied to the discounted amount: adding $8\\%$ multiplies by $1.08$, so $t(x) = 1.08x$.",
+          "Compose tax after discount: $t(d(p)) = 1.08(0.8p) = 0.864p$. This is the key, A.",
+          "B comes from subtracting the percents as $20\\% - 8\\% = 12\\%$ off, giving $0.88p$.",
+          "C adds the two factors $1.08 + 0.8 = 1.88$ instead of multiplying them.",
+          "D applies only the discount twice or subtracts $28\\%$, ignoring that tax is added."
+        ],
+        "answer": "A) $0.864p$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Given $f(x) = \\sqrt{x}$ and $g(x) = 2x + 7$, find $(f \\circ g)(9)$.\nA) $5$\nB) $13$\nC) $\\sqrt{2x + 7}$\nD) $25$",
+      "answer": "A) $5$",
+      "solution": {
+        "steps": [
+          "Work from the inside out: $(f \\circ g)(9) = f(g(9))$.",
+          "Evaluate the inner function: $g(9) = 2(9) + 7 = 25$.",
+          "Apply the outer function: $f(25) = \\sqrt{25} = 5$. This is the key, A.",
+          "B comes from $2\\sqrt{9} + 7 = 2(3) + 7 = 13$, applying the square root in the wrong order ($g(f(9))$ style).",
+          "C is the general rule $f(g(x)) = \\sqrt{2x+7}$ left unevaluated at $x = 9$.",
+          "D is the inner value $g(9) = 25$, forgetting to apply the square root."
+        ],
+        "answer": "A) $5$"
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T19:38:44.935Z"
+}

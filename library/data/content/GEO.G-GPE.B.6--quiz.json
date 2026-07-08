@@ -1,0 +1,144 @@
+{
+  "id": "GEO.G-GPE.B.6--quiz",
+  "standard": "GEO.G-GPE.B.6",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Expressing Geometric Properties with Equations",
+  "domainCode": "G-GPE",
+  "cluster": "Use coordinates to prove simple geometric theorems algebraically",
+  "clusterCode": "B",
+  "skillName": "Partitioning a Line Segment",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Partitioning a line segment: find the point that divides a directed segment in a given ratio using the section formula, recognize the midpoint as the $1:1$ case, and solve inverse problems for a ratio or a missing endpoint.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Find the midpoint of the segment from $A(2, 3)$ to $B(8, 11)$.\nA) $(5, 7)$\nB) $(6, 8)$\nC) $(10, 14)$\nD) $(3, 4)$",
+      "answer": "A) $(5, 7)$",
+      "solution": {
+        "steps": [
+          "The midpoint is the ratio $1:1$ case: $M = \\left(\\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2}\\right)$.",
+          "Average the $x$-coordinates: $\\frac{2 + 8}{2} = \\frac{10}{2} = 5$.",
+          "Average the $y$-coordinates: $\\frac{3 + 11}{2} = \\frac{14}{2} = 7$.",
+          "So $M = (5, 7)$, which is choice A.",
+          "B comes from averaging only one pair correctly and slipping on the other; C is the sum $(2+8, 3+11)$ without dividing by 2; D is the difference $(8-2)/3$-style miscount of the run and rise."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Point $P$ partitions the directed segment from $A(0, 0)$ to $B(8, 12)$ in the ratio $1:3$. Find $P$.\nA) $(2, 3)$\nB) $(4, 6)$\nC) $(6, 9)$\nD) $(8, 12)$",
+      "answer": "A) $(2, 3)$",
+      "solution": {
+        "steps": [
+          "The partition fraction is $k = \\frac{m}{m+n} = \\frac{1}{1+3} = \\frac{1}{4}$.",
+          "Run and rise: $\\Delta x = 8 - 0 = 8$, $\\Delta y = 12 - 0 = 12$.",
+          "$P = \\left(0 + \\frac{1}{4}(8), 0 + \\frac{1}{4}(12)\\right) = (2, 3)$, which is choice A.",
+          "B is the midpoint $(4, 6)$, the error of averaging instead of using $\\frac{1}{4}$; C uses $k = \\frac{3}{4}$, the flipped ratio; D is the endpoint $B$ itself."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Which expression gives the partition fraction $k$ used to locate the point dividing a directed segment from $A$ to $B$ in the ratio $m:n$ (measured from $A$)?\nA) $\\frac{m}{m+n}$\nB) $\\frac{m}{n}$\nC) $\\frac{n}{m+n}$\nD) $\\frac{m+n}{m}$",
+      "answer": "A) $\\frac{m}{m+n}$",
+      "solution": {
+        "steps": [
+          "Starting at $A$ and moving toward $B$, the fraction of the way traveled is $\\frac{AP}{AB} = \\frac{m}{m+n}$, choice A.",
+          "B, $\\frac{m}{n}$, is the raw ratio, not the fraction of the whole segment; using it over-shoots the point.",
+          "C, $\\frac{n}{m+n}$, is the fraction measured from $B$ (the flipped ratio), which lands on the wrong side.",
+          "D is the reciprocal of A and is greater than 1, so it cannot be a fraction of the segment."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Point $P$ partitions the directed segment from $A(1, 2)$ to $B(7, 5)$ in the ratio $2:3$. Find $P$.\nA) $\\left(\\frac{17}{5}, \\frac{16}{5}\\right)$\nB) $\\left(\\frac{23}{5}, \\frac{19}{5}\\right)$\nC) $(5, 4)$\nD) $\\left(\\frac{7}{5}, \\frac{12}{5}\\right)$",
+      "answer": "A) $\\left(\\frac{17}{5}, \\frac{16}{5}\\right)$",
+      "solution": {
+        "steps": [
+          "Partition fraction: $k = \\frac{2}{2+3} = \\frac{2}{5}$.",
+          "Deltas: $\\Delta x = 7 - 1 = 6$, $\\Delta y = 5 - 2 = 3$.",
+          "$P = \\left(1 + \\frac{2}{5}(6), 2 + \\frac{2}{5}(3)\\right) = \\left(1 + \\frac{12}{5}, 2 + \\frac{6}{5}\\right) = \\left(\\frac{17}{5}, \\frac{16}{5}\\right)$, choice A.",
+          "B uses $k = \\frac{3}{5}$ (flipped ratio), giving the point for $3:2$; C uses $\\frac{m}{n} = \\frac{2}{3}$ instead of $\\frac{2}{5}$; D adds $k$ to each coordinate instead of multiplying it by the delta."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Point $P$ partitions the directed segment from $A(-2, 1)$ to $B(6, 9)$ in the ratio $1:3$. Find $P$.\nA) $(0, 3)$\nB) $(2, 5)$\nC) $(-1, 3)$\nD) $(4, 7)$",
+      "answer": "A) $(0, 3)$",
+      "solution": {
+        "steps": [
+          "Partition fraction: $k = \\frac{1}{1+3} = \\frac{1}{4}$.",
+          "Deltas, watching the double negative: $\\Delta x = 6 - (-2) = 8$, $\\Delta y = 9 - 1 = 8$.",
+          "$P = \\left(-2 + \\frac{1}{4}(8), 1 + \\frac{1}{4}(8)\\right) = (-2 + 2, 1 + 2) = (0, 3)$, choice A.",
+          "B is the midpoint $(2, 5)$, from averaging instead of using $\\frac{1}{4}$; C drops the double negative, using $\\Delta x = 6 - 2 = 4$ to land at $(-1, 3)$; D uses $k = \\frac{3}{4}$, the flipped ratio."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Point $P$ partitions the directed segment from $A(-3, 4)$ to $B(5, -2)$ in the ratio $3:1$. Find $P$.\nA) $(3, -\\tfrac{1}{2})$\nB) $(1, 1)$\nC) $(-1, \\tfrac{5}{2})$\nD) $(2, 1)$",
+      "answer": "A) $(3, -\\tfrac{1}{2})$",
+      "solution": {
+        "steps": [
+          "Partition fraction: $k = \\frac{3}{3+1} = \\frac{3}{4}$.",
+          "Deltas: $\\Delta x = 5 - (-3) = 8$, $\\Delta y = -2 - 4 = -6$.",
+          "$P = \\left(-3 + \\frac{3}{4}(8), 4 + \\frac{3}{4}(-6)\\right) = \\left(-3 + 6, 4 - \\frac{18}{4}\\right) = \\left(3, 4 - \\frac{9}{2}\\right) = \\left(3, -\\frac{1}{2}\\right)$, choice A.",
+          "B is the midpoint $(1, 1)$, from averaging; C uses $k = \\frac{1}{4}$ (flipped ratio); D comes from using $\\frac{m}{n} = 3$ scaled wrongly, ignoring the $m+n$ denominator."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "On the directed segment from $A(0, 0)$ to $B(12, 8)$, the point $P(3, 2)$ lies on $\\overline{AB}$. Find the ratio $AP:PB$.\nA) $1:3$\nB) $3:1$\nC) $1:4$\nD) $3:4$",
+      "answer": "A) $1:3$",
+      "solution": {
+        "steps": [
+          "Find what fraction of the way from $A$ to $B$ the point $P$ is: $\\frac{P_x - A_x}{B_x - A_x} = \\frac{3 - 0}{12 - 0} = \\frac{3}{12} = \\frac{1}{4}$.",
+          "Check with $y$: $\\frac{2 - 0}{8 - 0} = \\frac{2}{8} = \\frac{1}{4}$, consistent, so $P = A + \\frac{1}{4}(B - A)$.",
+          "If $k = \\frac{m}{m+n} = \\frac{1}{4}$, then $AP:PB = 1:3$, choice A.",
+          "B reverses the ratio to $3:1$ (measuring from the wrong end); C reports $1:4$, confusing the part-to-whole fraction $\\frac{1}{4}$ with the part-to-part ratio; D divides the raw coordinates $\\frac{3}{4}$ without forming the correct ratio."
+        ]
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Point $P(4, 1)$ partitions the directed segment from $A(-2, -5)$ to $B$ in the ratio $3:1$. Find the coordinates of endpoint $B$.\nA) $(6, 3)$\nB) $(2, -1)$\nC) $(10, 7)$\nD) $(0, -3)$",
+      "answer": "A) $(6, 3)$",
+      "solution": {
+        "steps": [
+          "Partition fraction: $k = \\frac{3}{3+1} = \\frac{3}{4}$, and the section formula gives $P = A + k(B - A)$.",
+          "Solve the $x$-equation: $4 = -2 + \\frac{3}{4}(x_B + 2)$, so $6 = \\frac{3}{4}(x_B + 2)$, giving $x_B + 2 = 8$ and $x_B = 6$.",
+          "Solve the $y$-equation: $1 = -5 + \\frac{3}{4}(y_B + 5)$, so $6 = \\frac{3}{4}(y_B + 5)$, giving $y_B + 5 = 8$ and $y_B = 3$.",
+          "So $B = (6, 3)$, choice A.",
+          "B is $P$ shifted by the wrong delta; C uses $k = \\frac{1}{4}$ (flipped ratio) when back-solving; D treats $P$ as the midpoint and reflects $A$ across it."
+        ]
+      }
+    }
+  ]
+}

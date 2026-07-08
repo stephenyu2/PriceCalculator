@@ -1,0 +1,158 @@
+{
+  "id": "A2.S-ID.B.6--quiz",
+  "standard": "A2.S-ID.B.6",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on two categorical and quantitative variables",
+  "clusterCode": "B",
+  "skillName": "Fitting Functions to Data",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "Eight multiple-choice questions on fitting linear, quadratic, and exponential functions to data: classifying the family, building a model, predicting, and judging fit with residuals.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "The data $(0,3),(1,5),(2,7),(3,9)$ has a constant first difference of $2$. Which function family fits this data?\nA) Exponential\nB) Linear\nC) Quadratic\nD) None of these",
+      "answer": "B) Linear",
+      "solution": {
+        "steps": [
+          "A constant first difference means each step adds the same amount, which is the signature of a linear function $y=mx+b$.",
+          "Here the values increase by $2$ each time, so the data is linear (in fact $y=2x+3$).",
+          "C is wrong: a quadratic has a constant SECOND difference, not a constant first difference.",
+          "A is wrong: an exponential has a constant RATIO between values; here $\\frac{5}{3}\\neq\\frac{7}{5}$, so it is not exponential.",
+          "D is wrong because the linear pattern is clear and exact."
+        ],
+        "answer": "B) Linear"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "What is the common ratio of the exponential data $(0,2),(1,6),(2,18),(3,54)$?\nA) $4$\nB) $2$\nC) $3$\nD) $\\frac{1}{3}$",
+      "answer": "C) $3$",
+      "solution": {
+        "steps": [
+          "For an exponential pattern, divide each value by the previous value to find the common ratio.",
+          "$\\frac{6}{2}=3$, $\\frac{18}{6}=3$, $\\frac{54}{18}=3$, so the common ratio is $3$.",
+          "A is wrong: $4$ comes from the difference $6-2=4$, but ratio uses division, not subtraction.",
+          "B is wrong: $2$ is the initial value $a$ at $x=0$, not the ratio.",
+          "D is wrong: $\\frac{1}{3}$ inverts the ratio (dividing previous by current)."
+        ],
+        "answer": "C) $3$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "A line of fit passes through the representative points $(2,7)$ and $(8,25)$. What is the slope of the line?\nA) $\\frac{1}{3}$\nB) $-3$\nC) $\\frac{18}{10}$\nD) $3$",
+      "answer": "D) $3$",
+      "solution": {
+        "steps": [
+          "Use the slope formula $m=\\frac{y_2-y_1}{x_2-x_1}$.",
+          "$m=\\frac{25-7}{8-2}=\\frac{18}{6}=3$.",
+          "A is wrong: $\\frac{1}{3}$ inverts the formula, dividing change in $x$ by change in $y$: $\\frac{8-2}{25-7}$.",
+          "C is wrong: it subtracts $x$ and $y$ inconsistently and does not simplify to the slope.",
+          "B is wrong: the values increase together, so the slope is positive, not negative."
+        ],
+        "answer": "D) $3$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "The data $(0,1),(1,4),(2,9),(3,16)$ has first differences $3,5,7$ and a constant second difference of $2$. Which model fits this data?\nA) $y=4^{x}$\nB) $y=(x+1)^2$\nC) $y=3x+1$\nD) $y=2\\cdot 4^{x}$",
+      "answer": "B) $y=(x+1)^2$",
+      "solution": {
+        "steps": [
+          "A constant SECOND difference (here $2$) is the signature of a quadratic $y=ax^2+bx+c$.",
+          "Testing $y=(x+1)^2$: $x=0\\to1$, $x=1\\to4$, $x=2\\to9$, $x=3\\to16$, which matches every point.",
+          "A is wrong: it confuses quadratic with exponential just because the data curves upward; $4^{x}$ gives $1,4,16,64$, not the data.",
+          "C is wrong: the first differences $3,5,7$ are not constant, so the data is not linear.",
+          "D is wrong: it is also exponential and does not match the points."
+        ],
+        "answer": "B) $y=(x+1)^2$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "A line of fit has slope $3$ and passes through the point $(2,7)$. What is the equation of the line?\nA) $y=3x+13$\nB) $y=3x+7$\nC) $y=3x+1$\nD) $y=3x-1$",
+      "answer": "C) $y=3x+1$",
+      "solution": {
+        "steps": [
+          "Find the intercept with $b=y-mx$ using the point $(2,7)$ and slope $3$.",
+          "$b=7-3(2)=7-6=1$, so the line is $y=3x+1$.",
+          "A is wrong: it uses $b=y+mx=7+3(2)=13$, a sign error in the intercept formula.",
+          "B is wrong: $7$ is the $y$-value of the point, not the intercept.",
+          "D is wrong: it has the wrong sign on the correct magnitude of the intercept."
+        ],
+        "answer": "C) $y=3x+1$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "A savings balance grows by $5\\%$ each year starting from $\\$1000$. Which exponential model represents the balance $y$ after $x$ years?\nA) $y=1000\\cdot 0.05^{x}$\nB) $y=1000\\cdot 1.05^{x}$\nC) $y=1000\\cdot 0.95^{x}$\nD) $y=1000+0.05x$",
+      "answer": "B) $y=1000\\cdot 1.05^{x}$",
+      "solution": {
+        "steps": [
+          "For a constant percent increase, the growth factor (base) is $1+r$ where $r$ is the rate as a decimal.",
+          "A $5\\%$ increase gives $r=0.05$, so the base is $1+0.05=1.05$ and the model is $y=1000\\cdot 1.05^{x}$.",
+          "A is wrong: it uses $0.05$ as the base, which would shrink the balance by $95\\%$ each year.",
+          "C is wrong: $0.95$ is the factor for a $5\\%$ DECREASE, not an increase.",
+          "D is wrong: it is linear (adds a fixed amount), but a percent of the balance is multiplicative, not additive."
+        ],
+        "answer": "B) $y=1000\\cdot 1.05^{x}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Bacteria are modeled by $y=5\\cdot 3^{x}$, where $x$ is hours. The model predicts a count at $x=4$, but the actual count is $410$. What is the residual (actual minus predicted)?\nA) $-5$\nB) $405$\nC) $5$\nD) $810$",
+      "answer": "C) $5$",
+      "solution": {
+        "steps": [
+          "First predict at $x=4$: $\\hat{y}=5\\cdot 3^{4}=5\\cdot 81=405$.",
+          "The residual is actual minus predicted: $410-405=5$.",
+          "A is wrong: it flips the sign by computing predicted minus actual, $405-410=-5$.",
+          "B is wrong: $405$ is the predicted value, not the residual.",
+          "D is wrong: it incorrectly doubles or misreads the values; the correct difference is $5$."
+        ],
+        "answer": "C) $5$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A line is fit to a set of data, and the residuals run negative, then positive, then negative as $x$ increases, forming a clear U-shaped pattern. What does this residual pattern indicate?\nA) The line fits the data well because the residuals are small\nB) The data has no association between the variables\nC) The line fits well because the residuals sum to zero\nD) The line is the wrong family; a quadratic model fits better",
+      "answer": "D) The line is the wrong family; a quadratic model fits better",
+      "solution": {
+        "steps": [
+          "Fit is judged by whether residuals scatter RANDOMLY (good fit) or show a PATTERN (wrong model family).",
+          "A systematic U-shaped pattern (negative, positive, negative) means the straight line cannot capture the curvature, so a curved model such as a quadratic fits better.",
+          "A is wrong: fit is judged by randomness of residuals, not their size; a clear pattern signals a poor model.",
+          "B is wrong: a strong pattern in the data is exactly why the line misfits; there is a (non-linear) association.",
+          "C is wrong: residuals from a least-squares fit always sum to about zero, so that fact alone says nothing about whether the family is correct."
+        ],
+        "answer": "D) The line is the wrong family; a quadratic model fits better"
+      }
+    }
+  ]
+}

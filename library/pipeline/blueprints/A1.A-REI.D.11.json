@@ -1,0 +1,139 @@
+{
+  "standard": "A1.A-REI.D.11",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Reasoning with Equations and Inequalities",
+  "domainCode": "A-REI",
+  "cluster": "Represent and solve equations and inequalities graphically",
+  "clusterCode": "D",
+  "skillName": "Solving f(x) = g(x) Graphically",
+
+  "description": "Students connect the algebraic equation $f(x) = g(x)$ to the geometry of two graphs. They explain that a value $x = a$ satisfies $f(x) = g(x)$ exactly when the curves $y = f(x)$ and $y = g(x)$ pass through a common point, because at that input both functions return the same output, so the equation's solutions are precisely the $x$-coordinates of the intersection points (the $y$-coordinate is the shared output, not the solution). Given two graphs, a table of values, or two function rules, students locate the intersection point(s), read off the $x$-coordinate(s) as the solution set, and interpret the result. When the intersection is not at a lattice point, they approximate the solution from a graph, narrow it with a table of values, or refine it by successive approximation, checking by evaluating $f$ and $g$ to see which is larger on each side of the crossing. They handle linear, absolute value, quadratic, exponential, and piecewise/step functions, and recognize cases with no solution (graphs never meet), one solution, or two or more solutions.",
+
+  "subSkills": [
+    "Explain why an x-coordinate of an intersection point of $y = f(x)$ and $y = g(x)$ is a solution of $f(x) = g(x)$, and why the y-coordinate is not the solution",
+    "Read the solution(s) of $f(x) = g(x)$ off a graph by identifying intersection points and recording their x-coordinates",
+    "Rewrite a single equation as $f(x) = g(x)$ to set up a graphical solution, choosing the two functions to graph",
+    "Use a shared table of values for $f$ and $g$ to find where $f(x) = g(x)$ exactly, or to bracket where it occurs",
+    "Approximate a non-integer solution from a graph to the nearest reasonable scale value",
+    "Refine an approximate solution by successive approximation: bracket the root in an interval, then test a midpoint and keep the half-interval where $f - g$ changes sign",
+    "Determine the number of solutions (zero, one, two, or more) from how many times the graphs intersect",
+    "Verify a candidate solution by evaluating $f$ and $g$ at that x-value and confirming equal outputs"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Read solution from an intersection point given on a graph",
+      "example": "The lines $y = f(x)$ and $y = g(x)$ are graphed and cross at the point $(3, 7)$. What is the solution of $f(x) = g(x)$? Answer: $x = 3$ (the x-coordinate; $7$ is the shared output, not the solution)."
+    },
+    {
+      "name": "Find the intersection x-coordinate from two function rules",
+      "example": "Let $f(x) = 2x + 1$ and $g(x) = -x + 7$. Solve $f(x) = g(x)$ graphically by finding where the lines meet. Answer: $2x + 1 = -x + 7$ gives $x = 2$, so the graphs intersect at $(2, 5)$ and the solution is $x = 2$."
+    },
+    {
+      "name": "Solve from a shared table of values",
+      "example": "A table lists $f(x)$ and $g(x)$ at $x = 0, 1, 2, 3, 4$. The two columns are equal at $x = 3$ (both give $10$). What is the solution of $f(x) = g(x)$? Answer: $x = 3$, since that is the only input where the outputs match."
+    },
+    {
+      "name": "Rewrite one equation as f(x) = g(x) and solve graphically",
+      "example": "To solve $x^2 - 3 = 2x$ graphically, let $f(x) = x^2 - 3$ and $g(x) = 2x$. The parabola and line intersect at $(-1, -2)$ and $(3, 6)$, so the solutions are $x = -1$ and $x = 3$."
+    },
+    {
+      "name": "Count the solutions from the number of intersections",
+      "example": "The parabola $y = f(x)$ and the line $y = g(x)$ are graphed; the line crosses the parabola twice, at $x = -2$ and $x = 4$. How many solutions does $f(x) = g(x)$ have and what are they? Answer: two solutions, $x = -2$ and $x = 4$."
+    },
+    {
+      "name": "No-solution / non-meeting graphs",
+      "example": "The graphs of $f(x) = x^2 + 2$ and $g(x) = -1$ never intersect. How many solutions does $f(x) = g(x)$ have? Answer: none, because the curves share no point, so there is no input where the outputs are equal."
+    },
+    {
+      "name": "Approximate a non-integer solution from a graph",
+      "example": "The line $y = g(x)$ crosses the curve $y = f(x)$ between $x = 1$ and $x = 2$, closer to $x = 2$. Estimate the solution of $f(x) = g(x)$ to the nearest tenth. Answer: about $x \\approx 1.7$, read from where the curves cross."
+    },
+    {
+      "name": "Successive approximation with a sign table for f(x) - g(x)",
+      "example": "For $f(x) = 2^x$ and $g(x) = x + 3$, $f(2) - g(2) = 4 - 5 = -1 < 0$ and $f(3) - g(3) = 8 - 6 = 2 > 0$, so a solution lies in $(2, 3)$. Testing $x = 2.5$ gives $f - g \\approx 0.16 > 0$, so the root is in $(2, 2.5)$; the solution is about $x \\approx 2.4$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "The solution is the x-coordinate of an intersection that is a labeled lattice point on a graph or an exact match in a table. The student reads or extracts an integer solution and states it, ideally explaining that they report the x-coordinate, not the y. One linear or simple curve scenario, exactly one solution. Tier1 worksheet items live here through early Medium.",
+      "constraints": [
+        "Intersection point is given or clearly at a lattice point, e.g. $(3, 7)$, with integer coordinates",
+        "Solution is a single integer x-value, read directly from a labeled graph or a table where two columns are equal at one input",
+        "Functions are linear, or one is a constant horizontal line, so there is exactly one intersection",
+        "Common trap addressed: choosing the x-coordinate over the y-coordinate, but no approximation or rewriting required",
+        "No successive approximation, no equation rewriting, no counting of multiple solutions"
+      ]
+    },
+    "Medium": {
+      "description": "Student must produce the intersection rather than just read a labeled point: solve $f(x) = g(x)$ from two given rules, use a table to bracket or match a value, count two or more solutions from a graphed parabola or absolute value crossing, or rewrite a single equation as $f(x) = g(x)$ before solving. Solutions are still exact (integers or simple fractions). This band straddles the tier1/tier2 split: its upper edge belongs to tier2.",
+      "constraints": [
+        "Student finds the intersection x-coordinate from two function rules (linear-linear, or line meeting a parabola/absolute value) where solutions are integers or simple fractions",
+        "May require rewriting a one-sided equation such as $x^2 - 3 = 2x$ into $f(x) = g(x)$ form and naming the two graphs",
+        "May involve two or more intersection points so the student reports a solution set, or a no-solution case where graphs do not meet",
+        "Tables span several inputs and the student must scan for the matching row rather than being handed it",
+        "At most one nonlinear function; exact values only, no decimal approximation needed"
+      ]
+    },
+    "Hard": {
+      "description": "The intersection is not at a lattice point, so the student must approximate: estimate from a graph to a stated precision, then refine by successive approximation using a sign analysis of $f(x) - g(x)$, or reason about a transcendental crossing (exponential vs. linear, quadratic vs. exponential). May also require explaining why the x-coordinate is the solution as a constructed argument. Tier2 worksheet items concentrate here.",
+      "constraints": [
+        "Solution is irrational or non-integer, requiring approximation from a graph and refinement by table or successive halving of a bracketing interval",
+        "Student builds or reads a sign table for $f(x) - g(x)$ to bracket the root, then narrows the interval by testing a midpoint",
+        "Includes exponential-vs-linear or quadratic-vs-exponential crossings where no exact algebraic solution is expected",
+        "May require justifying, as a written argument, why the intersection x-coordinate is the solution and why both outputs being equal is what the equation asserts",
+        "May combine two crossings where one is exact and one must be approximated, or interpret the approximation in a context"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student reports the y-coordinate of the intersection point as the solution",
+      "distractor": "For graphs meeting at $(3, 7)$, gives the solution as $x = 7$ (the shared output) instead of $x = 3$, confusing the y-coordinate with the solution of $f(x) = g(x)$"
+    },
+    {
+      "misconception": "Student gives the full ordered pair as the solution instead of just the x-coordinate",
+      "distractor": "States the solution of $f(x) = g(x)$ as $(3, 7)$, treating the intersection point itself as the answer rather than reporting the x-value $x = 3$"
+    },
+    {
+      "misconception": "Student looks for x-intercepts of one graph instead of the intersection of the two graphs",
+      "distractor": "Solves $f(x) = g(x)$ by finding where $y = f(x)$ crosses the x-axis (its zero), reading $f(x) = 0$ rather than $f(x) = g(x)$"
+    },
+    {
+      "misconception": "Student sets the functions equal but then solves an arithmetic step incorrectly, landing on a wrong x",
+      "distractor": "For $2x + 1 = -x + 7$ moves the $x$-terms wrong and gets $x = 6$ (dividing $7+1$ by ... ) or $x = -2$, instead of correctly $3x = 6$ so $x = 2$"
+    },
+    {
+      "misconception": "Student assumes two graphs always meet exactly once, so reports a single solution when there are two or none",
+      "distractor": "For a line crossing a parabola at $x = -2$ and $x = 4$ reports only one solution, or claims a solution exists for $x^2 + 2 = -1$ where the graphs never meet"
+    },
+    {
+      "misconception": "Student rounds or reads the approximate root to the wrong side of the crossing",
+      "distractor": "For a crossing between $x = 1$ and $x = 2$ that is nearer $x = 2$, estimates $x \\approx 1.2$ by reading the wrong side, instead of $x \\approx 1.7$"
+    },
+    {
+      "misconception": "Student misuses the sign of $f(x) - g(x)$ and brackets the root in the wrong interval",
+      "distractor": "Sees $f(2) - g(2) = -1$ and $f(3) - g(3) = 2$ but concludes the root lies in $(3, 4)$ or outside $(2,3)$, ignoring that the sign change between $x = 2$ and $x = 3$ locates the solution in $(2, 3)$"
+    },
+    {
+      "misconception": "Student plugs the solution back in incorrectly or checks only one function, accepting a value where the outputs differ",
+      "distractor": "Claims $x = 1$ solves $2^x = x + 3$ because $g(1) = 4$ looks reasonable, without checking that $f(1) = 2 \\neq 4$, so $f$ and $g$ are not equal there"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

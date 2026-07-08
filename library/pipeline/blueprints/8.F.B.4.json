@@ -1,0 +1,120 @@
+{
+  "standard": "8.F.B.4",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Functions",
+  "domainCode": "F",
+  "cluster": "Use functions to model relationships between quantities",
+  "clusterCode": "B",
+  "skillName": "Modeling Linear Relationships",
+
+  "description": "Students construct a linear function $y = mx + b$ to model a real-world relationship between two quantities. They determine the rate of change (slope $m$) and the initial value ($y$-intercept $b$) from a verbal description, from two ordered pairs $(x_1, y_1)$ and $(x_2, y_2)$, from a table, or from a graph. They interpret $m$ and $b$ in terms of the situation (e.g. dollars per hour, starting balance) and connect them to features of the graph and table.",
+
+  "subSkills": [
+    "Compute the rate of change as $m = \\frac{y_2 - y_1}{x_2 - x_1}$ from two points",
+    "Read the rate of change and initial value directly from a table of values",
+    "Read the slope and $y$-intercept from a graph",
+    "Identify the initial value $b$ as the output when $x = 0$ (extrapolating backward when needed)",
+    "Write the function rule $y = mx + b$ from a description, table, two points, or graph",
+    "Interpret $m$ as a rate (units of $y$ per unit of $x$) in context",
+    "Interpret $b$ as the starting/initial amount in context and as the $y$-intercept on the graph",
+    "Use the constructed function to predict an output for a given input"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Function from a verbal description",
+      "example": "A gym charges a $\\$30$ sign-up fee plus $\\$15$ per month. Write a function for the total cost $y$ after $x$ months. Answer: $y = 15x + 30$."
+    },
+    {
+      "name": "Rate of change and initial value from two points",
+      "example": "A plant is $4$ cm tall after $2$ days and $10$ cm tall after $5$ days. Find the rate of change and the initial height. Answer: $m = \\frac{10 - 4}{5 - 2} = 2$ cm/day, $b = 0$ cm."
+    },
+    {
+      "name": "Reading rate and initial value from a table",
+      "example": "A table shows $(0, 50), (1, 47), (2, 44), (3, 41)$. Find the function. Answer: $m = -3$, $b = 50$, so $y = -3x + 50$."
+    },
+    {
+      "name": "Reading slope and intercept from a graph",
+      "example": "A line passes through $(0, 2)$ and $(4, 10)$ on a graph. Write its function. Answer: $m = 2$, $b = 2$, so $y = 2x + 2$."
+    },
+    {
+      "name": "Interpreting slope and intercept in context",
+      "example": "For $C = 0.10m + 20$ modeling a phone bill where $m$ is minutes, interpret the $0.10$ and the $20$. Answer: $\\$0.10$ per minute (rate of change) and a $\\$20$ fixed monthly charge (initial value)."
+    },
+    {
+      "name": "Predicting an output using the constructed model",
+      "example": "A tank drains by the rule $y = -8x + 200$ liters after $x$ minutes. How much remains after $10$ minutes? Answer: $y = -8(10) + 200 = 120$ liters."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Initial value is given directly or read off as the $x = 0$ entry; rate of change is a small positive integer found in one step. The function is essentially handed to the student in pieces.",
+      "constraints": [
+        "Slope $m$ is a positive integer with $|m| \\le 10$",
+        "Initial value $b$ is given explicitly or appears as the $(0, b)$ row of a table",
+        "One-step rate computation or direct read-off; no negative slopes",
+        "Single familiar context (cost, distance, savings)"
+      ]
+    },
+    "Medium": {
+      "description": "Student must compute the rate of change from two points and find the initial value when $x = 0$ is not given. Slopes may be negative or fractional. Includes one interpretation question.",
+      "constraints": [
+        "Slope from two points using $m = \\frac{y_2 - y_1}{x_2 - x_1}$; may be negative or a simple fraction like $\\frac{1}{2}$ or $\\frac{3}{4}$",
+        "Initial value $b$ must be solved for using $b = y - mx$ since $x = 0$ is not listed",
+        "Requires writing the full rule $y = mx + b$ and interpreting either $m$ or $b$ in context",
+        "Table or graph may start at a nonzero $x$ value"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step modeling: extract two quantities from a wordy description or a graph with no labeled intercept, build the function, then interpret both $m$ and $b$ and make a prediction or comparison. May compare two linear models.",
+      "constraints": [
+        "Fractional or negative slope that must be reduced",
+        "No point with $x = 0$ given; intercept found by extrapolation, and prediction required for a new input",
+        "Asks for interpretation of BOTH rate of change and initial value in the situation and on the graph",
+        "May require comparing two models (which has the greater rate of change / larger initial value)"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student inverts the slope ratio, dividing change in $x$ by change in $y$",
+      "distractor": "Computes $m = \\frac{x_2 - x_1}{y_2 - y_1}$, so for $(2,4),(5,10)$ gives $\\frac{3}{6} = \\frac{1}{2}$ instead of $2$"
+    },
+    {
+      "misconception": "Student treats a listed $y$-value (often the first table entry) as the initial value without checking that $x = 0$",
+      "distractor": "Reports $b$ as the $y$ at the smallest listed $x$ (e.g. uses $y$ at $x = 2$) instead of solving $b = y - mx$"
+    },
+    {
+      "misconception": "Student swaps the roles of slope and intercept in the function rule",
+      "distractor": "Writes $y = bx + m$, e.g. $y = 30x + 15$ for a $\\$30$ fee plus $\\$15$ per month instead of $y = 15x + 30$"
+    },
+    {
+      "misconception": "Student mismatches the sign of the rate of change for a decreasing relationship",
+      "distractor": "Gives a positive slope (e.g. $m = 3$) for a quantity that is decreasing, instead of $m = -3$"
+    },
+    {
+      "misconception": "Student interprets the slope as a total amount rather than a per-unit rate",
+      "distractor": "Says the $0.10$ in $C = 0.10m + 20$ means a $\\$0.10$ total charge instead of $\\$0.10$ per minute"
+    },
+    {
+      "misconception": "Student forgets the initial value when predicting an output, using only $mx$",
+      "distractor": "Computes $y = -8(10) = -80$ instead of $y = -8(10) + 200 = 120$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

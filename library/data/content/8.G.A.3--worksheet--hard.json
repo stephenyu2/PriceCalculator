@@ -1,0 +1,209 @@
+{
+  "id": "8.G.A.3--worksheet--hard",
+  "standard": "8.G.A.3",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand congruence and similarity using physical models, transparencies, or geometry software",
+  "clusterCode": "A",
+  "skillName": "Transformations on the Coordinate Plane",
+  "materialType": "worksheet",
+  "difficulty": "Hard",
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "These problems ask you to reason about transformations, not just apply a stated rule. You will compose two transformations in sequence, identify an unknown transformation from a preimage and image, solve for a missing scale factor or vector, and decide whether resulting figures are congruent, similar, or neither. Remember: translations, reflections, and rotations preserve lengths and angles (congruence); dilations preserve angles and shape but scale every length by the factor $k$ (similarity).",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Point $H(2,3)$ is reflected over the $y$-axis and then translated $5$ units down. What are the coordinates of $H''$?",
+      "answer": "$H''(-2,-2)$",
+      "solution": {
+        "steps": [
+          "Apply the reflection over the $y$-axis first, using $(x,y)\\to(-x,y)$: $H(2,3)\\to(-2,3)$.",
+          "Now translate that image $5$ units down, using $(x,y)\\to(x,\\;y-5)$: $(-2,3)\\to(-2,3-5)=(-2,-2)$.",
+          "So $H''(-2,-2)$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A figure has vertex $G(2,7)$, and its image after a single transformation has vertex $G'(-7,2)$. What single transformation about the origin maps $G$ to $G'$? State it precisely.",
+      "answer": "A $90^\\circ$ counterclockwise rotation about the origin, given by $(x,y)\\to(-y,x)$.",
+      "solution": {
+        "steps": [
+          "Compare the coordinates: $x=2,\\;y=7$ became $-7$ and $2$.",
+          "The new $x$-coordinate $-7$ equals $-y$, and the new $y$-coordinate $2$ equals $x$.",
+          "So the rule is $(x,y)\\to(-y,x)$, which is a $90^\\circ$ counterclockwise rotation about the origin.",
+          "Check: $(2,7)\\to(-7,2)$, matching $G'$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Point $P(-4,6)$ is rotated $90^\\circ$ counterclockwise about the origin and then reflected over the $x$-axis. Find the coordinates of $P''$.",
+      "answer": "$P''(-6,4)$",
+      "solution": {
+        "steps": [
+          "Rotate $90^\\circ$ counterclockwise with $(x,y)\\to(-y,x)$: $P(-4,6)\\to(-6,-4)$.",
+          "Reflect that image over the $x$-axis with $(x,y)\\to(x,-y)$, which negates the $y$-coordinate: $(-6,-4)\\to(-6,4)$.",
+          "So $P''(-6,4)$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Segment $\\overline{AB}$ has endpoints $A(2,0)$ and $B(8,0)$, so its length is $6$. After a dilation centered at the origin, the image segment has length $15$. What is the scale factor $k$, and are the segments congruent or similar?",
+      "answer": "$k=\\frac{5}{2}$; the segments are similar but not congruent.",
+      "solution": {
+        "steps": [
+          "Under a dilation, every length is multiplied by $k$, so $\\text{image length}=k\\cdot\\text{original length}$.",
+          "Set up $15=k\\cdot 6$, so $k=\\frac{15}{6}=\\frac{5}{2}$.",
+          "Since $k\\ne 1$, the length changes, so the figures are not congruent.",
+          "A dilation preserves shape and angles, so the segments are similar but not congruent."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Triangle $DEF$ has vertices $D(1,2)$, $E(4,2)$, $F(1,6)$. The triangle is dilated by scale factor $k=2$ about the origin and then translated by $(x,y)\\to(x-3,\\;y+1)$. Find the coordinates of $D''$, $E''$, and $F''$.",
+      "answer": "$D''(-1,5)$, $E''(5,5)$, $F''(-1,13)$",
+      "solution": {
+        "steps": [
+          "Dilate each vertex by $k=2$ with $(x,y)\\to(2x,2y)$: $D(1,2)\\to(2,4)$, $E(4,2)\\to(8,4)$, $F(1,6)\\to(2,12)$.",
+          "Translate each image with $(x,y)\\to(x-3,\\;y+1)$: $(2,4)\\to(-1,5)$, $(8,4)\\to(5,5)$, $(2,12)\\to(-1,13)$.",
+          "So $D''(-1,5)$, $E''(5,5)$, $F''(-1,13)$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A figure has vertex $M(5,-3)$, and its image after a single transformation has vertex $M'(-5,3)$. Identify the single transformation about the origin with its coordinate rule, and give the other common name for this same map.",
+      "answer": "A $180^\\circ$ rotation about the origin, $(x,y)\\to(-x,-y)$; it is also called a point reflection (reflection through the origin).",
+      "solution": {
+        "steps": [
+          "Compare: $x=5,\\;y=-3$ became $-5$ and $3$, so both coordinates are negated: $(x,y)\\to(-x,-y)$.",
+          "The rule $(x,y)\\to(-x,-y)$ is a $180^\\circ$ rotation about the origin.",
+          "This same map is also called a point reflection, or reflection through the origin, since each point maps to the point directly opposite it through the origin.",
+          "Check: $(5,-3)\\to(-5,3)=M'$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Point $C(6,-9)$ is dilated about the origin so that its image is $C'(-2,3)$. Find the scale factor $k$.",
+      "answer": "$k=-\\frac{1}{3}$",
+      "solution": {
+        "steps": [
+          "Under a dilation about the origin, $(x,y)\\to(kx,ky)$, so each image coordinate is $k$ times the original.",
+          "Using the $x$-coordinates: $kx=-2$ gives $6k=-2$, so $k=-\\frac{2}{6}=-\\frac{1}{3}$.",
+          "Check with the $y$-coordinate: $k\\cdot(-9)=-\\frac{1}{3}\\cdot(-9)=3$, which matches $C'$.",
+          "So $k=-\\frac{1}{3}$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Point $Q(7,2)$ is translated by some vector $(x,y)\\to(x+a,\\;y+b)$ and lands on $Q'(3,9)$. Find the translation vector $(a,b)$, then use it to find the image of $R(-1,5)$ under the same translation.",
+      "answer": "Translation vector $(a,b)=(-4,7)$; the image of $R$ is $R'(-5,12)$.",
+      "solution": {
+        "steps": [
+          "The vector components are the changes in each coordinate: $a=3-7=-4$ and $b=9-2=7$, so $(a,b)=(-4,7)$.",
+          "Apply $(x,y)\\to(x-4,\\;y+7)$ to $R(-1,5)$: $(-1-4,\\;5+7)=(-5,12)$.",
+          "So $R'(-5,12)$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Triangle $JKL$ is reflected over the line $y=x$ and then dilated by scale factor $k=3$ about the origin. If $J(2,5)$ is one vertex of the preimage, find the coordinates of $J''$.",
+      "answer": "$J''(15,6)$",
+      "solution": {
+        "steps": [
+          "Reflect over $y=x$ by swapping coordinates, $(x,y)\\to(y,x)$: $J(2,5)\\to(5,2)$.",
+          "Dilate by $k=3$ about the origin with $(x,y)\\to(3x,3y)$: $(5,2)\\to(15,6)$.",
+          "So $J''(15,6)$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Square $WXYZ$ has side length $4$. It is first translated $6$ units right, then reflected over the $y$-axis, then dilated by $k=\\frac{3}{4}$ about the origin. What is the side length of the final image, and is the final figure congruent, similar, or neither to the original square? Explain.",
+      "answer": "The final side length is $3$; the figure is similar (but not congruent) to the original.",
+      "solution": {
+        "steps": [
+          "Translations and reflections are rigid motions, so they do not change the side length: it stays $4$ after those two steps.",
+          "The dilation by $k=\\frac{3}{4}$ multiplies every length by $\\frac{3}{4}$: $4\\cdot\\frac{3}{4}=3$.",
+          "So the final side length is $3$.",
+          "Because a dilation with $k\\ne 1$ was applied, the size changed, so the figure is not congruent; dilations preserve shape and angles, so it is similar to the original."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A figure has vertices at $A(3,1)$ and $B(6,4)$. After a single transformation, the images are $A'(-1,3)$ and $B'(-4,6)$. Identify the single transformation about the origin and justify it using both points.",
+      "answer": "A $90^\\circ$ counterclockwise rotation about the origin, $(x,y)\\to(-y,x)$.",
+      "solution": {
+        "steps": [
+          "Test $(x,y)\\to(-y,x)$ on $A(3,1)$: $(-1,3)$, which matches $A'$.",
+          "Test the same rule on $B(6,4)$: $(-4,6)$, which matches $B'$.",
+          "Both points follow $(x,y)\\to(-y,x)$, the $90^\\circ$ counterclockwise rotation about the origin.",
+          "Lengths are preserved (it is a rigid motion), confirming a rotation rather than a dilation."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Point $S(-8,4)$ is reflected over the line $y=-x$ and then rotated $180^\\circ$ about the origin. Find the coordinates of $S''$.",
+      "answer": "$S''(4,-8)$",
+      "solution": {
+        "steps": [
+          "Reflect over $y=-x$ with $(x,y)\\to(-y,-x)$: $S(-8,4)\\to(-4,8)$.",
+          "Rotate $180^\\circ$ about the origin with $(x,y)\\to(-x,-y)$: $(-4,8)\\to(4,-8)$.",
+          "So $S''(4,-8)$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Triangle $T$ has area $10$ square units. It is dilated by scale factor $k=3$ about the origin to form triangle $T'$. What is the area of $T'$, and are the two triangles congruent or similar? Explain why the area does not just multiply by $3$.",
+      "answer": "The area of $T'$ is $90$ square units; the triangles are similar (not congruent).",
+      "solution": {
+        "steps": [
+          "A dilation by $k$ multiplies every length by $k$, so it multiplies area by $k^2$ (area depends on two dimensions).",
+          "Here $k=3$, so the area multiplies by $k^2=3^2=9$.",
+          "New area $=10\\cdot 9=90$ square units.",
+          "Since $k\\ne 1$ the size changed, so the triangles are not congruent; a dilation preserves shape and angles, so they are similar."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Point $N(4,-6)$ undergoes a composition: first a dilation by $k=\\frac{1}{2}$ about the origin, then a translation by $(x,y)\\to(x+5,\\;y-1)$. The final image is $N''$. After finding $N''$, state whether $N$ and $N''$ are the same distance from the origin.",
+      "answer": "$N''(7,-4)$; they are not the same distance from the origin because the dilation shrank the figure.",
+      "solution": {
+        "steps": [
+          "Dilate $N(4,-6)$ by $k=\\frac{1}{2}$ with $(x,y)\\to\\left(\\tfrac{1}{2}x,\\tfrac{1}{2}y\\right)$: $(2,-3)$.",
+          "Translate with $(x,y)\\to(x+5,\\;y-1)$: $(2+5,\\;-3-1)=(7,-4)$, so $N''(7,-4)$.",
+          "The composition includes a dilation with $k\\ne 1$, which changes distances, so $N$ and $N''$ are not the same distance from the origin (the figure is not congruent to the original).",
+          "So $N''(7,-4)$ and the distances differ."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Quadrilateral $PQRS$ has vertices $P(-2,1)$, $Q(0,4)$, $R(3,3)$, $S(2,-1)$. It is rotated $270^\\circ$ counterclockwise about the origin and then reflected over the $x$-axis. Find the image coordinates of all four vertices.",
+      "answer": "$P''(1,-2)$, $Q''(4,0)$, $R''(3,3)$, $S''(-1,2)$",
+      "solution": {
+        "steps": [
+          "A $270^\\circ$ counterclockwise rotation about the origin uses $(x,y)\\to(y,-x)$.",
+          "Apply it: $P(-2,1)\\to(1,2)$, $Q(0,4)\\to(4,0)$, $R(3,3)\\to(3,-3)$, $S(2,-1)\\to(-1,-2)$.",
+          "Reflect each over the $x$-axis with $(x,y)\\to(x,-y)$: $(1,2)\\to(1,-2)$, $(4,0)\\to(4,0)$, $(3,-3)\\to(3,3)$, $(-1,-2)\\to(-1,2)$.",
+          "So $P''(1,-2)$, $Q''(4,0)$, $R''(3,3)$, $S''(-1,2)$."
+        ]
+      }
+    }
+  ]
+}

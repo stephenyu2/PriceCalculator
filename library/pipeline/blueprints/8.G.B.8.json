@@ -1,0 +1,119 @@
+{
+  "standard": "8.G.B.8",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand and apply the Pythagorean Theorem",
+  "clusterCode": "B",
+  "skillName": "Distance Between Two Points",
+
+  "description": "Students apply the Pythagorean Theorem to find the distance between two points in the coordinate plane. Given two points $(x_1, y_1)$ and $(x_2, y_2)$, they build a right triangle whose legs are the horizontal and vertical separations, $|x_2 - x_1|$ and $|y_2 - y_1|$, and find the hypotenuse using $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$. They report exact distances as simplified radicals and approximate them as decimals when asked.",
+
+  "subSkills": [
+    "Compute the horizontal leg $|x_2 - x_1|$ and the vertical leg $|y_2 - y_1|$ between two points",
+    "Recognize the segment between two points as the hypotenuse of a right triangle with axis-parallel legs",
+    "Apply the distance formula $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$ correctly, including squaring negative differences",
+    "Simplify a square root to exact radical form (e.g. $\\sqrt{50} = 5\\sqrt{2}$)",
+    "Approximate an irrational distance to a stated number of decimal places",
+    "Handle points with negative coordinates and points across quadrants",
+    "Apply distance to real-world coordinate contexts (maps, grids) including perimeter and comparing two distances"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Distance between two given points",
+      "example": "Find the distance between $(1, 2)$ and $(4, 6)$. Answer: $d = \\sqrt{(4-1)^2 + (6-2)^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$."
+    },
+    {
+      "name": "Distance requiring radical simplification",
+      "example": "Find the exact distance between $(-3, 1)$ and $(2, 6)$. Answer: $d = \\sqrt{(2-(-3))^2 + (6-1)^2} = \\sqrt{25 + 25} = \\sqrt{50} = 5\\sqrt{2}$."
+    },
+    {
+      "name": "Distance with negative coordinates across quadrants",
+      "example": "Find the distance between $(-4, -2)$ and $(3, -5)$. Answer: $d = \\sqrt{(3-(-4))^2 + (-5-(-2))^2} = \\sqrt{49 + 9} = \\sqrt{58}$."
+    },
+    {
+      "name": "Distance with decimal approximation",
+      "example": "Find the distance between $(0, 0)$ and $(5, 7)$ to the nearest hundredth. Answer: $d = \\sqrt{25 + 49} = \\sqrt{74} \\approx 8.60$."
+    },
+    {
+      "name": "Right triangle / leg-and-hypotenuse setup",
+      "example": "Points $A(2, 1)$, $B(7, 1)$, and $C(7, 4)$ form a right triangle. Find the length of the hypotenuse $AC$. Answer: legs $AB = 5$ and $BC = 3$, so $AC = \\sqrt{5^2 + 3^2} = \\sqrt{34}$."
+    },
+    {
+      "name": "Real-world coordinate / perimeter / comparison",
+      "example": "On a grid map, a school is at $(2, 3)$ and a library is at $(8, 11)$ (units in blocks). How far apart are they? Answer: $d = \\sqrt{(8-2)^2 + (11-3)^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$ blocks."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Both points are in the first quadrant with small nonnegative integer coordinates. The differences are positive whole numbers and the distance is a perfect square (a clean whole-number answer like $5$, $10$, $13$).",
+      "constraints": [
+        "All coordinates are nonnegative integers, magnitude $\\le 12$",
+        "Leg lengths form a Pythagorean triple so $d$ is a whole number (e.g. 3-4-5, 6-8-10, 5-12-13)",
+        "No radical simplification or decimal approximation needed",
+        "Single distance, no multi-step follow-up"
+      ]
+    },
+    "Medium": {
+      "description": "Points may include negative coordinates so at least one difference is negative and must be squared carefully. The distance is irrational and must be reported as a simplified exact radical, or approximated to a stated decimal place.",
+      "constraints": [
+        "At least one coordinate is negative, requiring correct handling of $(x_2 - x_1)^2$ with a negative difference",
+        "Distance is irrational; answer is a simplified radical such as $5\\sqrt{2}$ or $2\\sqrt{13}$, or a decimal approximation when requested",
+        "Coordinate magnitudes up to about 15",
+        "May ask for either exact radical or rounded decimal"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems: build a right triangle from three points, compute a perimeter, compare two distances, or extract points from a real-world / verbal context before applying the formula. Combines radical simplification with reasoning.",
+      "constraints": [
+        "Requires more than one distance computation (perimeter of a triangle, comparison of two segments, or verifying a shape)",
+        "Or requires reading a context to identify the coordinate pairs first",
+        "Answers may combine multiple simplified radicals (e.g. perimeter $= 6 + \\sqrt{8} + \\sqrt{20}$ simplified to $6 + 2\\sqrt{2} + 2\\sqrt{5}$)",
+        "Points span multiple quadrants with larger magnitudes (up to about 20)"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student subtracts coordinates and adds the differences directly instead of squaring them (treats distance like a sum of legs, the taxicab distance)",
+      "distractor": "For $(1,2)$ to $(4,6)$ computes $|4-1| + |6-2| = 3 + 4 = 7$ instead of $\\sqrt{3^2 + 4^2} = 5$"
+    },
+    {
+      "misconception": "Student forgets to take the square root and reports the sum of squares as the distance",
+      "distractor": "For $(1,2)$ to $(4,6)$ gives $3^2 + 4^2 = 25$ instead of $\\sqrt{25} = 5$"
+    },
+    {
+      "misconception": "Student mismatches coordinates, subtracting $x$ from $y$ (computes $(x_2 - y_1)$ and $(y_2 - x_1)$)",
+      "distractor": "For $(1,2)$ to $(4,6)$ uses $(4-2)^2 + (6-1)^2 = 4 + 25 = 29$, giving $\\sqrt{29}$ instead of $5$"
+    },
+    {
+      "misconception": "Student drops the negative sign before squaring or squares only the absolute values inconsistently, mishandling negative coordinates",
+      "distractor": "For $(-3,1)$ to $(2,6)$ writes $(2-3)^2 + (6-1)^2 = 1 + 25 = 26$ (using $2-3$ instead of $2-(-3)$), giving $\\sqrt{26}$ instead of $\\sqrt{50} = 5\\sqrt{2}$"
+    },
+    {
+      "misconception": "Student does not simplify the radical, leaving an unsimplified or distributed root",
+      "distractor": "Reports $\\sqrt{50}$ as $\\sqrt{50}$ left unsimplified, or incorrectly as $\\sqrt{25} + \\sqrt{25} = 10$, instead of $5\\sqrt{2}$"
+    },
+    {
+      "misconception": "Student squares the difference incorrectly by doubling instead of squaring (treats $a^2$ as $2a$)",
+      "distractor": "For legs $3$ and $4$ computes $\\sqrt{2(3) + 2(4)} = \\sqrt{14}$ instead of $\\sqrt{9 + 16} = 5$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

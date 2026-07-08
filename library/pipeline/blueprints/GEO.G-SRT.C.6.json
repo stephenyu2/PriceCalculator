@@ -1,0 +1,133 @@
+{
+  "standard": "GEO.G-SRT.C.6",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Similarity, Right Triangles, and Trigonometry",
+  "domainCode": "G-SRT",
+  "cluster": "Define trigonometric ratios and solve problems involving right triangles",
+  "clusterCode": "C",
+  "skillName": "Defining Trigonometric Ratios",
+
+  "description": "Students understand that because all right triangles sharing a given acute angle are similar (by AA similarity), the ratios of their corresponding sides depend only on the angle, not on the size of the triangle. This invariance is what lets each acute angle define fixed numbers: $\\sin\\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}}$, $\\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}}$, and $\\tan\\theta = \\frac{\\text{opposite}}{\\text{adjacent}}$. Given a right triangle, students correctly identify which side is opposite, adjacent, and hypotenuse relative to a named acute angle, write the three primary ratios as exact fractions (rationalizing radical denominators where needed), and explain why two similar right triangles produce identical ratios for congruent angles. They also use a known side ratio to recover a missing side or to confirm a triangle is right and similar.",
+
+  "subSkills": [
+    "Identify the hypotenuse, the side opposite a named acute angle, and the side adjacent to it in a right triangle",
+    "Write $\\sin\\theta$, $\\cos\\theta$, and $\\tan\\theta$ as exact fractions from the three side lengths of a right triangle",
+    "Use the Pythagorean theorem to find a missing side before forming a ratio",
+    "Rationalize a denominator so a ratio like $\\frac{1}{\\sqrt{2}}$ is written as $\\frac{\\sqrt{2}}{2}$",
+    "Explain, using AA similarity, why the side ratio for a given acute angle is the same in every right triangle containing that angle",
+    "Recognize that the two acute angles of a right triangle are complementary and that $\\sin\\theta = \\cos(90^\\circ - \\theta)$ as a consequence of swapping opposite and adjacent",
+    "Recover an unknown side length from a given trigonometric ratio and one known side",
+    "Compare ratios across two similar right triangles to confirm they are equal for congruent angles"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Identify opposite, adjacent, hypotenuse",
+      "example": "In right triangle $ABC$ with the right angle at $C$, name the side opposite $\\angle A$, the side adjacent to $\\angle A$, and the hypotenuse. Answer: opposite is $\\overline{BC}$, adjacent is $\\overline{AC}$, hypotenuse is $\\overline{AB}$."
+    },
+    {
+      "name": "Write all three ratios from given sides",
+      "example": "A right triangle has legs $6$ and $8$ and hypotenuse $10$. For the acute angle $\\theta$ opposite the side of length $6$, find $\\sin\\theta$, $\\cos\\theta$, $\\tan\\theta$. Answer: $\\sin\\theta = \\frac{6}{10} = \\frac{3}{5}$, $\\cos\\theta = \\frac{8}{10} = \\frac{4}{5}$, $\\tan\\theta = \\frac{6}{8} = \\frac{3}{4}$."
+    },
+    {
+      "name": "Find a missing side first, then the ratio",
+      "example": "A right triangle has hypotenuse $13$ and one leg $5$, with $\\theta$ the angle opposite the unknown leg. Find $\\tan\\theta$. Answer: the missing leg is $\\sqrt{13^2 - 5^2} = 12$, so $\\tan\\theta = \\frac{12}{5}$."
+    },
+    {
+      "name": "Special-triangle exact ratio with rationalizing",
+      "example": "In an isosceles right triangle with legs $1$ and hypotenuse $\\sqrt{2}$, find $\\sin 45^\\circ$. Answer: $\\sin 45^\\circ = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$."
+    },
+    {
+      "name": "Similarity invariance of the ratio",
+      "example": "Triangle $DEF$ is similar to triangle $ABC$ with $\\angle D = \\angle A$ and a scale factor of $3$. If $\\sin A = \\frac{3}{5}$, find $\\sin D$. Answer: $\\sin D = \\frac{3}{5}$, because similar right triangles have equal side ratios for congruent angles."
+    },
+    {
+      "name": "Recover a side from a given ratio",
+      "example": "In a right triangle, $\\cos\\theta = \\frac{4}{5}$ and the hypotenuse is $20$. Find the side adjacent to $\\theta$. Answer: adjacent $= \\frac{4}{5}\\cdot 20 = 16$."
+    },
+    {
+      "name": "Cofunction / complementary-angle relationship",
+      "example": "In right triangle $ABC$ with the right angle at $C$, show that $\\sin A = \\cos B$. Answer: $\\sin A = \\frac{BC}{AB}$ and $\\cos B = \\frac{BC}{AB}$, and since $A + B = 90^\\circ$, $\\sin A = \\cos(90^\\circ - A) = \\cos B$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step identification or direct ratio formation when all three side lengths are given as clean integers. The student labels opposite/adjacent/hypotenuse for a named acute angle and writes one or more of $\\sin$, $\\cos$, $\\tan$ as a reduced fraction. No missing side, no radicals, no similarity argument.",
+      "constraints": [
+        "All three sides given as small whole numbers (e.g. a $3$-$4$-$5$ or $6$-$8$-$10$ triangle)",
+        "Task is to name opposite/adjacent/hypotenuse or write one primary ratio",
+        "Answer reduces to a simple fraction with no radical in the denominator",
+        "Only one of the three ratios is requested, or a pure identification question"
+      ]
+    },
+    "Medium": {
+      "description": "Two to three steps: find a missing side with the Pythagorean theorem before writing a ratio, write all three ratios, rationalize a radical denominator, or recover a side length from a given ratio and one side. May require recognizing a special right triangle.",
+      "constraints": [
+        "Requires the Pythagorean theorem to find the third side before forming the ratio",
+        "Asks for all three ratios at once, or for a ratio that needs a rationalized radical (e.g. $\\frac{\\sqrt{2}}{2}$, $\\frac{\\sqrt{3}}{3}$)",
+        "Recover a missing side from a given ratio and one known length",
+        "Involves a $45^\\circ$-$45^\\circ$-$90^\\circ$ or $30^\\circ$-$60^\\circ$-$90^\\circ$ triangle with exact radical sides"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step synthesis or justification: explain via AA similarity why the ratio is independent of triangle size, transfer a ratio across two similar triangles, derive a cofunction relationship, or combine a missing-side computation with a similarity or complementary-angle argument. Answers are exact and may require a written reason.",
+      "constraints": [
+        "Requires justifying with AA similarity that the side ratio depends only on the angle, not the side lengths",
+        "Transfers a known ratio between similar right triangles or across a scale factor",
+        "Derives or applies $\\sin\\theta = \\cos(90^\\circ - \\theta)$ or that $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$ from the definitions",
+        "Chains a Pythagorean computation, a rationalized radical, and a similarity or cofunction statement; answers exact with a stated reason"
+      ]
+    },
+    "tierSplit": "This standard uses a single ramped worksheet. If split, tier1 (Easy to Medium) covers identifying opposite/adjacent/hypotenuse, writing the three ratios from integer sides, finding a missing side with the Pythagorean theorem, and rationalizing special-triangle ratios; tier2 (Medium to Hard) covers recovering a side from a given ratio, the AA-similarity invariance argument, transferring ratios between similar triangles, and the complementary-angle cofunction relationship."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student swaps opposite and adjacent relative to the named angle",
+      "distractor": "For $\\theta$ opposite the leg of length $6$ in a $6$-$8$-$10$ triangle reports $\\sin\\theta = \\frac{8}{10} = \\frac{4}{5}$ (the cosine) instead of $\\frac{3}{5}$"
+    },
+    {
+      "misconception": "Student confuses tangent with sine or cosine, dividing by the hypotenuse instead of the adjacent leg",
+      "distractor": "Computes $\\tan\\theta = \\frac{6}{10} = \\frac{3}{5}$ (opposite over hypotenuse) instead of $\\tan\\theta = \\frac{6}{8} = \\frac{3}{4}$ (opposite over adjacent)"
+    },
+    {
+      "misconception": "Student uses the wrong side as the hypotenuse, treating a leg as the longest side",
+      "distractor": "Writes $\\sin\\theta = \\frac{\\text{opposite}}{\\text{adjacent}}$, placing a leg in the hypotenuse position, e.g. $\\frac{6}{8}$ for a sine that should be $\\frac{6}{10}=\\frac{3}{5}$"
+    },
+    {
+      "misconception": "Student adds the squared legs but forgets the square root when finding a missing side",
+      "distractor": "For legs $5$ and $12$ uses hypotenuse $169$ instead of $13$, giving $\\sin\\theta = \\frac{5}{169}$ instead of $\\frac{5}{13}$"
+    },
+    {
+      "misconception": "Student leaves a radical in the denominator or rationalizes incorrectly",
+      "distractor": "Reports $\\sin 45^\\circ = \\frac{1}{\\sqrt{2}}$ unrationalized, or writes $\\frac{2}{\\sqrt{2}}$ or $\\frac{\\sqrt{2}}{4}$ instead of the correct $\\frac{\\sqrt{2}}{2}$"
+    },
+    {
+      "misconception": "Student believes the ratio changes when the triangle is scaled, not recognizing the similarity invariance",
+      "distractor": "After scaling a triangle by $3$ reports $\\sin D = \\frac{9}{15}$ unsimplified, or $\\sin D = 3\\cdot\\frac{3}{5}$, instead of the unchanged $\\sin D = \\frac{3}{5}$"
+    },
+    {
+      "misconception": "Student inverts the ratio when recovering a side, dividing instead of multiplying by the given ratio",
+      "distractor": "Given $\\cos\\theta = \\frac{4}{5}$ and hypotenuse $20$, computes adjacent $= 20 \\div \\frac{4}{5} = 25$ instead of $20\\cdot\\frac{4}{5} = 16$"
+    },
+    {
+      "misconception": "Student misapplies the cofunction relationship, equating same-named functions of complementary angles",
+      "distractor": "Claims $\\sin A = \\sin B$ for the two acute angles of a right triangle instead of $\\sin A = \\cos B$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

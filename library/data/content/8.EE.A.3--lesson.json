@@ -1,0 +1,170 @@
+{
+  "id": "8.EE.A.3--lesson",
+  "standard": "8.EE.A.3",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Expressions and Equations",
+  "domainCode": "EE",
+  "cluster": "Work with radicals and integer exponents",
+  "clusterCode": "A",
+  "skillName": "Powers of 10 and Estimation",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "A power of 10 is a quick way to size up very large or very small numbers. We write a number as a single digit times an integer power of 10, like $8 \\times 10^{9}$ or $5 \\times 10^{-6}$. The exponent tells you how many places the decimal point moves: a positive exponent makes a big number, a negative exponent makes a small one. Once two numbers are in this form, you can estimate, multiply, and compare them by working with the leading digits and the exponents separately. To multiply, multiply the digits and add the exponents. To find how many times as large one is than another, divide the digits and subtract the exponents.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "The estimated world population is about $7{,}900{,}000{,}000$ people. Express this as a single digit times an integer power of 10.",
+      "solution": {
+        "steps": [
+          "Round to one nonzero digit. The leading digit is $7$ and the next digit is $9$, which is $\\ge 5$, so round up: $7{,}900{,}000{,}000 \\approx 8{,}000{,}000{,}000$.",
+          "Count the places from the decimal point (just after the last zero) back to just after the leading $8$. There are $9$ places: $8{,}000{,}000{,}000$ has $9$ zeros.",
+          "Write the power of 10 using that count: $8{,}000{,}000{,}000 = 8 \\times 10^{9}$.",
+          "Check: $10^{9} = 1{,}000{,}000{,}000$ and $8 \\times 1{,}000{,}000{,}000 = 8{,}000{,}000{,}000$. Correct."
+        ],
+        "answer": "$8 \\times 10^{9}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "The width of a red blood cell is about $0.000008$ meter. Write this measurement as a single digit times a power of 10.",
+      "solution": {
+        "steps": [
+          "The only nonzero digit is $8$, so the leading digit is $8$.",
+          "Because the number is less than $1$, the exponent will be negative. Count how many places the decimal point moves to the right to get from $0.000008$ to $8$.",
+          "Moving the decimal point: $0.000008 \\to 0.00008 \\to 0.0008 \\to 0.008 \\to 0.08 \\to 0.8 \\to 8$. That is $6$ places.",
+          "Each right move means dividing by $10$, so the original number equals $8 \\times 10^{-6}$.",
+          "Check: $10^{-6} = 0.000001$ and $8 \\times 0.000001 = 0.000008$. Correct."
+        ],
+        "answer": "$8 \\times 10^{-6}$ meter"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "The Sun is about $1 \\times 10^{9}$ meters wide and the Moon is about $4 \\times 10^{6}$ meters wide. About how many times as wide as the Moon is the Sun?",
+      "solution": {
+        "steps": [
+          "To find 'how many times as wide', divide the Sun's width by the Moon's width: $\\dfrac{1 \\times 10^{9}}{4 \\times 10^{6}}$.",
+          "Divide the leading digits: $\\dfrac{1}{4} = 0.25$.",
+          "Subtract the exponents: $10^{9 - 6} = 10^{3}$.",
+          "Combine: $0.25 \\times 10^{3}$. Since $0.25$ is not a single digit, renormalize: $0.25 \\times 10^{3} = 0.25 \\times 1000 = 250$.",
+          "So the Sun is about $250$ times as wide as the Moon."
+        ],
+        "answer": "About $250$ times as wide"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Quantity A is about $6 \\times 10^{5}$ and quantity B is about $3 \\times 10^{-2}$. How many times as large as B is A?",
+      "solution": {
+        "steps": [
+          "Set up the division: $\\dfrac{6 \\times 10^{5}}{3 \\times 10^{-2}}$.",
+          "Divide the leading digits: $\\dfrac{6}{3} = 2$.",
+          "Subtract the exponents, being careful with the negative: $10^{5 - (-2)} = 10^{5 + 2} = 10^{7}$.",
+          "Combine: $2 \\times 10^{7}$, which is already in single-digit-times-power-of-10 form.",
+          "So A is $2 \\times 10^{7}$ (twenty million) times as large as B."
+        ],
+        "answer": "$2 \\times 10^{7}$ times as large"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A country has about $3 \\times 10^{8}$ people, and each person uses about $4 \\times 10^{2}$ gallons of water per day. Estimate the total number of gallons of water used per day. Write your answer as a single digit times a power of 10.",
+      "solution": {
+        "steps": [
+          "Total $=$ (number of people) $\\times$ (gallons per person) $= (3 \\times 10^{8})(4 \\times 10^{2})$.",
+          "Multiply the leading digits: $3 \\times 4 = 12$.",
+          "Add the exponents: $10^{8 + 2} = 10^{10}$.",
+          "Combine: $12 \\times 10^{10}$. Since $12$ is not a single digit, renormalize by writing $12 = 1.2 \\times 10^{1}$, so $12 \\times 10^{10} = 1.2 \\times 10^{1} \\times 10^{10} = 1.2 \\times 10^{11}$.",
+          "The country uses about $1.2 \\times 10^{11}$ gallons per day."
+        ],
+        "answer": "$1.2 \\times 10^{11}$ gallons per day"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Express the distance $0.0000003$ meter as a single digit times a power of 10.",
+      "hint": "The number is less than $1$, so the exponent is negative. Count how many places the decimal point moves to the right to reach the digit $3$.",
+      "solution": {
+        "steps": [
+          "The only nonzero digit is $3$, so the leading digit is $3$.",
+          "Count the right moves: $0.0000003 \\to 3$ takes $7$ places.",
+          "Because the number is less than $1$, the exponent is $-7$: $3 \\times 10^{-7}$.",
+          "Check: $3 \\times 0.0000001 = 0.0000003$. Correct."
+        ],
+        "answer": "$3 \\times 10^{-7}$ meter"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Round $61{,}000{,}000$ to one nonzero digit and write it as a single digit times an integer power of 10.",
+      "hint": "Round to the leading digit first, then count how many places the decimal point would move.",
+      "solution": {
+        "steps": [
+          "The leading digit is $6$ and the next digit is $1$, which is less than $5$, so round down: $61{,}000{,}000 \\approx 60{,}000{,}000$.",
+          "Count the zeros in $60{,}000{,}000$: there are $7$ of them.",
+          "Write it as a power of 10: $60{,}000{,}000 = 6 \\times 10^{7}$.",
+          "Check: $6 \\times 10{,}000{,}000 = 60{,}000{,}000$. Correct."
+        ],
+        "answer": "$6 \\times 10^{7}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A bacterium has a mass of about $8 \\times 10^{-13}$ gram and a virus has a mass of about $2 \\times 10^{-16}$ gram. How many times as heavy as the virus is the bacterium?",
+      "hint": "Divide the leading digits and subtract the exponents. Watch the signs when subtracting a negative exponent.",
+      "solution": {
+        "steps": [
+          "Set up the division: $\\dfrac{8 \\times 10^{-13}}{2 \\times 10^{-16}}$.",
+          "Divide the leading digits: $\\dfrac{8}{2} = 4$.",
+          "Subtract the exponents: $10^{-13 - (-16)} = 10^{-13 + 16} = 10^{3}$.",
+          "Combine: $4 \\times 10^{3} = 4000$.",
+          "The bacterium is about $4 \\times 10^{3}$, or $4000$, times as heavy as the virus."
+        ],
+        "answer": "$4 \\times 10^{3}$ (4000) times as heavy"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Estimate the product $(5 \\times 10^{4})(6 \\times 10^{7})$ and write the result as a single digit times a power of 10.",
+      "hint": "Multiply the leading digits and add the exponents, then renormalize if the digit part is $10$ or more.",
+      "solution": {
+        "steps": [
+          "Multiply the leading digits: $5 \\times 6 = 30$.",
+          "Add the exponents: $10^{4 + 7} = 10^{11}$.",
+          "Combine: $30 \\times 10^{11}$. Since $30$ is not a single digit, write $30 = 3 \\times 10^{1}$.",
+          "Then $30 \\times 10^{11} = 3 \\times 10^{1} \\times 10^{11} = 3 \\times 10^{12}$."
+        ],
+        "answer": "$3 \\times 10^{12}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Which is larger, $9 \\times 10^{4}$ or $2 \\times 10^{6}$, and about how many times as large is it?",
+      "hint": "Compare the exponents first. A difference of $1$ in the exponent means about $10$ times as large.",
+      "solution": {
+        "steps": [
+          "Compare the exponents: $2 \\times 10^{6}$ has exponent $6$, while $9 \\times 10^{4}$ has exponent $4$. The exponent $6$ is larger, so $2 \\times 10^{6}$ is the larger number.",
+          "To estimate how many times as large, divide: $\\dfrac{2 \\times 10^{6}}{9 \\times 10^{4}}$.",
+          "Divide the leading digits: $\\dfrac{2}{9} \\approx 0.22$. Subtract the exponents: $10^{6 - 4} = 10^{2}$.",
+          "Combine: $0.22 \\times 10^{2} = 22$. So $2 \\times 10^{6}$ is roughly $22$ times as large as $9 \\times 10^{4}$ (about $20$ times, two powers of 10 bigger reduced by the digit ratio)."
+        ],
+        "answer": "$2 \\times 10^{6}$ is larger, about $22$ times as large"
+      }
+    }
+  ]
+}

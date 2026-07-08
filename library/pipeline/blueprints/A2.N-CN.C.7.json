@@ -1,0 +1,141 @@
+{
+  "standard": "A2.N-CN.C.7",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Number and Quantity — The Complex Number System",
+  "domainCode": "N-CN",
+  "cluster": "Use complex numbers in polynomial identities and equations",
+  "clusterCode": "C",
+  "skillName": "Complex Solutions of Quadratics",
+
+  "description": "Students solve quadratic equations with real coefficients whose solutions are non-real complex numbers. They recognize from the discriminant $b^2-4ac<0$ that a quadratic has two complex-conjugate solutions, and they produce those solutions in standard form $a+bi$ using both completing the square (especially when $b=0$, e.g. $x^2+k=0$) and the quadratic formula. They simplify square roots of negative numbers using $\\sqrt{-1}=i$ (so $\\sqrt{-k}=i\\sqrt{k}$ for $k>0$), reduce radicals, and write each solution as a conjugate pair $\\frac{-b}{2a}\\pm\\frac{\\sqrt{4ac-b^2}}{2a}\\,i$. They also verify a complex solution by substitution and reconstruct a quadratic from a given complex-conjugate root pair.",
+
+  "subSkills": [
+    "Compute the discriminant $b^2-4ac$ and classify the nature of the roots (two real, one repeated real, or two complex conjugates) by its sign",
+    "Simplify the square root of a negative number: rewrite $\\sqrt{-k}$ as $i\\sqrt{k}$ and reduce the radical (e.g. $\\sqrt{-12}=2i\\sqrt{3}$)",
+    "Solve a pure quadratic $x^2+k=0$ or $a x^2+c=0$ by isolating $x^2$ and taking the square root, yielding $\\pm i\\sqrt{k}$",
+    "Apply the quadratic formula $x=\\dfrac{-b\\pm\\sqrt{b^2-4ac}}{2a}$ when the discriminant is negative and simplify to standard form $a+bi$",
+    "Solve by completing the square and express the complex roots in $a+bi$ form",
+    "Write the two solutions as a complex-conjugate pair and present each in standard form with the real part and imaginary part identified",
+    "Verify that a complex number is a solution by substituting it back into the quadratic (using $i^2=-1$)",
+    "Reconstruct a quadratic (in factored or expanded form) from a given complex-conjugate root pair using sum and product of roots"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Pure imaginary roots from $x^2+k=0$",
+      "example": "Solve $x^2+25=0$. (Isolate $x^2=-25$, so $x=\\pm\\sqrt{-25}=\\pm5i$.)"
+    },
+    {
+      "name": "Coefficient on the square term, $ax^2+c=0$",
+      "example": "Solve $3x^2+48=0$. ($x^2=-16$, so $x=\\pm 4i$.)"
+    },
+    {
+      "name": "Classify roots by the discriminant",
+      "example": "Without solving, determine the nature of the roots of $2x^2-3x+5=0$. (Discriminant $=(-3)^2-4(2)(5)=9-40=-31<0$, so two complex-conjugate solutions.)"
+    },
+    {
+      "name": "Quadratic formula with negative discriminant (integer $b$)",
+      "example": "Solve $x^2-4x+13=0$. ($x=\\dfrac{4\\pm\\sqrt{16-52}}{2}=\\dfrac{4\\pm\\sqrt{-36}}{2}=\\dfrac{4\\pm6i}{2}=2\\pm3i$.)"
+    },
+    {
+      "name": "Quadratic formula leaving a reduced radical in the imaginary part",
+      "example": "Solve $x^2+2x+5=0$ — wait, that reduces cleanly; instead $x^2-2x+4=0$. ($x=\\dfrac{2\\pm\\sqrt{4-16}}{2}=\\dfrac{2\\pm\\sqrt{-12}}{2}=\\dfrac{2\\pm2i\\sqrt{3}}{2}=1\\pm i\\sqrt{3}$.)"
+    },
+    {
+      "name": "Leading coefficient $a\\neq1$ with complex roots",
+      "example": "Solve $2x^2-2x+1=0$. ($x=\\dfrac{2\\pm\\sqrt{4-8}}{4}=\\dfrac{2\\pm2i}{4}=\\dfrac{1}{2}\\pm\\dfrac{1}{2}i$.)"
+    },
+    {
+      "name": "Solve by completing the square",
+      "example": "Solve $x^2+6x+34=0$ by completing the square. ($(x+3)^2=-25$, so $x+3=\\pm5i$, giving $x=-3\\pm5i$.)"
+    },
+    {
+      "name": "Verify a complex solution by substitution",
+      "example": "Show that $x=2+3i$ satisfies $x^2-4x+13=0$. (Compute $(2+3i)^2-4(2+3i)+13=(4+12i+9i^2)-(8+12i)+13=(4+12i-9)-8-12i+13=0$.)"
+    },
+    {
+      "name": "Reconstruct a quadratic from a complex-conjugate root pair",
+      "example": "Find a quadratic with real coefficients having $3-2i$ as a root. (Conjugate $3+2i$ is also a root; sum $=6$, product $=9+4=13$, so $x^2-6x+13=0$.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "One- or two-step problems with $b=0$ or a direct discriminant check. The student isolates $x^2$ in a pure quadratic and takes a square root that lands on a clean pure-imaginary value $\\pm ni$, or classifies roots from a single discriminant computation. No quadratic formula with a nonzero linear term, no radical to reduce.",
+      "constraints": [
+        "Equation is $x^2+k=0$ or $ax^2+c=0$ with $k$ a perfect square after dividing out $a$, so roots are $\\pm ni$ with $n$ an integer",
+        "OR a single discriminant computation that asks only to classify the roots (real vs. complex), not to solve",
+        "Imaginary part is an integer; no reduced radical and no real part",
+        "Numbers stay small (coefficients with absolute value $\\le 50$)"
+      ]
+    },
+    "Medium": {
+      "description": "Full quadratic formula or completing the square on $x^2+bx+c=0$ (or $a=1$) with a negative discriminant that produces a clean conjugate pair $p\\pm qi$ where the radical simplifies to an integer. Both a real part and an integer imaginary part are present. This is the central band where a typical solve lives.",
+      "constraints": [
+        "Leading coefficient $a=1$ (or divides out cleanly) and $b\\neq0$",
+        "Discriminant is the negative of a perfect square so $\\sqrt{4ac-b^2}$ is an integer",
+        "Solutions take the form $p\\pm qi$ with integer $p$ and $q$",
+        "May require solving by completing the square as the named method"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems where the imaginary part is a reduced radical and/or the leading coefficient $a\\neq1$ produces fractional real and imaginary parts, plus the inverse and verification tasks. Includes reconstructing a quadratic from a complex root, verifying a root by substitution with $i^2=-1$, or simplifying $\\sqrt{-k}$ where $k$ is not a perfect square.",
+      "constraints": [
+        "$\\sqrt{4ac-b^2}$ is NOT a perfect square, so the imaginary part is a reduced radical such as $i\\sqrt{3}$ or $\\dfrac{\\sqrt{7}}{2}i$",
+        "OR leading coefficient $a\\neq1$ yielding fractional real and/or imaginary parts (e.g. $\\dfrac{1}{2}\\pm\\dfrac{1}{2}i$)",
+        "OR reconstruct the quadratic from a single given complex-conjugate root using sum and product of roots",
+        "OR verify a given complex solution by full substitution, correctly applying $i^2=-1$",
+        "Exact values required (radicals and fractions), never rounded decimals"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Treats $\\sqrt{-k}$ as a real number or as $-\\sqrt{k}$, dropping the imaginary unit",
+      "distractor": "For $x^2+25=0$ writes $x=\\pm5$ (or $x=-5$) instead of $x=\\pm5i$, ignoring that the root is non-real"
+    },
+    {
+      "misconception": "Splits a negative radical incorrectly: $\\sqrt{-a}\\cdot\\sqrt{-b}=\\sqrt{ab}$ as if both were real",
+      "distractor": "Computes $\\sqrt{-4}\\cdot\\sqrt{-9}=\\sqrt{36}=6$ instead of $(2i)(3i)=6i^2=-6$"
+    },
+    {
+      "misconception": "Sign error on $i^2$: uses $i^2=1$ instead of $i^2=-1$",
+      "distractor": "When verifying, evaluates $(2+3i)^2=4+12i+9$ (treating $9i^2$ as $+9$) and concludes the substitution fails or yields the wrong sum"
+    },
+    {
+      "misconception": "Misuses the discriminant sign, reading $b^2-4ac<0$ as 'no solutions' rather than 'two complex solutions'",
+      "distractor": "States $x^2-4x+13=0$ has no solution because the discriminant is negative, instead of giving $2\\pm3i$"
+    },
+    {
+      "misconception": "Forgets to divide the entire numerator (both real and imaginary parts) by $2a$",
+      "distractor": "For $x^2-4x+13=0$ writes $x=4\\pm3i$ (dividing only one term) instead of $x=2\\pm3i$"
+    },
+    {
+      "misconception": "Drops or mis-signs the linear coefficient in $-b$ when applying the quadratic formula",
+      "distractor": "For $x^2-4x+13=0$ uses $-b=-4$, giving $x=-2\\pm3i$ instead of $x=2\\pm3i$"
+    },
+    {
+      "misconception": "Fails to reduce the radical in the imaginary part",
+      "distractor": "For $x^2-2x+4=0$ leaves $x=1\\pm i\\sqrt{12}$ or $\\dfrac{2\\pm i\\sqrt{12}}{2}$ instead of simplifying $\\sqrt{12}=2\\sqrt{3}$ to get $1\\pm i\\sqrt{3}$"
+    },
+    {
+      "misconception": "When reconstructing from a complex root, uses only the given root and forgets its conjugate (or sign-errors the product)",
+      "distractor": "Given root $3-2i$, writes $x-(3-2i)=0$ (a non-real-coefficient linear factor) or computes the product of roots as $9-4=5$ instead of $9+4=13$, giving $x^2-6x+5$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

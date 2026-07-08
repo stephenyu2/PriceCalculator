@@ -1,0 +1,224 @@
+{
+  "id": "8.G.A--cluster-worksheet",
+  "standard": null,
+  "clusterId": "8.G.A",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand congruence and similarity using physical models, transparencies, or geometry software",
+  "clusterCode": "A",
+  "skillName": "Understand congruence and similarity using physical models, transparencies, or geometry software",
+  "materialType": "cluster-worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "intro": "This cluster worksheet spans all five standards of geometry cluster 8.G.A: the invariant properties of rigid transformations (8.G.A.1), congruence through sequences of rigid motions (8.G.A.2), carrying out transformations on the coordinate plane (8.G.A.3), similarity and dilations (8.G.A.4), and angle relationships with triangle similarity (8.G.A.5). Items are grouped by standard and ramp from straightforward applications to multi-step reasoning.",
+  "items": [
+    {
+      "standard": "8.G.A.1",
+      "id": 1,
+      "prompt": "A segment has length $7$ before a translation by $(x,y)\\to(x+5,\\,y-2)$ is applied. What is the length of the image segment, and which property of rigid motions justifies your answer?",
+      "answer": "$7$; translations preserve length.",
+      "solution": {
+        "steps": [
+          "A translation is a rigid motion, and rigid motions map every segment to a segment of the same length.",
+          "Therefore the image segment has the same length as the original.",
+          "The image length is $7$, justified by the length-preserving property of rigid motions."
+        ]
+      }
+    },
+    {
+      "standard": "8.G.A.1",
+      "id": 2,
+      "prompt": "Point $A(3,-2)$ is rotated $90^\\circ$ counterclockwise about the origin using the rule $(x,y)\\to(-y,\\,x)$. Find the coordinates of the image $A'$.",
+      "answer": "$A'(2,3)$",
+      "solution": {
+        "steps": [
+          "Apply the rule $(x,y)\\to(-y,\\,x)$ to $A(3,-2)$.",
+          "The new $x$-coordinate is $-y=-(-2)=2$.",
+          "The new $y$-coordinate is $x=3$.",
+          "So $A'(2,3)$."
+        ]
+      }
+    },
+    {
+      "standard": "8.G.A.1",
+      "id": 3,
+      "prompt": "Segment $\\overline{PQ}$ has endpoints $P(1,2)$ and $Q(5,5)$. After the translation $(x,y)\\to(x-3,\\,y+1)$, show that the image segment $\\overline{P'Q'}$ has the same length as $\\overline{PQ}$.",
+      "answer": "Both segments have length $5$, so length is preserved.",
+      "solution": {
+        "steps": [
+          "Find $PQ$ with the distance formula: $PQ=\\sqrt{(5-1)^2+(5-2)^2}=\\sqrt{16+9}=\\sqrt{25}=5$.",
+          "Apply the translation: $P'(1-3,\\,2+1)=P'(-2,3)$ and $Q'(5-3,\\,5+1)=Q'(2,6)$.",
+          "Find $P'Q'$: $P'Q'=\\sqrt{(2-(-2))^2+(6-3)^2}=\\sqrt{16+9}=\\sqrt{25}=5$.",
+          "Since $PQ=P'Q'=5$, the translation preserved the length, as expected for a rigid motion."
+        ]
+      }
+    },
+    {
+      "standard": "8.G.A.2",
+      "id": 4,
+      "prompt": "Triangle $ABC$ has vertices $A(1,2)$, $B(4,2)$, and $C(4,6)$. Find the coordinates of the image after the translation $(x,y)\\to(x-3,\\,y+1)$. Is the image congruent to triangle $ABC$?",
+      "answer": "$A'(-2,3)$, $B'(1,3)$, $C'(1,7)$; yes, the image is congruent.",
+      "solution": {
+        "steps": [
+          "Apply the rule to each vertex. $A'(1-3,\\,2+1)=A'(-2,3)$.",
+          "$B'(4-3,\\,2+1)=B'(1,3)$.",
+          "$C'(4-3,\\,6+1)=C'(1,7)$.",
+          "A translation is a rigid motion, so the image is congruent to triangle $ABC$."
+        ]
+      }
+    },
+    {
+      "standard": "8.G.A.2",
+      "id": 5,
+      "prompt": "Point $P(2,5)$ is reflected over the $y$-axis and then translated by $(x,y)\\to(x,\\,y-4)$. What are the coordinates of the final image $P''$?",
+      "answer": "$P''(-2,1)$",
+      "solution": {
+        "steps": [
+          "Reflect $P(2,5)$ over the $y$-axis using $(x,y)\\to(-x,\\,y)$: $P'(-2,5)$.",
+          "Apply the translation $(x,y)\\to(x,\\,y-4)$ to $P'(-2,5)$: $P''(-2,\\,5-4)$.",
+          "This gives $P''(-2,1)$."
+        ]
+      }
+    },
+    {
+      "standard": "8.G.A.2",
+      "id": 6,
+      "prompt": "Triangle $DEF$ has vertices $D(1,1)$, $E(4,1)$, $F(1,5)$, and triangle $D'E'F'$ has vertices $D'(-1,-1)$, $E'(-4,-1)$, $F'(-1,-5)$. Describe a single rigid motion that maps $DEF$ onto $D'E'F'$, and use it to justify that the triangles are congruent.",
+      "answer": "A $180^\\circ$ rotation about the origin; the triangles are congruent because that rotation is a rigid motion.",
+      "solution": {
+        "steps": [
+          "Compare each vertex to its image: $D(1,1)\\to D'(-1,-1)$, $E(4,1)\\to E'(-4,-1)$, $F(1,5)\\to F'(-1,-5)$.",
+          "Each image is the original with both coordinates negated, which is the rule $(x,y)\\to(-x,\\,-y)$.",
+          "That rule is exactly a $180^\\circ$ rotation about the origin.",
+          "Because a $180^\\circ$ rotation is a rigid motion, it preserves all lengths and angles, so triangle $DEF$ is congruent to triangle $D'E'F'$."
+        ]
+      }
+    },
+    {
+      "standard": "8.G.A.3",
+      "id": 7,
+      "prompt": "The point $A(3,-2)$ is translated $4$ units left and $5$ units up. What are the coordinates of $A'$?",
+      "answer": "$A'(-1,3)$",
+      "solution": {
+        "steps": [
+          "Moving left decreases $x$: $3-4=-1$.",
+          "Moving up increases $y$: $-2+5=3$.",
+          "So $A'(-1,3)$."
+        ]
+      }
+    },
+    {
+      "standard": "8.G.A.3",
+      "id": 8,
+      "prompt": "Reflect $Q(5,3)$ over the line $y=x$. Then state the rule you used.",
+      "answer": "$Q'(3,5)$; the rule is $(x,y)\\to(y,\\,x)$.",
+      "solution": {
+        "steps": [
+          "Reflecting over the line $y=x$ swaps the two coordinates: $(x,y)\\to(y,\\,x)$.",
+          "Apply it to $Q(5,3)$: swap to get $(3,5)$.",
+          "So $Q'(3,5)$."
+        ]
+      }
+    },
+    {
+      "standard": "8.G.A.3",
+      "id": 9,
+      "prompt": "Point $H(2,3)$ is first reflected over the $y$-axis, then translated $5$ units down. Find the coordinates of the final image $H''$.",
+      "answer": "$H''(-2,-2)$",
+      "solution": {
+        "steps": [
+          "Reflect $H(2,3)$ over the $y$-axis using $(x,y)\\to(-x,\\,y)$: $H'(-2,3)$.",
+          "Translate $5$ units down by subtracting $5$ from the $y$-coordinate: $H''(-2,\\,3-5)$.",
+          "This gives $H''(-2,-2)$."
+        ]
+      }
+    },
+    {
+      "standard": "8.G.A.4",
+      "id": 10,
+      "prompt": "Triangle $ABC$ has vertices $A(2,4)$, $B(6,2)$, $C(-2,-2)$. Find the coordinates of the image after a dilation centered at the origin with scale factor $k=\\frac{1}{2}$.",
+      "answer": "$A'(1,2)$, $B'(3,1)$, $C'(-1,-1)$",
+      "solution": {
+        "steps": [
+          "For a dilation about the origin, multiply each coordinate by $k=\\frac{1}{2}$: $(x,y)\\to\\left(\\tfrac{1}{2}x,\\,\\tfrac{1}{2}y\\right)$.",
+          "$A'\\left(\\tfrac{1}{2}\\cdot 2,\\,\\tfrac{1}{2}\\cdot 4\\right)=A'(1,2)$.",
+          "$B'\\left(\\tfrac{1}{2}\\cdot 6,\\,\\tfrac{1}{2}\\cdot 2\\right)=B'(3,1)$.",
+          "$C'\\left(\\tfrac{1}{2}\\cdot(-2),\\,\\tfrac{1}{2}\\cdot(-2)\\right)=C'(-1,-1)$."
+        ]
+      }
+    },
+    {
+      "standard": "8.G.A.4",
+      "id": 11,
+      "prompt": "A figure is dilated about the origin so that the point $(4,8)$ maps to $(6,12)$. What is the scale factor $k$?",
+      "answer": "$k=\\frac{3}{2}$",
+      "solution": {
+        "steps": [
+          "The scale factor is the ratio of an image coordinate to the corresponding original coordinate.",
+          "Using the $x$-coordinates: $k=\\frac{6}{4}=\\frac{3}{2}$.",
+          "Check with the $y$-coordinates: $\\frac{12}{8}=\\frac{3}{2}$, which agrees.",
+          "So $k=\\frac{3}{2}$."
+        ]
+      }
+    },
+    {
+      "standard": "8.G.A.4",
+      "id": 12,
+      "prompt": "$\\triangle ABC\\sim\\triangle DEF$ with $AB=8$, $DE=12$, and $BC=10$. Find $EF$, and state whether the two triangles are congruent or only similar.",
+      "answer": "$EF=15$; the triangles are similar but not congruent.",
+      "solution": {
+        "steps": [
+          "Find the scale factor from the corresponding sides $AB$ and $DE$: $k=\\frac{DE}{AB}=\\frac{12}{8}=\\frac{3}{2}$.",
+          "Corresponding sides of similar triangles are proportional, so $EF=k\\cdot BC=\\frac{3}{2}\\cdot 10=15$.",
+          "Because $k=\\frac{3}{2}\\neq 1$, the triangles are not the same size, so they are similar but not congruent."
+        ]
+      }
+    },
+    {
+      "standard": "8.G.A.5",
+      "id": 13,
+      "prompt": "Two angles of a triangle measure $47^\\circ$ and $68^\\circ$. Find the third angle.",
+      "answer": "$65^\\circ$",
+      "solution": {
+        "steps": [
+          "The interior angles of a triangle sum to $180^\\circ$.",
+          "Subtract the known angles: $180^\\circ-47^\\circ-68^\\circ$.",
+          "$180-47=133$, and $133-68=65$.",
+          "The third angle is $65^\\circ$."
+        ]
+      }
+    },
+    {
+      "standard": "8.G.A.5",
+      "id": 14,
+      "prompt": "Parallel lines $\\ell$ and $m$ are cut by a transversal, forming an angle of $113^\\circ$. Find the measure of its alternate interior angle and the measure of its co-interior (same-side interior) angle.",
+      "answer": "Alternate interior angle $=113^\\circ$; co-interior angle $=67^\\circ$.",
+      "solution": {
+        "steps": [
+          "When parallel lines are cut by a transversal, alternate interior angles are congruent, so the alternate interior angle equals $113^\\circ$.",
+          "Co-interior (same-side interior) angles are supplementary, so they sum to $180^\\circ$.",
+          "Compute the co-interior angle: $180^\\circ-113^\\circ=67^\\circ$."
+        ]
+      }
+    },
+    {
+      "standard": "8.G.A.5",
+      "id": 15,
+      "prompt": "A transversal crosses two parallel lines. An alternate interior angle measures $58^\\circ$ and forms one angle of a triangle whose second angle is $74^\\circ$. Corresponding congruent angles formed by the parallel lines are also given as $(3x+10)^\\circ$ and $(5x-24)^\\circ$. First find the third angle of the triangle, then solve for $x$.",
+      "answer": "Third angle $=48^\\circ$; $x=17$.",
+      "solution": {
+        "steps": [
+          "The $58^\\circ$ alternate interior angle is congruent to the angle it pairs with, and it serves as one angle of the triangle, so the triangle has angles $58^\\circ$ and $74^\\circ$ with a third unknown angle.",
+          "Use the triangle angle sum: the third angle is $180^\\circ-58^\\circ-74^\\circ=48^\\circ$.",
+          "Corresponding angles formed by parallel lines are congruent, so set the expressions equal: $3x+10=5x-24$.",
+          "Solve: $10+24=5x-3x$, so $34=2x$, giving $x=17$."
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T10:32:40.073Z",
+  "generatedAt": "2026-06-24T10:32:40.073Z"
+}

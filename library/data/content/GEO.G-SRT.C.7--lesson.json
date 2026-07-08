@@ -1,0 +1,166 @@
+{
+  "id": "GEO.G-SRT.C.7--lesson",
+  "standard": "GEO.G-SRT.C.7",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Similarity, Right Triangles, and Trigonometry",
+  "domainCode": "G-SRT",
+  "cluster": "Define trigonometric ratios and solve problems involving right triangles",
+  "clusterCode": "C",
+  "skillName": "Sine and Cosine of Complementary Angles",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "intro": "In any right triangle the two acute angles add to $90^\\circ$, so they are complementary. Because the leg opposite one acute angle is the leg adjacent to the other (and both share the same hypotenuse), the sine of one acute angle equals the cosine of its complement. In symbols, for an acute angle $\\theta$, $\\sin\\theta = \\cos(90^\\circ - \\theta)$ and $\\cos\\theta = \\sin(90^\\circ - \\theta)$. The co-function relationship lets you swap between sine and cosine, read off a value for a complementary angle without recomputing ratios, and solve equations like $\\sin a = \\cos b$ by setting $a + b = 90^\\circ$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "In right triangle $ABC$ with $\\angle C = 90^\\circ$, you are told $\\sin A = \\frac{8}{17}$. Find $\\cos B$.",
+      "solution": {
+        "steps": [
+          "Since $\\angle C = 90^\\circ$, the two acute angles satisfy $A + B = 90^\\circ$, so $B$ is the complement of $A$.",
+          "The co-function relationship says the sine of an angle equals the cosine of its complement: $\\sin A = \\cos(90^\\circ - A) = \\cos B$.",
+          "Therefore $\\cos B = \\sin A = \\frac{8}{17}$.",
+          "Why: the leg opposite $A$ is the leg adjacent to $B$, and both ratios are over the same hypotenuse, so $\\frac{\\text{opp }A}{\\text{hyp}} = \\frac{\\text{adj }B}{\\text{hyp}}$."
+        ],
+        "answer": "$\\cos B = \\frac{8}{17}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Rewrite $\\sin 37^\\circ$ as the cosine of an angle.",
+      "solution": {
+        "steps": [
+          "Use the co-function identity $\\sin\\theta = \\cos(90^\\circ - \\theta)$.",
+          "Here $\\theta = 37^\\circ$, so the complement is $90^\\circ - 37^\\circ = 53^\\circ$.",
+          "Swap sine for cosine and use the complement: $\\sin 37^\\circ = \\cos 53^\\circ$.",
+          "Check: $37^\\circ + 53^\\circ = 90^\\circ$, confirming the angles are complementary."
+        ],
+        "answer": "$\\cos 53^\\circ$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Is the statement $\\sin 40^\\circ = \\cos 50^\\circ$ true or false? Explain.",
+      "solution": {
+        "steps": [
+          "Two trig values are equal by the co-function relationship when one is a sine and the other a cosine of complementary angles.",
+          "Add the two angles: $40^\\circ + 50^\\circ = 90^\\circ$, so $40^\\circ$ and $50^\\circ$ are complementary.",
+          "Because $\\sin\\theta = \\cos(90^\\circ - \\theta)$, we have $\\sin 40^\\circ = \\cos(90^\\circ - 40^\\circ) = \\cos 50^\\circ$.",
+          "So the statement is true."
+        ],
+        "answer": "True, because $40^\\circ + 50^\\circ = 90^\\circ$, so $\\sin 40^\\circ = \\cos 50^\\circ$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Find the acute angle $\\theta$ so that $\\sin 28^\\circ = \\cos\\theta$.",
+      "solution": {
+        "steps": [
+          "The co-function identity gives $\\sin 28^\\circ = \\cos(90^\\circ - 28^\\circ)$.",
+          "Compute the complement: $90^\\circ - 28^\\circ = 62^\\circ$, so $\\sin 28^\\circ = \\cos 62^\\circ$.",
+          "Matching with $\\sin 28^\\circ = \\cos\\theta$ gives $\\theta = 62^\\circ$.",
+          "Check that it is acute: $62^\\circ$ is between $0^\\circ$ and $90^\\circ$, so it is a valid acute angle."
+        ],
+        "answer": "$\\theta = 62^\\circ$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Solve for $x$: $\\sin(2x) = \\cos(x + 30^\\circ)$, where the angles are acute.",
+      "solution": {
+        "steps": [
+          "$\\sin a = \\cos b$ holds when the angles are complementary, so set $a + b = 90^\\circ$.",
+          "Here $a = 2x$ and $b = x + 30^\\circ$, giving $2x + (x + 30^\\circ) = 90^\\circ$.",
+          "Combine like terms: $3x + 30^\\circ = 90^\\circ$.",
+          "Subtract $30^\\circ$: $3x = 60^\\circ$.",
+          "Divide by $3$: $x = 20^\\circ$.",
+          "Check: $2x = 40^\\circ$ and $x + 30^\\circ = 50^\\circ$, and $40^\\circ + 50^\\circ = 90^\\circ$, so $\\sin 40^\\circ = \\cos 50^\\circ$."
+        ],
+        "answer": "$x = 20^\\circ$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "In right triangle $PQR$ with $\\angle R = 90^\\circ$, $\\cos P = \\frac{7}{25}$. Find $\\sin Q$.",
+      "hint": "Since $\\angle R = 90^\\circ$, angles $P$ and $Q$ are complementary, and $\\sin Q = \\cos(90^\\circ - Q) = \\cos P$.",
+      "solution": {
+        "steps": [
+          "$\\angle R = 90^\\circ$ means $P + Q = 90^\\circ$, so $Q$ is the complement of $P$.",
+          "The co-function relationship gives $\\sin Q = \\cos(90^\\circ - Q) = \\cos P$.",
+          "Therefore $\\sin Q = \\cos P = \\frac{7}{25}$."
+        ],
+        "answer": "$\\sin Q = \\frac{7}{25}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Rewrite $\\cos 18^\\circ$ as the sine of an angle.",
+      "hint": "Use $\\cos\\theta = \\sin(90^\\circ - \\theta)$ and find the complement of $18^\\circ$.",
+      "solution": {
+        "steps": [
+          "Apply $\\cos\\theta = \\sin(90^\\circ - \\theta)$ with $\\theta = 18^\\circ$.",
+          "The complement is $90^\\circ - 18^\\circ = 72^\\circ$.",
+          "So $\\cos 18^\\circ = \\sin 72^\\circ$."
+        ],
+        "answer": "$\\sin 72^\\circ$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Find the acute angle $\\theta$ so that $\\cos 65^\\circ = \\sin\\theta$.",
+      "hint": "$\\cos\\theta = \\sin(90^\\circ - \\theta)$, so take the complement of $65^\\circ$.",
+      "solution": {
+        "steps": [
+          "Use $\\cos 65^\\circ = \\sin(90^\\circ - 65^\\circ)$.",
+          "Compute the complement: $90^\\circ - 65^\\circ = 25^\\circ$.",
+          "So $\\cos 65^\\circ = \\sin 25^\\circ$, which matches $\\sin\\theta$ when $\\theta = 25^\\circ$."
+        ],
+        "answer": "$\\theta = 25^\\circ$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Solve for $x$: $\\sin(3x + 10^\\circ) = \\cos(x + 20^\\circ)$, where the angles are acute.",
+      "hint": "Set the two angles complementary: $(3x + 10^\\circ) + (x + 20^\\circ) = 90^\\circ$.",
+      "solution": {
+        "steps": [
+          "Since $\\sin a = \\cos b$ requires $a + b = 90^\\circ$, set $(3x + 10^\\circ) + (x + 20^\\circ) = 90^\\circ$.",
+          "Combine like terms: $4x + 30^\\circ = 90^\\circ$.",
+          "Subtract $30^\\circ$: $4x = 60^\\circ$.",
+          "Divide by $4$: $x = 15^\\circ$.",
+          "Check: $3x + 10^\\circ = 55^\\circ$ and $x + 20^\\circ = 35^\\circ$, and $55^\\circ + 35^\\circ = 90^\\circ$."
+        ],
+        "answer": "$x = 15^\\circ$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Express $\\cos\\frac{\\pi}{5}$ as a sine, using the radian co-function form $\\cos\\theta = \\sin\\!\\left(\\frac{\\pi}{2} - \\theta\\right)$.",
+      "hint": "Subtract from $\\frac{\\pi}{2}$. Use a common denominator: $\\frac{\\pi}{2} = \\frac{5\\pi}{10}$ and $\\frac{\\pi}{5} = \\frac{2\\pi}{10}$.",
+      "solution": {
+        "steps": [
+          "Apply $\\cos\\theta = \\sin\\!\\left(\\frac{\\pi}{2} - \\theta\\right)$ with $\\theta = \\frac{\\pi}{5}$.",
+          "Write both angles over a common denominator of $10$: $\\frac{\\pi}{2} = \\frac{5\\pi}{10}$ and $\\frac{\\pi}{5} = \\frac{2\\pi}{10}$.",
+          "Subtract: $\\frac{5\\pi}{10} - \\frac{2\\pi}{10} = \\frac{3\\pi}{10}$.",
+          "So $\\cos\\frac{\\pi}{5} = \\sin\\frac{3\\pi}{10}$."
+        ],
+        "answer": "$\\sin\\frac{3\\pi}{10}$"
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "generatedAt": "2026-06-24T21:01:54.123Z"
+}

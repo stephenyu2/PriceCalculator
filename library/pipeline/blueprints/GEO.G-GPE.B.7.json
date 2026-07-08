@@ -1,0 +1,140 @@
+{
+  "_comment": "SKILL BLUEPRINT — output of the Spec agent, input to the Generator agent. One blueprint per standard.",
+
+  "standard": "GEO.G-GPE.B.7",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Expressing Geometric Properties with Equations",
+  "domainCode": "G-GPE",
+  "cluster": "Use coordinates to prove simple geometric theorems algebraically",
+  "clusterCode": "B",
+  "skillName": "Perimeter and Area Using Coordinates",
+
+  "description": "Students place polygons in the coordinate plane and use coordinates to compute their perimeters and the areas of triangles and rectangles. They apply the distance formula $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$ to find side lengths, sum the side lengths for perimeter, and use base-times-height (or decomposition into rectangles and right triangles) for area. They must identify when a side is horizontal or vertical (so its length is a simple coordinate difference) versus slanted (requiring the distance formula), choose an appropriate base and corresponding perpendicular height, and report exact values using radicals when sides are not aligned with the axes.",
+
+  "subSkills": [
+    "Compute the distance between two points with the distance formula, simplifying radicals such as $\\sqrt{8} = 2\\sqrt{2}$",
+    "Recognize horizontal and vertical segments and find their lengths as $|x_2 - x_1|$ or $|y_2 - y_1|$ without the distance formula",
+    "Add side lengths around a polygon to find its perimeter, combining like radical terms",
+    "Find the area of an axis-aligned rectangle as length times width from coordinates",
+    "Find the area of a right triangle whose legs are horizontal and vertical as $\\frac{1}{2} bh$",
+    "Find the area of a slanted triangle by choosing a base, computing the perpendicular height, or by enclosing it in a rectangle and subtracting corner triangles (box method)",
+    "Verify a quadrilateral is a rectangle from coordinates (perpendicular adjacent sides via slopes) before applying the rectangle area formula",
+    "Report exact perimeters and areas, distinguishing when a radical answer is required from when the result is rational"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Distance between two points",
+      "example": "Find the distance between $A(1, 2)$ and $B(7, 10)$. Answer: $\\sqrt{(7-1)^2 + (10-2)^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$."
+    },
+    {
+      "name": "Perimeter of an axis-aligned rectangle",
+      "example": "A rectangle has vertices $P(2, 1)$, $Q(8, 1)$, $R(8, 5)$, $S(2, 5)$. Find its perimeter. Answer: $2(6) + 2(4) = 20$."
+    },
+    {
+      "name": "Perimeter of a slanted polygon",
+      "example": "Triangle $ABC$ has vertices $A(0, 0)$, $B(4, 0)$, $C(4, 3)$. Find the perimeter. Answer: $4 + 3 + \\sqrt{4^2 + 3^2} = 4 + 3 + 5 = 12$."
+    },
+    {
+      "name": "Area of an axis-aligned rectangle",
+      "example": "Find the area of the rectangle with vertices $(1, 2)$, $(6, 2)$, $(6, 9)$, $(1, 9)$. Answer: $5 \\times 7 = 35$ square units."
+    },
+    {
+      "name": "Area of a right triangle with horizontal/vertical legs",
+      "example": "Find the area of triangle with vertices $(2, 1)$, $(8, 1)$, $(2, 5)$. Answer: $\\frac{1}{2}(6)(4) = 12$ square units."
+    },
+    {
+      "name": "Area of a slanted triangle (box method or base-height)",
+      "example": "Find the area of triangle with vertices $A(1, 1)$, $B(5, 2)$, $C(2, 6)$. Enclose it in a bounding rectangle and subtract the three corner right triangles, or use a base and its perpendicular height."
+    },
+    {
+      "name": "Mixed perimeter-and-area on a slanted figure",
+      "example": "Triangle $D(-2, -1)$, $E(4, -1)$, $F(1, 4)$ has a horizontal base $DE$. Find both its perimeter (distance formula on the two slanted sides) and its area (base $DE$ with the vertical height to $F$)."
+    },
+    {
+      "name": "Verify rectangle then compute",
+      "example": "Show that $A(0, 0)$, $B(4, 2)$, $C(3, 4)$, $D(-1, 2)$ form a rectangle (check perpendicular adjacent sides by slopes), then find its area using side lengths from the distance formula."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "One direct computation on a figure whose relevant sides are horizontal or vertical. Find a single distance, the perimeter of an axis-aligned rectangle, the area of an axis-aligned rectangle, or the area of a right triangle with horizontal and vertical legs. Lengths come from subtracting coordinates; no radical simplification is needed and the answer is a whole number.",
+      "constraints": [
+        "All needed side lengths are horizontal or vertical (length is a coordinate difference)",
+        "Single distance-formula uses, if any, land on a perfect square (e.g. $3$-$4$-$5$, $5$-$12$-$13$, $6$-$8$-$10$)",
+        "Integer coordinates with absolute value $\\le 10$",
+        "Answer is a whole number of length units or square units, no radicals"
+      ]
+    },
+    "Medium": {
+      "description": "Requires the distance formula on one or more slanted sides with radical simplification, or the area of a slanted triangle via the box (bounding-rectangle) method or a chosen base and perpendicular height. Perimeters may combine like radical terms. Two to four steps, and the answer may be an exact radical.",
+      "constraints": [
+        "At least one side is slanted and needs $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$ with simplification such as $\\sqrt{50} = 5\\sqrt{2}$",
+        "Area of a slanted triangle computed by the box method or base-and-height, not by a memorized determinant",
+        "Perimeter answers may need combining like radicals, e.g. $2\\sqrt{5} + 3\\sqrt{5} = 5\\sqrt{5}$",
+        "Integer coordinates with absolute value $\\le 12$; answers may be exact radicals"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step problems that combine verification, perimeter, and area, or that require decomposing a composite polygon. The student may first prove a figure is a rectangle (perpendicular adjacent sides) before using a formula, compute both perimeter and area of a fully slanted triangle, or decompose a quadrilateral into rectangles and right triangles. Several distance-formula computations and a synthesis step are required.",
+      "constraints": [
+        "Combines two or more tasks (e.g. classify the figure, then find perimeter and area)",
+        "May require decomposing a composite shape or using the box method on a triangle with no axis-aligned side",
+        "Multiple distance-formula computations whose radicals must be simplified and, for perimeter, combined",
+        "Integer coordinates with absolute value $\\le 12$; exact radical answers expected, and area may stay rational even when sides are irrational"
+      ]
+    },
+    "tierSplit": "If split into two worksheets: tier1 covers Easy to Medium, single-quantity computations, the distance formula, perimeter and area of axis-aligned rectangles and right triangles, and a first pass at slanted sides with radical simplification. tier2 covers Medium to Hard, area of slanted triangles by the box method, perimeters that combine like radicals, rectangle verification before computing, and composite-figure decomposition. No item overlap between tiers."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Adds inside the radical without squaring, treating the distance formula as $\\sqrt{(x_2 - x_1) + (y_2 - y_1)}$",
+      "distractor": "For $A(1, 2)$, $B(7, 10)$ gives $\\sqrt{6 + 8} = \\sqrt{14}$ instead of the correct $\\sqrt{36 + 64} = 10$"
+    },
+    {
+      "misconception": "Distributes the square root over the sum, computing $\\sqrt{a^2 + b^2}$ as $a + b$",
+      "distractor": "For legs $6$ and $8$ reports a hypotenuse of $6 + 8 = 14$ instead of $\\sqrt{36 + 64} = 10$"
+    },
+    {
+      "misconception": "Confuses perimeter with area, summing side lengths when area is asked or multiplying when perimeter is asked",
+      "distractor": "For a $6$ by $4$ rectangle reports $24$ when asked for the perimeter (the area) instead of $20$"
+    },
+    {
+      "misconception": "Forgets the factor of $\\frac{1}{2}$ in the triangle area formula",
+      "distractor": "For a right triangle with legs $6$ and $4$ gives an area of $24$ instead of $\\frac{1}{2}(6)(4) = 12$"
+    },
+    {
+      "misconception": "Uses a slanted side as the height of a triangle instead of the perpendicular distance to the base",
+      "distractor": "Takes the length of slant side $BC$ as the height, e.g. using $5$ instead of the vertical height $3$, inflating the area"
+    },
+    {
+      "misconception": "Mis-simplifies a radical, taking the square root of each term separately",
+      "distractor": "Simplifies $\\sqrt{50}$ as $\\sqrt{25} + \\sqrt{25} = 10$ instead of $\\sqrt{25}\\cdot\\sqrt{2} = 5\\sqrt{2}$"
+    },
+    {
+      "misconception": "Adds unlike radical terms as if they were like terms when finding perimeter",
+      "distractor": "Combines $2\\sqrt{5} + 3\\sqrt{2}$ into $5\\sqrt{7}$ instead of leaving it as $2\\sqrt{5} + 3\\sqrt{2}$"
+    },
+    {
+      "misconception": "Assumes a quadrilateral is a rectangle from its appearance and applies the rectangle area formula without checking that adjacent sides are perpendicular",
+      "distractor": "Multiplies two adjacent side lengths to get the area of a parallelogram that is not a rectangle, ignoring that the slopes are not negative reciprocals"
+    }
+  ],
+
+  "_comment_itemCounts": "worksheet.single = one ramped sheet (Easy->Hard across 15 items). tier1/tier2 only if the standard is split into two worksheets (15 each, no overlap).",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

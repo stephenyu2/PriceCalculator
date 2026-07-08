@@ -1,0 +1,173 @@
+{
+  "id": "A1.A-REI.D.12--lesson",
+  "standard": "A1.A-REI.D.12",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Reasoning with Equations and Inequalities",
+  "domainCode": "A-REI",
+  "cluster": "Represent and solve equations and inequalities graphically",
+  "clusterCode": "D",
+  "skillName": "Graphing Linear Inequalities",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "intro": "The graph of a linear inequality in two variables is a half-plane. To graph it, first graph the boundary line: make it solid for $\\le$ or $\\ge$ (the line is included) and dashed for $<$ or $>$ (the line is not included). Then pick a test point not on the line, usually the origin $(0,\\,0)$, substitute it into the inequality, and shade the side that makes the inequality true. A system of inequalities is graphed by overlaying every half-plane; the solution is the region where they all overlap. To check whether an ordered pair is a solution, substitute it and confirm every inequality is satisfied.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Graph $y \\ge 2x - 3$. State whether the boundary line is solid or dashed and which half-plane to shade.",
+      "solution": {
+        "steps": [
+          "Identify the boundary line: $y = 2x - 3$, with slope $2$ and $y$-intercept $-3$.",
+          "Choose solid vs. dashed: the symbol is $\\ge$, which includes equality, so the boundary line is SOLID.",
+          "Pick a test point not on the line. The origin $(0,\\,0)$ is not on the line, so use it.",
+          "Substitute $(0,\\,0)$ into $y \\ge 2x - 3$: $0 \\ge 2(0) - 3$, which is $0 \\ge -3$. This is TRUE.",
+          "Because the test point makes the inequality true, shade the side of the line that contains the origin."
+        ],
+        "answer": "Solid boundary line $y = 2x - 3$; shade the half-plane containing the origin (the upper-left side)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Graph $y < \\frac{1}{2}x + 1$. State whether the boundary is solid or dashed and which side to shade.",
+      "solution": {
+        "steps": [
+          "Boundary line: $y = \\frac{1}{2}x + 1$, slope $\\frac{1}{2}$ and $y$-intercept $1$.",
+          "The symbol is $<$ (strict), so the boundary line is DASHED; points on the line are not solutions.",
+          "Test the origin $(0,\\,0)$, which is not on the line.",
+          "Substitute: $0 < \\frac{1}{2}(0) + 1$, which is $0 < 1$. This is TRUE.",
+          "Since the origin satisfies the inequality, shade the half-plane that contains the origin (below the line)."
+        ],
+        "answer": "Dashed boundary line $y = \\frac{1}{2}x + 1$; shade the half-plane below the line, containing the origin."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Graph $2x + 3y \\le 6$. Rewrite in slope-intercept form, decide solid or dashed, and shade.",
+      "solution": {
+        "steps": [
+          "Solve the boundary $2x + 3y = 6$ for $y$: subtract $2x$ to get $3y = -2x + 6$, then divide by $3$ to get $y = -\\frac{2}{3}x + 2$.",
+          "The symbol $\\le$ is non-strict, so the boundary line is SOLID.",
+          "Test the origin $(0,\\,0)$ in the original inequality $2x + 3y \\le 6$: $2(0) + 3(0) \\le 6$ gives $0 \\le 6$. This is TRUE.",
+          "Because the origin satisfies the inequality, shade the side containing the origin (below the line $y = -\\frac{2}{3}x + 2$)."
+        ],
+        "answer": "Solid boundary $y = -\\frac{2}{3}x + 2$; shade the half-plane containing the origin."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Graph $y \\le 3x$. Explain why the origin cannot be the test point, then shade correctly.",
+      "solution": {
+        "steps": [
+          "Boundary line: $y = 3x$, slope $3$, passing through the origin.",
+          "The symbol $\\le$ is non-strict, so the boundary is SOLID.",
+          "Try the origin $(0,\\,0)$: substituting gives $0 \\le 3(0)$, which is $0 \\le 0$. This is on the boundary, not a strict yes or no, so the origin cannot decide which side to shade.",
+          "Choose a different test point off the line, such as $(1,\\,0)$.",
+          "Substitute $(1,\\,0)$ into $y \\le 3x$: $0 \\le 3(1)$ gives $0 \\le 3$. This is TRUE.",
+          "Shade the half-plane containing $(1,\\,0)$, which is the region below and to the right of the line."
+        ],
+        "answer": "Solid boundary $y = 3x$; the origin lies on the line, so test $(1,\\,0)$: $0 \\le 3$ is true, so shade the side containing $(1,\\,0)$ (below-right of the line)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Graph the system $\\begin{cases} y \\ge x - 1 \\\\ y < -2x + 4 \\end{cases}$ and describe the solution region. Then determine whether $(0,\\,0)$ is a solution.",
+      "solution": {
+        "steps": [
+          "Graph the first inequality $y \\ge x - 1$: boundary $y = x - 1$ is SOLID ($\\ge$). Test $(0,\\,0)$: $0 \\ge 0 - 1$ gives $0 \\ge -1$, TRUE, so shade the side containing the origin (above the line).",
+          "Graph the second inequality $y < -2x + 4$: boundary $y = -2x + 4$ is DASHED ($<$). Test $(0,\\,0)$: $0 < -2(0) + 4$ gives $0 < 4$, TRUE, so shade the side containing the origin (below the line).",
+          "The solution set of the system is the region where the two shaded half-planes OVERLAP.",
+          "Check $(0,\\,0)$ in both inequalities: $0 \\ge -1$ is true and $0 < 4$ is true. Since both hold, $(0,\\,0)$ lies in the overlap.",
+          "Therefore $(0,\\,0)$ is a solution of the system."
+        ],
+        "answer": "The solution is the overlap of the two half-planes (on or above $y = x - 1$ and below $y = -2x + 4$). The point $(0,\\,0)$ satisfies both, so it is a solution."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Graph $y > -x + 2$. State whether the boundary is solid or dashed and which half-plane to shade.",
+      "hint": "A $>$ symbol means a dashed line. Test the origin $(0,\\,0)$ and shade the side that makes the inequality true.",
+      "solution": {
+        "steps": [
+          "Boundary line: $y = -x + 2$, slope $-1$ and $y$-intercept $2$.",
+          "The symbol $>$ is strict, so the boundary line is DASHED.",
+          "Test the origin $(0,\\,0)$: $0 > -(0) + 2$ gives $0 > 2$. This is FALSE.",
+          "Because the origin makes the inequality false, shade the half-plane that does NOT contain the origin (above the line)."
+        ],
+        "answer": "Dashed boundary $y = -x + 2$; shade the half-plane above the line (the side not containing the origin)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Is $(4,\\,1)$ a solution of $y > -x + 2$? Justify with substitution.",
+      "hint": "Substitute $x = 4$ and $y = 1$ into the inequality and check whether the resulting statement is true.",
+      "solution": {
+        "steps": [
+          "Substitute $x = 4$ and $y = 1$ into $y > -x + 2$.",
+          "Left side: $y = 1$. Right side: $-x + 2 = -4 + 2 = -2$.",
+          "The statement becomes $1 > -2$, which is TRUE.",
+          "Since the ordered pair makes the inequality true, $(4,\\,1)$ is a solution."
+        ],
+        "answer": "Yes, $(4,\\,1)$ is a solution because $1 > -2$ is true."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Graph $-2x + y > 4$. Rewrite in slope-intercept form, state solid or dashed, and shade.",
+      "hint": "Solve for $y$ by adding $2x$ to both sides. Since you are adding (not dividing by a negative), the symbol does not flip.",
+      "solution": {
+        "steps": [
+          "Solve the boundary for $y$: add $2x$ to both sides of $-2x + y > 4$ to get $y > 2x + 4$.",
+          "The symbol $>$ is strict, so the boundary line $y = 2x + 4$ is DASHED.",
+          "Test the origin $(0,\\,0)$: $0 > 2(0) + 4$ gives $0 > 4$. This is FALSE.",
+          "Because the origin makes the inequality false, shade the half-plane that does NOT contain the origin (above the line)."
+        ],
+        "answer": "Dashed boundary $y = 2x + 4$; shade the half-plane above the line (not containing the origin)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Graph $3x - y \\ge 0$. Rewrite for $y$ (watch the symbol), and because the boundary passes through the origin, use a non-origin test point.",
+      "hint": "Subtract $3x$, then divide by $-1$. Dividing by a negative FLIPS the inequality symbol. The line passes through $(0,\\,0)$, so test a point like $(1,\\,0)$.",
+      "solution": {
+        "steps": [
+          "Start with $3x - y \\ge 0$. Subtract $3x$: $-y \\ge -3x$.",
+          "Divide both sides by $-1$, which FLIPS the symbol: $y \\le 3x$.",
+          "The symbol $\\le$ is non-strict, so the boundary $y = 3x$ is SOLID. It passes through the origin, so the origin cannot be the test point.",
+          "Test $(1,\\,0)$ in $y \\le 3x$: $0 \\le 3(1)$ gives $0 \\le 3$. This is TRUE.",
+          "Shade the half-plane containing $(1,\\,0)$, which is below and to the right of the line."
+        ],
+        "answer": "Solid boundary $y = 3x$; shade the side containing $(1,\\,0)$ (below-right of the line), since $0 \\le 3$ is true."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Is $(1,\\,1)$ a solution of the system $\\begin{cases} y \\le 2x \\\\ y > -1 \\end{cases}$? Check every inequality.",
+      "hint": "A point is a solution of a system only if it satisfies ALL inequalities. Substitute $(1,\\,1)$ into each one.",
+      "solution": {
+        "steps": [
+          "Check the first inequality $y \\le 2x$ with $x = 1$, $y = 1$: $1 \\le 2(1)$ gives $1 \\le 2$, which is TRUE.",
+          "Check the second inequality $y > -1$ with $y = 1$: $1 > -1$, which is TRUE.",
+          "Both inequalities are satisfied, so the point lies in the overlap of the two half-planes.",
+          "Therefore $(1,\\,1)$ is a solution of the system."
+        ],
+        "answer": "Yes, $(1,\\,1)$ is a solution because $1 \\le 2$ and $1 > -1$ are both true."
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T11:30:04.469Z"
+}

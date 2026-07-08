@@ -1,0 +1,143 @@
+{
+  "standard": "A1.S-ID.B.6",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on two categorical and quantitative variables",
+  "clusterCode": "B",
+  "skillName": "Scatter Plots and Fitted Functions",
+
+  "description": "Students represent paired data on two quantitative variables as a scatter plot and describe how the variables are related. They identify the form of association (linear vs. nonlinear, such as quadratic or exponential), its direction (positive vs. negative), and its strength (strong, moderate, weak, or none), then fit a function to the data. For roughly linear data they fit a line, write its equation $y=mx+b$ using the slope $m=\\frac{y_2-y_1}{x_2-x_1}$ between two representative points and the $y$-intercept $b$, use the line to predict (interpolate and extrapolate), and interpret the slope and intercept in the data context. They also assess fit informally by examining how residuals (the gaps $y_{\\text{actual}}-y_{\\text{predicted}}$) are distributed, and recognize when a nonlinear model fits better than a line.",
+
+  "subSkills": [
+    "Plot ordered pairs $(x,y)$ from a table or context onto a scatter plot with correctly scaled axes",
+    "Describe the association as linear or nonlinear and identify nonlinear shape (quadratic, exponential)",
+    "Describe direction (positive vs. negative) and strength (strong, moderate, weak, none) of an association",
+    "Compute the slope $m=\\frac{y_2-y_1}{x_2-x_1}$ of a line of fit through two representative data points",
+    "Write the equation of a line of fit in the form $y=mx+b$ and find $b$ by back-solving $b=y-mx$",
+    "Use a fitted line to predict an output (interpolation) and to extrapolate beyond the data",
+    "Interpret the slope as a rate of change and the $y$-intercept as a starting value in context",
+    "Compute and interpret a residual $y_{\\text{actual}}-y_{\\text{predicted}}$ to judge how well a model fits",
+    "Decide whether a linear model is appropriate or whether a nonlinear function fits the data better"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Describe the association",
+      "example": "A scatter plot of hours studied $x$ vs. test score $y$ shows points rising from lower-left to upper-right in a tight band. Describe the association. Answer: a strong positive linear association."
+    },
+    {
+      "name": "Identify linear vs. nonlinear",
+      "example": "Data for $(0,2),(1,3),(2,6),(3,11),(4,18)$ has growing first differences $1,3,5,7$, so the points curve upward; the association is nonlinear (quadratic), not linear."
+    },
+    {
+      "name": "Find the slope of a line of fit",
+      "example": "A trend line passes through the representative points $(2,5)$ and $(8,23)$. Slope $m=\\frac{23-5}{8-2}=\\frac{18}{6}=3$."
+    },
+    {
+      "name": "Write the equation of the line of fit",
+      "example": "A line of fit passes through $(2,5)$ with slope $3$. Then $b=5-3(2)=-1$, so $y=3x-1$."
+    },
+    {
+      "name": "Predict with the model (interpolate/extrapolate)",
+      "example": "Using $y=3x-1$ to model temperature $y$ at hour $x$, predict the value at $x=10$: $y=3(10)-1=29$."
+    },
+    {
+      "name": "Interpret slope and intercept in context",
+      "example": "For plant height $y=1.5x+4$ (cm) after $x$ weeks, the slope $1.5$ means the plant grows $1.5$ cm per week and the intercept $4$ means it started at $4$ cm."
+    },
+    {
+      "name": "Compute a residual",
+      "example": "A model predicts $\\hat{y}=2x+1$. At $x=5$ the actual value is $13$. The residual is $13-(2\\cdot 5+1)=13-11=2$, so the model underestimates by $2$."
+    },
+    {
+      "name": "Build the line of fit from a data table",
+      "example": "Given $(1,4),(2,7),(3,9),(4,12),(5,14)$, pick representative points $(1,4)$ and $(5,14)$: $m=\\frac{14-4}{5-1}=\\frac{10}{4}=2.5$, $b=4-2.5(1)=1.5$, so $y=2.5x+1.5$."
+    },
+    {
+      "name": "Choose the better model",
+      "example": "Population data $(0,100),(1,200),(2,400),(3,800)$ doubles each step (constant ratio $2$), so an exponential model $y=100\\cdot 2^{x}$ fits better than a line."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step reading or one direct computation. Describe an association's direction and strength from a clearly patterned plot, identify it as linear or nonlinear from an obvious shape, or compute one slope between two given points. The scatter plot or short table is small and the trend is unambiguous, with no equation to assemble.",
+      "constraints": [
+        "Task is to name direction (positive/negative) and strength, or to label linear vs. nonlinear",
+        "Any computation is a single slope $m=\\frac{y_2-y_1}{x_2-x_1}$ between two stated points with integer result",
+        "Data set has at most $5$ points and a clear, strong pattern",
+        "No back-solving for an intercept and no prediction"
+      ]
+    },
+    "Medium": {
+      "description": "Two connected steps. Build the equation of a line of fit by finding slope from two representative points and then back-solving the intercept $b=y-mx$, or use a given fitted line to make one prediction, or compute a single residual. Slopes may be tidy non-integers (such as $2.5$). Interpretation of slope or intercept in context appears here.",
+      "constraints": [
+        "Find $m$ from two points, then $b=y-mx$, then write $y=mx+b$",
+        "Or substitute one $x$ into a given line to interpolate or extrapolate a prediction",
+        "Or compute one residual $y_{\\text{actual}}-y_{\\text{predicted}}$ and state over/underestimate",
+        "Slopes may be terminating decimals or simple fractions; numbers stay manageable",
+        "tier1 (Easy to Medium) lives here: describing associations, single slopes, building one line of fit, and one prediction"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step modeling and judgment. Fit a line from a full data table, then both predict and interpret, or compute and compare residuals across points to assess fit, or decide between a linear and a nonlinear model by testing first differences against ratios and then write the appropriate rule. May chain construction, prediction, and a context interpretation in one item.",
+      "constraints": [
+        "Construct the line of fit from a table, then use it to predict and interpret slope/intercept in context",
+        "Compare residuals at several points, or reason about whether residuals show a pattern (poor linear fit)",
+        "Decide linear vs. nonlinear by checking constant difference vs. constant ratio, then write $y=mx+b$ or $y=ab^{x}$",
+        "Requires reading a context to extract the two variables and units",
+        "tier2 (Medium to Hard) lives here: full table-to-model builds, residual comparison, and model-choice items, with no item overlap with tier1"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student confuses the direction of association, calling a downward trend positive",
+      "distractor": "For points falling from upper-left to lower-right answers 'positive association' instead of 'negative association'"
+    },
+    {
+      "misconception": "Student inverts the slope formula, dividing change in $x$ by change in $y$",
+      "distractor": "For $(2,5)$ and $(8,23)$ computes $m=\\frac{8-2}{23-5}=\\frac{1}{3}$ instead of $m=\\frac{23-5}{8-2}=3$"
+    },
+    {
+      "misconception": "Student finds the correct slope but reports $y=mx$, forgetting to find and add the intercept",
+      "distractor": "For a line through $(2,5)$ with slope $3$ writes $y=3x$ instead of $y=3x-1$"
+    },
+    {
+      "misconception": "Student sign-errors the intercept by computing $b=y+mx$ instead of $b=y-mx$",
+      "distractor": "For point $(2,5)$ and slope $3$ writes $b=5+3(2)=11$ giving $y=3x+11$ instead of $b=5-3(2)=-1$"
+    },
+    {
+      "misconception": "Student swaps the meaning of slope and intercept when interpreting in context",
+      "distractor": "For $y=1.5x+4$ says the plant started at $1.5$ cm and grows $4$ cm per week instead of starting at $4$ cm and growing $1.5$ cm per week"
+    },
+    {
+      "misconception": "Student computes the residual as predicted minus actual, flipping its sign",
+      "distractor": "For actual $13$ and predicted $11$ reports a residual of $11-13=-2$ instead of $13-11=2$"
+    },
+    {
+      "misconception": "Student assumes data is linear and fits a line to data with a constant ratio",
+      "distractor": "For $(0,100),(1,200),(2,400),(3,800)$ writes $y=200x+100$ instead of recognizing the exponential model $y=100\\cdot 2^{x}$"
+    },
+    {
+      "misconception": "Student equates strength with steepness, calling a steep but scattered cloud a strong association",
+      "distractor": "For widely scattered points around a steep line answers 'strong association' instead of 'weak association'"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "id": "GEO.G-SRT.A.2--lesson",
+  "standard": "GEO.G-SRT.A.2",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Similarity, Right Triangles, and Trigonometry",
+  "domainCode": "G-SRT",
+  "cluster": "Understand similarity in terms of similarity transformations",
+  "clusterCode": "A",
+  "skillName": "Similarity Transformations and Triangles",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Two figures are similar when one can be mapped exactly onto the other by a sequence of rigid motions (translations, rotations, reflections) together with a dilation. The rigid motions preserve size and shape, and the dilation rescales every length by the same scale factor $k$ while leaving all angle measures unchanged. As a result, similar triangles have all corresponding angles equal and all corresponding sides proportional. Writing a similarity statement such as $\\triangle ABC \\sim \\triangle DEF$ records the correspondence: $\\angle A = \\angle D$, $\\angle B = \\angle E$, $\\angle C = \\angle F$, and $\\frac{DE}{AB} = \\frac{EF}{BC} = \\frac{DF}{AC} = k$. These two consequences, equal angles and proportional sides, let you find missing measurements.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Figure $B$ is the image of figure $A$ under a reflection followed by a dilation with scale factor $3$. Are $A$ and $B$ similar? Justify your answer using the transformational definition of similarity.",
+      "solution": {
+        "steps": [
+          "Recall the definition: two figures are similar if a sequence of rigid motions together with a dilation maps one onto the other.",
+          "A reflection is a rigid motion (it preserves all distances and angle measures).",
+          "A dilation with scale factor $3$ is a similarity transformation (it multiplies every length by $3$ and preserves angle measures).",
+          "The given sequence is a rigid motion (reflection) followed by a dilation, which is exactly a similarity transformation, and it maps $A$ onto $B$.",
+          "Since such a sequence exists, $A \\sim B$."
+        ],
+        "answer": "Yes, $A \\sim B$, because a rigid motion (the reflection) followed by a dilation is a similarity transformation that maps $A$ onto $B$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "$\\triangle ABC \\sim \\triangle DEF$ with $AB = 8$ corresponding to $DE = 20$. Find the scale factor $k$ from $\\triangle ABC$ to $\\triangle DEF$.",
+      "solution": {
+        "steps": [
+          "The scale factor from a preimage to its image is the ratio of a corresponding image length to the preimage length: $k = \\frac{\\text{image}}{\\text{preimage}}$.",
+          "Here $AB = 8$ is the preimage length and $DE = 20$ is the corresponding image length, so $k = \\frac{DE}{AB} = \\frac{20}{8}$.",
+          "Simplify: $\\frac{20}{8} = \\frac{5}{2}$.",
+          "So the dilation that takes $\\triangle ABC$ to $\\triangle DEF$ has scale factor $\\frac{5}{2}$."
+        ],
+        "answer": "$k = \\frac{5}{2}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Triangle $A$ has side lengths $5, 12, 13$ and triangle $B$ has side lengths $15, 36, 39$. Decide whether the triangles are similar, and if so describe a sequence of transformations that maps $A$ onto $B$.",
+      "solution": {
+        "steps": [
+          "Compare each pair of corresponding sides as a ratio of $B$'s side to $A$'s side, smallest with smallest, and so on.",
+          "$\\frac{15}{5} = 3$, $\\frac{36}{12} = 3$, and $\\frac{39}{13} = 3$.",
+          "All three ratios are equal to $3$, so every side of $B$ is $3$ times the corresponding side of $A$. The triangles are similar with scale factor $k = 3$.",
+          "Because the side lengths match under a single scale factor, a dilation with scale factor $3$ produces a triangle congruent to $B$; a rigid motion (a suitable rotation, reflection, or translation) then aligns it exactly with $B$.",
+          "So a dilation with $k = 3$ composed with a rigid motion maps $A$ onto $B$, confirming $A \\sim B$."
+        ],
+        "answer": "Yes, they are similar with $k = 3$; a dilation by $3$ followed by a rigid motion maps $A$ onto $B$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "$\\triangle PQR \\sim \\triangle STU$ with $PQ = 8$, $ST = 12$, and $QR = 10$. Find $TU$.",
+      "solution": {
+        "steps": [
+          "Read the correspondence from the similarity statement $\\triangle PQR \\sim \\triangle STU$: $P \\leftrightarrow S$, $Q \\leftrightarrow T$, $R \\leftrightarrow U$, so $PQ$ corresponds to $ST$ and $QR$ corresponds to $TU$.",
+          "Corresponding sides are proportional, so $\\frac{TU}{QR} = \\frac{ST}{PQ}$.",
+          "Substitute the known values: $\\frac{TU}{10} = \\frac{12}{8} = \\frac{3}{2}$.",
+          "Solve for $TU$: $TU = 10 \\cdot \\frac{3}{2} = 15$.",
+          "So the missing side has length $15$."
+        ],
+        "answer": "$TU = 15$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Given $\\triangle ABC \\sim \\triangle DEF$ with $\\angle A = 50^\\circ$ and $\\angle B = 70^\\circ$, find $\\angle F$.",
+      "solution": {
+        "steps": [
+          "A dilation and rigid motions preserve angle measures, so corresponding angles of similar triangles are equal. From $\\triangle ABC \\sim \\triangle DEF$, $\\angle C = \\angle F$.",
+          "Find $\\angle C$ using the triangle angle sum: $\\angle A + \\angle B + \\angle C = 180^\\circ$.",
+          "Substitute: $50^\\circ + 70^\\circ + \\angle C = 180^\\circ$, so $\\angle C = 180^\\circ - 120^\\circ = 60^\\circ$.",
+          "Since $\\angle F = \\angle C$, we get $\\angle F = 60^\\circ$."
+        ],
+        "answer": "$\\angle F = 60^\\circ$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Figure $B$ is the image of figure $A$ under a translation followed by a dilation with scale factor $\\frac{1}{2}$. Are $A$ and $B$ similar? Explain.",
+      "hint": "A translation is a rigid motion. Is a rigid motion followed by a dilation a similarity transformation, even when $k < 1$?",
+      "solution": {
+        "steps": [
+          "A translation is a rigid motion, and a dilation (with any positive scale factor, including $k = \\frac{1}{2}$) is a similarity transformation.",
+          "A rigid motion followed by a dilation is a similarity transformation, and it maps $A$ onto $B$.",
+          "Because such a sequence exists, $A \\sim B$. A scale factor less than $1$ shrinks the figure but does not break similarity."
+        ],
+        "answer": "Yes, $A \\sim B$; a rigid motion followed by a dilation is a similarity transformation regardless of whether $k$ is greater or less than $1$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "$\\triangle JKL \\sim \\triangle MNP$ with $JK = 6$ corresponding to $MN = 9$. Find the scale factor $k$ from $\\triangle JKL$ to $\\triangle MNP$.",
+      "hint": "Divide the image length by the preimage length: $k = \\frac{\\text{image}}{\\text{preimage}} = \\frac{MN}{JK}$.",
+      "solution": {
+        "steps": [
+          "The scale factor from preimage to image is $k = \\frac{MN}{JK}$.",
+          "Substitute: $k = \\frac{9}{6}$.",
+          "Simplify: $\\frac{9}{6} = \\frac{3}{2}$.",
+          "So $k = \\frac{3}{2}$."
+        ],
+        "answer": "$k = \\frac{3}{2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Two triangles have side lengths $4, 6, 8$ and $6, 9, 12$. Show whether they are similar and, if so, state the scale factor.",
+      "hint": "Pair the sides smallest with smallest and check whether all three ratios are equal.",
+      "solution": {
+        "steps": [
+          "Form the ratio of each side of the second triangle to the corresponding side of the first: $\\frac{6}{4}$, $\\frac{9}{6}$, $\\frac{12}{8}$.",
+          "Simplify each: $\\frac{6}{4} = \\frac{3}{2}$, $\\frac{9}{6} = \\frac{3}{2}$, $\\frac{12}{8} = \\frac{3}{2}$.",
+          "All three ratios equal $\\frac{3}{2}$, so a single dilation with scale factor $\\frac{3}{2}$ (together with a rigid motion) maps the first triangle onto the second.",
+          "Therefore the triangles are similar with $k = \\frac{3}{2}$."
+        ],
+        "answer": "Yes, they are similar with scale factor $k = \\frac{3}{2}$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "$\\triangle ABC \\sim \\triangle DEF$ with $AB = 9$, $DE = 15$, and $BC = 12$. Find $EF$.",
+      "hint": "Corresponding sides are proportional: $\\frac{EF}{BC} = \\frac{DE}{AB}$. Solve for $EF$.",
+      "solution": {
+        "steps": [
+          "From $\\triangle ABC \\sim \\triangle DEF$, side $AB$ corresponds to $DE$ and side $BC$ corresponds to $EF$.",
+          "Set up the proportion of corresponding sides: $\\frac{EF}{BC} = \\frac{DE}{AB}$, so $\\frac{EF}{12} = \\frac{15}{9}$.",
+          "Simplify the ratio: $\\frac{15}{9} = \\frac{5}{3}$.",
+          "Solve: $EF = 12 \\cdot \\frac{5}{3} = 20$.",
+          "So $EF = 20$."
+        ],
+        "answer": "$EF = 20$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "$\\triangle ABC \\sim \\triangle DEF$. The side of $\\triangle DEF$ corresponding to $AB$ has length $2x + 1$, while $AB = 6$ and the corresponding side $DE = 15$. Using the scale factor, the side corresponding to $AB$ should equal $DE$; in another figure the same scale factor sends a side of length $6$ to a side written as $2x + 1$. Find $x$.",
+      "hint": "First find the scale factor $k = \\frac{DE}{AB}$. Then the image of a length-$6$ side is $6k$, and this equals $2x + 1$. Solve the resulting equation.",
+      "solution": {
+        "steps": [
+          "Find the scale factor from $\\triangle ABC$ to $\\triangle DEF$: $k = \\frac{DE}{AB} = \\frac{15}{6} = \\frac{5}{2}$.",
+          "Applying this scale factor to a side of length $6$ gives an image length of $6 \\cdot \\frac{5}{2} = 15$.",
+          "That image length is written algebraically as $2x + 1$, so set $2x + 1 = 15$.",
+          "Subtract $1$ from both sides: $2x = 14$.",
+          "Divide by $2$: $x = 7$."
+        ],
+        "answer": "$x = 7$"
+      }
+    }
+  ]
+}

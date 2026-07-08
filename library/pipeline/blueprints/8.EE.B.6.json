@@ -1,0 +1,130 @@
+{
+  "standard": "8.EE.B.6",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Expressions and Equations",
+  "domainCode": "EE",
+  "cluster": "Understand the connections between proportional relationships, lines, and linear equations",
+  "clusterCode": "B",
+  "skillName": "Slope and Linear Equations",
+
+  "description": "Students explain why slope is constant along a non-vertical line by using similar triangles (the slope triangles between any two points are similar, so their corresponding side ratios are equal). They compute slope as $\\frac{\\text{rise}}{\\text{run}} = \\frac{y_2 - y_1}{x_2 - x_1}$ between two points, derive and write the equation $y = mx$ for a line through the origin (a proportional relationship with constant of proportionality $m$), and derive and write $y = mx + b$ for a line crossing the $y$-axis at $(0, b)$. They connect graphs, tables, equations, and the similar-triangles argument.",
+
+  "subSkills": [
+    "Compute slope between two points using $m = \\frac{y_2 - y_1}{x_2 - x_1}$, including negative and fractional slopes",
+    "Identify and label slope triangles on a line and recognize that any two such triangles are similar",
+    "Use the AA similarity / equal-ratio argument to explain why slope is the same between any two distinct points on a non-vertical line",
+    "Recognize a line through the origin as a proportional relationship and write its equation as $y = mx$",
+    "Identify the $y$-intercept $b$ as the point $(0, b)$ where the line crosses the vertical axis",
+    "Derive and write the equation $y = mx + b$ from a graph, a table, or two points",
+    "Interpret $m$ and $b$ in context and translate among graph, table, and equation representations"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Slope from two points",
+      "example": "Find the slope of the line through $(2, 3)$ and $(6, 11)$. Answer: $m = \\frac{11 - 3}{6 - 2} = \\frac{8}{4} = 2$."
+    },
+    {
+      "name": "Slope from a graph (slope triangle)",
+      "example": "A line passes through $(0, 1)$ and $(4, 3)$. Draw a slope triangle and find the slope. Answer: $m = \\frac{2}{4} = \\frac{1}{2}$."
+    },
+    {
+      "name": "Similar-triangles justification",
+      "example": "On a non-vertical line, slope triangle $A$ has legs of length $2$ (rise) and $3$ (run); a second triangle $B$ on the same line has a run of $9$. Explain why the triangles are similar and find the rise of triangle $B$. Answer: the two right triangles share the line as hypotenuse direction and both have a horizontal and vertical leg, so corresponding angles are equal (AA); thus $\\frac{\\text{rise}}{\\text{run}}$ is equal, giving rise $= 6$ and slope $\\frac{2}{3}$ either way."
+    },
+    {
+      "name": "Equation of a line through the origin",
+      "example": "A proportional relationship passes through $(0, 0)$ and $(3, 12)$. Write the equation. Answer: $m = \\frac{12}{3} = 4$, so $y = 4x$."
+    },
+    {
+      "name": "Equation y = mx + b from a graph or two points",
+      "example": "A line crosses the $y$-axis at $(0, -2)$ and has slope $\\frac{3}{4}$. Write its equation. Answer: $y = \\frac{3}{4}x - 2$."
+    },
+    {
+      "name": "Equation from a table",
+      "example": "A table shows $(1, 5), (2, 8), (3, 11)$. Write the equation. Answer: constant change of $3$ per step gives $m = 3$; back to $x = 0$ gives $b = 2$, so $y = 3x + 2$."
+    },
+    {
+      "name": "Interpret slope and intercept in context",
+      "example": "A pool drains so that depth $y$ (in) after $x$ minutes follows $y = -2x + 30$. What do $-2$ and $30$ mean? Answer: the depth starts at $30$ in ($b$) and decreases $2$ in per minute (slope $m$)."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step slope or equation tasks with whole-number, positive values. Slope is read directly from two given points or a clearly labeled graph, or an equation is written when both $m$ and $b$ are given outright.",
+      "constraints": [
+        "Coordinates are small non-negative integers ($0 \\le x, y \\le 12$)",
+        "Slope comes out to a whole number or a simple unit fraction such as $\\frac{1}{2}$",
+        "$y$-intercept $b$ is a small integer and often given directly",
+        "Lines through the origin yield $y = mx$ with integer $m$",
+        "No similar-triangles justification required beyond naming rise over run"
+      ]
+    },
+    "Medium": {
+      "description": "Two-to-three step problems: compute a fractional or negative slope, then build $y = mx + b$ from two points, a table, or a graph where $b$ must be found by extending back to $x = 0$. Includes basic similar-triangles reasoning about equal ratios.",
+      "constraints": [
+        "Slope is a non-unit fraction or negative value (e.g. $\\frac{2}{3}$, $-\\frac{3}{4}$)",
+        "Coordinates may be negative",
+        "$b$ is not given and must be derived from a point and the slope or from a table",
+        "Requires identifying that two slope triangles share equal ratios because they are similar",
+        "Tables require finding the constant rate of change first"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning and full justification: write a complete similar-triangles argument for why slope is constant, derive $y = mx$ or $y = mx + b$ from minimal information, or interpret and compare lines in context. May combine the derivation with a follow-up evaluation.",
+      "constraints": [
+        "Requires a written AA / equal-ratio explanation that slope is the same between any two points",
+        "Information is given indirectly (one point plus a similar-triangle, or a real-world description)",
+        "Slopes and intercepts may be fractions or negatives requiring careful sign work",
+        "May ask the student to derive the general form $y = mx + b$ from the geometry and then evaluate $y$ for a given $x$",
+        "May compare two lines (different slopes/intercepts) and reason about which is steeper or where they meet the axis"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student inverts the slope ratio, computing run over rise",
+      "distractor": "For $(2, 3)$ and $(6, 11)$ gives $\\frac{x_2 - x_1}{y_2 - y_1} = \\frac{4}{8} = \\frac{1}{2}$ instead of $2$"
+    },
+    {
+      "misconception": "Student subtracts coordinates in inconsistent order (mismatched x and y order)",
+      "distractor": "Computes $\\frac{y_2 - y_1}{x_1 - x_2}$, flipping the sign to get $-2$ instead of $2$"
+    },
+    {
+      "misconception": "Student forgets the negative sign for a downward-sloping line",
+      "distractor": "Reports slope as $\\frac{3}{4}$ instead of $-\\frac{3}{4}$ for a line that falls left to right"
+    },
+    {
+      "misconception": "Student swaps slope and y-intercept in the equation",
+      "distractor": "Writes $y = bx + m$, e.g. $y = -2x + \\frac{3}{4}$ instead of $y = \\frac{3}{4}x - 2$"
+    },
+    {
+      "misconception": "Student reads the y-intercept off the wrong axis (uses the x-intercept as b)",
+      "distractor": "Takes $b$ from where the line crosses the $x$-axis instead of the $y$-axis, e.g. $b = 4$ instead of $b = -2$"
+    },
+    {
+      "misconception": "Student assumes any line through two points is proportional and drops the intercept",
+      "distractor": "Writes $y = mx$ (e.g. $y = 3x$) for a line that does not pass through the origin, omitting $+ b$"
+    },
+    {
+      "misconception": "Student thinks slope changes depending on which two points are chosen on the line",
+      "distractor": "Claims the slope between far-apart points differs from the slope between nearby points, missing that the slope triangles are similar so the ratio is constant"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

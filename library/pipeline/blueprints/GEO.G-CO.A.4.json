@@ -1,0 +1,132 @@
+{
+  "standard": "GEO.G-CO.A.4",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Experiment with transformations in the plane",
+  "clusterCode": "A",
+  "skillName": "Defining Rigid Motions",
+
+  "description": "Students develop and apply precise definitions of the three rigid motions in terms of geometric primitives rather than coordinate shortcuts. A translation is defined by a directed line segment (vector): every point $P$ moves so that $\\overrightarrow{PP'}$ is parallel to, the same length as, and the same direction as the defining vector. A reflection across a line $m$ sends each point $P$ to the point $P'$ such that $m$ is the perpendicular bisector of $\\overline{PP'}$ (points on $m$ are fixed). A rotation of $\\theta$ degrees about a center $C$ sends each point $P$ to $P'$ so that $CP=CP'$ (they lie on a circle centered at $C$) and $m\\angle PCP'=\\theta$. Students articulate these definitions, justify why each motion preserves distance and angle measure, and use the definitions to locate images, identify centers and lines, and decide whether a description actually specifies a rigid motion.",
+
+  "subSkills": [
+    "State the definition of a translation in terms of a directed line segment: $\\overline{PP'}$ is parallel to and congruent to the defining segment with the same direction",
+    "State the definition of a reflection across line $m$: $m$ is the perpendicular bisector of $\\overline{PP'}$ for every off-line point $P$, and points on $m$ are fixed",
+    "State the definition of a rotation about center $C$ through angle $\\theta$: $CP=CP'$ and $m\\angle PCP'=\\theta$ (image lies on the circle of radius $CP$ centered at $C$)",
+    "Identify which geometric primitive (parallel lines/segments, perpendicular bisector, circle and central angle) is the defining feature of each motion",
+    "Locate the image of a point under a given translation, reflection, or rotation using the definition (perpendicular bisector, equal radii, central angle)",
+    "Recover the parameters of a motion from a preimage and image: the translation vector, the reflection line, or the center and angle of a rotation",
+    "Explain why each rigid motion preserves distance and angle measure (carries segments to congruent segments and angles to congruent angles)",
+    "Distinguish a fully specified rigid motion from an underspecified or non-rigid description (e.g., a center without an angle, or a 'stretch' that changes length)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Match motion to defining primitive",
+      "example": "Which rigid motion is defined by the condition that the line of the motion is the perpendicular bisector of the segment joining each point to its image? Answer: a reflection."
+    },
+    {
+      "name": "Complete the definition",
+      "example": "Fill in: 'A rotation about center $C$ through angle $\\theta$ maps point $P$ to $P'$ so that $CP = \\underline{\\quad}$ and $m\\angle PCP' = \\underline{\\quad}$.' Answer: $CP'$ and $\\theta$."
+    },
+    {
+      "name": "Locate image from the definition",
+      "example": "Point $P$ is reflected across line $m$. If the foot of the perpendicular from $P$ to $m$ is $F$ and $PF = 3$, then $P'$ lies on ray opposite $\\overrightarrow{FP}$ with $FP' = 3$, so $m$ is the perpendicular bisector of $\\overline{PP'}$ and $PP' = 6$."
+    },
+    {
+      "name": "Translation by a directed segment",
+      "example": "Under the translation along directed segment $\\overrightarrow{AB}$ with $AB = 5$, the image $P'$ of any point $P$ satisfies $\\overrightarrow{PP'}$ parallel to $\\overrightarrow{AB}$, same direction, and $PP' = 5$."
+    },
+    {
+      "name": "Recover the parameters of the motion",
+      "example": "A point $P$ maps to $P'$ under a rotation about $C$. Given $CP = CP' = 4$ and $m\\angle PCP' = 90^\\circ$, the motion is a $90^\\circ$ rotation about $C$; the perpendicular bisector of $\\overline{PP'}$ passes through $C$."
+    },
+    {
+      "name": "Justify distance/angle preservation",
+      "example": "Explain why a reflection across $m$ preserves the length of $\\overline{PQ}$. Since $m$ is the perpendicular bisector of both $\\overline{PP'}$ and $\\overline{QQ'}$, congruent right triangles give $P'Q' = PQ$."
+    },
+    {
+      "name": "Decide if a description specifies a rigid motion",
+      "example": "Does 'rotate the figure about point $C$' fully specify a rotation? No. A rotation requires both a center and a directed angle $\\theta$; the angle is missing, so the image is not determined."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step recall and recognition. The student names the rigid motion tied to a given defining primitive, or fills one blank in a stated definition. No construction or computation beyond reading the definition.",
+      "constraints": [
+        "Identify the motion from its defining feature (perpendicular bisector to reflection, circle and central angle to rotation, parallel congruent segment to translation)",
+        "Complete a single blank in a definition (e.g., supply $CP'$ or $\\theta$)",
+        "Match each of translation, reflection, rotation to the primitive it uses",
+        "No image points must be located; the defining condition is stated directly in the prompt"
+      ]
+    },
+    "Medium": {
+      "description": "Apply one definition to locate an image point or to read off one parameter. The student uses the perpendicular-bisector condition, equal radii with a central angle, or the directed-segment condition to compute a length, an angle, or a single coordinate-free position.",
+      "constraints": [
+        "Use the reflection definition to find a distance such as $PP' = 2\\,PF$ given the distance $PF$ to the line",
+        "Use the rotation definition to state $CP' = CP$ and $m\\angle PCP' = \\theta$ for a specific $\\theta$ such as $60^\\circ$, $90^\\circ$, or $180^\\circ$",
+        "Use the translation definition to find $PP'$ from the length of the directed segment",
+        "Recover exactly one parameter (the reflection line as perpendicular bisector, the translation length, or the rotation radius) from given data"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning, full parameter recovery, or justification. The student recovers a complete motion from preimage and image, explains why a motion preserves distance or angle using the definition, or judges whether a description is a valid rigid motion and corrects it.",
+      "constraints": [
+        "Given preimage and image data, identify the motion and all of its parameters (center and angle, line of reflection, or vector)",
+        "Justify distance or angle preservation from the definition (congruent triangles from the perpendicular bisector, or $CP = CP'$ and $CQ = CQ'$ with a shared angle for rotations)",
+        "Determine whether a verbal description fully specifies a rigid motion and state the missing element or why a 'stretch'/'dilation' is excluded",
+        "May chain two facts, e.g. find the rotation angle from $m\\angle PCP'$ and then conclude $\\triangle PCQ \\cong \\triangle P'CQ'$"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Confuses which primitive defines which motion (e.g., thinks a reflection is defined by a central angle or a rotation by a perpendicular bisector)",
+      "distractor": "Names a rotation as the motion in which the line is the perpendicular bisector of $\\overline{PP'}$, instead of a reflection"
+    },
+    {
+      "misconception": "Thinks the line of reflection bisects $\\overline{PP'}$ but is not perpendicular to it (drops the right-angle condition)",
+      "distractor": "States only that $m$ passes through the midpoint of $\\overline{PP'}$, omitting that $m \\perp \\overline{PP'}$, so the reflection is not actually defined"
+    },
+    {
+      "misconception": "Forgets the equal-radius condition for a rotation, keeping only the angle",
+      "distractor": "Defines a rotation by $m\\angle PCP' = \\theta$ alone and lets $CP' \\ne CP$, which would not preserve distance"
+    },
+    {
+      "misconception": "Believes a translation can change the length or direction of the displacement segment",
+      "distractor": "Says the image $P'$ satisfies $\\overrightarrow{PP'}$ parallel to the vector but with a different length, or in the opposite direction, instead of congruent and same direction"
+    },
+    {
+      "misconception": "Halves or doubles the wrong quantity when using the perpendicular-bisector definition",
+      "distractor": "For $PF = 3$ from the line of reflection, reports $PP' = 3$ instead of $PP' = 6$, treating $PF$ as the full distance to the image"
+    },
+    {
+      "misconception": "Confuses the rotation angle with the angle's supplement or with $m\\angle PCP'$ being measured at the wrong vertex",
+      "distractor": "For a $60^\\circ$ rotation reports $m\\angle PCP' = 120^\\circ$, using the supplement instead of the rotation angle"
+    },
+    {
+      "misconception": "Believes a center alone (without an angle) or a line direction alone fully specifies a rigid motion",
+      "distractor": "Claims 'rotate about $C$' determines a unique image, ignoring that the angle $\\theta$ is required"
+    },
+    {
+      "misconception": "Treats a dilation or stretch as a rigid motion because it 'moves' the figure",
+      "distractor": "Classifies a dilation about $C$ by scale factor $2$ as a rigid motion, ignoring that it multiplies distances and is not distance-preserving"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

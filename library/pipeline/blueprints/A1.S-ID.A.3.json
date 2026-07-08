@@ -1,0 +1,129 @@
+{
+  "standard": "A1.S-ID.A.3",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Categorical and Quantitative Data",
+  "domainCode": "S-ID",
+  "cluster": "Summarize, represent, and interpret data on a single count or measurement variable",
+  "clusterCode": "A",
+  "skillName": "Shape, Center, Spread, and Outliers",
+
+  "description": "Students interpret and compare data distributions by describing their shape (symmetric, skewed left, skewed right, uniform, with peaks or gaps), measuring center (mean $\\bar{x}$ and median), and measuring spread (range, interquartile range $\\text{IQR}=Q_3-Q_1$, and standard deviation). They identify outliers using the $1.5\\times\\text{IQR}$ rule, explain how an extreme data point shifts the mean far more than the median and inflates the range and standard deviation, and choose which center and spread measures best summarize a given data set in context.",
+
+  "subSkills": [
+    "Describe the shape of a distribution from a dot plot, histogram, or box plot (symmetric, skewed right, skewed left, uniform, bimodal, gaps and clusters)",
+    "Compute the mean $\\bar{x}=\\frac{\\sum x_i}{n}$ and the median of a data set",
+    "Compute spread: range, quartiles $Q_1$ and $Q_3$, $\\text{IQR}=Q_3-Q_1$",
+    "Identify outliers with the $1.5\\times\\text{IQR}$ fences: below $Q_1-1.5\\cdot\\text{IQR}$ or above $Q_3+1.5\\cdot\\text{IQR}$",
+    "Explain and quantify the effect of an outlier on mean vs. median and on range/IQR/standard deviation",
+    "Choose the resistant measures (median, IQR) for skewed data and (mean, standard deviation) for roughly symmetric data, with justification",
+    "Compare the centers and spreads of two distributions in context"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Describe shape from a display",
+      "example": "A dot plot of quiz scores piles up at the high end with a long tail toward the low scores. Describe the shape of the distribution. (Answer: skewed left.)"
+    },
+    {
+      "name": "Compute center and spread",
+      "example": "For the data set $\\{4, 6, 6, 7, 9, 12\\}$, find the mean, the median, the range, and the IQR. (Answers: mean $=\\frac{44}{6}=\\frac{22}{3}$, median $=6.5$, range $=8$, $\\text{IQR}=Q_3-Q_1=9-6=3$.)"
+    },
+    {
+      "name": "Outlier test with the $1.5\\times\\text{IQR}$ rule",
+      "example": "A data set has $Q_1=12$, $Q_3=20$, so $\\text{IQR}=8$. Is the value $35$ an outlier? (Upper fence $=20+1.5\\cdot 8=32$; since $35>32$, yes it is an outlier.)"
+    },
+    {
+      "name": "Effect of an outlier on center and spread",
+      "example": "The values $\\{8, 9, 10, 11, 12\\}$ have mean $10$ and median $10$. Replace $12$ with $42$. What happens to the mean and the median? (Mean rises to $\\frac{80}{5}=16$; median stays $10$. The mean is pulled toward the outlier; the median resists it.)"
+    },
+    {
+      "name": "Choose the appropriate measures",
+      "example": "Home prices in a neighborhood are strongly skewed right by a few mansions. Which measure of center and which measure of spread best summarize the data, and why? (Median and IQR, because they are resistant to the skew and extreme values.)"
+    },
+    {
+      "name": "Compare two distributions in context",
+      "example": "Class A scores have median $78$, $\\text{IQR}=6$; Class B has median $78$, $\\text{IQR}=20$. Same center, but compare the spread and what it means about consistency. (Class B is far more variable; scores are less consistent.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-concept recall and one-step computation on a small, clean data set (about $5$ to $7$ values, often pre-sorted). Identify shape from a clear display, or compute one statistic (mean, median, or range), or apply a one-line definition. No outlier fences yet.",
+      "constraints": [
+        "Data set has $\\le 7$ values, integers, already sorted or trivially sorted",
+        "Asks for exactly one statistic or a shape label from an unambiguous display",
+        "Median lands on an actual data value (odd $n$); mean is an exact integer or simple fraction",
+        "No IQR fence computation and no comparison of two data sets"
+      ]
+    },
+    "Medium": {
+      "description": "Multi-step computation: find quartiles and IQR, OR apply the full $1.5\\times\\text{IQR}$ outlier test, OR compute how the mean and median each change when one value is altered. Connects center/spread to shape (e.g. mean > median implies skewed right).",
+      "constraints": [
+        "Data set has $8$ to $12$ values requiring correct quartile placement",
+        "Requires $\\text{IQR}=Q_3-Q_1$ and may require both upper and lower fences",
+        "Quantifies the before/after effect of changing or removing one extreme value",
+        "Links the relationship between mean and median to the shape of the distribution"
+      ]
+    },
+    "Hard": {
+      "description": "Reasoning and justification in context: compare two distributions on shape, center, and spread together; decide which center/spread measures are appropriate and defend the choice; reason about standard deviation qualitatively; or solve a backward problem (find a missing value given a target mean or determine what value would make a point an outlier).",
+      "constraints": [
+        "Compares two data sets or two displays across shape, center, AND spread",
+        "Requires choosing resistant vs. non-resistant measures with a written justification",
+        "May reason about standard deviation as relative spread without a heavy formula computation",
+        "May be a reverse problem: solve for an unknown data value given a target mean, or find the boundary value at an outlier fence"
+      ]
+    },
+    "_split": "This standard is conceptually broad (shape + center + spread + outliers + measure selection), so it is authored as a tier1 + tier2 pair. tier1 covers Easy to Medium: describing shape, computing a single center/spread statistic, finding IQR, and the basic $1.5\\times\\text{IQR}$ outlier test. tier2 covers Medium to Hard: quantifying outlier effects on mean vs. median, comparing two distributions, justifying the choice of resistant measures, qualitative standard deviation, and reverse problems. No item overlap between tiers."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Confuses the direction of skew, naming it for the side with the bulk of the data instead of the side with the tail",
+      "distractor": "Calls a distribution with a long left tail 'skewed right' because most points sit on the right"
+    },
+    {
+      "misconception": "Believes the mean is always the best or only measure of center, even for skewed data with outliers",
+      "distractor": "Recommends the mean and range for strongly skewed home-price data instead of the median and IQR"
+    },
+    {
+      "misconception": "Computes IQR as the range or as $Q_3+Q_1$ instead of $Q_3-Q_1$",
+      "distractor": "Reports $\\text{IQR}=Q_3+Q_1$ (e.g. $9+6=15$) or the full range instead of $Q_3-Q_1=3$"
+    },
+    {
+      "misconception": "Uses a fixed cutoff or the wrong multiplier for outliers instead of the $1.5\\times\\text{IQR}$ fences",
+      "distractor": "Calls any value more than $2\\cdot\\text{IQR}$ above the mean an outlier, or uses $Q_3+\\text{IQR}$ as the fence, giving the wrong verdict"
+    },
+    {
+      "misconception": "Thinks an outlier shifts the median as much as the mean, not recognizing the median as resistant",
+      "distractor": "Claims that replacing $12$ with $42$ in $\\{8,9,10,11,12\\}$ raises both the mean and the median"
+    },
+    {
+      "misconception": "Forgets to sort the data before finding the median or quartiles",
+      "distractor": "Reports the middle value of the unsorted list as the median (e.g. takes the $3$rd entry as listed rather than the $3$rd smallest)"
+    },
+    {
+      "misconception": "Confuses measures of center with measures of spread",
+      "distractor": "Names the mean or median when asked for a measure of spread, or names the IQR when asked for center"
+    },
+    {
+      "misconception": "Assumes equal centers mean equal distributions, ignoring spread",
+      "distractor": "Concludes two classes with the same median performed identically even though one has $\\text{IQR}=6$ and the other $\\text{IQR}=20$"
+    }
+  ],
+
+  "_comment_itemCounts": "Authored as a tier1 + tier2 pair because the standard spans shape, center, spread, outliers, and measure selection. tier1 = Easy->Medium, tier2 = Medium->Hard, no item overlap. lesson 5+5, quiz 8.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

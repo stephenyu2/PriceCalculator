@@ -1,0 +1,173 @@
+{
+  "id": "A1.A-CED.A.2--lesson",
+  "standard": "A1.A-CED.A.2",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Creating Equations",
+  "domainCode": "A-CED",
+  "cluster": "Create equations that describe numbers or relationships",
+  "clusterCode": "A",
+  "skillName": "Equations in Two or More Variables",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "When two quantities are related, you can capture that relationship with an equation in two variables. Start by naming each quantity with a variable and its units, then turn the words into an equation, usually slope-intercept form $y=mx+b$ (a starting value plus a constant rate) or standard form $Ax+By=C$ (a constraint or total). From the equation you can build a table of ordered-pair solutions $(x,y)$, choose a sensible scale for each axis, graph the line with labeled axes, and read meaning from the slope (a rate of change) and the intercepts (starting or limiting values). Some relationships among three quantities need a third variable.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A gym charges a $\\$20$ sign-up fee plus $\\$15$ for each month of membership. Let $x$ be the number of months and let $y$ be the total cost in dollars. Write an equation that gives the total cost in terms of the number of months.",
+      "solution": {
+        "steps": [
+          "Identify the two quantities: months $x$ and total cost $y$ (in dollars).",
+          "The $\\$15$ is charged for each month, so it is the rate of change (the slope): it multiplies $x$, giving $15x$.",
+          "The $\\$20$ sign-up fee is a one-time amount that you pay no matter how many months you join, so it is the constant (the $y$-intercept): you add $20$.",
+          "Combine the rate and the constant in slope-intercept form $y=mx+b$ with $m=15$ and $b=20$: $y=15x+20$.",
+          "Check: at $x=0$ months the cost is $y=15(0)+20=20$ (just the fee), and each extra month adds $\\$15$, which matches the situation."
+        ],
+        "answer": "$y=15x+20$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A car travels at a constant speed of $55$ miles per hour. Let $t$ be the number of hours driven and let $d$ be the distance traveled in miles. Write an equation relating $d$ and $t$.",
+      "solution": {
+        "steps": [
+          "Name the quantities: time $t$ in hours and distance $d$ in miles.",
+          "The phrase '$55$ miles per hour' means the car covers $55$ miles for each $1$ hour, so distance is the rate times the time: $d=55\\cdot t$.",
+          "There is no starting distance (at $t=0$ hours the car has gone $0$ miles), so the constant term is $0$. This is a proportional (direct-variation) equation $d=kt$ with $k=55$.",
+          "Write it as $d=55t$.",
+          "Check the units: $\\frac{\\text{miles}}{\\text{hour}}\\times\\text{hours}=\\text{miles}$, which is correct, and at $t=2$ hours $d=55(2)=110$ miles."
+        ],
+        "answer": "$d=55t$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A theater sells adult tickets for $\\$8$ each and child tickets for $\\$5$ each. For one show the total ticket revenue was $\\$200$. Let $a$ be the number of adult tickets sold and $c$ the number of child tickets sold. Write an equation that models this constraint.",
+      "solution": {
+        "steps": [
+          "Find the money from each kind of ticket. Adult tickets bring in $\\$8$ each, so $a$ adult tickets give $8a$ dollars.",
+          "Child tickets bring in $\\$5$ each, so $c$ child tickets give $5c$ dollars.",
+          "The two amounts together equal the total revenue of $\\$200$, so add them: $8a+5c=200$.",
+          "This is standard form $Ax+By=C$ (a constraint or total) rather than $y=mx+b$, because neither variable is naturally 'in terms of' the other; they are linked by a fixed total.",
+          "Match each price to its own quantity: keep $8$ with the adults $a$ and $5$ with the children $c$. Swapping them to $5a+8c=200$ would model a different situation."
+        ],
+        "answer": "$8a+5c=200$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "For the equation $y=2x-3$, build a table of solution pairs for $x=-1,0,1,2$, then describe how you would scale the axes to graph these points.",
+      "solution": {
+        "steps": [
+          "Substitute each $x$ value into $y=2x-3$. At $x=-1$: $y=2(-1)-3=-2-3=-5$, giving $(-1,-5)$.",
+          "At $x=0$: $y=2(0)-3=-3$, giving $(0,-3)$.",
+          "At $x=1$: $y=2(1)-3=2-3=-1$, giving $(1,-1)$.",
+          "At $x=2$: $y=2(2)-3=4-3=1$, giving $(2,1)$.",
+          "The table is $(-1,-5),(0,-3),(1,-1),(2,1)$.",
+          "The $x$ values run from $-1$ to $2$ and the $y$ values from $-5$ to $1$, so let the $x$-axis go from about $-2$ to $3$ and the $y$-axis from about $-6$ to $2$, with a scale of $1$ unit per gridline. Plot the four ordered pairs and draw the line through them."
+        ],
+        "answer": "$(-1,-5),(0,-3),(1,-1),(2,1)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A phone plan charges a fixed base amount plus a cost per minute, modeled by $C=0.10m+25$, where $C$ is the monthly cost in dollars and $m$ is the number of minutes used. Interpret the slope and the $C$-intercept in the context of the plan.",
+      "solution": {
+        "steps": [
+          "Compare $C=0.10m+25$ with slope-intercept form $y=mx+b$. Here the slope is $0.10$ and the constant (the $C$-intercept) is $25$.",
+          "The slope is the rate of change of cost with respect to minutes, so $0.10$ means each additional minute used adds $\\$0.10$ to the monthly cost.",
+          "The $C$-intercept is the value of $C$ when $m=0$: $C=0.10(0)+25=25$. This is the cost with no minutes used, the fixed base charge of $\\$25$.",
+          "So the slope $0.10$ describes the per-minute rate and the intercept $25$ describes the starting (base) cost."
+        ],
+        "answer": "Slope $0.10$: each extra minute adds $\\$0.10$. $C$-intercept $25$: the $\\$25$ base charge when $m=0$ minutes."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A plumber charges a $\\$50$ service fee plus $\\$40$ for each hour of work. Let $x$ be the number of hours and $y$ the total charge in dollars. Write an equation for the total charge in terms of hours.",
+      "hint": "The per-hour amount is the rate (it multiplies $x$); the one-time fee is the constant you add.",
+      "solution": {
+        "steps": [
+          "The $\\$40$ per hour is the rate of change, so it multiplies $x$: $40x$.",
+          "The $\\$50$ service fee is a one-time constant, so add it: $b=50$.",
+          "Write in slope-intercept form $y=mx+b$: $y=40x+50$.",
+          "Check: at $x=0$ hours the charge is $\\$50$ (just the fee), as expected."
+        ],
+        "answer": "$y=40x+50$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Water flows into a tank at a constant rate of $3$ gallons per minute, starting from an empty tank. Let $t$ be minutes and $G$ be gallons in the tank. Write an equation relating $G$ and $t$.",
+      "hint": "There is no water to start, so the constant term is $0$; this is a proportional equation $G=kt$.",
+      "solution": {
+        "steps": [
+          "The rate is $3$ gallons for each minute, so $G=3\\cdot t$.",
+          "The tank starts empty, so at $t=0$ minutes $G=0$ and there is no constant term to add.",
+          "The equation is $G=3t$.",
+          "Check: at $t=4$ minutes $G=3(4)=12$ gallons, which fits $3$ gallons each minute."
+        ],
+        "answer": "$G=3t$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A bakery sells muffins for $\\$3$ each and cookies for $\\$2$ each. One morning the total muffin-and-cookie sales were $\\$60$. Let $m$ be the number of muffins and $c$ the number of cookies. Write an equation modeling this total.",
+      "hint": "Find the money from muffins and from cookies, then set their sum equal to the total. Keep each price with its own item.",
+      "solution": {
+        "steps": [
+          "Muffins bring in $\\$3$ each, so $m$ muffins give $3m$ dollars.",
+          "Cookies bring in $\\$2$ each, so $c$ cookies give $2c$ dollars.",
+          "Their sum is the total of $\\$60$: $3m+2c=60$.",
+          "Keep $3$ with the muffins $m$ and $2$ with the cookies $c$; this is standard form $Ax+By=C$."
+        ],
+        "answer": "$3m+2c=60$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "For the equation $y=-3x+4$, complete a table of solution pairs for $x=-1,0,1,2$.",
+      "hint": "Substitute each $x$ into $y=-3x+4$ and watch the signs, especially when $x$ is negative.",
+      "solution": {
+        "steps": [
+          "At $x=-1$: $y=-3(-1)+4=3+4=7$, giving $(-1,7)$.",
+          "At $x=0$: $y=-3(0)+4=4$, giving $(0,4)$.",
+          "At $x=1$: $y=-3(1)+4=-3+4=1$, giving $(1,1)$.",
+          "At $x=2$: $y=-3(2)+4=-6+4=-2$, giving $(2,-2)$.",
+          "The table is $(-1,7),(0,4),(1,1),(2,-2)$."
+        ],
+        "answer": "$(-1,7),(0,4),(1,1),(2,-2)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A snack stand sells popcorn at $\\$4$, soda at $\\$3$, and candy at $\\$2$ each. In one evening it took in $\\$120$. Let $p$, $s$, and $d$ be the numbers of popcorn, soda, and candy sold. Write an equation in three variables that models the total revenue.",
+      "hint": "Multiply each price by its quantity and add the three products; set the sum equal to the total revenue.",
+      "solution": {
+        "steps": [
+          "Popcorn gives $4p$ dollars, soda gives $3s$ dollars, and candy gives $2d$ dollars.",
+          "Add the three amounts to get the total revenue and set it equal to $\\$120$.",
+          "The equation in three variables is $4p+3s+2d=120$.",
+          "Each price stays attached to its own item, so a wrong pairing (for example $2p+3s+4d=120$) would model a different stand."
+        ],
+        "answer": "$4p+3s+2d=120$"
+      }
+    }
+  ]
+}

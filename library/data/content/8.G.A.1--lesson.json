@@ -1,0 +1,165 @@
+{
+  "id": "8.G.A.1--lesson",
+  "standard": "8.G.A.1",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand congruence and similarity using physical models, transparencies, or geometry software",
+  "clusterCode": "A",
+  "skillName": "Properties of Rigid Transformations",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "A rigid motion is a transformation that moves a figure without changing its size or shape. Translations (slides), reflections (flips), and rotations (turns) are all rigid motions. They share three key properties: line segments map to line segments of the same length, angles map to angles of the same measure, and parallel lines map to parallel lines. In short, distance and angle measure are preserved. Reflections also reverse orientation, while translations and rotations keep it. This lesson uses coordinate rules to apply each motion and to verify that these properties hold.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Point $A(3,-2)$ is rotated $90^\\circ$ counterclockwise about the origin. What are the coordinates of its image $A'$?",
+      "solution": {
+        "steps": [
+          "The rule for a $90^\\circ$ counterclockwise rotation about the origin is $(x,y)\\to(-y,\\,x)$.",
+          "Here $x=3$ and $y=-2$, so $-y=-(-2)=2$ and $x=3$.",
+          "Substitute into the rule: $A(3,-2)\\to A'(-y,\\,x)=(2,\\,3)$.",
+          "Because a rotation is a rigid motion, $A'$ is the same distance from the origin as $A$ and the figure's size and shape are unchanged."
+        ],
+        "answer": "$A'(2,\\,3)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Segment $\\overline{PQ}$ has endpoints $P(1,2)$ and $Q(5,5)$. After the translation $(x,y)\\to(x-3,\\;y+1)$, show that the image segment $\\overline{P'Q'}$ has the same length as $\\overline{PQ}$.",
+      "solution": {
+        "steps": [
+          "Find the length of $\\overline{PQ}$ with the distance formula: $PQ=\\sqrt{(5-1)^2+(5-2)^2}=\\sqrt{4^2+3^2}=\\sqrt{16+9}=\\sqrt{25}=5$.",
+          "Apply the translation to each endpoint. $P(1,2)\\to P'(1-3,\\,2+1)=(-2,\\,3)$.",
+          "$Q(5,5)\\to Q'(5-3,\\,5+1)=(2,\\,6)$.",
+          "Find the length of $\\overline{P'Q'}$: $P'Q'=\\sqrt{(2-(-2))^2+(6-3)^2}=\\sqrt{4^2+3^2}=\\sqrt{25}=5$.",
+          "Since $PQ=5$ and $P'Q'=5$, the lengths are equal. This confirms that a translation preserves segment length, a defining property of a rigid motion."
+        ],
+        "answer": "Both segments have length $5$, so the translation preserves length."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "In triangle $ABC$, angle $B$ measures $58^\\circ$. The triangle is reflected over the $y$-axis to form triangle $A'B'C'$. What is the measure of the corresponding angle $B'$, and why?",
+      "solution": {
+        "steps": [
+          "A reflection over the $y$-axis uses the rule $(x,y)\\to(-x,\\,y)$.",
+          "A reflection is a rigid motion, so it maps every angle to an angle of the exactly the same measure.",
+          "Therefore angle $B'$ has the same measure as angle $B$: $m\\angle B'=58^\\circ$.",
+          "Note that a reflection reverses orientation (the vertices read in the opposite rotational order), but it does not change any angle measure or any side length."
+        ],
+        "answer": "$m\\angle B'=58^\\circ$, because a reflection preserves angle measure."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Lines $\\ell$ and $m$ are parallel, each with slope $\\frac{2}{3}$. After a $180^\\circ$ rotation about the origin, what are the slopes of their images, and are the images still parallel?",
+      "solution": {
+        "steps": [
+          "A $180^\\circ$ rotation about the origin uses the rule $(x,y)\\to(-x,\\,-y)$.",
+          "Take any two points on line $\\ell$, say $(x_1,y_1)$ and $(x_2,y_2)$. Their images are $(-x_1,-y_1)$ and $(-x_2,-y_2)$.",
+          "The slope of the image line is $\\dfrac{-y_2-(-y_1)}{-x_2-(-x_1)}=\\dfrac{-(y_2-y_1)}{-(x_2-x_1)}=\\dfrac{y_2-y_1}{x_2-x_1}$, the same slope as the original.",
+          "So the image of $\\ell$ has slope $\\frac{2}{3}$ and the image of $m$ has slope $\\frac{2}{3}$.",
+          "Because both image lines have equal slopes $\\frac{2}{3}$, they are parallel. A rigid motion maps parallel lines to parallel lines."
+        ],
+        "answer": "Both images have slope $\\frac{2}{3}$ and remain parallel."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A square has side length $4$. A transformation maps it to a square whose sides each measure $8$. Is this transformation a rigid motion? Justify your answer using the length-preservation property.",
+      "solution": {
+        "steps": [
+          "A rigid motion preserves length: every segment maps to a segment of the same length.",
+          "Here each side changes from $4$ to $8$, so the lengths are not preserved ($8\\neq 4$).",
+          "Because at least one length changed, the transformation cannot be a rigid motion.",
+          "This is a dilation with scale factor $2$, which changes size while keeping shape, so it is a non-rigid (similarity) transformation."
+        ],
+        "answer": "No. It is not a rigid motion because the side lengths change (from $4$ to $8$); it is a dilation."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Point $D(-4,1)$ is reflected over the $x$-axis. What are the coordinates of its image $D'$?",
+      "hint": "Reflecting over the $x$-axis uses the rule $(x,y)\\to(x,\\,-y)$: keep $x$, negate $y$.",
+      "solution": {
+        "steps": [
+          "Apply the rule $(x,y)\\to(x,\\,-y)$ with $x=-4$ and $y=1$.",
+          "Keep $x=-4$ and negate $y$: $-y=-(1)=-1$.",
+          "So $D(-4,1)\\to D'(-4,\\,-1)$."
+        ],
+        "answer": "$D'(-4,\\,-1)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Point $E(2,5)$ is translated by the rule $(x,y)\\to(x+3,\\;y-4)$. What are the coordinates of $E'$?",
+      "hint": "Add $3$ to the $x$-coordinate and subtract $4$ from the $y$-coordinate.",
+      "solution": {
+        "steps": [
+          "Apply the rule to $E(2,5)$: new $x=2+3=5$.",
+          "New $y=5-4=1$.",
+          "So $E(2,5)\\to E'(5,\\,1)$."
+        ],
+        "answer": "$E'(5,\\,1)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Segment $\\overline{FG}$ has endpoints $F(-1,-1)$ and $G(2,3)$. Use the distance formula to find its length.",
+      "hint": "Length $=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$.",
+      "solution": {
+        "steps": [
+          "Substitute into the distance formula: $FG=\\sqrt{(2-(-1))^2+(3-(-1))^2}$.",
+          "Simplify inside: $FG=\\sqrt{3^2+4^2}=\\sqrt{9+16}$.",
+          "$FG=\\sqrt{25}=5$.",
+          "After any rigid motion, the image of $\\overline{FG}$ would also have length $5$."
+        ],
+        "answer": "$FG=5$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Triangle $JKL$ has angle $K=73^\\circ$. The triangle is rotated $90^\\circ$ clockwise about the origin. What is the measure of the corresponding angle $K'$, and why?",
+      "hint": "A rotation is a rigid motion. Think about which quantities a rigid motion leaves unchanged.",
+      "solution": {
+        "steps": [
+          "A rotation is a rigid motion, so it preserves angle measure.",
+          "The image angle $K'$ corresponds to angle $K$, so it has the same measure.",
+          "Therefore $m\\angle K'=73^\\circ$.",
+          "Rotations also preserve length and orientation, so the image triangle is congruent to the original."
+        ],
+        "answer": "$m\\angle K'=73^\\circ$, because a rotation preserves angle measure."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A triangle with vertices $(2,1),(4,1),(2,5)$ maps to the triangle with vertices $(2,-1),(4,-1),(2,-5)$. Which single rigid motion was applied?",
+      "hint": "Compare each point to its image. What happens to each $x$-coordinate and each $y$-coordinate?",
+      "solution": {
+        "steps": [
+          "Compare each vertex with its image: $(2,1)\\to(2,-1)$, $(4,1)\\to(4,-1)$, $(2,5)\\to(2,-5)$.",
+          "In every case the $x$-coordinate stays the same and the $y$-coordinate is negated.",
+          "This matches the rule $(x,y)\\to(x,\\,-y)$, which is a reflection over the $x$-axis.",
+          "The transformation is a reflection over the $x$-axis."
+        ],
+        "answer": "A reflection over the $x$-axis, $(x,y)\\to(x,\\,-y)$."
+      }
+    }
+  ]
+}

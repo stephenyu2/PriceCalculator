@@ -1,0 +1,176 @@
+{
+  "id": "GEO.G-CO.D.12--lesson",
+  "standard": "GEO.G-CO.D.12",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Make geometric constructions",
+  "clusterCode": "D",
+  "skillName": "Formal Geometric Constructions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "A formal construction uses only a compass and a straightedge, and every construction is justified by geometry, not by how the picture looks. The compass guarantees equal distances: any two segments drawn with the same compass opening are congruent because they share a radius. From that single fact you build everything else. Equal radii produce congruent triangles (usually by SSS), and congruent triangles hand you congruent angles, perpendicular lines, and parallel lines through CPCTC. As you read each example, notice which step depends on keeping the compass width fixed, what congruent triangles appear, and which postulate (almost always SSS) proves them congruent.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Copy segment $\\overline{AB}$ onto a ray that starts at point $A'$. Describe the compass-and-straightedge steps and explain why the new segment is congruent to $\\overline{AB}$.",
+      "solution": {
+        "steps": [
+          "Draw a ray with endpoint $A'$ using the straightedge. This is where the copy will live.",
+          "Place the compass point on $A$ and open it until the pencil point rests on $B$. The compass opening now equals the length $AB$.",
+          "Without changing the compass width, move the compass point to $A'$ and strike an arc that crosses the ray. Label the crossing point $B'$.",
+          "Because the compass width was not changed, $A'B'$ equals the same radius as $AB$, so $A'B' = AB$.",
+          "Equal lengths give congruent segments, so $\\overline{A'B'} \\cong \\overline{AB}$. The construction works because the fixed compass opening transfers the exact distance."
+        ],
+        "answer": "$\\overline{A'B'} \\cong \\overline{AB}$ because both segments equal the same fixed compass radius."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Construct the perpendicular bisector of $\\overline{AB}$. List the steps and explain why every point on the constructed line is equidistant from $A$ and $B$.",
+      "solution": {
+        "steps": [
+          "Open the compass to a width greater than $\\frac{1}{2}AB$. This guarantees the two arcs will overlap; a smaller width would leave a gap.",
+          "Place the compass point at $A$ and draw an arc above and below the segment. Keeping the same width, place the compass point at $B$ and draw a second arc. Label the two intersection points $C$ (above) and $D$ (below).",
+          "Because both arcs used the same radius $r$, we have $CA = CB = r$ and $DA = DB = r$. So $C$ and $D$ are each equidistant from $A$ and $B$.",
+          "Draw line $\\overleftrightarrow{CD}$ with the straightedge. Both $C$ and $D$ are equidistant from $A$ and $B$, and the set of points equidistant from the two endpoints of a segment is exactly its perpendicular bisector.",
+          "Therefore $\\overleftrightarrow{CD}$ is the perpendicular bisector of $\\overline{AB}$: it passes through the midpoint and meets $\\overline{AB}$ at a right angle, and every point on it satisfies $PA = PB$."
+        ],
+        "answer": "$\\overleftrightarrow{CD}$ is the perpendicular bisector of $\\overline{AB}$; every point on it is equidistant from $A$ and $B$ because the equal compass radii force $CA = CB$ and $DA = DB$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Bisect $\\angle ABC$. Give the steps and name the congruence postulate that proves the ray you draw splits the angle into two congruent angles.",
+      "solution": {
+        "steps": [
+          "Place the compass point at the vertex $B$ and draw an arc that crosses ray $\\overrightarrow{BA}$ at $P$ and ray $\\overrightarrow{BC}$ at $Q$. Because the arc has one radius, $BP = BQ$.",
+          "Keeping a fixed compass width, place the point at $P$ and draw an arc in the interior of the angle, then place the point at $Q$ and draw another arc of the same radius. Label their intersection $R$. Then $PR = QR$ because both arcs used the same radius.",
+          "Draw ray $\\overrightarrow{BR}$ with the straightedge. This is the proposed bisector.",
+          "Compare $\\triangle BPR$ and $\\triangle BQR$: $BP = BQ$ (step 1), $PR = QR$ (step 2), and $BR = BR$ (shared side). All three pairs of sides are congruent, so $\\triangle BPR \\cong \\triangle BQR$ by SSS.",
+          "By CPCTC, $\\angle PBR \\cong \\angle QBR$. So $\\overrightarrow{BR}$ bisects $\\angle ABC$. The postulate that justifies the construction is SSS."
+        ],
+        "answer": "$\\overrightarrow{BR}$ bisects $\\angle ABC$; $\\triangle BPR \\cong \\triangle BQR$ by SSS, and CPCTC gives $\\angle PBR \\cong \\angle QBR$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Construct a line perpendicular to line $\\ell$ passing through a point $P$ that lies on $\\ell$. Describe the steps and justify why the result is perpendicular.",
+      "solution": {
+        "steps": [
+          "With the compass point at $P$, strike equal arcs that cross $\\ell$ on both sides of $P$, marking points $A$ and $B$. Because one radius was used, $PA = PB$, so $P$ is the midpoint of $\\overline{AB}$.",
+          "Open the compass wider than $\\frac{1}{2}AB$. From $A$, draw an arc above the line; from $B$, draw an arc of the same width above the line. Label their intersection $Q$. Then $QA = QB$ because both arcs share a radius.",
+          "Draw line $\\overleftrightarrow{PQ}$ with the straightedge.",
+          "Now $Q$ is equidistant from $A$ and $B$, and $P$ is the midpoint of $\\overline{AB}$, so both $P$ and $Q$ lie on the perpendicular bisector of $\\overline{AB}$. That bisector is perpendicular to $\\overline{AB}$, which lies along $\\ell$.",
+          "Therefore $\\overleftrightarrow{PQ} \\perp \\ell$ at $P$. The construction reuses the perpendicular-bisector idea: equal radii make $P$ and $Q$ equidistant from $A$ and $B$, forcing a right angle at $P$."
+        ],
+        "answer": "$\\overleftrightarrow{PQ} \\perp \\ell$ at $P$, because $P$ and $Q$ are both equidistant from $A$ and $B$ and so lie on the perpendicular bisector of $\\overline{AB}$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Construct a line through point $P$ (not on line $\\ell$) parallel to $\\ell$ using the copied-angle method. Describe the steps and state which angle relationship guarantees the lines are parallel.",
+      "solution": {
+        "steps": [
+          "Draw a transversal: use the straightedge to draw a line through $P$ that crosses $\\ell$ at a point $A$.",
+          "Copy the angle that the transversal makes with $\\ell$ at $A$, placing the copy at $P$ so that it opens in the corresponding position (same side of the transversal, same side of the new line as the original angle is at $A$).",
+          "To copy the angle, draw an arc centered at $A$ crossing both the transversal and $\\ell$, then reproduce that same arc and its chord width at $P$ using the fixed compass openings, exactly as in the copy-an-angle construction.",
+          "Draw line $m$ through $P$ along the new side of the copied angle.",
+          "The copied angle at $P$ and the original angle at $A$ are congruent corresponding angles formed by the transversal. By the Converse of the Corresponding Angles Postulate, congruent corresponding angles force $m \\parallel \\ell$.",
+          "Therefore line $m$ through $P$ is parallel to $\\ell$. The parallel result is guaranteed by congruent corresponding angles, not by how parallel the lines appear."
+        ],
+        "answer": "Line $m$ through $P$ is parallel to $\\ell$; congruent corresponding angles (by the converse of the corresponding angles postulate) guarantee $m \\parallel \\ell$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A student copies $\\overline{AB}$ onto a new ray but accidentally opens the compass a little wider after marking the length $AB$ and before striking the arc on the new ray. Explain why the resulting segment $\\overline{A'B'}$ is not congruent to $\\overline{AB}$.",
+      "hint": "A copied segment is congruent only because the compass radius stays fixed. What changes when the width is reopened?",
+      "solution": {
+        "steps": [
+          "Copying a segment relies on the compass opening staying equal to $AB$ from the moment it is set on $\\overline{AB}$ until the arc is struck on the new ray.",
+          "When the student widens the compass, the new opening is some length $r > AB$, so the arc on the new ray is struck at radius $r$, giving $A'B' = r$.",
+          "Since $r \\ne AB$, the lengths differ: $A'B' \\ne AB$.",
+          "Congruent segments must have equal length, so $\\overline{A'B'} \\not\\cong \\overline{AB}$. The construction fails because the two segments no longer share the same radius."
+        ],
+        "answer": "$\\overline{A'B'} \\not\\cong \\overline{AB}$ because reopening the compass makes $A'B' = r \\ne AB$, so the segments no longer share a common radius."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "In the perpendicular-bisector construction of $\\overline{AB}$, arcs of equal radius drawn from $A$ and from $B$ meet at point $C$. State why $CA = CB$, and name the geometric fact that lets you conclude $C$ lies on the perpendicular bisector of $\\overline{AB}$.",
+      "hint": "Both arcs were drawn with one compass setting. What does the same radius force to be equal?",
+      "solution": {
+        "steps": [
+          "The arc from $A$ and the arc from $B$ were both drawn with the same compass radius $r$.",
+          "Point $C$ is on the arc centered at $A$, so $CA = r$. Point $C$ is also on the arc centered at $B$, so $CB = r$.",
+          "Therefore $CA = CB = r$, meaning $C$ is equidistant from $A$ and $B$.",
+          "Any point equidistant from the two endpoints of a segment lies on the perpendicular bisector of that segment, so $C$ lies on the perpendicular bisector of $\\overline{AB}$."
+        ],
+        "answer": "$CA = CB$ because both equal the common compass radius; a point equidistant from $A$ and $B$ lies on the perpendicular bisector of $\\overline{AB}$, so $C$ is on it."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "When bisecting $\\angle ABC$, a student claims triangles $\\triangle BPR$ and $\\triangle BQR$ are congruent by SAS. Identify the correct congruence postulate, state the three pairs of congruent parts, and explain why SAS is not the right choice here.",
+      "hint": "List exactly what equal radii and the shared side give you. Are you given an angle between two sides, or three sides?",
+      "solution": {
+        "steps": [
+          "The construction gives $BP = BQ$ (the first arc from $B$ used one radius) and $PR = QR$ (the arcs from $P$ and $Q$ used one radius).",
+          "The two triangles share side $BR$, so $BR = BR$.",
+          "That is three pairs of congruent sides: $BP \\cong BQ$, $PR \\cong QR$, and $BR \\cong BR$. Three pairs of sides is the SSS postulate.",
+          "SAS requires two sides and the included angle between them. The construction never gives a pair of congruent included angles; it gives a third pair of sides. So SSS, not SAS, is the correct postulate.",
+          "By SSS, $\\triangle BPR \\cong \\triangle BQR$, and CPCTC then gives $\\angle PBR \\cong \\angle QBR$, confirming the bisector."
+        ],
+        "answer": "The correct postulate is SSS, using $BP \\cong BQ$, $PR \\cong QR$, and the shared side $BR \\cong BR$; SAS is wrong because no included angle is given, only a third pair of sides."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Two towns $A$ and $B$ are marked on a map, and a straight road $r$ runs across the map. The town planners want a fire station that is equally far from both towns and that sits on road $r$. Describe the construction that locates the station and explain why it works.",
+      "hint": "Where do all points equidistant from $A$ and $B$ lie? Then how do you get a single point on the road?",
+      "solution": {
+        "steps": [
+          "Construct the perpendicular bisector of $\\overline{AB}$: open the compass wider than $\\frac{1}{2}AB$, strike equal arcs from $A$ and from $B$ that meet at two points, and draw the line through those two points.",
+          "Every point on this perpendicular bisector is equidistant from $A$ and $B$, because the equal radii force each point to satisfy (distance to $A$) $=$ (distance to $B$).",
+          "Find where the perpendicular bisector crosses road $r$. Call that intersection point $S$.",
+          "Because $S$ is on the perpendicular bisector, $SA = SB$, so the station is equally far from both towns. Because $S$ is on road $r$, the station sits on the road.",
+          "Therefore $S$ is the required location. (If the perpendicular bisector is parallel to $r$ and never meets it, no such point exists.)"
+        ],
+        "answer": "Build the perpendicular bisector of $\\overline{AB}$ and place the station at its intersection $S$ with road $r$; $S$ works because every perpendicular-bisector point satisfies $SA = SB$, and $S$ also lies on the road."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A student constructs a line through $P$ meant to be parallel to $\\ell$ by copying an angle, but copies it so that the new angle and the original angle are congruent same-side interior (co-interior) angles instead of corresponding angles. Explain why this does not guarantee the constructed line is parallel to $\\ell$, and state what is actually true about the constructed line.",
+      "hint": "Parallel lines make co-interior angles supplementary, not congruent. What must congruent co-interior angles each measure for the lines to be parallel?",
+      "solution": {
+        "steps": [
+          "For a transversal cutting two lines, the lines are parallel exactly when corresponding angles are congruent, alternate interior angles are congruent, or same-side (co-interior) interior angles are supplementary (sum to $180^\\circ$).",
+          "The student made the two co-interior angles congruent, not supplementary. Congruent co-interior angles are equal, but the parallel condition needs them to add to $180^\\circ$.",
+          "Two congruent co-interior angles are supplementary only if each equals $90^\\circ$. Unless the original angle happens to be a right angle, the congruent copy does not satisfy the parallel condition.",
+          "So in general the constructed line is not parallel to $\\ell$. The correct construction copies the angle as a corresponding (or alternate interior) angle so the angles are congruent in a pair whose congruence does force parallelism.",
+          "What is actually true: the constructed line is parallel to $\\ell$ only in the special case where the copied angle measures $90^\\circ$; otherwise it crosses $\\ell$."
+        ],
+        "answer": "Congruent co-interior angles do not force parallel lines (they would need to be supplementary, i.e. each $90^\\circ$), so in general the line is not parallel to $\\ell$; the student should have copied a corresponding or alternate interior angle instead."
+      }
+    }
+  ]
+}

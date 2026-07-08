@@ -1,0 +1,173 @@
+{
+  "id": "A1.N-Q.A.3--lesson",
+  "standard": "A1.N-Q.A.3",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Quantities",
+  "domainCode": "N-Q",
+  "cluster": "Reason quantitatively and use units to solve problems",
+  "clusterCode": "A",
+  "skillName": "Accuracy and Measurement Limitations",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "Every measurement carries a limit on how precisely it can be known. A reported quantity should never look more precise than the data it came from. In this lesson you will read the precision of a measuring tool, count significant figures, round to a stated accuracy, and propagate precision through arithmetic: products and quotients keep the significant figures of the least-precise factor, while sums and differences keep the least precise decimal place. You will also separate accuracy (closeness to the true value) from precision (fineness of the scale).",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A graduated cylinder is marked in increments of $1\\text{ mL}$. To what precision can you report a volume, and how should a reading of $24\\text{ mL}$ be written with its uncertainty?",
+      "solution": {
+        "steps": [
+          "The reading uncertainty of an instrument is half of its smallest scale division.",
+          "The smallest division here is $1\\text{ mL}$, so the uncertainty is $\\frac{1}{2}(1\\text{ mL}) = \\pm 0.5\\text{ mL}$.",
+          "A reading made between marks is justified to the tenths place, so report the value as $24.0\\text{ mL}$.",
+          "Attach the uncertainty: $24.0 \\pm 0.5\\text{ mL}$.",
+          "Reporting $\\pm 1\\text{ mL}$ would be the common error of using the full division instead of half of it."
+        ],
+        "answer": "$24.0 \\pm 0.5\\text{ mL}$ (precision to $\\pm 0.5\\text{ mL}$)"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "How many significant figures are in the measurement $0.04060\\text{ kg}$?",
+      "solution": {
+        "steps": [
+          "Leading zeros only locate the decimal point and are never significant. The two zeros in $0.0\\ldots$ do not count.",
+          "Start counting at the first nonzero digit, the $4$.",
+          "The embedded zero between $4$ and $6$ is significant because it sits between nonzero digits: $4, 0, 6$.",
+          "The trailing zero after the $6$ comes after the decimal point, so it is significant: it shows the measurement was read to that place.",
+          "Significant digits: $4, 0, 6, 0$, which is $4$ significant figures."
+        ],
+        "answer": "$4$ significant figures"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Round the measured length $12.847\\text{ cm}$ to $3$ significant figures.",
+      "solution": {
+        "steps": [
+          "Count off the first $3$ significant figures from the left: $1$, $2$, $8$.",
+          "The next digit decides the rounding. It is $4$.",
+          "Since $4 < 5$, the third kept digit stays as $8$ (round down).",
+          "Drop the remaining digits, keeping the value at the hundredths place.",
+          "The result is $12.8\\text{ cm}$."
+        ],
+        "answer": "$12.8\\text{ cm}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A rectangle is measured as $4.7\\text{ cm}$ by $2.31\\text{ cm}$. Report its area to the appropriate number of significant figures.",
+      "solution": {
+        "steps": [
+          "Multiply the full measured values: $4.7 \\times 2.31 = 10.857\\text{ cm}^2$.",
+          "For multiplication, the result keeps the significant figures of the least-precise factor.",
+          "$4.7$ has $2$ significant figures; $2.31$ has $3$. The limiting factor is $4.7$ with $2$ significant figures.",
+          "Round $10.857$ to $2$ significant figures: the third digit is $8 \\geq 5$, so the second digit $0$ rounds up to $1$, giving $11$.",
+          "Report the area as $11\\text{ cm}^2$. Writing $10.857\\text{ cm}^2$ would falsely claim $5$-figure precision."
+        ],
+        "answer": "$11\\text{ cm}^2$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Add the measured lengths $13.2\\text{ cm}$ and $0.057\\text{ cm}$ and report the sum to the correct precision.",
+      "solution": {
+        "steps": [
+          "Add the values exactly: $13.2 + 0.057 = 13.257\\text{ cm}$.",
+          "For addition, the result is reported to the least precise decimal place among the addends, not by significant figures.",
+          "$13.2$ is known only to the tenths place; $0.057$ is known to the thousandths place. The least precise is the tenths place.",
+          "Round $13.257$ to the tenths place: the digit after the tenths is $5$, so the tenths digit $2$ rounds up to $3$.",
+          "Report the sum as $13.3\\text{ cm}$. Reporting $13\\text{ cm}$ would wrongly apply the significant-figure rule to addition."
+        ],
+        "answer": "$13.3\\text{ cm}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A ruler is marked in increments of $0.1\\text{ cm}$. What is the reading uncertainty of a length measured with this ruler?",
+      "hint": "The reading uncertainty is half of the smallest scale division.",
+      "solution": {
+        "steps": [
+          "The smallest division is $0.1\\text{ cm}$.",
+          "The reading uncertainty is half of this: $\\frac{1}{2}(0.1\\text{ cm}) = \\pm 0.05\\text{ cm}$.",
+          "So a length read with this ruler is uncertain by $\\pm 0.05\\text{ cm}$."
+        ],
+        "answer": "$\\pm 0.05\\text{ cm}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "How many significant figures are in the measurement $0.003020\\text{ s}$?",
+      "hint": "Leading zeros do not count; embedded zeros and trailing zeros after the decimal point do count.",
+      "solution": {
+        "steps": [
+          "The leading zeros in $0.00$ only place the decimal point and are not significant.",
+          "Begin counting at the first nonzero digit, $3$.",
+          "The embedded zero in $3, 0, 2$ is significant; the trailing zero after $2$ is significant because it follows the decimal point.",
+          "Significant digits: $3, 0, 2, 0$, which is $4$ significant figures."
+        ],
+        "answer": "$4$ significant figures"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Round the measured mass $5.6749\\text{ g}$ to $3$ significant figures.",
+      "hint": "Identify the first three significant figures, then look at the next digit to decide whether to round up.",
+      "solution": {
+        "steps": [
+          "The first $3$ significant figures are $5$, $6$, $7$.",
+          "The next digit is $4$, and $4 < 5$, so round down (keep the $7$).",
+          "Drop the remaining digits, keeping the value to the hundredths place.",
+          "The result is $5.67\\text{ g}$."
+        ],
+        "answer": "$5.67\\text{ g}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A strip of metal is measured as $3.05\\text{ m}$ long and $0.40\\text{ m}$ wide. Report the area to the appropriate number of significant figures.",
+      "hint": "Multiply, then keep only as many significant figures as the factor with the fewest.",
+      "solution": {
+        "steps": [
+          "Multiply the measured values: $3.05 \\times 0.40 = 1.22\\text{ m}^2$.",
+          "Count significant figures: $3.05$ has $3$, and $0.40$ has $2$ (the trailing zero after the decimal counts).",
+          "The limiting factor is $0.40$ with $2$ significant figures.",
+          "Round $1.22$ to $2$ significant figures: the third digit is $2 < 5$, so it rounds down to $1.2$.",
+          "Report the area as $1.2\\text{ m}^2$."
+        ],
+        "answer": "$1.2\\text{ m}^2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Two balances each weigh an object whose true mass is $20.0\\text{ g}$. Balance A reads $20.41\\text{ g}$, $20.42\\text{ g}$, $20.40\\text{ g}$. Balance B reads $19.9\\text{ g}$, $20.1\\text{ g}$, $20.0\\text{ g}$. Which balance is more precise, and which is more accurate?",
+      "hint": "Precision is how tightly the readings cluster; accuracy is how close they center on the true value of $20.0\\text{ g}$.",
+      "solution": {
+        "steps": [
+          "Look at the spread of each set. Balance A's readings range only from $20.40$ to $20.42\\text{ g}$, a very tight cluster, so A is more precise.",
+          "Balance B's readings range from $19.9$ to $20.1\\text{ g}$, a wider spread, so B is less precise.",
+          "Now compare each cluster's center to the true value $20.0\\text{ g}$. Balance A centers near $20.41\\text{ g}$, about $0.4\\text{ g}$ too high, so A is less accurate.",
+          "Balance B centers on $20.0\\text{ g}$, right on the true value, so B is more accurate.",
+          "Conclusion: Balance A is more precise but less accurate; Balance B is more accurate but less precise. Tight agreement does not guarantee closeness to the true value."
+        ],
+        "answer": "Balance A is more precise (tightly clustered); Balance B is more accurate (centered on the true $20.0\\text{ g}$)."
+      }
+    }
+  ]
+}

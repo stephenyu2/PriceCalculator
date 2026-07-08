@@ -1,0 +1,132 @@
+{
+  "standard": "A1.F-BF.B.3",
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Building Functions",
+  "domainCode": "F-BF",
+  "cluster": "Build new functions from existing functions",
+  "clusterCode": "B",
+  "skillName": "Transformations of Functions",
+
+  "description": "Students identify and describe how the graph of a parent function $f(x)$ changes when it is replaced by $f(x)+k$, $kf(x)$, $f(kx)$, or $f(x+k)$ for specific positive and negative values of $k$. They name each transformation (vertical shift, vertical stretch/compression and reflection across the $x$-axis, horizontal stretch/compression and reflection across the $y$-axis, horizontal shift), predict the new graph or equation, and work backward to find the value of $k$ from a given graph or pair of graphs. They reason carefully about the counterintuitive direction of horizontal transformations, where $f(x+k)$ shifts left for positive $k$ and $f(kx)$ compresses horizontally for $|k|>1$.",
+
+  "subSkills": [
+    "Identify a vertical shift: $f(x)+k$ moves the graph up for $k>0$ and down for $k<0$ by $|k|$ units",
+    "Identify a vertical stretch or compression: $kf(x)$ scales outputs by $|k|$, stretching for $|k|>1$ and compressing for $0<|k|<1$",
+    "Recognize reflection across the $x$-axis when $k<0$ in $kf(x)$, and across the $y$-axis when $k<0$ in $f(kx)$",
+    "Identify a horizontal shift: $f(x+k)$ moves the graph left for $k>0$ and right for $k<0$ by $|k|$ units",
+    "Identify a horizontal stretch or compression: $f(kx)$ compresses toward the $y$-axis for $|k|>1$ and stretches for $0<|k|<1$",
+    "Apply a transformation to a specific point on the parent graph to predict the image point",
+    "Write the equation of a transformed function given a description, and describe the transformation given two equations",
+    "Find the value of $k$ from a graph or from a parent-and-image graph pair"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Name the transformation from the equation",
+      "example": "Describe how the graph of $g(x)=f(x)-4$ compares to $f(x)$. Answer: a vertical shift down $4$ units."
+    },
+    {
+      "name": "Vertical stretch, compression, or reflection",
+      "example": "Describe $g(x)=-3f(x)$ relative to $f(x)$. Answer: a reflection across the $x$-axis and a vertical stretch by a factor of $3$."
+    },
+    {
+      "name": "Horizontal shift (direction reversal)",
+      "example": "Describe $g(x)=f(x+5)$ relative to $f(x)$. Answer: a horizontal shift left $5$ units."
+    },
+    {
+      "name": "Horizontal stretch or compression",
+      "example": "Describe $g(x)=f(2x)$ relative to $f(x)$. Answer: a horizontal compression by a factor of $\\frac{1}{2}$ (toward the $y$-axis)."
+    },
+    {
+      "name": "Transform a point on the graph",
+      "example": "The point $(3,8)$ is on $y=f(x)$. Find its image on $y=f(x)+5$ and on $y=2f(x)$. Answers: $(3,13)$ and $(3,16)$."
+    },
+    {
+      "name": "Apply to a concrete parent function",
+      "example": "If $f(x)=x^{2}$, write the equation for the graph shifted right $3$ and up $1$. Answer: $g(x)=(x-3)^{2}+1$."
+    },
+    {
+      "name": "Find k from a graph or graph pair",
+      "example": "The graph of $g$ is the graph of $f(x)=x^{2}$ moved so its vertex is at $(0,-6)$. Find $k$ in $g(x)=f(x)+k$. Answer: $k=-6$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "A single transformation of the most intuitive types: a vertical shift $f(x)+k$ or a vertical stretch/compression/reflection $kf(x)$, with $k$ an integer or simple value. The student names the transformation from the equation or writes the equation from a stated single transformation. No horizontal direction reversal and no working backward from a graph.",
+      "constraints": [
+        "Exactly one transformation, drawn from $f(x)+k$ or $kf(x)$",
+        "$k$ is a small integer (or $\\frac{1}{2}$ for a simple compression)",
+        "Task is name-the-transformation or write-the-equation, never find $k$ from a picture",
+        "Direction is intuitive: up/down for $+k$, taller/shorter for the multiplier"
+      ]
+    },
+    "Medium": {
+      "description": "A single transformation that includes the counterintuitive horizontal cases $f(x+k)$ and $f(kx)$, where the student must reverse the expected direction, or a vertical case applied to a specific point or a named parent function. May ask the student to find $k$ from a clearly described single shift.",
+      "constraints": [
+        "Still one transformation, but now may be horizontal ($f(x+k)$ shifts opposite the sign of $k$; $f(kx)$ compresses for $|k|>1$)",
+        "May apply the transformation to a given point $(a,b)$ or to a named parent such as $f(x)=x^{2}$ or $f(x)=|x|$",
+        "May ask the student to find $k$ from a single described or graphed shift",
+        "tier1 (Easy to Medium) lives here: single transformations of all four types, from intuitive vertical shifts up through the horizontal direction reversals"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step: a composition of two transformations (for example a stretch and a shift, or a reflection and a horizontal shift), determining the order of operations, writing or interpreting the combined equation, or backing out the value of $k$ from a parent-and-image graph pair when the transformation type must first be inferred.",
+      "constraints": [
+        "Combines two transformations, e.g. $g(x)=2f(x)-3$ or $g(x)=f(x-1)+4$, requiring both to be named or applied in correct order",
+        "Find $k$ from a graph pair where the student must first decide which of the four forms produced the image",
+        "May mix a horizontal and a vertical change, or a reflection with a scaling",
+        "tier2 (Medium to Hard) lives here: compositions and find-$k$-from-a-graph tasks, with no item overlap with tier1"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student reverses the direction of a horizontal shift, treating $f(x+k)$ like the more intuitive vertical rule",
+      "distractor": "For $g(x)=f(x+5)$ says the graph shifts right $5$ units instead of left $5$ units"
+    },
+    {
+      "misconception": "Student confuses horizontal shifts with vertical shifts, moving up/down for a change inside the function",
+      "distractor": "For $g(x)=f(x-3)$ says the graph shifts down $3$ units instead of right $3$ units"
+    },
+    {
+      "misconception": "Student treats $f(kx)$ as a vertical change or reverses stretch and compression",
+      "distractor": "For $g(x)=f(2x)$ says a horizontal stretch by a factor of $2$ instead of a horizontal compression by a factor of $\\frac{1}{2}$"
+    },
+    {
+      "misconception": "Student reads $kf(x)$ with $|k|>1$ as a compression instead of a stretch",
+      "distractor": "For $g(x)=3f(x)$ says a vertical compression by a factor of $\\frac{1}{3}$ instead of a vertical stretch by a factor of $3$"
+    },
+    {
+      "misconception": "Student ignores the reflection caused by a negative coefficient, keeping only the magnitude",
+      "distractor": "For $g(x)=-2f(x)$ says a vertical stretch by a factor of $2$ with no reflection across the $x$-axis"
+    },
+    {
+      "misconception": "Student applies a vertical shift to the $x$-coordinate of a transformed point instead of the $y$-coordinate",
+      "distractor": "For the point $(3,8)$ on $y=f(x)+5$ gives $(8,8)$ instead of $(3,13)$"
+    },
+    {
+      "misconception": "Student gets the sign of $k$ wrong when reading a vertical shift from a graph",
+      "distractor": "For a graph of $f(x)=x^{2}$ lowered to vertex $(0,-6)$ writes $k=6$ in $g(x)=f(x)+k$ instead of $k=-6$"
+    },
+    {
+      "misconception": "Student forgets that a multiplier scales the output, scaling the input instead when transforming a point",
+      "distractor": "For $(3,8)$ on $y=2f(x)$ gives $(6,8)$ instead of $(3,16)$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "id": "8.G.B.6--lesson",
+  "standard": "8.G.B.6",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Understand and apply the Pythagorean Theorem",
+  "clusterCode": "B",
+  "skillName": "Pythagorean Theorem Proof",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "The Pythagorean Theorem says that for a right triangle with legs $a$ and $b$ and hypotenuse $c$, $a^2 + b^2 = c^2$. This lesson is not about plugging numbers in. It is about why the rule is true and how to justify each step. We will build the area-rearrangement proof, see the algebra that makes it work, meet the similar-triangles proof, and learn the converse: if $a^2 + b^2 = c^2$, then the triangle must be right. Knowing the proof lets you spot errors in other people's reasoning and decide whether a triangle is right, acute, or obtuse.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Four congruent right triangles with legs $a$ and $b$ are arranged around a tilted inner square of side $c$ to form one big square whose side length is $a+b$. Write the area of the big square two different ways and use them to derive $a^2 + b^2 = c^2$.",
+      "solution": {
+        "steps": [
+          "Count the area two ways. As a single square with side $a+b$, the big square has area $(a+b)^2$.",
+          "As its pieces, the big square is the tilted inner square of side $c$ (area $c^2$) plus the four congruent right triangles. Each triangle has area $\\frac{1}{2}ab$, so the four together have area $4\\cdot\\frac{1}{2}ab = 2ab$.",
+          "Set the two descriptions of the same area equal: $(a+b)^2 = c^2 + 2ab$.",
+          "Expand the left side: $(a+b)^2 = a^2 + 2ab + b^2$, so $a^2 + 2ab + b^2 = c^2 + 2ab$.",
+          "Subtract $2ab$ from both sides. The $2ab$ terms cancel, leaving $a^2 + b^2 = c^2$.",
+          "This is exactly the Pythagorean Theorem, derived purely from comparing areas."
+        ],
+        "answer": "$(a+b)^2 = c^2 + 2ab$, and after expanding and canceling $2ab$ this gives $a^2 + b^2 = c^2$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "In the rearrangement proof you reach the equation $(a+b)^2 = c^2 + 4\\left(\\frac{1}{2}ab\\right)$. Expand and simplify both sides, name the term that cancels, and state the result.",
+      "solution": {
+        "steps": [
+          "Simplify the right side first: $4\\left(\\frac{1}{2}ab\\right) = 2ab$, so the equation is $(a+b)^2 = c^2 + 2ab$.",
+          "Expand the left side using the distributive property: $(a+b)^2 = a^2 + 2ab + b^2$.",
+          "The equation is now $a^2 + 2ab + b^2 = c^2 + 2ab$.",
+          "The $2ab$ term appears on both sides, so it is the term that cancels when you subtract $2ab$ from each side.",
+          "After canceling: $a^2 + b^2 = c^2$.",
+          "The cancellation of $2ab$ is the key. The four triangle areas are exactly what the algebraic cross term $2ab$ accounts for, which is why the proof closes."
+        ],
+        "answer": "The $2ab$ term cancels, leaving $a^2 + b^2 = c^2$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "State the converse of the Pythagorean Theorem. Then explain why showing $a^2 + b^2 = c^2$ (with $c$ the longest side) is enough to conclude the triangle is right.",
+      "solution": {
+        "steps": [
+          "The theorem says: if a triangle is right with legs $a$, $b$ and hypotenuse $c$, then $a^2 + b^2 = c^2$.",
+          "The converse swaps the hypothesis and conclusion: if a triangle has sides $a$, $b$, $c$ (with $c$ longest) and $a^2 + b^2 = c^2$, then the triangle is a right triangle, with the right angle opposite side $c$.",
+          "Why this works: build a separate right triangle with legs $a$ and $b$. By the theorem its hypotenuse is $\\sqrt{a^2 + b^2} = \\sqrt{c^2} = c$.",
+          "Now your original triangle and this right triangle have all three sides equal ($a$, $b$, and $c$), so they are congruent by SSS.",
+          "Congruent triangles have equal corresponding angles, so the angle opposite $c$ in the original triangle equals the right angle in the constructed triangle.",
+          "Therefore the original triangle is right. Note the converse is a genuinely separate statement and needs this argument; it is not automatically true just because the theorem is."
+        ],
+        "answer": "Converse: if $a^2 + b^2 = c^2$ with $c$ the longest side, the triangle is right. It holds because a true right triangle with legs $a$, $b$ has hypotenuse $c$, so by SSS the given triangle is congruent to it and shares its right angle."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "An altitude is drawn from the right angle to the hypotenuse of a right triangle, splitting the hypotenuse of length $c$ into two pieces $p$ and $q$ (so $p + q = c$). Explain why the two small triangles are similar to the original, and use the proportions to derive $a^2 + b^2 = c^2$.",
+      "solution": {
+        "steps": [
+          "Each small triangle shares an acute angle with the original triangle and also has a right angle (where the altitude meets the hypotenuse). With two equal angles, they are similar to the original by AA similarity.",
+          "Use the small triangle adjacent to leg $a$. Similarity gives the proportion $\\frac{a}{c} = \\frac{p}{a}$ (the leg over the hypotenuse equals the matching parts).",
+          "Cross multiply: $a^2 = c\\cdot p$.",
+          "Use the other small triangle adjacent to leg $b$. Similarity gives $\\frac{b}{c} = \\frac{q}{b}$, so $b^2 = c\\cdot q$.",
+          "Add the two results: $a^2 + b^2 = c\\cdot p + c\\cdot q = c(p + q)$.",
+          "Substitute $p + q = c$: $a^2 + b^2 = c\\cdot c = c^2$.",
+          "This proves the theorem using similarity instead of area rearrangement."
+        ],
+        "answer": "The altitude creates two triangles similar to the original (AA), giving $a^2 = c\\,p$ and $b^2 = c\\,q$; adding them gives $a^2 + b^2 = c(p+q) = c^2$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A student presents the rearrangement proof but writes: \"The big square has area $a^2 + b^2$ directly, and the four right triangles have total area $ab$.\" Identify which statements are wrong and give the correct values.",
+      "solution": {
+        "steps": [
+          "Check the big square's area. Its side is $a+b$, so its area is $(a+b)^2 = a^2 + 2ab + b^2$, not $a^2 + b^2$. The student dropped the middle term $2ab$.",
+          "Check the four triangles. Each right triangle has legs $a$ and $b$, so each has area $\\frac{1}{2}ab$, not $ab$.",
+          "Four triangles together have area $4\\cdot\\frac{1}{2}ab = 2ab$, not $ab$. The student forgot the factor of $\\frac{1}{2}$ in a triangle's area.",
+          "With the corrected pieces, the area balances: $(a+b)^2 = c^2 + 2ab$ becomes $a^2 + 2ab + b^2 = c^2 + 2ab$, and the $2ab$ cancels to give $a^2 + b^2 = c^2$.",
+          "Both of the student's claims are wrong: the big square is $(a+b)^2$, and the four triangles total $2ab$."
+        ],
+        "answer": "Both statements are wrong. The big square's area is $(a+b)^2 = a^2 + 2ab + b^2$, and the four triangles total $2ab$ (each is $\\frac{1}{2}ab$), not $ab$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A triangle has sides $9$, $12$, and $15$. Use the converse of the Pythagorean Theorem to decide whether it is a right triangle. Show the computation.",
+      "hint": "The longest side is $c$. Compare $a^2 + b^2$ with $c^2$. If they are equal, the triangle is right.",
+      "solution": {
+        "steps": [
+          "Identify the longest side as $c$: here $c = 15$, and the legs are $a = 9$, $b = 12$.",
+          "Compute $a^2 + b^2 = 9^2 + 12^2 = 81 + 144 = 225$.",
+          "Compute $c^2 = 15^2 = 225$.",
+          "Since $a^2 + b^2 = c^2$ (both equal $225$), the converse says the triangle is right.",
+          "The right angle is opposite the longest side, $15$."
+        ],
+        "answer": "Yes, it is a right triangle, because $9^2 + 12^2 = 81 + 144 = 225 = 15^2$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A triangle has sides $6$, $8$, and $11$. Use the converse to classify the triangle as right, acute, or obtuse. Show your comparison.",
+      "hint": "Compare $a^2 + b^2$ to $c^2$ for the longest side $c$. If $a^2+b^2 < c^2$ the triangle is obtuse; if $a^2+b^2 > c^2$ it is acute.",
+      "solution": {
+        "steps": [
+          "The longest side is $c = 11$, with legs $a = 6$ and $b = 8$.",
+          "Compute $a^2 + b^2 = 6^2 + 8^2 = 36 + 64 = 100$.",
+          "Compute $c^2 = 11^2 = 121$.",
+          "Compare: $100 < 121$, so $a^2 + b^2 < c^2$.",
+          "When $a^2 + b^2 < c^2$, the angle opposite $c$ is larger than a right angle, so the triangle is obtuse."
+        ],
+        "answer": "Obtuse, because $6^2 + 8^2 = 100$ is less than $11^2 = 121$, so $a^2 + b^2 < c^2$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "In the rearrangement proof, the inner tilted square has side length $c$. Explain in your own steps why its area is $c^2$ and what role that area plays in deriving $a^2 + b^2 = c^2$.",
+      "hint": "The area of any square is the side length squared. Think about how the inner square plus the four triangles make up the whole big square.",
+      "solution": {
+        "steps": [
+          "The inner figure is a square with every side equal to $c$, so its area is side squared: $c^2$.",
+          "The big square (side $a+b$) is made of exactly two kinds of pieces: this inner square and the four congruent right triangles.",
+          "So area of big square $=$ inner square area $+$ four triangle areas: $(a+b)^2 = c^2 + 2ab$.",
+          "The $c^2$ term is the part of the total area that the proof solves for. Expanding $(a+b)^2$ and canceling the $2ab$ on both sides isolates $c^2 = a^2 + b^2$.",
+          "So the inner square's area $c^2$ is the quantity the whole rearrangement is designed to express in terms of $a$ and $b$."
+        ],
+        "answer": "Its area is $c^2$ because a square's area is its side squared. It plays the role of the $c^2$ term: $(a+b)^2 = c^2 + 2ab$ simplifies to $a^2 + b^2 = c^2$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A student says: \"The converse means every right triangle satisfies $a^2 + b^2 = c^2$.\" Explain why this statement is actually the theorem, not its converse, and state the converse correctly.",
+      "hint": "The converse switches the 'if' and 'then' parts. The theorem starts from 'right triangle'; the converse starts from the equation.",
+      "solution": {
+        "steps": [
+          "The student's sentence starts with 'every right triangle' and concludes the equation holds. That is exactly the original theorem: right triangle $\\Rightarrow a^2 + b^2 = c^2$.",
+          "The converse swaps the hypothesis and conclusion: it must start from the equation and conclude the triangle is right.",
+          "Correct converse: if a triangle has sides with $a^2 + b^2 = c^2$ (where $c$ is the longest side), then the triangle is a right triangle.",
+          "The student confused the two directions. The theorem and its converse are different statements, and each needs its own justification."
+        ],
+        "answer": "The student stated the theorem (right triangle $\\Rightarrow a^2+b^2=c^2$). The converse is the reverse: if $a^2 + b^2 = c^2$ with $c$ longest, then the triangle is right."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Using the similar-triangles proof, you have established $a^2 = c\\cdot p$ and $b^2 = c\\cdot q$, where $p$ and $q$ are the two pieces the altitude cuts the hypotenuse into. Finish the proof to reach $a^2 + b^2 = c^2$.",
+      "hint": "Add the two equations and factor out $c$. Remember that the two pieces add up to the whole hypotenuse.",
+      "solution": {
+        "steps": [
+          "Add the two given equations: $a^2 + b^2 = c\\cdot p + c\\cdot q$.",
+          "Factor $c$ from the right side: $a^2 + b^2 = c(p + q)$.",
+          "The two pieces make up the whole hypotenuse, so $p + q = c$.",
+          "Substitute: $a^2 + b^2 = c\\cdot c = c^2$.",
+          "This completes the similar-triangles proof of the Pythagorean Theorem."
+        ],
+        "answer": "Adding gives $a^2 + b^2 = c(p+q)$, and since $p+q=c$, this is $a^2 + b^2 = c^2$."
+      }
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "id": "A1.F-LE.A.3--lesson",
+  "standard": "A1.F-LE.A.3",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Linear, Quadratic, and Exponential Models",
+  "domainCode": "F-LE",
+  "cluster": "Construct and compare linear, quadratic, and exponential models and solve problems",
+  "clusterCode": "A",
+  "skillName": "Exponential Exceeds Polynomial Growth",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "A linear function grows by adding the same amount each step, and a quadratic grows by an increasing but bounded amount. An exponential function multiplies by the same fixed factor each step. Because repeated multiplication snowballs, an exponential function always overtakes a linear, quadratic, or any polynomial function and stays ahead for large inputs, even when it starts behind. In this lesson you build value tables, compare outputs row by row, and find the input where the exponential first exceeds its rival.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Let $f(x)=3^{x}$ and $g(x)=10x+5$. Which function is larger at $x=4$?",
+      "solution": {
+        "steps": [
+          "Evaluate the exponential: $f(4)=3^{4}=3\\cdot 3\\cdot 3\\cdot 3=81$.",
+          "Evaluate the linear function: $g(4)=10(4)+5=40+5=45$.",
+          "Compare the two outputs: $81>45$, so $f(4)>g(4)$.",
+          "The exponential function $f(x)=3^{x}$ is larger at $x=4$."
+        ],
+        "answer": "$f(x)=3^{x}$ is larger, since $f(4)=81>45=g(4)$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Compare $f(x)=2^{x}$ and $g(x)=4x$ for $x=0,1,2,3,4,5$. At what whole-number input does $f$ first exceed $g$?",
+      "solution": {
+        "steps": [
+          "Build the table for $f(x)=2^{x}$ by multiplying by $2$ each step: $f(0)=1,\\ f(1)=2,\\ f(2)=4,\\ f(3)=8,\\ f(4)=16,\\ f(5)=32$.",
+          "Build the table for $g(x)=4x$ by adding $4$ each step: $g(0)=0,\\ g(1)=4,\\ g(2)=8,\\ g(3)=12,\\ g(4)=16,\\ g(5)=20$.",
+          "Scan row by row. At $x=0,1,2,3$ the linear value is greater or equal; at $x=4$ they tie since $16=16$.",
+          "A tie is not 'exceeds', so check the next input: at $x=5$, $f(5)=32$ and $g(5)=20$, so $f>g$.",
+          "The exponential first strictly exceeds the linear function at $x=5$."
+        ],
+        "answer": "At $x=5$, where $f(5)=32>20=g(5)$ (they only tie at $x=4$)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Compare $f(x)=2^{x}$ and $g(x)=x^{2}$ for $x=0,1,2,3,4,5$. Build both tables and state the smallest input where the exponential first exceeds the quadratic, even though the quadratic leads for some smaller inputs.",
+      "solution": {
+        "steps": [
+          "Evaluate $f(x)=2^{x}$: $f(0)=1,\\ f(1)=2,\\ f(2)=4,\\ f(3)=8,\\ f(4)=16,\\ f(5)=32$.",
+          "Evaluate $g(x)=x^{2}$: $g(0)=0,\\ g(1)=1,\\ g(2)=4,\\ g(3)=9,\\ g(4)=16,\\ g(5)=25$.",
+          "Compare each row: at $x=0,1$ the exponential leads; at $x=2$ they tie at $4$; at $x=3$ the quadratic is ahead ($9>8$); at $x=4$ they tie at $16$.",
+          "At $x=5$, $f(5)=32$ while $g(5)=25$, so the exponential is strictly greater.",
+          "Beyond $x=5$ the gap keeps widening because $f$ doubles while $g$ grows more slowly, so the exponential stays ahead.",
+          "The exponential first exceeds the quadratic at $x=5$."
+        ],
+        "answer": "At $x=5$, where $f(5)=32>25=g(5)$; the exponential then stays ahead."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A graph shows the curve $y=2^{x}$ and the line $y=3x+1$. The curve starts below the line, crosses it once near $x=4$, and stays above it afterward. State approximately where the exponential begins to exceed the linear function and which function dominates for large $x$.",
+      "solution": {
+        "steps": [
+          "Reading a graph, the crossover is where the curve and line meet. The problem says they cross once near $x=4$.",
+          "Confirm with values: at $x=3$, $2^{3}=8$ and $3(3)+1=10$, so the line is still above. At $x=4$, $2^{4}=16$ and $3(4)+1=13$, so the curve is now above.",
+          "So the exponential first exceeds the line between $x=3$ and $x=4$, that is, near $x=4$.",
+          "To the right of the crossover the curve stays above the line, so the exponential dominates for large $x$.",
+          "Crossover near $x=4$; the exponential $y=2^{x}$ dominates for large $x$."
+        ],
+        "answer": "The exponential begins to exceed the line near $x=4$, and the exponential $y=2^{x}$ dominates for large $x$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Will $f(x)=1.5^{x}$ ever exceed $g(x)=x^{3}$? For $x=10$ the cubic is far ahead ($g(10)=1000$ while $f(10)\\approx 57.7$). Explain whether the exponential eventually exceeds the cubic and why.",
+      "solution": {
+        "steps": [
+          "For small inputs the cubic is much larger, so it is tempting to say the cubic always wins.",
+          "Compare how each function grows. Each time $x$ increases by $1$, $f$ is multiplied by the fixed factor $1.5$, so $f$ grows by $50\\%$ of its current value.",
+          "The cubic $g(x)=x^{3}$ grows by adding $(x+1)^{3}-x^{3}=3x^{2}+3x+1$. That increase grows, but only at a polynomial rate, not by a fixed percentage of the whole value.",
+          "Growing by a fixed percentage of an ever-larger value eventually outpaces any polynomial increase, so the exponential's outputs eventually overtake the cubic.",
+          "For example, by $x=50$ the exponential $1.5^{50}$ is in the hundreds of millions while $50^{3}=125000$, so the exponential has long since passed the cubic.",
+          "Therefore $f(x)=1.5^{x}$ does eventually exceed $g(x)=x^{3}$ and stays ahead permanently for large enough $x$."
+        ],
+        "answer": "Yes. An exponential multiplies by a fixed factor each step, so it eventually and permanently exceeds any polynomial, including $x^{3}$, for large enough $x$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Let $f(x)=2^{x}$ and $g(x)=5x$. Which function is larger at $x=5$?",
+      "hint": "Find $2^{5}$ by doubling from $1$ five times, then compute $5\\cdot 5$ and compare.",
+      "solution": {
+        "steps": [
+          "Evaluate $f(5)=2^{5}=2\\cdot 2\\cdot 2\\cdot 2\\cdot 2=32$.",
+          "Evaluate $g(5)=5(5)=25$.",
+          "Compare: $32>25$, so the exponential is larger.",
+          "The exponential function $f(x)=2^{x}$ is larger at $x=5$."
+        ],
+        "answer": "$f(x)=2^{x}$ is larger, since $f(5)=32>25=g(5)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Compare $f(x)=3^{x}$ and $g(x)=12x$ for $x=0,1,2,3$. At what whole-number input does $f$ first exceed $g$?",
+      "hint": "Make a table for each function. Remember $3^{x}$ multiplies by $3$ each step while $12x$ adds $12$ each step.",
+      "solution": {
+        "steps": [
+          "Table for $f(x)=3^{x}$: $f(0)=1,\\ f(1)=3,\\ f(2)=9,\\ f(3)=27$.",
+          "Table for $g(x)=12x$: $g(0)=0,\\ g(1)=12,\\ g(2)=24,\\ g(3)=36$.",
+          "Compare rows: at $x=1$ and $x=2$ the linear value is larger ($12>3$, $24>9$). At $x=3$, $f(3)=27$ but $g(3)=36$, so the linear is still ahead.",
+          "Continue one more step: $f(4)=81$ and $g(4)=48$, so the exponential first exceeds the linear at $x=4$.",
+          "The exponential first exceeds the linear function at $x=4$."
+        ],
+        "answer": "At $x=4$, where $f(4)=81>48=g(4)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Compare $f(x)=2^{x}$ and $g(x)=2x^{2}$ for $x=0,1,2,3,4,5,6$. Build both tables and state the smallest input where the exponential first exceeds the quadratic.",
+      "hint": "Evaluate $2^{x}$ by doubling and $2x^{2}$ by squaring then multiplying by $2$. Scan past any row where they tie.",
+      "solution": {
+        "steps": [
+          "Table for $f(x)=2^{x}$: $1,\\ 2,\\ 4,\\ 8,\\ 16,\\ 32,\\ 64$ for $x=0$ through $6$.",
+          "Table for $g(x)=2x^{2}$: $g(0)=0,\\ g(1)=2,\\ g(2)=8,\\ g(3)=18,\\ g(4)=32,\\ g(5)=50,\\ g(6)=72$.",
+          "Compare rows: at $x=1$ they tie at $2$; for $x=2,3,4$ the quadratic leads or ties ($8\\ge 4$, $18>8$, $32=32$); at $x=5$, $f=32$ but $g=50$, still behind.",
+          "At $x=6$, $f(6)=64$ and $g(6)=72$, so the quadratic is still slightly ahead.",
+          "Check one more step: $f(7)=128$ and $g(7)=2(49)=98$, so the exponential first exceeds the quadratic at $x=7$.",
+          "The exponential first exceeds the quadratic at $x=7$."
+        ],
+        "answer": "At $x=7$, where $f(7)=128>98=g(7)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A graph shows the curve $y=3^{x}$ and the line $y=20x+5$. The curve starts below the line and crosses it once between $x=4$ and $x=5$. Use values at $x=3$, $x=4$, and $x=5$ to confirm where the exponential begins to exceed the line, and state which function dominates for large $x$.",
+      "hint": "Compute $3^{3}$, $3^{4}$, and $3^{5}$, then $20(3)+5$, $20(4)+5$, and $20(5)+5$, and see between which inputs the curve passes the line.",
+      "solution": {
+        "steps": [
+          "At $x=3$: $3^{3}=27$ and $20(3)+5=65$, so the line is above ($65>27$).",
+          "At $x=4$: $3^{4}=81$ and $20(4)+5=85$, so the line is still slightly above ($85>81$).",
+          "At $x=5$: $3^{5}=243$ and $20(5)+5=105$, so now the curve is above ($243>105$).",
+          "So the exponential first exceeds the line between $x=4$ and $x=5$.",
+          "Past the crossover the curve stays above the line, so the exponential dominates for large $x$.",
+          "The exponential begins to exceed the line between $x=4$ and $x=5$, and $y=3^{x}$ dominates for large $x$."
+        ],
+        "answer": "The exponential exceeds the line between $x=4$ and $x=5$, and the exponential $y=3^{x}$ dominates for large $x$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Carla says that because $g(x)=x^{3}$ is far above $f(x)=2^{x}$ at $x=8$ (where $g(8)=512$ and $f(8)=256$), the cubic will beat the exponential forever. Explain why she is wrong.",
+      "hint": "Think about how each function grows from one step to the next: the exponential multiplies by a fixed factor, while the cubic's increase grows only at a polynomial rate.",
+      "solution": {
+        "steps": [
+          "At $x=8$ the cubic is ahead, but being ahead at one input does not mean ahead forever.",
+          "Each step, $f(x)=2^{x}$ multiplies by $2$, so it doubles. The cubic $g(x)=x^{3}$ grows by adding $(x+1)^{3}-x^{3}=3x^{2}+3x+1$, which increases only at a polynomial rate.",
+          "Doubling a value eventually outpaces adding a polynomial amount, so the exponential's lead grows once it catches up.",
+          "Check past $x=8$: at $x=9$, $f=512$ and $g=729$; at $x=10$, $f=1024$ and $g=1000$, so the exponential has overtaken the cubic.",
+          "After $x=10$ the exponential stays ahead and the gap widens, so Carla is wrong: the exponential eventually and permanently exceeds the cubic."
+        ],
+        "answer": "She is wrong. The exponential doubles each step while the cubic grows only polynomially, so $2^{x}$ overtakes $x^{3}$ (by $x=10$, $1024>1000$) and stays ahead permanently."
+      }
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "id": "8.F.A.3--lesson",
+  "standard": "8.F.A.3",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Functions",
+  "domainCode": "F",
+  "cluster": "Define, evaluate, and compare functions",
+  "clusterCode": "A",
+  "skillName": "Linear vs. Nonlinear Functions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "A linear function can be written as $y = mx + b$, and its graph is always a straight line. Here $m$ is the slope (the constant rate of change) and $b$ is the y-intercept (the value of $y$ when $x = 0$). A function is linear only when $x$ appears to the first power, is not in a denominator, and is not inside a radical. To classify a function, check for a constant rate of change: in a table, $\\frac{\\Delta y}{\\Delta x}$ must be the same for every pair of points (with the $x$-values evenly spaced for a quick difference check). Functions like $y = x^2$, $y = x^3$, $y = \\frac{1}{x}$, and $y = 2^x$ are nonlinear because their rate of change is not constant and their graphs are curves, not straight lines.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Is the function $y = -3x + 7$ linear or nonlinear? Identify the slope $m$ and the y-intercept $b$.",
+      "solution": {
+        "steps": [
+          "Compare the equation to the linear form $y = mx + b$.",
+          "Here $x$ appears only to the first power, it is not in a denominator, and it is not inside a radical, so the function is linear.",
+          "Match the coefficients: the number multiplying $x$ is $m$, so $m = -3$.",
+          "The constant added on is $b$, so $b = 7$. This means the line crosses the y-axis at $(0, 7)$.",
+          "Because the equation fits $y = mx + b$, the graph is a straight line and the function is linear."
+        ],
+        "answer": "Linear, with slope $m = -3$ and y-intercept $b = 7$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Classify each function as linear or nonlinear: $y = 4x - 1$, $\\quad y = x^2 + 2$, $\\quad y = \\frac{1}{2}x$. Explain how you decided.",
+      "solution": {
+        "steps": [
+          "A function is linear only if it can be written as $y = mx + b$ with $x$ to the first power, not in a denominator, and not inside a radical.",
+          "$y = 4x - 1$: $x$ is to the first power, so this is linear, with $m = 4$ and $b = -1$.",
+          "$y = x^2 + 2$: $x$ is raised to the second power, so this is nonlinear. Its graph is a parabola, not a straight line.",
+          "$y = \\frac{1}{2}x$: this is $y = \\frac{1}{2}x + 0$, so $x$ is to the first power and it is linear, with $m = \\frac{1}{2}$ and $b = 0$. A fraction coefficient is still allowed.",
+          "Only $y = x^2 + 2$ is nonlinear; the other two are linear."
+        ],
+        "answer": "$y = 4x - 1$ and $y = \\frac{1}{2}x$ are linear; $y = x^2 + 2$ is nonlinear (it has $x^2$)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A table shows the points $(1, 3), (2, 5), (3, 7), (4, 9)$. Is the function linear? If so, write its equation in the form $y = mx + b$.",
+      "solution": {
+        "steps": [
+          "Check that the $x$-values are evenly spaced: they go $1, 2, 3, 4$, increasing by $1$ each time, so $\\Delta x = 1$ for every step.",
+          "Find the change in $y$ between consecutive points: $5 - 3 = 2$, $\\;7 - 5 = 2$, $\\;9 - 7 = 2$.",
+          "The rate of change is $\\frac{\\Delta y}{\\Delta x} = \\frac{2}{1} = 2$ for every interval, so the rate is constant and the function is linear. The slope is $m = 2$.",
+          "Find $b$ by working back to $x = 0$: at $x = 1$, $y = 3$; subtract one slope step to get $y = 3 - 2 = 1$ at $x = 0$, so $b = 1$.",
+          "Write the equation: $y = 2x + 1$. Check: at $x = 4$, $y = 2(4) + 1 = 9$, which matches the table."
+        ],
+        "answer": "Linear; the equation is $y = 2x + 1$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A table shows the points $(0, 1), (1, 2), (2, 4), (3, 8)$. Is the rate of change constant? Classify the function as linear or nonlinear.",
+      "solution": {
+        "steps": [
+          "The $x$-values are evenly spaced ($0, 1, 2, 3$ with $\\Delta x = 1$), so compare the changes in $y$.",
+          "Differences in $y$: $2 - 1 = 1$, $\\;4 - 2 = 2$, $\\;8 - 4 = 4$.",
+          "The differences $1, 2, 4$ are not equal, so the rate of change is not constant. That rules out a linear function.",
+          "Notice instead that each $y$-value is double the one before ($1 \\to 2 \\to 4 \\to 8$). A constant ratio (multiplying), not a constant difference (adding), signals an exponential pattern such as $y = 2^x$.",
+          "Because the rate of change is not constant, the function is nonlinear."
+        ],
+        "answer": "The rate of change is not constant, so the function is nonlinear (it is exponential, $y = 2^x$)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Rewrite $2x + y = 6$ in the form $y = mx + b$. State the slope and y-intercept, and explain why the function is linear.",
+      "solution": {
+        "steps": [
+          "Start with $2x + y = 6$ and isolate $y$ by subtracting $2x$ from both sides.",
+          "This gives $y = -2x + 6$, which is now in the form $y = mx + b$.",
+          "Read off the slope: $m = -2$ (the coefficient of $x$).",
+          "Read off the y-intercept: $b = 6$, so the line crosses the y-axis at $(0, 6)$.",
+          "Since $x$ appears only to the first power and is not in a denominator or radical, the equation fits $y = mx + b$ and its graph is a straight line, so the function is linear."
+        ],
+        "answer": "$y = -2x + 6$; slope $m = -2$, y-intercept $b = 6$. It is linear."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Is the function $y = 5x - 2$ linear or nonlinear? Identify the slope $m$ and the y-intercept $b$.",
+      "hint": "Compare it to $y = mx + b$. The number multiplying $x$ is $m$, and the constant is $b$.",
+      "solution": {
+        "steps": [
+          "The equation $y = 5x - 2$ already matches $y = mx + b$, and $x$ is to the first power, so it is linear.",
+          "The coefficient of $x$ is the slope: $m = 5$.",
+          "The constant term is the y-intercept: $b = -2$."
+        ],
+        "answer": "Linear, with slope $m = 5$ and y-intercept $b = -2$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Which of these functions is nonlinear, and why: $y = 7x + 3$, $\\quad y = x^3$, $\\quad y = -x + 9$?",
+      "hint": "A function is nonlinear if $x$ is raised to a power other than 1, is in a denominator, or is inside a radical.",
+      "solution": {
+        "steps": [
+          "$y = 7x + 3$: $x$ is to the first power, so this is linear.",
+          "$y = -x + 9$: this is $y = -1x + 9$, with $x$ to the first power, so this is linear.",
+          "$y = x^3$: $x$ is raised to the third power, so the rate of change is not constant and its graph is a curve.",
+          "Therefore $y = x^3$ is the nonlinear function."
+        ],
+        "answer": "$y = x^3$ is nonlinear because $x$ is raised to the third power, so its graph is a curve, not a straight line."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A table shows the points $(1, 4), (2, 7), (3, 10), (4, 13)$. Is the function linear? If so, write its equation in the form $y = mx + b$.",
+      "hint": "Check whether $y$ changes by the same amount each time the $x$-values step up by 1, then work back to find $y$ at $x = 0$.",
+      "solution": {
+        "steps": [
+          "The $x$-values increase by $1$ each step, so $\\Delta x = 1$.",
+          "The changes in $y$ are $7 - 4 = 3$, $\\;10 - 7 = 3$, $\\;13 - 10 = 3$, which are all equal, so the rate of change is constant and $m = 3$.",
+          "At $x = 1$, $y = 4$; step back to $x = 0$ by subtracting the slope: $4 - 3 = 1$, so $b = 1$.",
+          "The equation is $y = 3x + 1$. Check: at $x = 4$, $y = 3(4) + 1 = 13$, which matches."
+        ],
+        "answer": "Linear; the equation is $y = 3x + 1$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A water tank starts with $5$ gallons and fills at $2$ gallons per minute, so $y = 2x + 5$, where $x$ is minutes and $y$ is gallons. State the slope $m$ and y-intercept $b$, and confirm the relationship is linear.",
+      "hint": "The starting amount is the y-intercept (the value when $x = 0$); the rate per minute is the slope.",
+      "solution": {
+        "steps": [
+          "The equation $y = 2x + 5$ is already in the form $y = mx + b$.",
+          "The rate of filling is the slope: $m = 2$ gallons per minute.",
+          "The starting amount, the value when $x = 0$, is the y-intercept: $b = 5$ gallons.",
+          "Because the tank gains the same $2$ gallons every minute, the rate of change is constant, so the relationship is linear."
+        ],
+        "answer": "Slope $m = 2$ gallons per minute, y-intercept $b = 5$ gallons; the relationship is linear because the rate of change is constant."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Give an example of a function that is not linear, and explain why its graph is not a straight line.",
+      "hint": "Pick an equation where $x$ is raised to a power other than 1 or is in a denominator, such as $y = x^2$ or $y = \\frac{1}{x}$.",
+      "solution": {
+        "steps": [
+          "Choose a function where $x$ is not simply to the first power, for example $y = x^2$.",
+          "Test the rate of change with a few points: $(0, 0), (1, 1), (2, 4), (3, 9)$. The differences in $y$ are $1, 3, 5$, which are not equal.",
+          "Because the rate of change is not constant, the function cannot be written as $y = mx + b$.",
+          "Its graph is a parabola, a curve that bends, not a straight line, so the function is nonlinear. (Other valid examples include $y = x^3$ and $y = \\frac{1}{x}$.)"
+        ],
+        "answer": "Example: $y = x^2$. It is nonlinear because its rate of change is not constant, so its graph is a curved parabola rather than a straight line."
+      }
+    }
+  ]
+}

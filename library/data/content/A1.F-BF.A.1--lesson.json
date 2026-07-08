@@ -1,0 +1,171 @@
+{
+  "id": "A1.F-BF.A.1--lesson",
+  "standard": "A1.F-BF.A.1",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Building Functions",
+  "domainCode": "F-BF",
+  "cluster": "Build a function that models a relationship between two quantities",
+  "clusterCode": "A",
+  "skillName": "Writing Functions from Context",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "A function rule turns a real-world description into algebra. To build one, first decide what the input (independent variable) and output (dependent variable) are. Then check the pattern: if the output changes by a constant amount for each step, the model is linear, $f(x)=mx+b$, where $b$ is the starting value and $m$ is the constant rate of change. If the output is multiplied by a constant factor for each step, the model is exponential, $f(x)=ab^{x}$, where $a$ is the starting value and $b$ is the common ratio (for a percent change, $b=1+r$ for growth or $b=1-r$ for decay). Sometimes a quantity is the sum of two simpler functions, so you build $h(x)=f(x)+g(x)$ and combine like terms.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A water tank already holds $200$ gallons, and a hose adds water at a steady rate of $15$ gallons per minute. Write a function $V(t)$ that gives the number of gallons in the tank after $t$ minutes.",
+      "solution": {
+        "steps": [
+          "Identify the variables: the input is the time $t$ in minutes, and the output is the volume $V$ in gallons.",
+          "Check the pattern: the tank gains the same $15$ gallons every minute, a constant rate of change, so the model is linear, $V(t)=mt+b$.",
+          "The starting value (the amount at $t=0$) is $b=200$ gallons.",
+          "The constant rate of change is $m=15$ gallons per minute.",
+          "Substitute into $V(t)=mt+b$ to get $V(t)=15t+200$."
+        ],
+        "answer": "$V(t)=15t+200$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A table of values for a function $f$ shows $f(0)=7,\\ f(1)=11,\\ f(2)=15,\\ f(3)=19$. Write the rule for $f(x)$.",
+      "solution": {
+        "steps": [
+          "Check whether the change is constant: $11-7=4$, $15-11=4$, $19-15=4$. The output increases by $4$ each time $x$ increases by $1$.",
+          "Because the difference is constant, the model is linear, $f(x)=mx+b$.",
+          "The constant rate of change is the common difference, so $m=4$.",
+          "The starting value is the output at $x=0$, so $b=f(0)=7$.",
+          "Substitute to get $f(x)=4x+7$. Check: $f(2)=4(2)+7=15$, which matches the table."
+        ],
+        "answer": "$f(x)=4x+7$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A bacteria culture starts with $500$ cells, and the number of cells triples every hour. Write a function $P(t)$ for the number of cells after $t$ hours.",
+      "solution": {
+        "steps": [
+          "Identify the variables: the input is time $t$ in hours, the output is the population $P$.",
+          "Check the pattern: each hour the count is multiplied by $3$, a constant ratio, so the model is exponential, $P(t)=ab^{t}$.",
+          "The starting value is $a=500$ cells.",
+          "The common ratio (the multiplier per hour) is $b=3$.",
+          "Substitute into $P(t)=ab^{t}$ to get $P(t)=500\\cdot 3^{t}$. Note the $t$ is an exponent, not a factor: after $2$ hours $P(2)=500\\cdot 3^{2}=4500$."
+        ],
+        "answer": "$P(t)=500\\cdot 3^{t}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A laptop is worth $\\$1200$ when new and loses $20\\%$ of its value each year. Write a function $V(t)$ for its value in dollars after $t$ years.",
+      "solution": {
+        "steps": [
+          "A constant percent change each year means the model is exponential, $V(t)=ab^{t}$.",
+          "The starting value is $a=1200$ dollars.",
+          "The value loses $20\\%$ each year, so each year it keeps $100\\%-20\\%=80\\%$ of its value.",
+          "Convert the kept percent to a multiplier: $b=1-0.20=0.80$.",
+          "Substitute to get $V(t)=1200(0.8)^{t}$. Check: after $1$ year $V(1)=1200(0.8)=960$ dollars, a $20\\%$ drop."
+        ],
+        "answer": "$V(t)=1200(0.8)^{t}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A repair shop charges a flat $\\$40$ service fee plus $\\$25$ per hour of labor, modeled by $L(h)=25h+40$. The job also needs a part that costs a flat $\\$90$. Write a function $C(h)$ for the total cost of a job that takes $h$ hours.",
+      "solution": {
+        "steps": [
+          "The total cost is the labor cost plus the part cost, so $C(h)=L(h)+90$.",
+          "Substitute the labor function: $C(h)=(25h+40)+90$.",
+          "Combine the constant terms: $40+90=130$.",
+          "So $C(h)=25h+130$. The per-hour rate $25$ stays the same; only the flat amounts add together."
+        ],
+        "answer": "$C(h)=25h+130$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A candle is $18$ centimeters tall and burns down at a steady rate of $3$ centimeters per hour. Write a function $H(t)$ for the candle's height in centimeters after $t$ hours.",
+      "hint": "The height starts at $18$ and goes down by the same amount each hour, so the model is linear with a negative rate of change.",
+      "solution": {
+        "steps": [
+          "The input is time $t$ in hours and the output is height $H$, which changes by a constant amount, so the model is linear, $H(t)=mt+b$.",
+          "The starting height is $b=18$ centimeters.",
+          "The candle loses height, so the rate of change is negative: $m=-3$ centimeters per hour.",
+          "Substitute to get $H(t)=-3t+18$."
+        ],
+        "answer": "$H(t)=-3t+18$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A table for a function $g$ shows $g(0)=5,\\ g(1)=8,\\ g(2)=11,\\ g(3)=14$. Write the rule for $g(x)$.",
+      "hint": "Find the constant difference between outputs for the slope, and read the starting value off $g(0)$.",
+      "solution": {
+        "steps": [
+          "The outputs increase by $8-5=3$ each step, a constant difference, so the model is linear, $g(x)=mx+b$.",
+          "The slope is the common difference, $m=3$.",
+          "The starting value is $b=g(0)=5$.",
+          "Substitute to get $g(x)=3x+5$. Check: $g(3)=3(3)+5=14$, which matches."
+        ],
+        "answer": "$g(x)=3x+5$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A social media post has $80$ shares, and the number of shares doubles every day. Write a function $S(d)$ for the number of shares after $d$ days.",
+      "hint": "Doubling each day is a constant multiplier, so the model is exponential, $S(d)=ab^{d}$. The $d$ is an exponent.",
+      "solution": {
+        "steps": [
+          "Each day the shares are multiplied by $2$, a constant ratio, so the model is exponential, $S(d)=ab^{d}$.",
+          "The starting value is $a=80$ shares.",
+          "The common ratio is $b=2$.",
+          "Substitute to get $S(d)=80\\cdot 2^{d}$."
+        ],
+        "answer": "$S(d)=80\\cdot 2^{d}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A town has a population of $5000$ people and grows by $10\\%$ each year. Write a function $P(t)$ for the population after $t$ years.",
+      "hint": "A percent growth gives an exponential model. The base is $1+r$, where $r$ is the percent written as a decimal.",
+      "solution": {
+        "steps": [
+          "A constant percent change each year means the model is exponential, $P(t)=ab^{t}$.",
+          "The starting value is $a=5000$ people.",
+          "The population grows by $10\\%$, so the multiplier is $b=1+0.10=1.10$.",
+          "Substitute to get $P(t)=5000(1.1)^{t}$."
+        ],
+        "answer": "$P(t)=5000(1.1)^{t}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A gym membership has a one-time signup fee of $\\$60$ plus a monthly charge given by $M(x)=30x$, where $x$ is the number of months. The member also buys a locker for a flat $\\$45$. Write a function $T(x)$ for the total amount paid after $x$ months.",
+      "hint": "Add the monthly charge function to the two flat fees, then combine the constant terms.",
+      "solution": {
+        "steps": [
+          "The total is the monthly charges plus the two flat fees: $T(x)=M(x)+60+45$.",
+          "Substitute the monthly function: $T(x)=30x+60+45$.",
+          "Combine the constants: $60+45=105$.",
+          "So $T(x)=30x+105$."
+        ],
+        "answer": "$T(x)=30x+105$"
+      }
+    }
+  ]
+}

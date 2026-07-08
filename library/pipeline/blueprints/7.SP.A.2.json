@@ -1,0 +1,123 @@
+{
+  "standard": "7.SP.A.2",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Use random sampling to draw inferences about a population",
+  "clusterCode": "A",
+  "skillName": "Drawing Inferences from Samples",
+
+  "description": "Students use data from a random sample to estimate an unknown characteristic of a population, such as a population proportion, count, or mean. They scale a sample statistic up to the full population (for example, if $\\frac{12}{50}$ of a sample have a trait, they estimate $\\frac{12}{50}$ of the whole population does too). They also generate or examine multiple same-size samples to see how estimates vary, and use that variation to judge how reliable a single estimate is and to give a reasonable range for the true value.",
+
+  "subSkills": [
+    "Compute a sample proportion as a fraction or percent from sample counts",
+    "Scale a sample statistic up to a population to predict a count or total (proportional reasoning)",
+    "Estimate a population mean from a sample mean",
+    "Compare estimates produced by several different same-size random samples",
+    "Describe and quantify the variation (spread) across multiple sample estimates",
+    "Use the spread of multiple samples to state a reasonable range or interval for the true population value",
+    "Judge whether a sample is random/representative and explain why representativeness matters"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Sample proportion to population count",
+      "example": "In a random sample of $40$ students, $14$ said they walk to school. The school has $600$ students. Estimate how many students in the whole school walk to school. (Answer: $\\frac{14}{40}\\times 600 = 210$ students.)"
+    },
+    {
+      "name": "Estimate a population proportion or percent",
+      "example": "A random sample of $80$ light bulbs contained $6$ defective bulbs. Estimate the percent of all bulbs in the shipment that are defective. (Answer: $\\frac{6}{80}=7.5\\%$.)"
+    },
+    {
+      "name": "Estimate a population mean",
+      "example": "A random sample of $25$ books in a library has a mean of $312$ pages. Estimate the mean number of pages for all books in the library. (Answer: about $312$ pages.)"
+    },
+    {
+      "name": "Compare multiple samples / gauge variation",
+      "example": "Four random samples of $50$ voters each gave the percent favoring a measure as $46\\%$, $52\\%$, $48\\%$, and $50\\%$. Use these to estimate the percent of all voters who favor it, and give a reasonable range. (Answer: about $49\\%$; the estimates vary from $46\\%$ to $52\\%$, so a reasonable range is $46\\%$ to $52\\%$.)"
+    },
+    {
+      "name": "Reasonableness / representativeness reasoning",
+      "example": "To estimate the favorite sport of all students, Maria surveys only members of the basketball team. Explain why her sample may give a biased estimate of the population. (Answer: the basketball team is not representative; it overrepresents students who like basketball.)"
+    },
+    {
+      "name": "Reverse / find population total from estimate",
+      "example": "In a random sample, $\\frac{3}{20}$ of fish caught in a lake were trout. If biologists estimate the lake holds $4000$ fish, about how many are trout? (Answer: $\\frac{3}{20}\\times 4000 = 600$ trout.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "One direct step of proportional scaling or a single sample proportion/percent from clean numbers. The sample and population sizes divide evenly and the answer is a whole number or simple percent.",
+      "constraints": [
+        "Single random sample, no comparison across samples",
+        "Sample size divides the population evenly (e.g. sample $20$ of population $200$) or the proportion is a simple fraction like $\\frac{1}{4},\\frac{1}{5},\\frac{3}{10}$",
+        "Answer is a whole-number count or a terminating percent",
+        "Familiar context (students, marbles, light bulbs)"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step reasoning: form a sample proportion that does not reduce trivially, then scale to a population; or estimate a population mean and use it; or work with two given samples. Numbers may require computing a percent that is not an integer.",
+      "constraints": [
+        "Proportion does not reduce to a unit fraction (e.g. $\\frac{14}{40}$, $\\frac{6}{80}$)",
+        "Scaling factor is not a whole number, so the student multiplies a fraction by the population",
+        "May ask for a percent with one decimal place (e.g. $7.5\\%$) or a population mean estimate",
+        "Context may include means (pages, minutes, dollars) not just counts"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step work using several same-size samples to gauge variation, give a reasonable range or interval, judge reliability, or reason about representativeness/bias. Requires interpretation and justification, not just computation.",
+      "constraints": [
+        "Three or more samples are given or simulated; student combines or compares them",
+        "Student must quantify variation (range or spread of estimates) and state a reasonable interval for the true value",
+        "May require explaining why a sample is or is not representative, or why more/larger samples reduce variation",
+        "May combine scaling with a reasonableness judgment or a comparison of two populations"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student reports the raw sample count as the population estimate, ignoring the need to scale up",
+      "distractor": "Answers $14$ (the sample count of walkers) instead of $\\frac{14}{40}\\times 600 = 210$"
+    },
+    {
+      "misconception": "Student inverts the proportion, using $\\frac{\\text{total}}{\\text{part}}$ instead of $\\frac{\\text{part}}{\\text{total}}$",
+      "distractor": "Computes $\\frac{40}{14}\\times 600$ or $\\frac{80}{6}$ instead of $\\frac{14}{40}\\times 600$ or $\\frac{6}{80}$"
+    },
+    {
+      "misconception": "Student multiplies by the sample size instead of the population size",
+      "distractor": "Computes $\\frac{14}{40}\\times 40 = 14$ or scales by the wrong total, ignoring the $600$"
+    },
+    {
+      "misconception": "Student treats the proportion as a percent of the wrong base or drops the percent conversion",
+      "distractor": "Reports $6\\%$ defective (the raw count $6$ read as a percent) instead of $\\frac{6}{80}=7.5\\%$"
+    },
+    {
+      "misconception": "Student picks a single sample's estimate and ignores the variation shown by the other samples",
+      "distractor": "States the true value is exactly $46\\%$ (one sample) rather than recognizing a range like $46\\%$ to $52\\%$ around $\\approx 49\\%$"
+    },
+    {
+      "misconception": "Student believes a larger or biased non-random sample is automatically more accurate, ignoring representativeness",
+      "distractor": "Claims the basketball-team survey is valid because it is a big sample, instead of recognizing it is not representative"
+    },
+    {
+      "misconception": "Student averages the percents incorrectly or adds counts across samples without keeping consistent sample sizes",
+      "distractor": "Adds $46+52+48+50 = 196$ and reports $196$ or $196\\%$ instead of averaging to $49\\%$"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "id": "A1.N-Q.A.2--lesson",
+  "standard": "A1.N-Q.A.2",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Quantities",
+  "domainCode": "N-Q",
+  "cluster": "Reason quantitatively and use units to solve problems",
+  "clusterCode": "A",
+  "skillName": "Defining Quantities for Modeling",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "intro": "When you build a model of a real situation, your first job is to decide WHAT to measure. A good quantity is operationally well defined (two people could measure it and agree), carries a sensible unit, and is the right TYPE for the question, a count, a total, a rate, a ratio, a per-capita figure, or a percent. A key idea: when you compare groups of different sizes, a raw total is usually misleading, so you define a rate or per-unit quantity instead. There is rarely one numeric answer here, but there are clearly better and worse choices.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A bakery wants to know which of its two shops is busier on a typical morning. A manager suggests measuring 'the number of customers.' Name the quantity, with its unit, you should actually define, and explain why the manager's version is not yet well defined.",
+      "solution": {
+        "steps": [
+          "Decide what 'busier' means operationally: it is about how many customers arrive per unit of time, not a vague headcount.",
+          "The manager's quantity is incomplete because it does not fix a time window, so two observers could count over different periods and disagree.",
+          "Pin down a measurable quantity: number of customers served per hour during the morning rush (say $7$ a.m. to $9$ a.m.).",
+          "Attach the unit: customers per hour.",
+          "This is now operationally well defined: anyone can count customers in that fixed window and compute the rate, and the two shops become directly comparable."
+        ],
+        "answer": "Define the quantity as customers served per hour during a fixed morning window (unit: customers per hour). The manager's 'number of customers' is not well defined because it never specifies the time period over which to count."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Country $A$ produces $1{,}200{,}000$ tons of wheat and Country $B$ produces $400{,}000$ tons. To decide which country is more agriculturally PRODUCTIVE, what quantity should you define instead of comparing the totals, and what unit would it carry?",
+      "solution": {
+        "steps": [
+          "Notice the trap: comparing raw totals only tells you who grows more wheat overall, not who is more productive.",
+          "Productivity is about output relative to the resource used, so you need a rate, not a total.",
+          "Choose a resource to divide by, such as farmland area (or number of farm workers).",
+          "Define the quantity: wheat produced per unit of farmland, for example tons of wheat per acre (a yield).",
+          "Now a small country with high yield can rank above a large country with a bigger raw total, which is exactly what 'more productive' should capture. Unit: tons per acre."
+        ],
+        "answer": "Define a yield: tons of wheat produced per acre of farmland (unit: tons per acre). A per-unit rate, not the raw total, measures productivity fairly across countries of different sizes."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A city manager compares water use across neighborhoods of very different populations. Should water use be reported as total gallons per month, or as gallons per person per day? Justify the choice for a fair comparison.",
+      "solution": {
+        "steps": [
+          "Identify the goal: compare how much water residents use, across neighborhoods that differ in size.",
+          "A large neighborhood will almost always have a larger total simply because more people live there, so total gallons per month confounds population with usage habits.",
+          "To make the comparison fair, divide out the population: gallons per person per day is a per-capita rate.",
+          "This per-capita quantity isolates usage behavior, so a small neighborhood and a large neighborhood can be compared on equal footing.",
+          "Choose gallons per person per day. Unit: gallons per person per day."
+        ],
+        "answer": "Report gallons per person per day. A per-capita rate removes the effect of differing populations, so the comparison reflects usage habits rather than neighborhood size."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "You are choosing between two cell phone plans. Plan $X$ costs $\\$30$ per month plus $\\$0.10$ per GB of data; Plan $Y$ costs $\\$45$ per month with unlimited data. List the quantities, with units, you must define to model total YEARLY cost as a function of monthly data use $d$.",
+      "solution": {
+        "steps": [
+          "Identify the decision variable: monthly data use, call it $d$, measured in GB per month.",
+          "Identify the fixed inputs you already know: Plan $X$ monthly base $\\$30$ per month and per-GB charge $\\$0.10$ per GB; Plan $Y$ monthly base $\\$45$ per month.",
+          "Define the output quantity: total yearly cost in dollars per year for each plan.",
+          "Build Plan $X$ as a function of $d$: monthly cost is $30 + 0.10d$ dollars per month, so yearly cost is $C_X(d) = 12(30 + 0.10d) = 360 + 1.2d$ dollars per year.",
+          "Build Plan $Y$: yearly cost is $C_Y = 12 \\times 45 = 540$ dollars per year, constant in $d$.",
+          "So the quantities are: $d$ (GB per month), each plan's yearly cost in dollars per year, and the known rate $\\$0.10$ per GB and base fees in dollars per month."
+        ],
+        "answer": "Define: monthly data use $d$ in GB per month (the input); total yearly cost in dollars per year for each plan (the output); plus the known rates, base fee in dollars per month and Plan $X$'s $\\$0.10$ per GB. This gives $C_X(d) = 360 + 1.2d$ and $C_Y = 540$ dollars per year."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "A traffic study models the average speed of cars on a residential street to help set a speed limit. State an appropriate unit, a sensible level of precision (to the nearest what?), and a reasonable range of values the quantity could take.",
+      "solution": {
+        "steps": [
+          "Choose the quantity and its unit: average car speed, measured in miles per hour.",
+          "Decide precision by context: speeds are read off a radar to whole or half numbers, and a speed limit is set in whole numbers, so reporting to the nearest $1$ mile per hour is sensible. Reporting to the nearest thousandth of a mile per hour would be absurd.",
+          "Decide a reasonable range: on a residential street cars realistically travel from about $0$ (stopped) up to roughly $50$ miles per hour for a speeder; values like $200$ miles per hour or negative speeds are impossible here.",
+          "State all three together so the quantity is fully specified for the model."
+        ],
+        "answer": "Unit: miles per hour. Precision: to the nearest $1$ mile per hour. Reasonable range: about $0$ to $50$ miles per hour for a residential street."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A school wants to know whether its cafeteria is too crowded at lunch. Name one quantity, with its unit, that best captures 'crowdedness,' and explain why it is better than simply using the school's total enrollment.",
+      "hint": "Crowdedness is about how many people share a fixed space at one time. Think of a quantity per unit of area.",
+      "solution": {
+        "steps": [
+          "Crowdedness depends on how many students occupy the cafeteria at once relative to its size, not on how many students attend the school overall.",
+          "Total enrollment is off target because many students are elsewhere during a given lunch period, and it ignores the room's size.",
+          "Define a density: number of students in the cafeteria at peak lunch divided by the cafeteria floor area.",
+          "Attach the unit: students per square foot (or students per square meter)."
+        ],
+        "answer": "Define students per square foot in the cafeteria at peak lunch (unit: students per square foot). This is better than total enrollment because crowdedness depends on how many people share the actual space at one time, not on the whole school's size."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "To compare two streaming services, a student proposes the quantity 'number of good movies.' Explain why this is not well defined for a model, and define a measurable quantity that could replace it.",
+      "hint": "Ask: could two different people measure this and get the same value? What makes 'good' a problem?",
+      "solution": {
+        "steps": [
+          "Check whether the quantity is operationally well defined: the word 'good' is subjective, so two people would count different movies and disagree.",
+          "Because it cannot be measured consistently, it cannot anchor a model.",
+          "Replace it with something measurable and unambiguous, for example the total number of titles available, or the number of titles rated $4$ stars or higher by users.",
+          "This replacement has a clear counting rule everyone can apply the same way."
+        ],
+        "answer": "'Number of good movies' is not well defined because 'good' is subjective and two observers could not measure it and agree. Replace it with a measurable quantity such as the number of titles rated $4$ stars or higher (unit: titles)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "City $P$ had $300$ crimes last year and City $Q$ had $150$ crimes. City $P$ has $600{,}000$ residents and City $Q$ has $200{,}000$. To compare how SAFE the two cities are, what quantity should you define instead of comparing the raw counts, and what unit would it carry?",
+      "hint": "The cities are very different sizes. Adjust the count for population.",
+      "solution": {
+        "steps": [
+          "Notice the cities differ greatly in population, so raw crime counts are not comparable: a bigger city naturally has more crimes.",
+          "To compare safety fairly, scale the count by population, giving a per-capita rate.",
+          "Define crimes per capita, conventionally expressed as crimes per $100{,}000$ residents per year.",
+          "Check it: City $P$ has $\\frac{300}{600{,}000}\\times 100{,}000 = 50$ per $100{,}000$; City $Q$ has $\\frac{150}{200{,}000}\\times 100{,}000 = 75$ per $100{,}000$, so $Q$ is actually less safe by this measure, which the raw counts hid."
+        ],
+        "answer": "Define a crime rate: crimes per $100{,}000$ residents per year (a per-capita rate). It accounts for the very different city sizes, unlike the raw counts. Here $P$ is $50$ and $Q$ is $75$ per $100{,}000$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A test was given to $40$ students in Class $A$ and $25$ students in Class $B$. In Class $A$, $30$ students passed; in Class $B$, $20$ passed. To compare how well the two classes did, should you report the number who passed or the percent who passed? Define the quantity and its unit, then say which class did better.",
+      "hint": "The classes have different numbers of students. A count alone hides that.",
+      "solution": {
+        "steps": [
+          "The classes have different sizes ($40$ versus $25$), so the raw number who passed is not a fair comparison.",
+          "Define the pass rate: percent of students who passed, that is passing students divided by total students, times $100$. Unit: percent.",
+          "Class $A$: $\\frac{30}{40}\\times 100 = 75\\%$.",
+          "Class $B$: $\\frac{20}{25}\\times 100 = 80\\%$.",
+          "Class $B$ did better by this measure, even though Class $A$ had more students pass in raw count."
+        ],
+        "answer": "Report the percent who passed (unit: percent), not the raw count. Class $A$ is $75\\%$ and Class $B$ is $80\\%$, so Class $B$ did better, which the raw counts ($30$ vs. $20$) would have hidden."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A food truck owner wants to model her total daily PROFIT as a function of the number of tacos $t$ she sells in a day. List the quantities, with units, she must define for the model, given that each taco sells for $\\$3$, each costs $\\$1$ in ingredients, and she pays a fixed $\\$80$ per day to rent her spot.",
+      "hint": "Profit is revenue minus cost. Identify the input variable, the per-taco amounts, and the fixed cost, each with a unit.",
+      "solution": {
+        "steps": [
+          "Define the input variable: number of tacos sold per day, $t$, in tacos per day.",
+          "Define the revenue rate: price per taco, $\\$3$ per taco, so revenue is $3t$ dollars per day.",
+          "Define the variable cost rate: ingredient cost per taco, $\\$1$ per taco, so variable cost is $1t$ dollars per day.",
+          "Define the fixed cost: $\\$80$ per day for the rental spot.",
+          "Define the output: total daily profit in dollars per day, $P(t) = 3t - (1t + 80) = 2t - 80$ dollars per day."
+        ],
+        "answer": "Define: $t$ = tacos sold per day (input, tacos per day); price $\\$3$ per taco and ingredient cost $\\$1$ per taco; fixed rent $\\$80$ per day; and the output, daily profit in dollars per day. This gives $P(t) = 2t - 80$ dollars per day."
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T11:30:04.469Z"
+}

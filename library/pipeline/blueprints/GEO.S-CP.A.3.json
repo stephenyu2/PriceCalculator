@@ -1,0 +1,125 @@
+{
+  "standard": "GEO.S-CP.A.3",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Understand independence and conditional probability and use them to interpret data",
+  "clusterCode": "A",
+  "skillName": "Conditional Probability Defined",
+
+  "description": "Students define and compute the conditional probability of $A$ given $B$ as $P(A\\mid B)=\\dfrac{P(A\\text{ and }B)}{P(B)}$, where $P(B)>0$. They interpret $P(A\\mid B)$ as the probability of $A$ restricted to the outcomes where $B$ has occurred, compute it from two-way tables, Venn diagrams, set/sample-space descriptions, and given probabilities, and use the rule to characterize independence: $A$ and $B$ are independent exactly when $P(A\\mid B)=P(A)$ and $P(B\\mid A)=P(B)$. They distinguish $P(A\\mid B)$ from $P(B\\mid A)$ and from $P(A\\text{ and }B)$.",
+
+  "subSkills": [
+    "State the definition $P(A\\mid B)=\\dfrac{P(A\\text{ and }B)}{P(B)}$ and the condition $P(B)>0$",
+    "Compute a conditional probability from a two-way frequency table by restricting to the conditioning row or column",
+    "Compute a conditional probability from given values of $P(A\\text{ and }B)$ and $P(B)$",
+    "Compute a conditional probability from a sample space or Venn diagram by counting favorable outcomes within the condition",
+    "Distinguish $P(A\\mid B)$ from $P(B\\mid A)$ and from $P(A\\text{ and }B)$",
+    "Test independence by checking whether $P(A\\mid B)=P(A)$ (equivalently $P(B\\mid A)=P(B)$)",
+    "Rearrange the definition to recover $P(A\\text{ and }B)=P(A\\mid B)\\,P(B)$"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Conditional from a two-way table",
+      "example": "A survey records students by grade and whether they play a sport. Of $80$ students, $30$ play a sport and $50$ do not; among sport players $18$ are seniors. Given that a randomly chosen student plays a sport, find the probability the student is a senior: $P(\\text{senior}\\mid\\text{sport})=\\dfrac{18}{30}=\\dfrac{3}{5}$."
+    },
+    {
+      "name": "Conditional from given probabilities",
+      "example": "Given $P(A\\text{ and }B)=\\dfrac{1}{5}$ and $P(B)=\\dfrac{1}{2}$, find $P(A\\mid B)=\\dfrac{1/5}{1/2}=\\dfrac{2}{5}$."
+    },
+    {
+      "name": "Conditional from a sample space or Venn diagram",
+      "example": "A fair die is rolled. Let $A=\\{\\text{prime}\\}=\\{2,3,5\\}$ and $B=\\{\\text{odd}\\}=\\{1,3,5\\}$. Then $A\\cap B=\\{3,5\\}$ and $P(A\\mid B)=\\dfrac{2/6}{3/6}=\\dfrac{2}{3}$."
+    },
+    {
+      "name": "Compare $P(A\\mid B)$ with $P(B\\mid A)$",
+      "example": "From a table with $P(A\\text{ and }B)=\\dfrac{12}{50}$, $P(A)=\\dfrac{20}{50}$, $P(B)=\\dfrac{15}{50}$, compute $P(A\\mid B)=\\dfrac{12}{15}=\\dfrac{4}{5}$ and $P(B\\mid A)=\\dfrac{12}{20}=\\dfrac{3}{5}$ and note they differ."
+    },
+    {
+      "name": "Test independence via conditional probability",
+      "example": "Given $P(A)=\\dfrac{1}{3}$, $P(B)=\\dfrac{1}{2}$, $P(A\\text{ and }B)=\\dfrac{1}{6}$, check independence: $P(A\\mid B)=\\dfrac{1/6}{1/2}=\\dfrac{1}{3}=P(A)$, so $A$ and $B$ are independent."
+    },
+    {
+      "name": "Solve for a missing joint or marginal probability",
+      "example": "Given $P(A\\mid B)=\\dfrac{3}{4}$ and $P(B)=\\dfrac{2}{5}$, find $P(A\\text{ and }B)=P(A\\mid B)\\,P(B)=\\dfrac{3}{4}\\cdot\\dfrac{2}{5}=\\dfrac{3}{10}$."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Direct one-step application of $P(A\\mid B)=\\dfrac{P(A\\text{ and }B)}{P(B)}$ where both inputs are given or read directly off a clearly labeled two-way table or small sample space. The conditioning event is stated explicitly and the answer is a single fraction that reduces in at most one step.",
+      "constraints": [
+        "$P(A\\text{ and }B)$ and $P(B)$ (or the counts) are given directly, no intermediate computation",
+        "Counts or probabilities use small denominators ($\\le 12$); answers reduce with at most one simplification",
+        "Single conditioning event; no comparison and no independence test",
+        "Sample spaces have $\\le 8$ equally likely outcomes when used"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step problems: the student must first extract or compute $P(A\\text{ and }B)$ and $P(B)$ from a fuller two-way table (row/column/total reconstruction) or from set descriptions before dividing, or must rearrange the definition to solve for $P(A\\text{ and }B)$ from $P(A\\mid B)$ and $P(B)$. Distinguishing $P(A\\mid B)$ from $P(B\\mid A)$ appears here.",
+      "constraints": [
+        "Student computes a needed total, row sum, or intersection count before applying the formula",
+        "Includes either solving for a missing joint/marginal probability or contrasting $P(A\\mid B)$ vs $P(B\\mid A)$",
+        "Denominators up to $50$; final answer given as a reduced fraction",
+        "Tables are $2\\times 2$ with margins; Venn diagrams use up to three region counts"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning and interpretation: test independence by comparing $P(A\\mid B)$ to $P(A)$ (and/or $P(B\\mid A)$ to $P(B)$) and state the conclusion, or chain the rule (find a conditional, then use it to recover a joint probability, then answer a contextual follow-up). Requires interpreting what the conditional means in context, not just computing it.",
+      "constraints": [
+        "Requires comparing two computed probabilities and stating an independence/dependence conclusion with justification",
+        "Or chains two or more applications of the definition (e.g. compute $P(A\\mid B)$, then $P(A\\text{ and }B)$, then a contextual probability)",
+        "Mixes table/Venn extraction with the algebraic rearrangement $P(A\\text{ and }B)=P(A\\mid B)P(B)$",
+        "Answer includes a verbal interpretation of independence or of the conditional probability"
+      ]
+    },
+    "tierSplit": "If split into two worksheets: tier1 covers Easy to Medium (direct division from given values and from tables, distinguishing $P(A\\mid B)$ from $P(B\\mid A)$); tier2 covers Medium to Hard (rearranging for missing probabilities, independence testing via $P(A\\mid B)=P(A)$, and multi-step contextual interpretation). No item overlap between tiers. Most uses take the single ramped worksheet."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student confuses $P(A\\mid B)$ with the joint probability $P(A\\text{ and }B)$ and reports the intersection without dividing by $P(B)$",
+      "distractor": "Gives $P(A\\text{ and }B)$ itself, e.g. answers $\\dfrac{1}{5}$ instead of $\\dfrac{1/5}{1/2}=\\dfrac{2}{5}$"
+    },
+    {
+      "misconception": "Student reverses the condition and computes $P(B\\mid A)$ instead of $P(A\\mid B)$, dividing by the wrong marginal",
+      "distractor": "Uses $\\dfrac{P(A\\text{ and }B)}{P(A)}$, e.g. answers $\\dfrac{12}{20}=\\dfrac{3}{5}$ when $\\dfrac{12}{15}=\\dfrac{4}{5}$ was asked"
+    },
+    {
+      "misconception": "Student divides by the wrong denominator, using the whole-sample total or $P(A)$ rather than $P(B)$ when conditioning on $B$",
+      "distractor": "Uses the grand total $80$ as the denominator, e.g. $\\dfrac{18}{80}=\\dfrac{9}{40}$ instead of $\\dfrac{18}{30}=\\dfrac{3}{5}$"
+    },
+    {
+      "misconception": "Student multiplies $P(A)$ and $P(B)$ to get the conditional, assuming independence is automatic",
+      "distractor": "Reports $P(A)\\cdot P(B)$, e.g. $\\dfrac{1}{3}\\cdot\\dfrac{1}{2}=\\dfrac{1}{6}$ as the value of $P(A\\mid B)$ instead of $\\dfrac{1}{3}$"
+    },
+    {
+      "misconception": "Student concludes dependence (or independence) by comparing $P(A\\mid B)$ to $P(B)$ instead of to $P(A)$",
+      "distractor": "Checks whether $P(A\\mid B)=P(B)$, so labels independent events as dependent (or vice versa) by matching the wrong marginal"
+    },
+    {
+      "misconception": "Student adds $P(A)$ and $P(B)$ or subtracts when recovering a joint probability instead of multiplying $P(A\\mid B)\\,P(B)$",
+      "distractor": "Computes $P(A\\mid B)+P(B)$, e.g. $\\dfrac{3}{4}+\\dfrac{2}{5}=\\dfrac{23}{20}$ instead of $\\dfrac{3}{4}\\cdot\\dfrac{2}{5}=\\dfrac{3}{10}$"
+    },
+    {
+      "misconception": "Student forgets to reduce or mishandles the complex fraction, dividing numerators and denominators straight across",
+      "distractor": "From $\\dfrac{1/5}{1/2}$ writes $\\dfrac{1}{10}$ (multiplying denominators) instead of $\\dfrac{1}{5}\\cdot\\dfrac{2}{1}=\\dfrac{2}{5}$"
+    }
+  ],
+
+  "_comment_itemCounts": "worksheet.single = one ramped sheet Easy->Hard across 15 items. tier1/tier2 only if the standard is split into two worksheets.",
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

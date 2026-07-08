@@ -1,0 +1,165 @@
+{
+  "id": "GEO.S-CP.A.5--quiz",
+  "standard": "GEO.S-CP.A.5",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Conditional Probability and the Rules of Probability",
+  "domainCode": "S-CP",
+  "cluster": "Understand independence and conditional probability and use them to interpret data",
+  "clusterCode": "A",
+  "skillName": "Everyday Conditional Probability",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Eight multiple-choice questions on everyday conditional probability: translating phrases like 'among' and 'given' into $P(A \\mid B)$, computing conditional probabilities from counts and two-way tables, and deciding independence by comparing $P(A \\mid B)$ with $P(A)$.",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "A health report states: 'Among adults who exercise daily, $15\\%$ have high blood pressure.' Let $E$ be 'exercises daily' and $H$ be 'has high blood pressure.' Which statement matches the sentence?\nA) $P(H \\mid E) = 0.15$\nB) $P(E \\mid H) = 0.15$\nC) $P(H \\text{ and } E) = 0.15$\nD) $P(E) = 0.15$",
+      "answer": "A) $P(H \\mid E) = 0.15$",
+      "solution": {
+        "steps": [
+          "The phrase 'among adults who exercise daily' sets the condition: we are already inside the group of daily exercisers, so $E$ is the given event $B$.",
+          "The $15\\%$ describes how many of that group have high blood pressure, so $H$ is the target event $A$.",
+          "Translating 'among $E$, the chance of $H$' gives $P(H \\mid E) = 0.15$, which is option A.",
+          "B reverses the condition and target ($P(E \\mid H)$ would be 'among those with high blood pressure, the rate who exercise').",
+          "C reads it as a joint probability over all adults, but 'among exercisers' restricts to the $E$ group, not everyone.",
+          "D ignores high blood pressure entirely and is just the rate of exercising."
+        ],
+        "answer": "A) $P(H \\mid E) = 0.15$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "In a class of $30$ students, $18$ play a sport, and of those $18$ sport players, $12$ also play an instrument. What is the probability that a student plays an instrument given that they play a sport?\nA) $\\frac{12}{30} = \\frac{2}{5}$\nB) $\\frac{12}{18} = \\frac{2}{3}$\nC) $\\frac{18}{30} = \\frac{3}{5}$\nD) $\\frac{18}{12} = \\frac{3}{2}$",
+      "answer": "B) $\\frac{12}{18} = \\frac{2}{3}$",
+      "solution": {
+        "steps": [
+          "'Given that they play a sport' makes the sport players the condition, so the denominator is the number of sport players, $18$.",
+          "Of those $18$, the number who also play an instrument is $12$, the numerator.",
+          "$P(I \\mid S) = \\dfrac{12}{18} = \\dfrac{2}{3}$, which is option B.",
+          "A divides by the grand total $30$, giving the joint probability $P(I \\text{ and } S)$, not the conditional.",
+          "C is just $P(\\text{plays a sport})$ and ignores the instrument count.",
+          "D inverts the fraction; a probability cannot exceed $1$."
+        ],
+        "answer": "B) $\\frac{12}{18} = \\frac{2}{3}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "A survey finds $P(\\text{likes coffee}) = 0.6$ and $P(\\text{likes coffee} \\mid \\text{works night shift}) = 0.6$. Are 'likes coffee' and 'works night shift' independent?\nA) Yes, because $P(A \\mid B) = P(A)$\nB) No, because $P(A \\mid B) > 0$\nC) No, because the two events can happen together\nD) Cannot tell without the count of night-shift workers",
+      "answer": "A) Yes, because $P(A \\mid B) = P(A)$",
+      "solution": {
+        "steps": [
+          "Two events are independent exactly when knowing one does not change the probability of the other, that is when $P(A \\mid B) = P(A)$.",
+          "Here $P(\\text{likes coffee} \\mid \\text{works night shift}) = 0.6$ equals $P(\\text{likes coffee}) = 0.6$, so knowing the person works night shift does not change the chance they like coffee.",
+          "Therefore the events are independent, which is option A.",
+          "B uses an irrelevant test; $P(A \\mid B) > 0$ only says the events can co-occur, not whether they are independent.",
+          "C confuses independence with mutual exclusivity; events that can happen together can still be independent.",
+          "D is wrong because the equality $P(A \\mid B) = P(A)$ already settles independence; no further counts are needed."
+        ],
+        "answer": "A) Yes, because $P(A \\mid B) = P(A)$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "A two-way table sorts $120$ people by whether they own a pet (rows) and whether they rent or own their home (columns). Pet owners: $45$ own a home, $30$ rent (row total $75$). No pet: $20$ own a home, $25$ rent (row total $45$). Find $P(\\text{owns home} \\mid \\text{owns a pet})$.\nA) $\\frac{45}{120} = \\frac{3}{8}$\nB) $\\frac{45}{65} = \\frac{9}{13}$\nC) $\\frac{45}{75} = \\frac{3}{5}$\nD) $\\frac{75}{120} = \\frac{5}{8}$",
+      "answer": "C) $\\frac{45}{75} = \\frac{3}{5}$",
+      "solution": {
+        "steps": [
+          "'Given owns a pet' restricts attention to the pet-owner row, whose total is $75$, so that is the denominator.",
+          "Within that row, the number who also own a home is $45$, the numerator.",
+          "$P(\\text{owns home} \\mid \\text{owns a pet}) = \\dfrac{45}{75} = \\dfrac{3}{5}$, which is option C.",
+          "A divides by the grand total $120$, giving the joint probability $P(\\text{owns home and owns a pet})$, not the conditional.",
+          "B uses $65$, the column total for home owners ($45 + 20$), which is the denominator for the reversed conditional $P(\\text{owns a pet} \\mid \\text{owns home})$.",
+          "D is just $P(\\text{owns a pet}) = \\dfrac{75}{120}$ and ignores the home-ownership condition."
+        ],
+        "answer": "C) $\\frac{45}{75} = \\frac{3}{5}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Using the same two-way table (Pet: $45$ own home, $30$ rent; No pet: $20$ own home, $25$ rent; total $120$), which quantity equals the joint probability $P(\\text{owns a pet and rents})$?\nA) $\\frac{30}{75}$\nB) $\\frac{30}{55}$\nC) $\\frac{30}{120} = \\frac{1}{4}$\nD) $\\frac{55}{120}$",
+      "answer": "C) $\\frac{30}{120} = \\frac{1}{4}$",
+      "solution": {
+        "steps": [
+          "A joint probability $P(A \\text{ and } B)$ counts the people in the single cell where both happen, divided by the grand total.",
+          "The cell for 'owns a pet and rents' contains $30$ people, and the grand total is $120$.",
+          "$P(\\text{owns a pet and rents}) = \\dfrac{30}{120} = \\dfrac{1}{4}$, which is option C.",
+          "A divides by the pet-owner row total $75$; that is the conditional $P(\\text{rents} \\mid \\text{owns a pet})$, not the joint probability.",
+          "B divides by the renter column total $55$ ($30 + 25$); that is the conditional $P(\\text{owns a pet} \\mid \\text{rents})$.",
+          "D is the marginal $P(\\text{rents}) = \\dfrac{55}{120}$ and ignores pet ownership."
+        ],
+        "answer": "C) $\\frac{30}{120} = \\frac{1}{4}$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "In a town, $P(\\text{rain} \\mid \\text{cloudy sky}) = 0.5$. A student concludes that $P(\\text{cloudy sky} \\mid \\text{rain}) = 0.5$ as well. Is this reasoning valid?\nA) Yes, because conditional probability is symmetric\nB) Yes, because both involve the same two events\nC) No, in general $P(A \\mid B) \\ne P(B \\mid A)$\nD) No, because $P(\\text{rain} \\mid \\text{cloudy sky})$ must equal $1$",
+      "answer": "C) No, in general $P(A \\mid B) \\ne P(B \\mid A)$",
+      "solution": {
+        "steps": [
+          "Conditioning is directional: $P(A \\mid B)$ asks the chance of $A$ within the $B$ group, while $P(B \\mid A)$ asks the chance of $B$ within the $A$ group, and these use different denominators.",
+          "$P(\\text{cloudy sky} \\mid \\text{rain})$ is typically much higher than $0.5$ (it usually is cloudy when it rains), so it need not equal $P(\\text{rain} \\mid \\text{cloudy sky})$.",
+          "Thus the reasoning is invalid: in general $P(A \\mid B) \\ne P(B \\mid A)$, which is option C.",
+          "A and B both assume conditioning is symmetric, which is the misconception being tested.",
+          "D is false; there is no rule forcing $P(\\text{rain} \\mid \\text{cloudy sky})$ to be $1$."
+        ],
+        "answer": "C) No, in general $P(A \\mid B) \\ne P(B \\mid A)$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A streaming service surveys $200$ users. Of the $80$ who watch sports, $32$ also watch documentaries. Overall, $90$ of the $200$ users watch documentaries. Are 'watches sports' ($S$) and 'watches documentaries' ($D$) independent?\nA) Independent, because $P(D \\mid S) = P(D)$\nB) Dependent, because $P(D \\mid S) = 0.40$ while $P(D) = 0.45$\nC) Independent, because $32 > 0$ so they overlap\nD) Dependent, because $P(D \\mid S) \\ne P(S \\mid D)$",
+      "answer": "B) Dependent, because $P(D \\mid S) = 0.40$ while $P(D) = 0.45$",
+      "solution": {
+        "steps": [
+          "Independence is tested by comparing the conditional $P(D \\mid S)$ with the marginal $P(D)$.",
+          "$P(D \\mid S) = \\dfrac{32}{80} = 0.40$, using the $80$ sports watchers as the denominator.",
+          "$P(D) = \\dfrac{90}{200} = 0.45$, the overall documentary rate.",
+          "Since $0.40 \\ne 0.45$, knowing a user watches sports changes the chance they watch documentaries, so the events are dependent: option B.",
+          "A misstates the values; the two probabilities are not equal here.",
+          "C confuses overlap with independence; overlapping events can be dependent or independent, and overlap alone proves nothing.",
+          "D uses the wrong test: independence compares $P(D \\mid S)$ to $P(D)$, not $P(D \\mid S)$ to $P(S \\mid D)$, which almost always differ even when events are independent."
+        ],
+        "answer": "B) Dependent, because $P(D \\mid S) = 0.40$ while $P(D) = 0.45$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A screening test for a rare disease gives $P(\\text{disease} \\mid \\text{positive test}) = 0.31$, while the overall rate is $P(\\text{disease}) = 0.05$. What does this comparison tell a doctor?\nA) The events are independent, so the test is useless\nB) A positive test raises the chance of disease, so the events are dependent\nC) $31\\%$ of all people tested have the disease\nD) The disease and a positive test are mutually exclusive",
+      "answer": "B) A positive test raises the chance of disease, so the events are dependent",
+      "solution": {
+        "steps": [
+          "Compare the conditional $P(\\text{disease} \\mid \\text{positive test}) = 0.31$ with the marginal $P(\\text{disease}) = 0.05$.",
+          "Because $0.31 > 0.05$, knowing the test is positive raises the probability of disease well above the baseline, so the two events are associated, that is dependent: option B.",
+          "A is wrong because independence would require $P(\\text{disease} \\mid \\text{positive test}) = P(\\text{disease})$, but $0.31 \\ne 0.05$.",
+          "C misreads the conditional as a marginal; $0.31$ is the disease rate only among those who test positive, not among everyone.",
+          "D confuses dependence with mutual exclusivity; the events clearly can occur together (positive testers who truly have the disease), so they are not mutually exclusive."
+        ],
+        "answer": "B) A positive test raises the chance of disease, so the events are dependent"
+      }
+    }
+  ]
+}

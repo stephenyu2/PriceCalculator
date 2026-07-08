@@ -1,0 +1,170 @@
+{
+  "id": "7.SP.C.7--lesson",
+  "standard": "7.SP.C.7",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate chance processes and develop, use, and evaluate probability models",
+  "clusterCode": "C",
+  "skillName": "Probability Models",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "A probability model lists every possible outcome of a chance process and assigns each one a probability between $0$ and $1$, with all the probabilities adding up to $1$. A uniform model treats every outcome as equally likely, so each of $n$ outcomes gets probability $\\frac{1}{n}$. An empirical model uses collected data, estimating $P(\\text{event}) = \\frac{\\text{observed frequency}}{\\text{total trials}}$. You can use a model to find the probability of an event, predict how often an outcome should happen in many trials, and compare the model's predictions to what actually happened. When the model and the data disagree, you look for a reason: too few trials, a biased process, or a wrong assumption that the outcomes are equally likely.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A fair spinner has $5$ equal sections numbered $1$ through $5$. Assign a probability to each outcome, then find $P(\\text{number greater than } 3)$.",
+      "solution": {
+        "steps": [
+          "The spinner is fair, so all $5$ sections are equally likely. This is a uniform model.",
+          "Each outcome gets probability $\\frac{1}{n} = \\frac{1}{5}$, so $P(1)=P(2)=P(3)=P(4)=P(5)=\\frac{1}{5}$.",
+          "Check the model is valid: $\\frac{1}{5}+\\frac{1}{5}+\\frac{1}{5}+\\frac{1}{5}+\\frac{1}{5}=\\frac{5}{5}=1$, and each is between $0$ and $1$.",
+          "The favorable outcomes for 'greater than $3$' are $4$ and $5$.",
+          "Add their probabilities: $P(>3)=\\frac{1}{5}+\\frac{1}{5}=\\frac{2}{5}$."
+        ],
+        "answer": "Each outcome has probability $\\frac{1}{5}$, and $P(\\text{greater than } 3)=\\frac{2}{5}$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A bag of marbles is drawn $50$ times with replacement. The results are red $20$, blue $18$, green $12$. Use the data to estimate $P(\\text{blue})$.",
+      "solution": {
+        "steps": [
+          "We do not know the bag is uniform, so build an empirical model from the observed data.",
+          "The empirical probability is $P(\\text{event}) = \\frac{\\text{observed frequency}}{\\text{total trials}}$.",
+          "Blue was drawn $18$ times out of $50$ total draws, so $P(\\text{blue}) = \\frac{18}{50}$.",
+          "Simplify by dividing the numerator and denominator by their GCF $2$: $\\frac{18 \\div 2}{50 \\div 2} = \\frac{9}{25}$.",
+          "As a decimal this is $\\frac{9}{25}=0.36$."
+        ],
+        "answer": "$P(\\text{blue}) = \\frac{18}{50} = \\frac{9}{25} = 0.36$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A fair number cube is rolled $60$ times. About how many times do you expect to roll a $4$?",
+      "solution": {
+        "steps": [
+          "A fair number cube has $6$ equally likely faces, so $P(4)=\\frac{1}{6}$.",
+          "The expected count of an outcome is $P(\\text{outcome}) \\times (\\text{number of trials})$.",
+          "Multiply: $\\frac{1}{6} \\times 60 = \\frac{60}{6}$.",
+          "Simplify: $\\frac{60}{6} = 10$.",
+          "So in $60$ rolls you expect to roll a $4$ about $10$ times. This is a prediction, not a guarantee."
+        ],
+        "answer": "About $10$ times."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "A coin is modeled as fair, so $P(\\text{heads})=\\frac{1}{2}$. In $40$ flips it lands heads $22$ times. Find the observed relative frequency of heads and decide whether it agrees well with the model.",
+      "solution": {
+        "steps": [
+          "The model predicts $P(\\text{heads})=\\frac{1}{2}=0.5$.",
+          "The observed relative frequency is $\\frac{\\text{observed heads}}{\\text{total flips}} = \\frac{22}{40}$.",
+          "Simplify: $\\frac{22}{40} = \\frac{11}{20}$, which as a decimal is $0.55$.",
+          "Compare the two values: the model gives $0.5$ and the data give $0.55$, a difference of only $0.05$.",
+          "A gap of $0.05$ over just $40$ flips is small and easily explained by normal chance variation, so the agreement is good and the fair-coin model is reasonable."
+        ],
+        "answer": "Observed relative frequency $=\\frac{22}{40}=\\frac{11}{20}=0.55$, which is close to the model's $0.5$, so the agreement is good."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "Survey data show a class picks pizza with probability $\\frac{1}{2}$, tacos with probability $\\frac{3}{10}$, and salad with probability $\\frac{1}{5}$. Verify this is a valid probability model, then find $P(\\text{not salad})$.",
+      "solution": {
+        "steps": [
+          "A model is valid when each probability is between $0$ and $1$ and the probabilities sum to $1$.",
+          "Each value $\\frac{1}{2}$, $\\frac{3}{10}$, and $\\frac{1}{5}$ is between $0$ and $1$.",
+          "Rewrite with a common denominator of $10$: $\\frac{1}{2}=\\frac{5}{10}$, $\\frac{3}{10}=\\frac{3}{10}$, $\\frac{1}{5}=\\frac{2}{10}$.",
+          "Add them: $\\frac{5}{10}+\\frac{3}{10}+\\frac{2}{10}=\\frac{10}{10}=1$, so the model is valid.",
+          "Use the complement for 'not salad': $P(\\text{not salad}) = 1 - P(\\text{salad}) = 1 - \\frac{1}{5} = \\frac{5}{5} - \\frac{1}{5} = \\frac{4}{5}$."
+        ],
+        "answer": "The model is valid (probabilities sum to $1$), and $P(\\text{not salad}) = \\frac{4}{5}$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A fair number cube has faces numbered $1$ through $6$. Assign a probability to each face, then find $P(\\text{even number})$.",
+      "hint": "All faces are equally likely, so each gets probability $\\frac{1}{6}$. The even faces are $2$, $4$, and $6$.",
+      "solution": {
+        "steps": [
+          "The cube is fair, so each of the $6$ faces has probability $\\frac{1}{6}$ (a uniform model).",
+          "The even outcomes are $2$, $4$, and $6$.",
+          "Add their probabilities: $P(\\text{even}) = \\frac{1}{6}+\\frac{1}{6}+\\frac{1}{6} = \\frac{3}{6}$.",
+          "Simplify: $\\frac{3}{6}=\\frac{1}{2}$."
+        ],
+        "answer": "$P(\\text{even number}) = \\frac{1}{2}$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A spinner is spun $40$ times and lands on yellow $14$ times. Use the data to estimate $P(\\text{yellow})$. Write your answer as a fraction in lowest terms.",
+      "hint": "Divide the number of yellow spins by the total number of spins, then simplify.",
+      "solution": {
+        "steps": [
+          "Build an empirical model: $P(\\text{yellow}) = \\frac{\\text{yellow spins}}{\\text{total spins}}$.",
+          "Substitute the data: $P(\\text{yellow}) = \\frac{14}{40}$.",
+          "Simplify by dividing top and bottom by the GCF $2$: $\\frac{14 \\div 2}{40 \\div 2} = \\frac{7}{20}$."
+        ],
+        "answer": "$P(\\text{yellow}) = \\frac{14}{40} = \\frac{7}{20}$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A fair coin is flipped $80$ times. About how many times do you expect it to land tails?",
+      "hint": "For a fair coin $P(\\text{tails})=\\frac{1}{2}$. Multiply that probability by the number of flips.",
+      "solution": {
+        "steps": [
+          "A fair coin has $P(\\text{tails})=\\frac{1}{2}$.",
+          "Expected count $= P(\\text{tails}) \\times (\\text{number of flips}) = \\frac{1}{2} \\times 80$.",
+          "Multiply: $\\frac{1}{2} \\times 80 = \\frac{80}{2} = 40$."
+        ],
+        "answer": "About $40$ times."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A six-sided number cube is rolled $30$ times. The number $6$ comes up $9$ times. The cube is modeled as fair, so $P(6)=\\frac{1}{6}$. Find the observed relative frequency of rolling a $6$ and compare it to the model.",
+      "hint": "The observed relative frequency is $\\frac{9}{30}$. Compare it as a decimal to $\\frac{1}{6}\\approx 0.167$.",
+      "solution": {
+        "steps": [
+          "The model predicts $P(6)=\\frac{1}{6}\\approx 0.167$.",
+          "The observed relative frequency is $\\frac{\\text{sixes}}{\\text{total rolls}} = \\frac{9}{30}$.",
+          "Simplify: $\\frac{9}{30}=\\frac{3}{10}=0.3$.",
+          "Compare: the data give $0.3$ but the fair model gives about $0.167$, a noticeable gap. The $6$ came up much more often than a fair cube predicts.",
+          "With only $30$ rolls this could be chance variation, but the cube may also be unfair (biased toward $6$); more trials would help decide."
+        ],
+        "answer": "Observed relative frequency $=\\frac{9}{30}=\\frac{3}{10}=0.3$, which is well above the model's $\\frac{1}{6}\\approx 0.167$, so the data do not agree well with the fair-cube model."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "A four-color spinner is modeled with $P(\\text{red})=\\frac{2}{5}$, $P(\\text{blue})=\\frac{1}{5}$, $P(\\text{green})=\\frac{1}{10}$, and $P(\\text{yellow})=p$. Find $p$ so the model is valid, then find $P(\\text{not red})$.",
+      "hint": "All four probabilities must add to $1$. Use a common denominator of $10$ to add the known values, then subtract from $1$.",
+      "solution": {
+        "steps": [
+          "A valid model has probabilities that sum to $1$, so $\\frac{2}{5}+\\frac{1}{5}+\\frac{1}{10}+p = 1$.",
+          "Rewrite the known values with denominator $10$: $\\frac{2}{5}=\\frac{4}{10}$, $\\frac{1}{5}=\\frac{2}{10}$, $\\frac{1}{10}=\\frac{1}{10}$.",
+          "Add the known parts: $\\frac{4}{10}+\\frac{2}{10}+\\frac{1}{10}=\\frac{7}{10}$.",
+          "Solve for $p$: $p = 1 - \\frac{7}{10} = \\frac{10}{10}-\\frac{7}{10}=\\frac{3}{10}$.",
+          "Find $P(\\text{not red})$ with the complement: $P(\\text{not red}) = 1 - P(\\text{red}) = 1 - \\frac{2}{5} = \\frac{5}{5}-\\frac{2}{5}=\\frac{3}{5}$."
+        ],
+        "answer": "$p = \\frac{3}{10}$, and $P(\\text{not red}) = \\frac{3}{5}$."
+      }
+    }
+  ]
+}

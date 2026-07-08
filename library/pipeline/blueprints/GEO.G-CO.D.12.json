@@ -1,0 +1,126 @@
+{
+  "standard": "GEO.G-CO.D.12",
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Congruence",
+  "domainCode": "G-CO",
+  "cluster": "Make geometric constructions",
+  "clusterCode": "D",
+  "skillName": "Formal Geometric Constructions",
+
+  "description": "Students perform and justify formal geometric constructions using a compass and straightedge (and equivalent tools such as paper folding or reflective devices). They reproduce a segment or angle, bisect a segment or angle, construct perpendicular and parallel lines, and build basic figures, then explain WHY each construction works by appealing to congruent triangles, equal radii, and the defining properties of perpendicular bisectors, angle bisectors, and parallel lines. Because the renderer is text and KaTeX only, items describe each compass-and-straightedge step in words and verify it with the underlying geometric reasoning (equal radii give congruent segments, SSS gives congruent triangles, equidistance defines the perpendicular bisector) rather than relying on a drawn diagram.",
+
+  "subSkills": [
+    "Copy a segment congruent to a given segment using a fixed compass width",
+    "Copy an angle congruent to a given angle by transferring arcs",
+    "Construct the perpendicular bisector of a segment and explain the equal-radii / congruent-triangle justification",
+    "Bisect a given angle and justify it with SSS congruent triangles",
+    "Construct a line perpendicular to a given line through a point on it and through a point off it",
+    "Construct a line parallel to a given line through a point not on it (copied corresponding angles or rhombus method)",
+    "Identify which steps depend on equal compass radii and which conclusion ($\\overline{AB}\\cong\\overline{CD}$, $\\angle ABC\\cong\\angle DEF$) those equal radii guarantee",
+    "Connect a construction to its defining locus property (perpendicular bisector = points equidistant from the endpoints; angle bisector = points equidistant from the sides)"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Order the construction steps",
+      "example": "Put the steps for bisecting $\\angle ABC$ in the correct order: (1) place the compass point at $B$ and draw an arc crossing both rays at $P$ and $Q$; (2) from $P$ and $Q$ draw two arcs of equal radius meeting at $R$; (3) draw ray $\\overrightarrow{BR}$. Which ordering produces the bisector?"
+    },
+    {
+      "name": "Justify a step",
+      "example": "In the perpendicular-bisector construction of $\\overline{AB}$, the compass radius is kept larger than $\\tfrac{1}{2}AB$ and arcs from $A$ and $B$ meet at $C$ and $D$. Why is $CA=CB$? (Answer: both equal the compass radius, so $C$ is equidistant from $A$ and $B$.)"
+    },
+    {
+      "name": "Name the congruence postulate",
+      "example": "When you bisect $\\angle ABC$, triangles $\\triangle BPR$ and $\\triangle BQR$ are congruent. Which postulate proves it, and which corresponding parts give $\\angle PBR\\cong\\angle QBR$? (SSS, then CPCTC.)"
+    },
+    {
+      "name": "Identify the construction from its steps",
+      "example": "A student marks point $P$ on line $\\ell$, swings equal arcs to mark $A$ and $B$ on $\\ell$ so $PA=PB$, then draws equal-radius arcs from $A$ and $B$ meeting at $Q$, and draws $\\overleftrightarrow{PQ}$. What has been constructed? (The line through $P$ perpendicular to $\\ell$.)"
+    },
+    {
+      "name": "Parallel-line construction",
+      "example": "To construct a line through $P$ parallel to line $\\ell$, you draw a transversal through $P$ meeting $\\ell$ at $A$, then copy the angle that $\\ell$ makes with the transversal at $P$. Which angle pair guarantees the new line is parallel to $\\ell$? (Congruent corresponding angles.)"
+    },
+    {
+      "name": "Locus / defining property",
+      "example": "Explain why every point on the perpendicular bisector of $\\overline{AB}$ is equidistant from $A$ and $B$, and use this to locate a point equidistant from two towns $A$ and $B$ that also lies on a given road."
+    },
+    {
+      "name": "Spot the error",
+      "example": "A student copies $\\overline{AB}$ but changes the compass width between marking the radius on $\\overline{AB}$ and striking the arc on the new ray. Why does the resulting segment fail to be congruent to $\\overline{AB}$? (The two segments no longer share the same radius, so $\\overline{A'B'}\\not\\cong\\overline{AB}$.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single, named construction with the standard textbook steps. Student recalls the procedure, identifies the tool action, or states the immediate equal-radii fact. One reasoning hop at most.",
+      "constraints": [
+        "Construction is one of: copy a segment, copy an angle, bisect a segment (perpendicular bisector), bisect an angle",
+        "Question asks to name the construction, order 3 short steps, or state why two compass-drawn segments are equal ($PA=PB$ because both are the radius)",
+        "No multi-triangle proof required; congruence justification is at most 'equal radii'"
+      ]
+    },
+    "Medium": {
+      "description": "Construction plus one layer of justification: name the congruence postulate (usually SSS), apply CPCTC to get the congruent angles or the perpendicularity, or distinguish the on-the-line vs off-the-line perpendicular cases. Two to three reasoning hops.",
+      "constraints": [
+        "Includes perpendicular-through-a-point (on and off the line) and the angle-bisector justification via $\\triangle BPR\\cong\\triangle BQR$ (SSS) then CPCTC",
+        "Student must cite the postulate AND the conclusion it yields, or pick the radius condition that makes the arcs intersect (radius $>\\tfrac{1}{2}AB$)",
+        "May require recognizing that congruent corresponding (or alternate interior) angles force a parallel line"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step or synthetic task: build a compound figure, the parallel-line construction with full angle-congruence justification, a locus/equidistance application, or an error-analysis that traces a flawed step to a failed congruence conclusion. Requires assembling several constructions or a short chain of deductions.",
+      "constraints": [
+        "Tasks: construct a parallel line and justify with the corresponding/alternate-angle theorem; combine perpendicular bisectors to locate a circumcenter or a point equidistant from given points; full error analysis tracing a wrong outcome to the violated congruence condition",
+        "Justification chain has 3+ linked steps (equal radii $\\Rightarrow$ SSS $\\Rightarrow$ CPCTC $\\Rightarrow$ desired congruence/perpendicularity/parallelism)",
+        "May embed a real-world locus context (equidistant point, shortest path, fold line)"
+      ]
+    },
+    "_split": "This standard is procedure-rich but uses one ramped worksheet (single, 15 items, Easy->Hard). If split, tier1 covers copy-segment, copy-angle, perpendicular bisector, and angle bisector with equal-radii justification (Easy to Medium); tier2 covers perpendicular-through-a-point, parallel-line construction, SSS/CPCTC justification, locus applications, and error analysis (Medium to Hard)."
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student thinks the compass width may be readjusted freely between steps",
+      "distractor": "Claims the copied segment is congruent even though the compass was reopened, ignoring that congruence depends on the radius staying fixed"
+    },
+    {
+      "misconception": "Student confuses the perpendicular bisector with the angle bisector",
+      "distractor": "Says the construction that strikes equal arcs from the two endpoints of a segment bisects an angle, or that $\\overrightarrow{BR}$ is perpendicular to a segment rather than bisecting $\\angle ABC$"
+    },
+    {
+      "misconception": "Student names the wrong congruence postulate (picks SAS or ASA when SSS applies)",
+      "distractor": "Justifies the angle-bisector construction with SAS or AAS instead of SSS, since the three pairs of equal sides (equal radii and the shared side) are what is actually given"
+    },
+    {
+      "misconception": "Student believes the intersecting arcs work for any radius",
+      "distractor": "States any compass radius produces a perpendicular bisector, missing that the radius must exceed $\\tfrac{1}{2}AB$ for the arcs to meet"
+    },
+    {
+      "misconception": "Student assumes a hand-drawn 'looks-perpendicular' or 'looks-parallel' figure is a valid construction",
+      "distractor": "Accepts eyeballing a right angle or a parallel line as a formal construction, with no compass-and-straightedge justification"
+    },
+    {
+      "misconception": "Student mislabels the angle pair that guarantees parallel lines",
+      "distractor": "Claims congruent same-side (co-interior) angles, rather than congruent corresponding or alternate interior angles, prove the constructed line is parallel"
+    },
+    {
+      "misconception": "Student reverses the locus property of the perpendicular bisector",
+      "distractor": "Says points on the perpendicular bisector are equidistant from the two arc intersection points instead of from the two endpoints of the original segment"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

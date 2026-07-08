@@ -1,0 +1,123 @@
+{
+  "standard": "7.G.A.3",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Draw, construct, and describe geometrical figures and describe the relationships between them",
+  "clusterCode": "A",
+  "skillName": "Cross Sections of 3D Figures",
+
+  "description": "Students determine and describe the two-dimensional figure produced when a plane slices through a three-dimensional solid, focusing on right rectangular prisms and right rectangular pyramids. They must reason about how the orientation of the slicing plane (parallel to a face, perpendicular to a face, or angled/diagonal) controls the shape of the resulting cross section, name that shape precisely (rectangle, square, triangle, trapezoid, etc.), and where dimensions are given, compute the side lengths or area of the cross section.",
+
+  "subSkills": [
+    "Visualize the intersection of a plane and a solid as a flat 2D region (the cross section)",
+    "Slice a right rectangular prism parallel to a face and identify the resulting rectangle or square",
+    "Slice a right rectangular prism perpendicular or diagonal to a face and identify the resulting rectangle",
+    "Slice a right rectangular pyramid parallel to the base (resulting in a smaller similar rectangle/square) versus through the apex (resulting in a triangle)",
+    "Slice a right rectangular pyramid with a plane not through the apex and not parallel to the base (resulting in a trapezoid)",
+    "Name 2D figures precisely using vertex/side counts and right-angle properties",
+    "Determine the dimensions and area of a cross section when the solid's measurements are given"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Prism sliced parallel to a face",
+      "example": "A right rectangular prism is $6$ cm long, $4$ cm wide, and $3$ cm tall. A plane slices the prism parallel to its top and bottom faces. What two-dimensional figure is the cross section, and what are its dimensions?"
+    },
+    {
+      "name": "Prism sliced perpendicular or vertically",
+      "example": "A right rectangular prism measures $8$ in by $5$ in by $2$ in. A vertical plane cuts straight down, perpendicular to the length, slicing the $5$ in by $2$ in face. Name the cross section and give its dimensions."
+    },
+    {
+      "name": "Pyramid sliced parallel to the base",
+      "example": "A right rectangular pyramid has a base $10$ ft by $6$ ft. A plane slices it parallel to the base, halfway up the height. What is the shape of the cross section, and what fraction of the base's linear dimensions does it have?"
+    },
+    {
+      "name": "Pyramid sliced through the apex",
+      "example": "A right rectangular pyramid is sliced by a vertical plane that passes through the apex and is parallel to a pair of base edges. What two-dimensional figure results?"
+    },
+    {
+      "name": "Pyramid sliced to form a trapezoid",
+      "example": "A right rectangular pyramid is cut by a plane that is not parallel to the base and does not pass through the apex, intersecting all four lateral faces. Describe the resulting cross section."
+    },
+    {
+      "name": "Cross-section area computation",
+      "example": "A right rectangular prism is $7$ cm by $4$ cm by $4$ cm. A plane slices it parallel to the $7$ cm by $4$ cm face. Find the area of the cross section."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-step identification of a cross section from a slice parallel to a face of a right rectangular prism, or naming the smaller similar rectangle from a base-parallel slice of a pyramid. The answer is the name of the shape and/or its directly readable dimensions.",
+      "constraints": [
+        "Solid is a right rectangular prism or the slice is parallel to the base of a pyramid",
+        "Slicing plane is parallel to a named face, so the cross section is congruent (prism) or similar (pyramid) to that face",
+        "Dimensions of the cross section are read directly from the solid with no computation, or computed in one step",
+        "Whole-number measurements only"
+      ]
+    },
+    "Medium": {
+      "description": "Identification requires reasoning about a slice that is perpendicular or vertical (prism) or through the apex (pyramid), so the student must pick which dimensions appear in the cross section. May require one computation such as area of the resulting rectangle or triangle.",
+      "constraints": [
+        "Slice is perpendicular/vertical for a prism, or through the apex for a pyramid (yielding a triangle)",
+        "Student must determine which two of the solid's three dimensions form the cross section",
+        "One follow-up computation (perimeter or area) of a rectangle, square, or triangle",
+        "Measurements may include simple fractions or two-digit whole numbers"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning about a non-standard slice, including diagonal slices of a prism, base-parallel slices of a pyramid that require similarity scaling, or slices producing a trapezoid. May require computing a scaled dimension via the ratio of heights, or justifying why a particular non-shape (e.g., a pentagon) cannot occur.",
+      "constraints": [
+        "Slice is diagonal (prism), base-parallel at a stated fraction of the height (pyramid, requiring similarity), or oblique producing a trapezoid",
+        "Requires similarity/proportion to find a scaled side length, or area of a trapezoid",
+        "May ask the student to evaluate or rule out an incorrect shape claim",
+        "Two or more steps before the final answer"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student thinks any slice of a rectangular prism is a square rather than checking the actual two dimensions exposed",
+      "distractor": "Names the cross section a square when the two exposed dimensions are unequal (e.g., calls a $6 \\times 4$ rectangle a square)"
+    },
+    {
+      "misconception": "Student believes a base-parallel slice of a pyramid produces a triangle, confusing it with a vertical slice through the apex",
+      "distractor": "Answers 'triangle' for a slice parallel to the rectangular base, which actually yields a smaller similar rectangle"
+    },
+    {
+      "misconception": "Student assumes a base-parallel cross section of a pyramid is congruent to the base, ignoring that it shrinks with height",
+      "distractor": "Gives the cross section the full base dimensions (e.g., $10 \\times 6$) instead of the scaled-down $5 \\times 3$ at half height"
+    },
+    {
+      "misconception": "Student names the 3D solid instead of the 2D cross section",
+      "distractor": "Answers 'rectangular prism' or 'pyramid' instead of the 2D figure (rectangle, triangle, trapezoid)"
+    },
+    {
+      "misconception": "Student confuses the trapezoid result of an oblique pyramid slice with a triangle or rectangle",
+      "distractor": "Answers 'rectangle' or 'triangle' for an oblique slice that crosses all four lateral faces, which is actually a trapezoid"
+    },
+    {
+      "misconception": "Student computes volume or surface area of the solid instead of the area of the flat cross section",
+      "distractor": "Reports a volume figure (e.g., $96 \\text{ cm}^3$) instead of the cross-section area (e.g., $24 \\text{ cm}^2$)"
+    },
+    {
+      "misconception": "Student multiplies the wrong pair of dimensions when finding cross-section area",
+      "distractor": "Uses the dimension perpendicular to the slicing plane (e.g., includes the height that the parallel slice does not expose) so the area is wrong"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}

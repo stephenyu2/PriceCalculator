@@ -1,0 +1,233 @@
+{
+  "id": "A2.S-IC.B--cluster-test",
+  "standard": null,
+  "clusterId": "A2.S-IC.B",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+  "domainCode": "S-IC",
+  "cluster": "Make inferences and justify conclusions from sample surveys, experiments, and observational studies",
+  "clusterCode": "B",
+  "skillName": "Make inferences and justify conclusions from sample surveys, experiments, and observational studies",
+  "materialType": "cluster-test",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "items": [
+    {
+      "type": "quiz",
+      "id": 1,
+      "standard": "A2.S-IC.B.3",
+      "difficulty": "Easy",
+      "prompt": "A nutrition lab randomly assigns $200$ volunteers to take either a vitamin pill or a placebo for $12$ weeks, then compares the two groups' cholesterol levels. Which type of study is this?\nA) A sample survey\nB) An observational study\nC) An experiment\nD) A census",
+      "answer": "C) An experiment",
+      "solution": {
+        "steps": [
+          "An experiment is defined by the researcher actively imposing a treatment on subjects and comparing outcomes against a control group.",
+          "Here the lab assigns each volunteer to a pill or a placebo, so a treatment is imposed. The key is C.",
+          "A is wrong: a sample survey only measures subjects to estimate a population parameter, it imposes no treatment.",
+          "B is wrong: an observational study records subjects without imposing any treatment, but here a treatment is assigned.",
+          "D is wrong: a census measures an entire population, not a treatment comparison on $200$ volunteers."
+        ],
+        "answer": "C) An experiment"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 2,
+      "standard": "A2.S-IC.B.3",
+      "difficulty": "Medium",
+      "prompt": "A study selects $500$ adults at random from a national registry, then randomly assigns each adult to either an exercise program or a no-exercise control group. What does the random assignment to the two groups accomplish?\nA) It makes the results generalize to the whole national population.\nB) It balances confounding variables across the groups so a cause-and-effect conclusion is justified.\nC) It guarantees the two groups have exactly equal sizes.\nD) It replaces the need for a control group.",
+      "answer": "B) It balances confounding variables across the groups so a cause-and-effect conclusion is justified.",
+      "solution": {
+        "steps": [
+          "Random assignment (allocating subjects to treatment vs. control at random) balances confounding variables across groups on average, so any outcome difference can be attributed to the treatment. The key is B.",
+          "A is wrong: generalizability to the population comes from random sampling (selecting the $500$ adults at random), not from random assignment.",
+          "C is wrong: random assignment does not force exactly equal group sizes, and equal sizes are not its purpose.",
+          "D is wrong: the control group is what the treatment is compared against; assignment distributes subjects but does not remove the need for a control."
+        ],
+        "answer": "B) It balances confounding variables across the groups so a cause-and-effect conclusion is justified."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 3,
+      "standard": "A2.S-IC.B.3",
+      "difficulty": "Hard",
+      "prompt": "Researchers observe that towns with more firefighters present at a fire also tend to have more fire damage, and a report concludes that firefighters cause the damage. The data come from records of past fires, with no treatment assigned. Which statement best evaluates this conclusion?\nA) The conclusion is valid because the association between firefighters and damage is strong.\nB) The conclusion is invalid; this is an observational study and the size of the fire is a lurking variable that drives both.\nC) The conclusion is valid because more firefighters were present in every case.\nD) The conclusion would be valid if the researchers collected data from more towns.",
+      "answer": "B) The conclusion is invalid; this is an observational study and the size of the fire is a lurking variable that drives both.",
+      "solution": {
+        "steps": [
+          "No treatment was imposed, so this is an observational study, which can show association but cannot establish causation.",
+          "The size of the fire is a confounding (lurking) variable: bigger fires both draw more firefighters and cause more damage, creating the association. The key is B.",
+          "A is wrong: a strong association alone never proves causation when confounding is uncontrolled.",
+          "C is wrong: firefighters being present does not establish that they cause the damage; that reverses the direction the lurking variable explains.",
+          "D is wrong: adding more towns increases sample size but does not control the confounding; only random assignment of a treatment could do that."
+        ],
+        "answer": "B) The conclusion is invalid; this is an observational study and the size of the fire is a lurking variable that drives both."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 4,
+      "standard": "A2.S-IC.B.4",
+      "difficulty": "Easy",
+      "prompt": "In a random sample of $400$ households, $144$ own a pet. What is the point estimate $\\hat{p}$ of the population proportion of households that own a pet?\nA) $\\hat{p}=0.36$\nB) $\\hat{p}=0.64$\nC) $\\hat{p}=144$\nD) $\\hat{p}=2.78$",
+      "answer": "A) $\\hat{p}=0.36$",
+      "solution": {
+        "steps": [
+          "The point estimate of a population proportion is the sample proportion $\\hat{p}=\\dfrac{x}{n}$.",
+          "Here $x=144$ and $n=400$, so $\\hat{p}=\\dfrac{144}{400}=0.36$. The key is A.",
+          "B is $\\dfrac{256}{400}=0.64$, the proportion that do NOT own a pet.",
+          "C reports the raw count $144$, which is not a proportion (a proportion lies between $0$ and $1$).",
+          "D inverts the fraction as $\\dfrac{400}{144}\\approx 2.78$, which exceeds $1$ and cannot be a proportion."
+        ],
+        "answer": "A) $\\hat{p}=0.36$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 5,
+      "standard": "A2.S-IC.B.4",
+      "difficulty": "Medium",
+      "prompt": "A random sample of $n=64$ commute times has mean $\\bar{x}=23$ minutes and sample standard deviation $s=8$ minutes. Using $\\text{ME}\\approx 2\\cdot SE$ with $SE_{\\bar{x}}=\\dfrac{s}{\\sqrt{n}}$, what is the approximate $95\\%$ margin of error?\nA) $\\text{ME}\\approx 0.25$ minutes\nB) $\\text{ME}\\approx 1$ minute\nC) $\\text{ME}\\approx 2$ minutes\nD) $\\text{ME}\\approx 16$ minutes",
+      "answer": "C) $\\text{ME}\\approx 2$ minutes",
+      "solution": {
+        "steps": [
+          "Compute the standard error of the mean: $SE=\\dfrac{s}{\\sqrt{n}}=\\dfrac{8}{\\sqrt{64}}=\\dfrac{8}{8}=1$.",
+          "The $95\\%$ margin of error is $\\text{ME}\\approx 2\\cdot SE=2(1)=2$ minutes. The key is C.",
+          "A uses $n$ instead of $\\sqrt{n}$: $\\dfrac{8}{64}=0.125$, then a wrong scaling; the standard error of a mean divides $s$ by $\\sqrt{n}$, not $n$.",
+          "B reports the standard error itself ($SE=1$) and drops the factor of about $2$ needed for $95\\%$ confidence.",
+          "D uses $\\text{ME}=2s=16$, multiplying the standard deviation instead of the standard error."
+        ],
+        "answer": "C) $\\text{ME}\\approx 2$ minutes"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 6,
+      "standard": "A2.S-IC.B.4",
+      "difficulty": "Hard",
+      "prompt": "A poll using a random sample of $n=400$ has a $95\\%$ margin of error of $0.05$. The pollster wants to cut the margin of error in half to $0.025$ using the same method. Since $\\text{ME}$ is proportional to $\\dfrac{1}{\\sqrt{n}}$, what sample size is needed?\nA) $n=800$\nB) $n=1000$\nC) $n=1600$\nD) $n=200$",
+      "answer": "C) $n=1600$",
+      "solution": {
+        "steps": [
+          "Because $\\text{ME}\\propto\\dfrac{1}{\\sqrt{n}}$, halving the margin of error requires multiplying $\\sqrt{n}$ by $2$, which multiplies $n$ by $2^2=4$.",
+          "So the new sample size is $4\\times 400=1600$. The key is C.",
+          "A ($n=800$) doubles the sample size, which would only divide the margin of error by $\\sqrt{2}\\approx 1.41$, not by $2$.",
+          "B ($n=1000$) is an arbitrary increase that does not match the factor-of-$4$ rule.",
+          "D ($n=200$) halves the sample size, which would increase the margin of error, not shrink it."
+        ],
+        "answer": "C) $n=1600$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 7,
+      "standard": "A2.S-IC.B.5",
+      "difficulty": "Easy",
+      "prompt": "In a randomized experiment, the Drug A group had a mean recovery time of $\\bar{x}_A=5.4$ days and the placebo group had a mean recovery time of $\\bar{x}_B=7.1$ days. What is the observed difference $\\bar{x}_A-\\bar{x}_B$?\nA) $12.5$ days\nB) $1.7$ days\nC) $-1.7$ days\nD) $0$ days",
+      "answer": "C) $-1.7$ days",
+      "solution": {
+        "steps": [
+          "The observed difference is $\\bar{x}_A-\\bar{x}_B=5.4-7.1=-1.7$ days. The key is C.",
+          "A adds the two means ($5.4+7.1=12.5$) instead of subtracting.",
+          "B subtracts in the reverse order ($7.1-5.4=1.7$), giving the wrong sign for $\\bar{x}_A-\\bar{x}_B$.",
+          "D would require the two means to be equal, but $5.4\\neq 7.1$."
+        ],
+        "answer": "C) $-1.7$ days"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 8,
+      "standard": "A2.S-IC.B.5",
+      "difficulty": "Medium",
+      "prompt": "A re-randomization simulation shuffled the pooled outcomes of a two-treatment experiment $200$ times, and $6$ of those trials produced a difference of means at least as extreme as the observed difference. What is the empirical p-value?\nA) $0.03$\nB) $33.3$\nC) $6$\nD) $0.97$",
+      "answer": "A) $0.03$",
+      "solution": {
+        "steps": [
+          "The empirical p-value is the proportion of simulated trials at least as extreme as the observed difference: $\\dfrac{\\text{extreme trials}}{\\text{total trials}}=\\dfrac{6}{200}=0.03$. The key is A.",
+          "B inverts the fraction as $\\dfrac{200}{6}\\approx 33.3$, which cannot be a probability.",
+          "C reports the raw count $6$ instead of dividing by the total number of trials.",
+          "D ($0.97$) is the complement $1-0.03$, the proportion of trials NOT at least as extreme, which is not the p-value."
+        ],
+        "answer": "A) $0.03$"
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 9,
+      "standard": "A2.S-IC.B.5",
+      "difficulty": "Hard",
+      "prompt": "In a randomized experiment comparing two study methods, the observed difference of mean test scores was $4.2$ points. A re-randomization simulation of $500$ trials produced $15$ differences at least as extreme as $4.2$ points. Testing at the $0.05$ significance level, what should the researchers conclude?\nA) The p-value is $0.03$, which is greater than $0.05$, so the difference is not significant.\nB) The p-value is $0.03$, which is less than $0.05$, so the difference is statistically significant evidence that the methods differ.\nC) The difference is significant simply because $4.2\\neq 0$.\nD) The simulation proves the better method works for every student.",
+      "answer": "B) The p-value is $0.03$, which is less than $0.05$, so the difference is statistically significant evidence that the methods differ.",
+      "solution": {
+        "steps": [
+          "The empirical p-value is $\\dfrac{15}{500}=0.03$.",
+          "Since $0.03<0.05$, the observed difference is rare under random assignment alone, so it is statistically significant evidence that the two methods differ. The key is B.",
+          "A reverses the decision rule: $0.03$ is less than $0.05$, not greater, so this comparison and conclusion are wrong.",
+          "C is wrong: a nonzero difference is not automatically significant; significance is judged by how rare the difference is under re-randomization.",
+          "D overstates the conclusion: a significant result shows the methods differ in this experiment, not that the better method works for every individual student."
+        ],
+        "answer": "B) The p-value is $0.03$, which is less than $0.05$, so the difference is statistically significant evidence that the methods differ."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 10,
+      "standard": "A2.S-IC.B.6",
+      "difficulty": "Easy",
+      "prompt": "A magazine reports that $82\\%$ of readers who mailed in a survey card favor a four-day work week, and concludes that most workers nationwide favor it. What is the main flaw in this report?\nA) The sample is a voluntary-response sample of the magazine's readers, so it cannot be generalized to all workers.\nB) The sample size is too small to report a percentage.\nC) The conclusion is fully justified because $82\\%$ is a large majority.\nD) The report should have used a smaller percentage.",
+      "answer": "A) The sample is a voluntary-response sample of the magazine's readers, so it cannot be generalized to all workers.",
+      "solution": {
+        "steps": [
+          "People who choose to mail in a survey card form a voluntary-response sample, which is biased and not a random sample of all workers. The key is A.",
+          "B is wrong: the flaw is the biased sampling method, not the sample size; even thousands of returned cards stay biased.",
+          "C is wrong: a large percentage from a biased sample still cannot be generalized to the nation.",
+          "D is wrong: changing the percentage does not fix the underlying sampling bias."
+        ],
+        "answer": "A) The sample is a voluntary-response sample of the magazine's readers, so it cannot be generalized to all workers."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 11,
+      "standard": "A2.S-IC.B.6",
+      "difficulty": "Medium",
+      "prompt": "A poll reports candidate A at $48\\%$ and candidate B at $46\\%$, each with a margin of error of $\\pm 3\\%$, and the headline declares that A is winning. Is the $2$-point lead statistically meaningful?\nA) Yes, because $48\\%>46\\%$.\nB) Yes, because the margin of error is small.\nC) No, the plausible intervals ($45\\%$ to $51\\%$ and $43\\%$ to $49\\%$) overlap and the $2$-point gap is within the $\\pm 3\\%$ margin.\nD) No, because polls are never accurate.",
+      "answer": "C) No, the plausible intervals ($45\\%$ to $51\\%$ and $43\\%$ to $49\\%$) overlap and the $2$-point gap is within the $\\pm 3\\%$ margin.",
+      "solution": {
+        "steps": [
+          "Candidate A's plausible interval is $48\\%\\pm 3\\%$, i.e. $45\\%$ to $51\\%$; candidate B's is $46\\%\\pm 3\\%$, i.e. $43\\%$ to $49\\%$.",
+          "These intervals overlap and the $2$-point gap is smaller than the $\\pm 3\\%$ margin of error, so the lead is not statistically meaningful. The key is C.",
+          "A is wrong: a raw difference of $2$ points inside the margin of error does not establish a real lead.",
+          "B is wrong: a $\\pm 3\\%$ margin is larger than the $2$-point gap, so it does not make the difference meaningful.",
+          "D is wrong: well-conducted polls can be informative; the issue here is specifically that the gap falls within the margin of error, not that polling is worthless."
+        ],
+        "answer": "C) No, the plausible intervals ($45\\%$ to $51\\%$ and $43\\%$ to $49\\%$) overlap and the $2$-point gap is within the $\\pm 3\\%$ margin."
+      }
+    },
+    {
+      "type": "quiz",
+      "id": 12,
+      "standard": "A2.S-IC.B.6",
+      "difficulty": "Hard",
+      "prompt": "A health report observes that people who take vitamin D get fewer colds, based on records with no treatment assigned, and headlines 'Vitamin D prevents colds.' Which response gives the corrected, defensible conclusion?\nA) Vitamin D prevents colds, since the data show fewer colds among users.\nB) This is an observational study, so the data support only an association; a confounding variable such as overall health could explain both, so vitamin D use is associated with fewer colds, not proven to prevent them.\nC) The report proves nothing at all and should be ignored entirely.\nD) Collecting data from more people would let this study prove that vitamin D prevents colds.",
+      "answer": "B) This is an observational study, so the data support only an association; a confounding variable such as overall health could explain both, so vitamin D use is associated with fewer colds, not proven to prevent them.",
+      "solution": {
+        "steps": [
+          "No treatment was assigned, so the report describes an observational study, which can show association but not causation.",
+          "A confounding variable such as overall health or time spent outdoors could cause both more vitamin D use and fewer colds, so the defensible conclusion is association, not prevention. The key is B.",
+          "A is wrong: it treats an observational association as proven cause and effect.",
+          "C overcorrects: a flaw bounds what the report can support, but the data still establish a real association; the report is not worthless.",
+          "D is wrong: more subjects increase sample size but do not control confounding; only random assignment of a treatment could justify a causal claim."
+        ],
+        "answer": "B) This is an observational study, so the data support only an association; a confounding variable such as overall health could explain both, so vitamin D use is associated with fewer colds, not proven to prevent them."
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T19:56:47.282Z"
+}

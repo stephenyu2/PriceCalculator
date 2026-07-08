@@ -1,0 +1,170 @@
+{
+  "id": "A1.N-Q.A.1--lesson",
+  "standard": "A1.N-Q.A.1",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Quantities",
+  "domainCode": "N-Q",
+  "cluster": "Reason quantitatively and use units to solve problems",
+  "clusterCode": "A",
+  "skillName": "Units in Multi-Step Problems",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "intro": "Units are a tool for thinking, not just labels you attach at the end. A conversion factor is a fraction equal to $1$, like $\\frac{12\\text{ in}}{1\\text{ ft}}$, that you orient so the unit you want to remove cancels. By carrying units through every multiplication and division, you can check that a setup is correct: a good setup is one whose units cancel to leave exactly the units the question asks for. The same habit lets you keep units consistent before substituting into a formula, figure out the units of an unknown, and choose a sensible scale and origin when you graph data.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Convert $7$ feet to inches using the fact that $1\\text{ ft}=12\\text{ in}$.",
+      "solution": {
+        "steps": [
+          "Write the conversion factor as a fraction equal to $1$. Since we want to cancel feet, put feet in the denominator: $\\frac{12\\text{ in}}{1\\text{ ft}}$.",
+          "Multiply the given quantity by the conversion factor: $7\\text{ ft}\\times\\frac{12\\text{ in}}{1\\text{ ft}}$.",
+          "The ft unit cancels, leaving inches: $7\\times 12\\text{ in}=84\\text{ in}$.",
+          "Check: the only unit left is inches, which is what the question asked for."
+        ],
+        "answer": "$84$ inches"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Convert $2.5$ miles to inches using $1\\text{ mi}=5280\\text{ ft}$ and $1\\text{ ft}=12\\text{ in}$.",
+      "solution": {
+        "steps": [
+          "Chain two conversion factors so the intermediate unit (feet) cancels. Orient each so the unwanted unit is on the bottom.",
+          "Set up: $2.5\\text{ mi}\\times\\frac{5280\\text{ ft}}{1\\text{ mi}}\\times\\frac{12\\text{ in}}{1\\text{ ft}}$.",
+          "The mi cancels with mi and the ft cancels with ft, leaving inches.",
+          "Multiply the numbers: $2.5\\times 5280=13200$, then $13200\\times 12=158400$.",
+          "Check: only inches remain, so the setup is correct."
+        ],
+        "answer": "$158400$ inches"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A car travels at $60\\ \\frac{\\text{mi}}{\\text{hr}}$. Convert this speed to $\\frac{\\text{ft}}{\\text{s}}$ using $1\\text{ mi}=5280\\text{ ft}$ and $1\\text{ hr}=3600\\text{ s}$.",
+      "solution": {
+        "steps": [
+          "This is a compound rate, so convert the numerator (miles to feet) and the denominator (hours to seconds).",
+          "Convert miles to feet with $\\frac{5280\\text{ ft}}{1\\text{ mi}}$ so the mi cancels.",
+          "Convert hours to seconds with $\\frac{1\\text{ hr}}{3600\\text{ s}}$ so the hr cancels (hr is in the denominator of the rate, so we need hr in the numerator of the factor).",
+          "Set up: $60\\ \\frac{\\text{mi}}{\\text{hr}}\\times\\frac{5280\\text{ ft}}{1\\text{ mi}}\\times\\frac{1\\text{ hr}}{3600\\text{ s}}$.",
+          "After cancelling mi and hr, the units left are $\\frac{\\text{ft}}{\\text{s}}$.",
+          "Multiply: $\\frac{60\\times 5280}{3600}=\\frac{316800}{3600}=88$.",
+          "Check: the units are $\\frac{\\text{ft}}{\\text{s}}$, exactly what was requested."
+        ],
+        "answer": "$88\\ \\frac{\\text{ft}}{\\text{s}}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Using $\\text{distance}=\\text{rate}\\times\\text{time}$, a runner moves at $8\\ \\frac{\\text{ft}}{\\text{s}}$ for $5$ minutes. How far does the runner travel, in feet?",
+      "solution": {
+        "steps": [
+          "Make the units consistent before substituting. The rate uses seconds but the time is in minutes, so convert.",
+          "Convert $5$ minutes to seconds: $5\\text{ min}\\times\\frac{60\\text{ s}}{1\\text{ min}}=300\\text{ s}$.",
+          "Substitute into $d=\\text{rate}\\times\\text{time}$: $d=8\\ \\frac{\\text{ft}}{\\text{s}}\\times 300\\text{ s}$.",
+          "The s cancels, leaving feet: $d=8\\times 300\\text{ ft}=2400\\text{ ft}$.",
+          "Check: the answer is in feet, the unit the formula produces once the inputs match."
+        ],
+        "answer": "$2400$ feet"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "In the work formula $W=Fd$, force $F$ is measured in newtons (N) and distance $d$ in meters (m). What are the units of $W$? Also explain how unit reasoning rules out reporting $W$ in newtons alone.",
+      "solution": {
+        "steps": [
+          "Units multiply the same way the quantities do. Since $W=Fd$, the units of $W$ are (units of $F$)$\\times$(units of $d$).",
+          "That gives $\\text{N}\\times\\text{m}=\\text{N}\\cdot\\text{m}$.",
+          "A newton-meter is also called a joule (J), so $W$ is in joules.",
+          "Reporting $W$ in N alone would drop the meter factor entirely, which cannot be right because $d$ contributes its meters to the product. The units must include both N and m."
+        ],
+        "answer": "$\\text{N}\\cdot\\text{m}$ (joules)"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Convert $48$ inches to feet using $1\\text{ ft}=12\\text{ in}$.",
+      "hint": "Orient the conversion factor so the inches cancel. That means inches should be in the denominator: $\\frac{1\\text{ ft}}{12\\text{ in}}$.",
+      "solution": {
+        "steps": [
+          "Write the factor so inches cancel: $\\frac{1\\text{ ft}}{12\\text{ in}}$.",
+          "Multiply: $48\\text{ in}\\times\\frac{1\\text{ ft}}{12\\text{ in}}$.",
+          "The in cancels, leaving feet: $\\frac{48}{12}\\text{ ft}=4\\text{ ft}$."
+        ],
+        "answer": "$4$ feet"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "Convert $3$ kilometers to centimeters using $1\\text{ km}=1000\\text{ m}$ and $1\\text{ m}=100\\text{ cm}$.",
+      "hint": "Chain two factors so that km cancels first, then m cancels, leaving cm.",
+      "solution": {
+        "steps": [
+          "Set up the chain: $3\\text{ km}\\times\\frac{1000\\text{ m}}{1\\text{ km}}\\times\\frac{100\\text{ cm}}{1\\text{ m}}$.",
+          "The km cancels with km and the m cancels with m, leaving centimeters.",
+          "Multiply: $3\\times 1000=3000$, then $3000\\times 100=300000$."
+        ],
+        "answer": "$300000$ centimeters"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "A hose fills a tank at $3\\ \\frac{\\text{gal}}{\\text{min}}$. How many gallons does the tank hold if it fills completely in $2$ hours? Use $1\\text{ hr}=60\\text{ min}$.",
+      "hint": "Convert the time to minutes first so it matches the rate, then multiply rate by time.",
+      "solution": {
+        "steps": [
+          "Convert $2$ hours to minutes: $2\\text{ hr}\\times\\frac{60\\text{ min}}{1\\text{ hr}}=120\\text{ min}$.",
+          "Multiply rate by time: $3\\ \\frac{\\text{gal}}{\\text{min}}\\times 120\\text{ min}$.",
+          "The min cancels, leaving gallons: $3\\times 120\\text{ gal}=360\\text{ gal}$."
+        ],
+        "answer": "$360$ gallons"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "A cyclist rides at $30\\ \\frac{\\text{ft}}{\\text{s}}$. Convert this speed to $\\frac{\\text{mi}}{\\text{hr}}$ using $1\\text{ mi}=5280\\text{ ft}$ and $1\\text{ hr}=3600\\text{ s}$.",
+      "hint": "Both the numerator and the denominator change. Use $\\frac{1\\text{ mi}}{5280\\text{ ft}}$ to cancel feet and $\\frac{3600\\text{ s}}{1\\text{ hr}}$ to cancel seconds.",
+      "solution": {
+        "steps": [
+          "Set up: $30\\ \\frac{\\text{ft}}{\\text{s}}\\times\\frac{1\\text{ mi}}{5280\\text{ ft}}\\times\\frac{3600\\text{ s}}{1\\text{ hr}}$.",
+          "The ft cancels and the s cancels, leaving $\\frac{\\text{mi}}{\\text{hr}}$.",
+          "Multiply: $\\frac{30\\times 3600}{5280}=\\frac{108000}{5280}$.",
+          "Simplify: $\\frac{108000}{5280}=\\frac{225}{11}\\approx 20.45$.",
+          "So the speed is about $20.45\\ \\frac{\\text{mi}}{\\text{hr}}$."
+        ],
+        "answer": "$\\frac{225}{11}\\ \\frac{\\text{mi}}{\\text{hr}}\\approx 20.45\\ \\frac{\\text{mi}}{\\text{hr}}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Daily high temperatures for a week range from $52^{\\circ}\\text{F}$ to $89^{\\circ}\\text{F}$. You will plot them on a vertical axis. Choose a reasonable starting value (origin) and a scale (interval per gridline) for the axis, and justify why starting at $0$ would be a poor choice.",
+      "hint": "The data is clustered far from zero. Pick an origin a little below the smallest value and a scale that spreads the range of about $37^{\\circ}\\text{F}$ across several gridlines.",
+      "solution": {
+        "steps": [
+          "Find the range of the data: $89^{\\circ}\\text{F}-52^{\\circ}\\text{F}=37^{\\circ}\\text{F}$.",
+          "Choose an origin just below the lowest value so the data is not squeezed against the bottom. Starting at $50^{\\circ}\\text{F}$ works well.",
+          "Choose a scale that covers the range in a handful of gridlines. With a scale of $5^{\\circ}\\text{F}$ per gridline, the axis from $50^{\\circ}\\text{F}$ to $90^{\\circ}\\text{F}$ uses $8$ gridlines, which displays the data clearly.",
+          "Starting at $0^{\\circ}\\text{F}$ would waste the entire $0$ to $50$ portion of the axis, compressing all the data into a small band at the top and hiding the day-to-day differences."
+        ],
+        "answer": "Start the axis near $50^{\\circ}\\text{F}$ (not $0$) and use a scale of about $5^{\\circ}\\text{F}$ per gridline; a $0$ origin wastes most of the axis and hides the variation."
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T11:30:04.469Z"
+}

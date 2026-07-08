@@ -1,0 +1,157 @@
+{
+  "id": "GEO.G-GPE.B.7--quiz",
+  "standard": "GEO.G-GPE.B.7",
+  "clusterId": null,
+  "grade": "geometry",
+  "subject": "math",
+  "domain": "Expressing Geometric Properties with Equations",
+  "domainCode": "G-GPE",
+  "cluster": "Use coordinates to prove simple geometric theorems algebraically",
+  "clusterCode": "B",
+  "skillName": "Perimeter and Area Using Coordinates",
+  "materialType": "quiz",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T21:01:54.123Z",
+  "intro": "Use coordinates to find perimeters and areas. Apply the distance formula $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$ for slanted sides, subtract coordinates for horizontal and vertical sides, and use base times height for areas. Report exact values.",
+  "items": [
+    {
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Find the distance between $A(2, 3)$ and $B(10, 9)$.\nA) $\\sqrt{14}$\nB) $14$\nC) $10$\nD) $\\sqrt{28}$",
+      "answer": "C) $10$",
+      "solution": {
+        "steps": [
+          "Apply the distance formula: $d = \\sqrt{(10 - 2)^2 + (9 - 3)^2}$.",
+          "Square each difference: $d = \\sqrt{8^2 + 6^2} = \\sqrt{64 + 36}$.",
+          "Add and take the root: $d = \\sqrt{100} = 10$. The answer is C.",
+          "A treats the formula as $\\sqrt{(x_2 - x_1) + (y_2 - y_1)} = \\sqrt{8 + 6} = \\sqrt{14}$, forgetting to square first.",
+          "B distributes the root over the sum, computing $8 + 6 = 14$ instead of $\\sqrt{64 + 36}$.",
+          "D comes from adding the differences first and then squaring, $\\sqrt{(8 + 6)\\cdot 2}$, which is not the distance formula."
+        ],
+        "answer": "C) $10$"
+      }
+    },
+    {
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "A rectangle has vertices $P(1, 2)$, $Q(7, 2)$, $R(7, 6)$, $S(1, 6)$. Find its perimeter.\nA) $24$\nB) $20$\nC) $10$\nD) $48$",
+      "answer": "B) $20$",
+      "solution": {
+        "steps": [
+          "The horizontal side $PQ$ has length $|7 - 1| = 6$ and the vertical side $QR$ has length $|6 - 2| = 4$.",
+          "Perimeter is twice the sum of the two side lengths: $2(6 + 4) = 2(10) = 20$. The answer is B.",
+          "A is the area, $6 \\times 4 = 24$, confusing perimeter with area.",
+          "C adds the length and width only once, $6 + 4 = 10$, forgetting that each occurs twice.",
+          "D doubles the area, $2(24) = 48$, mixing the two formulas."
+        ],
+        "answer": "B) $20$"
+      }
+    },
+    {
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "Find the area of the triangle with vertices $(2, 1)$, $(8, 1)$, $(2, 5)$.\nA) $12$\nB) $24$\nC) $10$\nD) $48$",
+      "answer": "A) $12$",
+      "solution": {
+        "steps": [
+          "The legs are horizontal and vertical: base $= |8 - 2| = 6$ and height $= |5 - 1| = 4$.",
+          "Area of a right triangle is $\\frac{1}{2} bh = \\frac{1}{2}(6)(4) = 12$ square units. The answer is A.",
+          "B forgets the factor of $\\frac{1}{2}$, giving $6 \\times 4 = 24$.",
+          "C adds the legs, $6 + 4 = 10$, which is not an area.",
+          "D multiplies the legs and then doubles, $2(24) = 48$."
+        ],
+        "answer": "A) $12$"
+      }
+    },
+    {
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Find the distance between $A(1, 1)$ and $B(6, 6)$, simplified.\nA) $5\\sqrt{2}$\nB) $10$\nC) $\\sqrt{10}$\nD) $25\\sqrt{2}$",
+      "answer": "A) $5\\sqrt{2}$",
+      "solution": {
+        "steps": [
+          "Apply the distance formula: $d = \\sqrt{(6 - 1)^2 + (6 - 1)^2} = \\sqrt{5^2 + 5^2} = \\sqrt{50}$.",
+          "Simplify the radical: $\\sqrt{50} = \\sqrt{25}\\cdot\\sqrt{2} = 5\\sqrt{2}$. The answer is A.",
+          "B mis-simplifies $\\sqrt{50}$ as $\\sqrt{25} + \\sqrt{25} = 5 + 5 = 10$, splitting the root over a sum.",
+          "C uses $\\sqrt{5 + 5} = \\sqrt{10}$, forgetting to square the differences.",
+          "D keeps the $25$ outside the root instead of taking its square root, writing $25\\sqrt{2}$."
+        ],
+        "answer": "A) $5\\sqrt{2}$"
+      }
+    },
+    {
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Triangle has vertices $A(0, 0)$, $B(6, 0)$, $C(6, 8)$. Find its perimeter.\nA) $24$\nB) $28$\nC) $20$\nD) $48$",
+      "answer": "A) $24$",
+      "solution": {
+        "steps": [
+          "Side $AB$ is horizontal: $|6 - 0| = 6$. Side $BC$ is vertical: $|8 - 0| = 8$.",
+          "Side $CA$ is slanted: $\\sqrt{(6 - 0)^2 + (8 - 0)^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$.",
+          "Perimeter is the sum of all sides: $6 + 8 + 10 = 24$. The answer is A.",
+          "B uses a hypotenuse of $6 + 8 = 14$ (distributing the root over the sum), giving $6 + 8 + 14 = 28$.",
+          "C is the area of the triangle, $\\frac{1}{2}(6)(8) = 24$ mis-recalled as $20$, not a perimeter.",
+          "D doubles the area $\\frac{1}{2}(6)(8) = 24$ to $48$, confusing the quantities."
+        ],
+        "answer": "A) $24$"
+      }
+    },
+    {
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Find the area of the triangle with vertices $A(1, 1)$, $B(5, 2)$, $C(2, 6)$ using the box (bounding-rectangle) method.\nA) $20$\nB) $\\frac{19}{2}$\nC) $\\frac{15}{2}$\nD) $11$",
+      "answer": "B) $\\frac{19}{2}$",
+      "solution": {
+        "steps": [
+          "Enclose the triangle in the bounding rectangle from $x = 1$ to $x = 5$ and $y = 1$ to $y = 6$: width $4$, height $5$, area $20$.",
+          "Subtract the three corner right triangles. Bottom-right: legs $4$ and $1$, area $\\frac{1}{2}(4)(1) = 2$. Top: legs $3$ and $4$, area $\\frac{1}{2}(3)(4) = 6$. Left: legs $1$ and $5$, area $\\frac{1}{2}(1)(5) = \\frac{5}{2}$.",
+          "Corner total: $2 + 6 + \\frac{5}{2} = \\frac{21}{2}$.",
+          "Triangle area $= 20 - \\frac{21}{2} = \\frac{40 - 21}{2} = \\frac{19}{2}$. The answer is B.",
+          "A is the area of the whole bounding rectangle, $20$, without subtracting the corner triangles.",
+          "C and D come from miscounting a corner triangle (for example using a leg of $3$ instead of $4$, or dropping the $\\frac{5}{2}$ corner), giving the wrong subtraction total."
+        ],
+        "answer": "B) $\\frac{19}{2}$"
+      }
+    },
+    {
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Triangle has vertices $A(0, 0)$, $B(2, 4)$, $C(6, 2)$. Find its exact perimeter.\nA) $4\\sqrt{5} + 2\\sqrt{10}$\nB) $6\\sqrt{15}$\nC) $4\\sqrt{5} + 4\\sqrt{10}$\nD) $6\\sqrt{5}$",
+      "answer": "A) $4\\sqrt{5} + 2\\sqrt{10}$",
+      "solution": {
+        "steps": [
+          "$AB = \\sqrt{(2 - 0)^2 + (4 - 0)^2} = \\sqrt{4 + 16} = \\sqrt{20} = 2\\sqrt{5}$.",
+          "$BC = \\sqrt{(6 - 2)^2 + (2 - 4)^2} = \\sqrt{16 + 4} = \\sqrt{20} = 2\\sqrt{5}$.",
+          "$CA = \\sqrt{(0 - 6)^2 + (0 - 2)^2} = \\sqrt{36 + 4} = \\sqrt{40} = 2\\sqrt{10}$.",
+          "Combine the like radicals: $2\\sqrt{5} + 2\\sqrt{5} + 2\\sqrt{10} = 4\\sqrt{5} + 2\\sqrt{10}$. The answer is A.",
+          "B adds the unlike radicals as if they were like terms, merging $\\sqrt{5}$ and $\\sqrt{10}$ into $\\sqrt{15}$.",
+          "C mis-simplifies $\\sqrt{40}$ as $4\\sqrt{10}$ instead of $2\\sqrt{10}$, doubling the slanted side $CA$.",
+          "D drops the $2\\sqrt{10}$ term, combining only the $\\sqrt{5}$ pieces and miscounting them as $6\\sqrt{5}$."
+        ],
+        "answer": "A) $4\\sqrt{5} + 2\\sqrt{10}$"
+      }
+    },
+    {
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "The points $A(0, 0)$, $B(4, 2)$, $C(3, 4)$, $D(-1, 2)$ form a quadrilateral. Verify it is a rectangle, then find its area.\nA) $10$\nB) $20$\nC) $6\\sqrt{5}$\nD) $3\\sqrt{5}$",
+      "answer": "A) $10$",
+      "solution": {
+        "steps": [
+          "Check perpendicularity of adjacent sides. Slope of $AB = \\frac{2 - 0}{4 - 0} = \\frac{1}{2}$. Slope of $BC = \\frac{4 - 2}{3 - 4} = \\frac{2}{-1} = -2$.",
+          "The product of the slopes is $\\frac{1}{2}\\cdot(-2) = -1$, so $AB \\perp BC$; with opposite sides equal the figure is a rectangle.",
+          "Find the side lengths: $AB = \\sqrt{4^2 + 2^2} = \\sqrt{20} = 2\\sqrt{5}$ and $BC = \\sqrt{(3 - 4)^2 + (4 - 2)^2} = \\sqrt{1 + 4} = \\sqrt{5}$.",
+          "Area $= (2\\sqrt{5})(\\sqrt{5}) = 2 \\cdot 5 = 10$ square units. The answer is A.",
+          "B doubles the area, treating it like a perimeter-area mix.",
+          "C is the perimeter $2(2\\sqrt{5} + \\sqrt{5}) = 6\\sqrt{5}$, not the area.",
+          "D adds the two side lengths $2\\sqrt{5} + \\sqrt{5} = 3\\sqrt{5}$ instead of multiplying them for the area."
+        ],
+        "answer": "A) $10$"
+      }
+    }
+  ]
+}

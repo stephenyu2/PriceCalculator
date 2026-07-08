@@ -1,0 +1,216 @@
+{
+  "id": "A2.A-APR.D.6--worksheet",
+  "standard": "A2.A-APR.D.6",
+  "clusterId": null,
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Algebra — Arithmetic with Polynomials and Rational Expressions",
+  "domainCode": "A-APR",
+  "cluster": "Rewrite rational expressions",
+  "clusterCode": "D",
+  "skillName": "Rewriting Rational Expressions",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T19:38:44.935Z",
+  "intro": "Rewrite each rational expression $\\frac{a(x)}{b(x)}$ as a quotient plus remainder, $q(x)+\\frac{r(x)}{b(x)}$, where $\\deg r<\\deg b$. Use term-by-term splitting for monomial divisors, synthetic division for linear divisors $x-c$, and long division for general divisors. Insert zero placeholders for missing powers and verify with $a(x)=b(x)\\,q(x)+r(x)$.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Rewrite $\\frac{8x^2+12x}{4x}$ by splitting term by term.",
+      "answer": "$2x+3$",
+      "solution": {
+        "steps": [
+          "Split the numerator over $4x$ term by term: $\\frac{8x^2}{4x}+\\frac{12x}{4x}$.",
+          "Divide each term: $\\frac{8x^2}{4x}=2x$ and $\\frac{12x}{4x}=3$.",
+          "Combine: $2x+3$. The remainder is $0$, so no fraction remains."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Rewrite $\\frac{6x^3-9x^2+3x}{3x}$ by splitting term by term.",
+      "answer": "$2x^2-3x+1$",
+      "solution": {
+        "steps": [
+          "Divide every term of the numerator by $3x$: $\\frac{6x^3}{3x}-\\frac{9x^2}{3x}+\\frac{3x}{3x}$.",
+          "Simplify each piece: $\\frac{6x^3}{3x}=2x^2$, $\\frac{9x^2}{3x}=3x$, $\\frac{3x}{3x}=1$.",
+          "Combine: $2x^2-3x+1$ with remainder $0$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Rewrite $\\frac{x^2+5x+6}{x+2}$. (The division is exact.)",
+      "answer": "$x+3$",
+      "solution": {
+        "steps": [
+          "Use synthetic division by $x+2$, so $c=-2$, with coefficients $1,\\,5,\\,6$.",
+          "Bring down $1$. Multiply $1\\cdot(-2)=-2$, add to $5$ to get $3$. Multiply $3\\cdot(-2)=-6$, add to $6$ to get $0$.",
+          "The quotient coefficients are $1,\\,3$ and the remainder is $0$, so $q(x)=x+3$.",
+          "Since the remainder is $0$, $\\frac{x^2+5x+6}{x+2}=x+3$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Rewrite $\\frac{2x^2+7x+3}{x+3}$. (The division is exact, so $x+3$ is a factor.)",
+      "answer": "$2x+1$",
+      "solution": {
+        "steps": [
+          "Use synthetic division by $x+3$, so $c=-3$, with coefficients $2,\\,7,\\,3$.",
+          "Bring down $2$. Multiply $2\\cdot(-3)=-6$, add to $7$ to get $1$. Multiply $1\\cdot(-3)=-3$, add to $3$ to get $0$.",
+          "Quotient coefficients $2,\\,1$ with remainder $0$, so $q(x)=2x+1$.",
+          "$\\frac{2x^2+7x+3}{x+3}=2x+1$, confirming $x+3$ is a factor."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Rewrite $\\frac{x^2-9}{x-3}$. (The division is exact.)",
+      "answer": "$x+3$",
+      "solution": {
+        "steps": [
+          "Recognize $x^2-9=(x-3)(x+3)$, a difference of squares.",
+          "Cancel the common factor $x-3$: $\\frac{(x-3)(x+3)}{x-3}=x+3$.",
+          "Equivalently, synthetic division by $x-3$ ($c=3$) on $1,\\,0,\\,-9$ gives quotient $1,\\,3$, remainder $0$.",
+          "So $\\frac{x^2-9}{x-3}=x+3$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Write $\\frac{x^2+3x+5}{x+1}$ in the form $q(x)+\\frac{r(x)}{b(x)}$.",
+      "answer": "$x+2+\\frac{3}{x+1}$",
+      "solution": {
+        "steps": [
+          "Use synthetic division by $x+1$, so $c=-1$, with coefficients $1,\\,3,\\,5$.",
+          "Bring down $1$. Multiply $1\\cdot(-1)=-1$, add to $3$ to get $2$. Multiply $2\\cdot(-1)=-2$, add to $5$ to get $3$.",
+          "Quotient coefficients $1,\\,2$ give $q(x)=x+2$; the remainder is $3$.",
+          "Since $\\deg r=0<\\deg b=1$, stop. The result is $x+2+\\frac{3}{x+1}$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Use synthetic division to write $\\frac{2x^3-3x^2+4}{x-2}$ in the form $q(x)+\\frac{r(x)}{b(x)}$. (Watch the missing $x$ term.)",
+      "answer": "$2x^2+x+2+\\frac{8}{x-2}$",
+      "solution": {
+        "steps": [
+          "Insert a zero placeholder for the missing $x$ term: coefficients are $2,\\,-3,\\,0,\\,4$.",
+          "Synthetic division by $x-2$ uses $c=2$. Bring down $2$. Multiply $2\\cdot2=4$, add to $-3$ to get $1$.",
+          "Multiply $1\\cdot2=2$, add to $0$ to get $2$. Multiply $2\\cdot2=4$, add to $4$ to get $8$.",
+          "Quotient coefficients $2,\\,1,\\,2$ give $q(x)=2x^2+x+2$; remainder $8$.",
+          "The result is $2x^2+x+2+\\frac{8}{x-2}$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Rewrite $\\frac{x^3-8}{x-2}$. Insert zero placeholders for the missing powers.",
+      "answer": "$x^2+2x+4$",
+      "solution": {
+        "steps": [
+          "The numerator $x^3-8$ has missing $x^2$ and $x$ terms, so use coefficients $1,\\,0,\\,0,\\,-8$.",
+          "Synthetic division by $x-2$ uses $c=2$. Bring down $1$. Multiply $1\\cdot2=2$, add to $0$ to get $2$.",
+          "Multiply $2\\cdot2=4$, add to $0$ to get $4$. Multiply $4\\cdot2=8$, add to $-8$ to get $0$.",
+          "Quotient coefficients $1,\\,2,\\,4$ with remainder $0$, so $\\frac{x^3-8}{x-2}=x^2+2x+4$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Use the Remainder Theorem to find the remainder when $a(x)=x^3-4x+1$ is divided by $x-3$.",
+      "answer": "$16$",
+      "solution": {
+        "steps": [
+          "By the Remainder Theorem, dividing by $x-c$ leaves the remainder $a(c)$. Here $c=3$.",
+          "Evaluate $a(3)=3^3-4(3)+1=27-12+1$.",
+          "So the remainder is $16$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Write $\\frac{x^3+2x^2-x+5}{x^2+1}$ in the form $q(x)+\\frac{r(x)}{b(x)}$ using long division.",
+      "answer": "$x+2+\\frac{-2x+3}{x^2+1}$",
+      "solution": {
+        "steps": [
+          "Divide $x^3$ by $x^2$ to get $x$. Multiply $x(x^2+1)=x^3+x$ and subtract: $(x^3+2x^2-x+5)-(x^3+x)=2x^2-2x+5$.",
+          "Divide $2x^2$ by $x^2$ to get $2$. Multiply $2(x^2+1)=2x^2+2$ and subtract: $(2x^2-2x+5)-(2x^2+2)=-2x+3$.",
+          "The remainder $-2x+3$ has degree $1<\\deg b=2$, so stop. The quotient is $x+2$.",
+          "The result is $x+2+\\frac{-2x+3}{x^2+1}$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Write $\\frac{x^3+2x^2-x+5}{x^2+x+1}$ in the form $q(x)+\\frac{r(x)}{b(x)}$ using long division, then verify with $a(x)=b(x)q(x)+r(x)$.",
+      "answer": "$x+1+\\frac{-3x+4}{x^2+x+1}$",
+      "solution": {
+        "steps": [
+          "Divide $x^3$ by $x^2$ to get $x$. Multiply $x(x^2+x+1)=x^3+x^2+x$ and subtract: $(x^3+2x^2-x+5)-(x^3+x^2+x)=x^2-2x+5$.",
+          "Divide $x^2$ by $x^2$ to get $1$. Multiply $1(x^2+x+1)=x^2+x+1$ and subtract: $(x^2-2x+5)-(x^2+x+1)=-3x+4$.",
+          "The remainder $-3x+4$ has degree $1<\\deg b=2$, so stop. The quotient is $x+1$.",
+          "Verify: $(x^2+x+1)(x+1)+(-3x+4)=x^3+2x^2+2x+1-3x+4=x^3+2x^2-x+5$, which matches $a(x)$.",
+          "The result is $x+1+\\frac{-3x+4}{x^2+x+1}$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Rewrite $\\frac{6x^2-x-2}{2x+1}$ in the form $q(x)+\\frac{r(x)}{b(x)}$. (The divisor has leading coefficient $2$.)",
+      "answer": "$3x-2$",
+      "solution": {
+        "steps": [
+          "Divide $6x^2$ by $2x$ to get $3x$. Multiply $3x(2x+1)=6x^2+3x$ and subtract: $(6x^2-x-2)-(6x^2+3x)=-4x-2$.",
+          "Divide $-4x$ by $2x$ to get $-2$. Multiply $-2(2x+1)=-4x-2$ and subtract: $(-4x-2)-(-4x-2)=0$.",
+          "The remainder is $0$, so $q(x)=3x-2$ and $\\frac{6x^2-x-2}{2x+1}=3x-2$, confirming $2x+1$ is a factor."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Write $\\frac{2x^4-3x^2+x-1}{x^2-2}$ in the form $q(x)+\\frac{r(x)}{b(x)}$. (Mind the missing $x^3$ term.)",
+      "answer": "$2x^2+1+\\frac{x+1}{x^2-2}$",
+      "solution": {
+        "steps": [
+          "Write the numerator with a placeholder for the missing $x^3$ term: $2x^4+0x^3-3x^2+x-1$.",
+          "Divide $2x^4$ by $x^2$ to get $2x^2$. Multiply $2x^2(x^2-2)=2x^4-4x^2$ and subtract: $(2x^4+0x^3-3x^2+x-1)-(2x^4-4x^2)=0x^3+x^2+x-1$.",
+          "Divide $x^2$ by $x^2$ to get $1$. Multiply $1(x^2-2)=x^2-2$ and subtract: $(x^2+x-1)-(x^2-2)=x+1$.",
+          "The remainder $x+1$ has degree $1<\\deg b=2$, so stop. The quotient is $2x^2+1$.",
+          "The result is $2x^2+1+\\frac{x+1}{x^2-2}$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Given $\\frac{a(x)}{x+4}=x-1+\\frac{6}{x+4}$, reconstruct the dividend $a(x)$ using $a(x)=b(x)q(x)+r(x)$.",
+      "answer": "$x^2+3x+2$",
+      "solution": {
+        "steps": [
+          "Here $b(x)=x+4$, $q(x)=x-1$, and $r(x)=6$. Use $a(x)=b(x)q(x)+r(x)$.",
+          "Multiply: $(x+4)(x-1)=x^2+3x-4$.",
+          "Add the remainder: $a(x)=x^2+3x-4+6=x^2+3x+2$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Divide $\\frac{x^3-2x^2-5x+6}{x-1}$, confirm the remainder is $0$, then factor $x^3-2x^2-5x+6$ completely.",
+      "answer": "$\\frac{x^3-2x^2-5x+6}{x-1}=x^2-x-6$, and $x^3-2x^2-5x+6=(x-1)(x+2)(x-3)$",
+      "solution": {
+        "steps": [
+          "Synthetic division by $x-1$ uses $c=1$ with coefficients $1,\\,-2,\\,-5,\\,6$.",
+          "Bring down $1$. Multiply $1\\cdot1=1$, add to $-2$ to get $-1$. Multiply $-1\\cdot1=-1$, add to $-5$ to get $-6$. Multiply $-6\\cdot1=-6$, add to $6$ to get $0$.",
+          "Quotient coefficients $1,\\,-1,\\,-6$ with remainder $0$, so the quotient is $x^2-x-6$ and $x-1$ is a factor.",
+          "Factor the quotient: $x^2-x-6=(x+2)(x-3)$.",
+          "Therefore $x^3-2x^2-5x+6=(x-1)(x+2)(x-3)$."
+        ]
+      }
+    }
+  ]
+}

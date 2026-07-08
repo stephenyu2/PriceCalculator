@@ -1,0 +1,133 @@
+{
+  "standard": "A2.S-IC.B.6",
+  "grade": "algebra2",
+  "subject": "math",
+  "domain": "Statistics and Probability — Making Inferences and Justifying Conclusions",
+  "domainCode": "S-IC",
+  "cluster": "Make inferences and justify conclusions from sample surveys, experiments, and observational studies",
+  "clusterCode": "B",
+  "skillName": "Evaluating Data Reports",
+
+  "description": "Students read and critically evaluate reports that draw conclusions from data — newspaper articles, advertisements, survey summaries, study abstracts, and statistical graphics. For each report they identify how the data were collected (sample survey, experiment, or observational study), judge whether the sampling or assignment method supports the stated conclusion, and decide whether the conclusion is justified, overstated, or unsupported. They detect specific flaws: biased or non-random samples, leading or loaded question wording, confounding variables behind a causal claim, conclusions that generalize beyond the population studied, and misleading data displays (truncated or non-zero axis baselines, inconsistent scale intervals, distorted area or pictograph sizing, cherry-picked time windows). Where a report cites a margin of error, students interpret it correctly: a sample statistic such as $\\hat{p} = 0.47$ with margin of error $\\pm 0.03$ means the plausible interval for the population proportion is $0.44$ to $0.50$, so a claimed difference inside that margin is not statistically meaningful. Students explain precisely why a flawed report misleads and state the corrected, defensible conclusion the data actually support.",
+
+  "subSkills": [
+    "Identify how data in a report were collected (survey, experiment, or observational study) and what population the report claims to describe",
+    "Decide whether the data-collection method supports the report's conclusion, or whether the conclusion is overstated or unsupported",
+    "Detect bias from a non-random, voluntary-response, or convenience sample and explain how it skews the reported result",
+    "Detect leading or loaded question wording and explain how it inflates or deflates a reported proportion",
+    "Recognize a confounding variable behind a causal claim drawn from observational data and supply the defensible (association-only) conclusion",
+    "Spot a conclusion that generalizes beyond the population actually sampled and bound the legitimate scope",
+    "Identify misleading features of a data display: truncated or non-zero baseline, uneven scale intervals, distorted area/pictograph sizing, or a cherry-picked time window",
+    "Interpret a reported margin of error to form a plausible interval for the parameter and judge whether a claimed difference exceeds it",
+    "State, for a flawed report, the corrected conclusion the data genuinely justify"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Sampling-method critique",
+      "example": "A magazine reports that $82\\%$ of readers who mailed in a survey card favor a four-day work week, and concludes that most workers nationwide favor it. Is the conclusion justified? No: the mailed-in cards are a voluntary-response sample of one magazine's readers, who are not a random sample of all workers, so the $82\\%$ is biased and cannot generalize to the nation."
+    },
+    {
+      "name": "Question-wording bias",
+      "example": "A survey asks, 'Do you support wasteful government spending on a new stadium?' and reports that only $19\\%$ said yes. Explain why the reported figure understates true support. The phrase 'wasteful government spending' is loaded wording that pushes respondents toward 'no,' so the $19\\%$ is biased downward and does not measure genuine support for the stadium."
+    },
+    {
+      "name": "Causal claim from observational data",
+      "example": "A health report observes that people who take vitamin D get fewer colds and headlines 'Vitamin D prevents colds.' Evaluate the claim. The report describes an observational study, so it shows only an association; a confounding variable such as overall health or time spent outdoors could cause both, so the defensible conclusion is that vitamin D use is associated with fewer colds, not that it prevents them."
+    },
+    {
+      "name": "Overgeneralized scope",
+      "example": "An experiment that randomly assigned $60$ college sophomores at one university to two study methods concludes the better method 'works for all students everywhere.' Critique the scope. Random assignment supports a causal claim for subjects like these sophomores, but because they were not a random sample of all students, the conclusion cannot be generalized beyond the population the sample represents."
+    },
+    {
+      "name": "Misleading graph",
+      "example": "A bar graph of company profits starts its vertical axis at $\\$48$ million instead of $\\$0$, making a bar of $\\$50$ million look more than twice the height of a $\\$49$ million bar. Identify the misleading feature and its effect. The truncated (non-zero) baseline exaggerates a tiny difference; with a baseline at $\\$0$ the two bars would look nearly equal, so the graph overstates the change in profits."
+    },
+    {
+      "name": "Margin-of-error interpretation",
+      "example": "A poll reports candidate A at $48\\%$ and candidate B at $46\\%$ with a margin of error of $\\pm 3\\%$, and the headline declares A is winning. Is the lead meaningful? Each estimate's plausible interval ($45\\%$ to $51\\%$ for A, $43\\%$ to $49\\%$ for B) overlaps, and the $2$-point gap is within the $\\pm 3\\%$ margin, so the difference is not statistically meaningful and the race is effectively a tie."
+    },
+    {
+      "name": "Full report evaluation",
+      "example": "An ad claims '$4$ out of $5$ dentists recommend BrightWhite' based on a company-funded survey of $25$ dentists who use the product. Evaluate the report end to end. The sample is small, not random, and funded by the seller (convenience plus possible bias), so the $4/5$ figure cannot be generalized to all dentists; the defensible statement is only that most of these $25$ selected dentists recommended it."
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-flaw identification from a short, explicit report. The flaw (a voluntary-response sample, a loaded question, or a truncated axis) is the dominant feature, and the student names the flaw or states whether the conclusion is justified in one step. tier1 opens here and ramps into Medium.",
+      "constraints": [
+        "Report is two or three sentences and contains one clear flaw",
+        "Task is to name the flaw or answer justified/not justified, no corrected conclusion required",
+        "Sampling method or graph feature is plainly visible, not buried in detail",
+        "No margin-of-error arithmetic; no competing second flaw"
+      ]
+    },
+    "Medium": {
+      "description": "Two-step reasoning: the student identifies the flaw AND explains its effect on the conclusion, or interprets a single margin of error to test one claimed difference. Connects a design or display feature to the validity of the stated conclusion. tier1 ends here and tier2 begins here.",
+      "constraints": [
+        "Student must name the flaw and explain how it biases or invalidates the conclusion",
+        "May require forming a plausible interval from one margin of error ($\\hat{p} \\pm m$) and judging a single claimed difference",
+        "Distinguish association from causation in an observational report and state which the data support",
+        "The flawed feature must be inferred from one detail of a realistic report rather than stated outright"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step evaluation of a full report that chains method, scope, and conclusion, or reasons about two overlapping margin-of-error intervals. The student diagnoses one or more flaws, supplies the corrected defensible conclusion, and bounds how far the result can generalize. tier2 lives here.",
+      "constraints": [
+        "Report contains two interacting flaws (e.g. biased sample and overgeneralized scope) the student must untangle",
+        "Requires comparing two confidence intervals or margins of error to decide whether a reported difference is statistically meaningful",
+        "Student must critique a flawed conclusion and write the corrected, defensible conclusion the data justify",
+        "Reason about scope and confounding together: name a lurking variable and bound the population to which the result legitimately extends"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student trusts a reported percentage because the sample is large, ignoring that the sample is biased",
+      "distractor": "Accepts the mail-in survey's $82\\%$ as representative of all workers because thousands of cards were returned, overlooking that a voluntary-response sample cannot be generalized no matter its size"
+    },
+    {
+      "misconception": "Student treats a causal headline from an observational report as proven cause and effect",
+      "distractor": "Concludes that vitamin D prevents colds, instead of recognizing the observational design shows only an association that a confounding variable could explain"
+    },
+    {
+      "misconception": "Student ignores loaded or leading question wording and takes the reported figure at face value",
+      "distractor": "Reports that only $19\\%$ truly support the stadium, instead of recognizing that the loaded phrase 'wasteful spending' biased the result downward"
+    },
+    {
+      "misconception": "Student does not notice a truncated axis and reads the bar heights as the true ratio",
+      "distractor": "Says profits more than doubled because one bar is twice as tall, instead of seeing that the non-zero baseline exaggerates a small difference"
+    },
+    {
+      "misconception": "Student calls a difference inside the margin of error a real lead",
+      "distractor": "Declares candidate A is winning by $2$ points, instead of recognizing that a gap smaller than the $\\pm 3\\%$ margin is not statistically meaningful and the intervals overlap"
+    },
+    {
+      "misconception": "Student generalizes a result to a population the study never sampled",
+      "distractor": "Claims the study method works for all students everywhere, instead of limiting the conclusion to a population like the $60$ sampled sophomores"
+    },
+    {
+      "misconception": "Student dismisses a well-designed report because of the topic or source rather than the method",
+      "distractor": "Rejects a randomized, randomly sampled survey simply because the result is surprising, instead of judging the conclusion by the soundness of its sampling and design"
+    },
+    {
+      "misconception": "Student believes any flaw makes a report worthless rather than bounding what it can still support",
+      "distractor": "Says the dentist ad proves nothing at all, instead of stating the limited defensible conclusion that most of the $25$ selected dentists recommended the product"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "single": 15,
+      "tier1": 15,
+      "tier2": 15
+    },
+    "quiz": 8
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "id": "7.SP.B.4--quiz",
+  "standard": "7.SP.B.4",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Draw informal comparative inferences about two populations",
+  "clusterCode": "B",
+  "skillName": "Measures of Center and Variability",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "intro": "Eight multiple-choice questions on measures of center (mean, median) and variability (range, IQR, mean absolute deviation), including comparing two data sets and expressing the difference of means as a multiple of the MAD.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "What is the mean of the data set $\\{4, 7, 7, 10, 12\\}$?\nA) $7$\nB) $8$\nC) $10$\nD) $40$",
+      "answer": "B) $8$",
+      "solution": {
+        "steps": [
+          "Add the values: $4 + 7 + 7 + 10 + 12 = 40$.",
+          "Divide by the count $n = 5$: $\\bar{x} = \\dfrac{40}{5} = 8$. B is correct.",
+          "A is the median (the middle value $7$), not the mean.",
+          "C is just one of the larger values, and D is the sum without dividing by $n$."
+        ],
+        "answer": "B) $8$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "What is the median of the data set $\\{3, 9, 5, 1, 7\\}$?\nA) $5$\nB) $7$\nC) $9$\nD) $25$",
+      "answer": "A) $5$",
+      "solution": {
+        "steps": [
+          "First order the data: $\\{1, 3, 5, 7, 9\\}$.",
+          "With $n = 5$ values, the median is the middle (third) value, which is $5$. A is correct.",
+          "B comes from taking the middle of the unordered list $\\{3,9,5,1,7\\}$, where $5$ is in the middle position but the list was not sorted; sorting is required first.",
+          "C is the maximum, and D is the sum of the values, not a center."
+        ],
+        "answer": "A) $5$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "What is the range of the data set $\\{6, 2, 9, 4, 15, 8\\}$?\nA) $9$\nB) $13$\nC) $15$\nD) $7$",
+      "answer": "B) $13$",
+      "solution": {
+        "steps": [
+          "The range is $\\max - \\min$.",
+          "The maximum is $15$ and the minimum is $2$, so the range is $15 - 2 = 13$. B is correct.",
+          "A and D come from differences between other pairs of values, not the max and min.",
+          "C reports the maximum value alone instead of the difference."
+        ],
+        "answer": "B) $13$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Find the interquartile range (IQR) of the data set $\\{2, 5, 6, 8, 9, 12, 14\\}$.\nA) $7$\nB) $12$\nC) $8$\nD) $9$",
+      "answer": "A) $7$",
+      "solution": {
+        "steps": [
+          "The data is already ordered. The median (4th of 7 values) is $8$.",
+          "The lower half is $\\{2, 5, 6\\}$, so $Q_1 = 5$. The upper half is $\\{9, 12, 14\\}$, so $Q_3 = 12$.",
+          "$\\text{IQR} = Q_3 - Q_1 = 12 - 5 = 7$. A is correct.",
+          "B reports $Q_3$ alone. C is the range $\\max - \\min = 14 - 2 = 12$, the swap error of using range instead of IQR. D is just the median of the upper half."
+        ],
+        "answer": "A) $7$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Find the mean absolute deviation (MAD) of the data set $\\{3, 5, 8, 8\\}$.\nA) $0$\nB) $2$\nC) $6$\nD) $\\dfrac{1}{2}$",
+      "answer": "B) $2$",
+      "solution": {
+        "steps": [
+          "First find the mean: $\\bar{x} = \\dfrac{3 + 5 + 8 + 8}{4} = \\dfrac{24}{4} = 6$.",
+          "Absolute deviations from $6$: $|3-6| = 3$, $|5-6| = 1$, $|8-6| = 2$, $|8-6| = 2$.",
+          "$\\text{MAD} = \\dfrac{3 + 1 + 2 + 2}{4} = \\dfrac{8}{4} = 2$. B is correct.",
+          "A comes from summing the signed deviations $(-3) + (-1) + 2 + 2 = 0$ without taking absolute values. C is the mean itself, not the MAD."
+        ],
+        "answer": "B) $2$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Class A test scores have mean $80$ and MAD $4$. Class B test scores have mean $72$ and MAD $4$. Which statement is best supported?\nA) The two classes are essentially the same because their MADs are equal.\nB) Class A typically scored higher, and the two classes are about equally consistent.\nC) Class B typically scored higher and is more consistent.\nD) Class A is more spread out because its mean is larger.",
+      "answer": "B) Class A typically scored higher, and the two classes are about equally consistent.",
+      "solution": {
+        "steps": [
+          "Compare centers: Class A's mean ($80$) is greater than Class B's mean ($72$), so Class A typically scored higher.",
+          "Compare spreads: both classes have MAD $4$, so they are about equally consistent. B is correct.",
+          "A ignores the difference in centers and looks only at spread.",
+          "C reverses which class is higher, and D wrongly links a larger mean to greater spread (the mean measures center, not variability)."
+        ],
+        "answer": "B) Class A typically scored higher, and the two classes are about equally consistent."
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A random sample of plant heights from Field 1 has mean $10$ cm with MAD $2$ cm. A random sample from Field 2 has mean $16$ cm with MAD $2$ cm. Expressed as a multiple of the MAD, about how many MADs apart are the two means?\nA) About $\\dfrac{1}{3}$ MAD\nB) About $2$ MADs\nC) About $3$ MADs\nD) About $6$ MADs",
+      "answer": "C) About $3$ MADs",
+      "solution": {
+        "steps": [
+          "The difference in means is $|16 - 10| = 6$ cm.",
+          "Divide that difference by the MAD: $\\dfrac{|\\bar{x}_1 - \\bar{x}_2|}{\\text{MAD}} = \\dfrac{6}{2} = 3$. C is correct.",
+          "A inverts the ratio, computing $\\dfrac{\\text{MAD}}{\\text{difference}} = \\dfrac{2}{6} = \\dfrac{1}{3}$.",
+          "B uses the MAD value itself, and D reports the raw difference in means ($6$) without dividing by the MAD."
+        ],
+        "answer": "C) About $3$ MADs"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A random sample of word lengths from Book X is $\\{4, 6, 6, 8\\}$ letters, and a random sample from Book Y is $\\{2, 4, 4, 6\\}$ letters. The MAD of each sample is $1$ letter. Expressed as a multiple of the MAD, how far apart are the sample means, and what does this suggest about the books' typical word lengths?\nA) The means differ by $2$ MADs; Book X typically uses longer words.\nB) The means differ by $0$ MADs; the books are identical.\nC) The means differ by $\\dfrac{1}{2}$ MAD; Book Y typically uses longer words.\nD) The means differ by $6$ MADs; Book X typically uses longer words.",
+      "answer": "A) The means differ by $2$ MADs; Book X typically uses longer words.",
+      "solution": {
+        "steps": [
+          "Book X mean: $\\dfrac{4 + 6 + 6 + 8}{4} = \\dfrac{24}{4} = 6$. Book Y mean: $\\dfrac{2 + 4 + 4 + 6}{4} = \\dfrac{16}{4} = 4$.",
+          "Difference of means: $|6 - 4| = 2$ letters. With $\\text{MAD} = 1$, the separation is $\\dfrac{2}{1} = 2$ MADs.",
+          "A separation of $2$ MADs is substantial, and since random sampling lets us generalize to the books, Book X typically uses longer words. A is correct.",
+          "B ignores the clear difference in means. C inverts the ratio ($\\tfrac{1}{2}$) and reverses which book is longer. D reports a difference that is far too large; $2$ divided by MAD $1$ is $2$, not $6$."
+        ],
+        "answer": "A) The means differ by $2$ MADs; Book X typically uses longer words."
+      }
+    }
+  ],
+  "verifiedAt": "2026-06-24T09:01:39.750Z"
+}

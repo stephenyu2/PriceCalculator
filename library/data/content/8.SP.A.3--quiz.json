@@ -1,0 +1,158 @@
+{
+  "id": "8.SP.A.3--quiz",
+  "standard": "8.SP.A.3",
+  "grade": "8",
+  "subject": "math",
+  "domain": "Statistics and Probability",
+  "domainCode": "SP",
+  "cluster": "Investigate patterns of association in bivariate data",
+  "clusterCode": "A",
+  "skillName": "Linear Models in Context",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-19T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T09:01:39.750Z",
+  "intro": "An 8-item multiple-choice quiz on using and interpreting a linear model $y = mx + b$ in context: reading the slope as a rate of change, reading the intercept as the value when $x = 0$, predicting an output, solving for the input, building the model, and computing total change.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "A line fit to data relating weeks of practice $x$ to typing speed $y$ (words per minute) is $y = 4x + 25$. What does the slope $4$ mean in this context?\nA) Typing speed increases by about $4$ words per minute for each additional week of practice.\nB) A student with $0$ weeks of practice types about $4$ words per minute.\nC) Typing speed is $4$ words per minute in total.\nD) A student needs $4$ weeks of practice before any typing.",
+      "answer": "A) Typing speed increases by about $4$ words per minute for each additional week of practice.",
+      "solution": {
+        "steps": [
+          "The slope $m$ is the change in $y$ for each one-unit increase in $x$.",
+          "Here $x$ is weeks and $y$ is words per minute, so the slope $4$ means typing speed rises by $4$ wpm for each additional week. Choice A is correct.",
+          "B is wrong: it describes the intercept ($y$ at $x = 0$), not the slope.",
+          "C is wrong: it drops the 'per additional week' part and treats the slope as a total amount.",
+          "D is wrong: it misreads the slope as a number of weeks needed before typing."
+        ],
+        "answer": "A) Typing speed increases by about $4$ words per minute for each additional week of practice."
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "A linear model for plant height $y$ in centimeters after $x$ days is $y = 1.5x + 6$. Predict the height after $10$ days.\nA) $15$ centimeters\nB) $21$ centimeters\nC) $16.5$ centimeters\nD) $60$ centimeters",
+      "answer": "B) $21$ centimeters",
+      "solution": {
+        "steps": [
+          "Substitute $x = 10$ into $y = 1.5x + 6$.",
+          "$y = 1.5(10) + 6 = 15 + 6 = 21$ centimeters. Choice B is correct.",
+          "A is wrong: it computes $1.5(10) = 15$ and forgets to add the intercept $6$.",
+          "C is wrong: it adds the slope and intercept ($1.5 + 6 + \\dots$) incorrectly instead of substituting $x = 10$.",
+          "D is wrong: it multiplies $1.5 \\times 10 \\times 4$ or otherwise misuses the numbers."
+        ],
+        "answer": "B) $21$ centimeters"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Easy",
+      "prompt": "For the model $y = 4x + 25$ relating weeks of practice $x$ to typing speed $y$ (words per minute), interpret the $y$-intercept $25$.\nA) Typing speed increases by $25$ words per minute each week.\nB) A student needs $25$ weeks of practice before any typing.\nC) A student with $0$ weeks of practice is predicted to type about $25$ words per minute.\nD) The maximum typing speed is $25$ words per minute.",
+      "answer": "C) A student with $0$ weeks of practice is predicted to type about $25$ words per minute.",
+      "solution": {
+        "steps": [
+          "The $y$-intercept $b$ is the predicted value of $y$ when $x = 0$.",
+          "When $x = 0$ weeks, $y = 4(0) + 25 = 25$ wpm. Choice C is correct.",
+          "A is wrong: that describes the slope (a per-week rate), not the intercept.",
+          "B is wrong: it confuses the $y$-intercept with an $x$-intercept ($x$ when $y = 0$).",
+          "D is wrong: the intercept is a starting value, not a maximum."
+        ],
+        "answer": "C) A student with $0$ weeks of practice is predicted to type about $25$ words per minute."
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "Using the plant-height model $y = 1.5x + 6$ (height $y$ in centimeters after $x$ days), after how many days is the plant predicted to be $30$ centimeters tall?\nA) $20$ days\nB) $24$ days\nC) $16$ days\nD) $51$ days",
+      "answer": "C) $16$ days",
+      "solution": {
+        "steps": [
+          "Set $y = 30$: $30 = 1.5x + 6$.",
+          "Subtract the intercept first: $30 - 6 = 24$, so $1.5x = 24$.",
+          "Divide by the slope: $x = \\frac{24}{1.5} = 16$ days. Choice C is correct.",
+          "A is wrong: it divides $\\frac{30}{1.5} = 20$ without subtracting the intercept $6$ first.",
+          "B is wrong: it stops at $1.5x = 24$ and reads off $24$ instead of dividing by $1.5$.",
+          "D is wrong: it computes $1.5(30) + 6 = 51$, substituting into the wrong variable."
+        ],
+        "answer": "C) $16$ days"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "A tutoring program charges a $\\$20$ registration fee plus $\\$15$ per session. Let $y$ be the total cost after $x$ sessions. Which equation models the cost, and what is the cost of $8$ sessions?\nA) $y = 20x + 15$; cost of $8$ sessions is $\\$175$.\nB) $y = 15x + 20$; cost of $8$ sessions is $\\$140$.\nC) $y = 15x + 20$; cost of $8$ sessions is $\\$120$.\nD) $y = 35x$; cost of $8$ sessions is $\\$280$.",
+      "answer": "B) $y = 15x + 20$; cost of $8$ sessions is $\\$140$.",
+      "solution": {
+        "steps": [
+          "The per-session charge $\\$15$ is the slope (rate per session) and the $\\$20$ registration fee is the fixed intercept, so $y = 15x + 20$.",
+          "Substitute $x = 8$: $y = 15(8) + 20 = 120 + 20 = 140$, so $\\$140$. Choice B is correct.",
+          "A is wrong: it swaps the slope and intercept, using $20$ as the per-session rate.",
+          "C is wrong: it uses the correct equation but forgets to add the $\\$20$ fee, giving $15(8) = 120$.",
+          "D is wrong: it adds the two charges into a single slope and drops the fixed fee."
+        ],
+        "answer": "B) $y = 15x + 20$; cost of $8$ sessions is $\\$140$."
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "A model relating distance driven $x$ (miles) to fuel remaining $y$ (gallons) is $y = -0.04x + 12$. What does the slope $-0.04$ mean?\nA) Fuel remaining decreases by $0.04$ gallon for each additional mile driven.\nB) Fuel remaining increases by $0.04$ gallon for each additional mile driven.\nC) The car starts with $0.04$ gallon of fuel.\nD) The car can drive $0.04$ mile per gallon.",
+      "answer": "A) Fuel remaining decreases by $0.04$ gallon for each additional mile driven.",
+      "solution": {
+        "steps": [
+          "The slope is the change in $y$ per one-mile increase in $x$.",
+          "Because the slope is negative ($-0.04$), fuel remaining drops by $0.04$ gallon per mile driven. Choice A is correct.",
+          "B is wrong: it ignores the negative sign and treats a decrease as an increase.",
+          "C is wrong: that would describe an intercept, not the slope (and the intercept is $12$, not $0.04$).",
+          "D is wrong: it inverts the relationship, swapping the roles of miles and gallons."
+        ],
+        "answer": "A) Fuel remaining decreases by $0.04$ gallon for each additional mile driven."
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "A line is fit to data relating the number of monthly memberships sold $x$ to a gym's monthly revenue $y$ (dollars). The fitted line passes through the points $(10, 950)$ and $(30, 2350)$. Which equation models the revenue?\nA) $y = 70x + 250$\nB) $y = 0.014x + 949.86$\nC) $y = 70x + 950$\nD) $y = 95x$",
+      "answer": "A) $y = 70x + 250$",
+      "solution": {
+        "steps": [
+          "Find the slope: $m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{2350 - 950}{30 - 10} = \\frac{1400}{20} = 70$.",
+          "Find the intercept using $(10, 950)$: $950 = 70(10) + b = 700 + b$, so $b = 250$.",
+          "The model is $y = 70x + 250$. Choice A is correct.",
+          "B is wrong: it inverts the slope formula as $\\frac{x_2 - x_1}{y_2 - y_1} = \\frac{20}{1400} \\approx 0.014$.",
+          "C is wrong: it uses the correct slope but mistakes a data $y$-value ($950$) for the intercept.",
+          "D is wrong: it computes a single-point ratio $\\frac{950}{10} = 95$ and assumes the line passes through the origin."
+        ],
+        "answer": "A) $y = 70x + 250$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "A model relating distance driven $x$ (miles) to fuel remaining $y$ (gallons) is $y = -0.04x + 12$. How much fuel is used between mile $50$ and mile $200$?\nA) $6$ gallons\nB) $8$ gallons\nC) $4$ gallons\nD) $14$ gallons",
+      "answer": "A) $6$ gallons",
+      "solution": {
+        "steps": [
+          "Total change in fuel is $\\Delta y = m \\cdot \\Delta x = -0.04(200 - 50) = -0.04(150) = -6$ gallons.",
+          "A change of $-6$ gallons means $6$ gallons are used. Choice A is correct.",
+          "B is wrong: it computes the fuel remaining at mile $200$, $y = -0.04(200) + 12 = 4$, then misreads, or otherwise uses an interval of $200$ miles incorrectly.",
+          "C is wrong: it gives the fuel remaining at mile $200$ ($4$ gallons) instead of the amount used over the interval.",
+          "D is wrong: it ignores the negative slope and adds the change, or confuses the intercept $12$ with the answer."
+        ],
+        "answer": "A) $6$ gallons"
+      }
+    }
+  ]
+}

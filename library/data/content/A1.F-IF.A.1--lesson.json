@@ -1,0 +1,170 @@
+{
+  "id": "A1.F-IF.A.1--lesson",
+  "standard": "A1.F-IF.A.1",
+  "clusterId": null,
+  "grade": "algebra1",
+  "subject": "math",
+  "domain": "Interpreting Functions",
+  "domainCode": "F-IF",
+  "cluster": "Understand the concept of a function and use function notation",
+  "clusterCode": "A",
+  "skillName": "Defining Functions and Their Graphs",
+  "materialType": "lesson",
+  "difficulty": null,
+  "tier": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "",
+  "generatedAt": "2026-06-24T00:00:00.000Z",
+  "verifiedAt": "2026-06-24T11:30:04.469Z",
+  "intro": "A function is a rule that assigns to each input exactly one output. The set of allowed inputs is the domain and the set of resulting outputs is the range. You can decide whether a relation is a function by checking that no input is paired with two different outputs (the vertical line test does this for graphs). Function notation $f(x)$ names the output of $f$ at the input $x$, and the graph of $f$ is the set of points $(x, f(x))$, so $f(a)=b$ is the same as saying the point $(a,b)$ lies on the graph of $y=f(x)$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Is the relation $\\{(1,3),(2,5),(3,7),(2,9)\\}$ a function? Explain. Also state its domain and range.",
+      "solution": {
+        "steps": [
+          "A relation is a function when every input (first coordinate) is paired with exactly one output (second coordinate).",
+          "List the inputs: $1, 2, 3, 2$. The input $2$ appears twice.",
+          "Check the outputs for $2$: the pairs $(2,5)$ and $(2,9)$ give the input $2$ two different outputs, $5$ and $9$.",
+          "Because one input has two outputs, the exactly-one-output rule fails, so the relation is not a function.",
+          "Domain is the set of inputs: $\\{1,2,3\\}$. Range is the set of outputs: $\\{3,5,7,9\\}$."
+        ],
+        "answer": "Not a function, because the input $2$ is paired with both $5$ and $9$. Domain $\\{1,2,3\\}$, range $\\{3,5,7,9\\}$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "State the domain and range of the relation $\\{(-2,4),(0,1),(3,4),(5,0)\\}$, and decide whether it is a function.",
+      "solution": {
+        "steps": [
+          "The domain is the set of all first coordinates (inputs): $-2, 0, 3, 5$.",
+          "Writing the domain in increasing order: $\\{-2,0,3,5\\}$.",
+          "The range is the set of all second coordinates (outputs): $4, 1, 4, 0$. List each value once: $\\{0,1,4\\}$.",
+          "Check the function rule: the inputs $-2,0,3,5$ are all different, so no input has two outputs.",
+          "Repeated outputs are allowed, so the output $4$ appearing twice does not break the rule. The relation is a function."
+        ],
+        "answer": "Domain $\\{-2,0,3,5\\}$, range $\\{0,1,4\\}$. It is a function."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A sideways parabola given by $x = y^2$ is graphed in the plane. Use the vertical line test to decide whether this graph represents a function of $x$.",
+      "solution": {
+        "steps": [
+          "The vertical line test says a graph is a function of $x$ when every vertical line crosses the graph at most once.",
+          "Pick a vertical line to the right of the origin, for example $x = 4$.",
+          "Substitute $x=4$ into $x=y^2$: $4 = y^2$, so $y = 2$ or $y = -2$.",
+          "The vertical line $x=4$ meets the curve at two points, $(4,2)$ and $(4,-2)$.",
+          "Since a single input $x=4$ gives two outputs, the vertical line crosses twice, so the graph is not a function."
+        ],
+        "answer": "No. The vertical line $x=4$ meets the curve at $(4,2)$ and $(4,-2)$, so the graph fails the vertical line test and is not a function."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 4,
+      "prompt": "Given $f(x) = 2x - 5$, evaluate $f(3)$. Then explain what point this gives on the graph of $y = f(x)$.",
+      "solution": {
+        "steps": [
+          "Function notation $f(3)$ means: substitute the input $x=3$ into the rule, it is not multiplication of $f$ and $3$.",
+          "Replace $x$ with $3$: $f(3) = 2(3) - 5$.",
+          "Multiply: $2(3) = 6$, so $f(3) = 6 - 5$.",
+          "Subtract: $f(3) = 1$.",
+          "Since $f(3)=1$, the point $(3,1)$ lies on the graph of $y=f(x)$, because the graph of $f$ is the set of points $(x,f(x))$."
+        ],
+        "answer": "$f(3) = 1$, and the point $(3,1)$ is on the graph of $y=f(x)$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 5,
+      "prompt": "The graph of $y = f(x)$ passes through the point $(2,7)$. A second function is defined by the rule $g(x) = x^2 - 3$. Find $f(2)$ from the graph, then evaluate $g(-2)$.",
+      "solution": {
+        "steps": [
+          "The graph of $y=f(x)$ is the set of points $(x, f(x))$, so the point $(2,7)$ means the input $2$ produces the output $7$.",
+          "Therefore $f(2) = 7$ (the output, the $y$-value, not the input $2$).",
+          "Now evaluate $g(-2)$ by substituting $x = -2$ into $g(x) = x^2 - 3$: $g(-2) = (-2)^2 - 3$.",
+          "Square first, keeping the parentheses: $(-2)^2 = 4$.",
+          "Subtract: $g(-2) = 4 - 3 = 1$."
+        ],
+        "answer": "$f(2) = 7$ and $g(-2) = 1$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Is the relation $\\{(4,1),(5,2),(6,3),(7,2)\\}$ a function? State the domain and range.",
+      "hint": "Check whether any input (first coordinate) is repeated with two different outputs. Repeated outputs are fine.",
+      "solution": {
+        "steps": [
+          "List the inputs: $4,5,6,7$. They are all different, so no input has two outputs.",
+          "Because each input has exactly one output, the relation is a function.",
+          "Domain is the set of inputs: $\\{4,5,6,7\\}$.",
+          "Range is the set of outputs $1,2,3,2$, listed once each: $\\{1,2,3\\}$."
+        ],
+        "answer": "Yes, it is a function. Domain $\\{4,5,6,7\\}$, range $\\{1,2,3\\}$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 7,
+      "prompt": "A mapping diagram sends $1 \\to a$, $2 \\to a$, and $3 \\to b$. Is this relation a function? Explain.",
+      "hint": "Ask whether each input maps to exactly one output. It is acceptable for two inputs to share the same output.",
+      "solution": {
+        "steps": [
+          "Check each input separately: $1 \\to a$, $2 \\to a$, $3 \\to b$. Every input has exactly one arrow leaving it.",
+          "Two inputs ($1$ and $2$) share the output $a$, but repeated outputs are allowed for a function.",
+          "Since no input has two different outputs, the relation is a function."
+        ],
+        "answer": "Yes, it is a function. Each input has exactly one output; the outputs may repeat."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 8,
+      "prompt": "Given $f(x) = 3x - 1$, find $f(-2)$.",
+      "hint": "Substitute $x=-2$ into the rule and watch the sign.",
+      "solution": {
+        "steps": [
+          "Replace $x$ with $-2$: $f(-2) = 3(-2) - 1$.",
+          "Multiply: $3(-2) = -6$, so $f(-2) = -6 - 1$.",
+          "Subtract: $f(-2) = -7$."
+        ],
+        "answer": "$f(-2) = -7$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 9,
+      "prompt": "Given $f(x) = x^2 - 3$, evaluate $f\\!\\left(\\tfrac{1}{2}\\right)$. Give the exact value as a fraction.",
+      "hint": "Substitute $x = \\frac{1}{2}$ and square it first: $\\left(\\frac{1}{2}\\right)^2 = \\frac{1}{4}$.",
+      "solution": {
+        "steps": [
+          "Substitute $x = \\frac{1}{2}$ into $f(x) = x^2 - 3$: $f\\!\\left(\\tfrac{1}{2}\\right) = \\left(\\frac{1}{2}\\right)^2 - 3$.",
+          "Square the fraction: $\\left(\\frac{1}{2}\\right)^2 = \\frac{1}{4}$.",
+          "So $f\\!\\left(\\tfrac{1}{2}\\right) = \\frac{1}{4} - 3$.",
+          "Write $3$ as $\\frac{12}{4}$ and subtract: $\\frac{1}{4} - \\frac{12}{4} = -\\frac{11}{4}$."
+        ],
+        "answer": "$f\\!\\left(\\tfrac{1}{2}\\right) = -\\frac{11}{4}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 10,
+      "prompt": "Given $f(x) = 2x - 5$, solve $f(x) = 11$ for $x$.",
+      "hint": "Solving $f(x)=11$ means finding the input $x$ that produces output $11$. Set $2x-5=11$ and solve, do not evaluate.",
+      "solution": {
+        "steps": [
+          "$f(x) = 11$ means $2x - 5 = 11$.",
+          "Add $5$ to both sides: $2x = 16$.",
+          "Divide both sides by $2$: $x = 8$.",
+          "Check: $f(8) = 2(8) - 5 = 16 - 5 = 11$, which matches."
+        ],
+        "answer": "$x = 8$"
+      }
+    }
+  ]
+}

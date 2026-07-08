@@ -1,0 +1,124 @@
+{
+  "standard": "7.G.A.2",
+  "grade": "7",
+  "subject": "math",
+  "domain": "Geometry",
+  "domainCode": "G",
+  "cluster": "Draw, construct, and describe geometrical figures and describe the relationships between them",
+  "clusterCode": "A",
+  "skillName": "Drawing Geometric Shapes with Given Conditions",
+
+  "description": "Students draw and construct geometric shapes (freehand, with ruler and protractor, or with technology) that satisfy a set of given conditions. The central focus is building triangles from three given measures of angles or sides and determining whether those conditions produce a unique triangle, more than one triangle, or no triangle at all. Students must reason about the triangle inequality ($a + b > c$ for the longest side), the fact that the three interior angles of a triangle sum to $180^\\circ$, and the congruence criteria SSS, SAS, ASA, and AAS (which give a unique triangle) versus the ambiguous SSA case and the AAA case (which give similar but not unique triangles).",
+
+  "subSkills": [
+    "Apply the triangle inequality: three side lengths form a triangle only when the sum of the two shorter sides exceeds the longest side",
+    "Use the angle-sum property: the three interior angles of a triangle must total $180^\\circ$",
+    "Classify a set of conditions as determining a unique triangle, more than one triangle, or no triangle",
+    "Recognize that SSS, SAS, ASA, and AAS conditions determine a unique triangle (up to congruence)",
+    "Recognize that AAA (three angles, no side) determines triangle shape but not size, so it yields more than one (infinitely many) triangle",
+    "Recognize the ambiguous case SSA, where two given sides and a non-included angle can give zero, one, or two triangles",
+    "Construct or sketch a triangle from given side and angle measures using ruler and protractor",
+    "Describe geometric figures other than triangles (quadrilaterals, parallel/perpendicular constraints) that meet stated conditions"
+  ],
+
+  "problemArchetypes": [
+    {
+      "name": "Triangle inequality test (three sides)",
+      "example": "Can a triangle be drawn with side lengths $4\\text{ cm}$, $5\\text{ cm}$, and $11\\text{ cm}$? Explain. (No, because $4 + 5 = 9 < 11$.)"
+    },
+    {
+      "name": "Angle-sum feasibility (three angles)",
+      "example": "Can a triangle have interior angles measuring $40^\\circ$, $60^\\circ$, and $90^\\circ$? (No, because $40 + 60 + 90 = 190^\\circ \\ne 180^\\circ$.)"
+    },
+    {
+      "name": "Unique / more than one / none classification",
+      "example": "Conditions: angles $50^\\circ$, $60^\\circ$, $70^\\circ$ with no side length given. Does this determine a unique triangle, more than one triangle, or no triangle? (More than one: the angles sum to $180^\\circ$ but with no side fixed, infinitely many similar triangles exist.)"
+    },
+    {
+      "name": "Congruence-criterion identification (SSS/SAS/ASA/AAS)",
+      "example": "A triangle is given by two sides of $6\\text{ cm}$ and $8\\text{ cm}$ with the included angle of $40^\\circ$. Is the triangle unique? Which criterion applies? (Unique, SAS.)"
+    },
+    {
+      "name": "Constructing a triangle from measures",
+      "example": "Using a ruler and protractor, construct a triangle with a $7\\text{ cm}$ base, a $45^\\circ$ angle at one end of the base, and a $60^\\circ$ angle at the other end. Is the triangle unique? (Unique, ASA.)"
+    },
+    {
+      "name": "Ambiguous SSA case",
+      "example": "Given sides $a = 5\\text{ cm}$ and $b = 8\\text{ cm}$ with a non-included angle $A = 30^\\circ$ opposite $a$, how many triangles are possible? (Two, because the SSA condition is ambiguous here.)"
+    },
+    {
+      "name": "Drawing other shapes with conditions",
+      "example": "Draw a quadrilateral with exactly one pair of parallel sides and two right angles. Name the figure. (A right trapezoid.)"
+    }
+  ],
+
+  "difficultyRubric": {
+    "Easy": {
+      "description": "Single-property check with small whole-number measures. The student tests one rule (triangle inequality with an obvious failure/success, or angle sum equal vs. not equal to $180^\\circ$) and answers yes/no or identifies a basic shape.",
+      "constraints": [
+        "Side lengths are whole numbers $\\le 12$ and the inequality result is clear-cut (no borderline equality cases)",
+        "Angle measures are whole numbers that either obviously sum to $180^\\circ$ or obviously do not",
+        "Only one condition type is involved (sides only or angles only)",
+        "No congruence-criterion naming required"
+      ]
+    },
+    "Medium": {
+      "description": "Classify a set of mixed conditions as unique, more than one, or no triangle, and name the governing criterion (SSS, SAS, ASA, AAS, or AAA). Requires combining the triangle inequality or angle sum with a congruence concept.",
+      "constraints": [
+        "Conditions mix sides and angles (e.g., two sides and an included angle, or two angles and a side)",
+        "Student must name the applicable congruence criterion or state AAA for similar-only",
+        "May include a degenerate boundary case where $a + b = c$ (no triangle, a straight segment)",
+        "Construction steps with ruler and protractor may be requested"
+      ]
+    },
+    "Hard": {
+      "description": "Multi-step reasoning including the ambiguous SSA case, finding a missing angle before classifying, or determining the full range of a side or angle for which a triangle is possible. May require justifying how many triangles exist and why.",
+      "constraints": [
+        "Includes SSA ambiguous-case analysis (zero, one, or two triangles) or requires computing a missing measure first",
+        "May ask for the range of values of an unknown side, e.g., the third side must satisfy $|a-b| < c < a+b$",
+        "Requires a written justification or counts the number of distinct triangles",
+        "Combines two ideas, such as angle sum to find a third angle and then a congruence criterion to decide uniqueness"
+      ]
+    }
+  },
+
+  "commonMisconceptions": [
+    {
+      "misconception": "Student thinks any three side lengths form a triangle and ignores the triangle inequality",
+      "distractor": "Claims sides $4$, $5$, $11$ make a valid triangle because all three are positive lengths, instead of seeing $4 + 5 < 11$"
+    },
+    {
+      "misconception": "Student checks the inequality against the wrong pair of sides (uses the two longest instead of the two shortest)",
+      "distractor": "Tests $5 + 11 > 4$ and concludes a triangle exists, instead of testing the two shortest sides $4 + 5$ against the longest $11$"
+    },
+    {
+      "misconception": "Student believes three given angles always determine one unique triangle",
+      "distractor": "Answers 'unique triangle' for the AAA condition $50^\\circ, 60^\\circ, 70^\\circ$, not realizing it gives infinitely many similar triangles of different sizes"
+    },
+    {
+      "misconception": "Student uses an angle sum other than $180^\\circ$ (e.g., $360^\\circ$, confusing it with a quadrilateral)",
+      "distractor": "States that angles $40^\\circ, 60^\\circ, 90^\\circ$ form a triangle because they could be part of a $360^\\circ$ total, instead of requiring exactly $180^\\circ$"
+    },
+    {
+      "misconception": "Student treats the SSA condition as if it always gives a unique triangle (over-applies SAS)",
+      "distractor": "Answers 'exactly one triangle' for an ambiguous SSA setup, missing that two non-congruent triangles can satisfy it"
+    },
+    {
+      "misconception": "Student ignores the degenerate boundary case where the two shorter sides sum exactly to the longest side",
+      "distractor": "Claims sides $3$, $4$, $7$ form a triangle because $3 + 4 = 7$ is 'big enough', instead of recognizing the equality collapses the figure into a straight segment (no triangle)"
+    }
+  ],
+
+  "itemCounts": {
+    "lesson": {
+      "workedExamples": 5,
+      "practiceProblems": 5
+    },
+    "worksheet": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+    },
+    "quiz": 8
+  }
+}
