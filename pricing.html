@@ -329,7 +329,7 @@
       document.querySelectorAll('.card-buy').forEach(function (btn) {
         btn.addEventListener('click', function () {
           selectedLevel = btn.dataset.level;
-          summary.textContent = btn.dataset.label + ' — ' + btn.dataset.price +
+          summary.textContent = btn.dataset.label + ': ' + btn.dataset.price +
             ' for 6 hours of private tutoring (20% off). Enter your details to check out.';
           checkout.hidden = false;
           checkout.scrollIntoView({ behavior: 'smooth', block: 'center' });
