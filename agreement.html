@@ -89,6 +89,10 @@
       margin: 0;
     }
 
+    .terms-clause p + p {
+      margin-top: 0.8rem;
+    }
+
     .terms-close {
       font-family: var(--font-body);
       font-size: 0.94rem;
@@ -183,6 +187,10 @@
 </head>
 <body>
 
+  <!-- Back to Parent Portal -->
+  <a href="/parent-portal" style="position:fixed; bottom:1.25rem; left:1.25rem; z-index:9999; background:#111111; color:#ffffff; font-family:'Inter',system-ui,sans-serif; font-size:0.78rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; padding:0.6rem 1.1rem; border-radius:999px; box-shadow:0 4px 14px rgba(17,17,17,0.25);">&larr; Parent Portal</a>
+
+
   <!-- ===========================
        PAGE HERO
   =========================== -->
@@ -203,7 +211,7 @@
 
       <div class="agreement-intro">
         <h2 class="agreement-heading">Tutoring Services Agreement</h2>
-        <p class="agreement-subtext">Please read these terms carefully. By checking "I agree" and submitting your name and email below, you acknowledge that you have read, understood, and agreed to these terms.</p>
+        <p class="agreement-subtext">Please read these terms carefully. By checking the boxes and submitting your name and email below, you acknowledge that you have read, understood, and agreed to these terms.</p>
       </div>
 
       <!-- ── Full terms ── -->
@@ -214,56 +222,53 @@
         </div>
 
         <div class="terms-clause">
-          <h3 class="terms-clause-title">2. Plans and Payment</h3>
-          <p>We offer two ways to pay. Flexible Hour Packages are prepaid blocks of tutoring hours (such as 10 or 20 hours) purchased at the rate for your student's level, and purchased hours never expire. The Monthly Subscription is a recurring plan that reserves a weekly time slot for your student at a set number of hours per week; it is billed automatically each month on the same date to the payment method on file and renews until canceled. All payments are processed securely through Stripe. Rates are set by grade level and provided at the time of purchase.</p>
+          <h3 class="terms-clause-title">2. How It Works: Prepaid Hours</h3>
+          <p>All tutoring is purchased as prepaid hours. You purchase a package of hours, and each completed session is deducted from your hour balance. Your balance is visible in your TutorBird account. Purchased hours never expire. Hours may be used for any of our services and may be shared among siblings in the same family. Rates are set by your student's level and by the size of the package purchased; larger packages are offered at a lower per-hour rate. Current rates are available in your parent portal.</p>
         </div>
 
         <div class="terms-clause">
-          <h3 class="terms-clause-title">3. Refunds</h3>
-          <p>All payments are final and non-refundable. Prepaid package hours are non-refundable, though they never expire and remain available for future sessions. Monthly subscription payments already processed are non-refundable; canceling a subscription stops future billing but does not refund the current or prior months.</p>
+          <h3 class="terms-clause-title">3. Introductory Package</h3>
+          <p>New families begin with a 6-hour introductory package at 20% off, backed by our money-back guarantee. If you are not satisfied, you may request a full refund of the introductory package, regardless of how many of the six hours were used, at any time before you purchase additional hours or within 14 days of your sixth introductory session, whichever comes first. After that point, the introductory payment is final and Section 7 applies.</p>
         </div>
 
         <div class="terms-clause">
-          <h3 class="terms-clause-title">4. Scheduling</h3>
-          <p>For the Monthly Subscription, your student's weekly time slot is reserved and held, generally with the same tutor each week; if your regular tutor is unavailable, we will cover the session with another qualified tutor. Any additional sessions outside your reserved slot, including redeeming make-up credits, are booked the same way as Flexible Hour Package sessions (described next). For Flexible Hour Packages, sessions are booked as needed with no reserved slot; booking at least 48 hours in advance guarantees a session with a subject-expert tutor, though a specific tutor or exact time is not guaranteed, and booking earlier improves your chances of your preferred time and tutor. Sessions may be booked up to two weeks in advance.</p>
+          <h3 class="terms-clause-title">4. Saved Payment Method and Automatic Refill</h3>
+          <p>When you purchase your introductory package, your payment method is securely saved with our payment processor, Stripe. You authorize LVT to charge that saved payment method for tutoring hours you purchase, including when you are not present at checkout.</p>
+          <p>No automatic charge will occur unless you enroll in Automatic Refill. If you choose to continue with us after your introductory package, you may enroll by selecting a refill size: 10 or 20 hours for academic tutoring, or 5, 10, or 20 hours for SAT and ACT prep. Once enrolled, we will charge your saved payment method for your selected refill size whenever your hour balance runs low, at the per-hour rate for your student's level and package size. Refills are not charged on a fixed date; they occur only when your balance runs low, so their frequency depends on how quickly you use your hours.</p>
+          <p>We will email you before each automatic refill is charged. You may change your refill size, pause automatic refill, or turn it off entirely at any time by contacting us, and requests take effect within one business day. Turning off automatic refill does not affect hours you have already purchased. We require a valid payment method on file and strongly recommend a backup card. If a charge fails on all cards on file, we will notify you, and no further sessions may be scheduled until payment is resolved.</p>
         </div>
 
         <div class="terms-clause">
-          <h3 class="terms-clause-title">5. Cancellations, Rescheduling, and Missed Sessions</h3>
-          <p>Cancel or reschedule with at least 24 hours' notice at no penalty. For the Monthly Subscription, a session canceled with at least 24 hours' notice is still billed as part of your monthly plan, and we will issue a make-up credit for one session of your student's usual length; make-up credits appear in your TutorBird account, are your responsibility to redeem, and expire 30 days after they are issued. Make-up credits are booked like any non-reserved session (see Scheduling above): the earlier you book the better, and no more than two weeks in advance. For Flexible Hour Packages, a session canceled with at least 24 hours' notice is simply not deducted from your hour balance (and your hours never expire). Cancellations with less than 24 hours' notice, and no-shows, are billed or deducted as a used session and receive no make-up credit. Repeated no-call, no-show sessions may incur a fee.</p>
+          <h3 class="terms-clause-title">5. Scheduling</h3>
+          <p>Once your student is matched with a tutor, you coordinate scheduling directly with that tutor. Sessions are booked from your available hour balance. When your balance reaches zero, no further sessions may be scheduled until your account is refilled. We do not reserve or guarantee a fixed weekly time slot; recurring times are arranged between you and your tutor and are subject to that tutor's availability.</p>
         </div>
 
         <div class="terms-clause">
-          <h3 class="terms-clause-title">6. Subscription Pauses</h3>
-          <p>If your student will be away for an extended period (two weeks or more, such as a vacation), you may pause your subscription. Billing stops during the pause and resumes when you return, and we will do our best to restore your original time slot.</p>
+          <h3 class="terms-clause-title">6. Cancellations, Rescheduling, and Missed Sessions</h3>
+          <p>Cancel or reschedule with at least 24 hours' notice and no hours are deducted from your balance. Cancellations with less than 24 hours' notice, and no-shows, are deducted from your balance as a used session. Repeated no-call, no-show sessions may incur a fee. If a tutor cancels a session, no hours are deducted.</p>
         </div>
 
         <div class="terms-clause">
-          <h3 class="terms-clause-title">7. Canceling a Subscription</h3>
-          <p>You may cancel your monthly subscription at any time. Cancellation stops future billing, and you will not be charged for the following month.</p>
+          <h3 class="terms-clause-title">7. Refunds and Unused Hours</h3>
+          <p>Purchases are final. Because your hours never expire and remain available for future sessions, refunds are not issued for unused hours in the ordinary course. If you wish to close your account and cash out an unused balance, we will refund your unused hours at 75% of their purchase value, returned to your original payment method. To request this, contact us directly; for your security, we confirm all account and refund requests with the account holder before processing them. The introductory package is governed by Section 3.</p>
         </div>
 
         <div class="terms-clause">
-          <h3 class="terms-clause-title">8. What's Included (Monthly Subscription)</h3>
-          <p>Subscriptions include a reserved weekly time slot, full access to our curriculum, homework between sessions on request, progress quizzes on request, and a monthly parent-tutor conference on request.</p>
-        </div>
-
-        <div class="terms-clause">
-          <h3 class="terms-clause-title">9. Results</h3>
+          <h3 class="terms-clause-title">8. Results</h3>
           <p>We are committed to your student's progress, but we do not guarantee specific grades, test scores, or academic outcomes. Results depend on many factors, including the student's effort, attendance, and engagement.</p>
         </div>
 
         <div class="terms-clause">
-          <h3 class="terms-clause-title">10. Conduct</h3>
+          <h3 class="terms-clause-title">9. Conduct</h3>
           <p>We ask that students and families treat our tutors with respect. We reserve the right to decline or discontinue service in cases of abusive conduct or repeated policy violations.</p>
         </div>
 
         <div class="terms-clause">
-          <h3 class="terms-clause-title">11. Changes to These Terms</h3>
-          <p>We may update these terms from time to time. Material changes to subscription rates will be communicated with at least 30 days' notice.</p>
+          <h3 class="terms-clause-title">10. Changes to These Terms</h3>
+          <p>We may update these terms from time to time. Material changes to rates or to the automatic refill terms will be communicated with at least 30 days' notice.</p>
         </div>
 
-        <p class="terms-close">By checking "I agree" below and entering your name and email, you confirm that you have read and accepted these terms.</p>
+        <p class="terms-close">By checking the boxes below and entering your name and email, you confirm that you have read and accepted these terms, and you authorize LVT to save your payment method and to charge it for tutoring hours as described in Section 4.</p>
       </div>
 
       <!-- ── Acceptance form ── -->
@@ -295,20 +300,16 @@
             <input class="form-input" type="text" id="student-name" name="student-name" placeholder="Optional" />
           </div>
 
-          <!-- Plan -->
-          <div class="form-field">
-            <label class="form-label" for="plan">Plan You're Agreeing To <span class="form-required">*</span></label>
-            <select class="form-input form-select" id="plan" name="plan" required>
-              <option value="" disabled selected>Select a plan</option>
-              <option value="Flexible Hour Package">Flexible Hour Package</option>
-              <option value="Monthly Subscription">Monthly Subscription</option>
-            </select>
-          </div>
-
           <!-- Agreement checkbox -->
           <div class="form-checkbox">
             <input type="checkbox" id="agree" name="agreed-to-terms" value="Yes" required />
             <label for="agree">I have read and agree to the Tutoring Services Agreement above. <span class="form-required">*</span></label>
+          </div>
+
+          <!-- Payment authorization checkbox -->
+          <div class="form-checkbox">
+            <input type="checkbox" id="authorize-payment" name="payment-authorization" value="Yes" required />
+            <label for="authorize-payment">I authorize Launch Valley Tutoring to save my payment method and to charge it for tutoring hours as described in Section 4, including automatic refills if I choose to enroll. <span class="form-required">*</span></label>
           </div>
 
           <button class="btn btn-gold lead-form-submit" type="submit">Submit Agreement</button>
@@ -318,7 +319,7 @@
       <!-- ── Success view ── -->
       <div class="agreement-success" id="agreement-success" role="status" aria-live="polite">
         <h2 class="agreement-success-title">Agreement received</h2>
-        <p>Thank you, your agreement has been received. Next, choose your plan at <a href="/tutoring-packages">launchvalleytutoring.com/tutoring-packages</a>.</p>
+        <p>Thank you, your agreement has been received. Head back to the <a href="/parent-portal">parent portal</a> to continue with your next step.</p>
       </div>
 
     </div>

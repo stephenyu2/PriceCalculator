@@ -35,8 +35,151 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="pricing.css" />
+
+  <style>
+    /* ============================================
+       INTRO PACKAGE: buy buttons + checkout form
+    ============================================ */
+    .card-buy {
+      margin-top: 1.1rem;
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: #111111;
+      color: #ffffff;
+      border: none;
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color var(--transition);
+    }
+
+    .card-buy:hover {
+      background: #333333;
+    }
+
+    .intro-checkout {
+      max-width: 560px;
+      margin: 3rem auto 0;
+      background: var(--navy-light);
+      border: 1px solid rgba(0, 0, 0, 0.11);
+      border-radius: 12px;
+      padding: clamp(1.6rem, 4vw, 2.4rem);
+    }
+
+    .intro-checkout[hidden] {
+      display: none;
+    }
+
+    .intro-checkout-title {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--white);
+      margin: 0 0 0.35rem;
+    }
+
+    .intro-checkout-summary {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin: 0 0 1.5rem;
+      line-height: 1.6;
+    }
+
+    .intro-field {
+      margin-bottom: 1.1rem;
+    }
+
+    .intro-label {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 0.35rem;
+    }
+
+    .intro-input {
+      width: 100%;
+      padding: 0.7rem 0.9rem;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--white);
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: var(--radius);
+    }
+
+    .intro-hint {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+      line-height: 1.5;
+    }
+
+    .intro-submit {
+      width: 100%;
+      margin-top: 0.4rem;
+      padding: 0.9rem 1rem;
+      background: #111111;
+      color: #ffffff;
+      border: none;
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color var(--transition);
+    }
+
+    .intro-submit:hover {
+      background: #333333;
+    }
+
+    .intro-submit:disabled {
+      opacity: 0.6;
+      cursor: wait;
+    }
+
+    .intro-error {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: #a4262c;
+      margin: 0.8rem 0 0;
+      display: none;
+    }
+
+    .intro-error.active {
+      display: block;
+    }
+
+    .intro-agreement-note {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 1rem 0 0;
+      text-align: center;
+    }
+
+    .intro-agreement-note a {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Back to Parent Portal -->
+  <a href="/parent-portal" style="position:fixed; bottom:1.25rem; left:1.25rem; z-index:9999; background:#111111; color:#ffffff; font-family:'Inter',system-ui,sans-serif; font-size:0.78rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; padding:0.6rem 1.1rem; border-radius:999px; box-shadow:0 4px 14px rgba(17,17,17,0.25);">&larr; Parent Portal</a>
+
 
   <!-- ===========================
        NAVIGATION
@@ -85,47 +228,145 @@
 
       <div class="pricing-intro">
         <h1 class="pricing-heading">First Time with Us?<br>Start with Our 3-Week Launchpad</h1>
-        <p class="pricing-subtext">Every student begins with a 21-day entry period. Includes 6 hours of private sessions to ensure the perfect tutor match and a custom academic roadmap. No long-term commitments or contracts required.</p>
+        <p class="pricing-subtext">Every student begins with a 21-day entry period. Includes 6 hours of private sessions to ensure the perfect tutor match and a custom academic roadmap. No long-term commitments or contracts required. Backed by our money-back guarantee: if you're not satisfied, we'll refund the entire package, no questions asked, regardless of how many of the hours you've already used.</p>
       </div>
 
       <div class="pricing-cards">
 
         <div class="pricing-card">
-          <p class="card-level">Middle School</p>
+          <p class="card-level">Elementary</p>
+          <span class="card-badge">20% Off</span>
           <div class="card-discounted">
-            <span class="card-new">$570</span>
+            <span class="card-original">$480</span>
+            <span class="card-new">$384</span>
           </div>
+          <button type="button" class="card-buy" data-level="elementary" data-label="Elementary" data-price="$384">Buy Now</button>
+        </div>
+
+        <div class="pricing-card">
+          <p class="card-level">Middle School</p>
+          <span class="card-badge">20% Off</span>
+          <div class="card-discounted">
+            <span class="card-original">$570</span>
+            <span class="card-new">$456</span>
+          </div>
+          <button type="button" class="card-buy" data-level="middle" data-label="Middle School" data-price="$456">Buy Now</button>
         </div>
 
         <div class="pricing-card">
           <p class="card-level">High School</p>
+          <span class="card-badge">20% Off</span>
           <div class="card-discounted">
-            <span class="card-new">$630</span>
+            <span class="card-original">$630</span>
+            <span class="card-new">$504</span>
           </div>
+          <button type="button" class="card-buy" data-level="high" data-label="High School" data-price="$504">Buy Now</button>
         </div>
 
         <div class="pricing-card">
           <p class="card-level">College</p>
+          <span class="card-badge">20% Off</span>
           <div class="card-discounted">
-            <span class="card-new">$750</span>
+            <span class="card-original">$750</span>
+            <span class="card-new">$600</span>
           </div>
+          <button type="button" class="card-buy" data-level="college" data-label="College" data-price="$600">Buy Now</button>
         </div>
 
         <div class="pricing-card pricing-card--featured">
           <p class="card-level">SAT/ACT Prep</p>
+          <span class="card-badge">20% Off</span>
           <div class="card-discounted">
-            <span class="card-new">$750</span>
+            <span class="card-original">$750</span>
+            <span class="card-new">$600</span>
           </div>
+          <button type="button" class="card-buy" data-level="sat-act" data-label="SAT/ACT Prep" data-price="$600">Buy Now</button>
         </div>
 
       </div><!-- /pricing-cards -->
 
-      <div class="pricing-cta">
-        <a href="index.html#get-started" class="nav-cta">Get Started</a>
+      <!-- ── Intro package checkout form (appears after choosing a level) ── -->
+      <div class="intro-checkout" id="intro-checkout" hidden>
+        <h2 class="intro-checkout-title">6-Hour Introductory Package</h2>
+        <p class="intro-checkout-summary" id="intro-summary"></p>
+
+        <form id="intro-form">
+          <div class="intro-field">
+            <label class="intro-label" for="intro-email">Email</label>
+            <input class="intro-input" type="email" id="intro-email" required placeholder="you@example.com" autocomplete="email" />
+            <p class="intro-hint">Use the same email you signed up and accepted the agreement with. Your receipt and account records are tied to it.</p>
+          </div>
+
+          <div class="intro-field">
+            <label class="intro-label" for="intro-parent">Parent or Guardian Name</label>
+            <input class="intro-input" type="text" id="intro-parent" required placeholder="Jane Smith" autocomplete="name" />
+          </div>
+
+          <div class="intro-field">
+            <label class="intro-label" for="intro-student">Student's Name</label>
+            <input class="intro-input" type="text" id="intro-student" required placeholder="Alex Smith" />
+          </div>
+
+          <button class="intro-submit" id="intro-submit" type="submit">Continue to Secure Checkout</button>
+          <p class="intro-error" id="intro-error"></p>
+        </form>
+
+        <p class="intro-agreement-note">Checkout is processed securely by Stripe. By purchasing, you confirm you have accepted the <a href="/agreement">Tutoring Services Agreement</a>, including saving your card for future tutoring-hour purchases as described in Section 4.</p>
       </div>
 
     </div>
   </section>
+
+  <script>
+    (function () {
+      var checkout = document.getElementById('intro-checkout');
+      var summary = document.getElementById('intro-summary');
+      var form = document.getElementById('intro-form');
+      var submitBtn = document.getElementById('intro-submit');
+      var errorEl = document.getElementById('intro-error');
+      var selectedLevel = null;
+
+      document.querySelectorAll('.card-buy').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          selectedLevel = btn.dataset.level;
+          summary.textContent = btn.dataset.label + ' — ' + btn.dataset.price +
+            ' for 6 hours of private tutoring (20% off). Enter your details to check out.';
+          checkout.hidden = false;
+          checkout.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!selectedLevel) return;
+        errorEl.classList.remove('active');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Opening Checkout…';
+
+        fetch('/.netlify/functions/create-intro-checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            level: selectedLevel,
+            email: document.getElementById('intro-email').value.trim(),
+            parentName: document.getElementById('intro-parent').value.trim(),
+            studentName: document.getElementById('intro-student').value.trim()
+          })
+        })
+          .then(function (res) { return res.json(); })
+          .then(function (data) {
+            if (data && data.url) { window.location = data.url; return; }
+            throw new Error((data && data.error) || 'Could not start checkout.');
+          })
+          .catch(function (err) {
+            errorEl.textContent = err.message + ' Please try again, or call us at (818) 294-3292.';
+            errorEl.classList.add('active');
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Continue to Secure Checkout';
+          });
+      });
+    })();
+  </script>
 
 
   <!-- ===========================
