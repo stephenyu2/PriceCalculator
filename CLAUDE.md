@@ -3,7 +3,10 @@
 ## Project overview
 Plain HTML5 / CSS3 / Vanilla JS. No framework, no build step.
 Deployed on Netlify. Forms use Netlify Forms (`data-netlify="true"`).
-One serverless function: `netlify/functions/create-checkout.js` (Stripe checkout for /sat-planner; dependency-free, reads `STRIPE_SECRET_KEY` from Netlify env vars — never put keys in front-end code).
+Three serverless functions in `netlify/functions/` (all dependency-free, all read `STRIPE_SECRET_KEY` from Netlify env vars — never put keys in front-end code):
+- `create-intro-checkout.js` — Stripe checkout for the 6-hour intro package (/pricing); saves the card via `setup_future_usage`; prices hardcoded in cents, must match pricing.html
+- `create-setup-checkout.js` — card-on-file setup for migrating customers (/save-card), no charge
+- `create-checkout.js` — legacy SAT planner checkout (the planner now routes purchases to /parent-portal instead)
 
 ## Deploying (IMPORTANT — do not drag-and-drop)
 The site is NOT auto-deployed from git. Deploy with the Netlify CLI from the project root:
@@ -22,16 +25,27 @@ Open http://localhost:8080. Note: the Stripe checkout function does NOT run unde
 ## Site structure
 ```
 /                          → index.html (landing page)
-/pricing                   → pricing.html (pricing calculator)
 /contact                   → contact.html
 /about, /faq, /careers, /privacy, /terms
-/get-started, /sign-up
+/get-started
 /thank-you, /thank-you-diagnostic
 /member-pricing            → member-pricing.html (hub)
 /member-pricing-tutoring   → member-pricing-tutoring.html
 /member-pricing-sat-act    → member-pricing-sat-act.html
-/sat-planner               → sat-planner.html (hidden SAT prep plan calculator: noindex/nofollow, unlinked, direct URL only). Two-tier packages (Essentials/Complete) + Stripe hosted checkout via the create-checkout function. ALL pricing math lives in sat-pricing.js (repo root), shared by the page (browser) and the function (server) — never duplicate the formula; edit constants there only.
+/sat-planner               → sat-planner.html (hidden SAT prep plan calculator: noindex/nofollow, unlinked, direct URL only). Shows the recommended plan and routes purchases to /parent-portal. ALL pricing math lives in sat-pricing.js (repo root) — never duplicate the formula; edit constants there only.
+
+Billing / parent portal cluster (all noindex, prepaid-hours model, live since 2026-07-08):
+/parent-portal             → parent-portal.html (hub: new families, migrating customers, plan management, six enrollment perks, resources)
+/sign-up                   → sign-up.html (step 1: TutorBird enrollment widget)
+/agreement                 → agreement.html (step 2: Tutoring Services Agreement, 11 sections; Netlify form is the consent record. Sections 3, 4, and 7 are cross-referenced from other pages — do not renumber them)
+/pricing                   → pricing.html (step 3: 6-hour intro package purchase, 20% off, via create-intro-checkout)
+/save-card                 → save-card.html (migrating customers: card on file via create-setup-checkout) → /card-saved
+/auto-refill               → auto-refill.html (Automatic Refill enrollment form + refill price table)
+/manage-package            → manage-package.html (pause/change/cancel refills)
 /payment-success           → payment-success.html (post-checkout landing page, noindex)
+
+Prices live in FOUR places that must move together: create-intro-checkout.js (hardcoded cents), pricing.html, auto-refill.html, and the parent handout PDF (~/Downloads/LVT-Packages-and-Payment.pdf, regenerated from HTML — ask Claude, the source is kept in its project memory). The six enrollment perks must also stay identical across the PDF, parent-portal.html, and agreement.html Section 8.
+Old-model pages (subscriptions, buy-hours, tutoring-packages) were deleted 2026-07-09; their URLs 301 to /parent-portal via _redirects.
 
 /tutoring/                 → tutoring/index.html (hub with video panels)
 /tutoring/<subject>/       → individual subject pages (14 total)
@@ -51,7 +65,7 @@ Open http://localhost:8080. Note: the Stripe checkout function does NOT run unde
 ```
 
 ## CSS architecture
-- `styles.css` — global styles, CSS variables, nav, hero, buttons, dark mode
+- `styles.css` — global styles, CSS variables, nav, hero, buttons
 - `pricing.css` — pricing calculator section
 - `member-pricing.css` — member pricing cards
 - `contact.css` — contact form and cards
@@ -89,12 +103,12 @@ Never add uncompressed source videos to the repo.
 The tutoring hub currently loads ~33 MB (all three videos autoplay simultaneously). Lazy-loading the off-screen panels is a known pending improvement — load only the first panel's video on page load, defer the others until scroll or tap.
 
 ## JavaScript (script.js)
-Single file, no dependencies. Handles: sticky nav, FAQ accordion, pricing calculator (grade selector → tier prices), mobile menu, scroll reveal (IntersectionObserver), testimonial card flip, dark/light mode (persisted to localStorage), Netlify form POST + redirect, Google Maps lazy-load facade.
+Single file, no dependencies. Handles: sticky nav, FAQ accordion, pricing calculator (grade selector → tier prices), mobile menu, scroll reveal (IntersectionObserver), testimonial card flip, Netlify form POST + redirect, Google Maps lazy-load facade.
 
 ## Design tokens
 - Fonts: Playfair Display (headings), Inter (body) — loaded from Google Fonts
-- Colors: navy (`#1a1a2e`), gold (`#8B6914`), off-white (`#f5f3ee`)
-- Dark mode: toggled via `data-theme="dark"` on `<html>`, persisted to localStorage
+- Palette: black accent / cream / white, LIGHT MODE ONLY. The CSS variable names are legacy: `--navy` is now cream (`#f5f3ee`) and `--gold`/`--white` are now black (`#111111`). Read the values in `styles.css`, not the names. There is no dark mode — never add one, and remove dark-mode CSS if encountered.
+- Copy style: never use em dashes; use a comma or period instead.
 - Fluid spacing: use `clamp()` — do not use fixed px for section padding
 
 ## Redirects

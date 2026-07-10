@@ -267,19 +267,11 @@
 
     .tier-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
+      max-width: 520px;
       gap: 1.5rem;
-      margin-top: 2.4rem;
+      margin: 2.4rem auto 0;
       align-items: stretch;
-    }
-
-    @media (max-width: 640px) {
-      .tier-grid {
-        grid-template-columns: 1fr;
-        max-width: 440px;
-        margin-left: auto;
-        margin-right: auto;
-      }
     }
 
     .tier-card {
@@ -382,127 +374,6 @@
       color: var(--gold);
     }
 
-    .tier-total {
-      margin-top: auto;
-      padding-top: 0.8rem;
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
-
-    .tier-total strong {
-      font-family: var(--font-heading);
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-left: 0.35rem;
-    }
-
-    .tier-total .total-was {
-      text-decoration: line-through;
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      margin-left: 0.35rem;
-    }
-
-    .choose-btn {
-      width: 100%;
-      background: var(--gold);
-      border: 1px solid var(--gold);
-      color: var(--on-gold);
-      padding: 0.85rem 1.2rem;
-      border-radius: var(--radius);
-      font-family: var(--font-body);
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background var(--transition), border-color var(--transition);
-    }
-
-    .choose-btn:hover {
-      background: var(--gold-light);
-      border-color: var(--gold-light);
-    }
-
-    /* --- Payment choice (appears after a package is chosen) --- */
-    .payment-choice {
-      display: none;
-      margin-top: 2.5rem;
-    }
-
-    .payment-choice.visible {
-      display: block;
-    }
-
-    .payment-choice-title {
-      font-family: var(--font-body);
-      font-size: 1rem;
-      color: var(--white);
-      text-align: center;
-      margin: 0 0 1.2rem;
-    }
-
-    .pay-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 560px) {
-      .pay-grid {
-        grid-template-columns: 1fr;
-        max-width: 420px;
-      }
-    }
-
-    .pay-btn {
-      width: 100%;
-      background: var(--navy);
-      border: 1px solid rgba(0, 0, 0, 0.18);
-      border-radius: 8px;
-      padding: 0.75rem 0.9rem;
-      font-family: var(--font-body);
-      color: var(--white);
-      text-align: left;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      gap: 0.15rem;
-      transition: border-color var(--transition);
-    }
-
-    .pay-btn:hover {
-      border-color: rgba(0, 0, 0, 0.4);
-    }
-
-    .pay-btn.selected {
-      border-color: var(--gold);
-      box-shadow: 0 0 0 1px var(--gold);
-    }
-
-    .pay-btn .pay-main {
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    .pay-btn .pay-sub {
-      font-size: 0.76rem;
-      color: var(--text-muted);
-    }
-
-    .pay-btn:disabled {
-      opacity: 0.65;
-      cursor: default;
-    }
-
-    .checkout-error {
-      max-width: 600px;
-      margin: 1rem auto 0;
-    }
-
     .checkout-note {
       font-family: var(--font-body);
       font-size: 0.82rem;
@@ -540,7 +411,7 @@
 
       <div class="planner-intro">
         <h2 class="planner-heading">Plan Your SAT Prep</h2>
-        <p class="planner-subtext">Enter your diagnostic results and test date, and we'll recommend a program length, weekly pace, and payment options.</p>
+        <p class="planner-subtext">Enter your diagnostic results and test date, and we'll recommend a program length and weekly pace.</p>
       </div>
 
       <form class="planner-form" id="planner-form" novalidate>
@@ -602,13 +473,7 @@
 
         <div class="tier-grid" id="tier-grid"></div>
 
-        <!-- Payment choice -->
-        <div class="payment-choice" id="payment-choice">
-          <p class="payment-choice-title" id="payment-choice-title"></p>
-          <div class="pay-grid" id="pay-grid"></div>
-          <p class="planner-error checkout-error" id="checkout-error" role="alert"></p>
-          <p class="checkout-note">You'll be taken to our secure Stripe checkout to finish signing up.</p>
-        </div>
+        <p class="checkout-note">Ready to start? Purchase your tutoring hours from the <a href="/parent-portal" style="color: var(--gold); text-decoration: underline;">parent portal</a>.</p>
       </div>
 
     </div>
@@ -642,10 +507,6 @@
       var summaryEl = document.getElementById('plan-summary');
       var paceNoteEl = document.getElementById('pace-note');
       var tierGrid = document.getElementById('tier-grid');
-      var paymentChoice = document.getElementById('payment-choice');
-      var paymentChoiceTitle = document.getElementById('payment-choice-title');
-      var payGrid = document.getElementById('pay-grid');
-      var checkoutError = document.getElementById('checkout-error');
       var splitToggle = document.getElementById('split-toggle');
       var splitFields = document.getElementById('split-fields');
       var targetTotalInput = document.getElementById('target-total');
@@ -655,16 +516,11 @@
       var otherDateWrap = document.getElementById('other-date-wrap');
       var otherDateInput = document.getElementById('test-date');
 
-      var plan = null;           // holds the last calculated plan (inputs + all three tiers)
-      var selection = null;      // { tierKey, pay: 'upfront' | 'monthly' }
+      var plan = null;           // holds the last calculated plan (inputs + both tiers)
       var selectedDate = null;   // 'YYYY-MM-DD' from a chip, or 'other'
       // Weakness concentration is not asked on the page; every plan uses the
       // neutral 'mixed' multiplier (1.0) from sat-pricing.js.
       var selectedConc = 'mixed';
-
-      function money(n) {
-        return '$' + n.toLocaleString('en-US');
-      }
 
 
       function parseISO(iso) {
@@ -833,132 +689,38 @@
           testDateText: testDateText,
           calc: calc
         };
-        selection = null;
 
         // --- Render results ---
         summaryEl.innerHTML = 'To go from <strong>' + calc.currentTotal + '</strong> to <strong>' + calc.targetTotal +
           '</strong> by your <strong>' + testDateText + '</strong> test, we recommend <strong>' + complete.hours +
           ' hours</strong> of tutoring, <strong>' + complete.hoursPerWeek + ' hours/week</strong> over <strong>' +
-          calc.weeks + (calc.weeks === 1 ? ' week' : ' weeks') + '</strong> starting next week. Choose how thorough you want to go:';
+          calc.weeks + (calc.weeks === 1 ? ' week' : ' weeks') + '</strong> starting next week.';
 
         paceNoteEl.textContent = complete.hoursPerWeek + ' hours/week is a demanding pace. If that feels like too much, we recommend choosing a later test date to spread the plan out.';
         paceNoteEl.classList.toggle('visible', complete.hoursPerWeek > INTENSIVE_HOURS_PER_WEEK);
 
-        renderTiers(calc);
+        renderPlan(complete);
 
-        paymentChoice.classList.remove('visible');
-        checkoutError.classList.remove('visible');
         resultsEl.classList.add('visible');
         resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
 
-      // --- Tier cards ---
-      function renderTiers(calc) {
+      // --- What's-included card (the recommended plan's perks) ---
+      function renderPlan(tier) {
         tierGrid.innerHTML = '';
-        calc.tiers.forEach(function (t) {
-          var card = document.createElement('div');
-          card.className = 'tier-card' + (t.mostPopular ? ' popular' : '');
-          card.dataset.key = t.key;
+        var card = document.createElement('div');
+        card.className = 'tier-card';
 
-          var html = '';
-          if (t.mostPopular) html += '<span class="tier-popular-badge">Most Popular</span>';
-          html += '<span class="tier-name">' + t.name + '</span>';
-          html += '<span class="tier-hours">' + t.hours + ' hours</span>';
-          html += '<span class="tier-pace">' + t.hoursPerWeek + ' hours/week over ' + calc.weeks + (calc.weeks === 1 ? ' week' : ' weeks') + '</span>';
-          html += '<p class="tier-tagline">' + t.description + '</p>';
-          html += '<ul class="tier-includes">';
-          t.perks.forEach(function (perk) {
-            html += '<li><span class="mark">✓</span><span>' + perk + '</span></li>';
-          });
-          html += '</ul>';
-          html += '<div class="tier-total">Total' +
-            (t.fullTotal > t.total ? '<span class="total-was">' + money(t.fullTotal) + '</span>' : '') +
-            '<strong>' + money(t.total) + '</strong></div>';
-          html += '<button type="button" class="choose-btn" data-key="' + t.key + '">Choose ' + t.name + '</button>';
-
-          card.innerHTML = html;
-          tierGrid.appendChild(card);
+        var html = '<span class="tier-name">What\'s Included</span>';
+        html += '<ul class="tier-includes">';
+        tier.perks.forEach(function (perk) {
+          html += '<li><span class="mark">✓</span><span>' + perk + '</span></li>';
         });
+        html += '</ul>';
+
+        card.innerHTML = html;
+        tierGrid.appendChild(card);
       }
-
-      function findTier(key) {
-        var tier = null;
-        if (plan) plan.calc.tiers.forEach(function (t) { if (t.key === key) tier = t; });
-        return tier;
-      }
-
-      // --- Step 2: choose a package ---
-      tierGrid.addEventListener('click', function (e) {
-        var btn = e.target.closest('.choose-btn');
-        if (!btn || !plan) return;
-        var tier = findTier(btn.dataset.key);
-        if (!tier) return;
-        selection = { tierKey: tier.key, pay: null };
-
-        tierGrid.querySelectorAll('.tier-card').forEach(function (c) {
-          c.classList.toggle('selected', c.dataset.key === tier.key);
-        });
-
-        paymentChoiceTitle.innerHTML = 'How would you like to pay for the <strong>' + tier.name +
-          '</strong> package (' + money(tier.total) + ')?';
-
-        payGrid.innerHTML =
-          '<button type="button" class="pay-btn" data-pay="upfront">' +
-            '<span class="pay-main">Pay All at Once ' + money(tier.upfrontPrice) + '</span>' +
-            '<span class="pay-sub">Save ' + money(tier.upfrontSavings) + '</span></button>' +
-          '<button type="button" class="pay-btn" data-pay="monthly">' +
-            '<span class="pay-main">Pay Monthly ' + money(tier.monthlyPayment) + '/mo</span>' +
-            '<span class="pay-sub">' + tier.months + (tier.months === 1 ? ' payment' : ' payments') + ', total ' + money(tier.total) + '</span></button>';
-
-        checkoutError.classList.remove('visible');
-        paymentChoice.classList.add('visible');
-        paymentChoice.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      });
-
-      // --- Step 3: choose how to pay → Stripe hosted checkout ---
-      // The server recomputes the price from these raw inputs using the same
-      // shared formula (sat-pricing.js); no price is ever sent from here.
-      payGrid.addEventListener('click', function (e) {
-        var btn = e.target.closest('.pay-btn');
-        if (!btn || btn.disabled || !plan || !selection) return;
-        selection.pay = btn.dataset.pay;
-
-        payGrid.querySelectorAll('.pay-btn').forEach(function (b) {
-          b.classList.toggle('selected', b === btn);
-          b.disabled = true;
-        });
-        checkoutError.classList.remove('visible');
-
-        var mainEl = btn.querySelector('.pay-main');
-        var originalText = mainEl.textContent;
-        mainEl.textContent = 'Taking you to secure checkout…';
-
-        fetch('/.netlify/functions/create-checkout', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            studentName: plan.name,
-            currentMath: plan.currentMath,
-            currentRW: plan.currentRW,
-            targetTotal: plan.targetTotal,
-            testDate: plan.testDateISO,
-            tierKey: selection.tierKey,
-            pay: selection.pay
-          })
-        })
-          .then(function (res) {
-            return res.json().catch(function () { return {}; }).then(function (data) {
-              if (!res.ok || !data.url) throw new Error(data.error || 'Checkout failed');
-              window.location.href = data.url;
-            });
-          })
-          .catch(function () {
-            mainEl.textContent = originalText;
-            payGrid.querySelectorAll('.pay-btn').forEach(function (b) { b.disabled = false; });
-            checkoutError.textContent = 'Sorry, we couldn’t start checkout just now. Please try again in a moment, or contact Stephen, Mark, or Derek directly.';
-            checkoutError.classList.add('visible');
-          });
-      });
     })();
   </script>
 </body>

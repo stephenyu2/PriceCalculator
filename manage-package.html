@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WXD9PHPQP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9WXD9PHPQP');
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18021083135"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18021083135');
+  </script>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wuyjdxixyg");
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>Manage Your Package | Launch Valley Tutoring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ============================================
+       MANAGE PACKAGE: page-specific styles
+    ============================================ */
+    .manage-section {
+      padding: var(--section-pad) 1.5rem;
+    }
+
+    .manage-container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .manage-intro {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .manage-heading {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--white);
+      margin: 0 0 1rem;
+    }
+
+    .manage-subtext {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* --- Action selector --- */
+    .action-selector {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (max-width: 640px) {
+      .action-selector {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .action-btn {
+      background: var(--navy-light);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: 8px;
+      padding: 1rem 0.75rem;
+      text-align: center;
+      font-family: var(--font-body);
+      font-size: 0.86rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: border-color var(--transition), color var(--transition), background var(--transition);
+    }
+
+    .action-btn:hover {
+      border-color: rgba(0, 0, 0, 0.28);
+      color: var(--white);
+    }
+
+    .action-btn.active {
+      border-color: var(--gold);
+      background: rgba(0, 0, 0, 0.06);
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    /* --- Panels --- */
+    .manage-panel {
+      display: none;
+      background: var(--navy-light);
+      border: 1px solid rgba(0, 0, 0, 0.11);
+      border-radius: 12px;
+      padding: clamp(1.6rem, 4vw, 2.4rem);
+    }
+
+    .manage-panel.active {
+      display: block;
+    }
+
+    .manage-panel-title {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--white);
+      margin: 0 0 0.35rem;
+    }
+
+    .manage-panel-sub {
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin: 0 0 1.5rem;
+      line-height: 1.6;
+    }
+
+    .manage-field {
+      margin-bottom: 1.1rem;
+    }
+
+    .manage-label {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 0.35rem;
+    }
+
+    .manage-input {
+      width: 100%;
+      padding: 0.7rem 0.9rem;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--white);
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: var(--radius);
+    }
+
+    select.manage-input {
+      appearance: auto;
+      cursor: pointer;
+    }
+
+    textarea.manage-input {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .manage-hint {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+      line-height: 1.5;
+    }
+
+    .manage-submit {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      background: #111111;
+      color: #ffffff;
+      border: none;
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color var(--transition);
+    }
+
+    .manage-submit:hover {
+      background: #333333;
+    }
+
+    .manage-note {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 1rem 0 0;
+      text-align: center;
+    }
+
+    /* --- Cancel & refund panel --- */
+    .cancel-copy {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      padding: 1.2rem 1.3rem;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--white);
+      white-space: pre-wrap;
+      margin: 0 0 1rem;
+    }
+
+    .copy-btn {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      background: #111111;
+      color: #ffffff;
+      border: none;
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color var(--transition);
+    }
+
+    .copy-btn:hover {
+      background: #333333;
+    }
+
+    .cancel-send {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin: 1.2rem 0 0;
+    }
+
+    .cancel-send a {
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    /* --- Success view --- */
+    .manage-success {
+      display: none;
+      background: var(--navy-light);
+      border: 1px solid rgba(0, 0, 0, 0.11);
+      border-radius: 12px;
+      padding: clamp(2rem, 5vw, 3rem);
+      text-align: center;
+    }
+
+    .manage-success.active {
+      display: block;
+    }
+
+    .manage-success-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 600;
+      color: var(--white);
+      margin: 0 0 1rem;
+    }
+
+    .manage-success p {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin: 0 auto;
+      max-width: 460px;
+    }
+
+    .manage-success a {
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back to Parent Portal -->
+  <a href="/parent-portal" style="position:fixed; bottom:1.25rem; left:1.25rem; z-index:9999; background:#111111; color:#ffffff; font-family:'Inter',system-ui,sans-serif; font-size:0.78rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; padding:0.6rem 1.1rem; border-radius:999px; box-shadow:0 4px 14px rgba(17,17,17,0.25);">&larr; Parent Portal</a>
+
+
+  <!-- ===========================
+       PAGE HERO
+  =========================== -->
+  <section class="page-hero">
+    <img class="page-hero-bg" src="Images/GroupPhoto.jpeg" alt="" aria-hidden="true" />
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+    <div class="page-hero-content">
+      <h1 class="hero-heading">Manage Your Package</h1>
+    </div>
+  </section>
+
+
+  <!-- ===========================
+       MANAGE
+  =========================== -->
+  <section class="manage-section">
+    <div class="manage-container">
+
+      <div class="manage-intro">
+        <h2 class="manage-heading">Manage Your Package</h2>
+        <p class="manage-subtext">Pause your automatic refills, change your refill size, or close your account and cash out unused hours. All requests take effect within one business day.</p>
+      </div>
+
+      <!-- Action selector -->
+      <div class="action-selector" id="action-selector" role="tablist" aria-label="Choose an action">
+        <button class="action-btn" data-action="pause" type="button">Pause Automatic Refill</button>
+        <button class="action-btn" data-action="change" type="button">Change Refill Size</button>
+        <button class="action-btn" data-action="cancel" type="button">Cancel &amp; Refund</button>
+      </div>
+
+      <!-- ── Pause panel ── -->
+      <div class="manage-panel" data-panel="pause">
+        <h3 class="manage-panel-title">Pause Automatic Refill</h3>
+        <p class="manage-panel-sub">Pausing stops automatic charges. Your remaining hours stay on your account and never expire; you can keep using them until they run out, and no refill will be charged. Turn Automatic Refill back on anytime.</p>
+
+        <form id="pause-form" name="pause-auto-refill" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="pause-auto-refill" />
+          <p style="display:none" aria-hidden="true">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div class="manage-field">
+            <label class="manage-label" for="pause-parent">Parent or Guardian Name</label>
+            <input class="manage-input" type="text" id="pause-parent" name="parent-name" required placeholder="Jane Smith" autocomplete="name" />
+          </div>
+
+          <div class="manage-field">
+            <label class="manage-label" for="pause-email">Email</label>
+            <input class="manage-input" type="email" id="pause-email" name="email" required placeholder="jane@example.com" autocomplete="email" />
+            <p class="manage-hint">Use the same email as your account.</p>
+          </div>
+
+          <div class="manage-field">
+            <label class="manage-label" for="pause-student">Student's Name</label>
+            <input class="manage-input" type="text" id="pause-student" name="student-name" required placeholder="Alex Smith" />
+          </div>
+
+          <div class="manage-field">
+            <label class="manage-label" for="pause-notes">Anything we should know? (optional)</label>
+            <textarea class="manage-input" id="pause-notes" name="notes" placeholder="e.g. We're traveling for the summer and will pick back up in the fall."></textarea>
+          </div>
+
+          <button class="manage-submit" type="submit">Pause Automatic Refill</button>
+          <p class="manage-note">Takes effect within one business day. Hours you've already purchased are not affected.</p>
+        </form>
+      </div>
+
+      <!-- ── Change panel ── -->
+      <div class="manage-panel" data-panel="change">
+        <h3 class="manage-panel-title">Change Refill Size</h3>
+        <p class="manage-panel-sub">Pick the refill package you'd like going forward. The change applies to your next automatic refill.</p>
+
+        <form id="change-form" name="change-refill-size" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="change-refill-size" />
+          <p style="display:none" aria-hidden="true">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div class="manage-field">
+            <label class="manage-label" for="change-parent">Parent or Guardian Name</label>
+            <input class="manage-input" type="text" id="change-parent" name="parent-name" required placeholder="Jane Smith" autocomplete="name" />
+          </div>
+
+          <div class="manage-field">
+            <label class="manage-label" for="change-email">Email</label>
+            <input class="manage-input" type="email" id="change-email" name="email" required placeholder="jane@example.com" autocomplete="email" />
+            <p class="manage-hint">Use the same email as your account.</p>
+          </div>
+
+          <div class="manage-field">
+            <label class="manage-label" for="change-student">Student's Name</label>
+            <input class="manage-input" type="text" id="change-student" name="student-name" required placeholder="Alex Smith" />
+          </div>
+
+          <div class="manage-field">
+            <label class="manage-label" for="change-size">New Refill Size</label>
+            <select class="manage-input" id="change-size" name="new-refill-size" required>
+              <option value="" disabled selected>Choose your new refill package</option>
+              <option value="5 hours">5 hours</option>
+              <option value="10 hours">10 hours</option>
+              <option value="20 hours">20 hours</option>
+            </select>
+            <p class="manage-hint">Academic refills are charged at your student's level rate. Full rates are on the <a href="/auto-refill" style="color: var(--gold); text-decoration: underline;">Automatic Refill page</a>.</p>
+          </div>
+
+          <button class="manage-submit" type="submit">Update My Refill Size</button>
+          <p class="manage-note">Takes effect within one business day. You are not charged by submitting this form.</p>
+        </form>
+      </div>
+
+      <!-- ── Cancel & refund panel ── -->
+      <div class="manage-panel" data-panel="cancel">
+        <h3 class="manage-panel-title">Cancel &amp; Refund</h3>
+        <p class="manage-panel-sub">Closing your account cashes out your unused hours at 75% of their purchase value, refunded to your original payment method (per Section 7 of the Tutoring Services Agreement). For your security, we confirm every cancellation and refund with the account holder directly before processing, so this one isn't a form. Copy the message below and send it to us.</p>
+
+        <div class="cancel-copy" id="cancel-copy-text">Hi, I'd like to close my account and cash out my remaining hour balance. I understand unused hours are refunded at 75% of their purchase value to my original payment method, per the Tutoring Services Agreement.</div>
+
+        <button class="copy-btn" id="copy-btn" type="button">Copy This Message</button>
+
+        <p class="cancel-send">Send it to your point of contact, whether that's Stephen, Mark, or Derek, or email it to <a href="mailto:launch@launchvalleytutoring.com?subject=Account%20Closure%20and%20Refund%20Request">launch@launchvalleytutoring.com</a>. We'll confirm with you directly and process the refund.</p>
+      </div>
+
+      <!-- ── Success view ── -->
+      <div class="manage-success" id="manage-success" role="status" aria-live="polite">
+        <h2 class="manage-success-title">Request received</h2>
+        <p id="manage-success-detail"></p>
+        <p style="margin-top:1rem">We'll confirm by email within one business day. Head back to the <a href="/parent-portal">parent portal</a> anytime.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <script>
+    (function () {
+      var selector = document.getElementById('action-selector');
+      var buttons = selector.querySelectorAll('.action-btn');
+      var panels = document.querySelectorAll('.manage-panel');
+      var success = document.getElementById('manage-success');
+      var successDetail = document.getElementById('manage-success-detail');
+
+      function showAction(action) {
+        success.classList.remove('active');
+        buttons.forEach(function (btn) {
+          btn.classList.toggle('active', btn.dataset.action === action);
+        });
+        panels.forEach(function (panel) {
+          panel.classList.toggle('active', panel.dataset.panel === action);
+        });
+      }
+
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          showAction(btn.dataset.action);
+        });
+      });
+
+      showAction('pause');
+
+      // --- Netlify form submits (pause + change) ---
+      function encode(data) {
+        return Object.keys(data).map(function (key) {
+          return encodeURIComponent(key) + '=' + encodeURIComponent(data[key]);
+        }).join('&');
+      }
+
+      function wireForm(formId, formName, successText) {
+        var form = document.getElementById(formId);
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var data = { 'form-name': formName };
+          new FormData(form).forEach(function (val, key) { data[key] = val; });
+
+          function showSuccess() {
+            panels.forEach(function (p) { p.classList.remove('active'); });
+            buttons.forEach(function (b) { b.classList.remove('active'); });
+            successDetail.textContent = successText;
+            success.classList.add('active');
+            success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+
+          fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encode(data)
+          })
+            .then(showSuccess)
+            .catch(showSuccess);
+        });
+      }
+
+      wireForm('pause-form', 'pause-auto-refill',
+        'Your Automatic Refill pause request is in. No further automatic charges will occur once it takes effect, and your remaining hours stay available.');
+      wireForm('change-form', 'change-refill-size',
+        'Your refill size change is in. It applies to your next automatic refill.');
+
+      // --- Copy button for the cancel message ---
+      var copyBtn = document.getElementById('copy-btn');
+      copyBtn.addEventListener('click', function () {
+        var text = document.getElementById('cancel-copy-text').textContent;
+        function done() {
+          copyBtn.textContent = 'Copied!';
+          setTimeout(function () { copyBtn.textContent = 'Copy This Message'; }, 2000);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done).catch(done);
+        } else {
+          var ta = document.createElement('textarea');
+          ta.value = text;
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); } catch (err) {}
+          document.body.removeChild(ta);
+          done();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

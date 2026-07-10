@@ -132,6 +132,46 @@
       color: var(--gold);
     }
 
+    /* --- Enrollment perks checklist --- */
+    .portal-perks {
+      background: var(--navy-light);
+      border: 1px solid rgba(0, 0, 0, 0.11);
+      border-radius: 12px;
+      padding: 1.5rem 1.5rem 1.35rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem 1.75rem;
+      list-style: none;
+      margin: 0;
+    }
+
+    .portal-perk {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+    }
+
+    .portal-perk-mark {
+      flex-shrink: 0;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .portal-perk-text {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .portal-perk-text strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
     .portal-help {
       font-family: var(--font-body);
       font-size: 0.95rem;
@@ -220,25 +260,43 @@
         </div>
       </div>
 
+      <!-- ── Migrating customers (legacy plans) ── -->
+      <div class="portal-group">
+        <h2 class="portal-group-heading">Migrating Customers</h2>
+        <p class="portal-group-sub">Already with us on our older payment links or monthly plans? We've moved to prepaid hours with Automatic Refill: your hours never expire, and instead of hunting for a payment link every few weeks, your hours top up automatically when your balance runs low. <strong>Your existing hours carry over, nothing is lost.</strong> The move takes two steps, in this order. Then, when you're ready to buy hours, set up your refill under Buying and Managing Your Plan below.</p>
+        <div class="portal-grid">
+          <a class="portal-card" href="/agreement.html">
+            <h3 class="portal-card-title">1. Sign the New Agreement</h3>
+            <p class="portal-card-desc">Review and accept the updated Tutoring Services Agreement, which covers how automatic refills work.</p>
+            <span class="portal-card-cta">Review &amp; Accept →</span>
+          </a>
+          <a class="portal-card" href="/save-card.html">
+            <h3 class="portal-card-title">2. Save Your Card</h3>
+            <p class="portal-card-desc">Add your card securely with Stripe. No charge today, this only puts a card on file.</p>
+            <span class="portal-card-cta">Save Card →</span>
+          </a>
+        </div>
+      </div>
+
       <!-- ── 2. Buying and managing your long-term plan ── -->
       <div class="portal-group">
         <h2 class="portal-group-heading">Buying and Managing Your Plan</h2>
         <p class="portal-group-sub">For enrolled families: purchase hours and manage your ongoing plan.</p>
         <div class="portal-grid">
-          <a class="portal-card" href="/tutoring-packages.html">
-            <h3 class="portal-card-title">Tutoring Packages</h3>
-            <p class="portal-card-desc">Compare our tutoring package options.</p>
-            <span class="portal-card-cta">Compare Packages →</span>
+          <a class="portal-card" href="/auto-refill.html">
+            <h3 class="portal-card-title">Buy a Recurring Package</h3>
+            <p class="portal-card-desc">Enroll in Automatic Refill: your hours top back up automatically whenever your balance runs low.</p>
+            <span class="portal-card-cta">Set Up Refills →</span>
           </a>
-          <a class="portal-card" href="/subscriptions.html">
-            <h3 class="portal-card-title">Monthly Subscriptions</h3>
-            <p class="portal-card-desc">Recurring weekly tutoring, billed monthly.</p>
-            <span class="portal-card-cta">View Subscriptions →</span>
+          <a class="portal-card" href="/manage-package.html">
+            <h3 class="portal-card-title">Manage Your Package</h3>
+            <p class="portal-card-desc">Pause automatic refills, change your refill size, or cancel and refund your unused hours at 75% of their value.</p>
+            <span class="portal-card-cta">Manage →</span>
           </a>
-          <a class="portal-card" href="/buy-hours.html">
-            <h3 class="portal-card-title">Buy Tutoring Hours</h3>
-            <p class="portal-card-desc">Prepaid hour packages that never expire.</p>
-            <span class="portal-card-cta">Buy Hours →</span>
+          <a class="portal-card" href="https://app.tutorbird.com/" target="_blank" rel="noopener">
+            <h3 class="portal-card-title">Check Your Hours</h3>
+            <p class="portal-card-desc">Log in to TutorBird and go to the Account &amp; Invoices tab on the left. Your balance shows as a dollar amount, and it equals your hours: a balance of $8.00 means 8 hours left.</p>
+            <span class="portal-card-cta">Log In to TutorBird →</span>
           </a>
           <a class="portal-card" href="/sat-planner.html">
             <h3 class="portal-card-title">SAT Prep Planner</h3>
@@ -248,7 +306,39 @@
         </div>
       </div>
 
-      <!-- ── 3. Resources ── -->
+      <!-- ── 3. Enrollment perks ── -->
+      <div class="portal-group">
+        <h2 class="portal-group-heading">What Every Enrollment Includes</h2>
+        <p class="portal-group-sub">Every enrolled family gets these six perks at no extra cost. For anything marked "on request," just ask your tutor or contact us below.</p>
+        <ul class="portal-perks">
+          <li class="portal-perk">
+            <span class="portal-perk-mark">✓</span>
+            <p class="portal-perk-text"><strong>Homework between sessions,</strong> assigned by your tutor on request, so progress doesn't stop when the session ends.</p>
+          </li>
+          <li class="portal-perk">
+            <span class="portal-perk-mark">✓</span>
+            <p class="portal-perk-text"><strong>Weekly tests on request:</strong> a standard diagnostic for academic students, a full-length SAT/ACT practice exam for test prep. Optional proctoring at our Northridge office, Sundays at 10 AM.</p>
+          </li>
+          <li class="portal-perk">
+            <span class="portal-perk-mark">✓</span>
+            <p class="portal-perk-text"><strong>24/7 office access.</strong> Need a quiet place to study? Our office is always available to enrolled students.</p>
+          </li>
+          <li class="portal-perk">
+            <span class="portal-perk-mark">✓</span>
+            <p class="portal-perk-text"><strong>Monthly parent-tutor conference, on request.</strong> Sit down with your student's tutor each month to review progress and goals.</p>
+          </li>
+          <li class="portal-perk">
+            <span class="portal-perk-mark">✓</span>
+            <p class="portal-perk-text"><strong>A one-hour meeting with a test-taking expert, on request.</strong> A one-time session covering strategy, pacing, and test-day nerves.</p>
+          </li>
+          <li class="portal-perk">
+            <span class="portal-perk-mark">✓</span>
+            <p class="portal-perk-text"><strong>Tutor rematch guarantee.</strong> If your tutor isn't the right fit, we'll rematch you free, and the first session with your new tutor is on us.</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ── 4. Resources ── -->
       <div class="portal-group">
         <h2 class="portal-group-heading">Resources</h2>
         <p class="portal-group-sub">Study materials and placement tests, free for our families.</p>
