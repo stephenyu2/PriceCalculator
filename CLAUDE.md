@@ -60,8 +60,9 @@ Old-model pages (subscriptions, buy-hours, tutoring-packages) were deleted 2026-
 
 /curriculum/               → Academic Diagnostic tests (30 tests, email gate, timer, PDF)
 /library/                  → library/index.html (tutor-only CCSS library hub)
-/library/<subject>-<grade>/→ per-grade browsers (math-k..8/algebra1.., ela-k..12)
+/library/<subject>-<grade>/→ per-grade browsers (math-k..8/algebra1.., ela-k..12, math-sat, ela-sat)
 /library/material.html?id= → single lesson/worksheet/quiz viewer
+/scholarship/              → closed program, noindex, kept for reference only (no footer links)
 ```
 
 ## CSS architecture
