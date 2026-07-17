@@ -21,13 +21,13 @@
   'use strict';
 
   var MODULES = {
-    '01': { version: 'v3', title: 'Child Safety and Boundaries', path: '/tutors/training/01-child-safety/' },
-    '02': { version: 'v1', title: 'Mandated Reporting', path: '/tutors/training/02-mandated-reporting/' },
-    '03': { version: 'v2', title: 'Emergencies and Incidents', path: '/tutors/training/03-emergencies/' },
-    '04': { version: 'v1', title: 'Session Conduct and Accuracy', path: '/tutors/training/04-session-conduct/' },
-    '05': { version: 'v1', title: 'Records and Payment Integrity', path: '/tutors/training/05-records-and-payment/' },
-    '06': { version: 'v1', title: 'Confidentiality and Student Data', path: '/tutors/training/06-confidentiality/' },
-    '07': { version: 'v1', title: 'Respectful Conduct', path: '/tutors/training/07-respectful-conduct/' }
+    '01': { version: 'v4', title: 'Child Safety and Boundaries', path: '/tutors/training/01-child-safety/' },
+    '02': { version: 'v2', title: 'Mandated Reporting', path: '/tutors/training/02-mandated-reporting/' },
+    '03': { version: 'v3', title: 'Emergencies and Incidents', path: '/tutors/training/03-emergencies/' },
+    '04': { version: 'v2', title: 'Session Conduct and Accuracy', path: '/tutors/training/04-session-conduct/' },
+    '05': { version: 'v2', title: 'Records and Payment Integrity', path: '/tutors/training/05-records-and-payment/' },
+    '06': { version: 'v2', title: 'Confidentiality and Student Data', path: '/tutors/training/06-confidentiality/' },
+    '07': { version: 'v2', title: 'Respectful Conduct', path: '/tutors/training/07-respectful-conduct/' }
   };
 
   function flagKey(id) {
