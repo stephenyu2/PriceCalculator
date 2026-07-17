@@ -37,7 +37,7 @@ Open http://localhost:8080. Note: the Stripe checkout function does NOT run unde
 Billing / parent portal cluster (all noindex, prepaid-hours model, live since 2026-07-08):
 /parent-portal             → parent-portal.html (hub: new families, migrating customers, plan management, six enrollment perks, resources)
 /sign-up                   → sign-up.html (step 1: TutorBird enrollment widget)
-/agreement                 → agreement.html (step 2: Tutoring Services Agreement, 11 sections; Netlify form is the consent record. Sections 3, 4, and 7 are cross-referenced from other pages — do not renumber them)
+/agreement                 → agreement.html (step 2: Tutoring Services Agreement, 12 sections; Netlify form is the consent record. Sections 3, 4, and 7 are cross-referenced from other pages — do not renumber them. §12 is the background-check notice; keep it consistent with /safety/)
 /pricing                   → pricing.html (step 3: 6-hour intro package purchase, 20% off, via create-intro-checkout)
 /save-card                 → save-card.html (migrating customers: card on file via create-setup-checkout) → /card-saved
 /auto-refill               → auto-refill.html (Automatic Refill enrollment form + refill price table)
@@ -46,6 +46,17 @@ Billing / parent portal cluster (all noindex, prepaid-hours model, live since 20
 
 Prices live in FOUR places that must move together: create-intro-checkout.js (hardcoded cents), pricing.html, auto-refill.html, and the parent handout PDF (~/Downloads/LVT-Packages-and-Payment.pdf, regenerated from HTML — ask Claude, the source is kept in its project memory). The six enrollment perks must also stay identical across the PDF, parent-portal.html, and agreement.html Section 8.
 Old-model pages (subscriptions, buy-hours, tutoring-packages) were deleted 2026-07-09; their URLs 301 to /parent-portal via _redirects.
+
+Tutor portal cluster (all noindex, live since 2026-07-16; deliberately NO auth per Stephen, open like the parent portal, direct link only — do not add /tutors to robots.txt, that would advertise the path):
+/tutors/                   → hub (mirrors parent-portal.html: site nav + hero + portal-card grid + footer)
+/tutors/start, /tutors/agreement, /tutors/background-check, /tutors/training (+ 7 module pages + /complete), /tutors/rates, /tutors/resources, /tutors/incident-report, /tutors/done
+- Inner pages use the agreement.html-style pattern: floating back-pill + page hero, no nav. Shared assets: tutors/tutors.css, tutors/portal.js.
+- /tutors/agreement/ is the CANONICAL Independent Contractor Agreement (currently ICA-2026-07-16-v3) and /tutors/rates/ the canonical rate schedule (RATES-2026-07-16-v2); the old PDFs are retired. RULE: any text change to a signable document bumps its version string in the same commit (page footer, hidden form field, and for modules also the kicker, quiz data-version, portal.js MODULES map, and the completion-form checkbox label). Module versions: 01=v2, 02-07=v1.
+- Three Netlify forms are the legal record: tutor-agreement, tutor-training-complete (one combined record for all seven modules), tutor-incident-report. portal.js submits them via AJAX POST to "/" then redirects. localStorage (lvt_module_01..07, lvt_bgcheck_ack) is cosmetic progress only.
+- Background checks run through Checkr. /tutors/background-check/ has NO form by design (FCRA standalone-disclosure rule: never build a disclosure/authorization form or collect DOB/SSN); it only has an acknowledgment button.
+- Tutor-facing primary contact is Derek (818) 441-2204; Stephen (818) 294-3292 stays on incident/emergency/harassment lines; Mark (818) 601-6889.
+
+/safety/                   → PUBLIC, indexable (B&P § 18950 background-check notice; in sitemap; "Safety" footer link exists on every page — include it in the footer of any NEW page). Its claims (owners checked, annual re-runs) must stay true and consistent with agreement.html §12.
 
 /tutoring/                 → tutoring/index.html (hub with video panels)
 /tutoring/<subject>/       → individual subject pages (14 total)

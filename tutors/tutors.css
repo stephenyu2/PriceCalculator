@@ -1,0 +1,498 @@
+/* ============================================
+   LVT TUTOR PORTAL
+   Reuses design tokens from /styles.css and
+   form styles from /contact.css.
+   Light mode only. Black / cream / white.
+============================================ */
+
+body.portal-body {
+  padding-top: 0;
+}
+
+/* --- Layout --- */
+.portal-main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 4.5rem) 1.5rem clamp(3.5rem, 8vw, 6rem);
+}
+
+.portal-prose {
+  max-width: 70ch;
+}
+
+.portal-kicker {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 0.9rem;
+}
+
+.portal-prose h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.9rem, 4.5vw, 2.7rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--white);
+  margin: 0 0 1.2rem;
+}
+
+.portal-prose h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 3vw, 1.7rem);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--white);
+  margin: 2.6rem 0 0.9rem;
+}
+
+.portal-prose h3 {
+  font-family: var(--font-heading);
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--white);
+  margin: 2rem 0 0.5rem;
+}
+
+.portal-prose p,
+.portal-prose li {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: rgba(17, 17, 17, 0.82);
+}
+
+.portal-prose p {
+  margin: 0 0 1.1rem;
+}
+
+.portal-prose ul,
+.portal-prose ol {
+  margin: 0 0 1.1rem;
+  padding-left: 1.4rem;
+}
+
+.portal-prose li {
+  margin-bottom: 0.55rem;
+}
+
+.portal-prose a {
+  color: var(--white);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Link-styled buttons: undo the prose link color, which would
+   otherwise render black text on the black button */
+.portal-prose a.btn-cta {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.portal-why {
+  font-style: italic;
+  color: var(--text-muted);
+  border-left: 3px solid #111111;
+  padding-left: 1rem;
+  margin: 0 0 2rem;
+}
+
+/* --- Callout box --- */
+.portal-callout {
+  background: var(--navy-light);
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-left: 4px solid #111111;
+  border-radius: 8px;
+  padding: 1.3rem 1.5rem;
+  margin: 0 0 2.2rem;
+}
+
+.portal-callout p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--white);
+}
+
+.portal-callout p + p {
+  margin-top: 0.8rem;
+}
+
+/* --- Note (small, muted) --- */
+.portal-note {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* --- Version stamp --- */
+.portal-version {
+  margin-top: 3rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.13);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+/* --- Tables --- */
+.portal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 1.4rem;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+}
+
+.portal-table th,
+.portal-table td {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 0.65rem 0.85rem;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.55;
+  color: rgba(17, 17, 17, 0.82);
+}
+
+.portal-table th {
+  background: var(--navy-light);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.portal-table-wrap {
+  overflow-x: auto;
+}
+
+/* --- Card grid (hub, resources, training index) ---
+   Same pattern as parent-portal.html: the whole card
+   is the link. --- */
+.portal-group {
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.portal-group:last-child {
+  margin-bottom: 0;
+}
+
+.portal-group-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 600;
+  color: var(--white);
+  margin: 0 0 0.4rem;
+}
+
+.portal-group-sub {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0 0 1.4rem;
+}
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.portal-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--navy-light);
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-radius: 12px;
+  padding: 1.5rem 1.5rem 1.35rem;
+  text-decoration: none;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+a.portal-card:hover {
+  border-color: rgba(0, 0, 0, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(17, 17, 17, 0.08);
+}
+
+.portal-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--white);
+  margin: 0 0 0.45rem;
+  line-height: 1.3;
+}
+
+.portal-card-desc {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0 0 1.1rem;
+  flex-grow: 1;
+}
+
+.portal-card-cta {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.portal-help {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  border-top: 1px solid rgba(0, 0, 0, 0.11);
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  padding-top: 1.75rem;
+}
+
+.portal-help a {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* Module list status */
+.portal-module-status {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.portal-module-status.is-done {
+  color: var(--white);
+}
+
+/* --- Quiz --- */
+.quiz {
+  margin-top: 1rem;
+}
+
+.quiz-q {
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  border-radius: 8px;
+  background: var(--navy-light);
+  padding: 1.2rem 1.4rem 1rem;
+  margin: 0 0 1.2rem;
+}
+
+.quiz-q legend {
+  /* float pulls the legend off the fieldset border and back into
+     normal flow, so the question renders inside the card */
+  float: left;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--white);
+  padding: 0;
+  margin: 0 0 0.7rem;
+}
+
+.quiz-q .quiz-opt {
+  clear: both;
+}
+
+.quiz-opt {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.45rem 0.2rem;
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: rgba(17, 17, 17, 0.82);
+  cursor: pointer;
+}
+
+.quiz-opt input {
+  margin-top: 0.3rem;
+  flex-shrink: 0;
+  accent-color: #111111;
+  cursor: pointer;
+}
+
+.quiz-feedback {
+  margin: 0.6rem 0 0.2rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.quiz-feedback.is-right {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.quiz-feedback.is-wrong {
+  color: rgba(17, 17, 17, 0.7);
+  font-style: italic;
+}
+
+.quiz-actions {
+  margin: 1.8rem 0 0;
+}
+
+.quiz-actions .btn[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.quiz-actions .btn {
+  cursor: pointer;
+}
+
+.module-done {
+  background: var(--navy-light);
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-left: 4px solid #111111;
+  border-radius: 8px;
+  padding: 1.3rem 1.5rem;
+  margin-top: 1.8rem;
+}
+
+.module-done p {
+  margin: 0 0 0.9rem;
+}
+
+.module-done p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Forms --- */
+.portal-form-wrap {
+  background: var(--navy-light);
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-radius: 12px;
+  padding: clamp(1.6rem, 4vw, 2.4rem);
+  margin-top: 2.5rem;
+}
+
+.portal-form-wrap h2 {
+  margin-top: 0;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.form-checkbox input {
+  margin-top: 0.25rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+  accent-color: #111111;
+  cursor: pointer;
+}
+
+.form-checkbox label {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.form-error {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--navy-mid);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  margin: 0;
+}
+
+textarea.form-input {
+  resize: vertical;
+  min-height: 5.5rem;
+}
+
+.form-help {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin: 0.1rem 0 0;
+}
+
+.form-radio-group {
+  display: flex;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.form-radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.form-radio-group input {
+  accent-color: #111111;
+  cursor: pointer;
+}
+
+/* --- Print --- */
+@media print {
+  body.portal-body {
+    background: #ffffff;
+  }
+
+  .nav,
+  .footer,
+  .page-hero,
+  .portal-noprint,
+  .quiz,
+  .quiz-actions,
+  .module-done,
+  .portal-form-wrap,
+  form,
+  .btn {
+    display: none !important;
+  }
+
+  .portal-main {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .portal-prose {
+    max-width: 100%;
+  }
+
+  .portal-prose p,
+  .portal-prose li,
+  .portal-table td {
+    color: #111111;
+  }
+
+  .portal-callout,
+  .portal-table th {
+    background: #ffffff;
+  }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>Training Completion Record | LVT Tutor Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/contact.css" />
+  <link rel="stylesheet" href="/tutors/tutors.css" />
+</head>
+<body class="portal-body">
+
+  <!-- Back to Tutor Portal -->
+  <a href="/tutors/" class="portal-noprint" style="position:fixed; bottom:1.25rem; left:1.25rem; z-index:9999; background:#111111; color:#ffffff; font-family:'Inter',system-ui,sans-serif; font-size:0.78rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; padding:0.6rem 1.1rem; border-radius:999px; box-shadow:0 4px 14px rgba(17,17,17,0.25);">&larr; Tutor Portal</a>
+
+
+  <!-- ===========================
+       PAGE HERO
+  =========================== -->
+  <section class="page-hero">
+    <img class="page-hero-bg" src="/Images/GroupPhoto.jpeg" alt="" aria-hidden="true" />
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+    <div class="page-hero-content">
+      <h1 class="hero-heading">Compliance Training</h1>
+    </div>
+  </section>
+
+  <main class="portal-main portal-prose">
+    <p class="portal-kicker">Onboarding · Step 3 of 3</p>
+    <h1>Training Completion Record</h1>
+
+    <p>This is your official record that you completed all seven compliance training modules. Submit it once, after every module is done.</p>
+
+    <div class="portal-callout" data-training-gate>
+      <p><strong>Not yet.</strong> This form unlocks when all seven modules are marked complete in this browser. Still remaining:</p>
+      <ul data-remaining-list></ul>
+      <p class="portal-note">If you completed modules on another device or browser, reopen each module there or redo the checks here, the questions take a few minutes.</p>
+    </div>
+
+    <div class="portal-form-wrap" data-training-form hidden>
+      <h2>Confirm and sign</h2>
+      <p class="portal-note" style="margin-bottom:1.4rem;">Check each module to confirm you read it in full, then sign with your typed name.</p>
+
+      <form class="lead-form" name="tutor-training-complete" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-portal-form data-redirect="/tutors/done/">
+        <input type="hidden" name="form-name" value="tutor-training-complete" />
+        <p class="lead-form-hidden" aria-hidden="true">
+          <label>Skip: <input name="bot-field" /></label>
+        </p>
+
+        <div class="form-field">
+          <label class="form-label" for="full-name">Full legal name <span class="form-required">*</span></label>
+          <input class="form-input" type="text" id="full-name" name="full-name" autocomplete="name" required />
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="email">Email <span class="form-required">*</span></label>
+          <input class="form-input" type="email" id="email" name="email" autocomplete="email" required />
+        </div>
+
+        <div class="form-checkbox">
+          <input type="checkbox" id="module-01" name="module-01" value="Yes" required />
+          <label for="module-01">Child Safety and Boundaries (v2, 2026-07-16) <span class="form-required">*</span></label>
+        </div>
+
+        <div class="form-checkbox">
+          <input type="checkbox" id="module-02" name="module-02" value="Yes" required />
+          <label for="module-02">Mandated Reporting (v1, 2026-07-16) <span class="form-required">*</span></label>
+        </div>
+
+        <div class="form-checkbox">
+          <input type="checkbox" id="module-03" name="module-03" value="Yes" required />
+          <label for="module-03">Emergencies and Incidents (v1, 2026-07-16) <span class="form-required">*</span></label>
+        </div>
+
+        <div class="form-checkbox">
+          <input type="checkbox" id="module-04" name="module-04" value="Yes" required />
+          <label for="module-04">Session Conduct and Accuracy (v1, 2026-07-16) <span class="form-required">*</span></label>
+        </div>
+
+        <div class="form-checkbox">
+          <input type="checkbox" id="module-05" name="module-05" value="Yes" required />
+          <label for="module-05">Records and Payment Integrity (v1, 2026-07-16) <span class="form-required">*</span></label>
+        </div>
+
+        <div class="form-checkbox">
+          <input type="checkbox" id="module-06" name="module-06" value="Yes" required />
+          <label for="module-06">Confidentiality and Student Data (v1, 2026-07-16) <span class="form-required">*</span></label>
+        </div>
+
+        <div class="form-checkbox">
+          <input type="checkbox" id="module-07" name="module-07" value="Yes" required />
+          <label for="module-07">Respectful Conduct (v1, 2026-07-16) <span class="form-required">*</span></label>
+        </div>
+
+        <div class="form-checkbox">
+          <input type="checkbox" id="attestation" name="attestation" value="Yes" required />
+          <label for="attestation">I read each module in full, I answered the questions myself, and I understand that these are conditions of providing services for Launch Valley Tutoring. <span class="form-required">*</span></label>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="signature">Type your full legal name <span class="form-required">*</span></label>
+          <input class="form-input" type="text" id="signature" name="signature" autocomplete="off" required />
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="signature-date">Date <span class="form-required">*</span></label>
+          <input class="form-input" type="date" id="signature-date" name="signature-date" data-default-today required />
+        </div>
+
+        <p class="form-error" hidden>Your signature must match your full legal name exactly as you typed it above.</p>
+
+        <button class="btn btn-cta" type="submit">Submit Completion Record</button>
+      </form>
+    </div>
+
+    <p class="portal-version"><a href="/tutors/training/">Back to all modules</a></p>
+  </main>
+
+  <script src="/tutors/portal.js"></script>
+</body>
+</html>
