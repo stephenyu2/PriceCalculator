@@ -26,7 +26,7 @@
     '03': { version: 'v3', title: 'Emergencies and Incidents', path: '/tutors/training/03-emergencies/' },
     '04': { version: 'v2', title: 'Session Conduct and Accuracy', path: '/tutors/training/04-session-conduct/' },
     '05': { version: 'v3', title: 'Records and Payment Integrity', path: '/tutors/training/05-records-and-payment/' },
-    '06': { version: 'v2', title: 'Confidentiality and Student Data', path: '/tutors/training/06-confidentiality/' },
+    '06': { version: 'v3', title: 'Confidentiality and Student Data', path: '/tutors/training/06-confidentiality/' },
     '07': { version: 'v2', title: 'Respectful Conduct', path: '/tutors/training/07-respectful-conduct/' }
   };
 
