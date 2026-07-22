@@ -123,6 +123,11 @@
       flex-grow: 1;
     }
 
+    .portal-card-desc strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
     .portal-card-cta {
       font-family: var(--font-body);
       font-size: 0.8rem;
@@ -170,6 +175,148 @@
     .portal-perk-text strong {
       color: var(--white);
       font-weight: 600;
+    }
+
+    /* --- First-time login: dropdown fused to a card --- */
+    .portal-card-stack {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .portal-card-col {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .portal-card-col .portal-card {
+      flex-grow: 1;
+    }
+
+    .portal-card--attached {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom: none;
+    }
+
+    .portal-card--attached:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    .portal-firstlogin-summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      background: var(--navy-light);
+      border: 1px solid rgba(0, 0, 0, 0.11);
+      border-radius: 0 0 12px 12px;
+      padding: 0.8rem 1.5rem;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: var(--gold);
+      transition: color var(--transition);
+    }
+
+    .portal-firstlogin-summary:hover {
+      color: var(--white);
+    }
+
+    .portal-firstlogin-chevron {
+      flex-shrink: 0;
+      font-size: 0.7rem;
+      transition: transform var(--transition);
+    }
+
+    .is-open .portal-firstlogin-chevron {
+      transform: rotate(180deg);
+    }
+
+    /* open: bottom of the toggle squares off so the body attaches below it */
+    .is-open .portal-firstlogin-summary {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .portal-firstlogin-body {
+      background: var(--navy-light);
+      border: 1px solid rgba(0, 0, 0, 0.11);
+      border-top: none;
+      border-radius: 0 0 12px 12px;
+      padding: 1.2rem 1.5rem 1.4rem;
+    }
+
+    .portal-firstlogin-text {
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      line-height: 1.65;
+      color: var(--text-muted);
+      margin: 0 0 1.1rem;
+      max-width: 640px;
+    }
+
+    .portal-firstlogin-text strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .portal-firstlogin-text a {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .portal-firstlogin-figure {
+      margin: 0;
+      max-width: 640px;
+    }
+
+    .portal-firstlogin-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+    }
+
+    .portal-firstlogin-cap {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.55rem;
+    }
+
+    /* Desktop: an open dropdown spans the full row, card on the left, details on the right */
+    @media (min-width: 720px) {
+      .portal-card-stack.is-open {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: minmax(240px, 300px) 1fr;
+        gap: 0 1.5rem;
+        align-items: start;
+      }
+
+      /* body sits beside the card, so the toggle keeps its rounded bottom */
+      .portal-card-stack.is-open .portal-firstlogin-summary {
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+      }
+
+      /* body becomes its own rounded panel in the right column */
+      .portal-card-stack.is-open .portal-firstlogin-body {
+        border-top: 1px solid rgba(0, 0, 0, 0.11);
+        border-radius: 12px;
+        align-self: stretch;
+      }
+
+      .portal-card-stack.is-open .portal-firstlogin-figure {
+        max-width: 760px;
+      }
     }
 
     .portal-help {
@@ -293,15 +440,30 @@
             <p class="portal-card-desc">Pause automatic refills, change your refill size, or cancel and refund your unused hours at 75% of their value.</p>
             <span class="portal-card-cta">Manage →</span>
           </a>
-          <a class="portal-card" href="https://app.tutorbird.com/" target="_blank" rel="noopener">
-            <h3 class="portal-card-title">Check Your Hours</h3>
-            <p class="portal-card-desc">Log in to TutorBird and go to the Account &amp; Invoices tab on the left. Your balance shows as a dollar amount, and it equals your hours: a balance of $8.00 means 8 hours left.</p>
-            <span class="portal-card-cta">Log In to TutorBird →</span>
-          </a>
-          <a class="portal-card" href="/sat-planner.html">
-            <h3 class="portal-card-title">SAT Prep Planner</h3>
-            <p class="portal-card-desc">Build a week-by-week SAT prep plan and see exact pricing.</p>
-            <span class="portal-card-cta">Build a Plan →</span>
+          <div class="portal-card-stack">
+            <div class="portal-card-col">
+              <a class="portal-card portal-card--attached" href="https://app.tutorbird.com/" target="_blank" rel="noopener">
+                <h3 class="portal-card-title">Your TutorBird Portal</h3>
+                <p class="portal-card-desc">Log in to TutorBird for your account details: your <strong>hours</strong> on the Account &amp; Invoices tab (a balance of $8.00 means 8 hours left), your <strong>upcoming appointments</strong> on the Calendar, and your <strong>current plan details</strong> on the Online Resources tab.</p>
+                <span class="portal-card-cta">Log In to TutorBird →</span>
+              </a>
+              <button type="button" class="portal-firstlogin-summary" aria-expanded="false">
+                <span>First time logging in?</span>
+                <span class="portal-firstlogin-chevron" aria-hidden="true">▾</span>
+              </button>
+            </div>
+            <div class="portal-firstlogin-body" hidden>
+              <p class="portal-firstlogin-text">You can't log in until you've set your password. When we create your portal, we email you a message from <strong>Launch Valley Tutoring</strong> titled <strong>Portal Login Information</strong>. Open it and click <strong>"Click here to create your password."</strong> Once your password is set, use the <strong>Log In to TutorBird</strong> button above. If you can't find the email, check your spam folder or <a href="/contact">contact us</a> and we'll resend it.</p>
+              <figure class="portal-firstlogin-figure">
+                <img class="portal-firstlogin-img" src="Images/tutorbird-login-email.png" alt="Example of the Portal Login Information email from Launch Valley Tutoring, showing your login email, a password setup link, and the TutorBird login URL." loading="lazy" />
+                <figcaption class="portal-firstlogin-cap">Look for an email like this one.</figcaption>
+              </figure>
+            </div>
+          </div>
+          <a class="portal-card" href="https://billing.stripe.com/p/login/9B600l7SpbCWbJq7lG7ss00" target="_blank" rel="noopener">
+            <h3 class="portal-card-title">Payments &amp; Billing</h3>
+            <p class="portal-card-desc">View your payment history or update your card in our secure Stripe billing portal. Log in with the same email you used to buy your intro package or save your card.</p>
+            <span class="portal-card-cta">Manage Billing →</span>
           </a>
         </div>
       </div>
@@ -341,8 +503,28 @@
       <!-- ── 4. Resources ── -->
       <div class="portal-group">
         <h2 class="portal-group-heading">Resources</h2>
-        <p class="portal-group-sub">Study materials and placement tests, free for our families.</p>
+        <p class="portal-group-sub">Study materials, placement tests, and planning tools, free for our families.</p>
         <div class="portal-grid">
+          <div class="portal-card-stack">
+            <div class="portal-card-col">
+              <a class="portal-card portal-card--attached" href="https://launchvalleytutoring.score-smart.com/" target="_blank" rel="noopener">
+                <h3 class="portal-card-title">ScoreSmart</h3>
+                <p class="portal-card-desc">Log in to your personal ScoreSmart account to take practice tests, upload official tests, see score reports, and review test content, plus a personalized drill bank if your tutor enables it.</p>
+                <span class="portal-card-cta">Log In to ScoreSmart →</span>
+              </a>
+              <button type="button" class="portal-firstlogin-summary" aria-expanded="false">
+                <span>First time logging in?</span>
+                <span class="portal-firstlogin-chevron" aria-hidden="true">▾</span>
+              </button>
+            </div>
+            <div class="portal-firstlogin-body" hidden>
+              <p class="portal-firstlogin-text">When we set up your testing account, we email you a message from <strong>Launch Valley Tutoring</strong> with your <strong>username and password</strong> and your personal login link. Use those details to log in at <strong>launchvalleytutoring.score-smart.com</strong>. You can change your password any time. If you can't find the email, check your spam folder or <a href="/contact">contact us</a> and we'll resend it.</p>
+              <figure class="portal-firstlogin-figure">
+                <img class="portal-firstlogin-img" src="Images/scoresmart-login-email.png" alt="Example of the ScoreSmart account email from Launch Valley Tutoring, showing your personal login link and your username and password." loading="lazy" />
+                <figcaption class="portal-firstlogin-cap">Look for an email like this one.</figcaption>
+              </figure>
+            </div>
+          </div>
           <a class="portal-card" href="/library/">
             <h3 class="portal-card-title">Curriculum Library</h3>
             <p class="portal-card-desc">Lessons, worksheets, and quizzes for every Common Core standard, used by our tutors in sessions.</p>
@@ -352,6 +534,11 @@
             <h3 class="portal-card-title">Academic Diagnostic</h3>
             <p class="portal-card-desc">Free placement tests for math and English, kindergarten through 12th grade.</p>
             <span class="portal-card-cta">Take a Diagnostic →</span>
+          </a>
+          <a class="portal-card" href="/sat-planner.html">
+            <h3 class="portal-card-title">SAT Prep Planner</h3>
+            <p class="portal-card-desc">Build a week-by-week SAT prep plan tailored to your student's test date and goals.</p>
+            <span class="portal-card-cta">Build a Plan →</span>
           </a>
         </div>
       </div>
@@ -408,5 +595,18 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // First-time login dropdowns (TutorBird, ScoreSmart)
+    document.querySelectorAll('.portal-firstlogin-summary').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var stack = btn.closest('.portal-card-stack');
+        var body = stack.querySelector('.portal-firstlogin-body');
+        var open = !stack.classList.contains('is-open');
+        stack.classList.toggle('is-open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        body.hidden = !open;
+      });
+    });
+  </script>
 </body>
 </html>

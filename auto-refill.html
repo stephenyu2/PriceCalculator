@@ -92,6 +92,31 @@
       font-weight: 600;
     }
 
+    /* --- Grade level prompt + SAT caution --- */
+    .level-heading {
+      font-family: var(--font-heading);
+      font-size: clamp(1.3rem, 3vw, 1.7rem);
+      font-weight: 600;
+      color: var(--white);
+      text-align: center;
+      margin: 0 0 0.6rem;
+    }
+
+    .level-caution {
+      max-width: 620px;
+      margin: 0 auto 1.5rem;
+      text-align: center;
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .level-caution strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
     /* --- Level selector --- */
     .level-selector {
       display: grid;
@@ -445,10 +470,14 @@
 
       <div class="packages-intro">
         <h2 class="packages-heading">Buy a Recurring Package</h2>
-        <p class="packages-subtext">Choose your student's level and a refill size below. Hours never expire and are unique to each student.</p>
+        <p class="packages-subtext">Choose your student's level below and the refill sizes will appear. Hours never expire and are unique to each student.</p>
       </div>
 
       <p class="packages-note"><strong>How Automatic Refill works, in plain terms:</strong> this is a recurring package. Whenever your hour balance falls to <strong>two hours or below</strong>, we automatically charge the card you saved with us for your selected refill size, and your hours top back up. We email you before each charge. There is no fixed billing date; you are only charged when your balance actually runs low. You can change your refill size, pause, or turn it off at any time, and requests take effect within one business day. <strong>Sibling discount:</strong> families with two or more enrolled students get <strong>10% off</strong> every refill, for all siblings.</p>
+
+      <!-- Grade level prompt -->
+      <h3 class="level-heading">Choose Your Grade Level</h3>
+      <p class="level-caution">Select the level and the refill sizes will appear. <strong>One quick note:</strong> if you're enrolling for SAT or ACT prep, choose <strong>SAT/ACT Prep</strong>, not High School, even if your student is in high school.</p>
 
       <!-- Level selector -->
       <div class="level-selector" id="level-selector" role="tablist" aria-label="Choose a level">
@@ -690,10 +719,12 @@
       buttons.forEach(function (btn) {
         btn.addEventListener('click', function () {
           showLevel(btn.dataset.level);
+          // Switching level clears any prior refill choice so the wrong level can't carry over
+          selected = null;
+          document.querySelectorAll('.package-card').forEach(function (c) { c.classList.remove('selected'); });
+          formWrap.classList.remove('visible');
         });
       });
-
-      showLevel('high');
 
       // --- Select a refill package ---
       document.querySelectorAll('.package-cta').forEach(function (btn) {
