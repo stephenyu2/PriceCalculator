@@ -111,6 +111,36 @@
       font-weight: 600;
     }
 
+    /* --- Pause/resume toggle --- */
+    .pause-toggle {
+      display: inline-flex;
+      gap: 0.3rem;
+      background: rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: 999px;
+      padding: 0.25rem;
+      margin: 0 0 1.5rem;
+    }
+
+    .pause-toggle-btn {
+      border: none;
+      background: transparent;
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: background var(--transition), color var(--transition);
+    }
+
+    .pause-toggle-btn.active {
+      background: #111111;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
     /* --- Panels --- */
     .manage-panel {
       display: none;
@@ -209,6 +239,24 @@
       line-height: 1.5;
       margin: 1rem 0 0;
       text-align: center;
+    }
+
+    .manage-current {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      line-height: 1.65;
+      color: var(--text-muted);
+      margin: 0 0 1.6rem;
+    }
+
+    .manage-current a {
+      color: var(--gold);
+      font-weight: 600;
+      text-decoration: underline;
     }
 
     /* --- Cancel & refund panel --- */
@@ -323,23 +371,29 @@
 
       <div class="manage-intro">
         <h2 class="manage-heading">Manage Your Package</h2>
-        <p class="manage-subtext">Pause your automatic refills, change your refill size, or close your account and cash out unused hours. All requests take effect within one business day.</p>
+        <p class="manage-subtext">Pause or resume your automatic refills, change your refill size, or close your account and cash out unused hours. All requests take effect within one business day.</p>
       </div>
 
       <!-- Action selector -->
       <div class="action-selector" id="action-selector" role="tablist" aria-label="Choose an action">
-        <button class="action-btn" data-action="pause" type="button">Pause Automatic Refill</button>
+        <button class="action-btn" data-action="pause" type="button">Pause or Resume Refills</button>
         <button class="action-btn" data-action="change" type="button">Change Refill Size</button>
         <button class="action-btn" data-action="cancel" type="button">Cancel &amp; Refund</button>
       </div>
 
-      <!-- ── Pause panel ── -->
+      <!-- ── Pause / resume panel ── -->
       <div class="manage-panel" data-panel="pause">
-        <h3 class="manage-panel-title">Pause Automatic Refill</h3>
-        <p class="manage-panel-sub">Pausing stops automatic charges. Your remaining hours stay on your account and never expire; you can keep using them until they run out, and no refill will be charged. Turn Automatic Refill back on anytime.</p>
+        <h3 class="manage-panel-title" id="pause-title">Pause or Resume Refills</h3>
+        <p class="manage-panel-sub" id="pause-sub">Which would you like to do?</p>
+
+        <div class="pause-toggle" id="pause-toggle" role="tablist" aria-label="Pause or resume">
+          <button class="pause-toggle-btn active" data-mode="pause" type="button">Pause Refills</button>
+          <button class="pause-toggle-btn" data-mode="resume" type="button">Resume Refills</button>
+        </div>
 
         <form id="pause-form" name="pause-auto-refill" method="POST" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="pause-auto-refill" />
+          <input type="hidden" name="request-type" id="pause-request-type" value="Pause" />
           <p style="display:none" aria-hidden="true">
             <label>Don't fill this out: <input name="bot-field" /></label>
           </p>
@@ -365,7 +419,7 @@
             <textarea class="manage-input" id="pause-notes" name="notes" placeholder="e.g. We're traveling for the summer and will pick back up in the fall."></textarea>
           </div>
 
-          <button class="manage-submit" type="submit">Pause Automatic Refill</button>
+          <button class="manage-submit" id="pause-submit" type="submit">Pause Automatic Refill</button>
           <p class="manage-note">Takes effect within one business day. Hours you've already purchased are not affected.</p>
         </form>
       </div>
@@ -373,7 +427,9 @@
       <!-- ── Change panel ── -->
       <div class="manage-panel" data-panel="change">
         <h3 class="manage-panel-title">Change Refill Size</h3>
-        <p class="manage-panel-sub">Pick the refill package you'd like going forward. The change applies to your next automatic refill.</p>
+        <p class="manage-panel-sub">Choose your student's level, then pick the refill package you'd like going forward. Refills are charged at your student's level rate, and the change applies to your next automatic refill. Hours never expire.</p>
+
+        <p class="manage-current">Not sure what you're on now? Your current plan details are in <a href="https://app.tutorbird.com/" target="_blank" rel="noopener">your TutorBird portal</a> on the Online Resources tab, and your hour balance is on the Account &amp; Invoices tab (a balance of $8.00 means 8 hours left).</p>
 
         <form id="change-form" name="change-refill-size" method="POST" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="change-refill-size" />
@@ -398,14 +454,24 @@
           </div>
 
           <div class="manage-field">
-            <label class="manage-label" for="change-size">New Refill Size</label>
-            <select class="manage-input" id="change-size" name="new-refill-size" required>
-              <option value="" disabled selected>Choose your new refill package</option>
-              <option value="5 hours">5 hours</option>
-              <option value="10 hours">10 hours</option>
-              <option value="20 hours">20 hours</option>
+            <label class="manage-label" for="change-level">Student's Grade Level</label>
+            <select class="manage-input" id="change-level" name="level" required>
+              <option value="" disabled selected>Choose your student's level</option>
+              <option value="Elementary">Elementary</option>
+              <option value="Middle School">Middle School</option>
+              <option value="High School">High School</option>
+              <option value="College">College</option>
+              <option value="SAT/ACT Prep">SAT/ACT Prep</option>
             </select>
-            <p class="manage-hint">Academic refills are charged at your student's level rate. Full rates are on the <a href="/auto-refill" style="color: var(--gold); text-decoration: underline;">Automatic Refill page</a>.</p>
+            <p class="manage-hint">If your student is enrolled for SAT or ACT prep, choose SAT/ACT Prep, not High School, even if they're in high school.</p>
+          </div>
+
+          <div class="manage-field">
+            <label class="manage-label" for="change-size">New Refill Size</label>
+            <select class="manage-input" id="change-size" name="new-refill-size" required disabled>
+              <option value="" disabled selected>Choose your level first</option>
+            </select>
+            <p class="manage-hint">Prices appear once you pick a level. The 10 hour refill is 5% off, and the 20 hour refill is 20 hours for the price of 18. Full rates are on the <a href="/auto-refill" style="color: var(--gold); text-decoration: underline;">Automatic Refill page</a>.</p>
           </div>
 
           <button class="manage-submit" type="submit">Update My Refill Size</button>
@@ -462,6 +528,78 @@
 
       showAction('pause');
 
+      // --- Refill prices by level (must match auto-refill.html) ---
+      var REFILL_PRICES = {
+        'Elementary':   { '5': '$400', '10': '$760',   '20': '$1,440' },
+        'Middle School':{ '5': '$475', '10': '$900',   '20': '$1,710' },
+        'High School':  { '5': '$525', '10': '$995',   '20': '$1,890' },
+        'College':      { '5': '$625', '10': '$1,185', '20': '$2,250' },
+        'SAT/ACT Prep': { '5': '$625', '10': '$1,185', '20': '$2,250' }
+      };
+
+      var levelSelect = document.getElementById('change-level');
+      var sizeSelect = document.getElementById('change-size');
+
+      levelSelect.addEventListener('change', function () {
+        var prices = REFILL_PRICES[levelSelect.value];
+        sizeSelect.innerHTML = '';
+        if (!prices) {
+          sizeSelect.disabled = true;
+          sizeSelect.appendChild(new Option('Choose your level first', '', true, true));
+          return;
+        }
+        sizeSelect.disabled = false;
+        var placeholder = new Option('Choose your new refill package', '', true, true);
+        placeholder.disabled = true;
+        sizeSelect.appendChild(placeholder);
+        ['5', '10', '20'].forEach(function (hours) {
+          var label = hours + ' hours, ' + prices[hours];
+          if (hours === '10') { label += ' (5% off)'; }
+          if (hours === '20') { label += ' (20 hours for the price of 18)'; }
+          sizeSelect.appendChild(new Option(label, label));
+        });
+      });
+
+      // --- Pause / resume toggle ---
+      var pauseToggle = document.getElementById('pause-toggle');
+      var pauseToggleBtns = pauseToggle.querySelectorAll('.pause-toggle-btn');
+      var pauseTitle = document.getElementById('pause-title');
+      var pauseSub = document.getElementById('pause-sub');
+      var pauseSubmit = document.getElementById('pause-submit');
+      var pauseRequestType = document.getElementById('pause-request-type');
+
+      var PAUSE_COPY = {
+        pause: {
+          type: 'Pause',
+          title: 'Pause Automatic Refill',
+          sub: 'Pausing stops automatic charges. Your remaining hours stay on your account and never expire; you can keep using them until they run out, and no refill will be charged. Resume anytime.',
+          submit: 'Pause Automatic Refill'
+        },
+        resume: {
+          type: 'Resume',
+          title: 'Resume Automatic Refill',
+          sub: 'Resuming turns automatic charges back on. When your hour balance next runs low, your refill package tops you back up automatically, at the same size and level as before unless you change it.',
+          submit: 'Resume Automatic Refill'
+        }
+      };
+
+      function setPauseMode(mode) {
+        var copy = PAUSE_COPY[mode];
+        pauseToggleBtns.forEach(function (b) {
+          b.classList.toggle('active', b.dataset.mode === mode);
+        });
+        pauseTitle.textContent = copy.title;
+        pauseSub.textContent = copy.sub;
+        pauseSubmit.textContent = copy.submit;
+        pauseRequestType.value = copy.type;
+      }
+
+      pauseToggleBtns.forEach(function (b) {
+        b.addEventListener('click', function () { setPauseMode(b.dataset.mode); });
+      });
+
+      setPauseMode('pause');
+
       // --- Netlify form submits (pause + change) ---
       function encode(data) {
         return Object.keys(data).map(function (key) {
@@ -479,7 +617,7 @@
           function showSuccess() {
             panels.forEach(function (p) { p.classList.remove('active'); });
             buttons.forEach(function (b) { b.classList.remove('active'); });
-            successDetail.textContent = successText;
+            successDetail.textContent = typeof successText === 'function' ? successText(data) : successText;
             success.classList.add('active');
             success.scrollIntoView({ behavior: 'smooth', block: 'center' });
           }
@@ -494,8 +632,11 @@
         });
       }
 
-      wireForm('pause-form', 'pause-auto-refill',
-        'Your Automatic Refill pause request is in. No further automatic charges will occur once it takes effect, and your remaining hours stay available.');
+      wireForm('pause-form', 'pause-auto-refill', function (data) {
+        return data['request-type'] === 'Resume'
+          ? 'Your request to resume Automatic Refill is in. Charges will start again the next time your hour balance runs low.'
+          : 'Your Automatic Refill pause request is in. No further automatic charges will occur once it takes effect, and your remaining hours stay available.';
+      });
       wireForm('change-form', 'change-refill-size',
         'Your refill size change is in. It applies to your next automatic refill.');
 

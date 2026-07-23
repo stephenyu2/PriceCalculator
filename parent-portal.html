@@ -128,6 +128,43 @@
       font-weight: 600;
     }
 
+    .portal-card-list {
+      list-style: none;
+      margin: 0 0 1.1rem;
+      padding: 0;
+      flex-grow: 1;
+    }
+
+    .portal-card-list li {
+      position: relative;
+      padding-left: 1.1rem;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      line-height: 1.55;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .portal-card-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .portal-card-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .portal-card-list strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
     .portal-card-cta {
       font-family: var(--font-body);
       font-size: 0.8rem;
@@ -135,6 +172,65 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--gold);
+    }
+
+    /* --- Recurring plan feature band --- */
+    .portal-band {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem 2rem;
+      background: #111111;
+      border-radius: 14px;
+      padding: clamp(1.6rem, 4vw, 2.4rem);
+    }
+
+    .portal-band-copy {
+      flex: 1 1 340px;
+    }
+
+    .portal-band-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.3rem, 3vw, 1.6rem);
+      font-weight: 600;
+      color: #ffffff;
+      margin: 0 0 0.6rem;
+      line-height: 1.25;
+    }
+
+    .portal-band-desc {
+      font-family: var(--font-body);
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.82);
+      margin: 0;
+    }
+
+    .portal-band-desc strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .portal-band-cta {
+      flex: 0 0 auto;
+      display: inline-block;
+      background: #ffffff;
+      color: #111111;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.95rem 1.6rem;
+      border-radius: 999px;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .portal-band-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
     }
 
     /* --- Enrollment perks checklist --- */
@@ -410,7 +506,7 @@
       <!-- ── Migrating customers (legacy plans) ── -->
       <div class="portal-group">
         <h2 class="portal-group-heading">Migrating Customers</h2>
-        <p class="portal-group-sub">Already with us on our older payment links or monthly plans? We've moved to prepaid hours with Automatic Refill: your hours never expire, and instead of hunting for a payment link every few weeks, your hours top up automatically when your balance runs low. <strong>Your existing hours carry over, nothing is lost.</strong> The move takes two steps, in this order. Then, when you're ready to buy hours, set up your refill under Buying and Managing Your Plan below.</p>
+        <p class="portal-group-sub">Already with us on our older payment links or monthly plans? We've moved to prepaid hours with Automatic Refill: your hours never expire, and instead of hunting for a payment link every few weeks, your hours top up automatically when your balance runs low. <strong>Your existing hours carry over, nothing is lost.</strong> The move takes two steps, in this order. Then, when you're ready to buy hours, set up your refill under Set Up Your Recurring Plan below.</p>
         <div class="portal-grid">
           <a class="portal-card" href="/agreement.html">
             <h3 class="portal-card-title">1. Sign the New Agreement</h3>
@@ -425,26 +521,44 @@
         </div>
       </div>
 
-      <!-- ── 2. Buying and managing your long-term plan ── -->
+      <!-- ── 2. Set up your recurring plan (feature band) ── -->
       <div class="portal-group">
-        <h2 class="portal-group-heading">Buying and Managing Your Plan</h2>
-        <p class="portal-group-sub">For enrolled families: purchase hours and manage your ongoing plan.</p>
+        <h2 class="portal-group-heading">Set Up Your Recurring Plan</h2>
+        <p class="portal-group-sub">Every family moves to prepaid hours with Automatic Refill. It's a one-time setup, and it's the same step for everyone, whenever you're ready.</p>
+        <div class="portal-band">
+          <div class="portal-band-copy">
+            <h3 class="portal-band-title">Buy a Recurring Package</h3>
+            <p class="portal-band-desc">New families, do this when your intro package runs low. Migrating families, this is your next step after saving your card. Enroll in Automatic Refill for your student's level: choose your refill size and your hours top up automatically before you run out, so there's <strong>no payment link to chase.</strong></p>
+          </div>
+          <a class="portal-band-cta" href="/auto-refill.html">Set Up Refills →</a>
+        </div>
+      </div>
+
+      <!-- ── 3. Managing your plan ── -->
+      <div class="portal-group">
+        <h2 class="portal-group-heading">Managing Your Plan</h2>
+        <p class="portal-group-sub">Already on a recurring plan? Everything for your day to day lives here.</p>
         <div class="portal-grid">
-          <a class="portal-card" href="/auto-refill.html">
-            <h3 class="portal-card-title">Buy a Recurring Package</h3>
-            <p class="portal-card-desc">Enroll in Automatic Refill: your hours top back up automatically whenever your balance runs low.</p>
-            <span class="portal-card-cta">Set Up Refills →</span>
-          </a>
           <a class="portal-card" href="/manage-package.html">
             <h3 class="portal-card-title">Manage Your Package</h3>
             <p class="portal-card-desc">Pause automatic refills, change your refill size, or cancel and refund your unused hours at 75% of their value.</p>
             <span class="portal-card-cta">Manage →</span>
           </a>
+          <a class="portal-card" href="/agreement.html">
+            <h3 class="portal-card-title">Scheduling &amp; Cancellations</h3>
+            <p class="portal-card-desc">You and your tutor set your schedule directly, week to week. To reschedule or cancel, tell your tutor with <strong>24+ hours' notice</strong> and no hours are deducted. Less than 24 hours' notice or a no-show may use the hour. If your tutor cancels, it never does.</p>
+            <span class="portal-card-cta">Read the Full Terms →</span>
+          </a>
           <div class="portal-card-stack">
             <div class="portal-card-col">
               <a class="portal-card portal-card--attached" href="https://app.tutorbird.com/" target="_blank" rel="noopener">
                 <h3 class="portal-card-title">Your TutorBird Portal</h3>
-                <p class="portal-card-desc">Log in to TutorBird for your account details: your <strong>hours</strong> on the Account &amp; Invoices tab (a balance of $8.00 means 8 hours left), your <strong>upcoming appointments</strong> on the Calendar, and your <strong>current plan details</strong> on the Online Resources tab.</p>
+                <p class="portal-card-desc" style="margin-bottom:0.85rem;">Log in to TutorBird for your account details:</p>
+                <ul class="portal-card-list">
+                  <li>Your <strong>hour balance</strong> on the Account &amp; Invoices tab (a balance of $8.00 means 8 hours left).</li>
+                  <li>Your <strong>upcoming appointments</strong> on the Calendar.</li>
+                  <li>Your <strong>current plan details</strong> under Online Resources → Shared Space.</li>
+                </ul>
                 <span class="portal-card-cta">Log In to TutorBird →</span>
               </a>
               <button type="button" class="portal-firstlogin-summary" aria-expanded="false">
@@ -468,7 +582,7 @@
         </div>
       </div>
 
-      <!-- ── 3. Enrollment perks ── -->
+      <!-- ── 4. Enrollment perks ── -->
       <div class="portal-group">
         <h2 class="portal-group-heading">What Every Enrollment Includes</h2>
         <p class="portal-group-sub">Every enrolled family gets these six perks at no extra cost. For anything marked "on request," just ask your tutor or contact us below.</p>
@@ -508,8 +622,8 @@
           <div class="portal-card-stack">
             <div class="portal-card-col">
               <a class="portal-card portal-card--attached" href="https://launchvalleytutoring.score-smart.com/" target="_blank" rel="noopener">
-                <h3 class="portal-card-title">ScoreSmart</h3>
-                <p class="portal-card-desc">Log in to your personal ScoreSmart account to take practice tests, upload official tests, see score reports, and review test content, plus a personalized drill bank if your tutor enables it.</p>
+                <h3 class="portal-card-title">ScoreSmart (SAT/ACT Prep Only)</h3>
+                <p class="portal-card-desc">For SAT and ACT prep students only. Log in to your personal ScoreSmart account to take practice tests, upload official tests, see score reports, and review test content, plus a personalized drill bank if your tutor enables it.</p>
                 <span class="portal-card-cta">Log In to ScoreSmart →</span>
               </a>
               <button type="button" class="portal-firstlogin-summary" aria-expanded="false">
