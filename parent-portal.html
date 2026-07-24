@@ -58,6 +58,36 @@
       margin: 0 0 3rem;
     }
 
+    .portal-video {
+      max-width: 760px;
+      margin: 0 0 clamp(2.5rem, 5vw, 3.5rem);
+    }
+
+    .portal-video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(17, 17, 17, 0.14);
+    }
+
+    .portal-video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .portal-video-caption {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin: 0.9rem 0 0;
+    }
+
     .portal-group {
       margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
     }
@@ -103,6 +133,16 @@
       border-color: rgba(0, 0, 0, 0.35);
       transform: translateY(-2px);
       box-shadow: 0 6px 18px rgba(17, 17, 17, 0.08);
+    }
+
+    .portal-card--static {
+      cursor: default;
+    }
+
+    .portal-card--static:hover {
+      border-color: rgba(0, 0, 0, 0.11);
+      transform: none;
+      box-shadow: none;
     }
 
     .portal-card-title {
@@ -480,6 +520,19 @@
 
       <p class="portal-intro">Welcome. This page collects everything current and enrolling families need in one place: enrollment, pricing, plan management, and study resources. Bookmark it for quick access.</p>
 
+      <!-- ── Portal walkthrough video ── -->
+      <div class="portal-video">
+        <div class="portal-video-frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/tyFXbFLMxtw"
+            title="Parent Portal Walkthrough"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <p class="portal-video-caption">New here? Watch this short walkthrough of the portal before you get started.</p>
+      </div>
+
       <!-- ── 1. Enrollment + intro package ── -->
       <div class="portal-group">
         <h2 class="portal-group-heading">Getting Started</h2>
@@ -541,13 +594,13 @@
         <div class="portal-grid">
           <a class="portal-card" href="/manage-package.html">
             <h3 class="portal-card-title">Manage Your Package</h3>
-            <p class="portal-card-desc">Pause automatic refills, change your refill size, or cancel and refund your unused hours at 75% of their value.</p>
+            <p class="portal-card-desc" style="margin-bottom:0.85rem;">From here you can:</p>
+            <ul class="portal-card-list">
+              <li><strong>Pause or resume</strong> your automatic refills.</li>
+              <li><strong>Change your refill size.</strong></li>
+              <li><strong>Cancel and refund</strong> unused hours at 75% of their value.</li>
+            </ul>
             <span class="portal-card-cta">Manage →</span>
-          </a>
-          <a class="portal-card" href="/agreement.html">
-            <h3 class="portal-card-title">Scheduling &amp; Cancellations</h3>
-            <p class="portal-card-desc">You and your tutor set your schedule directly, week to week. To reschedule or cancel, tell your tutor with <strong>24+ hours' notice</strong> and no hours are deducted. Less than 24 hours' notice or a no-show may use the hour. If your tutor cancels, it never does.</p>
-            <span class="portal-card-cta">Read the Full Terms →</span>
           </a>
           <div class="portal-card-stack">
             <div class="portal-card-col">
@@ -576,9 +629,23 @@
           </div>
           <a class="portal-card" href="https://billing.stripe.com/p/login/9B600l7SpbCWbJq7lG7ss00" target="_blank" rel="noopener">
             <h3 class="portal-card-title">Payments &amp; Billing</h3>
-            <p class="portal-card-desc">View your payment history or update your card in our secure Stripe billing portal. Log in with the same email you used to buy your intro package or save your card.</p>
+            <p class="portal-card-desc" style="margin-bottom:0.85rem;">Log in to our secure Stripe billing portal to:</p>
+            <ul class="portal-card-list">
+              <li>View your <strong>payment history.</strong></li>
+              <li><strong>Update your card</strong> on file.</li>
+            </ul>
+            <p class="portal-card-desc" style="margin-bottom:1.1rem; font-size:0.82rem;">Log in with the same email you used to buy your intro package or save your card.</p>
             <span class="portal-card-cta">Manage Billing →</span>
           </a>
+          <div class="portal-card portal-card--static">
+            <h3 class="portal-card-title">Scheduling &amp; Cancellations</h3>
+            <p class="portal-card-desc" style="margin-bottom:0.85rem;">You and your tutor set your schedule directly, week to week.</p>
+            <ul class="portal-card-list">
+              <li><strong>24+ hours' notice:</strong> reschedule or cancel with your tutor and no hours are deducted.</li>
+              <li><strong>Under 24 hours or a no-show:</strong> the session may be deducted from your balance.</li>
+              <li><strong>If your tutor cancels:</strong> no hours are ever deducted.</li>
+            </ul>
+          </div>
         </div>
       </div>
 
