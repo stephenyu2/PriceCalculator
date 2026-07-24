@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>Emergency Contact | LVT Tutor Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/contact.css" />
+  <link rel="stylesheet" href="/tutors/tutors.css" />
+</head>
+<body class="portal-body">
+
+  <!-- Back to Tutor Portal -->
+  <a href="/tutors/" class="portal-noprint" style="position:fixed; bottom:1.25rem; left:1.25rem; z-index:9999; background:#111111; color:#ffffff; font-family:'Inter',system-ui,sans-serif; font-size:0.78rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; padding:0.6rem 1.1rem; border-radius:999px; box-shadow:0 4px 14px rgba(17,17,17,0.25);">&larr; Tutor Portal</a>
+
+
+  <!-- ===========================
+       PAGE HERO
+  =========================== -->
+  <section class="page-hero">
+    <img class="page-hero-bg" src="/Images/GroupPhoto.jpeg" alt="" aria-hidden="true" />
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+    <div class="page-hero-content">
+      <h1 class="hero-heading">Emergency Contact</h1>
+    </div>
+  </section>
+
+  <main class="portal-main portal-prose">
+    <p class="portal-kicker">Onboarding · Step 5 of 5</p>
+    <h1>Emergency Contact</h1>
+
+    <p>Give us one person we can reach if something happens to you during a session. This is the last onboarding step.</p>
+
+    <div class="portal-form-wrap">
+      <form class="lead-form" name="tutor-emergency-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-portal-form data-redirect="/tutors/done/">
+        <input type="hidden" name="form-name" value="tutor-emergency-contact" />
+        <p class="lead-form-hidden" aria-hidden="true">
+          <label>Skip: <input name="bot-field" /></label>
+        </p>
+
+        <div class="form-field">
+          <label class="form-label" for="tutor-name">Your name <span class="form-required">*</span></label>
+          <input class="form-input" type="text" id="tutor-name" name="tutor-name" autocomplete="name" required />
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="tutor-email">Your email <span class="form-required">*</span></label>
+          <input class="form-input" type="email" id="tutor-email" name="tutor-email" autocomplete="email" required />
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="contact-name">Emergency contact's name <span class="form-required">*</span></label>
+          <input class="form-input" type="text" id="contact-name" name="contact-name" required />
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="contact-relationship">Their relationship to you <span class="form-required">*</span></label>
+          <input class="form-input" type="text" id="contact-relationship" name="contact-relationship" placeholder="Parent, spouse, friend, etc." required />
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="contact-phone">Their phone number <span class="form-required">*</span></label>
+          <input class="form-input" type="tel" id="contact-phone" name="contact-phone" autocomplete="tel" required />
+        </div>
+
+        <button class="btn btn-cta" type="submit">Submit and Finish</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="/tutors/portal.js"></script>
+</body>
+</html>
