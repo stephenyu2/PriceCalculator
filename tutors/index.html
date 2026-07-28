@@ -33,6 +33,38 @@
       max-width: 640px;
       margin: 0 0 3rem;
     }
+
+    .portal-video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: clamp(1.25rem, 3vw, 2rem);
+      margin-top: 1.5rem;
+    }
+
+    .portal-video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(17, 17, 17, 0.14);
+    }
+
+    .portal-video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .portal-video-caption {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin: 0.9rem 0 0;
+    }
   </style>
 </head>
 <body>
@@ -118,10 +150,70 @@
         </div>
       </div>
 
-      <!-- ── Resources ── -->
+      <!-- ── Software & Tools ── -->
       <div class="portal-group">
-        <h2 class="portal-group-heading">Resources</h2>
-        <p class="portal-group-sub">Everything you will come back to after onboarding.</p>
+        <h2 class="portal-group-heading">Software &amp; Tools</h2>
+        <p class="portal-group-sub">The platforms you log in to every week.</p>
+        <div class="portal-grid">
+          <a class="portal-card" href="https://app.tutorbird.com/" target="_blank" rel="noopener">
+            <h3 class="portal-card-title">TutorBird</h3>
+            <p class="portal-card-desc">Scheduling, your students, marking attendance.</p>
+            <span class="portal-card-cta">Log In &rarr;</span>
+          </a>
+          <a class="portal-card" href="https://digitaltests.score-smart.com/user/login" target="_blank" rel="noopener">
+            <h3 class="portal-card-title">ScoreSmart</h3>
+            <p class="portal-card-desc">Digital SAT and ACT practice tests for your test prep students.</p>
+            <span class="portal-card-cta">Log In &rarr;</span>
+          </a>
+        </div>
+        <div class="portal-video-grid">
+          <div>
+            <div class="portal-video-frame">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/ZPqP8Fj2KzU"
+                title="TutorBird Walkthrough"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <p class="portal-video-caption">TutorBird: scheduling, your students, and marking attendance.</p>
+          </div>
+          <div>
+            <div class="portal-video-frame">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/XuaVXLwg_SE"
+                title="ScoreSmart Walkthrough"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <p class="portal-video-caption">ScoreSmart: digital SAT and ACT practice tests for your test prep students.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Curriculum ── -->
+      <div class="portal-group">
+        <h2 class="portal-group-heading">Curriculum</h2>
+        <p class="portal-group-sub">Lessons and placement tests to use with your students.</p>
+        <div class="portal-grid">
+          <a class="portal-card" href="/library/" target="_blank" rel="noopener">
+            <h3 class="portal-card-title">Curriculum Library</h3>
+            <p class="portal-card-desc">Lessons, worksheets, and quizzes for every Common Core standard, ready to use in your sessions.</p>
+            <span class="portal-card-cta">Open Library &rarr;</span>
+          </a>
+          <a class="portal-card" href="/curriculum/" target="_blank" rel="noopener">
+            <h3 class="portal-card-title">Academic Diagnostic</h3>
+            <p class="portal-card-desc">Free placement tests for math and English, kindergarten through 12th grade.</p>
+            <span class="portal-card-cta">Take a Diagnostic &rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ── Rates & Support ── -->
+      <div class="portal-group">
+        <h2 class="portal-group-heading">Rates &amp; Support</h2>
+        <p class="portal-group-sub">Your pay, who to reach, and how to report a problem.</p>
         <div class="portal-grid">
           <a class="portal-card" href="/tutors/rates/">
             <h3 class="portal-card-title">Rate Schedule</h3>
@@ -129,14 +221,19 @@
             <span class="portal-card-cta">View Rates &rarr;</span>
           </a>
           <a class="portal-card" href="/tutors/resources/">
-            <h3 class="portal-card-title">Software and Links</h3>
-            <p class="portal-card-desc">TutorBird, ScoreSmart, and who to contact for what.</p>
-            <span class="portal-card-cta">Open Links &rarr;</span>
+            <h3 class="portal-card-title">Contact Information</h3>
+            <p class="portal-card-desc">Who to contact for what, plus key phone numbers.</p>
+            <span class="portal-card-cta">View Contacts &rarr;</span>
           </a>
           <a class="portal-card" href="/tutors/incident-report/">
             <h3 class="portal-card-title">Report an Incident</h3>
             <p class="portal-card-desc">Any injury, safety concern, or anything that could be misconstrued. File it the same day.</p>
             <span class="portal-card-cta">File a Report &rarr;</span>
+          </a>
+          <a class="portal-card" href="/tutors/headshot/">
+            <h3 class="portal-card-title">Your Headshot</h3>
+            <p class="portal-card-desc">Optional. A photo for the Our Team page of our website.</p>
+            <span class="portal-card-cta">Upload Photo &rarr;</span>
           </a>
         </div>
       </div>

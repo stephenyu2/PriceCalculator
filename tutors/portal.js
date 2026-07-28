@@ -97,6 +97,61 @@
     });
   });
 
+  /* --- Netlify AJAX file-upload forms (multipart) ---
+     Files can't ride urlencoded, and Netlify only stores the
+     upload when the POST goes to "/", not to a page path. So
+     post FormData to "/" (no Content-Type header, so the browser
+     sets the multipart boundary itself) then redirect. Images are
+     downscaled first so large phone photos stay under the 8 MB cap. */
+  function shrinkImage(file, maxEdge, quality) {
+    return createImageBitmap(file).then(function (bmp) {
+      var scale = Math.min(1, maxEdge / Math.max(bmp.width, bmp.height));
+      var w = Math.round(bmp.width * scale);
+      var h = Math.round(bmp.height * scale);
+      var canvas = document.createElement('canvas');
+      canvas.width = w;
+      canvas.height = h;
+      canvas.getContext('2d').drawImage(bmp, 0, 0, w, h);
+      return new Promise(function (resolve) {
+        canvas.toBlob(function (blob) { resolve(blob); }, 'image/jpeg', quality);
+      });
+    });
+  }
+
+  document.querySelectorAll('form[data-file-form]').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var btn = form.querySelector('[type="submit"]');
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = 'Uploading…';
+      }
+
+      function redirect() {
+        window.location.href = form.getAttribute('data-redirect') || '/tutors/done/';
+      }
+      function send(fd) {
+        fetch('/', { method: 'POST', body: fd }).then(redirect).catch(redirect);
+      }
+
+      var fd = new FormData(form);
+      var fileInput = form.querySelector('input[type="file"]');
+      var file = fileInput && fileInput.files[0];
+
+      if (file && /^image\//.test(file.type) && window.createImageBitmap) {
+        shrinkImage(file, 1600, 0.85).then(function (blob) {
+          if (blob && blob.size < file.size) {
+            fd.set(fileInput.name, blob, file.name.replace(/\.[^.]+$/, '') + '.jpg');
+          }
+          send(fd);
+        }).catch(function () { send(fd); });
+      } else {
+        send(fd);
+      }
+    });
+  });
+
   /* --- Module quiz --- */
   document.querySelectorAll('[data-module-quiz]').forEach(function (quiz) {
     var moduleId = quiz.getAttribute('data-module');
@@ -232,6 +287,8 @@
     el.hidden = !params.get(el.getAttribute('data-show-if-param'));
   });
   document.querySelectorAll('[data-hide-if-param]').forEach(function (el) {
-    el.hidden = !!params.get(el.getAttribute('data-hide-if-param'));
+    el.hidden = el.getAttribute('data-hide-if-param').split(',').some(function (name) {
+      return !!params.get(name.trim());
+    });
   });
 })();

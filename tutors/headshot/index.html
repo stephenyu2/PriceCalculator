@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>Your Headshot | LVT Tutor Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/contact.css" />
+  <link rel="stylesheet" href="/tutors/tutors.css" />
+</head>
+<body class="portal-body">
+
+  <!-- Back to Tutor Portal -->
+  <a href="/tutors/" class="portal-noprint" style="position:fixed; bottom:1.25rem; left:1.25rem; z-index:9999; background:#111111; color:#ffffff; font-family:'Inter',system-ui,sans-serif; font-size:0.78rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; padding:0.6rem 1.1rem; border-radius:999px; box-shadow:0 4px 14px rgba(17,17,17,0.25);">&larr; Tutor Portal</a>
+
+
+  <!-- ===========================
+       PAGE HERO
+  =========================== -->
+  <section class="page-hero">
+    <img class="page-hero-bg" src="/Images/GroupPhoto.jpeg" alt="" aria-hidden="true" />
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+    <div class="page-hero-content">
+      <h1 class="hero-heading">Your Headshot</h1>
+    </div>
+  </section>
+
+  <main class="portal-main portal-prose">
+    <p class="portal-kicker">Resources</p>
+    <h1>Your Headshot</h1>
+
+    <p>Send us a photo for your tutor profile. It goes on the <a href="/team.html">Our Team</a> page of our website, where families can see who you are, so pick one you are happy to have public. This is optional and not part of onboarding.</p>
+    <p>A clear photo from the shoulders up works best: face fully visible, good lighting, and a plain background if you have one. A phone photo is fine.</p>
+
+    <div class="portal-form-wrap">
+      <form class="lead-form" name="tutor-headshot" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" data-file-form data-redirect="/tutors/done/?headshot=1">
+        <input type="hidden" name="form-name" value="tutor-headshot" />
+        <p class="lead-form-hidden" aria-hidden="true">
+          <label>Skip: <input name="bot-field" /></label>
+        </p>
+
+        <div class="form-field">
+          <label class="form-label" for="tutor-name">Your full name <span class="form-required">*</span></label>
+          <input class="form-input" type="text" id="tutor-name" name="tutor-name" autocomplete="name" required />
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="headshot">Your photo <span class="form-required">*</span></label>
+          <input class="form-input" type="file" id="headshot" name="headshot" accept="image/*" required />
+          <p class="form-help">JPG or PNG, any size.</p>
+        </div>
+
+        <button class="btn btn-cta" type="submit">Upload Photo</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="/tutors/portal.js"></script>
+</body>
+</html>

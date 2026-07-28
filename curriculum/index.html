@@ -154,50 +154,7 @@
     </div>
 
     <p class="hub-note"><strong>Grades K–2:</strong> Questions are designed to be read aloud. A parent or tutor should administer the test for younger students.</p>
-
-    <div class="lib-access-wrap">
-      <button class="lib-access-btn" onclick="openLibraryGate()">Access Our Full Curriculum</button>
-    </div>
   </main>
-
-  <!-- Library access gate -->
-  <div class="lib-gate-overlay hidden" id="libGate" onclick="handleLibGateOverlay(event)">
-    <div class="lib-gate-card">
-      <button class="lib-gate-close" onclick="closeLibraryGate()" aria-label="Close">&times;</button>
-      <h2 class="lib-gate-heading">Tutor Access</h2>
-      <p class="lib-gate-sub">Enter your access code to open the curriculum library.</p>
-      <input class="lib-gate-input" type="password" id="libCode" placeholder="Access code" oninput="clearLibError()" onkeydown="if(event.key==='Enter')submitLibCode()">
-      <p class="lib-gate-error hidden" id="libError">Incorrect code. Try again.</p>
-      <button class="lib-gate-btn" onclick="submitLibCode()">Enter</button>
-    </div>
-  </div>
-
-  <script>
-    function openLibraryGate() {
-      document.getElementById('libGate').classList.remove('hidden');
-      document.getElementById('libCode').value = '';
-      document.getElementById('libError').classList.add('hidden');
-      setTimeout(() => document.getElementById('libCode').focus(), 50);
-    }
-    function closeLibraryGate() {
-      document.getElementById('libGate').classList.add('hidden');
-    }
-    function handleLibGateOverlay(e) {
-      if (e.target === document.getElementById('libGate')) closeLibraryGate();
-    }
-    function clearLibError() {
-      document.getElementById('libError').classList.add('hidden');
-    }
-    function submitLibCode() {
-      if (document.getElementById('libCode').value === '528624') {
-        window.location.href = '/library/';
-      } else {
-        document.getElementById('libError').classList.remove('hidden');
-        document.getElementById('libCode').value = '';
-        document.getElementById('libCode').focus();
-      }
-    }
-  </script>
 
   <footer class="footer" id="footer">
     <div class="footer-brand">
