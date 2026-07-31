@@ -5,6 +5,7 @@
   "nextGrade": null,
   "timeMinutes": 40,
   "calculator": true,
+  "scratchPaper": true,
   "formulas": [
     {
       "label": "Mean",
@@ -41,107 +42,42 @@
       "standard": "HSS.ID.A.2",
       "text": "A dataset has values $2, 5, 7, 8, 8, 10, 15$. What is the median?",
       "options": [
-        "$8$",
         "$7$",
         "$7.86$",
+        "$8$",
         "$10$"
       ],
-      "answer": 0,
-      "explanation": "With 7 values in order, the median is the 4th value: $8$. The mean ($\\approx 7.86$) and mode ($8$) are different measures."
+      "answer": 2,
+      "explanation": "With 7 values already in order, the median is the middle (4th) value: $8$. The value $7.86$ is the mean and $10$ is not centrally located."
     },
     {
       "id": 2,
-      "standard": "HSS.ID.A.2",
-      "text": "Which measure of center is most resistant to outliers?",
+      "standard": "HSS.ID.A.1",
+      "text": "A distribution whose tail extends to the left is described as:",
       "options": [
-        "Median",
-        "Mean",
-        "Mode",
-        "Range"
+        "Skewed right",
+        "Skewed left",
+        "Symmetric",
+        "Bimodal"
       ],
-      "answer": 0,
-      "explanation": "The median depends only on the middle value(s), so extreme values do not affect it. The mean includes every value in its calculation, making it sensitive to outliers."
+      "answer": 1,
+      "explanation": "A left-skewed (negatively skewed) distribution has its long tail pointing toward the lower values. In a left-skewed distribution the mean is typically pulled below the median."
     },
     {
       "id": 3,
       "standard": "HSS.ID.A.3",
-      "text": "For the dataset $1, 3, 5, 7, 9, 11, 13$, the five-number summary is $\\{1, 4, 7, 10, 13\\}$. What is the IQR?",
+      "text": "For a dataset the five-number summary is $\\{1, 4, 7, 10, 13\\}$. What is the interquartile range (IQR)?",
       "options": [
-        "$6$",
+        "$3$",
         "$12$",
         "$7$",
-        "$3$"
+        "$6$"
       ],
-      "answer": 0,
-      "explanation": "$IQR = Q_3 - Q_1 = 10 - 4 = 6$. The IQR measures the spread of the middle 50% of the data."
+      "answer": 3,
+      "explanation": "$IQR = Q_3 - Q_1 = 10 - 4 = 6$. The value $12$ is the full range (max minus min) and $7$ is the median."
     },
     {
       "id": 4,
-      "standard": "HSS.ID.A.3",
-      "text": "A dataset has $Q_1 = 20$, $Q_3 = 40$, and $IQR = 20$. Using the $1.5 \\times IQR$ rule, which value would be classified as an outlier?",
-      "options": [
-        "$75$",
-        "$55$",
-        "$15$",
-        "$45$"
-      ],
-      "answer": 0,
-      "explanation": "Upper fence: $Q_3 + 1.5 \\times IQR = 40 + 30 = 70$. Lower fence: $Q_1 - 1.5 \\times IQR = 20 - 30 = -10$. Any value above 70 or below $-10$ is an outlier. $75 > 70$, so it is an outlier. The other values ($55$, $15$, $45$) all fall within the fences."
-    },
-    {
-      "id": 5,
-      "standard": "HSS.ID.A.1",
-      "text": "A distribution where the tail extends to the left is called:",
-      "options": [
-        "Skewed left",
-        "Skewed right",
-        "Symmetric",
-        "Bimodal"
-      ],
-      "answer": 0,
-      "explanation": "A left-skewed (negatively skewed) distribution has its tail pointing toward lower values. In a left-skewed distribution, the mean is typically less than the median."
-    },
-    {
-      "id": 6,
-      "standard": "HSS.ID.A.3",
-      "text": "The standard deviation of a dataset is $0$. What does this tell you about the data?",
-      "options": [
-        "All values are identical",
-        "All values are zero",
-        "The dataset has no mean",
-        "The dataset has one value"
-      ],
-      "answer": 0,
-      "explanation": "Standard deviation measures spread. A standard deviation of $0$ means there is no variability — every data point equals the mean, so all values are identical."
-    },
-    {
-      "id": 7,
-      "standard": "HSS.IC.B.3",
-      "text": "A researcher surveys every 10th student from an alphabetical school list. This is an example of:",
-      "options": [
-        "Systematic sampling",
-        "Stratified sampling",
-        "Cluster sampling",
-        "Convenience sampling"
-      ],
-      "answer": 0,
-      "explanation": "Systematic sampling selects every $k$th member of a population from a list. Stratified sampling divides the population into groups and samples from each; cluster sampling selects entire groups at random."
-    },
-    {
-      "id": 8,
-      "standard": "HSS.IC.B.3",
-      "text": "Which of the following studies allows researchers to establish causation between variables?",
-      "options": [
-        "A randomized controlled experiment",
-        "An observational study",
-        "A census",
-        "A case study"
-      ],
-      "answer": 0,
-      "explanation": "Only a randomized controlled experiment, where subjects are randomly assigned to treatment and control groups, can establish cause-and-effect relationships. Observational studies can only identify associations."
-    },
-    {
-      "id": 9,
       "standard": "HSS.CP.A.1",
       "text": "A bag contains 4 red and 6 blue marbles. What is $P(\\text{not red})$?",
       "options": [
@@ -151,23 +87,49 @@
         "$1.5$"
       ],
       "answer": 0,
-      "explanation": "$P(\\text{not red}) = 1 - P(\\text{red}) = 1 - \\frac{4}{10} = \\frac{6}{10} = 0.6$."
+      "explanation": "$P(\\text{not red}) = 1 - P(\\text{red}) = 1 - \\frac{4}{10} = \\frac{6}{10} = 0.6$. The value $0.4$ is $P(\\text{red})$ itself."
     },
     {
-      "id": 10,
-      "standard": "HSS.CP.B.6",
-      "text": "In a class of 30 students, 18 play soccer and 12 play basketball, with 5 playing both. What is $P(\\text{soccer} \\cup \\text{basketball})$?",
+      "id": 5,
+      "standard": "HSS.ID.B.6",
+      "text": "A scatterplot shows that as $x$ increases, $y$ tends to decrease. What does this indicate about the correlation coefficient $r$?",
       "options": [
-        "$\\frac{25}{30}$",
-        "$\\frac{30}{30}$",
-        "$\\frac{5}{30}$",
-        "$\\frac{20}{30}$"
+        "$r$ is positive, between $0$ and $1$",
+        "$r = 0$",
+        "$r$ is negative, between $-1$ and $0$",
+        "$r > 1$"
       ],
-      "answer": 0,
-      "explanation": "$P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = \\frac{18}{30} + \\frac{12}{30} - \\frac{5}{30} = \\frac{25}{30}$."
+      "answer": 2,
+      "explanation": "When one variable decreases as the other increases, the linear association is negative, so $r$ lies between $-1$ and $0$. Values of $r$ can never exceed $1$."
     },
     {
-      "id": 11,
+      "id": 6,
+      "standard": "HSS.CP.A.2",
+      "text": "A single fair six-sided die is rolled once. What is the probability of rolling a $2$ or a $5$?",
+      "options": [
+        "$\\frac{1}{36}$",
+        "$\\frac{1}{6}$",
+        "$\\frac{2}{3}$",
+        "$\\frac{1}{3}$"
+      ],
+      "answer": 3,
+      "explanation": "Rolling a $2$ and rolling a $5$ are mutually exclusive, so add: $\\frac{1}{6} + \\frac{1}{6} = \\frac{2}{6} = \\frac{1}{3}$. Multiplying would incorrectly give $\\frac{1}{36}$."
+    },
+    {
+      "id": 7,
+      "standard": "HSS.IC.B.3",
+      "text": "A researcher surveys every 10th student from an alphabetical school list. This is an example of:",
+      "options": [
+        "Stratified sampling",
+        "Systematic sampling",
+        "Cluster sampling",
+        "Convenience sampling"
+      ],
+      "answer": 1,
+      "explanation": "Systematic sampling selects every $k$th member from an ordered list. Stratified sampling divides the population into groups and samples within each; cluster sampling selects whole groups at random."
+    },
+    {
+      "id": 8,
       "standard": "HSS.CP.A.3",
       "text": "Events $A$ and $B$ are independent, with $P(A) = 0.4$ and $P(B) = 0.5$. What is $P(A \\cap B)$?",
       "options": [
@@ -177,12 +139,77 @@
         "$0.45$"
       ],
       "answer": 0,
-      "explanation": "For independent events, $P(A \\cap B) = P(A) \\cdot P(B) = 0.4 \\times 0.5 = 0.2$."
+      "explanation": "For independent events, $P(A \\cap B) = P(A) \\cdot P(B) = 0.4 \\times 0.5 = 0.2$. Adding the probabilities ($0.9$) would apply the wrong rule."
+    },
+    {
+      "id": 9,
+      "standard": "HSS.MD.A.2",
+      "text": "A random variable $X$ has the distribution $P(X=1) = 0.2$, $P(X=2) = 0.5$, $P(X=3) = 0.3$. What is $E(X)$?",
+      "options": [
+        "$2.0$",
+        "$1.5$",
+        "$2.5$",
+        "$2.1$"
+      ],
+      "answer": 3,
+      "explanation": "$E(X) = 1(0.2) + 2(0.5) + 3(0.3) = 0.2 + 1.0 + 0.9 = 2.1$. The value $2.0$ ignores the weighting and just averages the outcomes."
+    },
+    {
+      "id": 10,
+      "standard": "HSS.ID.A.3",
+      "text": "A dataset has $Q_1 = 20$, $Q_3 = 40$, and $IQR = 20$. Using the $1.5 \\times IQR$ rule, which value is classified as an outlier?",
+      "options": [
+        "$45$",
+        "$55$",
+        "$75$",
+        "$15$"
+      ],
+      "answer": 2,
+      "explanation": "Upper fence $= Q_3 + 1.5 \\times IQR = 40 + 30 = 70$; lower fence $= Q_1 - 1.5 \\times IQR = 20 - 30 = -10$. Only $75 > 70$ lies outside the fences. The others ($45$, $55$, $15$) fall within them."
+    },
+    {
+      "id": 11,
+      "standard": "HSS.ID.C.9",
+      "text": "A study finds a strong positive correlation ($r = 0.92$) between ice cream sales and drowning rates. What is the most appropriate conclusion?",
+      "options": [
+        "A lurking variable (hot weather) likely explains both; correlation does not imply causation",
+        "Ice cream consumption causes drowning",
+        "Rising drowning rates cause ice cream sales to increase",
+        "The study proves a causal relationship between the two variables"
+      ],
+      "answer": 0,
+      "explanation": "Correlation does not imply causation. A lurking variable, hot weather, raises both ice cream sales and swimming activity (and therefore drowning). Only a controlled experiment can establish causation."
     },
     {
       "id": 12,
+      "standard": "HSS.IC.B.3",
+      "text": "Which type of study allows researchers to establish a cause-and-effect relationship between variables?",
+      "options": [
+        "An observational study",
+        "A randomized controlled experiment",
+        "A census",
+        "A sample survey"
+      ],
+      "answer": 1,
+      "explanation": "Only a randomized controlled experiment, in which subjects are randomly assigned to treatment and control groups, can establish causation. Observational studies, censuses, and surveys can identify associations but cannot control for confounding."
+    },
+    {
+      "id": 13,
+      "standard": "HSS.CP.B.6",
+      "text": "In a class of 30 students, 18 play soccer and 12 play basketball, with 5 playing both. What is $P(\\text{soccer} \\cup \\text{basketball})$?",
+      "options": [
+        "$\\frac{30}{30}$",
+        "$\\frac{5}{30}$",
+        "$\\frac{20}{30}$",
+        "$\\frac{25}{30}$"
+      ],
+      "answer": 3,
+      "explanation": "$P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = \\frac{18}{30} + \\frac{12}{30} - \\frac{5}{30} = \\frac{25}{30}$. Failing to subtract the overlap gives $\\frac{30}{30}$; $\\frac{5}{30}$ is only the intersection."
+    },
+    {
+      "id": 14,
       "standard": "HSS.CP.B.8",
-      "text": "Given $P(A) = 0.6$, $P(B) = 0.5$, and $P(A \\cap B) = 0.3$, find $P(A | B)$.",
+      "text": "Given $P(A) = 0.6$, $P(B) = 0.5$, and $P(A \\cap B) = 0.3$, find $P(A \\mid B)$.",
       "options": [
         "$0.6$",
         "$0.3$",
@@ -190,189 +217,163 @@
         "$1.8$"
       ],
       "answer": 0,
-      "explanation": "$P(A | B) = \\frac{P(A \\cap B)}{P(B)} = \\frac{0.3}{0.5} = 0.6$. Notice that $P(A | B) = P(A)$, confirming $A$ and $B$ are independent."
-    },
-    {
-      "id": 13,
-      "standard": "HSS.CP.B.9",
-      "text": "How many ways can 3 students be chosen from a group of 8 to form a committee (order does not matter)?",
-      "options": [
-        "$56$",
-        "$336$",
-        "$24$",
-        "$512$"
-      ],
-      "answer": 0,
-      "explanation": "$\\binom{8}{3} = \\frac{8!}{3! \\cdot 5!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$. If order mattered (permutation), the answer would be $P(8,3) = 336$."
-    },
-    {
-      "id": 14,
-      "standard": "HSS.MD.A.2",
-      "text": "A random variable $X$ has the distribution: $P(X=1) = 0.2$, $P(X=2) = 0.5$, $P(X=3) = 0.3$. What is $E(X)$?",
-      "options": [
-        "$2.1$",
-        "$2.0$",
-        "$1.5$",
-        "$2.5$"
-      ],
-      "answer": 0,
-      "explanation": "$E(X) = 1(0.2) + 2(0.5) + 3(0.3) = 0.2 + 1.0 + 0.9 = 2.1$."
+      "explanation": "$P(A \\mid B) = \\frac{P(A \\cap B)}{P(B)} = \\frac{0.3}{0.5} = 0.6$. The value $0.3$ is the intersection and $0.5$ is $P(B)$."
     },
     {
       "id": 15,
-      "standard": "HSS.MD.B.5",
-      "text": "Which of the following is NOT a condition (BINS) for a binomial distribution?",
+      "standard": "HSS.CP.B.9",
+      "text": "How many ways can 3 students be chosen from a group of 8 to form a committee (order does not matter)?",
       "options": [
-        "The number of trials is random",
-        "Each trial has exactly two outcomes",
-        "The trials are independent",
-        "The probability of success is constant"
+        "$336$",
+        "$56$",
+        "$24$",
+        "$512$"
       ],
-      "answer": 0,
-      "explanation": "Binomial conditions (BINS): Binary outcomes, Independent trials, fixed Number of trials, Same probability of success. The number of trials must be fixed in advance, not random."
+      "answer": 1,
+      "explanation": "$\\binom{8}{3} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$. If order mattered this would be the permutation $P(8,3) = 336$; $8^3 = 512$ counts ordered selections with repetition."
     },
     {
       "id": 16,
       "standard": "HSS.MD.B.5",
-      "text": "A fair coin is flipped 10 times. Using the binomial distribution, what is the mean number of heads?",
+      "text": "A fair coin is flipped 10 times. Using the binomial model, what is the mean (expected) number of heads?",
       "options": [
-        "$5$",
         "$2.5$",
         "$\\sqrt{2.5}$",
+        "$5$",
         "$10$"
       ],
-      "answer": 0,
-      "explanation": "For a binomial distribution, $\\mu = np = 10 \\times 0.5 = 5$. The standard deviation is $\\sigma = \\sqrt{np(1-p)} = \\sqrt{10 \\times 0.5 \\times 0.5} = \\sqrt{2.5} \\approx 1.58$."
+      "answer": 2,
+      "explanation": "For a binomial distribution, $\\mu = np = 10 \\times 0.5 = 5$. The value $2.5$ is the variance $np(1-p)$ and $\\sqrt{2.5} \\approx 1.58$ is the standard deviation."
     },
     {
       "id": 17,
       "standard": "HSS.ID.A.4",
-      "text": "In a normal distribution with mean $\\mu = 100$ and standard deviation $\\sigma = 15$, approximately what percentage of values fall between $85$ and $115$?",
+      "text": "A student scores $78$ on a test where $\\mu = 70$ and $\\sigma = 4$. What is the student's $z$-score?",
       "options": [
-        "$68\\%$",
-        "$95\\%$",
-        "$99.7\\%$",
-        "$50\\%$"
+        "$0.5$",
+        "$-2$",
+        "$1.5$",
+        "$2$"
       ],
-      "answer": 0,
-      "explanation": "$85 = 100 - 15 = \\mu - \\sigma$ and $115 = 100 + 15 = \\mu + \\sigma$. By the 68-95-99.7 rule, approximately $68\\%$ of values fall within one standard deviation of the mean."
+      "answer": 3,
+      "explanation": "$z = \\frac{x - \\mu}{\\sigma} = \\frac{78 - 70}{4} = \\frac{8}{4} = 2$. Dividing in the wrong order gives $0.5$; reversing the subtraction gives $-2$."
     },
     {
       "id": 18,
-      "standard": "HSS.ID.A.4",
-      "text": "A student scores $78$ on a test where $\\mu = 70$ and $\\sigma = 4$. What is the student's $z$-score?",
+      "standard": "HSS.IC.A.2",
+      "text": "The Central Limit Theorem guarantees that the sampling distribution of $\\bar{x}$ is approximately normal when:",
       "options": [
-        "$2$",
-        "$0.5$",
-        "$-2$",
-        "$1.5$"
+        "The sample size is sufficiently large (typically $n \\geq 30$)",
+        "The population is already normally distributed",
+        "The sample is actually a census",
+        "The data contain no outliers"
       ],
       "answer": 0,
-      "explanation": "$z = \\frac{x - \\mu}{\\sigma} = \\frac{78 - 70}{4} = \\frac{8}{4} = 2$. A $z$-score of $2$ means the student scored $2$ standard deviations above the mean."
+      "explanation": "The CLT states that the sampling distribution of $\\bar{x}$ approaches normality as $n$ grows, regardless of the population's shape. A normal population makes $\\bar{x}$ exactly normal for any $n$, but that is not what the CLT requires."
     },
     {
       "id": 19,
-      "standard": "HSS.IC.A.1",
-      "text": "The sampling distribution of $\\bar{x}$ has a standard error of $\\frac{\\sigma}{\\sqrt{n}}$. What happens to the standard error if the sample size is quadrupled?",
+      "standard": "HSS.ID.A.2",
+      "text": "A sample consists of the five values $7, 7, 10, 13, 13$. What is the sample standard deviation?",
       "options": [
-        "It is halved",
-        "It is quartered",
-        "It doubles",
-        "It remains the same"
+        "$9$",
+        "$3$",
+        "$\\approx 2.68$",
+        "$6$"
       ],
-      "answer": 0,
-      "explanation": "If $n$ is replaced by $4n$, the standard error becomes $\\frac{\\sigma}{\\sqrt{4n}} = \\frac{\\sigma}{2\\sqrt{n}}$, which is half the original. Quadrupling the sample size cuts the standard error in half."
+      "answer": 1,
+      "explanation": "The mean is $\\frac{7+7+10+13+13}{5} = 10$. Deviations are $-3, -3, 0, 3, 3$; their squares sum to $9+9+0+9+9 = 36$. Sample variance $= \\frac{36}{5-1} = 9$, so the sample standard deviation is $\\sqrt{9} = 3$. The value $9$ is the variance, $\\approx 2.68$ uses the population divisor $n$, and $6$ is the range."
     },
     {
       "id": 20,
-      "standard": "HSS.IC.A.2",
-      "text": "The Central Limit Theorem states that the sampling distribution of $\\bar{x}$ is approximately normal when:",
+      "standard": "HSS.ID.B.6",
+      "text": "A least-squares regression line is $\\hat{y} = 2.5x + 10$. For a data point with $x = 8$ and an observed value of $y = 35$, what is the residual?",
       "options": [
-        "The sample size is sufficiently large (typically $n \\geq 30$)",
-        "The population is normally distributed",
-        "The sample is a census",
-        "The data has no outliers"
+        "$-5$",
+        "$30$",
+        "$5$",
+        "$65$"
       ],
-      "answer": 0,
-      "explanation": "The CLT guarantees that the sampling distribution of $\\bar{x}$ approaches normality as $n$ increases, regardless of the population's shape. A common guideline is $n \\geq 30$."
+      "answer": 2,
+      "explanation": "Predicted value: $\\hat{y} = 2.5(8) + 10 = 30$. Residual $=$ observed $-$ predicted $= 35 - 30 = 5$. Reversing the subtraction gives $-5$; $30$ is the prediction itself."
     },
     {
       "id": 21,
-      "standard": "HSS.IC.B.4",
-      "text": "A 95% confidence interval for a population mean is $(42, 58)$. Which interpretation is correct?",
+      "standard": "HSS.ID.A.4",
+      "text": "Test scores are normally distributed with $\\mu = 500$ and $\\sigma = 100$. Approximately what percentage of scores fall between $600$ and $700$?",
       "options": [
-        "We are 95% confident that the true population mean is between $42$ and $58$",
-        "95% of all data values fall between $42$ and $58$",
-        "There is a 95% chance the population mean is $50$",
-        "The sample mean is 95% accurate"
+        "$27\\%$",
+        "$34\\%$",
+        "$2.5\\%$",
+        "$13.5\\%$"
       ],
-      "answer": 0,
-      "explanation": "A confidence interval is interpreted as a range of plausible values for the parameter. We are 95% confident (based on the method) that the interval $(42, 58)$ contains the true population mean."
+      "answer": 3,
+      "explanation": "$600 = \\mu + \\sigma$ and $700 = \\mu + 2\\sigma$. The empirical rule gives 68% within $1\\sigma$ and 95% within $2\\sigma$, so the region between $1\\sigma$ and $2\\sigma$ on one side is $\\frac{95\\% - 68\\%}{2} = 13.5\\%$. The value $27\\%$ forgets to halve; $2.5\\%$ is the area beyond $2\\sigma$."
     },
     {
       "id": 22,
-      "standard": "HSS.IC.B.4",
-      "text": "Which of the following would decrease the width of a confidence interval?",
+      "standard": "HSS.CP.A.3",
+      "text": "A basketball player makes 70% of her free throws. She shoots 3 independent free throws. What is the probability she misses at least one?",
       "options": [
-        "Increasing the sample size",
-        "Increasing the confidence level",
-        "Decreasing the sample size",
-        "Using a two-sided test instead of a one-sided test"
+        "$0.343$",
+        "$0.9$",
+        "$0.657$",
+        "$0.027$"
       ],
-      "answer": 0,
-      "explanation": "A larger sample size reduces the standard error, narrowing the confidence interval. Increasing the confidence level widens the interval, and decreasing $n$ widens it."
+      "answer": 2,
+      "explanation": "P(makes all three) $= 0.7^3 = 0.343$. P(at least one miss) $= 1 - 0.343 = 0.657$. The value $0.027 = 0.3^3$ is the chance of missing all three, and $0.9 = 3 \\times 0.3$ double-counts overlapping outcomes."
     },
     {
       "id": 23,
-      "standard": "HSS.IC.B.5",
-      "text": "A researcher tests $H_0: \\mu = 50$ vs. $H_a: \\mu \\neq 50$ and finds a $p$-value of $0.03$. At $\\alpha = 0.05$, what is the correct conclusion?",
+      "standard": "HSS.MD.B.5",
+      "text": "A carnival game costs \\$2 to play. A player spins a wheel with a $\\frac{1}{4}$ chance of winning \\$5 and a $\\frac{3}{4}$ chance of winning nothing. What is the expected net gain per play?",
       "options": [
-        "Reject $H_0$; there is sufficient evidence that $\\mu \\neq 50$",
-        "Fail to reject $H_0$; there is insufficient evidence to conclude $\\mu \\neq 50$",
-        "Accept $H_a$; $\\mu = 50$ is definitively false",
-        "The test is inconclusive"
+        "$\\$1.25$",
+        "$-\\$0.75$",
+        "$\\$0.75$",
+        "$-\\$2$"
       ],
-      "answer": 0,
-      "explanation": "Since $p = 0.03 < \\alpha = 0.05$, we reject $H_0$. We never 'accept' $H_a$ — we say there is sufficient evidence to support it. The conclusion is always framed in terms of the null hypothesis."
+      "answer": 1,
+      "explanation": "Expected winnings $= \\frac{1}{4}(5) + \\frac{3}{4}(0) = 1.25$ dollars. Subtracting the \\$2 cost gives $1.25 - 2 = -0.75$, an expected loss of \\$0.75 per play. The value \\$1.25 ignores the cost to play."
     },
     {
       "id": 24,
-      "standard": "HSS.IC.B.5",
-      "text": "A Type I error occurs when:",
+      "standard": "HSS.IC.B.4",
+      "text": "A sample of $n = 100$ observations from a population with $\\sigma = 20$ has mean $\\bar{x} = 50$. For a 95% confidence interval ($z^* = 1.96$), what is the margin of error?",
       "options": [
-        "You reject a true null hypothesis",
-        "You fail to reject a false null hypothesis",
-        "Your sample size is too small",
-        "The $p$-value is greater than $\\alpha$"
+        "$39.2$",
+        "$0.392$",
+        "$1.96$",
+        "$3.92$"
       ],
-      "answer": 0,
-      "explanation": "A Type I error (false positive) is rejecting $H_0$ when it is actually true. Its probability is $\\alpha$, the significance level. A Type II error (false negative) is failing to reject a false $H_0$."
+      "answer": 3,
+      "explanation": "Standard error $= \\frac{\\sigma}{\\sqrt{n}} = \\frac{20}{\\sqrt{100}} = \\frac{20}{10} = 2$. Margin of error $= z^* \\times SE = 1.96 \\times 2 = 3.92$. Forgetting to divide by $\\sqrt{n}$ gives $39.2$."
     },
     {
       "id": 25,
-      "standard": "HSS.ID.B.6",
-      "text": "A scatterplot shows that as $x$ increases, $y$ tends to decrease. What does this indicate about the correlation coefficient $r$?",
+      "standard": "HSS.IC.B.5",
+      "text": "A researcher tests $H_0: \\mu = 50$ against $H_a: \\mu \\neq 50$ and obtains a $p$-value of $0.03$ at $\\alpha = 0.05$. Which conclusion is correct?",
       "options": [
-        "$r$ is negative, between $-1$ and $0$",
-        "$r$ is positive, between $0$ and $1$",
-        "$r = 0$",
-        "$r > 1$"
+        "Reject $H_0$; there is sufficient evidence that $\\mu \\neq 50$, and if $H_0$ is actually true this decision would be a Type I error",
+        "Fail to reject $H_0$; the evidence is insufficient to conclude $\\mu \\neq 50$",
+        "Reject $H_0$; this proves with certainty that $\\mu \\neq 50$",
+        "Accept $H_a$; the null hypothesis has been shown to be false"
       ],
       "answer": 0,
-      "explanation": "When one variable increases as the other decreases, the association is negative, so $r$ is between $-1$ and $0$. The value $r$ is always between $-1$ and $1$; values outside this range are impossible."
+      "explanation": "Since $p = 0.03 < \\alpha = 0.05$, reject $H_0$: there is sufficient evidence that $\\mu \\neq 50$. Rejecting a null that is in fact true is a Type I error, whose probability is $\\alpha$. A hypothesis test never proves a claim with certainty, and we do not 'accept' $H_a$."
     },
     {
       "id": 26,
-      "standard": "HSS.ID.C.9",
-      "text": "A study finds a strong positive correlation ($r = 0.92$) between ice cream sales and drowning rates. What is the most appropriate conclusion?",
+      "standard": "HSS.IC.A.1",
+      "text": "The standard error of the sample mean is $\\frac{\\sigma}{\\sqrt{n}}$. To cut the standard error in half, by what factor must the sample size $n$ be multiplied?",
       "options": [
-        "A lurking variable (hot weather) likely explains both; correlation does not imply causation",
-        "Ice cream consumption causes drowning",
-        "Drowning rates cause ice cream sales to rise",
-        "The study proves a causal relationship between the two variables"
+        "$2$",
+        "$4$",
+        "$8$",
+        "$16$"
       ],
-      "answer": 0,
-      "explanation": "Correlation does not imply causation. A lurking variable (hot weather) increases both ice cream sales and swimming activity, which raises drowning rates. Only a controlled experiment can establish causation."
+      "answer": 1,
+      "explanation": "Because $n$ appears under a square root, halving the standard error requires $\\sqrt{n}$ to double, so $n$ must be multiplied by $2^2 = 4$. Merely doubling $n$ only reduces the standard error by a factor of $\\sqrt{2} \\approx 1.41$."
     }
   ]
 }

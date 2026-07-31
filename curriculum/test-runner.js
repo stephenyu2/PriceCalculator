@@ -209,7 +209,13 @@ function downloadPDF() {
     doc.setDrawColor(200, 200, 200); doc.line(ML, y, ML + CW, y); y += 18;
 
     // ── Placement result leads ────────────────────────────────────
-    const lcMap = { 'Below Grade Level': [184,48,48], 'At Grade Level': [26,77,181], 'Above Grade Level': [24,110,56] };
+    const lcMap = {
+      'Significantly Below Grade Level': [138,28,28],
+      'Below Grade Level': [184,48,48],
+      'At Grade Level': [26,77,181],
+      'Above Grade Level': [24,110,56],
+      'Significantly Above Grade Level / Mastery': [15,90,43]
+    };
     const lc = lcMap[level] || [17, 17, 17];
 
     // Level in large text — the dominant visual
@@ -440,6 +446,18 @@ function renderTest(data) {
     calcBadge.removeAttribute('hidden');
   }
 
+  // Scratch paper badge — shown only when the test data opts in (scratchPaper: true)
+  const scratchBadge = document.getElementById('scratchBadge');
+  if (scratchBadge) {
+    if (data.scratchPaper) {
+      scratchBadge.textContent = 'Scratch paper required';
+      scratchBadge.className = 'calc-badge scratch';
+      scratchBadge.removeAttribute('hidden');
+    } else {
+      scratchBadge.setAttribute('hidden', '');
+    }
+  }
+
   // Formula sheet
   const formulaSection = document.getElementById('formulaSection');
   if (formulaSection && data.formulas && data.formulas.length) {
@@ -527,21 +545,31 @@ function handleSubmit() {
   const pct = Math.round((correct / total) * 100);
 
   let level, levelClass, levelIcon, description;
-  if (pct < 60) {
+  if (pct < 40) {
+    level = 'Significantly Below Grade Level';
+    levelClass = 'far-behind';
+    levelIcon = '⚠';
+    description = 'Your results point to real gaps in fundamentals from earlier grades. The best next step is to review prior-grade skills before moving on. A tutor can pinpoint exactly where to start.';
+  } else if (pct < 60) {
     level = 'Below Grade Level';
     levelClass = 'behind';
     levelIcon = '↓';
-    description = 'Your results suggest some foundational skills at this grade level need more practice. A tutor can help you build confidence and fill in the gaps.';
+    description = 'You are working below grade level expectations right now, and several in-grade skills need more practice. A tutor can help you close these gaps and build confidence.';
   } else if (pct < 80) {
     level = 'At Grade Level';
     levelClass = 'at-level';
     levelIcon = '✓';
     description = 'You are meeting grade level expectations. A tutor can help you strengthen the areas where you missed questions and push toward full mastery.';
-  } else {
+  } else if (pct < 90) {
     level = 'Above Grade Level';
     levelClass = 'above';
     levelIcon = '↑';
-    description = 'You scored above grade level expectations. Consider trying the next grade diagnostic to see how far ahead you are.';
+    description = 'You scored above grade level expectations and are handling the harder material. Consider trying the next grade diagnostic to see how far ahead you are.';
+  } else {
+    level = 'Significantly Above Grade Level / Mastery';
+    levelClass = 'mastery';
+    levelIcon = '★';
+    description = 'You showed mastery of this grade, including the most challenging questions. Trying the next grade diagnostic will give you a better sense of your ceiling.';
   }
 
   document.getElementById('scoreFraction').textContent = `${correct}/${total}`;

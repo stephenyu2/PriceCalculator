@@ -5,6 +5,7 @@
   "nextGrade": "precalculus",
   "timeMinutes": 40,
   "calculator": false,
+  "scratchPaper": true,
   "formulas": null,
   "questions": [
     {
@@ -18,89 +19,141 @@
         "$-i$"
       ],
       "answer": 0,
-      "explanation": "By definition, $i$ is the imaginary unit satisfying $i^2 = -1$."
+      "explanation": "By definition, the imaginary unit satisfies $i^2 = -1$."
     },
     {
       "id": 2,
       "standard": "HSN.CN.A.2",
       "text": "Simplify: $(2 + 3i)(1 - i)$",
       "options": [
+        "$5 - i$",
         "$5 + i$",
-        "$2 - 3i$",
         "$-1 + i$",
-        "$5 - i$"
+        "$2 - 3i$"
       ],
-      "answer": 0,
-      "explanation": "FOIL: $2(1) + 2(-i) + 3i(1) + 3i(-i) = 2 - 2i + 3i - 3i^2 = 2 + i - 3(-1) = 2 + i + 3 = 5 + i$."
+      "answer": 1,
+      "explanation": "FOIL: $2 - 2i + 3i - 3i^2$. Since $i^2 = -1$, $-3i^2 = 3$, giving $2 + i + 3 = 5 + i$."
     },
     {
       "id": 3,
-      "standard": "HSA.SSE.A.2",
-      "text": "Which expression equals $x^3 - 8$?",
+      "standard": "HSN.CN.A.3",
+      "text": "Simplify: $\\frac{2}{1 + i}$",
       "options": [
-        "$(x - 2)(x^2 + 2x + 4)$",
-        "$(x - 2)(x^2 - 2x + 4)$",
-        "$(x + 2)(x^2 - 2x + 4)$",
-        "$(x - 2)^3$"
+        "$1 + i$",
+        "$2 - 2i$",
+        "$1 - i$",
+        "$-1 - i$"
       ],
-      "answer": 0,
-      "explanation": "Difference of cubes: $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$. With $a = x$ and $b = 2$: $(x - 2)(x^2 + 2x + 4)$."
+      "answer": 2,
+      "explanation": "Multiply by the conjugate $\\frac{1 - i}{1 - i}$: $\\frac{2(1 - i)}{(1 + i)(1 - i)} = \\frac{2 - 2i}{1 - i^2} = \\frac{2 - 2i}{2} = 1 - i$."
     },
     {
       "id": 4,
-      "standard": "HSA.SSE.B.3",
-      "text": "Complete the square to solve $x^2 + 8x + 5 = 0$.",
+      "standard": "HSN.CN.C.7",
+      "text": "Solve: $x^2 - 4x + 13 = 0$",
       "options": [
-        "$x = -4 \\pm \\sqrt{11}$",
-        "$x = -4 \\pm \\sqrt{21}$",
-        "$x = 4 \\pm \\sqrt{11}$",
-        "$x = -8 \\pm \\sqrt{11}$"
+        "$x = 2 \\pm 3i$",
+        "$x = 2 \\pm 3$",
+        "$x = -2 \\pm 3i$",
+        "$x = 4 \\pm 3i$"
       ],
       "answer": 0,
-      "explanation": "$x^2 + 8x + 16 = 11$, so $(x + 4)^2 = 11$, giving $x + 4 = \\pm\\sqrt{11}$, thus $x = -4 \\pm \\sqrt{11}$."
+      "explanation": "Quadratic formula: $x = \\frac{4 \\pm \\sqrt{16 - 52}}{2} = \\frac{4 \\pm \\sqrt{-36}}{2} = \\frac{4 \\pm 6i}{2} = 2 \\pm 3i$."
     },
     {
       "id": 5,
-      "standard": "HSA.APR.B.2",
-      "text": "When $f(x) = x^3 - 2x^2 + x - 3$ is divided by $(x - 3)$, what is the remainder?",
+      "standard": "HSA.SSE.A.2",
+      "text": "Which expression equals $x^3 - 8$?",
       "options": [
-        "9",
-        "$-3$",
-        "0",
-        "3"
+        "$(x - 2)(x^2 - 2x + 4)$",
+        "$(x + 2)(x^2 - 2x + 4)$",
+        "$(x - 2)^3$",
+        "$(x - 2)(x^2 + 2x + 4)$"
       ],
-      "answer": 0,
-      "explanation": "By the Remainder Theorem, the remainder equals $f(3) = 27 - 18 + 3 - 3 = 9$."
+      "answer": 3,
+      "explanation": "Difference of cubes $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$ with $a = x$ and $b = 2$: $(x - 2)(x^2 + 2x + 4)$."
     },
     {
       "id": 6,
-      "standard": "HSA.APR.B.3",
-      "text": "If $f(x) = x^3 - x^2 - 6x$, what are the zeros of $f(x)$?",
+      "standard": "HSA.SSE.B.3",
+      "text": "Complete the square to solve $x^2 + 8x + 5 = 0$.",
       "options": [
-        "$0, 3, -2$",
-        "$0, -3, 2$",
-        "$1, 3, -2$",
-        "$0, 3, 2$"
+        "$x = -4 \\pm \\sqrt{21}$",
+        "$x = 4 \\pm \\sqrt{11}$",
+        "$x = -4 \\pm \\sqrt{11}$",
+        "$x = -8 \\pm \\sqrt{11}$"
       ],
-      "answer": 0,
-      "explanation": "Factor: $f(x) = x(x^2 - x - 6) = x(x - 3)(x + 2)$, giving zeros $x = 0, 3, -2$."
+      "answer": 2,
+      "explanation": "$x^2 + 8x = -5$; add $16$: $(x + 4)^2 = 11$, so $x + 4 = \\pm\\sqrt{11}$, giving $x = -4 \\pm \\sqrt{11}$."
     },
     {
       "id": 7,
-      "standard": "HSA.APR.D.6",
-      "text": "Simplify: $\\frac{x^2 - 4}{x - 2}$, for $x \\neq 2$.",
+      "standard": "HSA.SSE.B.4",
+      "text": "What is the sum of the first 6 terms of the geometric series with first term $2$ and common ratio $3$?",
       "options": [
-        "$x + 2$",
-        "$x - 2$",
-        "$x^2 - 2$",
-        "$\\frac{1}{x + 2}$"
+        "$486$",
+        "$728$",
+        "$1458$",
+        "$364$"
       ],
-      "answer": 0,
-      "explanation": "Factor the numerator: $\\frac{(x - 2)(x + 2)}{x - 2} = x + 2$, for $x \\neq 2$."
+      "answer": 1,
+      "explanation": "$S_n = \\frac{a_1(r^n - 1)}{r - 1} = \\frac{2(3^6 - 1)}{3 - 1} = \\frac{2(729 - 1)}{2} = 728$."
     },
     {
       "id": 8,
-      "standard": "HSA.CED.A.1",
+      "standard": "HSA.APR.B.2",
+      "text": "When $f(x) = x^3 - 2x^2 + x - 3$ is divided by $(x - 3)$, what is the remainder?",
+      "options": [
+        "$0$",
+        "$3$",
+        "$-3$",
+        "$9$"
+      ],
+      "answer": 3,
+      "explanation": "By the Remainder Theorem the remainder is $f(3) = 27 - 18 + 3 - 3 = 9$."
+    },
+    {
+      "id": 9,
+      "standard": "HSA.APR.B.3",
+      "text": "Solve: $x^4 - 5x^2 + 4 = 0$",
+      "options": [
+        "$x = \\pm 1, \\pm 2$",
+        "$x = \\pm 1, \\pm 4$",
+        "$x = \\pm 2$",
+        "$x = 1, 2$"
+      ],
+      "answer": 0,
+      "explanation": "Let $u = x^2$: $u^2 - 5u + 4 = (u - 1)(u - 4) = 0$, so $x^2 = 1$ or $x^2 = 4$, giving $x = \\pm 1, \\pm 2$."
+    },
+    {
+      "id": 10,
+      "standard": "HSA.APR.D.6",
+      "text": "Simplify: $\\frac{x^2 - 4}{x - 2}$, for $x \\neq 2$.",
+      "options": [
+        "$x - 2$",
+        "$x^2 - 2$",
+        "$\\frac{1}{x + 2}$",
+        "$x + 2$"
+      ],
+      "answer": 3,
+      "explanation": "Factor the numerator: $\\frac{(x - 2)(x + 2)}{x - 2} = x + 2$ for $x \\neq 2$."
+    },
+    {
+      "id": 11,
+      "standard": "HSA.APR.D.6",
+      "text": "What is the quotient when $x^3 + 2x^2 - 5x - 6$ is divided by $(x + 3)$?",
+      "options": [
+        "$x^2 - x + 2$",
+        "$x^2 + x - 2$",
+        "$x^2 + 2x - 2$",
+        "$x^2 - x - 2$"
+      ],
+      "answer": 3,
+      "explanation": "Dividing gives $x^2 - x - 2$ with remainder $0$. Check: $(x + 3)(x^2 - x - 2) = x^3 + 2x^2 - 5x - 6$."
+    },
+    {
+      "id": 12,
+      "standard": "HSA.REI.A.2",
       "text": "Solve: $\\sqrt{2x + 3} = 5$",
       "options": [
         "$x = 11$",
@@ -109,88 +162,101 @@
         "$x = 14$"
       ],
       "answer": 0,
-      "explanation": "Square both sides: $2x + 3 = 25$, so $2x = 22$, $x = 11$. Check: $\\sqrt{22 + 3} = \\sqrt{25} = 5$. Correct."
-    },
-    {
-      "id": 9,
-      "standard": "HSA.REI.A.2",
-      "text": "Solve: $\\frac{x - 1}{x + 2} = \\frac{3}{x + 2}$. Which value is the valid solution?",
-      "options": [
-        "No solution",
-        "$x = 4$",
-        "$x = -2$",
-        "$x = 2$"
-      ],
-      "answer": 1,
-      "explanation": "Since both sides have the same denominator, set numerators equal: $x - 1 = 3$, so $x = 4$. Note $x = -2$ is excluded (makes denominator zero) but is not a solution anyway."
-    },
-    {
-      "id": 10,
-      "standard": "HSA.REI.B.4",
-      "text": "Solve $x^2 + 4 = 0$.",
-      "options": [
-        "$x = \\pm 2i$",
-        "$x = \\pm 2$",
-        "$x = \\pm 4i$",
-        "No real solution"
-      ],
-      "answer": 0,
-      "explanation": "$x^2 = -4$, so $x = \\pm\\sqrt{-4} = \\pm 2i$."
-    },
-    {
-      "id": 11,
-      "standard": "HSA.REI.C.7",
-      "text": "Solve the system: $y = x^2$ and $y = x + 2$",
-      "options": [
-        "$x = 2$ or $x = -1$",
-        "$x = 2$ or $x = 1$",
-        "$x = -2$ or $x = 1$",
-        "$x = -2$ or $x = -1$"
-      ],
-      "answer": 0,
-      "explanation": "Set $x^2 = x + 2$, so $x^2 - x - 2 = 0$, factor $(x - 2)(x + 1) = 0$, giving $x = 2$ or $x = -1$."
-    },
-    {
-      "id": 12,
-      "standard": "HSF.IF.B.4",
-      "text": "Which describes the end behavior of $f(x) = -2x^3 + 5x$?",
-      "options": [
-        "As $x \\to \\infty$, $f(x) \\to -\\infty$; as $x \\to -\\infty$, $f(x) \\to \\infty$",
-        "As $x \\to \\infty$, $f(x) \\to \\infty$; as $x \\to -\\infty$, $f(x) \\to -\\infty$",
-        "As $x \\to \\pm\\infty$, $f(x) \\to +\\infty$",
-        "As $x \\to \\pm\\infty$, $f(x) \\to -\\infty$"
-      ],
-      "answer": 0,
-      "explanation": "The leading term is $-2x^3$ (odd degree, negative leading coefficient): rises left, falls right."
+      "explanation": "Square both sides: $2x + 3 = 25$, so $2x = 22$, $x = 11$. Check: $\\sqrt{25} = 5$."
     },
     {
       "id": 13,
-      "standard": "HSF.IF.C.7",
-      "text": "What is the vertical asymptote of $f(x) = \\frac{1}{x - 3}$?",
+      "standard": "HSA.REI.A.2",
+      "text": "Solve: $\\frac{3}{x - 3} = \\frac{x}{x - 3} - 3$",
       "options": [
         "$x = 3$",
-        "$y = 3$",
-        "$x = -3$",
-        "$y = 0$"
+        "$x = 6$",
+        "No solution",
+        "$x = -3$"
       ],
-      "answer": 0,
-      "explanation": "The function is undefined when the denominator is zero: $x - 3 = 0$, so $x = 3$ is the vertical asymptote."
+      "answer": 2,
+      "explanation": "Multiply by $(x - 3)$: $3 = x - 3(x - 3) = -2x + 9$, so $x = 3$. But $x = 3$ makes the denominators zero, so it is extraneous and there is no solution."
     },
     {
       "id": 14,
-      "standard": "HSF.IF.C.8",
-      "text": "Rewrite $f(x) = x^2 - 6x + 11$ in vertex form to identify the minimum value.",
+      "standard": "HSA.REI.B.4",
+      "text": "For what value(s) of $k$ does $x^2 + kx + 9 = 0$ have exactly one real solution?",
       "options": [
-        "$f(x) = (x - 3)^2 + 2$; minimum is 2",
-        "$f(x) = (x - 3)^2 - 2$; minimum is $-2$",
-        "$f(x) = (x + 3)^2 + 2$; minimum is 2",
-        "$f(x) = (x - 6)^2 - 25$; minimum is $-25$"
+        "$k = 6$",
+        "$k = \\pm 3$",
+        "$k = \\pm 6$",
+        "$k = \\pm 36$"
       ],
-      "answer": 0,
-      "explanation": "$x^2 - 6x + 9 + 2 = (x - 3)^2 + 2$; the vertex is $(3, 2)$ so the minimum value is 2."
+      "answer": 2,
+      "explanation": "Exactly one real solution means the discriminant is zero: $k^2 - 4(1)(9) = k^2 - 36 = 0$, so $k = \\pm 6$."
     },
     {
       "id": 15,
+      "standard": "HSA.REI.C.7",
+      "text": "Solve the system: $y = x^2$ and $y = x + 2$",
+      "options": [
+        "$x = 2$ or $x = 1$",
+        "$x = 2$ or $x = -1$",
+        "$x = -2$ or $x = 1$",
+        "$x = -2$ or $x = -1$"
+      ],
+      "answer": 1,
+      "explanation": "Set $x^2 = x + 2$, so $x^2 - x - 2 = (x - 2)(x + 1) = 0$, giving $x = 2$ or $x = -1$."
+    },
+    {
+      "id": 16,
+      "standard": "HSF.IF.A.3",
+      "text": "The first four terms of a geometric sequence are $3, 6, 12, 24$. What is the common ratio?",
+      "options": [
+        "$3$",
+        "$\\frac{1}{2}$",
+        "$2$",
+        "$6$"
+      ],
+      "answer": 2,
+      "explanation": "The common ratio is the quotient of consecutive terms: $\\frac{6}{3} = 2$."
+    },
+    {
+      "id": 17,
+      "standard": "HSF.IF.B.4",
+      "text": "Which describes the end behavior of $f(x) = -2x^3 + 5x$?",
+      "options": [
+        "As $x \\to \\infty$, $f(x) \\to \\infty$; as $x \\to -\\infty$, $f(x) \\to -\\infty$",
+        "As $x \\to \\infty$, $f(x) \\to -\\infty$; as $x \\to -\\infty$, $f(x) \\to \\infty$",
+        "As $x \\to \\pm\\infty$, $f(x) \\to +\\infty$",
+        "As $x \\to \\pm\\infty$, $f(x) \\to -\\infty$"
+      ],
+      "answer": 1,
+      "explanation": "The leading term $-2x^3$ has odd degree and a negative coefficient, so the graph rises on the left and falls on the right."
+    },
+    {
+      "id": 18,
+      "standard": "HSF.IF.C.7",
+      "text": "What is the vertical asymptote of $f(x) = \\frac{1}{x - 3}$?",
+      "options": [
+        "$y = 3$",
+        "$x = -3$",
+        "$x = 3$",
+        "$y = 0$"
+      ],
+      "answer": 2,
+      "explanation": "A vertical asymptote occurs where the denominator is zero: $x - 3 = 0$, so $x = 3$."
+    },
+    {
+      "id": 19,
+      "standard": "HSF.IF.C.8",
+      "text": "Rewrite $f(x) = x^2 - 6x + 11$ in vertex form to identify the minimum value.",
+      "options": [
+        "$f(x) = (x - 3)^2 + 2$; minimum is $2$",
+        "$f(x) = (x - 3)^2 - 2$; minimum is $-2$",
+        "$f(x) = (x + 3)^2 + 2$; minimum is $2$",
+        "$f(x) = (x - 6)^2 - 25$; minimum is $-25$"
+      ],
+      "answer": 0,
+      "explanation": "$x^2 - 6x + 9 + 2 = (x - 3)^2 + 2$, so the vertex is $(3, 2)$ and the minimum value is $2$."
+    },
+    {
+      "id": 20,
       "standard": "HSF.BF.A.1",
       "text": "If $f(x) = 2x + 1$ and $g(x) = x^2$, what is $f(g(x))$?",
       "options": [
@@ -203,47 +269,34 @@
       "explanation": "Compose: $f(g(x)) = f(x^2) = 2(x^2) + 1 = 2x^2 + 1$."
     },
     {
-      "id": 16,
+      "id": 21,
       "standard": "HSF.BF.B.3",
       "text": "How does the graph of $y = (x - 4)^2 + 3$ compare to $y = x^2$?",
       "options": [
-        "Shifted 4 right and 3 up",
         "Shifted 4 left and 3 up",
+        "Shifted 4 right and 3 up",
         "Shifted 4 right and 3 down",
         "Shifted 4 left and 3 down"
       ],
-      "answer": 0,
-      "explanation": "Replacing $x$ with $(x - 4)$ shifts right 4 units; adding 3 shifts up 3 units."
+      "answer": 1,
+      "explanation": "Replacing $x$ with $(x - 4)$ shifts the graph right 4 units, and adding 3 shifts it up 3 units."
     },
     {
-      "id": 17,
+      "id": 22,
       "standard": "HSF.BF.B.4",
       "text": "If $f(x) = 3x - 6$, what is $f^{-1}(x)$?",
       "options": [
-        "$\\frac{x + 6}{3}$",
         "$\\frac{x - 6}{3}$",
         "$3x + 6$",
-        "$\\frac{x}{3} - 6$"
+        "$\\frac{x}{3} - 6$",
+        "$\\frac{x + 6}{3}$"
       ],
-      "answer": 0,
-      "explanation": "Swap $x$ and $y$ and solve for $y$: $x = 3y - 6$, so $3y = x + 6$, $y = \\frac{x + 6}{3}$."
+      "answer": 3,
+      "explanation": "Write $y = 3x - 6$, swap $x$ and $y$: $x = 3y - 6$, then solve: $3y = x + 6$, $y = \\frac{x + 6}{3}$."
     },
     {
-      "id": 18,
-      "standard": "HSF.LE.A.4",
-      "text": "Solve for $x$: $2^x = 32$",
-      "options": [
-        "$x = 5$",
-        "$x = 4$",
-        "$x = 6$",
-        "$x = 16$"
-      ],
-      "answer": 0,
-      "explanation": "Rewrite 32 as $2^5$, so $2^x = 2^5$, giving $x = 5$."
-    },
-    {
-      "id": 19,
-      "standard": "HSF.LE.A.4",
+      "id": 23,
+      "standard": "HSF.BF.B.5",
       "text": "Which equation is equivalent to $\\log_3(81) = x$?",
       "options": [
         "$3^x = 81$",
@@ -252,98 +305,46 @@
         "$x = \\frac{81}{3}$"
       ],
       "answer": 0,
-      "explanation": "By the definition of logarithm: $\\log_b(a) = c$ means $b^c = a$, so $\\log_3(81) = x$ means $3^x = 81$."
-    },
-    {
-      "id": 20,
-      "standard": "HSF.TF.A.1",
-      "text": "Convert 270° to radians.",
-      "options": [
-        "$\\frac{3\\pi}{2}$",
-        "$\\frac{\\pi}{2}$",
-        "$\\frac{2\\pi}{3}$",
-        "$\\frac{3\\pi}{4}$"
-      ],
-      "answer": 0,
-      "explanation": "Multiply degrees by $\\frac{\\pi}{180}$: $270 \\times \\frac{\\pi}{180} = \\frac{270\\pi}{180} = \\frac{3\\pi}{2}$."
-    },
-    {
-      "id": 21,
-      "standard": "HSF.TF.A.2",
-      "text": "At what angle on the unit circle does the point $(0, 1)$ occur?",
-      "options": [
-        "$\\frac{\\pi}{2}$ (90°)",
-        "$\\pi$ (180°)",
-        "$0$ (0°)",
-        "$\\frac{3\\pi}{2}$ (270°)"
-      ],
-      "answer": 0,
-      "explanation": "The point $(0, 1)$ lies at the top of the unit circle, corresponding to an angle of $\\frac{\\pi}{2}$ (90°)."
-    },
-    {
-      "id": 22,
-      "standard": "HSF.TF.B.5",
-      "text": "A Ferris wheel has radius 20 m and completes one revolution every 60 seconds. Which function models the height $h(t)$ of a rider starting at the center height of 25 m?",
-      "options": [
-        "$h(t) = 20\\sin\\left(\\frac{2\\pi t}{60}\\right) + 25$",
-        "$h(t) = 20\\cos(60t) + 25$",
-        "$h(t) = 25\\sin(20t)$",
-        "$h(t) = 60\\sin(t) + 20$"
-      ],
-      "answer": 0,
-      "explanation": "Amplitude = radius = 20, period = 60 s so $\\omega = \\frac{2\\pi}{60}$, vertical shift = 25 m: $h(t) = 20\\sin\\left(\\frac{2\\pi t}{60}\\right) + 25$."
-    },
-    {
-      "id": 23,
-      "standard": "HSF.TF.C.8",
-      "text": "If $\\sin(\\theta) = \\frac{3}{5}$ and $\\theta$ is in the first quadrant, what is $\\cos(\\theta)$?",
-      "options": [
-        "$\\frac{4}{5}$",
-        "$\\frac{3}{4}$",
-        "$\\frac{5}{3}$",
-        "$\\frac{\\sqrt{34}}{5}$"
-      ],
-      "answer": 0,
-      "explanation": "Using the Pythagorean identity: $\\cos^2(\\theta) = 1 - \\sin^2(\\theta) = 1 - \\frac{9}{25} = \\frac{16}{25}$, so $\\cos(\\theta) = \\frac{4}{5}$ (positive in Q1)."
+      "explanation": "By the definition of a logarithm, $\\log_b(a) = c$ means $b^c = a$, so $\\log_3(81) = x$ means $3^x = 81$."
     },
     {
       "id": 24,
-      "standard": "HSS.IC.A.1",
-      "text": "A researcher measures the effect of a new drug by comparing a treatment group and a control group selected randomly. This is best described as:",
+      "standard": "HSF.LE.A.4",
+      "text": "Solve for $x$: $2^x = 32$",
       "options": [
-        "An experiment",
-        "An observational study",
-        "A census",
-        "A sample survey only"
+        "$x = 4$",
+        "$x = 5$",
+        "$x = 6$",
+        "$x = 16$"
       ],
-      "answer": 0,
-      "explanation": "Random assignment to treatment and control groups defines an experiment, allowing causal inference."
+      "answer": 1,
+      "explanation": "Rewrite $32 = 2^5$, so $2^x = 2^5$ gives $x = 5$."
     },
     {
       "id": 25,
-      "standard": "HSS.IC.B.3",
-      "text": "A researcher surveys every 10th student on a class roster. This sampling method is called:",
+      "standard": "HSF.LE.A.4",
+      "text": "Solve: $\\log_2(x) + \\log_2(x - 2) = 3$",
       "options": [
-        "Systematic sampling",
-        "Simple random sampling",
-        "Stratified sampling",
-        "Convenience sampling"
+        "$x = 4$ or $x = -2$",
+        "$x = -2$",
+        "$x = 4$",
+        "$x = 6$"
       ],
-      "answer": 0,
-      "explanation": "Selecting every $k$th element from an ordered list is systematic sampling."
+      "answer": 2,
+      "explanation": "Combine logs: $\\log_2(x(x - 2)) = 3$, so $x(x - 2) = 8$, giving $x^2 - 2x - 8 = (x - 4)(x + 2) = 0$. Reject $x = -2$ (logarithm of a negative), so $x = 4$."
     },
     {
       "id": 26,
-      "standard": "HSS.CP.A.1",
-      "text": "In a class, $A = \\{\\text{students who play soccer}\\}$ and $B = \\{\\text{students who play basketball}\\}$. What does $A \\cap B$ represent?",
+      "standard": "HSF.LE.B.5",
+      "text": "A population of 800 bacteria doubles every 5 hours. Which function gives the population after $t$ hours?",
       "options": [
-        "Students who play both soccer and basketball",
-        "Students who play soccer or basketball",
-        "Students who play soccer but not basketball",
-        "Students who play neither sport"
+        "$P(t) = 800 \\cdot 2^{5t}$",
+        "$P(t) = 800 \\cdot 2^{t}$",
+        "$P(t) = 800 + 2^{t/5}$",
+        "$P(t) = 800 \\cdot 2^{t/5}$"
       ],
-      "answer": 0,
-      "explanation": "The intersection $A \\cap B$ is the set of elements in both $A$ and $B$ simultaneously."
+      "answer": 3,
+      "explanation": "Start at 800 and multiply by 2 once per 5-hour interval, so the exponent is $t/5$: $P(t) = 800 \\cdot 2^{t/5}$."
     }
   ]
 }

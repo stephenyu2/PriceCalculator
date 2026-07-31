@@ -5,6 +5,7 @@
   "nextGrade": "calculus2",
   "timeMinutes": 40,
   "calculator": false,
+  "scratchPaper": true,
   "formulas": null,
   "questions": [
     {
@@ -18,7 +19,7 @@
         "Does not exist"
       ],
       "answer": 1,
-      "explanation": "Factor the numerator: $\\frac{(x-3)(x+3)}{x-3} = x+3$ for $x \\neq 3$. As $x \\to 3$, $x + 3 \\to 6$."
+      "explanation": "Direct substitution gives $\\frac{0}{0}$, so factor the numerator: $\\frac{(x-3)(x+3)}{x-3} = x+3$ for $x \\neq 3$. As $x \\to 3$, $x + 3 \\to 6$."
     },
     {
       "id": 2,
@@ -26,12 +27,12 @@
       "text": "Evaluate $\\lim_{x \\to 0} \\frac{\\sin(5x)}{x}$.",
       "options": [
         "$0$",
-        "$5$",
         "$1$",
+        "$5$",
         "Does not exist"
       ],
-      "answer": 1,
-      "explanation": "Rewrite as $5 \\cdot \\frac{\\sin(5x)}{5x}$. Since $\\lim_{u \\to 0} \\frac{\\sin u}{u} = 1$, the limit is $5 \\cdot 1 = 5$."
+      "answer": 2,
+      "explanation": "Rewrite as $5 \\cdot \\frac{\\sin(5x)}{5x}$. Since $\\lim_{u \\to 0} \\frac{\\sin u}{u} = 1$ with $u = 5x$, the limit is $5 \\cdot 1 = 5$."
     },
     {
       "id": 3,
@@ -40,24 +41,24 @@
       "options": [
         "$0$",
         "$\\frac{1}{2}$",
-        "$\\frac{3}{2}$",
-        "$\\infty$"
+        "$\\infty$",
+        "$\\frac{3}{2}$"
       ],
-      "answer": 2,
-      "explanation": "Divide numerator and denominator by $x^2$: $\\frac{3 - 1/x}{2 + 5/x^2} \\to \\frac{3}{2}$ as $x \\to \\infty$."
+      "answer": 3,
+      "explanation": "The numerator and denominator have equal degree, so the limit is the ratio of leading coefficients. Dividing by $x^2$: $\\frac{3 - 1/x}{2 + 5/x^2} \\to \\frac{3}{2}$ as $x \\to \\infty$."
     },
     {
       "id": 4,
       "standard": "AP.CALC.AB.LIM-1",
-      "text": "Let $f(x) = \\begin{cases} x + 1 & x < 2 \\\\ 3 & x = 2 \\\\ 2x - 1 & x > 2 \\end{cases}$. What is $\\lim_{x \\to 2} f(x)$?",
+      "text": "Evaluate $\\lim_{x \\to 0} \\frac{1 - \\cos x}{x^2}$.",
       "options": [
-        "$3$",
-        "$2$",
-        "Does not exist",
-        "$1$"
+        "$0$",
+        "$\\frac{1}{2}$",
+        "$1$",
+        "Does not exist"
       ],
-      "answer": 0,
-      "explanation": "Left-hand limit: $\\lim_{x \\to 2^-}(x+1) = 3$. Right-hand limit: $\\lim_{x \\to 2^+}(2x-1) = 3$. Both sides agree, so $\\lim_{x \\to 2} f(x) = 3$."
+      "answer": 1,
+      "explanation": "This is the $\\frac{0}{0}$ indeterminate form. Apply L'Hopital's Rule: $\\lim_{x \\to 0} \\frac{\\sin x}{2x} = \\frac{1}{2} \\lim_{x \\to 0} \\frac{\\sin x}{x} = \\frac{1}{2}(1) = \\frac{1}{2}$."
     },
     {
       "id": 5,
@@ -70,36 +71,10 @@
         "The function is continuous at $x = 2$"
       ],
       "answer": 2,
-      "explanation": "The limit $\\lim_{x \\to 2} \\frac{(x-2)(x+2)}{x-2} = 4$ exists, but $f(2)$ is undefined. This is a removable discontinuity."
+      "explanation": "The limit $\\lim_{x \\to 2} \\frac{(x-2)(x+2)}{x-2} = 4$ exists, but $f(2)$ is undefined because the denominator is zero. A finite limit at an undefined point is a removable discontinuity."
     },
     {
       "id": 6,
-      "standard": "AP.CALC.AB.LIM-1",
-      "text": "If $-x^2 \\leq g(x) \\leq x^2$ for all $x$, what can you conclude about $\\lim_{x \\to 0} g(x)$?",
-      "options": [
-        "The limit does not exist",
-        "$\\lim_{x \\to 0} g(x) = 1$",
-        "$\\lim_{x \\to 0} g(x) = 0$",
-        "Not enough information"
-      ],
-      "answer": 2,
-      "explanation": "By the Squeeze Theorem, since $\\lim_{x \\to 0}(-x^2) = 0$ and $\\lim_{x \\to 0}(x^2) = 0$, it follows that $\\lim_{x \\to 0} g(x) = 0$."
-    },
-    {
-      "id": 7,
-      "standard": "AP.CALC.AB.DER-1",
-      "text": "Using the limit definition, what is $f'(x)$ if $f(x) = x^2$?",
-      "options": [
-        "$x$",
-        "$2x + 1$",
-        "$2x$",
-        "$x^2$"
-      ],
-      "answer": 2,
-      "explanation": "$f'(x) = \\lim_{h \\to 0} \\frac{(x+h)^2 - x^2}{h} = \\lim_{h \\to 0} \\frac{2xh + h^2}{h} = \\lim_{h \\to 0}(2x + h) = 2x$."
-    },
-    {
-      "id": 8,
       "standard": "AP.CALC.AB.DER-1",
       "text": "Find $\\frac{d}{dx}\\left[3x^4 - 5x^2 + 7\\right]$.",
       "options": [
@@ -109,75 +84,49 @@
         "$4x^3 - 2x$"
       ],
       "answer": 0,
-      "explanation": "Apply the power rule term by term: $\\frac{d}{dx}[3x^4] = 12x^3$, $\\frac{d}{dx}[-5x^2] = -10x$, and $\\frac{d}{dx}[7] = 0$."
+      "explanation": "Apply the power rule term by term: $\\frac{d}{dx}[3x^4] = 12x^3$, $\\frac{d}{dx}[-5x^2] = -10x$, and $\\frac{d}{dx}[7] = 0$. The constant differentiates to zero."
     },
     {
-      "id": 9,
-      "standard": "AP.CALC.AB.DER-1",
-      "text": "Find $\\frac{d}{dx}\\left[x^3 \\sin x\\right]$.",
-      "options": [
-        "$3x^2 \\sin x$",
-        "$x^3 \\cos x$",
-        "$3x^2 \\sin x + x^3 \\cos x$",
-        "$3x^2 \\cos x$"
-      ],
-      "answer": 2,
-      "explanation": "Apply the product rule: $(x^3)' \\sin x + x^3 (\\sin x)' = 3x^2 \\sin x + x^3 \\cos x$."
-    },
-    {
-      "id": 10,
-      "standard": "AP.CALC.AB.DER-1",
-      "text": "Find $\\frac{d}{dx}\\left[\\frac{x^2 + 1}{x - 1}\\right]$.",
-      "options": [
-        "$\\frac{2x(x-1) - (x^2+1)}{(x-1)^2}$",
-        "$\\frac{2x(x-1) + (x^2+1)}{(x-1)^2}$",
-        "$\\frac{2x}{1}$",
-        "$2x$"
-      ],
-      "answer": 0,
-      "explanation": "Apply the quotient rule: $\\frac{(2x)(x-1) - (x^2+1)(1)}{(x-1)^2} = \\frac{2x^2 - 2x - x^2 - 1}{(x-1)^2} = \\frac{x^2 - 2x - 1}{(x-1)^2}$."
-    },
-    {
-      "id": 11,
-      "standard": "AP.CALC.AB.DER-1",
-      "text": "Find $\\frac{d}{dx}\\left[\\sin(3x^2)\\right]$.",
-      "options": [
-        "$\\cos(3x^2)$",
-        "$6x \\cos(3x^2)$",
-        "$3x^2 \\cos(3x^2)$",
-        "$-6x \\cos(3x^2)$"
-      ],
-      "answer": 1,
-      "explanation": "Apply the chain rule: the outer function is $\\sin(u)$ and $u = 3x^2$. So the derivative is $\\cos(3x^2) \\cdot 6x = 6x \\cos(3x^2)$."
-    },
-    {
-      "id": 12,
+      "id": 7,
       "standard": "AP.CALC.AB.DER-1",
       "text": "What is $\\frac{d}{dx}\\left[e^{5x}\\right]$?",
       "options": [
         "$e^{5x}$",
         "$5e^{4x}$",
-        "$5e^{5x}$",
-        "$e^{5x} \\cdot x$"
+        "$xe^{5x}$",
+        "$5e^{5x}$"
       ],
-      "answer": 2,
-      "explanation": "By the chain rule: $\\frac{d}{dx}[e^{5x}] = e^{5x} \\cdot 5 = 5e^{5x}$."
+      "answer": 3,
+      "explanation": "By the chain rule, the derivative of $e^{u}$ is $e^{u} \\cdot u'$. Here $u = 5x$ so $u' = 5$, giving $\\frac{d}{dx}[e^{5x}] = e^{5x} \\cdot 5 = 5e^{5x}$."
     },
     {
-      "id": 13,
+      "id": 8,
       "standard": "AP.CALC.AB.DER-1",
-      "text": "Find $\\frac{d}{dx}\\left[\\ln(x^2 + 1)\\right]$.",
+      "text": "Find $\\frac{d}{dx}\\left[x^3 \\sin x\\right]$.",
       "options": [
-        "$\\frac{1}{x^2+1}$",
-        "$\\frac{2x}{x^2+1}$",
-        "$\\frac{x}{x^2+1}$",
-        "$\\ln(2x)$"
+        "$3x^2 \\cos x$",
+        "$3x^2 \\sin x + x^3 \\cos x$",
+        "$3x^2 \\sin x$",
+        "$x^3 \\cos x$"
       ],
       "answer": 1,
-      "explanation": "By the chain rule: $\\frac{1}{x^2+1} \\cdot 2x = \\frac{2x}{x^2+1}$."
+      "explanation": "Apply the product rule $(uv)' = u'v + uv'$ with $u = x^3$ and $v = \\sin x$: $(3x^2)(\\sin x) + (x^3)(\\cos x) = 3x^2 \\sin x + x^3 \\cos x$."
     },
     {
-      "id": 14,
+      "id": 9,
+      "standard": "AP.CALC.AB.DER-1",
+      "text": "Find $\\frac{d}{dx}\\left[\\sin(3x^2)\\right]$.",
+      "options": [
+        "$6x \\cos(3x^2)$",
+        "$\\cos(3x^2)$",
+        "$3x^2 \\cos(3x^2)$",
+        "$-6x \\cos(3x^2)$"
+      ],
+      "answer": 0,
+      "explanation": "Apply the chain rule with outer function $\\sin(u)$ and inner $u = 3x^2$, so $u' = 6x$. The derivative is $\\cos(3x^2) \\cdot 6x = 6x \\cos(3x^2)$."
+    },
+    {
+      "id": 10,
       "standard": "AP.CALC.AB.DER-1",
       "text": "If $x^2 + y^2 = 25$, find $\\frac{dy}{dx}$ using implicit differentiation.",
       "options": [
@@ -187,7 +136,59 @@
         "$-\\frac{y}{x}$"
       ],
       "answer": 1,
-      "explanation": "Differentiate both sides with respect to $x$: $2x + 2y\\frac{dy}{dx} = 0$. Solve: $\\frac{dy}{dx} = -\\frac{x}{y}$."
+      "explanation": "Differentiate both sides with respect to $x$, treating $y$ as a function of $x$: $2x + 2y\\frac{dy}{dx} = 0$. Solving gives $\\frac{dy}{dx} = -\\frac{x}{y}$."
+    },
+    {
+      "id": 11,
+      "standard": "AP.CALC.AB.DER-1",
+      "text": "Find $\\frac{d}{dx}\\left[\\frac{x^2 + 1}{x - 1}\\right]$.",
+      "options": [
+        "$\\frac{x^2 - 2x - 1}{(x-1)^2}$",
+        "$\\frac{-x^2 + 2x + 1}{(x-1)^2}$",
+        "$2x$",
+        "$\\frac{x^2 + 2x + 1}{(x-1)^2}$"
+      ],
+      "answer": 0,
+      "explanation": "Apply the quotient rule $\\frac{u'v - uv'}{v^2}$ with $u = x^2+1$ and $v = x-1$: $\\frac{(2x)(x-1) - (x^2+1)(1)}{(x-1)^2} = \\frac{2x^2 - 2x - x^2 - 1}{(x-1)^2} = \\frac{x^2 - 2x - 1}{(x-1)^2}$."
+    },
+    {
+      "id": 12,
+      "standard": "AP.CALC.AB.DER-1",
+      "text": "Find $\\frac{d}{dx}\\left[x^2 e^{3x}\\right]$.",
+      "options": [
+        "$6x e^{3x}$",
+        "$2x e^{3x} + x^2 e^{3x}$",
+        "$2x e^{3x} + 3x^2 e^{3x}$",
+        "$2x e^{3x}$"
+      ],
+      "answer": 2,
+      "explanation": "Use the product rule with $u = x^2$ and $v = e^{3x}$. Here $u' = 2x$ and $v' = 3e^{3x}$ (chain rule). So $u'v + uv' = 2x e^{3x} + x^2 (3e^{3x}) = 2x e^{3x} + 3x^2 e^{3x}$."
+    },
+    {
+      "id": 13,
+      "standard": "AP.CALC.AB.DER-1",
+      "text": "Using the limit definition of the derivative, find $f'(x)$ if $f(x) = \\frac{1}{x}$.",
+      "options": [
+        "$\\frac{1}{x^2}$",
+        "$-\\frac{1}{x}$",
+        "$-\\frac{2}{x^3}$",
+        "$-\\frac{1}{x^2}$"
+      ],
+      "answer": 3,
+      "explanation": "$f'(x) = \\lim_{h \\to 0} \\frac{\\frac{1}{x+h} - \\frac{1}{x}}{h} = \\lim_{h \\to 0} \\frac{x - (x+h)}{h \\, x(x+h)} = \\lim_{h \\to 0} \\frac{-h}{h \\, x(x+h)} = \\lim_{h \\to 0} \\frac{-1}{x(x+h)} = -\\frac{1}{x^2}$."
+    },
+    {
+      "id": 14,
+      "standard": "AP.CALC.AB.DER-2",
+      "text": "If $f'(c) = 0$ and $f''(c) > 0$, what can you conclude about $f$ at $x = c$?",
+      "options": [
+        "$f$ has a local maximum at $x = c$",
+        "$f$ has a local minimum at $x = c$",
+        "$f$ has an inflection point at $x = c$",
+        "No conclusion can be drawn"
+      ],
+      "answer": 1,
+      "explanation": "By the Second Derivative Test, a critical point where $f''(c) > 0$ is concave up, so $f$ has a local minimum at $x = c$."
     },
     {
       "id": 15,
@@ -200,51 +201,25 @@
         "$y = 4x - 1$"
       ],
       "answer": 0,
-      "explanation": "$f(2) = 5$ and $f'(x) = 2x$, so $f'(2) = 4$. The tangent line is $y - 5 = 4(x - 2)$, which simplifies to $y = 4x - 3$."
+      "explanation": "$f(2) = 5$ and $f'(x) = 2x$, so the slope is $f'(2) = 4$. Point-slope form gives $y - 5 = 4(x - 2)$, which simplifies to $y = 4x - 3$."
     },
     {
       "id": 16,
       "standard": "AP.CALC.AB.DER-2",
-      "text": "The function $f(x) = x^3 - 3x$ is increasing on which interval?",
+      "text": "Where does the function $f(x) = x^3 - 3x^2 + 4$ have an inflection point?",
       "options": [
-        "$(-\\infty, -1)$ and $(1, \\infty)$",
-        "$(-1, 1)$",
-        "$(-\\infty, 0)$",
-        "$(0, \\infty)$"
+        "$x = 0$",
+        "$x = 2$",
+        "$x = 1$",
+        "$x = 3$"
       ],
-      "answer": 0,
-      "explanation": "$f'(x) = 3x^2 - 3 = 3(x^2 - 1) = 3(x-1)(x+1)$. The derivative is positive when $x < -1$ or $x > 1$."
+      "answer": 2,
+      "explanation": "$f'(x) = 3x^2 - 6x$ and $f''(x) = 6x - 6$. Setting $f''(x) = 0$ gives $x = 1$, and $f''$ changes sign there, confirming an inflection point."
     },
     {
       "id": 17,
       "standard": "AP.CALC.AB.DER-2",
-      "text": "If $f'(c) = 0$ and $f''(c) > 0$, what can you conclude about $f$ at $x = c$?",
-      "options": [
-        "$f$ has a local maximum at $x = c$",
-        "$f$ has a local minimum at $x = c$",
-        "$f$ has an inflection point at $x = c$",
-        "No conclusion can be drawn"
-      ],
-      "answer": 1,
-      "explanation": "The Second Derivative Test: if $f'(c) = 0$ and $f''(c) > 0$, then $f$ is concave up at $c$, so $f$ has a local minimum there."
-    },
-    {
-      "id": 18,
-      "standard": "AP.CALC.AB.DER-2",
-      "text": "Where does the function $f(x) = x^3 - 3x^2 + 4$ have an inflection point?",
-      "options": [
-        "$x = 0$",
-        "$x = 1$",
-        "$x = 2$",
-        "$x = 3$"
-      ],
-      "answer": 1,
-      "explanation": "$f'(x) = 3x^2 - 6x$, $f''(x) = 6x - 6$. Setting $f''(x) = 0$ gives $x = 1$. The sign of $f''$ changes there, confirming an inflection point."
-    },
-    {
-      "id": 19,
-      "standard": "AP.CALC.AB.DER-2",
-      "text": "A 10 cm ladder leans against a wall. If the bottom slides away at 2 cm/s, how fast is the top sliding down when the bottom is 6 cm from the wall?",
+      "text": "A 10 cm ladder leans against a wall. If the bottom slides away from the wall at 2 cm/s, how fast is the top sliding down when the bottom is 6 cm from the wall?",
       "options": [
         "$\\frac{3}{2}$ cm/s",
         "$\\frac{4}{3}$ cm/s",
@@ -252,90 +227,90 @@
         "$2$ cm/s"
       ],
       "answer": 0,
-      "explanation": "$x^2 + y^2 = 100$. Differentiate: $2x\\frac{dx}{dt} + 2y\\frac{dy}{dt} = 0$. At $x=6$, $y=8$. So $2(6)(2) + 2(8)\\frac{dy}{dt} = 0 \\Rightarrow \\frac{dy}{dt} = -\\frac{3}{2}$. The top slides down at $\\frac{3}{2}$ cm/s."
+      "explanation": "From $x^2 + y^2 = 100$, differentiate with respect to time: $2x\\frac{dx}{dt} + 2y\\frac{dy}{dt} = 0$. At $x = 6$, $y = 8$. Substituting $\\frac{dx}{dt} = 2$: $2(6)(2) + 2(8)\\frac{dy}{dt} = 0$, so $\\frac{dy}{dt} = -\\frac{3}{2}$. The top slides down at $\\frac{3}{2}$ cm/s."
+    },
+    {
+      "id": 18,
+      "standard": "AP.CALC.AB.DER-2",
+      "text": "A farmer encloses a rectangular pen along a straight barn wall, using the wall as one full side so only the other three sides need fencing. With 100 ft of fencing, what dimensions maximize the area?",
+      "options": [
+        "$25 \\times 25$",
+        "$50 \\times 50$",
+        "$10 \\times 80$",
+        "$25 \\times 50$"
+      ],
+      "answer": 3,
+      "explanation": "Let $x$ be each side perpendicular to the barn and $y$ the side parallel to it. Then $2x + y = 100$, so $y = 100 - 2x$. Area $A = x(100 - 2x) = 100x - 2x^2$. Setting $A'(x) = 100 - 4x = 0$ gives $x = 25$ and $y = 50$. The maximizing dimensions are $25 \\times 50$."
+    },
+    {
+      "id": 19,
+      "standard": "AP.CALC.AB.DER-2",
+      "text": "A particle moves along a line with position $s(t) = t^3 - 6t^2 + 9t$ for $t \\geq 0$, where $t$ is in seconds. On which interval is the particle moving left?",
+      "options": [
+        "$(0, 1)$ and $(3, \\infty)$",
+        "$(1, 3)$",
+        "$(-\\infty, 1)$ and $(3, \\infty)$",
+        "$(0, 2)$"
+      ],
+      "answer": 1,
+      "explanation": "Velocity is $v(t) = s'(t) = 3t^2 - 12t + 9 = 3(t-1)(t-3)$. The particle moves left where $v(t) < 0$, which is between the roots: $1 < t < 3$, i.e. the interval $(1, 3)$."
     },
     {
       "id": 20,
-      "standard": "AP.CALC.AB.DER-2",
-      "text": "Among all rectangles with perimeter 40, which dimensions maximize the area?",
-      "options": [
-        "$5 \\times 15$",
-        "$8 \\times 12$",
-        "$10 \\times 10$",
-        "$2 \\times 18$"
-      ],
-      "answer": 2,
-      "explanation": "Let sides be $x$ and $20 - x$. Area $A = x(20-x) = 20x - x^2$. $A'(x) = 20 - 2x = 0 \\Rightarrow x = 10$. The square $10 \\times 10$ maximizes area."
-    },
-    {
-      "id": 21,
-      "standard": "AP.CALC.AB.DER-2",
-      "text": "Evaluate $\\lim_{x \\to 0} \\frac{e^x - 1}{x}$ using L'Hopital's Rule.",
-      "options": [
-        "$0$",
-        "$\\infty$",
-        "$1$",
-        "$e$"
-      ],
-      "answer": 2,
-      "explanation": "This is the $\\frac{0}{0}$ form. Applying L'Hopital's Rule: $\\lim_{x \\to 0} \\frac{e^x}{1} = e^0 = 1$."
-    },
-    {
-      "id": 22,
       "standard": "AP.CALC.AB.INT-1",
       "text": "Find $\\int (4x^3 - 6x + 2)\\,dx$.",
       "options": [
         "$12x^2 - 6 + C$",
+        "$4x^4 - 6x^2 + 2x + C$",
         "$x^4 - 3x^2 + 2x + C$",
-        "$x^4 - 6x + C$",
-        "$4x^4 - 6x^2 + 2x + C$"
+        "$x^4 - 6x + C$"
       ],
-      "answer": 1,
-      "explanation": "Apply the power rule for integration: $\\int 4x^3\\,dx = x^4$, $\\int -6x\\,dx = -3x^2$, $\\int 2\\,dx = 2x$. Sum and add $C$."
+      "answer": 2,
+      "explanation": "Apply the power rule for integration term by term: $\\int 4x^3\\,dx = x^4$, $\\int -6x\\,dx = -3x^2$, $\\int 2\\,dx = 2x$. Adding the constant gives $x^4 - 3x^2 + 2x + C$."
     },
     {
-      "id": 23,
+      "id": 21,
       "standard": "AP.CALC.AB.INT-1",
       "text": "Evaluate $\\int_0^2 (3x^2 + 1)\\,dx$.",
       "options": [
         "$8$",
-        "$10$",
         "$12$",
+        "$10$",
         "$6$"
       ],
-      "answer": 1,
-      "explanation": "Antiderivative is $x^3 + x$. Evaluate: $(2^3 + 2) - (0^3 + 0) = 10 - 0 = 10$."
+      "answer": 2,
+      "explanation": "The antiderivative is $x^3 + x$. By the Fundamental Theorem, evaluate at the bounds: $(2^3 + 2) - (0^3 + 0) = 10 - 0 = 10$."
     },
     {
-      "id": 24,
+      "id": 22,
+      "standard": "AP.CALC.AB.INT-2",
+      "text": "The Fundamental Theorem of Calculus (Part 1) states that if $F(x) = \\int_a^x f(t)\\,dt$ and $f$ is continuous, then:",
+      "options": [
+        "$F(x) = f(a) - f(x)$",
+        "$F'(x) = f(a)$",
+        "$F(x) = f(x) + C$",
+        "$F'(x) = f(x)$"
+      ],
+      "answer": 3,
+      "explanation": "FTC Part 1 says that differentiating an accumulation function returns the integrand: if $F(x) = \\int_a^x f(t)\\,dt$, then $F'(x) = f(x)$."
+    },
+    {
+      "id": 23,
       "standard": "AP.CALC.AB.INT-1",
       "text": "Use $u$-substitution to evaluate $\\int 2x(x^2 + 1)^4\\,dx$.",
       "options": [
-        "$\\frac{(x^2+1)^5}{5} + C$",
         "$\\frac{(x^2+1)^4}{4} + C$",
         "$2x(x^2+1)^5 + C$",
-        "$\\frac{(x^2+1)^5}{10} + C$"
+        "$\\frac{(x^2+1)^5}{10} + C$",
+        "$\\frac{(x^2+1)^5}{5} + C$"
       ],
-      "answer": 0,
-      "explanation": "Let $u = x^2 + 1$, $du = 2x\\,dx$. The integral becomes $\\int u^4\\,du = \\frac{u^5}{5} + C = \\frac{(x^2+1)^5}{5} + C$."
+      "answer": 3,
+      "explanation": "Let $u = x^2 + 1$, so $du = 2x\\,dx$. The integral becomes $\\int u^4\\,du = \\frac{u^5}{5} + C = \\frac{(x^2+1)^5}{5} + C$."
     },
     {
-      "id": 25,
+      "id": 24,
       "standard": "AP.CALC.AB.INT-2",
-      "text": "The Fundamental Theorem of Calculus Part 1 states that if $F(x) = \\int_a^x f(t)\\,dt$, then:",
-      "options": [
-        "$F(x) = f(a) - f(x)$",
-        "$F'(x) = f(x)$",
-        "$F'(x) = f(a)$",
-        "$F(x) = f(x) + C$"
-      ],
-      "answer": 1,
-      "explanation": "FTC Part 1 says that if $F(x) = \\int_a^x f(t)\\,dt$ and $f$ is continuous, then $F'(x) = f(x)$. Differentiation and integration are inverse operations."
-    },
-    {
-      "id": 26,
-      "standard": "AP.CALC.AB.INT-2",
-      "text": "Which of the following represents the area between $f(x) = x^2$ and $g(x) = x$ on the interval $[0, 1]$?",
+      "text": "Which expression represents the area of the region between $f(x) = x^2$ and $g(x) = x$ on the interval $[0, 1]$?",
       "options": [
         "$\\int_0^1 (x^2 - x)\\,dx$",
         "$\\int_0^1 (x - x^2)\\,dx$",
@@ -343,7 +318,33 @@
         "$\\int_0^1 x\\,dx$"
       ],
       "answer": 1,
-      "explanation": "On $[0,1]$, $g(x) = x \\geq x^2 = f(x)$. The area is $\\int_0^1 [g(x) - f(x)]\\,dx = \\int_0^1 (x - x^2)\\,dx$."
+      "explanation": "On $[0,1]$, $g(x) = x \\geq x^2 = f(x)$, so the top curve is $g$. Area equals $\\int_0^1 [\\text{top} - \\text{bottom}]\\,dx = \\int_0^1 (x - x^2)\\,dx$."
+    },
+    {
+      "id": 25,
+      "standard": "AP.CALC.AB.INT-1",
+      "text": "Evaluate $\\int_0^1 x e^{x^2}\\,dx$.",
+      "options": [
+        "$\\frac{e-1}{2}$",
+        "$e - 1$",
+        "$2(e-1)$",
+        "$\\frac{e^2-1}{2}$"
+      ],
+      "answer": 0,
+      "explanation": "Let $u = x^2$, so $du = 2x\\,dx$ and $x\\,dx = \\frac{1}{2}du$. When $x = 0$, $u = 0$; when $x = 1$, $u = 1$. The integral becomes $\\frac{1}{2}\\int_0^1 e^u\\,du = \\frac{1}{2}(e^1 - e^0) = \\frac{e-1}{2}$."
+    },
+    {
+      "id": 26,
+      "standard": "AP.CALC.AB.INT-2",
+      "text": "If $g(x) = \\int_0^{x^2} \\sin t\\,dt$, find $g'(x)$.",
+      "options": [
+        "$\\sin(x^2)$",
+        "$2x\\cos(x^2)$",
+        "$1 - \\cos(x^2)$",
+        "$2x\\sin(x^2)$"
+      ],
+      "answer": 3,
+      "explanation": "By the Fundamental Theorem with a variable upper limit, combine FTC Part 1 with the chain rule: $g'(x) = \\sin(x^2) \\cdot \\frac{d}{dx}(x^2) = \\sin(x^2) \\cdot 2x = 2x\\sin(x^2)$."
     }
   ]
 }
