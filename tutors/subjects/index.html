@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>Your Subjects | LVT Tutor Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/contact.css" />
+  <link rel="stylesheet" href="/tutors/tutors.css" />
+  <style>
+    .subj-legend {
+      list-style: none;
+      margin: 0 0 1.6rem;
+      padding: 1rem 1.1rem;
+      border: 1px solid #e4e0d6;
+      border-radius: var(--radius);
+      background: #faf9f5;
+    }
+    .subj-legend li {
+      font-family: var(--font-body);
+      font-size: 0.86rem;
+      line-height: 1.5;
+      color: var(--text-muted);
+      margin: 0 0 0.4rem;
+    }
+    .subj-legend li:last-child { margin-bottom: 0; }
+    .subj-legend strong { color: #111111; }
+
+    .subj-group { margin: 0 0 1.8rem; }
+    .subj-group-title {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 0 0 0.4rem;
+    }
+
+    .subj-head,
+    .subj-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 4.6rem 4.6rem 4.6rem;
+      align-items: center;
+    }
+    .subj-head {
+      padding: 0 0 0.35rem;
+      border-bottom: 1px solid #e4e0d6;
+    }
+    .subj-col {
+      text-align: center;
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      line-height: 1.2;
+      color: var(--text-muted);
+    }
+    .subj-row {
+      border-bottom: 1px solid #efece4;
+      min-height: 2.8rem;
+    }
+    .subj-name {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      line-height: 1.35;
+      color: #111111;
+      padding-right: 0.5rem;
+    }
+    .subj-opt {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      min-height: 2.8rem;
+    }
+    .subj-opt input {
+      width: 1.15rem;
+      height: 1.15rem;
+      accent-color: #111111;
+      cursor: pointer;
+      margin: 0;
+    }
+    .subj-clear {
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0.5rem 0 0;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 520px) {
+      .subj-head,
+      .subj-row {
+        grid-template-columns: minmax(0, 1fr) 3.1rem 3.1rem 3.1rem;
+      }
+      .subj-col { font-size: 0.6rem; }
+      .subj-name { font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body class="portal-body">
+
+  <!-- Back to Tutor Portal -->
+  <a href="/tutors/" class="portal-noprint" style="position:fixed; bottom:1.25rem; left:1.25rem; z-index:9999; background:#111111; color:#ffffff; font-family:'Inter',system-ui,sans-serif; font-size:0.78rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; padding:0.6rem 1.1rem; border-radius:999px; box-shadow:0 4px 14px rgba(17,17,17,0.25);">&larr; Tutor Portal</a>
+
+
+  <!-- ===========================
+       PAGE HERO
+  =========================== -->
+  <section class="page-hero">
+    <img class="page-hero-bg" src="/Images/GroupPhoto.jpeg" alt="" aria-hidden="true" />
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+    <div class="page-hero-content">
+      <h1 class="hero-heading">Your Subjects</h1>
+    </div>
+  </section>
+
+  <main class="portal-main portal-prose">
+    <p class="portal-kicker">Onboarding · Step 2 of 6</p>
+    <h1>Your Subjects</h1>
+
+    <p>Tell us what you can tutor. For each subject you teach, mark your level. Leave the rest blank. This is how we match you to students, so include everything you can cover.</p>
+
+    <ul class="subj-legend">
+      <li><strong>Verified:</strong> you passed LVT's assessment in this subject.</li>
+      <li><strong>Ready:</strong> a subject you could pass our test on today, we just have not tested you yet. You can teach it now with no prep. Checking it means we may place you with a client without testing you first, and delivering is then on you.</li>
+      <li><strong>Backup:</strong> not a subject we would assign by default. If we are short we may consider you, usually after a quick check first. An option, not a guarantee. If we ever place you in one of these untested and it does not go well, that is on us, not you.</li>
+    </ul>
+
+    <div class="portal-form-wrap">
+      <form class="lead-form" name="tutor-subjects" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-portal-form data-redirect="/tutors/background-check/">
+        <input type="hidden" name="form-name" value="tutor-subjects" />
+        <p class="lead-form-hidden" aria-hidden="true">
+          <label>Skip: <input name="bot-field" /></label>
+        </p>
+
+        <div class="form-field">
+          <label class="form-label" for="tutor-name">Your name <span class="form-required">*</span></label>
+          <input class="form-input" type="text" id="tutor-name" name="tutor-name" autocomplete="name" required />
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="tutor-email">Your email <span class="form-required">*</span></label>
+          <input class="form-input" type="email" id="tutor-email" name="tutor-email" autocomplete="email" required />
+        </div>
+
+        <div id="subj-root"></div>
+
+        <!-- Compiled from the matrix above so the submission reads as three plain lists -->
+        <input type="hidden" name="subjects-verified" id="subjects-verified" />
+        <input type="hidden" name="subjects-ready" id="subjects-ready" />
+        <input type="hidden" name="subjects-backup" id="subjects-backup" />
+
+        <p class="form-error" hidden style="color:#a4262c; font-family:var(--font-body); font-size:0.86rem; margin:0.4rem 0 1rem;">Mark a level for at least one subject before submitting.</p>
+
+        <button class="btn btn-cta" type="submit">Save and Continue</button>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      var GROUPS = [
+        { name: 'Math', items: [
+          'Elementary Math (K-5)', 'Middle School Math (6-8)', 'Pre-Algebra',
+          'Algebra 1', 'Algebra 2', 'Geometry', 'Trigonometry', 'Pre-Calculus',
+          'AP Precalculus', 'AP Calculus AB', 'AP Calculus BC', 'Multivariable Calculus',
+          'AP Statistics'
+        ] },
+        { name: 'Computer Science', items: [
+          'Intro to Computer Science', 'Python', 'Java',
+          'Web Development (HTML, CSS, JavaScript)', 'AP Computer Science A',
+          'AP Computer Science Principles'
+        ] },
+        { name: 'Science', items: [
+          'Elementary Science (K-5)', 'Middle School Science (6-8)', 'Biology',
+          'Chemistry', 'Physics', 'Organic Chemistry', 'Anatomy & Physiology',
+          'Environmental Science', 'AP Biology', 'AP Chemistry', 'AP Physics 1',
+          'AP Physics 2', 'AP Physics C: Mechanics',
+          'AP Physics C: Electricity & Magnetism', 'AP Environmental Science'
+        ] },
+        { name: 'English & Language Arts', items: [
+          'Elementary Reading & Writing (K-5)', 'Middle School English (6-8)',
+          'High School English', 'AP English Language', 'AP English Literature'
+        ] },
+        { name: 'History & Social Studies', items: [
+          'Middle School Social Studies (6-8)', 'US History', 'World History',
+          'US Government & Civics', 'Economics', 'Psychology', 'AP US History',
+          'AP World History', 'AP European History', 'AP US Government & Politics',
+          'AP Comparative Government & Politics', 'AP Human Geography',
+          'AP Psychology', 'AP Macroeconomics', 'AP Microeconomics'
+        ] },
+        { name: 'World Languages', items: [
+          'Spanish', 'French', 'Mandarin Chinese', 'Latin',
+          'AP Spanish Language & Culture', 'AP Spanish Literature & Culture',
+          'AP French Language & Culture', 'AP Chinese Language & Culture', 'AP Latin'
+        ] },
+        { name: 'Arts', items: [
+          'Art History', 'Music Theory', 'AP Art History', 'AP Music Theory'
+        ] },
+        { name: 'Test Prep', items: [
+          'SAT/ACT Math', 'SAT/ACT Reading & Writing', 'ACT Science'
+        ] },
+        { name: 'College Consulting', items: [
+          'College Admissions', 'College Essay Coaching'
+        ] }
+      ];
+
+      var LEVELS = [
+        { value: 'Verified', label: 'Verified' },
+        { value: 'Ready', label: 'Ready' },
+        { value: 'Backup', label: 'Backup' }
+      ];
+
+      var root = document.getElementById('subj-root');
+      var form = root.closest('form');
+
+      GROUPS.forEach(function (group, gi) {
+        var wrap = document.createElement('div');
+        wrap.className = 'subj-group';
+
+        var title = document.createElement('p');
+        title.className = 'subj-group-title';
+        title.textContent = group.name;
+        wrap.appendChild(title);
+
+        var head = document.createElement('div');
+        head.className = 'subj-head';
+        head.appendChild(document.createElement('span'));
+        LEVELS.forEach(function (lvl) {
+          var c = document.createElement('span');
+          c.className = 'subj-col';
+          c.textContent = lvl.label;
+          head.appendChild(c);
+        });
+        wrap.appendChild(head);
+
+        group.items.forEach(function (subject, si) {
+          var rowName = 'lvl-' + gi + '-' + si;
+          var row = document.createElement('div');
+          row.className = 'subj-row';
+
+          var nm = document.createElement('span');
+          nm.className = 'subj-name';
+          nm.textContent = subject;
+          row.appendChild(nm);
+
+          LEVELS.forEach(function (lvl) {
+            var cell = document.createElement('label');
+            cell.className = 'subj-opt';
+            var input = document.createElement('input');
+            input.type = 'radio';
+            input.name = rowName;
+            input.value = lvl.value;
+            input.setAttribute('data-subject', subject);
+            var srt = document.createElement('span');
+            srt.className = 'sr-only';
+            srt.textContent = subject + ': ' + lvl.label;
+            cell.appendChild(input);
+            cell.appendChild(srt);
+            row.appendChild(cell);
+          });
+
+          wrap.appendChild(row);
+        });
+
+        root.appendChild(wrap);
+      });
+
+      // Clear-all control
+      var clear = document.createElement('button');
+      clear.type = 'button';
+      clear.className = 'subj-clear';
+      clear.textContent = 'Clear all selections';
+      root.appendChild(clear);
+
+      var outVerified = document.getElementById('subjects-verified');
+      var outReady = document.getElementById('subjects-ready');
+      var outBackup = document.getElementById('subjects-backup');
+      var error = form.querySelector('.form-error');
+
+      function compile() {
+        var lists = { Verified: [], Ready: [], Backup: [] };
+        root.querySelectorAll('input[type="radio"]:checked').forEach(function (r) {
+          lists[r.value].push(r.getAttribute('data-subject'));
+        });
+        outVerified.value = lists.Verified.join(', ');
+        outReady.value = lists.Ready.join(', ');
+        outBackup.value = lists.Backup.join(', ');
+        return lists.Verified.length + lists.Ready.length + lists.Backup.length;
+      }
+
+      root.addEventListener('change', function () {
+        if (compile() > 0 && error) error.hidden = true;
+      });
+
+      clear.addEventListener('click', function () {
+        root.querySelectorAll('input[type="radio"]:checked').forEach(function (r) { r.checked = false; });
+        compile();
+      });
+
+      // Block submit if nothing is marked. Runs before portal.js because this
+      // script is included first, so stopImmediatePropagation prevents the AJAX post.
+      form.addEventListener('submit', function (e) {
+        if (compile() === 0) {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          if (error) {
+            error.hidden = false;
+            error.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
+      });
+    })();
+  </script>
+  <script src="/tutors/portal.js"></script>
+</body>
+</html>

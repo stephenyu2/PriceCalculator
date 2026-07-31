@@ -370,6 +370,20 @@
       cursor: pointer;
     }
 
+    .refill-sibling-price {
+      margin: -0.9rem 0 1.4rem 1.8rem;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .refill-sibling-price s {
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-right: 0.4rem;
+    }
+
     .refill-submit {
       width: 100%;
       padding: 0.9rem 1rem;
@@ -673,6 +687,7 @@
             <input type="checkbox" id="refill-siblings" name="sibling-discount" value="Yes, 2+ students enrolled" />
             <label for="refill-siblings">We have <strong>two or more students</strong> enrolled. Apply the <strong>10% sibling discount</strong> to our refills.</label>
           </div>
+          <p class="refill-sibling-price" id="refill-sibling-price" hidden></p>
 
           <div class="refill-checkbox">
             <input type="checkbox" id="refill-agree" name="authorized-auto-refill" value="Yes" required />
@@ -705,7 +720,38 @@
       var summary = document.getElementById('refill-summary');
       var success = document.getElementById('refill-success');
       var successDetail = document.getElementById('refill-success-detail');
+      var siblingBox = document.getElementById('refill-siblings');
+      var siblingPrice = document.getElementById('refill-sibling-price');
       var selected = null;
+
+      // 10% sibling discount, display only (all refills are charged manually)
+      function formatPrice(n) {
+        var hasCents = Math.round(n * 100) % 100 !== 0;
+        return '$' + n.toLocaleString('en-US', {
+          minimumFractionDigits: hasCents ? 2 : 0,
+          maximumFractionDigits: 2
+        });
+      }
+      function discountedPrice(priceStr) {
+        return formatPrice(parseFloat(priceStr.replace(/[$,]/g, '')) * 0.9);
+      }
+
+      function renderSummary() {
+        if (!selected) return;
+        var priceHtml = siblingBox.checked
+          ? '<strong>' + discountedPrice(selected.price) + '</strong> (10% sibling discount applied)'
+          : '<strong>' + selected.price + '</strong>';
+        summary.innerHTML = 'You are enrolling in the <strong>' + selected.hours + '-hour ' + selected.label +
+          ' refill</strong>. Whenever your balance falls to two hours or below, your saved card is charged ' +
+          priceHtml + ' and <strong>' + selected.hours + ' hours</strong> are added to your account.';
+
+        if (siblingBox.checked) {
+          siblingPrice.innerHTML = 'New refill price: <s>' + selected.price + '</s>' + discountedPrice(selected.price);
+          siblingPrice.hidden = false;
+        } else {
+          siblingPrice.hidden = true;
+        }
+      }
 
       function showLevel(level) {
         buttons.forEach(function (btn) {
@@ -743,14 +789,15 @@
           document.getElementById('refill-hours').value = selected.hours;
           document.getElementById('refill-price').value = selected.price;
 
-          summary.innerHTML = 'You are enrolling in the <strong>' + selected.hours + '-hour ' + selected.label +
-            ' refill</strong>. Whenever your balance falls to two hours or below, your saved card is charged <strong>' +
-            selected.price + '</strong> and <strong>' + selected.hours + ' hours</strong> are added to your account.';
+          renderSummary();
 
           formWrap.classList.add('visible');
           formWrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
       });
+
+      // Re-run the summary when the sibling discount is toggled
+      siblingBox.addEventListener('change', renderSummary);
 
       // --- Submit to Netlify ---
       function encode(data) {
@@ -768,8 +815,11 @@
         function showSuccess() {
           formWrap.classList.remove('visible');
           document.querySelectorAll('.package-card').forEach(function (c) { c.classList.remove('selected'); });
+          var priceLabel = siblingBox.checked
+            ? discountedPrice(selected.price) + ' per refill with the sibling discount'
+            : selected.price + ' per refill';
           successDetail.textContent = 'Automatic Refill is set to the ' + selected.hours + '-hour ' + selected.label +
-            ' package (' + selected.price + ' per refill, charged only when your balance falls to two hours or below).';
+            ' package (' + priceLabel + ', charged only when your balance falls to two hours or below).';
           success.classList.add('active');
           success.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
