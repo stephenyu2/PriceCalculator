@@ -349,3 +349,65 @@ document.querySelectorAll('.proof-item').forEach(function (item) {
     });
   }
 })();
+
+/* ---- Hero eyebrow: count-up numbers + star fill on load ---- */
+(function () {
+  var eyebrow = document.getElementById('hero-eyebrow');
+  if (!eyebrow) return;
+
+  var reduce = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+  function fmt(val, decimals) {
+    return decimals ? val.toFixed(decimals) : String(Math.round(val));
+  }
+
+  function countTo(el, from, to, duration, decimals, done) {
+    var start = null;
+    function step(ts) {
+      if (start === null) start = ts;
+      var p = Math.min((ts - start) / duration, 1);
+      el.textContent = fmt(from + (to - from) * easeOutCubic(p), decimals);
+      if (p < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = fmt(to, decimals);
+        if (done) done();
+      }
+    }
+    requestAnimationFrame(step);
+  }
+
+  function run() {
+    var fill = eyebrow.querySelector('.he-stars-fill');
+    if (fill) {
+      // 4.9 of 5: stop short of a full fifth star, leaving a visible sliver
+      if (reduce) { fill.style.width = '92%'; }
+      else { requestAnimationFrame(function () { fill.style.width = '92%'; }); }
+    }
+
+    var counts = eyebrow.querySelectorAll('.he-count');
+    Array.prototype.forEach.call(counts, function (el) {
+      var to = parseFloat(el.getAttribute('data-to'));
+      var from = el.hasAttribute('data-from')
+        ? parseFloat(el.getAttribute('data-from')) : 0;
+      var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+      if (reduce) {
+        el.textContent = fmt(to, decimals);
+        if (el.parentElement) el.parentElement.classList.add('done');
+        return;
+      }
+      countTo(el, from, to, 2000, decimals, function () {
+        if (el.parentElement) el.parentElement.classList.add('done');
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', run);
+  } else {
+    run();
+  }
+})();
