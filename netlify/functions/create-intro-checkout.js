@@ -22,15 +22,24 @@
    Never put that key in front-end code.
    ============================================================ */
 
-// The only prices this function can ever charge. 6 hours at 20%
-// off the standard hourly rate (80/95/105/125/125 per hour).
+// The only prices this function can ever charge. 6 hours at 20% off the
+// standard hourly rate. Elementary / Middle / High split by tutor tier
+// (Senior / Junior); College and SAT/ACT are a single flat rate.
+// Keys are level for flat rates, or level-tier for tiered levels; the
+// key is composed server-side from validated inputs (see below).
 const INTRO_PACKAGES = {
-  'elementary': { label: 'Elementary',    amount: 38400 }, // $384
-  'middle':     { label: 'Middle School', amount: 45600 }, // $456
-  'high':       { label: 'High School',   amount: 50400 }, // $504
-  'college':    { label: 'College',       amount: 60000 }, // $600
-  'sat-act':    { label: 'SAT/ACT Prep',  amount: 60000 }  // $600
+  'elementary-senior': { label: 'Elementary, Senior Tutor',    amount: 38400 }, // $384
+  'elementary-junior': { label: 'Elementary, Junior Tutor',    amount: 26400 }, // $264
+  'middle-senior':     { label: 'Middle School, Senior Tutor', amount: 45600 }, // $456
+  'middle-junior':     { label: 'Middle School, Junior Tutor', amount: 31200 }, // $312
+  'high-senior':       { label: 'High School, Senior Tutor',   amount: 50400 }, // $504
+  'high-junior':       { label: 'High School, Junior Tutor',   amount: 36000 }, // $360
+  'college':           { label: 'College',                     amount: 60000 }, // $600
+  'sat-act':           { label: 'SAT/ACT Prep',                amount: 60000 }  // $600
 };
+
+// Levels that require a tutor tier; the rest are flat-rate.
+const TIERED_LEVELS = ['elementary', 'middle', 'high'];
 
 function bad(message) {
   return { statusCode: 400, body: JSON.stringify({ error: message }) };
@@ -69,11 +78,20 @@ exports.handler = async function (event) {
 
   // ---- Validate the raw inputs (never trust the browser) ----
   const level = String(input.level || '').trim().toLowerCase();
+  const tier = String(input.tier || '').trim().toLowerCase();
   const email = String(input.email || '').trim().slice(0, 200);
   const parentName = String(input.parentName || '').trim().slice(0, 100);
   const studentName = String(input.studentName || '').trim().slice(0, 100);
 
-  const pkg = INTRO_PACKAGES[level];
+  // Tiered levels need a Senior/Junior tier; flat levels ignore it.
+  // Compose the lookup key server-side so a tampered price can't be charged.
+  let key = level;
+  if (TIERED_LEVELS.indexOf(level) !== -1) {
+    if (tier !== 'senior' && tier !== 'junior') return bad('A tutor tier is required.');
+    key = level + '-' + tier;
+  }
+
+  const pkg = INTRO_PACKAGES[key];
   if (!pkg) return bad('Invalid level.');
   // Light-touch email shape check; Stripe validates deliverability rules.
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return bad('A valid email is required.');

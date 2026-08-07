@@ -466,6 +466,16 @@
             <p class="manage-hint">If your student is enrolled for SAT or ACT prep, choose SAT/ACT Prep, not High School, even if they're in high school.</p>
           </div>
 
+          <div class="manage-field" id="change-tier-field" hidden>
+            <label class="manage-label" for="change-tier">Tutor Tier</label>
+            <select class="manage-input" id="change-tier" name="tier">
+              <option value="" disabled selected>Choose your tutor tier</option>
+              <option value="Senior Tutor">Senior Tutor</option>
+              <option value="Junior Tutor">Junior Tutor</option>
+            </select>
+            <p class="manage-hint">Elementary, middle, and high school refills are priced by tutor tier. Senior tutors are our most experienced; junior tutors are earlier in their careers. Keep the tier you're currently matched with unless you're switching tutors.</p>
+          </div>
+
           <div class="manage-field">
             <label class="manage-label" for="change-size">New Refill Size</label>
             <select class="manage-input" id="change-size" name="new-refill-size" required disabled>
@@ -529,25 +539,32 @@
       showAction('pause');
 
       // --- Refill prices by level (must match auto-refill.html) ---
+      // Elementary / Middle / High split by tutor tier; College and
+      // SAT/ACT are a single flat rate.
       var REFILL_PRICES = {
-        'Elementary':   { '5': '$400', '10': '$760',   '20': '$1,440' },
-        'Middle School':{ '5': '$475', '10': '$900',   '20': '$1,710' },
-        'High School':  { '5': '$525', '10': '$995',   '20': '$1,890' },
-        'College':      { '5': '$625', '10': '$1,185', '20': '$2,250' },
-        'SAT/ACT Prep': { '5': '$625', '10': '$1,185', '20': '$2,250' }
+        'Elementary':    { senior: { '5': '$400', '10': '$760',   '20': '$1,440' },
+                           junior: { '5': '$275', '10': '$525',   '20': '$990' } },
+        'Middle School': { senior: { '5': '$475', '10': '$900',   '20': '$1,710' },
+                           junior: { '5': '$325', '10': '$620',   '20': '$1,170' } },
+        'High School':   { senior: { '5': '$525', '10': '$995',   '20': '$1,890' },
+                           junior: { '5': '$375', '10': '$715',   '20': '$1,350' } },
+        'College':       { flat:   { '5': '$625', '10': '$1,185', '20': '$2,250' } },
+        'SAT/ACT Prep':  { flat:   { '5': '$625', '10': '$1,185', '20': '$2,250' } }
       };
 
       var levelSelect = document.getElementById('change-level');
+      var tierField = document.getElementById('change-tier-field');
+      var tierSelect = document.getElementById('change-tier');
       var sizeSelect = document.getElementById('change-size');
 
-      levelSelect.addEventListener('change', function () {
-        var prices = REFILL_PRICES[levelSelect.value];
+      function resetSize(placeholderText) {
         sizeSelect.innerHTML = '';
-        if (!prices) {
-          sizeSelect.disabled = true;
-          sizeSelect.appendChild(new Option('Choose your level first', '', true, true));
-          return;
-        }
+        sizeSelect.disabled = true;
+        sizeSelect.appendChild(new Option(placeholderText, '', true, true));
+      }
+
+      function populateSizes(prices) {
+        sizeSelect.innerHTML = '';
         sizeSelect.disabled = false;
         var placeholder = new Option('Choose your new refill package', '', true, true);
         placeholder.disabled = true;
@@ -558,7 +575,38 @@
           if (hours === '20') { label += ' (20 hours for the price of 18)'; }
           sizeSelect.appendChild(new Option(label, label));
         });
+      }
+
+      function refreshSizeOptions() {
+        var entry = REFILL_PRICES[levelSelect.value];
+        if (!entry) {
+          tierField.hidden = true;
+          tierSelect.value = '';
+          resetSize('Choose your level first');
+          return;
+        }
+        if (entry.flat) {
+          tierField.hidden = true;
+          tierSelect.value = '';
+          populateSizes(entry.flat);
+          return;
+        }
+        // Tiered level: a tutor tier is required before prices appear.
+        tierField.hidden = false;
+        var tierKey = tierSelect.value === 'Senior Tutor' ? 'senior'
+          : tierSelect.value === 'Junior Tutor' ? 'junior' : null;
+        if (!tierKey) {
+          resetSize('Choose your tutor tier first');
+          return;
+        }
+        populateSizes(entry[tierKey]);
+      }
+
+      levelSelect.addEventListener('change', function () {
+        tierSelect.value = '';
+        refreshSizeOptions();
       });
+      tierSelect.addEventListener('change', refreshSizeOptions);
 
       // --- Pause / resume toggle ---
       var pauseToggle = document.getElementById('pause-toggle');

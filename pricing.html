@@ -130,6 +130,77 @@
     }
 
     /* ============================================
+       TUTOR TIER SELECTOR (Senior / Junior)
+    ============================================ */
+    .tier-select {
+      max-width: 760px;
+      margin: 0 auto 2rem;
+      text-align: center;
+    }
+
+    .tier-select[hidden] {
+      display: none;
+    }
+
+    .tier-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1.4rem;
+    }
+
+    @media (max-width: 640px) {
+      .tier-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .tier-card {
+      background: var(--navy-light);
+      border: 1px solid rgba(0, 0, 0, 0.11);
+      border-radius: 8px;
+      padding: 1.5rem 1.4rem;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      transition: border-color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .tier-card:hover {
+      border-color: rgba(0, 0, 0, 0.28);
+      transform: translateY(-4px);
+    }
+
+    .tier-card.is-selected {
+      background: #111111;
+      border-color: #111111;
+      transform: translateY(-4px);
+    }
+
+    .tier-name {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .tier-desc {
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    .tier-card.is-selected .tier-name,
+    .tier-card.is-selected .tier-desc {
+      color: #ffffff;
+    }
+
+    /* ============================================
        INTRO PACKAGE: buy buttons + checkout form
     ============================================ */
     .card-buy {
@@ -330,29 +401,45 @@
 
       <div class="pricing-cards" id="grade-cards">
 
-        <button type="button" class="grade-card" data-level="elementary" data-label="Elementary" data-price="$384" data-original="$480">
+        <button type="button" class="grade-card" data-level="elementary" data-label="Elementary">
           <span class="grade-card-level">Elementary</span>
         </button>
 
-        <button type="button" class="grade-card" data-level="middle" data-label="Middle School" data-price="$456" data-original="$570">
+        <button type="button" class="grade-card" data-level="middle" data-label="Middle School">
           <span class="grade-card-level">Middle School</span>
         </button>
 
-        <button type="button" class="grade-card" data-level="high" data-label="High School" data-price="$504" data-original="$630">
+        <button type="button" class="grade-card" data-level="high" data-label="High School">
           <span class="grade-card-level">High School</span>
         </button>
 
-        <button type="button" class="grade-card" data-level="college" data-label="College" data-price="$600" data-original="$750">
+        <button type="button" class="grade-card" data-level="college" data-label="College">
           <span class="grade-card-level">College</span>
         </button>
 
-        <button type="button" class="grade-card" data-level="sat-act" data-label="SAT/ACT Prep" data-price="$600" data-original="$750">
+        <button type="button" class="grade-card" data-level="sat-act" data-label="SAT/ACT Prep">
           <span class="grade-card-level">SAT/ACT Prep</span>
         </button>
 
       </div><!-- /pricing-cards -->
 
-      <!-- ── Rate appears after a grade level is chosen ── -->
+      <!-- ── Tutor tier appears for Elementary / Middle / High School ── -->
+      <div class="tier-select" id="tier-select" hidden>
+        <h2 class="grade-select-heading">Choose Your Tutor Tier</h2>
+        <p class="grade-select-note">Both tiers are fully vetted and know their subjects cold. The difference is experience, and the rate that comes with it.</p>
+        <div class="tier-cards" id="tier-cards">
+          <button type="button" class="tier-card" data-tier="senior">
+            <span class="tier-name">Senior Tutor</span>
+            <span class="tier-desc">Our most experienced educators, each with a decade or more of tutoring behind them. They've worked with just about every type of student and seen it all. Senior tutors tend to be older, and they are, simply put, the strongest tutors we have.</span>
+          </button>
+          <button type="button" class="tier-card" data-tier="junior">
+            <span class="tier-name">Junior Tutor</span>
+            <span class="tier-desc">Sharp, fully-vetted tutors who know their subjects cold, but earlier in their careers, often just a few years in. They tend to be younger and a bit more energetic than our senior tutors.</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ── Rate appears after a grade level (and tier, if applicable) is chosen ── -->
       <div class="grade-rate" id="grade-rate" hidden>
         <span class="card-badge">20% Off</span>
         <p class="grade-rate-level" id="grade-rate-level"></p>
@@ -397,6 +484,26 @@
 
   <script>
     (function () {
+      // Intro-package prices. Elementary / Middle / High split by tutor
+      // tier; College and SAT/ACT are a single flat rate (no tier).
+      // These are display only; the server in create-intro-checkout.js
+      // holds the authoritative amounts and never trusts the browser.
+      var PRICES = {
+        'elementary': { label: 'Elementary',
+          senior: { price: '$384', original: '$480' },
+          junior: { price: '$264', original: '$330' } },
+        'middle': { label: 'Middle School',
+          senior: { price: '$456', original: '$570' },
+          junior: { price: '$312', original: '$390' } },
+        'high': { label: 'High School',
+          senior: { price: '$504', original: '$630' },
+          junior: { price: '$360', original: '$450' } },
+        'college': { label: 'College',
+          flat: { price: '$600', original: '$750' } },
+        'sat-act': { label: 'SAT/ACT Prep',
+          flat: { price: '$600', original: '$750' } }
+      };
+
       var checkout = document.getElementById('intro-checkout');
       var summary = document.getElementById('intro-summary');
       var form = document.getElementById('intro-form');
@@ -407,30 +514,70 @@
       var rateOriginal = document.getElementById('grade-rate-original');
       var rateNew = document.getElementById('grade-rate-new');
       var cards = document.querySelectorAll('.grade-card');
+      var tierSelect = document.getElementById('tier-select');
+      var tierCards = document.querySelectorAll('.tier-card');
       var selectedLevel = null;
+      var selectedTier = null;
+
+      var TIER_LABEL = { senior: 'Senior Tutor', junior: 'Junior Tutor' };
+
+      // Reveal the rate + checkout for the chosen level (and tier, if any).
+      function showRate(level, tier) {
+        var info = PRICES[level];
+        var priced = tier ? info[tier] : info.flat;
+        var label = info.label + (tier ? ', ' + TIER_LABEL[tier] : '');
+
+        rateLevel.textContent = label;
+        rateOriginal.textContent = priced.original;
+        rateNew.textContent = priced.price;
+        rate.hidden = false;
+
+        summary.textContent = label + ': ' + priced.price +
+          ' for 6 hours of private tutoring (20% off). Enter your details to check out.';
+        checkout.hidden = false;
+        rate.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
 
       cards.forEach(function (card) {
         card.addEventListener('click', function () {
           selectedLevel = card.dataset.level;
+          selectedTier = null;
 
           cards.forEach(function (c) { c.classList.remove('is-selected'); });
           card.classList.add('is-selected');
+          tierCards.forEach(function (c) { c.classList.remove('is-selected'); });
 
-          rateLevel.textContent = card.dataset.label;
-          rateOriginal.textContent = card.dataset.original;
-          rateNew.textContent = card.dataset.price;
-          rate.hidden = false;
+          var tiered = PRICES[selectedLevel].flat === undefined;
+          if (tiered) {
+            // Wait for a tutor tier before showing a rate.
+            tierSelect.hidden = false;
+            rate.hidden = true;
+            checkout.hidden = true;
+            tierSelect.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else {
+            tierSelect.hidden = true;
+            showRate(selectedLevel, null);
+          }
+        });
+      });
 
-          summary.textContent = card.dataset.label + ': ' + card.dataset.price +
-            ' for 6 hours of private tutoring (20% off). Enter your details to check out.';
-          checkout.hidden = false;
-          rate.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      tierCards.forEach(function (card) {
+        card.addEventListener('click', function () {
+          if (!selectedLevel) return;
+          selectedTier = card.dataset.tier;
+
+          tierCards.forEach(function (c) { c.classList.remove('is-selected'); });
+          card.classList.add('is-selected');
+
+          showRate(selectedLevel, selectedTier);
         });
       });
 
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         if (!selectedLevel) return;
+        // Tiered levels require a tutor tier before checkout.
+        if (PRICES[selectedLevel].flat === undefined && !selectedTier) return;
         errorEl.classList.remove('active');
         submitBtn.disabled = true;
         submitBtn.textContent = 'Opening Checkout…';
@@ -440,6 +587,7 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             level: selectedLevel,
+            tier: selectedTier,
             email: document.getElementById('intro-email').value.trim(),
             parentName: document.getElementById('intro-parent').value.trim(),
             studentName: document.getElementById('intro-student').value.trim()

@@ -163,6 +163,74 @@
       font-weight: 600;
     }
 
+    /* --- Tutor tier selector (Elementary / Middle / High) --- */
+    .tier-prompt {
+      display: none;
+    }
+
+    .tier-prompt.visible {
+      display: block;
+    }
+
+    .tier-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      max-width: 760px;
+      margin: 0 auto 2.5rem;
+    }
+
+    @media (max-width: 640px) {
+      .tier-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .tier-card {
+      background: var(--navy-light);
+      border: 1px solid rgba(0, 0, 0, 0.11);
+      border-radius: 8px;
+      padding: 1.5rem 1.4rem;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      transition: border-color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+    }
+
+    .tier-card:hover {
+      border-color: rgba(0, 0, 0, 0.28);
+      transform: translateY(-4px);
+    }
+
+    .tier-card.selected {
+      background: #111111;
+      border-color: #111111;
+      transform: translateY(-4px);
+    }
+
+    .tier-name {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    .tier-desc {
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    .tier-card.selected .tier-name,
+    .tier-card.selected .tier-desc {
+      color: #ffffff;
+    }
+
     /* --- Package panels --- */
     .package-panel {
       display: none;
@@ -502,15 +570,31 @@
         <button class="level-btn" data-level="sat-act" type="button">SAT/ACT Prep</button>
       </div>
 
-      <!-- Elementary -->
-      <div class="package-panel" data-panel="elementary">
+      <!-- ── Tutor tier appears for Elementary / Middle / High School ── -->
+      <div class="tier-prompt" id="tier-prompt">
+        <h3 class="level-heading">Choose Your Tutor Tier</h3>
+        <p class="level-caution">Both tiers are fully vetted and know their subjects cold. The difference is experience, and the rate that comes with it.</p>
+        <div class="tier-cards" id="tier-cards">
+          <button class="tier-card" type="button" data-tier="senior">
+            <span class="tier-name">Senior Tutor</span>
+            <span class="tier-desc">Our most experienced educators, each with a decade or more of tutoring behind them. They've worked with just about every type of student and seen it all. Senior tutors tend to be older, and they are, simply put, the strongest tutors we have.</span>
+          </button>
+          <button class="tier-card" type="button" data-tier="junior">
+            <span class="tier-name">Junior Tutor</span>
+            <span class="tier-desc">Sharp, fully-vetted tutors who know their subjects cold, but earlier in their careers, often just a few years in. They tend to be younger and a bit more energetic than our senior tutors.</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Elementary, Senior -->
+      <div class="package-panel" data-panel="elementary-senior">
         <div class="package-card">
           <h3 class="package-name">5-Hour Refill</h3>
           <div class="package-price-block">
             <span class="package-price">$400</span>
             <span class="package-price-per">/ 5 hours</span>
           </div>
-          <button class="package-cta" type="button" data-label="Elementary" data-hours="5" data-price="$400">Select</button>
+          <button class="package-cta" type="button" data-label="Elementary, Senior Tutor" data-hours="5" data-price="$400">Select</button>
         </div>
         <div class="package-card">
           <h3 class="package-name">10-Hour Refill</h3>
@@ -519,7 +603,7 @@
             <span class="package-price-per">/ 10 hours</span>
           </div>
           <span class="package-savings">Save $40</span>
-          <button class="package-cta" type="button" data-label="Elementary" data-hours="10" data-price="$760">Select</button>
+          <button class="package-cta" type="button" data-label="Elementary, Senior Tutor" data-hours="10" data-price="$760">Select</button>
         </div>
         <div class="package-card">
           <h3 class="package-name">20-Hour Refill</h3>
@@ -528,19 +612,49 @@
             <span class="package-price-per">/ 20 hours</span>
           </div>
           <span class="package-savings">20 hours for the price of 18, save $160</span>
-          <button class="package-cta" type="button" data-label="Elementary" data-hours="20" data-price="$1,440">Select</button>
+          <button class="package-cta" type="button" data-label="Elementary, Senior Tutor" data-hours="20" data-price="$1,440">Select</button>
         </div>
       </div>
 
-      <!-- Middle School -->
-      <div class="package-panel" data-panel="middle">
+      <!-- Elementary, Junior -->
+      <div class="package-panel" data-panel="elementary-junior">
+        <div class="package-card">
+          <h3 class="package-name">5-Hour Refill</h3>
+          <div class="package-price-block">
+            <span class="package-price">$275</span>
+            <span class="package-price-per">/ 5 hours</span>
+          </div>
+          <button class="package-cta" type="button" data-label="Elementary, Junior Tutor" data-hours="5" data-price="$275">Select</button>
+        </div>
+        <div class="package-card">
+          <h3 class="package-name">10-Hour Refill</h3>
+          <div class="package-price-block">
+            <span class="package-price">$525</span>
+            <span class="package-price-per">/ 10 hours</span>
+          </div>
+          <span class="package-savings">Save $25</span>
+          <button class="package-cta" type="button" data-label="Elementary, Junior Tutor" data-hours="10" data-price="$525">Select</button>
+        </div>
+        <div class="package-card">
+          <h3 class="package-name">20-Hour Refill</h3>
+          <div class="package-price-block">
+            <span class="package-price">$990</span>
+            <span class="package-price-per">/ 20 hours</span>
+          </div>
+          <span class="package-savings">20 hours for the price of 18, save $110</span>
+          <button class="package-cta" type="button" data-label="Elementary, Junior Tutor" data-hours="20" data-price="$990">Select</button>
+        </div>
+      </div>
+
+      <!-- Middle School, Senior -->
+      <div class="package-panel" data-panel="middle-senior">
         <div class="package-card">
           <h3 class="package-name">5-Hour Refill</h3>
           <div class="package-price-block">
             <span class="package-price">$475</span>
             <span class="package-price-per">/ 5 hours</span>
           </div>
-          <button class="package-cta" type="button" data-label="Middle School" data-hours="5" data-price="$475">Select</button>
+          <button class="package-cta" type="button" data-label="Middle School, Senior Tutor" data-hours="5" data-price="$475">Select</button>
         </div>
         <div class="package-card">
           <h3 class="package-name">10-Hour Refill</h3>
@@ -549,7 +663,7 @@
             <span class="package-price-per">/ 10 hours</span>
           </div>
           <span class="package-savings">Save $50</span>
-          <button class="package-cta" type="button" data-label="Middle School" data-hours="10" data-price="$900">Select</button>
+          <button class="package-cta" type="button" data-label="Middle School, Senior Tutor" data-hours="10" data-price="$900">Select</button>
         </div>
         <div class="package-card">
           <h3 class="package-name">20-Hour Refill</h3>
@@ -558,19 +672,49 @@
             <span class="package-price-per">/ 20 hours</span>
           </div>
           <span class="package-savings">20 hours for the price of 18, save $190</span>
-          <button class="package-cta" type="button" data-label="Middle School" data-hours="20" data-price="$1,710">Select</button>
+          <button class="package-cta" type="button" data-label="Middle School, Senior Tutor" data-hours="20" data-price="$1,710">Select</button>
         </div>
       </div>
 
-      <!-- High School -->
-      <div class="package-panel" data-panel="high">
+      <!-- Middle School, Junior -->
+      <div class="package-panel" data-panel="middle-junior">
+        <div class="package-card">
+          <h3 class="package-name">5-Hour Refill</h3>
+          <div class="package-price-block">
+            <span class="package-price">$325</span>
+            <span class="package-price-per">/ 5 hours</span>
+          </div>
+          <button class="package-cta" type="button" data-label="Middle School, Junior Tutor" data-hours="5" data-price="$325">Select</button>
+        </div>
+        <div class="package-card">
+          <h3 class="package-name">10-Hour Refill</h3>
+          <div class="package-price-block">
+            <span class="package-price">$620</span>
+            <span class="package-price-per">/ 10 hours</span>
+          </div>
+          <span class="package-savings">Save $30</span>
+          <button class="package-cta" type="button" data-label="Middle School, Junior Tutor" data-hours="10" data-price="$620">Select</button>
+        </div>
+        <div class="package-card">
+          <h3 class="package-name">20-Hour Refill</h3>
+          <div class="package-price-block">
+            <span class="package-price">$1,170</span>
+            <span class="package-price-per">/ 20 hours</span>
+          </div>
+          <span class="package-savings">20 hours for the price of 18, save $130</span>
+          <button class="package-cta" type="button" data-label="Middle School, Junior Tutor" data-hours="20" data-price="$1,170">Select</button>
+        </div>
+      </div>
+
+      <!-- High School, Senior -->
+      <div class="package-panel" data-panel="high-senior">
         <div class="package-card">
           <h3 class="package-name">5-Hour Refill</h3>
           <div class="package-price-block">
             <span class="package-price">$525</span>
             <span class="package-price-per">/ 5 hours</span>
           </div>
-          <button class="package-cta" type="button" data-label="High School" data-hours="5" data-price="$525">Select</button>
+          <button class="package-cta" type="button" data-label="High School, Senior Tutor" data-hours="5" data-price="$525">Select</button>
         </div>
         <div class="package-card">
           <h3 class="package-name">10-Hour Refill</h3>
@@ -579,7 +723,7 @@
             <span class="package-price-per">/ 10 hours</span>
           </div>
           <span class="package-savings">Save $55</span>
-          <button class="package-cta" type="button" data-label="High School" data-hours="10" data-price="$995">Select</button>
+          <button class="package-cta" type="button" data-label="High School, Senior Tutor" data-hours="10" data-price="$995">Select</button>
         </div>
         <div class="package-card">
           <h3 class="package-name">20-Hour Refill</h3>
@@ -588,7 +732,37 @@
             <span class="package-price-per">/ 20 hours</span>
           </div>
           <span class="package-savings">20 hours for the price of 18, save $210</span>
-          <button class="package-cta" type="button" data-label="High School" data-hours="20" data-price="$1,890">Select</button>
+          <button class="package-cta" type="button" data-label="High School, Senior Tutor" data-hours="20" data-price="$1,890">Select</button>
+        </div>
+      </div>
+
+      <!-- High School, Junior -->
+      <div class="package-panel" data-panel="high-junior">
+        <div class="package-card">
+          <h3 class="package-name">5-Hour Refill</h3>
+          <div class="package-price-block">
+            <span class="package-price">$375</span>
+            <span class="package-price-per">/ 5 hours</span>
+          </div>
+          <button class="package-cta" type="button" data-label="High School, Junior Tutor" data-hours="5" data-price="$375">Select</button>
+        </div>
+        <div class="package-card">
+          <h3 class="package-name">10-Hour Refill</h3>
+          <div class="package-price-block">
+            <span class="package-price">$715</span>
+            <span class="package-price-per">/ 10 hours</span>
+          </div>
+          <span class="package-savings">Save $35</span>
+          <button class="package-cta" type="button" data-label="High School, Junior Tutor" data-hours="10" data-price="$715">Select</button>
+        </div>
+        <div class="package-card">
+          <h3 class="package-name">20-Hour Refill</h3>
+          <div class="package-price-block">
+            <span class="package-price">$1,350</span>
+            <span class="package-price-per">/ 20 hours</span>
+          </div>
+          <span class="package-savings">20 hours for the price of 18, save $150</span>
+          <button class="package-cta" type="button" data-label="High School, Junior Tutor" data-hours="20" data-price="$1,350">Select</button>
         </div>
       </div>
 
@@ -715,6 +889,8 @@
       var selector = document.getElementById('level-selector');
       var buttons = selector.querySelectorAll('.level-btn');
       var panels = document.querySelectorAll('.package-panel');
+      var tierPrompt = document.getElementById('tier-prompt');
+      var tierCards = document.querySelectorAll('.tier-card');
       var formWrap = document.getElementById('refill-form-wrap');
       var form = document.getElementById('refill-form');
       var summary = document.getElementById('refill-summary');
@@ -723,6 +899,12 @@
       var siblingBox = document.getElementById('refill-siblings');
       var siblingPrice = document.getElementById('refill-sibling-price');
       var selected = null;
+
+      // Elementary / Middle / High are priced by tutor tier; College and
+      // SAT/ACT are flat. Panel keys are "level-tier" for the tiered ones.
+      var TIERED = { elementary: true, middle: true, high: true };
+      var currentLevel = null;
+      var currentTier = null;
 
       // 10% sibling discount, display only (all refills are charged manually)
       function formatPrice(n) {
@@ -753,22 +935,51 @@
         }
       }
 
-      function showLevel(level) {
-        buttons.forEach(function (btn) {
-          btn.classList.toggle('active', btn.dataset.level === level);
-        });
+      // Show a single package panel by its key (or none when key is null).
+      function showPanel(key) {
         panels.forEach(function (panel) {
-          panel.classList.toggle('active', panel.dataset.panel === level);
+          panel.classList.toggle('active', panel.dataset.panel === key);
         });
+      }
+
+      function clearRefillChoice() {
+        selected = null;
+        document.querySelectorAll('.package-card').forEach(function (c) { c.classList.remove('selected'); });
+        formWrap.classList.remove('visible');
       }
 
       buttons.forEach(function (btn) {
         btn.addEventListener('click', function () {
-          showLevel(btn.dataset.level);
+          currentLevel = btn.dataset.level;
+          currentTier = null;
+          buttons.forEach(function (b) { b.classList.toggle('active', b === btn); });
+          tierCards.forEach(function (c) { c.classList.remove('selected'); });
           // Switching level clears any prior refill choice so the wrong level can't carry over
-          selected = null;
-          document.querySelectorAll('.package-card').forEach(function (c) { c.classList.remove('selected'); });
-          formWrap.classList.remove('visible');
+          clearRefillChoice();
+
+          if (TIERED[currentLevel]) {
+            // Wait for a tutor tier before showing any prices.
+            showPanel(null);
+            tierPrompt.classList.add('visible');
+            tierPrompt.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else {
+            tierPrompt.classList.remove('visible');
+            showPanel(currentLevel);
+          }
+        });
+      });
+
+      tierCards.forEach(function (card) {
+        card.addEventListener('click', function () {
+          if (!currentLevel) return;
+          currentTier = card.dataset.tier;
+          tierCards.forEach(function (c) { c.classList.toggle('selected', c === card); });
+          clearRefillChoice();
+
+          var key = currentLevel + '-' + currentTier;
+          showPanel(key);
+          var panel = document.querySelector('.package-panel[data-panel="' + key + '"]');
+          if (panel) panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
       });
 
