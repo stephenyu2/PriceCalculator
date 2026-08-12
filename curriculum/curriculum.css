@@ -276,6 +276,42 @@ body {
 
 .hs-btn:hover .hs-grade { color: rgba(255,255,255,0.6); }
 
+/* Coming-soon / disabled subject (e.g. Science) */
+.subject-section.coming-soon { opacity: 0.55; }
+
+.subject-badge {
+  display: inline-block;
+  margin-left: 0.6rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: #eee;
+  border: 1.5px solid #ddd;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #888;
+  vertical-align: middle;
+}
+
+.grade-btn.disabled {
+  background: #f5f5f5;
+  border-color: #e5e5e5;
+  color: #aaa;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.grade-btn.disabled:hover {
+  background: #f5f5f5;
+  border-color: #e5e5e5;
+  color: #aaa;
+  transform: none;
+}
+
+.grade-btn.disabled .hs-grade { color: #ccc; }
+
 .hub-note {
   margin-top: clamp(2.5rem, 5vw, 4rem);
   padding: 1rem 1.25rem;

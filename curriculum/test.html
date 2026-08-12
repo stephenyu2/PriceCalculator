@@ -28,6 +28,21 @@
     <input type="hidden" name="grade">
   </form>
 
+  <!-- Hidden form — completed diagnostic results, POSTed from handleSubmit.
+       multipart enctype + file input so the generated PDF can be attached. -->
+  <form name="diagnostic-results" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
+    <input type="hidden" name="form-name" value="diagnostic-results">
+    <input type="email" name="email">
+    <input type="hidden" name="subject">
+    <input type="hidden" name="grade">
+    <input type="hidden" name="score">
+    <input type="hidden" name="percent">
+    <input type="hidden" name="level">
+    <input type="hidden" name="standards-breakdown">
+    <textarea name="missed-questions"></textarea>
+    <input type="file" name="results-pdf">
+  </form>
+
   <!-- Email gate — shown before test loads; hidden once email stored in localStorage -->
   <div class="gate-overlay" id="emailGate">
     <div class="gate-card">

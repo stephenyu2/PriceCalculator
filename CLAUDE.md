@@ -4,7 +4,7 @@
 Plain HTML5 / CSS3 / Vanilla JS. No framework, no build step.
 Deployed on Netlify. Forms use Netlify Forms (`data-netlify="true"`).
 Three serverless functions in `netlify/functions/` (all dependency-free, all read `STRIPE_SECRET_KEY` from Netlify env vars — never put keys in front-end code):
-- `create-intro-checkout.js` — Stripe checkout for the 6-hour intro package (/pricing); saves the card via `setup_future_usage`; prices hardcoded in cents, must match pricing.html
+- `create-intro-checkout.js` — Stripe checkout for the 6-hour intro package (/pricing); saves the card via `setup_future_usage`; prices hardcoded in cents, must match pricing.html. Prices are keyed by level, or `level-tier` for tiered levels (see tutor-tier note below); the server composes the key from validated inputs so a tampered price can't be charged.
 - `create-setup-checkout.js` — card-on-file setup for migrating customers (/save-card), no charge
 - `create-checkout.js` — legacy SAT planner checkout (the planner now routes purchases to /parent-portal instead)
 
@@ -44,12 +44,16 @@ Billing / parent portal cluster (all noindex, prepaid-hours model, live since 20
 /manage-package            → manage-package.html (pause/change/cancel refills)
 /payment-success           → payment-success.html (post-checkout landing page, noindex)
 
-Prices live in FOUR places that must move together: create-intro-checkout.js (hardcoded cents), pricing.html, auto-refill.html, and the parent handout PDF (~/Downloads/LVT-Packages-and-Payment.pdf, regenerated from HTML — ask Claude, the source is kept in its project memory). The six enrollment perks must also stay identical across the PDF, parent-portal.html, and agreement.html Section 8.
+Tutor tiers (added 2026-08-07): Elementary, Middle, and High School are priced by tutor tier, Senior Tutor and Junior Tutor (Senior = more experienced, higher price). College and SAT/ACT are flat, no tier. On /pricing the intro flow shows a Senior/Junior sub-step for the three tiered levels; auto-refill.html does the same before the refill sizes; manage-package.html's Change Refill Size adds a Tutor Tier dropdown. Tier copy (the Senior/Junior descriptions) lives in the per-grade handout PDFs.
+
+Prices live in these places that must move together: create-intro-checkout.js (hardcoded cents), pricing.html (intro), auto-refill.html and manage-package.html (refills), and the parent handout PDFs. The handouts are now THREE per-grade two-column (Senior/Junior) PDFs in iCloud at ~/Library/Mobile Documents/com~apple~CloudDocs/LaunchValleyTutoring/PaymentPackages/ (Elementary/Middle/High); the old single ~/Downloads/LVT-Packages-and-Payment.pdf is retired. See the packages-handout project memory for regen details. The six enrollment perks must also stay identical across the PDFs, parent-portal.html, and agreement.html Section 8.
 Old-model pages (subscriptions, buy-hours, tutoring-packages) were deleted 2026-07-09; their URLs 301 to /parent-portal via _redirects.
 
 Tutor portal cluster (all noindex, live since 2026-07-16; deliberately NO auth per Stephen, open like the parent portal, direct link only — do not add /tutors to robots.txt, that would advertise the path):
 /tutors/                   → hub (mirrors parent-portal.html: site nav + hero + portal-card grid + footer)
-/tutors/start, /tutors/agreement, /tutors/background-check, /tutors/training (+ 7 module pages + /complete), /tutors/rates, /tutors/resources, /tutors/incident-report, /tutors/done
+/tutors/start, /tutors/agreement, /tutors/subjects, /tutors/background-check, /tutors/training (+ 7 module pages + /complete), /tutors/bank-and-w9, /tutors/emergency-contact, /tutors/resources, /tutors/incident-report, /tutors/headshot, /tutors/sat-practice, /tutors/meetings, /tutors/done
+- /tutors/sat-practice/ and /tutors/meetings/ (added 2026-08-12) are unlinked-from-nowhere-else resource pages reached via hub "Software & Tools" cards: SAT Practice = College Board Question Bank + OnePrep (oneprep.com, the .com teacher product) + SAT Slayer (satslayer.org), with instructions; Online Meetings = the company Zoom room (no time limit, link+ID 948 487 1353+passcode 6dkqsK on the page) with Jitsi as backup.
+- /tutors/rates/ still exists as the canonical rate schedule but was UNLINKED from the portal 2026-08-12 (junior tutors will be on different price tiers, so one schedule no longer fits). Reachable by direct URL only; re-add a hub card to restore it.
 - Inner pages use the agreement.html-style pattern: floating back-pill + page hero, no nav. Shared assets: tutors/tutors.css, tutors/portal.js.
 - /tutors/agreement/ is the CANONICAL Independent Contractor Agreement (currently ICA-2026-07-16-v3) and /tutors/rates/ the canonical rate schedule (RATES-2026-07-16-v3, training is unpaid — no stipend); the old PDFs are retired. RULE: any text change to a signable document bumps its version string in the same commit (page footer, hidden form field, and for modules also the kicker, quiz data-version, portal.js MODULES map, and the completion-form checkbox label). Module versions: 01=v4, 03=v3, others v2. Training copy tone: neutral, plain rules only — no persuasion, threats, or "here's why you should comply" rationale (Stephen's explicit preference, 2026-07-17).
 - Three Netlify forms are the legal record: tutor-agreement, tutor-training-complete (one combined record for all seven modules), tutor-incident-report. portal.js submits them via AJAX POST to "/" then redirects. localStorage (lvt_module_01..07, lvt_bgcheck_ack) is cosmetic progress only.
@@ -69,7 +73,7 @@ Tutor portal cluster (all noindex, live since 2026-07-16; deliberately NO auth p
 /consulting/               → consulting/index.html (hub with video panels)
 /consulting/<service>/     → individual consulting pages (3 total)
 
-/curriculum/               → Academic Diagnostic tests (30 tests, email gate, timer, PDF)
+/curriculum/               → Academic Diagnostic tests (math + ELA + Science, email gate, timer, PDF). Science (NGSS-coded) is now complete: elementary K-5, middle 6-8 (California integrated model, each grade mixes life/physical/earth science), and high school by COURSE not grade (biology/chemistry/physics as the grade slug, mirroring math's algebra1/geometry tokens). Data in curriculum/data/science-*.json; engine config (SCIENCE_PROGRESSION, GRADE_LABELS.science) in test-runner.js.
 /library/                  → library/index.html (tutor-only CCSS library hub)
 /library/<subject>-<grade>/→ per-grade browsers (math-k..8/algebra1.., ela-k..12, math-sat, ela-sat)
 /library/material.html?id= → single lesson/worksheet/quiz viewer

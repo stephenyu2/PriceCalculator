@@ -4,6 +4,18 @@ const grade = params.get('grade');
 
 const MATH_PROGRESSION = ['k','1','2','3','4','5','6','7','8','algebra1','geometry','algebra2','precalculus','calculus1','calculus2'];
 const ELA_PROGRESSION  = ['k','1','2','3','4','5','6','7','8','9','10','11','12'];
+// Science diagnostics are being built out grade by grade; the progression lists
+// only the grades that actually have a test so the "next grade" prompt never
+// links to a diagnostic that does not exist yet. High school science is by
+// course (biology, chemistry, physics), not grade number, mirroring how the
+// math progression uses course tokens (algebra1, geometry, ...).
+const SCIENCE_PROGRESSION = ['k','1','2','3','4','5','6','7','8','biology','chemistry','physics'];
+
+const PROGRESSIONS = { math: MATH_PROGRESSION, ela: ELA_PROGRESSION, science: SCIENCE_PROGRESSION };
+
+const SUBJECT_LABELS = { math: 'Math', ela: 'English Language Arts', science: 'Science' };
+
+const SUPPORTED_SUBJECTS = ['math', 'ela', 'science'];
 
 const GRADE_LABELS = {
   math: {
@@ -16,6 +28,11 @@ const GRADE_LABELS = {
     k: 'Kindergarten', 1: '1st Grade', 2: '2nd Grade', 3: '3rd Grade',
     4: '4th Grade', 5: '5th Grade', 6: '6th Grade', 7: '7th Grade',
     8: '8th Grade', 9: '9th Grade', 10: '10th Grade', 11: '11th Grade', 12: '12th Grade'
+  },
+  science: {
+    k: 'Kindergarten', 1: '1st Grade', 2: '2nd Grade', 3: '3rd Grade',
+    4: '4th Grade', 5: '5th Grade', 6: '6th Grade', 7: '7th Grade', 8: '8th Grade',
+    biology: 'Biology', chemistry: 'Chemistry', physics: 'Physics'
   }
 };
 
@@ -153,10 +170,19 @@ function downloadPDF() {
   closeModal();
   const btn = document.getElementById('pdfDownloadBtn');
   if (btn) { btn.textContent = 'Generating PDF…'; btn.disabled = true; }
-
   try {
+    const { doc, filename } = buildResultsPDF();
+    doc.save(filename);
+  } finally {
+    if (btn) { btn.textContent = 'Download Results as PDF'; btn.disabled = false; }
+  }
+}
+
+// Builds the results PDF document (does not download it). Reads the rendered
+// score/level from the DOM, so call only after handleSubmit has populated them.
+function buildResultsPDF() {
     const gradeLabel   = GRADE_LABELS[subject][grade] || grade;
-    const subjectLabel = subject === 'math' ? 'Math' : 'English Language Arts';
+    const subjectLabel = SUBJECT_LABELS[subject] || subject;
     const dateStr      = new Date().toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
     const score        = document.getElementById('scoreFraction').textContent;
     const pct          = document.getElementById('scorePercent').textContent;
@@ -345,11 +371,7 @@ function downloadPDF() {
     y += ctaH;
 
     const filename = `${gradeLabel}-${subjectLabel}-Diagnostic.pdf`.replace(/\s+/g, '-');
-    doc.save(filename);
-
-  } finally {
-    if (btn) { btn.textContent = 'Download Results as PDF'; btn.disabled = false; }
-  }
+    return { doc, filename };
 }
 
 function closeModal() {
@@ -379,7 +401,7 @@ function typeset(el) {
 }
 
 async function init() {
-  if (!subject || !grade || !['math','ela'].includes(subject)) {
+  if (!subject || !grade || !SUPPORTED_SUBJECTS.includes(subject)) {
     showError();
     return;
   }
@@ -415,7 +437,7 @@ function renderTest(data) {
   document.getElementById('testLoading').classList.add('hidden');
   document.getElementById('testContent').classList.remove('hidden');
 
-  const subjectLabel = subject === 'math' ? 'Math' : 'English Language Arts';
+  const subjectLabel = SUBJECT_LABELS[subject] || subject;
   const gradeLabel = GRADE_LABELS[subject][grade] || grade;
 
   const fullTitle = `${gradeLabel} ${subjectLabel} Diagnostic`;
@@ -423,8 +445,9 @@ function renderTest(data) {
   document.getElementById('testTitle').textContent = fullTitle;
   document.getElementById('printTitle').textContent = fullTitle;
   document.getElementById('printDate').textContent = `Completed: ${new Date().toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' })}`;
+  const alignment = subject === 'science' ? 'NGSS aligned' : 'Common Core aligned';
   document.getElementById('testSubtitle').textContent =
-    `${data.questions.length} questions · ${data.timeMinutes} minutes · Common Core aligned`;
+    `${data.questions.length} questions · ${data.timeMinutes} minutes · ${alignment}`;
   document.getElementById('totalCount').textContent = data.questions.length;
   const dur = document.getElementById('testDuration');
   if (dur) dur.textContent = data.timeMinutes;
@@ -582,7 +605,7 @@ function handleSubmit() {
   document.getElementById('levelDescription').textContent = description;
 
   if (pct >= 80) {
-    const progression = subject === 'math' ? MATH_PROGRESSION : ELA_PROGRESSION;
+    const progression = PROGRESSIONS[subject] || [];
     const idx = progression.indexOf(grade);
     if (idx !== -1 && idx < progression.length - 1) {
       const nextGrade = progression[idx + 1];
@@ -622,6 +645,8 @@ function handleSubmit() {
 
   typeset(reviewList);
 
+  submitResults(correct, total, pct, level);
+
   document.getElementById('resultsSection').classList.remove('hidden');
   document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
 
@@ -632,4 +657,61 @@ function handleSubmit() {
   document.getElementById('questionsList').querySelectorAll('input').forEach(inp => inp.disabled = true);
   document.getElementById('submitBtn').disabled = true;
   document.getElementById('submitBtn').textContent = 'Submitted';
+}
+
+// Fire-and-forget POST of the completed result to Netlify Forms (dashboard +
+// email notification). Same pattern as the email gate — never block the UI on it.
+// Sent as multipart FormData so the generated PDF can ride along as a file
+// upload; the text fields (score, breakdown, missed-question list) appear inline
+// in the notification email, the PDF as a download link on the submission.
+function submitResults(correct, total, pct, level) {
+  // Per-standard right/wrong tally, e.g. "3.OA.A.1: 2/3 · 3.OA.A.2: 1/2"
+  const tally = {};
+  testData.questions.forEach(q => {
+    const std = q.standard || 'unlabeled';
+    if (!tally[std]) tally[std] = { correct: 0, total: 0 };
+    tally[std].total++;
+    if (answers[q.id] === q.answer) tally[std].correct++;
+  });
+  const breakdown = Object.keys(tally)
+    .map(std => `${std}: ${tally[std].correct}/${tally[std].total}`)
+    .join(' · ');
+
+  // Every incorrect or unanswered question, one per line, letters + plain text.
+  const letter = i => String.fromCharCode(65 + i);
+  const missed = testData.questions
+    .map((q, idx) => {
+      const a = answers[q.id];
+      if (a === q.answer) return null;
+      const std = q.standard ? ` [${q.standard}]` : '';
+      const correctText = `${letter(q.answer)}) ${latexToText(q.options[q.answer])}`;
+      if (a === undefined) {
+        return `Q${idx + 1}${std} unanswered — correct: ${correctText}`;
+      }
+      const chosenText = `${letter(a)}) ${latexToText(q.options[a])}`;
+      return `Q${idx + 1}${std} incorrect — chose: ${chosenText} | correct: ${correctText}`;
+    })
+    .filter(Boolean)
+    .join('\n') || 'None — all questions correct.';
+
+  const fd = new FormData();
+  fd.append('form-name', 'diagnostic-results');
+  fd.append('email', localStorage.getItem('lvt_email') || '');
+  fd.append('subject', subject || '');
+  fd.append('grade', grade || '');
+  fd.append('score', `${correct}/${total}`);
+  fd.append('percent', `${pct}%`);
+  fd.append('level', level);
+  fd.append('standards-breakdown', breakdown);
+  fd.append('missed-questions', missed);
+
+  // Attach the results PDF as a file upload. Best-effort: if jsPDF is not loaded
+  // or the build throws, the submission still goes through with all text fields.
+  try {
+    const { doc, filename } = buildResultsPDF();
+    fd.append('results-pdf', doc.output('blob'), filename);
+  } catch (e) { /* text-only submission */ }
+
+  // No Content-Type header — the browser sets the multipart boundary itself.
+  fetch('/', { method: 'POST', body: fd }).catch(() => {});
 }
