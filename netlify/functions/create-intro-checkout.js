@@ -1,5 +1,5 @@
 /* ============================================================
-   Launch Valley Tutoring — 6-hour introductory package checkout
+   Launch Valley Tutoring — 5-hour introductory package checkout
 
    Creates a Stripe Checkout Session for the one-time intro
    package AND saves the customer's card for future off-session
@@ -22,20 +22,20 @@
    Never put that key in front-end code.
    ============================================================ */
 
-// The only prices this function can ever charge. 6 hours at 20% off the
+// The only prices this function can ever charge. 5 hours at 20% off the
 // standard hourly rate. Elementary / Middle / High split by tutor tier
 // (Senior / Junior); College and SAT/ACT are a single flat rate.
 // Keys are level for flat rates, or level-tier for tiered levels; the
 // key is composed server-side from validated inputs (see below).
 const INTRO_PACKAGES = {
-  'elementary-senior': { label: 'Elementary, Senior Tutor',    amount: 38400 }, // $384
-  'elementary-junior': { label: 'Elementary, Junior Tutor',    amount: 26400 }, // $264
-  'middle-senior':     { label: 'Middle School, Senior Tutor', amount: 45600 }, // $456
-  'middle-junior':     { label: 'Middle School, Junior Tutor', amount: 31200 }, // $312
-  'high-senior':       { label: 'High School, Senior Tutor',   amount: 50400 }, // $504
-  'high-junior':       { label: 'High School, Junior Tutor',   amount: 36000 }, // $360
-  'college':           { label: 'College',                     amount: 60000 }, // $600
-  'sat-act':           { label: 'SAT/ACT Prep',                amount: 60000 }  // $600
+  'elementary-senior': { label: 'Elementary, Senior Tutor',    amount: 32000 }, // $320
+  'elementary-junior': { label: 'Elementary, Junior Tutor',    amount: 22000 }, // $220
+  'middle-senior':     { label: 'Middle School, Senior Tutor', amount: 38000 }, // $380
+  'middle-junior':     { label: 'Middle School, Junior Tutor', amount: 26000 }, // $260
+  'high-senior':       { label: 'High School, Senior Tutor',   amount: 42000 }, // $420
+  'high-junior':       { label: 'High School, Junior Tutor',   amount: 30000 }, // $300
+  'college':           { label: 'College',                     amount: 50000 }, // $500
+  'sat-act':           { label: 'SAT/ACT Prep',                amount: 50000 }  // $500
 };
 
 // Levels that require a tutor tier; the rest are flat-rate.
@@ -100,7 +100,7 @@ exports.handler = async function (event) {
 
   // Everything a director needs later, attached to the payment in Stripe.
   const metadata = {
-    package: '6-hour-intro',
+    package: '5-hour-intro',
     level: pkg.label,
     discount: '20% intro discount',
     parent_name: parentName,
@@ -124,8 +124,8 @@ exports.handler = async function (event) {
         currency: 'usd',
         unit_amount: pkg.amount, // hardcoded server-side, in cents
         product_data: {
-          name: '6-Hour Introductory Package, ' + pkg.label + ' (20% off)',
-          description: '6 hours of private tutoring. Money-back guarantee per the Tutoring Services Agreement.'
+          name: '5-Hour Introductory Package, ' + pkg.label + ' (20% off)',
+          description: '5 hours of private tutoring. Money-back guarantee per the Tutoring Services Agreement.'
         }
       }
     }],

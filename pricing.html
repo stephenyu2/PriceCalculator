@@ -390,8 +390,8 @@
     <div class="pricing-container">
 
       <div class="pricing-intro">
-        <h1 class="pricing-heading">First Time with Us?<br>Start with the 6-Hour Intro Package</h1>
-        <p class="pricing-subtext">Every new student begins with a 6-hour introductory package: private one-on-one sessions where we find the perfect tutor match and build a custom academic roadmap. Use the hours at whatever pace works for you; at a typical two hours per week, the package lasts about three weeks. No long-term commitments or contracts required. <strong>Backed by our money-back guarantee: if you're not satisfied, we'll refund the entire package, no questions asked, regardless of how many of the hours you've already used.</strong></p>
+        <h1 class="pricing-heading">First Time with Us?<br>Start with the 5-Hour Intro Package</h1>
+        <p class="pricing-subtext">Every new student begins with a 5-hour introductory package: private one-on-one sessions where we find the perfect tutor match and build a custom academic roadmap. Use the hours at whatever pace works for you; at a typical two hours per week, the package lasts about two and a half weeks. No long-term commitments or contracts required. <strong>Backed by our money-back guarantee: if you're not satisfied, we'll refund the entire package, no questions asked, regardless of how many of the hours you've already used.</strong></p>
       </div>
 
       <div class="grade-select-intro">
@@ -446,13 +446,13 @@
         <div class="grade-rate-price">
           <span class="card-original" id="grade-rate-original"></span>
           <span class="card-new" id="grade-rate-new"></span>
-          <span class="card-new-hr">for 6 hours of private tutoring</span>
+          <span class="card-new-hr">for 5 hours of private tutoring</span>
         </div>
       </div>
 
       <!-- ── Intro package checkout form (appears after choosing a level) ── -->
       <div class="intro-checkout" id="intro-checkout" hidden>
-        <h2 class="intro-checkout-title">6-Hour Introductory Package</h2>
+        <h2 class="intro-checkout-title">5-Hour Introductory Package</h2>
         <p class="intro-checkout-summary" id="intro-summary"></p>
 
         <form id="intro-form">
@@ -490,18 +490,18 @@
       // holds the authoritative amounts and never trusts the browser.
       var PRICES = {
         'elementary': { label: 'Elementary',
-          senior: { price: '$384', original: '$480' },
-          junior: { price: '$264', original: '$330' } },
+          senior: { price: '$320', original: '$400' },
+          junior: { price: '$220', original: '$275' } },
         'middle': { label: 'Middle School',
-          senior: { price: '$456', original: '$570' },
-          junior: { price: '$312', original: '$390' } },
+          senior: { price: '$380', original: '$475' },
+          junior: { price: '$260', original: '$325' } },
         'high': { label: 'High School',
-          senior: { price: '$504', original: '$630' },
-          junior: { price: '$360', original: '$450' } },
+          senior: { price: '$420', original: '$525' },
+          junior: { price: '$300', original: '$375' } },
         'college': { label: 'College',
-          flat: { price: '$600', original: '$750' } },
+          flat: { price: '$500', original: '$625' } },
         'sat-act': { label: 'SAT/ACT Prep',
-          flat: { price: '$600', original: '$750' } }
+          flat: { price: '$500', original: '$625' } }
       };
 
       var checkout = document.getElementById('intro-checkout');
@@ -533,7 +533,7 @@
         rate.hidden = false;
 
         summary.textContent = label + ': ' + priced.price +
-          ' for 6 hours of private tutoring (20% off). Enter your details to check out.';
+          ' for 5 hours of private tutoring (20% off). Enter your details to check out.';
         checkout.hidden = false;
         rate.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
