@@ -4,7 +4,7 @@
 Plain HTML5 / CSS3 / Vanilla JS. No framework, no build step.
 Deployed on Netlify. Forms use Netlify Forms (`data-netlify="true"`).
 Three serverless functions in `netlify/functions/` (all dependency-free, all read `STRIPE_SECRET_KEY` from Netlify env vars — never put keys in front-end code):
-- `create-intro-checkout.js` — Stripe checkout for the 6-hour intro package (/pricing); saves the card via `setup_future_usage`; prices hardcoded in cents, must match pricing.html. Prices are keyed by level, or `level-tier` for tiered levels (see tutor-tier note below); the server composes the key from validated inputs so a tampered price can't be charged.
+- `create-intro-checkout.js` — Stripe checkout for the 5-hour intro package (/pricing); saves the card via `setup_future_usage`; prices hardcoded in cents, must match pricing.html. Prices are keyed by level, or `level-tier` for tiered levels (see tutor-tier note below); the server composes the key from validated inputs so a tampered price can't be charged.
 - `create-setup-checkout.js` — card-on-file setup for migrating customers (/save-card), no charge
 - `create-checkout.js` — legacy SAT planner checkout (the planner now routes purchases to /parent-portal instead)
 
@@ -38,7 +38,7 @@ Billing / parent portal cluster (all noindex, prepaid-hours model, live since 20
 /parent-portal             → parent-portal.html (hub: new families, migrating customers, plan management, six enrollment perks, resources)
 /sign-up                   → sign-up.html (step 1: TutorBird enrollment widget)
 /agreement                 → agreement.html (step 2: Tutoring Services Agreement, 14 sections; Netlify form is the consent record. Sections 3, 4, and 7 are cross-referenced from other pages — do not renumber them. §12 background-check notice, keep consistent with /safety/; §13 sessions/location + Zoom terms, keep consistent with tutor Module 1; §14 all payment through LVT)
-/pricing                   → pricing.html (step 3: 6-hour intro package purchase, 20% off, via create-intro-checkout)
+/pricing                   → pricing.html (step 3: 5-hour intro package purchase, 20% off, via create-intro-checkout)
 /save-card                 → save-card.html (migrating customers: card on file via create-setup-checkout) → /card-saved
 /auto-refill               → auto-refill.html (Automatic Refill enrollment form + refill price table)
 /manage-package            → manage-package.html (pause/change/cancel refills)
