@@ -51,6 +51,10 @@
     .subj-row.subj-2 {
       grid-template-columns: minmax(0, 1fr) 8.5rem 8.5rem;
     }
+    .subj-head.subj-1,
+    .subj-row.subj-1 {
+      grid-template-columns: minmax(0, 1fr) 8.5rem;
+    }
     .subj-group-note {
       font-family: var(--font-body);
       font-size: 0.8rem;
@@ -126,6 +130,10 @@
       .subj-row.subj-2 {
         grid-template-columns: minmax(0, 1fr) 5.4rem 5.4rem;
       }
+      .subj-head.subj-1,
+      .subj-row.subj-1 {
+        grid-template-columns: minmax(0, 1fr) 6.5rem;
+      }
       .subj-col { font-size: 0.6rem; }
       .subj-name { font-size: 0.85rem; }
     }
@@ -184,7 +192,6 @@
         <input type="hidden" name="subjects-ready" id="subjects-ready" />
         <input type="hidden" name="subjects-backup" id="subjects-backup" />
         <input type="hidden" name="ld-experience" id="subjects-ld-experience" />
-        <input type="hidden" name="ld-comfortable" id="subjects-ld-comfortable" />
 
         <p class="form-error" hidden style="color:#a4262c; font-family:var(--font-body); font-size:0.86rem; margin:0.4rem 0 1rem;">Mark a level for at least one subject before submitting.</p>
 
@@ -220,7 +227,7 @@
           'High School English', 'AP English Language', 'AP English Literature'
         ] },
         { name: 'History & Social Studies', items: [
-          'Middle School Social Studies (6-8)', 'US History', 'World History',
+          'Elementary Social Studies (K-5)', 'Middle School Social Studies (6-8)', 'US History', 'World History',
           'US Government & Civics', 'Economics', 'Psychology', 'AP US History',
           'AP World History', 'AP European History', 'AP US Government & Politics',
           'AP Comparative Government & Politics', 'AP Human Geography',
@@ -248,10 +255,10 @@
           'Executive function & organization', 'Test-taking skills'
         ] },
         { name: 'Learning Differences & Accommodations',
-          note: 'Leave blank if you have no experience and are not comfortable with it.',
+          note: 'Leave blank if you have no experience with it.',
+          control: 'checkbox',
           levels: [
-            { value: 'Experienced', label: 'Experience with' },
-            { value: 'Comfortable', label: 'No experience but comfortable with' }
+            { value: 'Experienced', label: 'Experience with' }
           ], items: [
           'ADHD', 'Dyslexia & reading differences',
           'Dyscalculia (math differences)', 'Dysgraphia & writing differences',
@@ -274,7 +281,7 @@
         wrap.className = 'subj-group';
 
         var levels = group.levels || LEVELS;
-        var twoClass = levels.length === 2 ? ' subj-2' : '';
+        var colClass = levels.length === 1 ? ' subj-1' : (levels.length === 2 ? ' subj-2' : '');
 
         var title = document.createElement('p');
         title.className = 'subj-group-title';
@@ -289,7 +296,7 @@
         }
 
         var head = document.createElement('div');
-        head.className = 'subj-head' + twoClass;
+        head.className = 'subj-head' + colClass;
         head.appendChild(document.createElement('span'));
         levels.forEach(function (lvl) {
           var c = document.createElement('span');
@@ -302,7 +309,7 @@
         group.items.forEach(function (subject, si) {
           var rowName = 'lvl-' + gi + '-' + si;
           var row = document.createElement('div');
-          row.className = 'subj-row' + twoClass;
+          row.className = 'subj-row' + colClass;
 
           var nm = document.createElement('span');
           nm.className = 'subj-name';
@@ -313,7 +320,7 @@
             var cell = document.createElement('label');
             cell.className = 'subj-opt';
             var input = document.createElement('input');
-            input.type = 'radio';
+            input.type = group.control === 'checkbox' ? 'checkbox' : 'radio';
             input.name = rowName;
             input.value = lvl.value;
             input.setAttribute('data-subject', subject);
@@ -342,20 +349,18 @@
       var outReady = document.getElementById('subjects-ready');
       var outBackup = document.getElementById('subjects-backup');
       var outLdExp = document.getElementById('subjects-ld-experience');
-      var outLdComf = document.getElementById('subjects-ld-comfortable');
       var error = form.querySelector('.form-error');
 
       function compile() {
-        var lists = { Verified: [], Ready: [], Backup: [], Experienced: [], Comfortable: [] };
+        var lists = { Verified: [], Ready: [], Backup: [], Experienced: [] };
         var total = 0;
-        root.querySelectorAll('input[type="radio"]:checked').forEach(function (r) {
+        root.querySelectorAll('input:checked').forEach(function (r) {
           if (lists[r.value]) { lists[r.value].push(r.getAttribute('data-subject')); total++; }
         });
         outVerified.value = lists.Verified.join(', ');
         outReady.value = lists.Ready.join(', ');
         outBackup.value = lists.Backup.join(', ');
         outLdExp.value = lists.Experienced.join(', ');
-        outLdComf.value = lists.Comfortable.join(', ');
         return total;
       }
 
@@ -364,7 +369,7 @@
       });
 
       clear.addEventListener('click', function () {
-        root.querySelectorAll('input[type="radio"]:checked').forEach(function (r) { r.checked = false; });
+        root.querySelectorAll('input:checked').forEach(function (r) { r.checked = false; });
         compile();
       });
 
