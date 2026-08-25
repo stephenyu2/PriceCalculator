@@ -147,6 +147,10 @@ function row(label, val) {
     '</tr>';
 }
 
+function details(rows) {
+  return rows ? '<table style="border-collapse:collapse;margin:0 0 16px;">' + rows + '</table>' : '';
+}
+
 function wrap(inner) {
   return '' +
     '<div style="background:#f5f3ee;padding:32px 0;font-family:Inter,Arial,sans-serif;">' +
@@ -188,7 +192,11 @@ function buildMessage(formName, d) {
     case 'lead-form':
       return msg('Thanks for reaching out',
         h1('Thanks for reaching out') +
-        p(hi(first) + 'we\'ve received your message and a member of our team will get back to you shortly.'));
+        p(hi(first) + 'we\'ve received your message and a member of our team will get back to you shortly. Here\'s what you sent:') +
+        details(
+          row('Subject of interest', d.subject) +
+          row('Grade', d.grade) +
+          row('Phone', d.phone)));
 
     case 'email-popup':
       return msg('Welcome to Launch Valley Tutoring',
@@ -198,58 +206,110 @@ function buildMessage(formName, d) {
     case 'diag-signup':
       return msg('You\'re signed up for a diagnostic',
         h1('You\'re signed up') +
-        p(hi(first) + 'thanks for signing up for an SAT/ACT diagnostic. We\'ll be in touch with the details shortly.'));
+        p(hi(first) + 'thanks for signing up for a diagnostic. We\'ll be in touch with the details shortly. Here\'s what you selected:') +
+        details(row('Test', d['test-selection'])));
 
     case 'diagnostic-results':
       return msg('Your diagnostic results',
         h1('We\'ve received your results') +
-        p(hi(first) + 'thanks for completing your diagnostic. A tutor will review your results and follow up. If you downloaded your PDF report, keep it for your records.'));
+        p(hi(first) + 'thanks for completing your diagnostic. A tutor will review your results and follow up. If you downloaded your PDF report, keep it for your records. Here\'s a summary:') +
+        details(
+          row('Subject', d.subject) +
+          row('Grade', d.grade) +
+          row('Level', d.level) +
+          row('Score', d.score) +
+          row('Percent', d.percent)));
 
     case 'tutoring-agreement':
       return msg('We received your Tutoring Services Agreement',
         h1('Agreement received') +
-        p(hi(first) + 'thanks for accepting the Tutoring Services Agreement. This email confirms we\'ve recorded your acceptance. Keep it for your records.'));
+        p(hi(first) + 'thanks for accepting the Tutoring Services Agreement. This email confirms we\'ve recorded your acceptance. Keep it for your records.') +
+        details(
+          row('Parent/Guardian', d['full-name']) +
+          row('Student', d['student-name'])));
 
     case 'auto-refill-enrollment':
       return msg('Your recurring plan is set up',
         h1('Your plan is set up') +
-        p(hi(first) + 'thanks for enrolling in Automatic Refill. Your hours will top up automatically before you run low, so there\'s no payment link to chase. We\'ll confirm your refill size and schedule shortly.'));
+        p(hi(first) + 'thanks for enrolling in Automatic Refill. Your hours will top up automatically before you run low, so there\'s no payment link to chase. Here\'s what you set up:') +
+        details(
+          row('Student', d['student-name']) +
+          row('Level', d.level) +
+          row('Refill size', d['refill-hours']) +
+          row('Price', d['refill-price']) +
+          row('Sibling discount', d['sibling-discount'])) +
+        p('We\'ll confirm your refill size and schedule shortly.'));
 
     case 'change-refill-size':
       return msg('Your refill change request is in',
         h1('Request received') +
-        p(hi(first) + 'we\'ve received your request to change your refill size. We\'ll update your plan and confirm.'));
+        p(hi(first) + 'we\'ve received your request to change your refill size. We\'ll update your plan and confirm. Here\'s what you requested:') +
+        details(
+          row('Student', d['student-name']) +
+          row('Level', d.level) +
+          row('New refill size', d['new-refill-size']) +
+          row('Tutor tier', d.tier) +
+          row('Notes', d.notes)));
 
     case 'pause-auto-refill':
       return msg('Your plan request is in',
         h1('Request received') +
-        p(hi(first) + 'we\'ve received your request to pause or resume your automatic refills. We\'ll take care of it and confirm.'));
+        p(hi(first) + 'we\'ve received your request and we\'ll take care of it and confirm. Here\'s what you asked for:') +
+        details(
+          row('Student', d['student-name']) +
+          row('Request', d['request-type']) +
+          row('Notes', d.notes)));
 
     case 'tutor-agreement':
       return msg('We received your Independent Contractor Agreement',
         h1('Agreement received') +
-        p(hi(first) + 'thanks for signing the Independent Contractor Agreement. This email confirms we\'ve recorded your acceptance.'));
+        p(hi(first) + 'thanks for signing the Independent Contractor Agreement. This email confirms we\'ve recorded your acceptance.') +
+        details(
+          row('Name', d['full-name']) +
+          row('Signed', d['signature-date']) +
+          row('Agreement version', d['agreement-version']) +
+          row('Rate schedule version', d['rate-schedule-version'])));
 
     case 'tutor-subjects':
       return msg('We received your subject list',
         h1('Subjects received') +
-        p(hi(first) + 'thanks for submitting the subjects you can teach. We\'ve recorded it.'));
+        p(hi(first) + 'thanks for submitting the subjects you can teach. We\'ve recorded it. Here\'s what you sent:') +
+        details(
+          row('Verified', d['subjects-verified']) +
+          row('Ready', d['subjects-ready']) +
+          row('Backup', d['subjects-backup'])));
 
     case 'tutor-emergency-contact':
       return msg('We received your emergency contact',
         h1('Emergency contact received') +
-        p(hi(first) + 'thanks, we\'ve recorded your emergency contact information.'));
+        p(hi(first) + 'thanks, we\'ve recorded your emergency contact information. Here\'s what you sent:') +
+        details(
+          row('Contact', d['contact-name']) +
+          row('Relationship', d['contact-relationship']) +
+          row('Phone', d['contact-phone'])));
 
     case 'tutor-incident-report':
       return msg('We received your incident report',
         h1('Incident report received') +
-        p(hi(first) + 'thank you for submitting an incident report. We\'ve received it and the appropriate person will follow up.') +
+        p(hi(first) + 'thank you for submitting an incident report. We\'ve received it and the appropriate person will follow up. Here\'s what you reported:') +
+        details(
+          row('Date', d['incident-date']) +
+          row('Time', d['incident-time']) +
+          row('Location', d.location) +
+          row('Student', d['student-name']) +
+          row('Injury', d.injury) +
+          row('Parent notified', d['parent-notified']) +
+          row('What happened', d['what-happened']) +
+          row('What you did', d['what-you-did'])) +
         p('If this is an emergency, call 911. For an urgent safety concern, call Stephen at (818) 294-3292.'));
 
     case 'tutor-training-complete':
-      return msg('Training module recorded',
+      return msg('Training recorded',
         h1('Training recorded') +
-        p(hi(first) + 'thanks, we\'ve recorded your completed training. Keep this email for your records.'));
+        p(hi(first) + 'thanks, we\'ve recorded your completed training. Keep this email for your records.') +
+        details(
+          row('Name', d['full-name']) +
+          row('Signed', d['signature-date'])));
 
     default:
       return msg('We received your submission',
