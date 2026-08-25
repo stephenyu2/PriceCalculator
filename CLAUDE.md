@@ -3,10 +3,11 @@
 ## Project overview
 Plain HTML5 / CSS3 / Vanilla JS. No framework, no build step.
 Deployed on Netlify. Forms use Netlify Forms (`data-netlify="true"`).
-Three serverless functions in `netlify/functions/` (all dependency-free, all read `STRIPE_SECRET_KEY` from Netlify env vars — never put keys in front-end code):
+Four serverless functions in `netlify/functions/` (all dependency-free; the three checkout functions read `STRIPE_SECRET_KEY` from Netlify env vars — never put keys in front-end code):
 - `create-intro-checkout.js` — Stripe checkout for the 5-hour intro package (/pricing); saves the card via `setup_future_usage`; prices hardcoded in cents, must match pricing.html. Prices are keyed by level, or `level-tier` for tiered levels (see tutor-tier note below); the server composes the key from validated inputs so a tampered price can't be charged.
 - `create-setup-checkout.js` — card-on-file setup for migrating customers (/save-card), no charge
 - `create-checkout.js` — legacy SAT planner checkout (the planner now routes purchases to /parent-portal instead)
+- `submission-created.js` — Netlify TRIGGERED function (auto-runs after EVERY form submission site-wide); emails the submitter a confirmation via Resend. Verified sending domain is the SUBDOMAIN `contact.launchvalleytutoring.com`; reads `RESEND_API_KEY` + `FROM_EMAIL` + `REPLY_TO` from env vars. Per-form templates in `buildMessage()` (add a `case` for a new form); `SKIP_FORMS` excludes `diagnostic-email-gate`; forms without an email field self-skip; always returns 200 so a failed email never fails the submission. Business-side per-submission notifications are a SEPARATE no-code Netlify dashboard setting, not this function.
 
 ## Deploying (IMPORTANT — do not drag-and-drop)
 The site is NOT auto-deployed from git. Deploy with the Netlify CLI from the project root:
@@ -35,7 +36,7 @@ Open http://localhost:8080. Note: the Stripe checkout function does NOT run unde
 /sat-planner               → sat-planner.html (hidden SAT prep plan calculator: noindex/nofollow, unlinked, direct URL only). Shows the recommended plan and routes purchases to /parent-portal. ALL pricing math lives in sat-pricing.js (repo root) — never duplicate the formula; edit constants there only.
 
 Billing / parent portal cluster (all noindex, prepaid-hours model, live since 2026-07-08):
-/parent-portal             → parent-portal.html (hub: new families, migrating customers, plan management, six enrollment perks, resources)
+/parent-portal             → parent-portal.html (hub: new families, migrating customers, plan management, six enrollment perks, resources). Also hosts the "Register for a Diagnostic Test" wizard: an in-page modal that branches Academic (subject → grade K-12/College) vs SAT/ACT (SAT-or-ACT → ScoreSmart/Bluebook), then proctored-this-Sunday-10AM (dynamic date) yes/no; No → pick day+time (this week only, 24h minimum, 6AM-8PM in 30-min slots) + location; ends collecting student name + email and POSTs the `diagnostic-registration` Netlify form (which sends a confirmation via the submission-created function).
 /sign-up                   → sign-up.html (step 1: TutorBird enrollment widget)
 /agreement                 → agreement.html (step 2: Tutoring Services Agreement, 14 sections; Netlify form is the consent record. Sections 3, 4, and 7 are cross-referenced from other pages — do not renumber them. §12 background-check notice, keep consistent with /safety/; §13 sessions/location + Zoom terms, keep consistent with tutor Module 1; §14 all payment through LVT)
 /pricing                   → pricing.html (step 3: 5-hour intro package purchase, 20% off, via create-intro-checkout)

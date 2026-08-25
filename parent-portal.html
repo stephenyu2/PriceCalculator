@@ -469,6 +469,262 @@
       color: var(--gold);
       font-weight: 600;
     }
+
+    /* --- Diagnostic test registration wizard --- */
+    .dt-open-btn {
+      align-self: flex-start;
+      margin-top: auto;
+      background: #111111;
+      color: #ffffff;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 999px;
+      padding: 0.85rem 1.6rem;
+      cursor: pointer;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .dt-open-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    .dt-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+    }
+
+    .dt-modal[hidden] {
+      display: none;
+    }
+
+    .dt-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(17, 17, 17, 0.55);
+    }
+
+    .dt-dialog {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 520px;
+      max-height: calc(100vh - 2.5rem);
+      overflow-y: auto;
+      background: var(--navy);
+      border-radius: 16px;
+      padding: clamp(1.75rem, 5vw, 2.5rem);
+      box-shadow: 0 24px 60px rgba(17, 17, 17, 0.28);
+    }
+
+    .dt-close {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.95rem;
+      background: none;
+      border: none;
+      font-size: 1.7rem;
+      line-height: 1;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 0.25rem;
+    }
+
+    .dt-close:hover {
+      color: var(--white);
+    }
+
+    .dt-screen {
+      display: none;
+    }
+
+    .dt-screen.is-active {
+      display: block;
+    }
+
+    .dt-back {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-family: var(--font-body);
+      font-size: 0.84rem;
+      cursor: pointer;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+
+    .dt-back:hover {
+      color: var(--white);
+    }
+
+    .dt-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.4rem, 4vw, 1.8rem);
+      font-weight: 600;
+      color: var(--white);
+      margin: 0 0 0.6rem;
+      line-height: 1.25;
+    }
+
+    .dt-text {
+      font-family: var(--font-body);
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin: 0 0 1.4rem;
+    }
+
+    .dt-hint {
+      font-family: var(--font-body);
+      font-size: 0.86rem;
+      line-height: 1.55;
+      color: var(--text-muted);
+      background: rgba(17, 17, 17, 0.05);
+      border-radius: 10px;
+      padding: 0.75rem 0.95rem;
+      margin: 0 0 1.4rem;
+    }
+
+    .dt-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .dt-option {
+      width: 100%;
+      text-align: left;
+      background: #ffffff;
+      border: 1px solid rgba(17, 17, 17, 0.14);
+      border-radius: 12px;
+      padding: 1rem 1.15rem;
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+
+    .dt-option small {
+      display: block;
+      font-weight: 400;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    .dt-option:hover {
+      border-color: #111111;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(17, 17, 17, 0.1);
+    }
+
+    .dt-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .dt-field label {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.35rem;
+    }
+
+    .dt-field input,
+    .dt-field select {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--white);
+      background: #ffffff;
+      border: 1px solid rgba(17, 17, 17, 0.18);
+      border-radius: 10px;
+      padding: 0.7rem 0.85rem;
+    }
+
+    .dt-actions {
+      display: flex;
+      gap: 0.7rem;
+      margin-top: 0.4rem;
+    }
+
+    .dt-btn {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      padding: 0.85rem 1.5rem;
+      cursor: pointer;
+      border: none;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .dt-btn--primary {
+      background: #111111;
+      color: #ffffff;
+    }
+
+    .dt-btn--primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    .dt-btn--primary:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .dt-error {
+      color: #b3261e;
+      font-size: 0.85rem;
+      margin: 0.6rem 0 0;
+      font-family: var(--font-body);
+    }
+
+    .dt-summary {
+      list-style: none;
+      margin: 0 0 1.4rem;
+      padding: 1.1rem 1.25rem;
+      background: #ffffff;
+      border: 1px solid rgba(17, 17, 17, 0.12);
+      border-radius: 12px;
+    }
+
+    .dt-summary li {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      padding: 0.35rem 0;
+      color: var(--text-muted);
+    }
+
+    .dt-summary li span:last-child {
+      color: var(--white);
+      font-weight: 600;
+      text-align: right;
+    }
   </style>
 </head>
 <body>
@@ -681,6 +937,19 @@
         </ul>
       </div>
 
+      <!-- ── Register for a diagnostic test ── -->
+      <div class="portal-group">
+        <h2 class="portal-group-heading">Register for a Diagnostic Test</h2>
+        <p class="portal-group-sub">Sign up for a weekly diagnostic. Answer a few quick questions and we'll get you set up.</p>
+        <div class="portal-grid">
+          <div class="portal-card portal-card--static">
+            <h3 class="portal-card-title">Weekly Diagnostic Test</h3>
+            <p class="portal-card-desc">Register for an academic diagnostic or a full-length SAT practice test. Takes about a minute.</p>
+            <button type="button" class="dt-open-btn" id="dt-open">Register →</button>
+          </div>
+        </div>
+      </div>
+
       <!-- ── Discounts ── -->
       <div class="portal-group">
         <h2 class="portal-group-heading">Discounts</h2>
@@ -747,6 +1016,187 @@
 
 
   <!-- ===========================
+       DIAGNOSTIC REGISTRATION WIZARD
+  =========================== -->
+  <div class="dt-modal" id="dt-modal" hidden>
+    <div class="dt-overlay" data-dt-close></div>
+    <div class="dt-dialog" role="dialog" aria-modal="true" aria-labelledby="dt-heading">
+      <button type="button" class="dt-close" data-dt-close aria-label="Close">&times;</button>
+
+      <!-- Step: test type -->
+      <div class="dt-screen is-active" data-screen="type">
+        <h2 class="dt-title" id="dt-heading">Register for a Diagnostic Test</h2>
+        <p class="dt-text">Which test are you registering for?</p>
+        <div class="dt-options">
+          <button type="button" class="dt-option" data-field="testType" data-value="Academic" data-next="subject">Academic</button>
+          <button type="button" class="dt-option" data-next="which">SAT/ACT</button>
+        </div>
+      </div>
+
+      <!-- Step: academic subject -->
+      <div class="dt-screen" data-screen="subject">
+        <button type="button" class="dt-back">&larr; Back</button>
+        <h2 class="dt-title">Which Subject?</h2>
+        <p class="dt-text">What subject is this diagnostic for?</p>
+        <div class="dt-options">
+          <button type="button" class="dt-option" data-field="subject" data-value="Math" data-next="grade">Math</button>
+          <button type="button" class="dt-option" data-field="subject" data-value="Science" data-next="grade">Science</button>
+          <button type="button" class="dt-option" data-field="subject" data-value="ELA (English Language Arts)" data-next="grade">ELA (English Language Arts)</button>
+        </div>
+      </div>
+
+      <!-- Step: academic grade level -->
+      <div class="dt-screen" data-screen="grade">
+        <button type="button" class="dt-back">&larr; Back</button>
+        <h2 class="dt-title">Grade Level</h2>
+        <p class="dt-text">What grade level is the student?</p>
+        <div class="dt-fields">
+          <div class="dt-field">
+            <label for="dt-grade">Grade</label>
+            <select id="dt-grade">
+              <option value="">Select a grade</option>
+              <option value="Kindergarten">Kindergarten</option>
+              <option value="1st Grade">1st Grade</option>
+              <option value="2nd Grade">2nd Grade</option>
+              <option value="3rd Grade">3rd Grade</option>
+              <option value="4th Grade">4th Grade</option>
+              <option value="5th Grade">5th Grade</option>
+              <option value="6th Grade">6th Grade</option>
+              <option value="7th Grade">7th Grade</option>
+              <option value="8th Grade">8th Grade</option>
+              <option value="9th Grade">9th Grade</option>
+              <option value="10th Grade">10th Grade</option>
+              <option value="11th Grade">11th Grade</option>
+              <option value="12th Grade">12th Grade</option>
+              <option value="College">College</option>
+            </select>
+          </div>
+        </div>
+        <div class="dt-actions">
+          <button type="button" class="dt-btn dt-btn--primary" id="dt-grade-continue">Continue &rarr;</button>
+        </div>
+      </div>
+
+      <!-- Step: SAT or ACT -->
+      <div class="dt-screen" data-screen="which">
+        <button type="button" class="dt-back">&larr; Back</button>
+        <h2 class="dt-title">SAT or ACT?</h2>
+        <p class="dt-text">Which one would you like to register for?</p>
+        <div class="dt-options">
+          <button type="button" class="dt-option" data-field="testType" data-value="SAT" data-next="platform">SAT</button>
+          <button type="button" class="dt-option" data-field="testType" data-value="ACT" data-next="platform">ACT</button>
+        </div>
+      </div>
+
+      <!-- Step: practice platform -->
+      <div class="dt-screen" data-screen="platform">
+        <button type="button" class="dt-back">&larr; Back</button>
+        <h2 class="dt-title">Which Platform?</h2>
+        <p class="dt-text">Are you taking it on ScoreSmart or Bluebook?</p>
+        <p class="dt-hint">Not sure what this means, or we haven't talked to you about it? Just click ScoreSmart.</p>
+        <div class="dt-options">
+          <button type="button" class="dt-option" data-field="platform" data-value="ScoreSmart" data-next="proctored">ScoreSmart</button>
+          <button type="button" class="dt-option" data-field="platform" data-value="Bluebook" data-next="proctored">Bluebook</button>
+        </div>
+      </div>
+
+      <!-- Step: proctored at facility this Sunday? -->
+      <div class="dt-screen" data-screen="proctored">
+        <button type="button" class="dt-back">&larr; Back</button>
+        <h2 class="dt-title">Proctored Session</h2>
+        <p class="dt-text">Will you take it proctored at our Northridge office at 10 AM this Sunday, <strong id="dt-sunday"></strong>?</p>
+        <div class="dt-options">
+          <button type="button" class="dt-option" data-field="proctored" data-value="Yes" data-next="name">Yes, proctored this Sunday at 10 AM</button>
+          <button type="button" class="dt-option" data-field="proctored" data-value="No" data-next="schedule">No, I'd like a different time</button>
+        </div>
+      </div>
+
+      <!-- Step: pick a day and time -->
+      <div class="dt-screen" data-screen="schedule">
+        <button type="button" class="dt-back">&larr; Back</button>
+        <h2 class="dt-title">Pick a Time</h2>
+        <p class="dt-text">What day and time would you like to take it? Slots are for the rest of this week and must be at least 24 hours out.</p>
+        <div class="dt-fields">
+          <div class="dt-field">
+            <label for="dt-day">Day</label>
+            <select id="dt-day"></select>
+          </div>
+          <div class="dt-field">
+            <label for="dt-time">Start time</label>
+            <select id="dt-time"></select>
+          </div>
+        </div>
+        <p class="dt-hint" id="dt-sched-note" hidden>There are no remaining self-scheduled slots this week. Please go back and choose the proctored Sunday session, or contact us to arrange a time.</p>
+        <div class="dt-actions">
+          <button type="button" class="dt-btn dt-btn--primary" id="dt-sched-continue">Continue &rarr;</button>
+        </div>
+      </div>
+
+      <!-- Step: location -->
+      <div class="dt-screen" data-screen="location">
+        <button type="button" class="dt-back">&larr; Back</button>
+        <h2 class="dt-title">Where Will You Test?</h2>
+        <p class="dt-text">Would you like to take it at our facility unproctored, or somewhere else, whether that's at home, a library, or anywhere else besides our office?</p>
+        <div class="dt-options">
+          <button type="button" class="dt-option" data-field="location" data-value="Our facility, unproctored" data-next="name">At our facility, unproctored<small>We can't guarantee the office or conference room will be free, so you may need to find a quiet spot elsewhere in the building. If that won't work for you, choose somewhere else or take it proctored this Sunday at 10 AM.</small></button>
+          <button type="button" class="dt-option" data-field="location" data-value="Somewhere else (home, library, etc.)" data-next="name">Somewhere else (home, a library, etc.)</button>
+        </div>
+      </div>
+
+      <!-- Step: student name -->
+      <div class="dt-screen" data-screen="name">
+        <button type="button" class="dt-back">&larr; Back</button>
+        <h2 class="dt-title">Student Name</h2>
+        <p class="dt-text">Last thing, who is this test for?</p>
+        <div class="dt-fields">
+          <div class="dt-field">
+            <label for="dt-first">First name</label>
+            <input type="text" id="dt-first" autocomplete="given-name" />
+          </div>
+          <div class="dt-field">
+            <label for="dt-last">Last name</label>
+            <input type="text" id="dt-last" autocomplete="family-name" />
+          </div>
+          <div class="dt-field">
+            <label for="dt-email">Email for confirmation</label>
+            <input type="email" id="dt-email" autocomplete="email" />
+          </div>
+        </div>
+        <p class="dt-error" id="dt-name-error" hidden>Please enter a first name, last name, and a valid email.</p>
+        <div class="dt-actions">
+          <button type="button" class="dt-btn dt-btn--primary" id="dt-name-continue">Register &rarr;</button>
+        </div>
+      </div>
+
+      <!-- Step: confirmation -->
+      <div class="dt-screen" data-screen="done">
+        <h2 class="dt-title">You're registered!</h2>
+        <p class="dt-text">We've got your diagnostic request and sent a confirmation to the email you provided. Here's what you signed up for:</p>
+        <ul class="dt-summary" id="dt-summary"></ul>
+        <div class="dt-actions">
+          <button type="button" class="dt-btn dt-btn--primary" data-dt-close>Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden form so Netlify detects and captures diagnostic registrations -->
+  <form name="diagnostic-registration" data-netlify="true" hidden data-popup="1">
+    <input type="text" name="testType" />
+    <input type="text" name="subject" />
+    <input type="text" name="grade" />
+    <input type="text" name="platform" />
+    <input type="text" name="proctored" />
+    <input type="text" name="day" />
+    <input type="text" name="time" />
+    <input type="text" name="location" />
+    <input type="text" name="studentFirstName" />
+    <input type="text" name="studentLastName" />
+    <input type="email" name="email" />
+  </form>
+
+
+  <!-- ===========================
        FOOTER
   =========================== -->
   <footer class="footer" id="footer">
@@ -804,6 +1254,234 @@
         body.hidden = !open;
       });
     });
+  </script>
+
+  <script>
+    // Diagnostic test registration wizard
+    (function () {
+      var modal = document.getElementById('dt-modal');
+      if (!modal) return;
+
+      var openBtn = document.getElementById('dt-open');
+      var dialog = modal.querySelector('.dt-dialog');
+      var screens = {};
+      modal.querySelectorAll('.dt-screen').forEach(function (s) { screens[s.dataset.screen] = s; });
+
+      var state = {};
+      var history = [];
+
+      // --- this week's Sunday (roll to next week if today is Sunday) ---
+      function fmtDate(d) {
+        return d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+      }
+      var now0 = new Date();
+      var sunday = new Date(now0.getFullYear(), now0.getMonth(), now0.getDate() + ((7 - now0.getDay()) % 7));
+      if (now0.getDay() === 0) sunday.setDate(sunday.getDate() + 7);
+      var SUNDAY_LABEL = fmtDate(sunday);
+      var sundayEl = document.getElementById('dt-sunday');
+      if (sundayEl) sundayEl.textContent = SUNDAY_LABEL;
+
+      function current() {
+        for (var k in screens) { if (screens[k].classList.contains('is-active')) return k; }
+        return null;
+      }
+      function show(name) {
+        Object.keys(screens).forEach(function (k) { screens[k].classList.toggle('is-active', k === name); });
+        dialog.scrollTop = 0;
+      }
+      function goTo(name) { var cur = current(); if (cur) history.push(cur); show(name); }
+      function back() { var prev = history.pop(); if (prev) show(prev); }
+
+      function openModal() {
+        state = {};
+        history = [];
+        document.getElementById('dt-first').value = '';
+        document.getElementById('dt-last').value = '';
+        document.getElementById('dt-email').value = '';
+        document.getElementById('dt-grade').value = '';
+        document.getElementById('dt-name-error').hidden = true;
+        show('type');
+        modal.hidden = false;
+        document.body.style.overflow = 'hidden';
+      }
+      function closeModal() {
+        modal.hidden = true;
+        document.body.style.overflow = '';
+      }
+
+      openBtn.addEventListener('click', openModal);
+      modal.querySelectorAll('[data-dt-close]').forEach(function (el) { el.addEventListener('click', closeModal); });
+      modal.querySelectorAll('.dt-back').forEach(function (b) { b.addEventListener('click', back); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+
+      // Choice buttons that set a field and advance
+      modal.querySelectorAll('[data-next]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          if (btn.dataset.field) state[btn.dataset.field] = btn.dataset.value;
+          if (btn.dataset.field === 'proctored' && btn.dataset.value === 'Yes') {
+            state.day = SUNDAY_LABEL;
+            state.time = '10:00 AM';
+            state.location = 'Our facility, proctored';
+          }
+          var next = btn.dataset.next;
+          if (next === 'schedule') buildSchedule();
+          goTo(next);
+        });
+      });
+
+      // --- schedule step: day + time dropdowns, 24-hour minimum, this week only ---
+      var SLOTS = []; // 6 AM .. 8 PM, 30-minute start times (minutes from midnight)
+      for (var m0 = 6 * 60; m0 <= 20 * 60; m0 += 30) SLOTS.push(m0);
+
+      function fmtTime(m) {
+        var hr = Math.floor(m / 60);
+        var mm = m % 60;
+        var ap = hr < 12 ? 'AM' : 'PM';
+        var hh = ((hr + 11) % 12) + 1;
+        return hh + ':' + (mm < 10 ? '0' + mm : mm) + ' ' + ap;
+      }
+
+      function buildSchedule() {
+        var daySel = document.getElementById('dt-day');
+        var timeSel = document.getElementById('dt-time');
+        var note = document.getElementById('dt-sched-note');
+        var cont = document.getElementById('dt-sched-continue');
+
+        var min = new Date(Date.now() + 24 * 60 * 60 * 1000); // at least 24 hours out
+        var now = new Date();
+        // end of this week = coming Sunday (today if today is Sunday)
+        var end = new Date(now.getFullYear(), now.getMonth(), now.getDate() + ((7 - now.getDay()) % 7));
+
+        daySel.innerHTML = '';
+        var d = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        var days = [];
+        while (d <= end) {
+          var hasSlot = SLOTS.some(function (m) {
+            return new Date(d.getFullYear(), d.getMonth(), d.getDate(), 0, m) >= min;
+          });
+          if (hasSlot) days.push(new Date(d));
+          d.setDate(d.getDate() + 1);
+        }
+
+        if (days.length === 0) {
+          daySel.closest('.dt-field').style.display = 'none';
+          timeSel.closest('.dt-field').style.display = 'none';
+          note.hidden = false;
+          cont.disabled = true;
+          return;
+        }
+
+        daySel.closest('.dt-field').style.display = '';
+        timeSel.closest('.dt-field').style.display = '';
+        note.hidden = true;
+        cont.disabled = false;
+
+        days.forEach(function (dd) {
+          var o = document.createElement('option');
+          o.value = dd.getTime();
+          o.textContent = fmtDate(dd);
+          daySel.appendChild(o);
+        });
+
+        function buildTimes() {
+          timeSel.innerHTML = '';
+          var dd = new Date(parseInt(daySel.value, 10));
+          SLOTS.forEach(function (m) {
+            if (new Date(dd.getFullYear(), dd.getMonth(), dd.getDate(), 0, m) >= min) {
+              var o = document.createElement('option');
+              o.value = fmtTime(m);
+              o.textContent = fmtTime(m);
+              timeSel.appendChild(o);
+            }
+          });
+        }
+        daySel.onchange = buildTimes;
+        buildTimes();
+      }
+
+      // --- academic grade step ---
+      document.getElementById('dt-grade-continue').addEventListener('click', function () {
+        var g = document.getElementById('dt-grade').value;
+        if (!g) return;
+        state.grade = g;
+        goTo('proctored');
+      });
+
+      document.getElementById('dt-sched-continue').addEventListener('click', function () {
+        var daySel = document.getElementById('dt-day');
+        var timeSel = document.getElementById('dt-time');
+        if (!daySel.value || !timeSel.value) return;
+        state.day = daySel.options[daySel.selectedIndex].textContent;
+        state.time = timeSel.value;
+        goTo('location');
+      });
+
+      // --- name step: validate, then submit ---
+      document.getElementById('dt-name-continue').addEventListener('click', function () {
+        var fn = document.getElementById('dt-first').value.trim();
+        var ln = document.getElementById('dt-last').value.trim();
+        var em = document.getElementById('dt-email').value.trim();
+        var err = document.getElementById('dt-name-error');
+        if (!fn || !ln || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) { err.hidden = false; return; }
+        err.hidden = true;
+        state.studentFirstName = fn;
+        state.studentLastName = ln;
+        state.email = em;
+        submit();
+      });
+
+      function submit() {
+        var data = {
+          'form-name': 'diagnostic-registration',
+          testType: state.testType || '',
+          subject: state.subject || '',
+          grade: state.grade || '',
+          platform: state.platform || '',
+          proctored: state.proctored || '',
+          day: state.day || '',
+          time: state.time || '',
+          location: state.location || '',
+          studentFirstName: state.studentFirstName || '',
+          studentLastName: state.studentLastName || '',
+          email: state.email || ''
+        };
+        var body = Object.keys(data).map(function (k) {
+          return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]);
+        }).join('&');
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: body
+        }).catch(function () {});
+
+        fillSummary();
+        goTo('done');
+      }
+
+      function fillSummary() {
+        var rows = [
+          ['Student', (state.studentFirstName || '') + ' ' + (state.studentLastName || '')],
+          ['Email', state.email || ''],
+          ['Test', state.testType || ''],
+          ['Subject', state.subject || ''],
+          ['Grade', state.grade || ''],
+          ['Platform', state.platform || ''],
+          ['Day', state.day || ''],
+          ['Time', state.time || ''],
+          ['Location', state.location || '']
+        ];
+        var ul = document.getElementById('dt-summary');
+        ul.innerHTML = '';
+        rows.forEach(function (r) {
+          if (!r[1] || !r[1].trim()) return;
+          var li = document.createElement('li');
+          var a = document.createElement('span'); a.textContent = r[0];
+          var b = document.createElement('span'); b.textContent = r[1];
+          li.appendChild(a); li.appendChild(b);
+          ul.appendChild(li);
+        });
+      }
+    })();
   </script>
 </body>
 </html>
