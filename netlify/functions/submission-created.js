@@ -32,12 +32,20 @@ const RESEND_ENDPOINT = 'https://api.resend.com/emails';
 const FROM = process.env.FROM_EMAIL || 'Launch Valley Tutoring <launch@contact.launchvalleytutoring.com>';
 const REPLY_TO = process.env.REPLY_TO || 'launch@launchvalleytutoring.com';
 
+// Office inbox that also gets a copy (BCC) of certain confirmations.
+const OFFICE_EMAIL = process.env.OFFICE_EMAIL || 'launch@launchvalleytutoring.com';
+
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // Forms that intentionally do NOT send a confirmation.
 // diagnostic-email-gate just unlocks the on-page test; a confirmation
 // email would be noise while the person is mid-flow.
 const SKIP_FORMS = ['diagnostic-email-gate'];
+
+// Forms whose confirmation is also BCC'd to the office inbox, so we keep the
+// same formatted summary + PDF the submitter gets (not just the plain Netlify
+// dashboard notification). BCC keeps the internal address off the parent's copy.
+const OFFICE_COPY_FORMS = ['diagnostic-results'];
 
 exports.handler = async function (event) {
   const key = process.env.RESEND_API_KEY;
@@ -67,6 +75,18 @@ exports.handler = async function (event) {
 
   const msg = buildMessage(formName, data);
 
+  // Uploaded files (e.g. the diagnostic results PDF) come back as URLs in the
+  // submission payload. Fetch and base64-encode them so they ride along as real
+  // email attachments. Best-effort: a failed fetch just sends without the file.
+  const attachments = await getAttachments(data);
+
+  const body = { from: FROM, to: [to], reply_to: REPLY_TO, subject: msg.subject, html: msg.html };
+  if (attachments.length) body.attachments = attachments;
+  // Copy the office on select forms, unless the submitter already IS the office.
+  if (OFFICE_COPY_FORMS.indexOf(formName) !== -1 && to.toLowerCase() !== OFFICE_EMAIL.toLowerCase()) {
+    body.bcc = [OFFICE_EMAIL];
+  }
+
   try {
     const res = await fetch(RESEND_ENDPOINT, {
       method: 'POST',
@@ -74,7 +94,7 @@ exports.handler = async function (event) {
         'Authorization': 'Bearer ' + key,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ from: FROM, to: [to], reply_to: REPLY_TO, subject: msg.subject, html: msg.html })
+      body: JSON.stringify(body)
     });
     if (!res.ok) {
       const body = await res.text();
@@ -87,6 +107,45 @@ exports.handler = async function (event) {
   // Always 200: a failed confirmation email must not fail the submission.
   return { statusCode: 200, body: 'ok' };
 };
+
+/* ---- attachments ---- */
+
+// Form fields that hold an uploaded file (Netlify stores the file and puts its
+// URL in payload.data[field]). Add a field name here to attach its upload.
+const FILE_FIELDS = ['results-pdf'];
+const MAX_ATTACHMENT_BYTES = 15 * 1024 * 1024; // Resend's ~40MB base64 cap; stay well under
+
+async function getAttachments(data) {
+  const out = [];
+  for (let i = 0; i < FILE_FIELDS.length; i++) {
+    const field = FILE_FIELDS[i];
+    const url = (data[field] || '').trim();
+    if (!/^https?:\/\//i.test(url)) continue;
+    try {
+      const res = await fetch(url);
+      if (!res.ok) {
+        console.log('submission-created: attachment fetch', res.status, 'for', field);
+        continue;
+      }
+      const buf = Buffer.from(await res.arrayBuffer());
+      if (!buf.length || buf.length > MAX_ATTACHMENT_BYTES) continue;
+      out.push({ filename: fileName(url, field), content: buf.toString('base64') });
+    } catch (e) {
+      console.log('submission-created: attachment fetch failed', field, e && e.message);
+    }
+  }
+  return out;
+}
+
+function fileName(url, field) {
+  let name = '';
+  try {
+    name = decodeURIComponent(url.split('?')[0].split('/').pop() || '');
+  } catch (e) { name = ''; }
+  if (!name) name = field;
+  if (!/\.[a-z0-9]+$/i.test(name)) name += '.pdf';
+  return name;
+}
 
 /* ---- field helpers ---- */
 
@@ -151,6 +210,44 @@ function details(rows) {
   return rows ? '<table style="border-collapse:collapse;margin:0 0 16px;">' + rows + '</table>' : '';
 }
 
+function sectionLabel(text) {
+  return '<div style="font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#111;margin:20px 0 8px;">' + esc(text) + '</div>';
+}
+
+// The diagnostic sends a per-standard tally like "3.OA.A.1: 2/3 · 3.OA.A.2: 1/2".
+// Render it as a two-column table (standard, score) in the confirmation email.
+function standardsBreakdown(str) {
+  const raw = (str || '').trim();
+  if (!raw) return '';
+  const rows = raw.split('·').map(function (part) {
+    const seg = part.trim();
+    if (!seg) return '';
+    const i = seg.lastIndexOf(':');
+    if (i === -1) return row(seg, '');
+    return row(seg.slice(0, i).trim(), seg.slice(i + 1).trim());
+  }).join('');
+  if (!rows) return '';
+  return sectionLabel('Standards breakdown') +
+    '<table style="border-collapse:collapse;margin:0 0 8px;">' + rows + '</table>';
+}
+
+// The diagnostic sends one line per missed/unanswered question. Render each as a
+// list item; a single "None — all questions correct." line becomes a plain note.
+function missedQuestions(str) {
+  const raw = (str || '').trim();
+  if (!raw) return '';
+  const lines = raw.split('\n').map(function (l) { return l.trim(); }).filter(Boolean);
+  if (!lines.length) return '';
+  if (lines.length === 1 && /^none\b/i.test(lines[0])) {
+    return sectionLabel('Questions to review') + p(esc(lines[0]));
+  }
+  const items = lines.map(function (l) {
+    return '<li style="font-size:14px;line-height:1.6;color:#444;margin:0 0 8px;">' + esc(l) + '</li>';
+  }).join('');
+  return sectionLabel('Questions to review') +
+    '<ul style="margin:0 0 16px;padding-left:20px;">' + items + '</ul>';
+}
+
 function wrap(inner) {
   return '' +
     '<div style="background:#f5f3ee;padding:32px 0;font-family:Inter,Arial,sans-serif;">' +
@@ -212,13 +309,15 @@ function buildMessage(formName, d) {
     case 'diagnostic-results':
       return msg('Your diagnostic results',
         h1('We\'ve received your results') +
-        p(hi(first) + 'thanks for completing your diagnostic. A tutor will review your results and follow up. If you downloaded your PDF report, keep it for your records. Here\'s a summary:') +
+        p(hi(first) + 'thanks for completing your diagnostic. A tutor will review your results and follow up. If you downloaded your PDF report, keep it for your records. Here\'s the full summary:') +
         details(
           row('Subject', d.subject) +
           row('Grade', d.grade) +
           row('Level', d.level) +
           row('Score', d.score) +
-          row('Percent', d.percent)));
+          row('Percent', d.percent)) +
+        standardsBreakdown(d['standards-breakdown']) +
+        missedQuestions(d['missed-questions']));
 
     case 'tutoring-agreement':
       return msg('We received your Tutoring Services Agreement',
