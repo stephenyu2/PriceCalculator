@@ -75,10 +75,16 @@ exports.handler = async function (event) {
 
   const msg = buildMessage(formName, data);
 
-  // Uploaded files (e.g. the diagnostic results PDF) come back as URLs in the
-  // submission payload. Fetch and base64-encode them so they ride along as real
-  // email attachments. Best-effort: a failed fetch just sends without the file.
-  const attachments = await getAttachments(data);
+  // Uploaded files (e.g. the diagnostic results PDF) come back in the submission
+  // payload. Fetch and base64-encode them so they ride along as real email
+  // attachments. Best-effort and fully guarded: any failure here must never stop
+  // the confirmation email from going out.
+  let attachments = [];
+  try {
+    attachments = await getAttachments(data);
+  } catch (e) {
+    console.log('submission-created: getAttachments failed', e && e.message);
+  }
 
   const body = { from: FROM, to: [to], reply_to: REPLY_TO, subject: msg.subject, html: msg.html };
   if (attachments.length) body.attachments = attachments;
@@ -119,7 +125,7 @@ async function getAttachments(data) {
   const out = [];
   for (let i = 0; i < FILE_FIELDS.length; i++) {
     const field = FILE_FIELDS[i];
-    const url = (data[field] || '').trim();
+    const url = fileUrl(data[field]);
     if (!/^https?:\/\//i.test(url)) continue;
     try {
       const res = await fetch(url);
@@ -135,6 +141,17 @@ async function getAttachments(data) {
     }
   }
   return out;
+}
+
+// A Netlify Forms file-upload field does NOT arrive as a plain URL string: it
+// comes back as an object ({ url, name, size, ... }), and multi-file forms may
+// send an array of them. Normalize any shape to the file's URL string. Never
+// throws (a bad shape yields ''), so it can't crash the confirmation email.
+function fileUrl(v) {
+  if (Array.isArray(v)) v = v[0];
+  if (typeof v === 'string') return v.trim();
+  if (v && typeof v === 'object') return String(v.url || v.href || '').trim();
+  return '';
 }
 
 function fileName(url, field) {
