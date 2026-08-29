@@ -83,6 +83,12 @@
       color: var(--white);
     }
 
+    .field-optional {
+      font-weight: 400;
+      color: var(--text-muted);
+      letter-spacing: 0;
+    }
+
     .field-hint {
       font-family: var(--font-body);
       font-size: 0.8rem;
@@ -387,6 +393,25 @@
 </head>
 <body>
 
+  <!-- Hidden form so Netlify detects and registers "sat-planner" for the
+       JS AJAX POST below. Mirror every field name the planner submits. -->
+  <form name="sat-planner" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="sat-planner">
+    <input type="text" name="name">
+    <input type="email" name="email">
+    <input type="tel" name="phone">
+    <input type="hidden" name="current-math">
+    <input type="hidden" name="current-rw">
+    <input type="hidden" name="current-total">
+    <input type="hidden" name="target-total">
+    <input type="hidden" name="target-split">
+    <input type="hidden" name="test-date">
+    <input type="hidden" name="recommended-hours">
+    <input type="hidden" name="hours-per-week">
+    <input type="hidden" name="weeks">
+    <input type="hidden" name="estimated-price">
+  </form>
+
   <!-- Back to Parent Portal -->
   <a href="/parent-portal" style="position:fixed; bottom:1.25rem; left:1.25rem; z-index:9999; background:#111111; color:#ffffff; font-family:'Inter',system-ui,sans-serif; font-size:0.78rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; padding:0.6rem 1.1rem; border-radius:999px; box-shadow:0 4px 14px rgba(17,17,17,0.25);">&larr; Parent Portal</a>
 
@@ -419,6 +444,17 @@
         <div class="field">
           <label for="student-name">Student's Name</label>
           <input type="text" id="student-name" autocomplete="name" required />
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="planner-email">Email</label>
+            <input type="email" id="planner-email" autocomplete="email" placeholder="you@example.com" required />
+          </div>
+          <div class="field">
+            <label for="planner-phone">Phone <span class="field-optional">(optional)</span></label>
+            <input type="tel" id="planner-phone" autocomplete="tel" placeholder="(818) 555-0123" />
+          </div>
         </div>
 
         <div class="field-row">
@@ -598,12 +634,18 @@
         clearError();
 
         var name = document.getElementById('student-name').value.trim();
+        var email = document.getElementById('planner-email').value.trim();
+        var phone = document.getElementById('planner-phone').value.trim();
         var currentMath = parseInt(document.getElementById('current-math').value, 10);
         var currentRW = parseInt(document.getElementById('current-rw').value, 10);
 
         // --- Validation ---
         if (!name) {
           showError("Please enter the student's name.");
+          return;
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          showError('Please enter a valid email so we can send your plan.');
           return;
         }
         if (isNaN(currentMath) || currentMath < 200 || currentMath > 800) {
@@ -678,6 +720,8 @@
 
         plan = {
           name: name,
+          email: email,
+          phone: phone,
           currentMath: currentMath,
           currentRW: currentRW,
           currentTotal: calc.currentTotal,
@@ -703,7 +747,46 @@
 
         resultsEl.classList.add('visible');
         resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        submitPlan(plan, complete);
       });
+
+      // Fire-and-forget POST of the recommended plan to Netlify Forms, so the
+      // office gets the lead (name, contact, scores, target, date, recommendation)
+      // and the parent gets a confirmation email. Never blocks the on-page result.
+      var lastSentSig = null;
+      function submitPlan(p, complete) {
+        // Skip identical resubmits (double-clicks, or recalculating with the same
+        // inputs); a genuinely different plan still sends.
+        var sig = [p.email, p.currentMath, p.currentRW, p.targetTotal, p.testDateISO].join('|');
+        if (sig === lastSentSig) return;
+        lastSentSig = sig;
+
+        var split = (p.targetMath && p.targetRW)
+          ? ('Math ' + p.targetMath + ' / R&W ' + p.targetRW)
+          : 'No specific split';
+        var price = complete && complete.total != null ? '$' + complete.total : '';
+        var fd = new FormData();
+        fd.append('form-name', 'sat-planner');
+        fd.append('name', p.name);
+        fd.append('email', p.email);
+        fd.append('phone', p.phone);
+        fd.append('current-math', String(p.currentMath));
+        fd.append('current-rw', String(p.currentRW));
+        fd.append('current-total', String(p.currentTotal));
+        fd.append('target-total', String(p.targetTotal));
+        fd.append('target-split', split);
+        fd.append('test-date', p.testDateText);
+        fd.append('recommended-hours', String(complete.hours));
+        fd.append('hours-per-week', String(complete.hoursPerWeek));
+        fd.append('weeks', String(p.calc.weeks));
+        fd.append('estimated-price', price);
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(fd).toString()
+        }).catch(function () {});
+      }
 
       // --- What's-included card (the recommended plan's perks) ---
       function renderPlan(tier) {

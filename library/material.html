@@ -13,6 +13,22 @@
 </head>
 <body>
 
+  <!-- Hidden form so Netlify detects "library-quiz" for the JS AJAX POST in
+       material.js (fires once a quiz or cluster test is fully answered). -->
+  <form name="library-quiz" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="library-quiz">
+    <input type="hidden" name="title">
+    <input type="hidden" name="type">
+    <input type="hidden" name="standard">
+    <input type="hidden" name="grade">
+    <input type="hidden" name="subject">
+    <input type="hidden" name="material-id">
+    <input type="hidden" name="score">
+    <input type="hidden" name="percent">
+    <input type="hidden" name="standards-breakdown">
+    <input type="hidden" name="missed-questions">
+  </form>
+
   <header class="lib-header">
     <a href="/" class="lib-logo">Launch Valley Tutoring</a>
     <span class="lib-header-tag">Tutor Library</span>

@@ -1,6 +1,14 @@
 const params = new URLSearchParams(window.location.search);
 const id = params.get('id');
 
+// Scored quiz / cluster-test state. When every question in a quiz or cluster
+// test has been answered, the result is POSTed once to the office (Netlify form
+// "library-quiz"). No email is asked of the tutor taking it (office-only).
+let scoredData = null;        // the quiz/cluster-test being taken
+const scoredAnswers = {};     // itemId -> { chosen, correct }
+let scoredCount = 0;          // how many distinct items have been answered
+let scoredSent = false;       // guard: only send once per completion
+
 function typeset(el) {
   if (typeof renderMathInElement === 'function') {
     renderMathInElement(el, {
@@ -145,6 +153,7 @@ function renderWorksheet(data, el) {
 // ── Quiz ─────────────────────────────────────────────────────────────────────
 
 function renderQuiz(data, el) {
+  scoredData = data;
   el.innerHTML = `
     ${header(data)}
     ${stubNotice(data)}
@@ -156,6 +165,7 @@ function renderQuiz(data, el) {
 // ── Cluster test (reuses the clickable quiz renderer, sectioned by standard) ──
 
 function renderClusterTest(data, el) {
+  scoredData = data;
   el.innerHTML = `
     ${header(data)}
     ${stubNotice(data)}
@@ -228,6 +238,11 @@ function selectOption(itemId, chosenIndex, correctIndex) {
 
   const isCorrect = chosenIndex === correctIndex;
 
+  // Record for scoring, and send once the whole quiz/test is answered.
+  scoredAnswers[itemId] = { chosen: chosenIndex, correct: isCorrect };
+  scoredCount++;
+  if (scoredData && scoredCount >= scoredData.items.length) sendScoredResults();
+
   document.querySelectorAll(`[id^="qopt-${itemId}-"]`).forEach((el, i) => {
     if (i === correctIndex) el.classList.add('quiz-opt-correct');
     if (i === chosenIndex && !isCorrect) el.classList.add('quiz-opt-wrong');
@@ -241,6 +256,63 @@ function selectOption(itemId, chosenIndex, correctIndex) {
   const steps = document.getElementById(`ak-${itemId}`);
   steps.classList.remove('hidden');
   typeset(steps);
+}
+
+// Fire-and-forget POST of a completed quiz / cluster-test to the office (Netlify
+// form "library-quiz"). Builds the same score + per-standard breakdown + missed
+// list shape the academic diagnostic uses, so the confirmation email renders it.
+function sendScoredResults() {
+  if (scoredSent || !scoredData) return;
+  scoredSent = true;
+
+  const data = scoredData;
+  const items = data.items;
+  const tally = {};
+  const missed = [];
+  let correct = 0;
+
+  items.forEach((it, idx) => {
+    const std = it.standard || data.standard || 'General';
+    if (!tally[std]) tally[std] = { c: 0, t: 0 };
+    tally[std].t++;
+    const correctLetter = (it.answer || '').trim().charAt(0) || '?';
+    const a = scoredAnswers[it.id];
+    if (a && a.correct) {
+      correct++;
+      tally[std].c++;
+    } else {
+      const chosenLetter = a ? String.fromCharCode(65 + a.chosen) : 'unanswered';
+      missed.push(`Q${idx + 1} [${std}] chose ${chosenLetter}, correct ${correctLetter}`);
+    }
+  });
+
+  const total = items.length;
+  const pct = Math.round((correct / total) * 100);
+  const breakdown = Object.keys(tally)
+    .map(s => `${s}: ${tally[s].c}/${tally[s].t}`)
+    .join(' · ');
+  const missedStr = missed.length ? missed.join('\n') : 'None — all questions correct.';
+  const typeLabel = data.materialType === 'cluster-test' ? 'Cluster Test' : 'Quiz';
+  const stdLabel = data.materialType.startsWith('cluster') ? (data.clusterId || '') : (data.standard || '');
+
+  const fd = new FormData();
+  fd.append('form-name', 'library-quiz');
+  fd.append('title', data.skillName || data.cluster || '');
+  fd.append('type', typeLabel);
+  fd.append('standard', stdLabel);
+  fd.append('grade', data.grade || '');
+  fd.append('subject', data.subject || '');
+  fd.append('material-id', id);
+  fd.append('score', `${correct}/${total}`);
+  fd.append('percent', `${pct}%`);
+  fd.append('standards-breakdown', breakdown);
+  fd.append('missed-questions', missedStr);
+
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(fd).toString()
+  }).catch(() => {});
 }
 
 // ── Shared problem item (worksheet) ──────────────────────────────────────────

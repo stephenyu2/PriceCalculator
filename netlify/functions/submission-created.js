@@ -45,7 +45,11 @@ const SKIP_FORMS = ['diagnostic-email-gate'];
 // Forms whose confirmation is also BCC'd to the office inbox, so we keep the
 // same formatted summary + PDF the submitter gets (not just the plain Netlify
 // dashboard notification). BCC keeps the internal address off the parent's copy.
-const OFFICE_COPY_FORMS = ['diagnostic-results'];
+const OFFICE_COPY_FORMS = ['diagnostic-results', 'sat-planner'];
+
+// Forms with no submitter to confirm to: the email goes straight to the office.
+// Used for tutor-facing library quizzes/tests, which ask no email of the taker.
+const OFFICE_ONLY_FORMS = ['library-quiz'];
 
 exports.handler = async function (event) {
   const key = process.env.RESEND_API_KEY;
@@ -68,7 +72,10 @@ exports.handler = async function (event) {
     return { statusCode: 200, body: 'skipped form' };
   }
 
-  const to = getEmail(data);
+  const submitterEmail = getEmail(data);
+  const officeOnly = OFFICE_ONLY_FORMS.indexOf(formName) !== -1;
+  // Office-only forms have no submitter, so they go straight to the office.
+  const to = submitterEmail || (officeOnly ? OFFICE_EMAIL : '');
   if (!to) {
     return { statusCode: 200, body: 'no valid email' };
   }
@@ -335,6 +342,43 @@ function buildMessage(formName, d) {
           row('Percent', d.percent)) +
         standardsBreakdown(d['standards-breakdown']) +
         missedQuestions(d['missed-questions']));
+
+    case 'sat-planner': {
+      const cur = d['current-total']
+        ? d['current-total'] + ' (Math ' + d['current-math'] + ', R&W ' + d['current-rw'] + ')'
+        : '';
+      return msg('Your SAT prep plan',
+        h1('Your SAT prep plan') +
+        p(hi(first) + 'thanks for using the SAT Prep Planner. A tutor will review these results and follow up to help you get started. Here\'s the plan we put together:') +
+        details(
+          row('Student', d.name) +
+          row('Phone', d.phone) +
+          row('Current score', cur) +
+          row('Target score', d['target-total']) +
+          row('Target split', d['target-split']) +
+          row('Test date', d['test-date']) +
+          row('Recommended hours', d['recommended-hours']) +
+          row('Weekly pace', d['hours-per-week'] ? d['hours-per-week'] + ' hours/week' : '') +
+          row('Program length', d.weeks ? d.weeks + ' weeks' : '')) +
+        p('Ready to start? Purchase your tutoring hours from the parent portal at launchvalleytutoring.com/parent-portal, or reply to this email and we\'ll help you set it up.'));
+    }
+
+    case 'library-quiz': {
+      const kind = d.type || 'Quiz';
+      return msg('Library ' + kind.toLowerCase() + ' completed: ' + (d.title || ''),
+        h1('Library ' + kind.toLowerCase() + ' completed') +
+        p('A library ' + kind.toLowerCase() + ' was completed. Here are the results:') +
+        details(
+          row('Material', d.title) +
+          row('Type', d.type) +
+          row('Standard', d.standard) +
+          row('Grade', d.grade) +
+          row('Subject', d.subject) +
+          row('Score', d.score) +
+          row('Percent', d.percent)) +
+        standardsBreakdown(d['standards-breakdown']) +
+        missedQuestions(d['missed-questions']));
+    }
 
     case 'tutoring-agreement':
       return msg('We received your Tutoring Services Agreement',
