@@ -1095,8 +1095,19 @@
         <p class="dt-text">Are you taking it on ScoreSmart or Bluebook?</p>
         <p class="dt-hint">Not sure what this means, or we haven't talked to you about it? Just click ScoreSmart.</p>
         <div class="dt-options">
-          <button type="button" class="dt-option" data-field="platform" data-value="ScoreSmart" data-next="proctored">ScoreSmart</button>
+          <button type="button" class="dt-option" data-field="platform" data-value="ScoreSmart" data-next="weekend">ScoreSmart</button>
           <button type="button" class="dt-option" data-field="platform" data-value="Bluebook" data-next="proctored">Bluebook</button>
+        </div>
+      </div>
+
+      <!-- Step: weekend diagnostic testing (ScoreSmart only) -->
+      <div class="dt-screen" data-screen="weekend">
+        <button type="button" class="dt-back">&larr; Back</button>
+        <h2 class="dt-title">Weekend Diagnostic Testing</h2>
+        <p class="dt-text">ScoreSmart diagnostics run on weekends. Register by <strong>Thursday at 8 PM</strong> to test any time from Friday morning through Sunday night that same weekend, <strong id="dt-weekend-range"></strong>.</p>
+        <p class="dt-hint">How often should you test? If your official test date is more than 1.5 months away, take a diagnostic every two weeks. Once you're within 1.5 months of your test, take one every week.</p>
+        <div class="dt-actions">
+          <button type="button" class="dt-btn dt-btn--primary" id="dt-weekend-continue">Continue &rarr;</button>
         </div>
       </div>
 
@@ -1115,7 +1126,7 @@
       <div class="dt-screen" data-screen="schedule">
         <button type="button" class="dt-back">&larr; Back</button>
         <h2 class="dt-title">Pick a Time</h2>
-        <p class="dt-text">What day and time would you like to take it? Slots are for the rest of this week and must be at least 24 hours out.</p>
+        <p class="dt-text" id="dt-sched-text">What day and time would you like to take it? Slots are for the rest of this week and must be at least 24 hours out.</p>
         <div class="dt-fields">
           <div class="dt-field">
             <label for="dt-day">Day</label>
@@ -1281,6 +1292,32 @@
       var sundayEl = document.getElementById('dt-sunday');
       if (sundayEl) sundayEl.textContent = SUNDAY_LABEL;
 
+      // --- ScoreSmart weekend testing window (register by Thursday 8 PM,
+      //     test Friday morning through Sunday night that same weekend) ---
+      function computeWeekend() {
+        var n = new Date();
+        // upcoming Thursday 8 PM (today if today is Thursday)
+        var thu = new Date(n.getFullYear(), n.getMonth(), n.getDate() + ((4 - n.getDay() + 7) % 7), 20, 0, 0, 0);
+        if (n > thu) thu = new Date(thu.getFullYear(), thu.getMonth(), thu.getDate() + 7, 20, 0, 0, 0);
+        var fri = new Date(thu.getFullYear(), thu.getMonth(), thu.getDate() + 1);
+        var sat = new Date(thu.getFullYear(), thu.getMonth(), thu.getDate() + 2);
+        var sun = new Date(thu.getFullYear(), thu.getMonth(), thu.getDate() + 3);
+        return { days: [fri, sat, sun], sunday: sun };
+      }
+      function isWeekendMode() { return state.platform === 'ScoreSmart'; }
+      function currentSundayLabel() {
+        return isWeekendMode() ? fmtDate(computeWeekend().sunday) : SUNDAY_LABEL;
+      }
+      function setProctoredLabel() {
+        var el = document.getElementById('dt-sunday');
+        if (el) el.textContent = currentSundayLabel();
+      }
+      function setWeekendInfo() {
+        var w = computeWeekend();
+        var el = document.getElementById('dt-weekend-range');
+        if (el) el.textContent = fmtDate(w.days[0]) + ' through ' + fmtDate(w.sunday);
+      }
+
       function current() {
         for (var k in screens) { if (screens[k].classList.contains('is-active')) return k; }
         return null;
@@ -1319,11 +1356,13 @@
         btn.addEventListener('click', function () {
           if (btn.dataset.field) state[btn.dataset.field] = btn.dataset.value;
           if (btn.dataset.field === 'proctored' && btn.dataset.value === 'Yes') {
-            state.day = SUNDAY_LABEL;
+            state.day = currentSundayLabel();
             state.time = '10:00 AM';
             state.location = 'Our facility, proctored';
           }
           var next = btn.dataset.next;
+          if (next === 'weekend') setWeekendInfo();
+          if (next === 'proctored') setProctoredLabel();
           if (next === 'schedule') buildSchedule();
           goTo(next);
         });
@@ -1346,6 +1385,14 @@
         var timeSel = document.getElementById('dt-time');
         var note = document.getElementById('dt-sched-note');
         var cont = document.getElementById('dt-sched-continue');
+        var schedText = document.getElementById('dt-sched-text');
+
+        if (isWeekendMode()) {
+          if (schedText) schedText.textContent = 'What day and time would you like to take it? Weekend slots run Friday morning through Sunday night.';
+          buildWeekendSchedule(daySel, timeSel, note, cont);
+          return;
+        }
+        if (schedText) schedText.textContent = 'What day and time would you like to take it? Slots are for the rest of this week and must be at least 24 hours out.';
 
         var min = new Date(Date.now() + 24 * 60 * 60 * 1000); // at least 24 hours out
         var now = new Date();
@@ -1399,11 +1446,45 @@
         buildTimes();
       }
 
+      // ScoreSmart weekend slots: Friday, Saturday, Sunday of the eligible
+      // weekend, full 6 AM to 8 PM (the Thursday 8 PM cutoff gives the lead time)
+      function buildWeekendSchedule(daySel, timeSel, note, cont) {
+        var days = computeWeekend().days;
+        daySel.closest('.dt-field').style.display = '';
+        timeSel.closest('.dt-field').style.display = '';
+        note.hidden = true;
+        cont.disabled = false;
+
+        daySel.innerHTML = '';
+        days.forEach(function (dd) {
+          var o = document.createElement('option');
+          o.value = dd.getTime();
+          o.textContent = fmtDate(dd);
+          daySel.appendChild(o);
+        });
+
+        timeSel.innerHTML = '';
+        SLOTS.forEach(function (m) {
+          var o = document.createElement('option');
+          o.value = fmtTime(m);
+          o.textContent = fmtTime(m);
+          timeSel.appendChild(o);
+        });
+        daySel.onchange = null;
+      }
+
+      // --- weekend info step (ScoreSmart) ---
+      document.getElementById('dt-weekend-continue').addEventListener('click', function () {
+        setProctoredLabel();
+        goTo('proctored');
+      });
+
       // --- academic grade step ---
       document.getElementById('dt-grade-continue').addEventListener('click', function () {
         var g = document.getElementById('dt-grade').value;
         if (!g) return;
         state.grade = g;
+        setProctoredLabel();
         goTo('proctored');
       });
 
