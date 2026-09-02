@@ -940,11 +940,13 @@
       <!-- ── Register for a diagnostic test ── -->
       <div class="portal-group">
         <h2 class="portal-group-heading">Register for a Diagnostic Test</h2>
-        <p class="portal-group-sub">Sign up for a weekly diagnostic. Answer a few quick questions and we'll get you set up.</p>
+        <p class="portal-group-sub">Sign up for a weekend diagnostic. Answer a few quick questions and we'll get you set up.</p>
         <div class="portal-grid">
           <div class="portal-card portal-card--static">
-            <h3 class="portal-card-title">Weekly Diagnostic Test</h3>
+            <h3 class="portal-card-title">Weekend Diagnostic Test</h3>
             <p class="portal-card-desc">Register for an academic diagnostic or a full-length SAT practice test. Takes about a minute. Maximum of one registration per subject per week.</p>
+            <p class="portal-card-desc">SAT/ACT diagnostics on ScoreSmart run on weekends. Register by <strong id="dt-card-cutoff"></strong> to test any time from Friday morning through Sunday night that same weekend, <strong id="dt-card-range"></strong>.</p>
+            <p class="portal-card-desc">How often should you test? If your official test date is more than 1.5 months away, take a diagnostic every two weeks. Once you're within 1.5 months of your test, take one every week.</p>
             <button type="button" class="dt-open-btn" id="dt-open">Register →</button>
           </div>
         </div>
@@ -1104,7 +1106,7 @@
       <div class="dt-screen" data-screen="weekend">
         <button type="button" class="dt-back">&larr; Back</button>
         <h2 class="dt-title">Weekend Diagnostic Testing</h2>
-        <p class="dt-text">ScoreSmart diagnostics run on weekends. Register by <strong>Thursday at 8 PM</strong> to test any time from Friday morning through Sunday night that same weekend, <strong id="dt-weekend-range"></strong>.</p>
+        <p class="dt-text">ScoreSmart diagnostics run on weekends. Register by <strong id="dt-weekend-cutoff"></strong> to test any time from Friday morning through Sunday night that same weekend, <strong id="dt-weekend-range"></strong>.</p>
         <p class="dt-hint">How often should you test? If your official test date is more than 1.5 months away, take a diagnostic every two weeks. Once you're within 1.5 months of your test, take one every week.</p>
         <div class="dt-actions">
           <button type="button" class="dt-btn dt-btn--primary" id="dt-weekend-continue">Continue &rarr;</button>
@@ -1302,7 +1304,7 @@
         var fri = new Date(thu.getFullYear(), thu.getMonth(), thu.getDate() + 1);
         var sat = new Date(thu.getFullYear(), thu.getMonth(), thu.getDate() + 2);
         var sun = new Date(thu.getFullYear(), thu.getMonth(), thu.getDate() + 3);
-        return { days: [fri, sat, sun], sunday: sun };
+        return { thursday: thu, days: [fri, sat, sun], sunday: sun };
       }
       function isWeekendMode() { return state.platform === 'ScoreSmart'; }
       function currentSundayLabel() {
@@ -1314,9 +1316,20 @@
       }
       function setWeekendInfo() {
         var w = computeWeekend();
+        var cut = document.getElementById('dt-weekend-cutoff');
+        if (cut) cut.textContent = fmtDate(w.thursday) + ' at 8 PM';
         var el = document.getElementById('dt-weekend-range');
         if (el) el.textContent = fmtDate(w.days[0]) + ' through ' + fmtDate(w.sunday);
       }
+
+      // Fill the portal card's weekend window (shown before the wizard opens)
+      (function () {
+        var w = computeWeekend();
+        var c = document.getElementById('dt-card-cutoff');
+        var r = document.getElementById('dt-card-range');
+        if (c) c.textContent = fmtDate(w.thursday) + ' at 8 PM';
+        if (r) r.textContent = fmtDate(w.days[0]) + ' through ' + fmtDate(w.sunday);
+      })();
 
       function current() {
         for (var k in screens) { if (screens[k].classList.contains('is-active')) return k; }
