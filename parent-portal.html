@@ -945,7 +945,7 @@
           <div class="portal-card portal-card--static">
             <h3 class="portal-card-title">Weekend Diagnostic Test</h3>
             <p class="portal-card-desc">Register for an academic diagnostic or a full-length SAT practice test. Takes about a minute. Maximum of one registration per subject per week.</p>
-            <p class="portal-card-desc">SAT/ACT diagnostics on ScoreSmart run on weekends. Register by <strong id="dt-card-cutoff"></strong> to test any time from Friday morning through Sunday night that same weekend, <strong id="dt-card-range"></strong>.</p>
+            <p class="portal-card-desc">SAT and ACT diagnostics run on weekends. Register by <strong id="dt-card-cutoff"></strong> to test any time from Friday morning through Sunday night that same weekend, <strong id="dt-card-range"></strong>.</p>
             <p class="portal-card-desc">How often should you test? If your official test date is more than 1.5 months away, take a diagnostic every two weeks. Once you're within 1.5 months of your test, take one every week.</p>
             <button type="button" class="dt-open-btn" id="dt-open">Register →</button>
           </div>
@@ -1098,7 +1098,7 @@
         <p class="dt-hint">Not sure what this means, or we haven't talked to you about it? Just click ScoreSmart.</p>
         <div class="dt-options">
           <button type="button" class="dt-option" data-field="platform" data-value="ScoreSmart" data-next="weekend">ScoreSmart</button>
-          <button type="button" class="dt-option" data-field="platform" data-value="Bluebook" data-next="proctored">Bluebook</button>
+          <button type="button" class="dt-option" data-field="platform" data-value="Bluebook" data-next="weekend">Bluebook</button>
         </div>
       </div>
 
@@ -1106,7 +1106,7 @@
       <div class="dt-screen" data-screen="weekend">
         <button type="button" class="dt-back">&larr; Back</button>
         <h2 class="dt-title">Weekend Diagnostic Testing</h2>
-        <p class="dt-text">ScoreSmart diagnostics run on weekends. Register by <strong id="dt-weekend-cutoff"></strong> to test any time from Friday morning through Sunday night that same weekend, <strong id="dt-weekend-range"></strong>.</p>
+        <p class="dt-text">SAT and ACT diagnostics run on weekends. Register by <strong id="dt-weekend-cutoff"></strong> to test any time from Friday morning through Sunday night that same weekend, <strong id="dt-weekend-range"></strong>.</p>
         <p class="dt-hint">How often should you test? If your official test date is more than 1.5 months away, take a diagnostic every two weeks. Once you're within 1.5 months of your test, take one every week.</p>
         <div class="dt-actions">
           <button type="button" class="dt-btn dt-btn--primary" id="dt-weekend-continue">Continue &rarr;</button>
@@ -1306,7 +1306,7 @@
         var sun = new Date(thu.getFullYear(), thu.getMonth(), thu.getDate() + 3);
         return { thursday: thu, days: [fri, sat, sun], sunday: sun };
       }
-      function isWeekendMode() { return state.platform === 'ScoreSmart'; }
+      function isWeekendMode() { return state.testType === 'SAT' || state.testType === 'ACT'; }
       function currentSundayLabel() {
         return isWeekendMode() ? fmtDate(computeWeekend().sunday) : SUNDAY_LABEL;
       }
