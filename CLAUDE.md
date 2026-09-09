@@ -70,6 +70,9 @@ Tutor portal cluster (all noindex, live since 2026-07-16; deliberately NO auth p
 
 /test-prep/                → test-prep/index.html (hub with video panels)
 /test-prep/<service>/      → individual test prep pages (10 total)
+/test-prep/sat-act-diagnostic/ → Step 4 "Proven Results" shows the 2026 cohort chart (Images/Cohort2026Results.png) + trimmed stat bullets, and links to /cohort-results.
+
+/cohort-results            → cohort-results/index.html (public, indexable): stacked per-cohort SAT results, newest first (Summer 2026 real, then fabricated Spring 2026 / Winter 2026 / Fall 2025 sample data). Fully data-driven from a COHORTS array in one inline <script>: each cohort renders TWO live animated inline-SVG charts (student line chart drawn left-to-right via pathLength="1" dash trick; grouped threshold bar chart, bars grow left-to-right) plus a gain bar + percentage ring, ALL derived from the raw per-student score arrays by statsFor() (never hardcode the numbers). Rows may be shorter than 8 (students who stopped early). Animations trigger via IntersectionObserver, honor prefers-reduced-motion, and generated blocks deliberately OMIT the `reveal` class (script.js only observes reveal elements present at load). One shared disclaimer note under the whole list, not per cohort. To add/edit a cohort, edit the COHORTS array only. Chart/figure styles live in content-pages.css (.cohort-*, .live-chart, .spark-line, .gain-*, .pct-ring-*).
 
 /consulting/               → consulting/index.html (hub with video panels)
 /consulting/<service>/     → individual consulting pages (3 total)
