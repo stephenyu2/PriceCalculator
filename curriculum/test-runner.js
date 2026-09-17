@@ -349,7 +349,7 @@ function buildResultsPDF() {
 
     // Contact line
     const ctLines = wrappedLines(
-      'To discuss these results, text us at (818) 294-3292 or email launch@launchvalleytutoring.com.',
+      'To discuss these results, text us at (818) 638-3908 or email launch@launchvalleytutoring.com.',
       CW - 18, 9);
     const ctH = ctLines.length * lh(9) + 14;
     doc.setFillColor(250, 250, 248); doc.setDrawColor(221, 221, 221);
@@ -361,7 +361,7 @@ function buildResultsPDF() {
     // CTA box
     check(60);
     const ctaLines = wrappedLines(
-      'Ready to close the gaps? Book a free consultation at launchvalleytutoring.com or text us at (818) 294-3292.',
+      'Ready to close the gaps? Book a free consultation at launchvalleytutoring.com or text us at (818) 638-3908.',
       CW - 24, 10);
     const ctaH = ctaLines.length * lh(10) + 18;
     doc.setFillColor(17, 17, 17); doc.setDrawColor(17, 17, 17);
