@@ -51,13 +51,16 @@ const OFFICE_COPY_FORMS = ['diagnostic-results', 'sat-planner'];
 // Used for tutor-facing library quizzes/tests, which ask no email of the taker.
 const OFFICE_ONLY_FORMS = ['library-quiz'];
 
-exports.handler = async function (event) {
-  const key = process.env.RESEND_API_KEY;
-  if (!key) {
-    console.log('submission-created: RESEND_API_KEY not set, skipping confirmation email');
-    return { statusCode: 200, body: 'no key' };
-  }
+// --- GoHighLevel (LeadConnector) CRM forwarding ---
+// Sales-lead forms whose submissions are POSTed to a GoHighLevel Inbound Webhook
+// so the lead auto-creates/updates a contact in the CRM. The webhook URL lives in
+// the GHL_WEBHOOK_URL env var (set in Netlify, not in code) so it stays out of the
+// repo; without it, forwarding is skipped. Only customer-facing lead forms are
+// listed here on purpose: tutor onboarding, incident reports, agreements, and
+// library quizzes are records, not CRM leads.
+const GHL_FORMS = ['lead-form', 'diagnostic-registration', 'diag-signup', 'sat-planner'];
 
+exports.handler = async function (event) {
   let payload;
   try {
     payload = JSON.parse(event.body).payload;
@@ -67,6 +70,21 @@ exports.handler = async function (event) {
 
   const data = (payload && payload.data) || {};
   const formName = (payload && payload.form_name) || data['form-name'] || '';
+
+  // Forward sales leads to the GoHighLevel CRM. Runs first and independently of
+  // the confirmation email: fully guarded and best-effort, so a CRM hiccup can
+  // never stop the confirmation, and it still fires even if RESEND_API_KEY is unset.
+  try {
+    await forwardToGHL(formName, data);
+  } catch (e) {
+    console.log('submission-created: GHL forward failed', e && e.message);
+  }
+
+  const key = process.env.RESEND_API_KEY;
+  if (!key) {
+    console.log('submission-created: RESEND_API_KEY not set, skipping confirmation email');
+    return { statusCode: 200, body: 'no key' };
+  }
 
   if (SKIP_FORMS.indexOf(formName) !== -1) {
     return { statusCode: 200, body: 'skipped form' };
@@ -171,6 +189,49 @@ function fileName(url, field) {
   return name;
 }
 
+/* ---- GoHighLevel CRM forwarding ---- */
+
+// POST a lead form's submission to the GoHighLevel Inbound Webhook. GHL captures
+// this JSON and its workflow maps the fields onto a contact. We send both a set of
+// clean, standard contact fields (which GHL maps easily: name/email/phone) and the
+// raw form fields (so the workflow can map anything else, e.g. subject or grade).
+async function forwardToGHL(formName, data) {
+  if (GHL_FORMS.indexOf(formName) === -1) return;      // not a lead form
+  const url = process.env.GHL_WEBHOOK_URL;
+  if (!url) {
+    console.log('submission-created: GHL_WEBHOOK_URL not set, skipping CRM forward');
+    return;
+  }
+
+  const email = getEmail(data);
+  const name = getName(data);
+  const phone = getPhone(data);
+  const parts = name.split(/\s+/).filter(Boolean);
+
+  const body = Object.assign({}, data, {
+    source: 'launchvalleytutoring.com',
+    form: formName,
+    name: name,
+    full_name: name,
+    first_name: parts[0] || '',
+    last_name: parts.slice(1).join(' '),
+    email: email,
+    phone: phone
+  });
+  delete body['bot-field'];   // honeypot, never a real field
+  delete body['form-name'];   // Netlify's own field, redundant with `form`
+
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  });
+  if (!res.ok) {
+    const text = await res.text();
+    console.log('submission-created: GHL webhook error', res.status, text, '(form:', formName + ')');
+  }
+}
+
 /* ---- field helpers ---- */
 
 function getEmail(data) {
@@ -198,6 +259,34 @@ function getFirstName(data) {
   for (let i = 0; i < keys.length; i++) {
     const v = (data[keys[i]] || '').trim();
     if (v) return v.split(/\s+/)[0];
+  }
+  return '';
+}
+
+// Full name (not just the first word), across our forms' name-field variants.
+function getName(data) {
+  const keys = [
+    'full-name', 'parent-name', 'contact-name', 'tutor-name',
+    'reporter-name', 'name', 'first-name', 'firstName', 'studentFirstName'
+  ];
+  for (let i = 0; i < keys.length; i++) {
+    const v = (data[keys[i]] || '').trim();
+    if (v) return v;
+  }
+  return '';
+}
+
+function getPhone(data) {
+  const keys = ['phone', 'phone-number', 'contact-phone', 'tel'];
+  for (let i = 0; i < keys.length; i++) {
+    const v = (data[keys[i]] || '').trim();
+    if (v) return v;
+  }
+  for (const k in data) {
+    if (/phone|tel/i.test(k)) {
+      const v = (data[k] || '').trim();
+      if (v) return v;
+    }
   }
   return '';
 }
@@ -278,7 +367,7 @@ function wrap(inner) {
       '<div style="max-width:520px;margin:0 auto;background:#ffffff;border:1px solid #e2ddd4;border-radius:14px;padding:32px;">' +
         '<div style="font-family:Georgia,serif;font-size:20px;font-weight:700;color:#111;margin-bottom:20px;">Launch Valley Tutoring</div>' +
         inner +
-        '<p style="font-size:13px;color:#888;margin-top:28px;">Questions? Call (818) 294-3292 or email launch@launchvalleytutoring.com.</p>' +
+        '<p style="font-size:13px;color:#888;margin-top:28px;">Questions? Call (818) 638-3908 or email launch@launchvalleytutoring.com.</p>' +
       '</div>' +
     '</div>';
 }
@@ -461,7 +550,7 @@ function buildMessage(formName, d) {
           row('Parent notified', d['parent-notified']) +
           row('What happened', d['what-happened']) +
           row('What you did', d['what-you-did'])) +
-        p('If this is an emergency, call 911. For an urgent safety concern, call Stephen at (818) 294-3292.'));
+        p('If this is an emergency, call 911. For an urgent safety concern, call Stephen at (818) 638-3908.'));
 
     case 'tutor-training-complete':
       return msg('Training recorded',
