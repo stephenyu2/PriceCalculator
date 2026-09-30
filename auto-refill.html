@@ -906,6 +906,24 @@
       var currentLevel = null;
       var currentTier = null;
 
+      // The tutor tier is decided by the link we send the family, not chosen
+      // here: ?p=b applies the junior rate, anything else (including no param)
+      // applies senior. The tier is never shown to the parent. The token is
+      // stashed for the visit so it survives the /parent-portal entry point
+      // and any later page hops.
+      var _p = new URLSearchParams(location.search).get('p');
+      try {
+        if (_p) { sessionStorage.setItem('lvt_p', _p); }
+        else { _p = sessionStorage.getItem('lvt_p'); }
+      } catch (e) {}
+      var FORCED_TIER = _p === 'b' ? 'junior' : 'senior';
+
+      // Panel labels carry the tier for our records (hidden form field); the
+      // parent-facing copy drops it.
+      function displayLabel(label) {
+        return label.replace(/,\s*(Senior|Junior) Tutor$/, '');
+      }
+
       // 10% sibling discount, display only (all refills are charged manually)
       function formatPrice(n) {
         var hasCents = Math.round(n * 100) % 100 !== 0;
@@ -923,7 +941,7 @@
         var priceHtml = siblingBox.checked
           ? '<strong>' + discountedPrice(selected.price) + '</strong> (10% sibling discount applied)'
           : '<strong>' + selected.price + '</strong>';
-        summary.innerHTML = 'You are enrolling in the <strong>' + selected.hours + '-hour ' + selected.label +
+        summary.innerHTML = 'You are enrolling in the <strong>' + selected.hours + '-hour ' + displayLabel(selected.label) +
           ' refill</strong>. Whenever your balance falls to two hours or below, your saved card is charged ' +
           priceHtml + ' and <strong>' + selected.hours + ' hours</strong> are added to your account.';
 
@@ -957,13 +975,15 @@
           // Switching level clears any prior refill choice so the wrong level can't carry over
           clearRefillChoice();
 
+          tierPrompt.classList.remove('visible');
           if (TIERED[currentLevel]) {
-            // Wait for a tutor tier before showing any prices.
-            showPanel(null);
-            tierPrompt.classList.add('visible');
-            tierPrompt.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Tier comes from the link, not a parent choice.
+            currentTier = FORCED_TIER;
+            var key = currentLevel + '-' + currentTier;
+            showPanel(key);
+            var panel = document.querySelector('.package-panel[data-panel="' + key + '"]');
+            if (panel) panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
           } else {
-            tierPrompt.classList.remove('visible');
             showPanel(currentLevel);
           }
         });
@@ -1029,7 +1049,7 @@
           var priceLabel = siblingBox.checked
             ? discountedPrice(selected.price) + ' per refill with the sibling discount'
             : selected.price + ' per refill';
-          successDetail.textContent = 'Automatic Refill is set to the ' + selected.hours + '-hour ' + selected.label +
+          successDetail.textContent = 'Automatic Refill is set to the ' + selected.hours + '-hour ' + displayLabel(selected.label) +
             ' package (' + priceLabel + ', charged only when your balance falls to two hours or below).';
           success.classList.add('active');
           success.scrollIntoView({ behavior: 'smooth', block: 'center' });

@@ -938,7 +938,7 @@
       </div>
 
       <!-- ── Register for a diagnostic test ── -->
-      <div class="portal-group">
+      <div class="portal-group" id="register-diagnostic" style="scroll-margin-top: 90px;">
         <h2 class="portal-group-heading">Register for a Diagnostic Test</h2>
         <p class="portal-group-sub">Sign up for a weekend diagnostic. Answer a few quick questions and we'll get you set up.</p>
         <div class="portal-grid">
@@ -1267,6 +1267,19 @@
         body.hidden = !open;
       });
     });
+  </script>
+
+  <script>
+    // Tutor-tier token: families arrive here via a link that carries ?p=b
+    // (junior rate) or no param (senior, the default). Stash it for the visit
+    // so the pricing / auto-refill / manage-package pages read the right tier
+    // even though the parent never sees or chooses it.
+    (function () {
+      try {
+        var p = new URLSearchParams(location.search).get('p');
+        if (p) { sessionStorage.setItem('lvt_p', p); }
+      } catch (e) {}
+    })();
   </script>
 
   <script>

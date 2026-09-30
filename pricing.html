@@ -519,13 +519,23 @@
       var selectedLevel = null;
       var selectedTier = null;
 
-      var TIER_LABEL = { senior: 'Senior Tutor', junior: 'Junior Tutor' };
+      // The tutor tier is decided by the link we send the family, not chosen
+      // here: ?p=b applies the junior rate, anything else (including no
+      // param) applies senior. The tier is never shown to the parent. The
+      // token is stashed for the visit so it survives the /parent-portal
+      // entry point and any later page hops.
+      var _p = new URLSearchParams(location.search).get('p');
+      try {
+        if (_p) { sessionStorage.setItem('lvt_p', _p); }
+        else { _p = sessionStorage.getItem('lvt_p'); }
+      } catch (e) {}
+      var FORCED_TIER = _p === 'b' ? 'junior' : 'senior';
 
       // Reveal the rate + checkout for the chosen level (and tier, if any).
       function showRate(level, tier) {
         var info = PRICES[level];
         var priced = tier ? info[tier] : info.flat;
-        var label = info.label + (tier ? ', ' + TIER_LABEL[tier] : '');
+        var label = info.label;
 
         rateLevel.textContent = label;
         rateOriginal.textContent = priced.original;
@@ -548,14 +558,12 @@
           tierCards.forEach(function (c) { c.classList.remove('is-selected'); });
 
           var tiered = PRICES[selectedLevel].flat === undefined;
+          tierSelect.hidden = true;
           if (tiered) {
-            // Wait for a tutor tier before showing a rate.
-            tierSelect.hidden = false;
-            rate.hidden = true;
-            checkout.hidden = true;
-            tierSelect.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Tier comes from the link, not a parent choice.
+            selectedTier = FORCED_TIER;
+            showRate(selectedLevel, selectedTier);
           } else {
-            tierSelect.hidden = true;
             showRate(selectedLevel, null);
           }
         });

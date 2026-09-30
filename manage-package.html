@@ -557,6 +557,19 @@
       var tierSelect = document.getElementById('change-tier');
       var sizeSelect = document.getElementById('change-size');
 
+      // The tutor tier is decided by the link we send the family, not chosen
+      // here: ?p=b applies the junior rate, anything else (including no param)
+      // applies senior. The dropdown stays hidden; the tier still rides along
+      // in the submitted form for our records. The token is stashed for the
+      // visit so it survives the /parent-portal entry point and later hops.
+      var _p = new URLSearchParams(location.search).get('p');
+      try {
+        if (_p) { sessionStorage.setItem('lvt_p', _p); }
+        else { _p = sessionStorage.getItem('lvt_p'); }
+      } catch (e) {}
+      var FORCED_TIER = _p === 'b' ? 'junior' : 'senior';
+      var FORCED_TIER_LABEL = FORCED_TIER === 'junior' ? 'Junior Tutor' : 'Senior Tutor';
+
       function resetSize(placeholderText) {
         sizeSelect.innerHTML = '';
         sizeSelect.disabled = true;
@@ -591,22 +604,14 @@
           populateSizes(entry.flat);
           return;
         }
-        // Tiered level: a tutor tier is required before prices appear.
-        tierField.hidden = false;
-        var tierKey = tierSelect.value === 'Senior Tutor' ? 'senior'
-          : tierSelect.value === 'Junior Tutor' ? 'junior' : null;
-        if (!tierKey) {
-          resetSize('Choose your tutor tier first');
-          return;
-        }
-        populateSizes(entry[tierKey]);
+        // Tiered level: the tier comes from the link, not a parent choice.
+        // Keep the dropdown hidden but set its value so the form records it.
+        tierField.hidden = true;
+        tierSelect.value = FORCED_TIER_LABEL;
+        populateSizes(entry[FORCED_TIER]);
       }
 
-      levelSelect.addEventListener('change', function () {
-        tierSelect.value = '';
-        refreshSizeOptions();
-      });
-      tierSelect.addEventListener('change', refreshSizeOptions);
+      levelSelect.addEventListener('change', refreshSizeOptions);
 
       // --- Pause / resume toggle ---
       var pauseToggle = document.getElementById('pause-toggle');
