@@ -96,7 +96,13 @@ exports.handler = async function (event) {
   // Light-touch email shape check; Stripe validates deliverability rules.
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return bad('A valid email is required.');
 
-  const siteUrl = process.env.URL || 'http://localhost:8888';
+  // Prefer the address the visitor actually used so post-payment redirects
+  // land on the same site (netlify.app subdomain, custom domain, etc.).
+  const siteUrl =
+    (event.headers && (event.headers.origin ||
+      (event.headers.host && 'https://' + event.headers.host))) ||
+    process.env.URL ||
+    'http://localhost:8888';
 
   // Everything a director needs later, attached to the payment in Stripe.
   const metadata = {

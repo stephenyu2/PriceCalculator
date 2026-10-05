@@ -91,7 +91,13 @@ exports.handler = async function (event) {
   const tier = calc.tiers.find(function (t) { return t.key === tierKey; });
   if (!tier) return bad('Invalid package.');
 
-  const siteUrl = process.env.URL || 'http://localhost:8888';
+  // Prefer the address the visitor actually used so post-payment redirects
+  // land on the same site (netlify.app subdomain, custom domain, etc.).
+  const siteUrl =
+    (event.headers && (event.headers.origin ||
+      (event.headers.host && 'https://' + event.headers.host))) ||
+    process.env.URL ||
+    'http://localhost:8888';
 
   const packageName = 'SAT Prep ' + tier.name + ' Package (' + tier.hours + ' hours)';
   const packageDescription = tier.hours + ' tutoring hours, ' + tier.hoursPerWeek + ' hours/week over ' +
