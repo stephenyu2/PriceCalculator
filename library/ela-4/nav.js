@@ -1,12 +1,14 @@
 let skeleton = null;
 let catalog = null;
+let diagnostics = null;
 let GRADE_CODE = null; // grade prefix used in standard codes (e.g. "7", "PC", "K", "A1")
 
 async function init() {
   try {
-    [skeleton, catalog] = await Promise.all([
+    [skeleton, catalog, diagnostics] = await Promise.all([
       fetch('../data/skeleton-4-ela.json').then(r => r.json()),
-      fetch('../data/catalog.json').then(r => r.json())
+      fetch('../data/catalog.json').then(r => r.json()),
+      fetch('../data/skeleton-diagnostics.json').then(r => r.json()).catch(() => null)
     ]);
     GRADE_CODE = gradeCodeOf(skeleton);
     buildNav();
@@ -21,6 +23,8 @@ async function init() {
 function buildNav() {
   const nav = document.getElementById('libNav');
   nav.innerHTML = '<div class="nav-grade-label">4th Grade ELA</div>';
+
+  renderDiagnostics(nav);
 
   for (const domain of skeleton.domains) {
     const el = document.createElement('div');
@@ -38,6 +42,33 @@ function buildNav() {
     el.innerHTML = `<div class="nav-domain-name">${domain.name}</div>${clusterLinks}`;
     nav.appendChild(el);
   }
+}
+
+// Pinned "Full Grade Diagnostic" section at the top of the sidebar.
+// UI placeholder only: reads the diagnostics skeleton and shows the 5 planned
+// forms as disabled slots. No tests are wired yet (no items, no runner).
+function renderDiagnostics(nav) {
+  if (!diagnostics || !diagnostics.grades) return;
+  const key = `${skeleton.subject}-${skeleton.grade}`;
+  const g = diagnostics.grades[key];
+  if (!g || !Array.isArray(g.tests) || !g.tests.length) return;
+
+  const slots = g.tests.map(t => {
+    const tag = t.source === 'sampled' ? 'Sampled' : 'New';
+    return `
+      <span class="diag-slot" aria-disabled="true" title="Coming soon">
+        <span class="diag-slot-form">Form ${t.form}</span>
+        <span class="diag-slot-tag diag-${t.source}">${tag}</span>
+      </span>`;
+  }).join('');
+
+  const el = document.createElement('div');
+  el.className = 'nav-domain nav-diagnostics';
+  el.innerHTML = `
+    <div class="nav-domain-name">Full Grade Diagnostic</div>
+    <div class="diag-sub">${g.tests.length} tests \u00b7 timed \u00b7 PDF</div>
+    <div class="diag-slot-grid">${slots}</div>`;
+  nav.appendChild(el);
 }
 
 function handleHash() {

@@ -194,11 +194,37 @@ function parsePrompt(prompt) {
 
 function quizItem(p, num) {
   const { questionText, options } = parsePrompt(p.prompt);
-  const correctLetter = (p.answer || '').trim().charAt(0);
-  const correctIndex = correctLetter ? correctLetter.charCodeAt(0) - 65 : -1;
+  const steps = (p.solution && p.solution.steps) || [];
+  const stepsHtml = steps.map(s => `<li>${safe(s)}</li>`).join('');
   const diffTag = p.difficulty
     ? `<div class="problem-difficulty-tag difficulty-${p.difficulty.toLowerCase()}">${p.difficulty}</div>`
     : '';
+
+  // Free-response item (no "A) ... B) ..." options): show the question with a
+  // Show Answer toggle instead of unclickable multiple-choice options.
+  if (options.length < 2) {
+    return `
+    <li class="quiz-problem" id="qp-${p.id}">
+      ${diffTag}
+      <div class="quiz-question-row">
+        <span class="problem-num">${num}.</span>
+        <p class="problem-prompt">${safe(questionText)}</p>
+      </div>
+      <div class="practice-actions">
+        <button class="toggle-btn" onclick="toggle(this,'ans-${p.id}','Show Answer','Hide Answer')">Show Answer</button>
+      </div>
+      <div class="toggle-content hidden" id="ans-${p.id}">
+        <div class="answer-box">
+          <div class="answer-label">Answer</div>
+          <div class="answer-value">${safe(p.answer)}</div>
+          ${stepsHtml ? `<div class="solution-steps"><ol>${stepsHtml}</ol></div>` : ''}
+        </div>
+      </div>
+    </li>`;
+  }
+
+  const correctLetter = (p.answer || '').trim().charAt(0);
+  const correctIndex = correctLetter ? correctLetter.charCodeAt(0) - 65 : -1;
   const optionsHtml = options.map((opt, i) => `
     <li class="quiz-option" id="qopt-${p.id}-${i}" onclick="selectOption(${p.id}, ${i}, ${correctIndex})">
       <span class="quiz-option-letter">${String.fromCharCode(65 + i)}</span>
@@ -215,7 +241,7 @@ function quizItem(p, num) {
       <ul class="quiz-options">${optionsHtml}</ul>
       <div class="quiz-feedback hidden" id="qfb-${p.id}"></div>
       <div class="ak-steps-wrap hidden" id="ak-${p.id}">
-        <ol class="ak-steps">${p.solution.steps.map(s => `<li>${safe(s)}</li>`).join('')}</ol>
+        <ol class="ak-steps">${stepsHtml}</ol>
       </div>
     </li>`;
 }
