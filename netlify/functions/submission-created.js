@@ -235,6 +235,10 @@ async function forwardToGHL(formName, data) {
     full_name: name,
     first_name: parts[0] || '',
     last_name: parts.slice(1).join(' '),
+    firstName: parts[0] || '',
+    lastName: parts.slice(1).join(' '),
+    subjectType: data.subjectType || data.subject || '',
+    schoolLevel: data.schoolLevel || data.level || '',
     email: email,
     phone: phone
   });
