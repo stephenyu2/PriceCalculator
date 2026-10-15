@@ -1,0 +1,172 @@
+{
+  "id": "CALC2.DE.A.3--worksheet",
+  "standard": "CALC2.DE.A.3",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Differential Equations",
+  "domainCode": "DE",
+  "cluster": "Solving and applying",
+  "clusterCode": "A",
+  "skillName": "Euler's Method",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Apply $y_{n+1}=y_n+h\\,f(x_n,y_n)$ step by step.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "$\\frac{dy}{dx}=y$, $y(0)=1$, $h=0.5$: $y(0.5)$.",
+      "answer": "$1.5$",
+      "solution": {
+        "steps": [
+          "$1+0.5(1)=1.5$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "$\\frac{dy}{dx}=y$, $y(0)=1$, $h=0.5$: $y(1)$.",
+      "answer": "$2.25$",
+      "solution": {
+        "steps": [
+          "$1.5+0.5(1.5)=2.25$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "$\\frac{dy}{dx}=x+y$, $y(0)=1$, $h=1$: $y(1)$.",
+      "answer": "$2$",
+      "solution": {
+        "steps": [
+          "$1+1(0+1)=2$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "$\\frac{dy}{dx}=x+y$, $y(0)=1$, $h=1$: $y(2)$.",
+      "answer": "$5$",
+      "solution": {
+        "steps": [
+          "$2+1(1+2)=5$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "$\\frac{dy}{dx}=2x$, $y(0)=0$, $h=0.5$: $y(1)$.",
+      "answer": "$0.5$",
+      "solution": {
+        "steps": [
+          "$0\\to 0\\to 0.5$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "$\\frac{dy}{dx}=x$, $y(0)=0$, $h=1$: $y(3)$.",
+      "answer": "$3$",
+      "solution": {
+        "steps": [
+          "$0\\to 0\\to 1\\to 3$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "$\\frac{dy}{dx}=-y$, $y(0)=4$, $h=0.5$: $y(0.5)$.",
+      "answer": "$2$",
+      "solution": {
+        "steps": [
+          "$4+0.5(-4)=2$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "$\\frac{dy}{dx}=xy$, $y(0)=1$, $h=1$: $y(1)$.",
+      "answer": "$1$",
+      "solution": {
+        "steps": [
+          "Slope $0\\cdot 1=0$; $y_1=1$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "$\\frac{dy}{dx}=xy$, $y(0)=1$, $h=1$: $y(2)$.",
+      "answer": "$2$",
+      "solution": {
+        "steps": [
+          "At $(1,1)$ slope $1$; $y_2=1+1(1)=2$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "$\\frac{dy}{dx}=y+1$, $y(0)=0$, $h=0.5$: $y(0.5)$.",
+      "answer": "$0.5$",
+      "solution": {
+        "steps": [
+          "$0+0.5(0+1)=0.5$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "$\\frac{dy}{dx}=y+1$, $y(0)=0$, $h=0.5$: $y(1)$.",
+      "answer": "$1.25$",
+      "solution": {
+        "steps": [
+          "$0.5+0.5(1.5)=1.25$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "$\\frac{dy}{dx}=2$, $y(0)=3$, $h=0.25$: $y(0.5)$.",
+      "answer": "$4$",
+      "solution": {
+        "steps": [
+          "Two steps of $0.5$: $3+0.5+0.5=4$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "$\\frac{dy}{dx}=x-y$, $y(0)=2$, $h=1$: $y(1)$.",
+      "answer": "$0$",
+      "solution": {
+        "steps": [
+          "Slope $0-2=-2$; $y_1=2+1(-2)=0$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Does Euler under- or over-estimate a concave-up solution?",
+      "answer": "Underestimate.",
+      "solution": {
+        "steps": [
+          "Tangent lines lie below a concave-up curve."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "$\\frac{dy}{dx}=y$, $y(0)=1$, $h=1$: $y(2)$ (compare to $h=0.5$).",
+      "answer": "$4$",
+      "solution": {
+        "steps": [
+          "$1\\to 2\\to 4$; coarser step is less accurate."
+        ]
+      }
+    }
+  ],
+  "clusterId": null,
+  "tier": null
+}

@@ -1,0 +1,91 @@
+{
+  "id": "STAT.INF.B.5--lesson",
+  "standard": "STAT.INF.B.5",
+  "grade": "statistics",
+  "subject": "math",
+  "domain": "Statistical Inference",
+  "domainCode": "INF",
+  "cluster": "Significance tests",
+  "clusterCode": "B",
+  "skillName": "Significance Testing Concepts",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A significance test weighs evidence against a null hypothesis $H_0$ (a statement of 'no effect') in favor of an alternative $H_a$. The test statistic measures how far the data fall from $H_0$, and the p-value is the probability, assuming $H_0$ is true, of a result at least as extreme as observed. A small p-value (below the significance level $\\alpha$, often $0.05$) is strong evidence against $H_0$, so we reject $H_0$. A Type I error rejects a true $H_0$; a Type II error fails to reject a false $H_0$. Power is the probability of correctly rejecting a false $H_0$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A test gives p-value $0.03$ with $\\alpha=0.05$. State the decision.",
+      "solution": {
+        "steps": [
+          "Compare the p-value to $\\alpha$.",
+          "Since $0.03<0.05$, the result is statistically significant.",
+          "So we reject $H_0$."
+        ],
+        "answer": "Reject $H_0$ (significant)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A test gives p-value $0.20$ with $\\alpha=0.05$. State the decision.",
+      "solution": {
+        "steps": [
+          "Compare: $0.20>0.05$.",
+          "The evidence against $H_0$ is weak.",
+          "So we fail to reject $H_0$."
+        ],
+        "answer": "Fail to reject $H_0$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Rejecting a null hypothesis that is actually true is which type of error?",
+      "solution": {
+        "steps": [
+          "Rejecting a true $H_0$ is the false-positive error.",
+          "That is a Type I error, which occurs with probability $\\alpha$."
+        ],
+        "answer": "Type I error"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "p-value $0.01$, $\\alpha=0.05$: decision?",
+      "solution": {
+        "steps": [
+          "$0.01<0.05$: reject."
+        ],
+        "answer": "Reject $H_0$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Failing to reject a false $H_0$ is which error?",
+      "solution": {
+        "steps": [
+          "Type II error."
+        ],
+        "answer": "Type II"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "p-value definition: probability of a result at least as extreme, assuming:",
+      "solution": {
+        "steps": [
+          "$H_0$ is true."
+        ],
+        "answer": "$H_0$ is true"
+      }
+    }
+  ]
+}

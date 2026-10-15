@@ -1,0 +1,91 @@
+{
+  "id": "CALC2.DE.A.4--lesson",
+  "standard": "CALC2.DE.A.4",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Differential Equations",
+  "domainCode": "DE",
+  "cluster": "Solving and applying",
+  "clusterCode": "A",
+  "skillName": "Exponential Growth and Decay Models",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "When a quantity changes at a rate proportional to its amount, $\\frac{dy}{dt}=ky$, the solution is $y=y_0 e^{kt}$, where $y_0$ is the initial amount. Positive $k$ gives growth, negative $k$ decay. Half-life (decay) satisfies $\\frac{1}{2}=e^{k\\cdot t_{1/2}}$, and doubling time (growth) satisfies $2=e^{k\\cdot t_{d}}$. Use given data to solve for $k$, then answer the question.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A bacteria culture doubles every $3$ hours. If it starts at $500$, write $y(t)$ and find the amount after $9$ hours.",
+      "solution": {
+        "steps": [
+          "Model: $y=500e^{kt}$. Doubling in $3$ h means $2=e^{3k}$, so $k=\\frac{\\ln 2}{3}$.",
+          "After $9$ hours (three doublings): $y(9)=500\\cdot 2^{9/3}=500\\cdot 2^3$.",
+          "Compute: $500\\cdot 8=4000$."
+        ],
+        "answer": "$y(t)=500e^{(\\ln 2/3)t}$; $y(9)=4000$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A radioactive sample has half-life $10$ years. What fraction remains after $30$ years?",
+      "solution": {
+        "steps": [
+          "Each half-life halves the amount; $30$ years is $3$ half-lives.",
+          "Fraction remaining $=\\left(\\frac{1}{2}\\right)^3=\\frac{1}{8}$."
+        ],
+        "answer": "$\\dfrac{1}{8}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A quantity decays by $\\frac{dy}{dt}=-0.05y$ with $y(0)=200$. Find $y(10)$.",
+      "solution": {
+        "steps": [
+          "Solution: $y=200e^{-0.05t}$.",
+          "At $t=10$: $y=200e^{-0.5}$.",
+          "Compute: $200(0.6065)\\approx 121.3$."
+        ],
+        "answer": "$y(10)=200e^{-0.5}\\approx 121.3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Population $\\frac{dP}{dt}=0.02P$, $P(0)=1000$. Find $P(50)$.",
+      "solution": {
+        "steps": [
+          "$P=1000e^{0.02t}$; $P(50)=1000e^{1}\\approx 2718$."
+        ],
+        "answer": "$\\approx 2718$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Half-life $5$ years: fraction left after $15$ years?",
+      "solution": {
+        "steps": [
+          "$15/5=3$ half-lives: $(\\frac{1}{2})^3=\\frac{1}{8}$."
+        ],
+        "answer": "$\\dfrac{1}{8}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Doubling time of $\\frac{dy}{dt}=0.1y$?",
+      "solution": {
+        "steps": [
+          "$2=e^{0.1 t}\\Rightarrow t=\\frac{\\ln 2}{0.1}=10\\ln 2\\approx 6.93$."
+        ],
+        "answer": "$\\approx 6.93$ years"
+      }
+    }
+  ]
+}

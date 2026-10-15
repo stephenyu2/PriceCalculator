@@ -1,0 +1,184 @@
+{
+  "id": "CALC1.LIM.A.4--worksheet",
+  "standard": "CALC1.LIM.A.4",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Limits and Continuity",
+  "domainCode": "LIM",
+  "cluster": "Understanding limits",
+  "clusterCode": "A",
+  "skillName": "Limits Involving Infinity",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Evaluate limits at infinity and one-sided infinite limits; state asymptotes where asked.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "$\\lim_{x\\to\\infty}\\dfrac{7x+2}{3x-5}$",
+      "answer": "$\\dfrac{7}{3}$",
+      "solution": {
+        "steps": [
+          "Equal degree $1$; ratio of leading coefficients.",
+          "$\\frac{7}{3}$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "$\\lim_{x\\to\\infty}\\dfrac{4x^2-1}{2x^2+x}$",
+      "answer": "$2$",
+      "solution": {
+        "steps": [
+          "Equal degree $2$; leading ratio $\\frac{4}{2}=2$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "$\\lim_{x\\to\\infty}\\dfrac{6x-1}{x^2+2}$",
+      "answer": "$0$",
+      "solution": {
+        "steps": [
+          "Denominator degree is larger.",
+          "Limit is $0$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "$\\lim_{x\\to\\infty}\\dfrac{x^3}{x^2+5}$",
+      "answer": "$+\\infty$",
+      "solution": {
+        "steps": [
+          "Numerator degree larger.",
+          "Grows without bound."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "$\\lim_{x\\to -\\infty}\\dfrac{2x^2+3}{x^2-1}$",
+      "answer": "$2$",
+      "solution": {
+        "steps": [
+          "Equal degree $2$; leading ratio $2$ (same at $-\\infty$)."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "$\\lim_{x\\to\\infty}\\dfrac{3-x}{x+1}$",
+      "answer": "$-1$",
+      "solution": {
+        "steps": [
+          "Equal degree $1$; leading ratio $\\frac{-1}{1}=-1$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "$\\lim_{x\\to 3^+}\\dfrac{2}{x-3}$",
+      "answer": "$+\\infty$",
+      "solution": {
+        "steps": [
+          "For $x>3$ the denominator is small positive.",
+          "Quotient $\\to +\\infty$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "$\\lim_{x\\to 3^-}\\dfrac{2}{x-3}$",
+      "answer": "$-\\infty$",
+      "solution": {
+        "steps": [
+          "For $x<3$ the denominator is small negative.",
+          "Quotient $\\to -\\infty$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Horizontal asymptote of $f(x)=\\dfrac{5x^2+1}{x^2+4}$?",
+      "answer": "$y=5$",
+      "solution": {
+        "steps": [
+          "Equal degree; ratio of leading coefficients $5$.",
+          "Asymptote $y=5$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Horizontal asymptote of $f(x)=\\dfrac{2x+7}{x^2-9}$?",
+      "answer": "$y=0$",
+      "solution": {
+        "steps": [
+          "Denominator degree larger.",
+          "Asymptote $y=0$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Vertical asymptote(s) of $f(x)=\\dfrac{x}{x^2-4}$?",
+      "answer": "$x=2$ and $x=-2$",
+      "solution": {
+        "steps": [
+          "Denominator zero at $x=\\pm 2$, numerator nonzero there.",
+          "Vertical asymptotes $x=\\pm 2$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "$\\lim_{x\\to\\infty}\\dfrac{\\sqrt{9x^2+1}}{x}$",
+      "answer": "$3$",
+      "solution": {
+        "steps": [
+          "$\\sqrt{9x^2+1}\\approx 3|x|=3x$ for $x>0$.",
+          "Ratio $\\to 3$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "$\\lim_{x\\to -\\infty}\\dfrac{\\sqrt{9x^2+1}}{x}$",
+      "answer": "$-3$",
+      "solution": {
+        "steps": [
+          "For $x<0$, $\\sqrt{9x^2+1}\\approx 3|x|=-3x$.",
+          "Ratio $\\frac{-3x}{x}=-3$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "$\\lim_{x\\to\\infty}\\left(\\dfrac{x^2+1}{x}-x\\right)$",
+      "answer": "$0$",
+      "solution": {
+        "steps": [
+          "Combine: $\\frac{x^2+1}{x}-x=\\frac{x^2+1-x^2}{x}=\\frac{1}{x}$.",
+          "As $x\\to\\infty$, $\\frac{1}{x}\\to 0$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "$\\lim_{x\\to\\infty}\\dfrac{3x^2+2x}{x^3+1}$",
+      "answer": "$0$",
+      "solution": {
+        "steps": [
+          "Denominator degree $3$ beats numerator degree $2$.",
+          "Limit $0$."
+        ]
+      }
+    }
+  ],
+  "clusterId": null,
+  "tier": null
+}

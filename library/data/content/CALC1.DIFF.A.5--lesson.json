@@ -1,0 +1,95 @@
+{
+  "id": "CALC1.DIFF.A.5--lesson",
+  "standard": "CALC1.DIFF.A.5",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Differentiation",
+  "domainCode": "DIFF",
+  "cluster": "Defining and computing derivatives",
+  "clusterCode": "A",
+  "skillName": "Implicit Differentiation",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "When a curve is defined implicitly by an equation in $x$ and $y$, differentiate both sides with respect to $x$, treating $y$ as a function of $x$ (so every $y$ term picks up a factor of $\\frac{dy}{dx}$ by the chain rule). Then solve algebraically for $\\frac{dy}{dx}$. Evaluating at a point on the curve gives the slope of the tangent line there.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Find $\\frac{dy}{dx}$ for $x^2+y^2=25$.",
+      "solution": {
+        "steps": [
+          "Differentiate both sides with respect to $x$: $2x+2y\\frac{dy}{dx}=0$.",
+          "The $y^2$ term uses the chain rule, giving $2y\\frac{dy}{dx}$.",
+          "Solve: $2y\\frac{dy}{dx}=-2x$, so $\\frac{dy}{dx}=-\\frac{x}{y}$."
+        ],
+        "answer": "$\\dfrac{dy}{dx}=-\\dfrac{x}{y}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find the slope of the tangent to $x^2+y^2=25$ at the point $(3,4)$.",
+      "solution": {
+        "steps": [
+          "From $\\frac{dy}{dx}=-\\frac{x}{y}$, substitute the point.",
+          "$-\\frac{3}{4}$.",
+          "The tangent at $(3,4)$ has slope $-\\frac{3}{4}$ (perpendicular to the radius)."
+        ],
+        "answer": "Slope $=-\\dfrac{3}{4}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Find $\\frac{dy}{dx}$ for $xy+y^2=6$.",
+      "solution": {
+        "steps": [
+          "Differentiate: $\\frac{d}{dx}(xy)=y+x\\frac{dy}{dx}$ by the product rule; $\\frac{d}{dx}(y^2)=2y\\frac{dy}{dx}$.",
+          "So $y+x\\frac{dy}{dx}+2y\\frac{dy}{dx}=0$.",
+          "Group: $\\frac{dy}{dx}(x+2y)=-y$, so $\\frac{dy}{dx}=-\\frac{y}{x+2y}$."
+        ],
+        "answer": "$\\dfrac{dy}{dx}=-\\dfrac{y}{x+2y}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Find $\\frac{dy}{dx}$ for $x^2-y^2=9$.",
+      "solution": {
+        "steps": [
+          "Differentiate: $2x-2y\\frac{dy}{dx}=0$.",
+          "Solve: $\\frac{dy}{dx}=\\frac{x}{y}$."
+        ],
+        "answer": "$\\dfrac{dy}{dx}=\\dfrac{x}{y}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Find $\\frac{dy}{dx}$ for $x^3+y^3=6xy$.",
+      "solution": {
+        "steps": [
+          "Differentiate: $3x^2+3y^2\\frac{dy}{dx}=6y+6x\\frac{dy}{dx}$.",
+          "Group: $\\frac{dy}{dx}(3y^2-6x)=6y-3x^2$, so $\\frac{dy}{dx}=\\frac{6y-3x^2}{3y^2-6x}=\\frac{2y-x^2}{y^2-2x}$."
+        ],
+        "answer": "$\\dfrac{dy}{dx}=\\dfrac{2y-x^2}{y^2-2x}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Find the slope of $y^2=4x$ at $(1,2)$.",
+      "solution": {
+        "steps": [
+          "Differentiate: $2y\\frac{dy}{dx}=4$, so $\\frac{dy}{dx}=\\frac{2}{y}$.",
+          "At $(1,2)$: $\\frac{2}{2}=1$."
+        ],
+        "answer": "Slope $=1$"
+      }
+    }
+  ]
+}

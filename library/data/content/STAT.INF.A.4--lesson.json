@@ -1,0 +1,91 @@
+{
+  "id": "STAT.INF.A.4--lesson",
+  "standard": "STAT.INF.A.4",
+  "grade": "statistics",
+  "subject": "math",
+  "domain": "Statistical Inference",
+  "domainCode": "INF",
+  "cluster": "Estimating with confidence intervals",
+  "clusterCode": "A",
+  "skillName": "Two-Sample Inference",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Two-sample inference compares two populations. For a difference of proportions, the estimate is $\\hat{p}_1-\\hat{p}_2$ with standard error $\\sqrt{\\dfrac{\\hat{p}_1(1-\\hat{p}_1)}{n_1}+\\dfrac{\\hat{p}_2(1-\\hat{p}_2)}{n_2}}$. For a difference of means, the estimate is $\\bar{x}_1-\\bar{x}_2$ with standard error $\\sqrt{\\dfrac{s_1^2}{n_1}+\\dfrac{s_2^2}{n_2}}$ and a t critical value. If a confidence interval for the difference contains $0$, there is no significant difference at that level.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Standard error of a difference of means: $s_1=3$, $n_1=9$, $s_2=4$, $n_2=16$.",
+      "solution": {
+        "steps": [
+          "Use $\\sqrt{\\frac{s_1^2}{n_1}+\\frac{s_2^2}{n_2}}$.",
+          "$\\frac{9}{9}+\\frac{16}{16}=1+1=2$.",
+          "So SE $=\\sqrt{2}\\approx 1.41$."
+        ],
+        "answer": "SE $=\\sqrt{2}\\approx 1.41$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A $95\\%$ CI for $\\mu_1-\\mu_2$ is $(-2,5)$. What do you conclude?",
+      "solution": {
+        "steps": [
+          "Check whether $0$ lies inside the interval.",
+          "Since $0$ is between $-2$ and $5$, the interval includes no difference.",
+          "So there is no significant difference at the $5\\%$ level."
+        ],
+        "answer": "No significant difference ($0$ is in the interval)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Estimate the difference of proportions: $\\hat{p}_1=0.6$, $\\hat{p}_2=0.5$.",
+      "solution": {
+        "steps": [
+          "The point estimate is $\\hat{p}_1-\\hat{p}_2$.",
+          "$0.6-0.5=0.1$."
+        ],
+        "answer": "$0.1$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "SE of difference of means: $s_1=6,n_1=36$, $s_2=8,n_2=16$.",
+      "solution": {
+        "steps": [
+          "$\\frac{36}{36}+\\frac{64}{16}=1+4=5$; SE $=\\sqrt{5}$."
+        ],
+        "answer": "$\\sqrt{5}\\approx 2.24$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "CI $(1,4)$ for difference of means: significant?",
+      "solution": {
+        "steps": [
+          "$0$ not inside, so yes significant."
+        ],
+        "answer": "Significant"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Point estimate of $\\mu_1-\\mu_2$ if $\\bar{x}_1=20,\\bar{x}_2=15$.",
+      "solution": {
+        "steps": [
+          "$20-15=5$."
+        ],
+        "answer": "$5$"
+      }
+    }
+  ]
+}

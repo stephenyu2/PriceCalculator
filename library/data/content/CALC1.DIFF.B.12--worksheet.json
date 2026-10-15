@@ -1,0 +1,172 @@
+{
+  "id": "CALC1.DIFF.B.12--worksheet",
+  "standard": "CALC1.DIFF.B.12",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Differentiation",
+  "domainCode": "DIFF",
+  "cluster": "Applications of derivatives",
+  "clusterCode": "B",
+  "skillName": "L'Hopital's Rule",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Confirm the $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$ form, then differentiate top and bottom separately.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "$\\lim_{x\\to 0}\\dfrac{\\sin x}{x}$",
+      "answer": "$1$",
+      "solution": {
+        "steps": [
+          "$\\frac{0}{0}\\to\\frac{\\cos x}{1}\\to 1$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "$\\lim_{x\\to 0}\\dfrac{e^x-1}{x}$",
+      "answer": "$1$",
+      "solution": {
+        "steps": [
+          "$\\frac{0}{0}\\to\\frac{e^x}{1}\\to 1$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "$\\lim_{x\\to 0}\\dfrac{\\tan x}{x}$",
+      "answer": "$1$",
+      "solution": {
+        "steps": [
+          "$\\frac{0}{0}\\to\\frac{\\sec^2 x}{1}\\to 1$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "$\\lim_{x\\to\\infty}\\dfrac{\\ln x}{x}$",
+      "answer": "$0$",
+      "solution": {
+        "steps": [
+          "$\\frac{\\infty}{\\infty}\\to\\frac{1/x}{1}\\to 0$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "$\\lim_{x\\to\\infty}\\dfrac{x}{e^x}$",
+      "answer": "$0$",
+      "solution": {
+        "steps": [
+          "$\\frac{\\infty}{\\infty}\\to\\frac{1}{e^x}\\to 0$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "$\\lim_{x\\to 0}\\dfrac{1-\\cos x}{x^2}$",
+      "answer": "$\\dfrac{1}{2}$",
+      "solution": {
+        "steps": [
+          "Apply twice: $\\frac{\\sin x}{2x}\\to\\frac{\\cos x}{2}\\to\\frac{1}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "$\\lim_{x\\to 1}\\dfrac{x^2-1}{\\ln x}$",
+      "answer": "$2$",
+      "solution": {
+        "steps": [
+          "$\\frac{0}{0}\\to\\frac{2x}{1/x}=2x^2\\to 2$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "$\\lim_{x\\to 0}\\dfrac{\\sin 3x}{x}$",
+      "answer": "$3$",
+      "solution": {
+        "steps": [
+          "$\\frac{0}{0}\\to\\frac{3\\cos 3x}{1}\\to 3$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "$\\lim_{x\\to\\infty}\\dfrac{x^2}{e^x}$",
+      "answer": "$0$",
+      "solution": {
+        "steps": [
+          "Apply twice: $\\frac{2x}{e^x}\\to\\frac{2}{e^x}\\to 0$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "$\\lim_{x\\to 0}\\dfrac{e^{2x}-1}{x}$",
+      "answer": "$2$",
+      "solution": {
+        "steps": [
+          "$\\frac{0}{0}\\to\\frac{2e^{2x}}{1}\\to 2$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "$\\lim_{x\\to 0}\\dfrac{\\ln(1+x)}{x}$",
+      "answer": "$1$",
+      "solution": {
+        "steps": [
+          "$\\frac{0}{0}\\to\\frac{1/(1+x)}{1}\\to 1$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "$\\lim_{x\\to\\infty}\\dfrac{\\ln x}{\\sqrt{x}}$",
+      "answer": "$0$",
+      "solution": {
+        "steps": [
+          "$\\frac{\\infty}{\\infty}\\to\\frac{1/x}{1/(2\\sqrt{x})}=\\frac{2}{\\sqrt{x}}\\to 0$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "$\\lim_{x\\to 0}\\dfrac{\\sin x - x}{x^3}$",
+      "answer": "$-\\dfrac{1}{6}$",
+      "solution": {
+        "steps": [
+          "Apply thrice: $\\frac{\\cos x-1}{3x^2}\\to\\frac{-\\sin x}{6x}\\to\\frac{-\\cos x}{6}\\to-\\frac{1}{6}$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "$\\lim_{x\\to 2}\\dfrac{x^2-4}{x-2}$ (check it is $\\frac{0}{0}$)",
+      "answer": "$4$",
+      "solution": {
+        "steps": [
+          "$\\frac{0}{0}\\to\\frac{2x}{1}\\to 4$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "$\\lim_{x\\to 0^+} x\\ln x$ (rewrite as $\\frac{\\ln x}{1/x}$)",
+      "answer": "$0$",
+      "solution": {
+        "steps": [
+          "$\\frac{-\\infty}{\\infty}\\to\\frac{1/x}{-1/x^2}=-x\\to 0$."
+        ]
+      }
+    }
+  ],
+  "clusterId": null,
+  "tier": null
+}

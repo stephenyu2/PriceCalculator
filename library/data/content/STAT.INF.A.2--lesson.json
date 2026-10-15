@@ -1,0 +1,92 @@
+{
+  "id": "STAT.INF.A.2--lesson",
+  "standard": "STAT.INF.A.2",
+  "grade": "statistics",
+  "subject": "math",
+  "domain": "Statistical Inference",
+  "domainCode": "INF",
+  "cluster": "Estimating with confidence intervals",
+  "clusterCode": "A",
+  "skillName": "One-Sample z Interval for Proportions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A one-sample z interval for a population proportion is $\\hat{p}\\pm z^*\\sqrt{\\dfrac{\\hat{p}(1-\\hat{p})}{n}}$, where $\\hat{p}$ is the sample proportion and $z^*$ is the critical value ($1.645$ for $90\\%$, $1.96$ for $95\\%$, $2.576$ for $99\\%$). Conditions: random sample, independence (population at least $10n$), and large counts ($n\\hat{p}\\ge 10$ and $n(1-\\hat{p})\\ge 10$). The square-root factor is the standard error.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "In a sample of $100$, $\\hat{p}=0.5$. Find the standard error.",
+      "solution": {
+        "steps": [
+          "Standard error is $\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}$.",
+          "$\\sqrt{\\frac{0.5\\cdot 0.5}{100}}=\\sqrt{\\frac{0.25}{100}}=\\sqrt{0.0025}$.",
+          "So SE $=0.05$."
+        ],
+        "answer": "SE $=0.05$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "With $\\hat{p}=0.5$, $n=100$, build the $95\\%$ confidence interval.",
+      "solution": {
+        "steps": [
+          "Margin $=z^*\\cdot\\text{SE}=1.96\\cdot 0.05=0.098$.",
+          "Interval: $0.5\\pm 0.098$.",
+          "Endpoints: $(0.402,\\,0.598)$."
+        ],
+        "answer": "$(0.402,\\,0.598)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Check the large-counts condition for $\\hat{p}=0.2$, $n=50$.",
+      "solution": {
+        "steps": [
+          "$n\\hat{p}=50(0.2)=10$ and $n(1-\\hat{p})=50(0.8)=40$.",
+          "Both are at least $10$.",
+          "So the large-counts condition is met."
+        ],
+        "answer": "Met ($10\\ge 10$ and $40\\ge 10$)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "SE for $\\hat{p}=0.4$, $n=100$.",
+      "solution": {
+        "steps": [
+          "$\\sqrt{\\frac{0.24}{100}}=\\sqrt{0.0024}\\approx 0.049$."
+        ],
+        "answer": "$\\approx 0.049$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "z* for 95%.",
+      "solution": {
+        "steps": [
+          "$1.96$."
+        ],
+        "answer": "$1.96$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Large-counts for $\\hat{p}=0.1$, $n=50$: met?",
+      "solution": {
+        "steps": [
+          "$n\\hat{p}=5<10$, so not met."
+        ],
+        "answer": "Not met"
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "CALC1.INT.A.4--lesson",
+  "standard": "CALC1.INT.A.4",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Integration",
+  "domainCode": "INT",
+  "cluster": "Defining and computing integrals",
+  "clusterCode": "A",
+  "skillName": "u-Substitution",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Substitution reverses the chain rule. Choose $u=g(x)$ so that $g'(x)$ (up to a constant) appears as a factor; then $du=g'(x)\\,dx$ converts the integral into one in $u$. After integrating in $u$, substitute back. For a definite integral, either substitute back before evaluating, or change the limits to $u$-values and evaluate directly.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Evaluate $\\int 2x(x^2+1)^5\\,dx$.",
+      "solution": {
+        "steps": [
+          "Let $u=x^2+1$, so $du=2x\\,dx$, which matches the factor $2x\\,dx$.",
+          "Rewrite: $\\int u^5\\,du$.",
+          "Integrate: $\\frac{u^6}{6}+C$.",
+          "Back-substitute: $\\frac{(x^2+1)^6}{6}+C$."
+        ],
+        "answer": "$\\dfrac{(x^2+1)^6}{6}+C$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Evaluate $\\int x\\,e^{x^2}\\,dx$.",
+      "solution": {
+        "steps": [
+          "Let $u=x^2$, so $du=2x\\,dx$, i.e. $x\\,dx=\\frac{1}{2}du$.",
+          "Rewrite: $\\frac{1}{2}\\int e^u\\,du$.",
+          "Integrate: $\\frac{1}{2}e^u+C=\\frac{1}{2}e^{x^2}+C$."
+        ],
+        "answer": "$\\dfrac{1}{2}e^{x^2}+C$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Evaluate $\\int_0^1 x\\,e^{x^2}\\,dx$ by changing limits.",
+      "solution": {
+        "steps": [
+          "With $u=x^2$, $x\\,dx=\\frac{1}{2}du$; limits become $u=0$ to $u=1$.",
+          "Integral: $\\frac{1}{2}\\int_0^1 e^u\\,du=\\frac{1}{2}(e^1-e^0)$.",
+          "Simplify: $\\frac{1}{2}(e-1)$."
+        ],
+        "answer": "$\\dfrac{e-1}{2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Evaluate $\\int 3x^2(x^3+2)^4\\,dx$.",
+      "solution": {
+        "steps": [
+          "$u=x^3+2$, $du=3x^2\\,dx$; $\\int u^4\\,du=\\frac{u^5}{5}$."
+        ],
+        "answer": "$\\dfrac{(x^3+2)^5}{5}+C$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Evaluate $\\int \\cos(5x)\\,dx$.",
+      "solution": {
+        "steps": [
+          "$u=5x$, $du=5\\,dx$; $\\frac{1}{5}\\int\\cos u\\,du=\\frac{1}{5}\\sin(5x)+C$."
+        ],
+        "answer": "$\\dfrac{1}{5}\\sin(5x)+C$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Evaluate $\\int \\frac{2x}{x^2+1}\\,dx$.",
+      "solution": {
+        "steps": [
+          "$u=x^2+1$, $du=2x\\,dx$; $\\int\\frac{1}{u}\\,du=\\ln|u|+C$."
+        ],
+        "answer": "$\\ln(x^2+1)+C$"
+      }
+    }
+  ]
+}

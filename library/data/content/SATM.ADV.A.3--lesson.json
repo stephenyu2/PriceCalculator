@@ -1,0 +1,92 @@
+{
+  "id": "SATM.ADV.A.3--lesson",
+  "standard": "SATM.ADV.A.3",
+  "grade": "sat",
+  "subject": "math",
+  "domain": "Advanced Math",
+  "domainCode": "ADV",
+  "cluster": "Nonlinear expressions, equations, and functions",
+  "clusterCode": "A",
+  "skillName": "Exponential Functions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "An exponential function $y=ab^x$ changes by a constant FACTOR per step: $a$ is the initial value (at $x=0$) and $b$ is the growth/decay factor. If $b>1$ it grows; if $0<b<1$ it decays. A percent rate $r$ gives $b=1+r$ for growth or $b=1-r$ for decay. Compare with linear functions, which change by a constant AMOUNT. SAT items test writing a model from a description and reading off initial value and factor.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A population starts at $200$ and triples each year. Write $P(t)$ and find $P(2)$.",
+      "solution": {
+        "steps": [
+          "Initial value $200$, factor $3$: $P(t)=200\\cdot 3^t$.",
+          "At $t=2$: $P(2)=200\\cdot 3^2=200\\cdot 9$.",
+          "Compute: $1800$."
+        ],
+        "answer": "$P(t)=200\\cdot 3^t$; $P(2)=1800$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A $\\$500$ investment grows $4\\%$ per year. Write the model.",
+      "solution": {
+        "steps": [
+          "Growth factor is $b=1+r=1+0.04=1.04$.",
+          "Initial value is $500$.",
+          "So $V(t)=500(1.04)^t$."
+        ],
+        "answer": "$V(t)=500(1.04)^t$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A substance decays to half every hour from $80$ mg. Amount after $3$ hours?",
+      "solution": {
+        "steps": [
+          "Factor is $\\frac{1}{2}$: $A(t)=80\\left(\\frac{1}{2}\\right)^t$.",
+          "After $3$ hours: $80\\cdot\\frac{1}{8}=10$.",
+          "So $10$ mg remain."
+        ],
+        "answer": "$10$ mg"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "$y=5\\cdot 2^x$ at $x=3$.",
+      "solution": {
+        "steps": [
+          "$5\\cdot 8=40$."
+        ],
+        "answer": "$40$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Growth factor for $6\\%$ increase.",
+      "solution": {
+        "steps": [
+          "$1.06$."
+        ],
+        "answer": "$1.06$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Decay factor for $20\\%$ decrease.",
+      "solution": {
+        "steps": [
+          "$0.80$."
+        ],
+        "answer": "$0.80$"
+      }
+    }
+  ]
+}

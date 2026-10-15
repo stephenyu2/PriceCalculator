@@ -1,0 +1,172 @@
+{
+  "id": "CALC2.INT.A.1--worksheet",
+  "standard": "CALC2.INT.A.1",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Advanced Integration Techniques",
+  "domainCode": "INT",
+  "cluster": "Methods of integration",
+  "clusterCode": "A",
+  "skillName": "Integration by Parts",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Use $\\int u\\,dv=uv-\\int v\\,du$. Pick $u$ by LIATE so $du$ is simpler.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "$\\int x e^x\\,dx$",
+      "answer": "$xe^x-e^x+C$",
+      "solution": {
+        "steps": [
+          "$u=x,dv=e^x dx$: $xe^x-\\int e^x dx$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "$\\int x\\cos x\\,dx$",
+      "answer": "$x\\sin x+\\cos x+C$",
+      "solution": {
+        "steps": [
+          "$u=x$: $x\\sin x-\\int\\sin x\\,dx$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "$\\int \\ln x\\,dx$",
+      "answer": "$x\\ln x-x+C$",
+      "solution": {
+        "steps": [
+          "$u=\\ln x,dv=dx$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "$\\int x\\sin x\\,dx$",
+      "answer": "$-x\\cos x+\\sin x+C$",
+      "solution": {
+        "steps": [
+          "$u=x,dv=\\sin x dx$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "$\\int x e^{3x}\\,dx$",
+      "answer": "$\\dfrac{x}{3}e^{3x}-\\dfrac{1}{9}e^{3x}+C$",
+      "solution": {
+        "steps": [
+          "$v=\\frac{1}{3}e^{3x}$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "$\\int x^2 e^x\\,dx$",
+      "answer": "$x^2 e^x-2xe^x+2e^x+C$",
+      "solution": {
+        "steps": [
+          "Parts twice; reduces $x^2\\to 2x\\to 2$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "$\\int x^2\\ln x\\,dx$",
+      "answer": "$\\dfrac{x^3}{3}\\ln x-\\dfrac{x^3}{9}+C$",
+      "solution": {
+        "steps": [
+          "$u=\\ln x$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "$\\int \\arctan x\\,dx$",
+      "answer": "$x\\arctan x-\\dfrac{1}{2}\\ln(1+x^2)+C$",
+      "solution": {
+        "steps": [
+          "$u=\\arctan x,dv=dx$; $v=x$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "$\\int x\\ln x\\,dx$",
+      "answer": "$\\dfrac{x^2}{2}\\ln x-\\dfrac{x^2}{4}+C$",
+      "solution": {
+        "steps": [
+          "$u=\\ln x,dv=x\\,dx$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "$\\int_0^1 x e^x\\,dx$",
+      "answer": "$1$",
+      "solution": {
+        "steps": [
+          "$[xe^x-e^x]_0^1=(e-e)-(0-1)=1$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "$\\int x\\cos(2x)\\,dx$",
+      "answer": "$\\dfrac{x}{2}\\sin(2x)+\\dfrac{1}{4}\\cos(2x)+C$",
+      "solution": {
+        "steps": [
+          "$v=\\frac{1}{2}\\sin 2x$; then $-\\int\\frac{1}{2}\\sin 2x\\,dx$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "$\\int \\ln(2x)\\,dx$",
+      "answer": "$x\\ln(2x)-x+C$",
+      "solution": {
+        "steps": [
+          "$u=\\ln(2x),v=x$; $\\int x\\cdot\\frac{1}{x}=x$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "$\\int x^3\\ln x\\,dx$",
+      "answer": "$\\dfrac{x^4}{4}\\ln x-\\dfrac{x^4}{16}+C$",
+      "solution": {
+        "steps": [
+          "$u=\\ln x,v=\\frac{x^4}{4}$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "$\\int e^x\\sin x\\,dx$",
+      "answer": "$\\dfrac{e^x(\\sin x-\\cos x)}{2}+C$",
+      "solution": {
+        "steps": [
+          "Parts twice, solve for the integral."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "$\\int x\\,2^x\\,dx$",
+      "answer": "$\\dfrac{x2^x}{\\ln 2}-\\dfrac{2^x}{(\\ln 2)^2}+C$",
+      "solution": {
+        "steps": [
+          "$v=\\frac{2^x}{\\ln 2}$; then subtract $\\int v\\,du$."
+        ]
+      }
+    }
+  ],
+  "clusterId": null,
+  "tier": null
+}

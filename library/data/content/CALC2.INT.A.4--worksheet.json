@@ -1,0 +1,172 @@
+{
+  "id": "CALC2.INT.A.4--worksheet",
+  "standard": "CALC2.INT.A.4",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Advanced Integration Techniques",
+  "domainCode": "INT",
+  "cluster": "Methods of integration",
+  "clusterCode": "A",
+  "skillName": "Improper Integrals",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Rewrite as a limit and evaluate; use the p-test $\\int_1^\\infty x^{-p}$ converges iff $p>1$.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "$\\int_1^\\infty x^{-2}\\,dx$",
+      "answer": "Converges to $1$",
+      "solution": {
+        "steps": [
+          "$[-\\frac{1}{x}]_1^\\infty=1$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "$\\int_1^\\infty x^{-3}\\,dx$",
+      "answer": "Converges to $\\dfrac{1}{2}$",
+      "solution": {
+        "steps": [
+          "$[-\\frac{1}{2x^2}]_1^\\infty=\\frac{1}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "$\\int_1^\\infty \\frac{1}{x}\\,dx$",
+      "answer": "Diverges",
+      "solution": {
+        "steps": [
+          "$\\ln t\\to\\infty$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "$\\int_0^\\infty e^{-x}\\,dx$",
+      "answer": "Converges to $1$",
+      "solution": {
+        "steps": [
+          "$1-e^{-t}\\to 1$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "$\\int_0^\\infty e^{-2x}\\,dx$",
+      "answer": "Converges to $\\dfrac{1}{2}$",
+      "solution": {
+        "steps": [
+          "$[-\\frac{1}{2}e^{-2x}]_0^\\infty=\\frac{1}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "$\\int_0^1 x^{-1/2}\\,dx$",
+      "answer": "Converges to $2$",
+      "solution": {
+        "steps": [
+          "$[2\\sqrt{x}]_0^1=2$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "$\\int_0^1 \\frac{1}{x}\\,dx$",
+      "answer": "Diverges",
+      "solution": {
+        "steps": [
+          "$\\ln x\\to-\\infty$ as $x\\to 0^+$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "$\\int_1^\\infty x^{-1/2}\\,dx$",
+      "answer": "Diverges",
+      "solution": {
+        "steps": [
+          "$p=\\frac{1}{2}<1$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "$\\int_2^\\infty \\frac{1}{x^2}\\,dx$",
+      "answer": "Converges to $\\dfrac{1}{2}$",
+      "solution": {
+        "steps": [
+          "$[-\\frac{1}{x}]_2^\\infty=\\frac{1}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "By the p-test, $\\int_1^\\infty x^{-1.5}\\,dx$:",
+      "answer": "Converges ($p=1.5>1$).",
+      "solution": {
+        "steps": [
+          "$p>1$ converges."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "$\\int_0^\\infty x e^{-x}\\,dx$",
+      "answer": "Converges to $1$",
+      "solution": {
+        "steps": [
+          "By parts: $[-xe^{-x}-e^{-x}]_0^\\infty=1$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "$\\int_1^\\infty \\frac{1}{x^2+1}\\,dx$",
+      "answer": "Converges to $\\dfrac{\\pi}{4}$",
+      "solution": {
+        "steps": [
+          "$[\\arctan x]_1^\\infty=\\frac{\\pi}{2}-\\frac{\\pi}{4}=\\frac{\\pi}{4}$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "$\\int_{-\\infty}^0 e^{x}\\,dx$",
+      "answer": "Converges to $1$",
+      "solution": {
+        "steps": [
+          "$[e^x]_{-\\infty}^0=1-0=1$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "$\\int_0^4 \\frac{1}{\\sqrt{x}}\\,dx$",
+      "answer": "Converges to $4$",
+      "solution": {
+        "steps": [
+          "$[2\\sqrt{x}]_0^4=4$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "$\\int_1^\\infty \\frac{1}{x^p}\\,dx$ converges when:",
+      "answer": "$p>1$",
+      "solution": {
+        "steps": [
+          "The p-test threshold."
+        ]
+      }
+    }
+  ],
+  "clusterId": null,
+  "tier": null
+}

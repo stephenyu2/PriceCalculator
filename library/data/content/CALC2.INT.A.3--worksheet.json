@@ -1,0 +1,172 @@
+{
+  "id": "CALC2.INT.A.3--worksheet",
+  "standard": "CALC2.INT.A.3",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Advanced Integration Techniques",
+  "domainCode": "INT",
+  "cluster": "Methods of integration",
+  "clusterCode": "A",
+  "skillName": "Partial Fraction Decomposition",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Decompose into partial fractions and integrate when asked. Plug in the roots to find the constants fast.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Decompose $\\dfrac{1}{(x-1)(x+1)}$.",
+      "answer": "$\\dfrac{1/2}{x-1}-\\dfrac{1/2}{x+1}$",
+      "solution": {
+        "steps": [
+          "Roots give $A=\\frac{1}{2},B=-\\frac{1}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Decompose $\\dfrac{1}{x(x+1)}$.",
+      "answer": "$\\dfrac{1}{x}-\\dfrac{1}{x+1}$",
+      "solution": {
+        "steps": [
+          "$A=1$ at $x=0$, $B=-1$ at $x=-1$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "$\\int\\dfrac{1}{x(x+1)}\\,dx$",
+      "answer": "$\\ln|x|-\\ln|x+1|+C$",
+      "solution": {
+        "steps": [
+          "Integrate each term."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Decompose $\\dfrac{5x-1}{(x-1)(x+2)}$.",
+      "answer": "$\\dfrac{4/3}{x-1}+\\dfrac{11/3}{x+2}$",
+      "solution": {
+        "steps": [
+          "Roots give $A=\\frac{4}{3},B=\\frac{11}{3}$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "$\\int\\dfrac{3}{x^2-9}\\,dx$",
+      "answer": "$\\dfrac{1}{2}\\ln\\left|\\dfrac{x-3}{x+3}\\right|+C$",
+      "solution": {
+        "steps": [
+          "$A=\\frac{1}{2},B=-\\frac{1}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Decompose $\\dfrac{x}{(x-2)(x+2)}$.",
+      "answer": "$\\dfrac{1/2}{x-2}+\\dfrac{1/2}{x+2}$",
+      "solution": {
+        "steps": [
+          "$x=2$: $A=\\frac{1}{2}$; $x=-2$: $B=\\frac{1}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Decompose $\\dfrac{2x+3}{x(x+1)}$.",
+      "answer": "$\\dfrac{3}{x}-\\dfrac{1}{x+1}$",
+      "solution": {
+        "steps": [
+          "$x=0$: $A=3$; $x=-1$: $B=-1$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "$\\int\\dfrac{1}{x^2-4}\\,dx$",
+      "answer": "$\\dfrac{1}{4}\\ln\\left|\\dfrac{x-2}{x+2}\\right|+C$",
+      "solution": {
+        "steps": [
+          "$\\frac{1/4}{x-2}-\\frac{1/4}{x+2}$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Decompose $\\dfrac{4}{(x-1)(x-3)}$.",
+      "answer": "$\\dfrac{-2}{x-1}+\\dfrac{2}{x-3}$",
+      "solution": {
+        "steps": [
+          "$x=1$: $A=\\frac{4}{-2}=-2$; $x=3$: $B=\\frac{4}{2}=2$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Decompose $\\dfrac{7x-3}{(x-1)(x+3)}$.",
+      "answer": "$\\dfrac{1}{x-1}+\\dfrac{6}{x+3}$",
+      "solution": {
+        "steps": [
+          "$x=1$: $4A=4\\Rightarrow A=1$; $x=-3$: $-4B=-24\\Rightarrow B=6$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "$\\int\\dfrac{2x}{(x+1)(x-1)}\\,dx$",
+      "answer": "$\\ln|x+1|+\\ln|x-1|+C$",
+      "solution": {
+        "steps": [
+          "$\\frac{1}{x+1}+\\frac{1}{x-1}$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Decompose $\\dfrac{6}{x^2+x-6}$.",
+      "answer": "$\\dfrac{6/5}{x-2}-\\dfrac{6/5}{x+3}$",
+      "solution": {
+        "steps": [
+          "Factor $(x-2)(x+3)$; $x=2$: $A=\\frac{6}{5}$; $x=-3$: $B=-\\frac{6}{5}$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Is $\\dfrac{x^2}{x^2-1}$ proper?",
+      "answer": "No; divide first.",
+      "solution": {
+        "steps": [
+          "Equal degrees, so do polynomial division before decomposing."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Decompose $\\dfrac{x-4}{x(x-2)}$.",
+      "answer": "$\\dfrac{2}{x}-\\dfrac{1}{x-2}$",
+      "solution": {
+        "steps": [
+          "$x=0$: $A=\\frac{-4}{-2}=2$; $x=2$: $B=\\frac{-2}{2}=-1$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "$\\int\\dfrac{1}{(x-1)(x+1)}\\,dx$",
+      "answer": "$\\dfrac{1}{2}\\ln\\left|\\dfrac{x-1}{x+1}\\right|+C$",
+      "solution": {
+        "steps": [
+          "Decompose and integrate."
+        ]
+      }
+    }
+  ],
+  "clusterId": null,
+  "tier": null
+}

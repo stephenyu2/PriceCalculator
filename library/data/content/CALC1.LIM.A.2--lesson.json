@@ -1,0 +1,97 @@
+{
+  "id": "CALC1.LIM.A.2--lesson",
+  "standard": "CALC1.LIM.A.2",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Limits and Continuity",
+  "domainCode": "LIM",
+  "cluster": "Understanding limits",
+  "clusterCode": "A",
+  "skillName": "Limit Laws and Algebraic Evaluation",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "When $f$ is built from sums, products, quotients, powers, and roots of continuous pieces, you can usually evaluate $\\lim_{x\\to a} f(x)$ by direct substitution. The limit laws let you split a limit across these operations. Substitution fails when it produces the indeterminate form $\\frac{0}{0}$; then you first simplify, by factoring and canceling, by rationalizing with a conjugate, or by combining fractions, and substitute into the simplified expression.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Evaluate $\\lim_{x\\to 3}\\,(2x^2 - 4x + 1)$.",
+      "solution": {
+        "steps": [
+          "Polynomials are continuous, so substitute $x=3$ directly.",
+          "$2(3)^2 - 4(3) + 1 = 18 - 12 + 1$.",
+          "Combine: $18 - 12 + 1 = 7$."
+        ],
+        "answer": "$\\lim_{x\\to 3}(2x^2-4x+1)=7$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Evaluate $\\lim_{x\\to 5}\\dfrac{x^2-25}{x-5}$.",
+      "solution": {
+        "steps": [
+          "Direct substitution gives $\\frac{0}{0}$, an indeterminate form, so simplify first.",
+          "Factor the numerator: $x^2-25=(x-5)(x+5)$.",
+          "Cancel the common factor: $\\frac{(x-5)(x+5)}{x-5}=x+5$ for $x\\ne 5$.",
+          "Substitute into the simplified form: $5+5=10$."
+        ],
+        "answer": "$\\lim_{x\\to 5}\\dfrac{x^2-25}{x-5}=10$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Evaluate $\\lim_{x\\to 0}\\dfrac{\\sqrt{x+4}-2}{x}$.",
+      "solution": {
+        "steps": [
+          "Direct substitution gives $\\frac{0}{0}$, so rationalize the numerator.",
+          "Multiply by the conjugate: $\\dfrac{\\sqrt{x+4}-2}{x}\\cdot\\dfrac{\\sqrt{x+4}+2}{\\sqrt{x+4}+2}=\\dfrac{(x+4)-4}{x(\\sqrt{x+4}+2)}$.",
+          "Simplify the numerator to $x$ and cancel: $\\dfrac{x}{x(\\sqrt{x+4}+2)}=\\dfrac{1}{\\sqrt{x+4}+2}$.",
+          "Substitute $x=0$: $\\dfrac{1}{\\sqrt{4}+2}=\\dfrac{1}{4}$."
+        ],
+        "answer": "$\\lim_{x\\to 0}\\dfrac{\\sqrt{x+4}-2}{x}=\\dfrac{1}{4}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Evaluate $\\lim_{x\\to 2}\\dfrac{x^2+x-6}{x-2}$.",
+      "solution": {
+        "steps": [
+          "Substitution gives $\\frac{0}{0}$, so factor: $x^2+x-6=(x-2)(x+3)$.",
+          "Cancel $x-2$ to get $x+3$, then substitute $x=2$: $2+3=5$."
+        ],
+        "answer": "$5$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Evaluate $\\lim_{x\\to 4}\\dfrac{2x+1}{x-1}$.",
+      "solution": {
+        "steps": [
+          "The denominator is not zero at $x=4$, so substitute directly.",
+          "$\\dfrac{2(4)+1}{4-1}=\\dfrac{9}{3}=3$."
+        ],
+        "answer": "$3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Evaluate $\\lim_{x\\to 2}\\dfrac{x^3-8}{x-2}$.",
+      "solution": {
+        "steps": [
+          "Substitution gives $\\frac{0}{0}$; factor the difference of cubes $x^3-8=(x-2)(x^2+2x+4)$.",
+          "Cancel $x-2$ and substitute $x=2$: $2^2+2(2)+4=12$."
+        ],
+        "answer": "$12$"
+      }
+    }
+  ]
+}

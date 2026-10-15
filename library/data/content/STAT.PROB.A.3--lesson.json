@@ -1,0 +1,90 @@
+{
+  "id": "STAT.PROB.A.3--lesson",
+  "standard": "STAT.PROB.A.3",
+  "grade": "statistics",
+  "subject": "math",
+  "domain": "Probability",
+  "domainCode": "PROB",
+  "cluster": "Probability rules and models",
+  "clusterCode": "A",
+  "skillName": "Random Variables",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A random variable assigns a number to each outcome. A discrete random variable has a probability distribution listing values and probabilities that sum to $1$. Its mean (expected value) is $\\mu=E(X)=\\sum x_i\\,P(x_i)$, and its variance is $\\sigma^2=\\sum (x_i-\\mu)^2 P(x_i)$. Linear rules: $E(aX+b)=aE(X)+b$ and $\\text{Var}(aX+b)=a^2\\text{Var}(X)$. For independent $X,Y$: $E(X+Y)=E(X)+E(Y)$ and $\\text{Var}(X+Y)=\\text{Var}(X)+\\text{Var}(Y)$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A variable takes values $0,1,2$ with probabilities $0.2,0.5,0.3$. Find $E(X)$.",
+      "solution": {
+        "steps": [
+          "Multiply each value by its probability: $0(0.2)+1(0.5)+2(0.3)$.",
+          "Compute: $0+0.5+0.6=1.1$.",
+          "So the expected value is $1.1$."
+        ],
+        "answer": "$E(X)=1.1$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "If $E(X)=5$, find $E(2X+3)$.",
+      "solution": {
+        "steps": [
+          "Apply $E(aX+b)=aE(X)+b$.",
+          "$2(5)+3=10+3=13$."
+        ],
+        "answer": "$13$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "If $\\text{Var}(X)=4$, find $\\text{Var}(3X)$.",
+      "solution": {
+        "steps": [
+          "Use $\\text{Var}(aX)=a^2\\text{Var}(X)$.",
+          "$3^2\\cdot 4=9\\cdot 4=36$."
+        ],
+        "answer": "$36$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "$E(X)$ for values $1,2,3$ with probs $0.5,0.3,0.2$.",
+      "solution": {
+        "steps": [
+          "$0.5+0.6+0.6=1.7$."
+        ],
+        "answer": "$1.7$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "$E(4X-1)$ if $E(X)=2$.",
+      "solution": {
+        "steps": [
+          "$4(2)-1=7$."
+        ],
+        "answer": "$7$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "$\\text{Var}(X+Y)$ independent, each variance $5$.",
+      "solution": {
+        "steps": [
+          "$5+5=10$."
+        ],
+        "answer": "$10$"
+      }
+    }
+  ]
+}

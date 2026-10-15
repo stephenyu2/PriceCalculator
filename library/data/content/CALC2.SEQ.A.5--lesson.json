@@ -1,0 +1,92 @@
+{
+  "id": "CALC2.SEQ.A.5--lesson",
+  "standard": "CALC2.SEQ.A.5",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Sequences and Series",
+  "domainCode": "SEQ",
+  "cluster": "Sequences and convergence",
+  "clusterCode": "A",
+  "skillName": "Taylor and Maclaurin Series",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A Taylor series expands $f$ about $x=a$: $f(x)=\\sum_{n=0}^\\infty\\frac{f^{(n)}(a)}{n!}(x-a)^n$. A Maclaurin series is the special case $a=0$. Key Maclaurin series to know: $e^x=\\sum\\frac{x^n}{n!}$, $\\sin x=\\sum\\frac{(-1)^n x^{2n+1}}{(2n+1)!}$, $\\cos x=\\sum\\frac{(-1)^n x^{2n}}{(2n)!}$, and $\\frac{1}{1-x}=\\sum x^n$ for $|x|<1$. Taylor polynomials (partial sums) approximate $f$ near $a$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Find the Maclaurin series for $e^x$ from the definition.",
+      "solution": {
+        "steps": [
+          "All derivatives of $e^x$ are $e^x$, and at $a=0$ each equals $1$.",
+          "So $\\frac{f^{(n)}(0)}{n!}=\\frac{1}{n!}$.",
+          "The series is $\\sum_{n=0}^\\infty\\frac{x^n}{n!}=1+x+\\frac{x^2}{2}+\\frac{x^3}{6}+\\cdots$."
+        ],
+        "answer": "$e^x=\\sum_{n=0}^\\infty\\dfrac{x^n}{n!}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Write the Maclaurin series for $\\cos x$ and its first three nonzero terms.",
+      "solution": {
+        "steps": [
+          "$\\cos x=\\sum_{n=0}^\\infty\\frac{(-1)^n x^{2n}}{(2n)!}$.",
+          "Write out $n=0,1,2$: $1-\\frac{x^2}{2!}+\\frac{x^4}{4!}$.",
+          "So the first three nonzero terms are $1-\\frac{x^2}{2}+\\frac{x^4}{24}$."
+        ],
+        "answer": "$1-\\dfrac{x^2}{2}+\\dfrac{x^4}{24}-\\cdots$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Find the Taylor polynomial of degree $2$ for $f(x)=\\sqrt{x}$ about $a=4$.",
+      "solution": {
+        "steps": [
+          "$f(4)=2$; $f'(x)=\\frac{1}{2\\sqrt{x}}$ gives $f'(4)=\\frac{1}{4}$.",
+          "$f''(x)=-\\frac{1}{4}x^{-3/2}$ gives $f''(4)=-\\frac{1}{32}$, so $\\frac{f''(4)}{2!}=-\\frac{1}{64}$.",
+          "$T_2(x)=2+\\frac{1}{4}(x-4)-\\frac{1}{64}(x-4)^2$."
+        ],
+        "answer": "$T_2(x)=2+\\dfrac{1}{4}(x-4)-\\dfrac{1}{64}(x-4)^2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Maclaurin series of $\\sin x$ (first two nonzero terms).",
+      "solution": {
+        "steps": [
+          "$x-\\frac{x^3}{6}+\\cdots$"
+        ],
+        "answer": "$x-\\dfrac{x^3}{6}+\\cdots$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Maclaurin series of $\\frac{1}{1-x}$.",
+      "solution": {
+        "steps": [
+          "$\\sum x^n=1+x+x^2+\\cdots$ for $|x|<1$."
+        ],
+        "answer": "$\\sum_{n=0}^\\infty x^n$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Degree-1 Taylor polynomial of $e^x$ at $0$.",
+      "solution": {
+        "steps": [
+          "$T_1(x)=1+x$."
+        ],
+        "answer": "$1+x$"
+      }
+    }
+  ]
+}

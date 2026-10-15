@@ -1,0 +1,97 @@
+{
+  "id": "CALC1.DIFF.B.9--lesson",
+  "standard": "CALC1.DIFF.B.9",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Differentiation",
+  "domainCode": "DIFF",
+  "cluster": "Applications of derivatives",
+  "clusterCode": "B",
+  "skillName": "Increasing, Decreasing, and the First Derivative Test",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "The sign of $f'$ tells you where $f$ rises or falls: $f$ is increasing where $f'(x)>0$ and decreasing where $f'(x)<0$. Critical numbers are where $f'(x)=0$ or is undefined. The First Derivative Test classifies each critical number: if $f'$ changes from $+$ to $-$, it is a local maximum; from $-$ to $+$, a local minimum; no sign change means neither.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Find the intervals of increase/decrease and local extrema of $f(x)=x^3-3x$.",
+      "solution": {
+        "steps": [
+          "Differentiate: $f'(x)=3x^2-3=3(x-1)(x+1)$.",
+          "Critical numbers: $x=-1$ and $x=1$.",
+          "Sign of $f'$: positive on $(-\\infty,-1)$, negative on $(-1,1)$, positive on $(1,\\infty)$.",
+          "At $x=-1$, $f'$ goes $+\\to-$: local max; at $x=1$, $f'$ goes $-\\to+$: local min.",
+          "Local max $f(-1)=2$; local min $f(1)=-2$."
+        ],
+        "answer": "Increasing on $(-\\infty,-1)$ and $(1,\\infty)$; decreasing on $(-1,1)$; local max $2$ at $x=-1$, local min $-2$ at $x=1$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find the local extrema of $f(x)=x^2-4x+1$.",
+      "solution": {
+        "steps": [
+          "$f'(x)=2x-4$; critical number at $x=2$.",
+          "$f'<0$ for $x<2$ and $f'>0$ for $x>2$: $-\\to+$ means local min.",
+          "Local min value $f(2)=4-8+1=-3$."
+        ],
+        "answer": "Local min $-3$ at $x=2$; no local max."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Where is $f(x)=x^3$ increasing, and does it have a local extremum at $x=0$?",
+      "solution": {
+        "steps": [
+          "$f'(x)=3x^2\\ge 0$, equal to $0$ only at $x=0$.",
+          "$f'$ does not change sign at $0$ (positive on both sides).",
+          "So $f$ is increasing everywhere and has no local extremum at $0$ (it is an inflection with horizontal tangent)."
+        ],
+        "answer": "Increasing on all of $\\mathbb{R}$; no local extremum at $0$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Find critical numbers and classify them for $f(x)=x^2-6x$.",
+      "solution": {
+        "steps": [
+          "$f'(x)=2x-6=0\\Rightarrow x=3$.",
+          "$-\\to+$, so local min at $x=3$; $f(3)=-9$."
+        ],
+        "answer": "Local min $-9$ at $x=3$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Find intervals of increase/decrease for $f(x)=-x^2+8x$.",
+      "solution": {
+        "steps": [
+          "$f'(x)=-2x+8=0\\Rightarrow x=4$.",
+          "$f'>0$ for $x<4$ (increasing), $f'<0$ for $x>4$ (decreasing)."
+        ],
+        "answer": "Increasing on $(-\\infty,4)$, decreasing on $(4,\\infty)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Classify the critical numbers of $f(x)=x^3-12x$.",
+      "solution": {
+        "steps": [
+          "$f'(x)=3x^2-12=3(x-2)(x+2)$; critical at $x=\\pm 2$.",
+          "$x=-2$: $+\\to-$ local max $f(-2)=16$; $x=2$: $-\\to+$ local min $f(2)=-16$."
+        ],
+        "answer": "Local max $16$ at $x=-2$; local min $-16$ at $x=2$."
+      }
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "id": "CALC2.INT.A.2--worksheet",
+  "standard": "CALC2.INT.A.2",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Advanced Integration Techniques",
+  "domainCode": "INT",
+  "cluster": "Methods of integration",
+  "clusterCode": "A",
+  "skillName": "Trigonometric Integrals and Substitution",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Integrate powers of trig functions (odd power: substitute; even power: half-angle) and use trig substitution for roots.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "$\\int \\sin^3 x\\,dx$",
+      "answer": "$-\\cos x+\\dfrac{\\cos^3 x}{3}+C$",
+      "solution": {
+        "steps": [
+          "$\\sin x(1-\\cos^2 x)$, $u=\\cos x$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "$\\int \\cos^3 x\\,dx$",
+      "answer": "$\\sin x-\\dfrac{\\sin^3 x}{3}+C$",
+      "solution": {
+        "steps": [
+          "$\\cos x(1-\\sin^2 x)$, $u=\\sin x$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "$\\int \\sin^2 x\\,dx$",
+      "answer": "$\\dfrac{x}{2}-\\dfrac{\\sin 2x}{4}+C$",
+      "solution": {
+        "steps": [
+          "Half-angle $\\frac{1-\\cos 2x}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "$\\int \\cos^2 x\\,dx$",
+      "answer": "$\\dfrac{x}{2}+\\dfrac{\\sin 2x}{4}+C$",
+      "solution": {
+        "steps": [
+          "Half-angle $\\frac{1+\\cos 2x}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "$\\int \\sin^2 x\\cos x\\,dx$",
+      "answer": "$\\dfrac{\\sin^3 x}{3}+C$",
+      "solution": {
+        "steps": [
+          "$u=\\sin x$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "$\\int \\cos^2 x\\sin x\\,dx$",
+      "answer": "$-\\dfrac{\\cos^3 x}{3}+C$",
+      "solution": {
+        "steps": [
+          "$u=\\cos x$, $du=-\\sin x\\,dx$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "$\\int \\sec^2 x\\,dx$",
+      "answer": "$\\tan x+C$",
+      "solution": {
+        "steps": [
+          "Direct antiderivative."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "$\\int \\tan x\\,dx$",
+      "answer": "$-\\ln|\\cos x|+C$",
+      "solution": {
+        "steps": [
+          "$u=\\cos x$, $\\int\\frac{-du}{u}$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "$\\int \\dfrac{dx}{\\sqrt{9-x^2}}$",
+      "answer": "$\\arcsin\\dfrac{x}{3}+C$",
+      "solution": {
+        "steps": [
+          "$x=3\\sin\\theta$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "$\\int \\dfrac{dx}{\\sqrt{1-x^2}}$",
+      "answer": "$\\arcsin x+C$",
+      "solution": {
+        "steps": [
+          "$x=\\sin\\theta$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "$\\int \\dfrac{dx}{x^2+4}$",
+      "answer": "$\\dfrac{1}{2}\\arctan\\dfrac{x}{2}+C$",
+      "solution": {
+        "steps": [
+          "$x=2\\tan\\theta$ form; standard $\\frac{1}{a}\\arctan\\frac{x}{a}$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "$\\int \\dfrac{dx}{1+x^2}$",
+      "answer": "$\\arctan x+C$",
+      "solution": {
+        "steps": [
+          "Standard arctangent integral."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "$\\int_0^{\\pi/2}\\sin^2 x\\,dx$",
+      "answer": "$\\dfrac{\\pi}{4}$",
+      "solution": {
+        "steps": [
+          "$[\\frac{x}{2}-\\frac{\\sin 2x}{4}]_0^{\\pi/2}=\\frac{\\pi}{4}$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "$\\int \\sin^5 x\\cos x\\,dx$",
+      "answer": "$\\dfrac{\\sin^6 x}{6}+C$",
+      "solution": {
+        "steps": [
+          "$u=\\sin x$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "$\\int \\tan^2 x\\,dx$",
+      "answer": "$\\tan x-x+C$",
+      "solution": {
+        "steps": [
+          "$\\tan^2 x=\\sec^2 x-1$."
+        ]
+      }
+    }
+  ],
+  "clusterId": null,
+  "tier": null
+}

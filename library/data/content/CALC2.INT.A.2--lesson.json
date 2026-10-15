@@ -1,0 +1,93 @@
+{
+  "id": "CALC2.INT.A.2--lesson",
+  "standard": "CALC2.INT.A.2",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Advanced Integration Techniques",
+  "domainCode": "INT",
+  "cluster": "Methods of integration",
+  "clusterCode": "A",
+  "skillName": "Trigonometric Integrals and Substitution",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "For powers of sine and cosine: if one power is odd, peel off one factor and convert the rest with $\\sin^2+\\cos^2=1$, then substitute. For even powers use the half-angle identities $\\sin^2 x=\\frac{1-\\cos 2x}{2}$ and $\\cos^2 x=\\frac{1+\\cos 2x}{2}$. Trigonometric substitution handles roots: $\\sqrt{a^2-x^2}$ suggests $x=a\\sin\\theta$, $\\sqrt{a^2+x^2}$ suggests $x=a\\tan\\theta$, and $\\sqrt{x^2-a^2}$ suggests $x=a\\sec\\theta$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Evaluate $\\int \\sin^3 x\\,dx$.",
+      "solution": {
+        "steps": [
+          "The power of sine is odd; split off one factor: $\\sin^3 x=\\sin x(1-\\cos^2 x)$.",
+          "Let $u=\\cos x$, so $du=-\\sin x\\,dx$: the integral becomes $-\\int(1-u^2)\\,du$.",
+          "Integrate: $-\\left(u-\\frac{u^3}{3}\\right)+C$.",
+          "Back-substitute: $-\\cos x+\\frac{\\cos^3 x}{3}+C$."
+        ],
+        "answer": "$-\\cos x+\\dfrac{\\cos^3 x}{3}+C$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Evaluate $\\int \\cos^2 x\\,dx$.",
+      "solution": {
+        "steps": [
+          "Use the half-angle identity $\\cos^2 x=\\frac{1+\\cos 2x}{2}$.",
+          "$\\int\\frac{1+\\cos 2x}{2}\\,dx=\\frac{1}{2}\\int(1+\\cos 2x)\\,dx$.",
+          "Integrate: $\\frac{1}{2}\\left(x+\\frac{\\sin 2x}{2}\\right)+C=\\frac{x}{2}+\\frac{\\sin 2x}{4}+C$."
+        ],
+        "answer": "$\\dfrac{x}{2}+\\dfrac{\\sin 2x}{4}+C$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Set up $\\int \\dfrac{dx}{\\sqrt{9-x^2}}$ with a trig substitution and evaluate.",
+      "solution": {
+        "steps": [
+          "The form $\\sqrt{9-x^2}$ suggests $x=3\\sin\\theta$, $dx=3\\cos\\theta\\,d\\theta$.",
+          "Then $\\sqrt{9-x^2}=3\\cos\\theta$, so the integral is $\\int\\frac{3\\cos\\theta}{3\\cos\\theta}\\,d\\theta=\\int d\\theta$.",
+          "This gives $\\theta+C=\\arcsin\\frac{x}{3}+C$."
+        ],
+        "answer": "$\\arcsin\\dfrac{x}{3}+C$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Evaluate $\\int \\sin^2 x\\,dx$.",
+      "solution": {
+        "steps": [
+          "$\\sin^2 x=\\frac{1-\\cos 2x}{2}$; integrate to $\\frac{x}{2}-\\frac{\\sin 2x}{4}+C$."
+        ],
+        "answer": "$\\dfrac{x}{2}-\\dfrac{\\sin 2x}{4}+C$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Evaluate $\\int \\cos^3 x\\,dx$.",
+      "solution": {
+        "steps": [
+          "$\\cos^3 x=\\cos x(1-\\sin^2 x)$; $u=\\sin x$: $\\sin x-\\frac{\\sin^3 x}{3}+C$."
+        ],
+        "answer": "$\\sin x-\\dfrac{\\sin^3 x}{3}+C$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Evaluate $\\int \\dfrac{dx}{\\sqrt{4-x^2}}$.",
+      "solution": {
+        "steps": [
+          "$x=2\\sin\\theta$; integral becomes $\\int d\\theta=\\arcsin\\frac{x}{2}+C$."
+        ],
+        "answer": "$\\arcsin\\dfrac{x}{2}+C$"
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "CALC2.PPV.A.4--lesson",
+  "standard": "CALC2.PPV.A.4",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Parametric, Polar, and Vector Calculus",
+  "domainCode": "PPV",
+  "cluster": "Parametric and polar",
+  "clusterCode": "A",
+  "skillName": "Vectors in the Plane and Space",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A vector has magnitude and direction. In components, $\\mathbf{v}=\\langle a,b\\rangle$ (plane) or $\\langle a,b,c\\rangle$ (space). Magnitude $\\|\\mathbf{v}\\|=\\sqrt{a^2+b^2}$ (add $c^2$ in space). Add componentwise; scale by multiplying each component. The dot product $\\mathbf{u}\\cdot\\mathbf{v}=u_1v_1+u_2v_2(+u_3v_3)$ gives $\\|\\mathbf{u}\\|\\|\\mathbf{v}\\|\\cos\\theta$; it is zero exactly when the vectors are perpendicular. A unit vector is $\\frac{\\mathbf{v}}{\\|\\mathbf{v}\\|}$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "For $\\mathbf{u}=\\langle 3,4\\rangle$, find $\\|\\mathbf{u}\\|$ and a unit vector in its direction.",
+      "solution": {
+        "steps": [
+          "Magnitude: $\\|\\mathbf{u}\\|=\\sqrt{3^2+4^2}=\\sqrt{25}=5$.",
+          "Unit vector: divide by the magnitude, $\\frac{1}{5}\\langle 3,4\\rangle$.",
+          "So $\\hat{\\mathbf{u}}=\\left\\langle\\frac{3}{5},\\frac{4}{5}\\right\\rangle$."
+        ],
+        "answer": "$\\|\\mathbf{u}\\|=5$; $\\hat{\\mathbf{u}}=\\left\\langle\\frac{3}{5},\\frac{4}{5}\\right\\rangle$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find $\\mathbf{u}\\cdot\\mathbf{v}$ and the angle for $\\mathbf{u}=\\langle 1,2\\rangle$, $\\mathbf{v}=\\langle 3,-1\\rangle$.",
+      "solution": {
+        "steps": [
+          "Dot product: $1(3)+2(-1)=3-2=1$.",
+          "Magnitudes: $\\|\\mathbf{u}\\|=\\sqrt{5}$, $\\|\\mathbf{v}\\|=\\sqrt{10}$.",
+          "$\\cos\\theta=\\frac{1}{\\sqrt{5}\\sqrt{10}}=\\frac{1}{\\sqrt{50}}$, so $\\theta=\\arccos\\frac{1}{\\sqrt{50}}\\approx 81.9^\\circ$."
+        ],
+        "answer": "$\\mathbf{u}\\cdot\\mathbf{v}=1$; $\\theta\\approx 81.9^\\circ$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Are $\\mathbf{u}=\\langle 2,3\\rangle$ and $\\mathbf{v}=\\langle 3,-2\\rangle$ perpendicular?",
+      "solution": {
+        "steps": [
+          "Compute the dot product: $2(3)+3(-2)=6-6=0$.",
+          "A zero dot product means the vectors are perpendicular."
+        ],
+        "answer": "Yes; their dot product is $0$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Magnitude of $\\langle 5,12\\rangle$.",
+      "solution": {
+        "steps": [
+          "$\\sqrt{25+144}=\\sqrt{169}=13$."
+        ],
+        "answer": "$13$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "$\\langle 1,2,2\\rangle$: magnitude.",
+      "solution": {
+        "steps": [
+          "$\\sqrt{1+4+4}=3$."
+        ],
+        "answer": "$3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "$\\langle 2,1\\rangle\\cdot\\langle 3,4\\rangle$.",
+      "solution": {
+        "steps": [
+          "$6+4=10$."
+        ],
+        "answer": "$10$"
+      }
+    }
+  ]
+}

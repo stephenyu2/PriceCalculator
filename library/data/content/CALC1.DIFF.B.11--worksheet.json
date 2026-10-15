@@ -1,0 +1,172 @@
+{
+  "id": "CALC1.DIFF.B.11--worksheet",
+  "standard": "CALC1.DIFF.B.11",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Differentiation",
+  "domainCode": "DIFF",
+  "cluster": "Applications of derivatives",
+  "clusterCode": "B",
+  "skillName": "Optimization",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Set up the objective as a function of one variable, use the constraint, find and verify the optimum.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Two numbers sum to $30$; maximize their product.",
+      "answer": "$15$ and $15$ (product $225$)",
+      "solution": {
+        "steps": [
+          "$P=x(30-x)$, $P'=30-2x=0\\Rightarrow x=15$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Two positive numbers have product $36$; minimize their sum.",
+      "answer": "$6$ and $6$ (sum $12$)",
+      "solution": {
+        "steps": [
+          "$S=x+\\frac{36}{x}$, $S'=1-\\frac{36}{x^2}=0\\Rightarrow x=6$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Rectangle perimeter $24$; maximize area.",
+      "answer": "$6\\times 6$, area $36$",
+      "solution": {
+        "steps": [
+          "$A=x(12-x)$, $x=6$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Fence $3$ sides of a rectangle (river on 4th) with $60$ ft; maximize area.",
+      "answer": "$x=15, y=30$; area $450$",
+      "solution": {
+        "steps": [
+          "$2x+y=60$, $A=x(60-2x)$, $A'=60-4x=0\\Rightarrow x=15$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Minimize $f(x)=x^2-10x+3$.",
+      "answer": "$x=5$, value $-22$",
+      "solution": {
+        "steps": [
+          "$f'=2x-10=0\\Rightarrow x=5$; $f(5)=-22$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Maximize $f(x)=-2x^2+12x$.",
+      "answer": "$x=3$, value $18$",
+      "solution": {
+        "steps": [
+          "$f'=-4x+12=0\\Rightarrow x=3$; $f(3)=18$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Box from $10$-in square, corners $x$: $V=x(10-2x)^2$. Critical $x$ in $(0,5)$.",
+      "answer": "$x=\\dfrac{5}{3}$",
+      "solution": {
+        "steps": [
+          "$V'=(10-2x)(10-6x)=0\\Rightarrow x=\\frac{5}{3}$ (interior)."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Minimize sum of a number and its reciprocal for $x>0$: $f(x)=x+\\frac{1}{x}$.",
+      "answer": "$x=1$, value $2$",
+      "solution": {
+        "steps": [
+          "$f'=1-\\frac{1}{x^2}=0\\Rightarrow x=1$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "Maximize area of rectangle with one vertex on $y=6-x$ in the first quadrant: $A=x(6-x)$.",
+      "answer": "$x=3$, area $9$",
+      "solution": {
+        "steps": [
+          "$A'=6-2x=0\\Rightarrow x=3$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "A $200$ m fence makes two identical adjacent rectangular pens (one shared interior side) sharing a side; total fence $3x+2y=200$, maximize total area $A=2xy$... find $x$.",
+      "answer": "$x=\\dfrac{100}{3}$",
+      "solution": {
+        "steps": [
+          "$y=\\frac{200-3x}{2}$; $A=2x\\cdot\\frac{200-3x}{2}=x(200-3x)$; $A'=200-6x=0\\Rightarrow x=\\frac{100}{3}$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Minimize $f(x)=x^2+\\frac{16}{x}$ for $x>0$.",
+      "answer": "$x=2$, value $12$",
+      "solution": {
+        "steps": [
+          "$f'=2x-\\frac{16}{x^2}=0\\Rightarrow x^3=8\\Rightarrow x=2$; $f(2)=4+8=12$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Largest product of two numbers summing to $S$ (general).",
+      "answer": "Each is $\\frac{S}{2}$.",
+      "solution": {
+        "steps": [
+          "$P=x(S-x)$, $P'=S-2x=0\\Rightarrow x=\\frac{S}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Closed rectangular box, square base side $x$, volume $32$; minimize surface area $A=x^2+\\frac{128}{x}$... wait, open-top: $A=x^2+\\frac{128}{x}$. Find $x$.",
+      "answer": "$x=4$",
+      "solution": {
+        "steps": [
+          "$A'=2x-\\frac{128}{x^2}=0\\Rightarrow x^3=64\\Rightarrow x=4$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Minimize distance from origin to line $y=x-4$ by minimizing $D^2=x^2+(x-4)^2$.",
+      "answer": "$x=2$",
+      "solution": {
+        "steps": [
+          "$\\frac{d}{dx}(2x^2-8x+16)=4x-8=0\\Rightarrow x=2$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Maximize $xy$ subject to $x+4y=16$ ($x,y>0$).",
+      "answer": "$x=8, y=2$ (product $16$)",
+      "solution": {
+        "steps": [
+          "$x=16-4y$; $P=(16-4y)y$; $P'=16-8y=0\\Rightarrow y=2, x=8$."
+        ]
+      }
+    }
+  ],
+  "clusterId": null,
+  "tier": null
+}

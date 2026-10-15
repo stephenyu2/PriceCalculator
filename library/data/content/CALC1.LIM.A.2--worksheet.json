@@ -1,0 +1,186 @@
+{
+  "id": "CALC1.LIM.A.2--worksheet",
+  "standard": "CALC1.LIM.A.2",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Limits and Continuity",
+  "domainCode": "LIM",
+  "cluster": "Understanding limits",
+  "clusterCode": "A",
+  "skillName": "Limit Laws and Algebraic Evaluation",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Evaluate each limit. Try direct substitution first; if it gives $\\frac{0}{0}$, factor, rationalize, or combine fractions, then substitute.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "$\\lim_{x\\to 2}\\,(3x-7)$",
+      "answer": "$-1$",
+      "solution": {
+        "steps": [
+          "Substitute $x=2$: $3(2)-7=-1$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "$\\lim_{x\\to -1}\\,(x^2+4x+4)$",
+      "answer": "$1$",
+      "solution": {
+        "steps": [
+          "Substitute $x=-1$: $1-4+4=1$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "$\\lim_{x\\to 3}\\dfrac{x^2-9}{x-3}$",
+      "answer": "$6$",
+      "solution": {
+        "steps": [
+          "$\\frac{0}{0}$; factor $(x-3)(x+3)$, cancel, get $x+3$.",
+          "Substitute $x=3$: $6$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "$\\lim_{x\\to 1}\\dfrac{x^2-1}{x-1}$",
+      "answer": "$2$",
+      "solution": {
+        "steps": [
+          "Factor $(x-1)(x+1)$, cancel, get $x+1$.",
+          "Substitute $x=1$: $2$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "$\\lim_{x\\to 4}\\dfrac{x-4}{x^2-16}$",
+      "answer": "$\\dfrac{1}{8}$",
+      "solution": {
+        "steps": [
+          "Factor the denominator $(x-4)(x+4)$ and cancel $x-4$: $\\frac{1}{x+4}$.",
+          "Substitute $x=4$: $\\frac{1}{8}$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "$\\lim_{x\\to 0}\\dfrac{x^2+3x}{x}$",
+      "answer": "$3$",
+      "solution": {
+        "steps": [
+          "Factor $x$ from the numerator: $\\frac{x(x+3)}{x}=x+3$.",
+          "Substitute $x=0$: $3$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "$\\lim_{x\\to 5}\\dfrac{x^2-3x-10}{x-5}$",
+      "answer": "$7$",
+      "solution": {
+        "steps": [
+          "Factor $(x-5)(x+2)$, cancel $x-5$: $x+2$.",
+          "Substitute $x=5$: $7$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "$\\lim_{x\\to 9}\\dfrac{\\sqrt{x}-3}{x-9}$",
+      "answer": "$\\dfrac{1}{6}$",
+      "solution": {
+        "steps": [
+          "Write $x-9=(\\sqrt{x}-3)(\\sqrt{x}+3)$ and cancel: $\\frac{1}{\\sqrt{x}+3}$.",
+          "Substitute $x=9$: $\\frac{1}{6}$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "$\\lim_{x\\to 0}\\dfrac{\\sqrt{x+9}-3}{x}$",
+      "answer": "$\\dfrac{1}{6}$",
+      "solution": {
+        "steps": [
+          "Rationalize: $\\frac{(x+9)-9}{x(\\sqrt{x+9}+3)}=\\frac{1}{\\sqrt{x+9}+3}$.",
+          "Substitute $x=0$: $\\frac{1}{6}$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "$\\lim_{x\\to 2}\\dfrac{\\frac{1}{x}-\\frac{1}{2}}{x-2}$",
+      "answer": "$-\\dfrac{1}{4}$",
+      "solution": {
+        "steps": [
+          "Combine the top: $\\frac{1}{x}-\\frac{1}{2}=\\frac{2-x}{2x}$.",
+          "Divide by $x-2$: $\\frac{2-x}{2x(x-2)}=\\frac{-1}{2x}$.",
+          "Substitute $x=2$: $-\\frac{1}{4}$."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "$\\lim_{x\\to 3}\\dfrac{\\frac{1}{x}-\\frac{1}{3}}{x-3}$",
+      "answer": "$-\\dfrac{1}{9}$",
+      "solution": {
+        "steps": [
+          "Top becomes $\\frac{3-x}{3x}$; divide by $x-3$: $\\frac{-1}{3x}$.",
+          "Substitute $x=3$: $-\\frac{1}{9}$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "$\\lim_{x\\to 2}\\dfrac{x^3-8}{x^2-4}$",
+      "answer": "$3$",
+      "solution": {
+        "steps": [
+          "Factor: $\\frac{(x-2)(x^2+2x+4)}{(x-2)(x+2)}=\\frac{x^2+2x+4}{x+2}$.",
+          "Substitute $x=2$: $\\frac{12}{4}=3$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "$\\lim_{x\\to -3}\\dfrac{x^2+x-6}{x+3}$",
+      "answer": "$-5$",
+      "solution": {
+        "steps": [
+          "Factor $(x+3)(x-2)$, cancel $x+3$: $x-2$.",
+          "Substitute $x=-3$: $-5$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "$\\lim_{x\\to 1}\\dfrac{x^3-1}{x-1}$",
+      "answer": "$3$",
+      "solution": {
+        "steps": [
+          "Factor $x^3-1=(x-1)(x^2+x+1)$, cancel: $x^2+x+1$.",
+          "Substitute $x=1$: $3$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "$\\lim_{x\\to 0}\\dfrac{(x+5)^2-25}{x}$",
+      "answer": "$10$",
+      "solution": {
+        "steps": [
+          "Expand the top: $(x+5)^2-25=x^2+10x$.",
+          "Factor $x$: $\\frac{x(x+10)}{x}=x+10$, substitute $x=0$: $10$."
+        ]
+      }
+    }
+  ],
+  "clusterId": null,
+  "tier": null
+}

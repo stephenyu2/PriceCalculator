@@ -1,0 +1,90 @@
+{
+  "id": "STAT.PROB.A.4--lesson",
+  "standard": "STAT.PROB.A.4",
+  "grade": "statistics",
+  "subject": "math",
+  "domain": "Probability",
+  "domainCode": "PROB",
+  "cluster": "Probability rules and models",
+  "clusterCode": "A",
+  "skillName": "Binomial Distributions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A binomial setting has a fixed number of trials $n$, two outcomes per trial (success/failure), a constant success probability $p$, and independent trials. Then $P(X=k)=\\binom{n}{k}p^k(1-p)^{n-k}$. The mean is $\\mu=np$ and the standard deviation is $\\sigma=\\sqrt{np(1-p)}$. Use the formula for exact counts and sums of formula terms for 'at least' or 'at most' questions (or the complement for efficiency).",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "$X$ is binomial with $n=5$, $p=0.5$. Find $P(X=2)$.",
+      "solution": {
+        "steps": [
+          "Use $P(X=k)=\\binom{n}{k}p^k(1-p)^{n-k}$ with $k=2$.",
+          "$\\binom{5}{2}=10$, and $p^2(1-p)^3=(0.5)^2(0.5)^3=(0.5)^5=\\frac{1}{32}$.",
+          "Multiply: $10\\cdot\\frac{1}{32}=\\frac{10}{32}=0.3125$."
+        ],
+        "answer": "$P(X=2)=0.3125$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "For $n=20$, $p=0.3$, find the mean of $X$.",
+      "solution": {
+        "steps": [
+          "Use $\\mu=np$.",
+          "$20\\cdot 0.3=6$."
+        ],
+        "answer": "$\\mu=6$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "For $n=100$, $p=0.5$, find the standard deviation of $X$.",
+      "solution": {
+        "steps": [
+          "Use $\\sigma=\\sqrt{np(1-p)}$.",
+          "$\\sqrt{100\\cdot 0.5\\cdot 0.5}=\\sqrt{25}=5$."
+        ],
+        "answer": "$\\sigma=5$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Mean of binomial $n=50$, $p=0.2$.",
+      "solution": {
+        "steps": [
+          "$50\\cdot 0.2=10$."
+        ],
+        "answer": "$10$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "$P(X=0)$ for $n=3$, $p=0.5$.",
+      "solution": {
+        "steps": [
+          "$(0.5)^3=\\frac{1}{8}$."
+        ],
+        "answer": "$\\dfrac{1}{8}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "$\\sigma$ for $n=16$, $p=0.25$.",
+      "solution": {
+        "steps": [
+          "$\\sqrt{16\\cdot 0.25\\cdot 0.75}=\\sqrt{3}$."
+        ],
+        "answer": "$\\sqrt{3}\\approx 1.73$"
+      }
+    }
+  ]
+}

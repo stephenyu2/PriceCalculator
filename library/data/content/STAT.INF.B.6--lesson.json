@@ -1,0 +1,92 @@
+{
+  "id": "STAT.INF.B.6--lesson",
+  "standard": "STAT.INF.B.6",
+  "grade": "statistics",
+  "subject": "math",
+  "domain": "Statistical Inference",
+  "domainCode": "INF",
+  "cluster": "Significance tests",
+  "clusterCode": "B",
+  "skillName": "One-Sample Tests",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A one-sample test checks a claim about one population parameter. For a proportion, the z statistic is $z=\\dfrac{\\hat{p}-p_0}{\\sqrt{p_0(1-p_0)/n}}$ using the null value $p_0$ in the standard error. For a mean (with $\\sigma$ unknown), the t statistic is $t=\\dfrac{\\bar{x}-\\mu_0}{s/\\sqrt{n}}$ with $n-1$ degrees of freedom. Compare the test statistic's p-value to $\\alpha$, and write a conclusion in context.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Test $H_0: p=0.5$ with $\\hat{p}=0.6$, $n=100$. Compute the z statistic.",
+      "solution": {
+        "steps": [
+          "Standard error under $H_0$: $\\sqrt{\\frac{0.5\\cdot 0.5}{100}}=0.05$.",
+          "$z=\\frac{\\hat{p}-p_0}{\\text{SE}}=\\frac{0.6-0.5}{0.05}$.",
+          "Compute: $\\frac{0.1}{0.05}=2$."
+        ],
+        "answer": "$z=2$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Test $H_0:\\mu=50$ with $\\bar{x}=53$, $s=10$, $n=25$. Compute the t statistic.",
+      "solution": {
+        "steps": [
+          "SE of the mean: $\\frac{s}{\\sqrt{n}}=\\frac{10}{5}=2$.",
+          "$t=\\frac{\\bar{x}-\\mu_0}{\\text{SE}}=\\frac{53-50}{2}$.",
+          "Compute: $\\frac{3}{2}=1.5$ with df $=24$."
+        ],
+        "answer": "$t=1.5$ (df $=24$)"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A two-sided test has $z=2$. Roughly, is it significant at $\\alpha=0.05$?",
+      "solution": {
+        "steps": [
+          "For a two-sided test the critical z is about $1.96$ at $\\alpha=0.05$.",
+          "Since $|z|=2>1.96$, the result falls in the rejection region.",
+          "So it is (just) significant; reject $H_0$."
+        ],
+        "answer": "Yes, just significant (reject $H_0$)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "z for $\\hat{p}=0.55$, $p_0=0.5$, $n=100$.",
+      "solution": {
+        "steps": [
+          "SE $=0.05$; $z=\\frac{0.05}{0.05}=1$."
+        ],
+        "answer": "$1$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "t for $\\bar{x}=12$, $\\mu_0=10$, $s=4$, $n=16$.",
+      "solution": {
+        "steps": [
+          "SE $=1$; $t=\\frac{2}{1}=2$."
+        ],
+        "answer": "$2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "df for a one-sample t test with $n=20$.",
+      "solution": {
+        "steps": [
+          "$19$."
+        ],
+        "answer": "$19$"
+      }
+    }
+  ]
+}

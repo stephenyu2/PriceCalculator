@@ -1,0 +1,187 @@
+{
+  "id": "CALC1.LIM.A.3--worksheet",
+  "standard": "CALC1.LIM.A.3",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Limits and Continuity",
+  "domainCode": "LIM",
+  "cluster": "Understanding limits",
+  "clusterCode": "A",
+  "skillName": "Continuity",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Determine continuity, classify discontinuities, and apply the Intermediate Value Theorem. Use the three-part definition of continuity at a point.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Classify the discontinuity of $f(x)=\\dfrac{x^2-4}{x-2}$ at $x=2$.",
+      "answer": "Removable hole at $(2,4)$.",
+      "solution": {
+        "steps": [
+          "The limit is $x+2\\to 4$, but $f(2)$ is undefined.",
+          "Limit exists, value missing: removable."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Classify the discontinuity of $f(x)=\\dfrac{5}{x+1}$ at $x=-1$.",
+      "answer": "Infinite discontinuity (vertical asymptote $x=-1$).",
+      "solution": {
+        "steps": [
+          "The denominator $\\to 0$ and outputs grow without bound.",
+          "One-sided limits are $\\pm\\infty$: infinite discontinuity."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "Is $f(x)=\\begin{cases}2x & x\\le 1\\\\ x+1 & x>1\\end{cases}$ continuous at $x=1$?",
+      "answer": "Yes; both sides give $2$.",
+      "solution": {
+        "steps": [
+          "Left: $2(1)=2$. Right: $1+1=2$. Value $f(1)=2$.",
+          "All three agree, so $f$ is continuous at $1$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Is $f(x)=\\begin{cases}x^2 & x<2\\\\ 3x & x\\ge 2\\end{cases}$ continuous at $x=2$?",
+      "answer": "No; jump (left $4$, right $6$).",
+      "solution": {
+        "steps": [
+          "Left limit $2^2=4$; right value/limit $3(2)=6$.",
+          "Unequal one-sided limits: jump discontinuity."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "Find $k$ so $f(x)=\\begin{cases}kx+1 & x\\le 2\\\\ x^2 & x>2\\end{cases}$ is continuous at $x=2$.",
+      "answer": "$k=\\dfrac{3}{2}$",
+      "solution": {
+        "steps": [
+          "Match pieces at $2$: $2k+1=4$.",
+          "Solve $2k=3$, so $k=\\frac{3}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "Find $k$ so $f(x)=\\begin{cases}x^2+k & x\\le 1\\\\ 4x & x>1\\end{cases}$ is continuous at $x=1$.",
+      "answer": "$k=3$",
+      "solution": {
+        "steps": [
+          "Match at $1$: $1+k=4$.",
+          "So $k=3$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Use the IVT: does $f(x)=x^3-6x+2$ have a root in $[0,1]$?",
+      "answer": "Yes.",
+      "solution": {
+        "steps": [
+          "$f(0)=2>0$, $f(1)=1-6+2=-3<0$.",
+          "Sign change on a continuous function guarantees a root."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Use the IVT: does $f(x)=x^2-2$ have a root in $[1,2]$?",
+      "answer": "Yes (at $x=\\sqrt{2}$).",
+      "solution": {
+        "steps": [
+          "$f(1)=-1<0$, $f(2)=2>0$.",
+          "Continuous sign change gives a root; it is $\\sqrt{2}$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "At how many of $x=-1,0,1$ is $f(x)=\\dfrac{x}{x^2-1}$ discontinuous?",
+      "answer": "Two ($x=1$ and $x=-1$).",
+      "solution": {
+        "steps": [
+          "Denominator $x^2-1=0$ at $x=\\pm 1$.",
+          "Those are infinite discontinuities; $x=0$ is fine."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Is $f(x)=\\sqrt{x-3}$ continuous at $x=3$ (from the right)?",
+      "answer": "Yes, it is right-continuous at $3$.",
+      "solution": {
+        "steps": [
+          "$f(3)=0$ and $\\lim_{x\\to 3^+}\\sqrt{x-3}=0$.",
+          "The right-hand limit equals the value, so it is continuous from the right."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Classify the discontinuity of $f(x)=\\dfrac{|x|}{x}$ at $x=0$.",
+      "answer": "Jump discontinuity (left $-1$, right $1$).",
+      "solution": {
+        "steps": [
+          "For $x<0$, $f=-1$; for $x>0$, $f=1$.",
+          "Unequal one-sided limits: jump."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Find all $x$ where $f(x)=\\dfrac{x+2}{x^2-x-6}$ is discontinuous.",
+      "answer": "$x=3$ and $x=-2$",
+      "solution": {
+        "steps": [
+          "Factor the denominator: $(x-3)(x+2)$.",
+          "Zeros at $x=3$ (asymptote) and $x=-2$ (removable, cancels)."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Make $f(x)=\\dfrac{x^2-9}{x-3}$ continuous at $x=3$ by defining $f(3)$. What value?",
+      "answer": "$f(3)=6$",
+      "solution": {
+        "steps": [
+          "The limit is $x+3\\to 6$.",
+          "Define $f(3)=6$ to fill the hole."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "Does $f(x)=\\cos x - x$ have a solution to $\\cos x = x$ on $[0,1]$? (IVT)",
+      "answer": "Yes.",
+      "solution": {
+        "steps": [
+          "Let $g(x)=\\cos x - x$; $g(0)=1>0$, $g(1)=\\cos 1 - 1\\approx -0.46<0$.",
+          "Sign change gives a solution."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "Is a polynomial ever discontinuous on $\\mathbb{R}$?",
+      "answer": "No; polynomials are continuous everywhere.",
+      "solution": {
+        "steps": [
+          "Polynomials are built from sums and products of continuous powers.",
+          "So they are continuous for all real $x$."
+        ]
+      }
+    }
+  ],
+  "clusterId": null,
+  "tier": null
+}

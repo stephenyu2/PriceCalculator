@@ -1,0 +1,172 @@
+{
+  "id": "STAT.EDA.B.9--worksheet",
+  "standard": "STAT.EDA.B.9",
+  "grade": "statistics",
+  "subject": "math",
+  "domain": "Exploring Data",
+  "domainCode": "EDA",
+  "cluster": "Bivariate data",
+  "clusterCode": "B",
+  "skillName": "Transformations to Achieve Linearity",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Use logs to linearize exponential and power models, then back-transform.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "Transform for $y=ab^x$:",
+      "answer": "$\\log y$ vs $x$",
+      "solution": {
+        "steps": [
+          "Log the response."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "Transform for $y=ax^p$:",
+      "answer": "$\\log y$ vs $\\log x$",
+      "solution": {
+        "steps": [
+          "Log both."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "$\\log y=0.3+0.5x$: $a=$",
+      "answer": "$10^{0.3}\\approx 2.0$",
+      "solution": {
+        "steps": [
+          "Intercept exponentiated."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "$\\log y=0.3+0.5x$: $b=$",
+      "answer": "$10^{0.5}\\approx 3.16$",
+      "solution": {
+        "steps": [
+          "Slope exponentiated."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "$\\log y$ linear in $x$ implies model:",
+      "answer": "exponential",
+      "solution": {
+        "steps": [
+          "$y=ab^x$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "$\\log y$ linear in $\\log x$ implies model:",
+      "answer": "power",
+      "solution": {
+        "steps": [
+          "$y=ax^p$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "$\\log y=2+x$: $a=$",
+      "answer": "$100$",
+      "solution": {
+        "steps": [
+          "$10^2$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "$\\log y=2+x$: $b=$",
+      "answer": "$10$",
+      "solution": {
+        "steps": [
+          "$10^1$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "After transforming, you fit a:",
+      "answer": "line",
+      "solution": {
+        "steps": [
+          "Linear regression on transformed data."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Then you ___ to original units.",
+      "answer": "back-transform",
+      "solution": {
+        "steps": [
+          "Undo the log."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "Random residual plot of log fit means transform:",
+      "answer": "worked",
+      "solution": {
+        "steps": [
+          "Good linearization."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "$\\log y=\\log a+p\\log x$: the slope is",
+      "answer": "$p$",
+      "solution": {
+        "steps": [
+          "Power exponent."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "For $y=5\\cdot 2^x$, $\\log y$ intercept is",
+      "answer": "$\\log 5$",
+      "solution": {
+        "steps": [
+          "$\\log a=\\log 5$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "For $y=5\\cdot 2^x$, $\\log y$ slope is",
+      "answer": "$\\log 2$",
+      "solution": {
+        "steps": [
+          "$\\log b=\\log 2$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "A curved residual plot after transforming means the transform:",
+      "answer": "did not work",
+      "solution": {
+        "steps": [
+          "Try another transform."
+        ]
+      }
+    }
+  ],
+  "clusterId": null,
+  "tier": null
+}

@@ -1,0 +1,96 @@
+{
+  "id": "CALC1.LIM.A.4--lesson",
+  "standard": "CALC1.LIM.A.4",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Limits and Continuity",
+  "domainCode": "LIM",
+  "cluster": "Understanding limits",
+  "clusterCode": "A",
+  "skillName": "Limits Involving Infinity",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A limit at infinity, $\\lim_{x\\to\\pm\\infty} f(x)$, describes a function's end behavior. For a rational function, compare the degrees of numerator and denominator: equal degrees give the ratio of leading coefficients as a horizontal asymptote; a smaller numerator degree gives $0$; a larger numerator degree grows without bound (no horizontal asymptote). A vertical asymptote occurs where the denominator is zero but the numerator is not; there the limit is $+\\infty$ or $-\\infty$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Evaluate $\\lim_{x\\to\\infty}\\dfrac{3x^2+5}{x^2-4}$ and state the horizontal asymptote.",
+      "solution": {
+        "steps": [
+          "Numerator and denominator both have degree $2$.",
+          "Divide every term by $x^2$: $\\dfrac{3+5/x^2}{1-4/x^2}$.",
+          "As $x\\to\\infty$, the $1/x^2$ terms vanish, leaving $\\dfrac{3}{1}=3$.",
+          "The ratio of leading coefficients is $3$, so $y=3$ is a horizontal asymptote."
+        ],
+        "answer": "$\\lim_{x\\to\\infty}\\dfrac{3x^2+5}{x^2-4}=3$; horizontal asymptote $y=3$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Evaluate $\\lim_{x\\to\\infty}\\dfrac{2x+1}{x^2+3}$.",
+      "solution": {
+        "steps": [
+          "The numerator has degree $1$, the denominator degree $2$ (denominator wins).",
+          "Divide by $x^2$: $\\dfrac{2/x+1/x^2}{1+3/x^2}\\to\\dfrac{0}{1}$.",
+          "So the limit is $0$, and $y=0$ is a horizontal asymptote."
+        ],
+        "answer": "$0$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Evaluate $\\lim_{x\\to 2^+}\\dfrac{1}{x-2}$ and $\\lim_{x\\to 2^-}\\dfrac{1}{x-2}$.",
+      "solution": {
+        "steps": [
+          "Near $x=2$ the numerator is $1$ and the denominator $x-2\\to 0$.",
+          "For $x>2$, $x-2$ is a small positive number, so $\\frac{1}{x-2}\\to +\\infty$.",
+          "For $x<2$, $x-2$ is a small negative number, so $\\frac{1}{x-2}\\to -\\infty$.",
+          "The one-sided infinite limits confirm a vertical asymptote at $x=2$."
+        ],
+        "answer": "$\\lim_{x\\to 2^+}=+\\infty$ and $\\lim_{x\\to 2^-}=-\\infty$; vertical asymptote $x=2$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Evaluate $\\lim_{x\\to\\infty}\\dfrac{5x^3-2x}{2x^3+7}$.",
+      "solution": {
+        "steps": [
+          "Equal degree $3$; divide by $x^3$: $\\dfrac{5-2/x^2}{2+7/x^3}\\to\\dfrac{5}{2}$."
+        ],
+        "answer": "$\\dfrac{5}{2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Evaluate $\\lim_{x\\to\\infty}\\dfrac{x^2+1}{x+4}$.",
+      "solution": {
+        "steps": [
+          "Numerator degree $2$ exceeds denominator degree $1$.",
+          "The quotient grows without bound: $+\\infty$ (no horizontal asymptote)."
+        ],
+        "answer": "$+\\infty$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Evaluate $\\lim_{x\\to -\\infty}\\dfrac{4x}{\\sqrt{x^2+1}}$.",
+      "solution": {
+        "steps": [
+          "For large $|x|$, $\\sqrt{x^2+1}\\approx|x|$; as $x\\to -\\infty$, $|x|=-x$.",
+          "So $\\dfrac{4x}{-x}=-4$."
+        ],
+        "answer": "$-4$"
+      }
+    }
+  ]
+}

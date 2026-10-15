@@ -1,0 +1,90 @@
+{
+  "id": "STAT.EDA.B.9--lesson",
+  "standard": "STAT.EDA.B.9",
+  "grade": "statistics",
+  "subject": "math",
+  "domain": "Exploring Data",
+  "domainCode": "EDA",
+  "cluster": "Bivariate data",
+  "clusterCode": "B",
+  "skillName": "Transformations to Achieve Linearity",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "When a relationship is curved, transforming a variable can straighten it so linear regression applies. For exponential growth $y=ab^x$, taking $\\log y$ gives a linear relationship between $\\log y$ and $x$. For power models $y=ax^p$, taking the log of BOTH variables makes $\\log y$ linear in $\\log x$. After fitting the line to the transformed data, back-transform to express the model in the original units. A residual plot of the transformed fit should look random if the transformation worked.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Data fit $\\log y = 0.3 + 0.5x$. Write the exponential model $y=ab^x$.",
+      "solution": {
+        "steps": [
+          "Exponentiate both sides (base $10$): $y=10^{0.3+0.5x}=10^{0.3}\\cdot 10^{0.5x}$.",
+          "So $a=10^{0.3}\\approx 2.0$ and $b=10^{0.5}\\approx 3.16$.",
+          "The model is $y\\approx 2.0(3.16)^x$."
+        ],
+        "answer": "$y\\approx 2.0\\,(3.16)^x$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "If $\\log y$ is linear in $x$, what type of model fits the original data?",
+      "solution": {
+        "steps": [
+          "Linearity of $\\log y$ versus $x$ comes from $\\log(ab^x)=\\log a+x\\log b$.",
+          "That is the signature of an exponential model $y=ab^x$."
+        ],
+        "answer": "An exponential model $y=ab^x$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "If $\\log y$ is linear in $\\log x$, what model fits?",
+      "solution": {
+        "steps": [
+          "$\\log(ax^p)=\\log a+p\\log x$ is linear in $\\log x$.",
+          "So a power model $y=ax^p$ fits."
+        ],
+        "answer": "A power model $y=ax^p$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "$\\log y=1+0.2x$: find $a$ and $b$.",
+      "solution": {
+        "steps": [
+          "$a=10^1=10$, $b=10^{0.2}\\approx 1.58$."
+        ],
+        "answer": "$a=10$, $b\\approx 1.58$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Which transform straightens $y=ab^x$?",
+      "solution": {
+        "steps": [
+          "Take $\\log y$."
+        ],
+        "answer": "$\\log y$ vs $x$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Which transform straightens $y=ax^p$?",
+      "solution": {
+        "steps": [
+          "Log both variables."
+        ],
+        "answer": "$\\log y$ vs $\\log x$"
+      }
+    }
+  ]
+}

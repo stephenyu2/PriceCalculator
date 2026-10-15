@@ -1,0 +1,96 @@
+{
+  "id": "CALC2.INT.A.1--lesson",
+  "standard": "CALC2.INT.A.1",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Advanced Integration Techniques",
+  "domainCode": "INT",
+  "cluster": "Methods of integration",
+  "clusterCode": "A",
+  "skillName": "Integration by Parts",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Integration by parts reverses the product rule: $\\int u\\,dv=uv-\\int v\\,du$. Choose $u$ to be the part that gets simpler when differentiated and $dv$ the part you can integrate. A common guide is LIATE (Logarithmic, Inverse trig, Algebraic, Trig, Exponential) for picking $u$. Sometimes you apply the method twice, or solve for the original integral when it reappears.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Evaluate $\\int x e^x\\,dx$.",
+      "solution": {
+        "steps": [
+          "Let $u=x$ (simplifies) and $dv=e^x\\,dx$.",
+          "Then $du=dx$ and $v=e^x$.",
+          "Apply the formula: $uv-\\int v\\,du=xe^x-\\int e^x\\,dx$.",
+          "Finish: $xe^x-e^x+C$."
+        ],
+        "answer": "$xe^x-e^x+C$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Evaluate $\\int x\\cos x\\,dx$.",
+      "solution": {
+        "steps": [
+          "Let $u=x$, $dv=\\cos x\\,dx$, so $du=dx$, $v=\\sin x$.",
+          "Formula: $x\\sin x-\\int \\sin x\\,dx$.",
+          "Finish: $x\\sin x+\\cos x+C$."
+        ],
+        "answer": "$x\\sin x+\\cos x+C$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Evaluate $\\int \\ln x\\,dx$.",
+      "solution": {
+        "steps": [
+          "Let $u=\\ln x$, $dv=dx$, so $du=\\frac{1}{x}\\,dx$, $v=x$.",
+          "Formula: $x\\ln x-\\int x\\cdot\\frac{1}{x}\\,dx=x\\ln x-\\int 1\\,dx$.",
+          "Finish: $x\\ln x-x+C$."
+        ],
+        "answer": "$x\\ln x-x+C$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Evaluate $\\int x e^{2x}\\,dx$.",
+      "solution": {
+        "steps": [
+          "$u=x$, $dv=e^{2x}dx$; $v=\\frac{1}{2}e^{2x}$.",
+          "$\\frac{x}{2}e^{2x}-\\int\\frac{1}{2}e^{2x}dx=\\frac{x}{2}e^{2x}-\\frac{1}{4}e^{2x}+C$."
+        ],
+        "answer": "$\\dfrac{x}{2}e^{2x}-\\dfrac{1}{4}e^{2x}+C$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Evaluate $\\int x\\sin x\\,dx$.",
+      "solution": {
+        "steps": [
+          "$u=x$, $dv=\\sin x\\,dx$; $v=-\\cos x$.",
+          "$-x\\cos x+\\int\\cos x\\,dx=-x\\cos x+\\sin x+C$."
+        ],
+        "answer": "$-x\\cos x+\\sin x+C$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Evaluate $\\int x^2\\ln x\\,dx$.",
+      "solution": {
+        "steps": [
+          "$u=\\ln x$, $dv=x^2dx$; $v=\\frac{x^3}{3}$.",
+          "$\\frac{x^3}{3}\\ln x-\\int\\frac{x^2}{3}dx=\\frac{x^3}{3}\\ln x-\\frac{x^3}{9}+C$."
+        ],
+        "answer": "$\\dfrac{x^3}{3}\\ln x-\\dfrac{x^3}{9}+C$"
+      }
+    }
+  ]
+}

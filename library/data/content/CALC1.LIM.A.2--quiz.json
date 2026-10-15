@@ -1,0 +1,150 @@
+{
+  "id": "CALC1.LIM.A.2--quiz",
+  "standard": "CALC1.LIM.A.2",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Limits and Continuity",
+  "domainCode": "LIM",
+  "cluster": "Understanding limits",
+  "clusterCode": "A",
+  "skillName": "Limit Laws and Algebraic Evaluation",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Evaluate limits by substitution, factoring, rationalizing, or combining fractions.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "$\\lim_{x\\to 4}\\,(x^2-2x)=?$\nA) $6$\nB) $8$\nC) $12$\nD) $16$",
+      "answer": "B) $8$",
+      "solution": {
+        "steps": [
+          "Substitute $x=4$: $16-8=8$. Key is B.",
+          "A), C), D) come from arithmetic slips in $16-8$."
+        ],
+        "answer": "B) $8$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "$\\lim_{x\\to 3}\\dfrac{x^2-9}{x-3}=?$\nA) $0$\nB) $3$\nC) $6$\nD) Does not exist",
+      "answer": "C) $6$",
+      "solution": {
+        "steps": [
+          "$\\frac{0}{0}$; factor and cancel to get $x+3$, then substitute $3$ to get $6$. Key is C.",
+          "A) $0$ ignores the cancellation.",
+          "B) $3$ is the input.",
+          "D) is wrong; the hole still has a limit."
+        ],
+        "answer": "C) $6$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Medium",
+      "prompt": "$\\lim_{x\\to 0}\\dfrac{x^2-6x}{x}=?$\nA) $-6$\nB) $0$\nC) $6$\nD) Does not exist",
+      "answer": "A) $-6$",
+      "solution": {
+        "steps": [
+          "Factor $x$: $\\frac{x(x-6)}{x}=x-6$.",
+          "Substitute $x=0$: $-6$. Key is A.",
+          "B) $0$ wrongly keeps the removed factor.",
+          "C) drops the sign.",
+          "D) ignores that the hole has a limit."
+        ],
+        "answer": "A) $-6$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "$\\lim_{x\\to 16}\\dfrac{\\sqrt{x}-4}{x-16}=?$\nA) $\\dfrac{1}{8}$\nB) $\\dfrac{1}{4}$\nC) $8$\nD) $0$",
+      "answer": "A) $\\dfrac{1}{8}$",
+      "solution": {
+        "steps": [
+          "Write $x-16=(\\sqrt{x}-4)(\\sqrt{x}+4)$ and cancel: $\\frac{1}{\\sqrt{x}+4}$.",
+          "Substitute $x=16$: $\\frac{1}{4+4}=\\frac{1}{8}$. Key is A.",
+          "B) forgets to add the two roots.",
+          "C) inverts the fraction.",
+          "D) is not indeterminate-zero."
+        ],
+        "answer": "A) $\\dfrac{1}{8}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "$\\lim_{x\\to 2}\\dfrac{\\frac{1}{x}-\\frac{1}{2}}{x-2}=?$\nA) $-\\dfrac{1}{4}$\nB) $\\dfrac{1}{4}$\nC) $-\\dfrac{1}{2}$\nD) $0$",
+      "answer": "A) $-\\dfrac{1}{4}$",
+      "solution": {
+        "steps": [
+          "Combine the top: $\\frac{2-x}{2x}$; divide by $x-2$ to get $\\frac{-1}{2x}$.",
+          "Substitute $x=2$: $-\\frac{1}{4}$. Key is A.",
+          "B) drops the sign.",
+          "C) forgets the $x$ in $2x$.",
+          "D) ignores the simplification."
+        ],
+        "answer": "A) $-\\dfrac{1}{4}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "$\\lim_{x\\to -2}\\dfrac{x^2-4}{x+2}=?$\nA) $-4$\nB) $0$\nC) $4$\nD) Does not exist",
+      "answer": "A) $-4$",
+      "solution": {
+        "steps": [
+          "Factor $(x-2)(x+2)$, cancel $x+2$: $x-2$.",
+          "Substitute $x=-2$: $-4$. Key is A.",
+          "B) ignores cancellation.",
+          "C) drops the sign.",
+          "D) is wrong; the hole has a limit."
+        ],
+        "answer": "A) $-4$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "$\\lim_{x\\to 1}\\dfrac{x^3-1}{x^2-1}=?$\nA) $\\dfrac{2}{3}$\nB) $\\dfrac{3}{2}$\nC) $1$\nD) $3$",
+      "answer": "B) $\\dfrac{3}{2}$",
+      "solution": {
+        "steps": [
+          "Factor: $\\frac{(x-1)(x^2+x+1)}{(x-1)(x+1)}=\\frac{x^2+x+1}{x+1}$.",
+          "Substitute $x=1$: $\\frac{3}{2}$. Key is B.",
+          "A) inverts the fraction.",
+          "C) and D) are miscounts of the factors."
+        ],
+        "answer": "B) $\\dfrac{3}{2}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "$\\lim_{x\\to 0}\\dfrac{\\sqrt{4+x}-\\sqrt{4-x}}{x}=?$\nA) $0$\nB) $\\dfrac{1}{2}$\nC) $1$\nD) $2$",
+      "answer": "B) $\\dfrac{1}{2}$",
+      "solution": {
+        "steps": [
+          "Rationalize: multiply by $\\frac{\\sqrt{4+x}+\\sqrt{4-x}}{\\sqrt{4+x}+\\sqrt{4-x}}$; numerator becomes $(4+x)-(4-x)=2x$.",
+          "Get $\\frac{2x}{x(\\sqrt{4+x}+\\sqrt{4-x})}=\\frac{2}{\\sqrt{4+x}+\\sqrt{4-x}}$.",
+          "Substitute $x=0$: $\\frac{2}{2+2}=\\frac{1}{2}$. Key is B.",
+          "A), C), D) miss the conjugate step."
+        ],
+        "answer": "B) $\\dfrac{1}{2}$"
+      }
+    }
+  ]
+}

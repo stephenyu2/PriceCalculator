@@ -1,0 +1,134 @@
+{
+  "id": "CALC1.LIM.A.3--quiz",
+  "standard": "CALC1.LIM.A.3",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Limits and Continuity",
+  "domainCode": "LIM",
+  "cluster": "Understanding limits",
+  "clusterCode": "A",
+  "skillName": "Continuity",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Apply the three-part definition of continuity, classify discontinuities, and use the IVT.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Which condition is NOT required for $f$ to be continuous at $x=a$?\nA) $f(a)$ is defined\nB) $\\lim_{x\\to a} f(x)$ exists\nC) $\\lim_{x\\to a} f(x)=f(a)$\nD) $f'(a)$ exists",
+      "answer": "D) $f'(a)$ exists",
+      "solution": {
+        "steps": [
+          "Continuity needs the three limit/value conditions A, B, C.",
+          "Differentiability (D) is a stronger, separate property. Key is D."
+        ],
+        "answer": "D) $f'(a)$ exists"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "The discontinuity of $f(x)=\\dfrac{x^2-1}{x-1}$ at $x=1$ is:\nA) removable\nB) jump\nC) infinite\nD) none",
+      "answer": "A) removable",
+      "solution": {
+        "steps": [
+          "The limit is $x+1\\to 2$ but $f(1)$ is undefined.",
+          "Limit exists, value missing: removable. Key is A."
+        ],
+        "answer": "A) removable"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Medium",
+      "prompt": "For continuity of $f(x)=\\begin{cases}x^2 & x\\le 2\\\\ kx & x>2\\end{cases}$ at $2$, $k=?$\nA) $1$\nB) $2$\nC) $4$\nD) $6$",
+      "answer": "B) $2$",
+      "solution": {
+        "steps": [
+          "Match at $2$: $4=2k$, so $k=2$. Key is B.",
+          "C) $4$ forgets to divide; A) and D) are arithmetic slips."
+        ],
+        "answer": "B) $2$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "$f(x)=\\dfrac{|x-3|}{x-3}$ at $x=3$ has which discontinuity?\nA) removable\nB) jump\nC) infinite\nD) continuous",
+      "answer": "B) jump",
+      "solution": {
+        "steps": [
+          "Left of $3$ gives $-1$; right gives $1$.",
+          "Unequal one-sided limits: jump. Key is B."
+        ],
+        "answer": "B) jump"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "By the IVT, $f(x)=x^3-4x+1$ must have a root in which interval?\nA) $[0,1]$\nB) $[2,3]$\nC) $[-1,0]$\nD) $[3,4]$",
+      "answer": "A) $[0,1]$",
+      "solution": {
+        "steps": [
+          "$f(0)=1>0$, $f(1)=1-4+1=-2<0$: sign change on $[0,1]$.",
+          "So a root lies in $[0,1]$. Key is A.",
+          "Other intervals keep the same sign at both ends."
+        ],
+        "answer": "A) $[0,1]$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Where is $f(x)=\\dfrac{x-1}{x^2-1}$ discontinuous?\nA) only $x=1$\nB) only $x=-1$\nC) $x=\\pm 1$\nD) nowhere",
+      "answer": "C) $x=\\pm 1$",
+      "solution": {
+        "steps": [
+          "Denominator zero at $x=\\pm 1$.",
+          "$x=1$ is removable, $x=-1$ is infinite, but both are discontinuities. Key is C."
+        ],
+        "answer": "C) $x=\\pm 1$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "To remove the discontinuity of $f(x)=\\dfrac{x^3-8}{x-2}$ at $x=2$, define $f(2)=?$\nA) $0$\nB) $4$\nC) $8$\nD) $12$",
+      "answer": "D) $12$",
+      "solution": {
+        "steps": [
+          "Factor $x^3-8=(x-2)(x^2+2x+4)$, cancel, get $x^2+2x+4$.",
+          "At $x=2$: $4+4+4=12$. Key is D."
+        ],
+        "answer": "D) $12$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "If $f$ is continuous on $[1,5]$ with $f(1)=-2$ and $f(5)=7$, which value is $f$ GUARANTEED to attain?\nA) $-3$\nB) $0$\nC) $8$\nD) $10$",
+      "answer": "B) $0$",
+      "solution": {
+        "steps": [
+          "The IVT guarantees every value between $f(1)=-2$ and $f(5)=7$.",
+          "Only $0$ lies in $[-2,7]$. Key is B.",
+          "A) is below the range; C) and D) are above it."
+        ],
+        "answer": "B) $0$"
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "STAT.INF.A.3--lesson",
+  "standard": "STAT.INF.A.3",
+  "grade": "statistics",
+  "subject": "math",
+  "domain": "Statistical Inference",
+  "domainCode": "INF",
+  "cluster": "Estimating with confidence intervals",
+  "clusterCode": "A",
+  "skillName": "One-Sample t Interval for Means",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "When the population standard deviation is unknown, a confidence interval for the mean uses the t-distribution: $\\bar{x}\\pm t^*\\dfrac{s}{\\sqrt{n}}$, where $s$ is the sample standard deviation and $t^*$ comes from $n-1$ degrees of freedom. The t-distribution is bell-shaped but has heavier tails than the normal; as $n$ grows it approaches the normal. The standard error of the mean is $\\dfrac{s}{\\sqrt{n}}$. Conditions: random sample, independence, and an approximately normal population or a large enough sample.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "For $\\bar{x}=50$, $s=10$, $n=25$, find the standard error of the mean.",
+      "solution": {
+        "steps": [
+          "SE of the mean is $\\frac{s}{\\sqrt{n}}$.",
+          "$\\frac{10}{\\sqrt{25}}=\\frac{10}{5}=2$.",
+          "So SE $=2$."
+        ],
+        "answer": "SE $=2$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "How many degrees of freedom for a one-sample t interval with $n=25$?",
+      "solution": {
+        "steps": [
+          "Degrees of freedom are $n-1$.",
+          "$25-1=24$."
+        ],
+        "answer": "$24$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Build the interval for $\\bar{x}=50$, SE $=2$, $t^*=2.064$ (df $=24$, $95\\%$).",
+      "solution": {
+        "steps": [
+          "Margin $=t^*\\cdot\\text{SE}=2.064\\cdot 2=4.128$.",
+          "Interval: $50\\pm 4.128$.",
+          "Endpoints: about $(45.9,\\,54.1)$."
+        ],
+        "answer": "About $(45.9,\\,54.1)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "SE of the mean for $s=8$, $n=16$.",
+      "solution": {
+        "steps": [
+          "$\\frac{8}{4}=2$."
+        ],
+        "answer": "$2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "df for $n=10$.",
+      "solution": {
+        "steps": [
+          "$10-1=9$."
+        ],
+        "answer": "$9$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "SE of the mean for $s=12$, $n=36$.",
+      "solution": {
+        "steps": [
+          "$\\frac{12}{6}=2$."
+        ],
+        "answer": "$2$"
+      }
+    }
+  ]
+}

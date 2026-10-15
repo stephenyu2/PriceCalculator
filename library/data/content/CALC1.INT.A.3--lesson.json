@@ -1,0 +1,92 @@
+{
+  "id": "CALC1.INT.A.3--lesson",
+  "standard": "CALC1.INT.A.3",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Integration",
+  "domainCode": "INT",
+  "cluster": "Defining and computing integrals",
+  "clusterCode": "A",
+  "skillName": "Basic Antiderivatives and Indefinite Integrals",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "An antiderivative of $f$ is a function $F$ with $F'=f$. The indefinite integral collects all of them: $\\int f(x)\\,dx=F(x)+C$. Key rules: power rule for integrals $\\int x^n\\,dx=\\frac{x^{n+1}}{n+1}+C$ (for $n\\ne -1$), $\\int \\frac{1}{x}\\,dx=\\ln|x|+C$, $\\int e^x\\,dx=e^x+C$, $\\int \\cos x\\,dx=\\sin x+C$, $\\int \\sin x\\,dx=-\\cos x+C$. Always include the constant $C$ for an indefinite integral.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Find $\\int (6x^2-4x+5)\\,dx$.",
+      "solution": {
+        "steps": [
+          "Integrate term by term with the power rule.",
+          "$\\int 6x^2\\,dx=2x^3$, $\\int -4x\\,dx=-2x^2$, $\\int 5\\,dx=5x$.",
+          "Add the constant: $2x^3-2x^2+5x+C$."
+        ],
+        "answer": "$2x^3-2x^2+5x+C$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find $\\int \\left(\\sqrt{x}+\\frac{1}{x}\\right)\\,dx$.",
+      "solution": {
+        "steps": [
+          "Rewrite $\\sqrt{x}=x^{1/2}$.",
+          "$\\int x^{1/2}\\,dx=\\frac{2}{3}x^{3/2}$ and $\\int\\frac{1}{x}\\,dx=\\ln|x|$.",
+          "Combine: $\\frac{2}{3}x^{3/2}+\\ln|x|+C$."
+        ],
+        "answer": "$\\dfrac{2}{3}x^{3/2}+\\ln|x|+C$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Solve the initial value problem $F'(x)=3x^2$ with $F(1)=5$.",
+      "solution": {
+        "steps": [
+          "Antiderivative: $F(x)=x^3+C$.",
+          "Apply $F(1)=5$: $1+C=5$, so $C=4$.",
+          "Thus $F(x)=x^3+4$."
+        ],
+        "answer": "$F(x)=x^3+4$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Find $\\int (4x^3-2)\\,dx$.",
+      "solution": {
+        "steps": [
+          "$x^4-2x+C$."
+        ],
+        "answer": "$x^4-2x+C$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Find $\\int (e^x+\\cos x)\\,dx$.",
+      "solution": {
+        "steps": [
+          "$e^x+\\sin x+C$."
+        ],
+        "answer": "$e^x+\\sin x+C$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Solve $F'(x)=2x$, $F(0)=3$.",
+      "solution": {
+        "steps": [
+          "$F(x)=x^2+C$; $F(0)=3\\Rightarrow C=3$."
+        ],
+        "answer": "$F(x)=x^2+3$"
+      }
+    }
+  ]
+}

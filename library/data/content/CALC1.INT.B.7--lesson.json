@@ -1,0 +1,93 @@
+{
+  "id": "CALC1.INT.B.7--lesson",
+  "standard": "CALC1.INT.B.7",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Integration",
+  "domainCode": "INT",
+  "cluster": "Applications of integration",
+  "clusterCode": "B",
+  "skillName": "Accumulation and Net Change",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A definite integral of a rate gives the net change in the quantity: $\\int_a^b r(t)\\,dt=Q(b)-Q(a)$. For motion, $\\int_a^b v(t)\\,dt$ is displacement (net change in position), while $\\int_a^b |v(t)|\\,dt$ is total distance traveled. More generally, integrating a flow rate gives total accumulated amount, and adding it to a starting value gives the ending value.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "An object has velocity $v(t)=3t^2$ m/s. Find the displacement from $t=0$ to $t=2$.",
+      "solution": {
+        "steps": [
+          "Displacement is $\\int_0^2 v(t)\\,dt=\\int_0^2 3t^2\\,dt$.",
+          "Antiderivative $t^3$: $\\left[t^3\\right]_0^2=8-0$.",
+          "So the displacement is $8$ meters."
+        ],
+        "answer": "$8$ m"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Water flows into a tank at $r(t)=4t$ liters/min. How much enters during the first $5$ minutes?",
+      "solution": {
+        "steps": [
+          "Total volume is $\\int_0^5 4t\\,dt$.",
+          "Antiderivative $2t^2$: $\\left[2t^2\\right]_0^5=50$.",
+          "So $50$ liters flow in."
+        ],
+        "answer": "$50$ liters"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A particle has velocity $v(t)=t-3$ on $[0,5]$. Find displacement and total distance.",
+      "solution": {
+        "steps": [
+          "Displacement: $\\int_0^5 (t-3)\\,dt=\\left[\\frac{t^2}{2}-3t\\right]_0^5=\\frac{25}{2}-15=-\\frac{5}{2}$.",
+          "Distance needs $|v|$: $v<0$ on $[0,3)$, $v>0$ on $(3,5]$.",
+          "$\\int_0^3 (3-t)\\,dt=\\frac{9}{2}$ and $\\int_3^5 (t-3)\\,dt=2$.",
+          "Total distance $=\\frac{9}{2}+2=\\frac{13}{2}$."
+        ],
+        "answer": "Displacement $-\\dfrac{5}{2}$ m; total distance $\\dfrac{13}{2}$ m."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "If $v(t)=2t$, find the displacement on $[0,3]$.",
+      "solution": {
+        "steps": [
+          "$\\int_0^3 2t\\,dt=[t^2]_0^3=9$."
+        ],
+        "answer": "$9$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "A population grows at $P'(t)=100e^{0.1t}$ per year. Net change over the first $10$ years?",
+      "solution": {
+        "steps": [
+          "$\\int_0^{10}100e^{0.1t}\\,dt=1000(e^1-1)\\approx 1718$."
+        ],
+        "answer": "$\\approx 1718$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A car starts at position $s(0)=5$ with $v(t)=6t$. Find $s(2)$.",
+      "solution": {
+        "steps": [
+          "$s(2)=s(0)+\\int_0^2 6t\\,dt=5+[3t^2]_0^2=5+12=17$."
+        ],
+        "answer": "$s(2)=17$"
+      }
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "STAT.EDA.B.8--lesson",
+  "standard": "STAT.EDA.B.8",
+  "grade": "statistics",
+  "subject": "math",
+  "domain": "Exploring Data",
+  "domainCode": "EDA",
+  "cluster": "Bivariate data",
+  "clusterCode": "B",
+  "skillName": "Residuals and Residual Plots",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A residual is the observed value minus the predicted value: $\\text{residual}=y-\\hat{y}$. A positive residual means the model underpredicted; a negative one means it overpredicted. A residual plot graphs residuals against $x$ (or $\\hat{y}$). If the linear model fits well, the residual plot shows random scatter around $0$ with no pattern. A curved or fanning pattern signals that a line is not appropriate.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "The line is $\\hat{y}=2+3x$. For the point $(4,16)$, find the residual.",
+      "solution": {
+        "steps": [
+          "Predict: $\\hat{y}=2+3(4)=14$.",
+          "Residual $=y-\\hat{y}=16-14=2$.",
+          "The positive residual means the model underpredicted by $2$."
+        ],
+        "answer": "Residual $=2$ (underpredicted)"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "For $\\hat{y}=10-x$ and the point $(3,5)$, find and interpret the residual.",
+      "solution": {
+        "steps": [
+          "Predict: $\\hat{y}=10-3=7$.",
+          "Residual $=5-7=-2$.",
+          "Negative, so the model overpredicted the actual value by $2$."
+        ],
+        "answer": "Residual $=-2$ (overpredicted)"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A residual plot shows a clear U-shape. What does it tell you?",
+      "solution": {
+        "steps": [
+          "A random, patternless band would support a linear fit.",
+          "A U-shape is a systematic pattern.",
+          "So a straight-line model is not appropriate; the relationship is curved."
+        ],
+        "answer": "The linear model is inappropriate (curved relationship)."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Residual for $(2,9)$ with $\\hat{y}=1+3x$.",
+      "solution": {
+        "steps": [
+          "$\\hat{y}=7$; $9-7=2$."
+        ],
+        "answer": "$2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Residual for $(5,8)$ with $\\hat{y}=2x$.",
+      "solution": {
+        "steps": [
+          "$\\hat{y}=10$; $8-10=-2$."
+        ],
+        "answer": "$-2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Random scatter in a residual plot means:",
+      "solution": {
+        "steps": [
+          "A line is a good fit."
+        ],
+        "answer": "Linear model is appropriate"
+      }
+    }
+  ]
+}

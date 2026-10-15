@@ -1,0 +1,124 @@
+{
+  "id": "CALC1.INT.A.4--quiz",
+  "standard": "CALC1.INT.A.4",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Integration",
+  "domainCode": "INT",
+  "cluster": "Defining and computing integrals",
+  "clusterCode": "A",
+  "skillName": "u-Substitution",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Integrate by substitution.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "For $\\int 2x(x^2+1)^3\\,dx$, let $u=x^2+1$. Then $du=?$\nA) $x\\,dx$\nB) $2x\\,dx$\nC) $2\\,dx$\nD) $(x^2+1)\\,dx$",
+      "answer": "B) $2x\\,dx$",
+      "solution": {
+        "steps": [
+          "$\\frac{d}{dx}(x^2+1)=2x$. Key is B."
+        ],
+        "answer": "B) $2x\\,dx$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "$\\int \\cos(2x)\\,dx=?$\nA) $\\sin(2x)+C$\nB) $\\frac{1}{2}\\sin(2x)+C$\nC) $2\\sin(2x)+C$\nD) $-\\frac{1}{2}\\sin(2x)+C$",
+      "answer": "B) $\\frac{1}{2}\\sin(2x)+C$",
+      "solution": {
+        "steps": [
+          "$u=2x$ gives $\\frac{1}{2}\\sin(2x)$. Key is B."
+        ],
+        "answer": "B) $\\frac{1}{2}\\sin(2x)+C$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Medium",
+      "prompt": "$\\int 2x(x^2+1)^5\\,dx=?$\nA) $\\frac{(x^2+1)^6}{6}+C$\nB) $(x^2+1)^6+C$\nC) $\\frac{(x^2+1)^6}{12}+C$\nD) $5(x^2+1)^4+C$",
+      "answer": "A) $\\frac{(x^2+1)^6}{6}+C$",
+      "solution": {
+        "steps": [
+          "$u=x^2+1$, $\\int u^5\\,du=\\frac{u^6}{6}$. Key is A."
+        ],
+        "answer": "A) $\\frac{(x^2+1)^6}{6}+C$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "$\\int \\frac{2x}{x^2+1}\\,dx=?$\nA) $\\ln(x^2+1)+C$\nB) $\\frac{1}{x^2+1}+C$\nC) $2\\ln(x^2+1)+C$\nD) $\\arctan x+C$",
+      "answer": "A) $\\ln(x^2+1)+C$",
+      "solution": {
+        "steps": [
+          "$u=x^2+1$, $\\int\\frac{du}{u}=\\ln|u|$. Key is A."
+        ],
+        "answer": "A) $\\ln(x^2+1)+C$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "$\\int e^{3x}\\,dx=?$\nA) $e^{3x}+C$\nB) $3e^{3x}+C$\nC) $\\frac{1}{3}e^{3x}+C$\nD) $\\frac{1}{3}e^{x}+C$",
+      "answer": "C) $\\frac{1}{3}e^{3x}+C$",
+      "solution": {
+        "steps": [
+          "$u=3x$ gives $\\frac{1}{3}e^{3x}$. Key is C."
+        ],
+        "answer": "C) $\\frac{1}{3}e^{3x}+C$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "$\\int (2x+1)^4\\,dx=?$\nA) $\\frac{(2x+1)^5}{5}+C$\nB) $\\frac{(2x+1)^5}{10}+C$\nC) $(2x+1)^5+C$\nD) $4(2x+1)^3+C$",
+      "answer": "B) $\\frac{(2x+1)^5}{10}+C$",
+      "solution": {
+        "steps": [
+          "$u=2x+1$, $\\frac{1}{2}\\int u^4\\,du=\\frac{u^5}{10}$. Key is B."
+        ],
+        "answer": "B) $\\frac{(2x+1)^5}{10}+C$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "$\\int_0^2 2x(x^2+1)^3\\,dx=?$\nA) $156$\nB) $625$\nC) $624$\nD) $39$",
+      "answer": "A) $156$",
+      "solution": {
+        "steps": [
+          "$u:1\\to 5$, $\\frac{u^4}{4}\\Big|_1^5=\\frac{624}{4}=156$. Key is A."
+        ],
+        "answer": "A) $156$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "$\\int \\frac{\\ln x}{x}\\,dx=?$\nA) $\\frac{(\\ln x)^2}{2}+C$\nB) $\\ln(\\ln x)+C$\nC) $\\frac{1}{x^2}+C$\nD) $\\ln x+C$",
+      "answer": "A) $\\frac{(\\ln x)^2}{2}+C$",
+      "solution": {
+        "steps": [
+          "$u=\\ln x$, $\\int u\\,du=\\frac{u^2}{2}$. Key is A."
+        ],
+        "answer": "A) $\\frac{(\\ln x)^2}{2}+C$"
+      }
+    }
+  ]
+}

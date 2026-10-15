@@ -1,0 +1,97 @@
+{
+  "id": "CALC1.DIFF.B.11--lesson",
+  "standard": "CALC1.DIFF.B.11",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Differentiation",
+  "domainCode": "DIFF",
+  "cluster": "Applications of derivatives",
+  "clusterCode": "B",
+  "skillName": "Optimization",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "To optimize, write the quantity to be maximized or minimized (the objective) as a function of a single variable, using any constraint to eliminate the others. Then find critical numbers by setting the derivative to zero, and confirm which gives the max or min using the First or Second Derivative Test (or checking endpoints on a closed interval). Always answer the question asked, with correct units.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A farmer has $100$ ft of fence to enclose a rectangular pen against a river (no fence on the river side). What dimensions maximize the area?",
+      "solution": {
+        "steps": [
+          "Let the two sides perpendicular to the river be $x$ and the side parallel be $y$; fence used is $2x+y=100$.",
+          "Solve the constraint: $y=100-2x$. Objective: $A=xy=x(100-2x)=100x-2x^2$.",
+          "$A'(x)=100-4x=0\\Rightarrow x=25$; $A''=-4<0$ confirms a maximum.",
+          "Then $y=100-50=50$, and $A=25\\cdot 50=1250$ ft$^2$."
+        ],
+        "answer": "$x=25$ ft, $y=50$ ft; maximum area $1250$ ft$^2$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find two nonnegative numbers whose sum is $20$ and whose product is as large as possible.",
+      "solution": {
+        "steps": [
+          "Let the numbers be $x$ and $20-x$. Objective: $P=x(20-x)=20x-x^2$.",
+          "$P'(x)=20-2x=0\\Rightarrow x=10$; $P''=-2<0$ confirms a maximum.",
+          "The numbers are $10$ and $10$, with product $100$."
+        ],
+        "answer": "Both numbers are $10$; maximum product $100$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "An open-top box is made from a square of side $12$ in by cutting squares of side $x$ from each corner and folding. What $x$ maximizes the volume?",
+      "solution": {
+        "steps": [
+          "Base side is $12-2x$ and height is $x$, so $V=x(12-2x)^2$.",
+          "$V'(x)=(12-2x)^2+x\\cdot 2(12-2x)(-2)=(12-2x)(12-6x)$.",
+          "Set $V'=0$: $x=6$ (gives zero volume) or $x=2$.",
+          "Only $x=2$ is interior and gives a maximum: $V=2(8)^2=128$ in$^3$."
+        ],
+        "answer": "$x=2$ in; maximum volume $128$ in$^3$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "A rectangle has perimeter $40$. What dimensions maximize its area?",
+      "solution": {
+        "steps": [
+          "$2x+2y=40\\Rightarrow y=20-x$; $A=x(20-x)$.",
+          "$A'=20-2x=0\\Rightarrow x=10$, so it is a $10\\times 10$ square, area $100$."
+        ],
+        "answer": "$10\\times 10$; area $100$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Find the minimum of $f(x)=x^2-6x+5$ on all reals.",
+      "solution": {
+        "steps": [
+          "$f'=2x-6=0\\Rightarrow x=3$; $f''=2>0$ min.",
+          "$f(3)=-4$."
+        ],
+        "answer": "Minimum value $-4$ at $x=3$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "A rectangle is inscribed with base on the x-axis under $y=4-x^2$. Maximize its area (width $2x$, height $4-x^2$).",
+      "solution": {
+        "steps": [
+          "$A=2x(4-x^2)=8x-2x^3$.",
+          "$A'=8-6x^2=0\\Rightarrow x^2=\\frac{4}{3}, x=\\frac{2}{\\sqrt{3}}$; $A''=-12x<0$ max."
+        ],
+        "answer": "$x=\\dfrac{2}{\\sqrt{3}}$ gives the maximum area."
+      }
+    }
+  ]
+}

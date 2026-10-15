@@ -14,7 +14,26 @@ function typeset(el) {
 }
 
 function safe(s) {
-  return s ? s.replace(/\\\$/g, '<span>$</span>') : '';
+  if (!s) return '';
+  // Literal currency is authored as \$. Outside a $...$ math span it must be
+  // protected from KaTeX auto-render (which would treat the $ as a delimiter and
+  // mis-pair it with surrounding prose); inside a math span it must be left as
+  // \$ so KaTeX renders the dollar sign itself (auto-render skips escaped \$).
+  let out = '', inMath = false;
+  for (let i = 0; i < s.length; i++) {
+    const c = s[i];
+    if (c === '\\' && s[i + 1] === '$') {
+      out += inMath ? '\\$' : '<span>$</span>';
+      i++;
+      continue;
+    }
+    if (c === '$') {
+      if (s[i + 1] === '$') { out += '$$'; inMath = !inMath; i++; continue; }
+      inMath = !inMath;
+    }
+    out += c;
+  }
+  return out;
 }
 
 async function init() {

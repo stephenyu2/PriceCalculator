@@ -1,0 +1,91 @@
+{
+  "id": "STAT.INF.B.7--lesson",
+  "standard": "STAT.INF.B.7",
+  "grade": "statistics",
+  "subject": "math",
+  "domain": "Statistical Inference",
+  "domainCode": "INF",
+  "cluster": "Significance tests",
+  "clusterCode": "B",
+  "skillName": "Two-Sample Tests",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Two-sample tests compare two parameters. For two means, $t=\\dfrac{(\\bar{x}_1-\\bar{x}_2)-0}{\\sqrt{s_1^2/n_1+s_2^2/n_2}}$ tests $H_0:\\mu_1=\\mu_2$. For two proportions, a z test uses the combined (pooled) proportion in the standard error under $H_0:p_1=p_2$. A matched-pairs design instead analyzes the differences within pairs with a one-sample t test on those differences. Always state hypotheses, check conditions, compute the statistic and p-value, and conclude in context.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Compute the two-sample t statistic: $\\bar{x}_1=20$, $\\bar{x}_2=16$, SE of difference $=2$.",
+      "solution": {
+        "steps": [
+          "The statistic is $\\frac{(\\bar{x}_1-\\bar{x}_2)-0}{\\text{SE}}$.",
+          "Numerator: $20-16=4$.",
+          "$t=\\frac{4}{2}=2$."
+        ],
+        "answer": "$t=2$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "When should you use a matched-pairs (one-sample on differences) analysis?",
+      "solution": {
+        "steps": [
+          "Matched pairs arise when each observation in one group is naturally linked to one in the other.",
+          "Then you analyze the within-pair differences.",
+          "So use it for paired data (before/after, twins, same subject)."
+        ],
+        "answer": "For paired data; analyze the differences with a one-sample t."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "For a two-proportion z test, what proportion goes into the null standard error?",
+      "solution": {
+        "steps": [
+          "Under $H_0:p_1=p_2$, the best estimate is the combined success rate.",
+          "That is the pooled proportion $\\hat{p}=\\frac{\\text{total successes}}{\\text{total sample}}$."
+        ],
+        "answer": "The pooled (combined) proportion."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Two-sample t: diff $6$, SE $3$.",
+      "solution": {
+        "steps": [
+          "$\\frac{6}{3}=2$."
+        ],
+        "answer": "$2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Paired data: use which test?",
+      "solution": {
+        "steps": [
+          "One-sample t on the differences."
+        ],
+        "answer": "Matched-pairs t"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Two-sample t: diff $-4$, SE $2$.",
+      "solution": {
+        "steps": [
+          "$\\frac{-4}{2}=-2$."
+        ],
+        "answer": "$-2$"
+      }
+    }
+  ]
+}

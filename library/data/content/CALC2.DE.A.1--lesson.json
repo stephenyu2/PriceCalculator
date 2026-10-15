@@ -1,0 +1,93 @@
+{
+  "id": "CALC2.DE.A.1--lesson",
+  "standard": "CALC2.DE.A.1",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Differential Equations",
+  "domainCode": "DE",
+  "cluster": "Solving and applying",
+  "clusterCode": "A",
+  "skillName": "Separable Differential Equations",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A separable differential equation can be written $\\frac{dy}{dx}=g(x)h(y)$, so all $y$-terms go on one side and all $x$-terms on the other: $\\frac{dy}{h(y)}=g(x)\\,dx$. Integrate both sides, add a single constant $C$, and if an initial condition is given, substitute it to find $C$ (a particular solution). Solve for $y$ explicitly when possible.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Solve $\\dfrac{dy}{dx}=xy$ with $y(0)=2$.",
+      "solution": {
+        "steps": [
+          "Separate: $\\frac{dy}{y}=x\\,dx$.",
+          "Integrate both sides: $\\ln|y|=\\frac{x^2}{2}+C$.",
+          "Exponentiate: $y=Ae^{x^2/2}$ where $A=e^C$.",
+          "Apply $y(0)=2$: $2=Ae^0=A$, so $y=2e^{x^2/2}$."
+        ],
+        "answer": "$y=2e^{x^2/2}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Solve $\\dfrac{dy}{dx}=\\dfrac{x}{y}$ with $y(0)=3$.",
+      "solution": {
+        "steps": [
+          "Separate: $y\\,dy=x\\,dx$.",
+          "Integrate: $\\frac{y^2}{2}=\\frac{x^2}{2}+C$, so $y^2=x^2+C_1$.",
+          "Apply $y(0)=3$: $9=0+C_1$, so $y^2=x^2+9$, giving $y=\\sqrt{x^2+9}$."
+        ],
+        "answer": "$y=\\sqrt{x^2+9}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Find the general solution of $\\dfrac{dy}{dx}=3y$.",
+      "solution": {
+        "steps": [
+          "Separate: $\\frac{dy}{y}=3\\,dx$.",
+          "Integrate: $\\ln|y|=3x+C$.",
+          "Exponentiate: $y=Ae^{3x}$."
+        ],
+        "answer": "$y=Ae^{3x}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Solve $\\dfrac{dy}{dx}=2xy$, general solution.",
+      "solution": {
+        "steps": [
+          "$\\frac{dy}{y}=2x\\,dx$; $\\ln|y|=x^2+C$; $y=Ae^{x^2}$."
+        ],
+        "answer": "$y=Ae^{x^2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Solve $\\dfrac{dy}{dx}=\\dfrac{y}{x}$ for $x>0$, general solution.",
+      "solution": {
+        "steps": [
+          "$\\frac{dy}{y}=\\frac{dx}{x}$; $\\ln|y|=\\ln|x|+C$; $y=Ax$."
+        ],
+        "answer": "$y=Ax$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Solve $\\dfrac{dy}{dx}=6x^2$ with $y(0)=1$.",
+      "solution": {
+        "steps": [
+          "$dy=6x^2\\,dx$; $y=2x^3+C$; $y(0)=1\\Rightarrow C=1$."
+        ],
+        "answer": "$y=2x^3+1$"
+      }
+    }
+  ]
+}

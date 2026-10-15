@@ -1,0 +1,92 @@
+{
+  "id": "SATM.ALG.A.4--lesson",
+  "standard": "SATM.ALG.A.4",
+  "grade": "sat",
+  "subject": "math",
+  "domain": "Algebra",
+  "domainCode": "ALG",
+  "cluster": "Linear equations, functions, systems, and inequalities",
+  "clusterCode": "A",
+  "skillName": "Systems of Two Linear Equations",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A system of two linear equations is solved by substitution (solve one equation for a variable and substitute) or elimination (add or subtract equations to cancel a variable). The solution is the point where the lines meet. A system has one solution (lines cross), no solution (parallel, equal slopes but different intercepts), or infinitely many (the same line). On the SAT, recognizing the no-solution/infinite cases from coefficients is a common task.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Solve the system $x+y=10$ and $x-y=2$.",
+      "solution": {
+        "steps": [
+          "Add the two equations to eliminate $y$: $(x+y)+(x-y)=10+2$, so $2x=12$.",
+          "Divide: $x=6$.",
+          "Substitute into $x+y=10$: $6+y=10$, so $y=4$."
+        ],
+        "answer": "$(6,4)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Solve $y=2x+1$ and $y=x+4$ by substitution.",
+      "solution": {
+        "steps": [
+          "Set the expressions for $y$ equal: $2x+1=x+4$.",
+          "Solve: $x=3$.",
+          "Then $y=3+4=7$."
+        ],
+        "answer": "$(3,7)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "How many solutions does $y=3x+2$, $y=3x-5$ have?",
+      "solution": {
+        "steps": [
+          "Both lines have slope $3$ but different intercepts.",
+          "Parallel distinct lines never meet.",
+          "So there is no solution."
+        ],
+        "answer": "No solution"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Solve $x+y=7$, $x-y=1$.",
+      "solution": {
+        "steps": [
+          "Add: $2x=8$, $x=4$; then $y=3$."
+        ],
+        "answer": "$(4,3)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Solve $y=x$, $y=2x-3$.",
+      "solution": {
+        "steps": [
+          "$x=2x-3\\Rightarrow x=3$, $y=3$."
+        ],
+        "answer": "$(3,3)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Solutions of $y=2x+1$, $y=2x+1$?",
+      "solution": {
+        "steps": [
+          "Same line: infinitely many."
+        ],
+        "answer": "Infinitely many"
+      }
+    }
+  ]
+}

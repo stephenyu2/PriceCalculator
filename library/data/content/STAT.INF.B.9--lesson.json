@@ -1,0 +1,91 @@
+{
+  "id": "STAT.INF.B.9--lesson",
+  "standard": "STAT.INF.B.9",
+  "grade": "statistics",
+  "subject": "math",
+  "domain": "Statistical Inference",
+  "domainCode": "INF",
+  "cluster": "Significance tests",
+  "clusterCode": "B",
+  "skillName": "Inference for Regression",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Inference for regression asks whether a linear relationship in the population is real. The model is $y=\\alpha+\\beta x+\\varepsilon$, and the hypotheses usually test the slope: $H_0:\\beta=0$ (no linear relationship) vs $H_a:\\beta\\ne 0$. The test statistic is $t=\\dfrac{b}{\\text{SE}_b}$ with $n-2$ degrees of freedom, where $b$ is the sample slope. A confidence interval for the slope is $b\\pm t^*\\,\\text{SE}_b$. Conditions (often remembered as LINER): Linear, Independent, Normal residuals, Equal variance, Random.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A regression has slope $b=2.4$ and $\\text{SE}_b=0.8$. Compute the t statistic for $H_0:\\beta=0$.",
+      "solution": {
+        "steps": [
+          "The statistic is $t=\\frac{b}{\\text{SE}_b}$.",
+          "$t=\\frac{2.4}{0.8}=3$.",
+          "A large $t$ suggests the slope differs from $0$."
+        ],
+        "answer": "$t=3$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "With $n=12$ data points, how many degrees of freedom for the slope t test?",
+      "solution": {
+        "steps": [
+          "For regression inference, df $=n-2$.",
+          "$12-2=10$."
+        ],
+        "answer": "$10$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A $95\\%$ CI for the slope is $(0.5,2.5)$. What does it say about $\\beta=0$?",
+      "solution": {
+        "steps": [
+          "Check whether $0$ lies in the interval.",
+          "Since $0$ is NOT between $0.5$ and $2.5$, zero slope is implausible.",
+          "So there is significant evidence of a linear relationship."
+        ],
+        "answer": "Significant: $0$ is not in the interval."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "t for $b=1.5$, $\\text{SE}_b=0.5$.",
+      "solution": {
+        "steps": [
+          "$\\frac{1.5}{0.5}=3$."
+        ],
+        "answer": "$3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "df for regression with $n=20$.",
+      "solution": {
+        "steps": [
+          "$20-2=18$."
+        ],
+        "answer": "$18$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "CI for slope $(−1,3)$: significant?",
+      "solution": {
+        "steps": [
+          "$0$ inside, so not significant."
+        ],
+        "answer": "Not significant"
+      }
+    }
+  ]
+}

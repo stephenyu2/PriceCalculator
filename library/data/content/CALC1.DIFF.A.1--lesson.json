@@ -1,0 +1,96 @@
+{
+  "id": "CALC1.DIFF.A.1--lesson",
+  "standard": "CALC1.DIFF.A.1",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Differentiation",
+  "domainCode": "DIFF",
+  "cluster": "Defining and computing derivatives",
+  "clusterCode": "A",
+  "skillName": "Definition of the Derivative",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "The derivative of $f$ at $x=a$ is the limit of a difference quotient, $f'(a)=\\lim_{h\\to 0}\\dfrac{f(a+h)-f(a)}{h}$, which measures the instantaneous rate of change and the slope of the tangent line at $(a,f(a))$. The average rate of change over $[a,a+h]$ is the slope of a secant line; letting $h\\to 0$ turns the secant into the tangent. The same limit with a variable point gives the derivative function $f'(x)$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Use the limit definition to find $f'(x)$ for $f(x)=x^2$.",
+      "solution": {
+        "steps": [
+          "Form the difference quotient: $\\dfrac{(x+h)^2-x^2}{h}$.",
+          "Expand the numerator: $(x^2+2xh+h^2)-x^2=2xh+h^2$.",
+          "Divide by $h$: $\\dfrac{2xh+h^2}{h}=2x+h$ for $h\\ne 0$.",
+          "Take the limit as $h\\to 0$: $2x+0=2x$."
+        ],
+        "answer": "$f'(x)=2x$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find the slope of the tangent to $f(x)=3x^2$ at $x=1$ using the definition.",
+      "solution": {
+        "steps": [
+          "Difference quotient at $a=1$: $\\dfrac{3(1+h)^2-3(1)^2}{h}$.",
+          "Expand: $3(1+2h+h^2)-3=6h+3h^2$.",
+          "Divide by $h$: $6+3h$, then let $h\\to 0$ to get $6$."
+        ],
+        "answer": "Slope $=6$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "The position of an object is $s(t)=t^2$ meters at time $t$ seconds. Find the instantaneous velocity at $t=3$.",
+      "solution": {
+        "steps": [
+          "Velocity is $s'(3)=\\lim_{h\\to 0}\\dfrac{(3+h)^2-9}{h}$.",
+          "Numerator: $9+6h+h^2-9=6h+h^2$; divide by $h$: $6+h$.",
+          "Let $h\\to 0$: the velocity is $6$ m/s."
+        ],
+        "answer": "$6$ m/s"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Use the definition to find $f'(x)$ for $f(x)=5x+2$.",
+      "solution": {
+        "steps": [
+          "Difference quotient: $\\dfrac{5(x+h)+2-(5x+2)}{h}=\\dfrac{5h}{h}=5$.",
+          "Limit as $h\\to 0$ is $5$ (constant slope of a line)."
+        ],
+        "answer": "$f'(x)=5$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Use the definition to find $f'(x)$ for $f(x)=x^2-4x$.",
+      "solution": {
+        "steps": [
+          "Quotient: $\\dfrac{(x+h)^2-4(x+h)-(x^2-4x)}{h}=\\dfrac{2xh+h^2-4h}{h}=2x+h-4$.",
+          "Let $h\\to 0$: $2x-4$."
+        ],
+        "answer": "$f'(x)=2x-4$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Find the average rate of change of $f(x)=x^2$ on $[2,5]$ and compare it to $f'(2)$.",
+      "solution": {
+        "steps": [
+          "Average rate: $\\dfrac{f(5)-f(2)}{5-2}=\\dfrac{25-4}{3}=7$.",
+          "$f'(2)=2(2)=4$, which is smaller; the secant slope $7$ exceeds the tangent slope at the left end."
+        ],
+        "answer": "Average rate $=7$; $f'(2)=4$."
+      }
+    }
+  ]
+}

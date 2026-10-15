@@ -1,0 +1,92 @@
+{
+  "id": "STAT.INF.A.1--lesson",
+  "standard": "STAT.INF.A.1",
+  "grade": "statistics",
+  "subject": "math",
+  "domain": "Statistical Inference",
+  "domainCode": "INF",
+  "cluster": "Estimating with confidence intervals",
+  "clusterCode": "A",
+  "skillName": "Confidence Interval Concepts",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A confidence interval estimates a population parameter with a range: $\\text{estimate}\\pm\\text{margin of error}$, where the margin is a critical value times the standard error. The confidence level (e.g. $95\\%$) is the long-run success rate: about $95\\%$ of such intervals, over many samples, capture the true parameter. A higher confidence level widens the interval; a larger sample size narrows it. The interval is about the fixed parameter, not about any single value.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "An estimate is $0.60$ with margin of error $0.04$. Write the $95\\%$ confidence interval.",
+      "solution": {
+        "steps": [
+          "The interval is $\\text{estimate}\\pm\\text{margin}$.",
+          "$0.60\\pm 0.04$ gives the endpoints $0.56$ and $0.64$.",
+          "So the interval is $(0.56,\\,0.64)$."
+        ],
+        "answer": "$(0.56,\\,0.64)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Interpret a $95\\%$ confidence interval of $(0.56,0.64)$ for a population proportion.",
+      "solution": {
+        "steps": [
+          "The confidence level describes the method's long-run capture rate.",
+          "We are $95\\%$ confident the true proportion lies between $0.56$ and $0.64$.",
+          "It does not mean a $95\\%$ chance for this one interval; the parameter is fixed."
+        ],
+        "answer": "We are $95\\%$ confident the true proportion is between $0.56$ and $0.64$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "How does increasing the confidence level from $90\\%$ to $99\\%$ affect the interval width?",
+      "solution": {
+        "steps": [
+          "A higher confidence level uses a larger critical value.",
+          "A larger critical value increases the margin of error.",
+          "So the interval becomes wider."
+        ],
+        "answer": "The interval gets wider."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "CI for estimate $50$, margin $3$.",
+      "solution": {
+        "steps": [
+          "$50\\pm 3=(47,53)$."
+        ],
+        "answer": "$(47,53)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Does a bigger sample widen or narrow the interval?",
+      "solution": {
+        "steps": [
+          "Larger n shrinks the standard error, narrowing it."
+        ],
+        "answer": "Narrows"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "The margin of error is critical value times:",
+      "solution": {
+        "steps": [
+          "The standard error."
+        ],
+        "answer": "Standard error"
+      }
+    }
+  ]
+}

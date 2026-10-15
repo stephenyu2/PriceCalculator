@@ -1,0 +1,91 @@
+{
+  "id": "CALC2.SEQ.A.2--lesson",
+  "standard": "CALC2.SEQ.A.2",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Sequences and Series",
+  "domainCode": "SEQ",
+  "cluster": "Sequences and convergence",
+  "clusterCode": "A",
+  "skillName": "Series and Convergence Tests",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A series $\\sum a_n$ adds the terms of a sequence. A geometric series $\\sum ar^{n}$ converges iff $|r|<1$, with sum $\\frac{\\text{first term}}{1-r}$. The $n$th-term test: if $a_n\\not\\to 0$, the series diverges. The p-series $\\sum\\frac{1}{n^p}$ converges iff $p>1$. Other tools: the integral test, comparison and limit-comparison tests, and the ratio test $L=\\lim\\left|\\frac{a_{n+1}}{a_n}\\right|$ (converges if $L<1$, diverges if $L>1$).",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Find the sum of $\\sum_{n=0}^\\infty \\left(\\dfrac{1}{3}\\right)^n$.",
+      "solution": {
+        "steps": [
+          "Geometric with first term $1$ (at $n=0$) and ratio $r=\\frac{1}{3}$, and $|r|<1$.",
+          "Sum $=\\frac{\\text{first term}}{1-r}=\\frac{1}{1-\\frac{1}{3}}$.",
+          "Simplify: $\\frac{1}{2/3}=\\frac{3}{2}$."
+        ],
+        "answer": "$\\dfrac{3}{2}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Does $\\sum_{n=1}^\\infty \\dfrac{1}{n^2}$ converge?",
+      "solution": {
+        "steps": [
+          "This is a p-series with $p=2$.",
+          "Since $p=2>1$, the p-series converges.",
+          "(Its sum is $\\frac{\\pi^2}{6}$, but convergence is what the test decides.)"
+        ],
+        "answer": "Converges ($p=2>1$)"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Use the $n$th-term test on $\\sum_{n=1}^\\infty \\dfrac{n}{n+1}$.",
+      "solution": {
+        "steps": [
+          "Check $\\lim_{n\\to\\infty} a_n$: $\\frac{n}{n+1}\\to 1\\ne 0$.",
+          "Because the terms do not approach $0$, the series diverges."
+        ],
+        "answer": "Diverges (terms $\\to 1\\ne 0$)"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Sum of $\\sum_{n=1}^\\infty\\left(\\frac{1}{2}\\right)^n$.",
+      "solution": {
+        "steps": [
+          "First term $\\frac{1}{2}$, ratio $\\frac{1}{2}$: $\\frac{1/2}{1-1/2}=1$."
+        ],
+        "answer": "$1$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Does $\\sum\\frac{1}{n}$ converge?",
+      "solution": {
+        "steps": [
+          "p-series with $p=1$: diverges (harmonic)."
+        ],
+        "answer": "Diverges"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Does $\\sum\\frac{1}{n^3}$ converge?",
+      "solution": {
+        "steps": [
+          "p-series $p=3>1$: converges."
+        ],
+        "answer": "Converges"
+      }
+    }
+  ]
+}

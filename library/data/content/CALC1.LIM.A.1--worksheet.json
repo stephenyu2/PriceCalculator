@@ -1,0 +1,187 @@
+{
+  "id": "CALC1.LIM.A.1--worksheet",
+  "standard": "CALC1.LIM.A.1",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Limits and Continuity",
+  "domainCode": "LIM",
+  "cluster": "Understanding limits",
+  "clusterCode": "A",
+  "skillName": "Limits Graphically and Numerically",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Estimate each limit from the given table or graph description. Remember that a two-sided limit exists only when the left-hand and right-hand limits agree, and that the limit is about what the function approaches, not its value at the point.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "A table gives $f(2.9)=7.9,\\ f(2.99)=7.99,\\ f(3.1)=8.1,\\ f(3.01)=8.01$. Estimate $\\lim_{x\\to 3} f(x)$.",
+      "answer": "$8$",
+      "solution": {
+        "steps": [
+          "Left side approaches $8$; right side approaches $8$.",
+          "They agree, so the limit is $8$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A table gives $f(-0.1)=2.71,\\ f(-0.01)=2.718,\\ f(0.1)=2.72,\\ f(0.01)=2.718$. Estimate $\\lim_{x\\to 0} f(x)$ to three decimals.",
+      "answer": "$\\lim_{x\\to 0} f(x)\\approx 2.718$",
+      "solution": {
+        "steps": [
+          "Both sides settle toward $2.718$ as $x\\to 0$.",
+          "The common value to three decimals is $2.718$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "As $x\\to 5^-$, $f(x)\\to 3$ and as $x\\to 5^+$, $f(x)\\to 9$. Find $\\lim_{x\\to 5} f(x)$.",
+      "answer": "Does not exist (one-sided limits $3$ and $9$ disagree).",
+      "solution": {
+        "steps": [
+          "Left-hand limit is $3$, right-hand limit is $9$.",
+          "Different one-sided limits mean the two-sided limit does not exist."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "A graph has an open circle at $(4,5)$ with the curve approaching $5$ from both sides. Find $\\lim_{x\\to 4} f(x)$.",
+      "answer": "$5$",
+      "solution": {
+        "steps": [
+          "Both sides approach the open-circle height $5$.",
+          "The limit equals $5$ even though $(4,5)$ is not filled."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "A graph has the curve approaching $5$ from both sides at $x=4$ and a filled dot at $(4,1)$. Find $\\lim_{x\\to 4} f(x)$ and $f(4)$.",
+      "answer": "$\\lim_{x\\to 4} f(x)=5$ and $f(4)=1$",
+      "solution": {
+        "steps": [
+          "The limit reads the approach height $5$.",
+          "The filled dot gives the actual value $f(4)=1$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "A table gives $f(0.9)=-3.1,\\ f(0.99)=-3.01,\\ f(1.1)=-2.9,\\ f(1.01)=-2.99$. Estimate $\\lim_{x\\to 1} f(x)$.",
+      "answer": "$-3$",
+      "solution": {
+        "steps": [
+          "From the left the outputs approach $-3$; from the right they approach $-3$.",
+          "The limit is $-3$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "For $f(x)=\\dfrac{x^2-9}{x-3}$, a table gives $f(2.99)=5.99,\\ f(3.01)=6.01$. Estimate $\\lim_{x\\to 3} f(x)$.",
+      "answer": "$6$",
+      "solution": {
+        "steps": [
+          "The function is undefined at $x=3$, but the table values approach $6$ from both sides.",
+          "So $\\lim_{x\\to 3} f(x)=6$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "As $x\\to 2^-$, $f(x)\\to 4$; as $x\\to 2^+$, $f(x)\\to 4$; and $f(2)=10$. Find $\\lim_{x\\to 2} f(x)$.",
+      "answer": "$4$",
+      "solution": {
+        "steps": [
+          "Both one-sided limits equal $4$.",
+          "The value $f(2)=10$ does not change the limit, which is $4$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "A table for $f(x)=\\dfrac{\\sin x}{x}$ (radians) gives $f(0.1)=0.9983,\\ f(0.01)=0.99998,\\ f(-0.1)=0.9983$. Estimate $\\lim_{x\\to 0} f(x)$.",
+      "answer": "$1$",
+      "solution": {
+        "steps": [
+          "From both sides the outputs approach $1$ as $x\\to 0$.",
+          "So $\\lim_{x\\to 0}\\frac{\\sin x}{x}=1$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "As $x\\to 3^-$, $f(x)\\to 1$ and as $x\\to 3^+$, $f(x)$ grows without bound toward $+\\infty$. Does $\\lim_{x\\to 3} f(x)$ exist?",
+      "answer": "No; the limit does not exist.",
+      "solution": {
+        "steps": [
+          "The left side approaches $1$, but the right side is unbounded.",
+          "Since the sides do not agree on a finite value, the limit does not exist."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "A graph shows $f$ approaching $2$ as $x\\to\\infty$ (the curve levels off at height $2$). Estimate $\\lim_{x\\to\\infty} f(x)$.",
+      "answer": "$2$",
+      "solution": {
+        "steps": [
+          "As $x$ grows large the curve flattens toward height $2$.",
+          "So $\\lim_{x\\to\\infty} f(x)=2$, indicating a horizontal asymptote $y=2$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A table gives $f(1.99)=0.249,\\ f(1.999)=0.2499,\\ f(2.01)=0.251,\\ f(2.001)=0.2501$. Estimate $\\lim_{x\\to 2} f(x)$ as a fraction.",
+      "answer": "$\\dfrac{1}{4}$",
+      "solution": {
+        "steps": [
+          "Both sides approach $0.25$.",
+          "As a fraction, $0.25=\\frac{1}{4}$."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "As $x\\to 0^-$, $f(x)\\to -1$ and as $x\\to 0^+$, $f(x)\\to -1$, with an open circle at $(0,-1)$. Find $\\lim_{x\\to 0} f(x)$.",
+      "answer": "$-1$",
+      "solution": {
+        "steps": [
+          "Both one-sided limits equal $-1$.",
+          "The open circle does not affect the limit, so it is $-1$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "A table gives $f(4.9)=103,\\ f(4.99)=1003,\\ f(4.999)=10003$. Describe $\\lim_{x\\to 5^-} f(x)$.",
+      "answer": "$+\\infty$ (the limit does not exist as a finite number).",
+      "solution": {
+        "steps": [
+          "The outputs grow without bound as $x\\to 5^-$.",
+          "We write $\\lim_{x\\to 5^-} f(x)=+\\infty$, meaning no finite limit."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "As $x\\to 1^-$, $f(x)\\to 2$; as $x\\to 1^+$, $f(x)\\to 2$. A classmate says the limit is $2$ only if $f(1)=2$. Is the classmate right?",
+      "answer": "No. The limit is $2$ regardless of the value of $f(1)$.",
+      "solution": {
+        "steps": [
+          "A limit measures approach from both sides, which is $2$ here.",
+          "Whether $f(1)$ equals $2$, differs, or is undefined has no effect, so the classmate is wrong."
+        ]
+      }
+    }
+  ],
+  "clusterId": null,
+  "tier": null
+}

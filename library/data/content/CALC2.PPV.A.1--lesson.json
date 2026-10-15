@@ -1,0 +1,92 @@
+{
+  "id": "CALC2.PPV.A.1--lesson",
+  "standard": "CALC2.PPV.A.1",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Parametric, Polar, and Vector Calculus",
+  "domainCode": "PPV",
+  "cluster": "Parametric and polar",
+  "clusterCode": "A",
+  "skillName": "Parametric Equations and Calculus",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Parametric equations give $x=x(t)$ and $y=y(t)$, tracing a curve as $t$ varies. The slope is $\\frac{dy}{dx}=\\dfrac{dy/dt}{dx/dt}$ (where $dx/dt\\ne 0$). The second derivative is $\\frac{d^2y}{dx^2}=\\dfrac{d}{dt}\\!\\left(\\frac{dy}{dx}\\right)\\big/\\frac{dx}{dt}$. Arc length is $L=\\int_a^b\\sqrt{(dx/dt)^2+(dy/dt)^2}\\,dt$. You can also eliminate the parameter to get a Cartesian equation.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "For $x=t^2$, $y=t^3$, find $\\dfrac{dy}{dx}$.",
+      "solution": {
+        "steps": [
+          "Compute $\\frac{dx}{dt}=2t$ and $\\frac{dy}{dt}=3t^2$.",
+          "Divide: $\\frac{dy}{dx}=\\frac{3t^2}{2t}$.",
+          "Simplify for $t\\ne 0$: $\\frac{3t}{2}$."
+        ],
+        "answer": "$\\dfrac{dy}{dx}=\\dfrac{3t}{2}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Eliminate the parameter: $x=2t$, $y=t^2$.",
+      "solution": {
+        "steps": [
+          "Solve the first for $t$: $t=\\frac{x}{2}$.",
+          "Substitute into $y=t^2$: $y=\\left(\\frac{x}{2}\\right)^2=\\frac{x^2}{4}$.",
+          "So the curve is the parabola $y=\\frac{x^2}{4}$."
+        ],
+        "answer": "$y=\\dfrac{x^2}{4}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Find the arc length of $x=\\cos t$, $y=\\sin t$ for $0\\le t\\le 2\\pi$.",
+      "solution": {
+        "steps": [
+          "$\\frac{dx}{dt}=-\\sin t$, $\\frac{dy}{dt}=\\cos t$.",
+          "$(dx/dt)^2+(dy/dt)^2=\\sin^2 t+\\cos^2 t=1$.",
+          "$L=\\int_0^{2\\pi}\\sqrt{1}\\,dt=2\\pi$ (the circumference of the unit circle)."
+        ],
+        "answer": "$L=2\\pi$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "For $x=t$, $y=t^2$, find $\\frac{dy}{dx}$.",
+      "solution": {
+        "steps": [
+          "$\\frac{dy/dt}{dx/dt}=\\frac{2t}{1}=2t$."
+        ],
+        "answer": "$2t$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Eliminate the parameter: $x=t+1$, $y=t^2$.",
+      "solution": {
+        "steps": [
+          "$t=x-1$; $y=(x-1)^2$."
+        ],
+        "answer": "$y=(x-1)^2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Slope of $x=\\cos t$, $y=\\sin t$ at $t=\\frac{\\pi}{4}$.",
+      "solution": {
+        "steps": [
+          "$\\frac{dy}{dx}=\\frac{\\cos t}{-\\sin t}=-\\cot t$; at $\\frac{\\pi}{4}$, $-1$."
+        ],
+        "answer": "$-1$"
+      }
+    }
+  ]
+}

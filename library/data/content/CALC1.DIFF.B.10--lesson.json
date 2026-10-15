@@ -1,0 +1,95 @@
+{
+  "id": "CALC1.DIFF.B.10--lesson",
+  "standard": "CALC1.DIFF.B.10",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Differentiation",
+  "domainCode": "DIFF",
+  "cluster": "Applications of derivatives",
+  "clusterCode": "B",
+  "skillName": "Concavity and the Second Derivative Test",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "The second derivative $f''$ measures concavity. Where $f''(x)>0$ the graph is concave up (holds water); where $f''(x)<0$ it is concave down. An inflection point is where concavity changes, which requires $f''=0$ or undefined AND a sign change. The Second Derivative Test classifies a critical number $c$ (where $f'(c)=0$): if $f''(c)>0$ it is a local minimum, if $f''(c)<0$ a local maximum; if $f''(c)=0$ the test is inconclusive.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Find the intervals of concavity and inflection point of $f(x)=x^3-3x^2$.",
+      "solution": {
+        "steps": [
+          "First derivative $f'(x)=3x^2-6x$; second derivative $f''(x)=6x-6$.",
+          "Set $f''(x)=0$: $6x-6=0\\Rightarrow x=1$.",
+          "$f''<0$ for $x<1$ (concave down) and $f''>0$ for $x>1$ (concave up).",
+          "Concavity changes at $x=1$, so $(1,f(1))=(1,-2)$ is an inflection point."
+        ],
+        "answer": "Concave down on $(-\\infty,1)$, up on $(1,\\infty)$; inflection at $(1,-2)$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Use the Second Derivative Test to classify the critical numbers of $f(x)=x^3-12x$.",
+      "solution": {
+        "steps": [
+          "$f'(x)=3x^2-12=0\\Rightarrow x=\\pm 2$; $f''(x)=6x$.",
+          "$f''(-2)=-12<0$: local maximum at $x=-2$.",
+          "$f''(2)=12>0$: local minimum at $x=2$.",
+          "Values: $f(-2)=16$ (max), $f(2)=-16$ (min)."
+        ],
+        "answer": "Local max $16$ at $x=-2$, local min $-16$ at $x=2$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Classify the critical number of $f(x)=x^4$ at $x=0$ using the Second Derivative Test, and explain.",
+      "solution": {
+        "steps": [
+          "$f'(x)=4x^3=0\\Rightarrow x=0$; $f''(x)=12x^2$, so $f''(0)=0$.",
+          "The test is inconclusive when $f''(c)=0$.",
+          "Fall back to the First Derivative Test: $f'$ goes $-\\to+$ at $0$, so it is a local minimum."
+        ],
+        "answer": "Second Derivative Test inconclusive; First Derivative Test gives a local min at $x=0$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Where is $f(x)=x^3$ concave up?",
+      "solution": {
+        "steps": [
+          "$f''(x)=6x>0$ for $x>0$."
+        ],
+        "answer": "Concave up on $(0,\\infty)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Classify the critical number of $f(x)=x^2-8x$ with the Second Derivative Test.",
+      "solution": {
+        "steps": [
+          "$f'=2x-8=0\\Rightarrow x=4$; $f''=2>0$, so local min."
+        ],
+        "answer": "Local min at $x=4$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Find the inflection point of $f(x)=x^3-6x^2+5$.",
+      "solution": {
+        "steps": [
+          "$f''=6x-12=0\\Rightarrow x=2$; sign changes, so inflection.",
+          "$f(2)=8-24+5=-11$."
+        ],
+        "answer": "Inflection at $(2,-11)$."
+      }
+    }
+  ]
+}

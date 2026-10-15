@@ -1,0 +1,94 @@
+{
+  "id": "CALC1.DIFF.B.6--lesson",
+  "standard": "CALC1.DIFF.B.6",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Differentiation",
+  "domainCode": "DIFF",
+  "cluster": "Applications of derivatives",
+  "clusterCode": "B",
+  "skillName": "Related Rates",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "In a related-rates problem, several quantities change with time and are linked by an equation. Differentiate that equation with respect to $t$ (using the chain rule, so each variable gains a rate like $\\frac{dr}{dt}$), then substitute the known values and solve for the unknown rate. Steps: name variables and rates, write the relating equation, differentiate with respect to $t$, substitute, and solve. Keep units consistent and substitute specific values only AFTER differentiating.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A spherical balloon is inflated so its radius grows at $\\frac{dr}{dt}=2$ cm/s. How fast is the volume changing when $r=5$ cm? Use $V=\\frac{4}{3}\\pi r^3$.",
+      "solution": {
+        "steps": [
+          "Differentiate $V=\\frac{4}{3}\\pi r^3$ with respect to $t$: $\\frac{dV}{dt}=4\\pi r^2\\frac{dr}{dt}$.",
+          "Substitute $r=5$ and $\\frac{dr}{dt}=2$: $\\frac{dV}{dt}=4\\pi(25)(2)$.",
+          "Compute: $\\frac{dV}{dt}=200\\pi$ cubic cm per second."
+        ],
+        "answer": "$\\dfrac{dV}{dt}=200\\pi\\approx 628$ cm$^3$/s"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A $13$ ft ladder leans on a wall. The base slides away at $2$ ft/s. How fast is the top sliding down when the base is $5$ ft from the wall? Use $x^2+y^2=169$.",
+      "solution": {
+        "steps": [
+          "Differentiate $x^2+y^2=169$: $2x\\frac{dx}{dt}+2y\\frac{dy}{dt}=0$.",
+          "When $x=5$, $y=\\sqrt{169-25}=12$.",
+          "Substitute $x=5,\\ y=12,\\ \\frac{dx}{dt}=2$: $2(5)(2)+2(12)\\frac{dy}{dt}=0$.",
+          "Solve: $20+24\\frac{dy}{dt}=0$, so $\\frac{dy}{dt}=-\\frac{5}{6}$ ft/s (top moves down)."
+        ],
+        "answer": "$\\dfrac{dy}{dt}=-\\dfrac{5}{6}$ ft/s"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A conical tank fills so water depth rises. Area of a circular ripple grows: a stone makes a circular wave whose radius grows at $3$ ft/s. How fast is the area growing when $r=4$ ft? Use $A=\\pi r^2$.",
+      "solution": {
+        "steps": [
+          "Differentiate $A=\\pi r^2$: $\\frac{dA}{dt}=2\\pi r\\frac{dr}{dt}$.",
+          "Substitute $r=4$, $\\frac{dr}{dt}=3$: $\\frac{dA}{dt}=2\\pi(4)(3)=24\\pi$."
+        ],
+        "answer": "$\\dfrac{dA}{dt}=24\\pi\\approx 75.4$ ft$^2$/s"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "A circle's radius grows at $5$ cm/s. How fast is the area growing when $r=10$ cm? ($A=\\pi r^2$)",
+      "solution": {
+        "steps": [
+          "$\\frac{dA}{dt}=2\\pi r\\frac{dr}{dt}=2\\pi(10)(5)=100\\pi$."
+        ],
+        "answer": "$100\\pi$ cm$^2$/s"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "A cube's edge grows at $2$ mm/s. How fast is the volume growing when the edge is $6$ mm? ($V=s^3$)",
+      "solution": {
+        "steps": [
+          "$\\frac{dV}{dt}=3s^2\\frac{ds}{dt}=3(36)(2)=216$."
+        ],
+        "answer": "$216$ mm$^3$/s"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Two cars leave a point; one north at $30$ mph, one east at $40$ mph. How fast is the distance between them growing after $1$ hour? ($D^2=x^2+y^2$)",
+      "solution": {
+        "steps": [
+          "After $1$ h, $x=40$, $y=30$, $D=50$.",
+          "$D\\frac{dD}{dt}=x\\frac{dx}{dt}+y\\frac{dy}{dt}=40(40)+30(30)=2500$.",
+          "$\\frac{dD}{dt}=\\frac{2500}{50}=50$ mph."
+        ],
+        "answer": "$50$ mph"
+      }
+    }
+  ]
+}

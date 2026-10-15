@@ -1,0 +1,91 @@
+{
+  "id": "CALC1.INT.A.2--lesson",
+  "standard": "CALC1.INT.A.2",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Integration",
+  "domainCode": "INT",
+  "cluster": "Defining and computing integrals",
+  "clusterCode": "A",
+  "skillName": "Fundamental Theorem of Calculus",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "The Fundamental Theorem of Calculus links derivatives and integrals. Part 1: if $F(x)=\\int_a^x f(t)\\,dt$, then $F'(x)=f(x)$, so differentiating an accumulation undoes the integral. Part 2: if $F$ is any antiderivative of $f$, then $\\int_a^b f(x)\\,dx=F(b)-F(a)$. Part 2 turns area problems into antiderivative evaluations. With a variable upper limit $g(x)$, the chain rule gives $\\frac{d}{dx}\\int_a^{g(x)} f(t)\\,dt=f(g(x))\\,g'(x)$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Evaluate $\\int_0^3 x^2\\,dx$ using the Fundamental Theorem.",
+      "solution": {
+        "steps": [
+          "An antiderivative of $x^2$ is $F(x)=\\frac{x^3}{3}$.",
+          "Apply Part 2: $F(3)-F(0)=\\frac{27}{3}-0$.",
+          "So the integral equals $9$."
+        ],
+        "answer": "$\\int_0^3 x^2\\,dx=9$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "If $F(x)=\\int_0^x \\sin(t^2)\\,dt$, find $F'(x)$.",
+      "solution": {
+        "steps": [
+          "By Part 1, differentiating the accumulation returns the integrand evaluated at the upper limit.",
+          "So $F'(x)=\\sin(x^2)$."
+        ],
+        "answer": "$F'(x)=\\sin(x^2)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Find $\\dfrac{d}{dx}\\int_1^{x^2} \\sqrt{t}\\,dt$.",
+      "solution": {
+        "steps": [
+          "The upper limit is $g(x)=x^2$, so use the chain-rule form of Part 1.",
+          "$\\frac{d}{dx}\\int_1^{g(x)} \\sqrt{t}\\,dt=\\sqrt{g(x)}\\cdot g'(x)=\\sqrt{x^2}\\cdot 2x$.",
+          "For $x>0$, $\\sqrt{x^2}=x$, giving $x\\cdot 2x=2x^2$."
+        ],
+        "answer": "$2x^2$ (for $x>0$)"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Evaluate $\\int_1^4 2x\\,dx$.",
+      "solution": {
+        "steps": [
+          "Antiderivative $x^2$; $4^2-1^2=16-1=15$."
+        ],
+        "answer": "$15$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "If $F(x)=\\int_2^x e^{t}\\,dt$, find $F'(x)$.",
+      "solution": {
+        "steps": [
+          "By Part 1, $F'(x)=e^x$."
+        ],
+        "answer": "$F'(x)=e^x$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Evaluate $\\int_0^{\\pi/2}\\cos x\\,dx$.",
+      "solution": {
+        "steps": [
+          "Antiderivative $\\sin x$; $\\sin\\frac{\\pi}{2}-\\sin 0=1-0=1$."
+        ],
+        "answer": "$1$"
+      }
+    }
+  ]
+}

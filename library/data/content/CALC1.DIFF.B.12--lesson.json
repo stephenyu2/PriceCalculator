@@ -1,0 +1,93 @@
+{
+  "id": "CALC1.DIFF.B.12--lesson",
+  "standard": "CALC1.DIFF.B.12",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Differentiation",
+  "domainCode": "DIFF",
+  "cluster": "Applications of derivatives",
+  "clusterCode": "B",
+  "skillName": "L'Hopital's Rule",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "L'Hopital's Rule evaluates limits in the indeterminate forms $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$: if $\\lim\\frac{f}{g}$ has that form and $f,g$ are differentiable, then $\\lim\\dfrac{f(x)}{g(x)}=\\lim\\dfrac{f'(x)}{g'(x)}$, provided the right side exists. Always confirm the indeterminate form first, differentiate numerator and denominator separately (not as a quotient), and repeat if the new limit is still indeterminate.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Evaluate $\\lim_{x\\to 0}\\dfrac{\\sin x}{x}$ using L'Hopital's Rule.",
+      "solution": {
+        "steps": [
+          "Substitution gives $\\frac{0}{0}$, so the rule applies.",
+          "Differentiate top and bottom: $\\frac{\\cos x}{1}$.",
+          "Evaluate at $x=0$: $\\frac{\\cos 0}{1}=\\frac{1}{1}=1$."
+        ],
+        "answer": "$1$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Evaluate $\\lim_{x\\to 0}\\dfrac{e^x-1}{x}$.",
+      "solution": {
+        "steps": [
+          "Form is $\\frac{0}{0}$.",
+          "Differentiate: $\\frac{e^x}{1}$.",
+          "At $x=0$: $\\frac{1}{1}=1$."
+        ],
+        "answer": "$1$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Evaluate $\\lim_{x\\to\\infty}\\dfrac{\\ln x}{x}$.",
+      "solution": {
+        "steps": [
+          "As $x\\to\\infty$ the form is $\\frac{\\infty}{\\infty}$.",
+          "Differentiate: $\\frac{1/x}{1}=\\frac{1}{x}$.",
+          "As $x\\to\\infty$, $\\frac{1}{x}\\to 0$."
+        ],
+        "answer": "$0$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Evaluate $\\lim_{x\\to 0}\\dfrac{1-\\cos x}{x^2}$.",
+      "solution": {
+        "steps": [
+          "$\\frac{0}{0}$; differentiate: $\\frac{\\sin x}{2x}$, still $\\frac{0}{0}$.",
+          "Apply again: $\\frac{\\cos x}{2}\\to\\frac{1}{2}$."
+        ],
+        "answer": "$\\dfrac{1}{2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Evaluate $\\lim_{x\\to\\infty}\\dfrac{x^2}{e^x}$.",
+      "solution": {
+        "steps": [
+          "$\\frac{\\infty}{\\infty}$; differentiate twice: $\\frac{2x}{e^x}\\to\\frac{2}{e^x}\\to 0$."
+        ],
+        "answer": "$0$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Evaluate $\\lim_{x\\to 1}\\dfrac{\\ln x}{x-1}$.",
+      "solution": {
+        "steps": [
+          "$\\frac{0}{0}$; differentiate: $\\frac{1/x}{1}=\\frac{1}{x}\\to 1$."
+        ],
+        "answer": "$1$"
+      }
+    }
+  ]
+}

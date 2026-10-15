@@ -1,0 +1,92 @@
+{
+  "id": "CALC2.SEQ.A.6--lesson",
+  "standard": "CALC2.SEQ.A.6",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Sequences and Series",
+  "domainCode": "SEQ",
+  "cluster": "Sequences and convergence",
+  "clusterCode": "A",
+  "skillName": "Binomial Series and Applications",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "The binomial series generalizes the binomial theorem to any real power $k$: for $|x|<1$, $(1+x)^k=\\sum_{n=0}^\\infty\\binom{k}{n}x^n$, where $\\binom{k}{n}=\\frac{k(k-1)\\cdots(k-n+1)}{n!}$. When $k$ is a positive integer it terminates (the ordinary expansion); otherwise it is an infinite series. It is useful for approximating roots and for building new series by substitution, and for integrating functions with no elementary antiderivative term by term.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Write the first three terms of the binomial series for $(1+x)^{1/2}$.",
+      "solution": {
+        "steps": [
+          "Here $k=\\frac{1}{2}$. Compute coefficients: $\\binom{1/2}{0}=1$, $\\binom{1/2}{1}=\\frac{1}{2}$.",
+          "$\\binom{1/2}{2}=\\frac{\\frac{1}{2}\\left(\\frac{1}{2}-1\\right)}{2!}=\\frac{\\frac{1}{2}\\cdot(-\\frac{1}{2})}{2}=-\\frac{1}{8}$.",
+          "So $(1+x)^{1/2}=1+\\frac{1}{2}x-\\frac{1}{8}x^2+\\cdots$."
+        ],
+        "answer": "$1+\\dfrac{1}{2}x-\\dfrac{1}{8}x^2+\\cdots$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Use the binomial series to approximate $\\sqrt{1.04}$.",
+      "solution": {
+        "steps": [
+          "Write $\\sqrt{1.04}=(1+0.04)^{1/2}$ and use the first two terms $1+\\frac{1}{2}x$.",
+          "Substitute $x=0.04$: $1+\\frac{1}{2}(0.04)=1+0.02=1.02$.",
+          "So $\\sqrt{1.04}\\approx 1.02$ (exact $\\approx 1.0198$)."
+        ],
+        "answer": "$\\sqrt{1.04}\\approx 1.02$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Expand $(1+x)^{-1}$ with the binomial series and compare to the geometric series.",
+      "solution": {
+        "steps": [
+          "With $k=-1$: $\\binom{-1}{n}=(-1)^n$, so $(1+x)^{-1}=\\sum(-1)^n x^n$.",
+          "This is $1-x+x^2-x^3+\\cdots$.",
+          "It matches the geometric series for $\\frac{1}{1+x}$, valid for $|x|<1$."
+        ],
+        "answer": "$(1+x)^{-1}=\\sum_{n=0}^\\infty(-1)^n x^n$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "First two terms of $(1+x)^{1/3}$.",
+      "solution": {
+        "steps": [
+          "$k=\\frac{1}{3}$: $1+\\frac{1}{3}x+\\cdots$"
+        ],
+        "answer": "$1+\\dfrac{1}{3}x+\\cdots$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Approximate $\\sqrt[3]{1.06}$ with two terms.",
+      "solution": {
+        "steps": [
+          "$(1+0.06)^{1/3}\\approx 1+\\frac{1}{3}(0.06)=1.02$."
+        ],
+        "answer": "$\\approx 1.02$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Expand $(1+x)^2$ and note it terminates.",
+      "solution": {
+        "steps": [
+          "$k=2$ positive integer: $1+2x+x^2$ (finite)."
+        ],
+        "answer": "$1+2x+x^2$"
+      }
+    }
+  ]
+}

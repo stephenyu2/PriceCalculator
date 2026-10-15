@@ -1,0 +1,92 @@
+{
+  "id": "CALC1.DIFF.A.4--lesson",
+  "standard": "CALC1.DIFF.A.4",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Differentiation",
+  "domainCode": "DIFF",
+  "cluster": "Defining and computing derivatives",
+  "clusterCode": "A",
+  "skillName": "Derivatives of Trig, Exponential, and Log Functions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Memorize the core derivatives: $\\frac{d}{dx}\\sin x=\\cos x$, $\\frac{d}{dx}\\cos x=-\\sin x$, $\\frac{d}{dx}\\tan x=\\sec^2 x$, $\\frac{d}{dx}e^x=e^x$, $\\frac{d}{dx}\\ln x=\\frac{1}{x}$, and $\\frac{d}{dx}a^x=a^x\\ln a$. Combine them with the product, quotient, and chain rules. For a composite such as $e^{g(x)}$ the chain rule gives $g'(x)e^{g(x)}$, and $\\frac{d}{dx}\\ln(g(x))=\\frac{g'(x)}{g(x)}$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Differentiate $f(x)=e^x\\sin x$.",
+      "solution": {
+        "steps": [
+          "Use the product rule with $u=e^x$ and $v=\\sin x$.",
+          "$u'=e^x$ and $v'=\\cos x$.",
+          "$f'=u'v+uv'=e^x\\sin x+e^x\\cos x=e^x(\\sin x+\\cos x)$."
+        ],
+        "answer": "$f'(x)=e^x(\\sin x+\\cos x)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Differentiate $f(x)=\\ln(x^2+1)$.",
+      "solution": {
+        "steps": [
+          "Use $\\frac{d}{dx}\\ln(g)=\\frac{g'}{g}$ with $g=x^2+1$.",
+          "Here $g'=2x$.",
+          "So $f'(x)=\\dfrac{2x}{x^2+1}$."
+        ],
+        "answer": "$f'(x)=\\dfrac{2x}{x^2+1}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Differentiate $f(x)=e^{3x}\\cos x$ at the level of setting up the rules.",
+      "solution": {
+        "steps": [
+          "Product rule with $u=e^{3x}$, $v=\\cos x$.",
+          "Chain rule gives $u'=3e^{3x}$; $v'=-\\sin x$.",
+          "$f'=3e^{3x}\\cos x-e^{3x}\\sin x=e^{3x}(3\\cos x-\\sin x)$."
+        ],
+        "answer": "$f'(x)=e^{3x}(3\\cos x-\\sin x)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Differentiate $f(x)=\\sin(5x)$.",
+      "solution": {
+        "steps": [
+          "Chain rule: $\\cos(5x)\\cdot 5=5\\cos(5x)$."
+        ],
+        "answer": "$f'(x)=5\\cos(5x)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Differentiate $f(x)=x^2 e^x$.",
+      "solution": {
+        "steps": [
+          "Product rule: $2x\\,e^x+x^2 e^x=e^x(x^2+2x)$."
+        ],
+        "answer": "$f'(x)=e^x(x^2+2x)$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Differentiate $f(x)=\\dfrac{\\sin x}{x}$ and simplify.",
+      "solution": {
+        "steps": [
+          "Quotient rule: $\\dfrac{x\\cos x-\\sin x}{x^2}$."
+        ],
+        "answer": "$f'(x)=\\dfrac{x\\cos x-\\sin x}{x^2}$"
+      }
+    }
+  ]
+}

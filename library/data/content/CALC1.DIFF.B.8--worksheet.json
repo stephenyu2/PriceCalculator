@@ -1,0 +1,172 @@
+{
+  "id": "CALC1.DIFF.B.8--worksheet",
+  "standard": "CALC1.DIFF.B.8",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Differentiation",
+  "domainCode": "DIFF",
+  "cluster": "Applications of derivatives",
+  "clusterCode": "B",
+  "skillName": "Mean Value Theorem",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Check the MVT/Rolle hypotheses, then solve $f'(c)=\\frac{f(b)-f(a)}{b-a}$ for $c$ in $(a,b)$.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "MVT $c$ for $f(x)=x^2$ on $[2,6]$.",
+      "answer": "$c=4$",
+      "solution": {
+        "steps": [
+          "Secant $\\frac{36-4}{4}=8$; $2c=8\\Rightarrow c=4$."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "MVT $c$ for $f(x)=x^2$ on $[0,10]$.",
+      "answer": "$c=5$",
+      "solution": {
+        "steps": [
+          "Secant $\\frac{100-0}{10}=10$; $2c=10\\Rightarrow c=5$."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "MVT $c$ for $f(x)=x^2+3x$ on $[1,5]$.",
+      "answer": "$c=3$",
+      "solution": {
+        "steps": [
+          "Secant $\\frac{40-4}{4}=9$; $2c+3=9\\Rightarrow c=3$."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "Rolle $c$ for $f(x)=x^2-6x$ on $[0,6]$.",
+      "answer": "$c=3$",
+      "solution": {
+        "steps": [
+          "$f(0)=f(6)=0$; $2c-6=0\\Rightarrow c=3$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "MVT $c$ for $f(x)=x^3$ on $[0,3]$.",
+      "answer": "$c=\\sqrt{3}$",
+      "solution": {
+        "steps": [
+          "Secant $\\frac{27}{3}=9$; $3c^2=9\\Rightarrow c=\\sqrt{3}$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "MVT $c$ for $f(x)=\\sqrt{x}$ on $[0,4]$.",
+      "answer": "$c=1$",
+      "solution": {
+        "steps": [
+          "Secant $\\frac{2-0}{4}=\\frac{1}{2}$; $\\frac{1}{2\\sqrt{c}}=\\frac{1}{2}\\Rightarrow c=1$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Does Rolle apply to $f(x)=x^2-9$ on $[-3,3]$? Find $c$.",
+      "answer": "Yes; $c=0$",
+      "solution": {
+        "steps": [
+          "$f(-3)=f(3)=0$; $2c=0\\Rightarrow c=0$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Secant slope for $f(x)=x^2$ on $[1,4]$.",
+      "answer": "$5$",
+      "solution": {
+        "steps": [
+          "$\\frac{16-1}{3}=5$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "MVT $c$ for $f(x)=\\frac{1}{x}$ on $[1,2]$.",
+      "answer": "$c=\\sqrt{2}$",
+      "solution": {
+        "steps": [
+          "Secant $\\frac{1/2-1}{1}=-\\frac{1}{2}$; $-\\frac{1}{c^2}=-\\frac{1}{2}\\Rightarrow c=\\sqrt{2}$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "Why does the MVT not guarantee $c$ for $f(x)=\\frac{1}{x}$ on $[-1,1]$?",
+      "answer": "$f$ is discontinuous at $0$.",
+      "solution": {
+        "steps": [
+          "$f$ is not continuous on $[-1,1]$ (vertical asymptote at $0$), so the hypothesis fails."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "MVT $c$ for $f(x)=2x^2-x$ on $[0,2]$.",
+      "answer": "$c=1$",
+      "solution": {
+        "steps": [
+          "Secant $\\frac{6-0}{2}=3$; $4c-1=3\\Rightarrow c=1$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "A runner covers $400$ m in $50$ s. What average speed must be matched instantaneously?",
+      "answer": "$8$ m/s",
+      "solution": {
+        "steps": [
+          "$\\frac{400}{50}=8$; MVT guarantees $8$ m/s at some instant."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "Rolle $c$ for $f(x)=\\sin x$ on $[0,\\pi]$.",
+      "answer": "$c=\\frac{\\pi}{2}$",
+      "solution": {
+        "steps": [
+          "$\\sin 0=\\sin\\pi=0$; $\\cos c=0\\Rightarrow c=\\frac{\\pi}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "MVT $c$ for $f(x)=x^2-4x+1$ on $[1,3]$.",
+      "answer": "$c=2$",
+      "solution": {
+        "steps": [
+          "Secant $\\frac{f(3)-f(1)}{2}=\\frac{-2-(-2)}{2}=0$; $2c-4=0\\Rightarrow c=2$."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "True or false: the MVT requires differentiability on the closed interval $[a,b]$.",
+      "answer": "False (only open interval $(a,b)$).",
+      "solution": {
+        "steps": [
+          "Continuity on $[a,b]$ and differentiability on the OPEN $(a,b)$ suffice."
+        ]
+      }
+    }
+  ],
+  "clusterId": null,
+  "tier": null
+}

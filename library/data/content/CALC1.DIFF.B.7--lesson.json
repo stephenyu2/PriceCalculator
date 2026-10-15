@@ -1,0 +1,95 @@
+{
+  "id": "CALC1.DIFF.B.7--lesson",
+  "standard": "CALC1.DIFF.B.7",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Differentiation",
+  "domainCode": "DIFF",
+  "cluster": "Applications of derivatives",
+  "clusterCode": "B",
+  "skillName": "Linear Approximation",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Near a point $a$, the tangent line approximates the function: $L(x)=f(a)+f'(a)(x-a)$, so $f(x)\\approx L(x)$ for $x$ close to $a$. This linearization lets you estimate hard values using an easy base point. The differential $dy=f'(x)\\,dx$ estimates the change in $y$ for a small change $dx$. The approximation is best when $x$ is near $a$ and the curve is not too sharply bent there.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Use linear approximation at $a=16$ to estimate $\\sqrt{16.2}$.",
+      "solution": {
+        "steps": [
+          "Let $f(x)=\\sqrt{x}$, so $f'(x)=\\frac{1}{2\\sqrt{x}}$.",
+          "At $a=16$: $f(16)=4$ and $f'(16)=\\frac{1}{8}$.",
+          "Linearization: $L(x)=4+\\frac{1}{8}(x-16)$.",
+          "Estimate: $L(16.2)=4+\\frac{1}{8}(0.2)=4+0.025=4.025$."
+        ],
+        "answer": "$\\sqrt{16.2}\\approx 4.025$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Use the tangent line at $a=0$ to approximate $f(x)=e^x$ near $0$, then estimate $e^{0.1}$.",
+      "solution": {
+        "steps": [
+          "$f(0)=1$ and $f'(x)=e^x$ gives $f'(0)=1$.",
+          "$L(x)=1+1\\cdot(x-0)=1+x$.",
+          "Estimate: $e^{0.1}\\approx 1+0.1=1.1$ (actual $\\approx 1.105$)."
+        ],
+        "answer": "$e^{0.1}\\approx 1.1$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Estimate the change in area of a square of side $10$ when the side increases by $0.1$, using differentials. ($A=s^2$)",
+      "solution": {
+        "steps": [
+          "$dA=2s\\,ds$.",
+          "Substitute $s=10$, $ds=0.1$: $dA=2(10)(0.1)=2$.",
+          "So the area increases by about $2$ square units."
+        ],
+        "answer": "$dA\\approx 2$ square units"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Use linear approximation at $a=25$ to estimate $\\sqrt{24}$.",
+      "solution": {
+        "steps": [
+          "$f(x)=\\sqrt{x}$, $f'(25)=\\frac{1}{10}$, $f(25)=5$.",
+          "$L(24)=5+\\frac{1}{10}(-1)=4.9$."
+        ],
+        "answer": "$\\sqrt{24}\\approx 4.9$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Approximate $(2.01)^3$ using the tangent line at $a=2$.",
+      "solution": {
+        "steps": [
+          "$f(x)=x^3$, $f(2)=8$, $f'(2)=12$.",
+          "$L(2.01)=8+12(0.01)=8.12$."
+        ],
+        "answer": "$(2.01)^3\\approx 8.12$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Use differentials to estimate the change in $V=s^3$ when $s$ goes from $5$ to $5.1$.",
+      "solution": {
+        "steps": [
+          "$dV=3s^2\\,ds=3(25)(0.1)=7.5$."
+        ],
+        "answer": "$dV\\approx 7.5$"
+      }
+    }
+  ]
+}

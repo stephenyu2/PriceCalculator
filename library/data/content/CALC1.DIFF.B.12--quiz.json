@@ -1,0 +1,124 @@
+{
+  "id": "CALC1.DIFF.B.12--quiz",
+  "standard": "CALC1.DIFF.B.12",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Differentiation",
+  "domainCode": "DIFF",
+  "cluster": "Applications of derivatives",
+  "clusterCode": "B",
+  "skillName": "L'Hopital's Rule",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Apply L'Hopital's Rule to indeterminate forms.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "$\\lim_{x\\to 0}\\frac{\\sin x}{x}=?$\nA) $0$\nB) $1$\nC) $\\infty$\nD) DNE",
+      "answer": "B) $1$",
+      "solution": {
+        "steps": [
+          "$\\frac{0}{0}\\to\\frac{\\cos x}{1}\\to 1$. Key is B."
+        ],
+        "answer": "B) $1$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "$\\lim_{x\\to 0}\\frac{e^x-1}{x}=?$\nA) $0$\nB) $1$\nC) $e$\nD) $\\infty$",
+      "answer": "B) $1$",
+      "solution": {
+        "steps": [
+          "$\\frac{0}{0}\\to\\frac{e^x}{1}\\to 1$. Key is B."
+        ],
+        "answer": "B) $1$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Medium",
+      "prompt": "$\\lim_{x\\to\\infty}\\frac{\\ln x}{x}=?$\nA) $1$\nB) $0$\nC) $\\infty$\nD) $e$",
+      "answer": "B) $0$",
+      "solution": {
+        "steps": [
+          "$\\frac{\\infty}{\\infty}\\to\\frac{1/x}{1}\\to 0$. Key is B."
+        ],
+        "answer": "B) $0$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "$\\lim_{x\\to 0}\\frac{1-\\cos x}{x^2}=?$\nA) $0$\nB) $\\frac{1}{2}$\nC) $1$\nD) $2$",
+      "answer": "B) $\\frac{1}{2}$",
+      "solution": {
+        "steps": [
+          "Apply twice to get $\\frac{\\cos x}{2}\\to\\frac{1}{2}$. Key is B."
+        ],
+        "answer": "B) $\\frac{1}{2}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "$\\lim_{x\\to 0}\\frac{\\sin 3x}{x}=?$\nA) $1$\nB) $3$\nC) $0$\nD) $\\frac{1}{3}$",
+      "answer": "B) $3$",
+      "solution": {
+        "steps": [
+          "$\\frac{3\\cos 3x}{1}\\to 3$. Key is B."
+        ],
+        "answer": "B) $3$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "Before applying L'Hopital, you must confirm the form is:\nA) $1^\\infty$\nB) $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$\nC) $0\\cdot\\infty$\nD) any limit",
+      "answer": "B) $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$",
+      "solution": {
+        "steps": [
+          "The rule requires an indeterminate quotient form. Key is B."
+        ],
+        "answer": "B) $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "$\\lim_{x\\to\\infty}\\frac{x^2}{e^x}=?$\nA) $\\infty$\nB) $0$\nC) $1$\nD) $2$",
+      "answer": "B) $0$",
+      "solution": {
+        "steps": [
+          "Apply L'Hopital twice: $\\frac{2x}{e^x}\\to\\frac{2}{e^x}\\to 0$. Key is B."
+        ],
+        "answer": "B) $0$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "$\\lim_{x\\to 0}\\frac{\\sin x-x}{x^3}=?$\nA) $0$\nB) $-\\frac{1}{6}$\nC) $\\frac{1}{6}$\nD) $-1$",
+      "answer": "B) $-\\frac{1}{6}$",
+      "solution": {
+        "steps": [
+          "Three applications give $\\frac{-\\cos x}{6}\\to-\\frac{1}{6}$. Key is B."
+        ],
+        "answer": "B) $-\\frac{1}{6}$"
+      }
+    }
+  ]
+}

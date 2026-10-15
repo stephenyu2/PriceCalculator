@@ -1,0 +1,172 @@
+{
+  "id": "CALC2.SEQ.A.3--worksheet",
+  "standard": "CALC2.SEQ.A.3",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Sequences and Series",
+  "domainCode": "SEQ",
+  "cluster": "Sequences and convergence",
+  "clusterCode": "A",
+  "skillName": "Alternating Series",
+  "materialType": "worksheet",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Apply the Alternating Series Test, classify absolute vs conditional convergence, and bound errors.",
+  "items": [
+    {
+      "id": 1,
+      "prompt": "$\\sum\\frac{(-1)^{n+1}}{n}$ converge?",
+      "answer": "Yes (conditionally)",
+      "solution": {
+        "steps": [
+          "AST holds; harmonic diverges."
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "$\\sum\\frac{(-1)^n}{n^2}$ absolute?",
+      "answer": "Yes, absolutely",
+      "solution": {
+        "steps": [
+          "$\\sum\\frac{1}{n^2}$ converges."
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "$\\sum\\frac{(-1)^n}{\\sqrt{n}}$ absolute or conditional?",
+      "answer": "Conditional",
+      "solution": {
+        "steps": [
+          "AST converges; $\\sum\\frac{1}{\\sqrt{n}}$ diverges."
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "prompt": "$\\sum\\frac{(-1)^n}{n^3}$ absolute?",
+      "answer": "Yes, absolutely",
+      "solution": {
+        "steps": [
+          "$p=3>1$."
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "prompt": "$\\sum(-1)^n$ converge?",
+      "answer": "No",
+      "solution": {
+        "steps": [
+          "$b_n=1\\not\\to 0$."
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "prompt": "$\\sum\\frac{(-1)^n n}{n+1}$ converge?",
+      "answer": "No",
+      "solution": {
+        "steps": [
+          "Terms $\\to\\pm 1$, not $0$."
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "prompt": "Error using 3 terms of $\\sum\\frac{(-1)^{n+1}}{n}$.",
+      "answer": "$\\le\\frac{1}{4}$",
+      "solution": {
+        "steps": [
+          "Next term $b_4$."
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "prompt": "Error using 4 terms of $\\sum\\frac{(-1)^{n+1}}{n^2}$.",
+      "answer": "$\\le\\frac{1}{25}$",
+      "solution": {
+        "steps": [
+          "Next term $b_5=\\frac{1}{25}$."
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "prompt": "$\\sum\\frac{(-1)^n}{2^n}$ absolute?",
+      "answer": "Yes, absolutely",
+      "solution": {
+        "steps": [
+          "Geometric $|r|=\\frac{1}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "prompt": "$\\sum\\frac{(-1)^n}{\\ln n}$ ($n\\ge 2$) converge?",
+      "answer": "Yes (conditionally)",
+      "solution": {
+        "steps": [
+          "$\\frac{1}{\\ln n}\\downarrow 0$; $\\sum\\frac{1}{\\ln n}$ diverges."
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "prompt": "First 2-term estimate of $\\sum\\frac{(-1)^{n+1}}{n}$.",
+      "answer": "$\\frac{1}{2}$",
+      "solution": {
+        "steps": [
+          "$1-\\frac{1}{2}=\\frac{1}{2}$."
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "prompt": "Is $\\sum\\frac{(-1)^n}{n!}$ absolutely convergent?",
+      "answer": "Yes",
+      "solution": {
+        "steps": [
+          "$\\sum\\frac{1}{n!}$ converges (to $e$)."
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "prompt": "AST requires $b_n\\to$",
+      "answer": "$0$",
+      "solution": {
+        "steps": [
+          "Terms must shrink to zero."
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "prompt": "AST requires $b_n$ to be (eventually)",
+      "answer": "decreasing",
+      "solution": {
+        "steps": [
+          "Monotone decreasing eventually."
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "prompt": "$\\sum\\frac{(-1)^{n}}{n^{0.5}}$ absolute?",
+      "answer": "No; conditional",
+      "solution": {
+        "steps": [
+          "$p=\\frac{1}{2}<1$ diverges in absolute value."
+        ]
+      }
+    }
+  ],
+  "clusterId": null,
+  "tier": null
+}

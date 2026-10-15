@@ -1,0 +1,92 @@
+{
+  "id": "STAT.EDA.A.4--lesson",
+  "standard": "STAT.EDA.A.4",
+  "grade": "statistics",
+  "subject": "math",
+  "domain": "Exploring Data",
+  "domainCode": "EDA",
+  "cluster": "Categorical and quantitative data",
+  "clusterCode": "A",
+  "skillName": "Measures of Spread",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Spread measures how variable the data are. The range is maximum minus minimum. The interquartile range $\\text{IQR}=Q_3-Q_1$ covers the middle half and is resistant to outliers. A common outlier rule flags values below $Q_1-1.5\\,\\text{IQR}$ or above $Q_3+1.5\\,\\text{IQR}$. The standard deviation measures typical distance from the mean; its square is the variance. The five-number summary (min, $Q_1$, median, $Q_3$, max) underlies the boxplot.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "For $2,4,4,4,5,5,7,9$, find the range and the mean.",
+      "solution": {
+        "steps": [
+          "Range: $\\max-\\min=9-2=7$.",
+          "Mean: $\\frac{2+4+4+4+5+5+7+9}{8}=\\frac{40}{8}=5$.",
+          "So range $=7$ and mean $=5$."
+        ],
+        "answer": "Range $7$, mean $5$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find $Q_1$, $Q_3$, and the IQR of $1,3,5,7,9,11,13,15$.",
+      "solution": {
+        "steps": [
+          "The median splits the $8$ values into lower $1,3,5,7$ and upper $9,11,13,15$.",
+          "$Q_1=$ median of the lower half $=\\frac{3+5}{2}=4$; $Q_3=\\frac{11+13}{2}=12$.",
+          "IQR $=Q_3-Q_1=12-4=8$."
+        ],
+        "answer": "$Q_1=4$, $Q_3=12$, IQR $=8$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Using the $1.5\\,\\text{IQR}$ rule with $Q_1=4$, $Q_3=12$, is $30$ an outlier?",
+      "solution": {
+        "steps": [
+          "IQR $=8$, so the upper fence is $Q_3+1.5(8)=12+12=24$.",
+          "Since $30>24$, it is above the fence.",
+          "So $30$ is flagged as a high outlier."
+        ],
+        "answer": "Yes; $30>24$, so it is an outlier."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Range of $3,7,2,9,5$.",
+      "solution": {
+        "steps": [
+          "$9-2=7$."
+        ],
+        "answer": "$7$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "IQR if $Q_1=10$, $Q_3=25$.",
+      "solution": {
+        "steps": [
+          "$25-10=15$."
+        ],
+        "answer": "$15$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Upper fence if $Q_3=20$, IQR $=6$.",
+      "solution": {
+        "steps": [
+          "$20+1.5(6)=29$."
+        ],
+        "answer": "$29$"
+      }
+    }
+  ]
+}

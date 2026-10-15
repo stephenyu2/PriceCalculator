@@ -1,0 +1,124 @@
+{
+  "id": "CALC2.INT.A.3--quiz",
+  "standard": "CALC2.INT.A.3",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Advanced Integration Techniques",
+  "domainCode": "INT",
+  "cluster": "Methods of integration",
+  "clusterCode": "A",
+  "skillName": "Partial Fraction Decomposition",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Decompose rational functions and integrate.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "$\\dfrac{1}{x(x+1)}=?$\nA) $\\frac{1}{x}+\\frac{1}{x+1}$\nB) $\\frac{1}{x}-\\frac{1}{x+1}$\nC) $\\frac{1}{x+1}-\\frac{1}{x}$\nD) $\\frac{2}{x+1}$",
+      "answer": "B) $\\frac{1}{x}-\\frac{1}{x+1}$",
+      "solution": {
+        "steps": [
+          "$A=1,B=-1$. Key is B."
+        ],
+        "answer": "B) $\\frac{1}{x}-\\frac{1}{x+1}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "Before decomposing $\\frac{x^2}{x^2-1}$ you must:\nA) factor the numerator\nB) do polynomial division (it is improper)\nC) complete the square\nD) nothing",
+      "answer": "B) do polynomial division (it is improper)",
+      "solution": {
+        "steps": [
+          "Equal degrees means improper. Key is B."
+        ],
+        "answer": "B) do polynomial division (it is improper)"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Medium",
+      "prompt": "$\\int\\frac{1}{(x-1)(x+1)}\\,dx=?$\nA) $\\ln|x^2-1|+C$\nB) $\\frac{1}{2}\\ln\\left|\\frac{x-1}{x+1}\\right|+C$\nC) $\\arctan x+C$\nD) $\\frac{1}{x^2-1}+C$",
+      "answer": "B) $\\frac{1}{2}\\ln\\left|\\frac{x-1}{x+1}\\right|+C$",
+      "solution": {
+        "steps": [
+          "$\\frac{1/2}{x-1}-\\frac{1/2}{x+1}$. Key is B."
+        ],
+        "answer": "B) $\\frac{1}{2}\\ln\\left|\\frac{x-1}{x+1}\\right|+C$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "In $\\frac{5x-1}{(x-1)(x+2)}=\\frac{A}{x-1}+\\frac{B}{x+2}$, $A=?$\nA) $\\frac{4}{3}$\nB) $\\frac{11}{3}$\nC) $5$\nD) $1$",
+      "answer": "A) $\\frac{4}{3}$",
+      "solution": {
+        "steps": [
+          "$x=1$: $4=3A\\Rightarrow A=\\frac{4}{3}$. Key is A."
+        ],
+        "answer": "A) $\\frac{4}{3}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "$\\frac{1}{x^2-4}$ decomposes with denominators:\nA) $x,x-4$\nB) $x-2,x+2$\nC) $x-4,x+4$\nD) $x^2,4$",
+      "answer": "B) $x-2,x+2$",
+      "solution": {
+        "steps": [
+          "$x^2-4=(x-2)(x+2)$. Key is B."
+        ],
+        "answer": "B) $x-2,x+2$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "$\\frac{2x}{(x+1)(x-1)}=?$\nA) $\\frac{1}{x+1}+\\frac{1}{x-1}$\nB) $\\frac{1}{x+1}-\\frac{1}{x-1}$\nC) $\\frac{2}{x-1}$\nD) $\\frac{x}{x+1}$",
+      "answer": "A) $\\frac{1}{x+1}+\\frac{1}{x-1}$",
+      "solution": {
+        "steps": [
+          "$A=B=1$. Key is A."
+        ],
+        "answer": "A) $\\frac{1}{x+1}+\\frac{1}{x-1}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "$\\int\\frac{3}{x^2-9}\\,dx=?$\nA) $\\frac{1}{2}\\ln\\left|\\frac{x-3}{x+3}\\right|+C$\nB) $\\ln|x^2-9|+C$\nC) $\\frac{1}{6}\\ln|x^2-9|+C$\nD) $\\arctan\\frac{x}{3}+C$",
+      "answer": "A) $\\frac{1}{2}\\ln\\left|\\frac{x-3}{x+3}\\right|+C$",
+      "solution": {
+        "steps": [
+          "$A=\\frac{1}{2},B=-\\frac{1}{2}$. Key is A."
+        ],
+        "answer": "A) $\\frac{1}{2}\\ln\\left|\\frac{x-3}{x+3}\\right|+C$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "For a repeated factor $(x-2)^2$, the decomposition includes:\nA) only $\\frac{A}{x-2}$\nB) $\\frac{A}{x-2}+\\frac{B}{(x-2)^2}$\nC) $\\frac{A}{(x-2)^2}$ only\nD) $\\frac{Ax+B}{(x-2)^2}$",
+      "answer": "B) $\\frac{A}{x-2}+\\frac{B}{(x-2)^2}$",
+      "solution": {
+        "steps": [
+          "Each power up to the multiplicity gets a term. Key is B."
+        ],
+        "answer": "B) $\\frac{A}{x-2}+\\frac{B}{(x-2)^2}$"
+      }
+    }
+  ]
+}

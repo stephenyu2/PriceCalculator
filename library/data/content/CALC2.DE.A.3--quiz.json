@@ -1,0 +1,124 @@
+{
+  "id": "CALC2.DE.A.3--quiz",
+  "standard": "CALC2.DE.A.3",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Differential Equations",
+  "domainCode": "DE",
+  "cluster": "Solving and applying",
+  "clusterCode": "A",
+  "skillName": "Euler's Method",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Apply Euler's method.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "Euler update formula is:\nA) $y_{n+1}=y_n+h$\nB) $y_{n+1}=y_n+h f(x_n,y_n)$\nC) $y_{n+1}=f(x_n,y_n)$\nD) $y_{n+1}=y_n\\cdot h$",
+      "answer": "B) $y_{n+1}=y_n+h f(x_n,y_n)$",
+      "solution": {
+        "steps": [
+          "Step along the tangent. Key is B."
+        ],
+        "answer": "B) $y_{n+1}=y_n+h f(x_n,y_n)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "$\\frac{dy}{dx}=y$, $y(0)=1$, $h=0.5$: $y(0.5)=$\nA) $1$\nB) $1.5$\nC) $2$\nD) $0.5$",
+      "answer": "B) $1.5$",
+      "solution": {
+        "steps": [
+          "$1+0.5(1)=1.5$. Key is B."
+        ],
+        "answer": "B) $1.5$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Medium",
+      "prompt": "$\\frac{dy}{dx}=y$, $y(0)=1$, $h=0.5$: $y(1)\\approx$\nA) $2$\nB) $2.25$\nC) $2.5$\nD) $e$",
+      "answer": "B) $2.25$",
+      "solution": {
+        "steps": [
+          "$1.5+0.5(1.5)=2.25$. Key is B."
+        ],
+        "answer": "B) $2.25$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "$\\frac{dy}{dx}=x+y$, $y(0)=1$, $h=1$: $y(2)\\approx$\nA) $3$\nB) $5$\nC) $6$\nD) $4$",
+      "answer": "B) $5$",
+      "solution": {
+        "steps": [
+          "$1\\to 2\\to 5$. Key is B."
+        ],
+        "answer": "B) $5$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "For a concave-up exact solution, Euler's method tends to:\nA) overestimate\nB) underestimate\nC) be exact\nD) oscillate",
+      "answer": "B) underestimate",
+      "solution": {
+        "steps": [
+          "Tangents lie below the curve. Key is B."
+        ],
+        "answer": "B) underestimate"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "$\\frac{dy}{dx}=-y$, $y(0)=4$, $h=0.5$: $y(0.5)=$\nA) $2$\nB) $4$\nC) $3$\nD) $0$",
+      "answer": "A) $2$",
+      "solution": {
+        "steps": [
+          "$4+0.5(-4)=2$. Key is A."
+        ],
+        "answer": "A) $2$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "$\\frac{dy}{dx}=x+y$, $y(0)=1$, $h=1$: $y(1)=$\nA) $1$\nB) $2$\nC) $3$\nD) $5$",
+      "answer": "B) $2$",
+      "solution": {
+        "steps": [
+          "Slope $0+1=1$; $y_1=2$. Key is B."
+        ],
+        "answer": "B) $2$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Decreasing the step size $h$ generally makes Euler's approximation:\nA) worse\nB) more accurate\nC) unchanged\nD) diverge",
+      "answer": "B) more accurate",
+      "solution": {
+        "steps": [
+          "Smaller steps reduce error. Key is B."
+        ],
+        "answer": "B) more accurate"
+      }
+    }
+  ]
+}

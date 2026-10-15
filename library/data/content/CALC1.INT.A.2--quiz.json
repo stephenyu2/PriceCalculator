@@ -1,0 +1,124 @@
+{
+  "id": "CALC1.INT.A.2--quiz",
+  "standard": "CALC1.INT.A.2",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Integration",
+  "domainCode": "INT",
+  "cluster": "Defining and computing integrals",
+  "clusterCode": "A",
+  "skillName": "Fundamental Theorem of Calculus",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Apply both parts of the Fundamental Theorem of Calculus.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "$\\int_0^3 x^2\\,dx=?$\nA) $3$\nB) $9$\nC) $27$\nD) $\\frac{27}{2}$",
+      "answer": "B) $9$",
+      "solution": {
+        "steps": [
+          "$\\frac{x^3}{3}$ from $0$ to $3$: $9$. Key is B."
+        ],
+        "answer": "B) $9$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "If $F(x)=\\int_0^x \\sin(t^2)\\,dt$, then $F'(x)=?$\nA) $\\cos(x^2)$\nB) $\\sin(x^2)$\nC) $2x\\sin(x^2)$\nD) $-\\cos(x^2)$",
+      "answer": "B) $\\sin(x^2)$",
+      "solution": {
+        "steps": [
+          "Part 1 returns the integrand at the upper limit. Key is B."
+        ],
+        "answer": "B) $\\sin(x^2)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Medium",
+      "prompt": "$\\int_1^4 2x\\,dx=?$\nA) $7$\nB) $15$\nC) $16$\nD) $30$",
+      "answer": "B) $15$",
+      "solution": {
+        "steps": [
+          "$x^2$: $16-1=15$. Key is B."
+        ],
+        "answer": "B) $15$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "$\\int_0^{\\pi}\\sin x\\,dx=?$\nA) $0$\nB) $1$\nC) $2$\nD) $\\pi$",
+      "answer": "C) $2$",
+      "solution": {
+        "steps": [
+          "$-\\cos x$: $1+1=2$. Key is C."
+        ],
+        "answer": "C) $2$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "$\\frac{d}{dx}\\int_0^{x^2}\\cos t\\,dt=?$\nA) $\\cos(x^2)$\nB) $2x\\cos(x^2)$\nC) $\\sin(x^2)$\nD) $2x\\sin(x^2)$",
+      "answer": "B) $2x\\cos(x^2)$",
+      "solution": {
+        "steps": [
+          "Chain-rule Part 1: $\\cos(x^2)\\cdot 2x$. Key is B."
+        ],
+        "answer": "B) $2x\\cos(x^2)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "$\\int_0^1 e^x\\,dx=?$\nA) $e$\nB) $e-1$\nC) $1-e$\nD) $1$",
+      "answer": "B) $e-1$",
+      "solution": {
+        "steps": [
+          "$e^x$: $e-1$. Key is B."
+        ],
+        "answer": "B) $e-1$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "$\\int_1^4 \\sqrt{x}\\,dx=?$\nA) $\\frac{14}{3}$\nB) $7$\nC) $\\frac{7}{3}$\nD) $\\frac{16}{3}$",
+      "answer": "A) $\\frac{14}{3}$",
+      "solution": {
+        "steps": [
+          "$\\frac{2}{3}x^{3/2}$: $\\frac{2}{3}(8-1)=\\frac{14}{3}$. Key is A."
+        ],
+        "answer": "A) $\\frac{14}{3}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "If $G(x)=\\int_x^5 t\\,dt$, then $G'(x)=?$\nA) $x$\nB) $-x$\nC) $5$\nD) $5-x$",
+      "answer": "B) $-x$",
+      "solution": {
+        "steps": [
+          "$\\int_x^5=-\\int_5^x$, so $G'(x)=-x$. Key is B."
+        ],
+        "answer": "B) $-x$"
+      }
+    }
+  ]
+}

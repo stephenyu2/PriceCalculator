@@ -1,0 +1,93 @@
+{
+  "id": "CALC2.INT.A.3--lesson",
+  "standard": "CALC2.INT.A.3",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Advanced Integration Techniques",
+  "domainCode": "INT",
+  "cluster": "Methods of integration",
+  "clusterCode": "A",
+  "skillName": "Partial Fraction Decomposition",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A proper rational function (numerator degree less than denominator) can be split into simpler fractions whose integrals are logs or arctangents. Factor the denominator; for distinct linear factors write $\\frac{A}{x-r_1}+\\frac{B}{x-r_2}+\\cdots$, clear denominators, and solve for the constants (plugging in the roots is quick). Repeated and irreducible quadratic factors need extra terms. If the fraction is improper, divide first.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Decompose $\\dfrac{5x-1}{(x-1)(x+2)}$ into partial fractions.",
+      "solution": {
+        "steps": [
+          "Write $\\frac{5x-1}{(x-1)(x+2)}=\\frac{A}{x-1}+\\frac{B}{x+2}$.",
+          "Clear denominators: $5x-1=A(x+2)+B(x-1)$.",
+          "Let $x=1$: $4=3A\\Rightarrow A=\\frac{4}{3}$. Let $x=-2$: $-11=-3B\\Rightarrow B=\\frac{11}{3}$.",
+          "So it is $\\frac{4/3}{x-1}+\\frac{11/3}{x+2}$."
+        ],
+        "answer": "$\\dfrac{4/3}{x-1}+\\dfrac{11/3}{x+2}$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Evaluate $\\int \\dfrac{1}{(x-1)(x+1)}\\,dx$.",
+      "solution": {
+        "steps": [
+          "Decompose: $\\frac{1}{(x-1)(x+1)}=\\frac{A}{x-1}+\\frac{B}{x+1}$ with $1=A(x+1)+B(x-1)$.",
+          "Let $x=1$: $1=2A\\Rightarrow A=\\frac{1}{2}$; let $x=-1$: $1=-2B\\Rightarrow B=-\\frac{1}{2}$.",
+          "Integrate: $\\frac{1}{2}\\ln|x-1|-\\frac{1}{2}\\ln|x+1|+C$."
+        ],
+        "answer": "$\\dfrac{1}{2}\\ln\\left|\\dfrac{x-1}{x+1}\\right|+C$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Evaluate $\\int \\dfrac{3}{x^2-9}\\,dx$.",
+      "solution": {
+        "steps": [
+          "Factor: $x^2-9=(x-3)(x+3)$; decompose $\\frac{3}{(x-3)(x+3)}=\\frac{A}{x-3}+\\frac{B}{x+3}$.",
+          "$3=A(x+3)+B(x-3)$: $x=3$ gives $A=\\frac{1}{2}$, $x=-3$ gives $B=-\\frac{1}{2}$.",
+          "Integrate: $\\frac{1}{2}\\ln|x-3|-\\frac{1}{2}\\ln|x+3|+C$."
+        ],
+        "answer": "$\\dfrac{1}{2}\\ln\\left|\\dfrac{x-3}{x+3}\\right|+C$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Decompose $\\dfrac{x+7}{(x-2)(x+3)}$.",
+      "solution": {
+        "steps": [
+          "$A(x+3)+B(x-2)=x+7$; $x=2$: $5A=9... $ wait $A(5)=9\\Rightarrow A=\\frac{9}{5}$; $x=-3$: $B(-5)=4\\Rightarrow B=-\\frac{4}{5}$."
+        ],
+        "answer": "$\\dfrac{9/5}{x-2}-\\dfrac{4/5}{x+3}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Evaluate $\\int\\dfrac{1}{x^2-1}\\,dx$.",
+      "solution": {
+        "steps": [
+          "$\\frac{1/2}{x-1}-\\frac{1/2}{x+1}$; integrate to $\\frac{1}{2}\\ln\\left|\\frac{x-1}{x+1}\\right|+C$."
+        ],
+        "answer": "$\\dfrac{1}{2}\\ln\\left|\\dfrac{x-1}{x+1}\\right|+C$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Decompose $\\dfrac{2x}{(x+1)(x-1)}$.",
+      "solution": {
+        "steps": [
+          "$A(x-1)+B(x+1)=2x$; $x=1$: $2B=2\\Rightarrow B=1$; $x=-1$: $-2A=-2\\Rightarrow A=1$."
+        ],
+        "answer": "$\\dfrac{1}{x+1}+\\dfrac{1}{x-1}$"
+      }
+    }
+  ]
+}

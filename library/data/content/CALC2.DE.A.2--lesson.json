@@ -1,0 +1,92 @@
+{
+  "id": "CALC2.DE.A.2--lesson",
+  "standard": "CALC2.DE.A.2",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Differential Equations",
+  "domainCode": "DE",
+  "cluster": "Solving and applying",
+  "clusterCode": "A",
+  "skillName": "Slope Fields",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A slope field (direction field) draws a short segment at many points, each with slope $\\frac{dy}{dx}$ given by the differential equation evaluated there. Solution curves follow the segments. You can read qualitative behavior without solving: where slopes are zero the curve is momentarily flat, where slopes depend only on $y$ the field is horizontal-banded, and following segments from an initial point sketches the particular solution.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "For $\\dfrac{dy}{dx}=x$, find the slope of the field at $(2,5)$ and at $(-3,0)$.",
+      "solution": {
+        "steps": [
+          "The slope equals $x$ at each point, independent of $y$.",
+          "At $(2,5)$ the slope is $2$; at $(-3,0)$ the slope is $-3$.",
+          "So all points with the same $x$ share a slope (vertical bands)."
+        ],
+        "answer": "Slope $2$ at $(2,5)$; slope $-3$ at $(-3,0)$."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "For $\\dfrac{dy}{dx}=y$, where are the field segments horizontal?",
+      "solution": {
+        "steps": [
+          "Segments are horizontal where the slope is $0$, i.e. $y=0$.",
+          "So along the entire x-axis ($y=0$) the segments are flat.",
+          "Above the axis slopes are positive; below, negative."
+        ],
+        "answer": "Horizontal along $y=0$ (the x-axis)."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "For $\\dfrac{dy}{dx}=x+y$, find the slope at $(1,2)$ and $(0,0)$.",
+      "solution": {
+        "steps": [
+          "Evaluate $x+y$ at each point.",
+          "At $(1,2)$: $1+2=3$. At $(0,0)$: $0+0=0$.",
+          "The isocline of zero slope is the line $x+y=0$."
+        ],
+        "answer": "Slope $3$ at $(1,2)$; slope $0$ at $(0,0)$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "For $\\frac{dy}{dx}=2x$, slope at $(3,1)$?",
+      "solution": {
+        "steps": [
+          "Slope $=2x=6$."
+        ],
+        "answer": "$6$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "For $\\frac{dy}{dx}=y-1$, where are segments horizontal?",
+      "solution": {
+        "steps": [
+          "$y-1=0\\Rightarrow y=1$."
+        ],
+        "answer": "Along $y=1$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "For $\\frac{dy}{dx}=x-y$, slope at $(2,2)$?",
+      "solution": {
+        "steps": [
+          "$x-y=0$."
+        ],
+        "answer": "$0$"
+      }
+    }
+  ]
+}

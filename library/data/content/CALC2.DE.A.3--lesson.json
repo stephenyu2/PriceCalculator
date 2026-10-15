@@ -1,0 +1,93 @@
+{
+  "id": "CALC2.DE.A.3--lesson",
+  "standard": "CALC2.DE.A.3",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Differential Equations",
+  "domainCode": "DE",
+  "cluster": "Solving and applying",
+  "clusterCode": "A",
+  "skillName": "Euler's Method",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "Euler's method approximates a solution to $\\frac{dy}{dx}=f(x,y)$ with $y(x_0)=y_0$ by stepping along tangent lines. With step size $h$: $x_{n+1}=x_n+h$ and $y_{n+1}=y_n+h\\,f(x_n,y_n)$. Each step uses the current slope to predict the next $y$. Smaller $h$ gives a better approximation. The method tends to undershoot concave-up solutions and overshoot concave-down ones.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Use Euler's method with $h=0.5$ to approximate $y(1)$ for $\\frac{dy}{dx}=y$, $y(0)=1$.",
+      "solution": {
+        "steps": [
+          "Start at $(0,1)$ with slope $f=y=1$.",
+          "Step 1: $y_1=1+0.5(1)=1.5$ at $x=0.5$.",
+          "At $(0.5,1.5)$ the slope is $1.5$; step 2: $y_2=1.5+0.5(1.5)=2.25$ at $x=1$.",
+          "So $y(1)\\approx 2.25$ (the exact value is $e\\approx 2.718$, underestimated)."
+        ],
+        "answer": "$y(1)\\approx 2.25$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Use Euler's method with $h=1$ to approximate $y(2)$ for $\\frac{dy}{dx}=x+y$, $y(0)=1$.",
+      "solution": {
+        "steps": [
+          "At $(0,1)$: slope $0+1=1$; $y_1=1+1(1)=2$ at $x=1$.",
+          "At $(1,2)$: slope $1+2=3$; $y_2=2+1(3)=5$ at $x=2$.",
+          "So $y(2)\\approx 5$."
+        ],
+        "answer": "$y(2)\\approx 5$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Use $h=0.5$ to approximate $y(1)$ for $\\frac{dy}{dx}=2x$, $y(0)=0$.",
+      "solution": {
+        "steps": [
+          "At $(0,0)$: slope $0$; $y_1=0+0.5(0)=0$ at $x=0.5$.",
+          "At $(0.5,0)$: slope $2(0.5)=1$; $y_2=0+0.5(1)=0.5$ at $x=1$.",
+          "So $y(1)\\approx 0.5$ (exact $y=x^2=1$, underestimated since concave up)."
+        ],
+        "answer": "$y(1)\\approx 0.5$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Euler, $h=0.5$, $\\frac{dy}{dx}=y$, $y(0)=2$: find $y(0.5)$.",
+      "solution": {
+        "steps": [
+          "$y_1=2+0.5(2)=3$."
+        ],
+        "answer": "$y(0.5)\\approx 3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Euler, $h=1$, $\\frac{dy}{dx}=x$, $y(0)=0$: find $y(2)$.",
+      "solution": {
+        "steps": [
+          "$y_1=0+1(0)=0$; $y_2=0+1(1)=1$."
+        ],
+        "answer": "$y(2)\\approx 1$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Euler, $h=0.1$, $\\frac{dy}{dx}=x+y$, $y(0)=1$: find $y(0.1)$.",
+      "solution": {
+        "steps": [
+          "Slope $0+1=1$; $y_1=1+0.1(1)=1.1$."
+        ],
+        "answer": "$y(0.1)\\approx 1.1$"
+      }
+    }
+  ]
+}

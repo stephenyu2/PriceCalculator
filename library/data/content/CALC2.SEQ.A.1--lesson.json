@@ -1,0 +1,92 @@
+{
+  "id": "CALC2.SEQ.A.1--lesson",
+  "standard": "CALC2.SEQ.A.1",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Sequences and Series",
+  "domainCode": "SEQ",
+  "cluster": "Sequences and convergence",
+  "clusterCode": "A",
+  "skillName": "Sequences",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A sequence $\\{a_n\\}$ lists terms indexed by $n=1,2,3,\\dots$. It converges to $L$ if $\\lim_{n\\to\\infty} a_n=L$ exists (a finite number), and diverges otherwise. Many limits follow the same rules as function limits: for rational expressions compare degrees, and useful facts include $\\lim r^n=0$ when $|r|<1$ and $a_n\\to L$ when the terms are squeezed between two sequences with limit $L$. A sequence is monotonic if it is always increasing or always decreasing, and bounded if its terms stay within fixed bounds.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Does $a_n=\\dfrac{2n+1}{n+3}$ converge? If so, to what?",
+      "solution": {
+        "steps": [
+          "Divide numerator and denominator by $n$: $\\frac{2+1/n}{1+3/n}$.",
+          "As $n\\to\\infty$, the $1/n$ terms vanish.",
+          "The limit is $\\frac{2}{1}=2$, so the sequence converges to $2$."
+        ],
+        "answer": "Converges to $2$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Does $a_n=\\left(\\dfrac{1}{2}\\right)^n$ converge?",
+      "solution": {
+        "steps": [
+          "This is $r^n$ with $r=\\frac{1}{2}$, and $|r|<1$.",
+          "So $\\lim_{n\\to\\infty}\\left(\\frac{1}{2}\\right)^n=0$.",
+          "The sequence converges to $0$."
+        ],
+        "answer": "Converges to $0$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Does $a_n=(-1)^n$ converge?",
+      "solution": {
+        "steps": [
+          "The terms alternate: $-1,1,-1,1,\\dots$.",
+          "They do not approach a single value.",
+          "So the sequence diverges (no limit)."
+        ],
+        "answer": "Diverges"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Limit of $a_n=\\dfrac{3n}{n+1}$.",
+      "solution": {
+        "steps": [
+          "Divide by $n$: $\\frac{3}{1+1/n}\\to 3$."
+        ],
+        "answer": "$3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Limit of $a_n=\\dfrac{n}{n^2+1}$.",
+      "solution": {
+        "steps": [
+          "Denominator degree larger: limit $0$."
+        ],
+        "answer": "$0$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Does $a_n=2^n$ converge?",
+      "solution": {
+        "steps": [
+          "$2^n\\to\\infty$, unbounded."
+        ],
+        "answer": "Diverges"
+      }
+    }
+  ]
+}

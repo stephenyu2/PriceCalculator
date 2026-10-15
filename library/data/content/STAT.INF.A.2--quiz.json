@@ -1,0 +1,124 @@
+{
+  "id": "STAT.INF.A.2--quiz",
+  "standard": "STAT.INF.A.2",
+  "grade": "statistics",
+  "subject": "math",
+  "domain": "Statistical Inference",
+  "domainCode": "INF",
+  "cluster": "Estimating with confidence intervals",
+  "clusterCode": "A",
+  "skillName": "One-Sample z Interval for Proportions",
+  "materialType": "quiz",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "One-sample z interval for a proportion.",
+  "items": [
+    {
+      "type": "multiple-choice",
+      "id": 1,
+      "difficulty": "Easy",
+      "prompt": "The SE for a proportion is:\nA) $\\sqrt{\\hat{p}(1-\\hat{p})n}$\nB) $\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}$\nC) $\\frac{\\hat{p}}{n}$\nD) $\\hat{p}(1-\\hat{p})$",
+      "answer": "B) $\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}$",
+      "solution": {
+        "steps": [
+          "SE formula. Key is B."
+        ],
+        "answer": "B) $\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 2,
+      "difficulty": "Easy",
+      "prompt": "$z^*$ for $95\\%$ confidence is:\nA) $1.645$\nB) $1.96$\nC) $2.576$\nD) $2$",
+      "answer": "B) $1.96$",
+      "solution": {
+        "steps": [
+          "Standard value. Key is B."
+        ],
+        "answer": "B) $1.96$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 3,
+      "difficulty": "Medium",
+      "prompt": "SE for $\\hat{p}=0.5,n=100$:\nA) $0.5$\nB) $0.05$\nC) $0.025$\nD) $0.25$",
+      "answer": "B) $0.05$",
+      "solution": {
+        "steps": [
+          "$\\sqrt{0.25/100}$. Key is B."
+        ],
+        "answer": "B) $0.05$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 4,
+      "difficulty": "Medium",
+      "prompt": "95% CI for $\\hat{p}=0.5,n=100$:\nA) $(0.45,0.55)$\nB) $(0.402,0.598)$\nC) $(0.4,0.6)$\nD) $(0.48,0.52)$",
+      "answer": "B) $(0.402,0.598)$",
+      "solution": {
+        "steps": [
+          "$0.5\\pm 1.96(0.05)$. Key is B."
+        ],
+        "answer": "B) $(0.402,0.598)$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 5,
+      "difficulty": "Medium",
+      "prompt": "Large-counts condition requires:\nA) $n\\ge 30$\nB) $n\\hat{p}\\ge 10$ and $n(1-\\hat{p})\\ge 10$\nC) $\\hat{p}\\ge 0.5$\nD) population normal",
+      "answer": "B) $n\\hat{p}\\ge 10$ and $n(1-\\hat{p})\\ge 10$",
+      "solution": {
+        "steps": [
+          "Success/failure counts. Key is B."
+        ],
+        "answer": "B) $n\\hat{p}\\ge 10$ and $n(1-\\hat{p})\\ge 10$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 6,
+      "difficulty": "Medium",
+      "prompt": "For $\\hat{p}=0.05,n=100$, the large-counts condition is:\nA) met\nB) not met ($n\\hat{p}=5$)\nC) always met\nD) irrelevant",
+      "answer": "B) not met ($n\\hat{p}=5$)",
+      "solution": {
+        "steps": [
+          "$5<10$. Key is B."
+        ],
+        "answer": "B) not met ($n\\hat{p}=5$)"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 7,
+      "difficulty": "Hard",
+      "prompt": "Quadrupling $n$ changes the SE by a factor of:\nA) $4$\nB) $\\frac{1}{2}$\nC) $\\frac{1}{4}$\nD) $2$",
+      "answer": "B) $\\frac{1}{2}$",
+      "solution": {
+        "steps": [
+          "$1/\\sqrt{4}=1/2$. Key is B."
+        ],
+        "answer": "B) $\\frac{1}{2}$"
+      }
+    },
+    {
+      "type": "multiple-choice",
+      "id": 8,
+      "difficulty": "Hard",
+      "prompt": "Margin with $z^*=2.576$, SE $=0.02$:\nA) $0.0515$\nB) $0.02$\nC) $0.098$\nD) $0.129$",
+      "answer": "A) $0.0515$",
+      "solution": {
+        "steps": [
+          "$2.576\\cdot 0.02\\approx 0.0515$. Key is A."
+        ],
+        "answer": "A) $0.0515$"
+      }
+    }
+  ]
+}

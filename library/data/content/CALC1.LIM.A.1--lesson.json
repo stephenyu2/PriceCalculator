@@ -1,0 +1,99 @@
+{
+  "id": "CALC1.LIM.A.1--lesson",
+  "standard": "CALC1.LIM.A.1",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Limits and Continuity",
+  "domainCode": "LIM",
+  "cluster": "Understanding limits",
+  "clusterCode": "A",
+  "skillName": "Limits Graphically and Numerically",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A limit describes the value a function $f(x)$ approaches as $x$ gets close to a number $a$, whether or not $f(a)$ itself is defined. We write $\\lim_{x\\to a} f(x) = L$. From a graph or a table you trace the output as the input closes in from each side. The two-sided limit exists only when the left-hand limit $\\lim_{x\\to a^-} f(x)$ and the right-hand limit $\\lim_{x\\to a^+} f(x)$ agree. A hole, a jump, or an unbounded spike can all make a limit behave differently from the function's actual value there.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "A table for $f(x)$ gives $f(1.9)=4.9$, $f(1.99)=4.99$, $f(1.999)=4.999$ and $f(2.1)=5.1$, $f(2.01)=5.01$, $f(2.001)=5.001$. Estimate $\\lim_{x\\to 2} f(x)$.",
+      "solution": {
+        "steps": [
+          "As $x$ increases toward $2$ from the left, the outputs $4.9,\\ 4.99,\\ 4.999$ climb toward $5$.",
+          "As $x$ decreases toward $2$ from the right, the outputs $5.1,\\ 5.01,\\ 5.001$ fall toward $5$.",
+          "The left-hand limit $\\lim_{x\\to 2^-} f(x)=5$ and the right-hand limit $\\lim_{x\\to 2^+} f(x)=5$ agree.",
+          "Because the one-sided limits match, the two-sided limit exists and equals $5$."
+        ],
+        "answer": "$\\lim_{x\\to 2} f(x) = 5$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "A graph shows a filled point at $(3,4)$ but the curve approaches height $7$ from both sides as $x\\to 3$. Find $\\lim_{x\\to 3} f(x)$ and $f(3)$, and say whether they are equal.",
+      "solution": {
+        "steps": [
+          "The limit depends only on the heights the curve approaches near $x=3$, not on the plotted point.",
+          "From both sides the curve approaches $7$, so $\\lim_{x\\to 3} f(x)=7$.",
+          "The filled dot at $(3,4)$ gives the function's actual value, so $f(3)=4$.",
+          "They are different: a limit can disagree with the function value when there is a removable point."
+        ],
+        "answer": "$\\lim_{x\\to 3} f(x)=7$, but $f(3)=4$; they are not equal."
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "A step function jumps so that as $x\\to 0^-$ the outputs approach $-2$ and as $x\\to 0^+$ the outputs approach $3$. Does $\\lim_{x\\to 0} f(x)$ exist?",
+      "solution": {
+        "steps": [
+          "Read the left-hand limit: $\\lim_{x\\to 0^-} f(x) = -2$.",
+          "Read the right-hand limit: $\\lim_{x\\to 0^+} f(x) = 3$.",
+          "The two one-sided limits are different ($-2 \\ne 3$).",
+          "A two-sided limit exists only when both sides agree, so this limit does not exist."
+        ],
+        "answer": "The limit does not exist, because the one-sided limits $-2$ and $3$ disagree."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "A table gives $g(4.9)=12.01$, $g(4.99)=12.0001$, $g(5.1)=11.99$, $g(5.01)=11.9999$. Estimate $\\lim_{x\\to 5} g(x)$.",
+      "solution": {
+        "steps": [
+          "From the left the outputs approach $12$; from the right they also approach $12$.",
+          "Both one-sided limits equal $12$, so the two-sided limit exists."
+        ],
+        "answer": "$\\lim_{x\\to 5} g(x) = 12$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "On a graph, as $x\\to 1^-$ the curve rises toward $6$ and as $x\\to 1^+$ the curve rises toward $6$, but there is an open circle at $(1,6)$ and a filled dot at $(1,2)$. Find $\\lim_{x\\to 1} f(x)$.",
+      "solution": {
+        "steps": [
+          "Both one-sided limits approach the open-circle height $6$.",
+          "The filled dot sets $f(1)=2$, but the limit ignores the plotted value.",
+          "Since both sides approach $6$, the limit is $6$."
+        ],
+        "answer": "$\\lim_{x\\to 1} f(x) = 6$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "As $x\\to 2^-$, $h(x)\\to 1$, and as $x\\to 2^+$, $h(x)\\to 1$, while $h(2)$ is undefined. Does $\\lim_{x\\to 2} h(x)$ exist, and does the function need to be defined at $2$?",
+      "solution": {
+        "steps": [
+          "Both one-sided limits equal $1$, so the two-sided limit exists and equals $1$.",
+          "A limit describes approach, not the value at the point, so $h(2)$ being undefined does not matter."
+        ],
+        "answer": "Yes, $\\lim_{x\\to 2} h(x) = 1$; the function need not be defined at $x=2$."
+      }
+    }
+  ]
+}

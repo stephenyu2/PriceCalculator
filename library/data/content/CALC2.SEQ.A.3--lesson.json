@@ -1,0 +1,92 @@
+{
+  "id": "CALC2.SEQ.A.3--lesson",
+  "standard": "CALC2.SEQ.A.3",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Sequences and Series",
+  "domainCode": "SEQ",
+  "cluster": "Sequences and convergence",
+  "clusterCode": "A",
+  "skillName": "Alternating Series",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "An alternating series has terms that switch sign, like $\\sum(-1)^{n}b_n$ with $b_n>0$. The Alternating Series Test: it converges if the $b_n$ are eventually decreasing and $b_n\\to 0$. A series is absolutely convergent if $\\sum|a_n|$ converges (then $\\sum a_n$ converges too), and conditionally convergent if $\\sum a_n$ converges but $\\sum|a_n|$ diverges. The error in using the first $N$ terms of a convergent alternating series is at most the first omitted term $b_{N+1}$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Does $\\sum_{n=1}^\\infty \\dfrac{(-1)^{n+1}}{n}$ converge? Absolutely or conditionally?",
+      "solution": {
+        "steps": [
+          "The terms $b_n=\\frac{1}{n}$ are positive, decreasing, and $\\to 0$, so by the Alternating Series Test it converges.",
+          "Check absolute: $\\sum\\frac{1}{n}$ is the harmonic series, which diverges.",
+          "So the series converges conditionally."
+        ],
+        "answer": "Converges conditionally"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Does $\\sum_{n=1}^\\infty \\dfrac{(-1)^n}{n^2}$ converge absolutely?",
+      "solution": {
+        "steps": [
+          "Consider $\\sum\\left|\\frac{(-1)^n}{n^2}\\right|=\\sum\\frac{1}{n^2}$.",
+          "This is a p-series with $p=2>1$, which converges.",
+          "So the original series converges absolutely."
+        ],
+        "answer": "Converges absolutely"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Estimate $\\sum_{n=1}^\\infty \\dfrac{(-1)^{n+1}}{n}$ using the first $3$ terms and bound the error.",
+      "solution": {
+        "steps": [
+          "Partial sum: $1-\\frac{1}{2}+\\frac{1}{3}=\\frac{5}{6}\\approx 0.833$.",
+          "The error is at most the next term $b_4=\\frac{1}{4}=0.25$.",
+          "So the true sum (which is $\\ln 2\\approx 0.693$) is within $0.25$ of $0.833$."
+        ],
+        "answer": "Estimate $\\frac{5}{6}$ with error $\\le\\frac{1}{4}$."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Does $\\sum\\frac{(-1)^n}{\\sqrt{n}}$ converge?",
+      "solution": {
+        "steps": [
+          "$b_n=\\frac{1}{\\sqrt{n}}$ decreases to $0$: converges by AST."
+        ],
+        "answer": "Converges (conditionally)"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Does $\\sum\\frac{(-1)^n}{n^3}$ converge absolutely?",
+      "solution": {
+        "steps": [
+          "$\\sum\\frac{1}{n^3}$ is a convergent p-series: absolutely convergent."
+        ],
+        "answer": "Absolutely"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Error bound using 2 terms of $\\sum\\frac{(-1)^{n+1}}{n^2}$.",
+      "solution": {
+        "steps": [
+          "Next term $b_3=\\frac{1}{9}$."
+        ],
+        "answer": "$\\le\\frac{1}{9}$"
+      }
+    }
+  ]
+}

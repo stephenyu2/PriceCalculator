@@ -1,0 +1,96 @@
+{
+  "id": "CALC1.INT.A.1--lesson",
+  "standard": "CALC1.INT.A.1",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Integration",
+  "domainCode": "INT",
+  "cluster": "Defining and computing integrals",
+  "clusterCode": "A",
+  "skillName": "Riemann Sums and Definite Integrals",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A Riemann sum approximates the area under $y=f(x)$ on $[a,b]$ by rectangles. With $n$ equal subintervals of width $\\Delta x=\\frac{b-a}{n}$, the left sum uses left endpoints, the right sum uses right endpoints, and the midpoint sum uses midpoints for the rectangle heights. As $n\\to\\infty$ the sums converge to the definite integral $\\int_a^b f(x)\\,dx$, the exact signed area. Area below the axis counts as negative.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Approximate $\\int_0^4 x^2\\,dx$ with a right Riemann sum using $n=4$ rectangles.",
+      "solution": {
+        "steps": [
+          "Width: $\\Delta x=\\frac{4-0}{4}=1$; right endpoints are $x=1,2,3,4$.",
+          "Heights $f(x)=x^2$: $1,4,9,16$.",
+          "Sum: $(1+4+9+16)\\cdot 1=30$.",
+          "This right sum overestimates the true value $\\int_0^4 x^2\\,dx=\\frac{64}{3}\\approx 21.3$."
+        ],
+        "answer": "Right sum $=30$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Approximate $\\int_0^4 x^2\\,dx$ with a left Riemann sum using $n=4$.",
+      "solution": {
+        "steps": [
+          "$\\Delta x=1$; left endpoints $x=0,1,2,3$.",
+          "Heights: $0,1,4,9$.",
+          "Sum: $(0+1+4+9)\\cdot 1=14$ (an underestimate)."
+        ],
+        "answer": "Left sum $=14$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Interpret $\\int_0^2 (x-1)\\,dx$ as signed area and evaluate geometrically.",
+      "solution": {
+        "steps": [
+          "The line $y=x-1$ is below the axis on $[0,1]$ and above on $[1,2]$.",
+          "Each triangular region has area $\\frac{1}{2}(1)(1)=\\frac{1}{2}$.",
+          "The first is negative, the second positive: $-\\frac{1}{2}+\\frac{1}{2}=0$."
+        ],
+        "answer": "$\\int_0^2 (x-1)\\,dx=0$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Right Riemann sum for $\\int_0^3 2x\\,dx$ with $n=3$.",
+      "solution": {
+        "steps": [
+          "$\\Delta x=1$; right endpoints $1,2,3$; heights $2,4,6$.",
+          "Sum $=(2+4+6)(1)=12$."
+        ],
+        "answer": "$12$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Left Riemann sum for $\\int_1^3 x\\,dx$ with $n=2$.",
+      "solution": {
+        "steps": [
+          "$\\Delta x=1$; left endpoints $1,2$; heights $1,2$.",
+          "Sum $=(1+2)(1)=3$."
+        ],
+        "answer": "$3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Midpoint sum for $\\int_0^2 x^2\\,dx$ with $n=2$.",
+      "solution": {
+        "steps": [
+          "$\\Delta x=1$; midpoints $0.5,1.5$; heights $0.25,2.25$.",
+          "Sum $=(0.25+2.25)(1)=2.5$."
+        ],
+        "answer": "$2.5$"
+      }
+    }
+  ]
+}

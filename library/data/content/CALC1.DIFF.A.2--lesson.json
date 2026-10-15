@@ -1,0 +1,95 @@
+{
+  "id": "CALC1.DIFF.A.2--lesson",
+  "standard": "CALC1.DIFF.A.2",
+  "grade": "calculus1",
+  "subject": "math",
+  "domain": "Differentiation",
+  "domainCode": "DIFF",
+  "cluster": "Defining and computing derivatives",
+  "clusterCode": "A",
+  "skillName": "Basic Differentiation Rules",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "The basic rules let you differentiate without the limit each time. Power rule: $\\frac{d}{dx}x^n=nx^{n-1}$. Constant multiple, sum, and difference rules let you handle each term separately. Product rule: $(fg)'=f'g+fg'$. Quotient rule: $\\left(\\frac{f}{g}\\right)'=\\frac{f'g-fg'}{g^2}$. Rewriting roots and reciprocals as powers (for example $\\sqrt{x}=x^{1/2}$, $\\frac{1}{x^2}=x^{-2}$) makes the power rule apply directly.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Differentiate $f(x)=3x^4-5x^2+7$.",
+      "solution": {
+        "steps": [
+          "Apply the power rule term by term: $\\frac{d}{dx}3x^4=12x^3$.",
+          "$\\frac{d}{dx}(-5x^2)=-10x$ and the constant $7$ has derivative $0$.",
+          "Combine: $f'(x)=12x^3-10x$."
+        ],
+        "answer": "$f'(x)=12x^3-10x$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Differentiate $f(x)=(x^2+1)(x-3)$ using the product rule.",
+      "solution": {
+        "steps": [
+          "Let $u=x^2+1$ and $v=x-3$, so $u'=2x$ and $v'=1$.",
+          "Product rule: $f'=u'v+uv'=(2x)(x-3)+(x^2+1)(1)$.",
+          "Expand: $2x^2-6x+x^2+1=3x^2-6x+1$."
+        ],
+        "answer": "$f'(x)=3x^2-6x+1$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Differentiate $f(x)=\\dfrac{2x+1}{x-4}$ using the quotient rule.",
+      "solution": {
+        "steps": [
+          "Let $f=2x+1$, $g=x-4$, so $f'=2$, $g'=1$.",
+          "Quotient rule: $\\dfrac{f'g-fg'}{g^2}=\\dfrac{2(x-4)-(2x+1)(1)}{(x-4)^2}$.",
+          "Simplify the numerator: $2x-8-2x-1=-9$.",
+          "So the derivative is $\\dfrac{-9}{(x-4)^2}$."
+        ],
+        "answer": "$f'(x)=\\dfrac{-9}{(x-4)^2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Differentiate $f(x)=6x^3-4x+9$.",
+      "solution": {
+        "steps": [
+          "Power rule term by term: $18x^2-4$."
+        ],
+        "answer": "$f'(x)=18x^2-4$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Differentiate $f(x)=\\sqrt{x}+\\dfrac{1}{x}$.",
+      "solution": {
+        "steps": [
+          "Rewrite as $x^{1/2}+x^{-1}$.",
+          "Power rule: $\\frac{1}{2}x^{-1/2}-x^{-2}=\\frac{1}{2\\sqrt{x}}-\\frac{1}{x^2}$."
+        ],
+        "answer": "$f'(x)=\\dfrac{1}{2\\sqrt{x}}-\\dfrac{1}{x^2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Differentiate $f(x)=x^2(3x-1)$ with the product rule, then check by expanding.",
+      "solution": {
+        "steps": [
+          "Product rule: $2x(3x-1)+x^2(3)=6x^2-2x+3x^2=9x^2-2x$.",
+          "Check: $f=3x^3-x^2$, so $f'=9x^2-2x$, matching."
+        ],
+        "answer": "$f'(x)=9x^2-2x$"
+      }
+    }
+  ]
+}

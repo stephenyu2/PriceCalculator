@@ -1,0 +1,90 @@
+{
+  "id": "STAT.PROB.A.2--lesson",
+  "standard": "STAT.PROB.A.2",
+  "grade": "statistics",
+  "subject": "math",
+  "domain": "Probability",
+  "domainCode": "PROB",
+  "cluster": "Probability rules and models",
+  "clusterCode": "A",
+  "skillName": "Conditional Probability",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "The conditional probability of $A$ given $B$ is $P(A\\mid B)=\\dfrac{P(A\\text{ and }B)}{P(B)}$, the chance of $A$ within the cases where $B$ happens. The general multiplication rule rearranges this: $P(A\\text{ and }B)=P(B)\\,P(A\\mid B)$. Events $A$ and $B$ are independent when $P(A\\mid B)=P(A)$ (knowing $B$ does not change $A$'s probability). Two-way tables make conditional probabilities easy by restricting attention to one row or column.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "$P(A\\text{ and }B)=0.2$ and $P(B)=0.5$. Find $P(A\\mid B)$.",
+      "solution": {
+        "steps": [
+          "Use $P(A\\mid B)=\\frac{P(A\\text{ and }B)}{P(B)}$.",
+          "$\\frac{0.2}{0.5}=0.4$."
+        ],
+        "answer": "$0.4$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "In a group, $40$ like tea, and of those $10$ also like coffee. Find $P(\\text{coffee}\\mid\\text{tea})$.",
+      "solution": {
+        "steps": [
+          "Restrict to tea likers: $40$ people.",
+          "Among them $10$ like coffee: $\\frac{10}{40}=0.25$."
+        ],
+        "answer": "$0.25$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Are $A$ and $B$ independent if $P(A)=0.3$, $P(B)=0.5$, $P(A\\text{ and }B)=0.15$?",
+      "solution": {
+        "steps": [
+          "Check whether $P(A\\text{ and }B)=P(A)P(B)$.",
+          "$P(A)P(B)=0.3\\cdot 0.5=0.15$, which equals the given value.",
+          "So the events are independent."
+        ],
+        "answer": "Yes, independent."
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "$P(A\\mid B)$ if $P(A\\cap B)=0.1$, $P(B)=0.4$.",
+      "solution": {
+        "steps": [
+          "$\\frac{0.1}{0.4}=0.25$."
+        ],
+        "answer": "$0.25$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "$P(A\\cap B)$ if $P(B)=0.6$, $P(A\\mid B)=0.5$.",
+      "solution": {
+        "steps": [
+          "$0.6\\cdot 0.5=0.3$."
+        ],
+        "answer": "$0.3$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Independent if $P(A)=0.2$, $P(A\\mid B)=0.2$?",
+      "solution": {
+        "steps": [
+          "Equal, so yes."
+        ],
+        "answer": "Yes"
+      }
+    }
+  ]
+}

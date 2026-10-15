@@ -1,0 +1,94 @@
+{
+  "id": "CALC2.INT.A.4--lesson",
+  "standard": "CALC2.INT.A.4",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Advanced Integration Techniques",
+  "domainCode": "INT",
+  "cluster": "Methods of integration",
+  "clusterCode": "A",
+  "skillName": "Improper Integrals",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "An improper integral has an infinite limit or an integrand that blows up inside the interval. Evaluate it as a limit: $\\int_a^\\infty f\\,dx=\\lim_{t\\to\\infty}\\int_a^t f\\,dx$, and for a vertical asymptote at $b$, $\\int_a^b f\\,dx=\\lim_{t\\to b^-}\\int_a^t f\\,dx$. If the limit is a finite number the integral converges; otherwise it diverges. The p-test: $\\int_1^\\infty \\frac{1}{x^p}\\,dx$ converges exactly when $p>1$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Evaluate $\\int_1^\\infty \\dfrac{1}{x^2}\\,dx$.",
+      "solution": {
+        "steps": [
+          "Rewrite as a limit: $\\lim_{t\\to\\infty}\\int_1^t x^{-2}\\,dx$.",
+          "Antiderivative: $\\left[-\\frac{1}{x}\\right]_1^t=-\\frac{1}{t}+1$.",
+          "Take the limit: $\\lim_{t\\to\\infty}\\left(1-\\frac{1}{t}\\right)=1$.",
+          "The integral converges to $1$."
+        ],
+        "answer": "Converges to $1$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Determine whether $\\int_1^\\infty \\dfrac{1}{x}\\,dx$ converges.",
+      "solution": {
+        "steps": [
+          "Limit form: $\\lim_{t\\to\\infty}\\int_1^t \\frac{1}{x}\\,dx=\\lim_{t\\to\\infty}[\\ln x]_1^t=\\lim_{t\\to\\infty}\\ln t$.",
+          "Since $\\ln t\\to\\infty$, the limit is infinite.",
+          "The integral diverges (consistent with the p-test, $p=1$)."
+        ],
+        "answer": "Diverges"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Evaluate $\\int_0^1 \\dfrac{1}{\\sqrt{x}}\\,dx$.",
+      "solution": {
+        "steps": [
+          "The integrand blows up at $x=0$, so use $\\lim_{t\\to 0^+}\\int_t^1 x^{-1/2}\\,dx$.",
+          "Antiderivative: $\\left[2\\sqrt{x}\\right]_t^1=2-2\\sqrt{t}$.",
+          "Take the limit: $\\lim_{t\\to 0^+}(2-2\\sqrt{t})=2$.",
+          "The integral converges to $2$."
+        ],
+        "answer": "Converges to $2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Evaluate $\\int_1^\\infty \\dfrac{1}{x^3}\\,dx$.",
+      "solution": {
+        "steps": [
+          "$\\left[-\\frac{1}{2x^2}\\right]_1^t\\to 0-(-\\frac{1}{2})=\\frac{1}{2}$."
+        ],
+        "answer": "Converges to $\\dfrac{1}{2}$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Evaluate $\\int_0^\\infty e^{-x}\\,dx$.",
+      "solution": {
+        "steps": [
+          "$\\left[-e^{-x}\\right]_0^t=1-e^{-t}\\to 1$."
+        ],
+        "answer": "Converges to $1$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Does $\\int_1^\\infty \\dfrac{1}{\\sqrt{x}}\\,dx$ converge?",
+      "solution": {
+        "steps": [
+          "$p=\\frac{1}{2}<1$, so by the p-test it diverges."
+        ],
+        "answer": "Diverges"
+      }
+    }
+  ]
+}

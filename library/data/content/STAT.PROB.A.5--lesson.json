@@ -1,0 +1,92 @@
+{
+  "id": "STAT.PROB.A.5--lesson",
+  "standard": "STAT.PROB.A.5",
+  "grade": "statistics",
+  "subject": "math",
+  "domain": "Probability",
+  "domainCode": "PROB",
+  "cluster": "Probability rules and models",
+  "clusterCode": "A",
+  "skillName": "Normal Distributions",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A normal distribution is a symmetric, bell-shaped model described by its mean $\\mu$ and standard deviation $\\sigma$. A z-score $z=\\dfrac{x-\\mu}{\\sigma}$ counts how many standard deviations a value is from the mean; it standardizes to the standard normal (mean $0$, SD $1$). The empirical (68-95-99.7) rule: about $68\\%$ of data lie within $1\\sigma$, $95\\%$ within $2\\sigma$, and $99.7\\%$ within $3\\sigma$ of the mean. Areas under the curve give probabilities and percentiles.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Scores are normal with $\\mu=70$, $\\sigma=10$. Find the z-score of $85$.",
+      "solution": {
+        "steps": [
+          "Apply $z=\\frac{x-\\mu}{\\sigma}$.",
+          "$z=\\frac{85-70}{10}=\\frac{15}{10}=1.5$.",
+          "So $85$ is $1.5$ standard deviations above the mean."
+        ],
+        "answer": "$z=1.5$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Using the 68-95-99.7 rule for $\\mu=100$, $\\sigma=15$, what percent is between $85$ and $115$?",
+      "solution": {
+        "steps": [
+          "$85$ and $115$ are exactly $1\\sigma$ below and above the mean ($100\\pm 15$).",
+          "The empirical rule says about $68\\%$ lie within $1\\sigma$.",
+          "So about $68\\%$ fall between $85$ and $115$."
+        ],
+        "answer": "About $68\\%$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "For $\\mu=50$, $\\sigma=5$, what percent is above $60$ by the empirical rule?",
+      "solution": {
+        "steps": [
+          "$60$ is $2\\sigma$ above the mean ($50+2(5)$).",
+          "About $95\\%$ lie within $2\\sigma$, so $5\\%$ lie outside, split equally in the two tails.",
+          "The upper tail beyond $2\\sigma$ is about $2.5\\%$."
+        ],
+        "answer": "About $2.5\\%$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "z-score of $x=60$ with $\\mu=50$, $\\sigma=5$.",
+      "solution": {
+        "steps": [
+          "$\\frac{60-50}{5}=2$."
+        ],
+        "answer": "$2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Percent within $2\\sigma$ (empirical rule).",
+      "solution": {
+        "steps": [
+          "About $95\\%$."
+        ],
+        "answer": "$95\\%$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "z-score of the mean itself.",
+      "solution": {
+        "steps": [
+          "$\\frac{\\mu-\\mu}{\\sigma}=0$."
+        ],
+        "answer": "$0$"
+      }
+    }
+  ]
+}

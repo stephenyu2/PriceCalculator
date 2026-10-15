@@ -1,0 +1,92 @@
+{
+  "id": "CALC2.SEQ.A.4--lesson",
+  "standard": "CALC2.SEQ.A.4",
+  "grade": "calculus2",
+  "subject": "math",
+  "domain": "Sequences and Series",
+  "domainCode": "SEQ",
+  "cluster": "Sequences and convergence",
+  "clusterCode": "A",
+  "skillName": "Power Series",
+  "materialType": "lesson",
+  "difficulty": null,
+  "verificationStatus": "verified",
+  "verificationNotes": "Hand-authored; numeric answers checked with sympy.",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "verifiedAt": "2026-10-14T00:00:00.000Z",
+  "intro": "A power series $\\sum c_n(x-a)^n$ is a 'polynomial of infinite degree' centered at $a$. It converges on an interval around $a$ whose half-width is the radius of convergence $R$, usually found with the ratio test: solve $\\lim\\left|\\frac{c_{n+1}(x-a)^{n+1}}{c_n(x-a)^n}\\right|<1$ for $x$. At the endpoints you must test separately. Inside the interval you may differentiate or integrate the series term by term, keeping the same radius $R$.",
+  "items": [
+    {
+      "type": "worked-example",
+      "id": 1,
+      "prompt": "Find the radius of convergence of $\\sum_{n=0}^\\infty \\dfrac{x^n}{n!}$.",
+      "solution": {
+        "steps": [
+          "Apply the ratio test: $\\left|\\frac{x^{n+1}/(n+1)!}{x^n/n!}\\right|=\\frac{|x|}{n+1}$.",
+          "Take the limit as $n\\to\\infty$: $\\frac{|x|}{n+1}\\to 0$.",
+          "The limit $0<1$ for every $x$, so the series converges for all $x$: $R=\\infty$."
+        ],
+        "answer": "$R=\\infty$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 2,
+      "prompt": "Find the radius and interval of convergence of $\\sum_{n=0}^\\infty x^n$.",
+      "solution": {
+        "steps": [
+          "This is geometric with ratio $x$, so it converges iff $|x|<1$, giving $R=1$.",
+          "At $x=1$: $\\sum 1$ diverges; at $x=-1$: $\\sum(-1)^n$ diverges.",
+          "So the interval of convergence is $(-1,1)$."
+        ],
+        "answer": "$R=1$; interval $(-1,1)$"
+      }
+    },
+    {
+      "type": "worked-example",
+      "id": 3,
+      "prompt": "Find the radius of convergence of $\\sum_{n=1}^\\infty \\dfrac{(x-2)^n}{n}$.",
+      "solution": {
+        "steps": [
+          "Ratio test: $\\left|\\frac{(x-2)^{n+1}/(n+1)}{(x-2)^n/n}\\right|=|x-2|\\cdot\\frac{n}{n+1}$.",
+          "Limit: $|x-2|\\cdot 1=|x-2|<1$.",
+          "So $R=1$ (centered at $a=2$)."
+        ],
+        "answer": "$R=1$ (center $a=2$)"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 4,
+      "prompt": "Radius of $\\sum \\frac{x^n}{2^n}$.",
+      "solution": {
+        "steps": [
+          "Ratio $\\frac{|x|}{2}<1\\Rightarrow |x|<2$, so $R=2$."
+        ],
+        "answer": "$R=2$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 5,
+      "prompt": "Radius of $\\sum n!\\,x^n$.",
+      "solution": {
+        "steps": [
+          "Ratio $(n+1)|x|\\to\\infty$ unless $x=0$: $R=0$."
+        ],
+        "answer": "$R=0$"
+      }
+    },
+    {
+      "type": "practice",
+      "id": 6,
+      "prompt": "Interval of $\\sum x^n$.",
+      "solution": {
+        "steps": [
+          "$R=1$; both endpoints diverge, so $(-1,1)$."
+        ],
+        "answer": "$(-1,1)$"
+      }
+    }
+  ]
+}
