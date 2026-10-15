@@ -58,7 +58,23 @@ const OFFICE_ONLY_FORMS = ['library-quiz'];
 // repo; without it, forwarding is skipped. Only customer-facing lead forms are
 // listed here on purpose: tutor onboarding, incident reports, agreements, and
 // library quizzes are records, not CRM leads.
-const GHL_FORMS = ['lead-form', 'diagnostic-registration', 'diag-signup', 'sat-planner'];
+const GHL_FORMS = ['lead-form', 'diagnostic-registration', 'diag-signup', 'sat-planner', 'trial-session'];
+
+// Per-form CRM tags. A consistent tag lets a GHL workflow trigger on it later
+// (e.g. "Contact Tag added: website-free-session" -> send the sign-up text).
+const GHL_FORM_TAGS = {
+  'trial-session': ['website-free-session', 'website-lead']
+};
+
+// Optional direct GHL API path (in addition to the webhook). Only runs when
+// GHL_API_TOKEN (a Private Integration token with contacts + opportunities
+// write scope) is set in Netlify. It upserts the contact, assigns it to
+// GHL_ASSIGNED_USER_ID (Stephen), tags it, and opens an opportunity in
+// GHL_PIPELINE_ID / GHL_PIPELINE_STAGE_ID (defaults: Marketing Pipeline -> New Lead).
+const GHL_API = 'https://services.leadconnectorhq.com';
+const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID || 'JGX0k9GOf83TkQCXjYPJ';
+const GHL_PIPELINE_ID = process.env.GHL_PIPELINE_ID || 'bgnjZ0oMID4aN3hb8cdu';
+const GHL_PIPELINE_STAGE_ID = process.env.GHL_PIPELINE_STAGE_ID || '91913d4e-96ef-41e5-a9ae-51f12e60d862';
 
 exports.handler = async function (event) {
   let payload;
@@ -208,8 +224,12 @@ async function forwardToGHL(formName, data) {
   const phone = getPhone(data);
   const parts = name.split(/\s+/).filter(Boolean);
 
+  const tags = GHL_FORM_TAGS[formName] || [];
   const body = Object.assign({}, data, {
     source: 'launchvalleytutoring.com',
+    lead_source: 'website',
+    tags: tags.join(','),
+    assigned_to: process.env.GHL_ASSIGNED_USER_ID || '',
     form: formName,
     name: name,
     full_name: name,
@@ -230,6 +250,58 @@ async function forwardToGHL(formName, data) {
     const text = await res.text();
     console.log('submission-created: GHL webhook error', res.status, text, '(form:', formName + ')');
   }
+
+  try {
+    await upsertGHLContact(formName, { name, parts, email, phone, tags, data });
+  } catch (e) {
+    console.log('submission-created: GHL API upsert failed', e && e.message);
+  }
+}
+
+async function ghlFetch(path, body) {
+  const res = await fetch(GHL_API + path, {
+    method: 'POST',
+    headers: {
+      'Authorization': 'Bearer ' + process.env.GHL_API_TOKEN,
+      'Version': '2021-07-28',
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify(body)
+  });
+  const text = await res.text();
+  if (!res.ok) throw new Error(path + ' ' + res.status + ' ' + text);
+  try { return JSON.parse(text); } catch (e) { return {}; }
+}
+
+async function upsertGHLContact(formName, c) {
+  if (!process.env.GHL_API_TOKEN) return;
+  const assignedTo = process.env.GHL_ASSIGNED_USER_ID || undefined;
+  const digits = String(c.phone || '').replace(/\D/g, '');
+  const contact = {
+    locationId: GHL_LOCATION_ID,
+    firstName: c.parts[0] || '',
+    lastName: c.parts.slice(1).join(' '),
+    name: c.name,
+    phone: digits.length === 10 ? '+1' + digits : c.phone,
+    source: 'website',
+    tags: c.tags.concat(['subject: ' + (c.data.subject || ''), 'level: ' + (c.data.level || '')]).filter(t => !/: $/.test(t))
+  };
+  if (c.email) contact.email = c.email;
+  if (assignedTo) contact.assignedTo = assignedTo;
+  const out = await ghlFetch('/contacts/upsert', contact);
+  const id = out && out.contact && out.contact.id;
+  if (!id) return;
+  await ghlFetch('/opportunities/', {
+    locationId: GHL_LOCATION_ID,
+    pipelineId: GHL_PIPELINE_ID,
+    pipelineStageId: GHL_PIPELINE_STAGE_ID,
+    contactId: id,
+    name: (c.name || 'Website lead') + ' - Free session (' + [c.data.subject, c.data.level].filter(Boolean).join(', ') + ')',
+    status: 'open',
+    source: 'website',
+    assignedTo: assignedTo
+  }).catch(e => console.log('submission-created: GHL opportunity failed', e.message));
 }
 
 /* ---- field helpers ---- */
