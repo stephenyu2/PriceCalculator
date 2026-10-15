@@ -543,7 +543,7 @@ em { font-style: italic; color: var(--primary); }
 .tutors { overflow: hidden; padding: 5rem 0; }
 .tutors-head { max-width: 42rem; margin: 0 auto; padding: 0 1rem; text-align: center; }
 .tutors-head h2 { margin-top: 1rem; font-size: clamp(2.25rem, 6vw, 3.75rem); color: var(--primary-deep); }
-.tutors-head p { margin-top: 1.25rem; font-size: 1.125rem; color: color-mix(in oklab, var(--foreground) 70%, transparent); }
+.tutors-head p:not(.eyebrow) { margin-top: 1.25rem; font-size: 1.125rem; color: color-mix(in oklab, var(--foreground) 70%, transparent); }
 
 .tutor-marquee {
   margin-top: 3rem;
@@ -736,7 +736,7 @@ em { font-style: italic; color: var(--primary); }
 .page-hero { padding: 8rem 1rem 4rem; text-align: center; }
 .page-hero .inner { max-width: 48rem; margin: 0 auto; }
 .page-hero h1 { margin-top: 1.25rem; font-size: clamp(3rem, 8vw, 4.5rem); color: var(--primary-deep); }
-.page-hero p { margin: 1.5rem auto 0; max-width: 36rem; font-size: 1.125rem; line-height: 1.6; color: color-mix(in oklab, var(--foreground) 70%, transparent); }
+.page-hero p:not(.eyebrow) { margin: 1.5rem auto 0; max-width: 36rem; font-size: 1.125rem; line-height: 1.6; color: color-mix(in oklab, var(--foreground) 70%, transparent); }
 .tutor-grid {
   display: grid;
   gap: 2rem;
@@ -807,3 +807,140 @@ em { font-style: italic; color: var(--primary); }
   .review-marquee, .tutor-marquee { animation: none; }
   .btn-gold::after { display: none; }
 }
+
+/* ==========================================================================
+   Match-live overrides (2026-10-14): line-heights, type scale and spacing
+   tuned to match the live Lovable/Tailwind build one-to-one.
+   ========================================================================== */
+[hidden] { display: none !important; }
+
+/* Buttons: Tailwind text-sm font-medium, leading 1.25rem */
+.btn { font-size: 0.875rem; font-weight: 500; line-height: 1.25rem; }
+.btn-stack .big-label { line-height: 1.25rem; font-weight: 500; }
+.btn-stack .small-label { line-height: 1.25; }
+.eyebrow, .form-eyebrow { line-height: 1rem; }
+
+/* Header: 3-column grid so the nav sits dead centre */
+.lv-nav a { line-height: 1.25rem; }
+.lv-header-actions { justify-content: flex-end; }
+.call-label { line-height: 1.25; }
+.call-label .small-label { font-size: 0.625rem; line-height: 1.25; }
+.call-label .big-label { font-size: 0.875rem; line-height: 1.25rem; font-weight: 500; }
+@media (min-width: 640px) {
+  .lv-header { padding-left: 1.75rem; padding-right: 1.75rem; padding-top: 1.25rem; }
+  .lv-header-inner { padding: 0.75rem 1.5rem; }
+}
+@media (min-width: 1024px) {
+  .lv-header-inner { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0.5rem; }
+  .header-cta { font-size: 0.75rem; line-height: 1rem; }
+}
+
+/* Hero */
+.hero-rating .rating-text { line-height: 1.25rem; }
+.hero-sub { line-height: 1.625; }
+@media (min-width: 640px) { .hero h1 { font-size: 4.5rem; } }
+@media (min-width: 1024px) {
+  .hero h1 { font-size: 4.5rem; }
+  .hero-copy { padding-top: 2rem; padding-bottom: 2rem; }
+}
+@media (min-width: 1280px) { .hero h1 { font-size: 5.25rem; } }
+
+/* Section headings: Tailwind type scale (text-3xl 2.25rem lh, 4xl 2.5rem, 5xl+ lh 1) */
+.trial-head h2, .reviews-head h2, .tutors-head h2, .location-body h2, .tutors-band h2 { font-size: 2.25rem; line-height: 2.5rem; }
+.trial-form h2, .trial-success h2, .review-feedback h2, .tutor-card .body h3 { font-size: 1.875rem; line-height: 2.25rem; }
+@media (min-width: 640px) {
+  .trial-head h2, .reviews-head h2, .location-body h2, .tutors-band h2 { font-size: 3rem; line-height: 1; }
+  .tutors-head h2 { font-size: 3.75rem; line-height: 1; }
+}
+@media (min-width: 1024px) { .trial-head h2 { font-size: 3.75rem; line-height: 1; } }
+
+/* Trial form */
+.trial-form .form-sub { line-height: 1.25rem; }
+.field label { line-height: 1; }
+.field legend { line-height: 1.25rem; padding: 0; }
+.chip { font-weight: 500; line-height: 1rem; color: var(--foreground); white-space: nowrap; }
+.chip[aria-pressed="true"] { color: var(--inverse); }
+@media (min-width: 640px) { .chip { line-height: 1.25rem; } }
+
+/* Reviews */
+.reviews-head { padding: 0 1rem; }
+.reviews-head .google-rating { line-height: 1.25rem; }
+.review-foot .role { line-height: 1rem; }
+.review-card blockquote { line-height: 1.625; }
+.reviews-cta .btn-secondary { padding: 0 1.5rem; }
+@media (min-width: 640px) { .reviews-head { padding: 0 1.75rem; } }
+
+/* Tutors */
+.tutors-head p:not(.eyebrow) { line-height: 1.75rem; }
+.tutor-card .body .role { line-height: 1.25rem; }
+.tutor-card .body .bio { line-height: 1.625; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+@media (min-width: 640px) { .tutors-head { padding: 0 1.75rem; } }
+
+/* Location */
+.location-body .addr { line-height: 1.625; max-width: 28rem; }
+.location-actions .btn-secondary { height: 3rem; padding: 0 1.5rem; }
+.location-actions .btn-gold { padding: 0 1.75rem; }
+
+/* Footer */
+.lv-footer-brand .big { max-width: 64rem; }
+.lv-footer-contact { line-height: 1.25rem; }
+.lv-footer-bottom { line-height: 1rem; }
+.lv-footer-contact .btn-gold { padding: 0 1.75rem; margin-top: 0.5rem; }
+@media (min-width: 640px) {
+  .lv-footer-brand .big { font-size: 3.75rem; }
+  .lv-footer-brand .tagline { font-size: 1rem; }
+}
+@media (min-width: 1024px) {
+  .lv-footer-brand .big { font-size: 4.5rem; }
+  .lv-footer-contact .line { max-width: 20rem; text-align: right; }
+}
+@media (max-width: 639px) { .lv-footer-brand .big { font-size: 2.25rem; } .lv-footer-brand .tagline { font-size: 0.875rem; } }
+@media (max-width: 639px) {
+  .field label, .field legend { text-align: center; width: 100%; }
+  .chip { font-size: 0.75rem; }
+}
+.btn-stack { display: flex; }
+@media (min-width: 640px) {
+  .form-head { text-align: left; }
+  .trial-form h2 { margin-top: 0.5rem; }
+}
+
+/* Our Tutors page */
+.page-hero { padding: 8rem 1rem 4rem; }
+.page-hero .inner { max-width: 48rem; }
+.page-hero h1 { font-size: 3rem; line-height: 1; }
+.page-hero p:not(.eyebrow) { max-width: 42rem; line-height: 1.625; }
+.tutor-grid .body .role { line-height: 1rem; }
+.tutor-grid .body h2 { line-height: 2.5rem; }
+.tutor-grid .body .bio { line-height: 1.625; }
+.tutor-grid .body { padding: 1.5rem; }
+.tutors-band { padding-left: 1rem; padding-right: 1rem; }
+@media (min-width: 640px) {
+  .page-hero { padding: 10rem 1.75rem 5rem; }
+  .page-hero h1 { font-size: 4.5rem; }
+  .tutor-grid .body { padding: 1.75rem; }
+  .tutors-band { padding-left: 1.75rem; padding-right: 1.75rem; }
+}
+
+/* Review page */
+.review-box .brand { line-height: 2rem; }
+.review-box h1 { font-size: 3rem; line-height: 1.25; }
+.review-box .lead { line-height: 1.75rem; }
+.review-powered { line-height: 1rem; }
+@media (min-width: 640px) { .review-box h1 { font-size: 4.5rem; } }
+@media (min-width: 640px) { .tutor-grid { max-width: calc(1240px + 3.5rem); } }
+.lv-footer-brand .tagline{line-height:1.25rem}@media (min-width:640px){.lv-footer-brand .tagline{line-height:1.5rem}}
+
+/* Legal pages (privacy, terms): live Lovable layout, our own policy text */
+.legal-hero { background: linear-gradient(to bottom, oklch(0.969 0.016 293.756), var(--background)); padding: 5rem 1.25rem 2.5rem; }
+.legal-hero-inner { max-width: 48rem; margin: 0 auto; text-align: center; }
+.legal-back { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; line-height: 1.25rem; color: var(--primary); }
+.legal-back:hover { text-decoration: underline; }
+.legal-hero h1 { margin-top: 1.5rem; font-size: 2.25rem; line-height: 2.5rem; font-weight: 500; letter-spacing: -0.025em; color: var(--foreground); }
+.legal-date { margin-top: 0.75rem; font-size: 0.875rem; line-height: 1.25rem; color: var(--muted-foreground); }
+.legal-body { max-width: 48rem; margin: 0 auto; padding: 0 1.25rem 6rem; font-size: 1rem; line-height: 1.625; color: color-mix(in oklab, var(--foreground) 90%, transparent); }
+.legal-body > * + * { margin-top: 0.75rem; }
+.legal-body h2 { margin-top: 2.5rem; font-size: 1.25rem; line-height: 1.75rem; font-weight: 600; color: var(--foreground); }
+.legal-body a { color: var(--primary); }
+.legal-body ul { padding-left: 1.25rem; }
+@media (min-width: 640px) { .legal-hero h1 { font-size: 3rem; line-height: 1; } }

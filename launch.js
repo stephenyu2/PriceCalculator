@@ -98,6 +98,7 @@
         return;
       }
       var submitBtn = trialForm.querySelector('[type="submit"]');
+      var submitHtml = submitBtn ? submitBtn.innerHTML : "";
       if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Sending…"; }
 
       var data = {};
@@ -113,7 +114,7 @@
       }).catch(function () {
         var errBox = trialForm.querySelector("[data-submit-error]");
         if (errBox) errBox.removeAttribute("hidden");
-        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = "Claim Free Session"; }
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.innerHTML = submitHtml; }
       });
     });
 
