@@ -15,11 +15,16 @@
   var FIVE_STARS = STAR + STAR + STAR + STAR + STAR;
 
   function reviewCard(r, hidden) {
+    /* r.quote may contain <strong> tags to emphasize standout phrases, so it is
+       inserted as trusted HTML authored in index.html, not escaped. */
+    var avatar = r.photo
+      ? '<span class="review-avatar"><img src="' + esc(r.photo) + '" alt="' + esc(r.name) + '" loading="lazy" width="44" height="44"></span>'
+      : '<span class="review-avatar">' + esc(r.name.charAt(0)) + "</span>";
     return '<figure class="review-card"' + (hidden ? ' aria-hidden="true"' : "") + '>' +
       '<div class="stars" aria-label="Five star review">' + FIVE_STARS + "</div>" +
-      '<blockquote>“' + esc(r.quote) + '”</blockquote>' +
+      '<blockquote>“' + r.quote + '”</blockquote>' +
       '<figcaption class="review-foot">' +
-        '<span class="review-avatar">' + esc(r.name.charAt(0)) + "</span>" +
+        avatar +
         "<div><p class=\"name\">" + esc(r.name) + '</p><p class="role">' + esc(r.role) + "</p></div>" +
       "</figcaption>" + GOOGLE + "</figure>";
   }

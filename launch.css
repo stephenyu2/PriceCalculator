@@ -312,6 +312,7 @@ em { font-style: italic; color: var(--primary); }
   gap: 0.5rem;
 }
 .hero-rating .rating-text { font-size: 0.875rem; font-weight: 600; color: var(--primary-deep); }
+.hero-rating .stat-dot { font-weight: 600; color: var(--primary-deep); opacity: 0.45; }
 .hero h1 {
   margin: 1.5rem auto 0;
   max-width: 44rem;
@@ -501,6 +502,7 @@ em { font-style: italic; color: var(--primary); }
   font-size: 0.875rem; font-weight: 600; color: var(--primary-deep);
 }
 .reviews-head h2 { margin-top: 0.75rem; font-size: clamp(2.25rem, 5vw, 3rem); color: var(--primary-deep); }
+.award-plaque { display: block; margin: 1.5rem auto 0; width: auto; height: auto; max-width: clamp(150px, 38vw, 190px); }
 
 .marquee-viewport { margin-top: 2.5rem; overflow: hidden; }
 .review-marquee {
@@ -508,7 +510,7 @@ em { font-style: italic; color: var(--primary); }
   width: max-content;
   gap: 1rem;
   padding: 0 0.5rem;
-  animation: marquee-scroll-reviews 32s linear infinite;
+  animation: marquee-scroll-reviews 64s linear infinite;
 }
 .review-marquee:hover { animation-play-state: paused; }
 @keyframes marquee-scroll-reviews { to { transform: translateX(calc(-50% - 0.5rem)); } }
@@ -524,16 +526,20 @@ em { font-style: italic; color: var(--primary); }
   padding: 1.5rem;
 }
 .review-card blockquote { margin: 1rem 0 0; font-size: 0.875rem; line-height: 1.6; color: color-mix(in oklab, var(--foreground) 70%, transparent); }
+.review-card blockquote strong { font-weight: 600; color: var(--primary-deep); }
 .review-foot { margin-top: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
 .review-avatar {
   display: flex; align-items: center; justify-content: center;
   width: 2.75rem; height: 2.75rem;
+  flex-shrink: 0;
   border-radius: 999px;
+  overflow: hidden;
   background: var(--primary-soft);
   font-family: var(--font-display);
   font-size: 1.25rem;
   color: var(--primary-deep);
 }
+.review-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
 .review-foot .name { font-weight: 600; color: var(--primary-deep); }
 .review-foot .role { font-size: 0.75rem; color: var(--muted-foreground); }
 .review-card .google-mark { position: absolute; bottom: 1.5rem; right: 1.5rem; }
@@ -568,6 +574,10 @@ em { font-style: italic; color: var(--primary); }
 }
 .tutor-card .photo { width: 100%; aspect-ratio: 4 / 3; overflow: hidden; }
 .tutor-card .photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+/* Some photos sit lower in frame, nudge the crop down so faces center. */
+.tutor-card .photo img[src*="derek"], .tutor-grid .photo img[src*="derek"] { object-position: center 40%; }
+.tutor-card .photo img[src*="gus"], .tutor-grid .photo img[src*="gus"],
+.tutor-card .photo img[src*="christopher"], .tutor-grid .photo img[src*="christopher"] { object-position: center 20%; }
 .tutor-card .photo-fallback {
   display: flex; align-items: center; justify-content: center;
   aspect-ratio: 4 / 3; background: var(--secondary);
@@ -944,3 +954,38 @@ em { font-style: italic; color: var(--primary); }
 .legal-body a { color: var(--primary); }
 .legal-body ul { padding-left: 1.25rem; }
 @media (min-width: 640px) { .legal-hero h1 { font-size: 3rem; line-height: 1; } }
+
+/* Mobile header fix: .btn-stack{display:flex} above was un-hiding the call label on phones */
+@media (max-width: 639px) {
+  .lv-header .call-label { display: none; }
+  .lv-header .btn-call-full { width: 2.75rem; padding: 0; flex-shrink: 0; }
+  .lv-logo { white-space: nowrap; min-width: 0; }
+  .lv-header-actions { flex-shrink: 0; }
+  .chip { white-space: nowrap; }
+}
+@media (min-width: 640px) { .call-label { white-space: nowrap; } }
+
+/* ---- Mobile polish pass 2 (phones only; desktop unchanged) --------------- */
+.rating-star svg { fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linejoin: round; }
+.rating-star.on svg { fill: var(--gold); }
+@media (max-width: 639px) {
+  /* Equal-width stacked CTAs */
+  .hero-actions, .tutors-cta { align-items: stretch; width: 100%; max-width: 20rem; margin-left: auto; margin-right: auto; }
+  .hero-actions .btn, .tutors-cta .btn { width: 100%; justify-content: center; }
+  .tutors-cta { padding: 0; }
+  .reviews-cta { flex-wrap: nowrap; max-width: 24rem; margin-left: auto; margin-right: auto; }
+  .reviews-cta .btn { flex: 1 1 0; justify-content: center; white-space: nowrap; padding-left: 1rem; padding-right: 1rem; }
+  .reviews-cta .btn-gold { flex-grow: 1.6; }
+  /* Tighten the empty band between tutors and location */
+  .tutors { padding-bottom: 3.5rem; }
+  .location { padding-top: 1.5rem; padding-bottom: 4rem; }
+  /* Footer: comfortable tap targets, full-width CTA */
+  .lv-footer-contact { gap: 0.25rem; }
+  .lv-footer-contact .line { min-height: 44px; align-items: center; }
+  .lv-footer-contact .line svg { margin-top: 0; }
+  .lv-footer-links { gap: 0 1.25rem; }
+  .lv-footer-links a { display: inline-flex; align-items: center; min-height: 44px; }
+  .lv-footer .btn-gold { width: 100%; justify-content: center; }
+  .lv-footer-links > span { flex-basis: 100%; display: flex; align-items: center; min-height: 44px; order: 2; }
+  .lv-logo { display: inline-flex; align-items: center; min-height: 44px; }
+}
